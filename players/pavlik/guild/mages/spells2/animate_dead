@@ -1,0 +1,68 @@
+/*
+ * spell : Animate Dead   (necromancy)
+ * level : 5
+ * effect: Turns corpse into temporary pet
+ * cost  : 65 sp
+ * spec  : player must be evil alignment
+ * files : ~/mages/obj/animate_dead.c
+ */
+
+animate_dead(){
+  object ob, obj, weap;
+
+  if(!KNOW("andead")){
+    write("What?\n");
+    return 1;
+  }
+
+  if((tp->query_alignment() > 99) && (tp->query_level() < 20)){
+    write("You feel to nice to use this spell right now.\n");
+    return 1;
+  }
+
+  ob = present("bones", tp);
+  if(!ob) ob = present("corpse", tp);
+  if(!ob) ob = present("bones", env);
+  if(!ob) ob = present("corpse", env);
+
+  if(!ob){
+    write("You do not have the necessary components for this spell.\n");
+    return 1;
+  }
+
+  if(!tp->query_attack()){
+    write("You must be fighting to cast this spell.\n");
+    return 1;
+  }
+
+ write("You cast an "+GRN+"Animate Dead"+NORM+" spell ...\n");
+
+ if(spell_fail2(5, "necr", "pow")){
+  write("You "+HIR+"miscast"+NORM+" the spell!\n"+
+  "Something horrible forces itself in through your errant casting!\n");
+  say(ME+" miscast a spell and a horrible Bone Demon appears!\n");
+  destruct(ob);
+  obj = clone_object("players/pavlik/mages/obj/demon");
+  move_object(obj, env);
+  obj->do_demon(tp);
+  tp->add_spell_point(-15);
+  return 1;
+ }
+
+  tell_room(env,
+  ME+" casts an evil enchantment over a pile of old bones.\n"+
+  "The bones begin to rattle and tremble!\n");
+  tell_room(env,
+  "The bones stir and a "+GRN+"Skeleton"+NORM+" rises from the debris!\n"+
+  "The undead creation joins the battle.\n");
+  obj = clone_object("players/pavlik/mages/obj/animate_dead_obj");
+  move_object(obj, env);
+  obj->set_short(ob->short()+GRN+" [*animated*]"+NORM);
+  obj->set_name(GRN+ob->short()+NORM);
+  if(ob->heal_value()) ob->set_wc((ob->heal_value()*16)/9);
+  else obj->set_wc(18);
+  obj->attack_object(tp->query_attack());
+  destruct(ob);
+  tp->add_spell_point(-65);
+  return 1;
+}

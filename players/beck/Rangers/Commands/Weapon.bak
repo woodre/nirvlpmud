@@ -1,0 +1,32 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+RangerInit(){
+   if(PO->QuerySkillLevel("weapon") >= 5){
+     PO->AHiddenSkill("pweapon","beck",6);
+   }
+}
+
+RangerPower(str,Align){
+   
+}
+
+QMax(){
+   return 20;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(str){
+   write("Weapon is your ability to inflict damage on the enemy.\n"+
+         "\n"+
+         "Weapon skills:\n\n"+
+
+         "Power Weapon ("+BOLD+RED+"Pweapon"+OFF+")    5\n"+
+         "");
+   return 1;
+}
+
+OffSkill(int level){
+   return ((level/2));
+}

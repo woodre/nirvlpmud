@@ -1,0 +1,26 @@
+**************
+
+
+                     Identify
+
+Syntax:    identify <obj>
+
+Desc:
+           This command is used to identify an object in your 
+           environment. It returns basic information including the
+           short, creator, and inherits.
+
+Warning:   None
+
+Example:   identify bag
+                  results
+           Short: bag
+           Weight: 1
+           Value: 12
+           Inherits: obj/bag
+
+Related:   creator, origin
+
+
+**************
+

@@ -1,0 +1,14 @@
+The files in this directory are:
+Map.c - A daemon for managing the desert map rooms
+Mroom.c - A generic room for the map
+m* - The Myrmidar Mound
+mound_room.c - A special room class for the myrmidar maze running routines
+hive_mind.c - Some more routines for handling myrmidar behavior
+p* - The P'kalian Village, a tribe of green desert dwellers
+r* - Rocks, The brigand camp
+s* - City of Sudakan
+c* - Castle Magnarn
+x* - All of these rooms are locations on the map
+
+Misc:
+  daemonsraad.c - The final quest room/puzzle

@@ -1,0 +1,36 @@
+#include "/players/forbin/define.h"
+
+status main(string arg) {
+  string where, filename;
+  object what;
+  string one, two;
+  int envflag;
+  if(!arg) {
+    where = file_name(environment(this_player()));
+    if(sscanf(where,"%s#%s",one,two) == 2) filename = one;
+    command("update /"+filename+".c", this_player());
+    command("goto /"+filename+".c", this_player());
+    return 1; 
+  }
+  if(present(arg, environment(this_player()))) {
+    what = present(arg, environment(this_player()));
+    envflag = 1;
+  }
+  else if(present(arg, this_player())) {
+    what = present(arg, this_player());
+    envflag = 2;
+  }
+  else 
+    return (notify_fail("There is no "+arg+" present.\n"), 1);
+  filename = file_name(what);
+  if(sscanf(what, "%s#%s", one, two) == 2) filename = one;
+  move_object(what, "room/void");
+  destruct(what);
+  command("update /"+filename+".c", this_player());
+  if(envflag == 1) 
+    move_object(clone_object("/"+filename+".c"), environment(this_player()));
+  if(envflag == 2) 
+    move_object(clone_object("/"+filename+".c"), this_player());
+  write(capitalize(arg)+" updated and re-cloned.\n");
+  return 1;  
+}

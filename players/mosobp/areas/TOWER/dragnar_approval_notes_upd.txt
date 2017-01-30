@@ -1,0 +1,39 @@
+OBJ
+	* daura.c
+		o OK
+	* dki, gloves, pants, sarmor, sboots are all OK.
+NPC
+	* chiaotzu.c
+		o OK
+	* garlicjr.c
+		o In heal_check function this line needs to be updated either to
+      have a message to make it a blank string:
+      "\t\t\tPiccolo Energy burst spell, message can be removed after testing\n",
+		o Might be best to remove HB sections that are commented out.
+		o Total loot needs to be a max of 11,000 including gear.
+      I would suggest 7000 + r(4000) which is 9k plus 2k for armor.
+    o Needs bonus for healing: set_hp_bonus(1500);
+	* korrin.c
+		o OK. Sure you don't want to put the beans in now?
+	* mustard.c
+		o OK
+	* nappa.c
+		o  OK, coins could be as high as r(5500) which would average 2750.
+	* piccolo.c
+		o Gold still needs to be lowered. Max for level 27 is 17,500. Gold is currently at
+      16,500 and he has 2 armor worth over 3k.
+      Suggest 10,000 + r(9000) avg of 14,500 coins
+		o In heal_check function this line needs to be updated either to
+      have a message to make it a blank string:
+      "\t\t\tPiccolo Energy burst spell, message can be removed after testing\n",
+		o Might be best to remove HB sections that are commented out.
+	* raditz.c
+		o OK
+	* salt.c
+		o OK
+	* tien.c
+		o OK
+	* vinegar.c
+		o OK
+	* yamcha.c
+		o OK

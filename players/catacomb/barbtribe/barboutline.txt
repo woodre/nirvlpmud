@@ -1,0 +1,96 @@
+Clan of the Snake Barbarian forest
+----------------------------------
+I am envisioning a secluded forest filled with strange creatures, but ruled by the Clan of the Snake,
+Getting their name from the tattoo on each of the warriors of the tribe.Having lived in their forest 
+for several years, this nomadic barbarian tribe has been quite content with their primitivelife.  But
+now a group of Gnolls has invaded part of the forest and is threatening the Clan's way of life.  These barbarians have no other choice then to destroy the gnolls and retake their forest.
+
+
+Forest
+------
+
+Rooms
+-----
+barbentrance.c  A small open area before the forest containing a barbarian ranger
+barbforest1.c   forest description
+barbforest2.c   same 
+barbforest3.c   same
+barbforest4.c   same
+barbforest5.c   same
+barbforest6.c   same
+barbforest7.c   same
+
+Monsters
+--------
+
+wolf.c	 A standard wolf nothing really special about it.
+	  Upon death it drops wolf claws
+
+snake.c	 A standard snake
+ 	  Upon death it drops snake fangs
+
+stirge.c A large bird-like creature with an extremely long and thin beak used to stab 
+	  it's prey
+	  Upon death it drops its beak 
+
+Barbarian Village
+-----------------
+
+An encampment of barbarians that has been around for many years, providing the Clan of
+the Snake with everything they have ever needed, until now.  It is just a normal village
+with many dwellings for the clan.  guarded on two sides by mountains, the tribe is ready
+for any attack.  In the eastern regions is the chieftain's tent.
+
+Rooms
+-----
+barbVilEnt.c  entrance to the barbarian tribe area containing warriors guarding entrance
+barbvil1.c    barbarian encampment with dwellings, showing the difficult life of the barbarians
+barbvil2.c    more of the encampment
+barbvil3.c    same
+barbvil4.c    same
+chieftent.c   tent of the chieftain of the barbarians
+
+
+Monsters
+--------
+barb1.c       The chieftain himself
+		has Rbrkr.c  a war axe
+
+barb2.c	      The guard at the entrance to the village
+		has bones.c a game somewhat like craps
+		and warham.c  a standard warhammer
+
+barb3.c       A barbarian that wonders around the village
+		has wskinhide.c  a cloak made of wolf's skin
+
+Gnoll Village
+-------------
+  The gnoll's village is a much more crude encampment than the barbarians'.  Debris is 
+scattered throughout the paths of the villages.  The northern and western borders of 
+the camp are surrounded by dense foliage making travel in those directions impossible.
+in the southwest corner of the encampment sits the shamans dwelling.
+
+Rooms
+-----
+
+gnollentrance.c entrance to gnoll tribe area with gnoll guards
+gnollvil1.c	gnoll encampment, with crude dwellings and a disgusting environment
+gnollvil2.c     more of the gnoll village
+gnollvil3.c     same
+gnollvil4.c	shaman tent full of strange items, shop to sell items from forest
+
+Monsters
+--------
+
+gnoll1.c	one of the gnolls that wander through the encampment
+		  has leathershield.c  a simple shield
+
+gnoll2.c	another gnoll wandering the encampment
+		  has torncloak.c  an old battered cloak
+  		  and gnollsword.c  an old rusted sword
+
+gnollshaman.c	The shaman and leader of the gnolls buys the objects from the creatures of the 
+		  forest
+		  has shamanclub.c  a weak magical club
+   
+  

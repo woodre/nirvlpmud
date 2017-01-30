@@ -1,0 +1,77 @@
+inherit "/room/room";
+object mon;
+init() {
+add_action("east","east");
+add_action("east","e",1);
+add_action("south","south");
+add_action("north","north");
+add_action("north","n",1);
+add_action("south","s",1);
+add_action("west","west");
+add_action("west","w",1);
+add_action("down","down");
+add_action("down","d",1);
+::init();
+}
+reset(arg) {
+if(arg) return;
+set_light(1);
+monster();
+short_desc = "The entrance way";
+long_desc = 
+"This is the entrance to Grimm's world.  To the south you can see a newbie\n"+
+"area.  To the west is the best guild on the mud (grin).  To the east is\n"+
+"Omar's Novelty Shop.  North is the mud's main road.  And down is a\n"+
+"vast cavern area.\n";
+dest_dir = ({ "/players/grimm/rooms/enter1","down",
+#if 0   /* Rumplemintz */
+              "/players/grimm/guild","west",
+#else
+              "/players/guilds/dopplegangers/room/guild_entrance", "west",
+#endif
+              "/players/grimm/newbie/rooms/room1","south",
+              "/players/grimm/novelty","east",
+              "/room/vill_green","north",});
+}
+down() {
+  say(this_player()->query_name()+" leaves down into some caverns...\n");
+  this_player()->move_player("down#players/grimm/rooms/enter1");
+return 1;
+}
+south() {
+if (this_player()->query_level()<6 || this_player()->query_level()>20) {
+  this_player()->move_player("south#/players/grimm/newbie/rooms/room1");
+  return 1;
+  }
+write("\n\nThe salesman jumps in front of you and starts rambling again.\n"+
+"The salesman says: Whoa, Whoa, Whoa, Kimosabe! That is for people that\n"+
+"are under level 6!\nThe salesman says: You should try going DOWN from here!"+
+"\nThe salesman says: That is much more suited to YOUR needs.\n");
+return 1;
+}
+monster() {
+if(!present("wally")) {
+  mon=clone_object("players/grimm/newbie/monsters/wally");
+  move_object(mon,this_object());
+  }
+}
+north() {
+this_player()->move_player("north#/room/vill_green");
+return 1;
+}
+west() {
+#if 0 /* Rumplemintz */
+this_player()->move_player("west into a guild#/players/grimm/guild");
+#else
+  this_player()->move_player("west into a guild#/players/guilds/" +
+                             "dopplegangers/room/guild_entrance");
+#endif
+return 1;
+}
+east() {
+write("You notice the doors are locked shut.\nThere is a note tacked on"+
+" the door that reads:\n\"MOVED TO THE TREEHOUSE MALL\"\n");
+return 1;
+this_player()->move_player("east into a novelty shop#/players/grimm/novelty");
+return 1;
+}

@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "cprepare"
+myMsgU "You tighten your belt and prepare for battle."
+myMsgD 0
+roomMsgU "%SRC% tightens %SRCPOS% belt and prepares for battle."
+roomMsgD 0
+tellMsg 0
+farMsg 0
+owner "dune"

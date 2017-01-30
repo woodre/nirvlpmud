@@ -1,0 +1,13 @@
+>> ORDER: KILL BY IP ADDRESS
+
+Usage:
+order <indexnum> killip <ipaddress> <duration>
+
+Example:
+'order 3 killip 192.168.1.1 10'
+
+Description:
+This simply instructs the monster to kill anything it encounters
+in wandering that matches a specific IP address.
+
+

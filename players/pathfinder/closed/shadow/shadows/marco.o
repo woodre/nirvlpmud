@@ -1,0 +1,11 @@
+sh_xp 80000
+sh_pts 15
+sh_lev 3
+muffled 0
+drain_damage 6
+monitor 0
+summon 1
+points 0
+mshpts 15
+in "has entered the game."
+out "has left the game."

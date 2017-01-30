@@ -1,0 +1,21 @@
+Inheritance between objects was implemented in LPmud 2.0. This feature
+has not been tested extensively, so don't trust it too much.
+An object can inherit all variables and functions from another object.
+This is done with the declaration 'inherit "file";'. This must come before
+any local variables or functions.
+
+An example, defining a monster:
+
+inherit "obj/monster.talk";
+
+reset(arg) {
+    set_name("troll");
+    set_level(9);
+    set_hp(100);
+    set_wc(12);
+    set_al(-60);
+    set_short("A troll");
+    set_long("It is a nasty troll that looks very aggressive.\n");
+    set_aggressive(1);
+    ::reset(0);
+}

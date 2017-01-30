@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/players/snow/shadows/stuff/plate","/players/paulasx/weapons/godsword","/players/wren/Area/starbug/items/bat","/obj/armor","/players/mythos/aarmor/kabuto","/players/snow/ITEMS/bdiamond","/players/snow/WEAPONS/balance","/players/scathe/weap/lbow","/players/scathe/armor/damulet","/players/puppy/s/eq/apron","/obj/weapon","/obj/torch","/players/haji/quest/shrub","/players/snow/heals/kw_meat","/obj/weapon","/obj/treasure","/players/boltar/things/bell","/players/mythos/awep/quiver","/players/mythos/awep/zantetsuken","/players/pain/closed/weapons/widow","/obj/armor","/players/snow/closed/q/orb","/players/scathe/armor/igarb","/players/ultramagnus/darkarmor",})
+shorts ({"Ring of Death","[1mBlack Platemail[0m","Godsword","a [1;30mballbat[2;37;0m","Boots","Kabuto","A shimmering black diamond","The Broadsword of Balance","Longbow of Force","A Dragon Amulet","An apron","An evil-looking lightsabre","sunflower","A shrubbery","A hunk of whale meat","Bow","Arctic Seal pelt","A small gold colored bell","A quiver","[34mZantetsuken[0m","the Widowmaker, the sword of the Berserker","A magical [1mwhite[0m amulet","Orb of the Ancients","Initiate's garb","Dark Rider Chainmail",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

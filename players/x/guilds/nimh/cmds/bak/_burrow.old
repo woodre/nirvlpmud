@@ -1,0 +1,95 @@
+#include "../x.h"
+
+inherit N_EFUN;
+
+int cmd_burrow(string str)
+{
+ int cs, x, y, v;
+ string *cmds, *dx;
+ object hole;
+ if(!ENVTP->query_nimh_hole())
+ {
+  write("You must be in a hole dug by a NIMH Rat\n"+
+        "to be able to burrow.\n");
+  return 1;
+ }
+ if(!ENVTP->query_location() || catch(ENVTP->query_location()->load_me()))
+ {
+  write("Bad location for this hole.\nCannot burrow further.\n");
+  return 1;
+ }
+ if(!str)
+ {
+  write("Usage: 'burrow <dir1,dir2,etc.>'\n");
+  return 1;
+ }
+ write("\n");
+  cmds = explode(str,",");
+  cs = sizeof(cmds);
+  if(cs > 0)
+  for(x=0; x < cs; x++)
+  {
+   if(x >= 5)
+   {
+    write("You cannot burrow in more than five directions at once.\n");
+    return 1;
+   }
+/*
+   if(member_array(shorten_exit(cmds[v]),
+    ({"n","e","s","w","ne","nw","se","sw","u","d"})) == -1)
+   {
+    write("You may not burrow in a non-standard direction.\n"+
+          "Type 'nhelp burrow' for more info.\n");
+    return 1;
+   }
+*/
+   if(!(dx = (string*)ENVTP->query_location()->query_dest_dir()) || !sizeof(dx))
+   {
+    if(ENVTP->query_location()->query_std_dest1())
+    {
+     dx = ({
+      ENVTP->query_location()->query_std_dest1(),
+      ENVTP->query_location()->query_std_dir1(),
+      ENVTP->query_location()->query_std_dest2(),
+      ENVTP->query_location()->query_std_dir2(),
+      ENVTP->query_location()->query_std_dest3(),
+      ENVTP->query_location()->query_std_dir3(),
+      ENVTP->query_location()->query_std_dest4(),
+      ENVTP->query_location()->query_std_dir4(),
+      });
+    }
+    else {
+    write("Without obvious exits, you may not burrow.\n");
+    return 1;
+   }
+   }
+   if((y=member_array(shorten_exit(cmds[v]), dx)) == -1
+    && (y=member_array(elongate_exit(cmds[v]),dx)) == -1)
+   {
+    write("You may not burrow "+elongate_exit(cmds[v])+".\n");
+    return 1;
+   }
+   
+   if(!find_object(dx[y-1])) dx[y-1]->load_me();
+   if(!(hole=present(HOLE_ID, find_object(dx[y-1]))))
+    {
+     write(YEL+"   Burrowing "+elongate_exit(cmds[v])+"...\n"+NORM);
+   hole = CO(N_OBJ+"hole");
+   if(reverse_exit(cmds[v]))
+   if(!hole->query_exit(elongate_exit(reverse_exit(cmds[v]))))
+   hole->add_exit(elongate_exit(reverse_exit(cmds[v])), FN(ENVTP));
+   hole->set_creator((string)TP->RN);
+   hole->set_location(dx[y-1]);
+   MO(hole, dx[y-1]);
+   if(!ENVTP->query_exit(elongate_exit(cmds[v])))
+    ENVTP->add_exit(elongate_exit(cmds[v]), FN(hole));
+   }
+   else write("    Moving "+elongate_exit(cmds[v])+"...\n");
+   MO(TP, hole);
+   TR(ENV(hole), "\
+The ground beneath your feet trembles slightly.\n");
+   command("look", TP);
+ }
+ write("Burrow done.\n");
+ return 1;
+}

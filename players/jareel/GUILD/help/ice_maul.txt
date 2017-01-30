@@ -1,0 +1,13 @@
+  -- ICE MAUL --
+
+TYPE: Fixed
+INT REQ: 2
+USAGE: imaul on/off
+COST: 500,000
+WEP REQ: Blunt Type Wielded
+
+Mana drain only happens in combat.
+
+      /=LEVEL=COST SPS=DAMAGE=\
+      |   1  | 3/round| cold  |
+      \=======================/ 

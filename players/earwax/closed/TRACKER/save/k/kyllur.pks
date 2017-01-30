@@ -1,0 +1,6 @@
+02/22/06 01:55: Smokey      ((19+17 /Knights Templar) 23(1/1)
+03/16/06 20:45: Southstar   ((19    /Bloodfist)    18(2/1)
+03/19/07 20:52: Deathseeker ((15    /Rangers)      17(1/1)
+06/19/07 23:20: Tirnok      ((19+13 /Samurai)      26(2/1)
+06/19/07 23:22: Valen       ((19+100/Samurai)      33(5/1)
+06/20/07 00:07: Tirnok      ((19+12 /Samurai)      24(3/1)

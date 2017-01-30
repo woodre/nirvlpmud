@@ -1,0 +1,29 @@
+gold 0
+no_clean 0
+wielded 0
+wielded_by 0
+name_of_weapon "hockey stick"
+cap_name "Hockey stick"
+broke 0
+silentwield 0
+eff_wc 21
+misses 50
+hits 248
+alt_name 0
+alias_name "stick"
+short_desc "A Hockey Stick"
+long_desc "This is a very old hockey stick.  It is made of wood, and is a little heavy.The word 'LOUISVILLE' is written on the shaft in bold letters.  This stickbelongs to Gordie Howe, and helped him score 801 career goals in the NHL."
+read_msg 0
+save_flag 0
+class_of_weapon 20
+value 3500
+local_weight 2
+hit_func_fn "/open/jenny/gstick"
+wield_func 0
+wield_func_fn 0
+info 0
+type "staff"
+message_hit ({"[1mspeared[2;37;0m"," in the eye","[1mwacked[2;37;0m"," in the throat","[1mchopped[2;37;0m"," over the head","[1mslashed[2;37;0m"," in the groin","[1mbutt ended[2;37;0m"," in the ribs","[1mhacked[2;37;0m"," on the knee","[1mslashed[2;37;0m"," on the hand",})
+multipleIds ({})
+ob 0
+limit 4

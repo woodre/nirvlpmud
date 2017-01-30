@@ -1,0 +1,46 @@
+/* Okay lets start with this, kiss my ass. Change my code again and you will not be a happy camper.*/
+/* Oks lets start with basics here
+  first, this weapon has never been changed even when it was requested so I have taken the liberty of
+  changing it.]  It is now fully legal
+  Second, Hawkeye, originally, had line 16, the x = 0;
+  on line 20, this makes it so that whenever the got the special
+  the x value was fixed till he got the special again
+  therefore players would get return 'x' on the special and until they
+  got the special the 'x' would remain
+  Also, the random query was not random(3)==0
+  but rather this_player()->query_alignment > 500
+  this made it so that players with alignment above 500
+  i.e. most paladins, bards, etc. would always get the return
+  last of all the return was 9 + random(9) which is far above the legal 
+standards- quite frankly not good
+  so i have changed it as you can see and the return averages to about 7 which is legal
+  for saveables.
+  if you have any gripes or comments please contact me
+  directly
+  -mythos <12/4/95>
+*/
+inherit "obj/weapon";
+int i,x;
+reset(arg) {
+   ::reset(arg);
+if(arg) return;
+       set_alias("scalpel");
+       SetMultipleIds(({"hawkeye scalpel"}));
+       set_name("Scalpel of Hawkeye");
+       set_short("Hawkeye's Scalpel");
+       set_long("A very powerful and sharp Scalpel of Hawkeye.\n");
+         set_class(18);
+         set_weight(3);
+         set_value(10000);
+          set_hit_func(this_object());
+}
+weapon_hit(attacker) {
+  x= 0;
+  if(random(3) == 0) {
+if(this_player()->query_alignment() > 500) {
+say(this_player()->query_name() + " slices his opponent to pieces with his scalpel!\n");
+  write("You slice your opponent to pieces with your scalpel!\n");
+return 7; }
+}
+   return x;
+}

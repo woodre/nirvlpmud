@@ -1,0 +1,32 @@
+./dune/closed/guild/snow/weapons/ninja_to.c:15:query_totaldam()  { return prof; }
+./dune/closed/guild/snow/weapons/unarmed.c:11:query_totaldam()  { return prof; }
+./dune/closed/guild/snow/weapons/nunchaku.c:14:query_totaldam()  { return prof; }
+./dune/closed/guild/snow/weapons/ton-fa.c:15:query_totaldam()  { return prof; }
+./dune/closed/guild/snow/weapons/kusari_gama.c:14:query_totaldam()  { return prof; }
+./dune/closed/guild/snow/weapons/naginata.c:14:query_totaldam()  { return prof; }
+./sparrow/closed/cyberninja/snow/weapons/ninja_to.c:15:query_totaldam()  { return prof; }
+./sparrow/closed/cyberninja/snow/weapons/unarmed.c:11:query_totaldam()  { return prof; }
+./sparrow/closed/cyberninja/snow/weapons/nunchaku.c:14:query_totaldam()  { return prof; }
+./sparrow/closed/cyberninja/snow/weapons/ton-fa.c:15:query_totaldam()  { return prof; }
+./sparrow/closed/cyberninja/snow/weapons/kusari_gama.c:14:query_totaldam()  { return prof; }
+./sparrow/closed/cyberninja/snow/weapons/naginata.c:14:query_totaldam()  { return prof; }
+./maledicta/closed/ton-fa.c:15:query_totaldam()  { return prof; }
+./gowron/closed/cyber/ninjatodaem.c:25:query_totaldam() { return totaldam; }
+./mythos/closed/others/kgamadaem.c:25:query_totaldam() { return totaldam; }
+./mythos/closed/others/nagidam.c:26:query_totaldam() { return totaldam; }
+./snow/closed/wepdefs.h:21:#define TOT MYWEP->query_totaldam()
+./snow/closed/ninjatodaem.c:25:query_totaldam() { return totaldam; }
+./snow/closed/cyber/wepdefs.h:24:#define TOT MYWEP->query_totaldam()
+./snow/closed/cyber/kusarigama.c:11:query_totaldam() { return prof; }
+./snow/closed/new/ninja_to.c:15:query_totaldam()  { return prof; }
+./snow/closed/new/unarmed.c:11:query_totaldam()  { return prof; }
+./snow/closed/new/nunchaku.c:14:query_totaldam()  { return prof; }
+./snow/closed/new/ton-fa.c:15:query_totaldam()  { return prof; }
+./snow/closed/new/kusari_gama.c:14:query_totaldam()  { return prof; }
+./snow/closed/new/naginata.c:14:query_totaldam()  { return prof; }
+./snow/closed/naginata.c:75:query_totaldam() { return totaldam; }
+./snow/hands.c:11:query_totaldam() { return totaldam; }
+./ulath/closed/ninjaweps/ton-fa.c:15:query_totaldam()  { return prof; }
+./ulath/ton-fa.c:15:query_totaldam()  { return prof; }
+./pathfinder/closed/kgamadaem.c:25:query_totaldam() { return totaldam; }
+./pathfinder/junk/kgamadaem.c:25:query_totaldam() { return totaldam; }

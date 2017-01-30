@@ -1,0 +1,29 @@
+
+
+                       [help disconnection]
+-----------------------=========+=========----------------------- 
+
+To reduce overhead and prevent abuse the following applies to
+disconnection:
+
+  When a player disconnects, the player will remain disconnected
+  on the game for up to 1/4 hour, at this point all the player's
+  items will be transferred to a box at its present location and 
+  the player will be forced to quit. The box will remain for another
+  45 minutes, then it, and its contents will be destroyed. Only
+  the disconnected player can get into its box.
+
+  If there is more than one box in a room just type 'get all' or 
+  'get box #' this will allow you to open your box. Each box is
+  marked with a tag containing the owner's name.
+
+  If less than 15 minutes remain until reboot when a player
+  disconnects, the player will automatically quit at 100 seconds
+  before reboot.  If less than 200 seconds remain until reboot,
+  the player will quit just before reboot.  If less than 20
+  seconds are left, the player will quit at the time of reboot.
+  
+  If you are fighting a monster and disconnect, combat will stop.
+  However, if you disconnect again while fighting that monster,
+  combat will continue, unless more than 15 minutes have passed.
+  

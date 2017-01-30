@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/indianheaddress","/players/snow/cam/stuff/shield","/players/puppy/s/eq/parchment","/players/snow/WEAPONS/glass_sword","/players/mythos/mwep/voice","/players/wren/Area/starbug/items/jacket","/players/wren/Area/starbug/items/bazookoid","/obj/armor","/obj/weapon","/players/wren/Area/starbug/items/mirror","/players/arrina/treas/horseshoe","/players/sado/shop/rose","/players/hippo/armour/shield","/players/snow/WEAPONS/tsunami","/players/snow/shadows/stuff/crown","/obj/treasure","/obj/discon","/players/hippo/weapons/molar_sharf","/players/scathe/weap/lbow","/players/scathe/armor/damulet","/players/snow/chaos/objects/crabmeat","/players/scathe/armor/igarb","/obj/weapon","/players/wren/Area/starbug/items/currie","/players/saber/armor/dshades",})
+shorts ({"a tiny indian headdress","[34m[1mBlessed Shield[0m[0m","Parchment","Glass Sword","Voice","Lister's leather jacket","Bazookoid [1;30mmkII[2;37;0m","An [1mwhite[0m metal ring","Curved sword","a slim pocket mirror","A Silver Horseshoe","A beautiful red rose blossom","lap of meat","[34mTsunami[0m","[1mShadowCrown[0m","Arctic Wolf pelt","A magical storage box","A molar sharf","Longbow of Force","A Dragon Amulet","A slab of giant crabmeat","Initiate's garb","Baby rattle","A tin of chicken currie","[1mDark Shades[2;37;0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

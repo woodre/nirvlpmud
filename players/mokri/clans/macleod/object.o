@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[36mMcLeod Clan[0m[0m"
+long_desc "This is the clan object of the McLeod Clan.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "clan"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is the clan object of the McLeod Clan.[0mType 'clan_help' for commands."
+clan_short "[36mMcLeod Clan[0m[0m"
+damage_type "sonic"
+hall_path "/players/angel/area/school/room/school_hall_04"
+object_name "clan"
+owner "joab"
+spell_alias "Blast"
+spell_mess_me "%hi white%You B L A S T %AKN% with EMINENCE F O R C E!!!%normal%"
+spell_mess_room "%hi white% %TPN% a McLeod Clansmen used EMINENCE F O R C E to ATTACK %AKN% their F O E!!!"
+spell_mess_them "%hi white%You have been B L A S T E D with EMINENCE F O R C E!!!%normal%"
+abilities ({})
+chan_history ({"[Thu Feb 28 19:57:01 2008] Deathseeker: hmm not sure it is in ancient","[Thu Feb 28 19:57:13 2008] Joab: ah","[Thu Feb 28 19:57:17 2008] Deathseeker: in the forest...","[Thu Feb 28 19:57:23 2008] Deathseeker: the one that no one fucks with lol","[Thu Feb 28 19:57:41 2008] Joab: not sure but not many wizes on lately","[Thu Feb 28 19:57:45 2008] Deathseeker: main mob is like 1.5mill...","[Thu Feb 28 19:57:57 2008] Deathseeker: yea...because not enough players to make it worth it to them...","[Thu Feb 28 19:58:01 2008] Deathseeker: it kinda goes in a circle...","[Thu Feb 28 19:58:17 2008] Deathseeker: no players=no wizs, and when players do log...they log off because no wizs...","[Thu Feb 28 19:58:21 2008] Deathseeker: verry vishious circle...","[Thu Feb 28 19:58:47 2008] Deathseeker: most people left after waxy, and verts feud...","[Thu Feb 28 19:59:49 2008] Deathseeker: ima start advertiseing nirvana rofcl","[Thu Feb 28 19:59:51 2008] Deathseeker: heh","[Thu Feb 28 20:00:19 2008] Deathseeker: like posting things on myspace...and things of the such...getting people to at least try it out...and i know a bunch of people that will vote 2x a day weithre they play or not...","[Sun Mar  2 18:17:58 2008] Deathseeker: heh i sayd most lol","[Sun Mar  2 20:20:55 2008] Deathseeker: sup joab","[Sat Mar 14 15:30:47 2009] Joab has promoted Gogeta to a clan leader!","[Sat Mar 14 15:34:19 2009] Gogeta: lol","[Sat Mar 14 15:34:29 2009] Gogeta: trying to remember all my commands","[Sat Mar 14 15:35:23 2009] Joab: me too... thats what took so long to add you back...",})
+leaders ({"gogeta",})
+join_type 2
+private_coffer 2119070
+public_coffer 0
+spell_delay 5
+spell_id 1
+spell_cost 50
+last_spell_time 1248655834

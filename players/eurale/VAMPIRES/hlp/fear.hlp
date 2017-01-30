@@ -1,0 +1,8 @@
+  Spell Name                      Description                        GL    sps
+----------------- ------------------------------------------------- ----  -----
+  fear <who>       When this spell is successfully cast on a player  17     25
+                   who has their wimpy set, they will run in fear.
+                   Success is determined by the level of the target
+                   in relation to the caster.  Because this spell
+                   has been abused in the past, it is now logged.
+                   (18 Willpower required)

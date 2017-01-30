@@ -1,0 +1,11 @@
+
+                    path1.c             wrhs1.c - wrhs2.c
+                      |                     |        |
+                    path2.c   wharf1.c  wrhs3.c - wrhs4.c
+                      |          |                   |
+          walk4.c - walk3.c - walk2.c - walk0.c - walk1.c
+            |                    |                   
+          dock3.c             dock1.c
+            |                    |                   
+          dock4.c - boat1.c   dock2.c
+

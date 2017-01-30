@@ -1,0 +1,89 @@
+penguins
+
+anger based, all abilities deal in anger:  calm, pissy, ornery, irate, insane
+inventory hides armor, under penguin suit
+flying
+belly slide, belly flop
+waddle
+support
+blinking (location teleport)
+
+evolution
+
+Types of Penguins:
+Caelin says: Emperor, King, Adelie (accented first e)
+Caelin says: gentoo, chinstrap, rockhopper
+Caelin says: maccaroni, royal, fiordland crested, erect-crested
+Caelin says: snares Island, yellow-eyed, fairy
+Caelin says: magellanic, humboldt, african, galapogos
+seaworld.org
+
+Penguin calls (vocalizations) are individually identifiable, allowing partners to
+recognize ach other and also their chick.  This is important since the
+members of a large colony of penguins are nearly indistinguishable on sight.
+Research has identified difference in the calls of male and female emperor
+penguins.  These differences probably function in courtship and mate
+selection.
+
+There are three main kinds of penguin calls:
+a) the contact call is usually used at sea to assist in visual recognition of
+colony members.  The contact call of emperor and king penguins can be
+heard one kilometer.
+b)  The display call is the most complex of all the calls and is used
+between partners in a colony.  The call must convey information on territorial,
+sexual, and individual recognition.
+c) The threat call is the simplest and is used to defend a territory and warn
+against predators.
+
+The other big method of communication is "displays":
+Penguins communicate by vocalizing and performing physical behaviors
+called displays. They use many vocal and visual displays to communicate
+nesting territories, mating information, nest relief rituals, partner and chick
+recognition, and defense against intruders
+
+Lots of good stuff on their senses and on their adaptations for water, etc.
+
+vars
+settings (funs)
+hb
+armor
+query_auto_load(){ return GUILD_FILE+":"; }
+id(){
+reset(){
+extra_look(){
+long(){
+short(){
+void guild_death(){
+void init(){
+  if(!restore_stats()) save_stats();  /* restore guild stats */
+
+  if(!this_player()->query_bloodfist_player_shadow())  /* apply player shadow */
+  {
+    shad = clone_object(DIR+"obj/player_shadow.c");
+    shad->set_bloodfist_player_shadow(this_player());
+  }
+
+  c = sizeof(spells = files(CMDDIR + "*.c"));  /* add guild commands */
+  while(c--)
+  {
+    sscanf(spells[c], "%s.c", cmd);
+    add_action("cmd_hook", cmd);
+  }
+
+  this_player()->RegisterArmor(this_object(),
+  ({ "physical", 0, 0, "defense_bonus"}));
+
+  "/players/fred/closed/bloodfist/obj/stance_armor.c"->XXX();
+  this_player()->RegisterArmor(find_object("/players/fred/closed/bloodfist/obj/stance_armor"),({"physical",0,0,"stance_damage"}));
+}
+
+mixed cmd_hook(string str)
+{
+  string go;
+  go = DIR+"power/"+query_verb()+".c";
+  if(file_size(go) > 0)
+    return (mixed) go->main(str, this_object(), this_player());
+  return 0;
+}
+
+gen_wc_bonus(){ return wc_bonus; }

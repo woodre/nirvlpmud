@@ -1,0 +1,280 @@
+inherit "obj/treasure";
+object ob, shd, fun;
+
+reset(arg) {
+if(arg)  return;
+  set_id("nightshade's hour glass");
+  set_alias("glass");
+  set_value(0);
+  set_weight(0);
+  set_short("Nightshade's Hour Glass");
+}
+
+long() {
+if(this_player()->query_real_name() != "nightshade") {
+  write("You can see your time running out.\n");
+  return 1;
+  }
+  write("Commands are:\n");
+  write("       gexp, gmana, hmana, setmana, gfaith, cstat\n"
+ );
+  return 1;
+}
+query_auto_load() { return "players/nightshade/guild/time:"; }
+drop() { return 1; }
+init() {
+::init();
+  add_action("give_exp","gexp");
+  add_action("give_faith","gfaith");
+  add_action("heal_mana","hmana");
+  add_action("give_mana","gmana");
+  add_action("cleric_stat","cstat");
+  add_action("set_mana","setmana");
+   add_action("do_symbol", "csym");
+   add_action("do_cloak", "become");
+   add_action("do_uncloak", "revert");
+   add_action("do_lamp", "lamp");
+
+}
+
+
+do_symbol() {
+object ob, duh;
+duh=present("symbol", this_player());
+if(!duh) {
+   write("You clone a symbol.\n");
+   ob=clone_object("players/nightshade/guild/symbol");
+   move_object(ob, this_player());
+   return 1;
+}
+write("You have one but here is the new one. Destructing and re-cloning.\n");
+destruct(duh);
+ob=clone_object("players/nightshade/guild/symbol");
+move_object(ob, this_player());
+return 1;
+}
+cleric_stat(str) {
+object ob, badge;
+int gl, gexp, gdon, gf, gm, gmmax;
+string gc, gp;
+int gt;
+int st;
+  if(!str) {
+    write("Format: kstat <player>\n");
+    return 1;
+  }
+  ob = find_player(str);
+  if(!ob) {
+    write("No one by that name.\n");
+    return 1;
+  }
+  badge = present("cleric_guild", ob);
+  if(!badge) {
+    write(ob->query_name()+" does not have the symbol of faith.\n");
+    return 1;
+  }
+  gl = badge->query_guild_level();
+  gexp = badge->query_guild_exp();
+  gdon = badge->query_donated();
+  gf = badge->query_faith();
+  gm = badge->query_mana();
+  gmmax = badge->query_max_mana();
+  gt = ((gl * 2)+10) - badge->query_heal_count();
+  write(ob->short() + "\n");
+  write("Guild Level: " +gl+ "\t\t\tGuild Exp: " +gexp+ "\n");
+  write("Mana: "+gm+" / "+gmmax+"\t\tDonated: "+gdon+"\n");
+  write("Guild Faith: " +gf+ "\t\t\tHeal left: "+gt+ "\n");
+  return 1;
+}
+
+give_exp(str) {
+object ob, badge;
+string who;
+int am;
+  if(this_player()->query_name() != "Nightshade") {
+    write("You can not do that.\n");
+    return 1;
+  }
+  if(sscanf(str, "%s %d", who, am) != 2) {
+    write("Wrong usage.\n");
+    return 1;
+  }
+  ob = find_player(who);
+  if(!ob) {
+    write("No one by that name playing.\n");
+    return 1;
+  }
+        badge = present("cleric_guild", ob);
+
+  if(!badge) {
+    write("That player does not have a badge.\n");
+    return 1;
+  }
+  write("You give " +ob->query_name()+ " " +am+ " guild exps.\n");
+  tell_object(ob,this_player()->query_name()+
+        " has given you " +am+ " guild exps.\n");
+  badge->add_guild_exp(am);
+  return 1;
+}
+
+
+give_faith(str) {
+object ob, badge;
+string who;
+int am;
+  if(this_player()->query_name() != "Nightshade") {
+    write("You can not do that.\n");
+    return 1;
+  }
+  if(sscanf(str, "%s %d", who, am) != 2) {
+    write("Wrong usage.\n");
+    return 1;
+  }
+  ob = find_player(who);
+  if(!ob) {
+    write("No one by that name playing.\n");
+    return 1;
+  }
+  badge = present("cleric_guild", ob);
+  if(!badge) {
+    write("That player does not have a badge.\n");
+    return 1;
+  }
+  write("You give " +ob->query_name()+ " " +am+ " faith points.\n");
+  tell_object(ob,this_player()->query_name()+
+        " has given you " +am+ " faith points.\n");
+  badge->add_faith(am);
+  return 1;
+}
+
+
+give_mana(str) {
+object ob, badge;
+string who;
+int am;
+  if(this_player()->query_name() != "Nightshade") {
+    write("You can not do that.\n");
+    return 1;
+  }
+  if(sscanf(str, "%s %d", who, am) != 2) {
+    write("Wrong usage.\n");
+    return 1;
+  }
+  ob = find_player(who);
+  if(!ob) {
+    write("No one by that name playing.\n");
+    return 1;
+  }
+  badge = present("cleric_guild", ob);
+  if(!badge) {
+    write("That player does not have a badge.\n");
+    return 1;
+  }
+  write("You give " +ob->query_name()+ " " +am+ " mana points.\n");
+  tell_object(ob,this_player()->query_name()+
+        " has given you " +am+ " mana points.\n");
+  badge->add_mana(am);
+  return 1;
+}
+heal_mana(str) {
+object ob, badge;
+string who;
+int am;
+  if(this_player()->query_name() != "Nightshade") {
+    write("You can not do that.\n");
+    return 1;
+  }
+  ob = find_player(str);
+  if(!ob) {
+    write("No one by that name playing.\n");
+    return 1;
+  }
+  badge = present("cleric_guild", ob);
+  if(!badge) {
+    write("That player does not have a badge.\n");
+    return 1;
+  }
+  write("You heal " +ob->query_name()+ "'s mana points.\n");
+  tell_object(ob,this_player()->query_name()+
+        " has healed your mana points.\n");
+  badge->add_mana(1000);
+  return 1;
+}
+set_mana(str) {
+object ob, badge;
+string who;
+int am;
+  if(this_player()->query_name() != "Nightshade") {
+    write("You can not do that.\n");
+    return 1;
+  }
+  if(sscanf(str, "%s %d", who, am) != 2) {
+    write("Wrong usage.\n");
+    return 1;
+  }
+  ob = find_player(who);
+  if(!ob) {
+    write("No one by that name playing.\n");
+    return 1;
+  }
+  badge = present("cleric_guild", ob);
+  if(!badge) {
+    write("That player does not have a badge.\n");
+    return 1;
+  }
+  write("You set " +ob->query_name()+"'s max mana to " +am+".\n");
+  badge->set_max_mana(am);
+  return 1;
+}
+
+do_lamp(str)
+{
+object target;
+if(!str) return;
+if(str == "off")
+{
+if(shd) destruct(shd);
+write("Cleaning lamps.\n");
+return 1;
+}
+target=find_player(str);
+if(!target)
+{
+write("No such dood.\n");
+return 1;
+}
+if(shd)
+{
+write("The person is already lamped.\n");
+return 1;
+}
+shd=clone_object("players/nightshade/misc/shield");
+shd->startup(target);
+write(capitalize(str)+" is now being lamped.\n");
+return 1;
+}
+do_cloak(str) {
+        if(!str) {
+        write("Become what?\n");
+        return 1;
+                }
+        if(fun) {
+write("You are already shadowed.  Revert if you want to change.\n");
+return 1;
+}
+write("You become "+capitalize(str)+".\n");
+say(this_player()->query_name()+
+"'s form starts to melt and reshape into the likeness of "
++capitalize(str)+".\n");
+   fun=clone_object("players/nightshade/misc/tool_shadow");
+   fun->target_shadow(this_player());
+   fun->set_boggle(str);
+   return 1;
+}
+do_uncloak() {
+write("You turn to normal.\n");
+say(this_player()->query_name()+" reverts back to normal.\n");
+   write("Ok.\n");
+   fun->remove_target();
+   return 1;
+}

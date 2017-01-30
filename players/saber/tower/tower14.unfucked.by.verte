@@ -1,0 +1,124 @@
+#define tp this_player()->query_name()
+inherit "room/room";
+int search_count, clone_count, mcount, t;
+object ob, OBJ;
+string MON;
+
+reset(int arg){
+search_count = 1;
+  if(!present("xb")) {
+    move_object(clone_object("/players/mythos/closed/guild/forest/misc/xb.c"),this_object()); }
+if(!present("barfight")) {
+ move_object(clone_object("/players/saber/effects/barfight.c"),this_object());
+ }
+if(!present("sign")) {
+move_object(clone_object("/players/saber/food/fightpub.c"),this_object());
+}
+if(!present("mercenary")) {
+move_object(clone_object("/players/saber/monsters/merc.c"),this_object());  }
+if(!present("orc")) {
+move_object(clone_object("/players/saber/monsters/orc.c"),this_object());  }
+if(!present("amazon")) {
+move_object(clone_object("/players/saber/monsters/amazon.c"),this_object());  }
+if(!present("thief")) {
+move_object(clone_object("/players/saber/monsters/thief.c"),this_object());  }
+if(!present("barbarian")) {
+move_object(clone_object("/players/saber/monsters/barbarian.c"),this_object());  }
+ if(!arg){
+  set_light(1);
+  short_desc="Eternal Bar Fight";
+long_desc=
+ "You are in the common room of a pub which\n"+
+ "has seen much better days. Chairs, tables\n"+
+ "and bodies are scattered haphazardly about\n"+
+ "the chamber, and the overpowering smell of\n"+
+ "alcohol pervades the air.  There is a SIGN\n"+
+ "upon the wall.\n";
+
+items=({
+ "portal","A dark stone portal filled with a hazy blue aura",
+ "floor","The floor is covered with broken furniture and broken people",
+ "chair","A broken chair lying in multiple pieces on the floor",
+ "table","A smashed table leaning agaist the wall",
+ "pub","The common room of a nameless Inn",
+ "chamber","The common room of a nameless Inn",
+ "bodies","Many bodies strewn in random places about the room",
+ "barmaid","A comely young barmaid serving out drinks to the patrons",
+ });
+
+  dest_dir=({
+ "/players/saber/tower/tower6.c","portal",
+ "/players/saber/tower/tower14+1.c","east",
+  "/players/saber/tower/tower14+2","down",
+           });
+  call_out("check",60);
+  }   }
+init(){
+ ::init();
+  add_action("search","search");
+add_action("east","east");
+}
+
+east() {
+if (call_other(this_player(), "query_level", 0) < 20) {
+ write("There is too much broken furniture in the way.\n");
+ say(tp+" tries to move east, but is blocked by the broken furniture.\n");
+ return 1;   }
+write("You manage to wiggle through the broken furniture...\n");
+say(tp+" leaves east.\n");
+call_other(this_player(), "move_player", "east#players/saber/tower/tower14+1.c");
+ return 1;    }
+
+search() {
+if (search_count == 2)
+{
+search_count = search_count + 1;
+ write("You find a small gem on one of the unconscious bodies.\n");
+ say(tp+" searches the area.\n");
+ob = clone_object("/players/saber/gems/amber.c");
+transfer(ob,this_player());
+return 1;
+}
+else
+{
+search_count = search_count + 1;
+write("You don't find anything worth keeping.\n");
+say (tp +" searches the area\n");
+ return 1;  }
+}
+
+
+check()  {
+
+ clone_count = 0;
+
+do  {
+
+  if(clone_count == 0)  {
+    MON = "MERC";  }
+  if(clone_count == 1)  {
+    MON = "ORC";  }
+  if(clone_count == 2)  {
+    MON = "AMAZON";  }
+  if(clone_count == 3)  {  MON = "THIEF";  }
+  if(clone_count == 4)  {  MON = "BARBI";  }
+
+  if(!find_living(MON))  {
+  if(MON == "MERC")  {
+   OBJ = clone_object("/players/saber/monsters/merc.c");  }
+  if(MON == "ORC")  {
+    OBJ = clone_object("/players/saber/monsters/orc.c");  }
+  if(MON == "AMAZON")  {
+    OBJ = clone_object("/players/saber/monsters/amazon.c");  }
+  if(MON == "THIEF")  {
+    OBJ = clone_object("/players/saber/monsters/thief.c");  }
+  if(MON == "BARBI")  {
+    OBJ = clone_object("/players/saber/monsters/barbarian.c");  }
+
+  move_object(OBJ, "/players/saber/tower/tower14+1.c");
+        }
+  clone_count = clone_count + 1;
+
+  }  while(clone_count < 5);
+  call_out("check",60);
+}

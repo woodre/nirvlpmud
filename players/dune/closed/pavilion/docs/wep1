@@ -1,0 +1,24 @@
+
+---===ROBOMECH WEP1===---
+
+     There are several types of weapons available
+to your RoboMech.  Type 'robo wepinfo' for detailed
+information about each weapon.  The 'punch' weapon
+is your default weapon, you can always punch.
+     Weapons have range, heat dissipation, range, 
+blast radius, ammunition requirement, destruction
+factor, and capacity.  
+     Weapons with a range greater than zero will 
+shoot off a 'bullet' in the direction your mech is 
+currently facing.  Weapons have their own targeting 
+systems, so if you have specified a target, the bullet 
+will hit its target... if the target is in the path 
+of fire.  Path of fire is the direction that you 
+are aiming.  Path of fire is defined as a straight
+line that continues until it runs into a battlefield 
+wall.  Bullets will follow this path of fire if your
+aim of fire is specified.  If you have not specified
+an aim, or have specified an aim of 'any', your
+path of fire follow a straight randomly determined
+path.  
+

@@ -1,0 +1,68 @@
+#include "../lib/guild_defs.h"
+#include <ansi.h>
+
+
+inherit "/obj/clean";
+
+object player;
+
+void reset(int arg)
+{
+   if(arg) return;
+   set_no_clean(1);
+   enable_commands();
+}
+
+status id(string str)
+{
+   return (str == "u-sphere" || str == "hide_soul");
+}
+
+string short()
+{
+  object x;
+
+  x = TP;
+  if(!player) { destruct(this_object()); return 0; }
+  if(x == player) return "Your Soul";
+  if(present(x, ENV()))
+  {
+    if(query_verb() == "look" || query_verb() == "l")
+      return 0;
+  }
+  return capitalize((string)player->QRN) + "'s Soul";
+}
+
+void long(string str)
+{
+   if(present(TP, this_object()))
+      {
+      write("\n\
+\tYou are hidden within the nothingness of your soul...\n\
+\tA special sphere of protection surrounds your body.\n\
+\tType 'release' to free yourself.\n\n");
+      write("\
+         Outside you see:\n");
+      move_object(this_player(), environment());
+      command("look", this_player());
+      move_object(this_player(), this_object());
+   }
+}
+
+string realm()
+{
+   return "NT";
+}
+
+
+void catch_tell(string str)
+{
+   
+  if(!player) return;
+  if(player && (player != TP))
+      tell_object(player, "["+HIG+"RealWorld"+NORM+"]: " + str);
+}
+
+void set_player(object x) { player = x; }
+
+status query_undead_soul() { return 1; }

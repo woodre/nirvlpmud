@@ -1,0 +1,35 @@
+10/18/16 Gnar: 
+
+Room.c has been enhanced to be able to handle call_outs but deals with them nicely
+by turning them off when no players are in the room. Too many call_outs kills
+performance so this is the preferred method of doing call_outs in a room.
+
+In the inherited room's reset() call the: set_call_out function like this:
+	set_call_out( "trunk_effect", 5, 10 );
+
+Room.c sets call_out_func, call_out_int, call_out_int_rand from set_call_out.
+
+Then you need the define the function that will be called:
+
+trunk_effect() {
+  switch( random(5) ) {
+    case 0:
+      tell_room(this_object(), "From the corner of your eye you see the car rock slightly.\n");
+      break;
+    case 1:
+      tell_room(this_object(), "You hear a muffled thump from the back of the car.\n");
+      break;
+    case 2:
+      tell_room(this_object(), "You hear what sounds like scratching from the back of the car.\n");
+      break;
+    case 3:
+      tell_room(this_object(), "You hear a grunt from the direction of the car.\n");
+      break;
+    default:
+      tell_room(this_object(), "You hear a muffled moan from the trunk of the car.\n");
+      break;
+  }
+
+  call_out(call_out_func, call_out_int + random( call_out_int_rand ) );
+}
+

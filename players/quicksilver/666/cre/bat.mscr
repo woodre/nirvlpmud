@@ -1,0 +1,8 @@
+; test
+say Hey there!
+say Let me get some cake up in hurr.
+clone /players/quicksilver/closed/toys/piece.c
+say Schweet.  Got it.  Check me out.
+say Here ya go.
+give piece
+exec finish

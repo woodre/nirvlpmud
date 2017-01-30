@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/weapon","/obj/armor","/players/scathe/armor/igarb","/players/pain/NEW/arm/boots","/obj/weapon","/players/pain/NEW/weap/mace","/obj/torch","/players/sado/shop/rose","/players/jamila/beach/mobs/skin","/obj/treasure","/players/saber/armor/mshades","/players/saber/stuff/brief","/players/hippo/armour/shield","/players/hawkeye/armor/converse","/players/mythos/awep/tanto","/players/wren/Area/starbug/items/indianheaddress","/players/ultramagnus/rsack","/obj/torch","/players/scathe/armor/bowarmor","/players/pain/NEW/arm/helm","/obj/weapon","/obj/armor","/obj/armor","/obj/armor","/players/mythos/awep/daikyu",})
+shorts ({"a knarled staff","A suit of [1mwhite[0m chainmail","Initiate's garb","Heavy work boots","Baby powder","A large iron mace","sunflower","A beautiful red rose blossom","A Lizard Skin","Beach Bear pelt","Mirrorshades","A black briefcase","lap of meat","[31mConverse All-Stars[0m","Tanto","a tiny indian headdress","A red sack","light spell","Light Leather Armor","A horned helm","A Deadly Bullwhip","A pair of [1mwhite[0m boots","stone platemail","A suit of [1mwhite[0m platemail","Daikyu",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

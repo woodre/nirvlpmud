@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/polyelite/hall/r1","east",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A Hockey Stick","/players/jenny/wings/items/gstick",0,152,1,"A Hockey Stick","/players/jenny/wings/items/gstick",0,180,115,"[1mGrandor, Great Hammer[0m","/players/jareel/weapons/chaos/woods2/hammer",0,147,0,"[1;35mOrb [0mof [1;30mdarkness[0m","/players/cloud/Fayawyn/obj/orb",0,151,0,"[0m[33mGold Dragon Leggings[0m","/players/tallos/7tigers/objects/dragon_legs",0,0,0,"[33mPlatinum chain gloves[0m","/players/eurale/Chess/OBJ/gloves",0,0,0,"[34mAmulet o[0m[1m*[0m[34mf Protection[0m","/players/saber/armor/amuletpro",0,0,0,"[0m[1m[5m[32m[40mChristmas lights (lit)[0m","/players/boltar/things/xmaslights",0,0,0,})

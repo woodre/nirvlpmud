@@ -1,0 +1,128 @@
+CONCEPT
+	Strings: Can you live without em for more than 5 secs?
+
+SHARED STRINGS
+	Often I have wondered, how these things called strings work.
+	They handle so easily. Makes you suspicious, non?
+	And if you have ever read the section 'Shared string hash table'
+	in the output from the command 'status tables', you will become
+	even more suspicious. (Okay, not all will, but I sure did)
+
+	The game driver uses a kind of pool of strings, called the
+	shared string table. Every single string in the game will go
+	into this pool. And since all strings are unchangable this is
+	rather smart. Imagine the following:
+
+	room1.c
+		...
+		long() { write( "You are in a room.\n");}
+		...
+	
+	room2.c
+		...
+		long() { write( "You are in a room.\n");}
+		...
+
+	Even if these rooms are in different files, the driver will
+	spot that the two strings are identical and only put one into
+	the _shared_ string table.
+
+PROGRAMS
+	And that's a funny thing. These files compile into objects,
+	and the objects are split into several sections. One of these
+	sections is the string table.
+	The string table is a set of pointers to the shared string
+	table. One pointer for each "free" string. With free strings,
+	I mean text surrounded by double quotes. "You are in a room.\n"
+	is a free string. Whereas a string variable is not.
+
+	Consider this then:
+		...
+		string str;
+		str= "You are in a room.\n";
+		...
+
+	First, any value already in 'str' is freed. In this case,
+	nothing happens, since 'str' is 0. Then all that happens will
+	be that 'str' is assigned one of the pointers to the shared
+	string table from the object's string table. Simple as that..
+
+VARIABLES
+	Getting closer to the problems:
+		...
+		long_desc=
+			"You are in a room.\n" +
+			"You see nothing special.\n";
+		...
+
+	This is the _wrong_ way of doing it. The program has two free
+	strings. At the time of the assignment, a third string will be
+	composed from adding the two strings together. The result is
+	three strings in the shared string table:
+
+	1:	"You are in a room.\n"
+	2:	"You see nothing special.\n"
+	3:	"You are in a room.\nYou see nothing special.\n"
+
+	The first two being free strings used by the program,
+	and the third being the combined string used by the
+	variable 'long_desc'
+
+==>	How it probably should be done:
+		...
+		long_desc= "\
+		You are in a room.\n\
+		You see nothing special.\n";
+		...
+
+	This will result in one and only one shared string.
+
+	1:	"You are in a room.\nYou see nothing special.\n"
+
+	Which is used by both the program and and 'long_desc'.
+==>	And less than half the memory will be used.
+
+REFRENCES
+	When you assign a value to a variable, then value formerly
+	held by the variable will be deallocated. When an object is
+	destructed, all its free strings will be deallocated. (Values
+	of local variables are all deallocated on function return)
+
+	Each shared string has a use/reference count, which is
+	increased every time you make a reference to it. And
+	decreased every time you try to free it. If the count reaches
+	zero, the string will be utterly removed from the shared
+	string table.
+
+	In the example above, the sole string would have a ref. count
+	of 2. If you were to do a 'long_desc= 0;', ref. count would
+	decrease to one. And if the object was destructed, ref. count
+	would reach zero and the string would vanish.
+
+==>	Always remember to deallocate long strings in global variables
+	when you are finished with them. (Most often encountered when
+	using read_file(), read_bytes(), etc)
+
+SWAPPING
+	(Background tech stuff)
+	The 3.01.02-DR driver can only swap programs to disk.
+	Strings will stay in memory forever.
+	Every time a shared string is in any way used, it is moved to
+	the top of the table, thus slowly pushing infrequent used
+	strings to the back of the list.
+	Infrequent used strings will just sit there, in the back,
+	looking stupid, but not causing any noticeable CPU use.
+
+CONCLUSION
+	For each string there is at least a 12 byte overhead.
+	Take /room/quest_room.c. It does a long description of 11
+	lines the wrong	way. Total length is 803 chars.
+	Shared strings allocated: 12 (11 lines and sum of the 11)
+	Memory used: 12*12 bytes + 2*803 bytes	= 1750 bytes
+	Done right: 12 bytes + 803 bytes	=  815 bytes
+	Memory wasted: (1750 - 815) bytes	=  935 bytes
+
+	My estimate is that Nirvana has an average load of 1000
+	blueprint objects in which strings are ill used. Wild guess,
+	possible savings could be 200-300k. Hmm.. not enough :^)
+	[Commercial time: The 3.2.1 driver can do this automatically]

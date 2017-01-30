@@ -1,0 +1,18 @@
+a
+Q
+Bad argument 1 to call_other()
+Current object was players/dune/closed/guild/snow/weapons/kusari_gama#12146, line 49
+"fake_beat" in "players/mizan/closed/moe_pacemaker.c" ("players/mizan/closed/moe_pacemaker") line 31
+"heart_beat" in "players/gowron/room/obj/moe.c" ("players/gowron/room/obj/moe#12376") line 175
+"smash_glasses" in "players/gowron/room/obj/moe.c" ("players/gowron/room/obj/moe#12376") line 162
+"hit_player" in "players/dune/closed/guild/objects/shadow.c" ("players/dune/closed/guild/objects/shadow#9479") line 301
+"do_damage" in "players/dune/closed/guild/objects/shadow.c" ("players/dune/closed/guild/objects/shadow#9479") line 338
+"calcDamage" in "players/dune/closed/guild/objects/shadow.c" ("players/dune/closed/guild/objects/shadow#9479") line 554
+"hit_player" in "obj/living.c" ("obj/player#9474") line 262
+"do_damage" in "obj/living.c" ("obj/player#9474") line 478
+"death" in "obj/living.c" ("obj/player#9474") line 674
+"save_me" in "obj/player.c" ("obj/player#9474") line 3245
+"compute_treasure" in "obj/player.c" ("obj/player#9474") line 3319
+"short" in "players/dune/closed/guild/snow/weapons/weapon.c" ("players/dune/closed/guild/snow/weapons/kusari_gama#12146") line 71
+Error in call out.
+Undefined function: illegal_patch

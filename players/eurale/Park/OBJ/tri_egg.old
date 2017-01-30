@@ -1,0 +1,57 @@
+#define tpn this_player()->query_name()  /* player name  */
+#define ETP environment(this_player())
+#include "/players/eurale/closed/ansi.h"
+int number;
+
+id(str) { return str == "triceratop egg" || str == "egg"; }
+short() { return "triceratop egg"; }
+query_save_flag() { return 1; }
+query_value() { return (number * 411); }
+long() {
+  write("This is the egg of the fearsome triceratops.  It is about\n"+
+	"18 inches long and 25 inches in circumference.  You can either\n"+
+	"'suck' it or  barter it in.\n"); }
+
+reset(arg) {
+  if(arg) return;
+  number = 3;
+}
+
+init() {
+  add_action("suck_egg","suck");
+  add_action("Barter","barter");
+}
+
+suck_egg(str) {
+if(str == "egg") {
+  if(!call_other(this_player(),"eat_food", 5)) return 0;
+write("You poke a small hole through the thick shell and\n"+
+      "suck out some of the dark green slime from inside.  The\n"+
+     "smell is enough to make you vomit but you feel better...\n");
+  number = number - 1;
+call_other(this_player(),"heal_self",50);
+call_other(this_player(),"recalc_carry");
+if(!number) {
+  write(BOLD+"You suck out the last of the vile egg slime and smash the shell."+NORM+"\n");
+  destruct(this_object()); }
+ return 1; }
+}
+
+Barter(str) {
+int num;
+if(!str) { write("Barter what?\n"); return 1; }
+if(str == "egg") {
+if(!present("sedjak",ETP)) { write("What?\n"); return 1; }
+  num = number * (1400 + random(400));
+  write("Sedjak takes the egg.  He tells you, 'Haven't seen one of\n"+
+        "these in a while, I'll take it' and he hands you "+num+" coins\n"+
+        "for it.\n");
+  this_player()->add_money(num);
+  destruct(this_object());
+  return 1; }
+}
+
+
+get() { return 1; }
+
+query_weight() { return number; }

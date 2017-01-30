@@ -1,0 +1,208 @@
+/* 03/07/06 Copyright (c) Earwax/David Halek
+ *
+ * The actual 'adrenaline' object...it's an invisible, no-ac armor
+ * object that functions similar to bracers of speed where it calls
+ * an additional attack().  Description of injection:
+ *
+ * An injection specifically intended for CyberNinja use only.  This
+ * is sort of a stop-gap measure to beef ninja offense somewhat so
+ * they can contend with other guilds, until we nerf the attack()
+ * code in the dominant weapons, as well as address overall game
+ * balance and equipment.
+ *
+ * Formula:  chance of a 2nd attack() call in a given round is:
+ * ste/3 + dex/3 + chip level + belt level + xlevel/10
+ * with each having a max of 10, for a total chance of 50%.
+ *
+ * This will not recurse further, for a max of 2 attacks per round,
+ * on average, 3 attacks per 2 rounds, for a +100 with max stats
+ * and max guild.
+ *
+ * Defense:  it has an additional chance of returning a value for
+ * a very minor defensive bonus.  This chance per hb is 1/3 of the
+ * chance for the extra attack, for a return of 1+random(10).
+ */
+
+#include "../../defs.h"
+
+#define DEFENSE_BONUS 1+random(10)
+
+/* Global Variables */
+object Owner;  /* Who owns this thing */
+int    Chance; /* Calculated chance of attack() call */
+int    Hb;     /* To ensure it doesn't fire more than once/hb */
+status Flag;   /* So players can't use the command */
+
+/* Prototype Declarations */
+void defense_message(int i);
+void attack_message(int i);
+
+/* For testing purposes */
+void twax(string arg) {
+  object ob;
+  ob = find_player("earwax");
+   tell_object(ob, HIG+arg+NORM+"\n");
+}
+
+status drop() { return 1; }
+
+status id(string arg) { return arg == "CRYSTALIZED_ADRENALINE_ID"; }
+
+status activate_adrenaline(object who)
+{
+  if (!who)
+    return 0;
+
+  Owner = who;
+  Owner->RegisterArmor(this_object(), ({"physical", 0, 0, "do_special"}) );
+  return 1;
+}
+
+int do_special(object ob)
+{
+  object gob;
+  int ret;
+
+  if (!ob || !((object)ob->query_attack()))
+    return 0;
+
+  Owner = environment(this_object());
+  gob = present("implants", Owner);
+  ret = 0;
+
+  if (!Owner)
+    return 0;
+  if (!((object)ob->query_attack()))
+    return 0;
+
+  /* Calculate chance of extra attack */
+  if (!Chance || random(100) == 66)
+  {
+    int t;
+
+    if (!gob) /* They aren't a ninja? cheater! */
+      return -100;
+
+    t = (int)Owner->query_attrib("ste") / 3;
+    Chance = (t > 10 ? 10 : t);
+    t = (int)Owner->query_attrib("dex") / 3;
+    Chance += (t > 10 ? 10 : t);
+    Chance += (int)gob->guild_lev();
+    t = (int)gob->query_art_level();
+    Chance += (t > 7 ? t - 7 : 0);
+    Chance += ((int)Owner->query_extra_level()/10);
+  }
+
+  /* See if there's a defensive (return value) special */
+  if ((Chance /3) > random(100))
+  {
+    ret = DEFENSE_BONUS;
+    defense_message(random(4));
+  }
+
+  /* See if they get the extra attack */
+  if (Chance > random(100))
+  {
+    if (Hb >= time())
+      return ret;
+
+    Flag = 1;
+    command("Maledicta_ghetto_fix", Owner);
+    Flag = 0;
+    attack_message(random(8));
+    Hb = time();
+  }
+
+  return ret;
+}
+
+status destruct_me(string arg)
+{
+  write("Destructing...\n");
+  move_object(this_object(), "/room/void");
+  destruct(this_object());
+  return 1;
+}
+
+void init()
+{
+  add_action("extra_attack_fun", "Maledicta_ghetto_fix");
+  /* For testing */
+  add_action("destruct_me", "calmdown");
+}
+
+status extra_attack_fun(string arg)
+{
+  object wep, atk;
+
+  /* They've found out the command, and are using it manually */
+  if (Flag < 1)
+    return 0;
+
+
+  this_player()->toggle_already_fight(1);
+  wep = (object)this_player()->query_weapon();
+  atk = (object)this_player()->query_attack();
+
+  if (!atk)
+    return 1;
+
+  if (wep)
+  {
+    wep->hit(atk);
+  }
+
+  this_player()->attack();
+  return 1;
+}
+
+string extra_look()
+{
+  return (string)this_player()->query_name()
+    + " is tweaking on "+HIC+"crystalized adrenaline"+NORM;
+}
+
+void defense_message(int i)
+{
+  string name;
+
+  name = (string)Owner->query_name();
+  tell_object(Owner, HIC + ({
+    "Your enhanced speed allows you to dodge attacks.", 
+    "You narrowly avoid some damage.",
+    "You laugh as your incredible speed makes your opponent miss.",
+    "You dodge with ungodly speed." })[i] + NORM+"\n");
+  tell_room(environment(Owner), HIC + name + ({
+    " moves faster than your eyes can follow.\n",
+    " dodges attacks with ease.\n",
+    " spins under an attack.\n",
+    " dodges an attack with ungodly speed.\n",
+    })[i] + NORM, ({ Owner }));
+}
+
+void attack_message(int i)
+{
+  string name;
+
+  name = (string)Owner->query_name();
+  tell_object(Owner, HIC + ({
+    "Your incredible speed allows you to strike again!\n",
+    "You strike again!\n",
+    "You attack in a flurry of speed!\n",
+    "You attack in a blur of motion!\n",
+    "Your movements blur as you strike again.\n",
+    "Your body blurs with speed.\n",
+    "Your muscles twitch and spasm, and you strike again!\n",
+    "You swing again.\n",
+    })[i] + NORM);
+  tell_room(environment(Owner), HIC + name + ({
+    " attacks with blinding speed!\n",
+    " strikes again.\n",
+    " attacks in a flurry of speed.\n",
+    " blurs as they strike again.\n",
+    " swings again.\n",
+    " is a whirlwind of motion.\n",
+    " laughs and hits again.\n",
+    " gets another attack in.\n",
+    })[i] + NORM, ({ Owner }));
+}

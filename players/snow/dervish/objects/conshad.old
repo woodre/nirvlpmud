@@ -1,0 +1,59 @@
+#include "/players/snow/dervish/def.h"
+
+object victim;
+int time;
+
+set_victim(object ob) {
+  if(!ob) return;
+  victim = ob;
+  shadow(victim, 1);
+  return 1; }
+
+set_time(num) { time = num; }
+
+stop_con_shadow() {
+  shadow(victim, 0);
+  destruct(this_object());
+  return 1; }
+
+reset() {
+  set_heart_beat(1); }
+
+heart_beat() {
+  if(!environment()) return;
+  if(!random(5)) effect();
+  if(!time) {
+  end();
+  shadow(victim, 0);
+  destruct(this_object()); }
+  time --; }
+
+hit_player(int num) {
+  int total;
+  object me;
+  me = this_player();
+  if(me && me->query_guild_name() != "dervish")
+    return victim->hit_player(num);
+  total = num;
+  total = total * 2;
+  if(total > 50) total = 50;
+  return victim->hit_player(total); }
+    
+short() {
+  return victim->short()+" "+BOLD+RED+"(Confused)"+OFF+OFF; }
+
+is_confused() { return 1; }
+
+effect() {
+  if(victim && environment(victim)) {
+  tell_room(environment(victim),
+    victim->query_name()+" stumbles about in a whirlwind of sand.\n");
+  return 1; }
+  return; }
+
+end() {
+  if(victim && environment(victim)) {
+  tell_room(environment(victim),
+    victim->query_name()+" blinks as the sand dissipates.\n");
+  return 1; }
+  return; }

@@ -1,0 +1,25 @@
+>> UPDATES!
+  Right now there is'nt much visible going on. The guild core is
+  currently being furrowed out to fit the new morph forms. We are
+  going from 5 levels, with roughly 13 (?) forms, to 15 levels with
+  at least 60, and possibly 20 more. You should not run into problems
+  with the existing command set, existing morphs (except blobel), and
+  any existing code in the jello. The only new stuff that will be
+  buggy (in the motd) will be NEW stuff. Before I can add any new
+  forms I HAVE to make sure that the kernel is stable and can fit
+  the new infrastructure and features required for them bulletproof.
+
+  I have finally found the breakthrough in legalizing the extremely
+  hard hits in combat caused by higher level forms. Tetrapod was already
+  pushing the limit, and going higher was a huge stumbling block
+  in making heavier morph forms.
+  What is the price paid? Experience. Some atomic morph form like
+  dark tetrapod, hydra, or the other multilimbed/headed forms will
+  suck exp out of you if you land hits with severe excessive force.
+  Why do this? Well its simple. I hit the legal hp/round limit with
+  tetrapod. There was no way I could keep anything higher legal or
+  even interesting without some sort of drawback. If you guys hate this
+  idea let me know. I need some feedback or i'll just assume its ok.
+  
+  Feedback? Questions? Comments?
+  -m

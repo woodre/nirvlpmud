@@ -1,0 +1,14 @@
+SYNOPSIS
+	void add_attribute( string attr)
+	void add_attribute( string attr, int value)
+	void add_attribute( string attr, object obj)
+	void add_attribute( string attr, int value, object obj)
+
+DESCRIPTION
+	Add a deletable attribute with the name 'attr' to an object.
+	If no object 'obj' is given, the current object is used.
+	If no 'value' is given, 1 is used.
+
+SEE ALSO
+	attributes(C), add_prot_attribute(E), delete_attribute(E),
+	get_attribute(E), query_attribute(E)

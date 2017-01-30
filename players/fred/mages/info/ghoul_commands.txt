@@ -1,0 +1,20 @@
+*******************************************************************
+
+                    Ghoul Commands
+
+  gkill <monster> -- make your ghoul attack
+  snag <item> -- pick something up
+  guse <weapon> -- have the servant wield a weapon of your choice
+  gwear <armor> -- have servant wear shield or ring only.
+  toss <item> -- have the servant drop an item
+  gtransfer <item> to <player> -- have the servant give someone something
+  gsit -- will stop your servant from following you
+  gstop -- will make your servant pay attention to you
+  gready -- will make your servant wield/wear it's inventory
+  absorb -- will absorb a corpse to heal itself
+  gmon <on/off> -- will toggle your servants health monitor
+  dismiss -- tells servant to take a hike
+  gauto <on/off> -- will toggle servants auto attack feature
+
+********************************************************************
+

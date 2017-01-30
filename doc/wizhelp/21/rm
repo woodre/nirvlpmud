@@ -1,0 +1,20 @@
+**************
+
+
+                     Rm
+
+Syntax:    rm <file>
+
+Desc:
+           This command deletes the specified file.
+
+Warning:   Be sure you do not need the file for its gone
+
+Example:   rm /players/bob/toast.c
+                  results
+           toast.c is deleted
+
+Related:   mv, cp, ed
+
+
+**************

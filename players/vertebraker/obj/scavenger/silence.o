@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/NEW/weap/soulcrusher","/players/saber/stuff/mic","/obj/treasure","/players/arrina/heals/ade","/obj/weapon","/players/arrina/weapons/longknif","/players/pain/NEW/arm/gloves","/players/scathe/armor/damulet","/obj/armor","/obj/weapon","/players/hippo/armour/glazour_coat","/obj/armor","/obj/weapon","/obj/weapon","/players/wren/Area/starbug/items/ogunit","/players/mythos/awep/tanto","/players/sado/shop/chocolate","/players/mythos/aarmor/shell","/players/puppy/s/eq/collar","/players/snow/heals/ice_sphere","/players/pain/NEW/arm/tunic","/players/mythos/awep/claw","/obj/weapon","/players/emerson/weap/bigfoot","/players/mythos/aarmor/do",})
+shorts ({"a mace named [1m[31mSoulCrusher[0m","A microphone","A piece of corundum","bottle of refreshing [33mlemonade[0m","short sword","A longknife","Leather work gloves","A Dragon Amulet","Steel Shield","Baby powder","glazour coat","A [1mwhite[0m helmet","Curved sword","Shark`s tooth","a case containing an OG unit.","Tanto","A box of delicious Belgian chocolates","Tortoise Shell","A leather collar","An [1;36mIce[0m Sphere","A handsome blue tunic","claws","Longsword","A BIG foot","Do-Maru",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

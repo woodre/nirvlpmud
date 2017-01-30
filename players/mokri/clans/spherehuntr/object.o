@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30m([1;34m*[1;30m)[1;34mSphere[1;30m([1;34m*[1;30m)[0m[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "sphere"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;30m([1;34m*[1;30m)[1;34mSphere[1;30m([1;34m*[1;30m)[0m[0m"
+damage_type 0
+hall_path "/room/church"
+object_name "sphere"
+owner "sin"
+spell_alias "cheal"
+spell_mess_me "blah"
+spell_mess_room "blah"
+spell_mess_them "blah"
+abilities ({})
+chan_history ({"[Thu Jun 12 09:05:41 2014] Sin: steps on kids or pets","[Thu Jun 12 09:05:47 2014] Sin: random chance tho","[Thu Jun 12 09:05:53 2014] Bizkit: ah didn't know that","[Thu Jun 12 09:06:07 2014] Sin: yeah stepped on a pet of mine a while ago","[Thu Jun 12 09:08:27 2014] Bizkit: cant' carry","[Thu Jun 12 09:10:05 2014] Sin: afk for a bit","[Fri Jun 20 21:55:46 2014] Amalee has joined the clan!","[Fri Jun 20 22:02:12 2014] Sin has promoted Amalee to a clan leader!","[Sat Oct 11 17:38:44 2014] Sin: cant switch it so having fred switch it within the code","[Sat Oct 11 17:39:14 2014] Bizkit: no biggie","[Sat Oct 11 17:39:30 2014] Sin: actually it is to me...you can use it to heal the djinn","[Sat Oct 11 17:39:40 2014] Bizkit: The Djinn gains the heal_value from the corpse. Duh, dumbass.","[Sat Oct 11 17:39:54 2014] Sin: ahh but does it heal to FULL then","[Sat Oct 11 17:40:20 2014] Sin: incase a corpse doesnt heal it to full you will have the clan spell as backup","[Sat Oct 11 17:40:22 2014] Bizkit: don't know 6 small corpses barley moved it from 3 to 4","[Sat Oct 11 17:40:40 2014] Sin: or if you need an emergency heal on it","[Sat Oct 11 17:41:14 2014] Bizkit: can u heal things with larn? or just yourself","[Sat Oct 11 17:41:33 2014] Sin: only yourself or players I believe","[Sat Oct 11 17:41:39 2014] Sin: and its alignment restricted","[Sat Oct 11 17:41:59 2014] Sin: which is kinda strange that CRUSADER isnt 'good' enough for it",})
+leaders ({"amalee",})
+join_type 2
+private_coffer 1000
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 50
+last_spell_time 1413073706

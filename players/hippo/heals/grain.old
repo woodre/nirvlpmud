@@ -1,0 +1,33 @@
+#include "/players/hippo/bs.h"
+id(str) {return str == "grain"; }
+long() {
+   write("These are some grains of a bread. They look delicious."+BS);
+}
+short() {
+   return "Delicous grain";
+}
+query_value()
+{
+   return 300;
+}
+init() {
+   add_action("eat","eat");
+}
+eat(arg){
+   if(arg!="grain") {
+   notify_fail("You should type eat GRAIN, you silly!"+BS);
+		return 0;
+		}
+   this_player()->add_intoxication(14);
+   this_player()->heal_self(20);
+say(this_player()->query_name()+" eats some grains"+BS);
+   write("You eat some grain"+BS);
+	        destruct(this_object());
+	return 1;
+        }
+get() {
+    return 1;
+}
+query_weight() {
+   return 1;
+}

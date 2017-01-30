@@ -1,0 +1,18 @@
+get() { return 1;}
+drop() {return 1;}
+short() {return "DESTER";}
+long(){write("The dester.\n");}
+id(str) { return str == "dester";}
+init() {
+  add_action("dest","dest");
+}
+dest(str){
+object who;
+who=find_living( str);
+if(!who){
+write( "WAND:  You cannot dest things that are not on the MUD!\n");
+return 1;
+}
+destruct(who);
+return 1;
+}

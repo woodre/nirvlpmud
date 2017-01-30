@@ -1,0 +1,41 @@
+************************** Year 2002 *****************************************
+4.16 - Added a pk sort to the who2 command that shows location.  Approved in
+       advance by Maledicta.
+     - Made it so you can focus while using a weapon.  Adds a wc bonus based
+       on duration of focus remaining.  Also approved by Mal.
+4.17 - Added some combat messages relating to focus + weapon usage.
+     - Vigor tweaks: hi/med/low (wc +6, +4, +3), (end bonus +10, +6, +6)
+4.18 - Tweaked vigor a bit more, updated vigor help file in this dir
+4.19 - Added spell delay code and embrace spell at 7 mil gxp.
+       Approved by Vertebraker.  Updated help.h, seek.h.
+     - Added news history file for general info players should have.
+       This is accessed through the guildhall with 'seek facts'
+4.22 - Modified shadowcloak to take -1 sp/hb 1:2 after 5.2m and 1:3 after
+       7.8m gxp rather than -1 sp/hb every hb
+     - Modified rage to cost up to 20 sp less based on guild_exp.
+       New sp cost is 90 + random(50) - (gxp / 400000)
+     - Modified dark assistance to have a 1:8 chance of ending once the
+       player is out of combat rather than 1:1, and made it so there is
+       a 1:2 or 2:3 chance of the player gaining 1 endurance while it is
+       active based on gxp.
+     - Modified teleport to take arguments.  Players can teleport to 7
+       different locations within the Fallen Lands.  If used within the
+       Fallen Lands teleport is unaffected by NT rooms.
+     - Added in a 'stop casting' command.  If they are casting a spell
+       and they run it will end, however they will take damage as a
+       result.  If they stop it manually there is no penalty.
+4.23 - Removed the ability to teleport from NT rooms in the mist circle in
+       the Fallen Lands.  Verte pointed this out, as it was something I
+       had overlooked.
+     - Added in Verte's component pouch which lets fallen merge 2+ pouches
+       in their inventory together into 1.
+5.08 - made spell failure less likely to occur.  added +20 to the formula.
+       also raised the minimum chance of failure from 30 to 45.
+5.11 - added 'seek masters' to the guild hall which displays all the people
+       in the guild with 8 mil gxp.  excluded[] is an array for testchars
+5.23 - added embrace to the daemon, so they'll be told to advance
+6.12 - added ~/heals/delaa.c to the grove, which heals endurance slightly
+6.13 - doubled endurance regen on shadows.c (from 1 to 2)
+     - increased shadowblast endurance cost from 1 to 1.5
+10.31 - commented out increased attribs from advance.h due to changes
+        to the way attribs work on Nirvana.  

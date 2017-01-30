@@ -1,0 +1,33 @@
+In the interim, here is a script that HUPs netinfo services to get a hot 
+http://www.daemonnews.org/200012/daemon-osx2.html
+restart.
+
+#!/bin/sh
+case `whoami` in
+root)
+;;
+*)
+echo "Not Administrator (root). You need to be in order to restart the 
+network."
+return
+;;
+esac
+
+echo "Restarting the network, network will be unavailable."
+kill `ps aux | grep ipconfigd | grep -v grep | awk '{print $2}'`
+echo " - Killed 'ipconfigd'."
+ipconfigd
+echo " - Started 'ipconfigd' right back up."
+sleep 1
+ipconfig waitall
+echo " - Ran 'ipconfig waitall' to re-configure for new settings."
+sleep 1
+kill -HUP `cat /var/run/nibindd.pid`
+echo " - Killed 'nibindd' with a HUP (hang up)."
+sleep 2
+kill -HUP `cat /var/run/lookupd.pid`
+echo " - Killed 'lookupd' with a HUP (hang up)."
+
+echo "The network has successfully been restarted and/or re-configured and 
+is now available."
+http://macosrumors.com/?view=archive/10-00

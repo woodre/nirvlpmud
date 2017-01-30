@@ -1,0 +1,452 @@
+>> OVERVIEW OF THE PROVING GROUNDS OF THE OVERPOWERLORD
+>> Mizan (sausage@beanos.com), May 2011
+
+* SUMMARY
+The concept of this area is that of a giant maze set far underground and
+in the spirit of a giant theme park for experienced adventurers. The target
+audience are high level players in large parties. The realm is meant to be
+too difficult for single players to traverse on their own.
+
+Players enter from the northeast corner and must make their way to the
+remaining three corners- one of which contains a final showdown with the
+maze boss OverPowerLord. The other two corners contain one very hard
+monster each. A unique feature in this area is that people who successfully
+solve the map are instructed to contact Mizan, providing a claim code, and
+a valid shipping address. Physical goodies will be mailed to the winner.
+Supplies of prizes are limited, on a first-come, first-serve basis.
+
+The maze features a top-down Roguelike dynamic view, showing other player
+locations, terrain, piles of gold, or other landmarks. The memory footprint
+is roughly the same load as /room/room.c per cell, and is daemon controlled.
+
+The size of the maze is fairly large. There are a roughly 4500 navigable
+room cells bounded by "mountains", each of which has the chance to spawn
+a variety of creatures or hazards (or both).
+
+The layout of the maze itself is static, but the position of contents
+within can be randomly shuffled at a interval which is to be determined.
+The process of shuffling the maze is performed via a Perl script.
+
+There are a variety of hazards within the maze itself, ranging from
+aggressive monsters, damage-dealing squares, and explosives which can be
+fatal to players. 
+
+In general the realm offers a high payout of EXP, but at an expense of
+lower gold coins given the amount of work to kill monsters.
+
+There are healing stations in the form of vending machines which sell a
+variety of multi-use heals scattered across the maze. They all have limited
+inventory, and also exclusively operate by way of the bank balance. Some of
+the healing items they sell expire within a certain time period if they
+are not used quickly enough.
+
+A variety of expensive luxury items exist in the realm to try and act as
+a giant coin sucking machine. One example is a bulletin board which costs
+500k coins to make a posting.
+
+
+
+>> OBJECT OF THE MAZE AND OUTCOME UPON SOLVING
+The objective is to find OverPowerLord and defeat him in combat.
+If this objective is achieved, players will be told to email Mizan with
+a redemption code which will cause Mizan to reply asking for valid
+shipping address(es). Players will then be mailed winning prizes for
+their achievement.
+
+
+
+>> DIRECTORY STRUCTURE
+opl/arrow.c       The realm entrance, loaded to /room/wild1
+opl/beasties      Monsters
+opl/CELLS         All of the cells in the maze
+opl/core          Core objects, such as modified monster.c, room.c, etc
+opl/daemons       Daemon objects used by other objects in the area
+opl/data          User saved data such as tripod card .o files, bulletin boards.
+opl/definitions.h Definitions used by code.
+opl/environs      Fixed, environmental objects that players cannot pick up.
+opl/heals         Heal items usable by players
+opl/items         Miscellaneous items
+opl/logs          Log files. Mostly monster kill files.
+opl/overview.txt   << This file you are reading
+opl/ROOMS         "Normal" rooms in the realm
+opl/vehicles      Vehicles operable by players in the realm
+
+
+
+>> HAZARDS
+There are no dark rooms in the maze area, but some single-room complexes can 
+be entered by using the right key on the lock. These complexes have a good
+chance of having an aggressive monster, or a lit explosive (more on this later).
+
+Everything is coded to use damage types, with a few exceptions- being the two
+explosives which are designed to deal out certain death to players.
+
+Corridor cells have a chance of presenting hazards in the following forms:
+
+  * EXPLOSIVES - environs/ied.c
+  This is an explosive, which deals 3000 hitpoints in damage to anyone nearby.
+  It is almost certainly fatal to all players, and can significantly weaken a
+  higher level monster which comes close enough. There is a 50% chance that on
+  load an IED will be 'lit' and if the player(s) are not paying attention on
+  arrival they will be all be caught in the blast. In a fully loaded state
+  there are roughly 80-90 of these IEDs scattered across the entire maze.
+
+  * MEAT EXPLOSIVES - environs/whale.c
+  This is a variation of above, which litters the MUD with dead whale meat on
+  explosion. Similarly, these also have a 50% chance of being 'lit' on arrival
+  with a random timer of 3-8 seconds before it detonates. Players are warned
+  on entry of the maze by the gatekeeper that explosives are present and
+  can be instantly lethal.
+
+  * LAVA - environs/lava.c
+  This hurts a player (50 + random(40)) in "fire" every few seconds.
+  It is generally very obvious that a player is in a lava room, plus it
+  also appears on the map.
+
+  * RADIOACTIVITY - environs/uranium-puddle.c
+  This infects a player with radiation sickness if a player lingers too
+  long near this pool. The sickness eventually goes away over time, and
+  hits players with (10 + random(10)) "other|radiation" hitpoints every
+  few seconds.
+
+  * AGGRESSIVE, UNKILLABLE FIXED POSITION MOB - environs/autocannon.c
+  This is a WC 80 monster which aggressively attacks anything which enters
+  its room. It cannot be killed. Players are hinted to its nature as an
+  unstoppable annoyance. It can be temporarily disabled (10 minutes) by
+  purchasing a 100,000 coin item (items/autocannon-remote.c).
+
+  * AGGRESSIVE, UNKILLABLE FIXED POSITION POOPGUN - environs/poop-volcano.c
+  Similar to above, except this is a WC 160 monster, and it fires poop
+  instead of bullets. It too can be disabled temporarily with a key fob
+  remote (items/volcanogun-remote.c) available for 150,000 coins.
+
+>> MONSTERS IN GENERAL
+Monsters inherit from the file opl/core/monster.c which has some added
+hazards from the normal monster.c
+
+  * MORE WIMPYING - Monsters who do not block exits will wimpy when
+  they are in trouble.
+
+  * HARD HITTING - If a player with more than 400HP is tanking, the monster
+  has a 1/25 chance of striking the player hard enough to take them down
+  to roughly 80 hitpoints. This is good to keep things hazardous but within
+  reasonable fairness to tanks who don't have nearly as much HP.
+
+
+
+>> 'EASY' MONSTERS
+
+The following are 'easier' monsters which can be found typically within
+single-width passages. There is a maximum of 6 monsters present in one cell,
+and whenever there is an intersection (more than 2 exits) there is a 50%
+chance that a monster will appear that 'blocks' the intersection preventing
+movement until that monster is killed.
+
+MOST of these monsters pull their stats from a daemon (statsDM.c) which
+then assigns them their values such as HP, WC, AC, level, and gold coins.
+1 in 10 monsters will have their WC elevated by 30%. There will be no other
+indication that this monster is unique. This serves to break up the routine
+and keep players sharp.
+
+Additionally, if these monsters are not dispatched within 120 rounds of
+combat, they will gate in additional help (in the form of a cobold or a
+knobgoblin).
+
+FILENAME               HP     WC    AC   GOLD       EXP PAYOUT   NOTES
+cobold.c             3000 70+R10    45   4500+R1000    495K      Aggro
+giraffe.c            4500 88+R160   40   1000+R4500    490K      Blocks rooms
+gold.c               3000 70+R10    45   5000+R5000    430K
+goliathbeano.c  2560+2300 80        47   5000          577K      Monster guild, Tough combat
+gonk.c               3000 70+R10    45   4500+R1000    330K      Wimpys a lot
+guido.c               800 50        25   1500+R1000     80K 
+gummybear.c          3000 70+R10    45   4500+R1000    400K
+gundroid.c           6000 70+R200   45   10000         600K      Aggro, spawns 3 cobolds on death
+knobgoblin.c         1300 50        25   1500+R1000    267K      Monster guild, flees a lot 
+neocon-blocker.c     3000 70+R40    45   4500+R1000    560K
+neocon.c             3000 70+R10    45   4500+R1000    430K
+zombie.c             3000 70+R10    45   4500+R1000    400K
+
+
+
+>> 'MEDIUM' MONSTERS in the Fungal Forests
+
+These are the green cells in the maze area. Monsters are not as heavily
+populated in these areas as they are in the 'grey' maze block cells.
+
+Some monsters are sneaky and utilize tactics such as always facing to
+attack the weakest player of a party, or also side-striking pets and
+kids. Other monsters have a 15% chance for a random(400) or similar
+attack spell.
+
+Similar to the "easy" monsters from above, there is a 1 in 10 chance that
+a monster will clone with a 50% boost in WC.
+
+FILENAME               HP     WC    AC   GOLD       EXP PAYOUT   NOTES
+big_bunny.c          5000 80+R15 45+R10  7500+R1000  1,300K 
+potato.c             5000 80+R15 45+R10  7500+R1000  1,300K
+wookie.c             5000 80+R15 45+R10  7500+R1000  1,300K
+wussy_male_vampire.c 5000 80+R15 45+R10  7500+R1000  1,300K
+
+
+
+>> 'MEDIUM' MONSTERS
+
+These monsters can be found normally within passageways, or any area
+that I need a slightly stronger 'choke point'. It is not inherently
+obvious that an area contains medium strength monsters, because I have
+not indicated a color change within a passageway.
+
+The 1-in-10, 50% boost in WC rule is also in effect for these monsters.
+
+FILENAME               HP      WC     AC    GOLD     EXP PAYOUT   NOTES
+beano-agent.c        6666     170     66      0         2,000K 
+goblin.c             5000  80+R60 45+R10  7500+R1000    1,500K
+guard_turkey.c       5800 100+R15 45+R10  3750+R500     1,500K
+gundroid_hard.c      9900 100+R220    50  20000         2,000K
+hydra-blocker.c      5000  85+R250    65  6000+R20000   1,650K
+hydra.c              5000  85+R220    70  6000+R10000   1,500K
+karate_normal_man.c  5000  85+R15 45+R10  5000          1,400K    Monster guild
+knobgoblin-bully.c 3000+2000 70+R10   45  4500+R1000      860K    Monster guild
+lectroid.c           5000  80+R15 45+R10  7500+R1000    1,300K
+sheep.c              5000  80+R15 45+R10  7500+R1000    1,300K
+soldier.c            5000  80+R15 45+R10  7500+R1000    1,300K
+
+
+
+>> HARD MONSTERS
+
+These monsters can also be scattered within normal maze passageways.
+They tend to exist either as individual isolated blocks to keep players
+on their toes, or in a large clump with the intent to offer significant
+resistance to a group of players in combat.
+
+These monsters do not come with a WC boost, but 1 in 6 will have a 50%
+boost in their HP.
+
+FILENAME               HP      WC     AC     GOLD     EXP PAYOUT   NOTES 
+domokun.c      8850+10000     250     65        0        3,000K
+fusion_octotron.c   24000 90+R350     55        0        6,000K
+goldhard.c          20000     150 55+R20  3333+R15000    3,000K   
+lectroid_boss.c     10000     150 55+R20  12000+R2000    2,700K
+narci.c             10000     150 55+R20  12000+R2000    3,000K  Monster guild
+ogre.c              10000     150 55+R20  12000+R2000    3,000K  Monster guild
+ogress.c            10000     150 55+R20  10000+R10000   3,000K  Monster guild
+postal_worker.c     13500     150 55+R20  12000+R2000    3,250K
+potentato.c         13000     150 55+R20  12000+R2000    3,400K
+powerpig.c          10000     150 55+R20  12000+R2000    4,000K  Hard hit spells
+shoop.c             10000     150 55+R20  12000+R2000    2,800K
+soldierboss-blocker.c 10000   150 55+R20  12000+R2000    3,000K
+weasel.c            10000     150 55+R20  12000+R2000    3,000K  Hard hit spells
+
+
+
+>> SEA MONSTERS (All invisible, all in water areas)
+
+These monsters are all invisible and operate in a fashion fairly similar to
+those in the Wasteland graveyards.
+
+FILENAME               HP      WC     AC     GOLD      EXP PAYOUT   NOTES
+bigfish.c            5000  80+R15 45+R10   7500+R1000      800K
+fish.c               3000  70+R10     45   4500+R1000      600K
+hugefish.c          10000     150 55+R20  12000+R2000    3,000K
+octopus.c           10000     150 55+R20  12000+R2000    3,000K
+
+
+>> RARE MONSTERS (Random locations, 'reward' placement at ends of passages.)
+
+These monsters tend to be a bit cushier with their rewards because they are only
+encountered at the dead end of a passageway. Of course there are odds that other
+items could be at the end of passageways as well, such as explosives, lava, or
+radiation pools.
+
+FILENAME               HP      WC     AC     GOLD      EXP PAYOUT   NOTES
+afei.c               5000  80+R15 45+R10  32000+R2000     1,100K
+austrian_death_machine.c 10K  150 55+R20  12000+R2000     3,600K
+barney.c             3000  70+R10     45  12000+R2000        60K
+batty.c             10000     150 55+R20  12000+R2000     3,100K  Monster guild
+clippy.c             3000  70+R10     45   7500+R1000       650K  Monster guild
+fettdog.c            3000  70+R10     45   7500+R1000       750K  Monster guild
+li-mao-ching.c      13000     150 55+R20  24000+R4000     4,200K MG+Fast healing
+nightmare.c          3000  70+R10     45       0              4K  A heal trap
+phantom_shitter.c    5000  80+R15 45+R10  12000+R2000     1,000K  Monster guild
+plu-santa.c          3000  70+R10     45   4500+R1000       700K  Monster guild
+tehfaviddleetwood.c  3000  70+R10     45   4500+R1000       400K  MG Wannabee
+thorgrim.c          20000     150 55+R20  12000+R2000     4,100K  Monster guild
+williamhung.c         180      15      7    1000            1.7K  Very weak
+
+
+>> BOSS MONSTERS
+
+These monsters exist only in three places- the extreme corners of the maze.
+Defeating any one of them will result in a message being displayed to the
+player, along with a long entry indicating that they should get in contact
+with Mizan as they have just won a 'real life' reward, consisting of some
+real-life goods which will be shipped by Mizan.
+
+These items are of a limited supply, sent out on a first-come, first-win
+basis. Upon defeat of the OverPowerLord, a portal is cloned which will allow
+players to leave the maze without having to fight their way home.
+The player(s) are instructed to mail Mizan to claim their prize- which on
+receipt of their email I will ask them for a valid shipping address to send
+a toy package, consisting of some OverPowerLord themed trading cards and buttons.
+
+The other bosses do not generate such portals, and do not offer physical prizes.
+The Gurkha offers a WC 21 blade in addition to its large payout of coins.
+The blade is located in beasties/hard/gurkha/kukhri.c and has a maximum
+return of 10, 20 percent of the time.
+
+FILENAME               HP      WC     AC     GOLD     EXP PAYOUT   NOTES
+gurkha.c            18888     250     78   100000        8,200K    WC 21 weapon prize
+taxes.c             18888     250     78   250000        9,000K    Only gold prize
+
+overpowerlord.c     38888     250     88        0       15,000K
+
+
+
+>> UNKILLABLE MONSTERS
+
+These monsters are not meant to be killed, and are part of the room complex
+on top of the actual maze area. They serve mainly ornamental purposes.
+
+uncle_touchy.c
+tripod.c
+paul.c
+greeter.c
+gatekeeper.c  << Also forces monsters back into the maze if they happen to go 'up'
+bunny.c
+barkeep.c
+
+
+
+>> HEALS
+
+Most of these heals are sold by randomly placed vending machines in the maze.
+There is a limited supply of each heal for each vending machine.
+Some heals have drawbacks in that they are completely ineffective, or
+that they can actually hurt a player.
+
+NAME                     SOAK  STUFF   TOX   CHARGES   HP   SP   COST   
+bacon_lemonade.c           14      0    18         4   50   50   1000
+baturine.c                 10      0     5         4   50   50   1200
+beaverpiss.c               10      0    10         4   50   50   1000
+bitchcake.c                 1      8     0         3   50   50   NOT SOLD
+calomelette.c              13     13     0         4  -80  -20   3500
+cloacacola.c               10      0     0         4   75   75   2000
+energybar_diaper.c         13     10     0         4   50   50   1800
+energybar_hotgarbage.c      1     13     0         4   50   50   1800
+foodloaf.c                  1     18     0         4   40   40   1200
+hotnuts.c                   7     14     0         4   90   90   2000
+instant_hangover.c          0      0    20         4    1    1   NOT SOLD
+jellydonut.c                1      8     0         3   50   50   1000
+nightmarefuel.c            10      0     0         4  200  200   NOT SOLD
+^^ A monster attacks when the last charge of this is consumed.
+   This heal cannot be consumed when in an area that is not creator() == mizan
+
+spicytuna.c                 0     16     0         4   50   50   NOT SOLD
+superburrito.c              7     13     0         4   50   50   1000 *Decays over time
+turboburrito.c              7     15     0         4   75   75   1500 *Decays over time
+whalemeat.c                 0     13     0         4   50   50   NOT SOLD
+wienernut.c                 1      8     0         5   75   75   2200
+
+These heals cannot be purchased - are dropped 
+one at a time randomly for each kill of hard monster narci.c
+ublood_black.c              0      0     5         2  150  150   NOT SOLD
+ublood_cyan.c               0      0     5         2   50   50   NOT SOLD
+ublood_magenta.c            0      0     5         2   90   90   NOT SOLD
+ublood_yellow.c             0      0     5         2   70   70   NOT SOLD
+
+
+
+>> ITEMS
+autocannon-remote.c     Disables autocannon for 10 minutes. 100K coins.
+cock_unblocker.c        100K, 10 doses for 'unblocking' monsters for 10 minutes.
+gatekeeper_hat.c        Ornamental, not strong. Players should never get this.
+gatekeeper_pitchfork.c  Ornamental, not strong. Players should never get this.
+gatekeeper_suit.c       Ornamental, not strong. Players should never get this.
+gatekeeper_tag.c        Ornamental, not strong. Players should never get this.
+goblin-scarf.c          If worn, prevents goblins from attacking. 100K coins.
+mega_sand_bag.c         A bag, with small rocks in it (see below). 150K coins.
+mega_sand.c             It's actually a small rock. Does nothing.
+plexiglas_staff.c       A WC 28 weapon, which is designed to break 50% of use
+tripod_card.c           The membership card which records kills in the area
+ublood_product.c        A secret product, resulting from 1 million coins.
+usa-lapel-pin.c         If worn, prevents the soldiers from aggro. 150K coins.
+volcanogun-remote.c     Disables poop volcano for 10 minutes. 150K coins.
+wookie-translator.c     When carried, you can understand wookiees. 75K coins.
+zombie-perfume.c        When carried, prevents zombies from aggro. 100K coins.
+
+The only real "power item" in the map is the championship belt which is won
+after beating OverPowerLord. It is an autoloading armor item of the type 'belt'
+and doubles as a bag. It has a max weight of 12 for carried items, and has AC2.
+
+opl-champ-belt.c        Prize item after defeating the OverPowerLord.
+
+
+
+>> ENVIRONMENT OBJECTS (Things a player cannot pick up)
+
+Some of these objects have been previously mentioned, in particular the
+items which fall into the category of environmental hazards.
+
+NAME                       NOTES
+autocannon.c               Covered previously - environmental hazard
+bullboard.c                Costs 500,000 coins to make a posting.
+catapult.c                 A copy of the standard catapult from jello
+ied.c                      Covered previously - environmental hazard
+lava.c                     Covered previously - environmental hazard
+lemonade-stand.c           Exists randomly in maze, has 4 items, 5+R10 stocked.
+poker_machine.c            Same as Beek's poker machine, has 500 coin ante
+poop-volcano.c             Covered previously - environmental hazard
+ublood_processor.c         Costs 1M coins for worthless item.
+^^ I am bound to make enemies with this crazy thing. C'est la vie.
+
+top-player-board.c         Displays point leaders in realm.
+uranium-238-sickness.c     Covered previously - environmental hazard
+uranium-puddle.c           Covered previously - environmental hazard
+vending-machine.c          Only one copy exists in game. Sells $$$$ items.
+vending-machine-hotfood.c  Exists randomly, sells 5 items, 15/15/20/15/4 stocked
+vending-machine-junkfood.c Exists randomly, sells 4 items, 15/15/20/15 stocked
+victory_portal.c           Takes players to post office if they beat OPL in combat.
+whale.c                    Covered previously - environmental hazard
+
+
+
+>> VEHICLES
+
+Vehicles have taken a greatly diminished role from what I originally intended.
+They are still in the map, and serve mostly as a gimmick item which would let
+a player (or group of players) travel freely around on the map for a limited
+number of cells, primarily because fuel runs out. Fuel is not sold, and the
+only amount of fuel available is found littered in the maze.
+
+Vehicles have their "up" exit disabled, so anyone who drives "down" into a pit
+will become strandard. Additionally, they will not be able to leave the maze
+with a vehicle.
+
+Vehicles are by default locked, and to gain access to it players must find
+a corresponding key, which may or may not be carried by a particular monster.
+
+canyonero.c
+m113.c
+tiger1.c
+yellow_h2.c
+
+
+
+>> LOGGING
+Monster kills are logged in the file opl/monster_kills.csv
+It is in the form of a standard CSV file, with fields encapsulated in quotes
+and separated with commas. The fields being logged are:
+- Time/Date of kill
+- Filename of monster killed (including instance number)
+- Total rounds of combat
+- Player name (creature name) credited with kill
+- Filename of room
+
+It is from this file that if anyone were to solve this maze I would use as a
+basis to verify actual completion.
+
+Additionally, all actions performed by players in the same room as the
+OverPowerLord while in combat are logged to logs/opl_combat.csv and 
+logs/opl_snoop.log
+

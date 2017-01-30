@@ -1,0 +1,2 @@
+if(me->query_hp() >= me->query_mhp() * 9 / 10){ }  where me is the  player
+if((me->query_hp() >= me->query_mhp() * 9 / 10) && !random(10)){ }

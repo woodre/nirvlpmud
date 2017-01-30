@@ -1,0 +1,24 @@
+
+***** List of basic commands *****
+
+Command                            Description
+-----------------------------------------------------------------------------
+cast <spell> (<arg1>) (<arg2>)     Cast a spell
+* <message> or :<emote>            Use the guild chat line
+renew                              renew your magesoul and restore from save
+charge <amount>                    add spell points to your soul
+spells                             list learned spells
+teach <who> <spell>                try to teach someone a spell
+recruit <who>                      only the guild master may recruit members
+mon/itor                           toggle the guild monitor
+ansi (<on/off>)                    (de)activate ansi sequences
+emote <what>                       emote a string
+info (<topic>)                     display guild help messages
+
+Note: Arguments in parentheses are optional.
+
+Try typing "info list" and "info <spell>."
+
+Have fun!
+
+--Bastian

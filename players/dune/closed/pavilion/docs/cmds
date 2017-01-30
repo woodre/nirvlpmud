@@ -1,0 +1,20 @@
+---===ROBOMECH COMMANDS===---
+
+Command              Short Description
+______________________________________________________
+install <weapon>.....Install a new weapon
+supply <weapon>......Add ammunition to a weapon
+look/say.............As you would look/say normally
+robo <topic>.........Help on topic specified
+systems or sys.......Detailed info about your mech
+walk <direction>.....Type 'robo movement' for info
+fire <weapon>........Fire a weapon at target specified
+punch <mech>.........Punch a mech (default weapon)
+bail.................Bail out of your mech
+aim <direction>......Specify the direction to fire in
+target <mech>........Pick a mech to shoot at
+                     Helpful if there is more than 1 mech in path of fire
+comm <message>.......Talk over the RoboMech channel
+mechs................See what other mechs are playing
+repair <type>........Repair minor/average/major damage
+______________________________________________________

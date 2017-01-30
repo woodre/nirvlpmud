@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1;36msymbol[0m showing unmatched [1mhonor[0m (held)[0m"
+long_desc "This is a simple symbol which shows that the holder is of an unmistakably honorable way of life.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "symbol"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is a simple symbol which shows that the holder is of an unmistakably honorable way of life.[0mType 'clan_help' for commands."
+clan_short "A [1;36msymbol[0m showing unmatched [1mhonor[0m (held)[0m"
+damage_type 0
+hall_path "/players/wren/Area/coastline/coast1"
+object_name "symbol"
+owner "jacob"
+spell_alias "prayer"
+spell_mess_me "You kneel down, and the glory of the Ancient Ones fills %AKN%."
+spell_mess_room "%TPN% kneels down, and the glory of the Ancient Ones fills %AKN%."
+spell_mess_them "%TPN% kneels down, and the glory of the Ancient Ones fills you."
+abilities ({})
+chan_history ({"[Mon Jan 26 23:48:50 2009] Delmariah has joined the clan!","[Mon Jan 26 23:49:22 2009] Jacob has promoted Delmariah to a clan leader!","[Sun Mar 29 00:25:07 2009] Jacob: what's a 'critter' type clan room??","[Sun Mar 29 00:27:43 2009] Jason: worthless","[Sun Mar 29 00:30:43 2009] Jacob: me either","[Sun Mar 29 00:31:21 2009] Jason: i hit like a girl lol","[Sun Mar 29 00:31:43 2009] Jacob: me too :(","[Sun Mar 29 00:44:13 2009] Jason: do we hit better while pk?","[Sun Mar 29 00:44:35 2009] Jacob: not sure really, heh","[Sun Mar 29 00:44:49 2009] Jason: trying to figure out why im hitting like crap","[Sun Mar 29 00:53:04 2009] Jason: damn double xp is nice wonder how long it will last lol","[Sun Mar 29 00:53:18 2009] Jacob: 20 mins from start to finish","[Sun Mar 29 00:58:34 2009] Jason: hehehe 180k for granite golem lol","[Tue Jul 21 18:53:40 2009] Korwrath has joined the clan!","[Tue Jul 21 18:53:44 2009] Jacob: welcome","[Tue Jul 21 18:53:52 2009] Korwrath: thank you sire.","[Tue Jul 21 19:02:32 2009] Jacob has promoted Korwrath to a clan leader!","[Sat Jul 30 03:10:48 2011] Jason: yep","[Thu Feb 21 13:11:48 2013] Jacob has removed Korwrath as a clan leader!","[Thu Feb 21 13:12:12 2013] Jacob has removed Plex as a clan leader!",})
+leaders ({"chant","jason","delmariah",})
+join_type 1
+private_coffer 106299
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 80
+last_spell_time 1272682676

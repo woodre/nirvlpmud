@@ -1,0 +1,25 @@
+*******************************************************************
+
+Name:      Echo To
+
+Desc:      This ability is primarily for entertainment. Function like
+           an emote. It displays to your target.
+    
+Level:     40  
+
+Warning:   Tempting to use to harass players. Can be amusing
+           to have player appear to be doing any action that
+           comes to mind. Not good for happy players and goes
+           against rules of minimum wiz/player interaction to 
+           use overmuch.
+
+Syntax:    echoto <Text>
+
+Example:   echoto bob An arrow pieces your brain. INSTANT HEADACHE! 
+Result:    Only Bob will see
+           'An arrow pierces your brain. INSTANT HEADACHE!'
+
+Related:   echo, echoall, echochan
+
+
+*******************************************************************

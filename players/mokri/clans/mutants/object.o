@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A ball of [36mtoxic ooze[0m[0m"
+long_desc "This is a dangerous ball of [36mtoxic ooze[0m.It reeks of some kind of harsh chemical smell.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "ooze"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is a dangerous ball of [36mtoxic ooze[0m.It reeks of some kind of harsh chemical smell.[0mType 'clan_help' for commands."
+clan_short "A ball of [36mtoxic ooze[0m[0m"
+damage_type 0
+hall_path "/players/chip/myworkroom"
+object_name "ooze"
+owner "chip"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Thu Jun 21 16:22:18 2007] Chip has written a note to the clan board.","[Mon Sep 17 12:50:12 2007] Chiptwo has joined the clan!","[Tue Apr 15 17:53:37 2008] Chippertest has joined the clan!","[Tue Apr 15 17:54:21 2008] Chip has promoted Chippertest to a clan leader!","[Fri Jan 30 02:27:38 2009] Taskmaster has joined the clan!","[Fri Jan 30 02:27:50 2009] Chip has promoted Taskmaster to a clan leader!",})
+leaders ({"chippertest","taskmaster",})
+join_type 0
+private_coffer 1130640000
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

@@ -1,0 +1,15 @@
+#include "defs.h"
+
+status main(string arg) {
+  object who;
+
+  who = find_player(arg);
+
+  if (!who) {
+    notify_fail("Player not found: "+capitalize(arg)+"\n");
+    return 1;
+  }
+
+  tell_object(who, HIG+"Earwax is paging you..."+BEEP+"\n"+NORM+NORM);
+  return 1;
+}

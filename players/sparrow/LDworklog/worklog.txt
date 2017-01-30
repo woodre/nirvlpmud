@@ -1,0 +1,33 @@
+LD conversion worklog            total files editied (fixed) : 546
+
+worklog 9/13/06 
+/player/wren/Area/coastline
+  fixed coast1.c
+  fixed coast2.c 
+  fixed campsite.c
+  fixed coast3.c
+
+/players/wren/Area/forest1/specials/
+  fixed cormorant.c
+  
+worklog 9/14/06
+/players/wren/Area/coastline
+  fixed mountain.c
+  fixed mountain2.c
+  fixed pass.c
+  fixed path.c
+  fixed vale.c
+  
+worklog 9/16/06
+/players/maledicta/cont/rooms
+  fixed all files (536)
+  added check for driver version, if nirvana define varible
+  if not, do not define variable. I did this because I was getting
+  strange results on the old lib with just removing it. 
+  
+  If problems arise, a copy of the old version is located at:
+  /players/maledicta/cont/rooms_bk
+  just copy the entire directory to:
+  /players/maledicta/cont/rooms
+  to roll back to old version
+  -Sparrow

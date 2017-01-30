@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/underworld/hall/r6","east","/players/mokri/clans/underworld/hall/r8","west",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;30mTail of the Cacodemon[0m[31m  [[0m[1mDark Matrix[0m[31m][0m","/players/jareel/weapons/chaos/woods2/demon_tail",0,30,5,"[1;37mNature's [1;32mBlessing[0m","/players/jaraxle/3rd/alt/items/nature_orb",0,0,0,"[1;30mBlackdeath[0m, Broadsword of [1;30mTruth[0m[1;30m  [[0m[1mTrueSword [1;30m][0m","/players/jareel/weapons/chaos/woods2/humakt_sword",0,8115,3095,"Element of [34mAIR[0m","/players/mythos/awep/forest/air",0,0,0,"[1;30mDemon Guard[0m [[1;33mSun Forged[0m]","/players/jareel/armor/DWARFFORGE/demon/chest","1",0,0,"[1;30mDemon Shorts [0m[[1;33mSun Forged[0m][0m","/players/jareel/armor/DWARFFORGE/demon/underware",0,0,0,"Hockey Skates","/players/jenny/wings/items/tedskates",0,0,0,"[31mRing of Murder[0m","/players/vertebraker/closed/shardak/obj/murder",0,0,0,"A [33mgolden[0m earring","/players/vertebraker/swamp/OBJ/j_earring",0,0,0,"A small magic stone with a strange weight","/players/padrone/obj/gravstone",0,0,0,})

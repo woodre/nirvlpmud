@@ -1,0 +1,100 @@
+Wed Jan  5 16:57:43 2000--Action: created test char jentest Reason: to test stuff
+Wed Jan 19 18:07:24 2000--Action: moved tiffany and william to the church Reason: they were stuck in a room with no exits in the chapel.  had arrina's permission to move them.
+Fri Jan 21 06:19:09 2000--Action: dested beatfixer from click's invitory Reason: he had 2, and asked me to dest one of them.
+Fri Jan 28 23:37:58 2000--Action: dested FOS button off of dustyrose. Reason: she requested it.
+Wed Feb 16 16:57:45 2000--Action: imprisoned blade Reason: abusing shout, even after i warned her to stop.  after I warned her, she shouted "I don't give a fuck"
+Sat Feb 26 20:34:37 2000--Action: accidently deleated /open/ansi.h zeus restored a copy of it. Reason: screwed up
+Sat Mar  4 07:58:00 2000--Action: fixed /players/jenny/bundy/mobs/kelly.c to clone buck.c after she died, instead of buck2.c  updated room as well. Reason: reason it was wrong before is kinda complicated, ask if actually interested
+Sat Mar  4 18:34:10 2000--Action: change /players/jenny/bundy/items/tot.c to take bag off of the list of id's, so it wouldn't interfere with storage bags.  updated relevent monsters and rooms to make change take effect this reboot. Reason: I don't want to deal with people complaining the heal interfered with thier regular bags and got them killed
+Tue Mar  7 03:54:41 2000--Action: created jentesttwo as a second test char Reason: 
+Tue Mar  7 07:50:11 2000--Action: fixed a small grammer error in /players/jenny/bundy/rooms/4b.c Reason: 
+Thu Mar  9 07:04:20 2000--Action: moved roullet to church Reason: players/beren/Rooms/Olgyo/oroom1.c was messed up
+Fri Mar 10 04:25:10 2000--Action: added set_chat_chance to /players/jenny/bundy/mobs/bud.c Reason: it was missing before.
+Wed Mar 15 08:19:09 2000--Action: removed an unintended line of code from the heal shop in bundy area Reason: had bug abuse potential.  glad I found it before a player.
+Fri Mar 24 19:17:44 2000--Action: opened my second area Reason: snow approved it
+Fri Mar 31 23:32:17 2000--Action: changed /players/jenny/dukes/mobs/boss.c to sell /players/jenny/dukes/items/radar.c  Reason: snow approved the item radar.c and eurale approved the selling code boss.c
+Sat Apr  1 02:40:21 2000--Action: fixed grammer error in /players/jenny/dukes/items/general.c Reason: 
+Sat Apr  1 15:57:41 2000--Action: changed /players/jenny/dukes/mobs/boss.c to log whenever someone buys a radar gun Reason: to see if anyone actually uses them
+Thu Apr  6 01:16:25 2000--Action: mailed strange warning him to quit using this mud to harass summer and nelk Reason: 
+Sat Apr 15 02:14:19 2000--Action: made edge a sensei in the cybers guild Reason: he is maxed chip and beltlevel, and a sensei on the old guild object
+Thu Apr 20 22:25:09 2000--Action: suspended gothika from the cybers Reason: she pked a guildmate, but was not renegade
+Tue May  9 21:41:10 2000--Action: changed the monsters in /players/jenny/bundy/mobs over to obj/monster Reason: to make them run more smoothly with becks damage types
+Mon May 15 20:04:49 2000--Action: gave 5k coins to morgana Reason: she lost her goth object and had to rejoin.  the restore feature on the guard in saber's area didn't work for some reason.
+Tue May 16 19:51:31 2000--Action: put /players/jenny/general/machine.c in the room /players/jenny/areaentrance.c Reason: eurale approved it.
+Wed May 17 03:18:30 2000--Action: moved all of my logs from the directories in their areas to /players/jenny/logs Reason: cause I wanted to.
+Thu May 18 15:50:45 2000--Action: changed all my exit blocking monsters to allow ghosts to pass Reason: 
+Fri May 19 20:35:56 2000--Action: dested star's wedding ring off of her Reason: it was golden, and still wouldn't let her get a free divorce
+Fri May 19 20:36:20 2000--Action: I meant starr, sorry Reason: 
+Fri Jun  9 19:35:46 2000--Action: made genisus give me her coins and weapon Reason: caught santel transfering coins and a weapon to his new character genisus, since she seems to be a true newbie, i only warned her
+Thu Jul  6 15:29:39 2000--Action: change /players/jenny/dukes/items/bow.c Reason: changed special from a hit_player to return.  eurale approved
+Wed Aug  9 00:29:40 2000--Action: erased rosaly's pretitle Reason: she requested it, and couldn't do it herself
+Sun Aug 20 14:04:37 2000--Action: added 50k guild credits to solstice Reason: to fix a typo in his guild weapon
+Mon Sep  4 19:50:47 2000--Action: added my 80s area to the game. Reason: eurale approved
+Wed Sep  6 14:34:38 2000--Action: changed the look of /players/jenny/areaentrance.c a little bit. Reason: 
+Wed Sep 13 14:15:06 2000--Action: made bundy/rooms/cst, dukes/rooms/barn, and 80s/rooms/ollie all no_clean Reason: they are all kinda storage rooms, so I thought it would be thematic, and if we ever go to longer reboots, it might even be useful
+Sat Sep 30 23:51:42 2000--Action: added to the id's of my 80's monsters. Reason: was conflicting with cyberninja strikes command before
+Tue Oct  3 16:45:04 2000--Action: made an obj to remove tallos from the necros and did it Reason: he logged on without a guild object, and when I looked at the guild obj in daranath's directory, it said he was banned, so I removed him from the guild as he requested.
+Tue Oct 17 16:42:08 2000--Action: deguilded faust and refunded 3 million experience Reason: the dark mages closed, and the guild kickout and auto refund didn't seem to take care of him for some reason.  Pain grudingly approved my doing this, after saying "that cheater guild deserves no experience refund :) "
+Sat Nov 11 07:07:57 2000--Action: test Reason: testing
+Tue Nov 21 15:29:04 2000--Action: loaded ultramagnus's castle Reason: it was not loaded
+Tue Nov 21 17:01:55 2000--Action: gave fantasy 6 of feldegast's dark city daggers, and 6k coins to store them Reason: he had 6 of them in his locker from an invalid directory.
+Wed Dec  6 06:17:09 2000--Action: made an obj that forces catwoman to quit when she enters the room, and put it in her workroom Reason: her password has been hacked by kazer, this is just a stopgap measure until boltar can fix the problem.
+Thu Dec 14 08:24:06 2000--Action: destroyed /players/languilen/tools/projection.c Reason: it was causing errors for everyone logged on
+Tue Dec 19 01:47:27 2000--Action: deguilded jong Reason: he didn't seem to be properly deguilded from the knights, he still had a guild rank
+Sun Jan  7 23:12:55 2001--Action: dested /players/leatherneck/CASHAWK.c Reason: it shouldn't be in the game
+Tue Jan  9 05:06:35 2001--Action: noticed a wc 99 weapon in the shop and took it out. /players/francesco/univ/junk/arma.c Reason: I'm not a senior or anything, but this didn't seem like a legal weapon to me
+Thu Jan 11 00:49:22 2001--Action: added something to /players/jenny/general/machine.c that lets players change my title/pretitle around Reason: maledicta approved it
+Sat Jan 13 00:26:52 2001--Action: handed candy an old MK scar Reason: hers didn't autoload
+Wed Jan 17 21:49:47 2001--Action: gave dardone chaos platemail Reason: he couldn't retrieve it from his coffin, so I had him clear the coffin and gave him a new one
+Fri Jan 19 03:09:20 2001--Action: gave 342 coins to neo Reason: he was at - 342, that probally shouldn't happen mythos's tsuguri is to blame
+Fri Jan 26 20:51:01 2001--Action: put the stuff in /players/jenny/memorial into the game Reason: maledicta approved
+Wed Jan 31 11:44:39 2001[31m ========|> [2;37;0mchanged my wlog command to have some color[33m Reason: [2;37;0mto be different, in a conformist sort of way.
+Sat Feb  3 01:38:08 2001[31m ========|> [2;37;0mchange the mural in dreamspeakr's memorial to have sting's note first[33m Reason: [2;37;0mit was a courtasy to him, since he helped with the descriptions
+Tue Feb  6 19:11:35 2001[31m ========|> [2;37;0mmade it so whenever someone enters one of my areas, my workroom short changes to something thematic to that area[33m Reason: [2;37;0mIt ammuses me
+Thu Mar  1 01:52:27 2001[31m ========|> [2;37;0mchanged my room.c to allow follow in all of my no teleport areas[33m Reason: [2;37;0mthat's the way things should be
+Tue Mar 13 00:42:27 2001[31m ========|> [2;37;0mstarted an NCAA tournament pool and added /players/jenny/special/ncaa/vital.c to my castle[33m Reason: [2;37;0mwocket and maledicta approved
+Mon Apr  2 23:51:11 2001[31m ========|> [2;37;0mgave stone 13k coins[33m Reason: [2;37;0mthird place in the ncaa tournament pool, plus 3k for picking the champion
+Fri Apr  6 15:46:31 2001[31m ========|> [2;37;0mgave 15k coins to adidas[33m Reason: [2;37;0mhe won second place in the ncaa tournament pool.  all prize money is paid out now
+Sat Apr  7 04:26:14 2001[31m ========|> [2;37;0mcloned a pair of knuckle blades and gave them to nissassa[33m Reason: [2;37;0mthe wc on them was 6 and they were nosave.  this seems consistant with a broke weapon, but they were not broke.  this didn't seem normal
+Fri Apr 27 20:32:44 2001[31m ========|> [2;37;0mdeguilded theseius[33m Reason: [2;37;0mhe was just let out of prison, and was in some guild so old, even i'd never heard of it.  didn't refund guild exp though
+Mon Apr 30 22:03:18 2001[31m ========|> [2;37;0mset pino's magic from 21 to 20[33m Reason: [2;37;0mshe actually asked me to
+Thu May 10 23:54:25 2001[31m ========|> [2;37;0mopened red wings area[33m Reason: [2;37;0mmaledicta approved
+Fri May 11 01:29:32 2001[31m ========|> [2;37;0medited /players/jenny/wings/mobs/players/lapointe.c to block the out dirrection too[33m Reason: [2;37;0mthought it did that already, oversight
+Sun May 13 13:28:50 2001[31m ========|> [2;37;0mchanged /players/jenny/wings/items/eqbag.c to always return a weight of 1[33m Reason: [2;37;0mit wasn't working right before
+Mon May 21 05:47:22 2001[31m ========|> [2;37;0mchanged a few of the monsters in /players/jenny/bundy/mobs/ give more coins[33m Reason: [2;37;0mthe monster chart is different now from when they were coded
+Fri May 25 07:11:14 2001[31m ========|> [2;37;0mchanged a few monsters and a weapon in my bundy area over to damage types[33m Reason: [2;37;0mit was thematic, and vertebraker approved
+Fri Jun  1 23:49:58 2001[31m ========|> [2;37;0mstarted adding ac bonus's to my monsters that wear armor[33m Reason: [2;37;0mto compensate for that not being added to exp calculations
+Tue Jun  5 13:32:27 2001[31m ========|> [2;37;0mchanged the short on /players/jenny/wings/items/combinedrings.c[33m Reason: [2;37;0mI wanted to make it look like 2 different pieces of armor
+Tue Jun  5 13:39:23 2001[31m ========|> [2;37;0mreplaced worm's /players/jenny/wings/items/combinedrings.c from a crash[33m Reason: [2;37;0mno, i didn't cause the crash, but i felt guilty since i told him to get the ring out of storeage to show him a change i made to the short, if not for me, he wouldn't have had it out in the first place, so i replaced it
+Tue Jun  5 13:40:15 2001[31m ========|> [2;37;0mcrash was only about 2 minnutes after i told him to get the rings out[33m Reason: [2;37;0mjust thought i'd add that to be clear
+Sat Jun  9 23:32:32 2001[31m ========|> [2;37;0mcloned a neo symbiote guild obj to volkar[33m Reason: [2;37;0mhis didn't load
+Sun Jun 10 00:33:53 2001[31m ========|> [2;37;0mlet chode out of prison[33m Reason: [2;37;0mhe was jailed back in 97, other than logging into /room/prison, he wasn't even listed as being in prison
+Sun Jun 10 11:51:54 2001[31m ========|> [2;37;0mrestored slag's guild obj[33m Reason: [2;37;0mcause it wasn't there
+Wed Jun 20 00:26:12 2001[31m ========|> [2;37;0mstarted increasing my wc bonus's by half[33m Reason: [2;37;0mit's not fair that spells in monster.c give more experience per damage dished out than custom spells, maledicta approved
+Sun Jun 24 18:25:01 2001[31m ========|> [2;37;0mfixed bug in /players/jenny/wings/items/1997 and 1998ring.c's[33m Reason: [2;37;0m
+Tue Jun 26 00:26:13 2001[31m ========|> [2;37;0mdested quicktyper off keli[33m Reason: [2;37;0mat her request
+Tue Jun 26 01:02:21 2001[31m ========|> [2;37;0msuspended grit from the cybers[33m Reason: [2;37;0mhe attacked and spam dishonored a guildmate.  i'll suspend him til wocket can deal with it
+Thu Jun 28 16:06:47 2001[31m ========|> [2;37;0madded a small return and upped the damage done by pucks on /players/jenny/wings/items/gstick.c[33m Reason: [2;37;0mmaledicta suggested and approved
+Tue Jul 10 01:51:59 2001[31m ========|> [2;37;0mstarted changing my bonus's again[33m Reason: [2;37;0mbecause of /doc/build/RULES/monster.bonuses
+Wed Jul 11 01:46:26 2001[31m ========|> [2;37;0mstarted lowering wc bonus's back to where they were[33m Reason: [2;37;0mwc bonus formula changed back to the way it was before
+Fri Aug 17 16:29:48 2001[31m ========|> [2;37;0mreset plague's login to church after he was deguilded, plague is my char[33m Reason: [2;37;0msave mal the trouble of doing it
+Thu Aug 30 14:18:12 2001[31m ========|> [2;37;0mdid some updating of old monsters[33m Reason: [2;37;0mto make them fit in better with the new monster guide
+Sun Sep  2 23:09:34 2001[31m ========|> [2;37;0mpromoted kid to guild title of directive[33m Reason: [2;37;0mhe deserved it, plus the current guild officers don't log on much, the guild could use some leadership
+Mon Sep 24 03:34:16 2001[31m ========|> [2;37;0mchanged /players/jenny/wings/items/eqbag.c to try and address some of feldegast's concerns[33m Reason: [2;37;0m
+Tue Sep 25 01:03:36 2001[31m ========|> [2;37;0mtrimmed the cyber pk board down a little[33m Reason: [2;37;0mit was getting too full
+Sun Oct 14 01:08:06 2001[31m ========|> [2;37;0mdested a heal, and refunded cost of the heal to darknesss[33m Reason: [2;37;0mthe file was bugged /players/mythos/mmisc/drugs/speed.c
+Sun Oct 28 01:53:42 2001[31m ========|> [2;37;0mdested entropy[33m Reason: [2;37;0ma warning, he had no eq on or anything, hurt nothing but his pride
+Fri Nov  2 21:46:44 2001[31m ========|> [2;37;0mmade it so cybers can wield regular weps, doing this for testing purposes right now[33m Reason: [2;37;0mmaledicta approved
+Sat Nov  3 04:09:04 2001[31m ========|> [2;37;0mmade it so pkers can now enter the cyber guild hall, it basicly goes back to the way it was a year or so ago.  cybers can still use guild spells on those who invade the guild hall.[33m Reason: [2;37;0mmaledicta approved
+Tue Nov 27 22:09:22 2001[31m ========|> [2;37;0mcleared a locker space for steve and gave him a eurale broadsword[33m Reason: [2;37;0mcause eurale got the bright idea to switch the path of a popular item
+Sat Dec  1 01:35:21 2001[31m ========|> [2;37;0munjailed the chars jaraxle (kazer) jailed and refunded horus's coins and exp from being killed by him[33m Reason: [2;37;0mkazer is a fucking idiot
+Mon Dec  3 02:11:03 2001[31m ========|> [2;37;0munguilded specter[33m Reason: [2;37;0mhe got mistakenly put into the warriors guild somehow when released from prison, wierd huh?
+Wed Dec  5 00:33:23 2001[31m ========|> [2;37;0mrestored sylvan's guild obj[33m Reason: [2;37;0manyone even read these reports?
+Wed Oct 23 19:31:26 2002[31m ========|> [2;37;0mrestored /players/jenny/wings/items/laptop.c to the old file[33m Reason: [2;37;0mthe wiz who changed it is gone, the items they made it dependant upon were removed from the game, and verte approved
+Fri Nov  8 19:28:14 2002[31m ========|> [2;37;0mstarting going through my stuff and making things saveable,[33m Reason: [2;37;0m as per new save rules
+Thu Nov 14 17:15:00 2002[31m ========|> [2;37;0mgave some junk back to kia that he lost in crash[33m Reason: [2;37;0mboltar had no problem with it, so why not.  back in my day, we had 30 minnute lag between commands, it crashed all the time, we lost all our stuff, it took us an hour to get to our lockers and bring out more stuff, and we liked it.  damn players nowa days have things easy :)
+Sat Oct 29 16:17:15 2005[31m ========|> [2;37;0mfixed a typo in /players/jenny/general/machine.c[33m Reason: [2;37;0mbecause it was a typo
+Wed Apr 12 17:23:24 2006[31m ========|> [2;37;0mgave 30000 coins to oghma[33m Reason: [2;37;0mhe was having problems with the hotel, somehow he ended up registering twice, i had him check out of one of the rooms and reimbursed the 30k
+Tue May  2 22:50:42 2006[31m ========|> [2;37;0mEdited /players/trix/castle/center.c[33m Reason: [2;37;0mvertebraker moved the castle back N of church, I exit still had it going to the old place
+Sun Jun 25 00:12:48 2006[31m ========|> [2;37;0mcloned /players/jareel/mondar_boots.c and gave to oghma[33m Reason: [2;37;0mhe mistakenly gave his to an NPC, something about doing a keep all after the crash, his boots didn't save, so he accidently gave those to vinni in fred's area.  I didnt' completely understand it, but gave oghma the benifit of the doubt.
+Sun Aug  6 02:10:01 2006[31m ========|> [2;37;0mgave 2 weps to saze nerrumsh axe and fhl[33m Reason: [2;37;0mreimbursed for crash

@@ -1,0 +1,27 @@
+#define tp this_player()->query_name()
+inherit "obj/treasure";
+reset(arg)
+{   if (arg) return;
+   set_id("scroll");
+  set_short("A scroll of full heal");
+    set_long("A scroll of full heal.\n"+
+  "To use it: 'read heal'\n");
+/* Changing weight of 0 to 1 -Snow 10/99 */
+   set_weight(1);
+   set_value(10000);
+}
+init()
+{  add_action("read_scroll", "read");   }
+read_scroll(str)
+{
+if(str == "heal") {
+write("You read the silver runes of the scroll of healing.\n"+
+  "The runes fade away into darkness as the scroll bursts into flames.\n"+
+  "You are fully healed.\n");
+say(tp+" reads a scroll.\n"+
+  "The scroll bursts into flames.\n"+
+  tp+" is fully healed.\n");
+  this_player()->heal_self(10000);
+  destruct(this_object());
+    return 1;   }
+}

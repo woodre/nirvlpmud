@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/WEAPONS/glass_sword","/players/pain/NEW/arm/helm","/players/wren/Area/starbug/items/ogunit","/players/wren/Area/starbug/items/hair","/players/wren/Area/starbug/items/lunchbox","/players/wren/Area/starbug/items/straw","/players/saber/armor/dshades","/players/mythos/awep/tanto","/players/wren/Area/starbug/items/thermos","/obj/weapon","/players/softly/newbie/obj/cheese","/players/angel/area/stargate/obj/staff","/players/wren/Area/starbug/items/cowboyhat","/players/mythos/awep/dstaff","/obj/weapon","/players/sado/shop/rose","/players/snow/WEAPONS/souleater","/obj/treasure","/obj/weapon","/players/pathfinder/detroit/weapons/machete","/players/ultramagnus/bdiamond","/obj/weapon","/players/scathe/weap/baxe","/players/wren/Area/starbug/items/levis","/players/puppy/s/eq/block",})
+shorts ({"Glass Sword","A horned helm","a case containing an OG unit.","Perfect Hair","a lunch box","a long plastic straw","[1mDark Shades[2;37;0m","Tanto","a thermos","Decorated Broadsword","[1;33mCheese[2;37;0m","[1;36mSTAFF WEAPON[0m","a tiny cowboy hat","Dream Staff","A Deadly Bullwhip","A beautiful red rose blossom","[1mSoulEater[0m","Arctic Seal pelt","Bow","A deadly looking machete","A Blue Diamond","Baby rattle","A Huge Double Bladed Axe","stretched out Levi jeans.","A building block",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

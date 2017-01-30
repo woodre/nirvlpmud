@@ -1,0 +1,195 @@
+Hello to whoever is reading this,
+
+   This started off as a 'what the hell' project and seems to have
+evolved into a tool with great potential. I'm building a data sink
+for fun, it records as much info as it can about the players logged
+in every X minutes and appends to a file on disk.
+   The contents of this file are then FTPed off and parsed into
+a series of tables to my SQL server. The datasets will cumulatively
+grow on my SQL box with each addition of data. Such data logged is:
+
+   Playername
+   IP address
+   hostname
+   level
+   guild name
+   EXP
+   file name of room they are in
+   creator of room
+
+   Weapon? Filename of weapon
+   WC of weapon
+   Number of hits, etc...
+
+   Attacker? Filename of attacker.
+   AC/WC of attacker.
+   Creator of attacker, etc...
+
+The data is then pulled off of elof, and processed on the client side's
+database management system of choice. The compiled data could then be
+posted back perhaps, to users with no DBMS solutions in a widely used
+industry format, like DBASE or something.
+
+I think you get the idea, to log as much information as possible but
+not make it intrusive, nor suck unnecessary resources from elof.
+
+I have an example code in /players/mizan/sql/datalogger.c which
+is a possible data collection device.
+
+I am not a SQL expert. My know-how is very limited and I am still
+in the process of learning. Theoretically any DBMS can do what we
+need but I would prefer whatever we end up doing on the client side
+is ANSI SQL or miniSQL or something to that effect.
+
+I have not started this project really yet. I am just sizing up what
+needs to be done, a previous attempt of mine that screen scrapes from
+my people command though an interesting working model is a total
+waste of time. Client software to parse the data collected and spit it
+into a data source is required. This is far superior.
+
+
+---------------------------------------------------------------------
+
+Q: Why?
+
+A: Now I will explain :)
+
+-------------
+
+Q: What would this info be used for?
+
+A: I had in mind several things. Obviously it can track:
+      most heavily used castles
+      preferred player weapon
+      cheat items
+      stat gains
+
+   The original purposed I planned it for was second player tracking,
+   and validations of the sort.
+
+-------------
+
+Q: How would it be used?
+
+A: Assuming you had the connection to a SQL server (or whatever DBMS
+   for that matter) there is this scenario:
+
+   Player Dopey has been accused by wizard Bognut for being a 'swapped'
+   and publicly handled character. Dopey is currently logging in
+   from HugeNet which has a massive pool of dynamically assigned IP
+   addresses. Some sample SQL queries:
+
+>  SELECT PLAYERNAME FROM PLAYERIPTABLE
+
+   PLAYERNAME
+   ----------
+   192.168.2.100
+   192.168.2.120
+   192.168.2.220
+   192.168.2.221
+   192.168.2.226
+   192.168.2.243
+   192.168.2.244
+   192.168.2.249
+   192.168.102.220
+   192.168.113.71
+   147.122.80.191
+   156.97.113.104
+   192.198.99.102
+
+   Okay, we see that this is the list of all the IP addresses Dopey has
+   logged in since time zero of the dataset. So we narrow it down a bit,
+   and dnslookup the major sites:
+
+   192.168.2.249        ->   NewJersey3.HugeNet.com
+   192.168.102.220      ->   Vermont1.HugeNet.com
+   192.168.113.71       ->   Saskatchewan1.HugeNet.com
+   147.122.80.191       ->   CactusShade.Arizona.edu
+   156.97.113.104       ->   FuckingCold.Alaska.net
+   192.198.99.102       ->   Seoul.Korea.net.kr
+
+   Well we now know where Dopey has been dialing in from. Dopey must
+   either be very well travelled, but since he is culturally ignorant, 
+   and most gravediggers don't get to travel that much, we can safely
+   deduce that something funky is going down. Not solid proof mind you,
+   but it confirms Bognut's suspicions that something odd is at hand
+   here.
+
+>>>>>  Another example:
+
+   Wizard Bognut has noticed a dramatic increase in monsters being killed
+   lately. With the following SQL queries he discovers the following:
+
+>  SELECT WEAPONCLASS, WEAPONFILENAME
+   FROM WEAPONTABLE
+   WHERE WEAPONCLASS > 20
+
+   -----------------------------------------------------------------
+   22      /players/legitwizard/weapons/superweapon_with_drawbacks.c
+   22      /players/asshole/weapons/katana.c
+   24      /players/asshole/weapons/fireblade.c
+   26      /players/asshole/weapons/shotgun.c
+   28      /players/asshole/weapons/supernuke.c
+
+
+>  SELECT PLAYERNAME, GUILDNAME, WEAPONFILENAME
+   FROM PLAYERDATATABLE
+   WHERE WEAPONCLASS > 20
+
+   ---------------------------------------------------------------------
+   setting      assholes_guild      /players/asshole/weapons/katana.c
+   bombardin    assholes_guild      /players/asshole/weapons/katana.c
+   faaque       assholes_guild      /players/asshole/weapons/shotgun.c
+   lordbeavis   assholes_guild      /players/asshole/weapons/katana.c
+   hunanbeef    assholes_guild      /players/asshole/weapons/supernuke.c
+   carrion      assholes_guild      /players/asshole/weapons/katana.c
+
+
+   Hmm. We now can safely isolate that the only people who have access to
+   these bogus weapons are in Asshole's guild, the Abbots.
+
+   I rest my case on the usefulness of this.
+
+-------------
+
+Q: Ok, this is facist. Really, why do this?
+
+A: Facist? I've been called that for much less. Save your breath and
+   before you start a holy war listen up: I did this for pure fun.
+   I am not a database expert, but this is perfect motivation to learn
+   and be competent, short of dangling an Oracle certification in
+   my face, and applying an instant raise to my salary. But being that
+   I am a physical layer IT guy, that won't happen much.
+
+-------------
+
+Q: What about a player's rights, and privacy to information?
+
+A: I don't see the problem here. This is like an automated 'people'
+   command that saves character stats primarily. No personal data.
+
+-------------
+
+Q: The potential is there for saving personal data, what about mail
+   and hotel room descriptions? What about tells? What about private
+   conversations?
+
+A: You have to be one sick fuck to log all this on a permanent basis.
+   Your DASD requirements would be insane too. Not to mention the
+   kind of resource drain this would inflict on elof. Yes, there is
+   technically nothing to prevent personal info logging but mail
+   reading tools are in place. Chat logging is unregulated but wizards
+   are not dumb, and like the 'nuclear club' there are only a select
+   few wizards with that kind of capability anyway. 
+
+   I can't say these tools will only be used for good reasons, I'm
+   sure that any bozo could code a copy of this stuff and implement
+   it to serve their voyeuristic needs.
+
+
+Q: What do you think? I need input please. Offers of help would be
+   appreciated too, since i basically dumped my previous database
+   logging attempts, it was a crude pick axe compared to this.
+
+  I wrote this up rather quickly. I'm sure I missed something.
+-m

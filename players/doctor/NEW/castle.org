@@ -1,0 +1,46 @@
+#define NAME "doctor"
+#define DEST "room/vill_road3"
+/*
+ * This is just the facade to a castle. If you want to enable the
+ * "enter" command, move the player to a hall or something (which
+ * you have to design yourself).
+ * The predefined string DEST is where a player should come when he
+ * leaves the castle.
+ *
+ * This file is loaded automatically from "init_file". We have to move
+ * ourself to where we are supposed to be.
+ */
+
+id(str) { return str == "ladder"; }
+
+short() {
+   return "A ladder on the side of the tower";
+
+}
+is_castle() { return 1; }
+
+long() {
+    write("There is a ladder on the side of the tower.\n");
+}
+
+init() {
+    add_action("climb"); add_verb("climb");
+}
+
+climb(str) {
+   if(str != "up ladder") {
+     write("Up what??\n");
+     return 1;
+   }
+   write("\n\n");
+   write("As you climb you feel as if you are being transported\n");
+   write("somePLACE.....someTIME.....\n");
+   write("\n\n");
+   call_other(this_player(), "move_player",
+             "enter#players/doctor/CASTLE/room1");
+   return 1;
+}
+
+reset(arg) {
+    move_object(this_object(), DEST);
+}

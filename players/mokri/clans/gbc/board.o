@@ -1,0 +1,15 @@
+subject "healer"
+new_mess "ok guys, here's a healer, in this cave. the dirs from our clan hall is e, n, n, w, enter cave, n, n, d, w, w, n, n, n, w, w, w, w, kill healer....... we want to get as much of these heals stored in our locker room as possible... Keep in mind though, that if you drop them on the ground they dissapear for some reason. I retrieved all 3 I had saved in our locker room, dropped them on the floor to move some stuff around and lost em. The kill is easy, shouldn't have a problem at all with him, 5kish.Marek"
+messages ({"marek%DATA_BREAK%1217701214%DATA_BREAK%healer%DATA_BREAK%ok guys, here's a healer, in this cave. the dirs from our clan hall is e, n, n, w, enter cave, n, n, d, w, w, n, n, n, w, w, w, w, kill healer....... we want to get as much of these heals stored in our locker room as possible... Keep in mind though, that if you drop them on the ground they dissapear for some reason. I retrieved all 3 I had saved in our locker room, dropped them on the floor to move some stuff around and lost em. The kill is easy, shouldn't have a problem at all with him, 5kish.Marek",})
+no_clean 0
+short_desc 0
+long_desc "There is no clan_board_obj here."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_board_obj"
+alias_name 0
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})

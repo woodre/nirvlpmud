@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30mDark Soul[1;37m([1;31mbleeding[1;37m)[0m[0m"
+long_desc "                                   You die.                          You have a strange feeling.                  You can see your own dead body from above.                       setting hit points to 1/3 max....A white dot appears and expands into a bright white tunnel.The tunnel shimmers slightly as it grows in strength.You feel a desire to enter the tunnel.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "dark soul"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "                                   You die.                          You have a strange feeling.                  You can see your own dead body from above.                       setting hit points to 1/3 max....A white dot appears and expands into a bright white tunnel.The tunnel shimmers slightly as it grows in strength.You feel a desire to enter the tunnel.[0mType 'clan_help' for commands."
+clan_short "[1;30mDark Soul[1;37m([1;31mbleeding[1;37m)[0m[0m"
+damage_type 0
+hall_path "/room/path2"
+object_name "dark soul"
+owner "ruby"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 0
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/NEW/arm/bplate","/players/snow/cam/stuff/sword","/players/wren/Area/starbug/items/indianheaddress","/players/wren/Area/starbug/items/groinal","/obj/weapon","/players/mythos/aarmor/nodowa","/obj/weapon","/players/mythos/awep/backbite","/players/saber/armor/lboots","/players/arrina/treas/horseshoe","/players/pain/NEW/arm/helm","/players/softly/nhall/obj/decant3","/players/mythos/awep/kama","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/wren/Area/starbug/items/levis","/obj/weapon","/players/wren/Area/starbug/items/dreds","/players/snow/shadows/stuff/nightshade","/obj/level_list","/players/mythos/awep/zantetsuken","/players/sado/shop/rose","/players/puppy/s/eq/hammer","/players/maledicta/cont/weapons/rweapon","/players/wren/Area/starbug/items/sparehead","/obj/weapon",})
+shorts ({"A battered Breastplate","[34m[1mBlessed Longsword[0m[0m","a tiny indian headdress","Kryten's groinal attachment","Baby rattle","Nodowa","A glowing lightsabre","[31mBackbiter[0m","Leather boots","A Silver Horseshoe","A horned helm","Decanter of Healing [[1m2[2;37;0m]","kama","Peasant Rags","stretched out Levi jeans.","A gardening hoe","Lister's crusty deerstalker with dreds.","[1mNightShade[0m, the Broadsword of Death","A list of the top players","[34mZantetsuken[0m","A beautiful red rose blossom","A hammer","a Shortsword","Kryten's sparehead 3.","Curved sword",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

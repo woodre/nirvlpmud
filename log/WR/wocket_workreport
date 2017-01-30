@@ -1,0 +1,47 @@
+Thu May 24 13:27:42 2001 moved and edited my old workreport to wocket_workreport.old cause well.. zeus told me to .. so i just had to do it..
+Sat May 26 13:13:34 2001 changed set_alias("hide") to set_id("hide"); in /players/dusan/area1/items/vhide.c was declaring set_alias twice and players didn't know the correct syntax
+Mon May 28 01:06:53 2001 made it so officer budsen /players/pathfinder/detroit/monsters/budsen.c isn't transed to the jail during combat and then transed to the church
+Mon May 28 01:12:44 2001 added in a resetting of a necro member home when they leave the guild
+Mon May 28 02:19:15 2001 made some changes to necro guildob to prevent errors in cmdhook.. semi successful
+Sat Jun  2 17:52:19 2001 added \n to /players/mythos/healerguild/obj/shield_spell.c to some of the emote lines
+Wed Jun 13 11:35:40 2001 made /players/sado/tailor/welt.c not save non drop and gave it an id.c
+Fri Jul 20 01:51:27 2001 added an id of 'rotten orange' to the ~/std/orange.c object as per vertebrakers request
+Fri Jul 20 01:57:01 2001 added rotten tomato id to the umm.. tomatos?
+Thu Aug  2 00:38:36 2001 Removed beta char only code from the formation.c for the shardaks (they are now really open)
+Thu Aug  9 02:35:40 2001 added pet emotes to the neopets.
+Thu Aug  9 19:44:10 2001 banished the name 'history'
+Wed Aug 15 00:19:37 2001 made necro guild hall pk.
+Fri Aug 24 02:29:55 2001 added pet type 'rat' to my petstore. (same as all the others . .purely cosmetic)
+Fri Aug 24 02:44:15 2001 added hematite as a short option to my rings
+Fri Aug 24 02:44:23 2001 you can now have hematite wedding rings
+Tue Oct 16 00:33:34 2001 changed decay from 3skin cost to 2skin 4 blood
+Wed Oct 24 01:09:38 2001 changed decay back to original cost
+Wed Oct 24 01:14:48 2001 added turtle emotes to the neopet.c
+Tue Dec 11 17:22:57 2001 gave coldwind okay to let kylie keep dkatana from kazer fiacso for services rendered
+Wed Jan 16 01:48:42 2002 i think i fixed cosmos thingy exp reader.. but who knows..
+Sun Jan 27 16:11:15 2002 changed how neopets handled wimpying to prevent changing the attack order
+Mon Feb 11 18:27:28 2002 changed it back as it made it so that the pet would continue to be attacked after it wimpied.
+Mon May 27 15:27:37 2002 moved the necro guild hall from qual'tor to dryant graveyard
+Mon May 27 15:28:01 2002 made it so ggiant.c (ghost dryants) don't auto attack necros
+Mon May 27 15:28:11 2002 closed qual'tor necro guild hall entrance.
+Mon May 27 16:17:16 2002 added a if(ac == 0) return check to /players/maledicta/closed/w/OBJ/player_mod.c to try to fix a hb problem.. no luck.
+Mon Jun 10 03:06:14 2002 make the necro hall no follow
+Mon Jun 10 03:06:20 2002 fixed a lot of typos in the necros
+Mon Jun 24 02:31:40 2002 added in a no_clean code to the necro 'donation' room.
+Sun Oct  6 00:59:40 2002 moved cyber arena from in their guild hall to a teleport exit
+Sun Dec  1 23:43:43 2002 Added Cha and Dex stats to Necro scores
+Sun Jul 27 02:48:26 2003 removed guild exp from sabino (145000) so he could 'rejoin' the warriors... apparently the warriors doesn't remove it when they quit.but its in a closed dir.. and i lost my 100 level :(
+Mon Aug  4 22:55:55 2003 made it so that when cybers post on the main guild board they broadcast that fact.
+Sun Aug 24 01:11:18 2003 changed eurales Glade/oak3 to move rue about the if (arg) return call so she would respawn.. same with /RMS/barter
+Sun Sep 21 04:40:08 2003 changed the feline object to work with the 35 max ste and hopefully fix the problems with going above.  now you can only raise it if you are 30 initially
+Fri Oct 31 03:25:29 2003 made it so emerson's freezer would only spawn a bigfoot if there wasn't already one there..
+Sat Nov  1 20:50:01 2003 made it so that if cybers don't wield a cyber weapon they lose honor
+Wed Nov  5 02:37:31 2003 added a no string check to wizardchild's snowball
+Mon Dec  1 05:21:03 2003 changed /players/snow/dervish/objects/wepshad.c to check to see if it can actually be droppable before removing the shadow
+Wed Jan  7 22:50:46 2004 made it so that evoke ghouls could only be casted one at a time.. it was possible to spam the cmd before it was fully cast getting multiples
+Wed Jan 21 04:21:47 2004 zapped pullmyfngr .. an earwax char.. who was level 5
+Sun May 16 03:27:58 2004 fixed spirit_armor so it is actually worn and activated (there was a bad this_player call)
+Wed Jul  7 03:25:32 2004 added my first emote to the game .. "eye" :)
+Sat Jan  8 00:58:16 2005 added extra look to sabers no_sex item to show that they have had thier balls cut off
+Sat Aug 13 07:21:41 2005 opened a portal allowing fil to join the necromancers
+Sun Sep 18 15:44:12 2005 changed /players/vital/Rangers/Commands/Rwear.c lines 57 and 76.  needed a PO->QuerySkillLevel() instead of just a QuerySkillLevel.

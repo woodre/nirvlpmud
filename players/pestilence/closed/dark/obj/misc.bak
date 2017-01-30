@@ -1,0 +1,26 @@
+object offwep, firstwep;
+int spell_delay,combat,glvl;
+int recruit;
+int offwep_wc;
+
+set_offwep(ob) { offwep = ob; }
+query_combat_method() { return 3; }
+set_offwep_wc(num) { offwep_wc = num; }
+add_offwep_wc(num) { offwep_wc += num; }
+query_offwep_wc(num) { return offwep_wc; }
+query_offwep() { return offwep; }
+set_firstwep(ob) { firstwep = ob; }
+query_firstwep() { return firstwep; }
+remove_offwep() { offwep = 0; }
+remove_firstwep() { firstwep = 0; }
+
+add_spell_delay(num) { spell_delay += num; }
+set_spell_delay(num) { spell_delay = num; }
+query_spell_delay() { return spell_delay; }
+add_recruit(num) { recruit +- num; }
+query_recruit(num) { return recruit; }
+query_grank(num) { return combat; }
+add_combat(num) { combat += num; }
+query_combat(num) { return combat; }
+add_glvl(num) { glvl += num; }
+query_glvl(num) { return glvl; }

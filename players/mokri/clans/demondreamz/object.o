@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1mA [0m[31mDemon[0m[1m'[0m[31ms Heart[0m.[0m"
+long_desc "This is a heart ripped straight from the chest of a massive dream demon. It still pulsates with its own beat it your hand as it squirts blood into the air.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "heart"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is a heart ripped straight from the chest of a massive dream demon. It still pulsates with its own beat it your hand as it squirts blood into the air.[0mType 'clan_help' for commands."
+clan_short "[1mA [0m[31mDemon[0m[1m'[0m[31ms Heart[0m.[0m"
+damage_type 0
+hall_path "/players/mythos/aroom/ricev"
+object_name "heart"
+owner "highlander"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Sat Nov 14 21:11:05 2009] Highlander: damn need to coin now lol","[Sat Nov 14 21:12:49 2009] Wicket: what is color code for the clan rooms and clan object?","[Sat Nov 14 21:13:05 2009] Highlander: %color%","[Sat Nov 14 21:13:17 2009] Wicket: k","[Sat Nov 14 21:13:23 2009] Highlander: example %hi red%","[Sat Nov 14 21:14:07 2009] Highlander: what are you doing?","[Sat Nov 14 21:14:19 2009] Wicket: what is it so set it back to normal","[Sat Nov 14 21:14:23 2009] Highlander: doing room desc?","[Sat Nov 14 21:14:33 2009] Wicket: some","[Sat Nov 14 21:14:35 2009] Wicket: heh","[Sat Nov 14 21:14:41 2009] Wicket: what is the reset","[Sat Nov 14 21:17:31 2009] Wicket: heh","[Sat Nov 14 21:17:35 2009] Highlander: what","[Sat Nov 14 21:17:39 2009] Wicket: who2","[Sat Nov 14 21:19:49 2009] Wicket: anywho","[Sat Nov 14 21:20:07 2009] Wicket: ill mud a lil tomorrow and throw some stuff into the guild","[Sat Nov 14 21:20:17 2009] Wicket: clan even","[Sat Nov 14 21:21:25 2009] Wicket: later bro","[Wed Jan  6 22:46:39 2010] Highlander has removed Wicket as a clan leader!","[Sat Jan  9 03:38:19 2010] Highlander: 70000",})
+leaders ({})
+join_type 0
+private_coffer 0
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

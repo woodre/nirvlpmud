@@ -1,0 +1,54 @@
+The Help file for your cooly wiz toy.  All functions available are listed here
+------------------------------------------------------------------------------
+Chelp                             This Menu
+Iden (object)                     Identify an Object
+Align (str)                       Set your Alignment string
+Pretitle (str)                    Set your pretitle string
+Title (str)                       Set your title string
+Lon                               Turn the Wiz toy light on
+Loff                              Turn the Wiz toy light off
+Frog (player)                     Put/Remove Frog curse on a player
+Gender (player)(sex)              Set gender of player (male,female,creature)
+Ptitle (player) (str)             Set a Players Title
+Palign (player) (str)             Set a Players align string
+Gopost                            Go to the post office
+Rreturn                           Return to previous location
+Glue (on/off)                     Sets the anchor on your toy (defualt on)
+Move (ob, ob1)                    Move object to object1
+Bring (player)                    Trans a player to you
+Get!                              Power get (get an object no matter what!)
+                                  (will get item from player remotely)
+Scare (player)                    Scare the Hell out of a Player
+Update (target)                   Update a target (here = environment)
+Reset (target)                    Reset a target (here = environment)
+Clean (target)                    Destruct items from target (here = environment)
+                note: does not dest players (souled objects)
+Fixme                             Sets HP/Sp/Intox/Stuffed/Title and Align
+Dungeon (player)                  Throws a player in your Dungeon
+Force (player) (command)          Force a player to do command
+Whohas (object)                   List everyone with object
+Strip (object)                    Show the inventory of object
+Drop! (object)                    Drop an object no matter what
+Sgoto (player or room)            Silently goto target (player or room)
+Eye (object)                      See environment through target's eyes
+Ghst (player)                     Turn a player into a ghost
+Rmghst (player)                   Remove the ghost
+Zap (object)                      Call a zap in object (10000 hp)
+Chch (player)                     Send a player to the church
+Qit (player)                      Force a player to quit
+Silence (player)                  add -1000 sp to an annoying player
+Quiet (player)                    Put a shout curse on player
+Act (player) (command)            To a command in the environment of a player
+Goin (target)                     Go into a Target's inventory
+Sdest (target)                    Silent and Remote dest of target
+Iclean (target)                   Destruct an item from target
+Pvis (player)                     Force player to be Visible
+Money (DO NOT USE AMT)            Drop 60k coins on ground in front of you
+NO                                Calm fighting in room
+heal (player)                     Completely heal a player
+Axp (player) (amount)             Add experience to a player
+Echo                              echo in room
+ echoto (player)                  Echo to a player
+ echoall                          Echo across the mud
+Zp (target) (amount)              Zap a target for x amount of damage
+

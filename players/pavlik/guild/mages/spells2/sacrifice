@@ -1,0 +1,46 @@
+sacrifice(){
+  object obj;
+  int heal, msg;
+
+  if(!KNOW("dust_corpse") && !KNOW("sac")){
+    write("What?\n");
+    return 1;
+  }
+
+  obj = present("corpse", env);
+  if(!obj) obj = present("corpse", tp);
+
+  if(!obj){
+    write("There is no corpse here.\n");
+    return 1;
+  }
+
+  if(spell_fail2(1, "necr", "wil")) {
+    write("The soul escapes before you can complete the sacrifice.\n");
+    say(ME+" casts a spell and a corpse crumbles to dust.\n");
+    destruct(obj);
+    return 1;
+  }
+
+  heal = obj->heal_value();
+  msg = random(4);
+
+  if(msg == 0) tell_room(env,
+  ME+" dabs "+PO+" fingers in blood and traces a pentagram on the ground.\n"+
+  ME+" sacrifices the "+obj->short()+".\n"+
+  "The empty husk crumbles to dust.\n");
+  else if(msg == 1) tell_room(env,
+  ME+" casts a black spell over the "+obj->short()+".\n"+
+  "The corpse shrivels to dust and blows away with the wind.\n");
+  else if(msg == 2) tell_room(env,
+  ME+" casts a black spell over the "+obj->short()+".\n"+
+  "The corpse bursts into flames and incinerates!\n");
+  else if(msg == 3) tell_room(env,
+  ME+" casts a black spell over the "+obj->short()+".\n"+
+  "The corpse's flesh rots away until only a skeleton remains.\n"+
+  ME+" smiles demonicaly.\n");
+
+  tp->add_spell_point(heal * 7/4);
+  destruct(obj);
+  return 1;
+}

@@ -1,0 +1,139 @@
+I may not be on track here, but I find myself wondering how the current proposed changes (which are many and fairly complicated) will be introduced into a game that has, for the most part, had its parameters in place for a good long time.  We have players (at least a few still) who will be confused....or feel 'out of it'.  If the game is going to be changed to a large extent, would it not be better to make an 'alt' mud, change it up, and then let people log in and try it out?  I also wonder how in the worl
+
+
+
+I'm sorry to leave this unanswered for so long, but I wanted to make sure I
+could put a comprehensive reply together.  This is stuff I've had floating 
+around in my head for quite a while, so I want to make sure I respond as 
+clearly as possible.
+
+For starters:  Nirvana is a dying MUD.  I don't know that anyone wants to hear
+or accept this, but it's a fact.  If you look at Nirvy over the last what, 
+four, six, eight, ten years, it's steadily losing playerbase.  One or two 
+fewer players average per night, per year, perhaps, but it's dying.  What's 
+happing is we're not attracting or retaining new players, and gradually the 
+older players develop real-lives, or are kicked in the ass by their RLs.  They
+don't return, and we're not gaining new players at the same rate we lose them.
+This is a slow attrition, but it's a fact of life.  This is the reason, plain
+and simple for trying to introduce any changes all - to reverse this.
+
+Now, the older players are going to leave - in my own case, I've burnt out at
+times, and the eight or nine years I was gone from here were due to real-life.
+I'm a returned player, and yes, this happens fairly often.  It doesn't happen
+often enough to compensate for the loss of players.  In any case, there's no
+mud in existance that doesn't lose players - to the MMORPGs like WoW and
+Everquest, or whatever, to girlfriends, wives, kids, prison (heh), the USMC,
+or military service in general, rl in general, or whatever.  This is a fact 
+of life for any MUD.  The key is to replace those players with new ones.
+
+This is an ancient MUD.  I actually enjoy working on this MUD for that reason.
+I'll bitch and moan and gripe as much as anybody else about things that don't
+work like they should, if at all, and the pain in the ass it is to change 
+anything, but I've had a long history here, and the administration and pbase
+has as well.  This is something you can't replace, period.  The problem is
+that it's ancient in its systems.  Combat is clunky and obsolete, the chars 
+all use the same gear, there's no individuality, and syntax here is simply
+incomprehensible to most.  I am, usual flap aside, an extremely competant 
+player, and recently I've brought over one of the best players from another
+MUD, and he's had the same thoughts that I did learning this game:  it's 
+simply too piecemeal, the syntax isn't consistent enough, it's too simple in
+some areas (player creation, lack of races, etc) and too ridiculously complex
+in others: clunkiness of the save system, the weird exceptions for attribs, 
+hell, who thinks to type 'help attribs' - the inferior help file system, etc.
+
+I've been thinking over these issues for years, and as most players and 
+developers here are aware, I've been gaining input on one topic or another
+almost continuously during my time.  I don't have all the answers, so I seek 
+them out from others.  What the problems boil down to is the following:
+  Poor noob interface:  they are clueless, they don't gain appreciably in
+    power, they don't know what makes them more powerful - levels, stats, 
+    etc, they don't understand the game.  Noob areas are all over the place,
+    some of them aren't truly noob areas, noobs can't carry even minor gear, 
+    syntax is a nightmare, and we don't have a really professional or modern
+    looking interface, in general.
+  We're very limited.  Combat is ridiculously repetitive.  It's too 
+    simplistic, the only things to consider are healing and making sure to use
+    your one spell per round.  There's no variance, it's just different guilds
+    with different commands.  Use aliases, it's all the same guild.  I know
+    this sounds harsh, and some of you might argue, but the fact is, that's 
+    what it all boils down to.  If you really want to argue the point, send me
+    a tell or mail.
+  Every player basically the same.  There's very little variance in the high
+    end gear or chars.  They all max all stats eventually, they all use the
+    same gear when they can get it, etc.
+  Guilds make no sense.  Why does my bcm have no differences in combat than a
+    knight other than emotes?  A knight should be physically-oriented, the
+    mage more magical.  There's entire essays to be written about this subject
+    but I'm cutting it off here.
+  Saved items:  this is terrible.  Most chars can't even store their base
+    slots - of which there are too many, admittedly.  My bcm can store most
+    but not all of the gear - ALL OF WHICH - he equips generally.  It's also
+    very confusing and difficult to grasp for new chars, and primitive by the
+    standards of most modern, high player-base muds.
+  Gear makes no sense.  It's obvious what's the best - the lightest, max ac
+    item that has the best specials.  If you don't see the problem with this, 
+    then you don't need to be reading this at all, stick to playing the game.
+  Pk pointless: there's actually a lot to be written on this, but the core 
+    issues are being addressed by verte and me, and there's a large-scale
+    project going on by pain, jenny, me, other wizards for that as well.
+  Misc issues: not going into them here, but there's a lot heh :)
+
+This leaves the solutions and the reasons for them as the next topic.  What 
+I'm trying to do first is to streamline the attributes - we currently have 10
+that some of which do things, some don't, some depend, nobody knows.  What's
+the tradeoff between spending exp on levels or stats or guild?  Those are too
+difficult of questions for noobs to be considering.  Let's streamline this and
+let them know exactly what each stat is responsible for, let's make them go up
+each level, so they can focus on tradeoffs between guild levels and spending
+exp on levels.
+
+Next topic is races:  every player is currently the same.  This is boring, 
+it's foolish for balance, and irritating for players and guilds.  Let's put in
+some true graces, some true differences, let players choose and customize 
+their chars on a fundamental level.
+
+Skills.  This is one of my major goals.  The skill system I'm working on
+implementing is the single-most addictive system I've ever seen.  It's similar
+to the old warrior guild, but it's even more intuitive.  It makes sense, it
+facilitates things for guilds, and makes guildless chars viable.  My main 
+interest is addicting new players - when they see their skills shooting up 
+from the first fight they are in, and continuing to raise, it gives them a
+sense of accomplishment.  This is important for retaining noobs.
+
+Gear.  This is essential for everything else, and it's going to be unpopular
+initially, but it's a simple necessity for guilds and skills.
+
+The last topic is the problems.  My single biggest debate with myself on this
+is, does this change the fundamental nature of Nirvana.  Well, what I've 
+finally come to decide is that yes, it does, and no, it's not a bad thing.  
+Like I said, Nirvana is dying.  One can deny this or refuse it, or close their
+eyes to it, but the fact is Nirvana is declining.  Something needs to be done,
+and that something is modernization.  My goal plain and simple is to increase
+the playerbase.  The ways to do this are to simplify the mud's syntax, make
+it's core commands more professional in appearance, enhance the help files, 
+make learning the mud more intuitive, and most importantly, ADDICT them.
+
+In any case, I'm sorry this runs so long, I've actually tried to keep it as
+brief as possible.  If there's a subject anyone wants elaboration on, I'll be
+happily to provide it, but I'd ask that they talk to players, talk to newbies,
+look at the game as a newbie, remember what it was like when you were a newbie
+and just look at this with an open mind.  
+
+To answer the question from an implementation standpoint: 
+I'm doing this piecemeal, just a bit here, a bit there, and I've  
+been talking to players more or less nonstop on this.  I have an  
+open invitation for them to 'beta' these changes, and I'm making an 
+extreme effort to keep them in the loop. 
+ 
+From a code end, well, it's a pain in the ass, plain and simple. 
+I'm going to have everything legacy supported of course - that's  
+what makes this a pain in the ass.  I'd actually now rather do this 
+stuff this way rather than on an alt mud, simply because they can 
+see the progress, and it's less to learn for any given player.   
+ 
+It will be less of a shock this way, it will be gradual, and most 
+of the players will pretty much know what's going on, plus for  
+every 'nerfing' that happens, it can be balanced with a positive. 
+ 
+Anyways, I'm handling the code-end, and I can elaborate on exactly 
+what I'm doing if you're really that interested. 

@@ -1,0 +1,48 @@
+Guild Format 1 - Directories/files <mythos 3-15-98>
+  
+  * Guild files are not to be placed in closed dirs but rather
+    in /players/<whoever>/guild dir.  This makes it easier for
+    us to know exactly where the guild files are stored.
+    
+  * All files should be named with filenames that state exactly
+    what that file is.  Example: guildhall.c, masterobject.c, etc
+  
+  * The following is a sample guild dir format:
+     note: * denotes file all others are otherwise directories
+  
+                     /players/<whoever>/guild
+                                 |
+ ------------------------------------------------------------------------
+ |   |    |    |      |     |     |     |        |           |          |
+obj room mon  power member logs  docs  misc *guildob.c *guilddaem.c  *def.h
+ |
+ ---------
+ |   |   |
+wep arm misc
+
+    Note:  Please follow the above as closely as you can (this includes the
+           actual names of dirs and files)
+           
+    Details: power is the dir in which the guild powers as .h files are placed
+             such powers are included into the guilddaem.c and called thru
+             the guildob.c
+             example:
+             in guildob.c
+              
+               function_in_guildob() {
+                 guilddaem->function_in_guilddaem();
+               }
+             
+             in guilddaem.c
+               
+                #include "power/function_in_guilddaem.h"
+             
+             in power dir
+               
+                in function_in_guilddaem.h
+               
+                  function_in_guilddaem() { do_the_function; }
+                  
+    Note: Though there are various ways to code a guild object and its powers
+          the above way is highly recommended as it makes viewing the files
+          and functions easier.

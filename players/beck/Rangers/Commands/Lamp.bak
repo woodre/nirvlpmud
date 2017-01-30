@@ -1,0 +1,43 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+string *Rangers;
+
+RangerPower(){
+
+   string person;
+
+   person = TPRNAME+PO->QRandomNumber();
+
+   if(!Rangers)
+      Rangers = ({});
+
+   if(!(PO->QMorphed())){
+      if(member_array(person, Rangers) != -1)
+         Rangers -= ({ person });
+      write("You need to be morphed to use this.\n");
+      return 1;
+   }
+
+   if(member_array(person, Rangers) < 0){
+      PO->set_arm_light(2);
+      tell_room(ENVTP,TPNAME+"'s Helmet begins to emit a bright beacon of light.\n");
+      Rangers += ({ person });
+      return 1;
+   }
+
+   PO->set_arm_light(-2);
+   tell_room(ENVTP,TPNAME+"'s Helmet stops emitting light.\n");
+   Rangers -= ({ person });
+   return 1;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   write("Your Lamp skill allows you to see better in dark places\n"+
+         "by projecting a stong beacon of light from your helmet\n"+
+         "");
+   return 1;
+
+}

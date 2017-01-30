@@ -1,0 +1,6 @@
+clone /obj/wiz_tool.c
+clone /players/boltar/templar/templar.c
+clone /obj/mail_reader.c
+clone /players/maledicta/closed/tellobj.c
+main
+cd ~

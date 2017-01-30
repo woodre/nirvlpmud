@@ -1,0 +1,85 @@
+
+                ****** SEINFELD ******
+
+Cosmo's first area -- completed for approval on 4/17/97.
+-----------
+  Special thanks to Balowski, Eurale, Llew, Pain, Pavlik,
+and Mythos for all of their help, example files, and answers
+to my endless questions.
+-----------
+Files used in this area: 
+  All files in /players/cosmo/apt and its subdirectories;
+bat.c and bertha.c in ~/weap;
+babyblue.c, bubble.c, chefhat.c, goldenboy.c,
+helmet.c, and usps.c in ~/armor.
+-----------
+Background of area:
+  This area is based on the TV show Seinfeld.  Most monster, object,
+and room ideas are taken from that show, and every attempt was made
+to stick to the theme of the show.
+-----------
+Room links:
+  The player begins in the lobby of an apartment building and the
+only exit is to an elevator.  In the elevator, there are seven random
+exits: Newman's Room(12%), Elaine's Room(12%), Steinbrenner's Room(12%),
+Geroge's Room(12%), Bubble Boy's Room(12%), a hallway(20%), and out to
+a street(20%).  The elevator also has an emergency phone.  If used, the
+phone will return the player to the castle entrance: /room/plane1.
+  From each room that has a 12% chance, the player may return to the
+elevator by opening the door.  From the hallway, there are two doors
+which lead to Jerry's room and Kramer's room, and there is a button
+which leads back to the elevator.  Opening the door in either Jerry or
+Kramer's room leads back to the hallway.
+  From the street, the player has four choices.  Enter the building and
+end up back in the lobby, crawl down the manhole and end up in Pavlik's
+tiny sewer area, or go east or west.  The east/west road centers on this
+initial room, and from these street rooms, exits may be found for a
+Coffee Shop, Soup Shop, and Flower Shop.
+------------
+Details of objects (hierarchy):
+* ~/apt/rooms/rjerry
+  -- ~/apt/mon/helen
+  -- ~/apt/mon/morty
+  -- ~/armor/babyblue
+* ~/apt/rooms/rkramer
+  -- ~/apt/mon/joe
+  -- ~/apt/mon/kramer
+     >> ~/armor/helmet
+     >> ~/weap/bertha
+* ~/apt/rooms/rnewman
+  -- ~/apt/mon/newman
+     >> ~/apt/obj/rubble
+     >> ~/armor/usps
+* ~/apt/rooms/relaine
+  -- ~/apt/mon/elaine
+     >> ~/apt/obj/msprings
+* ~/apt/rooms/rbubble
+  -- ~/apt/mon/bboy
+     >> ~/armor/bubble
+* ~/apt/rooms/rstein
+  -- ~/apt/mon/stein
+     >> ~/weap/bat
+     >> ~/apt/obj/freedom
+* ~/apt/rooms/rgeorge
+  -- ~/apt/mon/frank
+  -- ~/apt/mon/estelle
+* ~/apt/rooms/rflower
+  -- ~/apt/obj/rose
+  -- ~/apt/mon/leo
+  -- ~/apt/mon/susan
+     >> ~/apt/obj/purse
+* ~/apt/rooms/rnazi
+  -- ~/apt/obj/scup
+  -- ~/apt/obj/sbowl
+  -- ~/apt/mon/nazi
+     >> ~/apt/obj/scup
+     >> ~/armor/chefhat
+* ~/apt/rooms/rcafe
+  -- ~/apt/mon/jerry
+     >> ~/armor/goldenboy
+  -- ~/apt/mon/george
+
+I think that covers every object in this area.
+Hopefully, this writeup will help expedite the approval process.
+Please mail me if any additional information is needed.
+

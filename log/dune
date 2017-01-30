@@ -1,0 +1,25 @@
+players/dune/closed/guild/daemons/_more.c line 218: syntax error
+players/dune/closed/guild/daemons/_more.c line 221: Bad assignment: illegal lhs (target)
+players/dune/closed/guild/daemons/_more.c line 229: Bad assignment: illegal lhs (target)
+players/dune/closed/guild/daemons/_more.c line 229: syntax error
+players/dune/closed/guild/daemons/_more.c line 238: Bad assignment: illegal lhs (target)
+players/dune/closed/guild/daemons/_more.c line 238: syntax error
+players/dune/closed/guild/daemons/_more.c line 325: Variable DOCDIR not declared !
+players/dune/closed/guild/lib_genCmds/cvote_results.c line 11: Missing arguments to simul_efun ls
+players/dune/closed/guild/lib_genCmds/cvote_results.c line 10: Missing arguments to simul_efun ls
+players/dune/closed/guild/lib_admCmds/logall.c line 10: Missing arguments to simul_efun ls
+players/dune/closed/guild/lib_admCmds/logend.c line 12: Missing arguments to simul_efun ls
+players/dune/closed/guild/rooms/archives.c line 83: Missing arguments to simul_efun ls
+players/dune/closed/guild/lib_genCmds/cvote_results.c line 10: Missing arguments to simul_efun ls
+Fri Mar  6 06:05:09 2015: players/dune/closed/guild/implants.c line 423:Undefined function set_shadows
+Fri Mar  6 06:05:09 2015: players/dune/closed/guild/implants.c line 423:Undefined function set_shadows
+Fri Mar  6 06:21:03 2015: players/dune/closed/guild/implants.c line 423:Undefined function set_shadows
+Fri Mar  6 06:21:03 2015: players/dune/closed/guild/implants.c line 423:Undefined function set_shadows
+players/dune/closed/guild/implants.c line 423: Undefined function 'set_shadows'
+players/dune/closed/guild/implants.c line 423: Undefined function 'set_shadows'
+Fri Mar  6 07:45:39 2015: players/dune/closed/guild/implants.c line 423:Undefined function set_shadows
+Fri Mar  6 07:45:39 2015: players/dune/closed/guild/implants.c line 423:Undefined function set_shadows
+Fri Mar  6 07:49:08 2015: players/dune/closed/guild/implants.c line 423:Undefined function set_shadows
+players/dune/closed/guild/daemons/_more.c line 326: Variable DAEMDIR not declared !
+players/dune/closed/guild/daemons/more_ob.c line 3: Missing type for argument
+players/dune/closed/guild/daemons/more_ob.c line 3: Return type not matching: got unknown, expected int

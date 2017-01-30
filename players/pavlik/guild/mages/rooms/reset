@@ -1,0 +1,87 @@
+/*
+ * things that need to be done at the reset:
+ * 1) set guild rank to 0.
+ * 2) set all guild stats to 0, reimburse player 45 guild experience
+ *    points for every stat point.
+ * 3) erase spell list.
+ * 4) set training and new spell to 0.
+ * 5) clear guild donation points.
+ * 6) somehow flag player to recieve mageobj2 on login.
+ * 7) give me guild object.
+ * 8) pointer to help file.
+ */
+
+mageguild_reset() {
+  object ob;
+  int total;
+
+  ob = present("mageobj", this_player());
+
+  if(!ob) {
+    write("Error ... no Mage Soul was found.\n");
+    return 1;
+  }
+
+  if(present("mageobj2", tp) && !PAV->is_gc(tp)) {
+    write("You do not need to do this again.\n");
+    return 1;
+  }
+
+  write("\n");
+  write("Preparing Mage Soul for update ... \n");
+  total = 0;
+
+  write("\tresetting guild rank ... ok.\n");
+  tp->add_guild_rank(-tp->query_guild_rank());
+  ob->set_divd(50);
+
+  write("\tresetting all guild stats to 0 ... ok  ");
+  total += ob->query_conjuration();
+  total += ob->query_enchantment();
+  total += ob->query_evocation();
+  total += ob->query_illusion();
+  total += ob->query_necromancy();
+  total = total * 60;
+  ob->raise_conjuration(-ob->query_conjuration());
+  ob->raise_enchantment(-ob->query_enchantment());
+  ob->raise_evocation(-ob->query_evocation());
+  ob->raise_illusion(-ob->query_illusion());
+  ob->raise_necromancy(-ob->query_necromancy());
+  ob->raise_intelligence(-ob->query_intelligence());
+  ob->raise_power(-ob->query_power());
+  ob->raise_wisdom(-ob->query_wisdom());
+  ob->raise_will_power(-ob->query_will_power());
+  tp->add_guild_exp(total);
+  write("["+total+" gxp added.]\n");
+
+  write("\tclearing spell list ... ok.\n");
+  ob->set_new_spell_list("RESET");
+
+  /* clear training slots and new spell slots */
+  ob->add_training_sessions(-ob->query_training_sessions());
+  ob->add_new_spells(-ob->query_new_spells());
+
+  write("\tresetting donation points ... ok.\n");
+  ob->add_donation(-ob->query_donation());
+  ob->add_donation(random(25));
+
+  write("\twriting new data file ... [**BUG!**]\n");
+  write("\tjust kidding.  new data file ok.\n");
+  ob->mage_autosave();
+
+  write("\n");
+  write("Update of Mage Soul complete.\n");
+  destruct(present("mageobj", this_player()));
+  move_object(clone_object("players/pavlik/guild/mages/mageobj2"), this_player());
+  present("mageobj2", this_player())->load_data();
+
+  write("Please read 'mhelp starting_over' for further details.\n");
+  write("\n");
+
+  /* log it */
+  write_file("/players/pavlik/guild/mages/log/RESET",
+  tp->query_real_name()+" has RESET ["+ctime()+"]\n");
+
+  return 1;
+}
+

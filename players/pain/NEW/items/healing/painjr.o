@@ -1,0 +1,13 @@
+no_clean 0
+short_desc "A knarled wand <$12530>"
+long_desc "This is an ancient wand carved out of solid oak.As you gaze at it you think you can see a healingenergy pulsing through its twists and knobs.Perhaps you could learn more about it by typing<healing>.You see that the wand has a value of $12530 and a total charge of 358 remaining."
+info 0
+save_flag 0
+value 1000
+local_weight 1
+name 0
+alias_name 0
+read_msg 0
+shop_dest_flag 1
+charge 358
+div 35

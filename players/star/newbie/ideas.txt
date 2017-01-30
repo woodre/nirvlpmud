@@ -1,0 +1,38 @@
+Newbie portal with lots of areas linked..  ask around for favorite stomping
+grounds..  check sub dirs of /players for dirs named "newbie"
+
+re-send "recall" command to the portal
+
+Update newbie book..  likely in Softly's dir..  make it more obvious that
+it's available..  maybe look into auto-loading it onto all newbs
+
+Newbies should start in the newbie hall
+
+Char customization should be done before login, then they login at 
+newbie hall..  not the lazy way as is currently the case..
+
+Map of the newbie hall??  If there's not one, put a dispenser there, or 
+maybe put a map in the book
+
+Death cost way less for newbs, and save their corpse and auto resurrect
+
+Newbie book file /players/softly/nhall/obj/nbook.c
+     Add guilds to the list
+     Add no pk to the bard listing
+     Make the book more easily found and well-known
+     Add unlisted areas going into the portal, to the list in the book
+     Add info about the portal, recall, and return portals to the book
+     ***  Check book for more possible needed changes  ***
+
+Maybe a shop in the newbie hall??  If so, maybe a sign saying that
+     adventurers who have done well financially and wish to look for
+     good gear should check the main shop for things others have sold.
+
+See if newbie book has information on the wimpy and consider commands
+
+In the newbie hall, room n4, the library, states that the portal chamber
+     is to the east.  The room to the east is actually the lockers.
+     Fix, of course, but also maybe a good room to put the portal
+     chamber off of.  Or possibly a 'portal' exit from main hall
+
+Check that newbie areas let in levels 6 and 7, not just up to 5

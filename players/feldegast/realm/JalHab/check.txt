@@ -1,0 +1,80 @@
+These items require special attention in approval:
+
+Heals:
+~/heals/myrm-blood.c
+~/heals/myrm-heart.c
+	These heals heal 20/60 and 80/20, and are calculated as an
+average of the hp/sp.  There is a 1/9 chance of random(60) damage.
+These must be fought for rather than purchased.
+
+stemple.c - A temple w/blessing.  The blessing is basicly a slow
+	regeneration spell that only works during combat.  See
+	~/heals/blessing.c for details.  This item has a cost/heal
+	ratio of 45 rather than 60 due to the slowness of the
+	regeneration, the remoteness of the location, the fact that
+	the heal only occurs during combat, and due to the sheer
+	improbability that players will actually use it.  I don't
+	see how this could really be abused at the current rate, and
+	I think it is a more thematic method of healing.
+
+Monsters:
+~/mon/cactipod.c
+	This monster has a 50% chance of leaving behind a 1200 coin
+heal, or producing 1+random(3) copies of itself.  This may sound like
+there will be hoards of cactipods wandering around the desert, but
+in practice there are rarely more than 4 generated.
+
+~/mon/jikhal.c
+	This was around the third of fourth monster that I made for
+this mud, but he has some nifty abilities.  He has a decent weapon and
+an ac4 armor.
+
+~/mon/valatia.c
+	Another monster with some special abilities.  She has the
+crystal ball listed below.
+
+Equipment:
+~/equip/wandereye.c
+	A powerful artifact that's on ~/mon/wanderer.c.  It has a few
+abilities for navigating the desert, can be used to slowly regenerate,
+and can be used to teleport using standard teleportation rules to the
+Jal-Hab.  Uses charges.  
+
+~/equip/ghelm.c
+	A golden helm.  Sold in limited quantities in a store for 8000
+coins.  There is a 1/6 chance of 6hp damage.  Not a practical item,
+but it is just sick and twisted enough to amuse me.
+
+Clothing:
+This is a new item type that I'm experimenting with.
+~/realm/JalHab/stailor.c - A tailor shop.
+~/std/clothes.c - The objects in a group.
+~/std/clothing.c - An individual piece.
+The basic idea is that the player buys a piece of clothing, and it
+becomes something that they permanently wear and appears in their
+long description.  They can remove these items, drop them, and they
+will become an individual piece of clothing.  The clothes simply have
+a cosmetic appearance and have no real game effect.  If this is
+popular, then I'd like to make it available to other wizards.  If it
+isn't, then I'll probably stop it from autoloading and forget about it.
+I think players will either really like this idea, or totally ignore
+it.
+
+Misc:
+~/obj/scroll-escape.c
+Teleports the player to a random location using TELE_ERR.  There are
+random(5) of these sold in the magic shop for 2500 coins per reboot.  
+
+~/realm/JalHab/stav6.c
+This is a casino with a blackjack game.  The pot is 2000 coins.
+
+
+~/obj/crystal.c
+This is a crystal ball on ~/mon/valatia.c, a "special" monster with a
+number of combat abilities.  Can be used to view another player's room,
+chance of detection, and to see a player's description(similar to the
+old bard history command).
+
+In addition, I have written an outline of the area, in 
+~/realm/JalHab/outline.txt which you can look over and tell me if you
+think everything else is good.

@@ -1,0 +1,103 @@
+int current_page;
+
+reset()
+{
+
+current_page = 0;
+}
+
+short() { return  "A dangling book"; }
+ 
+long(str) {
+if(str == "rope"){
+   write("The rope is made of a strong, thick cord that is dangling from the unknown.\n");
+        return;
+    }
+    write("There is a book danging from a rope.\n");
+    write("The title is:  'The Dream', maybe you should\n");
+    write("'read' it.\n");
+}
+ 
+init() {
+    add_action("open"); add_verb("open");
+    add_action("close"); add_verb("close");
+    add_action("read_book"); add_verb("read");
+   add_action("turn"); add_verb("turn");
+}
+ 
+id(str) { return str == "book" || str == "rope"; }
+ 
+open(str) {
+    if (!id(str))
+        return 0;
+    if (current_page > 0) {
+        write("The book is already open at page " + current_page + ".\n");
+        return 1;
+    }
+    current_page = 1;
+    write("Ok.\n");
+    say(call_other(this_player(), "query_name", 0) +
+        " opens the book.\n");
+    return 1;
+}
+
+close(str)
+{
+    if (!id(str))
+        return 0;
+    if (current_page == 0) {
+        write("It is already closed.\n");
+        return 1;
+    }
+   if (current_page == 2){
+    write("Ok.\n");
+    say(call_other(this_player(), "query_name", 0) +
+        " closed the book.\n");
+   current_page = 0;
+   return 1; }
+
+   if (current_page == 1){
+   write("You need to turn the page.\n");
+   return 1; }
+}
+ 
+read_book(str)
+{
+    if (!id(str) && str != "page")
+        return 0;
+    if (current_page == 0) {
+        write("It is closed.\n");
+        return 1;
+    }
+   if (current_page == 1){
+        cat("/players/brittany/kadath/OBJ/tbpage1");
+   return 1; }
+
+   if (current_page == 2){
+        cat("players/brittany/kadath/OBJ/tbpage2");
+   return 1; }
+}
+
+turn(str){
+  if (current_page == 1) {
+  write("You turn to page 2.\n");
+   current_page++;
+   return 1; }
+
+  if (current_page == 2) {
+   write("You turn back to page 1.\n");
+   current_page--;
+   return 1; }
+}
+ 
+get(str) {
+    if (str == "book") {
+        write("The book is attached to a rope.\n");
+        return 0;
+    }
+    if (str == "rope") {
+        write("The rope is secured to the desk.\n");
+        return 0;
+    }
+    return 0;
+}

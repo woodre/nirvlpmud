@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/obj/weapon","/players/wren/Area/starbug/items/comb","/obj/weapon","/obj/weapon","/players/wren/Area/starbug/items/lightbee","/players/wren/Area/starbug/items/arrogance","/players/ultramagnus/darkweapon","/players/mythos/awep/daikyu","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/obj/weapon","/obj/weapon","/players/snow/WEAPONS/souleater","/players/hippo/heals/dna_repair","/players/ultramagnus/apple","/obj/weapon","/obj/armor","/players/saber/armor/dshades","/players/snow/cam/stuff/shield","/players/pain/NEW/arm/helm","/players/ultramagnus/cap","/players/puppy/s/eq/crown","/players/ultramagnus/darkarmor","/players/emerson/heal/spizza","/players/mythos/aarmor/kote",})
+shorts ({"a sword","the cat's hair pick","Baby pin","Baby powder","a strange object called a 'light bee'","Rimmers arrogance.","Dark Rider Broadsword","Daikyu","Blaster","A Prince's Robes","Rabbit foot","Pillow","[1mSoulEater[0m","[32mdna repair string[0m","A Red Apple","Curved sword","Boots","[1mDark Shades[2;37;0m","[34m[1mBlessed Shield[0m[0m","A horned helm","An Elven Cap","A golden crown","Dark Rider Hood","large stuffed-crust pizza","Kote",})
+found ({1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,})
+loaded 0

@@ -1,0 +1,13 @@
+SYNOPSIS
+	status query_attribute( string attr)
+	status query_attribute( string attr, object obj)
+
+DESCRIPTION
+	Examine an object for the existance of the given attribute 'attr'.
+	If no object 'obj' is given, the current object is used.
+	Returns 1 for attribute found, 0 if not.
+
+SEE ALSO
+	attributes(C), add_attribute(E), add_prot_attribute(E),
+	delete_attribute(E), get_attribute(E)
+

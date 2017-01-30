@@ -1,0 +1,20 @@
+2006-04-28:
+	Added macro for ARMOR_PHYSICAL_PENALTY
+	Changed value from -20 to -10
+
+2006-04-26:
+	Added 'mspells' command - administrative command to display a players
+	spell list and also shows how many times they have used each spell during
+	the current login session.
+
+	Removed the half-assed 'mindstorm' spell.  Still searching for the last
+	level 6 spell to be added (type: illusion).
+
+2006-04-24:
+	Moved autosave function from guild-daemon.c to gob.c
+	This makes guild-daemon.c completely obselete and should be
+	ready for removal.
+
+2006-04-23:
+	Added "mindstorm" spell for alpha testing.
+

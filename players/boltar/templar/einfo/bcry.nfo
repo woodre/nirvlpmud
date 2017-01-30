@@ -1,0 +1,24 @@
+		-=[ bcry ]=-
+
+Usage: bcry <1-30> <message>
+Cost:  0
+Piety: 0
+
+  By setting this, you will cry out or emote randomly whatever
+you have placed within the selections. Here is how it works:
+You have 30 slots for emote/war cries.  Slots 1-10 are for when
+you are fighting powerful monsters/players. Slots 11-20 are for
+when you are fighting midlevel monsters/players. And lastly,
+slots 21-30 are for lowlevel monsters/players.  Which emote/
+warcry that goes off will be randomly decided. The fewer slots
+that you fill, the less chance of it going off.
+
+examples:
+bcry 1 charges into combat!   
+will display vs highlevels:  Playername charges into combat! 
+bcry 30 says, "DIE!"
+will display vs lowlevels: Playername says, "DIE!"
+
+To remove a slot, use: rbcry <1-30>
+To list what you have in your slots, use: lbcry
+

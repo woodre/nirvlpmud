@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[36mMark[0mof the[1;31mBrotherhood[0m"
+long_desc "A long[1;31mjagged scar[0mruns down the right arm,[1;36mcircleing[0mthe back of Jupis's wrist. in the[33mcenter[0m of the circle is a [32mPott Leaf[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "object"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A long[1;31mjagged scar[0mruns down the right arm,[1;36mcircleing[0mthe back of Jupis's wrist. in the[33mcenter[0m of the circle is a [32mPott Leaf[0mType 'clan_help' for commands."
+clan_short "[36mMark[0mof the[1;31mBrotherhood[0m"
+damage_type "poison"
+hall_path "/players/deathmonger/room/board_rooms/change_room"
+object_name "object"
+owner "jupis"
+spell_alias "smoke"
+spell_mess_me "You take a%hi red%HUGE %normal% hit from your%hi green%BONG%normal% and%red%EXHALE%normal% a %hi green%CLOUD%normal% of poisonous smoke on %AKN%."
+spell_mess_room "%TPN% Takes a%hi red%HUGE%normal%hit from his%hi green%BONG %normal% and%red%EXHALES %normal% a %hi green%CLOUD%normal% of poisonous smoke on %AKN%."
+spell_mess_them "%TPN% %green% Exhales%normal% a large amount of%hi green%POISONOUS BONG SMOKE%norma on %AKN%."
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 61000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1395635342

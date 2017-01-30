@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/charisma","/players/eurale/Glade/OBJ/elven_boots","/obj/weapon","/players/emerson/obj/political","/players/wren/Area/starbug/items/straw","/players/mythos/awep/zantetsuken","/obj/weapon","/players/angel/area/stargate/obj/bullets","/obj/armor","/players/angel/area/stargate/obj/P90","/players/softly/nhall/obj/decant3","/players/jamila/beach/mobs/skin","/players/ultramagnus/breastplate","/players/saber/stuff/power","/players/scathe/armor/rgarb","/players/wren/Area/starbug/items/reddress","/players/mythos/awep/katana","/players/jamila/beach/mobs/claw","/players/saber/stuff/trink","/players/mythos/aarmor/haramaki","/players/wren/Area/starbug/items/veil","/players/snow/WEAPONS/balance","/players/arrina/armor/sveil","/players/hippo/weapons/glue","/players/snow/WEAPONS/hon_sword",})
+shorts ({"a charismatic aura","[1mElven boots[2;37;0m","Rabbit foot","A Black Book","a long plastic straw","[34mZantetsuken[0m","An evil-looking lightsabre","A clip of bullets [50]","Robot Head","Machine gun","Decanter of Healing [[1m2[2;37;0m]","A Lizard Skin","A Black Breastplate with Red Decore","A power system","Monk's garb","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","Katana","A Lobster Claw","A strange metal trinket","Haramaki","a big wedding veil","The Broadsword of Balance","[1;37mShadowVeil[2;37;0m","a strong, 1 second glue","A finely honed longsword",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

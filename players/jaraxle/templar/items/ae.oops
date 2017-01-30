@@ -1,0 +1,72 @@
+#include <ansi.h>
+
+/*
+Created by: Feldegast
+Date: 1-1-01
+Description:
+A defensive field for the Healer defend spell.  The old defend
+spell didn't work with the new armor system.
+
+Redux by Jarhead & V for Armor enchantment
+*/
+#include "/players/feldegast/closed/ansi.h"
+
+object target;
+object shadow;
+
+int id(string str) {
+   return str=="knight_armor_enchantment";
+}
+
+int drop() { return 1; }
+int get() { return 0; }
+
+void start(object targ, int ac) {
+   mixed *parms;
+   target = targ;
+   parms = ({ "physical", ac, 0, "do_special" });
+   move_object(this_object(),targ);
+   targ->RegisterArmor(this_object(), parms);
+}
+
+void stop() {
+   target->RemoveArmor(this_object());
+   destruct(this_object());
+}
+
+do_special(owner) {
+    object ob;
+    string real_arm_short;
+   if(!shadow || !(ob=shadow->query_shad_wep()) || !present(ob, owner)) return stop();
+   if(!random(3) && owner)
+      {
+      if(!ob->query_worn()) return;
+      tell_object(owner, HIY + "Your " + NORM + (real_arm_short=(string)shadow->query_real_arm_short()) + HIY + " flashes!\n"+NORM);
+      if(environment(owner))
+         tell_room(environment(owner), HIY + (string)owner->query_name() + "'s " + NORM + (real_arm_short) + HIY + " flashes!\n" + NORM);
+      return (1 + random(4));
+   }
+}
+
+void remove_object(object ob) {
+   target->RemoveArmor(this_object());
+}
+
+void set_shadow(object ob) { shadow = ob; }
+
+void
+reset(int x)
+{
+   if(!x && !root())
+      call_out("enchant_end", 3000 + random(1200));
+}
+
+enchant_end()
+{
+   object ob;
+   if(!shadow || !(ob=shadow->query_shad_wep())) return stop();
+   if(environment())
+      tell_object(environment(), HIY + "The enchantment upon your " + NORM + (string)shadow->query_real_arm_short() + HIY + " has ended.\n" + NORM);
+   shadow->remove_shadow();
+   stop();
+}

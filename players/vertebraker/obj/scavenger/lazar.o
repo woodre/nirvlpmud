@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/saber/weapons/hrev","/players/angel/area/school/obj/charm_01","/players/snow/cam/stuff/plate","/players/mythos/awep/tanto","/obj/weapon","/players/pain/NEW/arm/helm","/players/boltar/things/toy","/players/hippo/weapons/molar_sharf","/players/pain/NEW/arm/hood","/players/wren/Area/starbug/items/fish","/players/hippo/armour/shield","/players/mythos/aarmor/sode","/obj/weapon","/obj/bag","/players/saber/armor/mini","/players/sado/shop/oreo","/players/pain/NEW/arm/tunic","/players/ultramagnus/darkweapon","/players/ultramagnus/darkweapon","/obj/treasure","/players/wren/Area/starbug/items/sparehead","/players/snow/ITEMS/bdiamond","/players/morgar/say","/players/emerson/armor/hat",})
+shorts ({"A Princess' Tiara","A Colt .68 Heavy Revolver","Charm Bracelet","[34m[1mBlessed Plate Armor[0m[0m","Tanto","Baby rattle","A horned helm","A small wood top","A molar sharf","A Black Hooded Cloak","A box of trout ala crem","lap of meat","Sode","Axe","bag","A skin tight leather mini skirt","A box of oreo cookies","A handsome blue tunic","Dark Rider Longsword","Dark Rider Spear","A golden staff","Kryten's sparehead 3.","A shimmering black diamond","say with echo and quotes","Driver's Hat",})
+found ({0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,})
+loaded 0

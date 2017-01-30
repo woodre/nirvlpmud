@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/sandstorm/hall/r1","west","/players/mokri/clans/sandstorm/hall/r13","down",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;36mPrismatic [30m[1mStronghold[0m","/players/jaraxle/3rd/alt/items/defense_orb",0,0,0,"[35mA mystical potion of full healing[2;37;0m","/players/wocket/turtleville/OBJ/heal_potion",0,0,0,"A pile of ashes","/players/jaraxle/closed/phoenix/ashes",0,0,0,"A pile of ashes","/players/jaraxle/closed/phoenix/ashes",0,0,0,"A pile of ashes","/players/jaraxle/closed/phoenix/ashes",0,0,0,"[1;30mObsidian [1;31mPunchknife[0m","/players/arrina/weapons/punchknife",0,0,0,"[35mBreath[1;37m of[0;0m[35m Souls[0;0m","/players/jaraxle/3rd/alt/items/mana_orb",0,0,0,"A Hockey Stick","/players/jenny/wings/items/gstick",0,0,0,"A Hockey Stick","/players/jenny/wings/items/gstick",0,0,0,"Orb of the [1m[30mvoid[0m","/players/jaraxle/3rd/pyramid/items/void",0,0,0,})

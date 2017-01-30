@@ -1,0 +1,20 @@
+****************
+
+                     Set_extra
+
+Syntax:    set_extra <who> <level>
+
+Desc:
+           This is to set a player's extra levels for test characters
+           Reminder that testers are not to be set to +100.
+
+Warning:   
+
+Example:   set_extra mike 10
+                  results
+           Mike's extra level is now 10
+
+Related:   set_level, set_attrib
+
+
+****************

@@ -1,0 +1,8 @@
+basic gems should be modified slightly and incorporated into random gem categories.
+resistance gems: resistance to basic dmg types.
+gem of nether echoes: (max end/2 pts)
+corpse drain += corpse level pts * 2 + guild level
+if(x = random(pts) > enemy hp% and end%)
+nmy->hit_player(x|shadow);
+pts $$ end -= x;
+

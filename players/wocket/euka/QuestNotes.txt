@@ -1,0 +1,30 @@
+/* Quest notes for the Euka Forest */
+
+1] Hint:  Listen to the gossip in turtleville.  News travels fast.
+2] cmd 'listen' in ~/turtleville/pub.c:
+   Man says: there is something strange happening.
+   Woman says:  I heard there is some wizards sacrificing euka.
+3] cmd 'ask bartender':
+   Bartender says: Ya, So I hear something strange is happening over
+     in the euka forest.  They dont speak english over there but I
+     heard Yelster is living out there.  You might want to hunt him
+     down.
+3] find Yelster/ 'ask Yelster':
+   Yelster gives translation book to adventureer.  speak is now translated
+   for player.
+4] Find elder 'ask elder':
+   Elder says:  There are 3 protection rocks that when set in their
+     corners bring protection to the forest.  An evil wizard has scatter
+     them across nirvana. please help find them and destroy the wizard.
+   Elder says:  Here, take this.  This devining rod will help you search
+     for the stones.
+5] Elder gives rod to player:  rod will notify player when they are close
+   to a stone.  there is a time limit on the rod before it breaks.
+6] player searches out stones. (there are 8 random locations for stones)
+7] players need to find switches to raise up stone holders (may have them
+   talk to elder again. or someone else.
+8] player places rocks.. (will at one point run into the wizard and must
+   kill him) perhaps prior to placing rocks
+9] euka gather around him.. elder gives quest points and prise of some sort.
+   perhaps something he treasuers but is utterly pointless to the player.
+10] Quest solved.

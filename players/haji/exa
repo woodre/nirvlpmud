@@ -1,0 +1,2 @@
+filename = read_file(str)
+file_explode = explode(filename, "\n");

@@ -1,0 +1,118 @@
+channel_names ({"shout","equip","babble","announce","cwiz","newbie","admin","pk","junk","risque","gossip","wiz",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 0
+luck 39
+lucky 148
+name "vertebraker"
+gender "male"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 2
+level 1000
+armor_class 0
+hit_point 26144
+max_hp 26144
+experience 72171
+mmsgout "mutters an ancient incantation and disappears"
+mmsgin "appears in a blinding flash of light"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 0
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -20
+cap_name "Vertebraker"
+spell_points 35138
+max_spell 35138
+spell_name "sonic"
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 6788959
+is_invis 0
+frog 0
+whimpy 0
+auto_load 0
+current_room "players/vertebraker/workroom"
+alignment 0
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Armors 0
+handshake_data 341
+handshake 98106425
+quest_point 0
+quests "[1;35m _                     ..uu.       ?$""`?i           z'       `M  .@"          x"       'Z :#"  .   .    f 8M       '&H?`  :$f U8   <  MP   x#'       d#`    XM  $5.  $  M' xM"     .!">     @  'f`$L:M  R.@!`    +`  >     R  X  "NXF  R"*L        k    'f  M   "$$ :E  5.        %    `~  "    `  'K  'M            .uH          'E   `h         .x*`             X     `      .uf`                *    .@8     .   'E9F  uf"          ,     ,     9h+"   $M    eH. 8b. .8    .....    .8`     $'   M 'E  `R;'   d?"""`"#   ` E      @    b  d   9R    ?*     @     >      K.zM `%M'   9'    Xf   .f    ;       R'          9     M  .=`    t                   M     Mx~    @                  lR    z"    @                  `   ;"                          `                                      _[2;37;0m"
+pregnancy 0
+pregtoo 0
+monitor_string 0
+saved_aliases ({"stardong","exec command(\"star do\"+BEEP+\"ng!\", this_player());","fnpc","clone /players/zeus/stuff/npc","notes","cat /pfiles/notes/v/vertebraker","home","goto ~/workroom","nope","reply No comment.","cleanv","exec command(\"update \" + file_name(environment(environment(find_player(\"verte\")))), this_player());","mythtell","cd /players/mythos/closed/tell","bombKoosh","exec int i; i = 100; while(i--) command(\"koosh cooper\", this_player());","lx","exec int i; string x,text; string *fds; fds = get_dir(\"/bin/wiz/\"); i = sizeof(fds); while(i--) { text = read_file(\"/bin/wiz/\"+fds[i]); if(sscanf(text, \"%swrite_file%s\",x,x)) write(\"WF: \"+fds[i]+\"\\n\"); if(sscanf(text, \"%slog_file%s\",x,x)) write(\"LF: \"+fds[i]+\"\\n\"); }","bw","cd /players/stardream/area/bw/room","cleanwork","exec destruct(present(\"u-sphere\", find_object(\"/players/vertebraker/workroom\")));","ffireworks","exec int i; i = 100; while(i--) move_object(clone_object(\"/players/llew/junk/firework\"), this_player());","ministry","cd /players/vertebraker/guilds/ministry/cmds","cw","clone /obj/wiz_tool","pussInBoots","exec command(\"risque \"+BEEP+BEEP+BEEP+BLINK+HIM+\"PUSSY!\"+NORM, this_player());","fetch_mad_koosh","exec int i; i = 100; while(i--) command(\"clone /players/mouzar/closed/koosh\", this_player());","fh","clone /players/eurale/Keep/NPC/hylar","lack_respect","star And you know what hurt the most?  The lack of respect.  Well, I forgot about that other thing.  The other thing hurt the most.  But the lack of respect hurt the second most.","hurt","cd /players/guilds/undead/hurtbrain","trixcastle","cd ~/classic/undead/trix/castle","myroom","cd ~/classic/undead/room","freak","exec command(\"star \"+HIR+BLINK+HBMAG+\"Freak\"+NORM+NORM, this_player());","diehard","star ...WITH A VENGEANCE.","wizhall","goto /room/adv_inner","scat","dump","sdance","emote does the sponge wobble gobble.","trix","cd /players/guilds/undead/trix","so","hjkfdhjdf","undead","cd ~/classic/undead","snoopers","p S","allidle","exec int s, idle_time; object *us; s = sizeof(us=users()); while(s--) if(us[s]) idle_time += query_idle(us[s]); write(\"total idling time: \"+idle_time/3600+\" hours\\n\");","ps","gpt","ls","ls -d","fetchMonkey","exec object obj; obj = clone_object(\"/players/vertebraker/closed/monkey\"); obj->set_owner(this_player()); move_object(obj, environment(this_player()));",})
+saved_nicknames ({"ds","demonsemen","vb","vertebraker","qs","quicksilver","dr","dustyrose","sd","stardream","sam","stardream",})
+wkrm "players/vertebraker/workroom.c"
+hostname "pcp0010571326pcs.mchncb01.pa.comcast.net"
+ok_edit "none#"
+mailaddr "tmieczkowski@gmail.com"
+saved_where 0
+title "the Janitor"
+pretitle "GARBAGE DAY!"
+password "pEmk9FS9rMnjw"
+race "rodent"
+al_title "neutral"
+PKGhostCounter 0
+intoxicated 0
+fight_area 0
+mon 1
+phys_at ({1,107,10,30341,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "68.45.152.184"
+msghome "goes home"
+description "the Eater of Worlds."
+guild_name "dervish"
+lastime "Aug 18 01:50 2005"
+player_killing 1
+invs_count 0
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd "/players/vertebraker/log/"
+dead 0
+guild_rank 99
+guild_exp 666
+guild_file 0
+home "/players/vertebraker/closed/shardak/room/grotto"
+ex_lv 9000
+qc 0
+strength 20
+intelligence 20
+stamina 23
+will_power 20
+magic_aptitude 20
+piety 20
+stealth 20
+charisma 20
+dexterity 1000
+atrbr ({5,5,20,36,20,18,20,20,20,19,})
+stuffed 0
+soaked 0
+no_give 0
+aprv "pain,snow,eurale,vertebraker"
+hint 0
+AnsiPref ({"tell","[1;36m","gossip","[1;31m","risque",0,"junk","[1;35m","babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"wiz",0,"cwiz",0,"page",0,"admin",0,"pk",0,"title",0,"pretitle",0,"roomtitle",0,"ls .c",0,"ls .h",0,"ls directory","[32m","ls otherFiles",0,})
+old_last "Aug 17 16:26 2005 to Aug 18 01:50 2005"
+BankBalance 36026
+other_copy 0

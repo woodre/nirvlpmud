@@ -1,0 +1,72 @@
+/*
+ * spell : Unseen Servant   (conjuration)
+ * level : 2
+ * effect: Takes object to another player or to the shop to be sold.
+ *         an object and call_out delays the effects of this spell.
+ * cost  : 30 sp
+ * spec  : 
+ * files : ~/mages/obj/unseen_servant.c
+ */  
+
+unseen_servant(str) {
+
+  string what, where;
+  object ob, obj;
+  object servant;
+  int failed;
+
+  if(!KNOW("userv"))
+	notify_fail("What?\n");
+
+  if(!str || sscanf(str, "%s %s", what, where) != 2) {
+	write("Use: userv <object> <dest>\n");
+	return 1;
+  }
+
+  ob = present(what, tp);
+  if(where == "shop" || where == "sell")
+	obj = tp;
+  else
+	obj = find_player(where);
+
+  if(!ob) {
+	write("You do not have a "+str+".\n");
+	return 1;
+  }
+
+  if(!obj) {
+	write("Cannot find "+capitalize(where)+".\n");
+	return 1;
+  }
+
+  /* can we drop this item at all? */
+  if(transfer(ob, env)) {
+	write("The servant would not be able to take "+what+".\n");
+	return 1;
+  }
+
+  write("You cast an "+MAG+"Unseen Servant"+NORM+" spell ...\n");
+
+  if(spell_fail2(2, "conj", "int")) {
+	failed = 1;
+  }
+
+  tell_room(env,
+    "A cold wind blows across the land sending shivers down your spine.\n"+
+    "A shadowy apparition rises from the ground and bows before "+ME+".\n");
+  say(ME+" whispers something to the dark figure.  It nods and disappears.\n");
+  write("You give the "+what+" to your servant and it disappears.\n");
+
+  servant = clone_object("players/pavlik/guild/mages/obj/unseen_servant");
+  servant->set_owner(tp);
+  servant->set_failed(failed);
+  servant->set_cargo(ob);
+  if(obj == tp) servant->set_destination(servant);
+  else servant->set_destination(obj);
+  transfer(ob, servant);
+  tp->add_spell_point(-30);
+
+  return 1;
+}
+
+

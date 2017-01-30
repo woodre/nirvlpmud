@@ -1,0 +1,13 @@
+                    -- DEMORALISE --
+
+TYPE: Spell (Fixed)
+INT REQ: 2
+USAGE: demoralize or demoralize <monster>
+COST: 500,000
+DRAWBACK: Time Delayed 30 seconds
+
+Reduce a monsters will to defend itself
+              
+     /=COST SP=XP COST=\
+     |  30    |500,000 |
+     \=================/

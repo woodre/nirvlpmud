@@ -1,0 +1,29 @@
+
+inherit "obj/monster";
+
+reset() {
+   set_name("wraith");
+   set_short("A wraith");
+   set_level(17);
+   set_ac(8);
+   set_wc(14);
+   set_al(-253);
+   set_aggressive(1);
+   call_out("special_hit", random(1), 0);
+   ::reset(0);
+}
+
+special_hit() {
+   string attacker;
+   object room;
+   attacker = attacker->query_name();
+   room = environment(this_object());
+
+   tell_room(room, "The wraith rakes "+capitalize(attacker)+" with its claws.\n");
+   tell_object(attacker, "You feel drained.\n");
+   this_player()->add_exp(-random(1000));
+   call_out("special_hit", random(30), 0);
+   return 1;
+}
+
+

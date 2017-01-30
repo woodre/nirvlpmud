@@ -1,0 +1,187 @@
+
+Thank you for taking the time to consider this proposal.
+
+I would like to offer assistance to Beck's Power Ranger guild. I do not
+want to steal the guild or take it over, however, I do not want to see
+the guild disappear, diminished or divided. To that end I propose that I
+be given access to the guild dirs to enable the guild to be an effective
+and contributive member of Nirvana.
+
+  I.  Primary Presence
+    A.  A guild needs to have at least one active wizard. I do not mean
+that a guild wizard needs to be present every hour of the day nor do
+they need to decide every minute detail of the guild's activity. Rather,
+I believe that a healthy guild should have wizard(s) who are actively
+involved in at the minimum maintenance (see section II.) and preferably
+active in progress, protection and morale.  Historically, as wizards
+have become less and less involved in their guilds, the guilds
+themselves have declined or suffered. There are several factors involved
+in any guilds decline, but the presence of an active, visible guild
+wizard will help to mitigate this problem.
+    B.  Beck's presence over the last year has been sporadic at best and
+for large periods of time completely absent. The times he has logged on,
+he has done great things for the guild, but when there is often more
+than 6 months between logins, it becomes a losing proposition. Time
+passes quickly on an lpmud where changes are instaneous and sweeping.
+Areas, guilds, objects come and go with fluidity. The lack of Beck's
+presence severly handicaps the Power Ranger's ability to keep up.
+	C.  The guild's stability is somewhat shaky because of the previous
+criterion. While there are about 5-6 active members, the majority of the
+guild is completely absent for one reason or another, but all connected
+to the presence or absence of a guild wizard and his/her ability to
+address the concerns that affect the guild.
+
+ II.  Maintenance
+    A.  Maintaining viability is a primary level of importance to me. I think 
+the Power Ranger guild has a lot of potential. That is the reason I chose to 
+join the guild. The reason I chose to become a wizard. I have always been a 
+large supporter of the Power Ranger guild from its beginning. I consider a guild 
+viable when it is kept current with any changes to the mud, other changes that 
+affect the guild and general house keeping. Guilds can do this in several 
+possible ways, but currently the Power Ranger guild does not have this most 
+basic maintenance capacity.
+    B.  Cleaning is a close second in importance and several parts of the Power 
+Ranger guild need to have maintenance cleaning.
+        1.  The Power Ranger guild hall and objects needs to be updated to 
+accurately reflect the current state of the guild. Numbers are incorrect or out 
+of date, players are confused about standard guild issues and there is general 
+feeling that they are forgotten.
+        2.  The Power Ranger membership also needs to be cleaned and handled 
+more closely.
+            a.  The fact that the guild sets membership limits is admirable, but 
+if that is the solution, then the guild membership needs to be evaluated on a 
+regular basis. Beck's current level of activity does not allow for this.
+            b.  The Power Ranger guild membership numbers also need to be 
+evaluated in terms of what level of the general mud population needs to be 
+allowed. Players with multiple characters in different guilds will not generally 
+have the time necessary to deal with the significant time and experience 
+requirements to be active in the guild. There are a couple solutions to this 
+problem. Either the general guild requirements can be reduced or made easier, or 
+else the guild membership itself can be more closely evaluated.
+        3.  The Power Ranger guild members themselves could accomplish much of 
+the day to day maintenance of the guild membership if they were allowed a means 
+of removing or suspending Power Rangers who do not actively contribute to the
+progression of the guild. This is not intended to fill a diciplinary or 
+corrective issues but does not preclude their use in such a manner.
+    C.  With Nirvana based on an extensible lib and codebase that is flexible, 
+the Power Ranger guild must be able to deal with those changes to remain 
+current.
+        1.  As the mudlib is updated changes may become necessary. Generally 
+changes are made to be as retroactive as possible, but there are going to be 
+exceptions.
+        2.  As other guilds open or shutdown there is the possibilities that the 
+Power Ranger guild will need to evaluated for continuing balance and 
+accessability.
+        3.  New areas and mobs can radically change the dynamics of a guild and 
+they Power Ranger guild is no exception.
+        4.  As new objects enter the mud there can be radical shifts in guild 
+abilities. Also, older objects that have not been in general use can become 
+problems for guilds and need to be dealt with. There are too many objects in the 
+game for every single one to be tested in all possible combinations. Somethings 
+are bound to conflict or need resolution.
+    D.  Time constraints will result in problems for a guild as well. Seniors 
+often have other continuing responsibilities without having to deal with another 
+wiz-less guild. As more membership responsibilites of a guild like the Power 
+Rangers are regulated, less time is required from seniors in policing problems.
+    E.  Progress will also require that regular maintenance be performed.
+
+III.  Progress
+    A.  The guild has made little or no appreciable progress in terms of 
+innovation. Not everything is about creating new things, but players seem to be 
+very interested in knowing that their guild is being kept current, from guild 
+room renovations, new features, or broader scope.
+    B.  Beck has tried to keep the guild current, but only logging in for a 
+couple of minutes 2 or 3 times a year is hard to keep it going. Player emails 
+and complaints stack up unanswered. A standing joke in relation to the Power
+Ranger guild questions is to "Mail Beck about it", meaning that it probably 
+won't be dealt with anytime soon.
+    C.  Over the course of several interviews with the few current members of 
+the Rangers who log on regularly, several different ideas were expressed that 
+would lend a large amount of playability and general feelings of "fun" that the 
+guild provides. [Logs of conversations with Power Rangers are available upon
+request. Both the existing Power Rangers and I affirm the desire to help the
+guild, but not to radically change, take over, steal or otherwise destroy Beck's
+original creation, remaining true to the original and within the bounds of the
+existing theme and rules.]
+    D.  Possible Changes:
+        1.  Revisit the current implementation of the Power Ranger "power pool".
+It would be necessary to maintain a balance of the guild's inherent ability
+while also trying to increase the overall "playability" or "fun" of the guild.
+        2.  Revise the Power Ranger guild hall "CommandCenter" to reflect the 
+changes made to the guild thus far and possibly finish the previously started 
+"build" modifications. Several additions have been planned but not implemented
+currently.
+        3.  Add on additional Power Ranger types or advanced add-ons. As Power
+Rangers achieve the maximum guild level, the previous motivation for further 
+playing is often reduced or minimized.
+        4.  Lower money limit capacity for Power Ranger. As the guild is 
+thematically not tied to materialism or wealth, but rather goodness and helping
+others, the ability to have 80,000 coins is something that could be changed
+in order to balance some of their other skills.
+            a.  Siphon some of the extra money out of the guild.
+            b.  Limit the maximum number of coins Power Rangers can carry.
+        5.  Power Ranger "Megaship"
+            a.  Could use some added functionality.
+            b.  Currently it is fluff.
+        6.  Power Ranger guild commanders/Team Leaders. Team Leaders are
+currently included in the guild code, but largely unimplemented. No additional
+power or combat abilities need to added, but some miscellaneous maintenance
+skills could be implemented.
+            a.  Provide help for smaller Power Rangers.
+            b.  Monitor membership and either report or deal with problems.
+            c.  Help in planning for the guild itself.
+            d.  Monitor the current Power Ranger allies.
+            e.  Composed of the top Power Ranger types "Space".
+        7.  Boards
+            a.  Council/Team Leader boards for postings votings.
+            b.  Disemination of information in the absence of guild wizard.
+
+ VI.  Morale [Player Response]
+    A. The Power Ranger guildmembers have felt a general loss of pride in their 
+standings as a guild. Ultimately a guild is only as good as the players who are 
+in it.
+        1.  Power Ranger guild is not considered viable by many players and is 
+even openly disparaged as even being a "real" guild.
+        2.  Players want to be join the guild but due to various factors are 
+excluded from joining.
+    B.  While the Power Ranger guild is not generally based on player control, 
+they feel like the guild itself is out of control and unrepresented. The control 
+level is perceived as not only missing, but actually losing ground.
+    C.  Little reward is currently included in the current Power Ranger guild. 
+The potential for reward is built into the guild, but missed largely because the 
+inattention given to the guild. In a highly thematic guild like the Power Rangers, 
+a lot of the reward is in the application of the guild's structure.
+    D.  There is also a lack of satisfaction as problems mount in the Power 
+Ranger guild. Not many Power Rangers log on and which only furthers the problems. 
+The Power Ranger guild is heavily reliant upon multiple Power Rangers working 
+together whereas the mud itself is generally designed around individuals. Also, 
+occasional problems and bugs within the guild are demoralizing to the people who 
+spend so much time and effort into being success in the Power Ranger guild.
+
+  V.  Accountability
+    A.  Only one wizard responsible for a guild is not unique, but I can lead to 
+a lack of accountability.
+        1.  Senior wizards are often to busy with their own projects or guilds 
+to deal with the problems that periodically occur. Additionally, they are often 
+unfamiliar with the Power Ranger guild and it's structure and application.
+        2.  No one around to watch the Power Rangers or be responsible for them. 
+There needs to be some level of advocacy.
+    B.  There is also a lack of comparison or monitor for the Power Ranger 
+guild. Other guilds are monitored closer and their affects on the mud and vice 
+versa taken into account.
+
+ VI.  Protection
+    A.  Beck's code deserves being protected and maintained. Seniors without a 
+feel for the Power Ranger guild theme may not realize why things are complete in 
+the manner they are. Some of the code is out dated and needs to be updated to 
+reflect the current state of the mud, but should be done so in a manner that 
+protects the intent of the author.
+    B.  The Power Ranger Theme and Ideals must also be protected. They are are 
+the basis for everything completed in the guild. The Power Ranger guild deserves 
+the advocacy and represenation of an active wizard, willing to make the time 
+necessary to maintain, progress, protect, account for, and bolster the morale of 
+members.
+    C.  Changes made in the interest of the entire mud cannot be completed in a 
+well informed manner without the accurate consideration of as many parts as 
+possible, including those guilds that are still active.
+

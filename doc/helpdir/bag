@@ -1,0 +1,12 @@
+
+
+                           [help bag]
+-----------------------=========+=========-----------------------                                 
+
+Usage: bag <item>
+       bag <item> in <bagname>
+
+  The bag command is a specialized version of the put command.  It
+attempts to place the specified item into the first bag in your
+inventory.  You can also specify which bag to put an item into,
+just like using the standard put command.

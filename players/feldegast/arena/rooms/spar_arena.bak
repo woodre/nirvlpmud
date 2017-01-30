@@ -1,0 +1,67 @@
+#define LOG_FILE "/players/feldegast/log/deaths.log"
+#include "std.h"
+
+object *rm_inv;
+int x=0;
+
+reset(arg) {
+  enable_commands();
+}
+catch_tell(str) {
+  tell_room("/players/feldegast/arena/rooms/stands2","*"+str);
+}
+set_fake_hb(arg) {
+  while(remove_call_out("fake_hb") != -1) ;
+  if(arg) call_out("fake_hb",3);
+}
+init() {
+  set_fake_hb(1);
+  add_action("east","east");
+  set_light(1);
+}
+  short() {
+    return "The Sparring Arena";
+  }
+  long() {
+    write(
+"     You are in a large circular chamber with a high ceiling and fine\n"+
+"white sand on the floor to soak up any incidental blood that may be\n"+
+"spilt.  Bright flaming torches light the room along the walls.  An\n"+
+"open gate leads east.\n"+
+"    The only obvious exit is east\n"
+    );
+  }
+  east() {
+    if (this_player()->query_pl_k() > 1 ) {
+      this_player()->rm_spar();
+      write("Sparring flag removed.\n");
+    }
+    this_player()->move_player("east#/players/feldegast/arena/rooms/spar_entry");
+    return 1;
+  }
+  query_spar_area() {
+    return 1;
+  }
+  realm() {
+    return "NT";
+  }
+fake_hb() {
+  set_fake_hb(0);
+  rm_inv=all_inventory(this_object());
+  x=0;
+  while(x!=sizeof(rm_inv)) {
+    if(rm_inv[x]->query_ghost()) {
+      tell_room(this_object(),"\n\n"+capitalize(rm_inv[x]->query_real_name())+" HAS DIED!\n\n");
+      tell_room(this_object(),"A pair of attendants come in and drag his corpse to the recovery room.\n");
+      rm_inv[x]->move_player("north#/players/feldegast/arena/rooms/recovery");
+      command("regenerate",rm_inv[x]);
+      tell_object(find_player("feldegast"),rm_inv[x]->short()+".\n");
+      write_file(LOG_FILE,
+ctime(time())+".\n");
+      tell_object(find_player("feldegast"),"Checkpoint Delta.\n");
+      if (present("corpse")) move_object(present("corpse"),"/players/feldegast/arena/rooms/recovery");
+    }
+    x++;
+  }
+  set_fake_hb(1);
+}

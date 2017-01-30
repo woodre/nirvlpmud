@@ -1,0 +1,14 @@
+>> ORDER: PESTER OBJECT
+
+Usage:
+order <indexnum> pester <creature> <duration>
+
+Example:
+'order 3 pester mizan 10'
+
+Description:
+This is a watered-down version of harrass. The monster will only follow
+the victim around, and use casual emotes. No visibly hostile activity
+will ensue, only that the monster will follow the player around
+relentlessly.
+

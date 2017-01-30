@@ -1,0 +1,32 @@
+heart_beat(){
+   int i;
+   ::heart_beat();
+
+/* If the Npc is attacking, it will do the following */
+
+   if(attacker_ob){
+
+/* This will make the heartbeat randomly choose a number from 0 - 19 */
+
+      i = random(20);
+
+/* Choose a number from 0 - 19 from these statements */
+
+      switch(i){
+         
+/* If the number chosen by the heartbeat is 0,1,2,3,4 do the grasp(){ command */
+         case 0..4: grasp();
+         break;
+         
+/* See prior note, using numbers 5,6,7,8,9 */
+         case 5..9: demon();
+         break;
+         
+/* If the number chosen is 10, 11, 12, 13, or 14 - do nothing */
+         case 10..14: return 0;
+         break;
+         case 15..19: demon();
+         break;
+      }
+   }
+}

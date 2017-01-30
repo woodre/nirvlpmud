@@ -1,0 +1,177 @@
+Prestige Levels
+---------------------------------------------------------------
+	Prestige levels are optional for max level 19+100 players 
+	that want to continue playing for something more than just
+	more exp.  When a player chooses to prestige, their level
+	will be reset to 1, stats will reset to 5, and they will be
+	starting over as a new player. Guild stats will need to be
+  reset. 
+  
+  There will be no limit to the number of prestige levels a 
+  player can gain. Advancing prestige level should be 
+  expensive, say 1,000,000 coins and increasing by 100,000 
+  for each prestige level. Prestige lev 10 would cost 2mil, 
+  level 20 would be 3mil etc.
+	
+Prestige Bonus
+---------------
+  When a player advances a prestige level, they will get a bonus
+  point they can apply to a set of prestige bonus skills. Max bonus 
+  amount is prestige_level/4 + 1, which means they are unable to stack 
+  a single bonus type. At level 10 max bonus allowed would be 4.  
+  Could not get a skill to level 10 until prestige level 34, which would 
+  be over 3 Billion xp.
+  
+  - wc_bonus - chance of added wc
+  - ac_bonus - chance of increased ac
+  - gold_bonus - chance of increased gold
+  - hp_regen - faster hp regen
+  - sp_regen - faster sp regen
+  - detox_rate - chance of increased detox rate
+  - hp_bonus - chance of increased hp
+  - sp_bonus - chance of increased sp
+  - xp_bonus - chance of increased xp
+  
+  ----------- Other Bonus Ideas
+  - Regen rate
+      Normal rate is 2 every 10 hb
+      If intoxed rate is 12 * 2
+      hp_regen_object increases 2 by query_hp_regen
+        if it returned 1 regen would go from 24 to 36 while intox, 2 to 3 while not intox
+      sp_regen_object increases 2 by query_sp_regen
+        if it returned 2 regen would go from 24 to 48 while intox, 2 to 4 while not intox
+  - hit_player dam changed from random to prestige_level + random(dam - prestige_level)
+  - do_damage max increased or modified
+  - Login Bonus - higher temporary stats, double xp, gold bonus
+  - autoload objs like bags
+	
+Code Changes
+--------------
+	Bonuses - player.c & living.c
+  Top Player List
+		Needs additional top_list for prestige_xp
+    Need query_prestige_score() top list
+	Function to prestige - Add prestige level room above exlv_guild room?
+  score
+  who
+  finger
+  guilds - need to reset guild when advancing prestige level
+	
+New Variables - player.c
+--------------------------
+/******************************************************************************
+ * Prestige Variables
+ *****************************************************************************/
+int prestige_level;
+int prestige_xp;
+int prestige_qp;
+int prestige_skill_points;
+mixed *prestige_skills;
+
+
+Functions - player.c
+-------------------------
+set_prestige_level( int amt ) {
+  log_file("ADVANCE", ctime() + " " +cap_name+" advanced from prestige level "+prestige_level+" to prestige level "+amt+"\n");
+  prestige_level = amt;
+  save_me();
+}
+query_prestige_level() { return prestige_level; }
+add_prestige_level( int amt ) { set_prestige_level( prestige_level + amt ) }
+
+set_prestige_xp( int amt ) { prestige_xp = amt/1000; }
+query_prestige_xp() { return prestige_xp; }
+add_prestige_xp( int amt ) { prestige_xp += amt/1000; }
+
+set_prestige_qp( int amt ) { prestige_qp = amt; }
+query_prestige_qp() { return prestige_qp; }
+add_prestige_qp( int amt ) { prestige_qp += amt; }
+
+query_prestige_score() { return { prestige_xp + prestige_qp * 325; }
+
+    
+Bonus in Living.c
+-------------------------
+------ attack() - wc_bonus
+if( prestige_wc_bonus > random(17+prestige_wc_bonus*3) ) {
+  damarr+=({prestige_wc_bonus});
+  typearr+=({"physical"});
+}
+
+------ do_damage()
+if( prestige_ac_bonus > random(17+prestige_ac_bonus*3) ) {
+  dam -= random(prestige_ac_bonus + 1);
+}
+
+------ add_money(int m) /**** No can do would never work, would be abused *****/
+if( prestige_gold_bonus > random(17+prestige_gold_bonus*3) ) {
+  m += prestige_gold_bonus * random(100)
+}
+
+Bonus in player.c
+-------------------------
+------ autoheal() - sps & hps regen
+if( prestige_sp_regen > random(17+prestige_sp_regen*3) ) {
+  spell_points += prestige_sp_regen;
+}
+
+if( prestige_hp_regen > random(17+prestige_hp_regen*3) ) {
+  spell_points += prestige_hp_regen;
+}
+
+------ heart_beat() - detox rate
+if( prestige_detox_bonus > random(17+prestige_detox_bonus*3) ) {
+  stuffed -= 1+random(prestige_detox_bonus);
+  soaked  -= 1+random(prestige_detox_bonus);
+}
+
+------ add_xp(int x) - xp bonus
+/********************************************************************
+ * Prestige XP Bonus
+ * When it fires it will give at least a 10% xp bonus based on the
+ * level of the skill. At skill level 10 it will average 50% bonus.
+ * Skill level 10 requires prestige level 34 which is 3bil xp. Skill
+ * level would fire 20% of the time which means an overall 10% xp
+ * bonus. 
+ ********************************************************************
+if( prestige_xp_bonus > random(17+prestige_xp_bonus*3) ) {
+  e += e * ( prestige_xp_bonus * 200 ) / ( 10 + prestige_xp_bonus ) / 100;
+}
+
+------ set_max_hp() - hp bonus
+max_hp += prestige_temp_hp;
+
+------ set_max_sp() - sp bonus
+max_spell += prestige_temp_sp;
+
+Variables to be updated during prestige
+-----------------------------------------
+	backup /pfiles playername.o file to playername.pres#?
+  set_level(1)
+	add_exp
+	set_title
+	add_money
+	rm_pk()
+  reset quest_point
+  reset quests
+	add_prestige_level
+	add_prestige_xp
+  add_prestige_qp
+	GUILD
+		add_guild_rank(0);
+		set_guild_exp(0);
+		set_guild_name(0);
+		set_home(0);
+		set_guild_file(0);
+		-- Need to move the playername.o guild file to playername.pres#
+	STATS -- Need to find the create player code
+		set_attrib("cha",5)
+		set_attrib("int",5)
+		set_attrib("mag",5)
+		set_attrib("sta",5)
+		set_attrib("str",5)
+		set_attrib("dex",5)
+		set_attrib("luc",5)
+		set_attrib("pie",5)
+		set_attrib("ste",5)
+		set_attrib("wil",5)

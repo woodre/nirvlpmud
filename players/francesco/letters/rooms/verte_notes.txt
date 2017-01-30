@@ -1,0 +1,67 @@
+ROOMS
+
+
+   In general, your descriptions are very short.  Try to keep
+   around 3-6 lines in length, but 3 is very minimal.
+   Also your line lengths need to be kept at less than 70.
+   When I recheck the line lengths, the rooms must be all
+   at 70 chars wide or below, or the area won't get approved.
+
+letters1.c -
+
+   the read(str) function does a notify_fail()
+   but returns 1, thus eliminating the use of a notify_fail().
+   Both cases should return 0.  The last case of
+   notify_fail(), it says "Enter what?".  That doesn't
+   make sense.  You're reading something.
+
+   in the items array, it says "shirt steps".  It should
+   read "short steps", I assume.
+
+   "Above the door it is written 'LETTERS DEPARTMENT'"
+   sounds shaky.  Try describing the door, and then
+   say what's above it.
+
+   If the dispenser is sold out, why is it here?
+
+letters2.c - 
+
+   The shelves are closed with glass window?
+   Do you mean _a_ glass window?
+
+   Also, "carry bazillions books" probably should
+   be "carry bazillions of books".
+
+   In the long description, "it is well lighted" ?
+   Do you mean "well lit"? 
+
+letters6.c -
+
+   The long description must be rewritten.
+   Don't ever tell the players what they see
+   is the "best they've ever seen".  Especially
+   for furniture.  A cave-dwelling Shardak might not
+   think the furniture is quite so great :)
+
+   Need items for books, notebook, penholder, and walls.
+
+letters7.c -
+
+   The library item says the library is empty of people.
+   If we're in the library, doesn't it have people in it?
+   Also, if there's another player, then there are definitely
+   people in it :)
+
+   In the long desc, "The shelves shin up the walls".  This
+   sounds odd.  Usually shinning up something means something
+   LIVING climbing the walls. 
+   Need a comma after In the middle of the room ..
+   
+   You need to change the if(!str) and responses to arguments
+   that aren't the correct syntax to notiu need a 'table' item.    The 'tables' item only talks
+   about one table.. *boggle*   Add items 'steps' and 'wheels'
+   for the ladder.
+
+
+All the other rooms are okay.
+

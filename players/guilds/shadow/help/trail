@@ -1,0 +1,16 @@
+TRAIL
+
+usage: 'trail' to drop a trail mark
+            'back' to set the back direction
+            'forward' to set the forward direction
+            'track < forward or back> <number of markers>'
+
+The trail commands offer a way to keep track of where you've been if
+your in an unfamiliar area, or a way to leave an are quickly if you get
+into trouble.  You can drop a marker in a room, set the 'back' direction
+( the way to leave ) and a forward direction ( the way to go forward ).
+If there are a string of these markers, you can use the track command 
+to go forward or backward any number of markers.   Remember, when 
+tracking, it is as if you were typing the directions to the computer, so if
+you set the back of a marker to "eats" instead of "east", it will stop the
+trail.

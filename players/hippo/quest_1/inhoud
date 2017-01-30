@@ -1,0 +1,12 @@
+SCORES.h  : inheritable file for highscores. (syntax: newsc(int); )
+brain.c  : place to play the quest_file game.c
+carotis.c  : way to the willosi.c
+game.c  : the quest_game itself. (cloned in brain.c)
+gamebck.c  : the quest_game without the highscore list inherited
+gamebck_sc.c  : backup for game.c
+highscores.o  : here are the highscores from SCORES.h stored.
+hippo.c  : the 'voice' in the brain.c
+hipposcores.c  : just a portable scorelist for players.
+                 (cloned after finishing game.c)
+private_sc_edit.sc  : for private use: edit highscores.o in case of bugs
+willosi.c  : place from where to enter brain.c

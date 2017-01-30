@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "cgrin"
+myMsgU "You grin cybernetically."
+myMsgD "You grin cybernetically at %TRG%."
+roomMsgU "%SRC% grins cybernetically."
+roomMsgD "%SRC% grins cybernetically at %TRG%."
+tellMsg "%SRC% grins cybernetically at you."
+farMsg "%SRC% grins cybernetically at you from afar."
+owner "dune"

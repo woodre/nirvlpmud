@@ -1,0 +1,178 @@
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+bin/wiz/_instances.c line 95: Undefined function 'normalize_path'
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+inherit/container.c line 403: Missing 'return <value>' statement
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+sys/guilds.h line 14: syntax error
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+obj/player.c line 2756 before '" ob: "+fi': Variable arg not declared !
+inherit/container.c line 403: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+Tue Mar 15 08:48:10 2016: bin/play/_pnext.c line 20:syntax error
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+Fri May 27 11:26:01 2016: obj/HUD.c line 25:Newline in string
+Fri May 27 11:26:01 2016: obj/HUD.c line 25:syntax error
+Thu Aug  4 10:47:44 2016: daemons/nrpoints.c line 58:Variable EXLV_GUILD not declared !
+Thu Aug  4 10:47:44 2016: daemons/nrpoints.c line 61:Variable ADV_GUILD not declared !
+Thu Aug  4 10:47:44 2016: daemons/nrpoints.c line 65:Variable EXLV_GUILD not declared !
+Thu Aug  4 10:47:44 2016: daemons/nrpoints.c line 65:Variable ADV_GUILD not declared !
+inherit/container.c line 403: Missing 'return <value>' statement
+bin/play/_score2.c line 15: Variable WEEK not declared !
+bin/play/_score2.c line 45: Variable TP not declared !
+bin/play/_score2.c line 45: Variable TP not declared !
+bin/play/_score2.c line 85: Variable print_rewards not declared !
+Thu Aug 11 18:31:39 2016: obj/player/nrpoints.c line 192:Undefined function is_testchar
+Thu Aug 11 18:31:39 2016: obj/player/nrpoints.c line 199:Variable WEEK not declared !
+Thu Aug 11 19:49:21 2016: obj/player/nrpoints.c line 198:Undefined function reset_login_rewards
+Thu Aug 11 19:49:21 2016: obj/player/nrpoints.c line 207:Function reset_login_rewards undefined
+Fri Aug 12 11:18:28 2016: obj/player.c line 2339:Variable lr_top_exp not declared !
+Fri Aug 12 11:18:28 2016: obj/player.c line 2340:Variable lr_top_exp not declared !
+Fri Aug 12 11:18:28 2016: obj/player.c line 2343:Variable lr_top_streak not declared !
+Fri Aug 12 11:18:28 2016: obj/player.c line 2344:Variable lr_top_streak not declared !
+Fri Aug 12 11:18:52 2016: obj/player.c line 2339:Variable lr_top_exp not declared !
+Fri Aug 12 11:18:52 2016: obj/player.c line 2340:Variable lr_top_exp not declared !
+Fri Aug 12 11:18:52 2016: obj/player.c line 2343:Variable lr_top_streak not declared !
+Fri Aug 12 11:18:52 2016: obj/player.c line 2344:Variable lr_top_streak not declared !
+Fri Aug 12 12:23:33 2016: obj/player/nrpoints.c line 203:Undefined function check_reward_period
+Fri Aug 12 13:11:58 2016: obj/player.c line 2368:syntax error
+Fri Aug 12 13:16:10 2016: obj/player.c line 4824:syntax error
+Fri Aug 12 15:42:45 2016: obj/player/nrpoints.c line 215:Bad assignment. Rhs: "unknown "
+obj/player.c line 4818 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+Thu Aug 18 10:07:11 2016: open/info/room.c line 82:Missing type for argument
+Thu Aug 18 10:32:21 2016: open/info/room.c line 124:Variable i not declared !
+Thu Aug 18 10:32:21 2016: open/info/room.c line 124:Variable i not declared !
+Thu Aug 18 10:32:21 2016: open/info/room.c line 124:Variable i not declared !
+Thu Aug 18 10:32:21 2016: open/info/room.c line 124:syntax error
+Thu Aug 18 10:32:21 2016: open/info/room.c line 143:Illegal LHS
+Thu Aug 18 10:32:21 2016: open/info/room.c line 144:Illegal LHS
+Thu Aug 18 10:32:43 2016: open/info/room.c line 125:syntax error
+Thu Aug 18 10:32:43 2016: open/info/room.c line 144:Illegal LHS
+Thu Aug 18 10:32:43 2016: open/info/room.c line 145:Illegal LHS
+Thu Aug 18 10:32:43 2016: open/info/room.c line 145:syntax error
+Thu Aug 18 10:32:43 2016: open/info/room.c line 146:Variable test not declared !
+Thu Aug 18 10:32:43 2016: open/info/room.c line 146:Illegal LHS
+Thu Aug 18 10:33:13 2016: open/info/room.c line 126:Too few arguments to pad
+Thu Aug 18 10:33:13 2016: open/info/room.c line 126:syntax error
+Thu Aug 18 10:33:13 2016: open/info/room.c line 144:Illegal LHS
+Thu Aug 18 10:33:13 2016: open/info/room.c line 145:Illegal LHS
+Thu Aug 18 10:33:13 2016: open/info/room.c line 145:syntax error
+Thu Aug 18 10:33:13 2016: open/info/room.c line 146:Variable test not declared !
+Thu Aug 18 10:33:38 2016: open/info/room.c line 126:syntax error
+Thu Aug 18 10:33:38 2016: open/info/room.c line 144:Illegal LHS
+Thu Aug 18 10:33:38 2016: open/info/room.c line 145:Illegal LHS
+Thu Aug 18 10:33:38 2016: open/info/room.c line 145:syntax error
+Thu Aug 18 10:33:38 2016: open/info/room.c line 146:Variable test not declared !
+Thu Aug 18 10:33:38 2016: open/info/room.c line 146:Illegal LHS
+Thu Aug 18 10:45:51 2016: open/info/room.c line 17:syntax error
+Thu Aug 18 10:45:51 2016: open/info/room.c line 18:Illegal LHS
+Thu Aug 18 10:45:51 2016: open/info/room.c line 18:syntax error
+Thu Aug 18 10:45:51 2016: open/info/room.c line 19:Illegal LHS
+Thu Aug 18 10:45:51 2016: open/info/room.c line 19:syntax error
+Thu Aug 18 10:45:51 2016: open/info/room.c line 68:Illegal LHS
+Thu Aug 18 10:48:04 2016: open/info/room.c line 129:syntax error
+Thu Aug 18 10:48:04 2016: open/info/room.c line 147:Illegal LHS
+Thu Aug 18 10:48:04 2016: open/info/room.c line 148:Illegal LHS
+Thu Aug 18 10:48:04 2016: open/info/room.c line 148:syntax error
+Thu Aug 18 10:48:04 2016: open/info/room.c line 149:Variable test not declared !
+Thu Aug 18 10:48:04 2016: open/info/room.c line 149:Illegal LHS
+Thu Aug 18 10:51:28 2016: open/info/room.c line 129:syntax error
+Thu Aug 18 10:51:28 2016: open/info/room.c line 147:Illegal LHS
+Thu Aug 18 10:51:28 2016: open/info/room.c line 148:Illegal LHS
+Thu Aug 18 10:51:28 2016: open/info/room.c line 148:syntax error
+Thu Aug 18 10:51:28 2016: open/info/room.c line 149:Variable test not declared !
+Thu Aug 18 10:51:28 2016: open/info/room.c line 149:Illegal LHS
+Thu Aug 18 11:17:45 2016: open/info/room.c line 114:Variable Item not declared !
+Thu Aug 18 11:34:15 2016: open/info/room.c line 137:Variable Item not declared !
+Thu Aug 18 11:49:00 2016: open/info/room.c line 160:syntax error
+Thu Aug 18 11:49:00 2016: open/info/room.c line 167:Illegal LHS
+Thu Aug 18 11:49:00 2016: open/info/room.c line 167:Variable i not declared !
+Thu Aug 18 11:49:00 2016: open/info/room.c line 167:Variable i not declared !
+Thu Aug 18 11:49:00 2016: open/info/room.c line 167:syntax error
+Thu Aug 18 11:49:00 2016: open/info/room.c line 170:syntax error
+Thu Aug 18 13:15:39 2016: open/info/room.c line 101:syntax error
+Thu Aug 18 13:15:39 2016: open/info/room.c line 126:Illegal LHS
+Thu Aug 18 13:15:39 2016: open/info/room.c line 138:syntax error
+Thu Aug 18 13:16:23 2016: open/info/room.c line 101:Variable EXPLOER not declared !
+Thu Aug 18 13:16:49 2016: open/info/room.c line 101:Variable EXPLORE not declared !
+Thu Aug 18 16:39:00 2016: obj/HUD.c line 75:syntax error
+Tue Aug 23 10:21:26 2016: open/info/room.c line 201:Newline in string
+Tue Aug 23 10:21:26 2016: open/info/room.c line 201:syntax error
+Tue Aug 23 10:38:01 2016: open/info/room.c line 277:Variable i not declared !
+Tue Aug 23 10:38:01 2016: open/info/room.c line 277:Variable i not declared !
+Tue Aug 23 10:38:01 2016: open/info/room.c line 277:Variable i not declared !
+Tue Aug 23 10:38:01 2016: open/info/room.c line 278:Variable i not declared !
+Tue Aug 23 10:38:01 2016: open/info/room.c line 279:Variable i not declared !
+Tue Aug 23 10:38:01 2016: open/info/room.c line 279:Variable i not declared !
+Tue Aug 23 10:53:35 2016: open/info/room.c line 199:Illegal character (hex 5c) '\'
+Tue Aug 23 10:53:35 2016: open/info/room.c line 199:syntax error
+Tue Aug 23 10:53:35 2016: open/info/room.c line 199:Newline in string
+obj/player.c line 4818 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+bin/wiz/_mk.c line 23: Undefined function 'version'
+obj/player.c line 4818 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/player.c line 4818 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/player.c line 4818 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+obj/player.c line 4818 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+obj/player.c line 4818 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+obj/player.c line 4823 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+obj/player.c line 4823 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+obj/player.c line 4870 before end of line: Missing 'return <value>' statement
+obj/player.c line 4879 before end of line: Missing 'return <value>' statement
+obj/player.c line 4879 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+Wed Oct  5 18:22:22 2016: obj/player.c line 657:Variable err not declared !
+Wed Oct  5 18:22:22 2016: obj/player.c line 658:Variable err not declared !
+obj/player.c line 4881 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+obj/player.c line 4881 before end of line: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+Fri Jan 20 14:35:38 2017: obj/corpse.c line 205:Variable HIY not declared !
+Fri Jan 20 14:35:38 2017: obj/corpse.c line 205:Variable NORM not declared !
+Fri Jan 20 14:35:42 2017: obj/corpse.c line 205:Variable HIY not declared !
+Fri Jan 20 14:35:42 2017: obj/corpse.c line 205:Variable NORM not declared !

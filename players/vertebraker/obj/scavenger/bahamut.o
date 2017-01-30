@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/haji/quest/diary","/players/mythos/aarmor/nodowa","/players/puppy/s/eq/parchment","/obj/armor","/players/wren/Area/starbug/items/wrench","/players/sado/shop/oreo","/players/mythos/closed/guild/forest/misc/key_myrax","/players/maledicta/cont/rdragon/dragonscale","/players/sado/shop/chocolate","/players/puppy/s/eq/cape","/players/hawkeye/items/record","/obj/weapon","/players/morgar/say","/players/wren/Area/starbug/items/fish","/players/wren/Area/starbug/items/bazookoid","/players/snow/cam/stuff/sword","/players/mythos/aarmor/sune-ate","/players/saber/armor/halter","/players/boltar/things/toy","/obj/weapon","/players/forbin/heals/dhuez","/obj/armor","/players/arrina/heals/honeyc","/players/ultramagnus/rdiamond","/players/arrina/weapons/punchknife",})
+shorts ({"A diary","Nodowa","Parchment","a hat","small pipe wrench","A box of oreo cookies","Ebon Key","[31ma dragonscale[2;37;0m","A box of delicious Belgian chocolates","A flowing cape","A Mozart Record","Curved sword","say with echo and quotes","A box of trout ala crem","Bazookoid [1;30mmkII[2;37;0m","[34m[1mBlessed Longsword[0m[0m","Sune-ate","A black halter top","A small wood top","spirit blade","d[0m[32m'[0mHuez [0m[32mleaves[0m","A cartoon character's shoes","[33mgooey honeycomb[0m","A Red Diamond","[1;30mObsidian [1;31mPunchknife[2;37;0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

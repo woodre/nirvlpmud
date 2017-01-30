@@ -1,0 +1,47 @@
+Moving Around the Files
+
+UNIX uses a heirarchical file structure with the root of the tree
+being named /.  Other directories branch off from that root directory
+and in turn have their own sub-directories.  All directories may
+contain directories and files.  Directories and files are referred to
+either by their absolute name, which always begins with /, or by their
+relative name which gives the file's name relative to a particular
+directory. In order to get around in the UNIX files structure, you
+have the typical UNIX commands for listing files, your current
+directory, etc.
+
+
+pwd: shows you your current working directory
+
+cd: changes your current working directory.  You may give either 
+    relative or absolute path names.  With no arguments, it changes
+    to your home directory.
+
+ls: lists all files in the directory named.  If no directory is
+    named, it lists the files of the current working directory
+
+rm: deletes the file named
+
+mv: renames the file named
+
+cp: copies the file named
+
+mkdir: makes a new directory
+
+rmdir: deletes a directory.  All files must have been first removed.
+
+more: pages the file named so that the file appears on your screen 
+    one page at a time.
+
+cat: shows the whole file to you at once
+
+head: shows you the first several lines of a file
+
+tail: shows you the last several lines of a file
+
+ed: allows you to edit a file using the mud editor
+
+Your directory is /players/<wizardname> which is automatically
+aliased by the game as `~'. You can quickly get to your directory
+by typing cd ~. All of your files will be in your directory. You 
+can also access all the files in the /open directory.

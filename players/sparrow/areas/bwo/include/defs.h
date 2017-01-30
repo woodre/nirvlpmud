@@ -1,0 +1,6 @@
+#define BWO "/players/sparrow/areas/bwo/rms/"
+#define BWO_incl "/players/sparrow/areas/bwo/include/"
+#define BWO_mobs "/players/sparrow/areas/bwo/npc/"
+#define BWO_heal "/players/sparrow/areas/bwo/obj/hls/"
+#define BWO_arms "/players/sparrow/areas/bwo/obj/arm/"
+#define BWO_obj "/players/sparrow/areas/bwo/obj/"

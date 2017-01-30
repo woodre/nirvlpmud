@@ -1,0 +1,26 @@
+
+                         -=[ Record ]=-
+
+Usage:  record <name> <crime-type> <details of situation>
+
+   Use this command to record a criminal. Remember,
+this person will be hunted by the guild. This is a
+serious matter and not one to be taken lightly.
+
+
+crime-type must be an integer:
+  1  Pet/Kid Killer
+  2  Thief
+  3  Attacking Ally
+  4  Muderering Ally
+  5  Repeat Offender
+  6  Sworn Enemy
+
+Examples: 
+record badplayer 1 Badplayer killed my squire
+record badplayer 2 Badplayer stole the coins from my kill.
+record badplayer 3 Badplayer attacked me when I was in Fallen Lands.
+record badplayer 4 Badplayer killed newbie for no reason.
+
+Related Topics: cwho, pardon, read_record
+

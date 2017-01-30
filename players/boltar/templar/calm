@@ -1,0 +1,31 @@
+/* grabbed from mizan's polys altered for templars */
+calm() {
+   object ob;
+   if(!test_piety(9)) return 1;
+   spell_cost(20);
+   if(!spell_ok) { write("You find that you cannot cast a spell of calming.\n");
+     return 1; }
+    write("You cast a spell of calming which brings everyone to a state of peace.\n");
+    say(this_player()->query_name()+" makes a series of gestures.\n");
+   if(1 == random(this_player()->query_attrib("wil"))) {
+     write("Your spell fails.\n"); return 1;
+   }
+   ob = first_inventory(environment(this_player()));
+   while(ob) {
+      object oc;
+      oc = ob;
+      ob = next_inventory(ob);
+      oc->attack_object();
+      oc->attack_object();
+      oc->stop_fight();
+      oc->stop_fight();
+      oc->stop_hunter();
+      oc->stop_hunter();
+   }
+   
+   write("Your spell calms all those around you.\n");
+   say("A calming effect overcomes everyone within sight.\n");
+   return 1;
+   
+}
+

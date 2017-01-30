@@ -1,0 +1,51 @@
+Aug  5 14:20: /obj/weapon /obj/armor /obj/treasure : added query_short()'s and numerous short_desc refs to query_short() .. set_short() in these objects i added long_desc checks before changing the long desc in set_short() as this will allow for easier modifications of items without the use of a shadow.
+Aug  5 17:19: made enchantments save on both armors and weps
+Aug  5 17:19: added query_descr() to /obj/money
+Aug  7 21:21: changed mi,sh,fi,so to dtypes
+Aug 11 02:13: /bin/play/_help - fixed typo
+Aug 11 20:57: /obj/user/keep_shadow - !this_player() check in drop()
+Aug 15 02:08: added query_critically_hurt() { if(hit_point * 100 / max_hp < 10) return 1; } to /obj/living
+Aug 15 02:55: /obj/living - added query_max_hp()
+Aug 15 03:04: changed "slightly hurt" desc from 20 hp below max hp to 90% of max hp
+Aug 15 20:04: updated mud inventory cmd to list total weight
+Aug 16 21:45: fixed /obj/player to reflect invis wizards better so ppl cant see there are invis wizs on login
+Aug 16 21:45: fixed /obj/monitor, /obj/player to use query_max_soak() etc
+Aug 16 21:46: fixed /obj/generic_heal and updated a bunch of old dirs to make sure the heals still work
+Aug 16 22:40: fixed a bug in add_phys_ate adding random(1) which always is 0 -- [obj/player]
+Aug 16 22:56: changed hooks to place player in /room/church to /room/vill_green in corrupt autoload: /obj/player
+Aug 17 02:48: updated my valid_wizard etc code to actually work. it had some problems
+Aug 17 03:25: made testchars not show on msg chan when logging in
+Aug 17 03:26: made testchars not show on msg chan when logging in
+Aug 19 02:51: added set_dest_dir
+Aug 19 02:51: oops... to room/room
+Aug 19 02:52: also added set_items
+Aug 19 03:57: added a_delete() simul_efun
+Aug 19 04:07: room/room - added set_short/set_long
+Aug 19 08:55: updated the mud's who cmd
+Aug 19 09:09: updated who and who2 with color and such
+Aug 23 19:36: fixed query_pct_weight() - updated to new carry standards in /obj/play/weight.h
+Aug 26 21:03: fiddled with player_short_object code in /obj/living for move_player()
+Aug 29 03:53: added something so new players tell us where they came from
+Sep  2 22:30: added a +1 check to query_spell_chance obj/monster2
+Sep  3 22:01: /obj/tunnel - fixed typo
+Sep 15 14:22: fixed reset(1) bug that caused players to autoresurrect
+Oct  7 16:16: /obj/mail_reader - changed read() to read(str) { if(str != "mail"
+Mar 14 19:33: added spouse variable to /obj/player
+Mar 15 01:23: modified the newsreader to use high intensity colors.
+Mar 23 05:47: put in /obj/lib/living/settings.h [just ripped the settings from living.h] .
+Mar 23 05:47: put in /obj/lib/living/alignment_tags.h. this is ghetto and confusing. but this formula hasn't been modified
+Mar 23 13:53: added query_light() { return set_light(0); } to weapon/armor/treasure/living
+Mar 23 13:54: ditto room.c
+Mar 23 15:34: added sight_short_modifier to /obj/monster & /obj/player. i'm not going to go into the specifics of what it does. ok, it allows modification of what short() returns on a monster. without having to shadow every single creature. or rewriting the look() function.
+Apr  6 14:03: wrote ascii_glyph sfun
+Apr  7 02:31: added disable/enable cmds at the end of player.c to allow for vampires to lose existence
+Apr  7 02:31: added a look_block in player.c's look cmd so other players can't see vampire inventories if they're shapeshifted
+Apr  7 03:00: /obj/mail_reader - added admin cc list
+Apr  7 03:00: had to add /doc/admin/mail to do it
+Apr  8 00:16: put in goback cmd
+Apr 12 06:30: made it so wizards cant dest themselves. the logs [and finger] are there for a reason
+Apr 29 19:05: monster.c - put in set_level() automod of wc/hp/ac
+Apr 30 22:40: monster.c put in wimpy code from my monster.c
+May  1 12:55: /obj/treasure - added query_name()
+May  1 13:02: added heals, heals+ cmds to lib
+May  1 14:35: /obj/user/cmd_hook - had to tweak to allow heals+

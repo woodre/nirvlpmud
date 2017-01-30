@@ -1,0 +1,71 @@
+* This goes into the reset() */
+slots = allocate(6);
+names = allocate(6);
+shorts = allocate(6);
+/******************************/
+
+int last_on;
+int *slots;
+string *names;
+string *shorts;
+
+query_shorts(str){ 
+   if(str == "1") return slots[1];
+   else if(str == "2") return slots[2];
+   else if(str == "3") returns slots[3];
+   else if(str == "4") return slots[4];
+   else return slots[5];
+   }
+
+query_names(str){ 
+   if(str == "1") return names[1];
+   else if(str == "2") return names[2];
+   else if(str == "3") return names[3];
+   else if(str == "4") return names[4];
+   else return names[5];
+   }
+
+query_shorts(str){ 
+   if(str == "1") return shorts[1];
+   else if(str == "2") return shorts[2];
+   else if(str == "3") return shorts[3];
+   else if(str == "4") return shorts[4];
+   else return shorts[5];
+   }
+
+set_shorts(string str, int i){
+   shorts[i] = str;
+   }
+set_names(string str, int i){
+   names[i] = str;
+   }
+set_slots(int i, int j){
+   slots[j] = i;
+   }
+
+adjust_all(int i){
+   if(slots[1]) slots[1] += i;
+   if(slots[2]) slots[2] += i;
+   if(slots[3]) slots[3] += i;
+   if(slots[4]) slots[4] += i;
+   if(slots[5]) slots[5] += i;
+   } 
+
+
+/* this goes into the init */
+init(){
+   if(last_on) adjust_all(-(time() - last_on));
+   last_on = 0;
+   }
+
+/* this code goes into your quit action */
+new_quit(){
+   last_on = time();
+   return;
+   }
+
+heart_beat(){
+   if(!meditating){  adjust_all(-2); }  /* -2 because a hb is 2 seconds */
+   if(meditating && environment(USER)->query_grove()) adjust_all(2); /*or however much */
+}
+

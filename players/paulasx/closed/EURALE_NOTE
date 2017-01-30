@@ -1,0 +1,9 @@
+  I made some changes in your quest so that the old cheat sheets about it
+would not be accurate.  Specifically, I closed the east exit of temple_nw and
+the west exit of temple_ne.  They must fight the dragon and mage to get to
+the altar room.  From Damian I switched the north exit to 'hell/hell1' and from
+the altar north you'll go to 'final_room'.  Nothing big, just that they have
+to look now rather than run through it.
+  If you have any question or want more detailed info, you can look in
+/log/EURALE_WORKREPORT.  I left your code in with comments around it so you
+could see what/where I made changes.  -Eurale 3/15/97

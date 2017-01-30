@@ -1,0 +1,103 @@
+channel_names ({"msg","risque","shout","equip","babble","wiz","announce","gossip","junk",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 80000
+luck 100
+lucky 251
+name "kazer"
+gender "male"
+msgin "appears from within a [1m[30mdark[2;37;0m swirl of [1m[30mmist[2;37;0m"
+msgout "steps into the [1m[30mmist[2;37;0m"
+is_npc 0
+brief 0
+level 40
+armor_class 0
+hit_point 9098
+max_hp 9098
+experience 10042524
+mmsgout "steps into a swirl of [1m[30mmist[2;37;0m"
+mmsgin "appears from within a [1m[30mdark[2;37;0m swirl of [1m[30mmist[2;37;0m"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 9
+hunted 0
+hunter 0
+hunting_time -388
+cap_name "Someone"
+spell_points 13098
+max_spell 13098
+spell_name "[1;34mstrength[2;37;0m upon your body"
+spell_cost 0
+spell_dam 0
+age 1911808
+is_invis 39
+frog 0
+whimpy 0
+auto_load "/players/mythos/prac/qt.c:;.X.Z;home goto /players/kazer/workroom~;.X.Z;realm cd /players/kazer/realm~;.X.Z;guild cd /players/kazer/guild~;.X.Z;wizhall goto /room/adv_inner~;.X.Z;ga get all~;.X.Z;wiztool clone /players/kazer/obj/wiztool~;.X.Z;deaths tail /log/DEATHS~;.X.Z;cdhome cd /players/kazer~;.X.Z;dum clone /open/vertebraker/dum~;.X.Z;renme hand kazer /players/kazer/guild/gobj~;.X.Z;.Y;10;^!/players/wocket/junk/quill.c:says^!players/pain/NEW/items/star.c:^!"
+current_room "players/kazer/workroom"
+alignment 0
+Weapons 0
+follow 0
+follow_num 0
+handshake_data 0
+handshake 0
+quest_point 288
+quests "toy_store#M*A*S*H#ring#jungle_village#orc_slayer#*sabbath*#trekkie#key_quest#hooks_hand#springfield#staff#phantasm_puzzle#t_rexs#keivjam#rod_quest#disk_quest#is_really_annoying_don't_wiz_him#protoculture#keep_dragons#cyclops_mace#super#temple_quest#melko#lost_rood#medallion#Ursa#chisel"
+pregnancy 0
+wkrm "PRISON%dreamspeakr#PRISON%zeus#PRISON%snow#PRISON%snow#"
+hostname "usr44-dialup89.mix1.WillowSprings.cw.net"
+ok_edit "none#"
+mailaddr "kazer@cloudnet.com"
+saved_where 0
+title "[1;34m+[2;37;0m[34m-[30m[1m //[2;37;0m"
+pretitle "([1;30m?[2;37;0m)[1m[30m // [2;37;0m[34m-[1;34m+[30m"
+password "IoAhBLmYjGYEU"
+race "[1m[30mstrand of mist[2;37;0m"
+al_title "[1;30m?[2;37;0m"
+intoxicated 0
+fight_area "players/snow/gate"
+mon 0
+phys_at ({1,5,11,348,0,0,})
+headache 0
+max_headache 8
+no_spell 0
+called_from_ip "166.62.170.91"
+msghome "steps into a swirl of [1m[30mmist[2;37;0m"
+description 0
+guild_name "renegade"
+lastime "Jul 28 08:26 2000 to Jul 28 08:26 2000"
+player_killing 1
+invs_count 13
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd "/players/kazer/"
+dead 0
+guild_rank 10
+guild_exp 673
+guild_file "players/kazer/guild/gobj.c"
+home "players/kazer/workroom"
+ex_lv 4000
+qc 1
+strength 100
+intelligence 100
+stamina 100
+will_power 100
+magic_aptitude 100
+piety 100
+stealth 100
+stuffed 0
+soaked 0
+no_give 0
+aprv "pain,dragnar,snow"
+other_copy 0

@@ -1,0 +1,9 @@
+Spell Name: gsp
+Guild Lvl : 6th
+Spell Cost: --
+Syntax    : gsp <nn>
+Descript. : Allows you to get <nn> Spell Points from the reserve in your
+	    "life", if you have any Spell Points stored, of course. To see
+	    if you have, just type "stored".
+	    Example: gsp 15
+See Also  : ghp, ssp, shp, stored 

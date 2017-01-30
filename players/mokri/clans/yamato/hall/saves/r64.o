@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/yamato/hall/r18","up",})
+short_desc "[34mDeagan's[0mpersonal storage underneath the[1mYamato Clan Halls.[0m"
+long_desc "You have entered[31mDeagan's[0mpersonal storage area underneath the Yamato clan halls.  You see some weapons laying about.  Back up is to Deagan's Personal room.[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;36mCrystal ball of Intellect [2;37;0m([2;37;0m[1;31mfloating[2;37;0m)[2;37;0m","/players/coldwind/desert/weapons/ball",0,0,0,"[1;37mKote[0;0m","/players/vertebraker/guilds/samurai/armor/kote",0,0,0,"[1;37mKabuto[0;0m","/players/vertebraker/guilds/samurai/armor/kabuto",0,0,0,})

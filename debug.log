@@ -1,0 +1,15 @@
+Bad argument 1 to call_other()
+Current object was players/mizan/services/mudwho, line 21
+"fake_beat" in "players/mizan/services/mudwho.c" ("players/mizan/services/mudwho") line 36
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/jareel/monsters/chaos/caves/mondar#1614, line 99
+"heart_beat" in "players/jareel/monsters/chaos/caves/mondar.c" ("players/jareel/monsters/chaos/caves/mondar#1614") line 191
+Heart beat in players/jareel/monsters/chaos/caves/mondar#1614 turned off.
+Failed to load file.
+Current object was obj/player#491, line 31
+"cmd_hook" in "players/pestilence/closed/dark/dark.c" ("players/pestilence/closed/dark/dark#492") line 13
+"main" in "players/pestilence/closed/dark/cmds/darkness.c" ("players/pestilence/closed/dark/cmds/darkness") line 20
+"move_player" in "obj/player.c" ("obj/player#491") line 4309
+"::move_player" in "obj/living.c" ("obj/player#491") line 251
+Connection timed out detected.

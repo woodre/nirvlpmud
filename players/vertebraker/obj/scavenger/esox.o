@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/rgarb","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/ultramagnus/darkarmor","/players/mythos/closed/guild/forest/misc/key_myrax","/obj/bag","/players/hippo/heals/nucleus","/players/maledicta/cont/weapons/rweapon","/players/morgar/say","/players/puppy/s/eq/hammer","/players/snow/WEAPONS/glowknife","/players/wren/Area/starbug/items/sparehead","/obj/armor","/players/arrina/armor/bedsheet","/players/arrina/armor/torque","/players/puppy/s/eq/ruler","/players/mythos/aarmor/shell","/obj/weapon","/players/ultramagnus/darkweapon","/players/wren/Area/starbug/items/bazookoid","/players/mosobp/areas/TEMPLE/OBJ/nsword","/obj/weapon","/players/wren/Area/starbug/items/lightbee","/players/scathe/armor/suit","/obj/armor","/players/puppy/s/eq/block",})
+shorts ({"Monk's garb","A Priest's Robes","Gold","Ebon Key","bag","[35mnucleus of a cell[0m","a Dagger","say with echo and quotes","A hammer","A glowing knife","Kryten's sparehead 3.","Robot Head","A Linen Bedsheet","Silver Torque","A wooden ruler","Tortoise Shell","spirit blade","Dark Rider Longsword","Bazookoid [1;30mmkII[2;37;0m","A nobleman's shortsword","a sword","a strange object called a 'light bee'","Black Suit","A large leaf","A building block",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,6 @@
+k 5
+backp ({"w,s,s,s,s","s,w,s,s,s,portal,s, enter realm,s","e,s,s,s,w,w,w,w,w,n","e,e,e,e,e,e,e,e","s,w,w,w,w,w,n",0,0,0,0,0,})
+bpatt ({"e,n,n,n,n","n,e,n,n,n,portal,n, enter realm,n","w,n,n,n,e,e,e,e,e,s","w,w,w,w,w,w,w,w","n,e,e,e,e,e,s",0,0,0,0,0,})
+patt ({"n,n,n,n,e","n, enter realm,n,portal,n,n,n,e,n","s,e,e,e,e,e,n,n,n,w","w,w,w,w,w,w,w,w","s,e,e,e,e,e,n",0,0,0,0,0,})
+ggg "s"
+comment ({0,0,0,0,0,0,0,0,0,0,})

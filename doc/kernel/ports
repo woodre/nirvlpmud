@@ -1,0 +1,18 @@
+For the mud and all connected services, we're currently using these
+ports on the mud host:
+
+     3500     mud port  (Nirvana, telnet-based)
+     3501     ftp port  (Nirvana, ftp control)
+     3502     mud port  (Nirvana, SSL-based)
+     3503     UDP port used for intermud2 by the driver
+     3504     erq daemon
+     3505     web-based mud client (bound to localhost)
+     3507     ftp port  (Nirvana, ftp-data for active connections)
+
+     3510     mud port  (Nirvanadev, telnet-based)
+     3511     ftp port  (Nirvanadev, ftp control)
+     3512     mud port  (Nirvanadev, SSL-based)
+     3513     UDP port used for intermud2 by the driver
+     3514     erq daemon
+     3515     (unused at Nirvanadev)
+     3517     ftp port  (Nirvanadev, ftp-data for active connections)

@@ -1,0 +1,19 @@
+/* CURRENT CODE LINES 448 to 453 */
+       if(party) exp_bonus = 24*exp_bonus/30;
+       if(!no_exp_value) {
+       if (party) party->share_exp(exp_bonus);
+       if(!party)
+       call_other(attacker_ob, "add_exp", exp_bonus);
+       }
+
+/* PROPOSED CHANGE */
+/* NOTE - MUST ADD INT VARIABLE 'party_exp' */
+      if(!no_exp_value) {
+        if(party) {
+          party_exp = 24*exp_bonus/30;
+          party->share_exp(party_exp);
+          exp_bonus = exp_bonus - party_exp;
+          call_other(attacker_ob, "add_exp", exp_bonus);
+        }
+        if(!party) call_other(attacker_ob, "add_exp", exp_bonus);
+      }

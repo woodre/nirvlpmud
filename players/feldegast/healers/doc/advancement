@@ -1,0 +1,16 @@
+Advancement:
+-----------
+Healers advance through 6 guild ranks.  To advance
+to a rank, the healer must go to the healer hall and donate
+experience to the next rank.  There are level requirements
+for each rank.  Level is checked each time spells are cast
+so there won't be any high-powered level 5 healers.
+
+Rank    Level             Xp        TotalXp
+-------------------------------------------
+1           5              0              0
+2           8         20,000         20,000
+3          12        100,000        120,000
+4          15        200,000        320,000
+5          18        330,000        650,000
+6          19+5      350,000      1,000,000

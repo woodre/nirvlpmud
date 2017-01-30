@@ -1,0 +1,21 @@
+**************
+
+
+                     Drop!
+
+Syntax:    drop! <obj>
+
+Desc:
+           This command allows a wizard to drop an object regardless
+           of its drop() flag.
+
+Warning:   Becareful not to leave things where players can get to em.
+
+Example:   drop! wiz_tell
+                  result
+           Bob drops his wiz_tell
+
+Related:   get!, give!, put!
+
+
+**************

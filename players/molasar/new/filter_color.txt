@@ -1,0 +1,108 @@
+
+/*
+ * FILTER_COLOR helpfile (4/15/94)
+ */
+
+Format:  filter_color(str, color, player)
+
+where str = the text string 
+      color = ansi color code
+      player = the player 'str' is being sent to
+
+NOTE: If you do not specify player, player is set to this_player()
+      You only need to set it if colorizing a string from the
+      heart_beat() of an object, guild tells, or any other functions
+      that don't recognize this_player()
+
+NOTE: filter_color() adds the ansi code to revert text back to
+      normal after the specified 'str'
+
+Basically the function checks to see if the player has enabled
+themselves to recieve ansi color. If so it returns the colorized string
+else they get the boring, plain, junky text. :(
+
+Please don't flood a player with a bunch of ugly colors.
+Use colors sparingly so as not to drive everyone off it.
+
+EXAMPLES:
+---------
+
+- filter_color in heart_beat()
+
+Colors the Hit point/Spell point message red for color ok players
+
+#define HIR ESC+"[1;31m"        /* High Intensity Red */
+
+heart_beat() {
+   if(battle) {
+      int hp, sp, mhp, msp;
+      hp = find_player(<player's name>)->query_hp();
+      sp = find_player(<player's name>)->query_sp();
+      mhp = find_player(<player's name>)->query_mhp();
+      msp = find_player(<player's name>)->query_msp();
+      tell_object(find_player(<player's name>),
+         filter_color("Hit points: ["+hp+"/"+mhp+"]    Spell points: ["
+         +sp+"/"+msp+"]\n",HIR, find_player(<player's name>)));
+   }
+}
+
+- filter_color in guild tell
+
+Will colorize the string "[Paladin]" in blue to all guildmembers that
+have enabled color.
+
+#define HIB ESC+"[1;34m"        /* High Intensity Blue  */
+
+guild_tell(str) {
+   object list, guild;
+   int i;
+   string name;
+   name = capitalize(this_player()->query_name());
+   
+   if(!str) {
+     write("Tell paladins what?\n");
+     return 1;
+   }
+   list = users();
+   for(i=0; i < sizeof(list); i++) {
+      guild = present("guild_medal", list[i]);
+      if(guild && !guild->query_muffled()) 
+      tell_object(list[i], filter_color("[Paladin] ",HIB,list[i])+me_tmp+
+                  " says '"+str+"'\n");   
+   }
+   return 1;
+}
+
+- filter_color with write()
+
+   write(filter_color("Guild info saved.....\n",HIB));
+
+- with tell_object() (Use same format for tell_room())
+
+   tell_object(environment(this_object()),
+                    filter_color("Correcting Paladin level....\n",HIB));
+
+
+- For catting files. Although you might be able to use filter_color()
+  with cat, I don't know if you'd want to. It could cause problems
+  with very large files. Here's an alternative:
+  It checks the player to see if their color_ok, if so then writes the
+  ansi string for blue. This will have the file catted in blue.
+  NORM is the ansi string that reverts text back to normal.
+  
+NOTE: If not using filter_color() be sure to change the text back to normal.
+      If you don't everything they type/see will be the last color they got.
+
+
+news() {
+   if(this_player()->query_color())
+     write(HIB);
+   cat("/players/sandman/paladin/NEWS");
+   if(this_player()->query_color())
+     write(NORM);
+   return 1;
+}
+
+That should cover most things, if you have any other mail me and we
+can see what we come up with. :)
+

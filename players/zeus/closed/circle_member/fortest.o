@@ -1,0 +1,14 @@
+guild_exp 8000000
+beats 370
+percent 0
+endurance 18
+max_endurance 80
+special_title 0
+weave 1
+endurance_monitor 1
+posendcol "[37m"
+negendcol "[1;31m"
+norm "[2;37;0m"
+old_exp 6712724
+custom_monitor "$HK$HP:$N$ $HR$#hps#$HK$ SP:$N$ $HB$#sps#$N$$HK$ Time  $N$$HM$#ahp#$N$$HK$ ($N$$HW$#al#$N$$HK$)#ret#Stuff  Soak  Intox  Trans  Coins:_$N$ $Y$#coins#$N$"
+Skills ({"focus","beckon shadows","wither corpse","drain","teleport","shield","weaken","meditate","web","blast","empower","know","shadowform","descend","shadowcloak","dark assistance","repulsion","vanish","rage","dark prayer","weave","see","vigor","embrace","siphon",})

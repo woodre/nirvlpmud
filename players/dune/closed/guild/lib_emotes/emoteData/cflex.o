@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "cflex"
+myMsgU "A $HY$*~*$B$ HIGH-VOLTAGE $Y$*~*$N$ arcs along your metallic skin____the code seems to $HG$flex$N$ around your body."
+myMsgD 0
+roomMsgU "A $HY$*~*$B$ HIGH-VOLTAGE $Y$*~*$N$ arcs along %SRC%'s metallic skin____the code seems to $HG$flex$N$ around %SRCPOS% body."
+roomMsgD 0
+tellMsg 0
+farMsg 0
+owner "pike"

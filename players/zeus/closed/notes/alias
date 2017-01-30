@@ -1,0 +1,20 @@
+alias . emote
+alias t drift
+alias dc cd /players/zeus
+alias wt clone /obj/wiz_tool.c
+alias allwiz ls /players/*
+alias er tail /log/zeus
+alias err tail /debug.log
+alias cx get all
+alias xc get all from corpse
+alias notice tail /log/DEATHS
+alias allwiz ls /players/*
+alias fog cat /players/zeus/closed/all.h
+alias mguide cat /doc/build/RULES/monster.guide
+alias hel hand zeus /obj/heal.c
+alias tst clone /players/zeus/stuff/npc.c
+alias pil clone /players/zeus/stuff/pill
+alias knght hand zeus /players/boltar/templar/templar
+alias cyb hand zeus /players/dune/closed/guild/implants
+alias polygob hand zeus /players/mizan/closed/poly/gob
+alias ptrn clone /players/emerson/mons/patron

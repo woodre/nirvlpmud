@@ -1,0 +1,21 @@
+*******************************************************************
+
+Name:     Climb in
+
+Desc:     This command lets a wizard enter the inventory of a 
+          player    
+
+Level:    60
+
+Warning: 
+
+Syntax:   climbin <player>   
+
+Example:  climbin mike 
+Result:                    results
+           Bob is now in Mike's inventory
+
+
+Related:  exiv  
+
+*******************************************************************

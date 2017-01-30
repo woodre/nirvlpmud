@@ -1,0 +1,59 @@
+[authored by verte <5-24-04>]
+[revised by verte <9-24-05> to add associations]
+
+Move nirvana.key and nirvana.spc to
+  C:\Program Files\Crimson Editor\spec\
+
+Move nirvCode.c to
+  C:\Program Files\Crimson Editor\template\
+
+Move extension.h to
+  C:\Program Files\Crimson Editor\link\
+  [this will overwrite the default C/C++ specification]
+
+Move extension.c to
+  C:\Program Files\Crimson Editor\link\
+  [this will overwrite the default C/C++ specification]
+
+
+_Tools...
+  _Preferences...
+    _General...
+      -Tab size: I set mine to 2. I wouldn't advise anything over 4.
+      -Check the box "Use spaces instead of tab." It screwed up
+       my paste a few times when left unchecked.
+      _Colors...
+	  _Keyword colors...
+          In the Nirvana keyword dictionary, [nirvana.key], I grouped
+          keywords into 4 categories:
+           [1] conditional statements, like if & switch
+           [2] variable/return types [and extra parameters],
+               like int, void, and static
+           [3] efuns, like tell_object and this_player
+           [4] and finally # driver calls such as #include, #define etc.
+          The default color settings for Crimson seem to be a bit
+          glaring.. screw around until you find something you like.
+    _File...
+      _Association...
+        _Type in .c and .h respectively in the box next to Associate,
+         then click Associate after each one. That will ensure that
+         Crimson will be associated with those files when you
+         double-click them on your Desktop.
+      _Syntax...
+        _Scroll the bar down under Syntax Types til you hit an -Empty-
+         slot. For Description, key in Nirvana. Click the ... box next
+         to the Lang Spec text box. Choose nirvana. Repeat this for
+         the Keywords text box.
+      _Filters...
+        _Scroll the bar down C++. Key in Nirvana instead.
+
+   Click Ok and get out of there.
+
+Choose File, Open Template.. select 'nirvCode'.
+
+Now, click Document, Syntax Type, and choose Nirvana.
+Congratulations. You're customized for Nirvana LPMud. !
+         
+ p.s. Remember there is a spell check option in
+      Crimson Editor, so no excuses! :)
+

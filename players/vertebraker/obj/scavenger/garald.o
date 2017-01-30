@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/maledicta/cont/weapons/rweapon","/players/wren/Area/starbug/items/wrench","/obj/armor","/obj/treasure","/obj/weapon","/players/mistress/other/disk","/players/mythos/awep/wakizashi","/players/snow/armor/arch_robes","/players/angel/area/stargate/obj/P90_no_ammo","/players/wren/Area/starbug/items/currie","/players/ultramagnus/apple","/obj/armor","/players/pain/NEW/arm/helm","/obj/weapon","/players/snow/shadows/stuff/crown","/obj/weapon","/players/hippo/weapons/molar_sharf","/players/wren/Area/starbug/items/groinal","/players/scathe/armor/suit","/players/sado/shop/rose","/players/mythos/aarmor/kabuto","/players/wren/Area/starbug/items/arrogance","/players/wren/Area/starbug/items/ogunit","/players/hippo/armour/boots","/obj/armor",})
+shorts ({"a Spiked club","small pipe wrench","A [1mwhite[0m helmet","some foul smelling trash","Decorated Broadsword","A fragile disk","Wakizashi","Robes of the Archwizard","[36mP90 machine gun[0m","A tin of chicken currie","A Red Apple","An [1mwhite[0m metal ring","A horned helm","Baby powder","[1mShadowCrown[0m","Rabbit foot","A molar sharf","Kryten's groinal attachment","Black Suit","A beautiful red rose blossom","Kabuto","Rimmers arrogance.","a case containing an OG unit.","anti-blood boots","A pair of [1mwhite[0m boots",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

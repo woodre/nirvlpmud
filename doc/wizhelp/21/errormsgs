@@ -1,0 +1,21 @@
+*************
+
+                     Errormsgs
+
+Syntax:    errormsgs
+
+Desc:
+           Toggles on error messages. Will return errors from load, 
+           clone, goto, exec. Saves having to check /debug.log
+
+Warning:   None
+
+
+Example:   errormsgs
+                  resultes
+           Error messages: ON
+
+Related:   clone, load, goto, exec, log
+
+
+**************

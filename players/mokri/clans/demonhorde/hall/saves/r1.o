@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/demonhorde/hall/main","west","/players/mokri/clans/demonhorde/hall/r2","east",})
+short_desc "[1;30mDemonHorde's [1;33mWeapon Cache[0m[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[33m[1mGlowing Sword[0m","/players/snow/WEAPONS/glow_sword",0,290,92,"[31mBerzerker Axe [1;37m[[1;36mChaos Honed[1;37m][0m","/players/jareel/weapons/chaos/woods2/chaos_axe",0,2152,575,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,0,0,"Iron [1;30mDeath[0m Blade","/players/jareel/weapons/mondar_death_sword",0,216,32,"A Hockey Stick","/players/jenny/wings/items/gstick",0,147,19,})

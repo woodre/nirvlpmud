@@ -1,0 +1,70 @@
+decent xp for pk
+heh heh heh heh heh
+
+neeeeeeeeeeeeeeeeeeeeeeeeeeeddddddddddddddddd standard channels, i.e. for guilds
+and an easy way of implementing them (rewrite obj/user/channel)
+make a dummy fun for /obj/simul_efun/matching_arrays
+to point to..
+ revise BIGEXP logging.. blows
+  need attacker_ob , query all attackers, as well as a pob check
+  possibly query partymaster to see what obj called it . 
+player run shop
+novowels bot
+ill code approval
+housing approval
+gemini approval
+FIX THE MOTHERFUCKING BCM TELL. IT SUXXXORZ
+ -add custom tell msgs in.
+customize wiztool cmds for slappy msgs!
+/log/SPONSOR needs a datestamp
+baka needs a mv to old backup, numbered system/datestamp
+higher coinmax : grog
+more rp based equipment
+one or two new guilds: ever
+more areas for coining purposes, and a few more like museum for solely xp kills
+more newbie places to kill
+spacemarines [ever]
+air should be savable thru a single boot then not
+noctis should be savable
+unicorn/pegasus
+monk guild
+moviemonster guild based in fiendsville [grog]
+mudkids need an assist cmd
+session statistics
+ - xp gained
+ - money gained
+
+implement llew's dice cmd
+
+term height [gemini]
+report/rep
+retell - repeat tell
+
+keep [item]
+ keep eq
+ keep all
+ etc
+ vs. unkeep
+
+farem - needs invis code like tell
+identify cmd/abil to recognize specials in weapons/armors ..
+  do function_exists()
+note
+ - note <text>
+ - note <id> to <id2> : show notes pgs id to id2
+ - note <id> - show note id
+ - note delete #
+ - note move id to id2
+ - note clear : clear all notes
+
+Couple of suggestions:
+1) A command to list recently added ones, now that they're all converted
+2) A command to list the socials beginning with a certain string (ie, "s" or "bo
+w")
+
+for who2 custom, add default settings, like default who2, but also
+ an abil to set your who2 to s_who for those that miss it
+ [when i take s_who from pain's star]
+ [deprecate Mwho]
+
+made give work with nicknames [present() ? ]

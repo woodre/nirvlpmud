@@ -1,0 +1,331 @@
+/* Originally approved by Snow on 7.29.99   */
+inherit "/obj/monster";
+#include "/players/zeus/closed/all.h"
+#define YOU capitalize((string)this_player()->query_real_name())
+int guard_help, me;
+
+reset(arg) {
+   ::reset(arg);
+   if (!arg) {
+
+  guard_help = 1;  /*  has one guard */
+
+  set_name("gurther");
+  set_short("A very old gurther");
+  set_race("gurther");
+  set_gender("male");
+  set_long(
+"This gurther is the oldest one that you have seen.  His black skin is\n"+
+"very shiny, although it hangs much looser on his body than the other\n"+
+"gurthers.  One of the two horns on the top of his head is broken in half.\n"+
+"He is sitting down, and almost looks like he is asleep, he is so very\n"+
+"peaceful.  He probably has much to say, and he looks like he might be\n"+
+"willing to 'barter' for certain collectable items.\n");
+  set_level(21);
+  set_ac(17);
+  set_wc(40);
+  set_hp(1000);
+  set_al(100);
+  set_chat_chance(5);
+  set_a_chat_chance(1);
+  load_chat("The gurther smiles softly at you.\n");
+  load_chat("The gurther looks at you tenderly.\n");
+  load_chat("The gurther asks: Do you have anything to barter?\n");
+  load_chat("The gurther says: I am the eldest of the gurthers.\n");
+  load_chat("The gurther sits peacefully in the grass.\n");
+  load_chat("The gurther watches you closely.\n");
+  load_chat("The gurther says: You can 'ask' me about the Fallen Lands.\n");
+  load_a_chat("The gurther says: One of us shall meet their fate now.\n");
+  set_dead_ob(TO);
+   }
+}
+
+
+void init(){
+	::init();
+	add_action("barter_cmd", "barter");
+	add_action("ask_cmd", "ask");
+}
+
+
+no_have(string str){
+    write("The gurther says: You don't have a "+str+"...\n");
+	return 1;
+}
+
+status barter_cmd(string str){
+int num;
+object ob;
+string str1,str2,str3;
+
+if(!str) {  write("The gurther asks: What?\n");  return 1; }
+
+if(str == "mane") {					/*  lions mane  */
+  ob = present("lions mane",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/OBJ/lionmane") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 3000 + random(2000);
+  TR(environment(),"The gurther buys a "+str+" from "+YOU+".\n",
+	  ({ TP }));
+  write(
+"The gurther smiles as he takes the lion's mane from you.  He stares\n"+
+"at it intently for a few moments, then puts it aside.  The gurther\n"+
+"reaches out and hands you "+num+" coins in exchange for the lion's mane.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "hand"){				/*  gorilla hand  */
+  ob = present("gorilla hand",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/OBJ/gorhand") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 3000 + random(2000);
+  TR(environment(),"The gurther buys a "+str+" from "+YOU+".\n",
+	  ({ TP }));
+  write(
+"The gurther smiles as he takes the gorilla hand from you.  He looks\n"+
+"it over before putting it aside.  He then hands you "+num+" coins.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "fur" || str == "tuft"){				/*  bear tuft of fur  */
+  ob = present("fur",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/OBJ/beartuft") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 3000 + random(2000);
+  TR(environment(), "The gurther buys a "+str+" from "+YOU+".\n",
+	  ({ TP }));
+  write(
+"The gurther smiles as he takes the tuft of brown bear fur from you.  He\n"+
+"stares at intently, turning it over in his hands.  He then sets it down\n"+
+"and smiles, handing you "+num+" coins in exchange for it.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "skin" || str == "snake skin"){			/*  snake skin  */
+  ob = present("snake skin",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/OBJ/snakeskin") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 800 + random(200);
+  TR(environment(), "The gurther buys a "+str+" from "+YOU+".\n",
+	  ({ TP }));
+  write(
+"The gurther smiles as he takes the snake skin from you.  He handles it\n"+
+"as though it was as delicate as a newborn baby.  He gently sets it aside\n"+
+"and smiles at you, handing you "+num+" coins in exchange for it.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "hair" || str == "wolf hair"){			/*  wolf hair  */
+  ob = present("wolf hair",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/OBJ/wolfhair") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 2700 + random(1500);
+  TR(environment(), "The gurther buys a "+str+" from "+YOU+".\n",
+	  ({ TP }));
+  write(
+"The gurther takes the wolf hair from you, examining it closely.  He\n"+
+"looks up and with a smile, offers you "+num+" coins for it.  You gladly\n"+
+"take it, as he sets the wolf hair behind him.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "heart" || str == "demons heart"){    /*  demons heart  */
+  ob = present("demons heart",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/heals/demon_heart") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  if(ob->query_bites() < 3){
+     tell_object(TP,
+        "The gurther says:  It's half eaten!\n");
+     return 1;  }
+  num = 5000 + random(2000);
+  TR(environment(), "The gurther buys a "+str+" from "+YOU+".\n",
+    ({ TP }));
+  write(
+"The gurther smiles as he takes the demons heart from you.  Holding it\n"+
+"in his hands, he gets a sickeningly evil grin upon his face.  He sets\n"+
+"it behind him and reaches out, handing you "+num+" coins for it.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "tooth" || str == "demons tooth"){    /*  demons tooth  */
+  ob = present("demons tooth",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/OBJ/demon_tooth") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 3000 + random(4000);
+  TR(environment(), "The gurther buys a "+str+" from "+YOU+".\n",
+	  ({ TP }));
+  write(
+"The gurther takes the demons tooth from your hand and stares intently\n"+
+"at it.  He seems to pay extra attention to the bloody stub.  He places\n"+
+"the tooth in a small pouch.  Reaching out, he hands you "+num+" coins\n"+
+"in exchange for the demons tooth.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "ruby" || str == "red ruby"){		/*  ruby  */
+  ob = present("zeus_red_ruby",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/OBJ/ruby") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 2500 + random(500);
+  TR(environment(), "The gurther buys a "+str+" from "+YOU+".\n",
+    ({ TP }));
+  write(
+"The gurther smiles as he takes the demons heart from you.  Holding it\n"+
+"in his hands, he gets a sickeningly evil grin upon his face.  He sets\n"+
+"it behind him and reaches out, handing you "+num+" coins for it.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "claws" || str == "beast claws"){		/*  beast claws  */
+  ob = present("beast claws",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/x/OBJ/claws") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 3500 + random(2200);
+  TR(environment(), "The gurther buys a "+str+" from "+YOU+".\n",
+    ({ TP }));
+  write(
+"The gurther takes the claws of the beast from you.  A sly grin sneaks\n"+
+"across his face as he examines the claws.  The gurther offers you "+num+
+"\ncoins in exchange for the claws, which you accept.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "gore" || str == "pile" || str == "demon gore"){ /*  demon gore  */
+  ob = present("hot and yummy gore",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/x/OBJ/demon_gore") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  num = 500 + random(2000);
+  TR(environment(), "The gurther buys a "+str+" from "+YOU+".\n",
+    ({ TP }));
+  write(
+"The gurther grimaces as he takes the pile of gore from you.  He\n"+
+"glances quickly at it as he puts it aside.  Then with a barely\n"+
+"visible smile he pays you "+num+" coins for the rare item.\n");
+  TP->add_money(num);
+  destruct(ob);
+  return 1; }
+if(str == "horn"){			/*   can't barter horns, he gets mad  */
+  object guard;
+  guard = CO("/players/zeus/realm/NPC/gguard2.c");
+  ob = present("horn",TP);
+  if(!ob){ no_have(str); return 1; }
+  str1 = file_name(ob);
+  sscanf(str1,"%s#%s",str2,str3);
+  if(str2 != "players/zeus/realm/OBJ/ghorn") {
+    write("The gurther says: You don't have that...\n");
+    return 1; }
+  TR(environment(),
+"The gurther says:  You dare kill my fellow gurthers?\n"+
+"					For that you shall pay...\n\n"+
+"A guard enters the room in a hurry.\n");
+  MO(guard, environment());
+  guard->set_ac(20);
+  guard->set_wc(40);
+  guard->attack_object(TP);
+  destruct(ob);
+  return 1;
+}
+}
+
+
+
+guard_help(){
+  object guard;
+  guard = CO("/players/zeus/realm/NPC/gguard.c");
+  if(!guard_help) return 0;
+  say("A guard walks into the room...\n");
+  MO(guard, environment());
+  guard->attack_object(AO);
+  guard_help = 0;
+  return 1;
+}
+
+
+monster_died()
+{
+ write("With your final blow you break off the gurthers other horn.\n");
+  MO(CO("/players/zeus/realm/OBJ/ghorn.c"), environment());  
+return 1; 
+}
+
+
+status ask_cmd(string str){
+ if(!str) return 0;
+ if(str=="gurther" || str=="old gurther")
+   me = TP;
+   call_out("tell_story", 1);
+return 1; }
+
+
+tell_story(){
+  tell_object(me,
+
+"\nThe old gurther tells you:\n\n"+
+"This has always been the home of the Gurthers.  Many years ago though, the\n"+
+"Humans came.  We fought a long and hard war with them to keep our home,\n"+
+"but in the end they won and drove us out.  So for many years we lived far\n"+
+"away, beyond the water.  They were hard times.  When things were looking\n"+
+"their worst, the wizard Auseth came to us with a plan to reclaim this area.\n"+
+"We let him lead us against the Humans, and he helped to make all our dreams\n"+
+"come true.  We are once again in the home that has been ours for so long,\n"+
+"and we owe it all to Auseth. So we know that not all Humans are bad.\n\n");
+TR(environment(), "The old gurther says something to "+YOU+".\n", ({me}));
+return 1; }
+
+
+heart_beat(){
+        ::heart_beat();
+        if(!environment()) 
+                return ;
+        if(!query_attack()) 
+                return ;
+        if(AO == TO){
+          TR(environment(), 
+            "The gurther shakes it off and keeps fighting...\n");
+          TO->stop_fight();
+          TO->stop_fight();
+          return ;
+        }
+        hit_point += 15;
+        if(!random(10)){  guard_help();   return;  }
+}

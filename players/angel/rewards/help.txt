@@ -1,0 +1,29 @@
+
+->> Earwax tells you: ok, in player.c upon logon it checks to see if there are any autoloads registered to the player
+Earwax tells you: the way an autoload gets registered to a player, is by the function query_auto_load() { return "filename"; } in the object
+
+Earwax tells you: now, during a reboot it's fine
+Earwax tells you: but after reboot, there isn't a copy loaded....so you have to preload it
+Earwax tells you: so in your castle.c put a line "/path/filename"->load_this_shit_up_nukka();
+Earwax tells you: function name doesn't matter, usually we use ??? or something along those lines, as it's convention to use a non-existant function
+
+
+Earwax tells you: this is all stuff you can look up in various places in the code, so i was hoping to not have to run through it but so be it hehe
+
+
+Earwax tells you: now, you can have INFORMATION about the object save, via the auto load string
+Earwax tells you: instead of:    string query_auto_load() { return "/players/angel/whatever/filename"; } you do string query_auto_load() { return "/players/angel/whatever/filename:"+coins_held; }    where coins_held is whatever variable name you use to say how many coins are in the item
+Earwax tells you: you need to have another function init_arg(mixed x) { int i; if (!x) return; if (intp(x)) i = x else sscanf(x+"", "%d%s", i, s); coins_held = i; }
+Earwax tells you: now that looks complex, it's mainly error checking
+Earwax tells you: init_arg() is called when an item is autoloaded
+Earwax tells you: so there is where you set the coins variable
+
+Earwax tells you: so that bit of code says, if there's no value for x, kick out....if it's an integer already, then set the coins to it, if it's not an integer yet, scan the integer portion of it out, .... then set coins value to whatever that integer is
+Earwax tells you: has to be done that way cuz sometimes variables save goofy on here, because we don't do enough type checks....that's beyond what you deal with normally, but take my word for it :)
+nod earwax
+You nod solemnly at Earwax from afar.
+->> 
+Earwax tells you: and i think in the code itself it types it as string anyways, so it prolly needs to be converted from string to int, and that's how you do that
+
+
+use stash and unstash as an add_action

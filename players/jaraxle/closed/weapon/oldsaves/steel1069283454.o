@@ -1,0 +1,37 @@
+no_clean 0
+wielded 0
+wielded_by 0
+name_of_weapon "warhammer"
+cap_name "Warhammer"
+broke 0
+silentwield 0
+eff_wc 18
+misses 37
+hits 87
+alt_name 0
+alias_name 0
+short_desc "Massive Warhammer of Health"
+long_desc "This is a warhammer of Grandmaster quality."
+read_msg 0
+save_flag 3
+class_of_weapon 18
+value 2675
+local_weight 6
+hit_func 0
+hit_func_fn "/players/jaraxle/closed/weapon/weapon2"
+wield_func 0
+wield_func_fn 0
+info 0
+type "hammer"
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+multipleIds 0
+time_delay 0
+two_handed_wield 0
+two_handed_wep 1
+no_break 0
+special_damage ({3,})
+special_chance ({15,})
+special_message 0
+special_rmessage 0
+special_fun ({"/players/jaraxle/closed/weapon/powers/health.c",})
+yup 1

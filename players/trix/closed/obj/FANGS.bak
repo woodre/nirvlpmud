@@ -1,0 +1,157 @@
+reset(arg) {
+        if(arg) return;
+}
+
+id( str ) {
+        if(str=="fangs") return 1;
+        return 0;
+}
+
+long() {
+        write( "You would need a mirror to look at them!!! [info fangs]\n");
+}
+
+query_auto_load() {
+  return "/players/trix/closed/obj/fangs.c:";
+}
+
+init()
+{
+  add_action( "smile","smile");
+  add_action( "grin","grin");
+  add_action( "pose","fpose");
+  add_action( "info","info");
+  add_action("vlad","vlad");
+}
+
+info(arg)
+{
+  if(arg!="fangs") return 0;
+  write("These are your personal ivory fangs, here are the commands:\n");
+  write("smile <who>\n");
+  write("grin <who>\n");
+  write("fpose <who>\n");
+  return 1;
+}
+
+adj(arg)
+{ if(arg=="female") return "her";
+  else if(arg=="male") return "his";
+  else return "its";
+}
+
+cobj(arg)
+{ if(arg=="female") return "her";
+  else if(arg=="male") return "him";
+  else return "it";
+}
+
+smile(arg)
+{  object aim,ob;
+   if(!arg)
+    {
+        write("You smile happily, exposing your sharp ivory fangs.\n");
+        say(capitalize(this_player()->query_real_name())+" smiles happily, exposing "+
+        adj(this_player()->query_gender())+" sharp ivory fangs.\n");
+    }
+    else
+    {   aim=present(arg,environment(this_player()));
+        if(!aim)
+         {   write("Smile at whom?\n");
+             return 1;
+         }
+        ob=first_inventory(environment(this_player())); 
+        while(ob)
+         { if(ob!=aim&&ob!=this_player()) 
+            tell_object(ob,capitalize(this_player()->query_real_name())+" smiles happily at "
+            +capitalize(aim->query_real_name())+", showing "+adj(this_player()->query_gender())+
+            " sharp ivory fangs.\n");
+           ob=next_inventory(ob);
+         } 
+        tell_object(aim,capitalize(this_player()->query_real_name())+" smiles happily at you"+
+        ", showing "+adj(this_player()->query_gender())+" sharp ivory fangs.\n");
+        write("You smile happily at "+capitalize(aim->query_real_name())+
+              ", exposing your sharp ivory fangs.\n");
+     }
+    return 1;
+}
+
+grin(arg)
+{  object aim,ob;
+   if(!arg)
+    {
+        write("You grin evilly, exposing your sharp ivory fangs.\n");
+        say(capitalize(this_player()->query_real_name())+" grins evilly, exposing "+
+        adj(this_player()->query_gender())+" sharp ivory fangs.\n");
+    }
+    else
+    {   aim=present(arg,environment(this_player()));
+        if(!aim)
+         {   write("Grin at whom?\n");
+             return 1;
+         }
+        ob=first_inventory(environment(this_player())); 
+        while(ob)
+         { if(ob!=aim&&ob!=this_player()) 
+            tell_object(ob,capitalize(this_player()->query_real_name())+" grins evilly at "
+            +capitalize(aim->query_real_name())+", showing "+adj(this_player()->query_gender())+
+            " sharp ivory fangs.\n");
+           ob=next_inventory(ob);
+         } 
+        tell_object(aim,capitalize(this_player()->query_real_name())+" grins evilly at you"+
+        ", showing "+adj(this_player()->query_gender())+" sharp ivory fangs.\n");
+        write("You grin evilly at "+capitalize(aim->query_real_name())+
+              ", exposing your sharp ivory fangs.\n");
+     }
+    return 1;
+}
+   
+pose(arg)
+{  object aim,ob;
+   if(!arg)
+    {
+        write("You pose for everyone, showing them your beautiful ivory fangs.\n");
+        say(capitalize(this_player()->query_real_name())+" poses for everyone, showing "+
+        adj(this_player()->query_gender())+" beautiful ivory fangs.\n");
+    }
+    else
+    {   aim=present(arg,environment(this_player()));
+        if(!aim)
+         {   write("Pose for whom?\n");
+             return 1;
+         }
+        ob=first_inventory(environment(this_player())); 
+        while(ob)
+         { if(ob!=aim&&ob!=this_player()) 
+            tell_object(ob,capitalize(this_player()->query_real_name())+" poses for "
+            +capitalize(aim->query_real_name())+", showing "+cobj(aim->query_gender())+
+            " "+adj(this_player()->query_gender())+
+            " beautiful ivory fangs.\n");
+           ob=next_inventory(ob);
+         } 
+        tell_object(aim,capitalize(this_player()->query_real_name())+" poses for you"+
+        ", showing you "+adj(this_player()->query_gender())+" beautiful ivory fangs.\n");
+        write("You pose for "+capitalize(aim->query_real_name())+
+              ", showing "+cobj(aim->query_gender())+" your beautiful ivory fangs.\n");
+     }
+    return 1;
+}
+vlad()
+{  object who;
+   if(this_player()->query_real_name()!="nikki") return;
+   who=find_living("vlad");
+   if(who&&who->query_interactive())
+     { write("Vlad is already awake.\n"); return 1; }
+   who=clone_object("/players/trix/closed/obj/summer");
+   move_object(who,environment(this_object()));
+   call_other(who,"set_owner_name","nikki");
+   call_other(who,"set_access_level",5);
+   call_other(who,"summer_nikki");
+   return 1;
+}
+get() {
+        return 1;
+}
+drop() {
+        return 1;
+}

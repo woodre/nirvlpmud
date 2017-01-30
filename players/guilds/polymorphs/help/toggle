@@ -1,0 +1,31 @@
+[TOGGLE]
+
+  Toggles a series of variables that the guild uses on and off.
+  Settings save automatically.
+
+Usage:  toggle <argument>
+
+Parameters: These are the following arguments:
+
+  autocharge    Automatically diverts some charge into the clay when
+                your spellpoints are maxxed.
+
+  drain         Toggles drain from energy to matter. Used in
+                the spells 'regain' and 'atomize'.
+
+  entry         Toggles where you login to the game.
+  eval          Toggles combat hit evalutation. Used to assess the
+                extent of your damage done by certain guild spells.
+
+  invis         Hides or reveals the lump of clay.
+  max           Toggles if monitor will remain active when HP+SP max out.
+  moncharge     Toggles whether clay charges will be displayed in monitor.
+  monitor       Toggles monitor on and off.
+  msg           Toggles exit/entry guild messages from the game.
+  muffle        Toggles guild channel muffle.
+
+  news          Toggles whether or not upon completing a news
+                message is told to the rest of the guild online.
+
+Typing 'toggle' displays all current toggle settings.
+

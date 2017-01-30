@@ -1,0 +1,162 @@
+Approval Notes for
+Coldwind's Desert Area
+12/19/2001
+by Feldegast
+
+Rooms
+-----
+
+General:
+  How does your area hook up to your castle?  You need to finish that before I can approve the area.
+
+  I was extremely impressed by your attention to detail in this area.  Each room had descriptions
+    for every item in the descriptions.  Good job!
+
+  In the exit function, you are clearing the player's pk area flag, but you aren't setting it in
+    the first place.  This should be set in the init function.
+
+  In the short description, it is unnecessary to add the null strings ("") at either end.  When
+    you add HIY to "Dahna Desert" the result is a string.  The only reason you would have to add ""
+    to anything is if you wanted to convert a number to a string.  This does not require fixing,
+    but you should make a note of it for your future areas.
+      string + string = string
+      int    + string = string
+      int    + int    = int
+  You repeatedly refer to "Few cacti plants".  This is not grammatically correct.  You can have
+    "A few cactus plants" or "Several cactus plants" or "A few cacti".
+
+  The same problem occurs with "Few palm trees" and "Few clouds".
+
+  In your move action functions, you need a message to indicate the player has left.  Usually
+    these messages are done with say messages instead of tell_room so that the person actually
+    performing the command doesn't see their own entrance and exit, because they already know
+    what they're doing.  (say is equivalent to tell_room w/blocking this_player(), which you
+    did for some messages)
+
+  In a few of the exit messages you did, you aliased both the shortcut command and the direction
+    command.  For example, 'east' and 'e'.  The compass directions, up, and down, are all
+    automatically aliases in the player object, so you only need to do east in such cases.
+    Don't worry about fixing this, it doesn't break anything if you DO alias it twice.
+
+  In general, I like the room descriptions that you did.  They were all of a good length and
+    didn't get either too long or too short.
+
+r1.c:
+  Why do the cactus plants give me an uneasy feeling?
+  The fox might confuse players.  They will almost inevitably try to kill it.
+  In the description of "desert", you misspelled featureless.
+  In the description of "sand", you need to conjugate cover to covers.  This note applies to
+    all rooms that repeat this description.
+  The description of "cacti" and "plants" has several grammatical problems.
+  In the description of "path" you say the path leads east and west, but the exits are east
+    and south.  This should be consistent with however you choose to do the entrance of your
+    area.
+  
+r2.c:
+  Good.
+
+r3.c:
+  You have an extra space on line 3.
+
+r4.c:
+  Good.
+
+v1.c:
+  Are there houses or are there tents to the east?  Some of the item descriptions seem
+   ambiguous in that respect.
+
+v2.c:
+  Silence INVOLVES the area?  How?
+  Your feet has leaded you?
+  Few palm trees?
+  In the fallen trees description: distroying.
+
+v3.c:
+  while *A* few others
+
+v4.c:
+  Is the village Arabian, meaning it is populated by the Arabs of earth, or is it Arabesque
+    meaning that it possesses the qualities that we would associate with Arabians?  Is this
+    a fantastical world you are creating, or is it based upon known historical or legendary
+    facts?
+  somwhere -> somewhere
+
+v5.c:
+  GROW high
+  HAS been under a malicious attack recently
+  Palm trees HAVE been
+  rocks PREVENT you
+  The description of 'rocks' is unclear.  Neutral?  Natural?
+  In the hill description, A few rocks.
+  You should allow some different ways to squeeze through the rocks so players don't get
+    annoyed with you.
+  Some suggestions:
+    squeeze...through rocks
+              rocks
+              through hill
+              hill
+              in
+
+v6.c:
+  tents MAKE your
+  The fallen trees BLOCK you...
+
+v7.c:
+  In the description of sign, capitalize the first letter.
+  Empty eye sockets staring at you silently. Your heart shudders!!.
+
+v9.c:
+  An old sign HAS been posted...
+  In the search message, you forgot a period at the end.
+  You might want to try attacked_by instead of attack_object.
+
+ma1.c:
+  Period at end of sentence.
+  he rocks -> the rocks
+
+ma3.c:
+  As you LOOK upwards, you FEEL?  That doesn't make sense.
+  infinity, not THE infinity.
+  heavely->heavily.  Of course, if there are only a few of them, I don't
+    see how that can be heavily...
+  The cave is not mentioned anywhere in the description, or in any of the
+    short descriptions.  If you want to make the cave REALLY obscure, then
+    that is okay, otherwise it should be more obvious.
+
+ma4.c:
+  a faintly lit cave
+  The cave exits east, but I got here from the west.
+
+ma5.c:
+  That blue giant slave must really get around, he was in the last room too.
+  as it PASSES by
+  vission -> vision
+  A better phrase would be "at the limit of your vision" or "as far as you can see".
+
+ma6.c:
+  East to go west?
+  in THE far corners
+  Extra space on line 5 of the description?
+
+ma7.c:
+  You can't enter an altar.  A temple, perhaps?
+  The second sentence needs work.  It doesn't make sense.
+  A soothing feeling
+  In the search_rock function, how do you know they are searching the rocks?
+    Also, you need a period at the end of the message for that.
+
+ma8.c:
+  BY their legs
+  has SPENT
+  stairs stand(?!)
+  If the player kills all the people in the room, then the long description
+    will no longer apply regarding the people in the room.
+
+ma9.c:
+  large rocks BLOCK
+  as it PASSES by
+  vission -> vision (see ma5.c)
+
+ma10.c:
+  A FEW CLOUDS
+  BLOCK

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/players/saber/weapons/lgun","/obj/treasure","/players/pain/NEW/arm/hood","/players/mythos/awep/naginata","/players/arrina/weapons/longknif","/players/mythos/aarmor/do","/players/wren/Area/starbug/items/lunchbox","/players/saber/stuff/mic","/players/pain/NEW/weap/mstar","/obj/weapon","/players/khrell/weapons/skaven/fellblade","/players/scathe/weap/baxe","/players/wren/Area/starbug/items/bouquet","/players/wren/Area/starbug/items/reddress","/players/mythos/marmor/shirt","/players/mythos/amisc/egg","/obj/weapon","/players/mythos/closed/guild/forest/misc/pelt","/players/maledicta/cont/weapons/rweapon","/obj/armor","/players/mythos/awep/katana","/obj/armor","/players/saber/armor/slboots","/players/mythos/aarmor/sune-ate",})
+shorts ({"Metal gloves","A lazer gun","Beach Bear pelt","A Black Hooded Cloak","Naginata","A longknife","Do-Maru","a lunch box","A microphone","Morningstar","Fear","[41m[30mFellblade[0m","A Huge Double Bladed Axe","a colorful bouquet of 'flowers'","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","Shirt","A strange looking egg","Small knife","A beautiful white pelt","a Scimitar","A large leaf","Katana","Robot Head","Stiletto heeled leather boots","Sune-ate",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

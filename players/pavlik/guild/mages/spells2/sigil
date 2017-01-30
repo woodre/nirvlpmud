@@ -1,0 +1,100 @@
+/*
+ * spell : Sigil   (conjuration)
+ * level : 4
+ * effect: Summons a monster to protect a prospective target
+ * cost  : 60 sp
+ * spec  : See Below, requires component (Amber Rod, 1500 coins)
+ * files : ~/mages/obj/sigil.c
+ *
+ * The sigil is a monster that stands guard over another monster
+ * that the player intends to kill. 
+ * When another player attacks a sigiled monster the sigil will:
+ *   1st time: stop the fight and warn the player.
+ *   2nd time: attack the player.
+ *
+ * updated: 11/25/2005 - pavlik
+ *	- added check to make sure target was not already fighting
+ *	- minor text changes
+ */
+
+sigil(str){
+  object ob, obj;
+
+  if(!KNOW("sigil")){
+	write("What?\n");
+	return 1;
+  }
+
+  if((!str) && (!tp->query_attack())){
+	write("Sigil what?\n");
+	return 1;
+  }
+
+  if(str == "off" || str == "dismiss"){
+	obj = find_living(rlname+"'s sigil");
+	if(!obj){
+		write("You have not conjurered a sigil.\n");
+		return 1;
+	}
+	obj->dismiss_sigil();
+	return 1;
+  }
+
+  if(!present("amber rod", tp)) {
+	write("You do not have the proper components for this spell.\n");
+	return 1;
+  }
+
+  if(find_living(rlname+"'s sigil")){
+	write("You have already conjured a sigil.\n");
+	return 1;
+  }
+
+  if(!str) obj = tp->query_attack();
+  else obj = present(str, env);
+
+  if(!obj){
+	write("There is no "+capitalize(str)+" here.\n");
+	return 1;
+  }
+
+  if((!living(obj)) || (!obj->query_npc())){
+	write("You cannot sigil "+capitalize(str)+".\n");
+	return 1;
+  }
+
+  if(obj->query_attack()) {
+	write(capitalize(str)+" is too busy to sigil right now.\n");
+	return 1;
+  }
+
+  write("You cast a "+HIC+"Sigil"+NORM+" spell ...\n");
+
+  if(spell_fail2(4, "conj", "int")) {
+	write("You "+HIR+"miscast"+NORM+" the spell!\n");
+	say(ME+" miscasts a summoning spell and a demon appears!\n");
+	write("The demon grabs the amber rod from your hand!\n");
+	obj = clone_object("players/pavlik/guild/mages/obj/demon");
+	move_object(obj, env);
+	move_object(present("amber rod", tp), obj);
+	obj->do_demon(tp);
+	tp->add_spell_point(-15);
+	return 1;
+  }
+
+  tell_room(env,
+    ME+" speaks an ancient word of magic and the earth splits open!\n"+
+    "A greater "+HIR+"Fire Elemental"+NORM+" emerges from the opening.\n"+
+    "The Elemental crosses its arms and bows before "+ME+".\n");
+  tell_room(env,
+    "A "+HIR+"Fire Elemental"+NORM+" appears to stand guard over "+IT+".\n");
+
+  ob = clone_object("players/pavlik/guild/mages/obj/sigil");
+  move_object(ob, env);
+  ob->set_owner(rlname);
+  ob->set_sigil(obj);
+  tp->add_spell_point(-60);
+  destruct(present("amber rod", tp));
+  return 1;
+
+}

@@ -1,0 +1,23 @@
+-----------------------NECROMANCERS---------------------
+
+Level 1 Guild Abilities         gl = guild level
+
+Power             Usage           Spell Cost   Components
+-------------------------------------------------------------
+Autopsy           autopsy corpse       5         none
+
+Harvesting        harvest <part>       0         none
+
+Chill Touch       chill <target>       10        1 blood
+
+Wraithform        wform             10 per gl    1 blood per gl
+
+Death's Embrace   embrace_death        25        none
+  note --> You must be at least level 2 for Death's Embrace
+Preserve          preserve             5         none
+
+Corpse Light      clight               10        none
+
+Summon Tool       toolme               50        none
+
+-------------------------------------------------------------

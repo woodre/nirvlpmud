@@ -1,0 +1,24 @@
+Following are the projects for making Nirvana a better place:
+
+Convert to LDMud
+  1) Get lib running (Boltar doing this)
+  2) Optimize and go through simul_efuns (Earwax)
+  3) Fix command system (Earwax)
+  4) Go through lib for the following:
+     - Change all write(), other string concatenations to (s)printf()
+     - Ensure all mappings/arrays pass copies rather than themselves
+     - Make sure everything works properly
+  5) Add areas to the game one at a time, debugging each
+  6) Enhance the documentation and work with wizards on changes
+  7) Optimize as much code as possible, get mud as stable as possible
+  8) Create OLC tools, to foster more building.
+
+Enhance Nirvana
+  1) Attribute changes
+  2) Race changes
+  3) Gear changes
+  4) Skill system for core/guildless
+  5) Combat changes - move to to-hit system, other changes
+  6) Nirvana points and rewards 
+  7) Noob interface/school to make learning the mud fun and easy :)
+  8) Aggressively recruit new players

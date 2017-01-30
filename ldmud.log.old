@@ -1,0 +1,18 @@
+Restart 3. Mon Nov 24 09:01:40 CST 2014
+2014.11.24 09:01:40 [erq] Amylaar ERQ Apr  7 2011: Path 'erq', debuglevel 0
+2014.11.24 09:01:40 Seeding PRNG from /dev/urandom.
+2014.11.24 09:01:40 LDMud 3.3.720 (Build 3010) (stable)
+2014.11.24 09:01:40 TLS: (GnuTLS) x509 keyfile 'key.pem', certfile 'cert.pem'
+2014.11.24 09:01:40 TLS: Error setting x509 keyfile: Error while reading file.
+2014.11.24 09:01:40 mySQL 5.1.73
+2014.11.24 09:01:40 Attempting to start erq '/home/petebre/mymud/lp312/mudbin/erq'.
+2014.11.24 09:01:40 Hostname 'loafy' address '174.137.154.70'
+]Failed to load master object 'secure/master'!
+2014.11.24 09:01:40 Failed to load master object 'secure/master'!
+2014.11.24 09:01:40 Current object was <null>
+No program to trace.
+2014.11.24 09:01:40 LDMud aborting on fatal error.
+]Failed to load master object 'secure/master'!
+2014.11.24 09:01:41 [erq] read: EOF
+2014.11.24 09:01:41 [erq] Read 0, should be 9!
+2014.11.24 09:01:41 [erq] Giving up.

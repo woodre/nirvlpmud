@@ -1,0 +1,68 @@
+/*
+ * spell : Vorpal Heal   (evocation)
+ * level : 7
+ * effect: Heals: 50 + Evoc/2 (max: 100)
+ * cost  : 120 sp
+ * spec  : can only be cast once every 3 minutes
+ * files : none
+ */
+
+vorpal_heal(str) {
+
+  object obj;
+  int amt;
+
+  if(!KNOW("vheal")) {
+	write("What?\n");
+	return 1;
+  }
+
+  if(!str) obj = tp;
+  else obj = present(str, env);
+
+  if(guild->query_next_heal() > time()) {
+	write("You can't cast this type of spell right now.\n");
+	return 1;
+  }
+
+  if(!obj){
+	write("That person is not here.\n");
+	return 1;
+  }
+
+  if( (obj != tp) && !present(obj, env) ){
+	write("That person is not here.\n");
+	return 1;
+  }
+
+  if(tp->query_sp() < 50) {
+	write("You are too tired to cast this spell.\n");
+	return 1;
+  }
+
+  write("You cast a "+HIC+"Vorpal Heal"+NORM+" spell ...\n");
+  write("You put your hands together and bow your head in concentration.\n");
+  say(ME+" puts "+PO+" hands together and "+PO+" brow furrows in concentration.\n");
+  say("The air around you ripples with the power of unseen magic.\n");
+
+  if(spell_fail2(7, "necr", "pow")){
+	write("You "+HIR+"miscast"+NORM+" the spell!\n");
+	write("The air stops shimmering.\n");
+	say("The air stops shimmering.\n");
+	write("You slump to the ground in complete exhaustion.\n");
+	say(ME+" slumps to the ground in complete exhaustion.\n");
+	tp->add_spell_point(-tp->query_sp());
+	return 1;
+  }
+
+  tell_room(env, IT+" seems to disappear for a moment.\n");
+  tell_object(obj, "The spell mends the damage to your body.\n");
+ 
+  amt = 50 + guild->query_total_evoc() / 2;
+  if(amt > 100) amt = 100;
+  obj->add_hit_point(amt);
+  tp->add_spell_point(-120);
+  guild->set_next_heal(time() + 180);
+  return 1;
+
+}

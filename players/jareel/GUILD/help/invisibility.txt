@@ -1,0 +1,13 @@
+  -- INVISIBILITY --
+
+TYPE: Spell (Fixed)
+INT REQ: 1
+USAGE: invis
+COST: 10,000 xp
+
+  Nirvana invisibility rules apply
+    
+      /=COST SP=LEVEL REQ=\
+      |   20   |   10     |
+      \===================/
+

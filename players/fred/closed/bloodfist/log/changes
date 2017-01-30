@@ -1,0 +1,168 @@
+Jul 28 21:12  ----------- OPENED BLOODFIST FOR BETA -----------------
+Jul 28 21:14  Beta testers are Ribbit, Archangel, Yorick, Slag, and Grit
+Jul 30 16:12  ~power/bloodcloak.c -- adjusted the honor level
+Jul 30 16:12  ~power/bloodprayer.c -- adjusted the honor level
+Jul 30 16:12  ~power/bloodboil.c -- adjusted the honor level
+Jul 30 16:13  ~power/bloodstep.c -- adjusted the honor level
+Jul 30 16:13  ~power/bloodomen.c -- adjusted the honor level
+Jul 30 16:13  ~power/bloodfury.c -- adjusted the honor level
+Jul 30 16:13  ~power/bloodlust.c -- adjusted the honor level
+Jul 30 19:07  ~obj/gem_chest.c -- fixed a check in deposit.
+Jul 30 19:12  ~power/fatal.c -- fixed it so it should kill the mob sometimes it didn't for some reason.
+Jul 31 09:52  ~obj/gem_chest.c -- fixed a line to clean up the display of the contents also changed it so it showed gem name on withdrawl.
+Aug  1 09:16  ~r/private.c -- added some code it was cloning two chests to the room sometimes.
+Aug  1 09:46  ~power/plunge.c -- added code so you couldn't plunge a kept weapons.
+Aug  1 09:55  ~power/throw.c -- added a check so you chouldn't throw a kept weapon.
+Aug  1 10:02  ~power/swap.c -- added code so you can't swap out a kept weapon.
+Aug  1 10:07  ~power/attack.c -- was giving double messages if the thing you tried to attack wasn't there.
+Aug  1 10:29  ~power/attack.c -- wasn't taking the sps from the player when casted.
+Aug  1 10:30  -- adjusted back all the above noted adjustments for honor level, I was under the wrong impression.
+Aug  1 19:10  -- updated help files for the change in honor requirements.
+Aug  2 23:01  ~power/attack.c -- added check to make sure the player had enough sps to cast the spell.
+Aug  2 23:02  ~power/bash.c -- moved the check on sps.  It would give the emote and then say you are too low on sps.
+Aug  2 23:02  ~help/study.c -- fixed a typo in the study helpfile.
+Aug  2 23:16  ~power/set_title.c -- fixed a typo in one of the titles.
+Aug  3 21:39  ~power/throw.c -- made it so you couldn't throw a forged weapon.
+Aug  3 21:40  ~power/bfbugs.c -- added a command so testers could see current posted bugs.
+Aug  3 21:42  ~obj/gem_chest -- fixed an error message to be more explanitory.
+Aug  3 22:00  ~NPC/elder.c -- added some code to check if they had the proper mud levels as well as glvls to do their next trial.
+Aug  4 21:41  ~gob.c -- added some code to save stats when you log off.
+Aug  5 20:19  ~r/private.c -- added a query_dont_clean_obs_here() check in the room so it wouldn't clear stuff on reset.
+Aug  5 22:17  ~obj/mboard.c -- made it so you playes could remove their own notes.
+Aug  5 22:18  ~r/private.c -- added some code so you could clear the room desc.
+Aug  8 21:40  ~obj/wep_shadow.c -- fixed a typo with the long() func.
+Aug  8 21:40  ~daemon/wep_daemon.c -- fixed some color from bleeding.
+Aug 10 19:46  ~obj/wep_shadow.c -- added some code so only the person that forged the wep can wield it.
+Aug 10 19:46  ~NPC/elder.c -- added some more checks to see if they are ready to advance.
+Aug 10 19:47  ~r/arena.c -- added a check so they can't enter the arena unless they are ready for their trial.
+Aug 10 19:54  ~obj/wep_shadow.c -- made the weapons have no value so you can't sell them.
+Aug 10 22:48  ~NPC/blacksmith.c -- added code so you could sell forged weapons so they didn't just lay around.
+Aug 12 22:09  ~eq/blood_amulet.c -- added a line so your attrib. bonuses automatically update.
+Aug 12 22:20  ~eq/combat_boots.c -- added a line so your attrib. bonuses automatically update.
+Aug 12 22:20  ~eq/bloodfist_ring.c -- added a line so your attrib. bonuses automatically update.
+Aug 13 09:43  ~obj/gem.c -- added some id checks to look at them and made it so you couldn't socket it unless you held it first.
+Aug 23 21:36  ~gob.c -- fixed it up so you actually get your strength bonuses to your attribs.  Was still set up on the max 20 stats.
+Aug 25 22:27  ~gob.c -- fixed rm_chosen() so it would cycle through the weapons right to update them.
+Aug 25 22:28  ~obj/wep_shadow.c -- reset set_hits(0); and set_misses(0); to 1's so it wouldn't bug.
+Sep  1 10:42  ~daemon/wep_daemon.c -- fixed a typo in the chaos gem.
+Sep  1 10:46  ~power/bloodboil.c -- made it so your sps couldn't go negative.
+Sep  6 09:22  ~gob.c -- added some code to support the new unstudy command.
+Sep  6 09:23  ~power/unstudy.c -- added this power to allow players to remove studied mobs from their list.
+Sep  6 10:12  ~gob.c -- bumped up some stuff on bcry so the detox/healing works a little better, doesn't do much now.
+Sep  6 10:20  ~NPC/beastmaster.c -- fixed a typo
+Sep  6 10:25  ~power/fatal.c -- made it so color wouldn't bleed if the wep->name() was colored for some reason.
+Sep  6 18:02  ~member/yorick.o -- had to patch him due to a bug.
+Sep  6 18:06  ~/players/zeus/desert/r/ec4.c -- fixed a name for beta testers.
+Sep  6 18:06  ~NPC/guardian.c -- fixed a name for beta testers.
+Sep  6 18:06  ******* Approved Dreadwolf for beta.  Grit is out since he's a punk that hasn't done squat. *******
+[Sep 10 09:03]  ~obj/gem_chest.c -- fixed it so it set all the gems withdrawn to set_held(1); for socketing purposes.
+[Sep 11 07:53]  ~power/guard.c -- fixed it so once you stopped guarding someone it reset and you guard someone else.
+[Sep 11 07:53]  ~obj/guard_obj.c -- fixed a typo.
+[Sep 12 14:50]  ~NPC/trial1.c to trial7.c -- added unique identifiers for trial mobs.
+[Sep 12 14:50]  ~NPC/beastmaster.c -- added unique identifier for trial mob.
+[Sep 12 14:50]  ~NPC/elder.c -- added unique identifier for trial mob.
+[Sep 14 21:11]  ~NPC/beastmaster.c -- fixed it so it doesn't try to clean the arena until you bow to him.
+[Sep 14 21:11]  ~daemon/arena_daemon.c -- changed some things in move_arena_contents() to move things properly.
+[Sep 15 12:46]  ~eq/combat_boots.c -- added the xfer_special() so it would remove the bonuses when you died.
+[Sep 18 08:30]  ~eq/blood_amulet.c -- added the xfer_special() so it would remove the bonuses when you died.
+[Sep 18 08:30]  ~eq/bloodfist_ring.c -- added the xfer_special() so it would remove the bonuses when you died.
+[Sep 18 08:30]  ~eq/gh_boots.c -- added the xfer_special() so it would remove the bonuses when you died.
+[Sep 18 08:30]  ~eq/gh_plate.c -- added the xfer_special() so it would remove the bonuses when you died.
+[Sep 18 08:30]  ~eq/gh_skull.c -- added the xfer_special() so it would remove the bonuses when you died.
+[Sep 18 08:30]  ~eq/gh_wall.c -- added the xfer_special() so it would remove the bonuses when you died.
+[Sep 20 12:56]  ~daemon/wep_daemon.c -- fixed a typo.
+[Sep 20 21:16]  ~daemon/wep_daemon.c -- fixed a typo so xetra and ryo gems actually work now.
+[Sep 22 10:40]  ~daemon/wep_daemon.c -- fixed the code for the beauty gem.
+[Sep 23 23:11]  ~power/ready.c -- added ready.c to try to prevent problems with attributes.
+[Sep 25 09:09]      --  replaced a neruumsh to Archangel. dested his guild ob to fix something and he had it sheathed.
+[Oct 12 21:17]  Allowed Archangel to swap chars as part of beta as Carnage.--  I zapped 10mil exp off Carnage as a fee for the swap
+[Oct 12 21:17]  from above -- cleared Archangel's character of bf stuff.
+[Nov  1 21:46]  patched Carnage with some guild junk -- he passed the trial but it didn't work right.
+[Nov  2 20:57]  ~daemon/wep_daemon.c -- fixed a couple things on demonic gem and angelic gem for balance.
+[Nov  7 18:49]  ~power/set_title.c -- after a suggestion added a , in the set_title after the name.
+[Nov  7 18:50]  ~power/unsocket.c -- added a 50% chance of being able to unsocket gems, if it fails the gem is destroyed.
+[Nov  7 19:23]  ~gob.c -- added to the extra look for weapons that are sheathed.
+[Nov  7 19:43]  ~gob.c -- added rest_check() for the rest power.
+[Nov  7 19:43]  ~power/rest.c -- added a check so if you're fully rested you can't start resting.
+[Nov  8 10:46]  ~daemon/title_daemon.c -- added code so you can choose titles from previous guild levels.
+[Nov  8 10:48]  ~power/unstudy.c -- added a check for glvl.  Not sure why if you can't study a mob naturally you wouldn't have anything to unstudy but I figured why not.
+[Nov  8 12:06]  ~gob.c -- fixed a typo.
+[Nov  8 19:57]  ~power/bloodstep.c -- loaded Forbin's fix for bloodstep.c it would make you look twice. Thanks Forb's =)
+[Nov 11 10:03]  ~daemon/wep_daemon.c -- added a ({ USER })) to the tell room emote so the player didn't get the message twice.
+[Nov 11 10:31]  ~obj/wep_shadow.c -- added a line to the long so you can tell if the weapon has been socketed or forged.
+[Nov 11 10:42]  ~power/random emotes. -- heh added bf to the front of the command to make sure thy don't conflict with other things on the mud.
+[Nov 11 20:39]  ~gob.c -- added code so when you quit it resets your invis from bloodcloak.
+[Nov 11 20:39]  ~gob.c -- added remove_object() to hopefully move the players sheathed weapons to the discon box if they idle out.
+[Nov 11 21:19]  ~NPC/elder.c -- fixed elder so he actually stops the fight in the arena and also that he goes back to the right room.
+[Nov 12 07:05]  ~obj/bloodward.c (added a +NORM in the healing message to reset color bleeding) [Forbin]
+[Nov 13 09:06]  ~power/bloodfury.c -- made it so you can't cast the spell when not in combat.
+[Nov 14 20:36]  ~katya/area/esquire/heals/water.c -- no real change just added comment as to price change for selling.
+[Nov 14 20:37]  ~katya/area/esquire/heals/mint.c -- no real change just added comment as to price change for selling.
+[Nov 18 20:34]  ~power/control.c -- Added Forbin's updated code for the guild pet giving the pet more funcionality =)
+[Nov 18 20:34]  ~power/pet.c -- Added Forbin's updated code for the guild pet giving the pet more funcionality =)
+[Nov 18 20:34]  ~obj/control_pet.c -- Added Forbin's updated code for the guild pet giving the pet more funcionality =)
+[Nov 18 20:34]  ~power/control.c -- changed upd_control_pet.c to control_pet.c in the cloning of pet, it was erroring [Forbin]
+[Nov 18 20:34]  ~obj/control_pet.c -- fixed the HONORVAL, WISVAL, and FAIVAL definitions (they were supposed to be divided by things - mob was attacking TOO often) [Forbin]
+[Nov 20 07:52]  ~help/control.c -- fixed one help command to include "all".
+[Dec 11 10:17]  ~obj/stance_armor.c -- added this to be able to use increased damage using RegisterArmor instead of reclaculating damage through hit_player().  Illarion's new system has most damage go through do_damage so wasn't working right.
+[Dec 11 10:18]  ~gob.c -- added code in the init to use RegisterArmor.
+[Dec 11 10:19]  ~gob.c -- added honor_calc() which used to be in the player_shadow.
+[Dec 11 10:20]  ~obj/player_shadow.c -- removed the honor_calc() and moved it to the gob.
+[Dec 11 10:21]  -- thank Illarion for the help with RegisterArmor transition.
+[Dec 11 16:39]  ~daemon/wep_daemon.c -- fixed a typo in the gem of fortitude.
+[Dec 12 16:37]  ~obj/control_pet.c -- added a check so it wouldn't attack itself.
+[Mar 14 21:42]  ~obj/fwater.c -- added filtered water as a heal, cost 3300 coins just a highden heal for BF.
+[Mar 14 21:42]  ~NPC/merchant.c -- added filtered water to the list of things you can purchase.
+[Mar 14 22:39]  defs.h -- lowered the HONOR_RATE so players could more easily gain blood honor.
+[Mar 22 22:25]  ~zeus/desert/r/ec4.c -- cleared it so people could use the north direction if they were not a beta tester.
+[Mar 22 22:26]  ~NPC/guardian.c -- removed some code so people that weren't defined as beta testers could join the guild.
+[Mar 24 19:20]  ~doc/login_news -- updated the login news to say that the guild was open and no longer in beta.
+[Mar 26 10:36]  heh edited several things, arena_daemon, erilon, atheos, umm some other things to help with arena deaths.
+[Mar 27 21:14]  added if(!str) return 0; check in ~/power/preserve to prevent sens mind error [Forbin]
+[Mar 28 12:45] added a missing 'the' line 96 in ~power/set_title.c [Forbin]
+[Mar 30 21:03]  ~power/several of em....had to add glvl checks to a few.
+[Mar 31 22:19]  ~power/choose.c -- made it so you can't choose wyrmslayer as a weapon to advance.
+[Apr  5 19:49]  added a if(!who) notify_fail to /obj/tool.c in bfstat() [Forbin]
+[Apr  6 22:49]  ~wep_daemon.c -- fixed gem of decay so it wouldn't bug at the end.
+[Apr  9 20:00]  Added a check in ~/power/raise.c to make sure a player can't raise an attrib higher than the amount of free attribs they have available. - Zeus
+[Apr  9 21:46]  ~power/unsocket.c -- changed line 22 if(str = "weapon") to if(str == "weapon") [Forbin]
+[Apr  9 22:09]  Updated ~/help/unsocket to fix a grammatical mistake. - Zeus
+[Apr 10 16:49]  ~NPC/guardian.c -- pumped up Seht a little he seemed too easy to kill.
+[Apr 10 16:49]  ~zeus/desert/r/ec4.c -- made the room Seht is in pk so guild members can help protect their guild hall.
+[Apr 10 20:20]  Modified query_study() in gob.c ~line 750 to omit the last 3 characters of a mobs file name so that mobs with sequential file names are grouped together as one kind of mob to study (for example, qurds). - Zeus
+[Apr 11 03:45]  Added a few more tombs to ~/r/graveyard.c - Zeus
+[Apr 13 22:19]  ~daemon/wep_daemon.c -- fixed angelic gem it was trying to hit a mob with a negative hit_player()
+[Apr 15 12:43]  ~gob.c -- changed query_propert("spar_area") to query_spar_area() in a check for honor.
+[Apr 18 21:43]  ~NPC/elder.c -- added some lines to show the arena stands messages during the victory portion.  Must have missed them earlier.
+[Apr 19 20:08]  ~log/arena_deaths -- removed deaths from my test char.
+[Apr 19 20:08]  ~power/rest.c -- fixed a typo of "recouperate" to "recuperate".
+[Apr 19 21:02]  ~NPC/beastmaster.c -- fixed a typo of "heartilly" to "heartily".
+[Apr 20 09:40]  ~r/arena.c -- fixed a typo had a double negative.
+[Apr 25 22:01]  ~gob.c -- added other things for when resting, increased hp/sp regen, and faster soak,food,intox reduction.
+[Apr 27 20:05]  ~r/graveyard.c -- added to the tomb's a message for Smack being he's died the most in the guild.
+[Apr 27 20:06]  ~gob.c -- added a generic wc bonus instead of pushing everything through the hit() on the wep_shadow.
+[May  2 11:00]  ~member/mjirn.o -- patched Mjirn some guild exp.  He had enough to attempt the glvl 4 trial but mud crashed.  Total comp 13k.
+[May 3 01:38]  ~gob.c line 1559 added check for ths - Zeus
+[May 25 20:30]  ~power/choose.c -- added a query_nonchoose() check to keep certain weps from being choosen so far just jewelled scepter from Mal & Jar's red caves and the jewelled dagger from Jar's blue caves.
+[May 31 21:32]  ~/help/choose -- updated with actual values -Zeus
+[Jul 13 21:30]  ~daemon/wep_daemon.c -- fixed a color bleed in the prismatic gem.
+[Jul 25 10:54]  ~power/choose.c -- fixed it so you can choose Temblor.  Thought I already fixed that at some point but apparently I was mistaken.
+[Jul 26 00:28]  ~gob.c -- Made slight modifications to gxp formula in honor_calc().  Raised probability of gaining gxp and raised amount players receive from dmg (75% instead of 58% of dmg taken when they gain). - Zeus
+[Jul 26 02:44]  ~gob.c -- Fixed concentrate.  It had been broken since I originally wrote it years ago, only adding 1 to each skill.  Now it actually adds a good amount to AGL MIT and ACC like it's supposed to.  *drools*  -Zeus
+[Jul 31 17:41]  ~gob.c line 1393 -- Changed cost of attrib levels after 500k attrib xp.  Made them more even, generally about 20% less for the mid levels.  Also added 3 more levels to the total for a max of 590 possible points (I believe) instead of 560.  Nobody is anywhere near this goal yet. - Zeus
+[Jul 31 17:41]  ~defs.h -- Modified the FAITH define to add attrib() and attribb() vals rather than double the attrib() val.  Had been ignoring item bonuses for faith.  This is mainly used in the honor formula, and this change may result in honor being gained twice as slowly. - Zeus
+[Jul 31 21:21]  ~obj/bloodward.c -- Buffed healing amount from 3+r7 to 6+r7 every 10 sec - Zeus
+[Jul 31 21:44]  ~gob.c line 1002 -- for battle cry, made it so that at 1000 honor player gets +1 to dh_bonus for regen, and at 1500 get +2 to dh_bonus. - Zeus
+[Aug  2 09:06]  ~gob -- heh fixed an error I made previously that only allowed certain socketed gems to work.
+[Aug  3 22:10]  ~r/graveyard.c -- added an inscription on the tombstone for Dreadwolf for dying 20 times since joining the guild.
+[Aug  4 15:29]  ~power/unsocket.c -- changed up unsocket.  Before your success rate was completely based on on a !random(2) changed success rate to be based off of honor, wisdom, agility, accuracy, and faith.  Minimum success rate 30% max 90%.
+[Aug 10 13:59]  ~daemon/wep_daemon.c -- fixed up the gem of inescapable horror was causing errors.
+[Aug 10 13:59]  ~obj/no_go.c -- fixed it, there were syntax errors and junk wouldn't even load, seems to work right now.
+[Aug 10 14:40]  ~obj/wep_shadow.c -- added a check on the wield() to check if the item was in your environment or it stopped players from wielding weps in rooms where a wep was plunged.
+[Aug 10 ??:??] ~defs.h -- lowered HONOR_RATE to 850 to increase gain after confering with Verte [Forbin]
+[Aug 10 ??:??] ~obj/wep_shadow.c -- changed an environment() to environment(ths), was preventing bf from wielding weapons  [Forbin]
+[Aug 13 ??:??] ~power/concentrate -- fixed typo "hightened" --> "heightened"
+[Aug 21 23:07] commented out the 'peace' code of the chaos gem in wep_daemon as it would cause errors when the wep special went off in the same round. - Zeus
+[Aug 24 09:47]  ~daemon/wep_daemon.c -- fixed the winter gem code it was all buggy and crap.
+[Oct 17 12:03]  changed the help file for loyalty to make it more clear so players wouldn't come up with their own "interpretation" as to it's meaning.
+[Oct 24 17:35]  ~NPC/beastmaster.c -- fixed some things dealing with arena deaths.

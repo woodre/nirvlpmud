@@ -1,0 +1,29 @@
+no_clean 0
+name_of_weapon "dark weapon"
+alt_name "sword"
+alias_name "sword"
+short_desc "Sword of Lies[36m  * Cold Fire * [2;37;0m"
+long_desc "Sword of Lies[36m  * Cold Fire * [2;37;0m[1;31mSlayer of Dragon[2;37;0m[1;31mSlayer of Shadow[2;37;0m[1;31mSlayer of Demon[2;37;0m[1;31mSlayer of Spirit[2;37;0m[1mVampiric[2;37;0m[1mSharpness[2;37;0m[1mBerserker[2;37;0m[1mSpeed[2;37;0m[1mParalyzing[2;37;0m[1mSpell Cleaver[2;37;0m[1;31mSoul Stealer[2;37;0m"
+read_msg "[31mA Weapon of BLOOD- forged by Laera.[2;37;0m"
+info 0
+hit_func 0
+wield_func 0
+save_flag 0
+class_of_weapon 16
+value 10000
+local_weight 2
+storage 350
+owner "laera"
+slay 1
+vampire 1
+life 1
+soul_steal 1
+sharp 1
+berserk 1
+speed 1
+wounding 1
+spell 1
+norm 1
+ego 12
+type_s ({"dragon","shadow","demon","spirit",})
+path "players/wocket/graveyard/lies"

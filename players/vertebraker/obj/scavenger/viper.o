@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/hawkeye/armor/fishing","/obj/level_list","/players/wren/Area/starbug/items/bat","/players/pain/NEW/weap/sword","/players/scathe/armor/suit","/players/wren/Area/starbug/items/cowboyhat","/players/snow/shadows/stuff/crown","/players/snow/cam/stuff/sword","/players/softly/nhall/obj/green2","/players/hippo/weapons/molar_sharf","/players/sado/shop/chocolate","/players/emerson/obj/box","/players/mythos/awep/wakizashi","/players/mythos/awep/tanto","/players/emerson/obj/instructions","/players/scathe/armor/mgarb","/players/wren/Area/starbug/items/ogunit","/players/ultramagnus/darkarmor","/players/mythos/aarmor/shell","/players/wren/Area/starbug/items/sequinjacket","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/pain/NEW/arm/helm","/players/hawkeye/items/bourbon","/players/pain/closed/wands/orb","/players/saber/armor/lpants",})
+shorts ({"A Fishing Hat","A list of the top players","a [1;30mballbat[2;37;0m","Sword","Black Suit","a tiny cowboy hat","[1mShadowCrown[0m","[34m[1mBlessed Longsword[0m[0m","Healing Balm [32m(green)[2;37;0m [2]","A molar sharf","A box of delicious Belgian chocolates","A box of parts","Wakizashi","Tanto","A piece of paper","Black Monk Robes","a case containing an OG unit.","Dark Rider Hood","Tortoise Shell","Cat's red sequin jacket","A Prince's Robes","A horned helm","bottle of bourbon","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","Black leather pants",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

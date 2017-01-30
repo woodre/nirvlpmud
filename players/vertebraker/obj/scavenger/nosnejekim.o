@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/wren/Area/starbug/items/currie","/players/angel/area/stargate/obj/P90","/players/saber/stuff/mic","/players/snow/WEAPONS/souleater","/players/mythos/mwep/voice","/players/wren/Area/starbug/items/leaflets","/players/mythos/awep/dstaff","/players/wren/Area/starbug/items/charisma","/players/hippo/weapons/glue","/obj/armor","/obj/weapon","/players/boltar/things/stove2","/players/forbin/realms/keats/OBJ/nazal_yew_staff","/obj/treasure","/obj/armor","/players/mythos/awep/kama","/players/hippo/armour/helmet","/players/wren/Area/starbug/items/comb","/players/angel/area/stargate/obj/P90_no_ammo","/players/scathe/armor/bowboot","/players/snow/chaos/objects/crabmeat","/players/saber/armor/dshades","/players/wren/Area/starbug/items/arrogance","/players/mythos/awep/ring","/players/wren/Area/starbug/items/gauntlet",})
+shorts ({"A tin of chicken currie","Machine gun","A microphone","[1mSoulEater[0m","Voice","a stack of leaflets","Dream Staff","a charismatic aura","a strong, 1 second glue","Steel Helmet","Baby rattle","A stove","A staff of [1;33myew[0m","Arctic Wolf pelt","Fawnskin Cloak","kama","nutshell helmet","the cat's hair pick","[36mP90 machine gun[0m","Hard Boots","A slab of giant crabmeat","[1mDark Shades[2;37;0m","Rimmers arrogance.","Silver Ring","Time gauntlet",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,})
+loaded 0

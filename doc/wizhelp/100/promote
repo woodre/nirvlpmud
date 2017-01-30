@@ -1,0 +1,23 @@
+**************
+
+
+                     Promote
+
+Syntax:    promote <player>
+
+Desc:
+           This command is used to advance a wizard's levels.
+
+Note:      Must be in same room as player.  After you type 
+           promote <player> you will be prompted to enter the
+           player's new level.
+
+Example:   promote bob
+                  results
+           Bob will be set to the prompted lvl you input
+
+Related:   approve
+
+
+**************
+

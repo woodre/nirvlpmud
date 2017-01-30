@@ -1,0 +1,1 @@
+healing_spring() { if(healing_spring_var[0] > lev) return 0; call_other(POWER,"healing_spring",lev,pow); return 1; }

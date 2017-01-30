@@ -1,0 +1,24 @@
+no_clean 0
+name "shield"
+alias 0
+short_desc "Tarrasque Shield"
+long_desc "Tarrasque Shield."
+value 400
+weight 1
+type "shield"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 1
+res 0
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+params ({"physical",1,0,"do_special",})

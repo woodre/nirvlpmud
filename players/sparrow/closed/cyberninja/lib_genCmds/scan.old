@@ -1,0 +1,59 @@
+#include "../DEFS.h"
+#include DEFS_ALEVELS
+#include DEFS_OFFICES
+
+
+status main(string str)
+{
+/* Simple sc command for a member, showing guild info */
+  int level, degree, honor, amode, glev;
+  int gxp, lowxp, freexp;
+  string brand, role, stone;
+
+  level  = (int)IPTP->query_art_level();
+  degree = level - BLACK_BELT;
+  if (degree < 0) degree = 0;
+
+  honor  = (int)IPTP->query_honor();
+  brand  = capitalize((string)IPTP->query_brand());
+  gxp    = (int)IPTP->guild_exp();
+  glev   = (int)IPTP->guild_lev();
+  lowxp  = (int)call_other(GLEVELD, "low_exp", glev);
+  freexp = gxp - lowxp;
+  amode  = (int)IPTP->query_attack_mode();
+  stone  = (string)IPTP->query_stone();
+
+  if (role = (string)call_other(OFFICED, "findRole", TP));
+  else role = 0;
+  if(!stone) stone = NOSTONE;
+
+  write(LINE+BOLD+YELLOW);
+  write(TPN+"'s guild info......\n");
+  write(OFF+LINE);
+
+  if (TRN == OWNER1 || TRN == OWNER2) write("You are a Guild Owner.\n");
+  else if(role) write("You hold the title of "+capitalize(role)+".\n");
+  write("Your "+stone+" vision trodes sparkle with inner light.\n"); 
+
+  write("Honor: "+(int)call_other(HLEVELD, "honorTitle", honor)+"\n");
+  write("Neural Chip: " + brand + ", type " + glev + "\n");
+  write("Guild Xp: "+gxp+"\n");
+  write("Free Xp: "+freexp+"\n");
+
+  write("Belt: "+(string)call_other(ALEVELD, "findBeltColor", level)+"");
+  if (degree > 0) write(", degree "+degree+"\n");
+  else write("\n");
+
+  write("Choice of Weapon: "+(string)IPTP->query_weapon()+"\n");
+
+  write("Attack Mode: ");
+  if(!amode) write("NONE\n");
+  if(amode == 1) write("ATTACK\n");
+  if(amode == 2) write("DEFENSE\n");
+
+  write("Credit Balance: "+(int)IPTP->balance()+"\n");
+  write(LINE);
+
+  return 1;
+}
+

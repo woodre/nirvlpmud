@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "Beads[0m"
+long_desc "A string of beads for keeping count of the prayers one is saying.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "beads"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A string of beads for keeping count of the prayers one is saying.[0mType 'clan_help' for commands."
+clan_short "Beads[0m"
+damage_type 0
+hall_path "/players/jareel/areas/entrance_area/grass_plain_9"
+object_name "beads"
+owner "herger"
+spell_alias "prayer"
+spell_mess_me "Rubs the beads and is healed"
+spell_mess_room "%TPN% rubs the prayer beads and is healed."
+spell_mess_them "%TPN% rubs the prayer beads and is healed."
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 116239
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 80
+last_spell_time 1320904255

@@ -1,0 +1,79 @@
+FINALS QUEST
+
+
+THEME
+The goal of the quest is to login into Fran's
+computer to get in advance the solutions of the finals.
+The player then must find the userid and the password of
+that computer to have access to it.  To do this, he/she
+must solve two mastermind games, one gives the userid,
+the other gives the password.  The player is caught when
+he tries to steal the info and then must fight for his/her
+life.  After killing two students he will use the userid 
+and the password to snoop into Fran's computer. 
+
+
+SOLUTION
+1: goto Fran and listen to him.
+2. goto his labs.
+3: sneak into his machining lab.
+4: solve one mastermind game.
+5: kill the student which is cloned.
+6: sneak into his foundry lab.
+7: solve another mastermind game.
+8: kill the other student.
+9: goto Fran's computer.
+10: type the userid and the password.
+The quest is solved.
+
+Note: steps 3 and 6 can be made in any order
+
+
+HINT
+Login into Fran's computer and steal his data.
+
+
+COMMENTS
+The player must solve two mastermind games, 
+one numbered and one colored, at level tough.
+This could give MC 9.
+The player must also kill Fran (easy, optional) and two 
+students (tough) to save his/her life.
+This could give PC 4.
+The quest is not cheatable because the solutions
+to the mastermind are always different.
+Also, the player must kill the guards alone, 
+without any help, in no teleport rooms.
+
+
+FILES 
+/players/francesco/masterquest/lab.c
+/players/francesco/masterquest/machining.c
+/players/francesco/masterquest/foundry.c
+/players/francesco/masterquest/computer.c
+/players/francesco/masterquest/mastermind4quest.c
+/players/francesco/masterquest/mastermindcolorquest.c
+/players/francesco/masterquest/questmonster.c
+/players/francesco/masterquest/questmonster2.c
+/players/francesco/masterquest/paper.c
+/players/francesco/masterquest/puter.c
+/players/francesco/masterquest/mastermind.log
+/players/francesco/masterquest/killstudent.log
+
+
+thanks
+
+
+fran
+
+completed 		04.09.2001
+final revision 		04.22.2001
+approved 		04.28.2001
+submitted as a quest 	10.10.2001
+further submittal 	02.27.2002
+revised			04.10.2002
+revamped, with a story  06.27.2002
+completed               07.05.2002
+approved   PC 4  MC 7   07.16.2002
+
+

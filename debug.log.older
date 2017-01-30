@@ -1,0 +1,82 @@
+Bad argument 1 to call_other()
+Current object was players/wocket/mushrooms/nonge#767, line 6
+"heart_beat" in "players/wocket/mushrooms/nonge.c" ("players/wocket/mushrooms/nonge#767") line 134
+"run_away" in "obj/living.c" ("players/wocket/mushrooms/nonge#767") line 3041
+error when executing program in destroyed object players/wocket/mushrooms/nonge#767
+Heart beat in players/wocket/mushrooms/nonge#767 turned off.
+Division by zero
+Current object was players/jareel/monsters/chaos/woods2/skeleton#4559, line 102
+"heart_beat" in "players/jareel/monsters/chaos/woods2/skeleton.c" ("players/jareel/monsters/chaos/woods2/skeleton#4559") line 51
+"::heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/jareel/monsters/chaos/woods2/skeleton#4559") line 366
+"::heart_beat" in "obj/monster.c" ("players/jareel/monsters/chaos/woods2/skeleton#4559") line 312
+Heart beat in players/jareel/monsters/chaos/woods2/skeleton#4559 turned off.
+Division by zero
+Current object was players/jareel/monsters/chaos/woods2/skeleton#5393, line 17
+"heart_beat" in "players/jareel/monsters/chaos/woods2/skeleton.c" ("players/jareel/monsters/chaos/woods2/skeleton#5393") line 51
+"::heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/jareel/monsters/chaos/woods2/skeleton#5393") line 366
+"::heart_beat" in "obj/monster" ("players/jareel/monsters/chaos/woods2/skeleton#5393") line 312
+Heart beat in players/jareel/monsters/chaos/woods2/skeleton#5393 turned off.
+Bad argument 1 to environment()
+Current object was players/pestilence/closed/dark/obj/madness#6390, line 49
+"do_madness" in "players/pestilence/closed/dark/obj/madness.c" ("players/pestilence/closed/dark/obj/madness#6390") line 91
+Error in call out.
+Connection timed out detected.
+Bad argument 2 to present()
+Current object was obj/player#7293, line 446
+"cmd_hook" in "obj/player.c" ("obj/player#7293") line 3401
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#7293") line 57
+"cmd_quit" in "bin/play/_quit.c" ("bin/play/_quit") line 6
+"quit" in "obj/player.c" ("obj/player#7293") line 1115
+Bad argument 2 to present()
+Current object was obj/player#790, line 52
+"discon_quit" in "obj/player.c" ("obj/player#790") line 3508
+"quit" in "obj/player.c" ("obj/player#790") line 1115
+Error in call out.
+Bad argument 2 to present()
+Current object was obj/player#7293, line 52
+"discon_quit" in "obj/player.c" ("obj/player#7293") line 3508
+"quit" in "obj/player.c" ("obj/player#7293") line 1115
+Error in call out.
+Too deep recursion.
+Current object was players/angel/area/nox/npc/fenri#2505, line 72
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#8045") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#8045") line 109
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#8045") line 1330
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 313
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#8045") line 216
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#1964") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#1964") line 109
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#1964") line 1330
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 313
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#1964") line 251
+"init" in "obj/monster" ("players/angel/area/nox/npc/fenri#1964") line 619
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#8043") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#8043") line 109
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#8043") line 1330
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 313
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#8043") line 216
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#4942") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#4942") line 109
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#4942") line 1330
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 313
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#4942") line 216
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#4792") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#4792") line 109
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#4792") line 1330
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 313
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#4792") line 216
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#3931") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#3931") line 109
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#3931") line 1330
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 313
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#3931") line 216
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#3849") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#3849") line 109
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#3849") line 1330
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 313
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#3849") line 251
+"init" in "obj/monster" ("players/angel/area/nox/npc/fenri#3849") line 619
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#2505") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#2505") line 109
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#2505") line 1287
+Error in look_for_objects_to_swap.

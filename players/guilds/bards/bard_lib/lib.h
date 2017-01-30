@@ -1,0 +1,23 @@
+#define BASE	"/players/guilds/bards/bard_lib/std/base"
+#define CLEANUP	"/players/guilds/bards/bard_lib/std/cleanup"
+#define OBJECT	"/players/guilds/bards/bard_lib/std/object"
+#define ITEM	"/players/guilds/bards/bard_lib/std/item"
+#define BAG	"/players/guilds/bards/bard_lib/std/bag"
+#define ARMOUR	"/players/guilds/bards/bard_lib/std/armour"
+#define WEAPON	"/players/guilds/bards/bard_lib/std/weapon"
+#define BBOARD	"/players/guilds/bards/bard_lib/std/board2"
+#define EDITOR	"/players/guilds/bards/bard_lib/std/editor"
+#define LIVING	"/players/guilds/bards/bard_lib/std/work/living"
+#define MONSTER	"/players/guilds/bards/bard_lib/std/work/monster"
+#define PORTHEAL "/players/guilds/bards/bard_lib/std/portheal"
+#define COLOUR	"/players/guilds/bards/bard_lib/std/colour"
+#define ROOM	"/players/guilds/bards/bard_lib/std/random/room"
+#define ATMOS	"/players/guilds/bards/bard_lib/std/random/atmos"
+#define EXITS	"/players/guilds/bards/bard_lib/std/random/exits"
+#define PROPS	"/players/guilds/bards/bard_lib/std/random/props"
+#define SIGNS	"/players/guilds/bards/bard_lib/std/random/signs"
+#define GENERATE "/players/guilds/bards/bard_lib/std/random/generate"
+
+#ifndef __VERSION__
+#include "std/portable.h"
+#endif

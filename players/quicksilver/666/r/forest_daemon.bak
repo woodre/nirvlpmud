@@ -1,0 +1,253 @@
+#include "/players/quicksilver/666/include/std.h"
+#include "/players/quicksilver/closed/color.h"
+#define ROWS 7
+#define COLS 19
+
+static object forest, forest_entry, forest_exit;
+string msgs;
+
+query_entry() { return forest_entry; }
+query_exit() { return forest_exit; }
+
+id(str) { return str=="orb"||str=="qsorb"; }
+short() { return "a dark orb"; }
+no_clean() { return 1; }
+
+find_rc(r,c) {
+   return (r*20)+c;
+}
+
+check_bounds(r,c) {
+   return (r>=0)&&(r<=ROWS)&&(c>=0)&&(c<=COLS);
+}
+
+init() {
+   add_action("start", "touch");
+   add_action("recreate", "recreate");
+   add_action("cleanup", "cleanup");
+}
+
+reset(arg) {
+   if(arg) {
+      restore_object("players/quicksilver/closed/etc/messages");
+      remove_call_out("refresh_area");
+      refresh_area();
+      return 1;
+   }
+   restore_object("players/quicksilver/closed/etc/messages");
+   create();
+   refresh_area();
+}
+
+add_msg(str) {
+   string temp;
+   int i;
+   
+   temp=({ });
+   if(!msgs) {
+      msgs=({str+"\n"});
+   } else {
+      if((sizeof(msgs)+1)>15) {
+         for(i=1; i<sizeof(msgs); i++) temp+=({msgs[i]});
+         msgs=temp;
+      }
+      msgs += ({ str+"\n" });
+   }
+   save_object("players/quicksilver/closed/etc/messages");
+   return 1;
+}
+
+clear_msg(str) {
+   msgs=0;
+   save_object("players/quicksilver/closed/etc/messages");
+   return 1;
+}
+
+print_msg() {
+   int i;
+   string outstr;
+   
+   outstr="";
+   if(!msgs) return BOLD+BLU+"There aren't any messages between you and your loved one to read."+NOSTYLE+"\n";
+   for(i=0; i<sizeof(msgs); i++) 
+     outstr=outstr+msgs[i];
+   return BOLD+BLU+"The messages between you and your loved one read:"+NOSTYLE+"\n"+outstr;
+}
+
+recreate() {
+   write("Starting room generation...\n");
+   generate_forest();
+   write("Room generation complete.\n");
+   write("Starting room setup...\n");
+   setup_forest();
+   write("Room setup complete.\n");
+   return 1;
+}
+
+create() {
+   generate_forest();
+   setup_forest();
+   return 1;
+}
+
+refresh_area() {
+   int r,c;
+   
+   forest_entry=forest[find_rc(7,10)];
+   forest_exit=forest[find_rc(7,17)];
+   for(r=0; r <= ROWS; r++) 
+      for(c=0; c <= COLS; c++)
+         forest[find_rc(r,c)]->id();
+   call_out("refresh_area",1000);
+   return 1;
+}
+
+generate_forest() {
+   int r,c;
+   
+   forest=allocate(8*20);
+   for(r=0; r <= ROWS; r++) 
+      for(c=0; c <= COLS; c++)
+         forest[find_rc(r,c)]=clone_object("players/quicksilver/666/r/forest_room.c");
+}
+
+cleanup() {
+   int r,c;
+   
+   for(r=0; r <= ROWS; r++) 
+      for(c=0; c <= COLS; c++)
+         destruct(forest[find_rc(r,c)]);
+   forest=0;
+   write("Ok.\n");
+   return 1;
+}
+
+add_exits(room, r, c) {
+   if(check_bounds(r-1,c)) room->add_exit(forest[find_rc(r-1,c)], "north");
+   if(check_bounds(r+1,c)) room->add_exit(forest[find_rc(r+1,c)], "south");
+   if(check_bounds(r,c+1)) room->add_exit(forest[find_rc(r,c+1)], "east");
+   if(check_bounds(r,c-1)) room->add_exit(forest[find_rc(r,c-1)], "west");
+}
+
+setup_exits() {
+   int r,c;
+   
+   for(r=0; r <= ROWS; r++) 
+      for(c=0; c <= COLS; c++) 
+         add_exits(forest[find_rc(r,c)],r,c);
+}
+
+setup_default_descrs() {
+   int r,c;
+   
+   for(r=1; r <= 6; r++) 
+      for(c=1; c <= 18; c++) {
+         forest[find_rc(r,c)]->set_long("   A dense forest stretches out before you in all directions.  The entire\n"+
+         "forest is washed in very pale light, giving everything a grey hue.  You\n"+
+         "wonder if you could even find your way out of this abysmal place.");
+         forest[find_rc(r,c)]->add_item("tree","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place.");
+         forest[find_rc(r,c)]->add_item("trees","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place.");
+      }
+}
+
+setup_edge_descrs() {
+   int r,c;
+
+   r=0;   
+   for(c=1; c <= 18; c++) {
+      forest[find_rc(r,c)]->set_long("   You have reached a dark corner of the forest.  To the north, the forest\n"+
+      "becomes so dark that it would be impossible navigate...and you have no desire\n"+
+      "to risk your well-being attempting it.\n"+
+      "   The forest seems a bit less dense to the south.");
+      forest[find_rc(r,c)]->add_item("tree","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place.");
+      forest[find_rc(r,c)]->add_item("trees","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place.");
+   }
+   r=7;   
+   for(c=1; c <= 18; c++) {
+      forest[find_rc(r,c)]->set_long("   You have reached a dark corner of the forest.  To the south, the forest\n"+
+      "becomes so dark that it would be impossible navigate...and you have no desire\n"+
+      "to risk your well-being attempting it.\n"+
+      "   The forest seems a bit less dense to the north.");
+      forest[find_rc(r,c)]->add_item("tree","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place.");
+      forest[find_rc(r,c)]->add_item("trees","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place.");
+   }
+   c=0;   
+   for(r=1; r <= 6; r++) {
+      forest[find_rc(r,c)]->set_long("   You have reached a dark corner of the forest.  To the west, the forest\n"+
+      "becomes so dark that it would be impossible navigate...and you have no desire\n"+
+      "to risk your well-being attempting it.\n"+
+      "   The forest seems a bit less dense to the east.");
+      forest[find_rc(r,c)]->add_item("tree","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place");
+      forest[find_rc(r,c)]->add_item("trees","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place");
+   }
+   c=19;   
+   for(r=1; r <= 6; r++) {
+      forest[find_rc(r,c)]->set_long("   You have reached a dark corner of the forest.  To the east, the forest\n"+
+      "becomes so dark that it would be impossible navigate...and you have no desire\n"+
+      "to risk your well-being attempting it.\n"+
+      "   The forest seems a bit less dense to the west.");
+      forest[find_rc(r,c)]->add_item("tree","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place.");
+      forest[find_rc(r,c)]->add_item("trees","Looking at the trees, you notice that their trunks are extremely gnarled and\ntwisted, adding to the macabre ambiance that surrounds this place.");
+   }
+}
+
+setup_entry() {
+   forest_entry=forest[find_rc(7,10)];
+   forest_entry->set_long("   Looking around, you notice you are in a dense forest.  Behind you shimmers\n"+
+   "a large red portal leading back to a more familiar--and definitely less\n"+
+   "sinister--realm.\n"+
+   "   You begin to wonder if venturing into these woods would have profound\n"+
+   "effects on your health.");
+   forest_entry->add_item("portal","The red portal shimmers brightly, casting a faint crimson glow on the\nsurrounding area.");
+   forest_entry->add_exit("players/quicksilver/workroom","portal");
+}
+
+setup_exit() {
+   forest_exit=forest[find_rc(7,17)];
+   forest_exit->set_long("   This part of the forest seems a bit less dense than the rest.  To the\n"+
+   "south lies a path leading into what appears to be a village.\n"+
+   "   Listening, you hear the noises of the village--probably the most familiar\n"+
+   "sound you have encountered since you first ventured into this domain.\n");
+   forest_exit->add_item("path","The path appears to be man-made.  Perhaps you should follow it to the south.");
+   forest_exit->add_exit("players/quicksilver/666/r/niurin/entry","south");
+}
+
+make_trap(room) {
+   room->nix_exits();
+   room->set_long("   As you glance around, you notice the path leading back has suddenly become\n"+
+   "so overgrown that it would be impossible to return.  Fearfully, you realize\n"+
+   "the forest has somehow closed in on you, caging you like an animal.");
+}
+
+setup_traps() {
+   int r,c;
+
+   make_trap(forest[find_rc(0,0)]);
+   make_trap(forest[find_rc(7,0)]);
+   make_trap(forest[find_rc(0,19)]);
+   make_trap(forest[find_rc(7,19)]);
+   r=0;   
+   for(c=1; c <= 18; c++) if(random(10)<2) make_trap(forest[find_rc(r,c)]);
+   c=0;   
+   for(r=1; r <= 6; r++) if(random(10)<2) make_trap(forest[find_rc(r,c)]);
+   c=19;   
+   for(r=1; r <= 6; r++) if(random(10)<2) make_trap(forest[find_rc(r,c)]);
+}
+
+setup_forest() {
+   setup_exits();
+   setup_default_descrs();
+   setup_edge_descrs();
+   setup_entry();
+   setup_exit();
+   setup_traps();
+}
+
+start(str) {
+   if(!id(str)) return 0;
+   tell_room(forest_entry, capitalize(TP->query_name())+" "+TP->query_mmsgin()+".\n");
+   move_object(TP, forest_entry);
+   tell_room(ENVTO, capitalize(TP->query_name())+" touches the orb and fades from view.\n");
+   tell_object(TP, "As you touch the orb, your surroundings fade...\nYou arrive elsewhere.\n");
+   return 1;
+}

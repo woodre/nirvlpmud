@@ -1,0 +1,20 @@
+#include "../DEFS.h"
+#define LEVEL  4
+
+status main(string str) {
+  if(!gotrank(TP, LEVEL)) return 0;
+  if(!str) {
+    write("You deactivate your weapon synchronization.\n");
+    IPTP->set_wepsync(0);
+    IPTP->save_me();
+    return 1;
+  }
+  if( !(str == "p1" || str == "p2" || str == "p3") ) {
+    write("Choices are p1, p2, or p3.\n");
+    return 1;
+  }
+  write("You set your synchronization to "+str+".\n");
+  IPTP->set_wepsync(str);
+  IPTP->save_me();
+  return 1;
+}

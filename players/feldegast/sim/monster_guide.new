@@ -1,0 +1,50 @@
+Level	Wc	Ac	Hp	Coins	Xp
+1	5	3	15	65	15
+2	6	3	30	90	32
+3	7	4	45	120	49
+4	8	4	60	150	65
+5	9	5	75	200	91
+6	10	5	90	250	124
+7	11	6	105	300	179
+8	12	7	120	350	232
+9	13	7	135	400	303
+10	14	8	150	450	402
+11	15	9	165	500	543
+12	16	9	180	550	728
+13	17	10	195	600	900
+14	18	11	220	750	1150
+15	20	12	250	1000	1600
+16	22	13	300	1500	2100
+17	24	14	350	2100	3800
+
+Monster above level 17 must have a spell attack.
+
+18      26      15      400     2800    4700
+19      28      16      450     3500    6029
+20	30	17	500	4500	6500
+
+Monsters above level 20 must have a powerful spell attack
+and ONE "special" advantage.
+
+21	34	19	600	6000	9000
+22	38	20	700	7000	11000
+23	40	21	800	8000	13000
+
+Monsters above level 23 must have a powerful spell attack
+and TWO "special" advantages.
+
+24	42	22	900	10000	16000
+25	44	23	1000	11000	18000
+26	46	24	1200	14000	22000
+
+Monsters above level 26 must have several powerful spell attacks
+and THREE "special" advantages.
+
+27	48	25	1500	17500	29000
+28	52	26	1800	23000	38000
+29	55	28	2000	30000	46000
+
+Monsters above level 29 must be part of a quest and require a
+full party of players to kill.
+
+30	60	30	2500	46000	65000

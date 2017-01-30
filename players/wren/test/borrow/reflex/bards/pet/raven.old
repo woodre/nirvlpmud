@@ -1,0 +1,59 @@
+/* <change by="Erasmios" date="2001-07-08"> */
+inherit "/players/reflex/guilds/bards/pet/petbase";
+
+create()
+{
+	::create();
+
+	set_self_damage(5);
+
+	set_name("raven");
+	set_short("A large black raven");
+	set_alt_name("bird");
+	set_gender("creature");
+	set_race("bird");
+	set_long
+		("A large raven with dark feathers and gleaming black eyes.\n"
+		 + "The raven has a small silver band around its left foot.\n");
+	set_level(1);
+	set_heal(4, 20);
+	set_ac(3);
+	set_wc(5);
+	set_hp(15);
+	set_al(400);
+	set_aggressive(0);
+	set_chat_chance(3);
+	set_a_chat_chance(2);
+	load_chat("The raven ruffles its feathers.\n");
+	load_chat("The raven looks at you.\n");
+	load_chat("The raven says \"\KAARR\"\n");
+	load_chat("The raven asks \"\WROAARRKK?\"\n");
+	load_chat("The raven says \"\CRAACKK\"\n");
+	load_chat("The raven circles.\n");
+	load_a_chat("The raven circles its foe.\n");
+	set_spell_mess1("The raven pecks at its opponents eyes.");
+	set_spell_mess2("The raven pecks at your eyes.");
+	set_chance(10);
+	set_spell_dam(5);
+}
+
+a_short()
+{
+	return "A raven";
+}
+
+the_short()
+{
+	return "The raven";
+}
+
+sic_sound(str)
+{
+	return ("The raven flies towards " + capitalize(str) + ".\n");
+}
+
+munch_sound()
+{
+	return ("The raven flies down to the corpse and plucks out its eyeballs.\n");
+}
+/* </change> */

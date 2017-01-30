@@ -1,0 +1,18 @@
+
+Now available set objects so they do not save in the hotel....
+if you are using /obj/armor /obj/weapon or /obj/treasure
+do the following:
+
+         call_other(object, "set_save_flag", 0);
+
+if the object is totally your own add the following function.
+
+    query_save_flag() { return 1; }
+
+If you have your own personal generic objects like armor and weapon
+please add the following to prevent them from retoring as a 0
+
+          generic_object() {return 1;}
+     if armor,weapon,or treasure is NOT inherited or included by your
+     generic object you must copy the save_thing and restore_thing
+     functions into your generic object.

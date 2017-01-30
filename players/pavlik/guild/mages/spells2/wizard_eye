@@ -1,0 +1,74 @@
+/*
+ * spell : Wizard Eye   (evocation)
+ * level : 2
+ * effect: peeks into adjacent rooms
+ * cost  : 50 sp
+ * spec  : 
+ * files : /mages/obj/wizard_eye.c
+ */
+
+wizard_eye(str) {
+
+  object obj;
+  int i;
+  string exits, name, dir;
+
+  if(!KNOW("wizeye")) {
+	write("What?\n");
+	return 1;
+  }
+
+  if(!env->query_dest_dir()) {
+	write("This spell will not work here.\n");
+	return 1;
+  }
+
+  write("You cast a "+HIG+"Wizard Mark"+NORM+" spell ...\n");
+
+  tell_room(env,
+    ME+" casts a spell and a floating eyeball appears out of mid air!\n"+
+    "The magical eye bobs up and down as it looks around.\n");
+
+  if(str && !dirtest(tp, str)) {
+	tell_room(env, "The floating eye bumps into a wall and disappears.\n");
+	write("There is no exit '"+str+"'.\n");
+	return 1;
+  }
+  else if(str) {
+	tell_rom(env, "The floating eye blinks twice and leaves "+str+".\n");
+  }
+  else {
+	tell_room(env, "The floating eye blinks three times and floats away.\n");
+  }
+
+  obj = clone_object("players/pavlik/guild/mages/obj/wizard_eye");
+
+  if(str) {
+	move_object(obj, env);
+	obj->exit_report(str);
+  }
+  else {
+	exits = env->query_dest_dir();
+	for(i=0; i<sizeof(exits); i+=2) {
+		name = exits[i];
+		dir = exits[i+1];
+		move_object(obj, name);
+		obj->do_report(dir);
+	}
+  }
+
+  tp->add_spell_point(-50);
+  return 1;
+}
+
+
+dirtest(ob, str) {
+  int x;
+  string exits;
+  exits = environment(ob)->query_dest_dir();
+  for(x=1; x<sizeof(exits); x+=2) {
+	if(exits[x] == str) return 1;
+  }
+  return 0;
+}
+

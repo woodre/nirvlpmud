@@ -1,0 +1,40 @@
+inherit "/obj/treasure.c";
+#include "/players/zeus/closed/all.h"
+#define VICTIM environment(TO)
+
+reset(arg){
+	  if(arg) return;
+
+  set_id("zeus_heart_attack");
+  set_short(0);
+  set_long(0);
+  set_alias(0);
+  set_weight(0);
+  set_value(0);
+  set_heart_beat(1);
+  call_out("okay", 7+random(3));
+}
+
+okay(){
+  tell_object(VICTIM,
+    "As you lay on the ground, you start to recover...\n");
+  destruct(this_object());
+}
+
+void init(){  add_action("ouch_it_hurts"); add_xverb("");}
+
+ouch_it_hurts(){
+  tell_object(VICTIM,
+  "You are wracked by pain as you try to move.\n"+
+  "You realize you have no control over your movements.\n");
+  return 1;
+}
+
+void heart_beat(){
+  if(!environment()) return ;
+  if(!random(4))
+    tell_object(VICTIM, "You slam about as pain consumes you.\n");
+}
+
+get(){ return 0; }
+drop(){  return 0; }

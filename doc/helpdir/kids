@@ -1,0 +1,45 @@
+
+
+                           [help kids]
+-----------------------=========+=========-----------------------  
+
+Female players on Nirvana can get pregnant and bear children.
+Getting pregnant happens more or less the same as it does in real
+life.
+
+If you wish to keep your mud kid after the next reboot and from 
+then on, you must leave your child at the village daycare center
+(s,4e,3n from the church) before reboot.
+
+You can then pick up your child at the daycare center at any
+time.  Once your child has been left at the daycare once, it will
+reappear there after reboots, even if it is lost in a crash or
+dies.  Death costs kids 1/4 of their total experience.  If you
+leave your kid in the daycare for more than 30 days, it may be
+sent away for adoption (deleted) if the daycare becomes
+overcrowded.
+
+Commanding your child:
+
+com <childname> <command> 
+
+Your child can do many of the same things you can, like wear
+armor, wield weapons, and kill monsters.  They are also subject
+to a few hazards that you or not, so you should be cautious when
+exploring or using your child for assistance in combat.
+
+To tell your child to follow you around, use the special child
+follow instruction: 'com <childname> follow'.  You can also 'com
+<childname> stop' to have your child stop following you- but you
+should be careful about leaving your child unattended.
+
+You can check your child's health with the command 'khp
+<childname>'.  Kids may heal using munchies and some other heals.
+Munchies are available for purchase at the daycare. Use the
+special child instruction 'com <childname> eat' to have your
+child attempt to use any munchies or other heals it is carrying.
+
+You can change your child's appearance with the 'kidtitle
+<title>' and 'kdesc <description>' commands.  Kidtitle changes
+the title that appears after your child's name in a room, and
+kdesc changes what players see when examining your child.

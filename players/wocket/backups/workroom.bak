@@ -1,0 +1,101 @@
+#define tp this_player()
+#define tpn this_player()->query_name()
+#define tpp this_player()->query_possessive()
+#include "/players/wocket/closed/ansi.h"
+inherit "room/room";
+
+int sstatus;
+string temp1;
+
+reset(arg) {
+  if(arg) return;
+set_light(1);
+
+short_desc = "";
+long_desc = "You see a bare room.\n\n\t Under ReConstruction\n\n";
+
+items = ({
+  "item","Description of the item",
+});
+
+dest_dir = ({
+    "/players/dreamspeakr/workroom.c","east",
+    "/room/church.c","church",
+    "/room/south/sforst45.c","angel",
+    "/players/wocket/mages/rooms/guildhall.c","guildhall",
+});
+
+}
+
+init (){
+  ::init();
+    add_action("east","east");
+    add_action("east","e");
+    add_action("shield","shield");
+    add_action("dog","dog");
+if(sstatus == 1 && this_player()->query_real_name() != "wocket"){
+    move_object(this_player(),"/room/church.c");
+    write(HIB+"**************************************************************************\n"+
+"              Marvin K. Mooney Will You Please Go Now!\n"+
+"                       by. Dr Seuss\n"+
+"**************************************************************************\n\n"+
+"The time has come.\nThe time has come.\nThe time is now.\nJust go.\nGo.\nGO!\nI don't care how.\nYou can go by foot.\nYou can go by cow.\nMarvin K. Mooney, will you please go now!\n"+
+"You can go on skates.\nYou can go on skis.\nYou can go in a hat.\nBut please go.\nPlease!\nI don't care.\nYou can go by bike.\nYou can go on a Zike-Bike if you like.\nIf you like you can go in an old blue shoe.\nJust go, go, GO!\nPlease do, do, DO!\n"+
+"Marvin K. Mooney,\nI don't care how.\nMarvine K. Mooney,\nwill you please\nGO NOW!\nYou can go on stilts.\nYou can go by fish.\nYou can go in a Crunk-Car if you wish.\nIf you wish you may go by lion's tail.\nOr stamp yourself and go by mail.\n"+
+"Marvin K. Mooney!\nDon't you know\nthe time had come\nto go, Go, GO!\nGet on your way!\nPlease, Marvin K.!\nYou might like going\nin a Zumble-Zay.\nYou can go by ballon...\n...or broomstick.\nOR\nYou can go bye camel\nin a bureau drawer.\n"+
+"You can go by Bumble-Boat...\n...or jet.\nI don't care how you go.\nJust GET!\nGet yourself a Ga-Zoom.\nYou can go with a ........\nBOOM\nMarvin, Marvin, Marvin!\nWill you leave this room!\nMarvin K. Mooney!\nI dont't care HOW.\nMarvin K. Mooney!\n"+
+"Will you please\nGO NOW!\nI said\nGO\nand\nGO\nI meant....\nThe time had come.\nSO...\nMarvin WENT.\n"+NORM+
+"You have been moved to the church.\n"
+);
+tell_object(find_player("wocket"),HIB+"A ripple has been made in the shields by "+tpn+".\n"+NORM);
+}
+}
+
+int shield(string str){
+if (str == "on"){
+  if(sstatus == 1){
+    write(BLU+"Your shields are already on.\n"+NORM);
+    return 1;
+}
+    write(BLU+"You have activated the shields.\n"+NORM);
+    sstatus = 1;
+return 1;
+}
+
+if (str == "off"){
+    if(sstatus == 0){
+    write(BLU+"Your shields are off.\n"+NORM);
+    return 1;
+  }
+    write(BLU+"You have disactivated the shields.\n"+NORM);
+    sstatus = 0;
+    return 1;
+}
+write("That is not a valid function.  You man only turn on and off.\n");
+    return 1;
+}
+
+query_long(){}
+long(str){
+  ::long();
+  if(sstatus == 1) write(HIB+"The shields are activated.\n"+NORM);
+  else
+  write(HIB+"The shields are not activated.\n"+NORM);
+}
+
+east(){
+if((tp->query_real_name() == "wocket") || (tp->query_real_name() == "dreamspeakr")){
+    return 0;
+  }
+write(HIB+"You are blocked by a shield and bouce back.\n"+NORM);
+say(HIB+tpn+" is thrown back by the shield.\n"+NORM);
+write("You may not enter Dreamspeakr's workroom without permission.\n");
+return 1;
+}
+
+short(){
+string str;
+str = temp1+"'s Pocket";
+if(this_player()) temp1 = this_player()->query_name();
+return str;
+}

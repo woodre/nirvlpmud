@@ -1,0 +1,15 @@
+subject "clan hall"
+new_mess "Entrance to clan hall is 7e,ne,continent"
+messages ({"jaster%DATA_BREAK%1278696079%DATA_BREAK%clan hall%DATA_BREAK%Entrance to clan hall is 7e,ne,continent",})
+no_clean 0
+short_desc 0
+long_desc "There is no clan_board_obj here."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_board_obj"
+alias_name 0
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})

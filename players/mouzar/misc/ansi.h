@@ -1,0 +1,10 @@
+#define esc ESC
+#define blink esc+"[5m"
+#define red esc+"[31m"
+#define green esc+"[32m"
+#define yellow esc+"[33m"
+#define blue esc+"[34m"
+#define purple esc+"[35m"
+#define cyan esc+"[36m"
+#define norm esc+"[0m"
+#include "/players/mouzar/misc/esc.h"

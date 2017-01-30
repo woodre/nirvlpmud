@@ -1,0 +1,17 @@
+____________________________________________________________________
+--------------------------------------------------------------------
+Guild Wimpy:
+  the guild wimpy is a life saver for getting one's ass out of a 
+battle before death.  not only can you toggle the wimpy on or off
+but you may select the % hit points left you would like to wimpy
+at and the direction you want to wimpy in.  
+   wimp -- toggle wimpy on or off
+   wimpat <%> -- set the % of HPs remaining that you would like to
+                 wimp out at (default is 10%)
+   wimpdir <dir> -- set the direction you would like to wimpy in.
+                  If no direction is given (dir = none) You will flee
+                  in the first direction avaliable.
+    - type 'wimpat' or 'wimpdir' only to use the defualts
+    - when you wimp, you follow (if on) will auto. shut off
+_____________________________________________________________________
+---------------------------------------------------------------------

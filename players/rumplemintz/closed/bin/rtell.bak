@@ -1,0 +1,19 @@
+#include <ansi.h>
+#define DAEMON "/players/rumplemintz/closed/bin/rdaemon.c"
+
+rtell(str){
+    string item, what;
+    object ob;
+    if(!str || sscanf(str, "%s %s", item, what) !=2){
+	notify_fail("Usage: rtell <item> <message>\n");
+	return 0;
+    }
+    ob = DAEMON->parse_list(item);
+    if(!ob) return 0;
+    if(!living(ob)){
+	write("Not a living object.\n");
+	return 1;
+    }
+    tell_object(ob, HIW+"Rumplemintz "+HIR+"tells you"+NORM+": "+what+"\n");
+    return 1;
+}

@@ -1,0 +1,23 @@
+Player/Player interaction
+I. PK
+   A. Keep PK optional: pk flag & pk areas.
+   B. Reduce exp lost on pk death to 1/10, with a max of 500k
+   C. Reduce number of pk zones, or reduce danger to newbies (only set 
+      pk for level 15+)
+   D. Add code to player to keep track of player kills, basicially move 
+      the old MK code to living.c (will enable us to have a top PK list)
+
+II. Role-Playing
+   A. Add guilds for both role-playing (Jedi) and non-role-playing (symbs).
+   B. Make role-playing status part of the guild joining process.  If 
+      players do not follow the guidelines, they can be removed.  
+      EX:  When becoming a Knight, the player should have to read the 
+      tablet, which outlines what the player must do.  If the player does
+      not roleplay, they can be removed.  The key is that the player must 
+      be aware of the rules before they join.
+
+III. Partying
+   A. Will depend on changes made to races,stats, and guilds.  But the party 
+      object will have to be modified to utilize the changes to their 
+      potential.  I think the party object should be looked at once the other
+      changes are approved.

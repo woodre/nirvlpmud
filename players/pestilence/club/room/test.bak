@@ -1,0 +1,93 @@
+#include "/open/ansi.h"
+#define TP this_player()
+#define TO this_object()
+#define tp this_player()
+#define TPN this_player()->query_name()
+inherit "/players/vertebraker/closed/std/room";
+object item;
+int cost;
+string what;
+
+reset(arg) {
+  if(arg) return;
+
+short_desc = ""+HIY+"Texas Hot's"+NORM+"";
+long_desc =
+  "    This is the famous restaurant named Texas Hot's.  Many different\n"+
+  "items can be purchased here.  There is a long bar that goes the length\n"+
+  "of the building with a menu on the wall behind the bar.  On the other\n"+
+  "side of the building there are twelve booths.\n";
+set_light(1);
+
+items = ({
+"bar","A long bar with stools every three feet extends the length of the building",
+"booths","There are twelve four-person booths along the other side of the building",
+"wall","On the wall there is a large menu telling what can be sold",
+"menu","->To see all available items please type 'list'",
+});
+
+dest_dir = ({
+"/players/pestilence/amity/room/nmain3.c","west",
+});
+}
+
+init(){
+    ::init();   
+   add_action("buy_it", "buy");
+   add_action("list"); add_verb("list");
+}
+
+list(){
+     write("1. hamburger____________________________1800 coins.\n"+
+           "2. vanilla milkshake____________________1800 coins.\n"+
+           "3. chocolate milkshake__________________2100 coins.\n"+
+           "4. french fries_________________________2100 coins.\n"+
+           "5. hotdog_______________________________2100 coins.\n"+
+           "6. lowfat vanilla milkshake_____________3300 coins.\n");
+     return 1;}
+
+buy_it(string str){
+        if(!str){ write("Buy 1-4"); return 1; }
+        if(str == "1"){
+          cost = 1800;
+          move_object(clone_object("players/pestilence/club/mob/busty.c"),TO);
+          what = "hamburger";
+          }
+        else if(str == "2"){
+          cost = 1800;
+          item = clone_object("/players/pestilence/amity/obj/vshake.c");
+          what = "vanilla milkshake";
+          }
+        else if(str == "3"){
+          cost = 2100;
+          item = clone_object("/players/pestilence/amity/obj/cshake.c");
+          what = "chocolate milkshake";
+          }
+        else if(str == "4"){
+          cost = 2100;
+          item = clone_object("/players/pestilence/amity/obj/fries.c");
+          what = "french fries";
+          }
+        else if(str == "5"){
+          cost = 2100;
+          item = clone_object("/players/pestilence/amity/obj/hotdog.c");
+          what = "hotdog";
+          }
+        else if(str == "6"){
+          cost = 3300;
+          item =   move_object(clone_object("players/pestilence/club/mob/busty.c"),TO);
+          what = "lowfat vanilla milkshake";
+          }
+        else{
+          write("The choices are 1-5.\n");
+          return 1;
+        }     
+ if (call_other(this_player(), "query_money", 0) < cost) {
+    write("I'm sorry, but you don't have enough coins for that.\n");
+     return 1;
+     }          
+ write("You pay "+cost+" coins for a "+what+".\n");
+ say(tp->query_name() + " purchases a "+what+".\n");
+ tp->add_money(-cost);
+ return 1;
+}

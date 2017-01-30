@@ -1,0 +1,14 @@
+                    -- CHECK ALIGNMENT --
+
+TYPE: Spell (Fixed)
+INT REQ: 1
+USAGE: align <monster>
+COST: 10,000 xp  
+
+This spell shows the alignment of a monster, some of the advanced
+guilds have alignment restrictions.
+
+      /=COST SP=XP COST=\
+      |   10   | 10,000 |
+      \=================/
+

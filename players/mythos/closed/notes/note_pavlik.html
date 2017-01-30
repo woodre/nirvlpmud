@@ -1,0 +1,303 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Generic SQL Query</title>
+</head>
+
+<body>
+
+
+<h2>select * from monster where weap_c='pavlik' and who='jaraxle'</h2>
+
+<table border="1">
+  <tr>
+
+    <th>WHEN
+</th>
+
+    <th>IP
+</th>
+
+    <th>WHO
+</th>
+
+    <th>EMAIL
+</th>
+
+    <th>LEV
+</th>
+
+    <th>GUILD
+</th>
+
+    <th>EXP
+</th>
+
+    <th>MONEY
+</th>
+
+    <th>WC
+</th>
+
+    <th>AC
+</th>
+
+    <th>HP
+</th>
+
+    <th>SP
+</th>
+
+    <th>ROOM_C
+</th>
+
+    <th>ROOM_F
+</th>
+
+    <th>ATT_C
+</th>
+
+    <th>ATT_F
+</th>
+
+    <th>ATT_N
+</th>
+
+    <th>ATT_WC
+</th>
+
+    <th>ATT_AC
+</th>
+
+    <th>ATT_MHP
+</th>
+
+    <th>WEAP_C
+</th>
+
+    <th>WEAP_F
+</th>
+
+    <th>WEAP_WC
+</th>
+
+  </tr>
+
+  <tr>
+
+    <td>2/25/99 4:04:21 AM
+</td>
+
+    <td>12.21.242.71   
+</td>
+
+    <td>jaraxle
+</td>
+
+    <td>blast47@hotmail.com
+</td>
+
+    <td>18
+</td>
+
+    <td>Knights Templar
+</td>
+
+    <td>1530683
+</td>
+
+    <td>16000
+</td>
+
+    <td>18
+</td>
+
+    <td>9
+</td>
+
+    <td>251
+</td>
+
+    <td>179
+</td>
+
+    <td>nightshade
+</td>
+
+    <td>players/nightshade/room/i11
+</td>
+
+    <td>0
+</td>
+
+    <td>0
+</td>
+
+    <td>0
+</td>
+
+    <td>0
+</td>
+
+    <td>0
+</td>
+
+    <td>0
+</td>
+
+    <td>pavlik
+</td>
+
+    <td>players/pavlik/weapons/falcon_rapier#792
+</td>
+
+    <td>18
+</td>
+
+  </tr>
+
+  <tr>
+
+    <td>2/25/99 4:34:21 AM
+</td>
+
+    <td>12.21.242.148  
+</td>
+
+    <td>jaraxle
+</td>
+
+    <td>blast47@hotmail.com
+</td>
+
+    <td>18
+</td>
+
+    <td>Knights Templar
+</td>
+
+    <td>1548332
+</td>
+
+    <td>26118
+</td>
+
+    <td>18
+</td>
+
+    <td>9
+</td>
+
+    <td>241
+</td>
+
+    <td>0
+</td>
+
+    <td>eurale
+</td>
+
+    <td>players/eurale/Fiend/mm24
+</td>
+
+    <td>eurale
+</td>
+
+    <td>players/eurale/Fiend/thing#1008
+</td>
+
+    <td>Thing
+</td>
+
+    <td>30
+</td>
+
+    <td>15
+</td>
+
+    <td>500
+</td>
+
+    <td>pavlik
+</td>
+
+    <td>players/pavlik/weapons/falcon_rapier#792
+</td>
+
+    <td>18
+</td>
+
+  </tr>
+
+</table>
+
+
+<h2>Enter the SQL select stmt:</h2>
+
+<h3>If you bring my server to a crawl, or fuck up the database badly, I'll come after you
+and your children, and then I will take the whole thing offline. I'm serious, if you don't
+know what you're doing here, don't do it.</h3>
+
+<form action="genericsql.asp" method="post">
+  <p><textarea name="sqlquery" rows="15" cols="80">select * from monster where weap_c='pavlik' and who='jaraxle'</textarea><input type="submit"> </p>
+</form>
+
+<p>DON'T USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING</p>
+
+<pre>
+SQL&gt; desc ipmap
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ WHO                                      VARCHAR2(16)
+ IP                                       VARCHAR2(16)
+ WEIGHT                                   NUMBER
+
+SQL&gt; desc nirvana
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ WHEN                            NOT NULL DATE
+ WHO                             NOT NULL VARCHAR2(16)
+ IP                              NOT NULL VARCHAR2(16)
+ ROOM                            NOT NULL VARCHAR2(256)
+
+SQL&gt; desc monster
+ Name                            Null?    Type
+ ------------------------------- -------- ----
+ WHEN                                     DATE
+ IP                                       CHAR(15)
+ WHO                                      VARCHAR2(16)
+ EMAIL                                    VARCHAR2(64)
+ LEV                                      NUMBER(10)
+ GUILD                                    VARCHAR2(16)
+ EXP                                      NUMBER(38)
+ MONEY                                    NUMBER(6)
+ WC                                       NUMBER(6)
+ AC                                       NUMBER(6)
+ HP                                       NUMBER(10)
+ SP                                       NUMBER(10)
+ ROOM_C                                   VARCHAR2(16)
+ ROOM_F                                   VARCHAR2(64)
+ ATT_C                                    VARCHAR2(16)
+ ATT_F                                    VARCHAR2(64)
+ ATT_N                                    VARCHAR2(32)
+ ATT_WC                                   NUMBER(6)
+ ATT_AC                                   NUMBER(6)
+ ATT_MHP                                  NUMBER(10)
+ WEAP_C                                   VARCHAR2(16)
+ WEAP_F                                   VARCHAR2(64)
+ WEAP_WC                                  NUMBER(6)
+</pre>
+
+<p>
+
+</p>
+
+<script>
+    document.forms(0).elements(0).focus();
+  </script>
+
+
+</body>
+</html>

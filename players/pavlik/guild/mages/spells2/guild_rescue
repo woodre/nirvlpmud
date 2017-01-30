@@ -1,0 +1,71 @@
+guild_rescue(){
+  string spell;
+  int i;
+
+
+  if(tp->query_guild_rank() < 12) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(env->realm() == "NT"){
+    write("Something here blocks your "+spell+" spell!\n");
+    return 1;
+  }
+
+  i = random(3);
+  if(i == 0) spell = "rescue";
+  else if(i == 1) spell = "escape";
+  else if(i == 2) spell = "egress";
+
+  if(spell == "rescue"){
+  write(
+  "You cast a Rescue spell...\n"+
+  "A magical steed appears before you.  You quickly scramble onto\n"+
+  "the Griffon's back and are swept away to the safety of the Mages\n"+
+  "Tower.  The Griffon sets you down gently and flies away.\n");
+  say(
+  ME+" casts a spell and a magical steed appears.  "+ME+" quickly\n"+
+  "scrambles onto the Griffon's back and flies away.\n");
+  }
+  if(spell == "escape"){
+  write(
+  "You take a small rope from your spell pouch and toss one end\n"+
+  "high into the air, where it hangs magically!  You quickly scramble\n"+
+  "up the rope.  When you climb back down, you are in the safety of\n"+
+  "the Mages Tower.  You pull the rope down and hide it away.\n");
+  say(
+  ME+" takes a small length of rope from one of his numerous pouches\n"+
+  "and throws one end of it into the air.  The rope stays magically\n"+
+  "suspended in the air!  "+ME+" quickly scrambles up the rope and\n"+
+  "disappears!\n");
+  }
+  if(spell == "egress"){
+  write(
+  "You cast an Egress spell.\n"+
+  "You have the feeling of being ripped apart then scrunched back\n"+
+  "together again as you are magically teleported to the Tower.\n");
+  say(
+  ME+" casts a magical spell.\n"+
+  "There is a bright flash of light and a thundering 'BOOM'!\n"+
+  ME+" is gone.\n");
+  }
+  move_object(tp, "players/pavlik/guild/mages/rooms/guild_room");
+  if(spell == "rescue")
+  say(
+  "A Griffon lands gracefully before you and "+ME+" quickly dismounts.\n"+
+  "The magical beast quietly departs.\n");
+  if(spell == "escape")
+  say(
+  "A magical rope appears out of nowhere, dangling from the sky.\n"+
+  ME+" climbs down the rope, pulls it down, coils it up and hides\n"+
+  "it away.\n");
+  if(spell == "egress")
+  say(
+  "There is a sharp CRACK and a thundering BOOM!\n"+
+  ME+" appears before you.\n"+
+  ME+" smiles nonchalantly.\n");
+  tp->add_spell_point(-25);
+  return 1;
+}
+

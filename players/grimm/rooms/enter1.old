@@ -1,0 +1,23 @@
+inherit "room/room";
+reset(arg) {
+    if (arg) return;
+
+    set_light(1);
+    short_desc = "Caverns";
+    no_castle_flag = 0;
+    long_desc = 
+        "This is the entrance to Grimm's area.  The walls look as though\n"
+ + "they have been built rather quickly.  The area feels rather strange:\n"
+        + "as though each step will take you miles away.\n";
+    dest_dir = 
+        ({
+         "players/grimm/rooms/haphaz_a6", "southwest",
+         "players/grimm/entrance", "north",
+         "players/grimm/rooms/haphaz_c5", "east",
+        });
+}
+
+query_light() {
+    return 1;
+}
+

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[31m<Fire Shield>[0m"
+long_desc "[31m<Fire Shield>[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "shield"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[31m<Fire Shield>[0mType 'clan_help' for commands."
+clan_short "[31m<Fire Shield>[0m"
+damage_type "good"
+hall_path "/room/vill_shore"
+object_name "shield"
+owner "thadeus"
+spell_alias "tt"
+spell_mess_me "You cast your clan spell"
+spell_mess_room "misses %AKN%."
+spell_mess_them "misses you."
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 100000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1448995188

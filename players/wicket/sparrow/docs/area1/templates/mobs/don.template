@@ -1,0 +1,22 @@
+<DON>
+
+Short Desc: Kristin Du-gotti (DON)
+Long Desc: An younger woman in his mid-thirties, Kristin is head over.
+         all of the registered nurses and medical assistants of the
+         facility. She takes managment to a whole new level. She has
+         long brown hair with chunks of blonde that streak down through
+         her hair. She wears a very small skirt and a very tight button
+         up dress shirt. She is very flirty with everyone in the building
+         One can probably guess how she made it into this job title.
+Name: kristin
+Race: Human
+Gender: Male
+Level: 5
+Wc: 9
+Ac: 5
+Hp: 75
+Gold: 200
+Spell: deathkiss
+        add_spell("deathkiss","#MN# $HY$blows$N$ you a $HR$kiss$N$. You feel $HG$sick$N$ all of a sudden.\n",
+                     "#MN# $HY$blows$N$ #TN# a $HR$kiss$N$. #TN# feels $HG$sick$N$ all of a sudden.\n",
+                     20(2d7),"other|poison");

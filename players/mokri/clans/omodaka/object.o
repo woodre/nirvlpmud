@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[33mA large [31mscar[0m [33macross the face[0m (worn)[0m"
+long_desc "This is the mark of those who serve the caste of [1;37mOdani[0m.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "scar"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is the mark of those who serve the caste of [1;37mOdani[0m.[0mType 'clan_help' for commands."
+clan_short "[33mA large [31mscar[0m [33macross the face[0m (worn)[0m"
+damage_type "water"
+hall_path "/players/bastion/isle/nearshore"
+object_name "scar"
+owner "goten"
+spell_alias "torment"
+spell_mess_me "%TPN% %hi red%impaled%normal% %AKN% in the stomach.%newline%%TPN% %red%IMPALES%normal% %AKN% with a savage thrust!%newline%%TPN% skillfully hacks into %AKN% with your honed longsword!%newline%%TPN% %hi red%impaled%normal% %AKN% in the stomach.%newline%%TPN% hits %AKN% very hard."
+spell_mess_room "%TPN% %hi red%impaled%normal% %AKN% in the stomach.%newline%%TPN% %red%IMPALES%normal% %AKN% with a savage thrust!%newline%%TPN% skillfully hacks into %AKN% with your honed longsword!%newline%%TPN% %hi red%impaled%normal% %AKN% in the stomach.%newline%%TPN% hits %AKN% very hard."
+spell_mess_them "%TPN% %hi red%impaled%normal% %AKN% in the stomach.%newline%%TPN% %red%IMPALES%normal% %AKN% with a savage thrust!%newline%%TPN% skillfully hacks into %AKN% with your honed longsword!%newline%%TPN% %hi red%impaled%normal% %AKN% in the stomach.%newline%%TPN% hits %AKN% very hard."
+abilities ({})
+chan_history ({"[Sun Jul 13 14:10:43 2014] Goten: torment is spell","[Sun Jul 13 14:11:05 2014] Goten: feel free to make yourself a private room and some lockers off it there's like 1.4 mil in the coffer","[Sun Jul 13 14:11:21 2014] Bevan: im sure","[Sun Jul 13 14:11:39 2014] Bevan: this head cold is kickin my ass","[Sun Jul 13 14:11:39 2014] Goten: and if u notice spell is water damage, which is good to use on cybers ;)","[Sun Jul 13 14:11:45 2014] Bevan: heh","[Sun Jul 13 14:12:13 2014] Bevan: hehe","[Sun Jul 13 14:15:29 2014] Bevan: sorry","[Sun Jul 13 14:15:33 2014] Bevan: was talking to wife she called me","[Sun Jul 13 14:15:45 2014] Goten: all good","[Sun Jul 13 14:16:09 2014] Goten: need to get Harley some mad xps sometime this week","[Sun Jul 13 14:16:17 2014] Bevan: i can try","[Sun Jul 13 14:16:19 2014] Bevan: heh","[Sun Jul 13 14:16:25 2014] Bevan: depending on my ot i work this weke","[Sun Jul 13 14:16:29 2014] Bevan: week","[Sun Jul 13 14:16:31 2014] Bevan: heh","[Sun Jul 13 14:16:37 2014] Bevan: we getting ready to go into rush season","[Sun Jul 13 14:16:39 2014] Goten: i'm on vacation","[Sun Jul 13 14:17:59 2014] Bevan: i hear ya","[Sun Jul 13 14:18:03 2014] Bevan: heh",})
+leaders ({"bevan",})
+join_type 2
+private_coffer 1481434
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 50
+last_spell_time 1407086070

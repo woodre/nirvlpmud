@@ -1,0 +1,108 @@
+/*
+ * spell : Magic Missile   (evocation)
+ * level : 1
+ * effect: spell_object: X * random(Evoc/10)
+ * cost  : 5 * X sp
+ * spec  : 
+ * files : none
+ */
+
+magic_missile(str){
+  object obj;
+  int missiles;
+  int dmg, total;
+
+  if(!KNOW("mssle") && !KNOW("magic_missile")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(guild->query_next_dmg() > time()) {
+    write("You cannot cast this spell right now.\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  /* this particular spell has no spell_fail check */
+
+  missiles = (tp->query_guild_rank() / 7) + 1;
+  if(missiles > 5) missiles = 5;
+
+  write("You cast a "+HIC+"Magic Missile"+NORM+" spell ...\n");
+  say(ME+" casts a Magic Missile spell ...\n");
+  tell_room(env,
+  "Lightning flashes across the sky and "+numer(missiles)+" deadly bolts "+
+  "of energy\nleap from "+ME+"'s fingertips!\n");
+
+  tp->add_spell_point(-(missiles * 5));
+
+  while(missiles > 0){
+    dmg = random(guild->query_total_evoc()/10);
+    total += dmg;
+
+    if(dmg < 1){
+      wild_shot(obj);
+    } else if(dmg < 3){
+      write("  Your missile "+CYN+"grazes"+NORM+" "+IT+".\n");
+      say("  "+ME+"'s missile grazes "+IT+".\n");
+    } else if(dmg < 6){
+      write("  Your missile hits "+IT+".\n");
+      say("  "+ME+"'s magic missile hits "+IT+".\n");
+    } else {
+      write("  Your missile streaks into "+IT+"'s body, ");
+      write(HIC+"a direct hit!!!\n"+NORM);
+      say("  "+ME+"'s missile flies straight into "+IT+", a direct hit!\n");
+    }
+    missiles--;
+  }
+
+  if(total > 50) total = 50;
+  tp->set_spell_dam(total * 5 / 2);
+  tp->set_spell_dtype("magical");
+
+  if(tp->query_level() > 20)
+    write("Total Damage: "+total+"\n");
+
+  return 1;
+}
+
+wild_shot(pimp){
+  object ob, obj;
+
+  ob = all_inventory(env);
+  obj = ob[random(sizeof(ob))];
+
+  if(obj == tp || obj == pimp) {
+    write("  Your missle fizzles...what a dud!\n");
+    say("  "+ME+"'s missle fizzles...what a dud!\n");
+    return 1;
+  }
+  if(!obj->query_hp()) {
+    write("  Your missle misses goes wild and strikes "+
+    obj->short()+"!\n");
+    say("  "+ME+"'s magic missile goes wild and strikes "+
+    obj->short()+"!\n");
+  }
+  else {
+    write("  Your missile goes wild and strikes "+IT+
+    " in the back!\n");
+    say("  "+ME+"'s magic missile goes wild and strikes "+
+    ME+" in the back!\n");
+    tell_object(obj,
+    ME+"'s magic missile hits you in the back!!!\n");
+  }
+  return 1;
+}
+
+numer(x) {
+  string tmp;
+  if(x == 1) tmp = "one";
+  if(x == 2) tmp = "two";
+  if(x == 3) tmp = "three";
+  if(x == 4) tmp = "four";
+  if(x == 5) tmp = "five";
+  if(x == 6) tmp = "six";
+  return HIC+capitalize(tmp)+NORM;
+}

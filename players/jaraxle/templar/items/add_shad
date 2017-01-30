@@ -1,0 +1,37 @@
+empower(str){
+   int cost;
+   object wep;
+   object ob;
+   if(!present("KnightInvite", this_player())){
+      return 0;
+   }
+   
+   if (!str) return 0;
+   ob=present(str,this_player());
+   if(!ob) ob = present(str,this_object());
+   if(!ob) {
+      write("Gadvey looks around but doesn't see that here.\n");
+      return 1;
+   }
+   
+   if(!ob->weapon_class()){ write("You don't think that is a weapon.\n"); return 1; }
+   
+   if(ob->query_wielded()){ 
+      write("Gadvey asks that you unwield it first.\n");
+      return 1;
+   }
+   if(ob->query_shadowed()){ write("It is already empowered!\n"); return 1; }
+   cost = 3000;
+   if(this_player()->query_money() < cost) {
+      write("Gadvey Shakes his head, \"You do not have enough money.\"\n");
+      return 1;
+   }
+   this_player()->add_money(-cost);
+   wep = clone_object("/players/maledicta/templar/obj/wepshad.c");
+   wep->add_shadow(ob);
+   write(
+      "Gadvey takes hold of the "+str+" and pours "+HIY+"Magical Energies"+NORM+" into it...\n"+
+      "The weapon glows brightly then for a moment then fades to normal.\n"+
+      "Gadvey returns it to your waiting grasp.\n");
+   return 1;
+}

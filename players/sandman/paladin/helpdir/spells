@@ -1,0 +1,21 @@
+[==========================================================================]
+
+Command:              Level:   Cost:    Effect:
+--------              ------   -----    -------
+bless                  ANY     50 sp    Increases damage/protection       
+call                    15     NONE     Summons a warhorse 
+clw                      5       25     Cures light wounds
+csw                      8       45     Cures serious wounds
+ccw                     12       75     Cures critical wounds
+dispell protection     ANY     NONE     Removes protection spell
+  from evil           
+kb (killing blow)       12     NONE     Kill a weak creature
+                                        You must be wielding a weapon!
+mark <monster>         ANY     NONE     Marks a monster as yours
+protection from evil   ANY    VARIES    Creates a shield which absorbs 1/3 
+                                          of the damage from evil monsters. 
+
+More information is available on these spells available by typing:
+    medal cmd <first word of spell>
+
+[==========================================================================]

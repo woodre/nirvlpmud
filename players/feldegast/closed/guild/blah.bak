@@ -1,0 +1,90 @@
+#define GUILD_ID "guardian guild object"
+#define GUILD_NAME "enchanter"
+#define GUILD_OBJ "/players/feldegast/guild/pendant.c"
+#define SAVE_PATH "/players/feldegast/guild/save/"
+#define COMMANDS "/players/feldegast/guild/commands.c"
+#define RANK present(GUILD_ID,this_player())->query_rank()
+#define GT HIW+"*"+HIB+TPN+NORM
+#define MYOB present(GUILD_ID, TP)
+
+#include "/players/feldegast/closed/ansi.h"
+#include "/players/feldegast/closed/shortcut.h"
+
+guild_talk(string str){
+  object *world,member;
+  int i;
+  world=users();
+  for( i = 0; i < sizeof(world); i++){
+    member = present(GUILD_ID,world[i]);
+    if(member){
+      tell_object(world[i],GT+" says: "+str+"\n");
+    }
+  }
+  return 1;
+}
+guild_emote(string str){
+  object *world,member;
+  int i;
+  world=users();
+  for( i = 0; i < sizeof(world); i++){
+    member = present(GUILD_ID,world[i]);
+    if(member){
+      tell_object(world[i],GT+" "+str+"\n");
+    }
+  }
+  return 1;
+}
+guild_who() {
+  object *world,member;
+  int i;
+  world=users();
+  write(
+"______________________________________________________\n"+
+"Name\t\tRank \n"+
+"______________________________________________________\n"
+  );
+  for( i=0; i <sizeof(world); i++) {
+    if(present(GUILD_ID,world[i])) {
+      write(world[i]->query_name());
+      write("\t\t");
+      write(present(GUILD_ID,world[i]->query_rank()));
+      write("\t");
+      if(!world[i]->query_invis())
+        write(environment(world[i])->short());
+      write("\n");
+    }
+  }
+  write(
+"_______________________________________________________\n"
+  );
+  return 1;
+}
+score() {
+  write(
+"[--------------------------------------------------------------------------]\n"
+  );
+  write(this_player()->short()+"\n");
+  write("Level: "+this_player()->query_level());
+  write("\t\tStamina: "+this_player()->query_attrib("str")+"\n");
+  write("Experience: "+this_player()->query_exp());
+  write("\t\tMagic: "+this_player()->query_attrib("mag")+"\n");
+  write("Rank: "+RANK);
+  write("\t\tIntelligence: "+this_player()->query_attrib("int")+"\n");
+  write("HP: "+this_player()->query_hp()+"/"+this_player()->query_mhp());
+  write("\t\tWisdom: "+this_player()->query_attrib("wis")+"\n");
+  write("SP: "+this_player()->query_spell_point()+"/"+this_player()->query_msp());
+  write("\t\tPiety: "+this_player()->query_attrib("pie")+"\n");
+  write("Coins: "+this_player()->query_money());
+  write("\t\tStealth: "+this_player()->query_attrib("ste")+"\n");
+  write("Pk: "+this_player()->query_pl_k());
+  write("\t\tLuck: "+this_player()->query_attrib("luc")+"\n");
+
+  write("Intox: "+this_player()->query_intoxination());
+  write("\tStuffed: "+this_player()->query_stuffed());
+  write("\tSoaked: "+this_player()->query_soaked()+"\n");
+  write(
+"[--------------------------------------------------------------------------]\n"
+  );
+  return 1;
+}
+

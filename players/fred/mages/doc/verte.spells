@@ -1,0 +1,57 @@
+
+Rank 4
+
+sleep -
+ Put an enemy to sleep, cannot atk unless manually
+ types 'wake' or waits (caster_total_level()/2)+
+ (caster_int/2) hbs.  Will wake up if atk'ed.
+
+darkdoor -
+
+ Create a dark door linked to any room.  Any BCM
+ may enter this door.
+
+drain -
+
+ Drain enemy's life force (heal_self() atk) over
+ time.  And heal the caster...
+
+Rank 5
+
+drakyr -
+
+ Summon a drakyr to ride.  This will
+ give a +wc boost, +ac boost.  As well as look
+ cool as hell.
+
+tentacles -
+
+ Summon black tentacles from hell to swirl and
+ wiggle all around the caster.  They do random
+ effects like extra dmg, deflecting atks, picking
+ up random objs, etc.  They cannot be controlled
+ by the caster, only summoned or dispelled.
+
+Rank 6
+
+circle -
+
+ Create a protective, effectively black circle around a room.
+ This allows all Black Circle Mages within to detox
+ and heal at an increased rate.  No one may enter
+ the room/circle except other BCM's.
+
+summon -
+
+ Summon a player, yay!
+
+cloud -
+
+ Create a dark cloud throughout the environment that
+ blinds and slows down those who pass through it.
+
+drain -
+
+ You will now the drain the life-force of all who are
+ attacking you.  The more enemies who atk you,
+ the more you heal.. and the more damage they take.

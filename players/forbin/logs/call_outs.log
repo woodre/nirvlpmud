@@ -1,0 +1,42 @@
+0. obj/soul#2198	update_inventory
+1. obj/soul#2175	update_inventory
+2. players/boltar/things/clock_tower#1118	find_time
+3. players/mizan/closed/makadra	fake_beat
+4. obj/soul#391	update_inventory
+5. obj/soul#1072	update_inventory
+6. obj/soul#2732	update_inventory
+7. room/prison	find_meat
+8. players/mizan/closed/planter2	fake_beat
+9. closed/wiz_soul#425	update_inventory
+10. closed/wiz_soul#470	update_inventory
+11. closed/wiz_soul#2040	update_inventory
+12. closed/wiz_soul#2484	update_inventory
+13. players/jaraxle/templar/mon/aster	tea_pot4
+14. players/jaraxle/templar/mon/aster#2712	tea_pot7
+15. players/vertebraker/swamp/OBJ/j_earring#2341	regen_sp
+16. players/fred/closed/bloodfist/NPC/elder#2826	hunt
+17. players/fred/closed/bloodfist/NPC/elder	hunt
+18. players/boltar/things/thi6#2486	do_keepalive
+19. players/boltar/things/lightupsanta#49	talk
+20. players/francesco/quest/items/finaldegree#427	healing
+21. players/padrone/walker/castle	automove
+22. players/trix/castle/town/mainroad2	muovi
+23. players/pain/NEW/mon/pal#2014	rebeat
+24. players/pain/NEW/mon/pal#2018	rebeat
+25. players/pestilence/club/mob/jim	CallForHelp
+26. players/mizan/services/mudwho	fake_beat
+27. 
+28. obj/player#2888	timeout
+29. players/forbin/realms/shack	restock
+30. players/forbin/realms/shack	clear_tipper
+31. players/mizan/castle	load_opl_entrance
+32. players/beck/Rangers/CommandCenter/Solar-Collector#403	collect
+33. players/beck/Rangers/CommandCenter/Solar-Collector#402	collect
+34. players/beck/Rangers/CommandCenter/Solar-Collector#401	collect
+35. players/beck/Rangers/CommandCenter/Solar-Collector#400	collect
+36. players/fred/closed/bloodfist/daemon/channel	autosave
+37. players/vertebraker/closed/shardak/daemons/shardak	demand_stuff
+38. players/vertebraker/closed/shardak/obj/blast_loader	load_holy_blasts
+39. 
+40. 
+41. players/mizan/closed/RandomRoomDM	self_reset

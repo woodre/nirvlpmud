@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1mDog Tags[0m"
+long_desc "none[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "dog tags"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "none[0mType 'clan_help' for commands."
+clan_short "[1mDog Tags[0m"
+damage_type "poison"
+hall_path "/players/dragnar/rooms/grave4"
+object_name "dog tags"
+owner "worm"
+spell_alias "Howl"
+spell_mess_me "You unleash a dark and fierce howl upon your enemy."
+spell_mess_room "unleashes an evil howl that fills the room with madness."
+spell_mess_them "A dark howling haunts your soul, you feel it corrupting your insides."
+abilities ({})
+chan_history ({"[Sun Jun 12 19:42:26 2011] Worm: Dragnars","[Sun Jun 12 19:42:38 2011] Worm: where our guild is, 1n,open gate,2-3east, all north 1 east","[Sun Jun 12 23:09:15 2011] Gizmo: Worm, I'd like to be a leader in the clan to build rooms and whatnot. If that is possible.","[Sun Jun 12 23:11:49 2011] Worm: k, let me see how","[Sun Jun 12 23:12:35 2011] Worm has promoted Gizmo to a clan leader!","[Sun Jun 12 23:12:43 2011] Gizmo: Thank you, Master","[Sun Jun 12 23:12:55 2011] Worm: heh, np man. back afk","[Thu Feb 28 17:22:42 2013] Spyder has joined the clan!","[Thu Feb 28 17:23:36 2013] Tembo: know where the graveyard is?","[Thu Feb 28 17:23:56 2013] Tembo: test","[Thu Feb 28 17:25:56 2013] Tembo: north, open gate, east, east","[Thu Feb 28 17:26:40 2013] Tembo: then n, e, n, enter_clan_hall","[Thu Feb 28 17:27:22 2013] Tembo: look around, there is a ton of storage","[Thu Feb 28 17:27:32 2013] Tembo: cept some ahole kiped my gear","[Thu Feb 28 17:28:06 2013] Tembo: you dont have a room,,,,cause of no money in the coffer, but if you dump money in the coffer we can build you a room.","[Thu Feb 28 17:28:18 2013] Tembo: oh yeah type clan_help for all clan functions","[Thu Feb 28 17:28:30 2013] Tembo: we also have an attack spell.....howl","[Thu Feb 28 17:28:44 2013] Tembo: it is a physical attack with a spell point cost of 80","[Thu Feb 28 17:30:14 2013] Spyder: k","[Thu Feb 28 17:35:26 2013] Tembo: want to hit behind while we get mondar?",})
+leaders ({"claw","flap","tembo","fury","morpheus","hadus","raz","vierna","shinn","songbird","gizmo",})
+join_type 1
+private_coffer 78391
+public_coffer 0
+spell_delay 3
+spell_id 1
+spell_cost 80
+last_spell_time 1350558916

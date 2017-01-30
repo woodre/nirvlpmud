@@ -1,0 +1,331 @@
+Meserir Forest
+-----------------
+This area is going to be basically about 5 main areas within 
+it the only really big area will be the forest with about 20 
+rooms. The other areas will be a small river area, an elven
+village(with shop and tavern), a marsh area, and A clearing
+between the forest and marsh.  figured it would be tailored
+to mid to high.
+
+-------------------------
+History of Meserir Forest
+-------------------------
+The Shamot elves talk of an isolated forest on the other side
+of the river that runs by their small village.  Thus begins 
+the story of Yeroc the Nomad.  In the Shamot's history their 
+have been many stories as to how Meserir forest came into 
+being.  Some say it is an evil that has developed from their
+own evil deeds, kind of a karma that has come back to haunt
+them.  Others believe that it is the resting place of demons,
+and evils the world refuses to acknowledge.  Other Shamot
+recall the story of Yeroc and the madness that he has brought
+to the once lovely forest.  Only a select few have entered and
+returned to recall the horific sites they had seen.  The only
+way to know the truth is to search the cursed forest and 
+discover the true nature of the beast.
+
+----------
+River area      Done except for adding mobs to rooms
+----------
+
+Village area(Village1.c)              Creek4.c
+    \                               /    |
+   Creek1.c -- Creek2.c -- Creek3.c -- Creek5.c -- Creek6.c
+                             |
+                    Forest area(Forest1.c)
+
+_______
+rooms
+-------
+       Creek1.c  entrance area
+       
+       Creek2.c  just a bridge to the forest area
+
+____________
+mobs & items
+------------
+ -      elf1.c    Just a simple low level mob 
+               with
+                - tunic.c
+			just a simple body armor, 3ac
+
+ -      elf2.c    Another low level mob
+	       with
+		- cloak.c
+			simple misc armor, 1ac
+
+ -      elf3.c    Low level mob 
+	       with 
+		- dagger.c
+			wc13 dagger, no specials
+                - pole.c
+			toy and something to sell
+
+______________
+Shamot village
+--------------
+
+Village7.c
+      \
+     Village6.c -- Village4.c -- Village5.c
+      /                   /
+Village3.c               /
+      \                 /
+      Village2.c -- Village1.c
+                        \
+                      Creek area(Creek1.c)
+
+_____
+rooms
+-----
+	Village1.c
+		Just has an exit to creek area
+
+	Village5.c
+		Going to be a tavern selling Shamot's finest wines 
+
+	Village7.c
+		Going to be a shop to buy misc armors in
+
+__________
+mobs&items     All Done   except special on priest
+----------
+     -   elfarcher.c
+		lvl15 mob, nothing special
+		  with
+	        -     bow.c
+			simple wc15 bow, small special with 
+			return of 2 on it
+
+     -    elfpriest.c
+		lvl 18 mob, healing special              
+		  with
+	        book2.c					    -Have to make this yet
+			A book telling the Shamot view of 
+			Yeroc legend, something to sell
+	     -    scepter.c
+			Mace type wc17, return of 3
+	     -    robes.c
+			body armor ac3 and 10%resist evil
+
+     -   elfboy.c
+		lvl 12 mob, nothing big
+		  with
+	     -      disks.c
+			just a toy like yoyo, to sell
+       
+     -   elflady.c
+		lvl 16 mob, nothing big
+		  with 
+	     -      staff.c
+			wc 17 battlestaff, with return of 3
+	     -      boots.c
+			ac1 boots, nothing special
+
+___________
+Forest area
+-----------
+F = Forest
+
+       Creek area(Creek3.c) 
+         |
+F2.c -- F1.c
+ |    /     \
+F3.c  --   F4.c -- F5.c -- F6.c -- F7.c
+            |       |       |    /      \
+           F8.c -- F9.c -- F10.c         F11.c
+                \   |       |    \      /
+                  F12.c -- F13.c   F14.c
+                /   |            /   |
+          F15.c -- F16.c-- F17.c --F18.c
+          /         /                  \
+       F19.c    Clearing1.c             F20.c
+         \                             /
+        Marsh area(Marsh2.c)        Marsh area(Marsh5.c)
+
+_____
+rooms
+-----
+
+      	Forest1.c
+	   exit to Creek area
+
+	Forest16.c
+	   exit to Clearing area
+
+	Forest19.c
+	   exit to Marsh area
+
+	Forest20.c
+	   exit to Marsh area
+
+	Forest12.c
+	   exit into a tree where Chelaris.c will be waiting
+
+__________
+mobs&items
+----------
+
+   -     spirit1.c 
+	   lvl17 mob with just a spell
+
+   -     spirit2.c
+	   lvl19 mob with a "dark damage" special
+
+   -     spirit3.c
+	   lvl15 mob, just a weak ghost
+
+   -     Chelaris.c
+	   lvl23 mob, two normal specials, with healing bonus
+		with
+		  elderRobe.c
+		    ac2 misc, nonsavable with very small random
+		    chance of small healing bonus
+		  Polaris.c
+		    wc18 mace, fairly heavy
+
+   -     spectre.c
+	   lvl 18 mob, with normal damage special
+
+   -     ranger.c
+	   lvl 17 mob
+	     with
+       -        shield.c
+		 ac1 shield
+       -        katana.c
+		 wc17 wep no specials
+
+   -    imp.c
+	   lvl17 mob, fire casting mob
+	     with
+	-	impwing.c
+		  just something to sell
+
+   -    viper1.c
+	   lvl16 mob, nothing special
+	     with
+        -      (2)fang.c
+		  just something to sell
+   -    viper2.c
+	    lvl19 mob, has a poison special
+	      with
+        -      skin.c
+		  ac1 misc armor
+        -      (2)fang.c
+                  same as viper1.c
+   -    viper3.c
+	    lvl15 mob, nothing special
+		
+__________
+Marsh area
+----------
+
+    Forest area(Forest19.c)         Forest area(Forest20.c)
+              \                                  /
+Marsh1.c -- Marsh2.c -- Marsh3.c -- Marsh4.c --Marsh5.c -- Marsh6.c
+ |             |       /      \     /     \      |           |
+ |   Shelter** |      /        \   /       \     |           |
+ |    /        |     /          \ /         \    |           |
+Marsh7.c -- Marsh8.c          Statue.c       Marsh9.c --- Marsh10.c
+
+
+
+**
+Shelter3.c    Shelter2.c -------- tunnel.c
+    \          /          hidden
+     Shelter1.c
+      /
+Marsh7.c
+						--Need to do Statue.c, Shelter3 and tunnel
+
+_____
+rooms
+-----
+
+	Marsh2.c
+	   exit to forest
+	Marsh5.c
+	   exit to forest
+	Shelter2.c
+	   hidden exit to a tunnel
+	tunnel.c
+	   one path leads to Statue.c and the other leads to
+ 	   Clearing4.c, only way to tunnel is through Shelter2.c
+
+__________
+mobs&items
+----------
+
+	Yeroc.c
+	   lvl23 mob, with earth and dark specials, strong
+		physical attacks, high ac
+		with
+		   Despair.c
+		     wc19 sword with evil special and special with
+		     return of 5 and 2
+		   Ycloak.c
+		     ac2 misc, nonsaveable
+	   -   book1.c
+		     The real story of Yeroc, something to sell
+
+	troll1.c
+	   lvl17 mob, extreme weakness to fire type attack,
+		and high regeneration rate
+		  with
+			hair.c
+			  something to sell
+	troll2.c
+	   lvl 15 mob, same as troll1 just toned down some
+	 	  
+
+	dog.c
+	   lvl 17 mob, Yeroc's wolflike pet, physical damage special
+	
+	guardian1.c and guardian2.c
+	   lvl 19 mobs, light and good special
+	 	with 
+		   axe.c
+		 	wc18, nonsaveable, heavy, with electric dmg
+		   orb.c
+			a heal, orb of life
+		   cleaver.c
+			wc17, with returns of 5 and 6
+
+_____________
+Clearing area
+-------------
+
+         Forest area(Forest16.c)
+           /
+    Clearing1.c   -------------   Clearing2.c
+    /                                        \
+   /                                          \
+Clearing3.c                               Clearing6.c
+   \                                          /
+    \                                        /
+    Clearing4.c  --------------   Clearing5.c
+
+_____
+Rooms
+-----
+
+	Clearing1.c
+	    exit to Forest area
+	
+	Clearing4.c
+	    placed here after going through tunnel.c
+
+__________
+Mobs&Items
+----------
+
+	Gargoyle1.c
+	   lvl18 mob, with earth damage
+		with
+		 statue.c
+		   something to sell
+	Gargoyle2.c
+	   lvl18 mob, with physical damage
+		with
+		  statue.c
+		    something to sell

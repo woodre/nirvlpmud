@@ -1,0 +1,17 @@
+THIS IS THE MASTER OBJECT
+dir should be in the form "players/fakir/filename"
+
+
+pick_dir(int num) {
+  int i;
+  string dir;
+  if(!num) { return "default room failure file"; }
+  i = random(25)+1;
+  if(i == num) { if(num == 25) { num -= random(24)+1; } else (num ++; } }
+  switch(i) {
+    case 1: dir = "file name for room 1"; break;
+    case 2: dir = "file name for room 2"; break;
+  etc etc
+    default: dir = "failure room"; break; }
+  if(!dir) return "failure room";
+  return dir; }

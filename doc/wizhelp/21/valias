@@ -1,0 +1,23 @@
+
+****************
+
+                     Valias
+
+Syntax:    valias <player>
+
+Desc:
+           This command will show you all the commands a player has 
+           aliases. It is helpful for debugging when a player says
+           they can't move. Check to see that they didn't alias
+           a movement command to something else.
+
+Warning:   
+
+Example:   valias mike
+                  results
+           all of mike's aliases are displayed
+
+Related:   vhistory, vnickname
+
+
+****************

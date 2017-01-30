@@ -1,0 +1,585 @@
+/* 
+ * The guild object of the Bards of Ryllian.
+ * By Saber (Geoffrey Z.)
+ * Version 3.0
+ *
+ */
+
+
+#include "/players/saber/closed/esc2.h"
+#include "/players/saber/closed/ansi.h"
+#include "/players/saber/closed/bard/extra.h"
+
+#define PWR "/players/saber/closed/bard/master"
+#define EMO "/players/saber/closed/bard/master2"
+#define CNT "/players/saber/closed/bard/cantrip_mast"
+
+
+string BURY_TYPE, INSTR_STRING;
+string CELEBRATE, SPONSOR, SPONSORED;
+
+int COLORINT, SPONSOR_NUMBER;
+int bard_level, bard_xp, guild_status;
+int store_sword, store_dagger, store_armor;
+
+int C1,  C2,  C3,  C4,  C5,  C6,  C7,  C8,  C9,  C10, C11, C12, C13, C14;
+int C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28;
+int C29, C30, C31, C32, C33, C34, C35, C36, C37, C38, C39, C40, C41, C42;
+int light_light, light_dark, light_target, light_shield;
+int seek_false, seek_disease, seek_armor, seek_wop, seek_find, seek_players;
+int know_know;
+int heal_heal, heal_area, heal_regen;
+int storm_storm, storm_fly, storm_lightning, storm_fog, storm_cloud;
+int name_agony, name_true;
+int sight_scout, sight_scry, sight_travel, sight_true;
+int mask_slip, mask_distort, mask_mirror, mask_shadow;
+int false_minor, false_send, false_illusion;
+int obscue_fumble, obscure_mislead;
+int rename_cover, rename_disappear, rename_change;
+int harm_project, harm_syphon;
+int distort_bind, distort_confusion;
+int calm_silence;
+
+static int LINE_FLAG, pet_name, age;
+static string IS_LIT;
+
+
+reset(arg)  {
+  if(arg) return;
+
+  set_instrument_string("Harp");
+  
+  COLORINT = 1;
+  LINE_FLAG = 1;
+  IS_LIT = "dark";
+         }
+
+
+id(str)  {
+  return str == "instrument" || 
+         str == "bard_obj"   || 
+         str == "guild_obj"  || 
+         str == INSTR_STRING;
+         }
+
+
+  drop()  { return 1; }
+  get()   { return 1; }
+  can_put_and_get()  { return 0; }
+  query_auto_load()  { return "/players/saber/closed/bard/instrument.c:"; }
+
+
+short()  {
+  if((TP != environment()) && this_player()->query_level() < 20) 
+    { inform(); }
+  return "A Bardic Instrument (("+INSTR_STRING+"))"; 
+        }
+
+
+long()  {
+  write("\n You hold in your hands a masterpiece of instrumental craftsmanship;\n"+
+        " perfection in the form of your Bardic "+INSTR_STRING+".  Legend has\n"+
+        " it that bardic instruments are imbued with the spirit of True Music,\n"+
+        " and that when held by one of talent and knowledge, they will produce\n"+
+        " songs which can make deities weap and the earth move.  Hold your head,\n"+
+        " high 'o Bard, for in your hands you hold an item of Beauty and Power.\n\n"+
+        " Inscribed on your "+INSTR_STRING+" are major runes:\n\n"+
+        " \tSoli\tMeske\tNoko\tMasi\tLahe\tWeso\tand Ana\n\n"+
+        " and inverted runes:\n\n"+
+        " \tLoda\tPodi\tBugi\tGure\tJuha\tUnca\tand Anu\n\n"+
+        " and the personal rune of:\n\n"+
+        " \t\tCrysea\n\n"+
+        " Deity of the Moon and Stars, Guardian of Animals and Patron Saint of\n"+
+        " the Bards of Ryllian.\n\n");
+  write(" For more info type <lore> or visit http://www.ryllian.com/saber/bards\n\n");
+         }
+
+
+init_arg(str)  {
+   write(HIM);
+   cat("/players/saber/closed/bard/MESSAGE");
+   write(NORM);
+        }
+
+
+init()  {
+
+  restore_me();
+
+/* Utility */
+
+   add_action("check_kill","kill");
+   add_action("no_no","kill_players");
+   add_action("register","register");
+   add_action("save_me","quit");
+   add_action("save_me","save_me");
+   add_action("save_me","pppp");
+   add_action("score_new","sco");
+   add_action("bard_update","clean_instrument");
+   add_action("aceme","aceme");
+
+
+/* Powers */
+
+  /* Lore - bard level 1-7  */
+
+   add_action("balance","balance");
+   add_action("bandage","bandage");
+   add_action("bard_emote","bte");
+   add_action("bard_image","bi");
+   add_action("bard_instr","instrument");
+   add_action("bard_kin","kin");
+   add_action("bard_talk","bt");
+   add_action("bard_title","bard_title");
+   add_action("bard_who","bwho");
+   add_action("bless","bless");
+   add_action("cant","cant");
+   add_action("celebrate","celebrate");
+   add_action("charm","charm");
+   add_action("check_time","time");
+   add_action("compare","compare");
+   add_action("corpse_healing","bury");
+   add_action("emote","emote");
+   add_action("emote",":");
+   add_action("farsong_s","farsong");
+   add_action("farsong_e","farsonge");
+   add_action("fly","fly");
+   add_action("grace","grace");
+   add_action("history","History");
+   add_action("lore","lore");
+   add_action("lang_check","vocab"); 
+   add_action("marry","wed");
+   add_action("new_say",";");
+   add_action("pet_list","companion_list");
+   add_action("replace_inst","replace_inst");
+   add_action("sponsor","sponsor");
+   add_action("strength","stre");
+   add_action("strength","strength");
+   add_action("succor","succor");
+   add_action("t_healing","bury_type");
+   add_action("toggle","toggle");
+   add_action("weapon_mastery","wa");
+   add_action("weapon_mastery","weapon");
+
+   add_action("set_know","set_know");
+
+
+  /* True Speak - bard level 8-14+  */
+
+   add_action("heal","he");
+   add_action("know","ko");
+   add_action("light","li");
+   add_action("name","na");
+   add_action("seek","sk");
+   add_action("sight","si");
+   add_action("storm","we");
+   add_action("storm_song","storm_song");
+
+
+  /* False Speak - bard level 8-14+  */
+ 
+   add_action("calm","ca");
+   add_action("distort","gi");
+   add_action("false_light","da");
+   add_action("harm","ha");
+   add_action("mask","di");
+   add_action("rename","nu");
+   add_action("obsucre","re");
+
+
+  /* Cantrip - all bard levels  */
+
+   add_action("cantrip_spell","cantrip");
+   add_action("cantrip_spell","C");
+
+  
+/*
+   add_action("gypsy_me","gypsy_me");
+   add_action("shape","S");
+   add_action("bard_song_sing","sing");
+*/
+
+
+   /*  Bardic Emotions  */
+
+   add_action("juggle","juggle");
+   add_action("juggle2","juggle2");
+   add_action("scarf","scarf");
+   add_action("blueli","blueli");
+   add_action("disappear","disappear");
+   add_action("sing1","sing1");
+   add_action("sing2","sing2");
+   add_action("holo","holo");
+   add_action("strings","strings");
+   add_action("clearth","clearth");
+   add_action("tune","tune");
+   add_action("sparkle","sparkle");
+   add_action("bows","bows");
+   add_action("handkiss","handkiss");
+
+        }
+
+
+no_no()  {
+  write("HAY!  That is NOT a bardic thing to do!\n\n");  return 1;  }
+
+
+check_kill(str)  {
+object target;
+  if(target = present(str,ENV))  {
+  if(target->is_player())  {  write("NO PLAYER KILLING!!!\n\n");  return 1; } } }
+
+
+inform()  {  
+  tell_object(environment(),
+    tp+" is a "+TP->query_gender()+" player of level "+TP->query_level()+", xlvl "+
+    TP->query_extra_level()+".\n");
+        }
+
+
+int toggle()  {
+  if(LINE_FLAG) { write(BARD_OFF); LINE_FLAG = 0; return 1;  }
+                  write(BARD_ON);  LINE_FLAG = 1; return 1;  }
+
+
+lang_check()  {
+   more("/players/saber/closed/bard/vocab");
+        }
+
+
+/* Utility */
+
+bard_update()      { PWR->bard_update();  return 1;  }
+register()         { PWR->register();     return 1;  }
+score_new()        { PWR->score_new();    return 1;  }
+
+check_age(str)     { PWR->check_age(str); return 1;  }
+
+
+/* Cantrip */
+
+cantrip_spell(str)    { CNT->cantrip_spell(str); return 1;    }
+query_know_spell(str) { query_cantrip(str);      return 1;    }
+
+
+/* Bardic Powers */
+
+balance(str)        { PWR->balance(str);      return 1;      }
+bandage(str)        { PWR->bandage(str);      return 1;      }
+bard_emote(str)     { PWR->bard_emote(str);   return 1;      }
+bard_image(str)     { PWR->bard_image(str);   return 1;      }
+bard_instr(str)     { PWR->bard_instr(str);   return 1;      }
+bard_kin()          { PWR->bard_kin();        return 1;      }
+bard_talk(str)      { PWR->bard_talk(str);    return 1;      }
+bard_title(str)     { PWR->bard_title(str);   return 1;      }
+bard_who()          { PWR->bard_who();        return 1;      }
+bless(str)          { PWR->bless(str);        return 1;      }
+calm(str)           { PWR->calm(str);         return 1;      }
+cant(str)           { PWR->cant(str);         return 1;      }
+celebrate(str)      { PWR->celebrate(str);    return 1;      }
+charm(str)          { PWR->charm(str);        return 1;      }
+compare(str)        { PWR->compare(str);      return 1;      }
+check_time()        { PWR->check_time();      return 1;      }
+corpse_healing()    { PWR->corpse_healing();  return 1;      } 
+distort(str)        { PWR->distort(str);      return 1;      }
+emote(str)          { PWR->emote(str);        return 1;      }
+false_light(str)    { PWR->false_light(str);  return 1;      }
+farsong(str)        { PWR->farsong(str);      return 1;      }
+fly(str)            { PWR->fly(str);          return 1;      }
+grace(str)          { PWR->grace(str);        return 1;      }
+harm(str)           { PWR->harm(str);         return 1;      }
+heal(str)           { PWR->heal(str);         return 1;      }
+history(str)        { PWR->history(str);      return 1;      }
+know(str)           { PWR->know(str);         return 1;      }
+light(str)          { PWR->light(str);        return 1;      }
+lore(str)           { PWR->lore(str);         return 1;      }
+marry(str)          { PWR->marry(str);        return 1;      }
+mask(str)           { PWR->mask(str);         return 1;      }
+name(str)           { PWR->name(str);         return 1;      }
+new_say(str)        { PWR->new_say(str);      return 1;      }
+obscure(str)        { PWR->obscure(str);      return 1;      }
+pet_list()          { PWR->pet_list();        return 1;      }
+rename(str)         { PWR->rename(str);       return 1;      }
+replace_inst(str)   { PWR->replace_inst(str); return 1;      }
+seek(str)           { PWR->seek(str);         return 1;      }
+sight(str)          { PWR->sight(str);        return 1;      }
+storm(str)          { PWR->storm(str);        return 1;      }
+strength(str)       { PWR->strength(str);     return 1;      }
+sponsor(str)        { PWR->sponsor(str);      return 1;      }
+storm_song()        { PWR->storm_song();      return 1;      }
+succor()            { PWR->succor();          return 1;      }
+t_healing(str)      { PWR->t_healing(str);    return 1;      }
+weapon_mastery(str) { PWR->weapon_mast(str);  return 1;      }
+
+
+/* Bardic Emotions */
+
+juggle(str)         { EMO->juggle(str);       return 1;      } 
+juggle2()           { EMO->juggle2();         return 1;      } 
+scarf(str)          { EMO->scarf(str);        return 1;      } 
+blueli(str)         { EMO->blueli(str);       return 1;      } 
+disappear(str)      { EMO->disappear(str);    return 1;      } 
+sing1(str)          { EMO->sing1(str);        return 1;      } 
+sing2()             { EMO->sing2();           return 1;      } 
+holo(str)           { EMO->holo(str);         return 1;      } 
+strings()           { EMO->strings();         return 1;      } 
+clearth()           { EMO->clearth();         return 1;      } 
+tune()              { EMO->tune();            return 1;      } 
+sparkle(str)        { EMO->sparkle(str);      return 1;      } 
+bows(str)           { EMO->bows(str);         return 1;      } 
+handkiss(str)       { EMO->handkiss(str);     return 1;      } 
+
+
+int farsong_s(string str)   { PWR->farsong(str, 0);    return 1;  }
+int farsong_e(string str)   { PWR->farsong(str, 1);    return 1;  }
+
+
+set_know(str)  {
+string NAME;
+int WHAT;
+
+  if(sscanf(str, "%s %d", NAME, WHAT) < 2)  { sscanf(str, "%s", NAME); } 
+
+  if(!WHAT) WHAT = 1;  else  WHAT=0;
+
+        if(NAME == "C1")  C1  = WHAT;   else if(NAME == "C2")  C2  = WHAT;
+   else if(NAME == "C3")  C3  = WHAT;   else if(NAME == "C4")  C4  = WHAT;
+   else if(NAME == "C5")  C5  = WHAT;   else if(NAME == "C6")  C6  = WHAT;
+   else if(NAME == "C7")  C7  = WHAT;   else if(NAME == "C8")  C8  = WHAT;
+   else if(NAME == "C9")  C9  = WHAT;   else if(NAME == "C10") C10 = WHAT;
+   else if(NAME == "C11") C11 = WHAT;   else if(NAME == "C12") C12 = WHAT;
+   else if(NAME == "C13") C13 = WHAT;   else if(NAME == "C14") C14 = WHAT;
+   else if(NAME == "C15") C15 = WHAT;   else if(NAME == "C16") C16 = WHAT;
+   else if(NAME == "C17") C17 = WHAT;   else if(NAME == "C18") C18 = WHAT;
+   else if(NAME == "C19") C19 = WHAT;   else if(NAME == "C20") C20 = WHAT;
+   else if(NAME == "C21") C21 = WHAT;   else if(NAME == "C22") C22 = WHAT;
+   else if(NAME == "C23") C23 = WHAT;   else if(NAME == "C24") C24 = WHAT;
+   else if(NAME == "C25") C25 = WHAT;   else if(NAME == "C26") C26 = WHAT;
+   else if(NAME == "C27") C27 = WHAT;   else if(NAME == "C28") C28 = WHAT;
+   else if(NAME == "C29") C29 = WHAT;
+ 
+  else if(NAME == "light_light"      )   light_light = WHAT;
+  else if(NAME == "light_dark"       )   light_dark = WHAT;
+  else if(NAME == "light_target"     )   light_target = WHAT;
+  else if(NAME == "light_shield"     )   light_shield = WHAT;
+  else if(NAME == "seek_false"       )   seek_false = WHAT;
+  else if(NAME == "seek_disease"     )   seek_disease = WHAT;
+  else if(NAME == "seek_armor"       )   seek_armor = WHAT;
+  else if(NAME == "seek_wop"         )   seek_wop = WHAT;
+  else if(NAME == "seek_players"     )   seek_players = WHAT;
+  else if(NAME == "seek_find"        )   seek_find = WHAT;
+  else if(NAME == "know_know"        )   know_know = WHAT;
+  else if(NAME == "heal_heal"        )   heal_heal = WHAT;
+  else if(NAME == "heal_area"        )   heal_area = WHAT;
+  else if(NAME == "heal_regen"       )   heal_regen = WHAT;
+  else if(NAME == "storm_storm"      )   storm_storm = WHAT;
+  else if(NAME == "storm_fly"        )   storm_fly = WHAT;
+  else if(NAME == "storm_lightning"  )   storm_lightning = WHAT;
+  else if(NAME == "storm_fog"        )   storm_fog = WHAT;
+  else if(NAME == "name_agony"       )   name_agony = WHAT;
+  else if(NAME == "name_true"        )   name_true = WHAT;
+  else if(NAME == "sight_scout"      )   sight_scout = WHAT;
+  else if(NAME == "sight_travel"     )   sight_travel = WHAT;
+  else if(NAME == "sight_true"       )   sight_true = WHAT;
+  else if(NAME == "mask_slip"        )   mask_slip = WHAT;
+  else if(NAME == "mask_mirror"      )   mask_mirror = WHAT;
+  else if(NAME == "mask_shadow"      )   mask_shadow = WHAT;
+  else if(NAME == "false_minor"      )   false_minor = WHAT;
+  else if(NAME == "false_send"       )   false_send = WHAT;
+  else if(NAME == "false_illusion"   )   false_illusion = WHAT;
+  else if(NAME == "obscue_fumble"    )   obscue_fumble = WHAT;
+  else if(NAME == "obscure_mislead"  )   obscure_mislead = WHAT;
+  else if(NAME == "rename_cover"     )   rename_cover = WHAT;
+  else if(NAME == "rename_disappear" )   rename_disappear = WHAT;
+  else if(NAME == "rename_change"    )   rename_change = WHAT;
+  else if(NAME == "harm_project"     )   harm_project = WHAT;
+  else if(NAME == "harm_syphon"      )   harm_syphon = WHAT;
+  else if(NAME == "distort_bind"     )   distort_bind = WHAT;
+  else if(NAME == "distort_confusion")   distort_confusion = WHAT;
+  else if(NAME == "calm_silence"     )   calm_silence = WHAT;
+  
+   else { write("Set what?\n");  }
+   return 1;
+        }
+        
+ 
+query_cantrip(str) {
+
+  if(str == "C1")  return C1;     if(str == "C2") return C2;
+  if(str == "C3")  return C3;     if(str == "C4") return C4;
+  if(str == "C5")  return C5;     if(str == "C6") return C6;
+  if(str == "C7")  return C7;     if(str == "C8") return C8;
+  if(str == "C9")  return C9;     if(str == "C10") return C10;
+  if(str == "C11") return C11;    if(str == "C12") return C12;
+  if(str == "C13") return C13;    if(str == "C14") return C14;
+  if(str == "C15") return C15;    if(str == "C16") return C16;
+  if(str == "C17") return C17;    if(str == "C18") return C18;
+  if(str == "C19") return C19;    if(str == "C20") return C20;
+  if(str == "C21") return C21;    if(str == "C22") return C22;
+  if(str == "C23") return C23;    if(str == "C24") return C24;
+  if(str == "C25") return C25;    if(str == "C26") return C26;
+  if(str == "C27") return C27;    if(str == "C28") return C28;
+  if(str == "C29") return C29;    
+
+  if(str == "light_light"      ) return light_light;
+  if(str == "light_dark"       ) return light_dark;
+  if(str == "light_target"     ) return light_target;
+  if(str == "light_shield"     ) return light_shield;
+  if(str == "seek_false"       ) return seek_false;
+  if(str == "seek_disease"     ) return seek_disease;
+  if(str == "seek_armor"       ) return seek_armor;
+  if(str == "seek_wop"         ) return seek_wop;
+  if(str == "seek_players"     ) return seek_players;
+  if(str == "seek_find"        ) return seek_find;
+  if(str == "know_know"        ) return know_know;
+  if(str == "heal_heal"        ) return heal_heal;
+  if(str == "heal_area"        ) return heal_area;
+  if(str == "heal_regen"       ) return heal_regen;
+  if(str == "storm_storm"      ) return storm_storm;
+  if(str == "storm_fly"        ) return storm_fly;
+  if(str == "storm_lightning"  ) return storm_lightning;
+  if(str == "storm_fog"        ) return storm_fog;
+  if(str == "name_agony"       ) return name_agony;
+  if(str == "name_true"        ) return name_true;
+  if(str == "sight_scout"      ) return sight_scout;
+  if(str == "sight_travel"     ) return sight_travel;
+  if(str == "sight_true"       ) return sight_true;
+  if(str == "mask_slip"        ) return mask_slip;
+  if(str == "mask_mirror"      ) return mask_mirror;
+  if(str == "mask_shadow"      ) return mask_shadow;
+  if(str == "false_minor"      ) return false_minor;
+  if(str == "false_send"       ) return false_send;
+  if(str == "false_illusion"   ) return false_illusion;
+  if(str == "obscue_fumble"    ) return obscue_fumble;
+  if(str == "obscure_mislead"  ) return obscure_mislead;
+  if(str == "rename_cover"     ) return rename_cover;
+  if(str == "rename_disappear" ) return rename_disappear;
+  if(str == "rename_change"    ) return rename_change;
+  if(str == "harm_project"     ) return harm_project;
+  if(str == "harm_syphon"      ) return harm_syphon;
+  if(str == "distort_bind"     ) return distort_bind;
+  if(str == "distort_confusion") return distort_confusion;
+  if(str == "calm_silence"     ) return calm_silence;
+
+  return 1;
+  }
+
+
+set_bard_level(str)  { 
+    int ark;  
+    if(sscanf(str, "%d", ark)) { bard_level = ark; }  
+        }
+
+query_bard_level()		 	{  return bard_level;  }
+        
+query_bard_xp()   			{ return bard_xp;      }
+set_bard_xp(str)    		{ bard_xp = str;       }
+
+set_pet_name(str)  			{ pet_name = str;      }
+query_pet_name()   			{ return pet_name;     }
+
+set_guild_status(str)  		{ guild_status = str;  }
+
+set_sponsor(str)    		{ SPONSOR = str;       }
+query_sponsor()     		{ return SPONSOR;      }
+
+set_sponsored(str)          { SPONSORED = str;     }
+query_sponsored()           { return SPONSORED;    }
+
+set_celebrate(str)          { CELEBRATE = str;     }
+query_celebrate()           { return CELEBRATE;    }
+
+query_instrument()          { return INSTR_STRING; }
+set_instrument_string(str)  { INSTR_STRING = str;  }
+
+query_bury_type()           { return BURY_TYPE;    }
+set_bury_type(str)          { BURY_TYPE = str;     }
+
+query_color()               { return COLORINT;     }
+set_color(str)  { 
+    int crk;  
+    if(sscanf(str, "%d", crk))  { COLORINT = crk;  }  
+        }
+
+query_light()				{ return IS_LIT;       }
+set_instr_light(str)        { IS_LIT = str;        }  
+
+query_sponsor_number()         { return SPONSOR_NUMBER; }
+set_sponsor_number(str) { 
+  int lrk;  
+  if(sscanf(str, "%d", lrk))  { SPONSOR_NUMBER = lrk;  }  
+        }
+
+int query_on()     { return LINE_FLAG; }
+
+query_armor()         { return store_armor; }
+set_armor(str)        { store_armor = str;  }  
+
+query_sword()         { return store_sword; }
+set_sword(str)        { store_sword = str;  }  
+
+query_dagger()         { return store_dagger; }
+set_dagger(str)        { store_dagger = str;  }  
+
+
+aceme(str)  {
+object ob;
+  ob = present("instrument",this_player());
+  call_other(ob, "set_bard_level", str);
+  write("ok.\n");
+  return 1;
+        }
+
+
+restore_me(name)  {
+
+object player;
+
+  if(!name)  {
+    if(!environment(this_object()) ||  !environment(this_object())->query_name())  return 0;
+  name = environment(this_object())->query_real_name();
+        }
+  
+  player = find_player(name);
+  
+  if(!player) return 0;
+  
+  tell_object(player, HIM+"Your mind fills with music."+NORM+"\n");
+  restore_object("players/saber/closed/bard/stats/" + name);
+  
+   if(guild_status == -1)  {
+     write("You have been banished from the Bards.\n"+
+           "Send mail Saber if you don't agree.\n");
+     destruct(TO);
+        }
+        
+  if(guild_status == -2)  {
+      write("You have been placed on suspension from the Bards.\n"+
+            "Send mail Saber is you don't agree.\n");
+      destruct(TO);
+        }
+        
+  environment(this_object())->set_guild_name("bards");
+  return 1;
+        }
+
+
+save_me()  {
+
+string file;
+
+  file = "players/saber/closed/bard/stats/" + this_player()->query_real_name();
+  
+  if(!save_object(file))  {
+  tell_object(environment(INSTR), "Error in saving guild score!\n");
+ 
+   }  else   {
+   
+  tell_object(environment(INSTR),
+    HIM+"Your Bardic stats have been saved.\n"+
+    "Party on!\n"+NORM);
+        }
+        
+  environment(INSTR)->set_guild_name("bard");
+
+        }

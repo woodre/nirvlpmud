@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/sickness/hall/main","up","/players/mokri/clans/sickness/hall/r5","down",})
+short_desc "The [1;30mThrone Room[0m of [31mTorment [0m& [33mSickness[0m[0m"
+long_desc "[1;30mWicket[0m'[1;30ms [33mPersonal [36mLockers[0m ([1;31mDo Not Touch[0m)[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;30mDemon Boots [0m[[1;33mSun Forged[0m][0m","/players/jareel/armor/DWARFFORGE/demon/boots",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous  < wc 5,0 >","/players/jareel/weapons/orlanth/fiona_sword",0,0,0,"[1;34mHoly Symbol of [1;33mTre[1;34mlos[0;0m < ac 2, misc >","/players/feldegast/equip/tsymbol",0,0,0,"[1;32mScarab of Healing [[42;1m[1;37mglowing[0;0m[1;32m][0;0m","/players/feldegast/equip/scarab","0",0,0,})

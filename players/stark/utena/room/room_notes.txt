@@ -1,0 +1,74 @@
+Approval Notes
+Stark's Utena Area
+by Feldegast
+11/13/00
+
+
+Rooms
+-----
+
+connection.c  **fixed**
+  Indentation?
+  Change the item description of foliege to foliage.
+  In "path" description, leading TO the north.
+  You have an extra period for the "path" description.
+
+grass.c  *corrected*
+  The width of the sign is a little long.  It wraps on my screen.
+
+tree.c  *removed 4th sentance***
+  The last sentence is not complete.  You have the subject, but no
+    action.  Also, in general you shouldn't refer to the monsters
+    in the room in your long descriptions because they might be
+    dead soon.
+
+court.c **done***
+  In the "atrium" item description, attrium.
+  In the "paths" description, the second sentence is a little confusing
+    regarding where the east-west path leads.
+  In general, you might want to make it clearer where the exits lead.
+  Why is the passage south blocked?
+
+garden.c  *changed*
+  Roses of many kind -> Many kinds of roses
+
+kendo.c **of***
+  Practitioners IN the art, or practitioners OF the art?
+
+fence.c  ***changed desc for crowds.  stupid auto periods***
+  "The bottom floor is DONE covered in tatami mats."  If I were really
+    a native West Virginian, that might've slipped past me.
+  In the long description you say the room is bare except for a couple
+    of fencers, but in the search command you refer to a crowd.
+  You have extra periods in several item descriptions.
+
+cafe.c  ***done***
+  In the listen description: murmer -> murmur
+  In the smell description: exquisit -> exquisite
+  In the windows description, that should be two sentences.
+
+piano.c  ****changed***
+  In the listen description: percision -> precision
+  The piano VACATES the room?  Occupies?
+
+school2.c  ***removed periods***
+  You have several extra periods in the item descriptions.
+
+school3.c  ***muted makes more sense***
+  In the listen description: Do you mean deafened, or muted?
+
+elevator2.c    **bog.. removevd several***
+  In the listen description: The several cables?
+
+planet.c **fixed***
+  An elevator door is TO the south.
+
+street2.c  ****Installed listen.  fixed students'****
+  No listen descrip?
+  Ha-ha...Like the town references.
+  students' dorms
+
+dorm.c  ***laf, fixed****
+  This room wasn't loading.
+
+

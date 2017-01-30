@@ -1,0 +1,5 @@
+Changed the inherit to line 1 on all files.
+Removed the ; after the ansi include.  Include files don't need a ;
+
+pipe.c  - changed piped to pipe in long descriptions.
+

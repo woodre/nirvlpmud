@@ -1,0 +1,15 @@
+Sacrifice Values:
+
+  Level      level*(1000 + random(1000)) 
+  Spouse     30000 * (level+exlevel)/4
+  Kids       level * 1000
+  Stat       2500
+  Fae        7500
+  Objects    value / 100
+  Weapon
+    WC < 16  random(1000)
+    WC > 15  WC * 200
+  Armor
+    AC < 3   random(750)
+    AC > 2   AC * 750
+  Money      #/125    

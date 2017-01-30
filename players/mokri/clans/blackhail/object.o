@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30mRaven[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "raven"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;30mRaven[0m"
+damage_type 0
+hall_path "/room/wild1"
+object_name "raven"
+owner "jellek"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Sat Dec 31 23:28:53 2011] Amphibian has joined the clan!","[Sat Dec 31 23:29:52 2011] Amphibian: I was looking for a clan to join...","[Sat Dec 31 23:30:00 2011] Jellek: nod","[Sat Dec 31 23:30:10 2011] Jellek: clan hall is 2w","[Sat Dec 31 23:30:25 2011] Amphibian: ok","[Sat Dec 31 23:32:37 2011] Amphibian: plenty of room to fill up with eq...","[Sat Dec 31 23:32:55 2011] Jellek: yeah and got plenty of coin left in coffer if I need to add more room for eq.","[Tue May 13 11:45:23 2014] Jellek: test",})
+leaders ({})
+join_type 0
+private_coffer 0
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

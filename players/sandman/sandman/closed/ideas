@@ -1,0 +1,116 @@
+From rcoursey@lonestar.utsa.edu Thu Jun 10 01:11:18 1993
+Return-Path: <rcoursey@lonestar.utsa.edu>
+Received: from utsa86.utsa.edu by elof.iit.edu (NX5.67c/NX3.0S)
+	id AA05082; Thu, 10 Jun 93 01:10:59 -0500
+Received: from lonestar.utsa.edu by UTSA86.UTSA.EDU with SMTP; 
+          Thu, 10 Jun 1993 1:10:41 -0500 (CDT)
+Received: by lonestar.utsa.edu (920330.SGI/920502.SGI)
+	for @utsa86.utsa.edu:harrrob@elof.iit.edu id AA00979; Thu, 10 Jun 93 01:10:41 -0500
+From: rcoursey@lonestar.utsa.edu (Robert L. Coursey)
+Message-Id: <9306100610.AA00979@lonestar.utsa.edu>
+Subject: Ideas for Nir
+To: harrrob@elof.iit.edu
+Date: Thu, 10 Jun 93 1:10:40 CDT
+X-Mailer: ELM [version 2.3 PL6]
+Status: RO
+
+
+(Grimm here ;)
+Okey, ya asked for a few ideas for projects and stuff online :)
+here's a quicky list of mine  (more to come if ya need it)
+
+-- Multiple guests.  If guest is already on, allow a person to log in as
+        guest2, then guest3, etc
+-- a secondary password for wizards ("wizword" -- already have the tested
+        code for it)
+-- a command "findallob" (currently in "/players/scooter/closed/wand.c")
+        that shows a list of ALL items currently being carried around
+        by any player that was created by a given wiz, and lists the
+        filename of it
+-- quest levels for lvl 5, 10, and 15, and possibly for exlvl 5, 10, 15
+        (I've already started on this project)
+-- new command "prevsnoop" that basically just returns a list of the past
+        20 commands the player has typed (easy, just show the history list
+        from the quicktyper)
+-- new money system with gold, silver, copper, etc
+-- a bank that the players can use to deposit coins (charges interest, etc)
+-- a language system for tells, writes, says, etc basically can be just a list
+        that is checked from the master catch_tell (not sure of the location
+        of it tho)
+-- color online...use a flag in the player.c or use a filter system in the
+        master catch_tell to weed out the escape characters
+-- mftp...allows uploads and downloads via ftp directly to and from the mud
+        (limit to downloads only for wizzies lvl <100 or so to prevent people
+        from overloading the HD) -- current source is located on
+        abdallah.cd.chalmers.se under /pub/lpmud/mftp
+-- hunger system...where the players have to eat to survive...can be based so
+        that higher leveled players need to eat more than lower leveled
+        players -- if ya don't eat, ya get damage from being hungry
+-- weather in the rooms...can be based off of seasons with snow, rain, hail,
+        etc
+-- mudtime (already coded in "/players/grimm/mtime.c") to allow day/night,
+        seasons, mud years, mud months -- is based off of real time where
+        1 mud minute = 5 real seconds, 60 mud seconds in a mud min, 60 mud
+        mins in a mud hour, 24 mud hours in a mud day (which equates to 2
+        real hours, 1 hour day, 1 hour night), 9 mud days in a mud week,
+        4 mud weeks in a mud month, 10 mud months in a mud year (the mud year
+        equates to right at 1 mud year per real month)
+-- armor rot...can have like 100*ac "hp" for armor or so, also with the weather,
+        the armor can rust and rot away
+-- an additional strength adjustment that is a + to damage (non-buyable) where
+        for every 10000 hp damage the player does they get a +1 to their damage
+        (up to a +5) (turns out to be really hard to get the +5, but is good
+        incentive for the players)
+-- a new command for players "fixweight" that scans through their stuffs and
+        adjusts their weight
+-- a "censor" to detect foul language on the shout, etc lines (under FCC rules
+        so kinda have to enforce it (got high school students online too ya
+        know))
+-- timeouts for players...after 20 mins of being idle, they begin getting
+        messages and after 30 mins of idle time they get moved to the shop,
+        get forced to sell all, and then "die of boredom" (forced to quit)
+-- option for wizards to be sent automatically to their workrooms upon
+        login (to escape from those damn enter watchers that tell any wiz
+        (i.e. Death) when a person (or wiz) logs in)
+-- "earplugs" to block tells so wizzies (like lvl 50+) cant be bothered
+        by lower leveld people's tells
+-- "isolation" for lvl 100+...go into "isolation" so you can't be bothered,
+        where you are not found as living, nor found in the users()
+        function ;)    ('cept by higher lvl peoples, of course)
+-- races w/ advantages and disabilities for each
+-- "unique items"...where there will only be >1< of the item on the game
+        at any single time, and where they cannot be stored in like the
+        lockers (check out "/players/grimm/rooms/haphaz_k12d2.c" and the
+        item "/players/grimm/weapons/shadow.c"...if you drop the shadow,
+        it resets the room and moves the shadow onto the titan in the room,
+        NOTE: normal resets DO NOT put the shadow on the titan ;)
+-- set up a "destruct_ok()" function to possibly aid in the above unique items
+        deal
+-- fix game "tell" where if the teller is invis and a lesser level than the
+        tellee, the tellee will see the teller's real name instead of the
+        current "Someone tells you:" deal (see the "tell(str)" function in
+        "/players/grimm/closed/obj/bone.c")
+-- new command "ul" that loads and updates an item in one command (put in
+        player.c:        static update_load(str) {
+                                     load(str);
+                                     update_object(str);
+                                     return 1; }
+        (has been tested already to work and is also in 
+        "/players/scooter/closed/wand.c")
+-- have "scars" put on a player for whenever they die (already coded and checked
+        out on a load of different systems)
+-- stricter constraints and punishments for newbies under lvl 40
+-- have "objectives" or "tasks" for wizzies to do to gain levels:
+        for lvl 21 to get to 25:  open a few rooms in an area
+         "   "  25 "  "   "  30:  show at least SOME intelligence in coding
+         "   "  30 "  "   "  40:  the wiz should write up a man page to further
+                                      develop our /doc section
+        etc.
+
+okey :)  that enuf for ya for now?   ;)
+
+-Rob
+(Grimm)
+-- 
+
+

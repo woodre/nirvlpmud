@@ -1,0 +1,17 @@
+   3 alien.c       2 customer.c      2 mutant2.c     1 predator2.c   
+   2 anaconda.c    3 facehugger.c    2 pirahna.c     2 spider_one.c  
+   3 cujo.c        2 mutant1.c       1 predator.c    2 spiders.c  
+Alien Drone:
+        Alien Tail Spike - Mostly done, just need to add a poison special to it which uses /players/chip/items/movies/poison.c (just like /players/chip/mobs/movies/alien.c)
+        Alien Skull Shield - Mostly done, just need to add the protection from the poison mentioned above
+        Vial of Alien Blood - Works exactly like the ball of ooze from fallen lands- /players/zeus/realm/OBJ/oozeball.c . only difference is the damage output will be higher per special
+**Mutant One: will drop one of the following OR 15-20K coins(47%)
+	Spiked Chain (RARE drop(2%)) - /weps/movies/mtnt_spkd_chain.c- need to know how to properly make it lower stats but only while wielded (sets back to normal upon unwield). also cannot raise the stat while wielded past the "new set maximum" of 15 for mag and 22 for sta (might be different for some players who have guilds with oddball stat maximums). also need to know how to make it have a special that does 70+random 55 damage with about 10-15% chance of it going off
+	.357 Magnum (RARE drop(4%)) - /weps/movies/357magnum.c- lightweight, multiple attacks per round, unbreakable, one-handed, bonus on the multiple attacks if dual wielding two, speed bonuses for dervish. drops max command limit per round for mages to 2 instead of 3 when wielded.
+	Straw Hat (common drop(47%)) - /armor/movies/strawhat.c- basically weightless, minor protection. has a special from the low weight that allows for extra dodging speed(type of damage reduction perhaps? avoiding hits?)
+
+**Mutant Two: will drop one of the following OR 15-20K coins(47%)
+	Huge, Rusting Axe (RARE drop(2%)) - /weps/movies/hugerustaxe.c- very heavy, 2-handed only. (Only)While wielded +5 strength bonus, -10 to dex, -15 to mag, has a manual special (like a spell) on it for a spin attack ('axespin'), which grants a second attack that same round. said second attack will always hit, even if the primary attack missed, but costs 50 sps and harms the user for 10+random(10). bloodfists get a bonus to might but a drawback for agility.
+	Thick, Tattered Boots (RARE drop(4%)) - /armor/movies/thickboots.c- fairly heavy, only allows 5 movements for every 3 heartbeats, VERY good protection. has a 'stomp' special that has a 10-20% chance to trigger, it does a 20+random(15) damage, with a 50% chance of doing 5+random(10) damage to the user. while worn, a -10 to dex, -5 int, -7 mag, but a str bonus of 2+random(3)
+	American Flag (common drop(47%)) - /items/movies/americanflag.c- additional armor slot(like orbs and phoenix mask), random+2 to luck and random+2 to piety, command to wear is 'hold', gives an extra_look of "+TPN+" is a true "+HIR+"P"+HIW+"a"+HIB+"t"+HIR+"r"+HIW+"i"+HIB+"o"+HIR+"t"+NORM+"
+ 

@@ -1,0 +1,256 @@
+#include "/players/forbin/mages/def.h"
+
+string *AbjuSpells, *ConjSpells, *EnchSpells, *EvocSpells;
+string *DiviSpells, *IlluSpells, *NecrSpells, *TranSpells;
+
+/* Prototype Declaration */
+void load_spells(string arg);
+
+id() { return "msd"; }
+
+short() { return "Mage Spell Daemon ["+HIR+"Do Not Destruct"+NORM+"]"; }
+
+void save_daemon()
+{
+  save_object("players/forbin/mages/log/msd_save");
+}
+
+int restore_daemon()
+{
+  int a;
+  a = restore_object("players/forbin/mages/log/msd_save");
+  return a;
+}
+
+void reset(mixed arg) 
+{
+  if(arg) return;
+
+  AbjuSpells = ConjSpells = EnchSpells = EvocSpells = ({ });
+  DiviSpells = IlluSpells = NecrSpells = TranSpells = ({ });
+
+  if(!restore_daemon())
+  {
+    load_spells("abju");
+    load_spells("conj");
+    load_spells("ench");
+    load_spells("evoc");
+    load_spells("divi");
+    load_spells("illu");
+    load_spells("necr");
+    load_spells("tran");
+    save_daemon();
+  }
+  else
+    restore_daemon();
+}
+
+level_and_name(s1, s2) {
+  int l1,l2;
+  l1 = call_other("/players/forbin/mages/spells/"+s1,"s_spell_level");
+  l2 = call_other("/players/forbin/mages/spells/"+s2,"s_spell_level");
+  if(l1 != l2) return l1 > l2;
+  return s1 > s2;
+}
+
+
+void load_spells(string arg)
+{
+	string *temparray, *spells, *sortedspells;
+	string sname, pname;
+	string error;
+	int slevel;	
+	int x, s;
+
+	
+  if(!arg)
+	  return;
+
+  if(member_array(arg, VALIDSCHOOLS) < 0)
+    return;	  
+    
+	temparray = spells = sortedspells = ({ });
+
+	switch(arg)
+	{
+		case "abju" : AbjuSpells = ({ }); break;
+	  case "conj" : ConjSpells = ({ }); break;
+    case "ench" : EnchSpells = ({ }); break;
+	  case "evoc" : EvocSpells = ({ }); break;
+		case "divi" : DiviSpells = ({ }); break;
+		case "illu" : IlluSpells = ({ });	break;
+		case "necr" : NecrSpells = ({ }); break;
+		case "tran" : TranSpells = ({ }); break;
+	}
+
+	temparray = get_dir("/players/forbin/mages/spells/*.c");
+  s = sizeof(temparray);
+	
+	for(x = 0; x < s; x++)
+	{
+    if(error = catch((string)call_other("/players/forbin/mages/spells/"+temparray[x], "test_load")))
+    {
+      if(find_player("forbin"))
+        tell_object(find_player("forbin"), 
+          HIM+"MageSpellDaemon ["+NORM+arg+" message"+HIM+"] "+HIW+">>"+NORM+
+          " Spell load failure: "+temparray[x]+", "+error);
+      write_file("/players/forbin/mages/log/MSDError",
+        "MageSpellDaemon ["+arg+" message] >> Spell load failure: "+temparray[x]+", "+error);
+    }
+    else if((string)call_other("/players/forbin/mages/spells/"+temparray[x], "s_spell_school") == arg)
+		{
+		  spells += ({ temparray[x], });
+		}
+	}
+	
+  spells = sort_array(spells,"level_and_name",this_object());
+  s = sizeof(spells);
+  
+	if(spells && sizeof(spells))
+	{
+	  for(x = 0; x < s; x++)
+  	{
+	    slevel = (int)call_other("/players/forbin/mages/spells/"+spells[x], "s_spell_level");
+  	  sname = (string)call_other("/players/forbin/mages/spells/"+spells[x], "s_spell_name");
+	    pname = (string)call_other("/players/forbin/mages/spells/"+spells[x], "s_proper_name");
+      write(sname+":"+slevel+"\n");
+  		sortedspells += ({ sname, ({ pname, slevel, }), });
+    }
+  }
+	switch(arg)
+	{
+	  case "abju" : AbjuSpells = sortedspells; break; 
+    case "conj" : ConjSpells = sortedspells; break; 
+	  case "ench" : EnchSpells = sortedspells; break; 
+		case "evoc" : EvocSpells = sortedspells; break; 
+	  case "divi" : DiviSpells = sortedspells; break; 
+    case "illu" : IlluSpells = sortedspells; break; 
+	  case "necr" : NecrSpells = sortedspells; break;
+	  case "tran" : TranSpells = sortedspells; break;  			
+	 }
+	save_daemon();
+}
+
+void print_spells(string school, object who)
+{
+  string *spells;
+	int x,l,s;
+	int glevelcheck;
+	
+	glevelcheck = (int)present("forbin_mage_object", who)->query_glevel();
+	if(who->query_level() > 99) glevelcheck = 7;
+
+  if(!glevelcheck) 
+		return;
+	
+  if(member_array(school, VALIDSCHOOLS) < 0)
+    return;	 	
+	
+	switch(school)
+	{
+    case "abju" : spells = AbjuSpells; break;
+	  case "conj" : spells = ConjSpells; break;
+    case "ench" : spells = EnchSpells; break;
+	  case "evoc" : spells = EvocSpells; break;
+		case "divi" : spells = DiviSpells; break;
+		case "illu" : spells = IlluSpells; break;
+		case "necr" : spells = NecrSpells; break;
+		case "tran" : spells = TranSpells; break;
+	}
+	
+	s = sizeof(spells);
+  
+  tell_object(who,"\n");
+  
+  for(x = 1; x < s; x+=2)
+  {
+    tell_object(who,
+      "\t"+pad(spells[x][0], 30)+"  "+pad(spells[x][1], -2)+"\n");
+
+	}
+  tell_object(who,"\n");	
+}
+
+
+status spell_exists(string spellname, string school)
+{
+	string *spells;
+  int x, s;
+  int existsflag;
+  
+  existsflag = 0; 
+  
+  if(member_array(school, VALIDSCHOOLS) < 0)
+    return 0;	   
+  
+	switch(school)
+	{
+		case "abju" : spells = AbjuSpells; break;
+	  case "conj" : spells = ConjSpells; break;
+		case "ench" : spells = EnchSpells; break;
+		case "evoc" : spells = EvocSpells; break;
+		case "divi" : spells = DiviSpells; break;
+		case "illu" : spells = IlluSpells; break;
+		case "necr" : spells = NecrSpells; break;
+		case "tran" : spells = TranSpells; break;
+	}
+	
+	s = sizeof(spells);
+	for(x = 0; x < s; x+=2)
+  {
+    if(spells[x] == spellname)
+    {
+      existsflag = 1;  
+      break;
+    }
+  }
+  return existsflag;	  
+}
+
+
+status learn_spell(string spellname, string school, object gob, object player)
+{
+  string *spells;
+  int sl,p;
+  if(!spell_exists(spellname, school))
+  {
+    tell_object(player,
+      "The is no spell by the name of: "+spellname+".\n");
+    return 0;
+  }
+  if(gob->know_spell(spellname, school))
+  {
+    tell_object(player,
+      "You already know the spell: "+spellname+".\n");
+    return 0;
+  }
+	switch(school)
+	{
+		case "abju" : spells = AbjuSpells; break;
+	  case "conj" : spells = ConjSpells; break;
+		case "ench" : spells = EnchSpells; break;
+		case "evoc" : spells = EvocSpells; break;
+		case "divi" : spells = DiviSpells; break;
+		case "illu" : spells = IlluSpells; break;
+		case "necr" : spells = NecrSpells; break;
+		case "tran" : spells = TranSpells; break;
+	}  
+	
+	(p = member_array(spellname, spells));
+	
+	if((sl = spells[p+1][1]) > (int)gob->query_glevel())
+	{
+    tell_object(player,
+      "Your guild level is not high enough to learn a level "+sl+" spell.\n");
+    return 0;  	
+	}
+	if(sl > (int)gob->query_spell_level_trains())
+	{
+    tell_object(player,
+      "You do not have enough spell level trains to learn a level "+sl+" spell.\n");
+    return 0;  	
+	}	
+  gob->add_spell(spellname, school, sl);
+  gob->sub_spell_level_trains(sl);
+  return 1;
+}

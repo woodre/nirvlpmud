@@ -1,0 +1,23 @@
+3.01.02-DR		3.01.02			Amylaar/3.2.1
+----------		-------			-------------
+add_attribute		-			-
+add_prot_attribute	-			-
+allocate		do.			do.
+allocate_mapping	do.			do.
+cp			-			?
+delete_attribute	-			-
+deletem			-			m_delete
+describe [obsolete]	-			-
+format			-			-
+get_attribute		-			-
+keys			-			m_indices
+mapp			-			mappingp
+pad			-			-
+pointerp		do.			do.
+print			-			-
+query_attribute		-			-
+reallocate		-			-
+remove_action		-			do.	
+rename			-			do.
+sizeof			do.			do.
+typeof			-			typeof	[returns different]

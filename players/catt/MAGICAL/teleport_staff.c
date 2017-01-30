@@ -1,0 +1,107 @@
+inherit"obj/weapon";
+#include "std.h"
+int i, charges, price;
+object targetloc;
+string pointo;
+
+id(str) { return str == "staff"; }
+
+reset(arg) {
+::reset(arg);
+    if (!arg) charges=random(6);
+    price = charges * 20;
+}
+
+long() {
+write("An old withered staff with distinct runes carved in black.\n" +
+      "You seem to feel a strange power in the staff, and the    \n" +
+      "markings tell you that the Demon Lords had some part in the\n" +
+   "making of it. The runes also hint at the command words used\n" +
+   "by the demon lords to use it: point (person) & invoke staff \n");
+}
+
+short() {
+return "Old Withered Staff";
+
+}
+
+query_value()
+{
+    return price;
+}
+
+init() {
+    add_action("use","invoke");
+    add_action("set","point");
+   add_action("charge","charge");
+}
+
+use(arg) {
+    string realm, destrealm;
+    object otherplayer;
+
+    if (!arg || arg != "staff") {
+        return 0;
+    } else {
+        if (i != 1) {
+            return 1;
+        } else {
+            realm=call_other(environment(this_player()),"realm",0);
+            otherplayer = find_living(pointo);
+            if(otherplayer == 0) return 0;
+            targetloc = environment(otherplayer);
+            destrealm=call_other(targetloc,"realm",0);
+            if ((realm == destrealm) && (realm != "NT")) {
+  write("A great bolt of lighting slams into you, knocking you \n" +
+        "unconcious. When you awake you are elsewhere.\n");
+say(call_other(this_player(),"query_name") + " Is struck by a bolt of" +
+    "lightning and disappears before your very eyes.\n");
+                move_object(this_player(), targetloc);
+say(call_other(this_player(),"query_name") + " Is dropped to the" +
+        " ground by a massive Lighting Demon\n");
+                call_other(this_player(),"look");
+                if (charges == 0) {
+                    move_object(this_object(), "room/store");
+            write("The staff bursts into flame and is consumed.\n");
+                    call_other(this_player(),"add_weight", -1);
+                }
+                charges=charges-1;
+            } else {
+           write("The staff tries to work, but burns you instead.\n");
+                move_object(this_object(), targetloc);
+             write("The staff bursts into flame and is consumed.\n");
+                call_other(this_player(),"add_weight", -1);
+            }
+            return 1;
+        }
+    }
+}
+
+set(arg) {
+
+    if (!arg) {
+        return 0;
+    }
+    else {
+
+         pointo = lower_case(arg);
+     write("The runes glow with power.\n");
+  say("The runes upon the withered staff glow with a demonic hue\n");
+        i = 1;
+    }
+   return 1;
+}
+
+get() {
+    return 1;
+}
+
+query_weight() {
+    return 1;
+}
+charge(arg) {
+    if (!arg || arg != "staff" ||
+        call_other(this_player(),"query_willp",0)<55) return 0;
+    write("Staff stats:\ncharges: "+charges+"\nsetting: "+pointo+"\n");
+    return 1;
+}

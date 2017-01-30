@@ -1,0 +1,37 @@
+./dune/closed/guild/snow/weapons/ninja_to.c:16:set_totaldam(num) { prof = num; }
+./dune/closed/guild/snow/weapons/unarmed.c:12:set_totaldam(num) { prof = num; }
+./dune/closed/guild/snow/weapons/nunchaku.c:15:set_totaldam(num) { prof = num; }
+./dune/closed/guild/snow/weapons/ton-fa.c:16:set_totaldam(num) { prof = num; }
+./dune/closed/guild/snow/weapons/kusari_gama.c:15:set_totaldam(num) { prof = num; }
+./dune/closed/guild/snow/weapons/naginata.c:15:set_totaldam(num) { prof = num; }
+./sparrow/closed/cyberninja/snow/weapons/ninja_to.c:16:set_totaldam(num) { prof = num; }
+./sparrow/closed/cyberninja/snow/weapons/unarmed.c:12:set_totaldam(num) { prof = num; }
+./sparrow/closed/cyberninja/snow/weapons/nunchaku.c:15:set_totaldam(num) { prof = num; }
+./sparrow/closed/cyberninja/snow/weapons/ton-fa.c:16:set_totaldam(num) { prof = num; }
+./sparrow/closed/cyberninja/snow/weapons/kusari_gama.c:15:set_totaldam(num) { prof = num; }
+./sparrow/closed/cyberninja/snow/weapons/naginata.c:15:set_totaldam(num) { prof = num; }
+./maledicta/closed/ton-fa.c:16:set_totaldam(num) { prof = num; }
+./gowron/closed/cyber/ninjatodaem.c:24:set_totaldam(td) { totaldam = td; }
+./gowron/closed/cyber/ninjatodaem.c:81:  set_totaldam(0);
+./mythos/closed/others/kgamadaem.c:24:set_totaldam(td) { totaldam = td; }
+./mythos/closed/others/kgamadaem.c:79:  set_totaldam(0);
+./mythos/closed/others/nagidam.c:25:set_totaldam(td) { totaldam = td; }
+./mythos/closed/others/nagidam.c:79:  set_totaldam(0);
+./snow/closed/ninjatodaem.c:24:set_totaldam(td) { totaldam = td; }
+./snow/closed/ninjatodaem.c:79:  set_totaldam(0);
+./snow/closed/cyber/kusarigama.c:12:set_totaldam(num) { prof = num; }
+./snow/closed/kgamadaem.c:57:   MYWEP->set_totaldam(0);
+./snow/closed/new/ninja_to.c:16:set_totaldam(num) { prof = num; }
+./snow/closed/new/unarmed.c:12:set_totaldam(num) { prof = num; }
+./snow/closed/new/nunchaku.c:15:set_totaldam(num) { prof = num; }
+./snow/closed/new/ton-fa.c:16:set_totaldam(num) { prof = num; }
+./snow/closed/new/kusari_gama.c:15:set_totaldam(num) { prof = num; }
+./snow/closed/new/naginata.c:15:set_totaldam(num) { prof = num; }
+./snow/closed/naginata.c:74:set_totaldam(num) { totaldam = num; }
+./snow/hands.c:12:set_totaldam(num) { totaldam = num; }
+./ulath/closed/ninjaweps/ton-fa.c:16:set_totaldam(num) { prof = num; }
+./ulath/ton-fa.c:16:set_totaldam(num) { prof = num; }
+./pathfinder/closed/kgamadaem.c:24:set_totaldam(td) { totaldam = td; }
+./pathfinder/closed/kgamadaem.c:79:  set_totaldam(0);
+./pathfinder/junk/kgamadaem.c:24:set_totaldam(td) { totaldam = td; }
+./pathfinder/junk/kgamadaem.c:79:  set_totaldam(0);

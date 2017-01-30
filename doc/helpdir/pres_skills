@@ -1,0 +1,25 @@
+                        [Prestige Skills]
+-----------------------=========+=========-----------------------
+
+    Prestige levels grant the player a prestige skill point
+  which can be applied to a set of prestige skills that will
+  enhance the player's abilities. The skills will fire randomly.
+  As the skill level is increased the skill will trigger more
+  often and/or with increased effectiveness.
+        
+  Prestige Skills
+  ---------------------------------------------------------------
+  EXP   - Chance of increased experience.
+  WC    - Chance of enhanced weapon class.
+  AC    - Chance of enhanced armor class.
+  GOLD  - Chance of increased gold when selling items at 
+          daemonized shops.
+  REGSP - Chance of spell point regeneration.
+  REGHP - Chance of hit point regeneration.
+  DETOX - Chance of increased detox rate.
+  HPS   - Bonus hit points.
+  SPS   - Bonus spell points.
+  
+  ---------------------------------------------------------------
+  For further information on this topic type: help pres_skills2
+-----------------------=========+=========-----------------------

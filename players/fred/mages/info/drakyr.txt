@@ -1,0 +1,18 @@
+              ~~~~ Drakyr ~~~~
+
+   Command: drakyr
+   Cost:    150
+
+     You may summon an enchanted drakyr, a man-creature from
+     the lost world of the Deimos.  While riding this foul
+     beast, you may level a heavier attack upon your hated
+     prey.
+
+     The Drakyr has the following commands.:
+       mount - to mount the Drakyr.
+       dismount - to dismount the Drakyr.
+       release - to get rid of the Drakyr.
+       dbag - to store items in Drakyr's bag.
+         dbag with no argument will list current bag contents.
+       dunbag - to retrieve items from Drakyr's bag.
+

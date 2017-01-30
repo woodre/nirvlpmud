@@ -1,0 +1,93 @@
+CandyLand Newbie Area by Martha@Nirvana
+
+The entire area is located in
+/players/martha/area
+
+There are 15 rooms located in
+/players/martha/area/rooms
+
+There are 3 heals located in
+/players/martha/area/rooms
+The heals are low tox, low heal value (5 tox, 10 heal{sp only})
+they are made with newbies in mind.
+
+There are 9 mobs located in 
+/players/martha/area/mobs
+
+There are 12 items located in 
+/players/martha/area/weps
+
+Here is a breakdown of each mob, what they carry, etc.
+
+Gloppy (/players/martha/area/mobs/gloppy.c)
+level 6, ac5, wc10, hp90, no coins, no items, he talks
+nothing special
+
+Gramma Nut (/players/martha/area/mobs/gnut.c)
+level 7, ac6, wc11, hp105, 75 coins, she talks, 
+nothing special................items she holds 
+granny shoes(players/martha/area/weps/shoes.c) you can wear
+as boots and they have a value of 58 coins, ac0 and
+peanut brittle(players/martha/area/heals/peanutbrittle.c)
+which is a heal and has a value of 100 coins
+
+Jolly (/players/martha/area/mobs/jolly.c)
+level 9, ac7, wc13, hp135, 90 coins, he talks, 
+nothing special...............items he holds
+gloves (/players/martha/area/weps/gloves.c) you can wear
+as ring and they have a value of 65 coins, ac0 and
+gumdrops(/players/martha/area/heals/gumdrop.c) 
+which is a heal and has a value of 100 coins
+
+King Kandy (/players/martha/area/mobs/kingk.c)
+level 10, ac8, wc14, hp150, 400 coins, he talks, 
+nothing special................items he holds
+suit (/players/martha/area/weps/suit.c) you can wear
+as armor and has a value of 100, ac0 and
+staff (/players/martha/area/weps/staff.c) you can wield
+has a value of 100 coins and wc1
+
+Lord Licorice (/players/martha/area/mobs/lord.c)
+level 10, ac8, wc14, hp150, 150 coins, he talks,
+nothing special...............items he holds
+cape (/players/martha/area/weps/cape.c) you can wear
+as misc item, has a value of 67 coins, ac0
+shield (/players/martha/area/weps/shield.c) you can wear
+as shield, has value of 73, ac0
+
+Mr. Mint (/players/martha/area/mobs/mrmint.c)
+level 7, ac6, wc11, hp105, 62 coins, he talks,
+nothing special.................items he holds
+axe (/players/martha/area/weps/axe.c) you can wield
+value of 100, wc1
+piccolo (/players/martha/area/weps/piccolo.c)
+this is just an item that players can blow and 
+it plays a little tune
+
+Princess Lolly (/players/martha/area/mobs/plolly.c)
+level 9, ac7, wc13, hp135, 100 coins, she talks,
+nothing special..................items she holds
+crown (/players/martha/area/weps/crown.c) you wear
+as helmet, value of 70 coins, ac0
+
+Plumpy (/players/martha/area/mobs/plumpy.c)
+level 5, ac5, wc9, hp75, 50 coins, he talks,
+nothing special...................items he holds
+necklace (/players/martha/area/weps/necklace.c)
+wear as amulet, value of 70 coins, ac0
+plum( /players/martha/area/heals/plum.c)
+which is a heal and has a value of 100 coins
+
+Queen Frostine (/players/martha/area/mobs/queenf.c)
+level 10, ac8, wc14, hp150, 200 coins, she talks,
+nothing special................items she holds
+crown (/players/martha/area/weps/iccrown.c)
+wear as helmet, value of 70 coins, ac0
+wand (/players/martha/area/weps/wand.c)
+wield, value of 100 coins, wc1
+
+
+That is the area. There is really nothing special about
+anything the mobs hold or the mobs themselves. They all
+have little remarks they make, but nothing special.
+

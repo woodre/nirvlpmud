@@ -1,0 +1,17 @@
+ARMOR--- Please do not make any non-standard armors (std:armor,helmet,boots
+         ring,amulet,shield) Make the armor's protection reflect how
+         difficult it was to obtain. No armor should be more protective
+         than platemail <ac 4>, unless it somewhere next to impossible to get, 
+         meaning that I should see a player with it no more than about once 
+         every month or more.
+
+       any non-standard armor has been made to self destruct.
+       there is now a type misc that you may use to make something outside
+       the six types, but there should be very few of these.
+        Only type armor should be above ac 2.
+        Ac 2 armors not of class armor should be rare and fairly
+        difficult to get.
+
+   note armor of class 0 or below may be of any type so long as set_ac is
+        called before set type.
+

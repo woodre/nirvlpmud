@@ -1,0 +1,20 @@
+disguise <what> | #corpse, undisguise
+
+Disguise changes your appearance to <what>.  No spaces are permitted, and no players may
+be emulated.  The alternative argument #corpse will change your appearance to be a "Corpse
+of yourname".  Only one disguise may be used at a time.
+
+reserve <what>, unreserve
+
+Reserve a monster so that only you are able to attack it.  Only one monster may be reserved at a time.
+
+bug <who>, bugroom <who> | here
+
+Bug relays what <who> says and does to you, preceding the actions with a "#".
+Roombug relays actions in the *room* of <who> to you.  The alternative argument 'here'
+bugs your present room.  Note that bugs have a limited lifetime.  Only one bug and one roombug may be active at one time.
+
+backstab <who>
+
+A first strike upon an enemy that you are not presently fighting.  Once the attack is underway, you cannot get behind your enemy obviously.
+

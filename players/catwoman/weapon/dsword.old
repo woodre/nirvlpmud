@@ -1,0 +1,90 @@
+inherit "obj/weapon.c";
+#define weapon this_object()
+
+int fuel;
+object dragonslayer;
+init() {
+    set_heart_beat(1);
+    add_action("charge", "charge");
+    add_action("stat_sword", "statsword");
+    ::init();
+     call_other(weapon, "set_name", "deathsword");
+     call_other(weapon, "set_short_desc", "deathsword");
+     call_other(weapon, "set_long_desc", "by typing statsword a level 4 or higher can check the fuel.\n");
+/*     call_other(weapon, "set_value", 3000);*/
+     call_other(weapon, "set_id", "deathsword");
+     call_other(weapon, "set_class", 19);
+     call_other(weapon, "set_alt_name", "sword");
+     call_other(weapon, "set_weight", 5);
+     call_other(weapon, "set_alias", "deathsword");
+     call_other(weapon, "set_save_flag", 0);
+}
+long() {
+	write(" by typing statsword a level 5 player may check the status of the fuel.\n");
+}
+wield(str) {
+  object name;
+  int align;
+  if(!id(str))
+     return 0;
+  name = call_other(this_player(), "query_name", 0);
+  if(wielded) {
+    write("You already wield it!\n");
+    return 1;
+  }
+  align = call_other(this_player(), "query_alignment", 0);
+  if(align >= 0) {
+    write("Deathsword screams in pain as you attempt to wield her.  She\n");
+    write("shrieks at you 'I am far more evil than thou!' and sends a\n");
+    write("jolt to you.\n");
+    say(name + " attempts to wield the dragonslayer and fails.\n");
+    call_other(this_player(), "hit_player", 20);
+    return 1;
+  }
+  if(align < 0) {
+    write("You grab the deathsword, and it begins to glow with an smokey\n");
+    write("black glow.  Deathsword howls in anticipation of its next\n");
+    write("victim.\n");
+    say("Deathsword howls with the anticipation of its next kill.\n");
+    wielded_by = this_player();
+    call_other(this_player(), "wield", this_object());
+    wielded = 1;
+    return 1;
+  }
+}
+charge(str) {
+object ob;
+	if (!id(str)) return 0;
+	if (str != "deathsword") return 0;
+	ob = present("swordbat",this_player());
+	if (!ob) {
+		write("you have no sword charger.\n");
+		return 1;
+	}
+	fuel = 0;
+	destruct(ob);
+	return 1;
+}
+heart_beat() {
+  if(fuel > 3000) {
+    say("Dragonslayer glows with a murky green light.\n");
+    say("Dragonslayer shrieks then returns to its master who created it.\n");
+    call_other(wielded_by, "stop_wielding");
+    set_heart_beat(0);
+    destruct(this_object());
+  }
+  if(wielded == 1) {
+    fuel += 3;
+  }
+}
+
+stat_sword() {
+  if(this_player()->query_level() < 4)
+    { return 0; }
+  write("Status of Dragonslayer\n");
+  write("  Fuel Used :: " + fuel + "\n");
+  write("  Fuel Left :: " + (3000 - fuel) + "\n");
+  return 1;
+}
+query_value() {return 3000;}
+

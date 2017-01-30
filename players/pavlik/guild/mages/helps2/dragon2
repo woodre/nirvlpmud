@@ -1,0 +1,34 @@
+-=[ Stone Dragon ]=-
+
+Each command is prefixed by the name of your dragon.
+Use your dragons name or 'dragg'
+Execute the command by typing the name and then the command.
+  ex: pashta kill ghost <or> pashta dismiss <or> dragg dismiss
+
+Command Avaliable:
+    name       : rename your dragon
+    dismiss    : dismiss your pet
+    follow     : have your dragon follow
+    stay       : stop following
+    kill       : attack
+    giveme     : give an item to you
+    say        : have your dragon say something
+    emote      : have your dragon emote something
+    report     : get a status report from your dragon
+
+Also Added:
+  setlook <str>     : changes the short descrip of your dragon.
+                      will appear as: NAME <setlook> Dragon
+                      ex: "ghirth setlook the big ugly" will end up as
+                      "Ghirth the big ugly Dragon"
+  setdescrip        : this will change the long descrip of your dragon.
+                      enter the descrip line by line, same as posting a note.
+                      use '**' to finish.
+  setmove <str>     : this will be shown when dragon enter/leaves room
+                      ex: "ghirth setmove rumbles" will end up as
+                      "Ghirth rumbles in" or "Ghirth rumbles out"
+
+*****************************************************************************
+If you lose your dragon [stops following etc]
+                Try "dragon summon"
+*****************************************************************************

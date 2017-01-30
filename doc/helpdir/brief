@@ -1,0 +1,17 @@
+
+
+                           [help brief]
+-----------------------=========+=========-----------------------   
+
+Usage: brief
+      
+  Your brief setting controls what you see as you move between
+rooms.  The brief command toggles between the three settings.  In
+brief mode, you see only the short description of a room.  In
+verbose mode, you see the full description.  In detail mode, you
+see both.
+
+Note: Default for a new player is verbose mode.
+      To set the ansi pref for room titles in detail mode see
+      'help ansipref' or the ansipref command.
+

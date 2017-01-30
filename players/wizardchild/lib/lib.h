@@ -1,0 +1,10 @@
+
+#define deconstruct_mapping(a0) call_other("/players/wizardchild/lib/deconstruct_mapping.c","deconstruct_mapping", a0)
+#define fix_path(a0) call_other("/players/wizardchild/lib/fix_path.c","fix_path", a0)
+#define format_time(a0) call_other("/players/wizardchild/lib/format_time.c","format_time", a0)
+#define get_files(a0) call_other("/players/wizardchild/lib/get_files.c","get_files", a0)
+#define get_prototype(a0,a1,a2) call_other("/players/wizardchild/lib/get_prototype.c","get_prototype", a0,a1,a2)
+#define get_root(a0) call_other("/players/wizardchild/lib/get_root.c","get_root", a0)
+#define has_member(a0,a1) call_other("/players/wizardchild/lib/has_member.c","has_member", a0,a1)
+#define reconstruct_mapping(a0) call_other("/players/wizardchild/lib/reconstruct_mapping.c","reconstruct_mapping", a0)
+#define rewrap_file(a0,a1) call_other("/players/wizardchild/lib/rewrap_file.c","rewrap_file", a0,a1)

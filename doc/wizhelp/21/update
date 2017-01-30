@@ -1,0 +1,19 @@
+****************
+
+                     Update
+
+Syntax:    update <file>
+
+Desc:
+           This command updates a file at the next reference.
+
+Warning:   
+
+Example:   update /players/bob/test/monkey.c
+                  results
+           obj monkey will be updated next time its called
+
+Related:   mk, upd_dir
+
+
+****************

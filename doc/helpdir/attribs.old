@@ -1,0 +1,28 @@
+
+
+                         [help attribs]                
+-----------------------=========+=========-----------------------    
+ 
+  Player attributes:
+
+  Stamina: Increases hit points.
+    Magic: Increases spell points.
+ Strength: Increases the amount you can carry
+     Luck: If you get lucky you take less or no damage from a hit.
+  Stealth: Maybe you can just slip by those aggressive monsters.
+           
+   Piety, Intelligence, and Will Power have been left open for
+   wizard applications.
+
+To see current values use 'score2' or 'sc2'
+increasing attributes: (min:8 max:20)
+              from 8 to 11: 2200 exp per pt.
+              from 11 to 12: 3300 exp per pt.
+              from 12 to 14: 3800 exp per pt.
+              from 14 to 16: 5066 exp per pt.
+              from 16 to 18: 6000 exp per pt.
+              from 18 to 20: 8000 exp per pt.
+
+ cost is high, because all skills are helpful in addition to level.
+ 
+ 

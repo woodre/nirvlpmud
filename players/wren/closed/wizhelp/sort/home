@@ -1,0 +1,21 @@
+**************
+
+
+                     Home
+
+Syntax:    home
+
+Desc:
+           Moves a wizard to location set as home. This is usually 
+           /players/<wizname>/workroom.c
+
+Warning:   No warning other than players will see a room exit message
+
+Example:   bob types home
+                  results 
+           bob is moved to /players/bob/workroom.c
+
+Related:   place, goto
+
+
+**************

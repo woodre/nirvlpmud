@@ -1,0 +1,31 @@
+#include "/players/grimm/header"
+inherit "room/room";
+realm() { return "NT"; }
+reset(arg) {
+monster();
+if(arg)
+   return;
+short_desc="Dark Corner";
+long_desc="You have walked into a dark corner.  There are cobwebs everywhere\n";
+dest_dir=({"players/grimm/closed/vampcastl/castle3","north"});
+set_light(1);
+}
+init() {
+  add_action("north","north");
+  ::init();
+}
+monster() {
+   int count;
+   object monster;
+   if(!present("spider")) 
+      while(count < 7) {
+         count += 1;
+         monster = clone_object("players/grimm/monster/spider");
+         move_object(monster,this_object());
+      }
+return 1; 
+}
+north() {
+  this_player()->move_player("north#players/grimm/closed/vampcastl/castle3");
+  return 1;
+}

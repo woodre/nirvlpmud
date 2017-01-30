@@ -1,0 +1,60 @@
+2016.08.29 23:01:02 LDMud 3.3.720 (Build 3010) (stable)
+2016.08.29 23:01:02 TLS: (OpenSSL) Keyfile 'key.pem', Certfile 'cert.pem'
+2016.08.29 23:01:02 TLS: Error setting x509 keyfile:
+2016.08.29 23:01:02 TLS: SSL error:02001002:system library:fopen:No such file or directory.
+2016.08.29 23:01:02 TLS: SSL error:20074002:BIO routines:FILE_CTRL:system lib.
+2016.08.29 23:01:02 TLS: SSL error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system lib.
+2016.08.29 23:01:02 mySQL 5.5.50
+2016.08.29 23:01:02 Attempting to start erq '/home/petebre/mymud/lp312/mudbin/erq'.
+2016.08.29 23:01:02 Hostname 'loafy' address '174.137.154.70'
+2016.08.29 23:01:02 UDP recv-socket requested for port: 3507
+2016.08.29 23:01:04 LDMud ready for users.
+2016.08.29 23:01:12 Missing 'return <value>' statement.
+2016.08.29 23:01:12 program: obj/generic_heal.c, object: players/jareel/heals/YELMALIAN/lthpts#402 line 170
+2016.08.29 23:07:45 Bad arg 1 to call_other(): got 'number', expected 'string/array/object'.
+2016.08.29 23:07:45 program: obj/player.c, object: obj/player line 2528
+'     heart_beat' in '        obj/player.c' ('          obj/player') line 1585
+'       autosave' in '        obj/player.c' ('          obj/player') line 1260
+'        save_me' in '        obj/player.c' ('          obj/player') line 2502
+'  illegal_patch' in '        obj/player.c' ('          obj/player') line 2528
+2016.08.29 23:07:45 Heart beat in obj/player turned off.
+2016.08.29 23:07:45 Error in heartbeat.
+2016.08.29 23:15:47 Missing 'return <value>' statement.
+2016.08.29 23:15:47 program: players/vertebraker/misc/mage/mage.c, object: players/vertebraker/misc/mage/mage#240 line 559
+2016.08.29 23:15:47 Caught error: Failed to load file: 'players/darkfire/castle/shattered/market/players/trix/castle/center'.
+'       cmd_hook' in '        obj/player.c' ('      obj/player#487') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('      obj/player#487') line 33
+'       cmd_goto' in '     bin/wiz/_goto.c' ('       bin/wiz/_goto') line 29
+'          CATCH' in                        ('       bin/wiz/_goto')
+2016.08.29 23:15:47 ... execution continues.
+2016.08.30 02:56:46 Missing 'return <value>' statement.
+2016.08.30 02:56:46 program: obj/go_player.c, object: obj/go_player#148 line 132
+2016.08.30 08:54:29 Bad arg 1 to tell_room(): got 'number', expected 'string/object'.
+2016.08.30 08:54:29 program: players/mythos/closed/play/updates.c, object: players/mythos/closed/play/updates line 412
+'     heart_beat' in 'players/mythos/closed/play/updates.c' ('players/mythos/closed/play/updates') line 421
+'          sweep' in 'players/mythos/closed/play/updates.c' ('players/mythos/closed/play/updates') line 356
+'          swept' in 'players/mythos/closed/play/updates.c' ('players/mythos/closed/play/updates') line 412
+2016.08.30 08:54:29 Heart beat in players/mythos/closed/play/updates turned off.
+2016.08.30 08:54:29 Error in heartbeat.
+2016.08.30 09:34:12 Error (104) upon reading socket 11 (ip 0x9a040c8 'obj/player#913'), closing connection: Connection reset by peer
+2016.08.30 15:32:01 Error in loading object: 'players/oberon/amber/city/mob/adult'.
+2016.08.30 15:32:01 program: players/oberon/amber/city/rooms/southwall4.c, object: players/oberon/amber/city/rooms/southwall4 line 19
+'           move' in '         room/room.c' ('players/oberon/amber/city/rooms/southwall3') line 297
+'    move_player' in '        obj/player.c' ('     obj/player#1112') line 4293
+'    move_player' in '        obj/living.c' ('     obj/player#1112') line 251
+'          reset' in 'players/oberon/amber/city/rooms/southwall4.c' ('players/oberon/amber/city/rooms/southwall4') line 19
+2016.08.30 15:35:24 Bad right arg to +: got 'object', expected 'number/string/float'.
+2016.08.30 15:35:24 program: players/oberon/closed/jewel.c, object: players/oberon/closed/jewel#1149 line 42
+'       cmd_test' in 'players/oberon/closed/jewel.c' ('players/oberon/closed/jewel#1149') line 42
+2016.08.30 16:16:47 Error (104) upon reading socket 11 (ip 0x9a040c8 'obj/player#1112'), closing connection: Connection reset by peer
+2016.08.31 09:05:11 Error in loading object: 'players/oberon/amber/city/mob/adult'.
+2016.08.31 09:05:11 program: players/oberon/amber/city/rooms/eastwall1.c, object: players/oberon/amber/city/rooms/eastwall1 line 19
+'           move' in '         room/room.c' ('players/oberon/amber/city/rooms/eastwall2') line 297
+'    move_player' in '        obj/player.c' ('     obj/player#1490') line 4293
+'    move_player' in '        obj/living.c' ('     obj/player#1490') line 251
+'          reset' in 'players/oberon/amber/city/rooms/eastwall1.c' ('players/oberon/amber/city/rooms/eastwall1') line 19
+2016.08.31 09:14:11 Undefined function: save_wiz_file
+2016.08.31 09:14:11 program: obj/master.c, object: obj/master line 2796
+'notify_shutdown' in '        obj/master.c' ('          obj/master') line 1654
+'  save_wiz_file' in '        obj/master.c' ('          obj/master') line 2796
+2016.08.31 09:14:11 Error in master_ob->notify_shutdown()

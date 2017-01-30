@@ -1,0 +1,181 @@
+General Write-up for Black Circle Mages.
+
+Advantages:
+
+  Maximum Magic attribute of 40.
+   - Cost 50k exp per/point past 30; 20sp total gain.
+     (Mages rely on spells)
+  They have two forms of guild pets, Ghoul, and Shadowdragon.
+   - Ghoul can wield/wear equip and help you fight.
+   - Shadowdragon can help fight, can mount/dismount etc.
+  Bonus damage when shadowed with lich or deathknight.
+   - bonus comes from heartbeat()
+  
+Disadvantages:
+
+  Lowered Strength and Stamina
+   - Stamina max at 23 - anything higher is set to 23 in heartbeat()
+     - 14hp total loss
+   - Strength max at 20 - reset in heartbeat()
+  Can't join the guild if they have enough extra exp to level.
+   - Don't want people joining with enough exp to max guild.
+  All spells require int of at least 20
+  No game Spells. ie. missile, shock, fireball, sonic.
+
+
+Spells: 
+R = Random, V = Varies
+
+Name:        Cost:   GLvl:   Damage:     Effect:
+*************************************************************************
+
+bede         200     5       none        ressurect corpse
+
+blast        15      2       10+R20      mid-level attack spell replace shock
+
+cc           none    0       none        talk on guild line
+
+ce           none    0       none        emote on guild line
+
+circle       none    0       none        guild who
+
+coat         60      0       none        enchants robes bonus ac(2+R4) in combat
+
+curse        25      3       none        shadow wep/armor sets ac wc to 0;
+
+dart         10      0       R20         low-level attack spell replace missile
+
+death        10      3       1-59        a finishing spell, mob has to be at 1/10 or lower
+
+deathknight  100     5       none        shadows player - see Objects deathknight below
+
+disrupt      30      5       20+R30      high-level attack spell replace sonic.
+
+dragon       100     4       none        summons a shadow dragon - see Monsters dragon below 
+
+drain        5       1       none        drains a corpse for energy
+
+energize     V       2       none        turn hps into sps - 10% loss on transfer.
+
+flame        20      3       15+R25      mid-level attack spell replace fireball
+
+fog          25      2       none        calm spell - must be in combat to use
+
+freeze       V       4       V           shadows your opponent - see Objects freeze below 
+
+ghoul        50      2       none        turn corpse into a ghoul - see Monsters ghoul below 
+
+heal         20      1       none        heals you or someone Level+R10
+
+home         none    0       none        toggles set_home to church or guild hall
+
+lich         60      3       none        shadows player - see Objects lich below        
+
+midas        5       1       none        turns a corpse into money heal_value*(5+R3)
+
+mreport      none    0       none        write_file for players to report bugs/typos/etc.
+
+mrestore     none    0       none        restore players stats at login
+
+msave        none    0       none        saves player info
+
+mupdate      none    0       none        update guild object
+
+obillusion   20      2       none        creates an illusion - see Objects illusion below 
+
+pillusion    20      2       none        creates an illusion - see Objects illusion below
+
+quit         none    0       none        just makes them msave when they leave
+
+risk         5       1       none        assess your opponents wc.
+
+say          none    0       none        replace basic say
+
+score        none    0       none        replace basic score/sc
+
+title        none    0       none        gives players a guild title
+
+uncurse      25      3       none        removes curse from wep/armor
+
+*************************************************************************************
+*************************************************************************************
+
+
+
+Objects:  
+
+Name:          Desc:
+*************************************************************************************
+
+blackbook      Used to join the guild.  Checks for guild exp, guild rank, guild_obj, 
+               and if they have enough exp to raise a lvl.
+
+board          Guild board to post notes, issues, news, etc.
+
+deathknight    Shadows player. Resets name, short, long, absorbs some damage for a 
+               time period.  Takes the hit_player damage through a formula and actually
+               returns 90-94% of it.  ie. if hit_player damage from opponent was 40,
+               player would get hit with hit_player 36.  Effect: added ac.
+
+dummy          A practice dummy to use in the guild hall to test power.  Doesn't report
+               any exact numbers.  Reports a color change per round dependent on damage.
+              
+freeze         Shadows a mob.  changes short, blocks movement and mob wimpy for a time 
+               period.  Recalculates hit_player damage for Black Circle Mages only.  It
+               takes the dmg and adds to it R((lvl/4)+(xlvl/4)).  Max return of 50.
+
+illusion       makes an illusion of a player or an object depending on if they use
+               obillusion or pilluions.  Pillusion forms an illusion of a player's
+               short();  Obillusion you assign a str to.  ie. 'obillusion A giant sword'
+               will form an illusion or A giant sword in the room.
+
+item_curse     Sets an items ac or wc to 0, until the curse is removed.
+
+lich           Shadows player. Resets name, short, long, absorbs some damage for a 
+               time period.  Takes hit_player dmg through a formula and returns 
+               95-99% of it to the player for added ac.
+
+robes          Invis object cloned to player from coat spell.
+
+throne         A throne that will be in the guild hall.  You can sit on it and clone 
+               a dark stalker from it.  See Monsters dark_stalker below.
+
+**************************************************************************************
+**************************************************************************************
+
+
+Monsters:
+
+Name:          Desc:
+**************************************************************************************
+
+dark_stalker   **NOTE** Most like illegal ***END***  I made a few changes to it but
+               I still don't think it would work.  People I talked to that used to be 
+               the guild thought they were great.  Right now it allows a someone that is
+               maxxed in the guild to basically 'snoop' someone that is of lower level
+               than themselves.  Thought about instead of 'snoop' just have it report
+               the persons inventory like if you looked at them.  
+
+ghoul          The first of two guild pets.  A ghoul is formed from a corpse of a mob.
+               Ghoul's can wield weapons, wear armors, pick things up, drop things, 
+               follow owners and give things they have to players.
+
+shade          Shade is a mob in the guild hall that is used for several purposes. Guild
+               members must go to shade to adv. rank within the guild, and to raise their
+               magic past 30.  Guild members must also go to Shade if they wish to leave
+               the guild.
+
+shadowdragon   The Shadowdragon is the second of two guild pets. Shadowdragons can do many
+               things much like the ghoul.  The dragon can't wield or wear but it can 
+               pick things up and drop them.  You can mount/dismount your dragon. While
+               mounted your location appears as your dragons short.  You can rename your
+               dragon as well.  See 'info dragon_commands' for a full listing.
+
+stalker        An invis mob that randomly moves about the guild hall.  If it comes across
+               a player that is not a guild member it throws them to the church.
+
+****************************************************************************************
+****************************************************************************************
+
+
+   

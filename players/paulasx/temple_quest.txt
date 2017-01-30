@@ -1,0 +1,15 @@
+The Temple of Bishamon has been taken over by the evil Arch wizard
+Benju Matsumoto.  You must retrieve the Godsword from Damian, the
+son of Satan, and defeat Benju.  Then give the sword to  Diamyo of
+Aru, he will defeat the evil in the Temple.  Ask Deacon Thomas about
+the Temple..
+
+/players/paula/hell/hell_end (where you get the godsword)
+/players/paula/temple/quest_room (where you give the sword to Diamyo)
+
+follow:
+enter castle
+7N,kill necromancer,2N,3S,E,2N,3W,S,N,S,2E,KILL DAMIAN,
+GET GODSWORD,PRAY,2S,E,2UP,wind through hallways killing
+all monsters in each room to move to next too until you
+get to Benju, kill benju,N,give godsword to Diamyo, DOWN

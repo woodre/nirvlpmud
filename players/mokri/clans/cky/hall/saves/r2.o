@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/cky/hall/r1","east",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A Hockey Stick","/players/jenny/wings/items/gstick",0,5,1,"[1;36mCrystal Longsword[0m","/players/llew/closed/crystal/crystal_sword",0,1776,164,"[1;36mCrystal Longsword[0m","/players/llew/closed/crystal/crystal_sword",0,5783,0,"[1;36mCrystal Longsword[0m","/players/llew/closed/crystal/crystal_sword",0,4039,0,"A finely honed longsword","/players/snow/WEAPONS/hon_sword",0,0,0,"A dark brown cloak","/players/vertebraker/misc/mage/items/cloak",0,0,0,"Bracers of Speed","/players/maledicta/cont/rdragon/sbracers","-0-",0,0,"A 1997 [1m[37mStanley Cup [0mChampionship Ring.A 1998 [1m[37mStanley Cup [0mChampionship Ring","/players/jenny/wings/items/combinedrings",0,0,0,"[1;37mNature's [1;32mBlessing[0m","/players/jaraxle/3rd/alt/items/nature_orb",0,0,0,"the face of [1;30mCyberJesus[0m","/players/vertebraker/misc/cj/cj_face",0,0,0,})

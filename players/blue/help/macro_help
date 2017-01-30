@@ -1,0 +1,12 @@
+The following macros are defined for the 'lpc' command:
+
+macro-               meaning-
+ENV(x)               environment(x)
+TP                   this_player()
+FP                   find_player()
+FL                   find_living()
+PR(x,y)              present(x, y)
+FO(x)                find_object(x)
+TEOB(ob, mesg)       tell_object(ob, mesg);
+
+If you know of any other useful macros, feel free to mail blue.

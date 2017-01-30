@@ -1,0 +1,193 @@
+                      -=[ Symbiote Guild ]=-
+                      
+This is a watered-down version of the guild summary. This covers
+powers, and other pertinent info.
+ 
+Guild Disadvantages:
+
+1.  Miniguilds       : not allowed, this includes the loss of the following...
+                       no portal spells 
+                       no flat healing spells 
+                       no healing decorpse
+                       no lead spell
+                       no weapon comparison
+                       no light spell
+                       no increased stealth
+                       
+2.  Quit             : cannot quit while in combat
+                
+3.  Game Spells      : no game spells
+
+4.  Pets(Any major command issued for a pet will devour the pet(dest it)
+         if owned by the symbiote)
+                     : no mud pets  
+                       
+5.  Magic            : magic is restricted to 5 max, sp is still a prime factor.
+                       This example list does not include all abilities vital to
+                       a symbiotes performance, costs range up to 75% sp
+                       low range attack spell costs 15 sp
+                       mid range attack spell costs 30 sp
+                       high range attack spell costs 40 sp
+                         
+6.  Matter           : some abilities require matter expenditures. Matter can only 
+                       be obtained though corpse draining, corpse draining offers
+                       no benefits, max matter = 300, transformation cost = 200,
+                       this leaves little matter to work with. Also 100 more matter
+                       must be obtained to transform again after the initial
+                       transformation. If mp drops below 10 then 50 hps will be
+                       transfered to 10 matter.
+                                                      
+7.  Armor            : no armor in symbiotic form, can use armor in human form.
+                       ac averages between 6-9 (compared to the high of 18 for
+                       guildless and others)
+                       ac low 4 5% of the time
+                       ac high 23 5% of the time
+                       some abilities affect ac
+                       hypermode increases dmg at the loss of -3 to -4 ac
+
+8.  Weapons          : can not use weapons in symbiote form.
+                       can use weapons in human form, although no spells
+                       besides a decorpse in human form(gives only matter
+                       points, no hps)
+
+10. Infusion         : symbiotes are affected negatively by healing powers,
+                       5 damage on a 25% chance until infusion is gone
+
+______________________________________________________________________________________
+
+
+AutoMoves (attack and defense):
+Here are the attack averages with guild weapon and add-ons:
+Average damages(NO ATTACK SPELLS):
+Symbiote**********************************************
+19th level with no additional enhancements:  
+3.578 for 100 rounds vs. 17 ac.
+
+19th level with Sword/spear/axe ability on:
+5.66 for 100 rounds vs. 17 ac.
+
+19th level with Sword/spear/axe ability and hypermode for one
+set:
+6.257 for 100 rounds vs. 17 ac.
+*******************************************************
+                VS.
+guildless**********************************************
+Guildless with a weapon that is 18 wc with a 25% special of 6:
+3.736 for 100 rounds vs. 17 ac.
+
+Guildless with AIR:
+8.687 for 100 rounds vs. 17 ac.
+
+Guildless with CHAINGUN:
+10.54 for 100 rounds vs. 17 ac.
+*******************************************************
+And just for laughs:
+19+21 poly in tetra with 4 wc 18 weps:
+22.402 for 100 rounds vs. 17 ac. 
+
+This may be too low. Might need to up, but will find out in beta
+testing.
+ 
+Defense:
+ In changed form the players base ac is random(stealth /2)
+ (Note that this guild does not use mini guilds, so no feline bonus on stealth).
+ Each round an additional bonus is possible to ac. The following is a listing of
+ defense moves. Note that if one move goes off, then none of the others are 
+ possible that round. This is HIGHLY randomized. 
+  
+      50%    +1 ac
+      40%    +2 ac
+      30%    +3 ac
+      20%    +4 ac
+       5%    +14 ac 
+______________________________________________________________________________________
+  
+  
+
+Abilities:
+NOTE: sp cost is at best, some start at a much higher amount and are lowered
+the more it is used. All attack spells work this way.
+Name:      Cost:         Level:   Effect:
+
+Absorb      sp: 0
+            mp: 0          1       takes corpse level + 1 to MP.
+
+Fatal       sp: Varies     1       Finisher move. Opponent must have less than
+            mp: 0                  50 hps, be at 0/10. Cost is opponents hps
+                                   /3 in hp damage to the user.
+
+Flee        sp: 15         8       retreat from combat
+            mp: 0     
+
+
+Harden      sp: 10         8       Symbiotes body hardens.  Ac becomes normal +
+            mp: 5                  random(level * 2).  Wc will range between 8-
+                                   12 with no spells functioning. 
+        
+                                    
+Shape Type  sp: 50         10      shape symbiote into a more lethal weapon
+            mp: 50                 <affect>    + random(8) + 1 to wc
+                                   <duration>  til changed
+                                   <types>     sword,axe,spear
+
+Burn off    sp: 5          12      symbiote increases metabolism to burn off
+            mp: 1                  waste.
+                                   <affects>    drops intox,soak,stuff by -1
+                                                every hb.
+                                                75% chance.
+                                                -1 sp for each point of intox
+                                                -1 sp for each stuff/soaked pt
+                                   <duration>   (will power) random min of 1/2
+                                  
+Web         sp: 20         14      keeps an npc type mob from wimpying.
+            mp: 5
+
+                                   
+Regenerate  sp: 10         18      Symbiote speeds up healing process
+            mp: 1                  <affects>    heals 1-2 hp per hb 
+                                                takes 1-2 sp per hb
+                                   <duration>   (Intelligence) random min of 1/2   
+
+Hypermode   sp: 70         19      allows double the auto moves to go
+            mp: 0                  off while in combat. this can
+                                   allow for double the bonus to the
+                                   weapon hit. number of rounds this
+                                   is active is 30 rounds + extra 
+                                   level.  Ac is negatively effected by
+                                   -3 to -4.
+**********************ATTACK SPELLS*******************************************
+Web slam    sp: 15         6       Base dmg: (5-15)  Advanced dmg: (10-20)
+            mp: 1
+
+Bite        sp: 30         10      Base dmg: (4-16)  Advanced dmg: (12-36)
+            mp: 0                  Base hp heal: (2)     Advanced hp heal: (6) 
+                                      Max hp healed: (12)
+                                      
+Frenzy      hp: 10-30     15       Frenzy adds directly to the symbiote wep.
+                                   The bonuses are 15, 30, or 45. This spell
+                                   runs off of hps, mp, as well as a new source
+                                   known as frenzy_level.  Frenzy level can be
+                                   driven up in this way:
+                                   A very hard hit raises it 1 pt.
+                                   bone crushing raises it 3 pts.
+                                   massacre raises it 8 pts.
+                                   When the players frenzy level reaches:
+                                   20, then they can cast it at level 1 and
+                                   receive a bonus of 20 to the wc. At 40 pts
+                                   can cast for a 30 bonus. At 60 pts can cast
+                                   and receive a bonus of 40.  Other spells
+                                   can not be cast at the same time as this one.
+******************************************************************************
+
+**********************MISC.***************************************************
+ssave                              guild save.
+
+link_help                          brings up the guild help.
+
+link                               brings up powers related to the link.
+
+rip_out_symbiote                   removes a player from the guild.
+******************************************************************************
+
+____________________________________________________________________________________
+

@@ -1,0 +1,22 @@
+             NeoBard Instrument commands
+
+
+songhelp             -      this help file
+farsong              -      special gossip
+farsonge             -      special gossip emote
+change_instrument    -      change instrument short
+crs                  -      create a song in memory
+view_song            -      shows stored song
+autosong             -      recites stored song
+songbreak            -      stops recitation
+change_title         -      changes your title
+update_instrument    -      updates the instrument
+toss_instrument      -      gets rid of this object
+
+
+Note: to get details on all commands except 
+      toss_instrument, songhelp, and songbreak 
+      can be found by typing just the command
+
+
+                               -a Mythos/Saber product

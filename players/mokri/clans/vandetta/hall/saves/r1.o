@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/vandetta/hall/main","west","/players/mokri/clans/vandetta/hall/r3","south",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,1630,501,"A finely honed longsword","/players/snow/WEAPONS/hon_sword",0,118,22,"[1;34mAmulet [0m[34mof the coming [1;34mStorm[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_amulet",0,0,0,"[1;34mBracers [0m[34mof the rushing [1;34mStorm[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_bracelet",0,0,0,"[1;37mAn overcloak of ShADoWs[0m","/players/forbin/realms/ruins/OBJ/newscloak",0,0,0,"Shamanic [34mboxer shorts[0m","/players/vertebraker/swamp/OBJ/denim_shorts",0,0,0,"[1;30mGrey onyx-cluster ring[0m","/players/eurale/Chess/OBJ/ring",0,0,0,"[1;34mEarring [0m[34mof the raging [1;34mStorm[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_earring",0,0,0,"A black belt [31m<Demon Cursed>[0m","/players/valen/area/catacombs/armors/d_belt",0,0,0,"[32mWarpstone[1;30m Armor[0m","/players/khrell/armors/skaven/warparmor",0,0,0,})

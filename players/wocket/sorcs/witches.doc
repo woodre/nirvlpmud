@@ -1,0 +1,112 @@
+Witches v2.0 -
+
+
+Theme -
+	A spell casting guild, concentrating on magical damage as
+opposed the physical damage.  Spells are learned as one travels 
+through the land so experience will never be 'robbed' from the player.
+But also players must have a certain ammount of experience before they
+can learn to comprehend complex magical spells.  Once learned however
+they are not forgotten through death.
+Because magic is being used as a form of destruction spells of creation
+are never learned.  For example:  A player might summon a pre created
+monster to serve their purposes but never raise the dead or bring life
+to a creature.  Also a player might steal life from another living
+object but will never be able to heal straight out.
+
+Objectives -
+	A player enters the guild when another player binds a spellbook
+for them.  A player then must seek out npcs (possibly player) to train
+them in certain spells.  Players must have an min exp ammount to learn
+a spell as well as a min number of practice points in a certain 
+type of magic ie. evocation, illusion, sorcery, etc...
+Exp amounts are not shown to player nor are practice points.
+
+	Because allowing a new member to join the guild costs a lot,
+hopefully this will slow members joining and get rid of a lot of
+the trouble makers.  People wont be willing to let just anyone in
+if it will cost them a lot.  Hopefully what monsters teach what, will
+be keep somewhat of a secret.  Also with this method new spells can
+be added with ease.  No one can ever max the guild out because no
+one will ever know if they have every spell. 
+
+	A player will receive a "book of shadows" at which they
+can make their own personal notes in as well as where they write their
+gained spells.  Help files will be limited allowing the players to
+write their own.
+
+	Witches are not a very strong attack guild but very effective
+as a secondary party member.  Hopefully parties will be encouraged
+gaining more for the mud as a whole.
+
+Advantages -
+	Spells do more then suggested damage.
+	Witches automatically gain 2 sp a round.
+	No exp costs for spells.
+
+Disadvantages -
+	No casting a spell while wielding a weapon.
+	No casting a spell while wearing armor.
+	No casting a spell in the dark.
+        No wimpy
+        Lower max stamina
+        Lower max strength
+        A lot of the commands are blocked and either redone
+        with in the guild or removed completely.
+
+Spells -
+
+Name                 Cost                Effect
+----                 ----                ------
+magic missile        10sp              random(30) damage
+shocking grasp       15sp              random(40) damage
+fireball             20sp              random(50) damage
+sonic                25sp              random(60) damage
+invisibility         40sp              target is_invis 18
+light                10sp              set_light(2) in specific room
+darkness             10sp              set_light(-5) in specific room
+teleport(speedster)  10sp              moves player up to 5 rooms away
+teleport(no error)   100sp             teleports player to set locations
+escape (teleport)    40sp              moves player to random location
+gate (teleport)      100sp creation    creates two gates from one player to 
+                     50hp usage          another.  The gates remain set for
+                                         a limited time.
+lifedrain            50hp 3delay       random(45)+10 damage->caster hp
+stoneskin            150sp             ac 75, player can not do any actions
+summon bear          50sp  3sp_upkeep  summons a bear for the battle
+summon griffin       100sp 5sp_upkeep  summons a griffen for battle
+summon golem         200sp 10sp_upkeep summons a golem for battle
+summon giant         300sp 15sp_upkeep summons a giant for battle 
+summon torach        40sp              summons a trader 
+dazzle               100sp             peace monster
+fog                  175sp             creates fog in room (no_fight zone)
+circle of protection 75sp              create circle so npcs cant enter
+bookbind             300sp 100kexp     create a new spell book (initiate member)
+true_sight           60(50)sp
+featherweight        50(35)sp          set_weight of object -1;
+enchant weapon       50(35)sp          set_wc +1
+enchant armor        50(35)sp          add defensive special to armor;
+fairyglow            50(35)sp          set_light(1) on item;
+identify             30(30)sp          show stats on an item
+locate               50(20)sp          show location of an object
+knowing              
+appeasing lust      100hp 100sp 50kexp ask a wish.  wish may or may 
+                                        not be granted by a guild wiz.
+bind                 40(40)sp          force monster not to wimpy
+                                       lower ac 1 wc 1
+blind                100(75)sp         cause blindness in player (no look)
+                                       in monster wc / 2
+infuse               random(50)        player to player sp->transfer
+
+ - possible spell ideas
+shield
+circle of fire
+mirror image
+blur
+haste
+slow
+
+Note:
+  This is NOT a powerguild!
+  It is a theme guild.
+  Doc is subject to change.

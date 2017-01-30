@@ -1,0 +1,52 @@
+#include "/players/mythos/closed/guild/def.h"
+
+object ob, ob2;
+int n,m,check;
+
+short() {
+  string shr;
+  shr = allocate(18);
+  shr[0]="Shrine Center [n,e,s,w]";
+  shr[1]="Smithy [n]";
+  shr[2]="Forest [n,e,s,w]";
+  shr[3]="Forest Pathway4 [se]";
+  shr[4]="Library Entrance [portal,n]";
+  shr[5]="The Post Office [n,s]";
+  shr[6]="Village church";
+  shr[7]="Village church";
+  shr[8]="Village church";
+  shr[9]="Village church";
+  shr[10]="Just for Kicks [n,s]";
+  shr[11]="Just for Kicks [w,e]";
+  shr[12]="The adventurers guild";
+  shr[13]="The stomach [throw_up,s,blood]";
+  shr[14]="BGC Tokyo [n,w,s]";
+  shr[15]="Village road [west,east,south,north]";
+  shr[16]="Jetty [w,e]";
+  shr[17]="City of Ryllian [n,e,s,w]";
+  return shr[random(18)];
+}
+
+long() {
+  write("You have entered the entrance hall to the guild.\n"+
+        "darkness shrouds this room and sounds are deadened.\n");
+  write("You may go: annex <back to the library>\n");
+}
+
+reset(arg) {
+ if(!present("plaque")) {
+  move_object(clone_object("/players/mythos/closed/guild/plaque.c"),this_object());
+}
+if(arg) return;
+  check = 0;
+  set_light(1);
+}
+realm() {return "NT"; }
+init() {
+  add_action("north","annex");
+}
+
+north() {
+  MV,"north#players/mythos/closed/guild/seclib.c");
+return 1;}
+

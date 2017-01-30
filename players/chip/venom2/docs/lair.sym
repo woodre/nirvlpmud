@@ -1,0 +1,25 @@
+Lair is the ability to enter your place of safety
+from all the world.  When you reach player level
+16 and then store the proper amounts of spell
+pts, matter, and coins, then you can create your
+lair.
+
+When you have enough, you will be notified by a 
+message.  Use 'place' at the room you want your
+lair to be at to put it into the ground. From
+then on, all you need do is use the command
+'lair' to enter when you are at that room.
+
+Related Commands:
+  place - Create your lair at the desired room.
+
+  store_mp <amount>  - Save up Matter.
+  store_sp <amount>  - Save up Sps.
+  store_mon <amount> - Save up Money.
+All of these can be stored at the main guild hall,
+but cannot be retrieved for any purpose other than
+what it was intended for.
+
+Cost: 5000 Mp, 5000 Sps, 1 million coins (stored)
+Skill Level: 0 (requires 16th Player Level)
+

@@ -1,0 +1,15 @@
+
+=============================================================================
+---- Rank 5 Spells ----------------------------------------------------------
+ Aid <plyr> <amt>    -- Send Hit Points to a Player                     amt-hp
+ Cash <target>       -- Use Money to attack your Enemy                  ??
+ Sneak <dir>         -- Move into a room undetected                     15
+---- Rank 6 Spells ----------------------------------------------------------
+ Crush <target>      -- Squeeze the life out of your enemy             rank
+ Teleport            -- Magicaly Teleport [see mhelp teleport]           40
+ Recruit <player>    -- Recruit a Player to Join the Guild              --
+---- Rank 7 Spells ----------------------------------------------------------
+ Prayer            -- Cast a shield around all Players in Room        45+
+ Hurl <obj>          -- Throw a weapon at a Monster for damage          --
+ Flame <target>      -- Cast Fire at your Enemy                         50
+==============================================================================

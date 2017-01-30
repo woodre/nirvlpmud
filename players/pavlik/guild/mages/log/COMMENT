@@ -1,0 +1,109 @@
+[Dec  4 10:29] Pavlik: test
+[Dec  4 13:59] Jason: testing cuz earwax is snooping
+[Dec  4 14:00] Jason: should have somewhere that you have to say train cause it says no where in help
+[Dec  4 15:02] Jason: might put some way of telling what kinda of enchants or protects that you have like an affects command or somethin
+[Dec  4 19:38] Toranaga: atmosphere typo'd in mhelp welcome
+[Dec  4 19:58] Toranaga: mhelp gdiv has typo in 'from'
+[Dec  4 20:00] Toranaga: mhelp advancing typo: training sessions
+[Dec  4 20:02] Toranaga: give a message when you do 'gtitle'
+[Dec  4 20:03] Toranaga: mhelp <blah> just returns 1, no message given
+[Dec  4 20:04] Toranaga: typo in 'mhelp dlead'
+[Dec  4 20:04] Toranaga: currently, that is, in dlead file
+[Dec  4 20:10] Toranaga: the advance message should be on guild channel
+[Dec  4 20:10] Toranaga: i can't use gdiv
+[Dec  4 20:35] Toranaga: old useless belt registers as worn but the short doesn't indicate it
+[Dec  4 21:12] Toranaga: training chamber - typo, thier should be their
+[Dec  4 22:01] Toranaga: ok, raise gives a message if you try to do it outside of the tower, but you have to 'say raise'? that's clumsy
+[Dec  4 22:09] Toranaga: doesn't appear to be anything preventing us from blowing training sessions when we are max in an attrib
+[Dec  4 22:25] Toranaga: 'teach jason' - typo in experienced
+[Dec  4 23:14] Toranaga: damage helpfile, typo: consider should be considered, also, devastates typo'd in last line
+[Dec  4 23:54] Toranaga: nature burger typo, should be "that's" not thats
+[Dec  5 01:03] Toranaga: ok sdagger is spammable, not sure if it actually deals damage the extra times it runs in a hb
+[Dec  5 06:59] Jason: idea for extra training sessions when stats are maxed make it where can exchange like say 10 sessions for 1 spell session
+[Dec  5 07:19] Toranaga: mhelp bugs still says to mail verte with them or use bug/typo commands
+[Dec  5 07:34] Toranaga: summoning chamber, can't l at runes, or ground, and 'thier' is typod
+[Dec  5 07:35] Toranaga: dragon trainer should have an id of trainer
+[Dec  5 07:36] Toranaga: it's 'summon dragon' but going by other spells, you would think it'd be 'dragon' which does a return 1, rather than giving a message
+[Dec  5 07:43] Toranaga: 'cost level' i will cost you....shouldn't this be 'it will cost you' ?
+[Dec  5 07:44] Toranaga: i'm really thinking i like dragons
+[Dec  5 07:44] Toranaga: however, they should prolly be ansi'd up
+[Dec  5 07:45] Toranaga: check out earwax/lib/color_parser.c - for players to be able to use color from command line
+[Dec  5 08:13] Toranaga: i'd prolly be a dick for bringing it up, but i'd like to see more components required - stoneskin perhaps requiring some kinda lotion you rub on, or herbs, or something
+[Dec  5 08:14] Toranaga: also, might be nifty if the staff was the ONLY weapon we could use
+[Dec  5 08:14] Toranaga: prolly not practical, but who knows, it's not like rangers and ninja don't get along without using game weapons, we should be about the spells rather than the hockey stick or whatnot
+[Dec  5 08:15] Toranaga: also, our ac should perhaps be looked into, we have truly badass ac
+[Dec  5 08:15] Toranaga: although with the hp penalty and the extra phys damage, not sure if it doesn't work itself out, but i'm killing moe (60k mob) pretty easily, although i went all-out (sp heals, good gear, strangle, animate dead, etc) against him
+[Dec  5 08:17] Toranaga: regarding component for stoneskin, it appears in the spell message that you take a small gemstone, so that should be component
+[Dec  5 08:18] Toranaga: i like strangle
+[Dec  5 08:19] Toranaga: not sure that life steal is worth using, seems to be too dangerous
+[Dec  5 08:20] Toranaga: interesting, can ffire, wait a round or 2, then blind, but can't do it the other way, not a problem, just an observation, it's a good thing
+[Dec  5 08:21] Toranaga: perhaps something on mon that shows timers
+[Dec  5 08:21] Toranaga: an extra line beneath it, maybe, with durations of various stuffs and spell delays
+[Dec  5 08:22] Toranaga: i'm really liking soul crush, very thematic, cool messages
+[Dec  5 08:22] Toranaga: calcxp should be taken off the timer and either tied into command hook or into the addition of exp itself
+[Dec  5 08:24] Toranaga: spell info should show whether an arg can be used with a spell or not
+[Dec  5 08:24] Toranaga: eshield should give a message when it wears off
+[Dec  5 08:25] Toranaga: damage over time idea is a very good one, i think it'd be extremely thematic not to mention fun
+[Dec  5 08:26] Toranaga: we don't coin particularly quickly but we seem to be devastating against bigger mobs, particularly in parties with sp heals
+[Dec  5 08:30] Toranaga: add replyto to guild tell command
+[Dec  5 09:38] Earwax: ran_messages in room inherit definitely needs to not re-callout if there's no player present
+[Dec  5 10:15] Earwax: shadow_dagger is a more efficient spell than blister - higher damage, higher average damage, and lower cost - according to the headers at least
+[Dec  5 10:16] Earwax: there should be a 'damage.h' define that has all the costs and damage calcs
+[Dec  5 10:17] Earwax: COST_SDAGGER 10 +funtogetillusionlevel()/4  .... SDAGGER_DAMAGE blah
+[Dec  5 10:29] Earwax: appears to be some issues with animate dead - cropping up in the bug logs
+[Dec  7 20:43] Marlboro: use practice and training sessions to train the guild dragon...allows you to either use extra, or to fine tune your build as you see fit.
+[Dec  7 20:53] Marlboro: i get a sensitive mind error when i cast curse
+[Dec 14 08:48] Jason: suggestion for a heal in ghall thats like 40 hps and 60 sps
+[Jan  4 16:36] Mortarion: perhaps the spell point cost of blister could be reduced, it's not cost efficient.
+[Jan  4 17:17] Mortarion: eshield could use a message when it wears off.
+[Jan 19 06:59] Jason: 0
+[Jan 19 07:22] Jason: strangle doesnt work
+[Jan 23 02:20] Jason: confuse should be a calm spell not a retreat
+[Feb 23 17:00] Crip: just a suggestion maybe a map to the beginning of each floor for people new to the guild?
+[Mar  8 14:26] Crip: heh 9k and up is a little crazy for coins to raise a stat point one time for dragons.... any way it could maybe be like 2k..... i think that will turn people off on using dragons as a pet if they have to spend that much money just to raise stats..... just a suggestion *crip*
+[Mar 10 17:09] Crip: a command maybe that we can use on our armors...... wrap or something that wraps them with a element of energy
+[Mar 10 17:09] Crip: a command we can use maybe to wep our weapons in the elements..... fire, ice and so on
+[Mar 10 21:13] Crip: what about an idea that a mage uses the souls of a victim to cast a cloak of souls over themself working as a defensive barrier..... feeding from the slain foes they kill
+[Mar 13 02:54] Pavlik: maybe update dragons so that players pick which spells they get
+[Mar 14 02:13] Toranaga: using 'generic' (my dragon's name apparently) without an arg gives sensitive mind message
+[Mar 14 03:11] Toranaga: in long desc for wizard mark erace should be erase
+[Mar 15 04:15] Elloco: if a spell casting FAILS, the delay should NOT be placed into effect. just my two cents
+[Mar 21 16:45] Mortarion: the spell type of absorb says evocation, yet help file says it delays alteration
+[Mar 23 01:51] Mortarion: the auto calc for gpx just ate 166700 exps and made them gxps pav  at this rate i'll be a level 1 newbie ;P
+[Apr  7 22:46] Mortarion: Give the etheriel dagger a description! Sheesh! Don't make me smack ya ;)
+[Apr 10 17:10] Pavlik (lvl:101) (rank:100) learned spell 'sac'
+[Apr 13 17:59] Jason: 20 seconds is a little long between attack spells should be like maybe 5 or so
+[Apr 26 23:28] Squint: typo in tell_room() fore stone skin wearing off...extra space between skin and spell.
+[Aug 14 13:16] Blake: no help file for mhelp experience though it says there should be one
+[Aug 15 11:13] Legacy: calcxp is a little wacked, I leveled to level 10, and then calc xoued and I swapped down to what I logged in at
+[Aug 16 15:19] Crip: is there  a way to convert trains into a chance for gaining new spells my stats and attribs are maxxed at 100% and all i am getting is a build up of trains and no new spell chances
+[Aug 16 19:18] Blake: maybe something in our monitor to show we have augury cast
+[Aug 16 19:18] Blake: and i think augury shouldn't last so long
+[Aug 16 19:20] Blake: nm on the previous about augu
+[Aug 16 21:22] Crip: anyway we can take the thing where you have to be trained by another mage out...... since no one is here high enough to train any of us at the time stage
+[May 14 10:29] Lanith: mtitle I believe should be set for rank 40 and not rank 15, since we have all these nice guild titles up til then
+[May 14 10:30] Lanith: mssle is very low dmg at lower levels it may need to be twinked to add a bit extra for low level mages
+[May 14 10:36] Lanith: I might be missing it, but we might need a portal room to the church or something in the guild towder
+[May 14 10:39] Lanith: while I enough the still cheap bags of holding in zinctal shop, inside the tower, you might want to change it up to the 1500 price instead of 500
+[May 14 10:40] Lanith: most mages agree that a spell componant pouch would be a good thing, to help  us organize components if nothing else.
+[May 14 15:42] Lanith: the following spells have yet to be added to the guild invuln,phantasm they are able to be learned but have no powers
+[May 14 15:43] Lanith: wizhat should have ac 1 I believe, since it like the only helm we can wear
+[May 14 16:04] Lanith: the silk robe from softely area should add bonus to guild intelligence and or wisdom
+[May 14 16:06] Lanith: shamanic boxer shorts from v's area should add guild bonus to conjuration and or will power
+[May 14 16:07] Lanith: amulet of lighting should add guild bonus to evocation
+[May 14 16:09] Lanith: aura of death's weight should be lowered to allow mages to wear it, and add guild bonus to necromancy
+[May 14 16:11] Lanith: spell staff from storm lich should have guild bonus +1 to all stats
+[May 14 16:13] Lanith: shadow veil should add guild bonus to illustion
+[May 14 16:15] Lanith: robes of the archwizard from snows mountain should give +1 guild bonus all schools of magic
+[May 14 16:18] Lanith: enchanted grey sash from eurales chess should add guild bonus to enchantment
+[Jan  3 13:58] Tierno: when a forced save is installed  dragon should be tied it somehow
+[Jan  5 15:38] Kutharsen: in 'commands' list, guild channel should show as 'gt' not 'gc'
+[Jan  6 00:54] Kutharsen: -Mages Khirstel- when you look at him, under where his HPs are shown, it says "Kristel Commands are:"....Kristel??
+[Jan 10 21:21] Corwin: Maybe have a trains to spellslot conversion of 10 to 1. So by spending 10 trainings, you get 1 spellslot? Something like that..
+[Mar 15 14:23] Rumplemintz: test
+[Mar 28 18:54] Narlav: The tlp setmark does not work, the error message, or just regular message, says it is still in alpha mode. If it is not being put in then it should be removed entirely, including from the helpfiles.
+[Feb 12 18:20] Cian: might want to change the affluence message for /players/guilds/
+[Sep  6 17:06] Wulfe: just a quick note, it might be good to return ASCII colors to normal at the end of 'msc' else it leaves everything cyan for awhile.
+[Sep  6 17:07] Wulfe: quick typo note: Your missle fizzles ("missile")
+[Sep  6 17:07] Wulfe: quick typo note: Your missle goes wild and strikes ("missile"). Oddly this is spelled correctly sometimes, so the string must be in a couple places.
+[Sep  6 17:16] Wulfe: oh yeah, freaking awesome guild

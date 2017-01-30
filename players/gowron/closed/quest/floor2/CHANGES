@@ -1,0 +1,5 @@
+12/6/99 - Dragnar
+  Modified smithers.c : He now does a check to make sure burns
+  is present before making the player attack burns and healing
+  himself.
+  Also modified the return; to return 1; in br.c solve()

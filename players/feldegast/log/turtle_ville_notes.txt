@@ -1,0 +1,113 @@
+Turtleville notes
+-----------------
+5/5/98
+tspath1.c - apperance ->appearance
+postmaster.c - shinny->shiny
+glint IN the light
+Shouldn't it be "A postman's hat"?
+Also, there's nothing to indicate why it would provide more
+protection than other hats.  (ac2)
+tville_fount.c - roofs tops -> roof tops
+The fountain is too spammy.
+Rewrite the last sentence of the long.  It looks awful.
+fountain - wonderfull -> wonderful
+drank
+drank -> drunk (drink?)
+You might want to combine the last two sentences of the fountain
+description.  Also... which->whom 'wish'->'wish'ed
+twpath1.c - shinying -> shining
+there -> their
+shell like -> shell-like
+twpath2.c -
+Change 'To the east leads back into town.' to 'To the east the road leads back into town.' or 'A town is to the east.' or 'To the east is the town.' or anything but the murderous butchery of the english language that it is at the moment.
+tnpath1.c - 'The roads are nicely paved with the sky blah blah blah'  WITH the sky?  I dinnae think so.
+tville_adv.c - 'the' shields
+outlaying -> outlying
+'On the back of the wall some pictures of great battles hang.'
+sylic -
+'You are much TOO advanced to be trained by me.'
+shellmail - turtules -> tortillas
+bloodlust - 'The hilt is decorated with silver and rubies and the blade has many ancient runes carved into it.'
+advance hall, pictures - greusome -> gruesome
+tville_shoppe.c - sqeaks -> squeaks
+Work on the third sentence.  It needs help.
+shopkeeper - maning -> manning
+distinquished -> distinguished
+shell smith - midle -> middle
+garbs -> garb
+The shell armor descriptions are kinda monotonous.
+In the case statement of the shell smith, you misspelled 'shellshield'.
+mikel - makes -> make
+easiably -> easily
+hes -> he's
+hardy -> hearty??  hardly??? no idea here
+tnpath3.c - a -> an
+'as south'??? What do you mean 'as south'?
+in -> to
+tnpath5.c -
+streaching -> stretching
+seemed -> seem
+'The west' -> 'To the west, the paved road leads back into town.'  Again, anything but 'The west'.
+tville_hall.c - emmense -> immense
+encumbances -> emcompasses
+erh, encompasses
+brillant -> brilliant
+comforts the chairs?  What were you thinking?
+ruffling -> are ruffled?
+mayor - foot -> feet
+tville_tower.c - enought -> enough
+magus -
+His descrip is being linewrapped by zmud.
+healing potion - tenticals -> tenticles
+A elongated -> An elongated
+staff - being -> begin
+tnpath4.c - 'To the east leads'???
+as -> .
+tvmarsh2.c - keep -> kept
+gloom?
+tvmarsh1.c - but with?
+tvmarsh4.c - as?  What is it with you and as?
+seems -> seem
+tvmarsh5.c - muddly -> muddy
+tvmarsh6.c - hand -> hang
+streching -> stretching
+tvmarsh8.c - thined -> thinned
+What exactly are you trying to describe here? 'impossible crossing lakes'?
+tvmarsh7.c - there -> their
+tvmarsh3.c - surrounds -> surround
+
+General comments
+----------------
+I think you did a good job with general concept, with the npc's
+and the monsters, but I also think you didn't do a very good job
+on your room descriptions.  You don't seem to have as many typos
+as you'd had in the graveyard, but you had alot more grammar
+problems and sentences that just don't sound right.
+
+I think you're going to have trouble drawing a crowd.  As a
+stand-alone area, it has nothing in it that can't be found
+elsewhere(with the exception of the healing potion).  A few of
+the npc's in town have good weapons, but I think players will be
+reluctant to kill monsters in town if they provide services(this
+is just a hunch).  Since your castle is located in such a remote
+location and nothing else is nearby, I think you need to cover
+all of the bases(monsters, heals, armor, weapons, transportation).
+Hmm...I should keep that in mind myself.  Anyway, I think you
+should put more stuff into the town.  It doesn't seem complete
+like it is.  You could have an old graveyard(okay, that's been
+done to death on here), a secret passage beneath the magus tower,
+a dead body beneath city hall, a statue of the town founder, a
+quiet nook where lovers meet, anything.  I just think you need
+something to show that this isn't just another arbitrary place
+for selling loot and buying armor.  Keep that in mind...
+
+As for how you should connect Turtleville to your area, I think
+you should connect it to the mushroom grove.  The road leading
+east from the fountain could connect to the second(?) room after
+you enter the grove.  It'd be nice if you could connect it to
+your dryant graveyard as well, but I'm not as familiar with that
+area.  I think players would be more likely to stop by Turtleville
+if they were just coming back from slaughtering a few nonges.
+Oh well...Just a few thoughts.  Take 'em or leave 'em...
+
+Feldegast

@@ -1,0 +1,12 @@
+#define V_PRIOR_RACE "PriorRace"
+#define V_HIDING     "HideSoul"
+#define V_DOG        "Darkhound"
+#define V_ZOMBIE     "Zombie"
+#define V_SHADOW     "playerShadow"
+#define V_HEAD     "bph"
+#define V_LARM     "bpla"
+#define V_LLEG     "bpll"
+#define V_RARM     "bpra"
+#define V_RLEG     "bprl"
+
+#define SPELL_DELAY "spellDelay"

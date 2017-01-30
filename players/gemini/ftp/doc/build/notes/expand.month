@@ -1,0 +1,17 @@
+ctime() returns truncated months.. i.e.
+ "Jun" for "June" .. 
+ or "Oct" for "October" ..
+
+You can get replace the month in an easy step by:
+      str = "Oct";
+      str = expand_month(str);
+      write(str + "\n");
+
+In other words .. It'll say October, not Oct :)
+
+Just a quick little efun.
+
+        string expand_month(string truncated_month);
+
+/obj/simul_efun/expand_month.c for code.
+

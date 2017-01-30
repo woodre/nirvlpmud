@@ -1,0 +1,130 @@
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/ptrees.c
+[31m==>[0m room looks and read well. Only comment is a question
+[31m==>[0m   Do plums have cores? I thought they had pits? Is
+[31m==>[0m   that more of a regional dialect thing? Hmm. That
+[31m==>[0m   actually turned out to be 3 questions.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/mobs/plumpy.c
+[31m==>[0m Description is rich and detailed. Mumtaz!
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/rooms/rtrail.c
+[31m==>[0m Add an item desc for 'trees' and 'house' as
+[31m==>[0m   a tie in to the areas they connect.
+[31m==>[0m *****************************************************************
+[31m==>[0m players/martha/area/rooms/pforest.c
+[31m==>[0m Would you be interested in adding color here. for red and white?
+[31m==>[0m   It might be a subtle touch.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/mobs/mrmint.c
+[31m==>[0m Good.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/weps/axe.c
+[31m==>[0m Consider making it WC 10. Another good idea might be to
+[31m==>[0m   make it have a special that only works for little the
+[31m==>[0m   little guys that would fight here. A newbie weapon as
+[31m==>[0m   it were, would really be a good idea. [Ditto for the
+[31m==>[0m   armors and other weapons that the mobs carry here.]
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/weps/piccolo.c
+[31m==>[0m Excellent. Functionality adds to the depth of the perception
+[31m==>[0m   within an area. Objects that actually do something.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/gmtn.c
+[31m==>[0m Good description. Add an item for 'crest' and 'sugar'
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/gmtn2.c
+[31m==>[0m Good desc.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/mobs/jolly.c
+[31m==>[0m /players/martha/area/heals/gumdrop.c
+[31m==>[0m /players/martha/area/weps/gloves.c
+[31m==>[0m Good
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/gpass.c
+[31m==>[0m Add an item desc for 'mountains'
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/road.c
+[31m==>[0m 'road' looks normal. What does normal look like?
+[31m==>[0m   Is it dirt? Gravel? Graham Cracker Crumb? Asphalt?
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/road2.c
+[31m==>[0m Add an item for 'castle' and 'house'
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/lcastle.c
+[31m==>[0m Add an item desc for 'castle'
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/mobs/lord.c
+[31m==>[0m /players/martha/area/weps/cape.c
+[31m==>[0m /players/martha/area/weps/shield.c
+[31m==>[0m Good.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/pbhouse.c
+[31m==>[0m Add an item desc for 'yard'
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/mobs/gnut.c
+[31m==>[0m /players/martha/area/weps/shoes.c
+[31m==>[0m /players/martha/area/heals/peanutbrittle.c
+[31m==>[0m Good.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/lwoods.c
+[31m==>[0m Might add an item desc for 'grape', 'cherry', 'orange',
+[31m==>[0m   'lemon', 'lime' and 'blueberry'
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/mobs/plolly.c
+[31m==>[0m /players/martha/area/weps/crown.c
+[31m==>[0m Good.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/icsea.c
+[31m==>[0m Add an item desc for 'chocolate', 'vanilla' and 'strawberry'
+[31m==>[0m figure out a way to edit the last line to reflect the fact
+[31m==>[0m   that people may not be headed toward the 'destination'
+[31m==>[0m   when they enter this room. Not sure what that will look
+[31m==>[0m   like when it's finished...
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/mobs/queenf.c
+[31m==>[0m add an id of 'queen' to Queen Frostine
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/weps/iccrown.c
+[31m==>[0m /players/martha/area/weps/wand.c
+[31m==>[0m Good. Consider the other suggestions for newbie weapons.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/mswamp.c
+[31m==>[0m Does the shadow refer to Gloppy? If so, what if someone
+[31m==>[0m   kills [God forbid] Gloppy? The desc needs to be mob
+[31m==>[0m   neutral.
+[31m==>[0m What color is the molasses?
+[31m==>[0m Maybe describe the spewing molasses in the room?
+[31m==>[0m *****************************************************************
+[31m==>[0m oops. Add an item desc for 'swamp'
+[31m==>[0m LINE
+[31m==>[0m /players/martha/area/mobs/gloppy.c
+[31m==>[0m Good.
+[31m==>[0m Thematically Gloppy might want a can of molasses heal.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/bridge.c
+[31m==>[0m Add an item desc for 'swamp' we just left
+[31m==>[0m Add an item desc for 'castle'
+[31m==>[0m Would be nice to add a custom function here to allow
+[31m==>[0m   player to 'taste' since you mention it in the long.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/rooms/kcastle.c
+[31m==>[0m Add an item desc for 'sprinkles'
+[31m==>[0m Add an item desc for 'chocolate', 'peppermint', 'peanut butter'
+[31m==>[0m   and 'caramel'
+[31m==>[0m Add an item desc for 'cone' and 'waffle cone'
+[31m==>[0m Add an item desc for 'walls'
+[31m==>[0m Consider adding a search function that when executed clones
+[31m==>[0m   the king and moves him into the room. Be sure to only let
+[31m==>[0m   players search once per reset though.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/martha/area/mobs/kingk.c
+[31m==>[0m Add an id for 'king' to the mob
+[31m==>[0m /players/martha/area/weps/suit.c
+[31m==>[0m /players/martha/area/weps/staff.c
+[31m==>[0m Same comments about newbie eq.
+[31m==>[0m *****************************************************************
+[31m==>[0m Wow. I think if you fix the stuff in this walkthrough,
+[31m==>[0m   there won't be much else to do. Congrats on a great
+[31m==>[0m   area and a great job of setting it up and getting it
+[31m==>[0m   done. Well Done.

@@ -1,0 +1,207 @@
+Rooms
+-----------
+so01
+  - Need following items added:
+    - From path:
+        ground
+        prints
+    - From buildings:
+        solar panels
+        satellite dishes
+==> KARASH: I added descriptions for all items, plus also added descriptions for 
+	building, panels, dishes.
+	
+so02
+  - Need following items added:
+    - From path:
+        ground
+        prints
+        door
+    - From buildings:
+        solar panels
+        satellite dishes
+==> KARASH: I added descriptions for all items, plus also added descriptions for
+	automatic door, doors, building, panels, dishes.
+	
+so03
+  - Need following items added:
+    - From tables:
+        marks
+    - seats
+==> KARASH: I added descriptions for all items, plus also added descriptions for
+	scratches, scuff marks.
+	
+so04
+  - Need following items added:
+    - From laptop:
+        cable
+==> KARASH: Done
+
+so05
+  - Need following items added:
+     - From path:
+        ground
+        prints
+    - From buildings:
+        solar panels
+        satellite dishes
+    - doors
+  - Just a suggestion, add an action to the room that adds a message to the room about the automatic doors
+    when the player leaves to the n or s. ASCII would be cool
+  - Guards are pretty spammy when both are in the room
+  - Guards not meant to prevent player from entering?
+==> KARASH: 
+	(1) I added descriptions for all items, plus also added descriptions for
+		building, panels, dishes, door, automatic door, automatic doors
+	(2) I added an action to ANY room object where you ENTERED or EXITED a building in the compound
+	(3) Lowered the set_chat_chance for Guard from 10 to 3 (2 guards in one room were very chatty)
+	(4) Yes, the guards were initially NOT meant to prevent a player from entering the main
+		building since the Commander will welcome any volunteers he can find to fight.  However
+		I changed it to make the guards stop you on their own terms b/c they are not happy 
+		with being stationed in the compound and wish to be the next soldiers through the slipgate.
+		You must now remove the guards to enter the main building.
+		
+so06 - Good
+
+so07
+  -Missing "." at the end of room description
+==> KARASH: Done
+
+so08
+  - computer equipment
+  - door
+  - wall
+==> KARASH: I added descriptions for all items, plus also added descriptions for
+	equipment, computers, glass door, walls, tables, conference table, server room.
+  
+so09
+  - computer equipment
+  - power supplies
+  - wall
+==> KARASH: I added descriptions for all items, plus also added descriptions for  
+	equipment, walls, counter, cords, corner
+  
+so10
+  - lights
+==> KARASH: Done.
+
+Mobs
+-------
+a_carmack.c - Good
+
+t_hall.c
+  - Not sure I understand the point of the bitch_slapped function being called from
+    the spell. It looks like the room will get two messages for the spell, and
+    the spell has an 80% fire rate. I'd suggest lowering the % and increasing the
+    damage a bit, then doing the second message from the function only when the
+    damage is close to the max amount.
+==> KARASH: I did this on purpose.  Initially, I was doing this to learn how to call a
+	function from the add_spell, but I decided to keep it the way it was.
+	I like the two messages for the spell because one is a vocal response and one is 
+	an attack action.  (1) The vocal chat is a humorous nod to John Romero's infamous Daikatana
+	Advertisement that simply stated "John Romero will make you his bitch!", which turned
+	off a lot of his fans, especially after the game bombed.  I even listed
+	that statement twice in the 3 statements found in the chat chance to give it more
+	probability to show. (2) The 'bitchslap' action from the called function is simply the
+	attack from this NPC.  Since this NPC has no weapon, I made the damage low, but with
+	a high % almost as if the NPC is flailing his arms trying to slap his attacker. I also
+	wanted a high percentage to serve as an insult to the attacker - heh.
+	If it's still a problem, let me know.
+	NOTE: Okay, I raised the damage needed to call the function statement on the second message from 1 to 9 (out of 10).
+	
+guard.c - Good
+s_petersen.c - Good
+a_mcgee.c - Good 
+
+keen.c 
+  - Where is the GB packers helmet for armor?!
+  - I think you should drop the % of spells firing and increase damage.
+  - He needs 1 more special ability for this level
+==> KARASH:
+	(1) Created a GB Packers helmet and NPC's favorite tshirt for the NPC.
+	(2) Changed Spell 1 from 50% 20-30dmg to 40% 40-60dmg.
+		Changed Spell 2 from 40% 30-40dmg to 40% 40-60dmg.
+		-- I only lowered the percentage of spell 1 a little, but doubled the damage
+		-- I kept the percentage on spell 2 the same, but raised the damage by 50% at max
+		I did not lower the percentage of this spell because it hits ALL attackers, which
+		serves as one of the NPC's 'special abilities'.
+	(3) The second spell has a decent percentage chance to hit ALL attackers.  This was
+	  meant to meet one of the NPC's 'special abilities', so I did raise the damage a little
+	  as I mentioned above.  So, 2 special abilites are multicast and all-attacker spell.
+	  Does this meet the requirements?
+
+j_carmack.c - Good
+
+romero.c - Good
+  - Had issue with catch_tell with the dark order guild obj on me
+  - Suggestion, add to the message something about John empowering his daikatana when switching to crit.
+==> KARASH:
+	(1) This issue is now fixed with Dragnar's help.  The sscanf function was not recognizing
+	  the speech when it was in color, so we added a remove_color function to the string variable
+	  and it works now.  I added the remove_color function to romero, romero the proud and romero the crit.
+	(2) Added message about empowering sword to romero.c
+  
+romero_proud.c 
+  - Again I think you should drop the % of spells firing and increase damage.
+    This keeps the fight a bit less predictable even though multi cast is on
+  - He needs 1 more special ability for this level
+==> KARASH:
+	(1) I only dropped the % of spell chance slightly (from 40% to 35%), but If
+	  doubled the damage range (from 20-30dmg to 40-60dmg).  I wanted the chance
+	  of multicast to say about the same.
+	(2) First Special Ability = Multicast; Second Special Ability = Calm_Room
+	  At two points during the combat, Romero Proud will calm the room to stop all fighting (around 6/10
+	  and 3/10).  I also raised the mob's self heal from 10hp/heartbeat to 15hp/heartbeat.  After the
+	  mob calms the room, he gives the attacker a book written about him as a distraction to the attacker
+	  while the mob self-heals a little.  If the mob reaches max hps, the counter to stop the fight will
+	  reset to calm another 2 times during combat.  This ability allows the mob to get a little extra
+	  healing during the fight, plus it will disrupt certain attacker abilities like the Mage's mimage
+	  or the Ranger's dust that changes alignment.
+  
+romero_crit.c
+  - Same theme for spells, lower % and increase dam. Spells should be in the
+    60+ range for a mob this level, even with multicast on. If you wanted you
+    could remove spells or reduce spell dam while shield is active?
+  - Coin limit for level 28 is 23k, but he clearly meets requirements for level 29
+    so you can bump level to 29 to increase max of 30k coins
+  - Emp daikatana is valued at 23k which must be included in the mobs value. However
+    the weapon only heals 150, and doesn't store, so I think you could drop the
+    value of this wep to 5k which would require lowering gold a bit. You can
+    either increase heal amount to make the weapon more valuable and lower coins,
+    or keep wep as is, lower value of wep, and only lower coins a bit to stay under 30k.
+==> KARASH:
+	(1) Lowered the % chance for spells from 40% to 25% and 
+	  almost tripled damage of spells from 20-30dmg to 55-75dmg.
+	(2) Raised NPC level to level 29.
+	(3) Raised the heal value of healing charges from 45hp/45sp to 95hp/95sp.  By
+	  multiplying this non-tox heal by 60 coins per hp (285 hps), the value of this healing
+	  item should be about 17,100 coins.  Changing value of Daikatana (empowered)
+	  from 23000 to 17500 coins.  Note that item only has 3 charges and does NOT store.
+	(4) Changed the coins dropped from NPC from 23000+random(10000) to
+	  10000+random(5000).  This gives an average of 12500, plus the 17500 value
+	  of the item dropped, which makes total dropped value of 30000 coins (level 29 coin amt).
+	  
+	
+fanboy.c - Good
+
+  
+Note: 3500 coins can be 2000 + random(3000) but nice when they are not always max
+==> KARASH: Noted.
+
+
+Items
+-----------
+All good, only comments on daikatana value noted under romero_crit.c
+
+General Feedback
+-----------------
+  - Very nice job Karash
+    - Headers done, comments added, easy to read code, nice overview
+    - Rooms well done with descriptions and items, grammar (coming from me take that for whatever it is worth)
+    - Well done theme with nice humor adding to it, setup will for future areas
+    - Obvious that you took the time to understand the base objects like monster.c and use the
+      functions available from those objects.
+    - Nice that your mobs don't all have max coins and gear isn't all 100% pushing limits, while your
+      bigger mobs are still interesting and different from anything else.
+    - Tied up a lot of lose ends I would not expect from a wizards first area, good example is resetting
+      John romero during room reset but still knowing to ensure he wasn't engaged in combat.

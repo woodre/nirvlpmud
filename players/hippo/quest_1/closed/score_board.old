@@ -1,0 +1,53 @@
+string messages, new_name;
+int num_messages, new_score;
+object who;
+#define SCORES "players/hippo/quest_1/highscores"
+
+id(str) {
+    return str =="scores" || str=="board" || str =="scoreboard";
+}
+
+long() {
+    write("This is the Hippo Brain Game Highscore Board.\n"+
+        "If you wanna have a list yourself, just play the game.\n");
+    if (num_messages == 0) {
+        write("The high score list is empty.\n");
+        return;
+    }
+    write(" Rank   Player     Score\n");
+    headers();
+}
+get()
+{   write("You can't carry a board, that is too heavy.\n"+
+    "Just play the game and leave. Then you get a list yourself.\n");
+    return 0;
+}
+
+short() {
+    return ("The Hippo Brain Game Highscore Board");
+}
+
+reset(arg) {
+    if (arg)
+        return;
+    restore_object(SCORES);
+}
+
+headers() {
+    string name,rest;
+    int high_score;
+    int i,tmp;
+    i = 1;
+    rest = messages;
+    while(rest!=0 && rest!="" && rest!="\n") {
+        tmp=sscanf(rest,"\n%s\n%d\n%s",name,high_score,rest);
+        if (tmp != 2 && tmp != 3) {
+            write("Shit, the list is corrupted. Mail Hippo about it!\n");
+            return;
+        }
+        write(" [" +i +"]:\t" + name + "\t"+ high_score + "\n");
+        i += 1;
+        if(i==11)
+            {return;}
+    }
+}

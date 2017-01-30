@@ -1,0 +1,40 @@
+New guild functions:
+
+ /players/blue/closed/shadow/testshadow.c:
+      scan <monster> (scan_monster()) - 
+         scans a monster to get current % of hps
+         level 4, cost 20
+
+ /players/blue/closed/shadow/obj/pearl.c
+   pearl.c is the control object for the servant functions.  It defines
+   commands called to (same path)/servant.c.  These commands currently
+   include:
+
+   change -   Causes the pearl to "change" into a servant/vice versa
+              Actually just clones a servant object and assignes it the
+              remembered hit_points and short_desc, or destructs the
+              servant object.  The pearl has no short() when a servant exists.
+   attack <monster> - Causes a servant to attack a present monster.
+   guard <monster> - Any monster not being attacked/attacking anything can be
+              guarded.  The servant stops following the master and waits in
+              the room.  Any non - shadow that attacks the guarded monster
+              gets attacked by the servant.   The player gets warned that the
+              servant is under attack.
+              Cost - 30 sp
+   wait -     The servant will wait behind in a room until called.
+   come -     Brings the servant out of wait/guard mode.
+              cost - 20 sp (if not in same room, else 0)
+
+   slook -    See through the servants eyes what is in its room.
+              cost - 10 sp
+
+   All servant spells are 6th level.  The only dubious one is guard.  I could
+set the servant up to have a wc of 9 or 10 when guarding, so that a newbie
+wouldn't get wasted for attacking a monster.   
+   The pearl auto loads, remembering the servant's name, hp, and the masters
+name.
+
+The pearl/servant would cost 125 sp to get new, and free to autoload
+
+I've updated this file 11:16 Wednesday night....please tell me if you read the
+updated version.:)

@@ -1,0 +1,21 @@
+
+Weapon skills are the heart of the Warrior.  They combine with
+the other skills and abilities to create a strong offense and
+defense.  Weapon skills can be raised to level 10 each and will
+work automatically in combat.  The following skills are available
+for weapon choices:
+
+Blunt   -  Club, hammer, mace, etc.
+Edged   -  Sword, axe, etc.
+Polearm -  Trident, scythe, lance, staff, etc.
+Archer  -  Guns, bows, crossbows, etc.
+Small   -  Dagger, shuriken, knife, scalpel, etc.
+Exotic  -  Whips, air, venom, kung fu, (Basically anything not
+           listed above goes here.)
+
+You can see if a weapon falls under a certain category by using
+'check <weapon>' which will return the type.
+
+NOTE: Other skills combine with these to perform better.
+
+ 

@@ -1,0 +1,16 @@
+set_firstwep(ob){ firstwep=ob; }
+query_firstwep(){return firstwep; }
+remove_firstwep(){ firstwep = 0; }
+
+set_offwep(ob) { offwep = ob; }
+query_offwep() { 
+  if(offwep) {
+    if((!offwep->query_wielded() && ! offwep->query_offwielded()) ||
+      offwep->query_wielded_by() != environment())
+      
+      remove_offwep();
+  }
+  return offwep; 
+}
+remove_offwep(){ offwep = 0; }
+.x

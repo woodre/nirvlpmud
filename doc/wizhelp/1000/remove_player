@@ -1,0 +1,24 @@
+**************
+
+
+                     Remove_Player
+
+Syntax:    remove_player [name]
+
+Desc:
+           removes entries from 'players','mail', and 'board_records' tables
+           for player 'name'.
+           Also attempts to remove that players .o file, though this may throw
+           an error and have to be done manually.
+
+Warning:   Entries in the database can only be restored to a previous state by
+           talking to Mizan. Make sure you want to remove!
+
+Example:   remove_player mokri
+                  results
+           as far as the database is concerned, 'mokri' no longer exists.
+
+Related:
+
+
+**************

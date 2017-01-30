@@ -1,0 +1,72 @@
+/****************************************************
+| weapon for /players/illarion/high/mon/duncan.c
+| wc 18 and a special that maxes at 30, with the following
+| drawbacks:  weapon is 2-handed, prevents spellcasting if
+| wielded, and the special only works if the wielder is good
+| and the target is evil, plus a cost of 20 sps
+| special is 10+random(20), along the lines of fireball
+**********************************/
+inherit "players/balowski/std/weapon.c";
+/* thanks to bal for the 2-handed weapon code */
+#include "/players/illarion/dfns.h"
+
+reset(arg) {
+  ::reset(arg);
+  if(arg) return;
+
+  set_name("katana");
+  set_short("A "+BOLD+"dragon-head"+NORM+" katana.");
+  set_long(
+"A truly awesome weapon forged by a japanese weaponsmith over two centuries\n"+
+"ago.  The blade is long, double-edged, and slightly curved, with a wicked\n"+
+"point.  The long white hilt is carved into a fanciful representation of\n"+
+"a dragon that has made this sword famous.\n");
+  set_class(18);
+  set_hands(2);
+  set_weight(5);
+  set_value(3000);
+  set_hit_func(this_object());
+}
+id(str) {
+    if(!query_wielded()) return ::id(str) || str == "katana";
+    else return ::id(str) || str == "no_spell" || str == "katana";
+}
+weapon_hit(att) {
+  if(random(4)) return 0;  /* 25% chance of special */
+  /* if the monster it is cloned to is wielding it, automatic special */
+  if(query_wielded_by()->id("Duncan MacCleod")) {
+      tell_room(environment(query_wielded_by()),
+                            "The dragon-head katana\n"+
+    HIY+"F  L  A  S  H  E  S\n"+NORM+"as Duncan swings it.\n");
+    return 10+random(20);
+  }
+  /* no special for an evil wielder or a good target */
+  if(query_wielded_by()->query_alignment() < 0 || att->query_alignment() > 0){
+    write("The katana may only be used by good to fight evil.\n");
+    return 0;
+  }
+  if(query_wielded_by()->query_spell_point() < 15) {
+    tell_object(query_wielded_by(),"You feel tired.\n");
+    return 0;
+  }
+  tell_room(environment(query_wielded_by()),"The dragon-head katana\n"+
+    HIY+"F  L  A  S  H  E  S\n"+NORM);
+  tell_object(query_wielded_by(),"dangerously as you swing it.\n");
+  tell_room(environment(query_wielded_by()),
+    "dangerously as "+query_wielded_by()->query_name()+" swings it.\n",
+    ({query_wielded_by()}));
+  query_wielded_by()->spell_object(att,"holy blast",10+random(20),20);
+  return 0;
+}
+query_message_hit(tmp) {
+  switch(tmp) {
+    default:     return ({" with a blinding slash","eradicated"});
+    case 21..30: return ({" with quick stabs","perforated"});
+    case 16..20: return ({" opening a minor wound","slashed"});
+    case 11..15: return ({" tearing some flesh","stabbed"});
+    case 6..10:  return ({" opening a small cut","slashed"});
+    case 4..5:   return ({" barely piercing the skin","stabbed"});
+    case 2..3:   return ({" with a weak slash","nicked"});
+    case 1:      return ({" with a slow stab","tapped"});
+  }
+}

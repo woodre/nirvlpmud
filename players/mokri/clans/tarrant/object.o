@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[36mA tiny, glowing rune[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "rune"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[36mA tiny, glowing rune[0m"
+damage_type 0
+hall_path "/room/eastroad5"
+object_name "rune"
+owner "garald"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Sat Jan 25 19:30:45 2014] Alexis smiles slyly.","[Sat Jan 25 19:31:49 2014] Garald: One south from the guild entrance","[Sat Jan 25 19:32:21 2014] Alexis laughs, \"MUCH easier than the twisted maze to get to Harlequin.\"","[Sat Jan 25 19:33:53 2014] Garald grins.  \"I used to move it around with me and use it to heal.  But I figured that was pretty much cheating.\"","[Sat Jan 25 19:34:45 2014] Alexis laughs.  \"Kinda, yes.  Clever, though.\"","[Sat Jan 25 19:35:55 2014] Garald: Also, I made the command to move the entrance cost 100sp","[Sat Jan 25 19:38:37 2014] Alexis: A moment, dear.  Phone.","[Sat Jan 25 19:44:45 2014] Alexis smiles.  \"It was my mom.  She was happy with the chili.\"","[Sat Jan 25 19:44:57 2014] Alexis: How is your lasagna, love.","[Sat Jan 25 19:45:33 2014] Garald: yummy.  <grin>  I ate half a family size, and then made myself put the rest away, before I ate the rest of it","[Sat Jan 25 19:45:59 2014] Alexis blinks, then laughs.  \"Wow.....I'm impressed!\"","[Sat Jan 25 19:46:57 2014] Garald: at my self-control?","[Sat Jan 25 19:47:31 2014] Alexis: I need to make popcorn for the family for Mythbusters, then I'm back.  About 5-10 minutes....after that, I'm here for the evening with not too many more interruptions.","[Sat Jan 25 19:48:15 2014] Alexis grins.  \"At being able to eat half a family sized lasagna.  I can usually only manage one piece....and only wish I could eat more of it!  Lasagna is one of my favorites.\"","[Sat Jan 25 19:48:31 2014] Garald: yes, well","[Sat Jan 25 19:48:47 2014] Alexis grins at you.","[Sat Jan 25 19:48:47 2014] Garald: see you in a few minutes","[Sat Jan 25 19:48:53 2014] Alexis: See you shortly.","[Sat Jan 25 21:12:29 2014] Garald: Speak of the devil","[Sat Jan 25 21:18:01 2014] Alexis grins.  \"Sorry, love.....again?  Rachael started.\"",})
+leaders ({"alexis",})
+join_type 1
+private_coffer 156
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

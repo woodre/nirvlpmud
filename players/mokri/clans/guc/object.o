@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30m[1m -=G.U.C=- [0m[0m"
+long_desc "A Upside Down  Black Onyx Cross that Bears The Letters Of The Title Given To All Who Have Been Forsaken *G.U.C* Gods Unwanted ChildrenNow forced  to be defilers of all flesh with one goal in mind purge all that is pure and clean!Bring death and carnage to this once tranquil land![0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "%hi black%%bold% -=G.U.C=- %normal%"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A Upside Down  Black Onyx Cross that Bears The Letters Of The Title Given To All Who Have Been Forsaken *G.U.C* Gods Unwanted ChildrenNow forced  to be defilers of all flesh with one goal in mind purge all that is pure and clean!Bring death and carnage to this once tranquil land![0mType 'clan_help' for commands."
+clan_short "[1;30m[1m -=G.U.C=- [0m[0m"
+damage_type "evil"
+hall_path "/players/boltar/hotel/hotel"
+object_name "%hi black%%bold% -=G.U.C=- %normal%"
+owner "krillgeta"
+spell_alias "DefilersCurse"
+spell_mess_me "You cast your %hi black%DefilersCurse%normal% on %AKN%."
+spell_mess_room "%TPN% casts %TP_POS% %hi black%DefilersCurse%normal% on %AKN%"
+spell_mess_them " %TPN% casts %TP_POS% %hi black%DefilersCurse%normal% on you"
+abilities ({})
+chan_history ({"[Thu Aug 21 18:36:00 2014] Krillgeta has joined the clan!","[Thu Aug 21 18:36:10 2014] Chrono: crap","[Thu Aug 21 18:36:16 2014] Chrono: there goes the neiborhood.","[Thu Aug 21 18:36:45 2014] Darkfyre: lol lol","[Thu Aug 21 18:37:34 2014] Krillgeta: blah u chrono","[Thu Aug 21 18:38:02 2014] Chrono: i lost all my stuff in the clan hall","[Thu Aug 21 18:38:12 2014] Chrono: it all went poof disaperao","[Thu Aug 21 18:38:12 2014] Krillgeta: heh","[Thu Aug 21 18:38:24 2014] Chrono: thats y i dont play this char anymore :shrug:","[Thu Aug 21 18:38:36 2014] Krillgeta: i'll grab u some while im busy","[Thu Aug 21 18:38:46 2014] Darkfyre: lol let me knwo what you need i have spare shit in teh uper lockers","[Thu Aug 21 18:38:49 2014] Chrono: i spoe.","[Thu Aug 21 18:53:42 2014] Krillgeta: why did chant have to come back","[Thu Aug 21 20:23:43 2014] Krillgeta: beside we are clan mates","[Thu Aug 21 20:23:59 2014] Darkfyre: lol no worries","[Sat Aug 23 21:00:10 2014] Krillgeta: hey","[Sat Aug 23 21:00:18 2014] Chrono: yo","[Sat Aug 23 21:00:30 2014] Krillgeta: come to green","[Fri May 27 13:07:13 2016] Krillgeta has removed Krillgeta as a clan leader!","[Fri Jun 17 16:18:47 2016] Desterus has joined the clan!",})
+leaders ({})
+join_type 2
+private_coffer 60000
+public_coffer 0
+spell_delay 0
+spell_id 1
+spell_cost 50
+last_spell_time 1422157688

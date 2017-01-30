@@ -1,0 +1,140 @@
+nrpoints 115
+totalpoints 115
+np_xlevel 0
+nbday "072107"
+rlbday 0
+penalty_left 0
+np_age 601
+time_to_heal 0
+hcnum 1
+crime 0
+money 80000
+luck2 0
+lucky 377
+name "vital"
+gender "male"
+msgin "is called in"
+msgout "will you just go"
+is_npc 0
+brief 0
+level 1000
+armor_class 0
+hit_point 8498
+max_hp 8498
+experience 3163820
+mmsgout "watches his lifeforce fade away into nothing"
+mmsgin "appears suddenly, being very alive and vital"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -35
+cap_name "Someone"
+spell_points 8475
+max_spell 8599
+spell_name "Demon"
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 16786931
+is_invis 100
+frog 0
+whimpy 0
+auto_load "/players/eurale/VAMPIRES/vampob.c:^!/players/guilds/Rangers/HonorRangerCommunicator:^!/players/sado/antifos/button.c:^!players/pain/NEW/items/star.c:^!/players/earwax/closed/TRACKER/loader:0^!"
+current_room "players/vital/workroom/workroom"
+alignment 0
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Armors 0
+channel_names ({"msg","equip","babble","junk","shout","cwiz","newbie","announce","wiz","admin","risque","gossip","pk","Earwax PK Tracker",})
+BankBalance 40000
+strength 99
+intelligence 99
+stamina 99
+will_power 99
+magic_aptitude 99
+piety 99
+stealth 99
+charisma 99
+dexterity 99
+luck 99
+atrbr ({8,8,99,99,99,99,99,99,99,99,})
+stats ({0,0,0,0,0,0,0,0,0,0,})
+stat_maxes ({0,0,0,0,0,0,0,0,0,0,})
+flag_tester 0
+handshake_data 363
+handshake 0
+quest_point 0
+quests "[34mVital[2;37;0m"
+pregnancy 0
+pregtoo 0
+monitor_string "::: $R$HP #hps#/#mhp# $N$$HB$SP #sps#/#msp# $N$I #intox#% F #stu#% S #soa#% T #inf#% #ahp# #ret#Experience: $M$#exp#$N$ Next: $Y$#nexp#$N$ Money: $G$#coins#"
+saved_aliases ({"kim","force kimberly","bil","force billy","zac","force zack","jas","force jason","zor","force zordon","tom","force tommy","trin","force trini",})
+saved_nicknames ({"spa","sparrowhawk","tb","treebeard","LINE","*****************************************************************","wax","earwax","miz","mizan","vamp","/players/guilds/vampires","v","vertebraker",})
+testchar_var 0
+nirvana_points 0
+clan 0
+sig 0
+wkrm 0
+hostname "62.61.164.209"
+ok_edit "woot#"
+mailaddr "vital.nirvana@gmail.com"
+saved_where 0
+title "spits in your blickin' soup."
+pretitle "Blick it, Nog Face as"
+password "xNByDW4FqbNro"
+spouse 0
+race "creeping darkness on the surface of the sun"
+al_title "Lord of Darkness"
+PKGhostCounter 0
+intoxicated 3036
+infuse 0
+stuffed 0
+soaked 0
+headache 0
+max_headache 8
+fight_area 0
+mon 1
+phys_at ({1,7,11,554,0,0,})
+no_spell 0
+called_from_ip "62.61.164.209"
+msghome "goes, "Heh.""
+description "says, "El Desdichado" Je suis le tenebreux, le veuf, l'inconsole,/Le prince d'Aquitaine a la tour abolie:/Ma seule etoile est mort, et mon luth constelle/Porte le soleil noir de la Melancolie.Dans la nuit du tombeau, toi qui m'as console,/Rends-moi le Pausilippe et la mer d'Italie,/La fleur qui plaisait tant a mon coeur desole,/Et la treille ou le pampre a la rose s'allie.Suis-je Amour ou Phebus? . . . Lusignan ou Biron?/Mon front est rouge encore u baiser de la reine;/ J'ai reve dans la"
+guild_name "vampire"
+clan_name 0
+clan_master 0
+clan_file 0
+lastime "Aug 28 14:25 2009"
+player_killing 0
+invs_count 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd "/players/vital/closed/meta/"
+errormsgs 0
+guild_rank "Dire"
+guild_exp 676
+guild_file ""
+home "players/vital/workroom/workroom"
+ex_lv 101
+qc 1
+no_give 0
+aprv "feldegast,arrina,boltar,vital"
+hint 0
+AnsiPref ({"tell",0,"gossip",0,"risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"wiz","[1;32m","cwiz",0,"page",0,"pk",0,"title",0,"pretitle",0,"roomtitle",0,"admin","[1;31m","ls .c","[31m","ls .h","[32m","ls directory","[36m","ls otherFiles",0,})
+old_last "Aug 27 17:01 2009"
+wiz_soul_light 0
+present_log "/log/vital"
+present_castle "/players/vital/castle"
+friends 0
+other_copy 0

@@ -1,0 +1,11 @@
+base structure for: /players/quicksilver/666
+--------------------------------------------
+cre/			- creatures/monsters...the living and unliving  -grin-
+doc/			- documentation/non-code stuff
+etc/			- stuff that doesn't fit elsewhere   f.e. .o files
+include/		- includes and definitions to avoid repetition
+obj/			- general objects -- non-ac/wc/heal items
+obj/armor/		- armor objects
+obj/heal/		- healing objects
+obj/weapon/		- weapon objects
+r/			- rooms

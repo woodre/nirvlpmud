@@ -1,0 +1,6 @@
+void rm(file)
+string file;
+
+Removes the file argument file.
+
+See also mkdir(), rmdir(), ls(), cat().

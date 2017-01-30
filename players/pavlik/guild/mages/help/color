@@ -1,0 +1,23 @@
+-=[ COLOR ]=-
+
+Most guild commands that output text utilize the mud-standard
+colorization scheme.
+
+Special tags enclosed in the '$' can be used to colorize messages.
+The accepted color tags are :
+
+$B$ -- Blue		$HB$ -- Bold Blue
+$Y$ -- Yellow		$HY$ -- Bold Yellow
+$R$ -- Red		$HR$ -- Bold Red
+$G$ -- Green		$HG$ -- Bold Green
+$W$ -- White		$HW$ -- Bold White
+$K$ -- Black		$HK$ -- Bold Black
+$M$ -- Magenta		$HM$ -- Bold Magenta
+
+$N$ -- Normal (return screen to normal color)
+
+
+Examples:
+	This is $HY$Bold Yellow$N$
+	This is $R$Red$N$ and $HR$Bold Red$N$
+

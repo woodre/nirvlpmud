@@ -1,0 +1,30 @@
+*******************************************************************
+
+Name:    Clone   
+
+Desc:    This command creates the object from the file specified.
+         One of a wizards most used commands. If in the directory 
+         you only need to type the name else you can clone from 
+         any directory from full path name. Objects appear in your 
+         inventory, monsters in your immediate environment.
+ 
+
+Level:   21 for your own stuff   
+
+Warning: When testing do not clone monsters in player areas. Also 
+         be aware that players will see a message when you clone 
+         objects and will often look at you to see what you are 
+         doing.
+
+
+Syntax:  clone <path>
+
+Example: clone /obj/bag.c
+Result:  
+         a bag is cloned into your inventory
+         if you were in the /obj directory you could also simply 
+         clone bag.c for same effect
+
+Related: hand, cloneall
+
+*******************************************************************

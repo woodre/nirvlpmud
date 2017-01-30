@@ -1,0 +1,37 @@
+************************** Year 2001 *****************************************
+1.02 - Modified drain again so if item cost is < 50+r(150) item dests.
+1.06 - Added vigor to current spells at 6mil gxp, approved by Wocket.
+     - Made it so weaken will end if target is below 10% health and 50 hp.
+     - Increased sp requirement on dark_prayer from 40 to 45, making the
+       spell slightly easier to cast.
+     - Added two new variables to know, one which counts players in the
+       target's room and one which counts living things.  No names or any
+       other information is given.  Concept approved by Wocket.
+     - Added code to chan_obj.c to make players not be a part of the channel
+       until they actually accept.  Also added a channel history reset command
+       to chan.h and recoded some of the bad stuff.  What was I thinking.
+2.22 - Fixed 2 infinite money cheats relating to bartering components.
+       Cobain discovered it over a month ago and did not report it, has
+       exploited it a number of times since.  Added an exception for
+       Cobain that will last 62 days; components cost him 3x as much.
+3.06 - Changed the add_hit_point() in shadowblast's finisher to hit_player()
+       and changed the value from sps * -1 to sps * 2.  This only applies
+       to NPCs and compensates for AC.  This is what was originally intended.
+4.11 - Verte updated my set_title.h code to conform to the new xlevels.  Not
+       to mention that his code is simply way better than mine ever was.  woot!
+4.23 - Added an optional level sort to the who command but didn't tell anyone.
+4.29 - Added in beckon shadows spell at 50k gxp approved by Wocket
+     - Added in shadowweave illusion approved by Wocket.  raised sps cost from
+       50 to 1/2 max sps and limited to 1 weave per wep at Wocket's request.
+5.13 - Increased sp drain when >= 2 fallen are together by 4 per person.
+5.17 - Increased cost of bone powder component from 500 to 600 coins.
+     - Added an endurance drain if >= 2 fallen are together, -# of fallen a hb.
+     - Added an endurance bonus of 0-5 to drain.h based on value of item.
+6.05 - Modified spacing in who2_new.h a little based on Worm's comments.
+     - Made it so Fallen do more dmg and drain more endurance in PK vs each
+       other.  Numbers are based on gxp so big guys don't crush little guys.
+6.19 - Modified know.h at Mal's request so invis players of equal level 
+       can't see each other's location.
+     - Removed invis check in who2_new.h at Mal's request.
+8.31 - Doubled end gain from draining items (based on value), now 0-10.
+11.27 - Added "dscnd" as an alternative to "descend"

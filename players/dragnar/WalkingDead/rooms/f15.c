@@ -1,0 +1,52 @@
+inherit "players/dragnar/WalkingDead/rooms/WalkingDeadRM";
+
+#include <ansi.h>
+
+reset(arg) {
+	if(arg) return;
+  
+  short_desc = "King County "+HIG+"Forest"+NORM;
+  set_light(1);
+  items=({
+    "road",
+"Glimpses of pavement can be seen through the trees, but you can't see\n\
+much detail through the leaves",
+    "forest",
+"The trees are fairly thick even close to the clearing, although it is\n\
+passable. They block out much of the sunlight and make it quite gloomy.\n\
+It is quiet in the forest, perhaps a bit too quiet",
+    "trees",
+"The trees dominate the forest.  Most are leafy trees such as cedar and\n\
+chestnut, but there are some evergreen pines as well. Many of the pines\n\
+grow in "+GRN+"dark green"+NORM+" patches.  Up close you notice that many of the\n\
+trees are covered in "+YEL+"moss"+NORM,
+    "pavement","It is not possible to see details of the pavement from here",
+    "clearing","A break in the trees can be seen to the west",
+    "pines",GRN+"Darker "+NORM+"varieties of pine grow in this part of the forest",
+    "moss",
+"Whatever type of moss this is, it doesn't seem to follow the standard\n\
+of only growing on the north sides of the trees",
+    "leaves",
+"Many shades of "+GRN+"green"+NORM+", the leaves gently sway in the breeze. They are\n\
+beautiful, but they cause a sense of restriction.  Anything could be\n\
+hiding in these trees with their leaves giving perfect cover",
+  });
+  dest_dir=({
+    "/players/dragnar/WalkingDead/rooms/f20","north",
+    "/players/dragnar/WalkingDead/rooms/f9","south",
+    "/players/dragnar/WalkingDead/rooms/r3","east",
+    "/players/dragnar/WalkingDead/rooms/f14","west",
+  });
+  long_desc=
+"The forest stretches out from this point in all directions.  The\n\
+trees here are dense, but you can pass in all directions. The forest\n\
+looks pretty much the same in all directions except east. To the east\n\
+the trees are cleared and a paved road runs north and south.  West heads\n\
+deeper into the forest and seems to have a slight uphill slope.\n";
+  
+  reanimate_corpse();
+}
+
+init() {
+	::init();
+}

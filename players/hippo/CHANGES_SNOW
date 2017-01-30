@@ -1,0 +1,23 @@
+/players/hippo/rooms/
+  aorta.c - reduced # of /c/ery.c from 5 to 3
+            reduced # of /c/leuco.c from 3 to 2
+  appendix.c - "" of /thrombo.c from 2 to 1 (lev20)
+  blood1.c - "" of ery from 3 to 1 (tons of these moving around)
+  blood2.c - "" of ery from 3 to 2
+             removed thrombo (lots of these + all same)
+  blood3.c - "" of ery from 3 to 1
+  blood5.c - "" of ery from 3 to 2, removed thrombo
+  blood6.c - "" of ery from 3 to 1
+  liver2.c - "" of /c/cahepar.c from 3 to 1 (lev20)
+  lventr.c - "" of /c/valvula.c from 2 to 1 (lev20)
+             commented out /c/contr_wave.c (lev20 and lots of 'em)
+  ratrium.c - "" of valvula from 2 to 1
+  rectum.c - "" of /c/something.c from 4 to 2
+             commented out contr_wave.c
+ 
+ 
+/players/hippo/c/
+  wow.c - changed level from 40 to 30 (very tough but no specials)
+  cahepar.c - changed level from 25 to 20
+  contr_wave.c - changed aggressive from 0 to 50%
+  thrombo.c - ""

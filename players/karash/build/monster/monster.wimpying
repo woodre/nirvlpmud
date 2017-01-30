@@ -1,0 +1,9 @@
+Sometimes when you code a monster that will wimpy, you will
+notice that it tries, but doesn't run.  Feldegast pointed
+out that usually this is caused by the fact that "monsters
+are typically moved into a room before the exits are set for
+the room, so they don't received the add_action that will
+allow them to leave the room."
+
+"The easiest way to fix this is to clone the monster to the room
+ AFTER you set the exits."

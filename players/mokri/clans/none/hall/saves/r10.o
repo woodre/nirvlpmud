@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/none/hall/r4","east","/players/mokri/clans/none/hall/r11","west",})
+short_desc "A Place[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;33mSummersword[0m","/players/feldegast/wep/summer",0,0,0,"[1;30mA [1;31mju[0m[31mju[1;30m trinket[0m","/players/forbin/realms/flame_forest/OBJ/juju",0,0,0,"[35mA mystical potion of full healing[2;37;0m","/players/wocket/turtleville/OBJ/heal_potion",0,0,0,"[34mWind Shield[0m","/players/jareel/armor/orlanthi_wind_lord_shield",0,0,0,"[1;30mA [1;31mju[0m[31mju[1;30m trinket[0m","/players/forbin/realms/flame_forest/OBJ/juju",0,0,0,"Iron [1m[30mfullplate[0m of death ([1;32mComplete Death Set[0m)","/players/jareel/armor/chaos/cave/fullset",0,0,0,"The Blade of the Fallen","/players/zeus/realm/OBJ/fallen_blade",0,5,0,"A [1;37mcrystal[0m ring with a [1m[1mblack[0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,})

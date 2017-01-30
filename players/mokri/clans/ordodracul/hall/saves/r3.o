@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/ordodracul/hall/r2","west",})
+short_desc "[1;32mVault 1[0m-Lockers[0m"
+long_desc "Here is the [1;31mDracul[0m [1;32mVault 1[0mplease return all items so that others may use them.[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level -1
+Items ({"[32mWarpstone[1;30m Armor[0m","/players/tallos/otherstuff/warparmor",0,0,0,"Bracers of Speed","/players/maledicta/cont/rdragon/sbracers","-0-",0,0,"[34mRockbreaker[0m","/players/pavlik/ilstkarn/weapons/rockbreaker",0,49,57,"Bolt cutters","/players/boltar/things/boltcut",0,0,914,})

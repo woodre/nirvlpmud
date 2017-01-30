@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "Broadsword of the Guardian (offwielded)[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "broadsword"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "Broadsword of the Guardian (offwielded)[0m"
+damage_type 0
+hall_path "/players/jaraxle/templar/rooms/nrecruit"
+object_name "broadsword"
+owner "saynt"
+spell_alias "gchant"
+spell_mess_me "You make a sudden, strange gesture with your hands. You feel a bit refreshed."
+spell_mess_room "%TPN% makes a sudden, strange gesture with their hands. %AKN% looks a bit refreshed."
+spell_mess_them "%TPN% makes a sudden, strange gesture with their hands. You feel a bit refreshed."
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 150000
+public_coffer 0
+spell_delay 4
+spell_id 2
+spell_cost 80
+last_spell_time 1218056391

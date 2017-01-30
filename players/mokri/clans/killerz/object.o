@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30mA [1;32mpoison [1;30mtipped [1;37mdagger[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "object"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;30mA [1;32mpoison [1;30mtipped [1;37mdagger[0m"
+damage_type 0
+hall_path "/players/dragnar/WasteLands/rooms/forest4"
+object_name "object"
+owner "kadaj"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 0
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

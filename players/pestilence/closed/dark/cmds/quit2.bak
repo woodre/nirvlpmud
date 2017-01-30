@@ -1,0 +1,8 @@
+
+#include "/players/pestilence/ansi.h"
+status main()
+{
+  write("<"+HIK+"Dark Order"+NORM+"> Guild Status Saved.\n");
+  previous_object()->save_me();
+  return 0;
+}

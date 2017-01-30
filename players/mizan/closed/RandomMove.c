@@ -1,0 +1,1 @@
+RandomMove() { return 1; }

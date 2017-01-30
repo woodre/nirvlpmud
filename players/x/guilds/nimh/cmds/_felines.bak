@@ -1,0 +1,23 @@
+#include "../x.h"
+
+int cmd_felines(string str)
+{
+ string *fp;
+ int    x, y;
+
+ if(str) return 0;
+
+ MASTER->feline_sense(PO, TP);
+
+ if(!(fp = (string*)PO->query_felines_present()) || !(y=sizeof(fp)))
+ {
+  fp = ({ });
+  PO->set_felines_present(({}));
+  write("\nNo felines present in your current area.\n\n");
+  return 1;
+ }
+ write(HIR+"\n[[[[[[[ ::::::::::::::::::::::     FELINES     :::::::::::::::::::::: ]]]]]]]\n\n"+NORM);
+ for(x=0;x<y;x++)
+  write(RED+" ::: "+NORM+(string)fp[x]->short()+RED+" :::\n"+NORM);
+ return 1;
+}

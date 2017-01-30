@@ -1,0 +1,11 @@
+#include "/players/vital/closed/headers/vital.h"
+#include <ansi.h>
+
+status main() {
+
+    tail("/debug.log");
+
+    return 1;
+
+}
+

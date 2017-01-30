@@ -1,0 +1,39 @@
+Vertebraker [7.13.01]
+
+I put this code in death() in living.c and tested it out:
+
+   if(attacker_ob)
+     if(environment()) /* this better happen ! */
+     {
+       object kc, a;
+
+       if(!alt_attacker_ob)
+       {
+         if(kc = present("kill_check_object", attacker_ob))
+           kc->kill_check(this_object());
+       }
+       else
+       {
+        
+         a = first_inventory(environment());
+         while(a)
+         {
+           if((object)a->query_attack() == this_object() &&
+             (kc = present("kill_check_object", a)) &&
+             a != this_object())
+           while(kc)
+           {
+             if((status)kc->id("kill_check_object"))
+                kc->kill_check(this_object());
+             if(kc)
+               kc = next_inventory(kc);
+           }
+
+           if(a) a = next_inventory(a);
+         }
+       }
+     }
+
+The use for this should be obvious.  In any objects
+with an id of "kill_check_object", it will call the function
+"kill_check" in each, with an argument of what has been slain.

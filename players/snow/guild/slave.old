@@ -1,0 +1,167 @@
+
+         /* defines and includes */
+#include "def.h"
+  
+         /* vars that save  */
+int liver,stomach,arms,legs,eyes;
+int armor;
+string title;
+int flash_time;
+
+         /* static vars - vars that dont save */
+
+         /* id of the object */
+  id(str) { return str == "cyborg_slave" || str == "pro_object"; }
+
+         /* autoloading */
+query_auto_load() { return "/players/snow/guild/slave.c:"; }
+    
+         /* drop and get */
+  drop () { return 1; }  /* undroppable */
+  get() { return 0; }    /* ungettable */
+
+         /* reset function  */ 
+  reset(arg) {
+    if(arg) return;
+    set_heart_beat(1);
+    title = "the Cyborg";
+  }
+
+         /* short function */
+  short() { return "Cyborg Object (development stage)"; }
+
+          /* long function */
+  long() { write("Stage 1: Setup.\n"); return 1; }
+
+/* INIT */
+  init() {
+  if(ENV(TO)) setup(ENVTO);
+  add_action("cyborg_reset","creset");
+/* EYES */
+if(eyes) {
+  add_action("cyborg_flash","eyeflash");
+  add_action("cyborg_look","look");
+  add_action("cyborg_look","l");
+  add_action("cyborg_get","get");
+  add_action("cyborg_get","take");
+  add_action("cyborg_put","put");
+  }
+
+/* LEGS */
+if(legs) {
+  add_action("run","run");
+  }
+
+/* ARMS */
+if(arms) {
+  }
+  add_action("cyborg_wield","grip");
+  }
+
+/* FUNCTIONS */
+cyborg_reset() {
+  object ob;
+  ob = clone_object("/players/snow/guild/slave.c");
+  write("Resetting cyborg status.\n");
+  move_object(ob, TP);
+  destruct(this_object());
+  return 1; }
+
+query_flash_time() { return flash_time; }
+cyborg_flash() {
+  if(TP->query_sp() < 25) { write("You lack the energy.\n"); return 1; }
+  if(flash_time) { write("You are already flashing light!\n"); return 1; }
+  write("Your eyes flash with a brilliant light!\n");
+  say(TPN+"'s eyes flash with a brilliant light!\n");
+  flash_time = 10;
+  set_light(10);
+  TP->add_spell_point(-25);
+  return 1; }
+cyborg_look(string str) { GOB->cyborg_look(str); return 1; }
+cyborg_get(string str) { GOB->cyborg_get(str); return 1; }
+cyborg_put(string str) { GOB->cyborg_put(str); return 1; }
+cyborg_wield(string str) { GOB->cyborg_wield(str); return 1; }
+run(string str) { GOB->run(str); return 1; }
+
+/* ADD BODY PARTS HERE */
+add_legs() {
+  write_file(LOG+"LEGS",TPRN+" "+ENV()->RN+" "+ctime(time())+"\n");
+  legs++;
+  save_me(ENVTO);
+  return 1; }
+add_arms() {
+  write_file(LOG+"ARMS",TPRN+" "+ENV()->RN+" "+ctime(time())+"\n");
+  arms++;
+  save_me(ENVTO);
+  return 1; }
+add_eyes() {
+  write_file(LOG+"EYES",TPRN+" "+ENV()->RN+" "+ctime(time())+"\n");
+  eyes++;
+  save_me(ENVTO);
+  return 1; }
+add_liver() {
+  write_file(LOG+"LIVER",TPRN+" "+ENV()->RN+" "+ctime(time())+"\n");
+  liver++;
+  save_me(ENVTO);
+  return 1; }
+add_stomach() {
+  write_file(LOG+"STOMACH",TPRN+" "+ENV()->RN+" "+ctime(time())+"\n");
+  stomach++;
+  save_me(ENVTO);
+  return 1; }
+add_armor() {
+  write_file(LOG+"ARMOR",TPRN+" "+ENV()->RN+" "+ctime(time())+"\n");
+  armor++;
+  save_me(ENVTO);
+  return 1; }
+query_legs() { return legs; }
+query_arms() { return arms; }
+query_eyes() { return eyes; }
+query_liver() { return liver; }
+query_stomach() { return stomach; }
+query_armor() { return armor; }
+
+weapon_mod() { return arms * 5; }
+
+/* HEART BEAT */
+  heart_beat() {
+    if(!environment()) { set_heart_beat(0); return 1; }
+  if(!environment()->is_player()) { set_heart_beat(0); return 1; }
+  if(liver) GOB->body_clean( environment() );
+  if(stomach) GOB->digest( ENV() );
+  if(flash_time) {
+    flash_time--;
+    if(flash_time < 1) {
+      tell_object(ENVTO, "Your eyes stop flashing light.\n");
+      set_light(-10);
+  } }
+  }
+
+setup(object ob) {
+  if(!ENV()) return 0;
+  if(!ENV()->is_player()) return 0;
+  if(!restore_me(ob)) save_me(ob);
+  reset();
+  return 1; }
+
+save_me(object ob) {
+  string file;
+  file = "players/snow/guild/cyborgs/" + ob->query_real_name();
+  if(!save_object(file)) {
+    tell_object(ob,"Save error...\n");
+    return 0;
+    }
+  tell_object(ob,"Saving cyborg status...\n");
+  return 1;
+}
+
+restore_me(object ob) {
+  string file;
+  file = "players/snow/guild/cyborgs/" + ob->query_real_name();
+  if(!restore_object(file)) {
+    tell_object(ob,"Cyborg restoration error...\n");
+    return 0;
+    }
+  tell_object(ob,"Cyborg powering up...\n");
+  return 1;
+}

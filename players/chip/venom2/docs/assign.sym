@@ -1,0 +1,19 @@
+Tentacles require being assigned in order to
+function properly.  You have 10 tentacles
+available to split between attack and defend
+(and burnoff & regeneration if you have them)
+To assign a tentacle to one of these functions,
+type: assign tentacle # to <job>
+
+Example -
+  assign tentacle 1 to attack
+
+To see a list of where tentacles are currently
+assigned too type, 'tentacles'
+
+Note: Burnoff and Regeneration REQUIRE
+      tentacles in order to function.
+
+Cost: 0
+Skill Level: 0
+

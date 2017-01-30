@@ -1,0 +1,23 @@
+#define BLANKS "                                                                                       "
+#include "/players/feldegast/closed/ansi.h"
+
+int get_color_length(string str) {
+  int i,l;
+  int flag;
+  int length;
+  for(i=0,l=strlen(str); i < l; i++)
+  {
+    if(str[i..i] == ESC) flag = 1;
+    if(flag) {
+      length++;
+     if(str[i..i] == "m") flag = 0;
+    }
+  }
+  return length;
+}
+
+string color_pad(string str, int len) {
+  len+=get_color_length(str);
+  str+=BLANKS;
+  return str[0..len];
+}

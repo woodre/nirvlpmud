@@ -1,0 +1,3 @@
+obj/msprings.c  - returns as intox type heal in is_heal
+mon/kramer.c - can make him wield and wear the weapon and armor he has - make sure to set_wc and ac after in the code
+mon/estelle.c - might want to make frank attack whoever kills Estelle... have it almost set up in monster_died

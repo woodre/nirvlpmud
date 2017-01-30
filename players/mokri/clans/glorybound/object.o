@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "a teardrop tattoo[0m"
+long_desc "a tattoo of a teardrop on the corner of the left eye[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "tattoo"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a tattoo of a teardrop on the corner of the left eye[0mType 'clan_help' for commands."
+clan_short "a teardrop tattoo[0m"
+damage_type "good"
+hall_path "/players/beck/room/street4"
+object_name "tattoo"
+owner "jabroni"
+spell_alias "touch"
+spell_mess_me "You touch your templar cross and strike your opponent with extra determination."
+spell_mess_room "touches his cross and fights harder."
+spell_mess_them "You feel the power of something higher influencing you."
+abilities ({})
+chan_history ({"[Mon Jan  6 18:16:45 2014] Sunim: slim pickings","[Mon Jan  6 18:16:49 2014] Sunim: we can change that","[Sat Feb  8 21:25:08 2014] Sunim: we as knights have the unique oppertunity to show others the future possibilities of cooperation and respect that other guilds do not.....","[Sat Feb  8 21:26:46 2014] Sunim: our actions as Knights and protectors of the realm are guided by The Tablet","[Sat Feb  8 21:28:20 2014] Sunim: forgive me, but are you a spiritual person?","[Sat Feb  8 21:30:08 2014] Sunim: it has no bearing on your acceptance, but what spiritual tradition do you adhrere to?","[Sat Feb  8 21:36:04 2014] Sunim: such a question usually isnt part of the screening process, but i felt compelled lol","[Sat Feb  8 21:57:22 2014] Sunim: I attend a united methodist church as well, hooray for methodism!","[Sat Feb  8 22:11:22 2014] Sunim: i agree that he would not censure, but i sometimes feel like the bible is interested in creating holy families","[Sat Feb  8 22:14:22 2014] Sunim: it's really controversial right now in the methodist church right now","[Sat Feb  8 22:37:32 2014] Sunim: wow really sad how conflicted dude was","[Sat Feb  8 22:46:14 2014] Sunim: oh crap i just noticed how recent this is","[Sat Feb  8 22:47:10 2014] Sunim: yeah just noticed","[Sat Feb  8 22:50:04 2014] Sunim: heck yeah","[Sat Feb  8 23:18:14 2014] Sunim: in acts, there was no building...the church was everywhere really","[Sat Feb  8 23:20:20 2014] Sunim: Highly recommend: http://en.wikipedia.org/wiki/The_Irresistible_Revolution","[Sat Feb  8 23:24:48 2014] Sunim: i suggest you discuss your candidacy with brother Marek","[Sat Feb  8 23:45:16 2014] Sunim: lol we just admitted an ally into the guild","[Sat Feb  8 23:47:28 2014] Sunim: \" do no harm, do good, and stay in love with God.\"","[Sat Jun 21 13:42:51 2014] Kika has joined the clan!",})
+leaders ({"tristan","sunim",})
+join_type 2
+private_coffer 148099
+public_coffer 0
+spell_delay 0
+spell_id 1
+spell_cost 15
+last_spell_time 1403461663

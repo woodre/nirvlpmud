@@ -1,0 +1,19 @@
+vh: 60 sp initial + 40 sp additional (100)
+    30 hp initial
+    +0 - 32 endurance (-4 a hb) (32)
+    +25 wc for 8 rounds
+
+vm: 40 sp initial + 56 sp additional (96)
+    20 hp initial
+    +15 - 42 endurance (-3 a hb) (27)
+    +15 wc for 14 rounds
+
+vl: 20 sp initial + 60 sp additional (80)
+    10 hp initial
+    +18 - 40 endurance (-2 a hb) (22)
+    +12 wc for 20 rounds
+
+
+high:   100 sp, 30 hp, 32 end, 8 rounds,  +25 wc
+medium: 96 sp,  20 hp, 27 end, 14 rounds, +15 wc
+low:    80 sp,  10 hp, 22 end, 20 rounds, +12 wc

@@ -1,0 +1,4 @@
+test()
+{
+"players/llew/tool/check_file_for_string"->check_file_for_string("/players/llew/testfile", "b");
+}

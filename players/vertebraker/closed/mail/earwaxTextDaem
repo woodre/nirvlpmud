@@ -1,0 +1,19 @@
+
+I was thinking about efuns, mainly the ansi/string manipulating ones
+How about we have a daemon (/obj/daemons dir would be a good thing)
+with ALL the various colour manipulating functions in it.
+
+With that in mind, you make simul efuns for the ones that don't exist,
+and to refer to the ones that already did (for backwards compat as well
+as simple convenience) to use the daemon
+
+For example - stick delete_colour() code in the daemon
+simul efun declaration would then simply be
+string delete_colour(string arg) { return (string)TEXTD->delete_colour(arg); }
+do that for all the funs
+
+That way we could add line wrapping, other shit to it, lower the loaded 
+code in the game (after all, everything inherits simul efun, so cutting
+down on that shit i think is worth the eval cost of the function calls)
+
+Just a thought i had, lemme know whatchu think

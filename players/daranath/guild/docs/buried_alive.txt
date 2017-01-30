@@ -1,0 +1,22 @@
+              NECROMANCERS
+---------------------------------------------------------
+     Buried Alive (miscellaneous)
+
+Comfort can be found within a gravesite, and a Necromancer is
+always at home there. By taking a gravesite and burying themselves
+within, the healing ability of the Necromancer is increased in
+speed and potency. Basic Necromancer Ability.
+
+note1 -> Once a Necromancer opens a gravesite, they still have
+         to get within it.
+note2 -> Must be done at a gravesite
+
+     Guild Level Attained: 3
+     Spell Point Cost: 35
+     Material Components: 1 parts Corpse Dust
+                          2 parts Blood
+     Usage: bury_me (opens a gravesite to rest in)
+            rest grave (actually puts you within the gravesite)
+            leave (to exit back to room you were in)
+
+---------------------------------------------------------

@@ -1,0 +1,13 @@
+[Balowski 96-02-28..]
+    ~/cave/caved5.c:
+        if (!present("dopp")) { 
+    ->  if (!present("drak", this_object())) {
+
+    ~/cave/monk6.c:
+    ~/cave/monk7.c:
+        monster = clone_object("/players/scathe/monsters/master");
+    ->  monster = clone_object("/players/scathe/monsters/mmaster");
+
+    ~/cave/monk4.c:
+        if (!present("initiate")) { 
+    ->  if (!present("monk", this_object())) {

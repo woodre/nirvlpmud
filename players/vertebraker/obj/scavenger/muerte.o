@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/wren/Area/starbug/items/bouquet","/obj/level_list","/obj/armor","/obj/weapon","/players/mythos/awep/daikyu","/players/mistress/other/disk","/players/pain/NEW/weap/mace2","/players/wren/Area/starbug/items/straw","/players/scathe/armor/egarb","/players/puppy/s/eq/cape","/players/mythos/marmor/shirt","/players/pain/NEW/arm/bplate","/players/pain/NEW/weap/sword","/players/snow/WEAPONS/glowknife","/players/wren/Area/starbug/items/bat","/players/jamila/beach/mobs/skin","/players/snow/cam/stuff/plate","/players/ultramagnus/breastplate","/obj/weapon","/obj/weapon","/players/pain/NEW/weap/mstar","/players/wren/Area/starbug/items/guitar","/players/wren/Area/starbug/items/mirror","/players/maledicta/cont/ltown/objects/dshield","/players/scathe/armor/suit",})
+shorts ({"a colorful bouquet of 'flowers'","A list of the top players","a hat","Fear","Daikyu","A fragile disk","A huge iron mace","a long plastic straw","Elder's garb","A flowing cape","Shirt","A battered Breastplate","Sword","A glowing knife","a [1;30mballbat[2;37;0m","A Lizard Skin","[34m[1mBlessed Plate Armor[0m[0m","A Black Breastplate with Red Decore","A gardening hoe","Decorated Broadsword","Morningstar","Lister's guitar","a slim pocket mirror","[32mShield of the [1;32mDrake[2;37;0m","Black Suit",})
+found ({0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

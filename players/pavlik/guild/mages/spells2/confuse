@@ -1,0 +1,71 @@
+/*
+ * spell : Confuse   (illusion)
+ * level : 3
+ * effect: Makes the target attack something else (random)
+ *         the new attacker must already be fighting the target
+ * cost  : 35 sp
+ * spec  : 
+ * files : none
+ */  
+
+confuse(str){
+  object obj, sucker;
+  object ob, attackers;
+  int i, count;
+
+  if(!KNOW("confuse")){
+  write("What?\n"); return 1; }
+
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  if(guild->query_next_prot() > time()) {
+    write("You cannot cast this spell again yet.\n");
+    return 1;
+  }
+
+  write("You cast a "+HIY+"Confusion"+NORM+" spell ...\n");
+
+  if(spell_fail2(3, "illu", "wis")) {
+    write("You fail the spell miserably.\n");
+    say(ME+" casts a spell but nothing happens.\n");
+    tp->add_spell_point(-20);
+    return 1;
+  }
+
+  ob = all_inventory(env);
+  attackers = allocate(6); 
+  count = -1;
+
+  /* build a list of others attacking */
+  for(i=0; i<sizeof(ob); i++) {
+    if(ob[i]->query_attack()==obj && ob[i] != obj->query_attack()
+       && count < 5) {
+      count++;
+      attackers[count] = ob[i];
+    }
+  }
+
+  if(count < 0) {
+    write("There is noone else for "+IT+" to attack.\n");
+    write("You decide to not cast this spell.\n");
+    tp->add_spell_point(-5);
+    return 1;
+  }
+
+  /* now attack one of the others */
+  sucker = attackers[random(count)];
+
+  tell_room(env,
+  ME+" casts a spell and hundreds of tiny starbursts appears in the air!\n"+
+  IT+" becomes "+RED+"angered and confused"+NORM+" by the dazzling lights.\n"+
+  IT+" turns and swings angrily at "+
+  HIC+capitalize(sucker->query_name())+NORM+"!\n");
+
+  obj->stop_fight(); obj->stop_fight();
+  obj->attack_object(sucker);
+  tp->add_spell_point(-35);
+  return 1;
+}
+

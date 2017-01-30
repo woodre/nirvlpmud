@@ -1,0 +1,40 @@
+init(){
+  if(USER){
+    if(USER->is_player() && USER == this_player() && !TP->is_kid()){
+      setup();
+
+      /* Commands for all Sigilists */
+      add_action("save_member", "sigsave");
+      add_action("leave_guild", "sig_leave");
+      add_action("ghelp_cmd", "shelp");
+      add_action("gwho_cmd", "sigwho");
+      add_action("channel_cmd", "sig");
+
+      /* Commands using Major Sigil */
+      if(level > 5) {
+        add_action("set_plevel","set_power");
+        add_action("invoke_spell",major_type, 2);
+      }
+      if(level > 14) add_action("new_sc","score", 2);
+      if(extralevel > 14) add_action("cone_att","cone", 2);
+
+      /* Commands using Lesser Sigils */
+      add_action("disperse","disperse");
+        /*
+        decorpse
+        light
+        darkness
+        paralyze
+        peace
+        heal
+        */
+
+      /* Commands using Instant Sigils (lab casting only) */
+        /*
+        temp AC bonus (enchant armor)
+        temp WC bonus (enchant weapon)
+        */
+
+    }
+  }
+}

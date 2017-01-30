@@ -1,0 +1,11 @@
+Tue Jun  4 22:13:17 2002--Action: Made Linusjr Reason: So I can test stuff
+Thu Oct 31 16:56:52 2002--Action: dested Francesco's acid (not sure of path) off of kaleia Reason: she said it was giving her a "sensitive mind error"
+Mon Jan 13 17:22:10 2003--Action: helped Hellraiser with some information concerning bartering of items when having maxed coins Reason: he said he had 80k, and tried bartering things, but didn't get any coins in his inventory.  I told him that it doesn't work that way, and offered an alternative to do.
+Sun May 25 14:30:26 2003  test
+Sat May 31 08:03:49 2003--Action: Changed NF notify_fail to FAIL in /def.h Reason: because of conflicts with /open/vertebraker/closed/std/room.c (NF is used for room properties...No-Fight) Also changed all files in my /Newbie/... directories and castle.c to use FAIL instead.
+Mon Jun 23 08:00:02 2003--Action: fixed ~/Newbie/room/n9a.c Reason: I forgot to put "+NORM" after long_desc and color would bleed.
+Thu Jul 17 09:44:33 2003--Action: Handed Tzeal the neosymbiote guild object Reason: He successfully completed the trial, but the guild object didn't clone to him.  Any questions please contact me.
+Fri Jul 25 14:27:09 2003--Action: added a description for "branches" in ../Newbie/room/n2.c Reason: it didn't have one.
+Sat Jul 26 09:56:15 2003--Action: coded and handed my cyberninja a title tool to set it to elemental enforcer (like Orb had) Reason: the MAG color is gay for an 'enforcer'
+Sat Jul 26 21:58:01 2003--Action: Modified ../Newbie/room/n2.c to have an add_action that allows for more bees to come out via a call_out Reason: maybe the area will see some necro traffic if nothing more? ;)
+[Jul  9 2004 11:45] A: Registered Test Character: Linusjr

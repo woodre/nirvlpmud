@@ -1,0 +1,98 @@
+/* INIT */
+  init() {
+  if(!ENV(TO)) return 1;
+  ENV(TO)->set_guild_file(basename(this_object()));
+  if(!ENV(TO)->is_player()) return 1;
+  if(!TP->is_player()) return;
+/*
+
+  if(query_ip_number(TP) == "134.129.239.13" && TP->query_real_name() != "budah") {
+    tell_object(this_player(),
+    "For your protection, your guild object has been removed.\n");
+  TP->set_guild_name(0);
+    destruct(this_object()); }
+*/
+  setup(ENV(TO));
+  add_action("dervish_reset","dreset");
+  add_action("dhelp","dervish");
+  add_action("dhome","dhome");
+  add_action("dtalk", "derv");
+  add_action("demote", "derve");
+  /*
+  add_action("dervish_train","dtrain");
+  add_action("dervish_set_percent","dset");
+  */
+  add_action("dervish_cleanse", "dcleanse");
+  add_action("dervish_whirlwind","whirlwind");
+  add_action("dtitle", "dtitle");
+  add_action("dervish_sandstorm", "sandstorm");
+  add_action("scatter","scatter");
+  add_action("offwield","offwield");
+  add_action("run","run");
+  add_action("sand_transfer","transfer");
+  add_action("dervish_chant", "dchant");
+  add_action("dervish_invis","dinvis");
+  add_action("dervish_pray", "dpray");
+  add_action("dervish_heal", "dheal");
+  add_action("dervish_oasis", "doasis");
+  add_action("dervish_sharpen", "dsharpen");
+  add_action("dervish_fatal", "sandburial");
+  add_action("dervish_idea", "didea");
+  add_action("dervish_sandcheck","sandcheck");
+  add_action("sandblast","sandblast");
+  add_action("confuse", "confuse");
+  add_action("dervish_score","score");
+  add_action("dervish_score","sc");
+  add_action("no_go","wimpy");
+  add_action("quit_func","quit");
+  add_action("sand_missile","mi");
+  add_action("sand_missile","missile"); 
+  add_action("sand_shock","sh");
+  add_action("sand_shock","shock"); 
+  add_action("sand_fireball","fi");
+  add_action("sand_fireball","fireball"); 
+  add_action("sand_sonic","so");
+  add_action("sand_sonic","sonic");
+  add_action("cmd_ready", "ready");
+#ifndef __LDMUD__ /* Rumplemintz */
+  add_action("cmd_ready"); add_xverb("#");
+#else
+  add_action("cmd_ready", "#", 3);
+#endif
+  add_action("kill","kill");
+  if(bravery) add_action("lead_toggle","dlead");
+  environment()->set_guild_name("dervish");
+  "/players/snow/dervish/objects/chatob.c"->resetchannel();
+  if(!ingame) { loginmsg(TP); ingame = 1; }
+  
+  
+  	   tell_object(this_player(), "\n\nCHANGING TO THE NEW DERVISH OBJECT.\n\n");
+	   destruct(this_object());
+	   TP->set_guild_name(0);
+	   TP->set_guild_file(0);
+	   move_object(clone_object("/players/guilds/dervish/gob.c"), this_player());
+	   command("save", TP);
+  }
+  
+
+no_go() { write("You cannot do that.\n"); return 1; }
+quit_func() { ingame = 0; logoutmsg(); save_me(); return 0; }
+
+loginmsg(ob) {
+  string mess, mess2, entermess;
+  mess = BOLD+"*"+RED+"DERVISH"+OFF+BOLD+"*";
+  mess2 = ob->query_name()+" enters the game.";
+  entermess = mess+" "+mess2+" "+mess+OFF+"\n";
+  if(ob->query_level() < 20)
+  CHATOB->send_msg(entermess); return 1; }
+
+logoutmsg() {
+  object me;
+  string mess, mess2, leavemess;
+  me = environment();
+  if(!me) return;
+  mess = BOLD+"*"+RED+"DERVISH"+OFF+BOLD+"*";
+  mess2 = me->query_name()+" leaves the game.";
+  leavemess = mess+" "+mess2+" "+mess+OFF+"\n";
+  if(me->query_level() < 20)
+  CHATOB->send_msg(leavemess); return 1; }

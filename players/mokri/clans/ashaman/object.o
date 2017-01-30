@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;31m An Enameled[1;30m Dragon [1;31mPin[0m"
+long_desc "[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "pin"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[0mType 'clan_help' for commands."
+clan_short "[1;31m An Enameled[1;30m Dragon [1;31mPin[0m"
+damage_type 0
+hall_path "/room/farmroad3"
+object_name "pin"
+owner "mosh"
+spell_alias "weave"
+spell_mess_me "You weave %yellow%Earth, %blue%Air, %hi red%Fire, %hi blue%Water, %normal%and %hi green%Spirit %normal% to form a healing aura"
+spell_mess_room "%TPN% weaves a healing aura"
+spell_mess_them "%TPN% weaves "%hi yellow%THE FIVE POWERS%normal%" into a healing aura about you"
+abilities ({})
+chan_history ({"[Fri Jul 30 08:26:17 2010] DeathKnight: i got a funny feelin u fare better than i do on that  :)","[Sat Jul 31 02:55:55 2010] DeathKnight: 50","[Sat Jul 31 02:56:07 2010] DeathKnight: ooopps","[Thu Aug 12 15:49:20 2010] DeathKnight: 100","[Fri Sep  3 16:39:00 2010] Msagro has joined the clan!","[Fri Sep  3 16:39:12 2010] Bilbill: welcome","[Tue Apr  5 18:51:32 2011] Kalel has joined the clan!","[Sun Feb  9 11:06:01 2014] Mosh: sup","[Mon Jul 14 19:14:15 2014] Lok has joined the clan!","[Mon Jul 14 19:14:19 2014] Lok: thabks","[Mon Jul 14 19:14:25 2014] Shadowstone: heh np","[Mon Jul 14 19:14:29 2014] Shadowstone: mosh is the owner fyi","[Mon Jul 14 19:14:41 2014] Lok: aint seen that name in ages","[Mon Jul 14 19:14:47 2014] Lok: heh","[Mon Jul 14 19:14:51 2014] Shadowstone: mosh is on alot","[Mon Jul 14 19:15:04 2014] Lok: talkin about u","[Mon Jul 14 19:15:18 2014] Shadowstone: anyways","[Mon Jul 14 19:15:50 2014] Lok: heh","[Mon Jul 14 19:16:06 2014] Shadowstone: clan hall is 7e,3s","[Wed Dec 30 21:38:57 2015] Careen has joined the clan!",})
+leaders ({"tierno","salina","shadowstone",})
+join_type 0
+private_coffer 84491
+public_coffer 0
+spell_delay 0
+spell_id 2
+spell_cost 30
+last_spell_time 1389149882

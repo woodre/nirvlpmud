@@ -1,0 +1,116 @@
+2016.08.26 13:26:23 LDMud 3.3.720 (Build 3010) (stable)
+2016.08.26 13:26:23 TLS: (OpenSSL) Keyfile 'key.pem', Certfile 'cert.pem'
+2016.08.26 13:26:23 TLS: Error setting x509 keyfile:
+2016.08.26 13:26:23 TLS: SSL error:02001002:system library:fopen:No such file or directory.
+2016.08.26 13:26:23 TLS: SSL error:20074002:BIO routines:FILE_CTRL:system lib.
+2016.08.26 13:26:23 TLS: SSL error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system lib.
+2016.08.26 13:26:23 mySQL 5.5.50
+2016.08.26 13:26:23 Attempting to start erq '/home/petebre/mymud/lp312/mudbin/erq'.
+2016.08.26 13:26:23 Hostname 'loafy' address '174.137.154.70'
+2016.08.26 13:26:23 UDP recv-socket requested for port: 3507
+2016.08.26 13:26:23 LDMud ready for users.
+2016.08.26 13:33:10 Bad arg 1 to call_other(): got 'number', expected 'string/array/object'.
+2016.08.26 13:33:10 program: obj/player.c, object: obj/player line 2528
+'     heart_beat' in '        obj/player.c' ('          obj/player') line 1585
+'       autosave' in '        obj/player.c' ('          obj/player') line 1260
+'        save_me' in '        obj/player.c' ('          obj/player') line 2502
+'  illegal_patch' in '        obj/player.c' ('          obj/player') line 2528
+2016.08.26 13:33:10 Heart beat in obj/player turned off.
+2016.08.26 13:33:10 Error in heartbeat.
+2016.08.26 13:52:52 Error (110) upon reading socket 7 (ip 0xa1df6c8 'obj/player#360'), closing connection: Connection timed out
+2016.08.26 17:22:45 Missing 'return <value>' statement.
+2016.08.26 17:22:45 program: obj/go_player.c, object: obj/go_player#153 line 132
+2016.08.29 04:46:31 Index for [] out of bounds: 112, vector size: 112
+2016.08.29 04:46:31 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/telephone-pole') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.08.29 04:46:31 Error in call out.
+2016.08.29 04:46:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:32 Index for [] out of bounds: 112, vector size: 112
+2016.08.29 04:46:32 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/telephone-pole#1977') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.08.29 04:46:33 Error in call out.
+2016.08.29 04:46:33 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:33 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:33 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:33 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:33 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:33 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:34 Index for [] out of bounds: 112, vector size: 112
+2016.08.29 04:46:34 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/telephone-pole#1980') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.08.29 04:46:34 Error in call out.
+2016.08.29 04:46:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 04:46:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.08.29 14:18:02 Too long evaluation. Execution aborted.
+2016.08.29 14:18:02 program: players/darkfire/obj/dfroom.c, object: players/darkfire/workroom/workroom line 190
+'      room_chat' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/workroom') line 200
+'room_chat_callout' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/workroom') line 190
+2016.08.29 14:18:02 Error in call out.
+2016.08.29 14:18:28 Error in loading object: 'players/darkfire/workroom/menagerie'.
+2016.08.29 14:18:28 program: obj/living.c, object: obj/player#2255 line 251
+'           move' in '         room/room.c' ('players/darkfire/workroom/workroom') line 297
+'    move_player' in '        obj/player.c' ('     obj/player#2255') line 4293
+'    move_player' in '        obj/living.c' ('     obj/player#2255') line 251
+2016.08.29 14:20:45 Error in loading object: 'players/darkfire/workroom/menagerie'.
+2016.08.29 14:20:45 program: obj/living.c, object: obj/player#2255 line 251
+'           move' in '         room/room.c' ('players/darkfire/workroom/workroom') line 297
+'    move_player' in '        obj/player.c' ('     obj/player#2255') line 4293
+'    move_player' in '        obj/living.c' ('     obj/player#2255') line 251
+2016.08.29 14:22:40 Caught error: Error in loading object: 'players/darkfire/workroom/menagerie'.
+'       cmd_hook' in '        obj/player.c' ('     obj/player#2255') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('     obj/player#2255') line 33
+'       cmd_goto' in '     bin/wiz/_goto.c' ('       bin/wiz/_goto') line 29
+'          CATCH' in                        ('       bin/wiz/_goto')
+2016.08.29 14:22:40 ... execution continues.
+2016.08.29 14:23:27 Caught error: Error in loading object: 'players/darkfire/workroom/menagerie'.
+'       cmd_hook' in '        obj/player.c' ('     obj/player#2255') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('     obj/player#2255') line 33
+'       cmd_goto' in '     bin/wiz/_goto.c' ('       bin/wiz/_goto') line 29
+'          CATCH' in                        ('       bin/wiz/_goto')
+2016.08.29 14:23:27 ... execution continues.
+2016.08.29 14:24:00 Too long evaluation. Execution aborted.
+2016.08.29 14:24:00 program: players/darkfire/obj/dfroom.c, object: players/darkfire/workroom/menagerie line 190
+'      room_chat' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/menagerie') line 200
+'room_chat_callout' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/menagerie') line 190
+2016.08.29 14:24:00 Error in call out.
+2016.08.29 14:24:06 Too long evaluation. Execution aborted.
+2016.08.29 14:24:06 program: players/darkfire/obj/dfroom.c, object: players/darkfire/workroom/workroom line 190
+'      room_chat' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/workroom') line 200
+'room_chat_callout' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/workroom') line 190
+2016.08.29 14:24:06 Error in call out.
+2016.08.29 14:24:12 Too long evaluation. Execution aborted.
+2016.08.29 14:24:12 program: players/darkfire/obj/dfroom.c, object: players/darkfire/workroom/menagerie line 190
+'      room_chat' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/menagerie') line 200
+'room_chat_callout' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/menagerie') line 190
+2016.08.29 14:24:12 Error in call out.
+2016.08.29 14:25:51 Caught error: Failed to load file: 'players/darkfire/castle/castle'.
+'       cmd_hook' in '        obj/player.c' ('     obj/player#2255') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('     obj/player#2255') line 33
+'       cmd_goto' in '     bin/wiz/_goto.c' ('       bin/wiz/_goto') line 29
+'          CATCH' in                        ('       bin/wiz/_goto')
+2016.08.29 14:25:51 ... execution continues.
+2016.08.29 14:26:10 Caught error: Failed to load file: 'players/darkfire/castle/shattered/base'.
+'       cmd_hook' in '        obj/player.c' ('     obj/player#2255') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('     obj/player#2255') line 33
+'       cmd_goto' in '     bin/wiz/_goto.c' ('       bin/wiz/_goto') line 29
+'          CATCH' in                        ('       bin/wiz/_goto')
+2016.08.29 14:26:10 ... execution continues.
+2016.08.29 14:26:34 Caught error: Failed to load file: 'players/darkfire/castle/shattered/market/inn'.
+'       cmd_hook' in '        obj/player.c' ('     obj/player#2255') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('     obj/player#2255') line 33
+'       cmd_goto' in '     bin/wiz/_goto.c' ('       bin/wiz/_goto') line 29
+'          CATCH' in                        ('       bin/wiz/_goto')
+2016.08.29 14:26:34 ... execution continues.
+2016.08.29 14:27:56 Undefined function: save_wiz_file
+2016.08.29 14:27:56 program: obj/master.c, object: obj/master line 2793
+'notify_shutdown' in '        obj/master.c' ('          obj/master') line 1654
+'  save_wiz_file' in '        obj/master.c' ('          obj/master') line 2793
+2016.08.29 14:27:56 Error in master_ob->notify_shutdown()

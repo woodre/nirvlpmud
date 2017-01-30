@@ -1,0 +1,55 @@
+/*
+ * spell : Lifesteal   (necromancy)
+ * level : 4
+ * effect: Does damage to the target and heals the caster
+ * cost  : 50 sp
+ * spec  : see below 
+ * files : ~/mages/obj/life_steal.c
+ *
+ * The challenge is to make an effective yet legal spell that
+ * will do damage to the target and heal the player by some
+ * amount.
+ * SEE ~/mages/obj/life_steal.c for details of this spell!
+ *
+ * updated: 11/21/2005 - pavlik
+ */  
+
+life_steal(str) {
+
+  object obj;
+  object ob;
+  int i, max;
+
+  if(!KNOW("steal")){
+	write("What?\n");
+	return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  if(!str) obj = tp->query_attack();
+  else obj = present(str, env);
+
+  if(time() < guild->query_next_dmg() || time() < guild->query_next_heal()){
+	write("You cannot cast this spell right now.\n");
+	return 1;
+  }
+
+  /* no "regular" spell fail, see the object */
+
+  write("You cast a "+MAG+"Lifesteal"+NORM+" spell ...\n");
+  tell_room(env,
+    "A "+HIY+"blinding conduit"+NORM+" of "+HIW+"white energy"+NORM+" appears between "+ME+" and "+IT+"!\n"+
+    "They both convulse uncontrollably as the energy arcs between them.\n");
+  write("You begin to suck the life from "+IT+".\n");
+
+  ob = clone_object("players/pavlik/guild/mages/obj/life_steal");
+  ob->set_owner(tp);
+  ob->set_target(obj);
+  move_object(ob, tp);
+  tp->add_spell_point(-50);
+
+  return 1;
+}
+

@@ -1,0 +1,15 @@
+Beck 5.20.2000
+
+1]
+  For monsters that wear armor their set_ac and the ac of the worn armor are
+  now added together, therefore making the monster have a higher ac. 
+
+  This total number is what you see now when you stat a monster.
+
+  So, if you have a monster that the ac has become too high, 
+  you will need to lower the set_ac amount in the monster file.
+
+2]
+  The worn armor is NOT currently taken into account
+  for determining exp.
+

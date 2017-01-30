@@ -1,0 +1,73 @@
+/*
+ moonstone_ring.c - An item just for fun.  It stays clear if all the alignments
+                    in the room are within the range -40 to +40.
+                    It darkens if the alignments lean toward evil.
+                    It lightens if the alignments lean toward good.
+*/
+
+inherit "obj/armor";
+
+object obj;
+
+int alignment_tally;
+
+string moonstone_color, moonstone_msg;
+
+init(arg) {
+  ::init(arg);
+
+}
+
+reset(arg) {
+  if (arg) return;
+  ::reset(arg);
+
+  set_name("moonstone ring");
+  set_short("a moonstone ring");
+  set_long("A small moonstone ring, it has a large 'N' engraved on the band.\n"+
+           "It has a moonstone set in the band.");
+  set_type("ring");
+  set_value(250);
+  set_weight(1);
+  set_ac(1);
+}
+
+short() {
+    if (!short_desc) return;
+    tally_alignments();
+    if (worn)
+	return short_desc + " (worn)."+moonstone_msg;
+    return short_desc+"."+moonstone_msg;
+}
+
+long(str) {
+    tally_alignments();
+    write(long_desc);
+    write(moonstone_msg+".\n");
+}
+
+tally_alignments() {
+  alignment_tally=0;
+  obj=first_inventory(environment(environment(this_object())));
+  while (obj) {
+    alignment_tally+=obj->query_alignment();
+    obj=next_inventory(obj);
+  }
+
+  if (alignment_tally < - 500) moonstone_color="solid black";
+  else
+  if (alignment_tally < - 100) moonstone_color="translucent black";
+  else
+  if (alignment_tally < - 20) moonstone_color="clear with black specks";
+  else
+  if (alignment_tally < 21) moonstone_color="clear";
+  else
+  if (alignment_tally > 500) moonstone_color="pure white";
+  else
+  if (alignment_tally > 100) moonstone_color="translucent white";
+  else
+  if (alignment_tally > 20) moonstone_color="clear with white specks";
+  moonstone_msg="  (The moonstone is "+moonstone_color+")";
+}
+
+id(str) { return (str=="ring" || str=="moonstone ring"); }

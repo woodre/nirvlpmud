@@ -1,0 +1,9 @@
+SYNOPSIS
+	int remove_action(string verb)
+
+DESCRIPTION
+	Removes the action 'verb' for command giver (this_player).
+	Action which has previously been added by the current object.
+
+SEE ALSO
+	add_action(E), move_object(E)

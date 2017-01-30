@@ -1,0 +1,11 @@
+sh_xp 180000
+sh_pts 20
+sh_lev 4
+muffled 0
+drain_damage 24
+monitor -1
+summon 1
+points 0
+mshpts 20
+in "has joined the crazyness"
+out "returns to depressing reality."

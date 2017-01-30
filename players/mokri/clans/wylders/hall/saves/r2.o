@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/wylders/hall/r1","up",})
+short_desc "A Big Thicket.[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A Hockey Stick","/players/jenny/wings/items/gstick",0,17,15,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,3815,3420,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,11225,10267,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,13849,2341,"[0m[33mGold Dragon Leggings[0m","/players/tallos/7tigers/objects/dragon_legs",0,0,0,"[1;30mDusty Ring[0m","/players/cloud/Fayawyn/obj/dring",0,0,0,"[1;34mHoly Symbol of [1;33mTre[1;34mlos[0m","/players/feldegast/equip/tsymbol",0,0,0,"[1;37mNature's [1;32mBlessing[0m","/players/jaraxle/3rd/alt/items/nature_orb",0,0,0,"[32mWarpstone[1;30m Armor[0m","/players/khrell/armors/skaven/warparmor",0,0,0,"Blocker","/players/jenny/wings/items/sblocker",0,0,0,})

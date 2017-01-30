@@ -1,0 +1,24 @@
+**************
+
+                     Snoop
+
+Syntax:    snoop <player>
+
+Desc:
+           This command allows a wizard to observe all the input done
+           by the player under observation. This power is helpful in 
+           diagnosing bugs and catching cheats. Should have reason to
+           spy on players, for wizards its a handy way to see what 
+           they are doing while you are training them.
+
+Warning:   Players don't need to be constantly monitored.
+
+Example:   snoop mike
+                  results
+           Bob sees all commands entered by player Mike
+
+Related:   
+
+
+**************
+

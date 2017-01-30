@@ -1,0 +1,11 @@
+boltar 1-oct-2000
+
+ In private rooms, players have been leaving crap on the ground
+then complaining after it gets cleaned up by the game.
+
+To address this, I added a query which will tell the standard cleanup
+function not to clean up stuff in a room. Just make the following
+function return something.
+
+query_dont_clean_obs_here()
+

@@ -1,0 +1,43 @@
+   [fallen spell list]
+
+gxp, spell name, endurance cost, comp
+
+0        focus           -1              -
+0        mud_spell       -1              -
+50000    beckon shadows   0              -
+100000   wither corpse   -1              -
+250000   drain           +[0-3]          -
+450000   teleport        -5          crows feather
+600000   shield          -3              -
+750000   weaken          -1              -
+950000   meditate        +[var]          -
+1200000  web [ring]      -5          spider web
+1500000  blast           -1              -
+1800000  empower         -15         ruby red gem
+1950000  know            -3              -
+2100000  shadowform      -5          ash blossom
+2400000  descend         +[0-8],0        -
+2700000  shadowcloak     -3              -
+3000000  dark assistance -5          dark root
+3300000  repulsion       -10         black leaf
+3600000  vanish          -10         pearl
+3900000  rage            -3          black liquid
+4300000  dark prayer     +2          bone powder
+5000000  weave           -50         shadow gem
+         deweave         -3              -
+5500000  see             -3          geode
+6000000  vigor           -35,30,25       -
+7000000  embrace         -15(-1/hb)      -
+8000000  siphon          +36         siphon stone
+
+speak [sp]
+emote, stand, bcry, swave, fdraw, scoff
+set_percent
+ecolor
+remove all
+drift
+csave, cupdate
+guild update(s)
+score [cs]
+set_title <special>
+chelp

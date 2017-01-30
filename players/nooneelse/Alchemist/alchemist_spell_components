@@ -1,0 +1,89 @@
+		Alchemist Component list
+		(also in component.c)
+
+--- 5-7		10	white	student
+alight          fire fly, flint                                 5, 25            =  30
+assess          glass bead                                      25               =  25
+process skins   acid                                            
+refine corpse   bat fur                                         20               =  20
+set home here   parchment, pencil                               10, 10           =  20
+stone skin      granite, flint                                  100, 25          = 125
+sew skins       needle, thread                                  
+
+--- 8-11	20	yellow	acolyte
+cure disease    moldy bread                                     75               =  75
+detect disease  green mold                                      20               =  20
+flash           sulphur, fire fly                               75, 5            =  80
+home            spider web                                      100              = 100
+ice             ice cube, powdered iron                         75, 100          = 175
+
+--- 12-14	40	blue	learned
+
+##############
+
+acid            arrow, adder's venom                            10, 10           =  20
+grease          oil, pork rind                                  20, 75           =  95
+air elemental   fan, feather                                    50, 50           = 100
+earth elemental dust, chalk                                     50, 75           = 125
+fire elemental  fire fly, bell                                  5, 50            =  55
+peace dust      olive branch                                    60               =  60
+haze            crystal bead, oil                               250, 20          = 270
+
+--- 15-18	60	red	adept
+transport       arrow, mercury                                  10, 100          = 110
+charity         arrow, mercury                                  10, 100          = 110
+fear            sulphur, flint                                  75, 25           = 100
+poison          arrow, adder's venom, vial of blood             10, 10, 350      = 370
+summon          arrow, mercury, iron rod                        10, 100, 75      = 185
+transfer        arrow, mercury, iron rod, crystal bead          10, 100, 75, 250 = 435
+zombie corpse   moldy bread, mercury, iron rod, vampire blood   75, 100, 75, 500 = 750
+
+--- 19+		80	black	master
+aid             fire fly, bell                                  5, 50            =  55
+asell           arrow, mercury, iron rod, crystal bead          10, 100, 75, 250 = 435
+hail            ice cube, iron rod                              75, 75           = 150
+repair          iron rod, diamond                               75, 200          = 275
+sharpen         flint, iron rod, diamond                        25, 75, 200      = 300
+summon vampire  arrow, mercury, iron rod, vampire blood         10, 100, 75, 500 = 685
+
+
+
+======================================================================================
+======================================================================================
+
+
+			List of Components
+
+component         # used   levels used               spell cost (gold)
+
+acid                 1     5x1                           
+adder's venom        2     12x1, 15x1                    10
+arrow                7     12x1, 15x4, 19x2              10
+bell                 2     12x1, 19x1                    50
+chalk                1     12x1                          75
+crystal bead         3     12x1, 15x1, 19x1             250
+diamond              2     19x2                         200
+dust                 1     12x1                          50
+fan                  1     12x1                          50
+feather              1     12x1                          50
+fire fly             4     5x1, 8x1, 12x1, 19x1           5
+flint                4     5x2, 15x1, 19x1               25
+glass bead           1     5x1                           25
+granite              1     5x1                          100
+green mold           1     8x1                           20
+ice cube             2     8x1, 19x1                     75
+iron rod             8     15x3, 19x5                    75
+mercury              6     15x4, 19x2                   100
+moldy bread          2     8x1, 15x1                     75
+needle               1     5x1                          
+oil                  2     12x2                          20
+olive branch         1     12x1                          60
+parchment            1     5x1                           10
+pencil               1     5x1                           10
+pork rind            1     12x1                          75
+powdered iron        2     5x1, 8x1                     100
+spider web           1     8x1                          100
+sulphur              2     8x1, 15x1                     75
+thread               1     5x1                          
+vampire blood        2     15x1, 19x1                   500
+vial of blood        1     15x1                         350

@@ -1,0 +1,77 @@
+
+string lastv;
+int lastvisit;
+
+short()
+{
+     return "A large and heavy book";
+}
+
+query_value()
+{
+        return 3;
+}
+
+  query_weight() {   return 200; }
+long()
+{
+   write("Welcome to The Hotel Time and Space.\n");
+   write("You may register for a room with the command 'register'\n" +
+   "");
+   write("Rooms cost 30000 coins and can save up to six items.\n" +
+   "Some items are designed not to save, you will be notified of which\n"+
+ "items saved and which did not. In your room drop items to be stored and type\n");
+  write("'store'. To bring your items back at later date, type 'restore'.\n");
+write("  There will be NO rembursements for lost items.\n");
+write("  You may invite other players into your room from the lobby\n");
+write("  by using 'invite <name>' inside your room.\n");
+write("  Checkout of your room with 'checkout'\n");
+}
+
+init() {
+  add_action("read","read");
+}
+
+
+
+get() {
+      write("The book is too heavy and is attached to the counter.\n");
+    return 0;
+}
+read(str){
+   if(str!="book" && str!="output")
+     return 0;
+    if(str!="output")
+   call_other("players/boltar/hotel/hotel", "list_guests",0);
+   if(str == "output")
+    call_other("players/boltar/hotel/hotel", "list_guests", 1);
+   return 1;
+}
+id(str) { return str=="book"; }
+
+
+set_date(arg) {
+  lastvisit[arg] = time();
+  lastv[arg] = extract(ctime(time()), 3, 10);
+  save_object("players/boltar/hotel/book");
+  }
+date(arg) {
+  return lastv[arg];
+ }
+reset(){
+int a;
+int i;
+lastv=allocate(70);
+lastvisit=allocate(70);
+restore_object("players/boltar/hotel/book");
+while ( i < 60) {
+    if(!lastvisit[i]) {
+      lastvisit[i]=time()-1036800;
+    }
+    i++;
+}
+return 1;
+}
+query_visit(arg) {
+    return lastvisit[arg];
+  }

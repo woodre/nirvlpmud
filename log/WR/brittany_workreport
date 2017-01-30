@@ -1,0 +1,27 @@
+Thu Jul  6 15:56:30 2000--Action: I fixed k3/4 Reason: made description for flame
+Thu Jul  6 15:57:34 2000--Action: I redid k5 Reason: corrected door description
+Thu Jul  6 15:58:26 2000--Action: I rephrased spiral in k8/9 Reason: wrong wording
+Thu Jul  6 16:02:55 2000--Action: fixed k11 Reason: added hint into mound description\
+Thu Jul  6 16:04:07 2000--Action: added listen to k12 Reason: no listen in room
+Thu Jul  6 16:05:37 2000--Action: added more syntax to k13 Reason: mound, dirt and pile work
+Thu Jul  6 16:06:33 2000--Action: added listen to k14 and zoog emote changed Reason: no listen/wrong emote from zoog
+Thu Jul  6 16:08:27 2000--Action: no change in k15 Reason: crawl was meant to lead to k13..k14 said you couldnt come back that way
+Thu Jul  6 16:10:59 2000--Action: removed exit k16/k19 Reason: do not tell exit when listed
+Thu Jul  6 16:11:45 2000--Action: fixed spelling error in k20, fixed search Reason: error
+Thu Jul  6 16:14:20 2000--Action: fixed k21 chimneys and removed river in description Reason: wrong description
+Thu Jul  6 16:14:52 2000--Action: k22 the river is only in this room Reason: no change
+Thu Jul  6 16:15:20 2000--Action: k23 fixed listen Reason: couldnt listen
+Thu Jul  6 16:15:58 2000--Action: k26 fixed \n after menu..removed potion Reason: error
+Thu Jul  6 16:16:44 2000--Action: k27 fixed return line in search/cemetary descript and search path Reason: error
+Thu Jul  6 16:17:42 2000--Action: k29 removed a sentence/added shapes descript Reason: error
+Thu Jul  6 16:32:24 2000--Action: fixed k30, added squeeze_crack/crevice Reason: allowed difference
+Thu Jul  6 16:34:54 2000--Action: fixed k33, corrected spelling and fixed sconce Reason: light candle or sconce work
+Thu Jul  6 16:35:30 2000--Action: fixed k34, same reason as k33 Reason: light candle and sconce work
+Thu Jul  6 16:36:54 2000--Action: k35 redid room description Reason: removed k36
+Thu Jul  6 16:44:49 2000--Action: k37 fixed syntax for throne/dais Reason: can use either
+Thu Jul  6 16:45:11 2000--Action: k39 fixed pedestal descript Reason: too long
+Fri Aug  4 00:54:52 2000--Action: fixed rockworm Reason: set_spell_dam was misspelled
+Fri Aug  4 00:56:28 2000--Action: fixed anzoogs Reason: remove enable cmd that shouldnt have been there
+Sun Aug  6 21:02:02 2000--Action: changed nasht and kaman alignment to neutral Reason: they are my entrance NPCs and my intention is not to pervent good align guilds from entering my area
+[Jul 19 2006 23:49] A: Registered Test Character: Brittest
+[Jun 13 2007 10:56] A: Registered Test Character: Ten

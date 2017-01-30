@@ -1,0 +1,20 @@
+**************
+
+                     Trans!
+
+Syntax:    trans! <player>
+
+Desc:
+           This command is a more powerful version of trans.
+           It places the player in your inventory.
+
+Warning:   Don't abuse players.
+
+Example:   trans! mike
+                  results
+           Bob now has Mike in his inventory
+
+Related:   trans, place
+
+
+**************

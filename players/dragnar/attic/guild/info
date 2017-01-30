@@ -1,0 +1,213 @@
+GUILD
+	Servants of Shardak
+
+AFFILIATED WIZARDS
+	Dragnar, Balowski, Gowron
+
+THEME
+	Malice and player killing
+	Con:	guild hall is pk and easily broken into
+		best `healing' spell gives 1 hp per 2 sps (approx)
+	Pro:	fairly unrestricted (no forced rp)
+		not a lot of backfiring spells
+	
+STRUCTURE
+	Player governed ranking system, where evil acts and pking
+	are necessary to advance
+
+GLEVELS
+	Level and cost in experience (accumulated)
+        1st ........0  2nd ....5,714  3rd ...28,571  4th ...80,000
+        5th ..171,428  6th ..314,285  7th ..520,000  8th ..800,000
+
+TRIALS
+	Trials should be passed before certain abilities are gained.
+	They are of the nature of mini quests.  Hints are given.
+
+        1. Kill a level 5+ monster and bring it back to the priest.
+        2. Get a teleport object and give it to the merchant.
+           Instruct him how to use it.
+        3. Give the Holy Avenger to the guild smith.
+        4. Defeat the monster (wildebeest) in the pit.
+	   No leaving, no peace. Claims a death now and then.
+        5. Sacrifice a newborn mudkid to Baal. 
+        6. <considered> Kill another player... Bring his head to
+           Shardak.
+
+LEAVING
+	A player leaving the guild is killed, and guild stats reset.
+
+ABILITIES
+        Cost in parenthesis. Needed trials in brackets.
+        I've tried to list the most powerful last.
+
+        LEVEL 1:       
+        gsave, restore  Save and restore guild stats
+        darken          Get a new clone of the guild object.
+        gt, ge, gf, gpt, gpe, gpf, gts
+			Guild channel commands.
+	gw, others      Guild who, who list
+        sk              Score listen guild xp and stuff
+	run		Speedster, up to 4 rooms
+	send		Send sps to Shardak [see SHARDAK]
+	summon		Summon Shardak inside guild [see SHARDAK]
+	login		Set login room to church or guild
+	worship shardak (10 sps)	Makes person evil.
+
+        LEVEL 2:
+        tag             Marks an item as not-to-be-sold. Only the
+                        merchant in the guild recognizes tags.
+        untag           Opposite of untag.
+        inv             Shows inventory with tagged items
+                        Tag, untag, and inv are not really guild
+                        stuff. Just a nice idea *hint hint*
+        scan (10 sps)   Inexact `consider' type spell
+        drain [1]       Heal yourself from a corpse. 1 of 9: healing
+			halved and bones left behind. [See SPINAL]
+        dagger (11 sps) spell_object, damage: 5 + random(13). No pk.
+
+        LEVEL 3:
+        call merchant [2] (10 sps)  Call the "portable shop" if it
+                        isn't busy. Deducts 5% of value of items
+                        sold, if guild member, 10% for others.
+        light (5 sps)   Get a light. Ahem..
+        equil           Shift hps to sps or hps to sps. 
+                        Deduct random of one 3rd for hps->sps.
+                        Deduct a 3rd + random a 3rd for sps->hps.
+        dragonskin (21 sps)     Get an ac 1 armour of type skin.
+        escape (25 sps) Imprecise teleport to guild.
+
+        LEVEL 4:
+        confuse (13 sps/person)
+			Peace spell. Can be blocked.
+        spear (17 sps)  spell_object(), damage: 8 + random(19). No pk.
+        slayer [3] (? sp)       Summon a slayer sword [see SLAYER]
+        toggle          Like equil, but amount and type to shift
+                        chosen by the player.
+
+        LEVEL 5:
+        summon [4] (100 sps)    Summon a dragon familiar [see DRAGON]
+        send (? sps)    Send sps to someone. Deduct random of 1/2
+                        if receiver is good, otherwise rand 1/3.
+        spy (19 sps)    Spy on another player [see DRAGON]
+
+        LEVEL 6:
+	ignite (10 sps) Prevent a given item from being picked up by
+			other than guild members.
+        wand (? coins)  Summon a wand. 10 coins can per acid drop.
+                        One acid drop per damage point. Damage 10 + r30.
+        darkness (25 sps)       Blocks exits in some rooms (the ones
+                        having a move() function) for 30 seconds.
+                        Cannot be cast in the /room/*.c rooms
+                        Does not block teleport out. Chance of escape.
+        waste_msg       Configure sound of waste spell.
+        waste (30 sps)  spell_object(), damage: 16 + random(25)
+        dragonskin (42 sps)     Get an ac 2 armour of type skin.
+
+        LEVEL 7:
+        breath (34 flame)       Flame breath [see DRAGON]
+        summon (5-100 sps)  	Invoke skeleton warrior [see SPINAL]
+
+        LEVEL 8:
+        bring (50 sps)  Using dragon to summon somebody. [see DRAGON]
+        storm (49 sps)  Rain fire and brimstone on opponent. During a
+                        period of half a minute, the storm does 3
+                        spell_object()'s (5 + r25, 5 + r25, 15 + r22),
+                        and other spells have a 75% chance of failing.
+                        If caster is not in combat, storm clears.
+                        If caster flees, storm turns against caster.
+
+	Outside level:
+	invite		invite a player to join the guild (senior)
+	ally		make a player an ally of the guild (senior)
+	expell		expell an ally (senior)
+	gpromote	promote or demote a guild members class
+	freeze		freeze most guild abilities (law)
+	unfreeze	neg freeze (law)
+
+SPINAL
+	Using a pile of bones (that `drain' may leave behind), summon
+	a skeleton warrior. Cost is ultimately determined by the level
+	of the killed monster. (level 20 monster gives level 18 spinal)
+	Cost is set to level*5 sps. Spinal will have ~90% of cost hps.
+      * Stats: level 1, wc 3, ac 0, exp 0, not pet.
+      * Can wear shields and wield one or two weapons.
+      * Fighting speed determined by level. 15 action points per hit,
+	level action points returned per heartbeat, i.e. level 18 can
+	hit twice once in every 5 rounds.
+      * Will attack owner, if (s)he has positive alignment, or if
+	wielding a high class weapon
+      * May attack owner's pets (attacks dragon always).
+
+DRAGON
+      * It will absorb a 4th of the damage inflicted to the owner.
+      * Its stats are: 170/170hps, 34/170sps, wc15, ac4, pet
+        (maxes from rules of 2-11-94: 175hps, ?sps, wc15, ac5, pet)
+      * It does not actively participate in combat.
+      * The spell points ("flame") can be used to cast a "flame
+        breath" spell. Standard spell_object() through the player,
+        damage 17 + random(28). Given the basic healing rate, this
+        should be possible every 595 seconds. Unless the owner feeds
+        it corpses. (like drain but for dragons)
+      * It can fly through 5 rooms if mounted. Allowed exits: 
+        (n,s,e,w,nw,ne,sw,se,u,d,in,out,back,step rift,enter portal)
+        Fly to guild for 25 sps.
+      * Can soar with its rider. It will look like the dragon flies
+        above a room, but it is in void. Costs 2 flame/35 seconds.
+      * Can remember a room (costs 9 sps) and return to it once
+        (costs 23 sps)
+      * Not mountable in combat.
+      * Can bring another player (if he/she accepts and not in realm)
+        for the cost of 50 sps.
+      * Can transport items to another player (if he/she not in realm).
+      * Can carry items for the owner in its saddlebag. /obj/container
+	with max_weight set to 10.
+      * Can be sent out to spy on another player.
+        Shows room, room contents, and the player's wielded weapon.
+
+SLAYER SWORD
+      * Does extra hits to the bearer's opponent using heartbeat and
+        hit_player(). (New version without hb is awaiting approval)
+      * Can be used in pk fights.
+      * Players can carry one at the time, not storable, not dropable.
+      * A given amount (max 150) of spell points are stored in the
+        sword as it is invoked. Self destructs when used up.
+      * Uses all strength left if opponent is below 25 hps.
+      * Damage table (before armour class is subtracted)
+        Probabilty:     Damage:         Cost:           Avg * prob.
+        .10             random(10)      == damage       0.45
+        .10             random(12)      == damage       0.55
+        .20             random(15)      == damage       1.4
+        .20             random(18)      == damage       1.7
+        .10             random(20)      == damage       0.95
+        .10             random(25)      == damage       1.2
+        .20             0               random(10)      0 / 0.9
+        Average:        6.25            7.15
+
+      * Yielding (with a 150 sp slayer):
+        Against an unarmed opponent: 131.3 pts of damage in 21 rounds
+        Against an ac 8 opponent:     83.9 pts (approx.) in 21 rounds
+
+SHARDAK
+	The guild hall is protected by a level 16 monster.  Breaking
+	in to the guild is therefore relatively easy, and since most
+	of the guild is pk/fight_area, other guilds have besieged the
+	guild.
+	In most of the guild rooms, members can summon shardak to aid
+	them in combat against other players. Shardak is a high level
+	monster, but has been `killed' on several occassions. For some
+	guilds it is easier than for others..
+	Shardak can return from death/banishment by the guild members
+	sending sps. 1000 sps is need to break the banishment.
+	Recently, when the guild took a severe drop in members, Shardak
+	has begun to prowl the guild and attack intruders. It is still
+	possible to go undetected though.
+
+MISC
+	Weapon repair in guild, demon blade, ring of murder,
+	practice dummy, entrance to sparring arena, borrowing money.
+	Will elaborate..
+
+NICHES
+	These are guild lockers and the number of items that can be
+	saved is derived from class and guild level.

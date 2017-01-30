@@ -1,0 +1,28 @@
+Gravepact listing for the spell within /guild/power
+
+Gravepact chance = random(guild_level + 11)
+
+case 1 - Drains all spell points
+case 2 - Drains all components
+case 3 - Drains random stat
+case 4 - Drains 1 point of Sta
+case 5 - Caster gains: 20 blood, 10 skin and 2 eye
+case 6 - Does 10 point spell_obj on target
+case 7 - Caster gains random(3) in WC
+case 8 - Target gains random(4)+1 in WC
+case 9 - Does absolutly nothing
+case 10- Skeleton rises as pet (if pet is not present)
+case 11- Wraithform is negated
+case 12- Mummy rises and attack caster
+case 13- Target gains random(100) heal self
+case 14- Target hit for random(30) hit player
+case 15- Caster hit for random(150) neg heal
+case 16- Caster gains 1 soul
+case 17- Does absolutly nothing (again)
+case 18- Target gains random(15)+10 in WC
+case 19- Realm of Darkness ruptured as 
+case 20- Does something really spiffy...  (avatar only)
+
+Case 20 is to be determined... Any suggestions can be mailed
+to Daranath...   
+

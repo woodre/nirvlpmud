@@ -1,0 +1,12 @@
+I removed the inherit of verte's room.c and changed it to room/room.c
+I did this so I wouldn't have to fuck with the item shit in his 
+inheritable, some buggy stuff with it when you override long() and I 
+figured this was easier for now.  I went ahead and did it myself, since
+pulling an inheritable means a lotta things have to be looked at, so
+I added a manual exit for out, and added an add_action() for look, that
+manually does everything involved, or just returns to the standard look
+for anything else, since 'look at bag' would be overridden in there too,
+the way it was.  lemme know any problems that arise, it should be kosher
+tho.
+
+wax

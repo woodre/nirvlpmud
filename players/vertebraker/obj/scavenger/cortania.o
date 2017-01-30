@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/obj/weapon","/players/softly/newbie/obj/cheese","/players/mythos/awep/katana","/players/sado/shop/rose","/players/mythos/awep/tanto","/players/jamila/beach/mobs/claw","/obj/treasure","/obj/treasure","/players/wren/Area/starbug/items/gauntlet","/players/wren/Area/starbug/items/bouquet","/players/angel/area/stargate/obj/bullets","/players/mythos/awep/kama","/obj/weapon","/players/pain/NEW/weap/soulcrusher","/players/wren/Area/starbug/items/levis","/players/jamila/beach/mobs/shell","/players/pain/NEW/weap/mace","/players/mythos/amisc/mirror","/players/angel/area/stargate/obj/staff","/obj/weapon","/players/wren/Area/starbug/items/straw","/players/arrina/treas/onyx","/players/puppy/s/eq/block","/obj/weapon",})
+shorts ({"A [1mwhite[0m helmet","Bow","[1;33mCheese[2;37;0m","Katana","A beautiful red rose blossom","Tanto","A Lobster Claw","Arctic Seal pelt","A piece of corundum","Time gauntlet","a colorful bouquet of 'flowers'","A clip of bullets [50]","kama","A gardening hoe","a mace named [1m[31mSoulCrusher[0m","stretched out Levi jeans.","A Large Shell","A large iron mace","A small mirror","[1;36mSTAFF WEAPON[0m","Shark`s tooth","a long plastic straw","A piece of carved onyx","A building block","some teeth",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

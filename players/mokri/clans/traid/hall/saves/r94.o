@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/traid/hall/r92","south","/players/mokri/clans/traid/hall/r100","north",})
+short_desc "Underground[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"Dark Knife","/players/mythos/closed/guild/task/8/knife5",0,0,0,"A heal spell","/players/morgar/spells/full_heal",0,0,0,"[1mElven boots[0m","/players/eurale/Glade/OBJ/elven_boots",0,0,0,"Bracers of Speed","/players/maledicta/cont/rdragon/sbracers","-0-",0,0,"[1;30mThe Foul Pendant[0m","/players/khrell/armors/skaven/foulpendant",0,0,0,"[1;30mDemon Guard[0m [[1;33mSun Forged[0m]","/players/jareel/armor/DWARFFORGE/demon/chest","1",0,0,"A finely honed longsword","/players/snow/WEAPONS/hon_sword",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,57,132,"[1;30mDemon Gloves [0m[[1;33mSun Forged[0m][0m","/players/jareel/armor/DWARFFORGE/demon/gloves",0,0,0,"A 1997 [1m[37mStanley Cup [0mChampionship Ring.A 1998 [1m[37mStanley Cup [0mChampionship Ring","/players/jenny/wings/items/combinedrings",0,0,0,})

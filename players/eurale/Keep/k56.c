@@ -1,0 +1,27 @@
+#include "/players/eurale/defs.h"
+inherit "room/room";
+
+reset(arg) {
+  if(arg) return;
+if(!present("dwarf")) {
+move_object(clone_object("players/eurale/Keep/NPC/neidar"),TO); }
+set_light(1);
+
+short_desc = BOLD+"The Keep"+NORM;
+long_desc =
+	"  You have wandered through the trees and worked your way up a\n"+
+	"small hill.  The area seems to be much more hilly in this part\n"+
+	"of the canyon.  The trees are much thinner and the grass is\n"+
+	"thicker and taller... a good place for an ambush.\n";
+
+items = ({
+	"hills","Gently rolling mounds",
+	"trees","Short, green, and leafy",
+	"grass","Waist high and generally yellowish",
+});
+
+dest_dir = ({
+	"players/eurale/Keep/k53.c","east",
+});
+
+}

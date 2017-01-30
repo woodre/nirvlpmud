@@ -1,0 +1,24 @@
+**************
+
+                     Setmmin
+
+Syntax:    setmmin <msg>
+
+Desc:
+           This command is to set your personal teleport message for
+           entering an environment via goto and the like. Default is 
+           "arrives in a puff of smoke.
+
+Warning:   Keep the message appropriate and be aware that it still 
+           displays when you are invisible.
+
+Example:   setmmin stumbles onto the stage
+                  results
+           Players see "Bob stumbles onto the stage" when Bob 
+           teleports to them.
+
+Related:   setmmout, setmin, setmout, setmhome, review
+
+
+**************
+

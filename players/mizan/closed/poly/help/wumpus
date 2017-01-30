@@ -1,0 +1,29 @@
+
+[WUMPUS] Level [3] 450 charges (+sta, --int, --mag, +str, -ste, +luck)
+
+
+  The wumpus is a fearsome creature. It has three arms and is covered
+  with thick, brown fur. The Wumpus does not like to be taunted.
+  As a Wumpus you can also gobble things in your extremely large
+  mouth and leave them there for storage. The Wumpus even has a
+  theme song to play during combat.
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+gobble <item>    Gobble up an item that is lying around in the room.
+                 You dont really eat it or anything, it just winds up
+                 inside your mouth for storage.
+
+spew <item>      Spit back out something that you gobbled earlier.
+
+strap <weapon>   Wield a second weapon offhand. You can strap up to
+                 two weapons.
+
+strap all        Same as above but cycles through inventory and straps
+                 weapons on a first-come, first-serve basis.
+
+unstrap <weapon> Remove a weapon wielded offhand.
+
+defecate         (60 SPS) Set colon to warp factor 5, and leave a
+                 horrifying lump of a present for everyone to see and
+                 play with.

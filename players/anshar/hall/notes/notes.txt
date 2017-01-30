@@ -1,0 +1,78 @@
+The Ambrosiatic Hall:
+
+A small area consiting of 10 rooms:
+
+
+                11
+                 |
+                10
+                 |
+              7--9--8
+              |     |
+              5     6
+              |     |
+              3--2--4
+                 |  <------enter gate
+                 1
+
+Rooms:
+
+Room 1 is the entrance to the hall. It is guarded by Azelane. 
+She does not appear at first, but only after trying to enter
+hall proper. Azelane bars the way, warning that to try to enter
+is to die. If the player continues to attempt to enter, she
+attacks. There are roots here that can be used to combat the
+special that Azelane does during combat, if a player is so
+inclined to look. The portal leads back to /players/anshar/chamber.c
+
+Room 2 is of little interest, just the beginning of the hall.
+
+Rooms 3 and 4 are essentially identical. Simple rooms until the
+player attempts to go north. Then, four suits of magically
+animated armour leap to attack.
+
+Rooms 5 and 6 are essentially identical. Continuation of the hall.
+
+Rooms 7 and 8 are essentially identical: Guard rooms containing
+three guards which will attack of the player attempts to enter
+room 9.
+
+Room 9 contains Tanu and Coran, which prevent the player from
+continuing to the north while they are present.
+
+Room 10 is the back of the hall. It contains Terran who keeps the
+from leaving while he is present. This room is also Non Teleport
+
+Room 11 is a treasure room containing 20-25K coins
+
+Creatures:
+
+NAME       LVL WC AC HP    SPECIAL       ROOM
+                        chance/damage
+------------------------------------------------------------------------------
+Azelane    20  40 15 800   40/100        hall1
+Armour     19  28 16 475   30/25         hall3, hall4
+Defender   10  17 10 200   none          hall7, hall8
+Tanu       20  40 30 600   30/50         hall9
+Coran      20  40 13 1000  25/60         hall9
+Terran     25  50 15 1000  40/100        hall10
+
+Items:
+
+chain1 found on the defenders is an ac3, wt3 body armor, valued at
+500 coins.
+
+halberd, also found on the defenders is a wc17, wt4 weapon with a
+20% chance of a return of 2.
+
+deathmaster found on Terran is a wc18 wt4 weapon.  Assuming that
+the alignment of the wielder is evil there is a 33% chance of a 
+special.
+
+root is a root picked from hall1. The root has no value, and is used
+only to make Azelane's special not go off.
+
+My castle will be updated so that it leads to /players/anshar/chamber.c
+(see /players/anshar/castle2.c) and /players/anshar/forest/room/path1.c
+will be updated to lead back to this same room so that all future expansions
+will be from here (see /players/anshar/forest/room/path1_2.c)

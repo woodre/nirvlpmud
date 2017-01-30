@@ -1,0 +1,13 @@
+wwear(str) {
+  int noabuse;
+  noabuse = 0;
+  if(str=="feather") {
+  this_player()->set_title("the Martyr");
+  write("You wear the feather.\n");
+  this_player()->clear_crime();
+  this_object()->set_short("A feather of great beauty <worn>");
+  if(call_other(this_player(),"query_attrib","mag") <21 && noabuse < 1){
+  this_player()->raise_magic_aptitude(1);
+  noabuse = 50; }
+  return 1;}
+  }

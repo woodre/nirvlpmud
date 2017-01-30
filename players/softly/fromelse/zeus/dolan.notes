@@ -1,0 +1,7 @@
+AO == attacker_ob
+QN == query_name()
+
+attacker_ob is the same as what you get if you call this_object()->query_attack()
+
+you can't do a write_file() from within a call_out
+because this_player() must be defined

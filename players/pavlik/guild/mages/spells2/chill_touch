@@ -1,0 +1,50 @@
+/*
+ * spell : Chill Touch   (necromancy)
+ * level : 1
+ * effect: spell_object: 5 + random(Necr/3)
+ * cost  : 5 + (Necr/6) sp
+ * spec  : 
+ * files : none
+ */
+
+chill_touch(str){
+  object obj;
+  int dmg;
+  int rand;
+
+  if(!KNOW("ctouch")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(guild->query_next_dmg() > time()) {
+    write("You cannot cast this spell right now.\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  write("You cast a "+HIB+"Chill Touch"+NORM+" spell ...\n");
+
+  if(spell_fail2(1, "necr", "wil")) {
+    write("You fail the spell miserably.\n");
+    write("Nothing happens.\n");
+    say(ME+"'s spell fizzles.\n");
+    tp->add_spell_point(-5);
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" reaches out and shocks "+IT+" with a deathly touch!\n"+
+  IT+" trembles with uncontrolable terror!\n");
+
+  dmg = 5 + random(guild->query_total_necr()/3);
+  tp->add_spell_point(-(5 + guild->query_necromancy()/6));
+
+  PAV->tell_damage(dmg,obj);
+  tp->set_spell_dam(dmg * 5/2);
+  tp->set_spell_dtype("other|evil");
+
+  return 1;
+}

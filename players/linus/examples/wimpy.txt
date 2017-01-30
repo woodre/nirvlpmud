@@ -1,0 +1,11 @@
+heart_beat(){
+   ::heart_beat();
+   if(this_object()->query_hp() < this_object()->query_max_hp / 4){
+      /* if npc's health is less than 25% */
+         if(random(5)){
+         say("Monster ran away.\n");
+         destruct(this_object());
+      }
+      say("Monster tried to leave.\n");
+   }
+}

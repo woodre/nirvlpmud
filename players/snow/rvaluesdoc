@@ -1,0 +1,8 @@
+For example, instead of:
+id(str) { if (str=="myobject") return 1; else return 0; }
+id(str) { return "myobject"==str; }
+basically, any time you see
+if(condition) return 1
+else return 0
+instead just do
+return condition;

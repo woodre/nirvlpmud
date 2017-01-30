@@ -1,0 +1,9 @@
+	>>---------<< /players/mizan/etheriel/heals >>---------<<
+
+	Anything that heals a player and can be picked up goes into
+	this directory. That includes items that may be mixed in
+	nature (i.e. edible weapons, armor, etc.)
+
+	As long as it calls on heal_self, add_hp, or add_sp, it will
+	go here whether or not it is a thimble or the Titanic.
+

@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/fightclub/hall/main","north","/players/mokri/clans/fightclub/hall/r3","west",})
+short_desc "[1;37mFight Club[0m storage room[0m"
+long_desc "The basement continues back, getting darker and damper as you head to the back wall. Boxes and old broken bar equipment neatly stacked up against the wall. The cold concrete can be felt beneath the cardboard laid on the ground.[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"An extremely sharp hunting knife","/players/vertebraker/swamp/x1/g-knife",0,0,0,"[41m[30mFellblade[0m","/players/khrell/weapons/skaven/fellblade",0,3,3,"[1;37mMisty Cloak[0m","/players/jaraxle/3rd/pyramid/items/myst_cloak",0,0,0,"gator [1;37mtooth[0m necklace (has 0 teeth)","/players/vertebraker/swamp/x1/g-necklace","X0CHINGY0X",0,0,"[31mP[36ma[33mt[1mc[33m[1mh[32mw[34mo[31mr[35mk[0m Cloak","/players/fakir/inn/ARM/patchcloak",0,0,0,"A [1;37mcrystal[0m ring with a [1m[1mblack[0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"[1;34mPlate[0m of [1;33mT[1;34m*[1;33mH[1;34m*[1;33mU[1;34m*[1;33mN[1;34m*[1;33mD[1;34m*[1;33mE[1;34m*[1;33mR[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_plate",0,0,0,})

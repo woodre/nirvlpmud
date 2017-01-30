@@ -1,0 +1,59 @@
+
+This file contains thoughts and notes on the Endurance Point system
+for the Meijin guild.
+
+-------------------------------
+Endurance Point Recovery Rate:
+-------------------------------
+Endurance Points recover once every 5 heart_beats.  The amount of
+points recovered is equal to Constitution/10.  Thus the max
+recovery rate is 10.  Endurance Points recover at at least a
+rate of 2 every 5 hb.
+
+At the maximum recovery rate the Endurance Point to Spell Point
+recovery ratio is 10:1
+
+I will try to use the 10:1 recovery ratio to justify how EPs
+can compare to SPs.
+
+----------------------
+Max Endurance Points:
+----------------------
+The maximum Endurance Points avaliable to a player is calculated
+in the following manner:
+  max_ep = 200 + (endurance_stat * 5) + (guild_rank * 7)/2
+
+The above calculates to 1244 points assuming max guild rank (127)
+and max endurance_stat (100).
+
+If we assume to 10:1 EP to SP ratio, the player only has 1/3rd the
+amount of endurance avaliable compared to the equivilent max number
+of spell points (353 for a 19+21 level player with magic aptitude of 20).
+
+---------------------------------
+Endurance Point costs in Combat:
+---------------------------------
+Cost for wielding a single weapon : 6  EPs per hb (30 every 5 hb)
+Cost for wielding two weapons     : 8  EPs per hb (40 every 5 hb)
+Cost for two weapons & parry mode : 10 EPs per hb (50 every 5 hb)
+
+Assuming the max EP recovery rate it will cost the player:
+4 EPs per hb for wielding a single weapon (30-10)/5
+6 EPs per hb for wielding two weapons (40-10)/5
+8 EPs per hb for wielding two weapons & parry mode (50-10)/5
+
+----------------------------------
+Endurance Point costs for Skills:
+----------------------------------
+Spells/Skills will have a cost equivilent to the SP cost * 7.  So
+a spell that would cost 25 SPs will cost 175 EPs.  The EP to SP cost
+ratio is 7:1
+
+---------------------
+Comparing EPs to SPs
+---------------------
+Although the EP to SP recovery ratio is 10:1, the EP to SP cost ratio
+is only 7:1.  The major differences between EPs and Sp are:
+  only 1/3rd of total possible EPs compared to the equiv. SPs
+  there are no heals to recover EPs like there are for SPs
+

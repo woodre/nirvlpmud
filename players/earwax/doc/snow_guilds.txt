@@ -1,0 +1,74 @@
+Breakdown of Guilds by Damage, Defense, and Max Attack stats.
+
+GUILD             ATTACK          DEFENSE          MAX DAMAGE
+No Guild             9               9                 16
+CyberNinja     7-9,16-18,26-27    17,5,-7              31
+Dark Mage   16-18(7),20-27(11-17)    9             39(30),53(43)
+Knights             10               9                 15
+Polymorph      28-31,38-40           9                31,41
+Rangers       11-12,16-17,26-29  9,9-11,13             29
+Vampires             9               9                 16
+
+Definitions and explanations:
+
+/* TESTING CHARACTER */
+Tester:     The tester in all cases was a 19+21 test character maxed in
+            each respective guild. All stats were at 20.
+
+/* CATEGORIES */
+Attack:     This category describes average damage done over 50 hits to
+            a test monster of ac0, without spells or attack commands.
+Defense:    This shows the 'real' ac of the player against a wc30 monster,
+            calculated by applying the average damage of wc30 -
+            hit_player(15)- in 50 'hits' on the player and registering the
+            actual damage caused by this function. This damage was
+            subtracted from 15 to get the differential, multiplied by two,
+            and finally added one to obtain 'real' ac (that is randomized
+            in hit_player). This method returns ac9 for non-guilded player
+            with ac9.
+Max Damage: This category shows the average damage done over 50 hits to a
+            test monster of ac0 allowing all guild spells and abilities
+            but no heals.
+
+/* GUILDS */
+Non-Guilded: Used sword of spirits- the maximum storable weapon
+             (wc18 1/3 chance return 7)- for Attack, normal armor
+             (ac 9, player max) for Defense, and sonic for Max Damage.
+Cyberninjas: This guild has 3 attack modes-  defense, none, offense.
+             These modes were tested individually in both Attack and
+             Defense and are shown in the above order. For Max Damage,
+             the highest numbers were obtained using fluxes and the 
+             p2 (fireball-equiv) attack spell and this is shown.
+Dark Mage:   This guild's strength lies in its heal_self and monster-
+             altering attack spells. However, it has a highly-effective
+             and highly-variable weapon that was tested in Attack. The
+             weapon has special damage against dragons, demons, spirits,
+             etc. so the Attack numbers are in 2 categories - against
+             normal and against special damage monsters. In the Defense
+             category, this guild can wear normal armor so is shown with
+             the normal max of 9. Max damage was attained using wound.
+             In Attack and Max Damage, heal_self damage is indicated in
+             parentheses.
+Knights:     Templar Attack numbers obtained using a sword of spirits-
+             the maximum storable weapon (wc18 1/3 chance return 7).
+             Defense was calculated using a templar shield and ac9.
+             Max damage found using ice (though sonic might have been
+             more effective).
+Polymorphs:  This guild has 2 effective and used forms for attack-
+             golem and tetrapod. These forms were tested individually
+             and are shown in the above order for attack. In Defense,
+             polymorphs can wear normal armor and are shown with the
+             normal max of 9. For Max Damage, tetrapods used blitz.
+Rangers:     This guild has three modes of attack: normal, morphed, and
+             with weapon on. These modes are indicated in the above order.
+             There are also three modes of defense: normal, morphed, and
+             with armor on. These are also indicated in the above order.
+             This guild uses a communally-stored sp system to power its
+             'weapon' and 'armor' modes. Since this takes no player sp or
+             commands while fighting, the damage and defense are found in
+             the normal Attack and Defense categories. However, there is
+             no difference between Attack with weapon on and Max Damage as
+             they cannot cast additional attack spells.
+Vampires:    As of this point in time, vampires have no exceptional weapons,
+             spells, or defenses and thus have the same results in Attack,
+             Defense, and Max Damage as non-guilded.

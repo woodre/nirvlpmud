@@ -1,0 +1,22 @@
+hp_heal 0
+sp_heal 0
+charges 10
+value 0
+intox 0
+soak 0
+stuff 2
+short_desc "a bag of[1;34m M&Ms[2;37;0m."
+long_desc "These are the fabled [1;34mblue M&M's[2;37;0m promised for assisting in world conquest.They actually look like they turned out ok."
+name "M&Ms"
+alias ({"bag","m&ms","m&m","candy",})
+msg "You pop a few [1;34mM&Ms[2;37;0m in your mouth. Melts in your mouth not in your hands."
+msg2 " eats some [1;34mM&Ms[2;37;0m. "
+cmds ({"eat","bites",})
+type "pieces"
+msg_precharges "*"
+msg_postcharges "*"
+type_single "pieces"
+msg_stuffed "You are too full!"
+msg_soaked "You can't drink anything else!"
+msg_intoxed "You cannot drink any more!"
+empty_msg 0

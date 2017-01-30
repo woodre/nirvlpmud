@@ -1,0 +1,163 @@
+              Atlantis by Angel@Nirvana
+
+
+
+There are 52 rooms located in  /players/angel/area/atlantis/room
+
+There are 9 mobs located in    /players/angel/area/atlantis/npc 
+
+There are 6 objects located in /players/angel/area/atlantis/obj
+
+
+                    Atlantis
+
+	Atlantis is a massive city of the Ancients filled with untapped technology,
+believed to have served as the central nexus for all Ancient activity in the
+Pegasus Galaxy.  Now the Tau'ri run the operation of atlantis.  Atlantis is
+only partly explored which players will be able to explore as well.  Atlantis
+is about as large as New York city.  This will allow for future expansion of
+this area.  However I plan on creating several other new areas to travel to 
+through the stargate. 
+	I have also used the sergeant's, corporals, and P90 from stargate because
+they are the ones who control Atlantis.  No need to make a new military when 
+the one you got works great.	
+         
+
+               Layout of atlantis
+
+If one is desired I can e-mail it to them.
+
+
+Mobs
+Here is a breakdown of each mob and what they carry
+/players/angel/area/atlantis
+ 
+<mobname> (/path/to/mob/<mobfilename.c>)
+level <#>, ac<#>, wc<#>, hp<#>, spell %chance-damages, <amount> coins +ramdom
+Does mob do anything special? [says, attacks, etc]
+What does the mob carry? 
+
+File:             /players/angel/area/atlantis/npc/athosians.c
+level <15>, ac<12>, wc<20>, hp<250>, coins random(500)+1000
+add_spell("stiffarm",
+    "#MN# $HG$Stiff Arms$N$ you in the face!\n",
+    "#MN# $HG$Stiff Arms$N$ #TN# in the face!\n",
+    5,({10,10}),({"physical","physical"}));
+add_spell("fistjab",
+    "#MN# hurls your body to the ground then lands a stiff $G$FIST JAB$N$!\n",
+    "#MN# hurls a body to the ground then lands a stiff $G$FIST JAB$N$ at #TN#!\n",
+    10,({5,20}),({"physical","other|lightning"}));
+Have you seen our leader Teyla?
+Have you been to the mainland?
+Carries Dragon Escrima and Health scanner
+
+
+File:             /players/angel/area/atlantis/npc/beckett.c
+level <15>, ac<12>, wc<20>, hp<250>, coins random(400)+1000
+Dr. Beckett says:  We're in another galaxy. How much more out can you get?
+Dr. Beckett says:  She knows I'm from Earth, son! It's not a bloody secret!
+
+
+File:             /players/angel/area/atlantis/npc/halling.c 
+level <20>, ac<17>, wc<30>, hp<500>, coins random(300)+2000
+add_spell("flesh hit",
+    "#MN# "+HIB+"manipulates the BO  S T A F F and SLICES your F O E ' S flesh!"+NORM+"\n",
+    "#MN# "+HIB+"manipulates the BO  S T A F F and SLICES your F O E ' S flesh!"+NORM+"\n",
+    20,({10,40}),({"physical","physical"}));
+add_spell("kyusho",
+    "#MN# strikes with a devistating $HM$HEAVY HAND$N$ Kyusho technique!\n",
+    "#MN# strikes with a devistating $HM$HEAVY HAND$N$ Kyusho technique!\n",
+    20,({10,40}),({"physical","physical"}));
+Our people live on the mainland.
+load_chat("You are welcome to come visit.
+Rakan Bo Staff
+
+
+File:             /players/angel/area/atlantis/npc/mckay.c
+level <13>, ac<10>, wc<17>, hp<195>, coins random(100)+200
+add_spell("shot","#MN# shoots his $HR$P-90$N$ piercing you.\n",
+                   "#MN# shoots his $HR$P-90$N$ piercing #TN#.\n",
+                    25,30,"other|physical");
+Well, It's gonna take longer than that!
+load_chat("Could you just, Give me a minunet!
+P90
+                    
+
+File:             /players/angel/area/atlantis/npc/ronon.c 
+level <29>, ac<30 + random (4)>, wc<56 + random (4)>, hp<2200>, coins random(1000)+28000
+set_multi_cast(1);
+  add_spell("head bust",
+    "#MN# swiftly swings his head around $G$B U S T I N G$N$ you, directly in your head!\n",
+    "#MN#  $G$B U S T$N$ #TN#, direct hit!\n",
+    20,({5,30}),({"physical","physical"}));
+  add_spell("energy",
+    "#MN# summons forth a massive $HM$B U R S T$N$, of Red Energy from his gun!\n",
+    "#MN# summons forth a massive $HM$B U R S T$N$, of Red Energy from his gun!\n",
+    20,({10,30}),({"physical","other|eletric"}));
+  add_spell("Lazer fire",
+    "#MN# releases a immense force  $HR$Red$N$-$HR$Bursts$N$  of Energy!\n",
+    "#MN# releases a immense force  $HR$R E D$N$-$HR$B U R S T$!\n",
+    15,({15,25}),({"other|fire","other|laser"}),1);
+You're expecting me to let them get away with this?
+Aren't we supposed to follow?
+Ronon's Gun
+
+File:             /players/angel/area/atlantis/npc/sheppard.c  
+level <20>, ac<17>, wc<30>, hp<500>, coins random(100)+4000
+set_multi_cast(3);
+  add_spell("shot","#MN# shoots his $HR$P-90$N$ piercing you.\n",
+                   "#MN# shoots his $HR$P-90$N$ piercing #TN#.\n",
+                    25,30,"other|physical");
+How about we go watch a game and get some popcorn!
+What's the status on that?
+They're politicians, Rodney. They're all creepy.
+P90
+  
+
+File:             /players/angel/area/atlantis/npc/teyla.c 
+level <28>, ac<26>, wc<52>, hp<1800>, coins random(1000)+23000
+set_multi_cast(3);
+  add_spell("head bust",
+    "#MN# swiftly swings her head around $G$B U S T I N G$N$ you, directly in your head!\n",
+    "#MN#  $G$B U S T$N$ #TN#, direct hit!\n",
+    20,({5,30}),({"physical","physical"}));
+  add_spell("flesh hit",
+    "#MN# "+HIB+"manipulates the BO  S T A F F and SLICES your F O E ' S flesh!"+NORM+"\n",
+    "#MN# "+HIB+"manipulates the BO  S T A F F and SLICES your F O E ' S flesh!"+NORM+"\n",
+    20,({10,40}),({"physical","physical"}));
+I am the leader of the Athosians!
+I have traded in many marketplaces, on many worlds.
+Rakan Bo Staff
+
+
+File:             /players/angel/area/atlantis/npc/weir.c 
+level <15>, ac<12>, wc<20>, hp<250>, coins random(100)+1000
+Elizabeth Weir says:  Well, we've been through a lot together. Yes.
+Dr. Weir says:  You had it coming.
+
+
+File:             /players/angel/area/atlantis/npc/wraith.c 
+level <23>, ac<21>, wc<40>, hp<800>, coins random(500)+8000
+set_multi_cast(1);
+  add_spell("drain",
+    "#MN# sucks a massive $HM$D R A I N$N$, of energy!\n",
+    "#MN# sucks a massive $HM$D R A I N$N$, of energy from you!\n",
+    20,({50,40}),({"physical","other|eletric"}));
+When I am free, you'll be the first that I feed upon.
+I am feeling a bit hungry.
+
+
+
+
+Objects
+Here is a breakdown of each object 
+/players/angel/area/atlantis/obj
+
+Type:                     Class:      Weight:    heal:    charges:    cost:    Path:
+
+D.H.D    																	   dhd.c
+Military ID                             0                                      militaryid.c
+Rakan                        19         1                            10000     rakan.c      
+Dragon Escrima               17         1                             1000     escrima.c
+Ronon's Gun                  19         1                             2000     rgun.c 
+Health Scanner 																   scan.c

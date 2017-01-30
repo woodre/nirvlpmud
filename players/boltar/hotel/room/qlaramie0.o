@@ -1,0 +1,26 @@
+no_clean 0
+name "shield"
+alias 0
+short_desc "[1mAn ebony shield[0m"
+long_desc "It is very sturdy and lightweight"
+buy_value 0
+value 4000
+weight 1
+type "shield"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 2
+res 0
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+params ({"physical",2,0,"do_special",})
+enchantments 0

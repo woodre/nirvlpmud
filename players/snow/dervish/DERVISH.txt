@@ -1,0 +1,45 @@
+Dervish guild description
+
+The Dervish (not based on RL) are a group of ascetics who approach death and
+battle without fear, knowing that the Sand is the ultimate power behind their
+fate. The Sand is their life, as well as a source of death. If they do not
+keep up with their sacrifices to the Sand (countdown by hb), the Sand takes
+sacrifice from their blood.
+Dervish start off extremely weak. They begin their journey as Initiates of
+level 5 (5885 xp) and advance by normal levels. They can use any weapon but
+as they increase in level, they quickly lose the ability to wear certain
+types of armor. At level 19, they can only wear rings, amulets, and misc.
+Their ascetic lifestyle is hard on the body - they have a stamina and strength
+maximum of 15. They cannot use wimpy, as this would take away the risk of
+death which is part of their faith.
+As they advance in power, they gain a few shamanic spell abilities and, at
+level 19, their most important power - dual wielding (at which point they are
+whirling dervishes). At level 19+10, Dervish masters gain their
+ultimate ability - control of the Sands to blast their opponents.
+
+Advantages:
+
+Can use healing spells, starting at level 10, only on self.
+Can use a confusion spell at level 15.  -
+    80 sps for duration of level hbs. Doubles hit_player damage - maximum of 50 damage each hit.
+    Only works on damage from Dervishes.
+Can dual-wield at level 19. -
+    Like wielding both weapons at once. Very powerful.
+Can cast a damage spell at extra level 10. - 
+    random(40)+30 heal_self damage
+
+Disadvantages:
+
+Start off at level 5. -
+  5885 xp, no ifs ands or buts.
+Armor restrictions - as level goes up armor types possible go down.
+No wimpy. - None
+Stamina max of 15. - That's all they ever get.
+Strength max of 15.
+Must lead every fight they are in. - They cannot fight a monster that is not attacking them.
+    Special exception - if monster is fighting a dervish, they simply take the monster's
+    random(wc) as damage every hb.
+Sand points - They must keep up with their sacrifices to the sand or they will die.
+Spell delay. - Every guild spell has a delay before casting any other guild spell.
+    Generally, the more powerful the spell, the longer the delay.
+Cannot cast healing spells while in combat.

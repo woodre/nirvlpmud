@@ -1,0 +1,24 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+#define COLORS ({RED,BLUE,BOLD+BLUE,BOLD+RED,GREEN,YELLOW,MAGENTA,REV_BLUE,BOLD+BLACK,CYAN,WHITE,})
+RangerPower(string msg, string channel){
+   object *rangers;
+   int i;
+   string format;
+   string Border;
+   string Main;
+   i = random(11);
+   Border = COLORS[i];
+   i = random(11);
+   Main = COLORS[i];
+   if(!msg){ 
+      write("It is better to say something.\n");
+      return 1;
+   }
+   format = Border+"["+OFF+Main+channel+OFF+Border+"]"+
+   OFF+" ";
+   format += PO->QRangerAnsi()+TP->query_name()+OFF+" says:";
+   format += " "+msg+"\n";
+   CHANNEL->ChannelMessage(channel, format);
+   return 1;
+}

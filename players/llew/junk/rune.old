@@ -1,0 +1,100 @@
+#include "/players/llew/closed/ansi.h"
+#define LEGAL ({"n","s","e","w","ne","nw","se","sw","u","d"})
+#define LOG "/players/llew/closed/logs/rune"
+#define ENV environment()
+#define tp this_player()
+
+string commands;
+
+id(str) {
+   return str == "llew-rune-of-speed" || str == "rune";
+}
+
+short() {
+   return HIB+"Rune"+NORM;
+}
+reset(arg) {
+   if(arg) return;
+   commands=0;
+}
+
+long() {
+   write("\n"+
+      "The Rune of Speed is commanded by rs <com1>,<com2>,<com3>,etc...\n"+
+      "There is no maximum to how many commands may be entered in the\n"+
+      "Rune.  Five commands will be carried out, the rest passed to the\n"+
+      "next round.  For a list of available commands type rs-commands.\n"+
+      "To kill your buffer of commands type rs-stop.  Unravel the Rune\n"+
+      "by typing rs-destroy.\n\n"
+   );
+}
+
+drop() { return 1; }
+get() { return 0; }
+query_auto_load() {
+   return "/players/llew/junk/rune.c:";
+}
+
+init() {
+ if(tp) {
+  if(tp->query_guild_name() == "shardak" || tp->query_guild_name() == "rangers") {
+  tp->add_money(1000);
+  tell_object(tp,"I'm sorry but your guild is unable to use this.\n"+
+                 "You have been compensated with 1000 coins.\n");
+  destruct(this_object());
+  tp->save_me();
+   return 1; }
+  }
+   add_action("rune_speed","rs");
+   add_action("list","rs-commands");
+   add_action("stop","rs-stop");
+   add_action("trash","rs-destroy");
+}
+
+rune_speed(com) {
+   if(!com) return 0;
+   if(!commands) do_commands(com);
+   else commands=commands+","+com;
+   return 1;
+}
+
+do_commands(com) {
+   int count;
+   string do_com;
+   count=0;
+   if(com) commands=com;
+   tell_object(ENV,"The "+HIB+"Rune"+NORM+" glows.\n");
+   while(count < 5 && sscanf(commands,"%s,%s",do_com,commands)==2) {
+      if(member_array(do_com,LEGAL) > -1)
+         command(do_com,ENV);
+      else tell_object(ENV,"Command, "+do_com+", is illegal.  Skipping command.\n");
+      count++;
+   }
+   if(count < 5) {
+      if(member_array(commands,LEGAL) > -1) 
+         command(commands,ENV);
+      else tell_object(ENV,"Command, "+commands+", is illegal.  Skipping command.\n");
+      commands=0;
+   }
+   if(commands=="") commands=0;
+   tell_object(ENV,"The "+HIB+"Rune"+NORM+" fades.\n");
+   if(commands) call_out("do_commands",3);
+}
+
+trash() {
+   write("The "+HIB+"Rune"+NORM+" fades to oblivion.\n");
+   destruct(this_object());
+   return 1;
+}
+list() {
+   write(HIB+"\nCommands available in the Rune are:\n"+NORM+implode(LEGAL,", ")+"\n\n");
+   return 1;
+}
+stop(string str) {
+   int x;
+   object obs;
+   write("The "+HIB+"Rune"+NORM+" flashes.\n");
+   commands=0;
+   remove_call_out("do_commands");
+   return 1;
+}

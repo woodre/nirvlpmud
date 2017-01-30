@@ -1,0 +1,26 @@
+                        [Prestige Guilds]
+-----------------------=========+=========-----------------------
+
+    Guilds are a key source of power on Nirvana. Guilds also
+  often require a large amount of time and experience to be
+  invested by the player in order to obtain those powers.
+  
+    When you choose to prestige, your character will be reset
+  to level 1. It would be absurd for a level 1 player to have
+  max guild abilities. It also would be difficult for a player
+  to lose the sacrifices invested into their chosen guild. In
+  order to find a balance, advancing prestige level will 
+  work in the following manner:
+  
+    * All guild information will be saved.
+    * Your guild object will be destroyed, however your guild
+      stats will remain saved.
+    * After meeting minimum requirements, you may restore your
+      guild. This will restore your guild stats exactly as they
+      were before your prestiged.
+    * A player may join any guild after a prestige, or restore
+      any guilds saved from previous prestige levels.
+      
+---------------------------------------------------------------
+  For further information on this topic type: help pres_requirements
+-----------------------=========+=========-----------------------

@@ -1,0 +1,233 @@
+SLIPGATE OUTPOST
+Area by Karash
+
+(Note: This summary got pretty long, but it's a detailed account of the theme)
+
+
+SUMMARY OF AREA
+
+This area is a smaller introductory area that will serve as the entrance
+to future areas that will follow the same/similar theme.  Basically, the theme
+surrounds the details behind the original Quake video game from the mid/late
+90s.  I was planning to recreate the first level of that great video game
+here, but that seemed like too big a task as a first area for a new
+wizard, so I created this smaller area as an introduction.  Most mobs are
+basic, but the John Romero npc is quite different.
+
+
+PREMISE OF AREA
+
+First, if you are not familiar with the video game, then I'll start there, because
+the theme of this area follows the same premise.  The premise of the original
+Quake game was that humans developed an instantaneous transport technology
+called a 'slipgate' (basically a teleporter).  However, an unknown entity from 
+another world/dimension, codenamed Quake, hijacks the technology and begins to
+send evil minions into our world, so the creators of the technology try to
+find a way to use the slipgates to bring the fight to Quake.
+
+With that premise, I incorporated some real-world facts as well.  The creators
+of that video game was Id Software, a group of superstar game creators that
+revolutionized the gaming industry with, first, the popular side-scrolling game
+called Commander Keen, then they pushed pc-gaming on par with popular game consoles
+with the 3D game Wolfenstein, which was followed by the ever-popular Doom!
+So, for this new area, all of the NPCs are key members of Id Software at that 
+time when the Quake video game was released in real-time 1996 (but no dates are
+mentioned in game).  
+
+As for Nirvana, this area is a recently deserted "Slipgate Outpost", a group
+of mobile buildings that were put in place to create a strike team to send 
+through a slipgate back to the main Slipgate Complex, which acts as a hub to
+other areas.  If you will, picture the mobile control center used in the
+movie Avatar - this ia a self-sufficient mobile control center, which was needed
+when the main complex was overtaken by Quake minions.
+
+The NPCs of this area in Nirvana are portrayed as a think-tank group of programmers, 
+strategists, and games-masters who created and developed the technology.
+They call themselves the "id" (after Id Software, of course) and they have
+been called to the Outpost to advise and assist where they can to regain
+control of the slipgates.
+
+
+FILES
+
+All files related to the area are found at:
+/players/karash/Outpost/OutpostSummary - This file.
+/players/karash/Outpost/rooms - All room objects
+/players/karash/Outpost/mobs - All mob objects in this area
+/players/karash/Outpost/items - All weapons, armor, items created for this area
+
+
+MAP
+
+The area is only 10 object rooms.
+
+				 so03   so06   so09
+				   |      |      |
+Nirvana - so01 - so02 - so05 - so08
+				   |      |      |
+				 so04   so07   so10
+	   
+
+ROOM KEYPOINTS
+
+1) so01, so02, so05 serve as the walkway through the compound.
+2) so03, so04, so06, so07 are smaller mobile units with some basic npcs.
+3) so08, so09, so10 serve as a large 3-room mobile unit where most of the code is located
+    and where you find the actual slipgate, the details of the area, and the main mob(s).
+	
+	
+NPC/MOBS FOUND
+
+1) Adrian Carmack               (a_carmack.c)
+2) Tom Hall                     (t_hall.c)
+3) American McGee               (a_mcgee.c)
+4) Sandy Petersen               (s_petersen.c)
+5) Guard                        (guard.c)
+6) Commander Keen               (keen.c)
+7) John Carmack                 (j_carmack.c)
+8) John Romero                  (romero.c)
+   John Romero the Proud        (romero_proud.c)
+   John Romero the Criticized   (romero_crit.c)
+   Fanboy                       (fanboy.c)
+   
+Adrian Carmack, Tom Hall, American McGee and Sandy Petersen are lower-level
+mobs worth lesser experience found in various rooms.
+
+Guards are lower-mid level serving as guards to the main building.
+
+Commander Keen is described as he would be from his original video game
+and serving as Commander of this mission.  He's a mid-higher level mob.
+
+John Carmack and John Romero are the key mobs of the area and described below.
+
+
+JOHN CARMACK
+
+John Carmack is the genius programmer who developed the engines that run the
+technology (both in Nirvana and real-world).  He is located in the slipgate room
+where future areas will be accessible.  I made him non-killable in game, so
+that players can interact with him to learn the story of the area and to give
+hints of what may be coming in the future.  (Try killing him - I had some fun 
+with that.)
+
+
+JOHN ROMERO
+
+Okay, this is where I hope to interest the players enough to keep them coming
+back to the area.  I tried to make a unique mob and hope I succeeded.  We'll see.
+
+Real-World Backstory
+
+Some backstory first...especially if you've never heard of John Romero.  
+
+In the real world, John Romero was one of the original co-founders of Id Software.
+He helped build Id Software when it was on the rise with Commander Keen, Doom
+and then Quake, and the co-founders of Id quickly became multi-millionaires from those
+games.  However, while some members (like John Carmack) continued to work
+non-stop on the next projects for the company, Romero became somewhat of a 
+"rock star" and was eventually asked to leave Id due to lack of focus.
+
+That's when he co-founded his next company and promised the next big game 
+called "Daikatana", which was a game about a legendary magical sword that could
+be used to gain certain powers (one being time travel).  Unfortunately, the video game
+was delayed for years and when it finally came out, it seemed outdated and had
+pretty bad gameplay.  The real John Romero turned off a lot of his fanbase 
+from his arrogant advertisements and the diva-like perception that was portrayed
+by the gaming media.
+
+Romero in Nirvana
+
+So, in game (Nirvana), John Romero has used the slipgate to find this unique sword called
+the Daikatana, which is just a plain sword at first.  Romero, the npc, is simply
+a mid-level mob who carries a basic sword called the Daikatana.
+
+However, through hints and clues in speech from all the other NPCs in the
+complex, the player can learn that if you compliment Romero on his sword, then
+something happens.
+
+If the player says some good statements complimenting Romero's sword, the NPC
+gains strength from the praise and becomes a higher-level version of the mob,
+called 'Romero the Proud' (armored by his "inflated ego").
+
+On the other hand, if the player has the inclination to do the opposite (or 
+the desire, after all these years, to finally come face-to-face with John
+Romero and really tell him how much his over-hyped video game that followed
+the great Doom and Quake really bombed) and criticize his beloved Daikatana...
+well, that criticism triggers some nasty stuff.
+ 
+Romero the Criticized
+
+When a player criticizes Romero, he turns into 'Romero the Criticized', a very
+high level mob that is more suited for a party to kill.  He empowers his 
+magical sword and becomes very aggressive.  In fact, even if calmed, he will
+continue to attack the one who criticized him.
+
+This mob also has some special abilities.  
+
+A) Daikatana Damage Shield
+  At three times during combat, Romero will activate a damage shield that will
+  prevent damage from hitting him (it will deplete the shield though) and revert
+  most of the damage back to the attacker that originated it.  This is very cool
+  and I'm pretty pumped about this (even if I had to get help from Dragnar to
+  pull it off - heh).
+  
+B) Call Fanboy
+  At five times during combat, Romero will utilize his beloved Daikatana and call
+  a "fanboy" out of the ether to help protect him from attackers (picture 1996
+  gaming fanatics who worshipped Id Software and John Romero's lifestyle at the
+  time - yes, I had some fun with this).
+  
+  Once the fanboy is called, as soon as fanboy recognizes a threat to Romero,
+  fanboy will activate a timer on some futuristic device in his pocket (Romero
+  has been busy using the powers of his sword to make that happen).  
+  
+  Everyone in the room will see a countdown, and if fanboy is still standing after
+  four heartbeats, a detonation will happen that will do massive damage to every
+  living creature in the room.  Note that once the countdown begins, fanboy
+  cannot be calmed and players can only stop the timer by killing the fanboy,
+  who has very little hitpoints and is easily killed.
+  
+  
+DAIKATANA
+
+The Daikatana (sword) that is dropped by Romero (basic) and Romero the Proud has no special
+abilities and is non-saveable.
+
+The Daikatana that is dropped by Romero the Criticized does have special abilities,
+but only has 3 charges for those abilities and is also non-saveable.
+
+A) Heal Spell
+   A basic heal spell that can be cast by the wielder with no tox.  It can also be
+   cast on others with transfer tox, but there is no description on the sword that 
+   states you can cast on others.  Players will just have to learn.
+   
+B) Call Fanboy
+   The wielder of the Daikatana can also use a charge to call a fanboy (circa late 90's
+   when John Romero was like a gaming god - and before the promise of Daikatana, which
+   tarnished that persona), but the fanboy will do nothing to help the player.  In fact,
+   if fanboy is present when Romero is attacked, the fanboy will begin a detonation
+   countdown as if Romero called the fanboy himself.  Heh.  (Fanboy is basically just
+   a novelty item for the players.)
+   
+
+CONCLUSION
+
+So, even though the area is fairly small, I put a lot of time and code into it (after all,
+Romero is like 3 mobs in one).  I wanted to do something different and try to 
+incorporate a lot of different coding techniques into the area to learn functionality.
+I'm pleased with it.
+
+I tried to put in lots of comments in the code for others to understand what I'm
+trying to do and I also tried to put lots of descriptions in each room.  But, I think
+that's what you'll be checking anyway, so I'm sure you'll tell me if it's sufficient.
+
+Anyway, there you go.  I'm still in the process of testing the files to make sure
+everything works across the board, but they are complete for the most part.
+
+Sorry this writeup turned out so long, but I was on a roll.  :)
+
+I'll also create a separate file for an object directory.
+
+Please let me know what you find.
+Thanks,
+Karash

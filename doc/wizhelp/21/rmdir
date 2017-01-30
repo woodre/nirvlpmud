@@ -1,0 +1,23 @@
+**************
+
+
+                     Rmdir
+
+Syntax:    rmdir <dir>
+
+Desc:
+           This command removes a directory. It only works on an 
+           empty directory which reduces some of your chance of 
+           removing an active directory.
+
+Warning:   Always becareful deleting if you don't have good offline 
+           backups.
+
+Example:   rmdir blech
+                  results
+           directory blech if containing files is gone
+
+Related:   cp_dir, mkdir
+
+
+**************

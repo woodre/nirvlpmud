@@ -1,0 +1,43 @@
+
+inherit "obj/treasure";
+
+id(str) { return str == "menu"; }
+
+reset(arg)
+{
+  name = "menu";
+}
+
+short() { return "A take out menu"; }
+query_value() {
+	return 500;
+}
+
+long()
+{
+  write("This is a take out menu for the revenge shop.\n"+
+        "   read and order are the commands you can do.\n");
+
+}
+
+init()
+{
+  add_action("read", "read");
+  add_action("order", "order");
+}
+
+read(str)
+{
+  if (id(str)) {
+    call_other("/players/catwoman/ts.c", "list", 0);
+    return(1);
+  }
+}
+
+
+order(str)
+{
+  call_other("/players/catwoman/ts.c", "buy", str);
+  return(1);
+}
+

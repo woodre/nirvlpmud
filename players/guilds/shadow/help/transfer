@@ -1,0 +1,13 @@
+TRANSFER
+
+usage: 'transfer <number of points> <sp spell points) or shp (shadow points)>
+
+This allows you to transer one kind of points ( shadow or spells ) to the
+other.   The number must be a positive integer.  Not all the points get
+transfered;  the higher your guild level the more get transfered.
+The transfered ratio is (shadow level) / (shadow level + 2) or
+3/4 which ever is larger. 
+
+You may not use transfer to exceed your maximum spell or shadow
+points. Maximum shadow points are equal to seven tumes your shadow
+level.

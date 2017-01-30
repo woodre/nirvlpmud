@@ -1,0 +1,247 @@
+[{(<===----------*----------===>)}]
+[{(<=-     Blue Crystal      -=>)}]
+[{(<===----------*----------===>)}]
+
+This document being a description of the new 
+Blue Crystal area theme and content.  More to come as it develops.
+
+
+
+*ETERNAL WAR*
+
+The Xetra and Chaoti have been fighting for eons inside a world
+that is a blueish hued crystal.  The energy of the crystal is 
+always fluctuating and renewing itself.   When either of the
+race is killed, the energy is collected and a new being is born,
+or rather formed.  Eternal enemies in constant conflict, neither
+side has been able to gain any distict advantage long enough to
+break the pendulum.
+
+Energy flows within the crystal.  It is the life of the crystal.
+The energy is manifested in tiny glowing blue particles called
+Fluella.  Both the Xetra and the Chaoti use this energy in their
+magic, though by different means.
+
+
+*XETRA*
+
+The Xetra are a muscular dark red skinned race.  Xetra are bulky
+bipedal beasts whose fingers end in extremely sharp claws.
+Xetra society is based on rule by might.  They are proficient in
+martial combat.  Fluella are used by the Xetra to augment
+physical ability.  
+
+The six base classes of the Xetra:
+----------------------------------
+Bsirri    (Scout)
+Hroct     (Warrior)
+Nuidcali  (Hunter)
+Yl'kata   (Guardian)
+Triatsor  (Harvester)
+Ragrissk  (Berserker)
+
+
+*CHAOTI*
+
+The Chaoti are a slender green tinged group of beings.  Their
+faces are triangular with penetrating rainbow flecked eyes.  They
+live in a socialist society ruled by an elder council called The 
+Consensus.  They wield magical energies in combat.  Fluella are
+used to augment magical ability.
+
+The six base classes of the Chaoti:
+-----------------------------------
+V'restiliar   (Explorer)
+Taashadpi     (Mage)
+Kga'as'tah    (Assassin)
+Rinmlaqadan   (Defender)
+Yuaoxile      (Collector)
+Il'yuive      (Fervent)
+
+
+*FLUELLA*
+
+The Fluella are a collective hive mind that are the blood and
+soul of the world of the crystal.  They float about the world,
+passing through walls and solid matter with ease.  They are pure
+energy.
+
+
+*A BRIEF HISTORY OF THE UNIVERSE*
+
+-- A spark in the fabric of space creates life in a crystal. 
+-- The crystal gains sentience.
+-- The crystal splits itself into three disctint parts.
+-- The three parts coalesce into Xetra, Chaoti and Fluella.
+-- Harmonious existence is shattered into anarchy.
+-- The two physical races eventually settle into structured society.
+-- Conflict between Xetra and Chaoti cycles endlessly.
+
+
+*KITAN*
+
+Kitan is the city of the Chaoti.  Carved crystal dwellings house
+the many citizens comfortably.  The center of town is dominated by
+a large merging crystal, which reforms those Chaoti lost in battle
+or old enough to recycle themselves.  The Consensus building holds
+nine bodies of extremely old Chaoti.  
+
+
+*TSELETH*
+
+Tseleth is the city of the Xetra.  It is rough hewn wide cavern with
+small makeshift dwellings lining the outside of a huge dark pit.
+The Dictator resised above the mass of underlings below, protected
+by hulking Xetra guards.
+
+
+*MAPS*
+
+The general layout of the area is an east to west flow of rooms with
+sub areas that have chance of certain monsters showing up.  The sub
+areas from west to east are as follows:
+
+Tseleth 
+Taera Xetra       (Xetra Controlled)
+Tkial Xetra       (Xetra Frontier)
+Ceda Tfelit       (Neutral)
+Tkial Chaoti      (Chaoti Frontier)
+Taera Chaoti      (Chaoti Controlled)
+Kitan
+
+Tseleth
+-------
+
+                [ ] - [ ]
+               /         \
+[ ] - [ ] - [ ] -- [ ]    [ ] - [ ] ---> Xetra Control
+               \         /
+                [ ] - [ ]
+
+Xetra Control
+-------------
+
+                [1]---[2]---[3]---[4]---[5]----[6] 
+               /       |     |     |     |        \
+ Tseleth <--[7]-[8]---[9]---[10]--[11]--[12]--[13]-[14]--> Xetra Front
+               \       |     |     |     |        /
+                [15]--[16]--[17]--[18]--[19]--[20] 
+
+Xetra Front
+-----------
+
+                                                [1]--[2]
+                                               / |      \
+                     [3]----------[4]  [5]--[6]-[7]      [8]-->
+                    /            /         / |
+                   /          [9]      [10] [11]           Neutral
+                  /            | \    /      |
+              [12]           [13] [14]------[15]
+               |                 \
+Xetra Con <---[16]-[17]           [18]
+                       \         /
+                        [19]-[20]
+
+
+Neutral
+-------
+             /---------[1]   
+            /           | \___________
+           /            |            |     [2]
+          /             |__         [3]--\  | \
+         /    ___________  |  _______| \  \_|  \-------[4]
+     [19]----/           \ | /          \             /
+       |_____      /------[5]            \____       {  |------[6]--|
+             \    /      / |_                 \       \ |     /     |
+          /---[11]      /    \                 \  |----[7]   /      |
+         /     |        |     [8]               \ |         /      /
+        /      |____    |      |                 [9]       /      /
+XF<-[15]            \   |     [E]---------------/ | \     /      /
+                     \  |   _/ |__      __________|  \---/---[10]----\
+                      \ |  /      \    /                /     |     --[13]->CF
+                       [14]--------[12]----------------/      |    /
+                        |           |                         |   /
+                        |          [16]---------------------\ |  /
+                       [18]-------/                          [17]
+  
+
+Chaoti Front
+------------
+                      [1]
+                       | \ 
+                       |  \
+                      [2]  [3]---[4]----[5]
+                     /        \   |        \
+                    /          \__|__       \
+                 [6]--[7]---[8]   |  \       [9] 
+                /   \          \ /    \       |
+               /     \          X      \      |
+           [10]       [11]--[12] [13]---[14]  |
+            |                   \           \ |
+Neutral <--[17]                  \           [15]--[16]--> Chaoti Control
+                                  \         /
+                                   [18]-[19]
+
+Chaoti Control
+--------------
+
+
+
+
+
+                [1]-----[2]     [3]----[4]      [5]--> Kitan
+               /           \   /          \    /
+            [6]   [7]-[8]---[9] [10]-[11]--[12]
+             |     | X |     |    | X |     |
+         <--[13] [14]-[15] [16] [17]-[18]  [19]
+Chaoti Front    \          /   \          /
+                 [20]--[21]     [22]--[23]
+
+
+
+Kitan
+-----
+
+                             [ ] - [ ] - [ ]
+                              |     |     |
+To Chaoti Control <--- [ ] - [ ] - [ ] - [ ]
+                              |     |     |
+                             [ ] - [ ] - [ ]
+
+
+
+*TREASURE*
+There is no gold in the crystal.  All value is held in physical bits
+of crystal imbued with power.  Generic clear is used for currency and
+simple abilities.  Each race influences the palor of crystals, red for
+the release of Xetra, green for Chaoti.  In actuality, Chaoti carry
+red crystals that affect spell power, while Xetra carry green crystals
+that affect health.
+
+Weapons and armor are carried by the different classes of each race.
+Magical effects can be randomly applied to the weapons.  Harder NPCs
+will have a better chance dropping an item and a higher quality of
+magical effect.
+
+
+*FACTIONS*
+
+Chaoti and Xetra are on a faction system which changes based on the
+creatures killed by the player, and later by quests they can do to 
+raise faction standing.  Chaoti are positive and Xetra negative.  This
+is not a reflection of good or evil, but a slider between the two, 
+Chaoti being arbitrarily positive.  Better quests with better rewards
+will be available to those players willing to take the time to raise
+faction.
+
+
+*THE QUEST*
+
+No quest inside the crystal will be part of the normal quest category.
+Several mini-quests will be used to gain faction with whichever race
+the player choses to side with.  Longer and more involved quests will
+come forth, leaking out more of the story of the crystal.  When the
+player is ready to attempt the final quest, a new section of crystal
+will become available for exploration.  If the player completes the 
+quest, the crystal will be reformed.  The area will be closed, replaced
+at the site of my castle by a monument in their honor.

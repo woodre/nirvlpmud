@@ -1,0 +1,21 @@
+#include "/players/earwax/housing/defs.h"
+
+inherit HROOM;
+void reset(status arg) {
+::reset(arg);
+  if (arg) return;
+
+  Light = 1;
+  LightToggle = (Light ? 1 : 0);
+  set_light(Light);
+  Short1 = "Chett's Shack[2;37;0m[2;37;0m";
+  Short2 = ": HautenHamer Der SchpleilinHaachtenGurtch Eht Mchensh Kannescheimin Reimenschpleilescn Chaapischepeht.[2;37;0m[2;37;0m";
+  long_desc = "[2;37;0mChett massacre you to small fragments.\n[2;37;0mChett laughs and strikes again!\n[2;37;0mChett hit you very hard.\n[2;37;0mLaser disruption beams funnel through Chett's eyes and slam into you!\n\n\n[2;37;0mYou feel very weak as your badly damaged body falls to the ground to the ground to die.\n[2;37;0mYour stamina is now 19\n\n[2;37;0m            Unkeeping all inventory items...\n[2;37;0mDone.\n[2;37;0m                                             You die.\n[2;37;0m                               You have a strange feeling.\n[2;37;0m                      You can see your own dead body from above.\n[2;37;0m                             setting hit points to 1/3 max....\n\n[2;37;0mA white dot appears and expands into a bright white tunnel.\n[2;37;0mThe tunnel shimmers slightly as it grows in strength.\n[2;37;0mYou feel a desire to enter the tunnel.[2;37;0m[2;37;0m\n";
+  FileName = "/players/earwax/housing/data/maledicta/room/Maledicta_PK_Continent_71_0.c";
+  RoomNum = 0;
+  BaseFilename = "/players/earwax/housing/data/maledicta/room/Maledicta_PK_Continent_71_";
+  Entrance = "/players/maledicta/cont/rooms/111.c";
+  get_master();
+  items = ({  });
+  dest_dir = ({ "/players/maledicta/cont/rooms/111.c", "out" });
+}

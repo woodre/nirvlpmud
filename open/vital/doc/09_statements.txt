@@ -1,0 +1,40 @@
+Statements - Making a Statement
+
+A statement is sort of a full sentence of instructions, made up from
+one or more expressions. Statements usually cover no more than a
+single line of code. Sometimes it's necessary to break it up though
+if it becomes too long, simply to improve on legibility. For most
+statements you simply break the line between two words, but if you
+are in the middle of a string you need to add a backslash (\) at the
+end of the line in order for the gamedriver to understand what's
+going on.
+
+write("This is an example of \
+      a broken string.\n");
+
+
+However, breaking a statement with backslash is sometimes considered
+ugly and can make the code hard to read. Other times, people will
+insist that code be broken up to IMPROVE readability. However, it's
+usually possible to break the line naturally at the end of a string,
+between two operators of some kind, or in an extreme case split the
+string in half and add the two parts together with the + operator.
+The only time the backslash really is necessary is in
+#define-statements, handled later.
+
+[PLEASE DO NOT DO THIS]
+write("This is a horrible way of " +
+      "breaking a string for the " +
+      "sake of memory and efficiency.\n");
+
+
+Statements in LPC are ended with a ;, which also is a good place to
+end the line. The simplest statement is a single ; on a line by
+itself. It does nothing, goes nowhere, and generally looks stupid,
+but is a statement nonetheless. There's nothing stopping you from
+entering another statement right after, other than that it will look
+awful.
+
+[PLEASE DO NOT DO THIS]
+write("This looks bad.\n");write("Infact,it'stheequivalentofleav"+
+"ingallthespacesoutofyoursentences.\n");write("Don't Do This\n");

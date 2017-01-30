@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/boltar/things/stove2","/obj/armor","/players/snow/closed/q/polar_hide","/obj/weapon","/obj/armor","/players/mythos/awep/dstaff","/players/saber/stuff/power","/obj/weapon","/obj/weapon","/players/maledicta/cont/armor/rboots","/players/scathe/armor/hood","/players/mosobp/areas/TEMPLE/OBJ/tiara","/obj/weapon","/players/wren/Area/starbug/items/bouquet","/players/wren/Area/starbug/items/sparehead","/players/mythos/marmor/shirt","/obj/armor","/players/snow/shadows/stuff/ring","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/wren/Area/starbug/items/sequinjacket","/obj/treasure","/players/wren/Area/starbug/items/wrench","/players/pain/NEW/weap/mstar","/obj/armor",})
+shorts ({"A stove","A suit of [1mwhite[0m chainmail","A polar bear hide","A huge spiked club","a hat","Dream Staff","A power system","Golden hoof","Baby pin","leather shoes","Hood","A Princess' Tiara","Rabbit foot","a colorful bouquet of 'flowers'","Kryten's sparehead 3.","Shirt","A large leaf","A dusky ring","A small [1mwhite[0m shield","Peasant Rags","Cat's red sequin jacket","A piece of corundum","small pipe wrench","Morningstar","A suit of [1mwhite[0m platemail",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

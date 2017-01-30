@@ -1,0 +1,35 @@
+#include "/players/fred/closed/bloodfist/defs.h"
+
+string guild_age(int guild_age)
+{
+  int i;
+  string temp; 
+  if(!guild_age)
+    return "an unknown amount of time";    
+  i = time() - guild_age;
+  if(i/43200)
+  {
+    temp += (i/43200 + " days ");
+    i = i - (i/43200)*43200;
+  }
+  if(i/1800)
+  {
+    temp += (i/1800 + " hours ");
+    i = i  - (i/1800)*1800;
+  }
+  if(i/30)
+  {
+    temp += (i/30 + " minutes ");
+    i = i - (i/30)*30;
+  }
+  temp += (i*2 + " seconds");
+  return temp;
+}
+
+status main(string str, object PO, object User)
+{
+  TOU "You joined Bloodfist "+
+    guild_age((int)PO->query_guild_age())+" ago.\n");
+  return 1;
+}
+

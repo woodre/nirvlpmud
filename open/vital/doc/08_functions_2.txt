@@ -1,0 +1,67 @@
+More Fun Function
+
+Function declarations
+
+A function must give proper notification of what kind of data type
+it returns, if any. A function is a label much like a variable name,
+consisting of < 32 characters, starting with a letter and no spaces.
+Custom and common sense dictate that all function names should be
+lowercase and only contain the special character '_' to separate
+words. Use function names that clearly reflect on what they do and
+use comments to add a header for each unique function. A function
+declaration looks like this [everything in <> is replaced by your
+text]:
+
+
+/*
+ * Function name: <Function name>
+ * Description:   <What it does >
+ * Arguments:     <What input does it take>
+ * Returns:       <What the function returns>
+ */
+<return type>
+<function name>(<argument list>)
+{
+   <code expressions>
+}
+
+EXAMPLE: [side note - Nirvana doesn't support the 'float' data type]
+/*
+ * Function name: compute_diam
+ * Description:   Compute the diameter of a circle given the 
+ *                circumference.
+ * Variables:     surf_area - the surface area
+ *                name - the name given the circle
+ * Returns:       The circumference.
+ */
+float
+compute_diam(float surf_area, string name)
+{
+    float rval;
+        
+    // Circumference = pie * diameter
+    rval = surf_area / 3.141592643;
+    write("The diameter of " + name + " is " + ftoa(rval) + "\n");
+
+    return rval;
+}
+
+
+The argument list is a comma-separated list of data types, much like
+a variable declaration where you specify what kind of data will be
+sent to the function and assign names to this data for later use in
+the function. The data recieved will only be usable inside the
+function, unless you explicitly send it out through a function call.
+
+(In order to save space and improve on legibility in the manual
+there won't be a header for all the short example functions).
+
+A function that doesn't return anything should be declared as void. 
+
+void
+write_all(string mess)
+{
+    users()->catch_msg(mess);
+}
+
+

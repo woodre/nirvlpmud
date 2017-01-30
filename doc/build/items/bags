@@ -1,0 +1,28 @@
+ 
+Bags
+
+10-27-97 -Bp
+14-Sep-98 added external -Bp
+
+
+Bags must have a limit to the weight that may be put into them.
+If not a weight limit, an item limit. A single bag must 
+not be able to carry more than 17 items or a weight greater
+than what a 19 level player would be able to carry.
+The formula is level + 6 + strength/5 so  29.
+
+A limitless bag may be created if a player takes the 
+weight charge at 1/8 of the total items in the bag.
+The weight of all items in the bag is to be added
+then divided by 8. this will be the weight charge
+to the player.
+
+External carry devices. These devices must not be secure.
+In other words, another player should be able to steal
+the objects. A living helper that can be killed etc. Such a critter
+will be called a carry pet. It should be level 1 and have 5 hp
+or less. Other wise it will fall under the pet rules.
+Its carry limit should be the same as allowed for a level 1
+in /obj/living and /obj/player. Non-living devices should
+be similar.
+

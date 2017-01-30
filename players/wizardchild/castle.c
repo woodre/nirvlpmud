@@ -1,0 +1,38 @@
+#define DEST "/room/forest2"
+#define AUTO_LOAD "/players/wizardchild/auto_load"
+id(str) { return str == "path" || str == "dark path"; }
+short() { return "A dark path heads south (type 'enter')"; }
+get()   { return 0; }
+drop()  { return 0; }
+long()  {
+  write("Looking south you see a heavily overgrown forest, with a small,\n");
+  write("seldom traveled path winding its way among the dense brush. You\n");
+  write("instantly realize that YOU ARE TAKING YOUR LIFE IN YOUR OWN HANDS\n");
+  write("by traveling this path, and that YOU WILL HOLD NOBODY ELSE\n");
+  write("RESPONSIBLE for any damage to you or your possessions.\n");
+}
+is_castle() { return 1; }
+reset(arg) {
+  if(arg) return ;
+  AUTO_LOAD->load_objects();
+  move_object(this_object(),DEST);
+}
+init() {
+  add_action("south","enter");
+  add_action("fail_enter","south");
+}
+fail_enter() { write("To enter this castle, type 'enter'\n"); return 1;  }
+south() {
+  object tp;
+  tp = this_player();
+  if(!tp->is_kid() && !tp->is_pet() && tp->query_npc()) {
+    say(tp->query_name()+" starts to enter the forest, but then decides to avoid certain death.\n");
+    return 1;
+  }
+  long();
+  write("\n");
+  this_player()->move_player("into the forest#/players/wizardchild/darkwood/rooms/entry");
+  log_file("wizardchild.enter", "["+ctime(time())+"] "+this_player()->query_real_name()+
+   ", level/xlv: "+this_player()->query_level()+"/"+this_player()->query_extra_level()+"]\n");
+  return 1;
+}

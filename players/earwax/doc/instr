@@ -1,0 +1,5 @@
+Simul_efun: status instr(string full, string partial)
+
+Checks to see if partial is contained within full:
+  Returns 0 if it's not, or if either string is null.
+  Returns 1 if it is.

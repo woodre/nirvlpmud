@@ -1,0 +1,21 @@
+**************
+
+
+                     Cp_dir
+
+Syntax:    cp_dir <dir> <destination>
+
+Desc:
+           This command copies the entire contents of a directory
+           to another directory.
+
+Warning:   
+
+Example:   cp_dir /players/mike/tim/ /players/bob/tim
+                  results
+           all contents of 'tim' are transfered to /players/bob/tim
+
+Related:   cp
+
+
+**************

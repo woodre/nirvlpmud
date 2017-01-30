@@ -1,0 +1,24 @@
+**************
+
+                     Wizlist
+
+Syntax:    wizlist <name>
+
+Desc:
+           Without argument it returns the top 15 wizards and the 
+           two above and two below your position on the wizlist. 
+           Or a specific wizard may be named and it will show
+
+Warning:   Don't take the list as a serious competetive indicator.
+           It primarily indicates which wizards are using the most 
+           system memory.
+
+Example:   wizlist bob
+                  results
+           shows top 15 on list and the two wizards above and below
+
+Related:   
+
+
+**************
+

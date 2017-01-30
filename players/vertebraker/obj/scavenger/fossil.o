@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/closed/q/orb","/obj/weapon","/players/arrina/treas/horseshoe","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/mythos/awep/quiver","/players/mythos/aarmor/haramaki","/obj/bag","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/puppy/s/eq/crown","/players/mizan/etheriel/heals/carbo-blast","/players/sado/shop/rose","/players/wren/Area/starbug/items/thermos","/obj/weapon","/players/saber/armor/dshades","/players/hawkeye/armor/converse","/players/saber/armor/lboots","/obj/weapon","/players/hippo/armour/endotheel","/obj/weapon","/players/arrina/armor/torque","/players/pain/NEW/arm/tunic","/players/hippo/armour/boots","/players/snow/armor/arch_robes","/obj/armor",})
+shorts ({"Orb of the Ancients","Spear","A Silver Horseshoe","A Deadly Bullwhip","A Princess' Tiara","A quiver","Haramaki","bag","Peasant Rags","A golden crown","A bottle of Carbo Blast","A beautiful red rose blossom","a thermos","Rabbit foot","[1mDark Shades[2;37;0m","[31mConverse All-Stars[0m","Leather boots","spirit blade","endotheel","An evil-looking lightsabre","Silver Torque","A handsome blue tunic","anti-blood boots","Robes of the Archwizard","A shoddy [1mwhite[0m cloak",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

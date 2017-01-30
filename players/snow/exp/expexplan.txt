@@ -1,0 +1,35 @@
+EXPERIENCE FORMULA CHANGE
+
+WHY?
+Currently, monster exp is level-driven, with little relation
+to stats such as hp, wc, or ac. There is also a high-end limit
+of close to 8k. Thus, extremely powerful monsters such as
+Icingdeath or Masakado are worth the same (or possibly less)
+than a standard level 20 monster.
+
+The experience award for powerful monsters is horribly low for
+the risk involved in killing them. Thus, players have little
+incentive to fight the big monsters, or to party.
+
+Monster experience should be related to monster power. A monster
+that can easily kill a level 19 player should be worth much more
+than monsters a level 19 can mow through with no risk or effort.
+
+Thus, I propose a new experience formula, based on monster stats
+rather than level. The new formula will not have a high end limit.
+Instead, extremely powerful monsters will be worth a lot more than
+normal monsters. There will be different exp rewards among the
+current level 20 monsters, based on their particular power (hp,
+wc, and ac).
+
+EFFECT
+For the standard monsters, the difference is small. Exp gains are
+similar for standard levels 1-20. Currently approved monsters will
+vary in exp return based on actual power. Some level 20 monsters
+will be worth more than others, because they are more powerful.
+
+NEEDS
+Wizzes with exceptional monsters will need to add the exceptional
+bonuses - hp, wc, ac to get the exp credit for those. I will make
+another doc explaining how the bonuses should be determined. These
+bonuses will require the addition of 1 line of code for each.

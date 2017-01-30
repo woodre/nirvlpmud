@@ -1,0 +1,74 @@
+Sat Jun  8 18:29:23 1996 Have asked oolabob/brand to help find heals....he knows the mud better'n anyone I know of on here.
+Sun Jun  9 20:31:18 1996 Gave 23590 coins to Oolabob in exchange for heals he bought searching them out for me.
+Sat Jun 22 05:02:22 1996 threw mode in prison after he shouted again AFTER I warned him....he quit out, lost his stuff. see next note
+Sat Jun 22 05:02:41 1996 I let him out after about 5 minutes, and reset his home so he didn't log back in there
+Sun Jun 23 21:03:39 1996 I moved Mythos's SAC file to SAC.old2 at his request
+Mon Jun 24 22:59:01 1996 I patched Mufasa back to level 15, as he kept his levels, but DID lose his exp after he left undeads...he asked for this
+Sat Aug 17 11:58:15 1996 Changed /players/emerson/heal/spizza.c from 8 charges to 3 charges to conform to boltar's heal ruling.
+Sat Aug 17 12:45:27 1996 Changed /players/emerson/heal/lpizza.c from 8 charges to 4 charges in accordance with Boltar's max healing rule.
+Sat Aug 17 14:03:19 1996 Changed /players/emerson/heal/drpepper.c from 4 charges to 3 charges in accordance with Boltar's max healing rule.
+Mon Sep 16 20:19:46 1996 I imprisoned Gaystray
+Wed Sep 18 01:41:15 1996 Test of updated work report object.
+Wed Sep 18 01:45:12 1996 Test of updated work report object.
+Sun Sep 22 01:55:46 1996 test of new worklog obj.
+Wed Oct  9 21:30:06 1996 I imprisoned Handy after multiple disgusting gossips after he'd been warned.
+Thu Nov 14 12:57:09 1996 Restored Trevaine's stats back to 20, he can get his levels back on his own, as I don't remember what level he was when he got deleted.
+Thu Dec  5 20:41:31 1996 Pkme reported that Jello was harrassing him...snooped him, he was being constantly spammed, asked Jello to stop.
+Sat Dec  7 15:04:01 1996 sponsored ulath, and he dropped his castle at /room/plane12.c
+Sat Dec  7 18:37:10 1996 Changed Achilles' home from paladin guild to church
+Fri Jan 24 10:43:55 1997 Gave Tyrnan his stats back...his character got erased, he was Doc...I remember him and know he had at least all this and m
+Fri Jun 20 17:41:40 1997 reset Ciani so she could empower a weapon earlier, forgot to log ugh, but ciani messed it up anyway, so now I reset her
+Wed Jun 25 18:07:31 1997 Kurtis and Mikem were dual playing and shared equip, so I dested the equip and mikem quit out before I quit him out.
+Sat Jun 28 21:47:39 1997 imprisoned babette for shouting obscenities
+Sun Jun 29 00:13:25 1997 Fixed pandemonium's character so it had gender, race, etc...it got messed up when it was created cause of a disconnect
+Wed Jul 23 22:02:59 1997 I imprisoned Changrela for admittedly having gotten the character from someone else
+Sun Oct 12 00:23:31 1997 reset the death room...it appeared Wulfgar was stuck there, he kept dyin' there
+Wed Nov 19 19:40:20 1997 I force-quit Twist after telling him to stop spamming Alanna and getting no results.
+Wed Dec  3 16:44:07 1997 Killed wulfgar 3 times for a guild crime....he told another player the answer to a task
+Tue Dec  9 20:40:15 1997 Warned Illarion about discussing quests with players on gossip
+Wed Dec 24 18:01:51 1997 set jenny's extra level back to 21...it was at 22 due to a bug
+Sun Dec 28 13:09:17 1997 Edited /players/nooneelse/black/guild_coffin_room.c  added object board; to line 86
+Fri Jan 16 11:52:32 1998 killed monkeydevil for a guild crime, he has two more coming...one more for the crime, another for trying to get another p
+Thu Jan 22 22:54:12 1998 set larisa's extra level back to 21
+Thu Jan 29 20:50:55 1998 gave back dyan exp to equal 1168775 to compensate for a glitch where she died 6 times
+Sun Feb 22 17:06:09 1998 warned biscuit several tiems to tell me he wasn't using a bot, he WAS, so I force quit him, his bot brought him back, and
+Sun Feb 22 17:06:12 1998 and I then killed him....
+Wed Mar 11 21:56:19 1998 ugh, forgot to log this earlier,....killed tara 3 times for guild crimes
+Sun May 17 17:57:35 1998 Gave blast back 109405 exp...he was partyin' with 2 "wiz" players, and died to a bug
+Wed May 27 17:48:57 1998 warned Konya/Hudson about multiplaying
+Sat Jun  6 21:17:26 1998 gave baskin back 23967 exp...he died and somehow lost more than 1/3
+Sun Jun 14 09:28:30 1998 gave caleab back 1302717 exp for a "double" death
+Sun Jun 28 09:42:54 1998 gave wulfgar 32259 exp reimbursement for multiple deaths he "suffered"
+Sun Jul  5 10:28:19 1998 I updated the village_green room when players had enough things dropped there to disconnect me
+Mon Jul 20 22:16:45 1998 changed /players/beren/Monsters/Olgyo/woman.c from wc5, ac5 to wc32 and ac18  (level 19 monster)
+Mon Jul 20 22:30:06 1998 changed /players/beren/Monsters/Olgyo/carmic.c from 400 to 600 hps....level 20 monster
+Mon Jul 20 22:40:24 1998 changed /players/beren/Monsters/Olgyo/fishman.c from ac10 to ac20    level 19 monster
+Mon Jul 20 22:46:53 1998 changed /players/beren/Monsters/Olgyo/hunter.c from 300 hps to 550 hps.....level 19 monster
+Mon Jul 20 22:52:16 1998 changed /players/beren/Monsters/Olgyo/nameless.c from wc 25 to wc 35...
+Mon Jul 20 22:57:58 1998 changed /players/beren/Monsters/Olgyo/piai.c from ac10 to ac20 and from wc25 to wc35   Level 20 monster
+Mon Aug 10 08:54:08 1998 killed tara for not doing her oath again
+Mon Aug 31 20:00:00 1998 set azazel's wil, sta, str, and mag stat to 6 so he could attempt to continue this character...he made a goofy mistake
+Sun Nov 22 12:37:07 1998 unguilded maledicta, rest his home, and gave him his guild exp back
+Wed Jan  6 16:55:38 1999 testing the new reportlog
+Wed Jan  6 16:56:04 1999 testing reporter
+Sun Mar  7 15:20:49 1999 copied the DM guild sac file to .old cause it was getting huge, and started a new one
+Fri Mar 12 18:55:51 1999 rmed /players/mythos/closed/guild/SAC.old and copied SAC to SAC.old
+Sat Mar 13 19:44:53 1999 I approved /players/feldegast/arena/melee/   m1b.c  m10.c m11.c and tornado.c for addition to his tournament area
+Sun Mar 21 16:42:06 1999 gave weasel back 1million exp that he lost due to a but
+Mon Apr 19 20:22:23 1999 kicked tartis out of the poly guild for pking and not answering me after I asked him about it over and over
+Mon Apr 19 23:09:46 1999 unguilded heathen, he was in pavlik's mage guild...didn't restore any exp or anything else
+Sun Apr 25 16:08:12 1999 rm'd nova.o from poly guild so the new nova could join
+Mon May 17 21:11:53 1999 changed fahkri.c from wc30 to wc 40, ac 20 to ac 25 and hps from 850 to 1200
+Fri Jun 11 13:44:37 1999 updated my heals...3 charges, 1500 coins, approved by snow....still going to implement the supply/demand stuff, I think
+Tue Jun 22 17:48:34 1999 changed the portal room in my qurd area...
+Tue Jun 22 22:08:17 1999 qurd1.c--from 500 to 800 hps
+Thu Jul  1 21:26:50 1999 added xp to scratch to equal his level 4, he had neg exp...and it was messing him up
+Wed Jul 28 21:20:56 1999 rmed void.o in polys, so void could join
+Sun Dec 12 13:01:08 1999 told kazer he wasn't allowed to have his own wiztool
+Mon Dec 13 21:40:00 1999 restored 802246 exp to beth for what appears to be a death to a bug...
+Sun Jan  2 23:00:16 2000 gave doombunny 584000 xp that he lost to a guild bug
+Sat Jan  8 17:29:25 2000 unguilded charity...shardaks dont' exist
+Tue Feb 29 18:29:38 2000 set up traff's test character, trafftoo...level 5 and all stats at 20
+Sun Mar  5 23:23:55 2000 gave trafftoo 2000000 exp and level 19
+Wed Mar  8 17:54:35 2000 kicked Tara out of the DM guild for cheating on guild tasks
+Thu Mar 16 16:27:16 2000 kicked blackstar out of DM guild for cheating on guild tasks

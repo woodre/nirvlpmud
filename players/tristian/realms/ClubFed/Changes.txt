@@ -1,0 +1,117 @@
+Changes for ClubFed.
+
+/obj directory --
+
+crack.c - 
+  it should sell for 4,500 coins not 1,800.
+  In the set_long() there should be a space between "the" and "'crack'"
+
+eightball.c -
+  You have set_name to "eight ball" and an add_alias to "eight ball" which
+  is redundant so I changed your add_alias to "eightball".
+
+  You have set_type and set_type_single as 'dopes' and 'dope'.  It's up to
+  you but if you look at the eightball it lists "There are [3] 'dopes' remaining".
+  To me 'shots' or 'hits' or something would make more sense.
+
+  This should also sell for 4,500 coins instead of 1,800.
+
+  In the set_long() there should be a space between "the" and "'dope'"
+    
+heroin.c -
+  In the set_long() there should be a space between "the" and "'crank'"
+  
+  This should also sell for 4,500 coins instead of 1,800.
+
+cig.c - 
+  For the bartering of this I'd rather see you add something like 
+  "joey_the_snitch" to the id() in joey.c and check for 
+  present("joey_the_snitch", environment(this_player()))
+  Just a more unique identifier.  Otherwise you have lazy asses like
+  myself that just name my pet "joey" and I can barter them without
+  actually having to find/goto the mob.
+
+-----------------------------------------------------------------------------
+
+/mobs directory --
+
+bank_fraud.c -
+  I'm fine with messing around with wc/ac/hps on a mob but this is a
+  pretty basic mob and should be strictly lvl 20.
+
+blackmail.c - 
+  Same as above, should be a lvl 20 mob.
+
+counterfeiting.c -
+  Same as above, should be a lvl 20 mob.
+ 
+For ALL mobs.
+  I'm guessing the above lvl changes are the case for ALL mobs so I'm 
+  going to stop listing it.  Just set all the mobs to lvl 20.
+
+  All the mobs have a spell msg about stabbing me with a shiv.  This is 
+  thematic but once I kill them there is no shiv.  I suggest coding a 
+  shiv.c to put in your /obj directory and clone it to all your mobs
+  when they die in the same way you do the cigarettes.  Just make it a
+  generic wc 15 or something with a value of like 700 coins.  These are 
+  all basically 30-40k mobs but 5 cig's is only 2500 coins.  Adding in
+  the shiv brings you up to 3,100 coins.  This however is still "low" 
+  by most standards.  If that's how you want it that's fine.  Otherwise
+  feel free to change the cigs to like 500+random(500) or something when
+  you barter them.
+
+______________________________________________________________________________
+
+/rooms directory --
+
+court.c - 
+  On the sign that you read you might want to change your 'Guilty' to 'guilty' 
+  since your check only recognizes lower case.  Or add to your arg check. 
+  if(arg == "guilty" || arg == "Guilty") return guilty();  Same theory with
+  the not guilty and no contest.
+  
+  In your not_guilty_2_1() final should be finally.
+
+Cell_B_10.c - 
+  For 'call guard'.  Just for theme instead of just cloning the guard maybe
+  just add a msg or along the lines of "A guard enters the cell and relocks
+  the door behind him."  Just something explaining where he came from instead
+  of just poof he's in the locked cell.
+
+hall_A_shower.c -
+  Same as Cell_B_10 note.
+
+hall_B_shower.c -
+  Same as Cell_B_10 note.
+
+joey_cell.c -
+  Change the 'list' and 'buy' to reflect change in heal prices.
+
+-------------------------------------------------------------------------------
+
+/mobs directory
+
+guard.c -
+  set lvl to 20 like the rest of the mobs.
+
+  in the load_chat() Your should be You're
+
+  the other load_chat() should be a load_a_chat() I think.  Seems like that would be when
+  you're actually attacking him.
+
+  long descript and some spells list things like billy club and mace.  Could do like
+  the convicts idea and just make a generic of it to clone upon death like I mentioned
+  with the shiv.
+
+shower_con.c - 
+  set lvl to 20.
+
+  Maybe code and clone a bar of soap on these guys as well.
+
+joey.c -
+  Add to his id() something more unique joey_the_snitch, joey_prison_bitch, whatever just
+  something unique for the trading of cigs.
+
+  set lvl to 20.
+
+  

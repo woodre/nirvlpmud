@@ -1,0 +1,37 @@
+A very simple weather model:
+
+temp:   cold, normal, hot
+clouds: none, p cloudy, overcast
+wind:   none, some, lots
+humid:  dry, normal, wet
+precip: none, some, lots
+
+By default, rooms will be considered to be outdoors.  They can change
+this by returning something for query_room_type():
+0: outdoor
+1: indoor (limited weather effects)
+2: no weather (underground, in a dimension with no weather, etc)
+
+Each directory is considered to be a different region for the purpose
+of weather.  The model will check for the file default_weather in
+each dir, and check for two functions:
+no_weather()
+0: weather done as normal
+1: there is no weather for the entire dir
+[areas like the underdark or jello could make use of this]
+default_weather()
+return an array with the default values from the variables above
+this will default to: ({1,0,0,1,0})
+
+The weather in each area is decided according to these variables-
+some combinations have more than one possible type of weather.
+That weather lasts for a half-hour, assuming someone is still in the
+area, and then of the values above is randomized and the weather is
+
+
+
+An even simpler model:  Each type of weather has a set of other
+weather types that can follow it:
+
+calm
+

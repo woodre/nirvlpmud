@@ -1,0 +1,577 @@
+2016.10.28 13:23:55 LDMud 3.3.720 (Build 3010) (stable)
+2016.10.28 13:23:55 TLS: (OpenSSL) Keyfile 'key.pem', Certfile 'cert.pem'
+2016.10.28 13:23:55 TLS: Error setting x509 keyfile:
+2016.10.28 13:23:55 TLS: SSL error:02001002:system library:fopen:No such file or directory.
+2016.10.28 13:23:55 TLS: SSL error:20074002:BIO routines:FILE_CTRL:system lib.
+2016.10.28 13:23:55 TLS: SSL error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system lib.
+2016.10.28 13:23:55 mySQL 5.5.52
+2016.10.28 13:23:55 Attempting to start erq '/home/petebre/mymud/lp312/mudbin/erq'.
+2016.10.28 13:23:55 Hostname 'loafy' address '174.137.154.70'
+2016.10.28 13:23:55 UDP recv-socket requested for port: 3507
+2016.10.28 13:23:59 LDMud ready for users.
+2016.10.28 19:47:01 Missing 'return <value>' statement.
+2016.10.28 19:47:01 program: obj/go_player.c, object: obj/go_player#152 line 132
+2016.10.30 05:24:54 Index for [] out of bounds: 124, vector size: 124
+2016.10.30 05:24:54 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.30 05:24:55 Error in call out.
+2016.10.30 05:24:55 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.30 05:24:56 Index for [] out of bounds: 124, vector size: 124
+2016.10.30 05:24:56 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#1420') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.30 05:24:56 Error in call out.
+2016.10.30 05:24:56 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.30 05:24:56 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.31 13:37:26 Index for [] out of bounds: 187, vector size: 187
+2016.10.31 13:37:26 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.31 13:37:26 Error in call out.
+2016.10.31 13:37:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.31 13:37:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.31 13:37:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.31 13:37:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.31 13:37:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.31 13:37:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.31 13:37:28 Index for [] out of bounds: 188, vector size: 188
+2016.10.31 13:37:28 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#1928') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.31 13:37:28 Error in call out.
+2016.10.31 13:37:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.31 13:37:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:00 Index for [] out of bounds: 95, vector size: 95
+2016.11.01 12:58:00 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.01 12:58:00 Error in call out.
+2016.11.01 12:58:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:02 Index for [] out of bounds: 95, vector size: 95
+2016.11.01 12:58:02 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#2399') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.01 12:58:02 Error in call out.
+2016.11.01 12:58:02 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:02 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:02 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:02 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:02 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.01 12:58:02 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.03 21:38:31 Index for [] out of bounds: 190, vector size: 190
+2016.11.03 21:38:31 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.03 21:38:31 Error in call out.
+2016.11.03 21:38:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.03 21:38:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.03 21:38:32 Index for [] out of bounds: 190, vector size: 190
+2016.11.03 21:38:32 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#3436') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.03 21:38:32 Error in call out.
+2016.11.03 21:38:32 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.03 21:38:32 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.03 21:38:32 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.08 17:18:40 Index for [] out of bounds: 112, vector size: 112
+2016.11.08 17:18:40 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.08 17:18:40 Error in call out.
+2016.11.08 17:18:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.08 17:18:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.08 17:18:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.08 17:18:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.08 17:18:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.08 17:18:42 Index for [] out of bounds: 112, vector size: 112
+2016.11.08 17:18:42 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#5519') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.08 17:18:42 Error in call out.
+2016.11.08 17:18:42 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.08 17:18:42 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.08 17:18:42 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:57 Index for [] out of bounds: 165, vector size: 165
+2016.11.15 07:04:57 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.15 07:04:57 Error in call out.
+2016.11.15 07:04:57 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:57 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:57 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:57 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:58 Index for [] out of bounds: 165, vector size: 165
+2016.11.15 07:04:58 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#8354') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.15 07:04:58 Error in call out.
+2016.11.15 07:04:58 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:58 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:58 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:58 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:58 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:58 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:04:58 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:05:01 Index for [] out of bounds: 166, vector size: 166
+2016.11.15 07:05:01 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#8358') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.15 07:05:01 Error in call out.
+2016.11.15 07:05:01 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.15 07:05:01 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.17 19:04:50 Index for [] out of bounds: 72, vector size: 72
+2016.11.17 19:04:50 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.17 19:04:50 Error in call out.
+2016.11.17 19:04:50 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.17 19:04:50 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.17 19:04:52 Index for [] out of bounds: 72, vector size: 72
+2016.11.17 19:04:52 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#9374') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.17 19:04:52 Error in call out.
+2016.11.17 19:04:52 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.17 19:04:52 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.17 19:04:52 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.17 19:04:52 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.22 11:18:11 Index for [] out of bounds: 57, vector size: 57
+2016.11.22 11:18:11 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.22 11:18:11 Error in call out.
+2016.11.22 11:18:11 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.22 11:18:11 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.22 11:18:12 Index for [] out of bounds: 57, vector size: 57
+2016.11.22 11:18:12 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#11186') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.22 11:18:12 Error in call out.
+2016.11.22 11:18:12 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.22 11:18:12 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.22 11:18:12 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.22 11:18:12 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 Index for [] out of bounds: 147, vector size: 147
+2016.11.24 18:51:28 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.24 18:51:28 Error in call out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:31 Index for [] out of bounds: 148, vector size: 148
+2016.11.24 18:51:31 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#12230') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.24 18:51:31 Error in call out.
+2016.11.24 18:51:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.24 18:51:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.30 12:38:47 Index for [] out of bounds: 117, vector size: 117
+2016.11.30 12:38:47 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.30 12:38:47 Error in call out.
+2016.11.30 12:38:47 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.30 12:38:47 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.30 12:38:48 Index for [] out of bounds: 117, vector size: 117
+2016.11.30 12:38:48 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#14957') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.11.30 12:38:49 Error in call out.
+2016.11.30 12:38:49 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.30 12:38:49 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.30 12:38:49 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.11.30 12:38:49 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:07 Index for [] out of bounds: 190, vector size: 190
+2016.12.02 13:32:07 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.02 13:32:07 Error in call out.
+2016.12.02 13:32:07 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:07 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:07 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:08 Index for [] out of bounds: 190, vector size: 190
+2016.12.02 13:32:08 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#15742') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.02 13:32:08 Error in call out.
+2016.12.02 13:32:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:12 Index for [] out of bounds: 193, vector size: 193
+2016.12.02 13:32:12 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#15746') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.02 13:32:12 Error in call out.
+2016.12.02 13:32:12 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:12 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:12 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.02 13:32:12 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:28 Index for [] out of bounds: 58, vector size: 58
+2016.12.03 06:12:28 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.03 06:12:29 Error in call out.
+2016.12.03 06:12:29 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:29 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:29 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:29 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:29 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:29 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:29 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:30 Index for [] out of bounds: 58, vector size: 58
+2016.12.03 06:12:30 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#16026') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.03 06:12:31 Error in call out.
+2016.12.03 06:12:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:31 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:12:55 Index for [] out of bounds: 67, vector size: 67
+2016.12.03 06:12:55 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#16053') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.03 06:12:55 Error in call out.
+2016.12.03 06:12:55 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:13:00 Index for [] out of bounds: 74, vector size: 74
+2016.12.03 06:13:00 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#16065') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.03 06:13:00 Error in call out.
+2016.12.03 06:13:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:13:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:13:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:13:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.03 06:13:00 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.10 22:39:24 Index for [] out of bounds: 189, vector size: 189
+2016.12.10 22:39:24 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.10 22:39:25 Error in call out.
+2016.12.10 22:39:25 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.10 22:39:25 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.10 22:39:25 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.10 22:39:26 Index for [] out of bounds: 189, vector size: 189
+2016.12.10 22:39:26 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#19517') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.10 22:39:26 Error in call out.
+2016.12.10 22:39:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.10 22:39:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.10 22:39:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.10 22:39:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.10 22:39:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.11 13:05:28 Index for [] out of bounds: 50, vector size: 50
+2016.12.11 13:05:28 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.11 13:05:28 Error in call out.
+2016.12.11 13:05:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.11 13:05:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.11 13:05:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.11 13:05:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.11 13:05:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.11 13:05:30 Index for [] out of bounds: 50, vector size: 50
+2016.12.11 13:05:30 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#19791') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.11 13:05:30 Error in call out.
+2016.12.11 13:05:30 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.11 13:05:30 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.11 13:05:30 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.15 14:52:15 Index for [] out of bounds: 189, vector size: 189
+2016.12.15 14:52:15 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.15 14:52:15 Error in call out.
+2016.12.15 14:52:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.15 14:52:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.15 14:52:16 Index for [] out of bounds: 190, vector size: 190
+2016.12.15 14:52:16 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#21445') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.15 14:52:16 Error in call out.
+2016.12.15 14:52:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.15 14:52:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.15 14:52:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.15 14:52:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.15 14:52:20 Index for [] out of bounds: 200, vector size: 200
+2016.12.15 14:52:20 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#21465') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.15 14:52:21 Error in call out.
+2016.12.15 14:52:21 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.21 21:59:39 Index for [] out of bounds: 47, vector size: 47
+2016.12.21 21:59:39 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.21 21:59:39 Error in call out.
+2016.12.21 21:59:39 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.21 21:59:39 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.21 21:59:39 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.21 21:59:39 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.21 21:59:40 Index for [] out of bounds: 47, vector size: 47
+2016.12.21 21:59:40 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#24939') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.21 21:59:41 Error in call out.
+2016.12.21 21:59:41 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.21 21:59:41 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.21 21:59:41 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.21 21:59:41 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:08 Index for [] out of bounds: 168, vector size: 168
+2016.12.25 03:46:08 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.25 03:46:08 Error in call out.
+2016.12.25 03:46:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:08 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:10 Index for [] out of bounds: 171, vector size: 171
+2016.12.25 03:46:10 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#26707') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.25 03:46:10 Error in call out.
+2016.12.25 03:46:10 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:10 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:10 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:10 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:10 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.25 03:46:10 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:38 Index for [] out of bounds: 155, vector size: 155
+2016.12.28 02:52:38 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.28 02:52:38 Error in call out.
+2016.12.28 02:52:38 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:38 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:38 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:38 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:38 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:38 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:40 Index for [] out of bounds: 155, vector size: 155
+2016.12.28 02:52:40 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#28448') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.28 02:52:40 Error in call out.
+2016.12.28 02:52:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.28 02:52:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 Index for [] out of bounds: 181, vector size: 181
+2016.12.29 09:59:24 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.29 09:59:24 Error in call out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:24 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:26 Index for [] out of bounds: 181, vector size: 181
+2016.12.29 09:59:26 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#29097') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.12.29 09:59:26 Error in call out.
+2016.12.29 09:59:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.12.29 09:59:26 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.02 01:46:34 Index for [] out of bounds: 89, vector size: 89
+2017.01.02 01:46:34 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.02 01:46:34 Error in call out.
+2017.01.02 01:46:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.02 01:46:35 Index for [] out of bounds: 89, vector size: 89
+2017.01.02 01:46:35 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#30897') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.02 01:46:35 Error in call out.
+2017.01.02 01:46:35 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.02 01:46:35 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.02 01:46:35 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:52 Index for [] out of bounds: 141, vector size: 141
+2017.01.03 02:12:52 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.03 02:12:52 Error in call out.
+2017.01.03 02:12:52 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:52 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 Index for [] out of bounds: 143, vector size: 143
+2017.01.03 02:12:54 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#31404') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.03 02:12:54 Error in call out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.03 02:12:54 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.09 21:32:46 Index for [] out of bounds: 103, vector size: 103
+2017.01.09 21:32:46 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.09 21:32:46 Error in call out.
+2017.01.09 21:32:46 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.09 21:32:46 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.09 21:32:47 Index for [] out of bounds: 103, vector size: 103
+2017.01.09 21:32:47 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#34736') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.09 21:32:47 Error in call out.
+2017.01.09 21:32:47 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.09 21:32:47 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.09 21:32:47 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.09 21:32:47 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.09 21:32:47 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 Index for [] out of bounds: 38, vector size: 38
+2017.01.12 23:59:53 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.12 23:59:53 Error in call out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:53 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:55 Index for [] out of bounds: 39, vector size: 39
+2017.01.12 23:59:55 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#36294') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.12 23:59:55 Error in call out.
+2017.01.12 23:59:55 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:55 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:56 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:56 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:56 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:56 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:56 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.12 23:59:56 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.14 08:13:20 Index for [] out of bounds: 104, vector size: 104
+2017.01.14 08:13:20 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.14 08:13:20 Error in call out.
+2017.01.14 08:13:20 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.14 08:13:21 Index for [] out of bounds: 104, vector size: 104
+2017.01.14 08:13:21 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#37109') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.14 08:13:21 Error in call out.
+2017.01.14 08:13:21 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.14 08:13:21 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.14 08:13:21 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.14 08:13:21 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.14 08:13:21 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.14 15:04:44 Bad arg 1 to move_object(): got 'number', expected 'string/object'.
+2017.01.14 15:04:44 program: obj/living.c, object: players/boltar/things/sqrl2#37306 line 251
+'       automove' in 'players/padrone/walker/castle.c' ('players/padrone/walker/castle') line 144
+'    move_castle' in 'players/padrone/walker/castle.c' ('players/padrone/walker/castle') line 306
+'     catch_tell' in 'players/boltar/things/life.c' ('players/boltar/things/life#37223') line 113
+'    random_move' in 'players/boltar/things/sqrl2.c' ('players/boltar/things/sqrl2#37306') line 137
+'          north' in 'players/boltar/santaland/trail.c' ('players/boltar/santaland/trail#30') line 15
+'    move_player' in '        obj/living.c' ('players/boltar/things/sqrl2#37306') line 251
+2017.01.14 15:04:44 Error in call out.
+2017.01.22 16:12:42 Index for [] out of bounds: 17, vector size: 17
+2017.01.22 16:12:42 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.22 16:12:42 Error in call out.
+2017.01.22 16:12:42 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.22 16:12:42 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.22 16:12:43 Index for [] out of bounds: 17, vector size: 17
+2017.01.22 16:12:43 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#41361') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.22 16:12:43 Error in call out.
+2017.01.22 16:12:43 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.22 16:12:43 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.22 16:12:43 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.22 16:12:43 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.25 01:59:33 Index for [] out of bounds: 104, vector size: 104
+2017.01.25 01:59:33 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.25 01:59:34 Error in call out.
+2017.01.25 01:59:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.25 01:59:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.25 01:59:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.25 01:59:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.25 01:59:34 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.25 01:59:35 Index for [] out of bounds: 104, vector size: 104
+2017.01.25 01:59:35 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#42704') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.25 01:59:36 Error in call out.
+2017.01.25 01:59:36 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.25 01:59:36 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.29 00:26:03 Index for [] out of bounds: 126, vector size: 126
+2017.01.29 00:26:03 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.29 00:26:03 Error in call out.
+2017.01.29 00:26:03 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.29 00:26:03 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.29 00:26:03 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.29 00:26:03 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.29 00:26:03 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.29 00:26:05 Index for [] out of bounds: 126, vector size: 126
+2017.01.29 00:26:05 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#44814') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2017.01.29 00:26:05 Error in call out.
+2017.01.29 00:26:05 call_out: user 'mizan' had an error: rescheduling call_out.
+2017.01.29 00:26:05 call_out: user 'mizan' had an error: rescheduling call_out.

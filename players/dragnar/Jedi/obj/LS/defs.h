@@ -1,0 +1,13 @@
+#define WIELDED this_object()->query_wielded()
+#define JEDI present("jedi_object", environment(this_object()))
+#define USER environment(this_object())
+#define ATT USER->query_attack()
+#define ATTN ATT->query_name()
+#define SKILL JEDI->query_skill("saber")
+#define OWNER this_object()->query_wep_owner()
+#define NAME capitalize(USER->query_real_name())
+#define GLEVEL USER->query_guild_rank()
+#define XP USER->query_guild_exp()
+#define SP USER->query_spell_point()
+#define Rank USER->query_guild_rank()
+#define MAX 10    /* Size of combination array */

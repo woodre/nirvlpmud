@@ -1,0 +1,29 @@
+
+[32m
+
+---------------------------=========+=========----------------------------    
+ 
+    Player attributes:
+
+  Stamina: 	Increases hit points.
+  Magic:  	Increases spell points.
+  Strength: 	Increases the amount you can carry
+  Luck: 	If you get lucky you take less or no damage from a hit.
+  Stealth: 	Maybe you can just slip by those aggressive monsters.
+           
+  Piety         These five attributes are used for a variety of
+  Intelligence  things throughout the game. They are mostly used
+  Will Power    for guilds and checks to stay out of harms way.
+  Dexterity     It may be more useful to leave raising these 
+  Charisma      until later. 
+
+
+Newbies are allowed to raise attributes 30 times for free, to a
+maximum of 10.  Use these free attributes to customize your
+character. For more info see 'help attribs'
+
+To see current values use 'score2' or 'sc2'
+To raise attribs use raise <str, sta, wil, mag, pie, ste, luc, int, dex, cha>
+
+---------------------------=========+=========----------------------------
+[0m

@@ -1,0 +1,100 @@
+#include <ansi.h>
+#define PAV "/players/pavlik/guild/mages/mage-master2.c"
+#define rlname this_player()->query_real_name()
+#define rname environment(this_object())->query_real_name()
+#define SAVE_PATH "players/pavlik/guild/mages/players/"
+#define DONATOR "/players/pavlik/guild/mages/donation-master.c"
+#define ADVANCE ("/players/pavlik/guild/mages/rooms/advance_room2.c")
+#define ME capitalize(this_player()->query_real_name())
+#define PO this_player()->query_possessive()
+#define en environment(this_object())
+#define tp this_player()
+#define env environment(this_player())
+#define attk this_player()->query_attack()
+#define IT capitalize(obj->query_name())
+#define Me capitalize(environment(this_object())->query_real_name())
+#define It capitalize(OBJ->query_name())
+#define guild present("mageobj", this_player())
+#define mage this_object()
+#define KNOW present("mageobj", this_player())->knowit
+#define VALID valid_atak(obj)
+
+
+align_str(str, num){
+  int len, x;
+  string msg;
+  sscanf(str, "%s", msg);
+  len = num - strlen(str);
+  if(len < 1) return msg+" ";
+  for(x=0;x<len;x++) msg = msg+" ";
+  return msg;
+}
+
+valid_atak(ob){
+
+  if(guild->query_casting() == 1){
+    write("You are already casting a spell.\n");
+    return 0;
+    }
+
+  if(this_player()->query_sp() < -101){
+    write("You are too tired to cast another spell!\n");
+    return 1;
+    }
+
+  if(!this_player()->query_attack()){
+    write("You be fighting before you can cast this spell.\n");
+    return 0;
+    }
+
+  if(!ob){
+    write("Cast this spell on who?\n");
+    return 0;
+    }
+
+  if(environment(ob)->query_arena()) return 1;
+
+  if(ob->query_pl_k() > 1) return 1;
+
+  if(ob->query_npc() != 1){
+    write("You cannot cast this spell on a Player.\n");
+    return 0;
+    }
+
+  return 1;
+}
+
+rancol(str){
+  string msg, letr;
+  int i, x;
+
+  msg = "";
+  for(i=0;i<strlen(str);i++){
+    letr = extract(str,i,i);
+    x = random(7);
+    if(x == 0) letr = HIR+letr; else
+    if(x == 1) letr = HIG+letr; else
+    if(x == 2) letr = HIY+letr; else
+    if(x == 3) letr = HIB+letr; else
+    if(x == 4) letr = HIM+letr; else
+    if(x == 5) letr = HIC+letr; else
+    letr = HIW+letr;
+    msg = msg + letr;
+  }
+  msg = msg+NORM;
+  return msg;
+}
+
+rancol2(str){
+  string msg;
+  int x;
+  x = random(7);
+  if(x == 0) msg = HIR+str+NORM; else
+  if(x == 1) msg = HIG+str+NORM; else
+  if(x == 2) msg = HIY+str+NORM; else
+  if(x == 3) msg = HIB+str+NORM; else
+  if(x == 4) msg = HIM+str+NORM; else
+  if(x == 5) msg = HIC+str+NORM; else
+  msg = HIW+str+NORM;
+  return msg;
+}

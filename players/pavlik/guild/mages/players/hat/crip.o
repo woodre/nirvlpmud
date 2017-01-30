@@ -1,0 +1,35 @@
+no_clean 0
+name "wizard's hat"
+alias "hat"
+short_desc "[35mWizard's Hat[0m"
+long_desc "[35mWizard's Hat[0m."
+worn_tag_short_flag 0
+buy_value 0
+value 0
+weight 0
+type "helmet"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 1
+ac 0
+res 0
+siz 0
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"helmet",})
+params ({"physical",0,0,"do_special",})
+enchantments 0
+k 1
+backp ({"buy 6,buy 11,buy 6,buy 11,buy 6,buy 11,n,u,tower,church,goportal","",0,0,0,0,0,0,0,0,})
+bpatt ({"advance,say aziar eim oyish,n,w,d,tower,church,goportal","",0,0,0,0,0,0,0,0,})
+patt ({"goportal,church,tower,d,w,n,say aziar eim oyish,advance","",0,0,0,0,0,0,0,0,})
+ggg "advance"
+comment ({"spell components","guild advance",0,0,0,0,0,0,0,0,})

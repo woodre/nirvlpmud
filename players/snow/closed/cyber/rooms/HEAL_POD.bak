@@ -1,0 +1,73 @@
+#define TP this_player()
+inherit "room/room";
+
+init() {
+  ::init();
+  call_out("move_me", 0, TP);
+  add_action("do_nothing"); add_xverb("");
+}
+
+move_me(object ob) {
+  if(!present("either implants", ob)) {
+  tell_object(ob, "------------>\n");
+  tell_object(ob,"You have infiltrated Netropolis without authorization.\n");
+  tell_object(ob, "------------>\n");
+  if(ob->is_player() && ob->query_level() < 20) move_object(ob,"/room/church");
+  }
+}
+
+
+reset(arg){
+ if(!arg){
+ set_light(1);
+ short_desc="CyberNinja Heal Pod";
+ long_desc=
+"    You are surrounded by the liquid machines of the heal pod.\n";
+
+  call_out("heal_players",5);
+  }   }
+
+realm() { return "NT"; }
+
+do_nothing(str) {
+  object convert_room;
+  string mess;
+ 
+  if (sscanf(str, "help %s", mess)==1) return;
+  if (sscanf(str, "cyber %s", mess)==1) return;
+  if (sscanf(str, "cyber%s", mess)==1) return;
+  if (sscanf(str, "help%s", mess)==1) return;
+ 
+  if (lower_case(str)=="progress") {
+    write("  HP: "+TP->query_hp()+"  SP: "+TP->query_sp()+"\n");
+  return 1; }
+ 
+  if (lower_case(str)=="stop") {
+    write("You mentally signal the nurse droids to release\n"+
+          "you from the healing pod...\n");
+    convert_room = "/players/snow/closed/cyber/rooms/convert";
+    move_object(TP, convert_room);
+    command("look", TP);
+    return 1; }
+ 
+  if(TP->query_level() >= 20) return;
+ 
+  write("While you are in the healing pod you may\n"+
+        "only perform thinking functions. That is, you\n"+
+        "may peruse the cyber or mud help files, see your\n"+
+        "healing 'progress', or 'stop' healing.\n");
+  return 1;
+}
+
+heal_players() {
+  object ob;
+  ob = first_inventory(this_object());
+  while(ob) {
+    if(ob->is_player()) ob->heal_self(1);
+    ob = next_inventory(ob);
+  }
+  call_out("heal_players", 5);
+  return 1;
+}
+
+feel() { return "no"; }

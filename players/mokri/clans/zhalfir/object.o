@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "The crest of [1;34mZhalfir[0m"
+long_desc "This is a crest placed upon your [33mflesh[0m is the symbol of [1;34m Zhalfir[0m. A [1mVERY [0m[31mPowerful [1;35mMage [0m,both very [1;33mintelligent [0mand [1mwise[0m.A person who has been blessed to have this mark placed upon them must have the trust form of strength and wisdom.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "crest"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is a crest placed upon your [33mflesh[0m is the symbol of [1;34m Zhalfir[0m. A [1mVERY [0m[31mPowerful [1;35mMage [0m,both very [1;33mintelligent [0mand [1mwise[0m.A person who has been blessed to have this mark placed upon them must have the trust form of strength and wisdom.[0mType 'clan_help' for commands."
+clan_short "The crest of [1;34mZhalfir[0m"
+damage_type 0
+hall_path "/players/jareel/areas/chaos/forest9"
+object_name "crest"
+owner "teferi"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Tue Aug 28 11:03:30 2007] Teferi: I added 2 new rooms to the clan hall heh","[Tue Aug 28 11:03:34 2007] Teferi: sure","[Tue Aug 28 11:03:42 2007] Crip: can you recruit kirk to mageS?","[Tue Aug 28 11:03:48 2007] Crip: she is a good friend of mine","[Tue Aug 28 11:04:04 2007] Teferi: don't u have a mage yet?","[Tue Aug 28 11:04:10 2007] Crip: not maxxed yet","[Tue Aug 28 11:04:20 2007] Teferi: level 40 at least?","[Tue Aug 28 11:04:24 2007] Teferi: heh","[Tue Aug 28 11:04:26 2007] Crip: nope","[Tue Aug 28 11:04:30 2007] Crip: been working on warrior","[Tue Aug 28 11:04:30 2007] Teferi: slacker","[Tue Aug 28 11:04:38 2007] Crip: my mages is messed up anywho","[Tue Aug 28 11:05:48 2007] Crip: you up to recruiting her for me","[Tue Aug 28 11:05:50 2007] Crip: ill watch out for her","[Tue Aug 28 11:06:08 2007] Teferi: If I am on when she gets the reqs to join","[Tue Aug 28 11:06:18 2007] Crip: whats the req?","[Tue Aug 28 11:06:32 2007] Teferi: level 12, 20 mag, 20 int","[Tue Aug 28 11:07:52 2007] Crip: once i max i will slam some into t he clan hall for ya","[Tue Aug 28 11:07:58 2007] Crip: i been soooooo busy lately","[Tue Aug 28 11:08:06 2007] Teferi: no prob",})
+leaders ({"crip",})
+join_type 1
+private_coffer 53859
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

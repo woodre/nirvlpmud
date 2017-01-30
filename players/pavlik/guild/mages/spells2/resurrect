@@ -1,0 +1,72 @@
+/*
+ * spell : Resurrect   (necromancy)
+ * level : 6
+ * effect: Revive a player from the dead
+ * cost  : 200 sp
+ * spec  : 
+ * files : none
+ */
+
+resurrect(str) {
+   object obj;
+
+  if(!KNOW("resurrect")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if (!str) {
+    write("Who do you want to resurrect?\n");
+    return 1;
+  }
+
+  obj = present("ghost of "+str, env);
+
+  if(!obj) {
+    write(capitalize(str)+" is not here.\n");
+    return 1;
+  }
+
+  if(!living(obj) || obj->query_npc()) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(obj == this_player()) {
+    write("You cannot cast this spell on yourself.\n");
+    return 1;
+  }
+
+  if(!obj->query_ghost()) {
+    write("You cannot resurrect something that is alive.\n"
+);
+    return 1;
+  }
+
+  if(tp->query_sp() < 140) {
+    write("You are too tired to cast this spell.\n");
+    return 1;
+  }
+
+  write("You cast a "+HIC+"Resurrection"+NORM+" spell ...\n");
+
+  if(spell_fail6(6, "necr", "wil")) {
+    write("You are unable to save "+IT+"'s poor soul.\n");
+    say(ME+" attempts to cast a powerful spell and fails.\n");
+    write("You feel tired.\n");
+    tp->add_spell_point(-tp->query_sp());
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" raises "+PO+" hands to the sky ...\n"+
+  IT+" is suddenly captured within a brilliant white light!\n"+
+  "The air around you is filled with loud chanting voices ...\n");
+  tell_room(env,
+  "      ...and then silence.\n");
+  call_other(obj, "remove_ghost", 0);
+  write("You have sucessfully raised "+IT+" from the dead!\n");
+  tp->add_spell_point(-200);
+  return 1;
+}
+

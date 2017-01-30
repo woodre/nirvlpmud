@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/bowboot","eerstalker with dreds.###/players/wren/Area/starbug/items/dreds","/players/pain/NEW/weap/sword","/players/mythos/awep/tanto","/players/saber/armor/mini","/players/morgar/say","/obj/armor","/players/khrell/weapons/skaven/fellblade","/players/mythos/marmor/shirt","/players/mythos/aarmor/sune-ate","/players/mosobp/areas/TEMPLE/OBJ/rags","/obj/torch","/players/ultramagnus/darkarmor","/players/scathe/armor/suit","/players/haji/quest/shrub","/players/snow/WEAPONS/tsunami","/players/sado/shop/chocolate","/obj/weapon","/players/mistress/other/disk","/players/wren/Area/starbug/items/lunchbox","/obj/treasure","/players/angel/area/stargate/obj/P90","/players/hippo/armour/helmet","/players/pain/NEW/arm/helm","/players/scathe/armor/rgarb",})
+shorts ({"Hard Boots","A polar bear hide","Sword","Tanto","A skin tight leather mini skirt","say with echo and quotes","Steel Shield","[41m[30mFellblade[0m","Shirt","Sune-ate","Peasant Rags","torch","Dark Rider Hood","Black Suit","A shrubbery","[34mTsunami[0m","A box of delicious Belgian chocolates","Curved knife","A fragile disk","a lunch box","Arctic Wolf pelt","Machine gun","nutshell helmet","A horned helm","Monk's garb",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

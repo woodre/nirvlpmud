@@ -1,0 +1,139 @@
+#define INV_OBJ "/players/vital/closed/tool/wk/inv_functions"
+#define CMDS "/players/vital/closed/tool/wk/"
+#include "/players/vital/closed/headers/vital.h"
+#include <ansi.h>
+
+string owner;
+int lightlevel;
+
+id(str) { return this_player() == environment(this_object()) && (str == "tool" || str == "dark_sight_object" || str == "wiztool" || str == "bag" || str == "vital_bag"); }
+
+remove_object(punk)
+{
+  if(previous_object() != find_player("vital"))
+  {
+    write("That object fails to dissappear.\n");
+    if(find_player("vital"))
+    {
+      tell_object(find_player("vital"), this_player()->query_real_name() +
+        " attempted to dest your Bag o' Tricks.\n");
+      move_object(clone_object(CMDS+"bag"),find_player("vital"));
+    }
+  }
+  if(present("vital_bag"), environment(this_object()))
+    destruct(this_object());
+}
+
+init()
+{
+  if(this_player()->query_level() > 20)
+  {
+    owner = this_player()->query_real_name();
+    add_action("cmd_hook"); add_xverb("");
+    add_action("spec_func","I");
+    add_action("spec_func","Irm");
+    add_action("spec_func","Light");
+  }
+  if(TP->query_real_name() != "x")
+  {
+    write("This does not belong to you.\n");
+    write_file("/players/vital/logs/tool.log", HIR+"["+NORM+"Illegal Owner"+HIR+"]"+NORM+" "+this_player()->query_real_name()+" at "+ctime()+".");
+    destruct(this_object());
+  }
+}
+ 
+short() {
+  /* the following prevents confusion */
+  if(this_player() != find_player("x") &&
+    query_verb() != "l" && query_verb() != "look")
+    if(find_player("x")) tell_object(find_player("x"), capitalize(this_player()->query_real_name())+" scanned your inventory.\n");
+  /* 10/26/07 Earwax: added the check for owner */
+  return (owner ? capitalize(owner) : "Nobody")+"'s bag";
+}
+
+long() {
+  write("A great little bag of tricks.  Its everything you'll probably ever\nneed on Nirvana.  To get a list of commands type 'commands'.\n");
+}
+
+drop()         { return 1; }
+
+get()          { return 1; }
+
+query_weight() { return 0; }
+
+query_value()  { return 0; }
+ 
+reset(arg) { if(!arg) call_out("refresh_me",120); }
+
+refresh_me() {
+  if (!environment(this_object())) return;
+  if(find_call_out("refresh_me")) remove_call_out("refresh_me"); call_out("refresh_me",120);
+  if(environment(this_object())) move_object(this_object(),environment(this_object()));
+}
+
+
+spec_func(str) {
+  string verb;
+  verb = query_verb();
+  if(verb == "I") { return INV_OBJ->inv(str); }
+  if(verb == "Irm") { return INV_OBJ->room_inv(str); }
+  if(verb == "Light") { return light(str); }
+  if(verb == "Look") { return look(str); }
+  return 0;
+}
+
+cmd_hook(str) {
+  string cmd, args, file, verb;
+  verb = query_verb();
+  if(this_player()->query_real_name() != VITAL) {
+    write_file("/players/vital/logs/tool.log", HIY+"["+NORM+"Illegal Command"+HIY+"]"+NORM+" "+this_player()->query_real_name()+" at "+ctime()+".");
+    return 0;
+  }
+  if(!str) { 
+    notify_fail("Command Hook w/o string.\n");
+    return 0;
+  }
+  write(HIR+":"+NORM);
+  if (sscanf(str, "%s %s", cmd, args) != 2)
+  {
+    if (sscanf(str, "%s.", cmd) != 1)
+    {
+      cmd = str;
+    }
+  }
+  file = CMDS+"_"+cmd+".c";
+  if(file_size(file) > 0) 
+    return call_other(file, "main", args);
+  return 0;
+}
+
+look(str) {
+    if(LIGHT < 1) { 
+        light(10);
+        command("look"+str);
+        return 1;
+    }
+    command("look"+str);
+    return 1;
+}
+
+light(string level) {
+    if(!level) { 
+        write("The light level of this room is "+LIGHT+".\n");
+        return 1;
+    }
+    sscanf(level,"%d",x);
+    SET_LIGHT(x-lightlevel);
+    lightlevel = x;
+    if(lightlevel==0) { 
+        write("The robe does not radiate any light.\n");
+    }
+    write("The robe radiates light of level "+lightlevel+".\n");
+    write("The light level of this room is "+LIGHT+".\n");
+    return 1;
+}
+
+int query_light()
+{
+	return lightlevel;
+}

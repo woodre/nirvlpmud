@@ -1,0 +1,22 @@
+Title of Accessory [generate_short()]
+[Lore]
+Description of accessory based on type and lore [generate_description()]
+Info into the creator of the object, the enchanter, the Black Willow Order
+amount and depth of information is based on lore score itself [generate_lore()]
+--
+--
+
+[Identify] [generate_iden()]
+Info into the specific abilities of the accesory. Correlations between the
+gem type and the specific dtype. Info on the basic methods used to bind
+dtype to gemstone
+
+Basic meter displaying a general gauge of strength of enchantment. Not done
+to scale so the true power cannot be determined without Max Lore and Identify
+ex.
+[::::::::::::::::::::::::::::::::::::::::] [dtype] [power%]
+[generate_meters()]
+
+[Appraise]
+Display the value of the item as surmised by the player. Low appraise will give 
+completely unreliable results. Max appraise will yield the exact value.

@@ -1,0 +1,17 @@
+#include "room.h"
+#include "/players/hippo/rvd.h"
+#undef EXTRA_RESET
+#define EXTRA_RESET extra_reset();
+extra_reset(){
+if(!present("machine")){
+move_object(clone_object("/players/hippo/objects/game_machine"),this_object());
+}
+}
+ONE_EXIT("/players/hippo/rooms/nose.c","nose",
+  "The game machine room.",
+  "You look around and think that this is a pleasant room to stay\n"+
+  "for a while. The walls have nice colors and the lamp at the roof\n"+
+  "spreads a gentle light. \n"+
+  "In the middle of the room you see a funny machine. As you come closer\n"+
+  "you recognize it as the 'game machine'.\n",
+  1)

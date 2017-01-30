@@ -1,0 +1,17 @@
+[WOMBAT] Level [1] 50 charges (--sta, --int, --mag, --ste, ++luck)
+         (cannot wield weapons)
+
+  The wombat is an interesting individual. It is capable of digging
+  vast tunnel networks linking spread out areas of the mud, and dragging
+  other objects around wherever it goes, among other things.
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+sniff <monster>  Determines the alignment of given monster.
+
+drag <object>    Drags an object that is too heavy for you to carry.
+
+burrow           Begins digging in the current spot to make a tunnel
+                 to the burrow.
+
+forage           (16 sp) Search for potatoes in the surrounding area.

@@ -1,0 +1,165 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+/*
+*  Allows the ranger to teleport to certain locations.
+*/
+
+RangerInit(){
+   if(PO->QuerySkillLevel("teleport") >= 7){
+      PO->AHiddenSkill("pack","beck");
+      PO->AHiddenSkill("unpack","beck");
+   }
+}
+
+QMax(){ return 20; }
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   
+   write("Teleporting is a major Power Ranger Ability.\n"+
+         "Teleporting allows a Ranger to instantly transfer to pre-designated locations,\n"+
+         "and to other Power Rangers.\n"+
+         "The cost to Teleport is:\n"+
+         "110 - ( 5 * (Teleport Skill Level) ).\n"+
+         "Teleporting when not morphed, or to other players, is double that amount.\n"+
+         "The minimum cost can never be less than 20 (40 when unmorphed/another player).\n\n"+
+         "Abilities:\n\n"+
+         BOLD+RED+"Pack"+OFF+"                                        7\n"+
+         BOLD+RED+"Unpack"+OFF+"                                      7\n"+         
+         "\n"+
+
+
+         "Locations:\n\n"+
+
+         "Church                                       1\n"+
+         "Command Center                               2\n"+
+         "Command Center Outside                       2\n"+
+         "Park                                         5\n"+
+         "Remote Locator (must have 13 Communication) 10\n"+
+         "Another Power Ranger 'teleport <name>'      10\n"+
+         "Megaship  (must be Space Ranger at least)   15\n"+
+         "!!! All  P2P teleport requires Comm skill of 3 or higher !!!\n"+
+         "\nOther destination will be available in the future\n"+
+         "Please mail Beck with (serious) suggestions.\n"+
+         "");
+}
+         
+RangerPower(str,string type){
+   int cost;
+   string destination;
+   object locator;
+   cost = 110 - (PO->QuerySkillLevel("teleport")*5);
+   if(cost < 20) cost = 20;
+   if(!str){write("Teleport where?\n"); return 1;}
+   if(!PO->QMorphed()){
+      if(MASTER->QPowerPoints(type) < cost*2){
+         write("There is not enough power to teleport you.\n");
+         return 0;
+      }
+   }
+   if(MASTER->QPowerPoints(type) < cost){
+      write("There is not enough power to teleport you.\n");
+      return 0;
+   }
+    if(!environment(TP)) return 0; /* added 6.11.01 by verte */
+   if(environment(TP)->realm() == "NT"){
+      write("Zordon tells you:  I can't seem to pinpoint your location there.\n");
+      return 0;
+   }
+   destination = "none";
+   if(str=="church" && PO->QuerySkillLevel("teleport") > 0){ destination = "X#/room/church.c"; }
+   if(str=="park" && PO->QuerySkillLevel("teleport") > 4 ){ destination = "teleport#/players/beck/room/park5.c"; }
+   if(str=="megaship" && TP->GLEVEL > 69 && PO->QuerySkillLevel("teleport") > 14 ){
+         destination = "teleport#/players/beck/Rangers/RangerSpaceship.c"; 
+   }
+   if(str=="command center" && PO->QuerySkillLevel("teleport") > 1 ){ destination = "X#/players/beck/Rangers/CommandCenter/CommandCenter.c"; }
+   if(str=="command center outside" && PO->QuerySkillLevel("teleport") > 1 ){ destination = "X#/players/beck/room/mountain2.c"; }
+   
+   if("/players/beck/Rangers/CommandCenter/CommandCenter.c"->QCurrEnhancement(str)){
+      locator = "/players/beck/Rangers/CommandCenter/CommandCenter.c"->QCurrEnhancement(str);
+      if(!locator->valid_teleport())
+         destination = "none";
+      else if(environment(locator)->realm() == "NT"){
+         write("Zordon tells you: I can't pinpoint "+str+"'s location for you.\n");
+         return 0;
+      }
+      else if(living(ENV(locator))){
+         write("You can not teleport to a living being.\n");
+         return 0;
+      }
+      else {
+         tell_room(environment(this_player()),TPNAME+
+            " becomes a mass of "+PO->QRangerAnsi()+PO->COLOR+
+            " light"+OFF+".\n"+"The "+PO->QRangerAnsi()+"light"+OFF+" then rockets into the sky and disappears"+
+            " out of sight.\n"+
+            "");
+            move_object(this_player(), environment(locator));
+            tell_room(environment(TP),"A brilliant display of "+
+            PO->QRangerAnsi()+PO->COLOR+" light"+OFF+" beams into the room.\n"+
+            "");
+            command("look", this_player());
+            MASTER->APowerPoints(-cost,type);
+         if(!PO->QMorphed()){
+            MASTER->APowerPoints(-cost,type);
+         }
+         return 1; 
+      }
+   } 
+      
+   if(type == "Dark Ranger"){
+      if(str == "castle"){ destination = "teleport#/players/beck/DarkRangers/Room/ZedChamber.c"; }
+   }
+   if(destination != "none"){   
+      tell_room(environment(this_player()),TPNAME+
+         " becomes a mass of "+PO->QRangerAnsi()+PO->COLOR+
+         " light"+OFF+".\n"+"The "+PO->QRangerAnsi()+"light"+OFF+" then rockets into the sky and disappears"+
+         " out of sight.\n"+
+         "");
+      call_other(TP,"move_player",destination);
+      tell_room(environment(TP),"A brilliant display of "+
+         PO->QRangerAnsi()+PO->COLOR+" light"+OFF+" beams into the room.\n"+
+         "");
+      MASTER->APowerPoints(-cost,type);
+      if(!PO->QMorphed()){
+         MASTER->APowerPoints(-cost,type);
+      }
+      return 1;
+   }
+/*
+   if(!TP->query_npc()){
+      write("Player to player teleports are currently disabled.\n");
+      return 0;
+   }
+*/
+   if(!find_living(str)){
+      write("You can't teleport there.\n");
+      return 0;
+   }
+   if(!present("RangerCommunicator", find_living(str)) || PO->QuerySkillLevel("teleport") < 10 && PO->QuerySkillLevel("communication") > 2){
+      write("You can't teleport to that person.\n");
+      return 0;
+   }
+   if(environment(find_living(str))->realm() == "NT"){
+      write("Zordon tells you: I can't pinpoint that ranger's location for you.\n");
+      return 0;
+   }
+   if(MASTER->QPowerPoints(type) < cost*2){
+      write("There is not enough Power to teleport you to that person.\n");
+      return 0;
+   }
+   tell_room(environment(TP),TPNAME+
+      " becomes a mass of "+PO->QRangerAnsi()+PO->COLOR+
+      " light"+OFF+".\n"+"The "+PO->QRangerAnsi()+"light"+OFF+" then rockets into the sky and disappears"+
+      " out of sight.\n"+
+      "");
+   move_object(this_player(), environment(find_living(str)));
+   tell_room(environment(this_player()),"A brilliant display of "+
+      PO->QRangerAnsi()+PO->COLOR+" light"+OFF+" beams into the room.\n"+
+      "");
+   command("look", this_player());
+   MASTER->APowerPoints(-(cost*2),type);
+   
+   return 1;
+}

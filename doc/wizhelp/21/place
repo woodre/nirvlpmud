@@ -1,0 +1,19 @@
+**************
+
+                     Place
+
+Syntax:    place <name> <path>
+
+Desc:
+           This command moves a player to the location specified. 
+
+Warning:   Becareful where you drop players.
+
+Example:   place mike /room/vill_green
+                  results
+           Bob moves Mike to the village green
+
+Related:   hand, church
+
+
+**************

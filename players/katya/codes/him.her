@@ -1,0 +1,6 @@
+
+"+this_player()->query_objective()+"     him/her
+"+this_player()->query_possessive()+"  his/her
+"+this_player()->query_pronoun()+"  he/she
+
+capitalize(this_player()->query_name()         players name

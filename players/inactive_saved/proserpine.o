@@ -1,0 +1,102 @@
+channel_names ({"msg","shout","equip","gossip","risque",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 54783
+luck 20
+lucky 74
+name "proserpine"
+gender "female"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 1
+level 19
+armor_class 0
+hit_point 290
+max_hp 290
+experience 2001033
+mmsgout "disappears in a puff of smoke"
+mmsgin "arrives in a puff of smoke"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -8
+cap_name "Proserpine"
+spell_points 226
+max_spell 226
+spell_name "fire ball"
+spell_cost 0
+spell_dam 0
+age 240423
+is_invis 0
+frog 0
+whimpy 33
+auto_load "/players/mythos/prac/qt.c:;.X.Z;xc get all from corpse~;.X.Z;ps party say~;.X.Z;cx get all~;.X.Z;t speed~;.X.Z;h eat honeycomb~;.X.Z;j pop zp2~;.X.Z;k drink ade~;.X.Z;es eat steak~;.X.Z;m major~;.X.Z;. emote~;.X.Z;x decorpse~;.X.Z;1 castle~;.X.Z;tw templar~;.X.Z;7 get honeycomb from bag~;.X.Z;8 get tab from bag~;.X.Z;9 get ade from bag~;.X.Z;c command~;.X.Z;r register~;.X.Z;rs read heal~;.X.Z;bow curtsey~;.X.Z;as apply sphere~;.X.Z;cc command call~;.X.Z;gc get coins~;.X.Z;dp drink potion~;.X.Z;er enter realm~;.X.Z;jo jumpout~;.X.Z;sb sel bottle~;.X.Z;em enter machine~;.X.Z;p s_who~;.X.Z;eg enter gate~;.X.Z;aa ask angel about turtleville~;.X.Z;y eat orange~;.X.Z;ep enter portal~;.X.Z;ccx command get all~;.X.Z;eh eat heart~;.X.Z;.Y;35;^!/players/mythos/prac/chatter.c:^!/players/dragnar/MKScar/scar:^!players/eurale/Abyss/OBJ/mark.c:^!players/pain/NEW/items/star.c:^!players/boltar/sprooms/clinic/boobs:medium 36 5^!/players/snow/ITEMS/dfeeler.c:^!/players/mizan/etheriel/items/beatfixer.c:^!/players/mythos/mmisc/watch.c:^!/players/mythos/mmisc/speed.c:^!/players/saber/closed/new_mini/succubus.c:^!"
+current_room "players/boltar/hotel/hotel.c"
+alignment 945
+follow 0
+follow_num 0
+handshake_data 473
+handshake 66918652
+quest_point 27
+quests "disk_quest#ring#key_quest"
+pregnancy 0
+wkrm 0
+hostname "user-2ini9bu.dialup.mindspring.com"
+ok_edit "none#"
+mailaddr "none"
+saved_where 0
+title "the Seneschal"
+pretitle "World Coming Down,"
+password "7cZA4SqnwsnKU"
+race "human"
+al_title "white lord"
+intoxicated 0
+fight_area 0
+mon 0
+phys_at ({1,5,8,255,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "165.121.37.126"
+msghome "goes home"
+description 0
+guild_name "Knights Templar"
+lastime "Dec  8 17:25 1999 to Dec  8 18:18 1999"
+player_killing 0
+invs_count 13
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd 0
+dead 0
+guild_rank 8
+guild_exp 3896001
+guild_file "players/boltar/templar/templar"
+home "/players/boltar/templar/adv_guild"
+ex_lv 0
+qc 1
+strength 20
+intelligence 20
+stamina 20
+will_power 20
+magic_aptitude 12
+piety 20
+stealth 10
+stuffed 0
+soaked 0
+no_give 944695082
+aprv 0
+other_copy 0

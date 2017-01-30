@@ -1,0 +1,138 @@
+Town of Gas City by Angel@Nirvana
+
+The entire area is located in /players/angel/area/town 
+
+There are 62 rooms located in  /players/angel/area/town/room
+
+There are 14 mobs located in  /players/angel/area/town/npc 
+
+There are 14 objects located in /players/angel/area/town/obj
+
+
+Town of Gas City
+
+	This area will put together all the areas I have already created for
+Gas City.  The school, colony, walmart, and the pub will all fit into the
+town.  I have also added many new businesses to the town.  Some sell objects
+while others are out of stock.  Throughout  the whole town there are citizens
+and employees that can be killed.  Most of the mobs have a credit card that
+can be redeemed for cash when players take them to Bob.
+
+
+Layout of the Town of Gas City
+
+If one is desired I can e-mail it to them.
+
+
+Mobs
+Here is a breakdown of each mob and what they carry
+/players/angel/area/town
+ 
+<mobname> (/path/to/mob/<mobfilename.c>)
+level <#>, ac<#>, wc<#>, hp<#>, spell %chance-damages, <amount> coins +ramdom
+Does mob do anything special? [says, attacks, etc]
+What does the mob carry? 
+
+Bradley(/bradly.c)
+8, ac7, wc12, hp135, sp10-10, coins 50+200
+set_wander_realm("/players/angel/area/town/room/");
+query_name()+" asks, \" Who the HELL do you think you are?
+The kids says,  Yes! It is I, Bradley, the Magnificent!
+The kids says, You guys are DEFINITELY on my shit list!
+Item   /players/angel/area/town/obj/knife.c
+Burglar(/burglar.c)
+17, ac14, wc24, hp350, coins 2000+300
+Can I see that burger?
+Hamburglar just ran off stage with your hamburger!
+
+Cashier(/cashier.c)
+30, ac60, wc60, hp10000
+query_name()+" asks, \"What would you like to order today?
+Hit point max / mob not killable
+
+Cashier_02(/cashier_02.c)
+30, ac60, wc60, hp10000
+query_name()+" asks, \"What would you like to order today?
+Hit point max / mob not killable
+
+Customer(/customer.c)
+15 + random (4),  ac9 + random (6), wc16 + random (10), hp180 + random (150)
+Coins random(1500)+2000
+query_name()+" asks, \"Hello, can I get some help here here?
+Man this is a long line!
+Is that all you have?
+Spell  stiffarm  5, 10-10
+Spell  fistjab    10, 5-40
+Random Items
+/players/angel/area/school/obj/underwear_01.c
+/players/angel/area/school/obj/boots_02.c
+/players/angel/area/school/obj/jeans_01.c
+
+Florist(/florist.c)
+30, ac60, wc60, hp10000
+query_name()+" asks, \"What would you like to order today?
+Hit point max / mob not killable
+
+Grimace(/grimace.c)
+17, ac14, wc24, hp350, coins 2000+300
+Duh............emm.......duh
+Did you ask me something?
+
+Johnny(/johnny.c)
+8, ac7, wc12, hp135, sp5-10, coins 50+300
+set_wander_realm("/players/angel/area/town/room/");
+query_name()+" asks, \"Do you have some food or money I can have?
+The kids says, man I am starving!
+
+Max(/max.c)
+30, ac60, wc60, hp10000
+query_name()+" asks, \"What can I do for you today?
+Hit point max / mob not killable
+
+Multi(/multi.c)
+14, ac11 + random (7), wc18 + random (7), hp220 + random (100)
+/players/angel/area/town/obj/cash.c  X 2
+Randomly creates a mix of mobs and chat
+
+Multi_02(/multi_02.c)
+10, ac 8 + random (6), wc 14 + random (6), hp 150 + random (80)
+Randomly creates a mix of mobs and chat
+
+Multi_mover(/multi_mover.c)
+10, ac 8 + random (6), wc 14 + random (6), hp 150 + random (80)
+set_wander_realm("/players/angel/area/town/room/");
+/players/angel/area/town/obj/cash.c
+Randomly creates a mix of mobs and chat
+
+Ronald(/ronald.c)
+17, ac14, wc24, hp350, coins random(300)+2000
+Welcome boys and girls
+I'm loving it!!!
+
+Teller(/teller.c)
+30, ac60, wc60, hp10000
+query_name()+" asks, \"What can I help you  with today?
+Hit point max / mob not killable
+
+
+
+Objects
+Here is a breakdown of each object 
+/players/angel/area/town/obj
+
+Type:                     Class:      Weight:    heal:    charges:    cost:    Path:
+
+Big Mac                                          50-50       4        4000      /bm.c
+Cash                                    1                                       /cash.c
+Coke                                             50-50       4        4000      /coke.c
+Double Cheeseburger                              50-50       3        2800      /dcb.c 
+Egg McMuffin                                     50-50       3        2800      /emm.c
+Fries                                            40-40       4        1250      /fries.c
+Hash brown                                       40-40       3         960      /hb.c
+Knife                       16          1                                       /knife.c
+Large rose                                                             100      /l_rose.c
+Large pizza                                      50-50       3        2800      /lp.c
+Pizza roll                                       50-50       4        4000       /pr.c
+Red rose                                                               50        /red_rose
+Sign                                                                             /sign_02.c
+Small pizza                                      40-40       3         960       /sp.c

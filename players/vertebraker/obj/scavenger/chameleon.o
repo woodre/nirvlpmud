@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/softly/nhall/obj/decant3","/players/snow/WEAPONS/tsunami","/players/snow/WEAPONS/glowknife","/players/scathe/armor/suit","/obj/weapon","/players/ultramagnus/darkweapon","/players/wren/Area/starbug/items/dreds","/players/angel/area/stargate/obj/bullets","/players/hippo/heals/bubbles","/players/arrina/armor/sveil","/players/eurale/Glade/OBJ/elven_boots","/players/mythos/awep/wakizashi","/obj/weapon","/players/emerson/armor/toupee","/players/mythos/awep/arrow","/players/saber/weapons/hrev","/players/mythos/amisc/mirror","/players/ultramagnus/rdiamond","/players/wren/Area/starbug/items/charisma","/players/mythos/closed/guild/forest/misc/pelt","/players/scathe/weap/baxe","/players/puppy/s/eq/apron","/players/wren/Area/starbug/items/cowboyhat","/players/mythos/awep/quiver","/players/mosobp/areas/TEMPLE/OBJ/tiara",})
+shorts ({"Decanter of Healing [[1m3[2;37;0m]","[34mTsunami[0m","A glowing knife","Black Suit","A glowing lightsabre","Dark Rider Spear","Lister's crusty deerstalker with dreds.","A clip of bullets [50]","[1;36mbubbles of 7up[0m","[1;37mShadowVeil[2;37;0m","[1mElven boots[2;37;0m","Wakizashi","An evil-looking lightsabre","A Bad Toupee","arrow","A Colt .68 Heavy Revolver","A small mirror","A Red Diamond","a charismatic aura","A beautiful white pelt","A Huge Double Bladed Axe","An apron","a tiny cowboy hat","A quiver","A Princess' Tiara",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

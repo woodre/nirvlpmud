@@ -1,0 +1,16 @@
+Wolf Commands:
+    wolf help ................. Shows this menu
+    wolf summon ............... Summon a wolf to your side (100sp)
+    wolf say <str> ............ Let your wolf talk for you
+    wolf emote <str> .......... Let your wolf emote a message
+    wolf tell <who> <what> .... Let your wolf tell somebody something
+    wolf look ................. Let you see through the eyes of your wolf
+    wolf leave ................ Release your wolf
+    wolf bring ................ Brings your wolf back to you
+    wolf follow ............... Command your wolf to follow you
+    wolf stay ................. Command your wolf to stay in the current room
+    attack <monster> .......... Command your wolf to attack a monster
+    wolf north, south, east, .. Command your wolf to move around
+      west, n, s, etc, etc ....
+ 
+NOTE: Anything the wolf sees will have a # in front of it.

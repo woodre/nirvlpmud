@@ -1,0 +1,37 @@
+Command                  Description                          Cost     Level
+----------------------------------------------------------------------------
+bite <plyr> ............ Bite <plyr> in the neck (no damage)  0 sp ..... 1
+renew .................. Get a new copy of the badge ........ 0 sp ..... 1
+change ................. Change into a morph ................ 0 sp ..... 1
+help_badge or hb ....... This menu .......................... 0 sp ..... 1
+help_badge2 or hb2 ..... Commands for levels 3, 4, and 5 .... 0 sp ..... 1
+help_badge3 or hb3 ..... Commands for levels 6, 7, 8, and 9 . 0 sp ..... 1
+new_commands ........... A list of new commands (updated .... 0 sp ..... 1
+             ...........   whenever the command is installed)      .....
+note <str> ............. Drop a note in the suggestion box .. 0 sp ..... 1
+fang_set <x> ........... Set the damage of your fang to <x> . 0 sp ..... 1
+  or fs <x> ...........   (sp charge is 1 for 1) ............      .....
+check_al ............... Check if you are good or evil ...... 0 sp ..... 1
+set_morph .............. Menu to show which morphs you can .. 0 sp ..... 1
+          ..............   be (more per level) ..............      .....
+guild_news ............. Current guild information .......... 0 sp ..... 1
+guild_tell <str> ....... Tell all members online a message .. 0 sp ..... 1
+  or gt <str> ..........    in <str> ........................      .....
+gw ..................... A list of guild players online ..... 0 sp ..... 1
+gz ..................... A list of guild wizards online ..... 0 sp ..... 1
+ga ..................... A list of all guild members online . 0 sp ..... 1
+guild_tell_shaddup ..... Silences Guild_Tell messages ....... 0 sp ..... 1
+  or gts ...............   (toggles ON and OFF) .............      .....
+allow_toggle ........... Toggles whether or not you wish to . 0 sp ..... 1
+  or at ................   allow summons or steps ...........      .....
+php .................... Pet Hit Point Monitor toggle ....... 0 sp ..... 1
+..........................................................................
+drain .................. Heals for "draining" a corpse ...... 2 sp ..... 2
+drain_toggle or dt ..... Toggle hp/sp collection from drain . 0 sp ..... 2
+fang <creature> ........ Attacks a creature for X damage .... ? sp ..... 2
+                ........   (the sp cost changes per level) ..      .....
+                ........   (increases per level) ............      .....
+tonic <X> .............. Heals X hp per X*2 sp ............. X*2sp ..... 2
+rescue ................. Transport to the guild hall ........ 40sp ..... 2
+       .................   (once per 5  minutes) ............      .....
+..........................................................................

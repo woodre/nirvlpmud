@@ -1,0 +1,1 @@
+[1;33mFantasy [2;37;0m[1m: [2;37;0m[1;33m I'm very proud to fight alongside such a brave,self-less warrior, Fantasy has proved time and time again that he is a very loyal brother both to me and all of you.[2;37;0m (borith)

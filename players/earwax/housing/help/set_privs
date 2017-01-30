@@ -1,0 +1,10 @@
+This command allows the owner of a building, or a character given 
+level 3 privileges, to set the privileges of another character.  In 
+short, the command allows another character access to a group of 
+commands, based on the list in [1;37mhinfo commands[2;37;0m[2;37;0m.  Basically, the 
+privilege levels are as follows: 
+
+Syntax:
+[1;37mset_privs[1;30m <playername> <0, 1, 2, or 3>[2;37;0m[2;37;0m
+
+[1;30mSee also: privileges, commands[2;37;0m[2;37;0m

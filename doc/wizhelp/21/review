@@ -1,0 +1,22 @@
+**************
+
+                     Review
+
+Syntax:    review
+
+Desc:
+           This command displays your movement messages. It shows 
+           current setting for message out, message in, teleport out,
+           teleport in, and home.
+
+Warning:   None
+
+Example:   review
+                  results
+           Bob enter review and sees all his custom movement messages
+
+Related:   setmmin, setmmout, setmin, setmout, setmhome
+
+
+**************
+

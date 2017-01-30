@@ -1,0 +1,3 @@
+map_key_a ({"@",({"[1;32m","Forest",}),"|",({"[1;31m","Path",}),"-",({"[1;31m","Path",}),"+",({"[1;31m","Path Junction",}),".",({"[1;30m","Impassable",}),"X",({"[5m","Current Location",}),"%",({"[32m","Plains",}),"#",({"[33m","Hills",}),"^",({"[1;34m","Body of Water",}),})
+exit_rooms ({"@","+","-","|","X","#","%",})
+delimiter " "

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/bowarmor","/players/mythos/aarmor/do","/players/angel/area/stargate/obj/P90","/obj/bag","/players/mythos/awep/katana","/players/pain/NEW/weap/soulcrusher","/players/mythos/aarmor/haramaki","/players/mythos/aarmor/sune-ate","/players/wren/Area/starbug/items/sparehead","/players/snow/chaos/objects/crabmeat","/obj/armor","/players/emerson/armor/jacket","/players/saber/armor/hardsuit1","/players/mythos/awep/arrow","/players/wren/Area/starbug/items/arrogance","/obj/armor","/obj/treasure","/players/mythos/awep/quiver","/players/jamila/beach/mobs/claw","/obj/weapon","/players/arrina/weapons/punchknife","/players/paulasx/weapons/godsword","/players/hawkeye/items/bible","/players/snow/cam/stuff/sword","/players/arrina/weapons/revenant",})
+shorts ({"Light Leather Armor","Do-Maru","Machine gun","bag","Katana","a mace named [1m[31mSoulCrusher[0m","Haramaki","Sune-ate","Kryten's sparehead 3.","A slab of giant crabmeat","Metal gloves","A Pizza Hut Jacket","A light blue Hardsuit","arrow","Rimmers arrogance.","A suit of [1mwhite[0m platemail","Arctic Seal pelt","A quiver","A Lobster Claw","A gardening hoe","[1;30mObsidian [1;31mPunchknife[2;37;0m","Godsword","A Bible(autographed by Jesus)","[34m[1mBlessed Longsword[0m[0m","Revenant Blade",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

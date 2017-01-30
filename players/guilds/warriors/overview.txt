@@ -1,0 +1,232 @@
+                           [ WARRIOR PROFESSION ]
+                                     BY
+                                  MALEDICTA
+ 
+                                   08.10.01 
+
+
+OVERVIEW:
+
+The Warrior Profession is a simple idea based on the fact that 
+almost every guild is stuck with loyalties that every players
+can't even begin to stand.  The Warrior's are not a guild, but
+instead a job(or profession) that the player becomes.  As with
+any job, it isn't who you are, instead it is what you do. Who
+you are is decided by the player.  A Warrior can be good, evil,
+neutral, religious, aetheist, warlike, peaceful, helpful, 
+harmful, the list goes on and on.  
+
+LEVEL STRUCTURE:
+
+There are 40 glvls within the Warrior class, totalling at just
+over 4.6 million to max.  Each level will provide the player
+with a skill point to spend.
+
+SKILL STRUCTURE:
+
+There are 21 skills in the Warrior profession.  6 Weapon type,
+8 attack moves, 4 defense, and 3 miscellaneous.  The number of
+levels per skill is varying, for instance you might be able to
+raise edged weapons to 10, while firstaid only raises to a max
+of 5.  Each level a skill point is gained, and can then be spent
+to either start a skill or add to a current skill.  
+The skills, after the 1st level, must be used in order to be
+raised.  In other words, if I raise edged weapon to 1, and then
+use nothing but blunt weapons, then I will not be able to raise
+edged until I use it several times.  This skill-usage tier will
+go up as the skill does, requiring 2000-4000 uses at best.   
+Of course, as you add to a skill it becomes more powerful, or
+raises its potential.  
+Perspective: There are 21 skills, with a total of 128 skill points
+available.  At 40th glvl a warrior will have 40 pts to spend,
+equaling up to less than one-third their potential. There is one
+exception to this rules, which will be noted below.
+
+SKILLS:
+
+6 Weapon Skills:
+Weapon skills have a range of 10 skill lvls available.
+edged       - Sword and axe
+blunt       - mace, club, stick, etc
+polearm     - trident, lance, etc.
+small       - dagger, knife, etc.
+exotic      - whips, chains, your usual BDSM
+archery     - bows, guns, etc.
+
+Weapon skills are charted by taking skill lvl * random(10) and
+then comparing it on a chart:
+Range:       Bonus to WC:
+95 to 100:   wep_bonus += 20
+85 to 94:    wep_bonus += 12        
+70 to 84:    wep_bonus += 10        
+50 to 69:    wep_bonus += 7         
+35 to 49:    wep_bonus += 4         
+25 to 34:    wep_bonus += 3         
+20 to 24:    wep_bonus += 2         
+10 to 19:    wep_bonus += 1         
+5  to 9:     wep_bonus += random(2) 
+1  to 4:     wep_bonus += 0 
+This shows that it is harder to get bonuses even
+when maxed at level 10 in a weapon.
+
+8 Attack moves:
+bash  - Use a shield to bash someones head in.
+        Skill Lvl:  1       2      3       4       5
+        Sp cost:    7      11     14      19      24
+        Damage:   r8+3    r12+5  r15+7   r20+9  r24+12
+        Bonus Damage: If player has block skill, then
+                      a bonus of block skill(max of 5)
+                      randomized and added to the damage
+                      total.
+        RESTRICTION: Requires a Shield.
+
+Charge - Charge an opponent and clobber them.
+        Skill Lvl:  1       2       3        4        5
+        Sp Cost:   11      14      19       22       25
+        Damage:  r18+2    r20+4   r22+8   r25+12   r30+15
+        Bonus:  3:10 chance of stunning an npc with this
+                attack, which prevents them from leaving
+                the room.
+        RESTRICTION: Wimpy must be off. Anti-toggle code
+                     is in. Prevents setting and unsetting
+                     of wimpy for 3 rounds at a time.
+
+Kick   - Kick someone. *CRACK* *BAM* *POWY*
+        Skill Lvl:  1       2       3        4         5
+        Sp Cost:    5       7       9       11        14
+        Damage:  r6+2    r8+3   r10+4    r12+5     r14+7
+        Bonus Damage: + random(weight of boots)
+
+Punch  - Punch someone.
+        Same as Kick, only weight of gloves can be added in.
+
+Strike - A skilled attack with your weapon.
+        Skill Lvl:  1       2       3        4         5
+        Sp Cost:   10      12      14       16        20
+        Damage:  r10+5    r12+6   r14+7    r16+8     r20+10
+        Bonus Damage: if using a weapon that you are skilled in
+                      gain a bonus of random(weapon skill/2)
+
+Throw -  
+        if using the dagger belt(ammo):
+        random(14) + 0-9(averaging 3) + random(strength/3)        
+        if throwing a normal weapon:
+        random(wc of wep) + 0-9(averaging 3) + random(str/3)
+        The 0-9 is based on skill lvl.
+        Bonus Damage: if player has skill in thrown weapon
+        type give a bonus of random(skill lvl of weapon)
+        Cost: 20
+
+Finish - Same as Symbiotes. Cost is remaining hps of target / 3 from
+         players sps.  The higher the finish level the higher the
+         hps of the target can be to finish them: 50 + skill lvl*10
+         with max skill lvl = 3.
+
+Blindfight -  Allows spells and skills to work in the dark at skill
+              lvl 1.  At skill lvl 2, can 'sense' the exits in the
+              room.
+
+
+4 Defense Moves:
+NOTE: Defensive moves are automatic, no typing required.
+
+Offhand Parry - Offhand wield a weapon so you can parry with it.
+		Range:      AC Bonus:
+		95 to 100:   random(15) 
+		85 to 94:    random(10)
+		70 to 84:    random(6)
+		50 to 69:    random(4)
+		1  to 49:    random(2)
+
+		Range is determined by random(skill lvl(1-5) * 20)
+
+Parry - Parry with your current weapon. NOTE: requires a wielded
+        wep.
+		Range:      AC Bonus:
+		95 to 100:   random(6) 
+		85 to 94:    random(5)
+		70 to 84:    random(4)
+		50 to 69:    random(3)
+		1  to 49:    random(2)
+      Range is determined by random(skill lvl(1-5) * 20)
+
+Block - Block with a shield. NOTE: requires a shield.
+  		Range:      AC Bonus:
+		95 to 100:   random(18) + 1 <-Seems high but is rare
+		85 to 94:    random(12) + 1 <-Same here
+		70 to 84:    random(8) + 1  <-This is a little more like it
+		50 to 69:    random(5) + 1  <-average bonus is here
+		25 to 49:    random(3) + 1
+      1  to 24:          1
+      Range is determined by random(skill lvl(1-5) * 20)
+
+ Dodge - A complete dodge of damage.
+      Chance: random(500) < (dodge lvl * 12) - local_weight
+      Bonus: Adds a bonus of 10k, allowing to dodge all damage.
+      Its rare, but nice. Kinda a 2nd chance for luck.
+
+
+3 Miscellaneous:
+ 
+ Firstaid -  This spell isn't like a normal heal spell, instead
+             it spreads the amount of healing, skill lvl * 4,
+             over several rounds.  If you move or start fighting
+             the healing is cancelled.  Sp Cost: Skill lvl * 8.
+             Bonus: Can gain bonus hps to healing if using special
+             kits that can be bought in the tower.
+ Pummel   -  Pummel an npc, making them unable to run.
+             Cost: 50 - skill lvl(1-5) * 5 (25-45)
+             Duration: 20 + skill lvl * 10
+             Restriction: Chance of failure,
+                          random(100) < skill lvl(1-5) * 20            
+ 
+ Run  -  Takes the player out of combat.  Higher the skill lvl
+         the more opponents a warrior can escape at once.
+         Cost: 15 sps
+
+
+PROFESSION LEVELS:
+Lvl  Req'd Xp  Bonus Chances:
+2    10000       
+3    15000  
+4    20000  
+5    25000    A chance to raise Str, Ste, Sta, or another skill pt.
+6    30000     
+7    45000  
+8    50000    A chance to raise Str, Ste, Sta, or another skill pt.
+9    55000 
+10   60000 
+11   70000
+12   80000    A chance to raise Str, Ste, Sta, or another skill pt.
+13   80000 
+14   80000 
+15   80000  
+16   90000 
+17   90000 
+18   100000   A chance to raise Str, Ste, Sta, or another skill pt.
+19   100000 
+20   100000 
+21   100000    
+22   100000 
+23   100000   A chance to raise Str, Ste, Sta, or another skill pt.
+24   120000 
+25   120000 
+26   120000 
+27   120000 
+28   120000 
+29   120000   A chance to raise Str, Ste, Sta, or another skill pt.
+30   120000 
+31   120000 
+32   150000  
+33   150000   A chance to raise Str, Ste, Sta, or another skill pt.
+34   150000  
+35   150000 
+36   180000 
+37   180000   A chance to raise Str, Ste, Sta, or another skill pt.
+38   200000 
+39   200000 
+40   250000   A chance to raise Str, Ste, Sta, or another skill pt.(x2)
+          
+The chances of gaining pts are semi rare, and on most test chars have
+averaged at around 6 pts spread over str,ste,sta, and skill pts.
+

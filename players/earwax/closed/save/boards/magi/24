@@ -1,0 +1,16 @@
+i don't need a command for manual adjustments, should automatically
+happen now, i just added some highly ghettoish code to the guild object,
+so that if someone like cerberus is handed a guild object it auto updates
+the hierarchy.....nothing is necessary
+
+if one proves to be necessary, later on, i'll fix it, but until then
+i'm not gonna fuck with it, just gonna slap in the hierarchy command
+for now.
+
+reason i'm doing it ghetto style right now instead of the right way, is
+just to get it working until i can recode the guild object
+
+with the way the guild object is right now, it's brutal trying to follow
+certain parts of it, especially the init(), so it'll be easier for me
+to work with it if i just recode the whole goddamn thing, and way simpler
+for you guys to make future changes, if it's in a more manageable format

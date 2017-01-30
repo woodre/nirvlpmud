@@ -1,0 +1,77 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+string *Rangers;
+
+QMax(){ return 20; }
+
+QSkill(string person){ 
+   if(!Rangers)
+      Rangers = ({});
+   if(member_array(person, Rangers) != -1){
+      return 1; 
+   }
+   else
+      return 0;
+}
+
+RangerPower(){
+   if(!Rangers)
+      Rangers = ({});
+
+   if(!(PO->QMorphed())){
+      if(member_array(TPRNAME, Rangers) != -1)
+         Rangers -= ({ TPRNAME });
+      write("You can only use your Power Weapon when Morphed.\n");
+      return 1;
+   }
+
+   if(member_array(TPRNAME, Rangers) < 0){
+      tell_room(ENVTP, TPNAME+" yells: Power "+PO->QRangerWeapon()+"\n");
+      Rangers += ({TPRNAME});
+      return 1;
+   }
+
+   
+   write("You Power down your Power Weapon.\n");
+   Rangers -= ({ TPRNAME });
+   return 1;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   write("Your Power Weapon gives you better fighting ability in battle.\n"+
+         "Power Weapon does come at a price however.\n"+
+         "The power cost is equivelent to your skill level in Weapon (5-20 Power Points)\n"+
+         "each time you hit the enemy.\n"+
+         "If power levels are too low, your Power Weapon will turn off.\n"+
+         "");
+   return 1;
+}
+
+OffSkill(int level){
+
+   if(!Rangers)
+      Rangers = ({});
+
+   level = PO->QuerySkillLevel("weapon");
+
+   if(member_array(ENV(PO)->query_real_name(), Rangers) >= 0){
+      if(!PO->QMorphed()){
+         Rangers -= ({ ENV(PO)->query_real_name() });
+         return 0;
+      }
+      if(MASTER->QPowerPoints(PO->QRangerAlign()) > level){
+         MASTER->APowerPoints(-level, PO->QRangerAlign());
+         tell_object(ENV(PO), "[ "+BOLD+RED+"POWER WEAPON"+OFF+" ] "+"You strike the enemy with your Power Weapon\n");
+         return (level/2);
+      }
+      else {
+         Rangers -= ({ ENV(PO)->query_real_name() });
+         return 0;
+      }
+   }
+   else
+      return 0;
+}

@@ -1,0 +1,18 @@
+FileName "players/earwax/housing/data/mythos/Mythos_Ancient_38"
+Short "Palace"
+LongDesc ""
+ShortDesc ""
+Ids ({"EARWAXIAN_HOUSING_OBJECT_ID_GOES_HERE",})
+WrapPref 0
+Upgrades ({"color-code converter",})
+Owner "sin"
+Owners ({"sin",})
+Privs ({3,})
+ClanName 0
+Entrance "/players/earwax/housing/data/mythos/room/Mythos_Ancient_38_0.c"
+LotSize 999
+HouseSize 10
+Cost 0
+LastRoom 0
+IsClanhall 0
+MaxRooms 999

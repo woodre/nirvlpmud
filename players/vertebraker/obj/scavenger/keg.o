@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/hawkeye/items/good","/players/emerson/heal/pepsi","/players/ultramagnus/staff","/players/snow/armor/arch_robes","/obj/treasure","/players/maledicta/cont/rdragon/dragonscale","/players/wren/Area/starbug/items/levis","/players/hippo/heals/dna_repair","/players/wren/Area/starbug/items/cottagecheese","/players/forbin/realms/keats/OBJ/nazal_yew_staff","/obj/armor","/obj/weapon","eerstalker with dreds.###/players/wren/Area/starbug/items/dreds","/obj/treasure","/players/arrina/weapons/punchknife","/players/arrina/treas/onyx","/obj/weapon","/players/puppy/s/eq/crown","/obj/armor","/players/ultramagnus/darkarmor","/players/emerson/weap/bigfoot","/players/mythos/awep/ring","/obj/weapon","/players/wren/Area/starbug/items/currie","/players/wren/Area/starbug/items/sparehead",})
+shorts ({"A potion","can of Diet Pepsi","An Old Long Staff","Robes of the Archwizard","Ruby","[31ma dragonscale[2;37;0m","stretched out Levi jeans.","[32mdna repair string[0m","a small tub of cottage cheese.","A staff of [1;33myew[0m","Steel Helmet","Steel Longsword","A polar bear hide","Arctic Wolf pelt","[1;30mObsidian [1;31mPunchknife[2;37;0m","A piece of carved onyx","Blaster","A golden crown","A suit of [1mwhite[0m chainmail","Dark Rider Chainmail","A BIG foot","Silver Ring","Golden hoof","A tin of chicken currie","Kryten's sparehead 3.",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;35mC[1;30mlaws of [1;35mT[1;30merror [1;35m([1;30mmelded[1;35m)[0m [31mS[1;37mcale [0m[31mC[1;37mloak[0m (worn) [31mBracers of Fear[0m (worn) [31mDragon [1;37mGreaves[0m (worn) [31mShard[1;37mak Tal[0m[31misman[0m (worn) [31mD[1;37mragon[0m [31mS[1;37mhield[0m (worn)[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "object"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;35mC[1;30mlaws of [1;35mT[1;30merror [1;35m([1;30mmelded[1;35m)[0m [31mS[1;37mcale [0m[31mC[1;37mloak[0m (worn) [31mBracers of Fear[0m (worn) [31mDragon [1;37mGreaves[0m (worn) [31mShard[1;37mak Tal[0m[31misman[0m (worn) [31mD[1;37mragon[0m [31mS[1;37mhield[0m (worn)[0m"
+damage_type 0
+hall_path "/room/vill_track"
+object_name "object"
+owner "genesis"
+spell_alias "hheal"
+spell_mess_me "you healed something"
+spell_mess_room "something heals someone."
+spell_mess_them "heals you."
+abilities ({})
+chan_history ({"[Wed Jan 13 23:55:04 2010] Genesis: dont blame ya","[Wed Jan 13 23:55:34 2010] Genesis: heal up","[Wed Jan 13 23:59:03 2010] Krylos: yes","[Wed Jan 13 23:59:05 2010] Genesis: congratz","[Wed Jan 13 23:59:35 2010] Genesis: I think...","[Thu Jan 14 00:00:03 2010] Genesis: did ya do it?","[Thu Jan 14 00:00:13 2010] Krylos: yep i kicked his ass","[Thu Jan 14 00:00:23 2010] Genesis: hrm...dont show you in a guild in who2","[Thu Jan 14 00:10:07 2010] Krylos: will i need any of my equipment ever again as a neo?","[Thu Jan 14 00:10:17 2010] Genesis: you can use gear as a neo","[Thu Jan 14 00:10:21 2010] Krylos: woot","[Thu Jan 14 00:10:33 2010] Genesis: some items wont cover your tentacles","[Thu Jan 14 00:10:37 2010] Genesis: like bracers of speed","[Thu Jan 14 00:11:05 2010] Krylos: damn it where is a wiz when you need one","[Thu Jan 14 00:11:09 2010] Genesis: but if any armors cover your tentacles...id say not worth it","[Thu Jan 14 00:11:23 2010] Genesis: either sleeping or getting laid like normal people","[Thu Jan 14 00:11:27 2010] Krylos: lol","[Thu Jan 14 00:41:10 2010] Genesis: heh","[Thu Jan 14 00:58:38 2010] Genesis: well later","[Thu Jan 14 00:58:42 2010] Krylos: night",})
+leaders ({"krylos",})
+join_type 2
+private_coffer 20000
+public_coffer 0
+spell_delay 2
+spell_id 2
+spell_cost 40
+last_spell_time 1403806138

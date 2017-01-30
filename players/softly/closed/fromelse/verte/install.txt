@@ -1,0 +1,23 @@
+INSTRUCTIONS : INSTALLING BLACKBEARD
+
+    For all rooms except the one in which you wish
+    to have Blackbeard start from, add a object p;
+    after reset(arg) and after if(arg) return;
+    put this code in:
+
+    if(p = present("blackbeard", this_object()))
+    {
+      move_object(p, "/room/void");
+      destruct(p);
+    }
+
+    For the room in which you wish to place blackbeard,
+    just check to make sure he's not there
+    if(!present("blackbeard", this_object())) clone_it_blah();
+    
+    A good idea would be to initialize the random movement
+    from the beginning, maybe when someone enters the lighthouse,
+    load the room you wish to start him from with a call_other,
+    and call the john_candy() function in his object.
+
+[v]

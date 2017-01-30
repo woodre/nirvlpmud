@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/puppy/s/eq/block","/players/wren/Area/starbug/items/gauntlet","/players/mythos/awep/katana","/players/snow/WEAPONS/ice_star","/players/wren/Area/starbug/items/reddress","/players/hippo/armour/helmet","/players/scathe/armor/hood","/players/mythos/awep/quiver","/obj/treasure","/players/hippo/heals/dna_repair","/players/arrina/treas/horseshoe","/players/saber/armor/hardsuit1","/players/snow/shadows/stuff/plate","/players/angel/area/stargate/obj/P90_no_ammo","/obj/weapon","/obj/armor","/players/arrina/armor/torque","/players/pain/NEW/weap/mstar","/players/wren/Area/starbug/items/bazookoid","/players/hippo/weapons/molar_sharf","/players/arrina/armor/bonering","/obj/weapon","/players/wren/Area/starbug/items/straw","/obj/weapon",})
+shorts ({"A Princess' Tiara","A building block","Time gauntlet","Katana","Ice Shuriken","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","nutshell helmet","Hood","A quiver","A golden staff","[32mdna repair string[0m","A Silver Horseshoe","A light blue Hardsuit","[1mBlack Platemail[0m","[36mP90 machine gun[0m","An evil-looking lightsabre","Boots","Silver Torque","Morningstar","Bazookoid [1;30mmkII[2;37;0m","A molar sharf","A Carved Bone Ring","Blaster","a long plastic straw","Glamering",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

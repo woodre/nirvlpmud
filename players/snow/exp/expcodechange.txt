@@ -1,0 +1,65 @@
+NEW VARIABLES
+int hp_bonus, ac_bonus, wc_bonus;
+
+NEW SETTINGS and QUERIES
+
+set_hp_bonus(num) { hp_bonus = num; }
+query_hp_bonus()  { return hp_bonus; }
+set_wc_bonus(num) { wc_bonus = num; }
+query_wc_bonus()  { return wc_bonus; }
+set_ac_bonus(num) { ac_bonus = num; }
+query_ac_bonus()  { return ac_bonus; }
+
+NEW FUNCTION CALCULATING EXP WORTH
+
+calculate_worth() {
+  int hp_factor, wc_factor, ac_factor, exp_worth;
+
+  hp_factor = (max_hp / 50) + 1;
+  hp_factor += hp_bonus / 50;
+
+  wc_factor = weapon_class;
+  wc_factor += spell_chance * spell_dam / 100;
+  wc_factor += wc_bonus;
+
+  ac_factor = armor_class;
+  ac_factor += (heal_rate * 3) / heal_intv;
+  ac_factor += ac_bonus;
+
+  exp_worth = hp_factor * wc_factor * ac_factor;
+  return exp_worth;
+}
+
+LINES TO BE INSERTED AND REPLACING
+
+    /* Note that you get no experience for killing other players! */
+    /* that last line was not true before.. it is now. */
+    else if(attacker_ob && is_npc) {
+      int exp_worth, align_diff, exp_bonus;
+      object party;
+
+      exp_worth = calculate_worth();
+
+      call_other(attacker_ob, "add_alignment", ADJ_ALIGNMENT(alignment));
+
+      /* Give some more experience for staying in your alignment */
+      align_diff = alignment - attacker_ob->query_alignment();
+
+      /* Never more than 20 percent */
+      align_diff /= 200;
+      
+      /* Get absolute value */
+      if (align_diff < 0) align_diff = -align_diff; 
+      exp_bonus = (100 - align_diff) * exp_worth / 100;
+
+      /* Never more than 1000 */
+      if(exp_bonus > 1000) exp_bonus = 1000;
+      
+      exp_worth += exp_bonus;
+
+      party=present("party object", attacker_ob);
+      if(!no_exp_value) {
+      if (party) party->share_exp(exp_worth);
+      if(!party)
+      call_other(attacker_ob, "add_exp", exp_worth);
+      }

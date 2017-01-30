@@ -1,0 +1,19 @@
+
+
+                          [help spells]
+-----------------------=========+=========-----------------------   
+
+This is a listing of all combat spells.
+
+Spell    (Sps cost)   Damage  Required level to cast
+----------------------------------------------------
+missile      10       1-20            5
+shock        15       1-30           10
+fireball     20       1-40           15
+sonic        25       12-45          19+5
+
+You have to have enough experience points to be able to use the spells,
+but then they will work 100 %.
+
+If you cast a spell on an idle player, a fight will start.
+

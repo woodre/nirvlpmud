@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1mA [1;31mjar[0m[1m of [1;32mposions[0m"
+long_desc "[1mA [1;31mjar[0m[1m of [1;32mposions[0mOnly assassins carry this jar of toxics.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "jar"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[1mA [1;31mjar[0m[1m of [1;32mposions[0mOnly assassins carry this jar of toxics.[0mType 'clan_help' for commands."
+clan_short "[1mA [1;31mjar[0m[1m of [1;32mposions[0m"
+damage_type "poison"
+hall_path "/room/clinic"
+object_name "jar"
+owner "recusant"
+spell_alias "tt"
+spell_mess_me "%bold%You dip your weapon into the %red%jar %normal%%newline%%hi black%Shadows begin to cover the room. You hide within a shadow%normal%%newline%%red%Your weapon drips with posion!%normal%%newline%%hi black%You emerge from the shadows and %hi cyan%STAB %hi red%%AKN% %hi black%in the back!%normal%"
+spell_mess_room "%bold%%TPN% dips %TP_POS% weapon into the %red%jar %normal%%newline%%hi black%Shadows begin to cover the room. %TPN% disappears into a shadow%normal%%newline%%hi black%%TPN% emerges from the shadows and %hi cyan%STABS %hi red%%AKN% %hi black%in the back!%normal%"
+spell_mess_them "%bold%%TPN% dips %TP_POS% weapon into the %red%jar %normal%%newline%%hi black%Shadows begin to cover the room. %TPN% disappears into a shadow%normal%%newline%%hi black%%TPN% emerges from the shadows and %hi cyan%STABS %hi red%YOU %hi black%in the back!%normal%"
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 0
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1442031062

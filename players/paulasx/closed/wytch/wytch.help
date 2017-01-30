@@ -1,0 +1,25 @@
+The following is a listing of what the Dopple-Wytch Faction can do:
+-------------------------------------------------------------------------------
+wytch_help  or  wh  ...............Get this menu
+
+wsay <str>  .......................Say a <str> to all the other people in the
+                                   room who are in your faction. The people 
+                                   NOT in the faction will see:
+                                   "Jojo says something in a cryptic tongue"
+
+wwho  .............................Get a listing of who is in your faction
+
+wtell <str>  ......................Tell a <str> to the other people online in your
+                                   faction
+
+wemote <str>  .....................Emote a <str> to the other people online in your
+                                   faction
+
+wshaddup  .........................Turn on/off the faction lines
+
+watak <monster>  ..................Generically attack a monster for 10 sp
+
+conjure  ..........................Get a new faction object
+
+wheal <amt>  ......................Swap <amt> coins for <amt>/10 hp and sp
+ 

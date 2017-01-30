@@ -1,0 +1,36 @@
+As you see this is a useful object.. you can go throught the entire mud
+quickly. It's simply to use .. here it is an example:
+
+you have to start adding a pattern (add w,s,e,n,u,sw,d,....)
+maximum number of patterns allowed : 10.
+well... now you can see how many pattern (and what are they) you
+have typing path. You would see something like this:
+
+1 : w,s,e,n,u,sw,d,....
+
+now to use it you can type exe 1 or rev 1 (to execute the pattern
+straight or reverse) or back 1 (to execute the pattern backward).
+
+The speedster allows only movements like e,w,n,s,d,u,sw,se,nw,ne.
+Every other movement will be not executed (don't try to put them in
+aliases.. it doesn't work! *grin*). The speedster is autoloading so
+you get it every time you log on. Your patterns will not delete when
+you disconnect or quit. So every time you log you'll have in your
+speedster.I hope this object will help you against mud's lag.
+
+_______________________________________________________________________
+|                                                                     |
+|   NEWS *<>* NEWS *<>* NEWS *<>* NEWS *<>* NEWS *<>* NEWS *<>* NEWS  |
+|_____________________________________________________________________|
+|                                                                     |
+|  I make a new command and I rename the other command back thinking  |
+|  it's more useful in this way. I renamed the back command in rev    |
+|  and I made the true back command (this one comes back throught the |
+|  pattern). An example: if your pattern is w,n,u,sw and you type     |
+|  back <num> the speedster execute ne,d,s,e (coming back to your     |
+|  start place).                                                      |
+|  I hope this will help you all.                                     |
+|  TYPE REF TO GET THE NEW COMMANDS!!!                                | 
+|                                                                     |
+|                                     Cya, Hurtb. :)                  |
+|_____________________________________________________________________|

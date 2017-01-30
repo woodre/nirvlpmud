@@ -1,0 +1,20 @@
+[1;34m[[0m[1mMon Jun  2 05:15:14 2003[1;34m] [0mI logged on.
+[1;34m[[0m[1mTue Jun  3 17:34:23 2003[1;34m] [0mWorking on my channel/communication object
+                           /players/llew/closed/lsong/line.c
+[1;34m[[0m[1mJun  3 18:03:02 2003[1;34m] [0mI updated my deed tool to be a little more eye friendly.
+[1;34m[[0m[1mJun  3 18:03:42 2003[1;34m] [0mGave Danimal back his Ranger ally object he lost from Knight
+                       ally object bug.
+[1;34m[[0m[1mJun 16 20:24:17 2003[1;34m] [0mI have increased the power of
+                       /players/llew/Other/monsters/llew.c due to s claim by a player
+                       that they killed him once, even though he is in a no fight room.
+                       He's still in the no fight room, so hopefully won't ever be
+                       attacked.
+[1;34m[[0m[1mJun 16 20:26:46 2003[1;34m] [0mA few weeks ago I decreased the heal power of the red crystal
+                       from full sp heal to half sp heal, and increased the chance it
+                       will crumble.
+[1;34m[[0m[1mJun 17 06:25:30 2003[1;34m] [0mMoved Unseen to church because of bug in
+                       /players/snow/MONSTERS/portguard1.c
+[1;34m[[0m[1mJun 25 08:00:14 2003[1;34m] [0mincreased ac on current xetra
+[1;34m[[0m[1mJun 25 08:01:16 2003[1;34m] [0mFrom random(8)+7 to random(8)+12
+[1;34m[[0m[1mJun 25 14:49:06 2003[1;34m] [0mraised returns on closed/crystal/xetra_claws.c slightly
+[1;34m[[0m[1mJun 25 14:55:34 2003[1;34m] [0mIncreased difficulty of closed/crystal/big_demon.c by about 33%.

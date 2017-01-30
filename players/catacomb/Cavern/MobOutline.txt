@@ -1,0 +1,64 @@
+Durkor Cavern Mob Stuff
+  R=Random
+
+Mob            Level    WC     AC     Item       Value
+
+bigbat.c        13      17     10     batwing     600
+
+Dguard.c        17      25     14     DGshied	  1000
+                                      DGdagger    1500
+         
+Dmage.c	        19      27     16     Mrobe       1500		
+        
+
+Dumage.c        19      27     16     Mbring      1000
+         
+
+-durkorScout.c  17      24     14     trident     500
+                                      Dcloak	  600
+
+
+Duwarrior.c     18      27     16     Dspear      1000
+                                      Dhelmet     750
+        
+
+Dwarrior.c      17      22+R4  15     Dscimitar   1000
+                                      Dboots      750
+
+
+FElem1.c        20      30     17     FireSword   2500
+                                      Forb        1000
+			          
+
+FElem2.c        19      28     16     FireArmor   2500
+                                      Forb        1000
+
+Gspider.c       16      22     13     Sdagger     1000
+
+Jumak1.c        18      26     15     N/A
+
+Jumak2.c        19      28     16     N/A
+
+lich1.c         18      30     15     Dthaxe      2000
+                                      CurseAmulet 1000
+
+lich2.c         18      29     15     Lclub       750
+                                      CurseHelmet 1000
+
+
+lizard1.c       15      20     12     blood       1000
+
+lizard2.c       17      24     14     blood       1000
+
+maijan.c        16      22     13     N/A
+
+soulFire.c      17      24     14     N/A
+
+spider.c        15      20     12     silk        1000
+
+Sgloom.c        26      48     24     Sscale      2000
+                                      SGfang      3000
+                                      gem1        1000
+                                      gem2        1000
+                                      gem3        1500
+                                      dragonbane  1500

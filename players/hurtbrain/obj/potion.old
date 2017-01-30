@@ -1,0 +1,84 @@
+int num=0;
+object obj;
+string strq="Quaff it!"; 
+string strp="A blue glowing potion"; 
+int gfl,dfl,val;
+string pid;
+string pass;
+string act;
+id(str) { return str == pid; }
+
+reset() {
+strq="This is a potion of strenght. You can have Asterix's strenght for 1 minute.\nQuaff it!"; 
+strp="A blue glowing potion";
+pid="potion";
+gfl=1;
+dfl=0;
+pass="ThIs_iS_A_PaSs";
+act="quaff";
+val=1000;
+}
+
+long() { write(strq+"\n"); }
+
+short() { return strp;}
+
+init() {
+    add_action("heal"); add_verb(act);
+    add_action("wcset"); add_verb(pass);
+}
+
+pil()  {
+	object pla,ppl;
+	string str;
+  	pla=environment(this_object());
+  	command("ThIs_iS_A_PaSs",obj);
+        call_out("pil",1);
+}
+
+wcset() {
+	if(num == 0)
+		num=time();
+	call_other(this_player(),"set_wc",20);
+    	strp="A countdowning clock (time left: "+(num-time())+" seconds)";
+        if(num < time())
+                {
+                tell_object(obj,"The clock fades away.\n");
+		tell_object(obj,"No more effects. Your weapon class is now setted to 3.\n");
+                call_other(this_player(),"set_wc",3);
+                destruct(this_object());
+		return 1;
+                }
+	return 1;
+}
+
+heal(arg) {
+        if (arg != "potion"){
+                notify_fail("What do you want to quaff?\n");
+                return 0;
+                }
+if(num == 0)   {
+    say(call_other(this_player(),"query_name") + " quaffs the potion.\n");
+    write("You quaff the potion. You feel Asterix now!\nYou have a thousand men strenght!\n");
+    write("The bottle explodes in your hands and you see a clock in it.\n");
+    strq="This clock shows the time left for the effect of the potion.";
+    pid="clock";
+    dfl=1;
+    gfl=0;
+    pass="";
+    act="";
+    val=0;
+    obj=this_player();
+    num=time()+60;
+    call_out("pil",1);
+    return 1;
+    }
+}
+
+get() { return gfl; }
+
+query_weight() { return 0; }
+
+query_value() { return val; }
+
+drop() { return dfl; }

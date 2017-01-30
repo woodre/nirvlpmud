@@ -1,0 +1,46 @@
+#include "base_spell.h"
+inherit "players/bastion/guild/spell/base_spell.c";
+
+reset(arg) {
+     if(arg) return;
+     base_chance=0;
+     spell_level=10;
+     casting_time=2;
+     duration=40;
+     spell_cost=100;
+     needs_target=NONLIVING;
+     no_attack=1;
+     spell_type=0;
+     id_name="enchant";
+     id_alias="enchant";
+     short_desc=0;
+     long_desc="0\n";
+}
+
+do_spell(targ) {
+     object ob, old;
+     caster=me;
+     target=targ;
+     if(!target_still_here()) return 1;
+     if(!target->weapon_class()) {
+          tell_object(caster, "Oops...that wasn't a weapon.\n");
+          call_out("self_destruct", 1);
+          return 1;
+     }
+     ob=clone_object("players/bastion/guild/obj/enchant_spell");
+     ob->self_destruct(duration * (caster->query_guild_rank()));
+     ob->set_class((caster->query_guild_rank() + 1) / 5 + 1);
+     ob->set_name("enchantment");
+     ob->set_alias("spell");
+     tell_object(caster, "You cast 'enchant weapon' on " +
+          target->query_name() + ".\n");
+     sp_say(caster->query_name() + " mutters something and the " +
+          target->query_name() + " glows with magical essence.\n");
+     old=present("enchantment", target);
+     if(old) 
+          old->self_destruct_2();
+     move_object(ob, target);
+     ob->start_spell();
+     call_out("self_destruct", 1);
+     return 1;
+}

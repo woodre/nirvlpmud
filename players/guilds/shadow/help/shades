@@ -1,0 +1,15 @@
+
+usage: 'shades'
+
+'shades' creates a pair of sunglasses, your shadow shades.  These handy things
+will do many things, but for now have only the following commands.
+
+-'shades < on | off >' Turn your glasses off.  This makes it as though you 
+                       didn't have any shades. ( You will grin evilly. )
+-'new'                 Gets you a new pair of shades
+-'SAY'                 Allows you to speak in BOLD type.  Costs 5 sp/shp.
+
+   There are also special messages for emotes like 'grin', 'smile', etc.
+   There will be more commands in the future.
+   If you have ideas or improvements for any of the emotes, or anything, please
+mud mail Blue.

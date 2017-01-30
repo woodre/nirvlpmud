@@ -1,0 +1,117 @@
+Aug 16 14:48 :: hi
+Aug 16 14:50 :: fixed cyberninja guild object, was not autoloading
+Aug 16 14:50 :: fixed cyberninja holodeck room
+Aug 16 14:50 :: added 'conv' command to cybers, which will replace 'con'. this is simply a name change because somehow my computer doesn't like con.c
+Aug 16 14:51 :: fixed the cyberninja archive hall, which allows guild members to write lore - which is basically stories of guild heroes
+Aug 16 14:52 :: created pfileCleaner.c, which cleans out old <playerName>.o files - players who no longer exist or who were banished can be removed automatically
+Aug 16 14:53 :: cleaned up much of my user directory, i.e. like removing old guild files and such
+Aug 16 14:54 :: removed various obselete wiz tools in my directory, modified spice.c to not autoload
+Aug 16 15:57 :: began preliminary work on poison command for the guild: poison.c and poisoning.c (usable only by wizzes at this point) located in /players/dune/closed/guild/lib_admCmds/ and from there ../objects
+Aug 16 16:07 :: the poison files are now poison.c, poisonHeal.c, and poisonAggressive.c
+Aug 16 17:45 :: ok, poison files are now healPoison.c and meanPoison.c
+Aug 16 21:51 :: finished creating the new CyberNinja poison dart enhancements, as approved by Vertebraker. Main files are tranq.c and degen.c located in /players/dune/closed/guild/lib_tools/.
+Aug 18 22:22 :: updated player file cleaner again
+Aug 18 22:22 :: added guild object restorer to cyberninja guild hall (phase_hall.c)
+Aug 18 22:51 :: updated guild board so that it is not writeable, but also made a duplicate guild board in The Drowning Rat /players/snow/ROOMS/bar.c which is the writeable version. This is so players can write notes without being pk'd
+Aug 18 23:02 :: made cninja guild archives room non-pk
+Aug 18 23:02 :: added a cninja guild object restorer to guildhall
+Aug 18 23:09 :: changed honor awards from huge-4pts, monstrous-5pts to huge-5pts and monstrous-7pts
+Aug 19 05:58 :: modified cninja recruiting: now they can recruit up to guild level / 3 recruits (max of 3 recruits per member at any one time). recruit slots are freed up when a recruit reaches mastery level in the guild.
+Aug 19 08:10 :: updated docs about guild offices
+Aug 19 17:39 :: fixed recruiting bugs
+Aug 19 17:39 :: updated guild officer docs
+Aug 19 17:40 :: restricted guild admin commands to only guild wizzes who have been assigned as Tier 2 wizards (or, wizards who manage the guild). Normal guild wizzes cannot use guild admin commands any longer
+Aug 19 18:28 :: made cninja archives room non-pk and prevented non-cybers from entering
+Aug 20 03:43 :: updated the oscan command, it can read the guild info of a ninja both logged out and online
+Aug 20 06:01 :: modified oscan command to see guild files of cninjas that are not logged on - so command can view ninja stats of both online and logged off members
+Aug 20 06:02 :: added a new 'members' command that allows high-level ninjas to view guild membership info
+Aug 20 06:02 :: updated various documentation
+Aug 20 18:04 :: removed base experience requirement for guild xp exchanging, now whatever free xp a player has earned while not a ninja can be used when joining
+Aug 20 18:05 :: fixed guild advancement routines, now ninjas of higher levels can upgrade those of lower levels
+Aug 21 04:31 :: cleaned up p1, p2, p3, and strike command code indentation, added some fail messages that weren't there before (i.e. like you're not high-enough level to use this command, etc.)
+Aug 21 04:31 :: cleaned up gwho and users commands
+Aug 21 04:57 :: allowed Renegade cninjas the full range of guild commands - they are after all still cninjas who have really done nothing wrong
+Aug 21 17:06 :: cleaned up some of the weapon/mech code indentation/comments
+Aug 21 17:49 :: updated cninja docs to clear up how to raise your guild level
+Aug 21 19:08 :: playing with file ownership and permissions (i.e. fixer.c and water.c) as well as /players/dune/closed/guild/snow/weapons and ../mechs to see if i or snow owns those files
+Aug 21 21:32 :: cleaned out some logs
+Aug 21 21:39 :: >>>>> Mode was executed by Snow a while back. After much deliberation, I have decided to give Mode the benefit of the doubt in his long explanation. I am restoring him to 1/2 guild level - 1/2 belt level - and 1/2 credits. This is  only half a restore of what Mode was,  and it is half of a  and it is less xp than Mode would  end up  woulill end up with after leaving the Shards. So in the end, I believe this is warranted because Mode ends up changing guilds, becoming of less guild level than in the Shardak, and ends up with less xp and lower player level.
+Aug 21 22:10 :: Mode -> set art level to 9 out of 17 levels, set quality level to 5 out of 10, set credits to a total of 250k which is enough to restore 2 out of 5 of his weapon links and to leave a remaining credit balance of 100k out of 200k max. Also set Mode's weapon to Naginata.
+Aug 21 22:22 :: made renegade cninjas have all guild commands
+Aug 22 08:07 :: added guild ladder command and updated docs
+Aug 22 08:56 :: Updated all CyberNinja guild documentation to make it up to date
+Aug 22 08:56 :: removed the cybereyes enhancement, as it's functionality has been removed a while ago... just a waste of gold for players
+Aug 22 08:56 :: Re-arranged all the guild wizzes in the guild
+Aug 22 16:15 :: added cybereyes back in, i guess it worked after all
+Aug 22 16:16 :: fixed guild emote box to have nicer appearance
+Aug 22 16:17 :: updated the method to make a wiz a guild wiz, much better now
+Aug 24 21:49 :: modified tranq command to cost +10k more and not force an attack
+Aug 28 16:50 :: fixed monster summoning for airservant.c
+Aug 28 17:35 :: enhancing room descriptions in /players/dune/room
+Aug 28 18:50 :: updated room descriptions and cleaned up monster code in /players/dune/room and /players/dune/monsters
+Aug 29 17:13 :: allowed directives and chosen one guild officers to remove renegade flag from cninjas
+Aug 30 07:06 :: updated quest, made clues easier to guess, fixed broken rooms and mispellings. rennovated things
+Aug 30 07:16 :: fixed weapon drop message
+Aug 30 17:42 :: added extra levels on the gwho list
+Aug 30 18:02 :: modified guild credit balance command to show max credits allowable
+Aug 30 18:03 :: modified guild info command 'scan' to show quality level instead of chip name only, this helps ninjas figure out required xp to next level
+Aug 30 22:49 :: new 'sc' command, replaces old scan and 'sc' commands
+Sep  2 19:54 :: changed pk command to cpk to not conflict with pk channel
+Sep 23 05:29 :: now cybers can view 'fax' help files in the heal pod
+Sep 23 05:29 :: re-arranged experience chart for belt levels to be shown in the same way as quality levels
+Sep 23 05:29 :: now ninjas can view enhancements of other ninjas offline
+Sep 24 17:08 :: added another honor level for players to attain (cybers that is
+Sep 25 03:28 :: fixed room exit problem with lothlorien area
+Sep 26 17:14 :: restored Claw as a cyberninja after his char was deleted. As is the case with all my guild restore principles, i only restore to 1/2 of what they once were.
+Sep 26 17:45 :: restored claw more fully based upon boltar's note on adv_inner board
+Sep 26 23:32 :: fixed up cninja guild boards so that players can now remove notes from them (if it's their own note), and high level guild seniors can remove any note.
+Sep 27 03:19 :: updated the honor system again with better titles and more levels
+Sep 28 03:21 :: updated guild titles
+Sep 28 03:21 :: update guild channels
+Sep 28 04:22 :: various work involving approving Jareel's new Legends area, includes hand-fixing various files of his to show him how to do things
+Sep 28 07:26 :: updated guild office promote/demote command
+Sep 29 20:25 :: fixed color bleading on guild who command
+Sep 29 20:25 :: added justification message to honor announcements (guild)
+Sep 29 20:25 :: added uncounsel command for ninjas to unrecruit recruits
+Sep 30 03:23 :: fixed honor_checkup, now behaves as it should
+Sep 30 05:19 :: updated guild offices
+Sep 30 09:09 :: updated voting system, enhanced it
+Sep 30 21:40 :: fixed honor checkup so that ihonors pk fights only every so often
+Sep 30 21:40 :: better cninja logging, now reports hard-to-trace modifications into a special log
+Sep 30 23:27 :: yesterday, Rek, a shardak player, came into the guild hall and killed my test character right in front of me (my wiz character was in the room too). Instead of zapping Rek , I  revived dunetest and had dunetest kill Rek. After a few deliberations, it was made clear that Rek should get his coins back. So I put the coins on a wolf and told Rek to kill the wolf in order to get his coins back. The amount was 80k coins
+Oct  1 03:56 :: added guild info file description for cyberninjas in /info
+Oct  1 03:56 :: er, that info file was /obj/info
+Oct  1 03:57 :: er, that was /open/info/guilds/
+Oct  1 22:53 :: fixed some guild office and voting system minor minor bugs
+Oct  2 06:17 :: talked with Francesco about his Kaleidescope tournament, approved it with the condition that he makes his description better
+Oct  2 06:18 :: and with the condition that Francesco not award the 50% kicker in prize money if only one player plays that week
+Oct  3 17:42 :: fixed clearing of counselor pairs
+Oct  4 05:08 :: as approved by Pain and Jaraxle, added a guild ATM - which allows guild credit pooling within the guild, and lowered the cost of enhancements and smartweapon links as these were prohibitively expensive
+Oct  4 05:17 :: refunded ninjas who already paid for enhancements and smartweapon links at the higher price
+Oct  7 03:23 :: cleaned up the shadow code in case i want to modify it
+Oct  7 20:06 :: made vote displaying much better
+Oct  7 20:06 :: fixed logall
+Oct  8 03:02 :: fixed cninja shadows, a variable wasn't being set that should have
+Oct 14 03:20 :: added damage types in guild flux command, this makes electric flux do actual electrical damage instead of plain old physical, and so on
+Oct 14 03:22 :: flux damage hasn't changed at all, nor flux cost. just used the special damage types now available
+Oct 17 02:00 :: cninja fluxes can now be synchronized, which means they use spell_object instead of hit_player. this also allows the fluxes to be used inpk
+Oct 17 02:00 :: added digestion to list of automatics
+Oct 17 02:00 :: changed way bionics and blades drain sp, they now drain sp upon effect instead of activation
+Oct 17 02:25 :: sped up digestion rate for ninjas so as to less tox/stuff disadvantages, part of attempt to get ninjas more balanced w/ other guilds (ideally still slightly less powerful)
+Oct 17 03:12 :: made slight mod to overload to slightly reduce use delay and chance to do double damage. This was approved back in the time when  severe disadvantages such as this needed to be ridiculous. Now, it's been adjusted to make it more reasonable, but still is quite disadvantageious.
+Oct 18 19:42 :: working on guild emotes
+Oct 18 23:07 :: created custom guild emotes
+Oct 20 19:09 :: made cyber bar cost credits for healing, not coins. these heals are not portable
+Oct 20 19:11 :: added new shadow defense, as approved by Jaraxle
+Oct 20 19:11 :: fixed overload, now double damage is really double damage.
+Oct 20 19:11 :: added new enhancements: polymer blood, mech monitor, nanoblood, inertia field
+Oct 20 19:11 :: fixed channel problems
+Oct 20 19:12 :: added new custom guild emote system
+Oct 21 01:42 :: had a cyberninja guild party and several contests, winner got guild credits, was a 2 hour long party!
+Oct 21 02:07 :: cyber armor was too high, lowered it to be reasonable
+Oct 29 04:24 :: got a report that cninja blades was causing insta-kills, the code looks good but i removed the part that could possibly cause the insta-kill
+Oct 29 04:25 :: cannot reproduce any flux/overload/alias errors
+Oct 29 04:25 :: fixed old flux commands: eflux/mflux/hflux
+Nov  6 16:36 :: fixed castle errors
+Nov  9 22:35 :: cybers are now off beta
+Mar  8 14:22 :: ~snow/closed/test/elem_hammer - added an id of "hammer"

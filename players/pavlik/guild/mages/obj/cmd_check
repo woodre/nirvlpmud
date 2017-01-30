@@ -1,0 +1,36 @@
+#define me environment(this_object())
+
+cmd_check(str){
+  if(str == "n" || str == "s" || str == "e" || str == "w" ||
+  str == "ne" || str == "nw" || str == "se" || str == "sw" ||
+  str == "in" || str == "out" || str == "exit" || str == "shop" ||
+  str == "u" || str == "up" || str == "d" || str == "down" ||
+  str == "leave")
+    command(str, me);
+  else
+    tell_object(me, HIR+"Invalid Command.\n"+NORM);
+  return 1;
+}
+
+info_hat(str){
+  if(str == "hat"){
+    if(!mage_check())  return 1;
+    write(
+    "The Wizard's Hat Command Guide: \n"+
+    "  go <#>      --  execute commands in path <#>.\n"+
+    "  go <cmds>   --  execute commands <cmds>.\n"+
+    "  back <#>    --  execute commands in path <#> in opposite:\n"+
+    "                  n,n,s,w  =  e,n,s,s\n"+
+    "  rev <#>     --  execute commands in path <#> in reverse order:\n"+
+    "                  n,n,s,w  =  w,s,n,n\n"+
+    "  add <cmds>  --  add new path with <cmds>.\n"+
+    "  del <#>     --  delete path <#>.\n"+
+    "  show        --  list paths\n"+
+    "  newhat      --  refresh your Wizard's Hat.\n"+
+    "  info hat    --  this really cool menu.\n"+
+    "  comment <#> <str> -- label path <#> with comment <str>.\n"+
+    "\n"+
+    "The Wizard's Hat, Version 1.1A  by  Pavlik & Hurtbrain.\n");
+    return 1;
+    }
+}

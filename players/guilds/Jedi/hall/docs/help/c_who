@@ -1,0 +1,12 @@
+Syntax: c_who [list]
+
+Lists current logged on players in your clan, along
+with their HP/SP status, and number of coins.
+
+An optional argument 'list' can be supplied, consisting
+of players names, separated by commas. If given, only
+those players will be shown.
+
+Example: 'c_who' would show everyone logged on in your clan.
+         'c_who bob,john' would only show Bob's and John's info
+         (assuming they are in your clan).

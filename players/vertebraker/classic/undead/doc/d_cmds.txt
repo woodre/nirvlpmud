@@ -1,0 +1,167 @@
+100k + 350 + 750 + 1000 + 1250 + 1500 + 2000 =
+ 6.95 mil xp to max.
+                                                             (V)  _____  (V)
+  |\/\/\/  _     _  _     _  ___      _______  _______  ___   `@_/\   /\_@'
+ .|####/  //    // /_\   // /--.\    /------' /-----,/ /--.\    |@O   O@|
+ |###/   //    // // \\_// //   \\  //___    //____// //   \\   | ~@_@~ |
+.|##/   //    // //   \ / //    // //---'   //----// //    //    \_@ @_/
+|#/    //    // //    // //    // //       //    // //    //    _@|III|@_
+|/     \\___// //    // //____// //_____  //    // //____//   .@  \---/  @.
+'       ----' '-    '- '------' '------' '-    '- '------'   (V)         (V)
+[You become the undead character i.e. a shadow.]
+
+Obviously no game spells...  no outside pets..
+ cannot wield weapons/wear armor til Rank 6.
+
+Even then, the non-Undead EQ tends to completely rot after
+ 1800+random(3600) seconds.......  
+ Actually everything in an Undead's inventory rots..
+ 3600+random(3600) for non-EQ...
+
+No partying with anyone except Undead and Vampires
+ until Rank 5.
+
+Base Emotes:
+ glare/greet/water/oblige/threaten
+
+Add set_message_hit() as they wield guild object to begin with.
+
+[1] Skeleton
+   *comm:  List all undead cmds.
+   *du:    List all undead logged on.
+   *guildleave
+   *hide:  Hide in your soul.
+   *ut/ue: Chat line.
+   *Add custom says, tells, emotes.
+   *Guild stats in score.
+   *throw_skull: 3+random(15) dmg.  Take your head off and hurl it at somebody.
+    Falls to the ground.  Costs 10 sp.
+   *scan:   Tells hp% left to a monster.
+    COST: 10
+
+[2] Zombie - 100k xp. 
+/*
+   *Touch: Does variable dmg, variable cost.  Based on guild_level.
+           Max cost: guild_level * 10.
+     Dmg: random(Guild_Level * 2) + random(cost)
+    Can only initiate fight this way.  Only hit one mob this way once.
+*/
+    Will do random effects when fighting an undead instead of dmg.
+   *burn:  corpse_heal
+    guild_level/2 + random(heal_value) hp/sp heal.
+   *set_touch
+     Set touch cost.
+   *shamble
+    Shamble into something, causing it to attack. [lead]
+   *eat_flesh
+    Eat someone's flesh.  Only done once per living thing, small heal.
+     1+random(guild_level/2) HP.
+
+[3] Ghoul - 350k xp
+   *charm:         Does dmg. 
+    Costs 5 + random(20) dmg. Costs 15 sp.
+   *dog:           Calls a darkhound.
+    HP: 50.  AC: 3  WC: 8  [10% dark_special of 1+random(5) other|dark]
+    is_pet() returns 0.
+    COST: 50
+   *whystle:       Transports death dog back to you.
+    COST: 5
+   *ecnart/trance: sp->hp & hp->sp 
+    1:3/4
+   *fball:         Create a flaming ball [wep].
+    WC 14 15%1+random(3) other|fire special. Undead only. no drop.. 
+    COST: 50
+   *glow:          dark_sight eyes.
+    COST: 10
+   *know:          Compare stats.
+    COST: 20
+   *mvest:         Creates a mystic vest [armor].
+    AC 3  15%1+random(3) return to all dmg types.
+    COST: 50
+   *umelt:         Melt obj into gold.
+    value * 95000 / 100000
+    COST: 10
+   
+[4] Shadow - 750k xp
+   *vision: See where another living is...
+    COST: 35
+   *aid:    Donate <x> SPs to someone else.
+    COST: x * 2
+   *feign:  Fake death. [remove self from combat]
+    COST: 20
+   *ffield: Create a force field [armor].
+    AC 4  15% 1 + random(6) to all return types.
+    COST: 75
+   *fog:    Does 10 + random(20) dmg.  Costs 20.
+   *fwhip:  Create a flaming whip [wep].
+    WC 16 15% 1 + random(6) other|fire.  Undead only, no drop...
+    COST: 75
+
+[5] Wight - 1 mil
+   *Glare:        Does 15 + random(20) dmg. Costs 25.
+   *animate dead: Summons zombie [only possible from undead guild hall?]
+   *call:         Transport slave zombie back to you.
+    COST: 10
+   *quartz:       Create a gem of quartz... [needed for shadows]
+    COST: 50 SP   200 coins.
+   *shadows:      Does 25 + random(50) hit_player()
+    COST: 75
+   *Can party with a task.
+
+[6] Wraith - 1.25 mil
+   *evoke:    Area-atk. Does dmg to all NPCs exc. pets, kids.
+              Variable cost based on # of enemies being hit.
+              5 + random(10) hit_player() dmg to everything.
+    COST: 50
+   *ghp/gsp:  Retrieve HPs/SPs in reserve from life.
+    [MAX MSP/2]
+   *shp/ssp:  Store HPs/SPs in reserve from life.
+   *lightning: Does dmg.
+    Does 20 + random(20) dmg. Costs 30.
+   *Add stored HP/SP to score...
+   *Wield weapons/armor with a task.
+
+[7] Spectre - 1.5 mil
+   *possess:  20 + random(30) dmg. Costs 35.
+   *revive:   Reincarnate dead player [only Undead/Vampire...]
+    guild_rank/10 chance of success.
+    COST: 200.
+   *spectral_hand: Create spectral hand pet to fight with ya til fight is over.
+    COST: 75
+    WC: 14 AC: 0 [Cannot be attacked] 15% chance 5+random(10) hit_player() crush
+    (10-guild_rank) * 10% chance per beat of fleeing...
+   *chill <monster>: Temporarily lower monster WC.
+    COST: 50.  Duration: guild_rank/2 * 5 beats.  Effect: -(guild_rank/2).
+   *weaken <monster>: Temporarily lower monster AC.
+    COST: 50.  Duration: guild_rank/2 * 5 beats.  Effect  -(guild_rank)
+   *dfinger <monster>:  Points finger of death at monster [-10% of hps...]
+    COST: 50.  Only one Undead can cast per monster.  Like an anytime deathblow.
+
+[8] Lich - 2 mil
+   *grab:   Cannot do anything, but reduce enemy WC to 0 for short time.
+    Duration: Lasts until stops.
+    COST: 100, 10 per beat upkeep.
+   *fix:    Repair a broken weapon.
+    COST: 50
+   *plague: Infect monster w. disease
+    COST: 75
+   *storm:  Longterm dmg on a mob.  Relatively like Shardak.
+    COST: 10. Duration: guild_rank/2 * 3 beats.  Effect: guild_rank + random(guild_rank) dmg
+   *amulet:
+    AC 3. 15% sp regen.  Undead only.
+    COST: 100
+
+[10] Undead WarLord/GC - appointed.
+   *gct:    GC channel...
+   *gce:    GC emote channel...
+   *gcw:    Show all L10+ Undead
+   *gcm:    GC channel muffle...
+   *guildfix: Give guild obj to a player who lost it.
+   *promote:  Promote player to next guild level.
+   *gdemote:  Demote player to the last guild level.
+   *turn <player> undead = recruit a player.
+   *flyer:   Create Undead guild flyer.
+   *offwield.
+
+[GWIZ] Dracolich
+   *set_lev: Set guild level to number.

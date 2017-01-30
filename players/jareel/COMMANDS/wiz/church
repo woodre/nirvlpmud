@@ -1,0 +1,23 @@
+*******************************************************************
+
+Name:    Church
+
+Desc:    This command moves you or a player to /room/church    
+
+Level:   21   
+
+Warning: Do not move people unless they know your moving them, or 
+         you are moving them because they are cheating.
+
+Syntax:  church or church veeshan
+
+Example: church
+  
+Result:  
+You have moved George to /room/church.
+You have been moved to Village church by George.
+
+
+Related: place, trans, green
+
+*******************************************************************

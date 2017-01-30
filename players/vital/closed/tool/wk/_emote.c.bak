@@ -1,0 +1,9 @@
+#include "/players/vital/closed/headers/vital.h"
+#include <ansi.h>
+
+main(str) {
+   if(!str) return;
+   write("You "+str+"\n");
+   TP->remote_say((string)capitalize(TPRN) + " " + str + "\n");
+   return 1;
+}

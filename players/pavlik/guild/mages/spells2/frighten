@@ -1,0 +1,46 @@
+/*
+ * spell : Frighten   (illusion)
+ * level : 4
+ * effect: Makes the target wimpy
+ * cost  : 45 sp
+ * spec  : can only be cast once every 3 minutes
+ * files : none
+ */  
+
+blind(str){
+  object obj;
+  object blind;
+  int i, max;
+
+  if(!KNOW("frighten")){
+    write("What?\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  if(time() < guild->query_next_alter()){
+    write("You cannot cast this spell right now.\n");
+    return 1;
+  }
+
+  write("You cast a "+HIY+"Frightening"+NORM+" spell ...\n");
+
+  if(spell_fail2(4, "illu", "wil")) {
+    write("The spell "+HIR+"backfires!\n"+NORM);
+    tell_room(env,
+    ME+" miscasts a spell and flees in panic!\n");
+    tp->run_away();
+    tp->add_spell_point(-15);
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" creates a powerful illusion that makes "+IT+" flee!\n");
+  obj->run_away();
+  tp->add_spell_point(-45);
+  guild->set_next_alter(time() + 180);
+  return 1;
+}
+

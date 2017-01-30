@@ -1,0 +1,88 @@
+string autostore;
+
+string extra_look() {
+  return environment()->query_name()+" can autoload stuff.\n";
+}
+int id(string str) {
+  return str=="autoloader";
+}
+string query_auto_load() {
+  return "/players/feldegast/junk/loader.c:";
+}
+void restore_item(string item) {
+  object ob;
+  string item_arg;
+  int hits, misses;
+
+  if(sscanf(item,"%s*%s$%d$%d",item,item_arg,hits,misses)==4) {
+    if( catch(ob=clone_object(item)) )
+      write("Item failed to load.\n");
+    else {
+      write(ob->short()+" [loaded]\n");
+      move_object(ob,this_player());
+    }
+    ob->locker_init(item_arg);
+    ob->set_hits(hits);
+    ob->set_misses(misses);
+  }
+}
+
+void reset(int arg) {
+  object ob;
+  string item;
+  string item_arg;
+
+  if(arg) return;
+  if(!restore_object("players/feldegast/junk/save/"+this_player()->query_real_name())) {
+    write("No objects to load.\n");
+    return;
+  }
+  while(sscanf(autostore,"%s#%s",item,autostore)==2) {
+    write(item);write("\n");
+    restore_item(item);
+  }
+}
+
+void init() {
+  add_action("cmd_quit","quit");
+  if(this_player()) command("ready",this_player());
+}
+
+int cmd_quit(string str) {
+  object ob;
+  object next;
+  string file;
+  string init_arg;
+  int hits, misses;
+
+  autostore="";
+  write("Storing inventory...\n");
+  ob=first_inventory(this_player());
+  while(ob) {
+    init_arg=0;
+    next=next_inventory(ob);
+    if(!ob->query_save_flag() &&
+       !ob->generic_object() &&
+       ob->get() &&
+/*       !ob->drop() && */
+       !ob->query_auto_load() &&
+       (ob->query_wielded() || ob->query_worn())
+    ) {
+      init_arg=(string)ob->locker_arg();
+      file=file_name(ob);
+      sscanf(file,"%s#",file);
+      file+="*"+init_arg;
+      file+="$"+ob->query_hits()+"$"+ob->query_misses();
+      autostore+=file+"#";
+      write(ob->short()+" [stored]\n");
+      destruct(ob);
+    }
+    ob=next;
+  }
+  save_object("players/feldegast/junk/save/"+this_player()->query_real_name());
+  write("Items saved.\n");
+  return 0;
+}
+
+       
+drop() { return 1; }

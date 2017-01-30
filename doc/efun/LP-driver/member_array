@@ -1,0 +1,6 @@
+int member_array(str, array)
+string str, *array;
+
+Checks to see if "str" is a member of the array.  -1 = Not there
+                                                   0 = Is there
+

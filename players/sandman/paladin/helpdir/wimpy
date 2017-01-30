@@ -1,0 +1,17 @@
+[===========================================================================]
+
+Paladins use a wimpy which is different than the normal wimpy.
+You are able to set the number of hit points that you wish run away at.
+You can also set the direction you wish to flee.
+  => wimpyhp <hit points>  and wimpydir <direction>
+
+Wimpy is not a guarantee to save your life so don't become too dependent
+on it.  In MOST cases it will save you.  
+
+NOTE: Battlescore MUST be turned on for the guild wimpy to work
+
+Be sure to keep the following in mind:
+- Make sure your regular wimpy is turned off
+- If you set your wimpydir, make sure it is a valid direction
+
+[===========================================================================]

@@ -1,0 +1,195 @@
+
+
+Karma
+-----
+All healers have karma.  Karma is gained by healing others,
+and is lost when you use your magic to harm others.  When
+a healer's karma becomes negative,  they no longer be able to
+use many of their powers.
+
+Advancement:
+-----------
+Healers advance through 6 guild ranks.  To advance
+to a rank, the healer must go to the healer hall and donate
+experience to the next rank.  There are level requirements
+for each rank.  Level is checked each time spells are cast
+so there won't be any high-powered level 5 healers.
+
+Rank    Level             Xp        TotalXp
+-------------------------------------------
+1           5              0              0
+2           8         20,000         20,000
+3          12        100,000        120,000
+4          15        200,000        320,000
+5          18        330,000        650,000
+6          19+5      350,000      1,000,000
+
+Overview of spells and abilities:
+--------------------------------
+
+Name : ht
+Level: 1
+Rank : 1
+Cost : none
+Description:
+  A method of communicating with other healers.
+
+Name : set_title
+Level: 1
+Rank : 1
+Cost : none
+Description:
+  Give yourself a title appropriate to your rank.  You may
+select a title of your current rank or lower.
+
+Name : login
+Level: 1
+Rank : 1
+Cost : none
+Description:
+  Change your login location from the healer hall to the church
+or vice-versa.
+
+Name : shine pendant
+Level: 1
+Rank : 1
+Cost : none
+Descriptioin:
+  Update your guild object if a new version has become available.
+
+Name : Bandage
+Level: 5
+Rank : 1
+Cost : 15 sp
+Description:
+  A basic, mostly non-magical application of first-aid skills.
+
+Name : Pyre
+Level: 8
+Rank : 2
+Cost : none
+Description:
+  A simple funeral for disposing of a corpse.    
+
+Name : Glow
+Level: 9
+Rank : 2
+Cost : 20 sp
+Description:
+  Create a softly glowing light.
+
+Name : Balance
+Level: 10
+Rank : 2
+Cost : variable
+Description:
+  Create a balance between your physical and mental health.
+
+Name : Cure 
+Level: 12
+Rank : 3
+Cost : 80 sp
+Description:
+  Purge poisons, toxins, and other harmful affects from the target.
+
+Name : Defend <target>
+Level: 14
+Rank : 3
+Cost : 50 sp
+Description:
+  This creates a short duration protective field around the target.
+The shield becomes more powerful at extra level 5, 25, and 50.  There
+is a delay between castings of this spell, which decreases at level 18,
+extra level 10 and 50.
+
+Name : Gift <target>
+Level: 15
+Rank : 4
+Cost : 40 hp
+Description:
+  Grant the target a gift of your own vitality.
+
+Name : Ward <type> <target>
+Level: 16
+Rank : 4
+Cost : 60 sp
+Description:
+  Place a protective ward around the target.  The target will be
+shielded against the type of damage that is specified.  Recasting
+this spell on a player who already has a ward will increase the
+duration of the existing ward.
+  The following wards are available: fire, water, air, earth, ice
+dark, evil, and poison.
+
+Name : Disrupt
+Level: 15
+Rank : 4
+Cost : 25 sp
+Description:
+  Disrupt the magical energy that animates undead creatures.
+
+Name : Rush
+Level: 17
+Rank : 4
+Cost : 30 sp
+Description:
+  This spell quickens the target making it easier for them to
+hit others, and dodge blows.
+
+Name: Automatic Regeneration
+Rank : 5
+Cost : none
+Description:
+  At rank 5, healers get enhanced regeneration.  Every other hb,
+they get 1 + random(1) hps.
+
+Name : Vita
+Level: 18
+Rank : 5
+Cost : 50 sp
+Description:
+  Heal the target.
+
+Name : Calm
+Level: 18
+Rank : 5
+Cost : 40/80 sp
+Description:
+  This spell can be used to calm either a single target, or an
+entire room.
+
+Name : Shield
+Level: 19
+Rank : 5
+Cost : 50 sp
+Description:
+  This creates a short-duration energy shield around the target.
+This spell increases in duration with level.  There is a delay
+between casting this spell.
+
+Name : Enhance <target> <attrib>
+Level: 19
+Rank : 5
+Cost : 100 sp
+Description:
+  This spell can be used to increase a single attribute for a
+limited time.  The amount that this attribute is increased depends
+upon the caster's level.
+
+Name : Bless
+Level: 19+5
+Rank : 6
+Cost : 80 sp
+Description:
+  This spell can be used to enhance or strengthen either a weapon
+or an armor.  There is a delay between casting this spell, that
+decreases with level.
+
+Name : Resurrect
+Level: 19+5
+Rank : 6
+Cost : 200 sp
+Description:
+  This spell brings a player back from a ghostly state.  Once this
+spell has been cast, the target must type 'live' to indicate that
+they are ready to be resurrected.

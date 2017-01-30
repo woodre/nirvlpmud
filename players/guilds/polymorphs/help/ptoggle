@@ -1,0 +1,24 @@
+
+[PTOGGLE]
+
+
+  Ptoggle is similar to the guild function 'toggle' which allows you
+  to enable or disable various settings that are relavent to your
+  current polymorph. This command is only relevant to polymorph forms
+  that support it.
+
+  Note that settings do NOT save automatically.
+
+
+Usage:  ptoggle <argument>
+
+
+Examples:
+
+
+  For the polymorph treehouse form, a function can be enabled or
+  disabled by 'ptoggle listen'.
+
+Typing 'ptoggle' displays all current toggle settings.
+
+

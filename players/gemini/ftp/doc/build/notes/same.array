@@ -1,0 +1,57 @@
+Vertebraker [6.25.04]
+
+New sfuns: determine if two arrays are the "same" in terms
+of which elements they contain.
+
+The first sfun, "same_exact_array" matches arrays in the exact order
+which their elements appear.
+
+The second sfun, "same_array" matches arrays if their elements match.
+The elements need not be in any order.
+
+---------------------------------------------------------------------
+
+int x;
+string *a, *b;
+
+a = ({ "one", "two", "dog", "four" });
+b = ({ "five", "six", "pickup", "al-qaeda" });
+
+x = same_exact_array(a, b);
+
+/* x == 0. */
+
+(This would also return 0 if same_array() was used instead)
+
+     [next example]
+
+int x;
+object *c, *d;
+
+c = ({ find_player("vertebraker"), find_player("boltar"), 
+       find_living("beano") });
+d = ({ find_player("vertebraker"), find_player("boltar"),
+       find_living("beano") });
+
+x = same_exact_array(c, d);
+
+/* x == 1. */
+
+     [next_example]
+
+int x;
+object *c, *d;
+
+c = ({ find_player("vertebraker"), find_player("boltar"), 
+       find_living("beano") });
+d = ({ find_living("beano"), find_player("vertebraker"), 
+       find_player("boltar") });
+
+x = same_array(c, d);
+
+/* x == 1 */
+
+This is rather simplistic, if you don't understand, don't
+worry cause you have no need for it anyway:)
+
+/obj/simul_efun/same_array.c for the "code".

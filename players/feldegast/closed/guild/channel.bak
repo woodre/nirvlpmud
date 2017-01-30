@@ -1,0 +1,50 @@
+#pragma strict_types;
+#include "/players/feldegast/closed/guild/defines.h"
+
+object *members=({ });
+int num_members;
+
+reset(arg) {
+  if(arg) return;
+  members=allocate(num_members);
+}
+
+query_num_members() {
+  return num_members;
+}
+query_members() {
+  return members;
+}
+add_member(object ob) {
+  object *temp;
+  int i;
+  temp=members;
+  for(i=0;i<num_members-1;i++) {
+    if(ob==members[i])
+      return;
+  }
+  members=allocate(num_members+1);
+  members+= ({ ob });
+  tell_object(ob,"Welcome back!\n");
+  if(!num_members) return;
+  for(i=0; i<=num_members;i++) {
+    members+=({ temp[i] });
+  }
+  num_members++;
+}
+remove_member(ob) {
+  members-=({ob});
+  num_members--;
+}
+broadcast(str) {
+  int i, max;
+  max=sizeof(members)-1;
+  tell_object(find_player("feldegast"),"Sizeof: "+sizeof(members)+"\n"+
+                                       "Members: "+num_members+"\n");
+  for(i=0;i<=max;i++) {
+    tell_object(find_player("feldegast"),i+"\n");
+    tell_object(members[i],
+HIB+"("+HIR+"*"+HIB+")"+NORM+" "+str+"\n"
+    );
+  }
+}

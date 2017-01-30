@@ -1,0 +1,1 @@
+haven() { if(haven_var[0] > lev) return 0; call_other(POWER,"haven",lev,pow); return 1; }

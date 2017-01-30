@@ -1,0 +1,30 @@
+It's in, it works.  Look at include/sample.c to see the grotto revamped.
+I realize it seems like a pain in the ass to do items that way, but really,
+It's not.  If it's the same description for 2 or more items, just set up
+a function to show the item description and put the function name instead of
+the description in add_item().
+
+I'm sure you guys can figure out how to use it, the inheritable itself is 
+well-documented.  Lemme know what you think.
+
+For the dark room, make sure in on_create() you use set_light(-1) to 
+make it dark, the default I have is light level 1.
+
+Note: do NOT use reset() or init()
+
+for things that only happen on creation, use on_create().
+for things like boards or mobs that you check for the presence of every
+reset, use on_reset().  instead of init() use on_init() for additional
+add_actions.  do NOT override the look command, long(), short() 
+what i mean by that is, don't use long() or short() functions in the rooms.
+use set_short() and set_long().  You can even set them to functions, but
+you shouldn't need to, the inheritable will do all the work for you, just
+set the shardak short, otherwise non-shards see 'the grotto' for everywhere.
+for long, it automatically adds the short if they don't have detail mode,
+automatically adds the exits for shards.
+
+for throne room, simply put the long description in under set_long(), then
+have a + extra_long()
+in extra_long() if it's a shardak, add the presence note, if it's not, just
+don't add anything.  very easy, any problems, lemme know, any suggestions,
+lemme know.

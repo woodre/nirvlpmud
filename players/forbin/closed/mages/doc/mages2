@@ -1,0 +1,85 @@
+School Exp:
+
+Spell Fail = 1 pt
+Spell Miscast = 2 pt
+Spell Success = 4 pt
+
+Modifer (damage, effect, etc.) = ? pt
+
+school exp calculated each time spell cast as follows:
+
+(spell fail/miscast/success + modifier) * attacker level
+
+
+CASTING (use sscanf for the casting command)
+
+If in battle, you don't need to specify target for spells, but
+outside of it you will.
+
+cast [what] at [target]
+cast [what] on [target]
+cast [what] upon [target]
+
+cast enchant armor on pentacle of defense
+cast acid arrow on disir
+cast dazzle on disir
+cast dazzle
+
+hrm...special cases (
+
+cast shift on forbin 150
+cast [what] on [target] [arg]
+
+MAYBE use @ as an amount identifier, like
+
+cast shift on forbin @150
+
+
+cast selects spell from:
+
+sscanf(string, %s at %s, spell, arg)
+sscanf(string, %s on %s, spell, arg)
+sscanf(string, %s upon %s, spell, arg)
+
+it calls spell and passes through arg
+
+then spell can do:
+sscanf(string, %s @%s, target, amount)
+
+
+need to replace all spaces with _ so you are able to do:
+
+return (implode(explode(spell, " "), "_"));
+
+chromatic orb    chromatic_orb
+chromatic spray  chromatic_spray
+
+spell = CMDDIR+"spell_"+spell+".c"->cast_spell(arg);
+
+----------------------------------------------------------------------
+I'd like for the gob hb to be able to call steps from the spells:
+
+if(Casting) {
+  spellcode->call_step(Casting, environment(this_object()));
+}
+
+
+status call_step(int step, object who) {
+  string msg, roommsg;
+  switch(step) {
+  case 2: msg = "You do this first.\n";
+          roommsg = Name+" did this first.\n";
+          break;
+  case 1: msg = "You do this second.\n";
+          roommsg = Name+" did this second.\n";
+          break;
+  case 0: msg = "You do this last.\n";
+          roommsg = Name+" did this last.\n";
+          break;
+  default: msg = "You continue casting.\n";
+           roommsg = Name+" continues casting.\n";
+           break;                              
+  }
+  tell_object(who, msg);
+  tell_room(environment(who), roommsg, ({ who }));
+}

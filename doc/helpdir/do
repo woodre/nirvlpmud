@@ -1,0 +1,17 @@
+                            [help do]
+-----------------------=========+=========-----------------------
+
+Usage: "do <cmd1,cmd2,cmd3,cmd4,...>"
+       "do"
+       "resume"
+
+Use this command in order to automate tasks you are performing
+every heart beat.  For example, you could "dance" for your mudding
+colleagues every heart beat three times by typing:
+
+             "do dance,dance,dance"
+
+To pause the commands within your do queue, type "do" without
+an argument.  To resume your queue, type "resume".
+
+

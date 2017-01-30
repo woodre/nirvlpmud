@@ -1,0 +1,142 @@
+/*
+ * Boltar doesn't want it .. :(
+ * But it would have been nice :)
+ */
+
+shoutin () {
+  int cexp,lvl,invs;
+  string nom,wi;
+  if(level > 0 && level < EXPLORE) {
+    cexp=call_other("room/adv_guild", "check_level", level);
+    add_alignment(0);
+    if(experience < cexp) {
+      call_other("room/adv_guild", "correct_level", this_object());
+    }
+    if (ex_lv) {
+      cexp=call_other("room/exlv_guild", "check_level", ex_lv);
+      if(experience < cexp) {
+        call_other("room/exlv_guild", "correct_extra_level", this_object());
+      }
+    }
+  }
+   if(level >= CREATE) { add_cmd_dir("/bin/wiz/"); EnableWizAnsiPrefs(); }
+   if(level >= SENIOR) EnableSeniorAnsiPrefs();
+   if(level >= ELDER)  add_cmd_dir("/closed/bin/");
+  if(player_killing > 1) player_killing = player_killing - 2;
+  if(name == "verte")
+  {
+    string file, lockerInit;
+    int hits, misses, sz;
+    object ob;
+
+    sz = sizeof(saved_equipment);
+    while(sz --)
+    {
+      if(file = saved_equipment[sz])
+      {
+        sscanf(file, "%s#%s$%d@%d", file, lockerInit, hits, misses);
+      
+        if(catch(ob = clone_object(file)))
+        {
+          write("An object is missing .. A watch is being substituted.\n");
+          log_file("UNRESTORED_EQUIPMENT", ctime()[4..15] + " " + file + "\n");
+          ob = clone_object("/players/boltar/things/watch");
+        }
+        move_object(ob, this_player());
+        ob->locker_init(lockerInit);
+        ob->set_hits(hits);
+        ob->set_misses(misses);
+      }
+
+      write(colour_pad((string)ob->short(), 45) + ": RESTORED.\n");
+    }
+
+    saved_equipment = ({ });
+  }
+  add_ansi_pref("page", 0);
+  lvl = this_player()->query_level();
+  nom = capitalize(this_player()->query_name());
+  invs = this_player()->query_invis();
+  if(level > EXPLORE || invs > 18) return 1;
+  if(lvl > 9999) {wi = "God";lvl = 0;}
+  if(lvl > 19 && lvl < 9999) { wi = "Wizard"; lvl = 0; }
+  if(lvl > 0) {
+    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+             ("+" + ex_lv) : "") + " ) has entered the game.\n", "msg");
+    return 1;
+  }
+  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+  return 1;
+}
+
+quit() {
+    qc += 1;
+    if(!this_object()) return;
+    if(this_object()->query_mounted()) {
+      object mm;
+      mm=this_object()->query_mounted();
+      if(environment())
+      move_object(mm,environment(this_object()));
+              command("dismount "+mm->query_name());
+    }
+    power = 0;
+    if(qc < 5) {
+    if (level < EXPLORE)
+    {
+      if(name == "verte")
+      {
+        int sz;
+        object  ai, *allInv;
+
+        sz = sizeof(allInv = all_inventory(this_object()));
+
+        while(sz --)
+        {
+          if((ai = allInv[sz]) && !ai->query_save_flag() && 
+             !ai->drop())
+          {
+            string basefile, ext;
+
+            sscanf(file_name(ai), "%s#%s", basefile, ext);
+
+            if(basefile[0..2] != "obj")
+            {
+              basefile += ("#" + (string)ai->locker_arg() +
+                           "$" + (int)ai->query_hits() + 
+                           "@" + (int)ai->query_misses());
+              saved_equipment += ({ basefile, });
+              write(colour_pad((string)ai->short(), 45) + ": SAVED.\n");
+              destruct(ai);
+            }
+          }
+        }
+     }
+        drop_all(1);
+    }
+    if(!stringp(lastime)) lastime = "UNKNOWN";
+    if(strlen(lastime) > 70) lastime ="UNKNOWN";
+    if(query_invis() < 19)
+    {
+    lastime=lastime+" to "+ctime()[4..15]+ctime()[19..24];
+    old_last=lastime;
+   }
+    clear_followers();
+    save_me();
+    shoutout();
+    }
+    if(qc > 4) save_me();
+    destruct_inventory();
+    if (level >= EXPLORE) write("Inventory destructed.\n");
+    write("Saving "); write(capitalize(name)); write(".\n");
+    checked_say(cap_name + " left the game.\n");
+    log_file("ENTER", extract(ctime(time()),4,15) + " "  + " (" + name +
+              ") exit " + experience +
+             " ep, " + money + " g.\n");
+    if(inact) {
+      no_give = time();
+      save_object("players/inactive_saved/"+name);
+      rm("/pfiles/"+extract(name,0,0)+"/"+name+".o");
+    }
+    destruct(this_object());
+    return 1;
+}

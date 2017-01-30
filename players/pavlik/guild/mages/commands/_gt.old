@@ -1,0 +1,75 @@
+#include "/players/pavlik/guild/mages/defs.h"
+inherit "players/pavlik/guild/mages/inherit/command";
+inherit "players/pavlik/guild/mages/inherit/string";
+
+reset(arg) {
+  if(arg) return;
+  set_verb("gt");
+  set_name("Guild Tell");
+  set_color_name(HIC+"Guild Tell"+NORM);
+  set_rank(1);
+  set_descrip(
+	"Communicate with other guild members.\n" +
+	"See Also: ge, gc\n"
+  );
+}
+
+
+cmd(str)
+{
+  object ob, obj;
+  int i;
+
+  if(!str)
+  {
+	notify_fail("Tell guild members what?\n");
+	return 0;
+  }
+
+  if(str == "history")
+  {
+	write("/obj/user/chistory"->query_history("MAGES"));
+	return 1;
+  }
+
+  if(guild->query_muffled() == 1)
+  {
+	notify_fail("You are muffled.\n");
+	return 0;
+  }
+
+  str = COLOR_PARSER->parse_pcodes(str);
+
+  ob = users();
+  for(i=0; i<sizeof(ob); i++)
+  {
+	obj = present("mageobj", ob[i]);
+	if(obj && obj->query_muffled() == 0)
+		tell_object(ob[i], CYN+"["+HIC+ME+NORM+CYN+"]: "+NORM+str+"\n");
+  }
+
+  "/obj/user/chistory"->add_history("MAGES", CYN+"["+HIC+ME+NORM+CYN+"]: "+NORM+str+"\n");
+  return 1;
+
+}
+
+
+guild_broadcast(str)
+{
+  object ob;
+  int i;
+
+  str = COLOR_PARSER->parse_pcodes(str);
+  str = tokenize(str);
+
+  ob = users();
+  for(i=0; i<sizeof(ob); i++)
+  {
+	if(present("mageobj", ob[i]) && !(present("mageobj", ob[i])->query_muffled()))
+		tell_object(ob[i], str);
+  }
+
+  "/obj/user/chistory"->add_history("MAGES", CYN+"["+HIC+ME+NORM+CYN+"]: "+NORM+str+"\n");
+  return 1;
+}
+

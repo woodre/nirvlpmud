@@ -1,0 +1,10 @@
+Healing Items on Monsters:
+
+In heal1, we dealt with healing cost of purchased healing. This file deals 
+with healing that you might place on a monster as treasure. Let me make
+myself perfectly clear here. FULL HEALS being found on monsters (those over
+50pts healing) are to be EXTREMELY rare. Most heals found on monsters seem
+to be non intox, you mightt want to make them intox heals if you want to 
+make them heal more. You might also want to mess around and give the item a
+chance to hurt the player if you want to give it a higher heal. Remember
+there should be risks in the game for great rewards.

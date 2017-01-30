@@ -1,0 +1,29 @@
+/*  personal tell command  */
+
+#include "/players/forbin/define.h"
+#include "/players/forbin/closed/wiztool/define.h"
+
+main(str) {
+  string who, what; object player;
+  if(!str || sscanf(str,"%s %s",who,what) < 2) {
+    FAIL("Syntax: 'tell <player> <message>'\n");
+      return 0; 
+  }
+  who = LOWER(who);
+  player = find_player(who);
+  if(!player) {
+    FAIL("No such player logged on.\n");
+      return 0; 
+  }
+  if(player->query_invis()) write(WTC+capitalize(who)+" is invisible.\n"+NORM);
+  if(!player->query_interactive()) write(WTC+CAP(who)+" is disconnected.\n"+NORM);
+  else if(query_idle(player) > 120) write(WTC+CAP(who)+" is idle.\n"+NORM);
+  if(in_editor(player)) write(WTC+capitalize(who)+" is editing.\n"+NORM);
+  if(this_player()->query_invis())
+    tell_object(player, HIW+"("+WTC+"invis"+HIW+") "+WTC+"Forbin tells you: "+NORM+what+"\n");
+  else
+    tell_object(player, WTC+"Forbin tells you: "+NORM+what+"\n");
+  player->add_tellhistory(WTC+CAP(TPRN)+" told you:"+NORM+" "+what);
+  write(WTC+"You speak to "+CAP(who)+": "+NORM+what+"\n");
+    return 1;
+}

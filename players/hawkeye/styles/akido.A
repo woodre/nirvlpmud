@@ -1,0 +1,177 @@
+#define ME capitalize(this_player()->query_name())
+#define IT capitalize(what->query_name())
+inherit "players/pavlik/closed/guild/styles/weapon.c";
+ object ob1, ob2, ob3, what;
+reset(arg) {
+    ::reset();
+    if (arg) return;
+ set_name("ki");
+ set_alias("ki");
+ set_short("ki");
+ set_long("ki.\n");
+ set_class(12);
+ set_save_flag(0);
+ set_weight(0);
+ set_value(0);
+ ob1 = this_object();
+ ob2 = this_object();
+ ob3 = this_object();
+    set_hit_func(this_object());
+}
+
+drop() {return 1;}
+short() { return; }
+long() { return; }
+get() {return 1;}
+query_ac_factor() { return 4; }
+
+weapon_hit(attacker){
+if(ob1 && ob1->query_attack() == this_player()) {
+  what = ob1;
+  do_attack();  }
+if(ob2 && ob2->query_attack() == this_player()) {
+  what = ob2;
+  do_attack();  }
+if(ob3 && ob3->query_attack() == this_player()) {
+  what = ob3;
+  do_attack();  }
+ return 1;
+}
+
+init() {
+ ::init();
+  add_action("ac","ac");
+ add_action("noway","wield");
+add_action("choke","choke");
+add_action("meditate","meditate");
+add_action("kill","kill");
+add_action("check_obs","whos");
+add_action("view_commands","cmds");
+}
+
+ac() {
+this_player()->set_ac(8);
+return 1;
+}
+noway() {
+ write("You cannot wield any weapons.\n");
+return 1;  }
+
+kill(str) {
+  object targ, me;
+ me = this_object();
+if(!str) { write("Kill what?\n"); return 1; }
+ targ = present(str, environment(this_player()));
+if(!targ) { write("That is not here.\n"); return 1; }
+if(!living(targ)) return 1;
+if(targ->query_npc()==0) {
+if(targ->query_pl_k()==0 || targ->query_pl_k()==1 &&
+this_player()->query_pl_k()==0) {
+  write("You cannot attack "+capitalize(str)+"!\n"); return 1; }
+     }
+
+if(targ->query_attack() == this_player()) {
+write("Yes, yes.\n");  return 1;  }
+
+if(targ == ob1 || targ == ob2 || targ == ob3){
+ this_player()->attack_object(targ);
+ return 1;
+}
+if(!present(ob1, environment(this_player())))
+  ob1 = targ;  else
+if(!present(ob2, environment(this_player())))
+  ob2 = targ;  else
+if(!present(ob3, environment(this_player())))
+  ob3 = targ;  else
+ob1 = targ;
+this_player()->attack_object(targ);
+return 1;
+}
+
+do_attack() {
+  int z, dmg;
+  string wt, sy;
+ z = random(9)+1;
+if(z == 1) {
+wt = "You grab your enemy in a shoulder hold.";
+sy = ME+" grabs "+IT+" in a shoulder hold.";  }
+if(z == 2) {
+wt = "You throw "+IT+" to the ground using a Side Wheel.";
+sy = ME+" throws "+IT+" to the ground using a Side Wheel.";  }
+if(z == 3) {
+wt = "You break your oppenents balance to his right front and use\n"+
+     "> a Knee Wheel to throw him to the ground.";
+sy = ME+" breaks "+IT+"'s balance and uses a Knee Wheel to toss him "+
+     "to the ground.";  }
+if(z == 4) {
+wt = "You grab "+IT+" in a reverse cross lock.\n"+
+     "> "+IT+" is helpless in your grasp.";
+sy = ME+" grabs his oppenent in a reverse cross lock.\n"+
+     "> "+IT+" is helpless in "+ME+"'s grasp.";  }
+if(z == 5) {
+wt = "You throw your oppenent to the ground with a Hip Spring.";
+sy = ME+" throws "+IT+" to the ground with a Hip Spring.";  }
+if(z == 6) {
+wt = "You send it to the crashing to the ground by using a Valley Drop.";
+sy = ME+" sends "+IT+" crashing to the ground by using a Valley Drop.";  }
+if(z == 7) {
+wt = "You wrench "+IT+"'s arm painfully behind his back with "+
+   "a Single-Wing Lock.";
+sy = ME+" wrenches "+IT+"'s arm painfully behind its back with a "+
+     "Single-Wing Lock";  }
+if(z == 8) {
+wt = "You deftly dodge "+IT+"'s clumsy attacks.";
+sy = ME+" deftly dodges "+IT+"'s clumsy attacks.";  }
+if(z == 9) {
+wt = "You knock "+IT+" to the ground with a Chasing Foot Sweep.";
+sy = ME+" knocks his enemy to the ground with a Chasing Foot Sweep.";  }
+if(z == 10) {
+wt = "You use a Back Throw and toss "+IT+" to the ground like a bag of dirt.";
+sy = ME+" uses a Back Throw and tosses "+IT+" to the ground "+
+   "like a bag of dirt.";  }
+write("> "+wt+"\n");   say("> "+sy+"\n");
+dmg = random(this_player()->query_guild_rank());
+if(dmg > what->query_hp())  dmg = what->query_hp();
+what->hit_player(dmg);
+}
+
+check_obs() {
+ string name1,name2,name3;
+if(ob1 && present(ob1, environment(this_player())))
+  name1 = ob1->query_name();  else  name1 = "none";
+if(ob2 && present(ob2, environment(this_player())))
+  name2 = ob2->query_name();  else  name2 = "none";
+if(ob3 && present(ob3, environment(this_player())))
+  name3 = ob3->query_name();  else  name3 = "none";
+write("Your Opponents are:  \n");
+write("  Opponent 1: "+capitalize(name1)+"\n"+
+   "  Opponent 2: "+capitalize(name2)+"\n"+
+   "  Opponent 3: "+capitalize(name3)+"\n");
+return 1;
+}
+
+view_commands() {
+write(
+"Akido commands: \n"+
+" kill <target> -- necessary for starting a battle with Akido.\n"+
+" whos  -- a listing of who you are fighting.\n"+
+" meditate      -- recover some of your energy faster.\n"+
+"\n");
+return 1;
+}
+
+meditate() {
+ int pie;
+pie = call_other(this_player(),"query_attrib","pie");
+if(this_player()->query_attack()){
+ write("You cannot meditate while you are fighting.\n");
+ return 1;  }
+write("You take deep breaths and empty your mind of thoughts.\n"+
+  "You let your body flow and harmonize with nature.\n"+
+  "The weariness and pain leave your body and you feel refreshed.\n");
+this_player()->add_spell_point(-15);
+this_player()->add_hit_point(random(pie)+5);
+this_player()->add_intoxination(-10);
+this_player()->add_stuffed(-25);
+return 1;
+}

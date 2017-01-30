@@ -1,0 +1,29 @@
+CONCEPT
+	Mappings. Not really anything more than a list of DR-efuns.
+
+DESCRIPTION
+	Not used a lot, and they are explained okay in the lpcmanuals in /doc.
+	But the efuns for mappings are a bit different here in Nirvana. The
+	efuns are listed below.
+	Searching for elements in mappings has been said to be faster than in
+	arrays. You can add to mappings, just like arrays. A _new_ mapping is
+	the result. Dunno howto expand a mapping in a way similar to the way
+	deletem shrinks a mapping (would be useful when daemonizing stuff).
+
+EFUNS
+	mapping allocate_mapping( int)
+		allocates a mapping the size of argument
+
+	mixed deletem( mapping, mixed)
+		deletes an entry in the mapping
+
+	mixed *keys( mapping)
+		returns an array of the indices to the mapping
+
+	int sizeof( mapping)
+		returns the size of the mapping
+
+	int mapp( mixed)
+		returns 1 if argument is a mapping, 0 if not
+
+	filter_array() should work too, but I have yet to check it out

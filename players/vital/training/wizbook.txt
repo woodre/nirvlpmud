@@ -1,0 +1,278 @@
+[1;37mIndex[2;37;0m
+The Wizard Handbook index:
+welcome  rules1  creativity1  interaction1  area1  terms1
+         rules2  creativity2  interaction2  area2
+         rules3               interaction3  area3
+                                            area4
+The information in this handbook has been written by many
+wizards over the years, most recently by Vital and Vertebraker.
+Updated: -[31mEurale[2;37;0m on 29/09/02 -[31mVital[2;37;0m on 08/05/2005.
+
+[1;37mWelcome[2;37;0m
+	The immortal staff of Nirvana wants to congratulate you on your
+accomplishment and welcome you aboard. You should know right off that
+your efforts will not always be welcomed by all the players but that
+should not dampen your enthusiasm to make Nirvana a better and more
+exciting place. In most cases any of us will be more than willing to
+assist you as you get started or guide you along when you have
+specific questions about how to do or deal with something.
+	There will be lots for you to learn and it takes time to become
+comfortable dealing with the many issues that confront you. We were
+all where you are now and we will try to be sympathetic and
+understanding as you progress through the learning process. Most of
+all, we want you to enjoy your wizard experience and hope that you
+leave a little piece of yourself somewhere in the land of Nirvana for
+the future players to explore and enjoy. Don't be afraid to ask about
+anything as it's the way most of us learned. You can see a list of
+wizard commands by typing [1;34mwizhelp 21[2;37;0m. Again, we want to congratulate
+you and say 'welcome aboard'.
+    -Boltar and his immortal staff
+
+[1;37mTerms 1[2;37;0m
+wiztool -    This is an object that has many built-in commands to
+             help wizards when dealing with players. It can help
+             to facilitate changes in player stats and/or string
+             variables. Exercise caution when making changes to 
+             any objects already in the game [players, guilds, etc].
+             [[31mNOTE[2;37;0m: Wizards below lvl 40 cannot have a wiztool.]
+                 
+test character - In order to test the various objects that one codes
+                 and to avoid using the player base, wizzes sometimes
+                 create another character that they use specifically
+                 to test these objects. Be sure all test characters
+                 are clearly labeled as such.
+
+[1;37mInteraction 1[2;37;0m
+	The wizard structure here is by levels. If a wizard of higher
+level asks you to do or not to do something, respect their level 
+and comply with their requests. If you feel that the request was
+unreasonable, mail your sponsor or the appropriate senior wizard
+about it. Wizards here have attained their levels through their
+contributions and/or expertise. Lower level wizards are expected
+to respect their requests unless they are superceded by a higher
+level wizard.
+
+	Public bickering among wizards will not be tolerated. If you
+have an issue with a wizard that is higher level than you, mail
+your sponsor or their sponsor. You might even mail Boltar but the
+[31mchain of command[2;37;0m is here for a reason so continuing the fight
+because you didn't get your way may do you more harm than good.
+Almost anything can be worked out with a little understanding. We
+are all here because we want to make Nirvana a better place so
+keep that in mind.
+
+[1;37mInteraction 2[2;37;0m
+	Although you came from the player ranks and probably have friends
+there, it is important that you keep wizard/player interaction to a
+minimum. Do not give out information about the game that the players
+cannot find out themselves by playing the game. As a wizard you have
+access to much more information than the player base and we do not
+expect that information to be shared. If you're not sure what should
+be shared, tell the player to ask a senior or higher level wizard
+about it. Simple rule: When in doubt, pass the buck.
+
+	[31mDo not[2;37;0m share wizard information with players either. You may know
+who is about to be promoted or demoted or which wizards are arguing
+about something but that is not for players to know. Wizard business
+should remain wizard business without exception. Sharing of this kind
+of information will almost surely mean a demotion back to player
+status. Permanently.
+
+	Every wizard's code is their property and should be treated as
+such. Do not copy/borrow anyone's code without their permission. Most
+wizards put a great deal of time into their work and will almost always
+share their efforts with you if you ask. So, respect their efforts
+by asking first and if they tell you no, maybe another wizard can help
+you with the project.
+
+[1;37mInteraction 3[2;37;0m
+	If a player is misbehaving, annoying other players purposely,
+spamming any of the channels, cursing over public channels (except
+risque) or in any way disrupting the game play of others and they
+will not stop after you've asked them to, do NOT dest them but use
+the [1;34mimprison[2;37;0m command to put them in jail [be sure to note the
+reason and the length of the sentence. They should remain there
+until the punishment has been served. The hardest part about dealing
+with players is that sometimes we don't like what they're doing but
+it is within the game rules for them to do it. Any time you deal
+with players, you should log your actions and reason so that later
+they cannot come back and claim something that isn't accurate or
+didn't happen. Keeping a log of all your actions is also a great way
+to protect yourself. You don't have to be the sole police officer on
+duty. Get other wizards to help you.
+
+	We want you to be excited about the things you code. Nothing you
+code should be shown to or shared with the player base until it has
+been approved, however. Trying to explain why your [31mcool item[2;37;0m isn't
+in the game because it was illegal is hard after you've already
+shown it to all your friends. So just hold your horses until it's
+approved. They'll all love it just as much a few days later.
+
+[1;37mRules 1[2;37;0m
+    Wizards are supposed to be an example to players. The higher the
+level you attain, the better the example you should set. Remember,
+you have chosen to ascend to the wizard ranks. Most importantly, use
+your common sense and use decency when dealing with both players and
+your fellow wizards.
+
+	All wizards are expected to adhere to the behavior standards in
+[1;34mhelp wiz_behavior[2;37;0m. These guidelines were established to remind
+wizards that our main goal on Nirvana is to create new things and help
+out players when they truly need it. Being an annoyance to other
+wizards or players negates the reason to have you here as a wizard.
+Your job is to contribute positively to the game and to foster trust
+between the player/wizard ranks.
+
+[1;37mRules 2[2;37;0m
+	If there is no command to do what you want to do in [1;34mwizhelp[2;37;0m then
+[31mdo not[2;37;0m attempt to do that action. As you gain levels you will be given
+more freedom to do other things. Always try to consider your fellow
+wizards and players collectively when trying to figure out what to do.
+In the end, you should always try to do what is best for Nirvana and
+most of all, be fair.
+
+	Wizard test characters should be clearly titled so that noone can
+mistake them for part of the player base. The excuse that [31mI thought
+everyone knew[2;37;0m will not be acceptable. No test character should be
+created that will affect the top players list nor should any test
+character be given to any other player to play or experiment with.
+
+[1;37mRules 3[2;37;0m
+	There is a wizard board located south of the advance room. Items
+of interest are posted there for discussion or general knowledge so it
+is expected that all wizards read these messages on a regular basis.
+
+	We've all been involved with players that test our resolve and
+learning to deal with them fairly is something that sometimes requires
+help. If you really need to be invisible to work, please do not
+hesitiate to do so.
+
+	If you are logged in as a wizard, do not log in as a player
+character and vice versa. Until you get your first area finished and
+approved, there are too many distractions and conflicts. This will
+both protect you and your position as a creative member of Nirvana's
+development team, and will reduce the chances of being caught up in
+previous mentioned distractions and conflicts.
+
+[1;37mCreativity 1[2;37;0m
+	Creativity is a very important asset. If you would like to try
+something that you think would be interesting and/or beneficial to
+Nirvana, but you are concerned about whether or not it is legal, be
+sure to have it checked out by a senior wizard. Usually a compromise
+can be worked out so that Nirvana and its players can benefit from
+your efforts. Try to keep in mind that game balance is essential and
+that new and creative ideas do not have to always be something that
+pushes the envelope of protection or power.
+
+	Every wizard is responsible for his or her own code. If something
+illegal is found, it will not be blamed on the approving wizard but on
+the coder who coded it. You will be expected to follow the rules in
+[1;37m/doc/build/RULES[2;37;0m for all items that you code. Again, if you're
+unsure about the legality of an item you've coded, get approval from
+a senior wizard.
+
+[1;37mCreativity 2[2;37;0m
+	For the most part you will be given the benefit of the doubt. If
+your item/guild/monster/whatever is approved, it is assumed to be
+legal. However, if it is discovered that it is not within the confines
+of the rules you can expect serious repercussions. All reports of
+illegal objects are investigated so it is vitally important that you
+police yourself and your code.
+
+	Any wizard, including senior wizards, that code an
+item/monster/room that falls outside the [1;37m/doc/build/RULES[2;37;0m guidelines
+must have it approved by another senior wizard and/or Boltar. Our
+biggest problems have arisen because we let one person code something
+[31moutside[2;37;0m the rules and that quickly becomes the [31mnorm[2;37;0m for all the
+code that follows. Being creative doesn't mean making the the game
+easier for everyone, it's convincing the players that what you've
+coded is unique, useful and something worth getting.
+
+[1;37mArea 1[2;37;0m
+	Everyone is usually excited about coding their first area and
+getting it into play. This sometimes leads to problems such as bad or
+not thought out ideas, duplication of another area's theme, poor
+looking room descriptions, etc. Discuss your ideas for your first area
+with your sponsor and give it as much thought as you can. You and your
+sponsor will come up with a more complete picture of what your area
+should entail. In order to make sure there is some uniformity in code
+here, your first area should generally meet the following
+requirements:
+
+	15 - 20 rooms. Each room should have its own room description.
+Nothing is more boring to players than to read the same description
+over and over. Proper grammar and punctuation should be used and that
+includes indentation to start a room description or new paragraph,
+correct spelling and sentence structure. The room description should
+be from 4-7 lines long and each line should be approximately 70
+characters in length.
+
+[1;37mArea 2[2;37;0m
+	7 - 10 monsters. Your first area should be a low to mid level area
+so keep your monsters straight forward. You should get used to coding
+approximately one monster for every two rooms. We are trying to avoid
+[31mslaughter houses[2;37;0m where players can stay in one location and kill
+continuously. Each monster should be unique and if they wouldn't
+normally be carrying money, then they shouldn't have any. Code some
+treasure instead that players can sell for the coins. Put some thought
+into this process and you'll find players will visit more often just
+because it's entertaining. Pay particular attention to the monster's
+alignment as doing what comes naturally doesn't necessarily make them
+evil or good.
+
+    [1;37mOther Thoughts:[2;37;0m
+        It is not uncommon for new wizards to code way too many
+      monsters that don't make sense for the area.  For example, you
+      wouldn't find dinosaurs in outer space carrying money so think
+      about it.
+        Talk with your sponsor about coding style. [31mHow[2;37;0m you code is
+      often as important or even more so than [31mwhat[2;37;0m you code. This
+      includes directory layouts, file names, and the layout of the
+      code inside those files.
+        You should include a README file with a general description of
+      the area and anything special one might expect to find.
+
+[1;37mArea 3[2;37;0m
+	The biggest problem with new areas is the descriptions. When you
+[31mlook[2;37;0m at something, you should get a description of [31mwhat[2;37;0m you see.
+Too often you get all kinds of information [31mexcept[2;37;0m what the item looks
+like. When someone walks into a room, they want to see what the room
+looks like, what items are in the the room, what hangs on the walls.
+They should not see a description of the objects in the room. The same
+should hold true for any monsters or items.
+
+	By looking at an object players should [31mnot[2;37;0m be told how they feel
+or where it might be headed. It is up to you as the coder to [31mmake[2;37;0m the
+players see exactly the same thing as you envision. Pretend you are
+the eyes of the player. Look at every noun in the room and make sure
+it is described. If you mention another different noun in the item
+description, you should have a description for that as well. It's very
+frustrating for both the coder and the person doing the approval when
+these things aren't done from the beginning.
+
+	Don't try to get too fancy with your first area. You'll have
+plenty of time to dazzle everyone later. This is a time to provide a
+sample of both the quality and creativity you are going to bring to
+Nirvana. You are surely going to want to look at examples and your
+sponsor should be able to provide those for you or you can look at
+[1;37m/open/examples[2;37;0m. Consider this first area a test.
+
+[1;37mArea 4[2;37;0m
+	Here's a suggestion. Only do 3 or 4 complete rooms and then ask
+for someone to look at them. That way, if there is a problem, you
+won't have so much to fix.
+
+	For those that are experienced coders and want to work off-line,
+you can use port 3000 to FTP your work to and from Nirvana. You will
+need an FTP client to upload to [34mnirvana.mudservices.com 3000[2;37;0m with your
+wizard name and password.
+
+	Much of the information you will need to complete your first area
+can be found in [1;37m/doc/build/RULES[2;37;0m. Get familiar with this information
+before you start rather than have to go back and redo lots of your
+work when it could have been avoided. Your sponsor should be a
+valuable source of information as well as many of the other immortal
+staff. We all make mistakes so you're bound to as well. The secret is
+how you handle your failures. We're glad you have elected to join us
+and look forward to your success so good luck.
+

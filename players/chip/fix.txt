@@ -1,0 +1,141 @@
+Hello Chip,
+
+A couple things to start with that you need to do.
+
+1)   Each time you create an area you should create a write up on the area.  You can view     
+      /players/angel/area/stargate/stargate_writeup.txt     or  
+      /players/vital/training/sample.writeup.txt
+      for an example how to make your own.  Then FTP it in your files for admin to view.     
+      This should tell us what the area is about and detail everything that is in your area.      
+     
+
+2)	Every file you create no matter how simple should have a header.  Some of your files 
+    have one and some do not. ADD one to every file.  Also the one I see in your file is short.
+    I would suggest you use the following:
+
+Example:
+
+      /*                                                                    
+       *    File:             /players/angel/area/atlantis/room/123.c            
+       *    Function:         room                                          
+       *    Author(s):        Angel@Nirvana                                 
+       *    Copyright:        Copyright (c) 2007 Angel                      
+       *                            All Rights Reserved.                  
+       *    Source:            08/15/07                                      
+       *    Notes:                                                          
+       *                                                                    
+       *                                                                    
+       *    Change History:                                                 
+       */
+
+Blank:
+
+
+      /*                                                                    
+       *    File:                 
+       *    Function: 
+       *    Author(s):        
+       *    Copyright:       
+       *                            
+       *    Source:            
+       *    Notes:                                                          
+       *                                                                    
+       *                                                                    
+       *    Change History:                                                 
+       */
+       
+     Header should be detailed and give as much information as possible.
+
+     
+     3)   All room description lines should NOT be longer than 70 characters
+          a quick way to see if they are too long is type "ruler" when you are
+          in the room.  This will display how long each line is. Also depending
+          on the editor you use, many will display this information.
+          
+    4)    I am attaching Nirvana's basic guide to NPC/MOB levels. I am not sure
+          if you have read this building file.  You do not have to be exact and 
+          can use random a bit but you need a good reason you be way off. I'll
+          get more into your NPC/MOB's later when I break down each file.
+    
+    
+    more /doc/build/RULES/monster.guide
+    
+Level   Wc      Ac      Hp      Coins
+1        5       3      15             65      
+2        6       3      30             90      
+3        7       4      45            120     
+4        8       4      60            150     
+5        9       5      75            200     
+6        10      5      90            250     
+7        11      6      105           300     
+8        12      7      120           350     
+9        13      7      135           400     
+10      14      8       150           450     
+11      15      9       165           500     
+12      16      9       180           550     
+13      17      10      195           600     
+14      18      11      220           750     
+15      20      12      250          1000    
+16      22      13      300          1500    
+17      24      14      350          2100    
+
+
+Monsters above level 17 must have a spell attack.
+
+18      26      15      400     3500    
+19      28      16      450     4000    
+20      30      17      500     5000    
+
+Monsters above level 20 must have a powerful spell attack
+and ONE "special" advantage.
+
+21      34      19      600     6000    
+22      38      20      700     7000    
+23      40      21      800     8000    
+
+Monsters above level 23 must have a powerful spell attack
+and TWO "special" advantages.
+
+24      42      22      900     10000   
+25      44      23      1000    11000   
+26      46      24      1200    14000   
+
+
+Monsters above level 26 must have several powerful spell attacks
+and THREE "special" advantages.
+
+27      48      25      1500    17500   
+28      52      26      1800    23000   
+29      55      28      2000    30000   
+
+Monsters above level 29 must be part of a quest and require a
+full party of players to kill.
+
+30      60      30      2500    46000   
+
+
+
+1. Monsters above level 19 should not be common.  As such,
+you should have a larger proportion of monsters 19 and
+below, than above.
+
+2. A special ability is a unique power that the monster has
+that requires special coding.  These abilities can include
+multiple attacks, area attack spells, mini-monster summoning,
+and more.  Wizards should take this opportunity to be creative.
+
+
+
+     5)  Ok, the next fix file I write up will have the room
+         corrections in it.  If you have not read all of the 
+         files in /doc it will help you in your coding. Also
+         Vital was the Wiz who trained me and he has some good
+         files to read for learning rules and all the basic in
+         /players/vital/training       /players/vital/examples
+         /players/vital/doc        I recommend you read all of
+         the files in the given paths.  One last bit of good
+         reading is http://wunderland.mud.de/mud/doc/efun/index.html
+         and http://www.merentha.com/descartes/  These last two
+         files I re-read to continue my learning of code and
+         each time I read them along with coding more I understand
+         more.

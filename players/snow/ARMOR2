@@ -1,0 +1,48 @@
+After talking with Mythos about the armor issue, we have come up with a
+method that could be used to keep the same armor class cap (as damage-
+reduction is not the issue, rather variety of armor, fun, and playing
+the game) in effectiveness, but have a much wider variety of armor
+qualities. This document will explain the idea in three parts:
+1. Explanation    2. Effect     3. Implementation
+
+1) Explanation:
+   Give 'armor' type armor a range of classes from 2 to 8. Give other
+   types a range from 1 to 4. Max armor class would thus be 32, given
+   the best armors in the game. The current subtraction of random ac
+   would be changed to random ac/3. Given rounding down, the reduction
+   in damage for maximimum ac would be random(32/3) - random(10), or 0-9.
+   These numbers can be altered (1-5 perhaps, different divisor, etc.)
+   but this is the basic concept.
+
+2) Effect:
+   Right now, there is no range in armor. Slippers can be ac1 while
+   steel boots can be ac2 (with approval). With a cap of 9 and 7 armor
+   types, 6 store-bought or low-value armors of class 1, along with a
+   decent (not rare or expensive) 'armor' type armor will give the max
+   effective armor class. Players know this and do not bother looking
+   for or storing 'good' armor. With this change, there would be a range
+   of effectiveness for each type of armor - leather gloves could be more
+   effective in defense than silk gloves (while steel gauntlets would be
+   more effective still). To get the maximum armor class, several rare
+   and good armor pieces would be needed. Players could still buy a full
+   set of clothing-type armor (blue jeans, tee shirt, baseball cap, etc)
+   but they would not have very effective armor (as it should be).
+
+3) Implementation:
+   This is the largest difficulty. There are many armor files in many
+   directories. The good thing is that I believe many of these files
+   can stay the same. There are a lot of clothing-type armors of ac1
+   that should be ac1. The rare and hard-to-obtain armor is just that-
+   rare. Saber has a lot of armor; mythos, scathe, and snow have a fair
+   number of valuable armor pieces; Feldegast and Pain have armor shops.
+   The most popular armor pieces I, Mythos, or any senior wiz with the
+   time could change in a day. I would allow wizzes to modify thier own
+   already-approved armor in the following manner - any armor not type
+   'armor' can be 1 or 2 (approval for above), type 'armor' needs
+   approval to go above 4. Changes should be logged in an 'ARMOR_CHANGE'
+   log file (with file name, old ac, new ac). Armor needing approval
+   will follow the same system as current.
+   It will take a lot of work. Another senior responsible purely for
+   armor and weapons would be great to have for this project. I am
+   willing to make an effort in any case and I think it will make the
+   mud a more interesting and fun place in the end.  -Snow

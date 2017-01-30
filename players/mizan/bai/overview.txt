@@ -1,0 +1,82 @@
+OVERVIEW FOR MIZAN'S CURRENTLY UNNAMED AREA
+
+* SUMMARY
+The concept of this area is that of a large, two-dimensional grid which
+serves as a traditional killing ground for mid to high level players. It also
+has the dual role of allowing for players to alter the terrain, in a form
+similar to the 3D game Minecraft. Players would be able to purchase a slot
+in which they could establish their "home base". They would be obligated to
+defend it from attack by the monsters in the maze (or from other players)
+by purchasing additional items to fortify and protect their home base. 
+
+* ARRANGEMENT
+When a player purchases a home base, they are given a spot on the master grid
+which they can make modifications to. The total area which they are allowed
+to is 15 by 15 squares. Players cannot expand beyond that area, and they
+cannot expand into adjacent lots which may or may not belong to other players.
+There is also a buffer space of 6 squares between each grid. A simplified
+map of the layout looks like below:
+
+ *------------------------*
+ |XXXX|XXXX|XXXX|XXXX|XXXX| Areas which have been 'X'ed out are zones where
+ |XXXX|XXXX|XXXX|XXXX|XXXX| player lots are assigned. 
+ |XXXX|XXXX|XXXX|XXXX|XXXX|
+ |XXXX|XXXX|XXXX|XXXX|XXXX| The passageways between the zones represent the
+ |----+----+----+----+----| buffer areas which nobody can build on, and have
+ |XXXX|XXXX|XXXX|XXXX|XXXX| monster infestations.
+ |XXXX|XXXX|XXXX|XXXX|XXXX|
+ |XXXX|XXXX|XXXX|XXXX|XXXX| The total size of the lots has not been determined
+ |XXXX|XXXX|XXXX|XXXX|XXXX| at time of writing.
+ |----+----+----+----+----|
+ |XXXX|XXXX|XXXX|XXXX|XXXX|
+ |XXXX|XXXX|XXXX|XXXX|XXXX|
+ |XXXX|XXXX|XXXX|XXXX|XXXX|
+ |XXXX|XXXX|XXXX|XXXX|XXXX|
+ *------------------------*
+
+The home base includes one item- a block ejector. This is a vehicle which
+serves the purpose of depositing additional terrain blocks (at a cost) so that
+players can design and fortify their home base.
+
+* OPERATIONS
+For a player without a home base, the realm is similar to any other- they can
+show up and help kill the wandering creatures within. If a player encounters
+a fortification, they can elect to defend it, or alternately try to destroy it.
+The owner of the fortification can view a log which shows the very basic 
+actions which other players have made on their territory.
+
+
+>> BLOCK TYPES
+The following block types are available for construction by players:
+
+DESCRIPTION                COST       DMG RESIST
+Dryer Lint                 5000               10
+Styrofoam
+Pile of sticks
+Sand
+Dirt                      50000             1000
+Gravel
+Brick                    100000             
+Reinforced concrete
+Steel
+
+
+SPECIAL BLOCKS
+TNT
+Cardboard fence
+Wooden fence
+Concrete fence
+
+
+GROUND TYPES
+Grassland
+Water
+Swamp
+Bedrock
+
+>> MONSTER TYPES
+Zombie
+Orc
+Griefer
+Madman
+

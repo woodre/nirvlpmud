@@ -1,0 +1,28 @@
+**************
+
+
+                     Statall
+
+Syntax:    statall
+
+Desc:
+           Returns information on all characters online at the time
+           the command is issued. Information returned are player 
+           name, money, armor class, weapon class, hit points, max
+           hit points, spell points, max spell points, and experience.
+           Useful for checking general strengths of players.
+
+Warning:   Do not use to help character gauge one another. Also 
+           results only display values for WC and AC of worn/wielded
+           and not values set by guild abilities.
+
+Example:   statall
+                  results
+           player + money + AC + WC + HP + MHP + SP + MHP + Exp
+           are displayed for all players online.
+
+Related:   stat, att/atm
+
+
+**************
+

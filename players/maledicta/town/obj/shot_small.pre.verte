@@ -1,0 +1,45 @@
+/* Sobers for -15 at a cost of 300 coins  */
+
+#include "/players/maledicta/ansi.h"
+int number;
+
+id(str) { return str == "shot" || str == "bloodcleanser"; }
+short() { return 
+  "Bloodcleansing Shot";
+   }
+query_potence() { return -15; }
+query_save_flag() { return 1; }
+query_value() { return 300; }
+long() {
+write(
+"A shot of bloodcleansing liquid. It will immediately take some\n"+
+"of the alcohol from the users bloodstream. You can 'inject'\n"+
+"the shot.\n");
+ }
+
+reset(arg) {
+  if(arg) return;
+  number = 1;
+}
+
+init() {
+  add_action("use_it","inject"); }
+
+use_it(str) {
+if(str == "shot") {
+  this_player()->drink_alcohol(-15);
+write("You inject yourself with a shot of blood cleansing fluid.\n");
+write("Instant relief floods into your body.\n"+
+"You crush it and drop the fragments to the ground.\n");
+say(this_player()->query_name()+" injects something into "+this_player()->query_possessive()+""+
+" arm.\n");
+destruct(this_object());
+this_player()->recalc_carry();
+ return 1; 
+ }
+
+}
+
+get() { return 1; }
+
+query_weight() { return 1; }

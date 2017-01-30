@@ -1,0 +1,45 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+RangerInit(){
+
+/* Add an id of "kill_check_object" if a ranger has any points in the team skill */
+/* Allows a small bonus when fighting with other rangers. */
+   PO->AID("kill_check_object");
+
+   if(PO->QuerySkillLevel("team") > 0){
+      PO->AHiddenSkill("aid","beck");
+   }
+   if(PO->QuerySkillLevel("team") >= 5){
+      PO->AHiddenSkill("wolfpack","beck",8);   
+   }
+   if(PO->QuerySkillLevel("team") >= 7){
+      PO->AID("kill_check_object");
+      PO->AHiddenSkill("parry","beck",8);   
+   }
+   
+}
+
+RangerPower(str,Align){
+   
+}
+
+QMax(){
+   return 20;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(str){
+   write("Team skills are very important and powerful for Power Rangers.\n"+
+         "Teamwork is a major component, and these skills provide useful tools\n"+
+         "\n"+
+         "Team Skills:\n\n"+
+         BOLD+RED+"Aid "+OFF+"                       1 (requires Teleport of 10 for remote use\n"+
+         BOLD+RED+"Wolfpack "+OFF+"                  5\n"+
+         BOLD+RED+"Parry "+OFF+"                     7\n"+
+         "\nOthers in the future as well\n"+
+         "");
+
+}
+

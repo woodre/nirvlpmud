@@ -1,0 +1,26 @@
+inherit "obj/weapon";
+int hit, heal, n;
+reset (arg){
+
+     set_name("sword of vampiric regeneration");
+     set_alias("sword");
+     set_class(17);
+     set_weight(7);
+     set_short("Sword of Vampiric Regeneration");
+     set_long("This sword glows with warmth, and you feel much better after\n"+
+              "holding it for awhile.  It is the most gigantic sword you\n"+
+              "have ever seen, so you will have to strain to carry it.\n");
+     set_value(10000);
+     set_hit_func(this_object());
+}
+query_save_flag(){return 1;}
+weapon_hit(attacker){
+     int i;
+     i = random(20);
+       if(i<4){
+heal = random(7);
+call_other(this_player(), "add_hit_point", heal);
+write("You feel rejuvenated by the power of the sword.\n");
+}
+return 1;
+}

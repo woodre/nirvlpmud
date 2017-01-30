@@ -1,0 +1,34 @@
+/*
+ *  sets up a way to use the contents of a directory as guild spells.
+ *  when the player uses a command, it calls the object that spell is in.
+ *  it also checks to make sure the spell is still there, which is probably
+ *  costly in terms of eval, but it prevents errors if a spell is removed.
+ */
+
+
+#define GUILD_DIR "/players/etc/etc"
+#define IS_GUILD this_player->query_guild_string()=="guild_name"
+
+void init() {
+  string *cmds;
+  int x,size;
+  string cmd;
+  if(!IS_GUILD) return;
+  cmds=get_dir(GUILD_DIR);
+  size=sizeof(cmds);
+  for(x=0;x<size;x++)
+    if(sscanf(cmds[x],"%s.c",cmd))
+      add_action("guild_command",cmd);
+}
+int guild_command(string str) {
+  string verb;
+  object ob;
+  verb=query_verb();
+  call_other(GUILD_DIR+verb,"???");   /* loads the object if it's there */
+  if(!find_object(GUILD_DIR+verb)) {    /* checks to see if it's there */
+    if(IS_GUILD)
+      transfer(this_object(),this_player());
+    return 0;               /* if it's not, player needs a new command set */
+  }
+  return call_other(GUILD_DIR+query_verb(),"main",str);
+}

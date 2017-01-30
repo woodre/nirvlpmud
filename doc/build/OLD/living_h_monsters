@@ -1,0 +1,8 @@
+  
+   I have put in a system to stop players from fighting and hitting more than
+     one monster at a time, similiar to that used by shadowhawk on 5150.
+     If you have a monster that just uses living.h or living.c (like the 
+     go player /obj/go_player.c) you will have to add this line in your
+     heart_beat() if you have one.
+     already_fight=0;
+     if you dont your monster will be unable to fight back.

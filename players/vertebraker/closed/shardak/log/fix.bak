@@ -1,0 +1,48 @@
+Nov 14 16:57 : rm'd run as a guild cmd
+
+Nov 14 22:43 : fixed invis gw bug
+
+Nov 14 22:43 : updated some help files, not all done
+
+Nov 14 22:45 : added no spells to the mark (remember to add back in invis later)
+
+Nov 14 22:45 : fixed initiation bug
+
+Nov 14 22:45 : fixed tales text
+
+Nov 14 22:46 : fixed manskin bag
+
+Nov 16 20:43 : rm'd shardak qt, replaced with /obj/quicktyper
+
+Nov 16 21:32 : disallowed shields
+
+Nov 17 07:25 : fixed dskin
+
+Nov 17 17:10 : fixed joining so it sets your home to the grotto.
+
+Nov 17 17:32 : made initial copy of holy.c
+
+Nov 17 19:51 : fixed i cmd, rm'd inv
+
+Nov 17 22:11 : added xp logs. added autoload to castle.c
+
+Nov 21 02:57 : fixed bardiche id
+
+Nov 21 03:43 : added back in wear/remove cmds
+
+Nov 21 03:55 : created new ring murder; still needs testing
+
+Nov 21 03:57 : rm'd acid wand + helpfiles
+
+Nov 21 05:19 : created ~/closed/shardak/obj/circle, a shadow for a circle of flame type spell
+
+Nov 21 07:07 : created dagger and belt objs
+
+Nov 30 20:09 : fixed circle.c added cmds/encircle.c for it to work
+
+Nov 30 20:09 : added obj/blaze.c and cmds/blaze.c
+
+Nov 30 20:09 : added emotes.h
+
+Dec  1 01:53 : fixed a gpromote bug
+

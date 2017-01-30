@@ -1,0 +1,41 @@
+GUILD ABILITIES:
+Here is a summary of all guild abilities, broken down by guild level.
+Many abilities require the purchase of special items to be used (e.g.,
+a sack of concrete and some water for 'concrete').
+
+ABILITY       TYPE      DESCRIPTION
+-----------   --------  -----------
+Bully
+  msave       basic     Save guild stats.
+  mhelp       basic     Guild help system.
+  mwho        basic     Mud who list.
+  mob         basic     Guild channel and guild who list.
+  guns        weapon    Listing of available guns.
+  pull        weapon    Pick out a gun to use.
+  load        weapon    Put ammo in the drawn gun.
+  pack        weapon    Stick the gun in an inconspicuous place.
+  shoot       weapon    Fire a gun.
+Thug
+  bash        combat    Combat ability equivalent to missile.
+  bagman      special   Non-fighting guild pet.
+  eyeball     special   Spying ability.
+  block       graft     Block a room exit until payment is made.
+Muscle
+  butt        combat    Combat ability equivalent to shock.
+  garotte     combat    Finishing combat move.
+  protect     graft     Make a player pay in return for protection.
+Racketeer
+  trophy      special   Corpse dismembering ability.
+  molotov     combat    Combat ability equivalent to fireball.
+  intimidate  graft     Make a player pay you or spar with you.
+Goodfella
+  smash       combat    Combat ability slightly better than fireball.
+  kidnap      graft     Ransom a mudkid or pet.
+Mafioso
+  spray       combat    Combat ability equivalent to sonic.
+  concrete    special   Stop a target from moving for a specified time.
+Wiseguy
+  driveby     combat    Combat ability slightly better than sonic.
+  blackmail   graft     More powerful grafting ability.
+
+<END>

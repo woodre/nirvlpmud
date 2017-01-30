@@ -1,0 +1,93 @@
+    Alchemist Guild Spells & Abilities
+          by category & level
+
+combat
+======
+flash <direction>                   acolyte
+ice <target>                        acolyte
+reserve <monster>                   acolyte
+sanctuary [on/off] <hp>             acolyte
+
+acid <target>                       learned
+grease <who>                        learned
+peace dust                          learned
+
+fear <who>                          adept
+poison <who>                        adept
+
+hail <target>                       master
+
+communication
+=============
+aemote <msg>                        student
+atell <msg/on/off>                  student
+athink <msg>                        student
+
+
+information
+===========
+assess <target>                     student
+
+earth elemental                     learned
+
+general
+=======
+cpr                                 student
+fellows                             student
+ahelp <topic>                       student
+
+launder pouch                       student
+alevels                             student
+alight                              student
+
+loginmsg <msg>                      student
+logoutmsg <msg>                     student
+anews                               student
+
+process skin                        student
+refine corpse                       student
+resign alchemy guild                student
+
+road home                           student
+set home here                       student
+sew skins                           student
+
+skin corpse                         student
+solve task                          student
+stone skin                          student
+
+tasks                               student
+awho                                student
+
+cure <who>                          acolyte
+detect disease                      acolyte
+dig hole                            acolyte
+etheral door                        acolyte
+
+air elemental <msg>                 learned
+dismiss <air/earth/fire> elemental  learned
+fire elemental                      learned
+transport <component> to <who>      learned
+
+aid <who> <amount>                  adept
+charity [<item>]                    adept
+create raven <name>                 adept
+scan <target>                       adept
+
+call vampire                        master
+repair <item>                       master
+asell <item>                        master
+sharpen <item>                      master
+
+guild master
+============
+acheck <who>                        grandmaster
+ademote <who>                       grandmaster
+aexpell <who> <E/CE/R/P/Q>          grandmaster
+apromote <who>                      grandmaster
+apunish <who>                       grandmaster
+areplace pouch <who>                grandmaster
+remove <who>                        grandmaster
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+see also: help solve task, help spell levels

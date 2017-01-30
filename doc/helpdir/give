@@ -1,0 +1,13 @@
+
+
+                           [help give]
+-----------------------=========+=========-----------------------   
+
+Usage: give <item> to <who>
+
+  This command will allow you to give items to other players or 
+ monsters. Example: 'give 1000 coins to newbie'
+                    'give knife to newbie'
+
+  Type "disallow_give" to disable/enable players' ability
+  to give you things.

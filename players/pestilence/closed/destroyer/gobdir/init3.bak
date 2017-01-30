@@ -1,0 +1,81 @@
+static string *cmds;
+static string *message_hit;
+#define SAVE "players/pestilence/closed/destroyer/members/"
+#define tpn      ENV()->query_real_name()
+
+init() {
+  object s, shadow, me;
+  string name;
+if(environment(this_object()) == this_player()) {
+  if(!restore_object(SAVE+tpn)) {
+   save_object(SAVE+tpn);
+}
+  }
+  if(tp->query_level() < 20) {
+    tp->set_guild_name(">A.o.P<");
+}
+            
+      if(this_player()->query_level()< 20)
+   me = this_player();
+   name = this_player()->query_real_name();
+
+      {
+        shadow = clone_object("/players/pestilence/closed/destroyer/obj/shadow.c");
+   shadow->set_name(name);
+   shadow->set_time(1000);
+
+        shadow->do_shadow(me);
+
+      }
+
+add_action("save_me","dsave");
+add_action("guild_update","dupdate");
+add_action("dhelp","destroyer");
+add_action("dhelp","dhelp");
+add_action("dhelp","ahelp");
+add_action("cmd_ctitle","dtitle");
+add_action("punch","barrage", 2);
+add_action("pwho","pwho");
+add_action("guild_quit","leave_guild");
+add_action("weaken","weaken");
+add_action("filer","dbug");
+add_action("fatal","abolish");
+add_action("fatal","ab");
+add_action("disable","disable");
+add_action("blindside","bs");
+add_action("blindside","blindside");
+add_action("rage","rage");
+add_action("frenzy","frenzy");
+add_action("frenzy","fr");
+add_action("rush","rush");
+add_action("decorpse","rob");
+add_action("cmd_guildwho","guildwho");
+add_action("cmd_lich","predator");
+add_action("study","study");
+add_action("dwield","dwield");
+add_action("disarm","disarm");
+add_action("enemy","enemy");
+add_action("settitle","set_title");
+add_action("settitle2","set_title2");
+add_cmds();
+if(this_player()->query_level() < 80){
+ write(""+HIW+"Obey your superior officer"+NORM+".\n");
+return 1;
+}
+
+/*
+        message_hit=({
+                        ""+HIR+"D E S T R O Y E D"+NORM+"", " with a frenzy of attacks",
+                        ""+HIR+"Mutilated"+NORM+"", "'s body into bloody ribbons",
+                        ""+HIW+"Destroyed"+NORM+"", " with an onslaught of blows",
+                        ""+HIW+"Massacred"+NORM+""," into small fragments",
+                        ""+HIR+"Slammed"+NORM+""," into the ground with bone shattering force",
+                        ""+HIW+"Smashed"+NORM+""," with a bone crushing sound",
+                        ""+HIW+"Hit"+NORM+""," very hard",
+                        ""+HIW+"Hit"+NORM+""," hard",
+                        ""+HIW+"Hit"+NORM+"","",
+                        ""+HIW+"Grazed"+NORM+"","",
+                        ""+HIW+"Tickled"+NORM+""," in the stomach",
+        });
+*/
+}

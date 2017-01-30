@@ -1,0 +1,163 @@
+int i, level, nastiness;
+int demonyes;
+string name;
+object nasty,player,room;
+
+setvars() {
+    player = this_player();
+    room = environment(player);
+    name = call_other(player,"query_name",0);
+    level = call_other(player,"query_level",0);
+}
+
+id(str) { return ((str == "book") || (str == "spellbook")); }
+
+reset() {nastiness=15;}
+
+long() {
+    write("Morgar's spell book is a huge tome lying open on a pedistal.\n");
+    write("He doesn't mind if people memorize spells from it, but taking\n");
+    write("it is strictly forbidden.  It is, of course, not safe to\n");
+    write("read, but you may use it at your own risk.\n");
+}
+
+short() { return "Morgar's spellbook"; }
+
+query_value() { return 10000; }
+
+init() {
+    add_action("use"); add_verb("use");
+    add_action("use"); add_verb("read");
+    add_action("memorize"); add_verb("learn");
+    add_action("memorize"); add_verb("memorize");
+    add_action("stats"); add_verb("stat");
+    add_action("set_nasty"); add_verb("setnasty");
+}
+
+use(arg) {
+    setvars();
+    if (!arg || !id(arg)) {
+        return 0;
+    } else {
+        say(name + " reads the spell book\n");
+        write("You read the book.\n");
+        write("In the book you find these spells:\n");
+        write("    Heal\n");
+        nasty(40);
+        return 1;
+    }
+}
+
+get() { 
+    setvars();
+    if (level < 20000) { return 0; }
+    else { return 1; }
+}
+
+stats(arg) {
+    if (call_other(this_player(),"query_level",0) < 20) { return 0; }
+    if (call_other(this_player(),"query_level",0)<20) {return 0; }
+    if (arg != "book") { return 0; }
+    write("Nastiness is "+nastiness+"\n");
+    return 1;
+}
+
+set_nasty(arg) {
+    if (call_other(this_player(),"query_level",0) < 20) { return 0; }
+    if (sscanf(arg,"%d",nastiness) != 1) {
+        write("Need an integer\n");
+    }
+    return 1;
+}
+
+
+query_weight() { return 5; }
+
+nasty(prob) {
+/*
+    if (0 == random(prob)) {
+    more demons
+*/
+   if (random(100) < prob) {
+        nastiness=nastiness+1;
+        demonyes = 1;
+        say(name + " accidentally summons a demon.\n");
+        tell_room(room, "A demon appears in a blast of fire!\n");
+        nasty = clone_object("obj/monster");
+        call_other(nasty, "set_name", "demon");
+        call_other(nasty, "set_alias", "demon");
+        call_other(nasty, "set_level",14+random(6));
+        call_other(nasty, "set_hp", 300 + (14+random(6))*10);
+        call_other(nasty, "set_al", -600);
+        call_other(nasty, "set_short", "A summoned demon is here");
+        call_other(nasty, "set_wc",nastiness+random(nastiness));
+        call_other(nasty, "set_ac",random(nastiness/2));
+        call_other(nasty, "set_aggressive", 1);
+        call_other(nasty, "set_chance",random(30));
+        call_other(nasty, "set_spell_mess1", "The demon throws fire.");
+        call_other(nasty, "set_spell_mess2", "The demon throws fire at you.");
+        call_other(nasty, "set_spell_dam",10+random(nastiness));
+        move_object(nasty, room);
+        call_other(nasty, "attack_object", player);
+        return 1;
+    }
+    return 0;
+}
+
+memorize(arg) {
+    if (present("demon",environment(this_object()))) {
+        write("You are busy.\n");
+        return 1;
+    }
+    if (arg != "heal")
+         return 0;
+/* ADDED BY MIZAN  to prevent for pet bug
+
+-----BEGIN PGP MESSAGE-----
+Version: 2.6.2
+
+hIwDSrLZYb6nRr0BA/0do9g8V0bJoamtfAhhUVS5D6z1dHJ8Otrcyoxvg0Eb6cap
+y/eltFX6nRcq8+UqFbW+41QmyR5zg43Sgdu0WG7SCCpWog/NpMDVCcX57S4p200e
+zegoi5MtJw2UJRGoqe7MB3hPXojAQubT/uilFj34KaHsI/831ONgNeQi0FoYjqYA
+AADC9W4U8jBgYtfxc/H/OeRdZf3k/BkjMY1CI7Nb7IhSA0B1uyEQmr+lB1w3SHAO
+10YIdpEt2SiltPOPz+xPZXBMHJX6Ww8be236YuYe+1/EeAJDAR6Vb1GszJcfJxYl
+JOPfGZVda4ocdmkEtDPe4QSo0Na1h0dPzAPA/WWAy0qLoT9sH12aUb8Z4H7XT6Jd
+VeiEvtAPQuJp4rsENsxuvxNXYJqUhTyhskW0IXi7Nn+kt/OHCeeRypEqIGjqgHA2
+NlaBDcU=
+=VPUK
+-----END PGP MESSAGE-----
+
+*/
+
+    if(!this_player()->is_player()) return 0;
+/* end addition */
+
+    setvars();
+    i = 20;
+/*
+    if ((nasty(2)+nasty(3))>0) {
+   new for more demons, less heals
+*/
+    nasty(60);
+    nasty(50);
+    if (demonyes)
+    {
+    demonyes = 0;
+        return 1;
+    }
+    if (arg=="heal") i=8;
+    if (level < i) {
+        write("You are too low level to learn that spell.\n");
+        return 1;
+    } else {
+        object spell;
+        if (call_other(this_player(),"query_ghost")) {
+            write("Ghosts can't learn spells.\n");
+            return 1;
+        }
+        spell = clone_object("players/morgar/spells/"+arg);
+        move_object(spell, player);
+        write("You learn "+arg+".\n");
+        return 1;
+    }
+}

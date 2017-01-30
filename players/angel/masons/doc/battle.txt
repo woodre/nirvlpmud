@@ -1,0 +1,26 @@
+(=============================================================================)
+
+NEW BATTLE COMMANDS:
+--------------------
+
+wimpyhp <hit point>    --- Sets the hit points that you wimpy out at.
+                           just typing wimpyhp will turn guildwimpy off.
+
+wimpydir <direction>   --- You will wimpyout in the specified direction.
+
+battlescore (bsc)      --- Will toggle on/off a constant report of your
+                           hit points and spell points.
+
+Note:  wimpydir only works if wimpyhp is set.  If you do not designate
+       a wimpydir it will be random.
+       typing 'rank' will show your current wimpyhp and wimpydir or tell
+       if guildwimpy is turned off.
+
+Note plus:  When using guildwimpy make sure regular wimpy is turned off.
+            I don't know what kind of problems could occur if they both
+            kick in at the same time.
+
+These commands are actually not implemented as they are now part of
+Nirvana lib.  In those days however, it was common for guilds to put
+in some form of these commands. - Earwax
+(=============================================================================)

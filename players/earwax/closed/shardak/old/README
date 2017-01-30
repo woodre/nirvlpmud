@@ -1,0 +1,4 @@
+This directory is for files that I remove or modify heavily.  I'm putting them in here in case they are needed later on.
+
+mark/soul_check.h - Putting other penalties in place for good alignment.  I don't like call_out() if I can avoid it.
+mark/gen_bonus.h - added the code for this to the guild object.

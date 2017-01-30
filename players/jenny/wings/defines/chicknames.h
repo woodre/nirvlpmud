@@ -1,0 +1,34 @@
+string FANNAME;
+int number;
+number = random(30);
+switch(number) {
+      case 0: FANNAME = "kristen"; break;
+      case 1: FANNAME = "michelle"; break;
+      case 2: FANNAME = "jenny"; break;
+      case 3: FANNAME = "stephie"; break;
+      case 4: FANNAME = "susan"; break;
+      case 5: FANNAME = "becky"; break;
+      case 6: FANNAME = "linda"; break;
+      case 7: FANNAME = "cheryl"; break;
+      case 8: FANNAME = "tiffany"; break;
+      case 9: FANNAME = "renee"; break;
+      case 10: FANNAME = "melissa"; break;
+      case 11: FANNAME = "ayn"; break;
+      case 12: FANNAME = "brandy"; break;
+      case 13: FANNAME = "nicole"; break;
+      case 14: FANNAME = "julie"; break;
+      case 15: FANNAME = "laura"; break;
+      case 16: FANNAME = "heather"; break;
+      case 17: FANNAME = "alison"; break;
+      case 18: FANNAME = "tina"; break;
+      case 19: FANNAME = "veronica"; break;
+      case 20: FANNAME = "carol"; break;
+      case 21: FANNAME = "gwen"; break;
+      case 22: FANNAME = "kim"; break;
+      case 23: FANNAME = "kelly"; break;
+      case 24: FANNAME = "shannon"; break;
+      case 25: FANNAME = "lisa"; break;
+      case 26: FANNAME = "alysa"; break;
+      case 27: FANNAME = "beth"; break;
+      case 28: FANNAME = "samantha"; break;
+      case 29: FANNAME = "dorine"; break;}

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/chaos/objects/crabmeat","/players/arrina/weapons/revenant","/players/ultramagnus/berries","/players/hippo/heals/grain","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/snow/ITEMS/ice_shard","/players/scathe/armor/bowarmor","/obj/armor","/players/pain/closed/wands/orb","/players/snow/WEAPONS/glowknife","/players/mythos/aarmor/sode","/obj/armor","/obj/weapon","/players/scathe/weap/lbow","/obj/weapon","/players/mythos/aarmor/shell","/players/arrina/treas/onyx","/obj/weapon","/players/mythos/awep/claw","/players/snow/heals/kw_meat","players/wren/Area/starbug/items/reddress","/obj/treasure","/players/wren/Area/starbug/items/hair","/players/scathe/armor/mgarb","/players/puppy/s/eq/quill",})
+shorts ({"A slab of giant crabmeat","Revenant Blade","A Bunch Of Blue Berries","[33mcrumbs of grain[0m","A Prince's Robes","An ice shard","Light Leather Armor","Steel Boots","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","A glowing knife","Sode","A Jedi Cloak","A Deadly Bullwhip","Longbow of Force","Curved knife","Tortoise Shell","A piece of carved onyx","A horse whip","claws","A hunk of whale meat","spirit blade","Arctic Wolf pelt","Perfect Hair","Black Monk Robes","A quill",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,11 @@
+sh_xp 6900000
+sh_pts 25
+sh_lev 10
+muffled 0
+drain_damage 100
+monitor -1
+summon 0
+points 0
+mshpts 50
+in "has entered the building"
+out "leaves with his hands in the air, running from the freaks!"

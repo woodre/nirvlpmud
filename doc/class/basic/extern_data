@@ -1,0 +1,100 @@
+extern_data
+
+DESCRIPTION
+  
+         The lfuns in the player that deal with extern_data, are ideal
+         for storing almost any kind of data that is associated with
+         the player. In former times wizards used invisible autoloading
+         objects to achieve this, now you can use extern_data. Usage
+         is very easy, you can do...
+
+
+   void set_extern_data(mixed owner, string name, mixed data);
+
+         Add some data to the player.
+         - owner is usually the creator's name, such as 'rumplemintz' or
+           'Village'. It just says: these data are your data.
+         - name is a string giving your data a name, it's similar
+           to a variable's name.
+         - data contains the information you want to have stored.
+           It may be of any structure (integer, array, array of arrays,
+           mapping,...). As the extern_data are saved in the player's
+           .o-File data should not contain objects or closures.
+
+   mixed query_extern_data(mixed owner, string name);
+  
+         It enables you to query for the data you added. That's very
+         useful. Owner and name are as above, and the call returns
+         what we described with 'data'.
+
+   void remove_extern_data(mixed owner, string name);
+
+         Well, guess that, it removes the specified extern_data from the
+         player.
+
+   varargs void change_extern_data(mixed owner, string name, closure changes,
+                                   mixed args);
+
+         I never used that one till now, but it sometimes can be very
+         useful if you want to change a player's data. I always queried
+         for the data, changed it and set it anew. But you - and I - perhaps
+         better should use change_extern_data. The closure changes is applied
+         to the data with the optional, additional arguments and the result
+         is the new extern_data. See the example, then you understand.
+
+
+
+EXAMPLES
+
+         Imagine you've got an integer that runs from 1 to 7 and that
+         describes how far the player has come in your quest - that is
+         strongly chronological, that means first solve step 1, then step2,
+         and so on. So you could do a:
+
+         player->set_extern_data("yourname", "quest", 1);
+         when the player solved the first part.
+
+         player->query_extern_data("yourname", "quest"); of course will
+         return '1'.
+
+         To increase the data by one you could - not should not - do a
+         player->set_extern_data(
+            "yourname", 
+            "quest",
+            player->query_extern_data("yourname", "quest") + 1
+         );
+         That's what I did - better would be:
+         player->change_extern_data("yourname", "quest", #'+, ({ 1 }));
+         or
+         player->change_extern_data("yourname", "quest", #'increase);
+         with increase(int x) { return x + 1; } if #'+ looks too strange
+         to you.
+
+         Last but not least when you don't need the data any longer
+         remove it again with
+         player->remove_extern_data("yourname", "quest");
+
+
+         In this case data was a simple integer, it often happens that
+         is more complete, perhaps an array of integers representing parts
+         of a quest - e.g. babydream - which can be solved in any order.
+
+         Let there be a 0th, 1st, 2nd and 3rd part, the player now, for
+         example solves the 2nd part, do a:
+         player->change_extern_data(
+            "yourname", "quest_parts", #'add_one, ({ 2 });
+         );
+
+         And add_one would look like:
+            int *add_one(int *previous, int single_new)
+            {
+              if (!previous) return ({ single_new });  // a ha, the first part
+                                                       // already solved it
+              if (member_array(single_new, previous) > -1) return previous;
+              return previous + ({ single_new });
+            }
+
+
+         A fancier example can be found in /players/examples/room/externy.c
+
+

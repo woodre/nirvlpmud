@@ -1,0 +1,50 @@
+ML                        COST                   G?  V   DESCRIPTION
+ 
+   Level 1 
+   chill .................10sp 1b        (12sp)       1  4+random(15)damage plus bonus
+   harvest ...............n/a                            Gains spell components from corpse.
+   claim dagger ..........50sp                           calls a dagger(wc12) which allows players to harvest.
+   embalm corpse .........2b             (4sp)           makes a corpse not decay.
+5  evoke ghouls ..........25-50sp 3b 2sk              1  creates small shield of ghosts around necro
+
+5  Level 2 - 50000 exp 150 val
+5  consume corpse ........20sp 1b        (22sp)       1  burns corpse to create corpse dust 
+   embrace_death .........25sp 3/4deathexp           50  kills you giving your some components.
+5  grasp .................15sp 2b        (19sp)       1  r(5) dam r(26) sp damage
+5  excavate corpse .......5hp                    YES     random chance dig up corpse level(5-19) r(5) will clone angry spirit
+
+   Level 3 - 75000 exp 400 val
+7  dig grave .............10hp 1cd               YES     clones a grave which can be entered to heal - OBJ/misc/grave_heal.c
+7  drain .................20sp 1e                     1  damage/heal 5+random(27) 
+7  animate skeleton ......109-(gl*3)sp 1cd 1corp      3  creates an animated skeleton MON/skeleton.c
+7  consecrate gravesite ..100sp 2b       (104sp)      3  turns a room into a gravesite
+
+   Level 4 - 100000 exp 550 val
+8  summon ghastly stench .20sp 4b 1e     (48sp)       1  summons OBJ/spells/gstench.c (area attack)
+8  cloak .................25sp 2b 1sk    (37sp)       1  lowers 3wc 1ac of monster for 25+(gr*2) seconds
+10 anguish ...............15sp 10hp 1b   (27sp)       1  dam r(40)+5
+   echo ..................n/a                            echo (with name attached to end)
+
+   Level 5 - 200000 exp 750 val
+10 disease ...............45sp 1h 4sk    (107sp)         damage over time from (120-140)
+10 graft .................30sp 1sk 4b    (46sp)          heal 20+r(25)
+10 siphon ................20hp                           transfers all sp from on guild member to another
+
+   level 6 - 300000 exp 850 val
+11 bloodmoon .............10sp 1h 1b     (42sp)       2  Moves a bloodmoon to the area which affects other spells OBJ/misc/bloodmoon.c
+11 raise portal ..........60sp 1sp 5b            YES  3  Creates a portal to the realm of death
+
+   Level 7 - 500000 exp 1000 val
+13 summon pestilence .....100sp 1cd                      r(chance for npc to die) r(player death)
+13 decay .................15sp 3sk       (39sp)       1  dam 15+r(48);
+
+   Level 8 - 1000000 exp 1250 val
+15 abandon -              attwc*4sp 1e                1  makes monster miss 4-5 rounds of combat
+   animate zombie<nf>
+
+   Level 9 - 1500000 exp 5000 val
+15 reanimate .............100sp 10b 5sk 2e 1h 1sp (255sp)  resurrect player with full heal
+15 wither ................150sp 2h 1so  (250sp)       1-3 reduces a monsters health by half (max 300)
+
+   Other
+   sacrifice

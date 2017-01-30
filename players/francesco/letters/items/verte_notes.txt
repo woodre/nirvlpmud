@@ -1,0 +1,71 @@
+ITEMS
+
+corpse.c -
+  You should inherit /obj/corpse instead,
+  and set a corpse_level so ppl can drain it.
+
+cane.c -
+  Why is it unwielded every 500 hb's?  And actually
+  this is unwielded every 500 seconds, not hb's.
+  This seems to be just a pain more than anything.
+  This isn't a real drawback, just a reason to not use
+  the weapon at all.
+
+  You do notify_fail() and return 1 in several functions.
+  That defeats the purpose.
+
+  Why does init() return 1 ?
+
+  weapon_hit() is whacked.  They get an automatic 1-3 wc
+  just for keeping their hp's high.  That's against the
+  rules.  There MUST be a 1/3 chance, per Mythos and Boltar.
+
+  Instead of in trade(str), having if(str == "cane"), do
+  if(id(str)) .
+
+  Add an id of "walking cane".
+
+  In read(str), you need to change the last notify_fail() to
+  What do you want to read?  You're not viewing anymore.
+
+  View handle is awkward.  *shrug*
+
+  How can a blade be hidden within itself?  Is this a riddle?
+  It should be, "a blade is hidden within".
+
+  You need to add a flag when the blade is withdrawn from the
+  cane, to make sure you can't withdraw it over and over again
+  to keep setting the wc to 18, and set it to 0 at reset. 
+  Preferably I'd rather see
+  the wc added in weapon_hit() cumulatively, rather than a
+  call of set_class().
+
+watch.c -
+  You should add an id of "golden watch".  Maybe you should
+  have it actually tell the time?
+
+  "view back" is so awkward here.  Maybe 'view the back' and
+  'view watch' for accepted cmds as well?
+
+  The last notify_fail() in read(str) asks What do you want to
+  view?  again you're not viewing, you're reading.
+
+dispenser.c -
+
+  Why is this here?
+
+board2.c -
+ 
+  "How they do .."  in the long description
+  makes no sense.  it should be "How they" ..
+  "A mental image of yourself" should be
+  "In other words, a mental image of yourself"
+  to make more sense.
+  "provided it is nor offensive, etc etc"
+  should be "provided it is not offensive, etc etc".
+
+board1.c
+  "provided it is nor offensive, etc etc"
+  should be "provided it is not offensive, etc etc".
+
+

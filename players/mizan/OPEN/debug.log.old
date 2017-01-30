@@ -1,0 +1,41 @@
+Bad argument 1 to call_other()
+Current object was players/sparrow/exec_temp#432, line 8
+"qtHook" in "closed/wiz_soul.c" ("closed/wiz_soul#402") line 18
+"process_hook" in "closed/wiz_soul.c" ("closed/wiz_soul#402") line 18
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"cmd_hook" in "obj/player.c" ("obj/player#400") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#400") line 33
+"cmd_exec" in "bin/wiz/secure/_exec.c" ("bin/wiz/_exec") line 33
+"exec_function" in "players/sparrow/exec_temp.c" ("players/sparrow/exec_temp#432") line 6
+Bad argument 2 to present()
+Current object was players/forbin/realms/keats/NPC/wizard#2968, line 71
+"heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/forbin/realms/keats/NPC/wizard#2968") line 356
+"::heart_beat" in "obj/monster" ("players/forbin/realms/keats/NPC/wizard#2968") line 291
+"attack" in "obj/monster" ("players/forbin/realms/keats/NPC/wizard#2968") line 1016
+"execute_spell" in "obj/monster" ("players/forbin/realms/keats/NPC/wizard#2968") line 980
+"call_acid_burn" in "players/forbin/realms/keats/NPC/wizard.c" ("players/forbin/realms/keats/NPC/wizard#2968") line 159
+Heart beat in players/forbin/realms/keats/NPC/wizard#2968 turned off.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Bad argument 1 to tell_object()
+Current object was obj/player#4757, line 77
+"heart_beat" in "players/snow/MONSTERS/snow_demon.c" ("players/snow/MONSTERS/snow_demon#5711") line 56
+"::heart_beat" in "obj/monster.c" ("players/snow/MONSTERS/snow_demon#5711") line 289
+"hit_player" in "obj/living.c" ("obj/player#4757") line 272
+"do_damage" in "obj/living.c" ("obj/player#4757") line 521
+error when executing program in destroyed object players/snow/MONSTERS/snow_demon#5711
+Heart beat in players/snow/MONSTERS/snow_demon#5711 turned off.
+Bad argument 1 to call_other()
+Current object was players/jaraxle/3rd/alt/items/poison#4784, line 23
+"qtHook" in "obj/soul.c" ("obj/soul#4760") line 6
+"process_hook" in "obj/soul.c" ("obj/soul#4760") line 6
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"activate" in "players/jaraxle/3rd/alt/items/poison.c" ("players/jaraxle/3rd/alt/items/poison#4784") line 65
+Connection reset by peer detected.
+An 'action' did something, but returned 0 or had an undefined verb.
+Current object was obj/simul_efun, line 38
+"cmd_hook" in "obj/player.c" ("obj/player#6821") line 2429
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#6821") line 33
+"cmd_dest" in "bin/wiz/_dest.c" ("bin/wiz/_dest") line 10
+"::cmd_destruct" in "bin/wiz/_destruct.c" ("bin/wiz/_dest") line 42
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22

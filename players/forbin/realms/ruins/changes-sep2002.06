@@ -1,0 +1,66 @@
+changes-sep2002.06
+
+  -changed all rooms/npcs/objects to inherit
+   /players/forbin/define.h instead of /players/maledicta/ansi.h
+
+RMS/*.c
+  -changed exits of area to lead to my hyperion area
+  *other than that, rooms weren't touched in any way
+
+NPC/fireangel*.c (fire angels have low ac, high wc)
+  -raised level from 15 to 18
+  -increased WC from 25 to 29
+  -increased AC from 8 to 13
+  -set HP to 400 from 300
+  -added an id of "demon" 
+  -added fake weapon cloning to mobs (make it look wielded)
+
+NPC/iceangel*.c (ice angels have low wc, high ac)
+  -raised level from 15 to 18*
+  -increased WC from 22 to 26*
+  -increased AC from 12 to 15*
+  -Sset HP to 425 from 300*
+   *except for iceangel4.c
+  -added an id of "demon"
+  -added fake weapon cloning to mobs (make it look wielded)
+
+NPC/iceangel7.c (added to RMS/r20.c)
+  -added this mob to hold WEP/ice_trident.c (which was
+   already made and in Mal's dir)
+
+NPC/iceangel4.c (made stronger to account for changes to ice_lance)
+  -raised level from 15 to 20*
+  -increased WC from 22 to 30*
+  -increased AC from 12 to 20*
+  -set HP to 550 from 300*
+  -raised spell from 5% of random(10) to 15% of 10+random(25)
+
+NPC/deathangel.c
+  -added an id of "demon"
+  -added fake weapon cloning (make it look wielded) 
+
+NPC/shadowangel.c
+  -added an id of "demon"
+  -added fake weapon cloning (make it look wielded)
+  -added fake armor cloning (make it look worn)  
+
+NPC/eghyron.c
+  -added fake weapon cloning (make it look wielded)
+  -added fake weapon cloning (make it look wielded)
+
+ARM/sshield.c    
+  -AC 2 from 1 *we need more good shields in the game
+
+WEP/flaming_*.c & WEP/ice_*.c
+  -changed bounty values from 1500+random(500) [avg 1750] 
+   to 3000+random(1001) [avg 3500] 
+   *except for ice_lance.c
+
+WEP/ice_lance.c  
+  -WC 19 from 17 *its non-save, and two-handed weapon
+  -changed bounty value from 1500+random(500) [avg 1750] 
+   to 4500+random(1001) [avg 5000]
+
+WEP/flaming_scythe  
+  -WC 18 from 17
+

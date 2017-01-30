@@ -1,0 +1,130 @@
+Writing spells and commands for Shards. - Earwax 1/14/04
+____________________________________________________________________________
+
+With the command system that's in place, most of the common checks that you
+would have to code into commands and skills have been eliminated.  What this
+means is that you can focus on coding the command itself, rather than 
+worrying about having the correct checks for guild level, pk status, or
+whatever.  Standard costs are also taken care of automatically.
+
+In order to take advantage of this system, you must have the following line
+in each command file:
+
+#include "defs.h"
+____________________________________________________________________________
+
+What is in this file is an include of the standard definitions (including
+ANSI), and an inherit of the command base code.  The other thing that's in
+there is a simple reset() that the command daemon uses to ensure that a 
+given command actually loads, before adding a link to it.
+
+The following are the actual parameters you can set in the commands.  The
+way it works is you only need to use the ones that are different than the
+defaults.  In other words, the number I have being returned is the default
+level for a given parameter, if you want it to be different, you simply add
+that function call, and have it return whatever value you want.  Note: PK
+is defaulting to 0 for everything but spells, and 1 for spells, which means
+that it's only required for spells.  Also note that you don't have to change
+the standard guild level required for spells, as spells will all have an
+associated task, and the task will require that they be of the requisite 
+guild level, just to see it and do it.
+____________________________________________________________________________
+
+Function Declaration               Description
+
+int glevel() { return 1; }         Required guild level (1-10)
+int grank() { return 1; }          Reguired guild rank (not resolved yet)
+int req_pk() { return 0; }         Requires PK to be set (0 is no, 1 is yes)
+int hp_cost() { return 0; }        HP cost of a command.
+int sp_cost() { return 0; }        SP cost of a command.
+int sac_cost() { return 0; }       Sacrifice-pool point cost.
+int exp_cost() { return 0; }       Experience point cost.
+string req_task() { return ""; }   Task required (use defs.h to setup)
+int arg() { return 0; }            See below.
+string *components() { return 0; } See below.
+____________________________________________________________________________
+
+Tasks:
+The way we will be doing tasks in this system is that upon outlining and
+setting up a task, we come up with a name for it.  In defs.h we give the
+task a defined name, and the text that actually is associated with it.  In
+other words, we say, OK, a player doing the task for burn gets an entry in
+his guild object that says he's done it.  The simplest and easiest to work
+with way to do this is to have strings.  So in defs.h you add
+#define TASK_BURN "Burn_Task_By_Linus" or whatever.  To check for that task
+as a requirement for a spell, just have the following line added:
+string req_task() { return TASK_BURN; }
+To add the task to a player upon successful completion, you would have (in
+the task) guild_object_of_player()->add_task(TASK_BURN);
+More on that later.
+____________________________________________________________________________
+
+Arg checks:
+There are basic arguement checks built into the command system.  You can 
+check for the presence of something in environment, for no arg and in combat
+or arg present, or for presence of arg in environment or inventory.  Here
+are what to use:
+
+Return    Description
+0         No checks.
+1         Checks arg to make sure it's living and in same room.
+2         Checks arg to make sure it's living and in same room, OR the 
+          caster is in combat.
+3         Checks arg to make sure it's present or in inventory.
+____________________________________________________________________________
+
+Components:
+If a spell requires components, you would return an array of all the object
+id's that they would require.  Use care with this, to use the least common
+id for a given thing.  For example, if something has ids of 'scale,' 
+'dragonscale,' or 'shardak_spell_dragonscale,' you would use the last one,
+as it's most likely only the intended component.  
+
+Examples:
+string *components() { 
+  return ({ "jaraxle_dragonscale",
+            "earwaxian_dragon_orb",
+            "shardak_guild_burn_component",
+            "demon heart" });
+}
+
+string *components() { return ({ "demon heart" }); }
+____________________________________________________________________________
+
+Other comments on writing commands.
+
+Any commands you write must have a function of the following declaration:
+int main(string arg, int *GStats)
+
+arg is the arguement that the player actually typed in, ie 'burn earwax'
+Earwax would be the arguement passed.
+
+glevel is the glevel of the player using the command.
+grank is the grank of the player using the command.
+sac is the sacrifice pool points of the player using the command.
+
+GStats MUST be declared exactly as it is up there, ie int *GStats with the
+GS being capitalized.  This is important, as stat checks will use defines
+based off the array being named GStats.  In other words, to access fervor,
+you would use if (random(30) < FERVOR) where FERVOR is defined as GStats[3]
+or whatever its index will be.  This is made to make things easier for you
+guys as you won't have to actually search a 2d array, or memorize the array
+indices.  Just make sure that every command you write that has to check
+any of the information is declared exactly the way I have it written above.
+
+I'm doing a lot of the checks and making syntax and coding as easy as
+possible, but with a system like this, some things can't be made any easier.
+In any case, cut/paste the declaration if you have to, just make sure to use
+it exactly as-is.
+
+Also note: Spell/command failure should return 0, success should return 1.
+This is especially important if any components or costs are defined, as a
+return 1 causes the cost to actually be removed, and a 0 doesn't.
+To set your own failure message, do the following line:
+return failure_msg("You don't have enough mojo for this.");
+That will output the following:
+(in HIK) Shardak tells you, '(HIR) You don't have enough mojo for this.'
+
+
+
+

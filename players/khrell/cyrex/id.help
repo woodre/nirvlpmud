@@ -1,0 +1,64 @@
+/* -------- fake aliases in quicktyper & wiz commands -------- */
+who,whos,whow,l,sc,g,gc,ex,ec,log,elog,dlog,powerup,rfakesetm
+
+echo <msg>               the echo command
+echoall <msg>            the echo all command
+echoto <who> <msg>       the echo to command
+force <who> <what>       the force command
+rat <who> <command>      do <command> in the presence of <who>
+rdemote <who> <level>    demote <who> to <level>
+rfixme                   fix my title & align & hp & intox
+rpat <who>               pat <who> on the head
+rprison <who>            send <who> to prison
+rpromote <who> <level>   promote <who> to <level>
+rquiet <who>             shout curse
+zap <who> <damage>       zap something for <damage> damage
+/* ----------------------------------------------------------- */
+ralign <al_string>       Changes your alignment string
+rblock <direction>       Drop a roadblock for <direction> here
+rbug                     Display bug/typo log from /log
+rcheck or rc             Display error & bug/typo logs from /log
+rclean <object>          Clean (destruct) objects from a location
+rclone <object>          Clone an object
+rdest <object>           Destruct an object
+rdrop <object>           Drop object
+rfollow <player>         Follow a player (toggle on/off)
+rfrog <player>           Toggle frog curse on a player
+rgender <who> to <what>  Set a player's gender to 0=neuter 1=male 2=female
+rget <object> [from <where>] Get object from somewhere/someone
+rgnat                    Get a gnat & set me as the owner
+rgoin <object>           Go into an object
+rgoto <object>           Go to/into object
+rguild [<guild name>]    Set guild, show it or ('rguild clear')
+rheal <who> <how much>   Heal someone/thing some
+rid <obj_name>           Show stats (id) of an object
+rinvis <player>          Make a player invisible (default=me)
+rlog                     Display error log from /log
+rlook [<object>]         Do a 'look' in location of object
+rmail/rpost              Go to post to send mail
+rmbug                    Remove bug/typo log from /log
+rmin <player> <msg>      Set min on player
+rmmin <player> <msg>     Set mmin on player
+rmmout <player> <msg>    Set mmout on player
+rmoney <amount>          Get/lose money
+rmout <player> <msg>     Set mout on player
+rmove <what> <where>     Transfer someone/something somewhere
+robjects <player>        List all objects of a player
+roff                     Turns off the built in light
+ron                      Turns on the built in light
+rpalign <person> <title> Change alignment message on a person
+rpeek <room>             Look at exits of a room
+rplayer <player>         Show stats & items of a player
+rptitle <person> <title> Change title on a person
+rreset <object>          Reset an object
+rreturn                  Return to where you did an rgoto from
+rrmlog                   Remove error log from /log
+rsnoop <who>             Check to see if you're being snooped
+rstop                    Stop fights in user's area
+rsummon <object>         Move player/object to user's location
+rtitle <title>           Changes your title and announce it
+rtrace/rfind <string>    Find the current location of an object
+rvis <player>            Make a player visible
+rweight <amount>         Get/lose weight
+rwho                     Extended user info
+rxp <who> <how much>     Give experience to someone

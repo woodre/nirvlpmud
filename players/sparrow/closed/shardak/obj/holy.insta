@@ -1,0 +1,125 @@
+#include "/players/vertebraker/ansi.h"
+#include "../def.h"
+
+status get() { return 0; }
+
+int
+alTotal(object x)
+{
+    int al;
+    object c;
+    c = first_inventory(x);
+    while(c)
+    {
+      if(c->is_player())
+      if(c != this_player()) al += (int)c->query_alignment();
+      c = next_inventory(c);
+    }
+
+    return al;
+}
+
+init()
+{
+    if(!environment()) return;
+    if(query_verb() == "open" || query_verb() == "trans" || query_verb() == "church" || query_verb() == "place") return;
+    if(this_player() && interactive(this_player()) &&
+        this_player()->query_guild_name() == GUILDNAME &&
+       this_player()->query_level() < 20 && alTotal(environment()) > 0)
+      holy_blast(this_player());
+}
+
+void holy_blast(object Shard)
+{
+    string lipton, noodles;  /* heh.. hungry */
+    object y;
+    int x; object *mud_users;
+    if(!Shard || !present(Shard) || Shard->query_ghost()) return;
+    if(0 == random(4))
+    {
+      lipton = 
+      "A shining light engulfs the area.  A flickering image of\n"+
+      "Heaven's gates floods your mind....  Beams of radiant light\n"+
+      "dance all over your environment...\n\n"+
+    "Suddenly, a discharge of holy light strikes "+Shard->query_name()+"!\n";
+      noodles =
+      "A shining light engulfs the area.  A flickering image of\n"+
+      "Heaven's gates floods your mind....  Beams of radiant light\n"+
+      "dance all over your environment...\n\n"+
+     HIW+"Suddenly, a discharge of holy light strikes you!"+NORM+"\n";
+    }
+    else if(0 == random(4))
+    {
+      lipton =
+      "A funnel of pure light thunders into the room...\n"+
+      HIY+"\tWaves of light cascade over "+Shard->query_name()+"...\n"+NORM;
+      noodles =
+      "A funnel of pure light thunders into the room...\n"+
+      HIY+"\tWaves of burning light cascade over you!\n"+NORM;
+    }
+    else if(0 == random(4))
+    {
+      lipton =
+      "You hear a sudden clap of thunder.\n"+
+      "The heavens above you part, clouds floating away from the\n"+
+      "grey sky..  Suddenly, the sky is awash in light!\n"+
+      "\tA bolt of "+HIY+"glowing luminesence"+NORM+
+      " strikes "+Shard->query_name()+"!\n";
+      noodles = 
+      "You hear a sudden clap of thunder.\n"+
+      "The heavens above you part, clouds floating away from the\n"+
+      "grey sky..  Suddenly, the sky is awash in light!\n"+
+      "\tA bolt of "+HIY+"glowing luminesence"+NORM+" strikes you!\n";
+    }
+    else
+    {
+      lipton =
+      "The air around you crackles, and a warmth fills the room...\n"+
+      "A spectral form emerges and points towards "+
+       Shard->query_name()+"...\n"+
+      Shard->query_name()+" coughs violently, choking...\n"+
+      "The form grins and discharges a bolt of "+HIC+"lightning"+NORM+"\n"+
+      "at "+Shard->query_name()+", and disappears.\n";
+      noodles = 
+      "The air around you crackles, and a warmth fills the room...\n"+
+      "A spectral form emerges and points towards you...\n"+
+      "You cough violently... choking in spasms...\n\n"+
+      "The form grins and discharges a bolt of "+HIC+"lightning"+NORM+"\n"+
+      "at you, leaving you to die.\n";
+    }
+    mud_users = users();
+    for(x = 0; x < sizeof(mud_users); x++)
+    {
+      if(mud_users[x]->on_chan("junk") && environment(mud_users[x]) 
+         && environment(mud_users[x]) != environment(this_object()))
+        tell_object(mud_users[x],
+      "The heavens part above "+environment(this_object())->short()+
+      "and light floods\ndown...\n");
+    }
+    tell_object(Shard, "\n\n" + noodles + "\n\n\n");
+    tell_room(environment(Shard), lipton, ({ Shard }));
+    y = clone_object("/obj/monster");
+    y->set_level(1); y->set_name("The Gods of Nirvana");
+    y->set_level(1);
+    move_object(y, environment());
+    Shard->attacked_by(y);
+    Shard->hit_player(200 + random(100), "other|good");
+    if(Shard)
+    if((int)Shard->query_ghost()) log_file("vertebraker.hb", ctime()[4..15] + " " + (string)Shard->query_real_name() + "\n");
+    if(y)
+    destruct(y);
+    call_out("holy_blast", 5, Shard);
+}
+
+string
+query_real_name() { return "The Gods of Nirvana"; }
+
+id(str) { return str == "holy_blast"; }
+
+string
+short()
+{
+    object a;
+    if((a = this_player()) && (string)a->query_guild_name() == GUILDNAME)
+    return HIW + "The area has been blessed by the gods" + NORM;
+}

@@ -1,0 +1,28 @@
+        	-=[ Skills ]=-
+
+   The following is information on the skills that
+can be trained in the Knights Templar.  By training
+a skill, you develop more expertise in it, thereby
+producing more damage or better defense.
+
+
+Skill:       Alternate types allowed:
+
+sword        swords, blade, blades, katana
+knife        dagger
+polearm      spear, trident, stick, pole
+bow          gun
+club         hammer, staff, mace, morningstar
+axe          
+shield
+
+
+If you have a skill, then any of the alternate types
+will be allowed when dealing with your bonuses. To see
+if a weapon is of a type you can use under a skill, 
+then attempt to look at it by a name or alternate name
+listed.  Shield is covered by any shield armor type.
+
+To see a listing of experience cost to raise each skill,
+then type: info skill_cost
+

@@ -1,0 +1,14 @@
+guild_exp 10500
+beats 3015
+percent 80
+endurance 37
+max_endurance 37
+special_title 0
+weave 0
+endurance_monitor 1
+posendcol "[37m"
+negendcol "[1;31m"
+norm "[2;37;0m"
+old_exp 5129222
+custom_monitor "$HR$-----$N$HY$ H: #hps#/#mhp#  S: #sps#/#msp#  T: #intox#% F: #stu#% S: #soa#% $N$HG$#ahp#$N$HR$ -----$N$"
+Skills ({"focus",})

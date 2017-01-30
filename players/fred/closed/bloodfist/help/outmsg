@@ -1,0 +1,10 @@
+
+Bloodfist Help:  Custom Logout Message
+
+  When you logout of the game, you can have a custom message display
+on the guild channel for everyone to see.  As with your pretitle, use
+the argument '|' if you want to reset your custom logout message to the
+default.
+
+Usage: outmsg
+       outmsg <str>

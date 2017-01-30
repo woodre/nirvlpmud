@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/gunslingers/hall/r5","south","/players/mokri/clans/gunslingers/hall/r7","north",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;30mIron Bastard Sword[0m","/players/jareel/weapons/humakti_iron_offwield_sword",0,0,0,"[31mAmulet of Blood[2;37;0m","/players/fred/closed/bloodfist/eq/blood_amulet","2",0,0,"[1m[30mDer EngelSense[2;37;0m","/players/fred/closed/bloodfist/eq/es",0,0,0,"[31mBerserker Axe '[1;37mRoar[0m[31m' [1;30m[[1;36m Chaos Honed [1;30m][0m [[1;32mSet of the Berzerker[0m][0m[0m","/players/jareel/weapons/stormbull/ROGAR/ChaosAx1",0,0,0,"A finely honed longsword","/players/snow/WEAPONS/hon_sword",0,36,5,"[1;30mGrey onyx-cluster ring[0m","/players/eurale/Chess/OBJ/ring",0,0,0,"[1;34mPlate[0m of [1;33mT[1;34m*[1;33mH[1;34m*[1;33mU[1;34m*[1;33mN[1;34m*[1;33mD[1;34m*[1;33mE[1;34m*[1;33mR[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_plate",0,0,0,"[31mBerzerker Axe [1;37m[[1;36mChaos Honed[1;37m][0;0m","/players/jareel/weapons/chaos/woods2/chaos_axe",0,19,9,"[1;31mBlood Bracelet[0m of [1;30m[[1;37mPower[0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageBracelet",0,0,0,})

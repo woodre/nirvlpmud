@@ -1,0 +1,15 @@
+dwield(string str) {
+  object firstwep, firstshad, wep, shadow, offwep, mygob;
+  int wepwc;
+  mygob = present("dknight_ob", TP);
+  if(!str) {
+ write("Wield what?\n"); return 1; }
+  wep = present(str, TP);
+  offwep = mygob->query_offwep();
+  firstwep = TP->query_weapon();
+              command("wield",this_player());
+  write(BOLD+RED+"Dark powers combine with your soul, to let you wield "+
+      wep->short()+".\n"+NORM);
+  shadow = clone_object("/players/pestilence/closed/destroyer/obj/wepshad.c");
+  shadow->start_wep_shadow(firstwep);
+  return 1; }

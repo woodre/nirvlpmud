@@ -1,0 +1,18 @@
+>> Operation Roles
+
+Your vehicle has three main roles, each with uniquely different capacities and
+responsibilities. A description is illustrated below:
+
+Driver     - The person responsible for navigating and operating the vehicle
+             through various terrains and conditions.
+Passenger  - Also known as the commander, the passenger is responsible for
+             keeping an eye on overall tactical situation and managing the
+             rest of the staff onboard.
+Cargo      - The cargo section contains passengers or plain old cargo. They
+             may have defensive roles on board as well, depending on your
+             vehicle's model type.
+
+To assume a role, give the command 'be driver' or 'be passenger', or 
+'be cargo'vwhen you have boarded the vehicle. Using the 'look' command 
+informs you of who may be filling the current roles.
+

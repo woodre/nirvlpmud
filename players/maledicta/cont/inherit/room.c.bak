@@ -1,0 +1,35 @@
+#include "/players/maledicta/ansi.h"
+inherit "room/room";
+
+
+long(str) {
+    int i;
+    if ((set_light(0) <= 0) && !present("dark_sight_object", this_player())) {
+       write("It is dark.\n");
+       return;
+    }
+    if (!str) {
+	write(HIW+capitalize(short_desc)+NORM+"\n\n"+long_desc+"\n\n");
+if(!dest_dir || no_exits)
+	write("[ No Obvious Exits. ]\n");
+	else {
+	    i = 1;
+	    while(i < sizeof(dest_dir)) {
+		write(" "+HIW+"[" +NORM+ dest_dir[i]+HIW+"] "+NORM);
+		i += 2;
+	    }
+	    write("\n");
+	}
+	return;
+    }
+    if (!items)
+	return;
+    i = 0;
+    while(i < sizeof(items)) {
+	if (items[i] == str) {
+	    write(items[i+1] + ".\n");
+	    return;
+	}
+	i += 2;
+    }
+}

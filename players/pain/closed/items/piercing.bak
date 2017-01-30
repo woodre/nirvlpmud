@@ -1,0 +1,592 @@
+#include "/players/pain/color.h"
+#define PAIN "/players/pain/closed/items/pierced"
+#define P_DIR "players/pain/closed/items/pierce_info/"
+#define tpn capitalize(environment(this_object())->query_real_name())
+#define grimace "You grimace as you admire your handywork.\n"
+#define p_msg tpn+" shows off a new "+str+" piercing.\n"
+#define gender environment(this_object())->query_gender()
+
+int muf;
+int clr;
+
+/*	Variables used for storing where the player
+	is pierced. 			*/
+
+int nipple;
+int belly;
+int ear;
+int nose;
+int tongue;
+int eye;
+int scrotum;
+int clit;
+int labia;
+int cheek;
+int lobe;
+int lip;
+int tat;
+string where;
+string t_desc;
+
+
+query_muff() { return muf; }
+query_color() { return clr; }
+
+init_arg() {
+	cat("/players/pain/closed/items/pierce_news");
+	if(restore_object(P_DIR+this_player()->query_real_name())) {
+		write("Restoring piercing info. . . .\n");
+	}
+	else {
+		write("Creating a piercing file . . .\n");
+		p_save();
+	}
+}
+id(str) { return str == "piercing" || str == "pains_piercing"; }
+short(){ return "A Sexy Body Piercing"; }
+long(){
+write("An ultra-sexy body piercing. You are truly one the kewl\n"+
+      "people. You wear this piercing as a sign of your triumph\n"+
+      "will. You declare yourself a citizen of the "+RED+"Alternative\n"+
+      "Nation"+END+", one of the beautiful people.\n\n"+
+      "Use <"+RED+"hpierce"+END+"> for more help.\n");
+}
+drop(){ return 1;}
+query_auto_load(){ return "players/pain/closed/items/piercing.c:";}
+init(){
+add_action("tattoo", "tattoo");
+add_action("new_tat", "new_tat");
+add_action("t_describe", "t_describe");
+add_action("pierce", "pierce");
+add_action("p_restore", "p_restore");
+add_action("p_save", "p_save");
+add_action("party_news", "party_news");
+add_action("get_guild", "mage");
+add_action("hpierce", "hpierce");
+add_action("ick", "ick");
+add_action("yuck", "yuck");
+add_action("quiver", "quiver");
+add_action("jump", "jump");
+add_action("jazz", "jazz");
+add_action("suckle", "suckle");
+add_action("horny", "horny");
+add_action("tongue", "tongue");
+add_action("agree", "agree");
+add_action("foff", "foff");
+add_action("swiggle", "swiggle");
+add_action("wibble", "wibble");
+add_action("lake", "lake");
+add_action("snort", "snort");
+add_action("face", "face");
+add_action("boot", "boot");
+add_action("lambada", "lambada");
+add_action("roll", "roll");
+add_action("mood", "mood");
+add_action("toss", "toss");
+add_action("kissme", "kissme");
+add_action("nasty", "nasty");
+add_action("mosh", "mosh");
+add_action("rave", "rave");
+add_action("bummer", "bummer");
+add_action("sucks", "sucks");
+add_action("boring", "boring");
+add_action("wonder", "wonder");
+add_action("sdance", "sdance");
+add_action("tstick", "tstick");
+add_action("get_rid_of_pierce", "get_rid_of_pierce");
+add_action("pierce_news", "pierce_news");
+add_action("replace", "p_replace");
+add_action("replace_all", "replace_all");
+add_action("thigh", "thigh");
+add_action("toe", "toe");
+/*
+add_action("tell", "tell");
+*/
+add_action("sleep", "sleep");
+add_action("chortle", "chortle");
+add_action("thwak", "thwak");
+add_action("phair", "phair");
+add_action("noogie", "noogie");
+add_action("flirt", "flirt");
+add_action("romance", "romance");
+add_action("cower", "cower");
+add_action("roar", "roar");
+add_action("howl", "howl");
+add_action("woo","woo");
+add_action("wish","wish");
+add_action("boggle","boggle");
+add_action("flex","flex");
+add_action("cheer","cheer");
+add_action("fear","fears");
+add_action("lag","lag");
+add_action("kiss","kiss2");
+add_action("alive","kewlwho");
+add_action("pt","pt");
+add_action("pe","pe");
+add_action("hush","hush");
+add_action("share","share");
+add_action("wedgie","wedgie");
+add_action("model","model");
+add_action("kinky","kinky");
+add_action("cuff","cuff");
+add_action("suck","suck");
+add_action("grok","grok");
+add_action("whip","whip");
+add_action("set_color","pcolor");
+}
+
+
+party_news() { cat("/players/pain/closed/items/party_news"); return 1; }
+get_guild() { PAIN->get_guild(); return 1; }
+hpierce() { PAIN->hpierce(); return 1; }
+ick() { PAIN->ick(); return 1; }
+yuck() { PAIN->yuck(); return 1; }
+quiver(arg) { PAIN->quiver(arg); return 1; }
+jump() { PAIN->jump(); return 1; }
+jazz() { PAIN-> jazz(); return 1; }
+suckle() { PAIN->suckle(); return 1; }
+blow() { PAIN->blow(); return 1; }
+horny() { PAIN->horny(); return 1; }
+tongue(arg) { PAIN->tongue(arg); return 1; }
+agree(arg) { PAIN->agree(arg); return 1; }
+foff(arg) { PAIN->foff(arg); return 1; }
+swiggle(arg) { PAIN->swiggle(arg); return 1; }
+wibble() { PAIN->wibble(); return 1; }
+lake(arg) { PAIN->lake(arg); return 1; }
+snort() { PAIN->snort(); return 1; }
+face(arg) { PAIN->face(arg); return 1; }
+boot(arg) { PAIN->boot(arg); return 1; }
+lambada(arg) { PAIN->lambada(arg); return ; }
+roll() { PAIN->roll(); return 1; }
+mood() { PAIN->mood(); return 1; }
+toss() { PAIN->toss(); return 1; }
+kissme(arg) { PAIN->kissme(arg); return 1; }
+nasty() { PAIN->nasty(); return 1; }
+mosh() { PAIN->mosh(); return 1; }
+rave() { PAIN->rave(); return 1; }
+bummer() { PAIN->bummer(); return 1; }
+sucks() { PAIN->sucks(); return 1; }
+boring() { PAIN->boring(); return 1; }
+wonder() { PAIN->wonder(); return 1; }
+sdance(arg) { PAIN->sdance(arg); return 1; }
+tstick(arg) { PAIN->tstick(arg); return 1; }
+get_rid_of_pierce() { destruct(this_object()); return 1; }
+pierce_news() { PAIN->pierce_news(); return 1; }
+replace() { PAIN->replace(); destruct(this_object()); return 1; }
+replace_all() { PAIN->replace_all(); return 1; }
+thigh(arg) { PAIN->thigh(arg); return 1; }
+toe(arg) { PAIN->toe(arg); return 1; }
+tell(arg) { PAIN->tell(arg); return 1; }
+sleep() { PAIN->sleep(); return 1; }
+chortle() { PAIN->chortle(); return 1; }
+thwak(arg) { PAIN->thwak(arg); return 1; }
+phair(arg) { PAIN->phair(arg); return 1; }
+noogie(arg) { PAIN->noogie(arg); return 1; }
+flirt(arg) { PAIN->flirt(arg); return 1; }
+romance(arg) { PAIN->romance(arg); return 1; }
+cower() { PAIN->cower(); return 1; }
+roar() { PAIN->roar(); return 1; }
+howl() { PAIN->howl(); return 1; }
+woo() {PAIN->woo(); return 1; }
+wish() { PAIN->wish(); return 1; }
+boggle() { PAIN->boggle(); return 1; }
+flex() { PAIN->flex(); return 1; }
+cheer(arg) { PAIN->cheer(arg); return 1; }
+fear(arg) { PAIN->fear(arg); return 1; }
+lag() { PAIN->lag(); return 1; }
+kiss(arg) { PAIN->kiss(arg); return 1; }
+alive() { PAIN->alive(); return 1; }
+pt(arg) { PAIN->pt(arg); return 1; }
+pe(arg) { PAIN->pe(arg); return 1; }
+wedgie(arg) { PAIN->wedgie(arg); return 1; }
+model(arg) { PAIN->model(arg); return 1; }
+kinky(arg) { PAIN->kinky(arg); return 1; }
+cuff(arg) { PAIN->cuff(arg); return 1; }
+suck(arg) { PAIN->suck(arg); return 1; }
+grok() { PAIN->grok(); return 1; }
+whip(arg) { PAIN->whip(arg); return 1; }
+set_color(){
+if(clr == 0){
+write("*# Color Disabled #*\n");
+clr = 1;
+return 1;
+}
+if(clr == 1){
+write(GREEN+"*#"+END+" Color Enabled "+GREEN+"#*"+END+"\n");
+clr = 0;
+return 1;
+}
+}
+
+p_restore() {
+   restore_object(P_DIR+this_player()->query_real_name());
+   write("Restoring piercing info...\n");
+   return 1;
+}
+p_save() {
+	save_object(P_DIR+this_player()->query_real_name());
+	write("Piercing info saved.\n");
+	return 1;
+}
+
+pierce(str) {
+	if(!str) { 
+		write("You must decide what bodypart to pierce.\n");
+		write("Choices are: \n");
+		write("nipple, tongue, clit, scrotum, labia, lip\n");
+		write("belly, cheek, nose, ear, earlobe, eyebrow\n");
+		write("Don't try to pierce something you ain't got\n");
+		write("BTW: This will hurt!\n");
+		return 1;
+	}
+	if(str == "nipple") {
+		if(nipple == 2) {
+			write("You already have both of them pierced!\n");
+			return 1;
+		}
+		if(nipple == 0) {
+			write("You grunt as you pierce your nipple with "+
+			      "a stainless steel ring.\n");
+			this_player()->heal_self(-15);
+			write(grimace);
+			say(p_msg);
+			nipple = 1;
+			p_save();
+			return 1;
+		}
+		if(nipple == 1) {
+			write("You grunt and pierce your other nipple.\n");
+			this_player()->heal_self(-15);
+			write(grimace);
+			say(p_msg);
+			nipple = 2;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "tongue") {
+		if(tongue == 1) {
+			write("Your tongue is already pierced!\n");
+			return 1;
+		}
+		if(tongue == 0) {
+			write("You groan as you pierce your tongue!\n");
+			this_player()->heal_self(-15);
+			write(grimace);
+			say(p_msg);
+			tongue = 1;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "belly") {
+		if(belly == 1) {
+			write("Your belly button is already pierced!\n");
+			return 1;
+		}
+		if(belly == 0) {
+			write("You cry out as you drive a ring through "+
+			      "the ever so sensitive skin of your belly "+
+			      "button!\n");
+			this_player()->heal_self(-20);
+			write(grimace);
+			say(p_msg);
+			belly = 1;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "ear") {
+		if(ear == 2) {
+			write("Both your ears are already pierced!\n");
+			return 1;
+		}
+		if(ear == 0) {
+			write("You bite your lip as you pierce your ear.\n");
+			this_player()->heal_self(-5);
+			write(grimace);
+			say(p_msg);
+			ear = 1;
+			p_save();
+			return 1;
+		}
+		if(ear == 1) {
+			write("You shudder as you pierce your other ear.\n");
+			this_player()->heal_self(-5);
+			write(grimace);
+			say(p_msg);
+			ear = 2;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "nose") {
+		if(nose == 1) {
+			write("Your nose is already pierced!\n");
+			return 1;
+		}
+		if(nose == 0) {
+			write("You fight back the urge to sneeze as "+
+			      "you push a ring through your nostril.\n");
+			this_player()->heal_self(-10);
+			write(grimace);
+			say(p_msg);
+			nose = 1;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "eyebrow") {
+		if(eye == 4) {
+			write("You already have plenty of eyebrow "+
+			      "piercings you freaK!\n");
+			return 1;
+		}
+		if(eye == 0) {
+			write("You wince as you pierce your eyebrow.\n");
+			this_player()->heal_self(-5);
+			write(grimace);
+			say(p_msg);	
+			eye = 1;
+			p_save();
+			return 1;
+		}
+		if( eye > 0) {
+			write("You pierce your eyebrow yet again!\n");
+			this_player()->heal_self(-5);
+			write(grimace);
+			say(p_msg);
+			eye++;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "scrotum") {
+		if(this_player()->query_gender() == "female") {
+			write("You ain't got one of those to pierce!\n");
+			return 1;
+		}
+		if(scrotum == 1){
+			write("It is already pierced sicko!\n");
+			return 1;
+		}
+		if(scrotum == 0) {
+			write("You scream bloody murder as you pierce "+
+			      "your scrotum! !\n");
+			this_player()->heal_self(-25);
+			write(grimace);
+			say(p_msg);
+			scrotum = 1;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "clit") {
+		if(this_player()->query_gender() == "male") {
+			write("You don't have one of those to pierce!\n");
+			return 1;
+		}
+		if(clit == 1) {
+			write("It is already pierced!\n");
+			return 1;
+		}
+		if(clit == 0) {
+			write("You squeal as you pierce your clitoris!\n");
+			this_player()->heal_self(-20);
+			write(grimace);
+			say(p_msg);
+			clit = 1;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "lip") {
+		if(lip == 1) {
+			write("Your lip is already pierced!\n");
+			return 1;
+		}
+		if(lip == 0) {
+			write("You moan loudly as you pierce your lip.\n");
+			this_player()->heal_self(-10);
+			write(grimace);
+			say(p_msg);
+			lip = 1;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "labia") {
+                if(this_player()->query_gender() == "male") {
+                        write("You don't have one of those to pierce!\n");
+                        return 1;
+                }
+		if(labia == 6) {
+			write("Don't you think you are pierced enough "+
+			      "there?\n");
+			return 1;
+		}
+		if(labia == 0) {
+			write("You cry out as you pierce your labia!\n");
+			this_player()->heal_self(-10);
+			write(grimace);
+			say(p_msg);
+			labia = 1;
+			p_save();
+			return 1;
+		}
+		if(labia > 0) {
+			write("You cry as you pierce your labia yet again!\n");
+			this_player()->heal_self(-10);
+			write(grimace);
+			say(p_msg);
+			labia++;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "earlobe") {
+		if(lobe == 10) {
+		     write("Don't you think you have pierced that enough?\n");	
+		     return 1;
+		}
+		if(lobe == 0) {
+			write("You pierce your earlobe!\n");
+			this_player()->heal_self(-3);
+			write(grimace);
+			say(p_msg);
+			lobe = 1;
+			p_save();
+			return 1;
+		}
+		if(lobe > 0) {
+			write("You pierce your earlobe yet again!\n");
+			this_player()->heal_self(-3);
+			write(grimace);
+			say(p_msg);
+			lobe++;
+			p_save();
+			return 1;
+		}
+	}
+	if(str == "cheek") {
+		if(cheek == 1) {
+			write("Your cheek is already pierced!\n");
+			return 1;
+		}
+		if(cheek == 0) {
+			write("You pierce straight through your cheek!\n");
+			this_player()->heal_self(-5);
+			write(grimace);
+			say(p_msg);
+			cheek = 1;
+			p_save();
+			return 1;
+		}
+	}
+	else {write("Invalid body part\n"); return 1;}
+}
+
+tattoo(str) {
+
+if(!str) {
+	write("Improper usage!\n");
+	write("Usage: tattoo <where>\n");
+	write("After this you will be prompted for your tattoo description.\n");
+	return 1;
+}
+	
+if(tat) {
+	write("You already have a tattoo!\n");
+	write("Do you want to redo your tattoo? (y/n)\n");
+	input_to("new_tat");
+	return 1;
+}
+
+where = str;
+write("Please enter your tattoo description. <warning do not press return until your description is complete. enter it as one complete line>\n");
+input_to("t_describe");
+return 1;
+}
+
+new_tat(str) {
+if(str != "y" && str != "Y" && str != "yes") {
+	write("Keeping old tattoo.\n");
+	return 1;
+}
+tat = 0;
+write("Enter new location: ");
+input_to("tattoo");
+return 1;
+}
+
+t_describe(str) {
+
+string gender2;
+string gen;
+
+if(gender == "male")
+	gen = "his";
+else gen = "her";
+
+if(gender == "male")
+	gender2 = "him";
+else gender2 = "her";
+if(!str) {
+	write("Error! Quitting out of tattoo function.\n");
+	where = 0;
+	return 1;
+}
+t_desc = str;
+write("You boldly give yourself a "+t_desc+" tattoo on your "+where+
+      " for all to see and enjoy.\n");
+say(tpn+" boldly gives "+gender2+"self a "+t_desc+" tattoo on "+gen+
+    " "+where+".\n");
+tat = 1;
+p_save();
+return 1;
+}
+
+
+
+hush(){
+if(muf == 0){
+write("`~ You decide to no longer listen to the other fans ~`\n");
+ muf = 1;
+return 1;
+}
+if(muf == 1){
+write("`~ You will again be able to listen to the other fans ~`\n");
+ muf = 0;
+return 1;
+}
+}
+share(arg) { PAIN->share(arg); return 1; }
+
+
+extra_look() {
+string gen;
+  string stuff, name;
+  stuff = ""+tpn+" has sexy Body Piercings: ";
+if(nipple == 1) stuff += " a nipple ring";
+if(nipple == 2) stuff += " two nipple rings";
+if(belly) stuff += ", a belly button ring";
+if(ear == 1) stuff += ", has an ear ring";
+if(ear == 2) stuff += ", two ear rings";
+if(nose) stuff += ", a nose ring";
+if(tongue) stuff += ", a tongue piercing";
+if(eye == 1) stuff += ", an eyebrow piercing";
+if(eye > 1) stuff += ", "+eye+" eyebrow piercings";
+if(scrotum) stuff += ", his scrotum pierced";
+if(clit) stuff += ", her clit pierced";
+if(labia == 1) stuff += ", her labia pierced";
+if(labia > 1) stuff += ", her labia pierced "+labia+" times";
+if(cheek) stuff += ", a cheek piercing";
+if(lobe == 1) stuff += ", an earlobe piercing";
+if(lobe > 1) stuff += ", "+lobe+" ear lobe piercings";
+if(lip) stuff += ", a lip piercing";
+if(gender == "male") {
+	gen = "his";
+}
+else gen = "her";
+if(tat) stuff += "\n"+tpn+" has a "+t_desc+" tattoo on "+gen+" "+where+".\n";
+  return stuff; }

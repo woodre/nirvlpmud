@@ -1,0 +1,16 @@
+no_clean 0
+name_of_weapon "two longswords"
+broke 0
+misses 0
+hits 0
+alt_name "longswords"
+alias_name "longsword"
+short_desc "A pair of Magical Longswords"
+long_desc "A pair of enchanted longswords forged from cold iron.They are covered with silver runes."
+read_msg "Forged by Laura, Weapons Master of the Bards."
+class_of_weapon 17
+value 800
+local_weight 3
+info 0
+deny_save 0
+weapon_type "sword"

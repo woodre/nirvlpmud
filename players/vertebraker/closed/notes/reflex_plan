@@ -1,0 +1,172 @@
+                                God                               (100,000)
+                                 |
+         ---------------------------------------------
+         |                       |                   |
+    Play development    Sub-God/super senior     Technical        (700-10,000)
+       (Open)                 (Reflex)           (Vertebraker)
+                                 |               (Balowski)
+     ---------------------------------------------------------
+     |                    |                 |                |   
+Guild Lead           Area Lead            Player  Wiz Development (201)
+(Maledicta)          (Daranath)           Affairs       (Jaraxle)
+     |                    |               (Eurale)           |
+Guild Approvers(2)   Area Approvers(3)      |       (3)Sponsors   (100)
+  (Open)               (Forbin)             |            (Zeus)
+     |                    |                 |                |
+     ---------------------------------------------------------          
+        |                    |               |
+        |                    |      Inactives/area coders         (80-99)
+        |                    |               |
+        |                    |---------------|
+        |               Junior wizs                               (20-79)
+        |                    |
+        ----------------------
+                  |
+              Players                                             (1-19)
+
+This is my proposal for position openings.  A good alternative if your still
+not sold on the concept of me running the show would be to put Daranath in
+as the super senior, move me to the Play Development(something I have a lot
+of ideas for, btw, if you ever wish to discuss it), and put Zeus in as a
+area lead.  I also could handle the Player Affairs pretty well.  I would not
+put Eurale in a position to be doing approvals as he was part of the reason
+wizards were leaving previously, he also is gone 6 months out of the year
+which is not the kind of consistant wizard we need.  However I do think he
+is someone who should be in management due to his intelligence and easy going
+manner, which allows him often to successfully arbitrate conflicts.  This is
+why I reccomended him for player affairs, and I believe that if he took on
+an apprentice to handle things while he is away during the winter, he could
+work out well there.
+
+The positions that are best for me are the ones that aren't code related as 
+thats obviously not my strong suit.  I would point out that we should have a
+security position as well, and thats one I could handle also.  Primarily I
+would obviously want the top spot simply because I am really good at systems 
+and I would like a chance to prove I can manage.  I have no problem taking
+fire from others as pretty much that has been how my whole career has been, 
+even as a player.  I don't get burned out despite the abuse, and while I love
+Nirvana, I simply do not take it so seriously that it truly impacts my mood in 
+real life, and as a result I don't get burned out easily.  
+
+My biggest concern in all this is that you pick someone who will get 
+frustrated easily and in a few months quit leaving everyone else bickering 
+yet again.  I think it is very important that whoever it is has a track record
+proving that they can handle everyone here, and that they have been here for
+a while without frequent inactive peroids.  This place needs some stability
+in the management and someone with a clear goal of expanding the playerbase
+and updating some of the legacy limitations due to the age of the mud(I will
+mention some of this below).  We need a path and a direction and leadership
+that has the strength to see it implemented.
+
+Plans I want to see implemented should I get the position:
+
+WIZARD CHANGES
+
+1) Completely documented help files for wizard commands, as well as some
+tutorials for new wizards on how to do some basic things.  I began working
+on this with Vertebraker before he left and I think it should be completed.
+
+2) Check and fix all wiz commands, integrate the wiztool into the base set
+of wiz commands, and make it so that if you type a wiz command incorrectly
+it will show you the correct syntax rather than just returning an error.
+This will greatly aid newbie wizards learn the system.
+
+3) Revamped 'snoop' command.  Snoop is a potentially valuable tool that is
+being restricted due to potential abuse.  Rather than restrict it in the
+current manner where people who are prone to abuse it simply have to earn
+the right to use it(L60) and then can abuse it at will, change it so that
+every wiz can use snoop and that it works like the prison command and 
+forces any wiz under level 100 to enter a reason for using it.  Furthermore,
+any wiz under L100 would have the snoop session automatically logged so
+that the senior in charge of security could periodically review the logs
+and make sure there is no abuse going on.  This would allow this valuable
+tool to be used for all, as it is useful both in the instruction of new
+wizards and the fixing of player bugs.
+
+4) Revamp the wiz level system from giving a direct level to instead
+giving a name for it.  The names I propose are as follows:
+
+L21-39: Apprentice Wizard
+L40-59: Wizard
+L60-99: Adept Wizard
+L100-199: Senior Wizard
+L200-299: Arch Wizard
+L300-999: Administrator
+L1000: Technical
+L10000: Assistant God
+L100000: God
+
+I think this system is a bit more clear, so that when a player is told
+to 'talk to a senior', they actually know what a senior is.  They also
+do not really need to know our actual levels, giving a more general idea
+of what we do and our status is more useful to the playerbase.  A help
+file with the info on these ranks would be written for the player help
+so that they could easily find the appropriate wizard for a problem they
+are having.  Who screens would not show a level for wizards except for
+the basic Nirvana 'who' command, which would list our ranks.  The finger
+command would also be changed to reflect this.  This also fits with one
+of my proposed player changes and will allow it without major confusion.
+See the section on revamping the player levels below in the player
+section.
+
+5) Clear chain of command.  Wizards will ONLY go to their superiors in
+the chain of command.  Circumventing the chain is not acceptable except
+in a clear case of a wizard abusing their power.  Undermining the wizard
+above you is to be treated harshly as it only leads to instability in the
+command structure and creates the 'soap opera' atmosphere that leads to
+the problems we have been having here lately.  The only reason to go above
+your superior's head is in a clear case of abuse, and the wizard doing it
+needs to be absolutely certain of themselves.  It cannot be just because
+they did not like something their boss did.
+
+6) Better seperation of wizards and players.  Wizards would still be free
+to socialize at will with willing players, however the interference in 
+purely game situations, relationships, and behaviors must end.  I have 
+personally seen a few wizards who will actively attempt to 'investigate'
+player behavior that other players do not like or are curious about, and
+in my opinion this undermines attempts to role play.  If its not a bug, the
+wizard needs to ignore requests from players like this, no matter how
+curious the wizard is.  Let the players play.
+
+7) Verte or Bal would implement a new standard room obj(Verte has a nice
+one) that all new wizards would be taught to use.  This would improve the
+quality of new realms considerably and make a lot of modern features
+standard across the mud.
+
+PLAYER CHANGES
+
+1) Comprehensive harrassment policy, to be added to the help files.  It
+will be spelled out what is and what is not considered harrassment, and
+players will be reffered to that when there is a problem just as they are
+for triggers/bots and multiplaying help files now.
+
+2) Unified level system.  Essentially keep the 1-19 levels, but stop listing them anymore.  Make it so that players advance extra levels simultaniously
+with regular levels(so a L1 player is technically 1+1, L5 is 5+5, etc) until
+they hit L19, and then regular level sticks there and extra level advances.
+This would accomplish a few things.  
+
+a) When combined with my wizard level change above this would essentially
+seperate the wiz levels from the player levels, decoupling an artificial
+limitation.
+
+b) It would preserve compatibility with old realms, checks, guilds, items, 
+etc, making it so that old code could gradually be migrated to checking the
+extra_level variable rather than the regular one, and new code could be done
+from the start to check extra_level instead.  This means that other than the
+change itself, not a lot of code would need to be changed to implement it.
+
+c) It would create a simplified and easy to understand level system that
+would make sense to true newbies.  The current system only makes sense to
+people who know the mud and that it works this way.  This is the first part
+of my plans to draw new players to the mud.  Those will be explained at
+another time unless you want to know this now.
+
+3) A new storage system would be created, to replace both the lockers and
+hotel rooms.  I am not certain what the best method would be yet, I have
+seen several good suggestions and would open the topic for discussion and
+see what comes out of it.
+
+This is my initial list.  I am going to add more to this as more comes to
+mind.  Thank you for the oppurtunity.
+
+-Reflex

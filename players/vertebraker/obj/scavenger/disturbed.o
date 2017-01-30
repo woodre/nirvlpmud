@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/mosobp/areas/TEMPLE/OBJ/robes","/players/puppy/s/eq/parchment","/players/hippo/armour/glazour_coat","/obj/weapon","/players/wren/Area/starbug/items/bouquet","/obj/armor","/players/mythos/aarmor/sode","/players/hippo/heals/grain","/players/softly/nhall/obj/decant3","/obj/armor","/players/arrina/heals/ale","/players/arrina/heals/honeyc","/players/hippo/weapons/glue","/players/wren/Area/starbug/items/hair","/players/wren/Area/starbug/items/cottagecheese","/players/pain/NEW/arm/bplate","/obj/weapon","/players/snow/cam/stuff/sword","/players/ultramagnus/bdiamond","/players/wren/Area/starbug/items/gauntlet","/obj/armor","/players/snow/WEAPONS/ice_star","/players/hippo/heals/dna_repair","/players/boltar/things/emoter","/players/arrina/treas/horseshoe",})
+shorts ({"A Priest's Robes","Parchment","glazour coat","Glamering","a colorful bouquet of 'flowers'","A small [1mwhite[0m shield","Sode","[33mcrumbs of grain[0m","Decanter of Healing [[1m2[2;37;0m]","A suit of [1mwhite[0m chainmail","[1mbottle of dark ale[0m","[33mgooey honeycomb[0m","a strong, 1 second glue","Perfect Hair","a small tub of cottage cheese.","A battered Breastplate","Blaster","[34m[1mBlessed Longsword[0m[0m","A Blue Diamond","Time gauntlet","Robot Head","Ice Shuriken","[32mdna repair string[0m","An emoter","A Silver Horseshoe",})
+found ({0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,})
+loaded 0

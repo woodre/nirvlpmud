@@ -1,0 +1,6 @@
+10/25/03 20:54: Kia         ((13    /Cyberninja)   15(1/1)
+11/ 3/03 15:21: Sora        ((10    /Cyberninja)   12(1/1)
+11/10/03 14:29: Demonic     ((19+7  /Cyberninja)   22(1/1)
+11/11/03 16:06: Sunim       ((12    /Cyberninja)   14(1/1)
+07/14/04 19:05: Dabufu      ((16    /Dervish)      18(1/1)
+07/ 7/05 09:21: Rage        (len bigger than field 20(3/2)

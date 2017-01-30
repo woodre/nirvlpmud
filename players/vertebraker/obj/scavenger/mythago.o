@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/sequinjacket","/players/snow/shadows/stuff/cloak","/players/pain/NEW/weap/mace2","/players/puppy/s/eq/block","/players/wren/Area/starbug/items/fish","/players/forbin/realms/keats/OBJ/nazal_yew_staff","/players/scathe/weap/lbow","/players/mythos/aarmor/sode","/obj/treasure","/players/maledicta/cont/weapons/rweapon","/players/saber/stuff/power","/players/wren/Area/starbug/items/reddress","/obj/armor","/obj/weapon","/players/ultramagnus/wiz_cloak","/players/wren/Area/starbug/items/bazookoid","/players/angel/area/stargate/obj/bullets","/players/boltar/things/xmaslights","/players/snow/WEAPONS/glass_sword","/obj/weapon","/obj/armor","/obj/armor","/players/ultramagnus/darkarmor","/obj/weapon","/players/mythos/closed/guild/forest/misc/pelt",})
+shorts ({"Cat's red sequin jacket","A dusky cloak","A huge iron mace","A building block","A box of trout ala crem","A staff of [1;33myew[0m","Longbow of Force","Sode","Arctic Seal pelt","a Scimitar","A power system","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","Steel Boots","Baby powder","An Old Grey Cloak","Bazookoid [1;30mmkII[2;37;0m","A clip of bullets [50]","Christmas lights","Glass Sword","Razor collar","A suit of [1mwhite[0m platemail","A suit of [1mwhite[0m chainmail","Dark Rider Gloves","A horse whip","A beautiful white pelt",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

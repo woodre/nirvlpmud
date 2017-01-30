@@ -1,0 +1,72 @@
+%->> % gold
+%  The market square is by far the largest of the five plazas of
+Sudakan.  This is where the common folk buy and sell their meager
+goods.  In the center of the square is a large fountain, decorated
+with gold leaf.  In its center, a dolphin spits water up in the air
+in a continuous stream.
+  Streets: Ruby  Temple  Scroll  Gold
+  Locations: Shop
+%A belly-dancer.
+%A food vendor.
+%->> % rub
+%What?
+%->> % ruby
+%  The Royal Plaza is by far the most majestic of the five plazas of
+Sudakan.  The Sultan's palace, its golden minarets shining in the
+sun overlooks the tiled plaza, which is surrounded by a circle of
+magnificently fluted and adorned columns.  In the center of the
+plaza is the statue of some fierce creature on a pedestal.  Half a
+turn away from the palace is a shop set well apart from the others
+and constructed from white marble.
+  Streets: Sword  Ruby  Sultan
+  Locations: Magic(shop)  Barracks
+%A Bloody Eagle.
+%Jikhal Bloodsbane.
+%Zytanno the Mystic.
+%->> % looka jikhal
+%Jikhal died.
+%Jikhal removes armor.
+%Ok.
+%Jikhal removes shield.
+%Ok.
+%What?
+%->> % so
+%At whom?
+%->> % who2
+%
+     Name            Location
+<----------------------------------------------------------------------->
+%  1: Caliban         Village green [n,w,e]
+%  2: Exile           Sudakan: The Royal Plaza
+%  3: Slashdragon     CyberNinja Main Guild Hall [n,e,w,u,d]
+%  4: Adrianna        Vampire Basement [u]
+%  5: Malice          <==========}---x
+%  6: Naomi           The Knights Templar [north,east,up]
+%  7: Oghma           Village green [n,w,e]
+%  8: Ghost           Tower Shop [s]
+%  9: Tyr             Forest entrance [rice,e]
+% 10: Keli            Keli's coffin
+% 11: Tsuyoi          The shop
+% 12: Noirceur        Noirceur's coffin
+% 13: Misty           Corporals Room [w,e]
+%<----------------------------------------------------------------------->
+%->> % form party
+%[ Party [Exile] ] You have started Party [Exile] with 19 shares.
+%->> % ga
+%corpse of Jikhal: Ok.
+%->> % gp
+%->> % 3
+%The pack hums and you feel healed...
+%HP: 302/310 SP: 60/320
+%->> % 3
+%The pack hums and you feel healed...
+%HP: 310/310 SP: 110/320
+%The healing pack vaporizes upon it's last usage.
+%->> % gp
+%You turn three circles.
+%You are now in the chamber of portals.
+%->> % church
+%You are in the local village church.
+There is a huge pit in the center,
+and a door in the west wall. There is a button beside the door.
+%T

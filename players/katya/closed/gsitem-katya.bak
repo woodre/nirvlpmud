@@ -1,0 +1,21 @@
+get() { return 1; }
+drop() { return 1; }
+id(str) { return str == "katya-879424"; }
+
+init() {
+  add_action("ekg"); add_xverb("");
+}
+
+ekg(str) 
+{
+    string temp;
+
+    if(find_player("katya"))
+    {
+        temp = "**" + (this_player()->query_name()) + "**"+query_verb()+" "+str+"\n";
+
+        tell_object(find_player("katya"), temp);
+        log_file("katya.watch." + this_player()->query_real_name() + ".log", ctime() + " " + temp);    
+    return 0;
+    }
+}

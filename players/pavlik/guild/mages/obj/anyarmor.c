@@ -1,0 +1,1 @@
+inherit "/players/pavlik/guild/mages/obj/anything_armor";

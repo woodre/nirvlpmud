@@ -1,0 +1,69 @@
+*******************************************************
+this are the old comments you did when you first looked
+*******************************************************
+Files in /open/maledicta:
+Total 23
+   4 ansi.h       4 firstarea               1 monster.c     1 room.c 
+   1 armor.c      3 frans_quest_area.txt    1 nhall/ 
+   1 examples/    3 heal.c                  4 review.txt 
+->> Guest ( player 1 ) has entered the game.
+more /open/maledicta/frans_quest_area.txt
+Ok, this is the first round of changes.  Get this done and then let
+me know when you are finished and I will go over it all one last
+time.
+
+front_library.c  -  The entrance and exits are not clearly shown.  
+                    I couldn't figure
+                    out on my own that 'go' and 'come' were the
+                    commands.
+
+back_library.c  - add item descriptions for mouse and screen. In the
+                  long():
+                  Known the book or the subject = Knowing the book or
+                  the subject
+                  also:
+                  is possible to wander around the shelves = 
+                  is possible to 'wander' around the shelves
+                  (There are several keywords to this area to make things
+                   work, and making them easier to know is good.  The quest
+                   shouldn't be hard because people don't know where to
+                   start or what to do, but instead because it is hard to
+More: (line 21) 
+                   answer the questions.)
+
+All Rooms -  Change Tag description: It might be useful to reading it = 
+             It might be useful to read it
+             Ok, the description says that there is a button that you
+             can 'push to lift', but the command is 'lift'. Then, when
+             I do the command lift, the function isn't there. Fix this.
+             When I need to answer the question, I don't know that I need
+             to 'whisper' it...instead i tried to say it. Make this more
+             clear.
+ "   Found the right direction to get to the geometry area of the\n"+
+ "library,  you are now in an aisle,  surrounded on both sides\n"+
+ "by metallic shelves,  holding several books.  A tag is suspended\n"+
+ "on the left shelf.\n", would look better as:
+ "   You enter the geometry area of the library.  This is an aisle\n"+
+ "that is surrounded on both sides by metallic shelves.  On these\n"+
+ "shelves are several books.  A tag is suspended on the left shelf.\n"
+
+
+production_systems.c: 
+More: (line 41) 
+             Read tag - change it to read: Not only does it analyze the 
+             single processes
+
+physics.c:
+             Read tag - Phisics = Physics
+
+fluid_dynamics.c:
+             Read tag - you have a double 'they'
+
+engines.c : 
+             Read tag - you have a double 'and' towards the end of it.
+
+
+
+
+More: (line 61) 
+EOF

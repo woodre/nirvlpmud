@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/saber/armor/mshades","/players/wren/Area/starbug/items/reddress","/players/snow/shadows/stuff/sgem","/obj/weapon","/players/mythos/awep/wakizashi","/players/pain/NEW/weap/mace","/obj/armor","/players/wren/Area/starbug/items/bat","/players/mythos/awep/daikyu","/players/wren/Area/starbug/items/hair","/obj/armor","/obj/weapon","/players/saber/armor/hardsuit1","/players/softly/nhall/obj/decant3","/players/wren/Area/starbug/items/currie","/obj/armor","/players/mythos/awep/arrow","/players/puppy/s/eq/ruler","/players/scathe/armor/rgarb","/players/pain/NEW/weap/mstar","/players/boltar/things/toy","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/wren/Area/starbug/items/groinal","/obj/treasure",})
+shorts ({"Mirrorshades","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","A dusky gem","Curved knife","Wakizashi","A large iron mace","A suit of [1mwhite[0m chainmail","a [1;30mballbat[2;37;0m","Daikyu","Perfect Hair","Ring of Death","some teeth","A purple Hardsuit <with pink legs!>","Decanter of Healing [[1m3[2;37;0m]","A tin of chicken currie","A pair of [1mwhite[0m boots","arrow","A wooden ruler","Monk's garb","Morningstar","A small wood top","Steel Shield","A Princess' Tiara","Kryten's groinal attachment","Arctic Wolf pelt",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,})
+loaded 0

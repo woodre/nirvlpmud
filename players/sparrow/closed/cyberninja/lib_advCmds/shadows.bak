@@ -1,0 +1,33 @@
+#include "../DEFS.h"
+#define LEVEL         8
+#define DRAIN_PEACE  40
+#define DRAIN_COMBAT 70
+
+status main(string str) {
+  /* command to hide in shadows */
+  object ob;
+  if(!gotrank(TP, LEVEL)) return 0;
+  if(present("_drivers_seat_", environment(TP))) {
+    write("You are already hiding in shadows.\n");
+    return 1; 
+  }
+  if((string)(environment(TP)->realm()) == "NT") {
+    write("You dare not enter the shadows here.\n");
+    return 1; 
+  }
+  if(TP->query_attack()) {
+    if(!gotsp(TP, DRAIN_COMBAT)) return 1;
+    this_player()->add_spell_point(-DRAIN_COMBAT);
+  } 
+  else {
+    if(!gotsp(TP, DRAIN_PEACE)) return 1;
+    TP->add_spell_point(-DRAIN_PEACE);
+  }
+  ob = clone_object(OBJDIR + "/hide.c");
+  move_object(ob, environment(TP));
+  if( !((int)TP->query_invis()) ) say(TPN + " disappears into the shadows.\n");
+  move_object(this_player(), ob);
+  write("You hide in shadows.\n");
+  write("For info, type 'look at shadows'.\n");
+  return 1;
+}

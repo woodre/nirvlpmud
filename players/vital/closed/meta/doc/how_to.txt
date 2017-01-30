@@ -1,0 +1,26 @@
+Welcome to mand [Manual Daemon] 0.1
+
+Welcome to the [1;33mMAND[2;37;0m help system. This is a prototype help file
+daemon to read in various help files from predefined directories.
+This system has been designed to bypass the original help system
+to enable more functions and execute a greater level of control
+over the way the information is presented.
+
+This is currently a work in progress and will be changing and
+developing over time as bugs are ironed out, features are
+evaluated and the whole system is enabled. If there are problems
+with the help files, let someone know immediately. Generally that
+someone should be Vital as he is responsible for this horrible
+morass of code that he is somehow trying to cram into the mold of
+a guild.
+
+The basic command is '[1;37mman[2;37;0m' which lets you access the files. It
+can access the existing help files as well as special files
+defined for this system. The system for reading files is portable
+and can be readily adapted for other developers. At some future
+date, there may even be a way to present feedback via this
+mechanism. If there are other features that you would like to see
+included in a help reader, feel free to let your feelings be made
+know.
+
+Thanks, [34mVital[2;37;0m

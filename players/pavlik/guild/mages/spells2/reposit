@@ -1,0 +1,61 @@
+reposit(str){
+  object obj, room;
+
+  if(tp->query_guild_rank() < 22){
+  write("What?\n"); return 1; }
+
+  if(!str){
+  write("Reposit what?\n");  return 1; }
+
+  obj = present(str, tp);
+  if(!obj) obj = present(str, env);
+
+  if(!obj){
+  write("There is no "+str+" here.\n"); return 1; }
+
+  if((obj->drop()) || (!obj->get())){
+  write("You cannot reposit the "+str+".\n"); return 1; }
+
+  write("You cast a simple "+HIC+"reposit"+NORM+" spell ...\n");
+  write("You remotely deposit the "+str+".\n");
+  say(ME+" utters a magical command and a "+str+" disappears.\n");
+  room = env;
+  move_object(tp, "players/pavlik/guild/mages/rooms/vault_room");
+  if(!present(obj, tp)) move_object(obj, tp);
+  command("deposit "+str, tp);
+  move_object(tp, room);
+  tp->recalc_carry();
+  tp->add_spell_point(-10);
+  return 1;
+}
+
+redraw(str){
+  object obj, room;
+
+  if(tp->query_guild_rank() < 22){
+  write("What?\n"); return 1; }
+
+  if(!str){
+  write("Redraw what?\n"); return 1; }
+
+  write("You cast a simple "+HIC+"redraw"+NORM+" spell ... \n");
+  room = env;
+  move_object(tp, "players/pavlik/guild/mages/rooms/vault_room");
+  command("withdraw "+str, tp);
+  move_object(tp, room);
+  tp->add_spell_point(-10);
+  return 1;
+}
+
+relist(str){
+  object room;
+ 
+  if(tp->query_guild_rank() < 22){
+  write("What?\n"); return 1; }
+
+  room = env;
+  move_object(tp, "players/pavlik/guild/mages/rooms/vault_room");
+  command("list "+str, tp);
+  move_object(tp, room);
+  return 1;
+}

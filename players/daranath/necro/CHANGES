@@ -1,0 +1,24 @@
+Moved all files from daranath's dir to this one so that I can ftp.
+Added new defines to def to make the guild more organized.
+Added Adena to the guild to test.
+Reflected those changes to the guildob
+Continued to add more defines.
+Added emote directores as well as admin pwoers directories
+initiated the change from dars guild object to mine.
+added the comp_pouch into the guild object (really silly to have two objects);
+added tod the grave_heal.c so as it now takes 3 skins to enter the grave decreased how often the full heal goes off
+and added an air variable that limits how long a player may stay in the grave.  if air runs out -30 hp per hb.
+removed the blood cost for chill and uped the sp cost to 12
+added in so that players can now wear very light armor > 2 for armor and >1 for everything else
+changed boneportal so that you can only cast it in graveyards.. it takes you to the ROD
+from there you can then enter other portals that are open.. they are only open for 100 callout
+cost is now 50 + 5blood + 1 spine
+rod is now where you can advance and join.. any players can enter the portal but those who are not
+necros and above level 5 get hit with 50 healself damage ever 10 callouts
+
+added in library with books.
+changed congrave to consecrate gravesite and make it so it actually takes sp.
+changed raise_dead to reanimate .. cost is 255 combined .. gives back (currently) 1/20 of exp
+
+ ~
+changed abandon to cost 3/4 wc *4 instead of wc*4

@@ -1,0 +1,25 @@
+
+[TETRAPOD] Level [5] 700 charges (++sta, --int, --mag, -str, +ste, -luck)
+
+
+  Tetrapods are capable of wielding up to four weapons at once, and
+  complete multilimbed combat. They are ignorant of magic, and
+  utterly incapable of casting combat spells.
+
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+strap <weapon>   Wield a second weapon offhand.
+
+strap all        Same as above but cycles through inventory and straps
+                 weapons on a first-come, first-serve basis.
+
+unstrap <weapon> Remove a weapon wielded offhand.
+
+
+blitz            (60 sps) Charge whatever you are fighting and hopefully land
+                 as many hard hits as possible in one combat round.
+
+raar <sp>        (variable, or automatic by default) Regenerate
+                 hp to sp on a 2sp : 1 hp heal ratio.
+

@@ -1,0 +1,20 @@
+r - road
+f - forest
+t - town
+p - path
+* - indicates special exit, search etc. in the room
+
+                                t7
+                                |
+                        r8*- t6,t5
+                   t3*- r7 - t4
+                        r6 - t2
+                   t1 - r5 - shop - store
+                        |
+            f19 - f20 - r4*- f21 - f22
+      f13 - f14 - f15 - r3*- f16 - f17 - f18
+f23 - f7* - f8  - f9  - r2*- f10 - f11 - f12
+      f6  - f5  - f4  - r1 - f1  - f2  - f3*
+                         |                 \
+                      entrance               p1 - p2*
+                

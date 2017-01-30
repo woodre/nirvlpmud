@@ -1,0 +1,107 @@
+string talk_name;
+int talk_num;
+int aid_name;
+
+
+query_guild_name(){ return "rangers"; }
+catch_tell(str){
+   string temp;
+   string what;
+   string who;
+   if(sscanf(str,"%sZordon says: %s is under attack%s", temp, what, who) == 3){
+      if(what == "The Command Center"){
+         aid_name = "The Command Center";
+         call_out("delay_aid", random(20));
+      }
+      else {
+         aid_name = lower_case(what);
+         call_out("delay_aid", random(20));
+      }
+   }
+   else if(sscanf(str,"%sPower Ranger%shello "+TO->query_name(), temp, what) == 2 || sscanf(str,"%sPower Ranger%shello "+TO->query_name()+"%s", temp, what, who) == 3)
+      {
+      talk_name = TP->query_name();
+      talk_num = 1;
+      call_out("delay_talk", 3);
+   }
+   else if(sscanf(str,"%sPower Ranger%sbye "+TO->query_name(), temp, what) == 2 || sscanf(str,"%sPower Ranger%sbye "+TO->query_name()+"%s", temp, what, who) == 3)
+      {
+      talk_name = TP->query_name();
+      talk_num = 2;
+      call_out("delay_talk", 3);
+   }
+   else {
+      return;
+   }
+}
+
+delay_aid(){
+   if(aid_name == "The Command Center"){
+      command("aid command center",TO);
+   }
+   else {
+      if(find_living("ranger_"+aid_name)){
+         if(find_living("ranger_"+aid_name) != TO){
+            command("rt I am on my way "+capitalize(aid_name)+". Hang in there.",TO);
+            if(!present("RangerCommunicator",TO)->QMorphed()){
+               MASTER->APowerPoints(3500,"Power Ranger");
+               command("morph",TO);
+            }
+            command("aid ranger_"+aid_name,TO);
+         }
+      }
+   }
+}
+delay_talk(){
+   if(talk_num == 1)
+      command("rt Hello "+talk_name,TO);
+   else if(talk_num == 2)
+      command("rt See you later "+talk_name,TO);
+   else
+      return;
+}
+
+static object cc_attack;
+
+attacked_by(ob){
+   if(!query_attack() || query_attack() != cc_attack){
+      CHANNEL->ChannelMessage("Power Ranger",WHITE+"["+RED+"Command Center"+OFF+WHITE+"]"+OFF+" Zordon says: "+NAME+" is under attack from "+ob->query_name()+".\n");
+      cc_attack = ob; 
+   }
+   ::attacked_by(ob);
+   
+}
+
+heart_beat(){
+   object attacker;
+   ::heart_beat();
+   if(!TO->query_attack()){
+      if(random(100) < 2){ random_move(); }
+   }
+   if(this_object()->query_attack()){
+      if((this_object()->query_attack())->query_level() < 21){
+         if(present("honor_ranger_communicator", this_object()->query_attack())){
+            attacker = this_object()->query_attack();
+            MASTER->RemoveRanger("Power Ranger",attacker);
+            destruct(present("honor_ranger_communicator", attacker));
+            tell_object(attacker, "Tommy tells you: How dare you!\n");
+            command("rt "+attacker->query_name()+" is no longer an Ally of the Power Rangers.\n",this_object());
+            attacker->hit_player(100);
+         }
+      }
+   }
+   if(hit_point < 850){
+      if(!present("RangerCommunicator",this_object())->QMorphed()){   
+         MASTER->APowerPoints(3500,"Power Ranger");
+         command("morph", this_object());
+         
+      }
+   }
+   if(hit_point < 750){
+      MASTER->APowerPoints(1400,"Power Ranger");
+      command("zord", this_object());
+   }
+   
+   
+   
+}

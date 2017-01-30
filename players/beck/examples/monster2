@@ -1,0 +1,20 @@
+inherit "obj/monster";
+
+reset(arg){
+   ::reset(arg);
+   if(arg) return;
+   set_name("thunder megazord");
+   set_race("ranger_megazord");
+   set_alias("megazord");
+   set_level(20);
+   set_hp(300);
+   set_al(-1000);
+   set_wc(22);
+   set_ac(13);
+   set_chat_chance(5);
+	load_chat("Ninja whispers: Only a Ninja can kill a Ninja.\n");
+	load_a_chat("Ninja says: You are not worthy of this battle.\n");
+    gold = clone_object("obj/money");
+   gold->set_money(random(2000)+300);
+   move_object(gold,this_object());
+}

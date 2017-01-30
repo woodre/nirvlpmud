@@ -1,0 +1,15 @@
+C Y B E R N I N J A
+
+Ability: plant_mine
+Usage  : plant_mine
+
+Effect : Places a landmine in your current room with a
+         short delay. After the delay time has elapsed,
+         the mine will attempt to explode on and damage
+         the first PK, non Cyberninja player who enters
+         the room.
+        
+         Only one landmine may be placed in each room at
+         a time.
+         
+Must be PK to use.

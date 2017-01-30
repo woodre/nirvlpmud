@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/jacket","/players/wren/Area/starbug/items/lunchbox","/players/arrina/heals/ade","/players/wren/Area/starbug/items/sparehead","/players/snow/shadows/stuff/ring","/players/snow/ITEMS/ice_shard","/players/jamila/beach/mobs/shell","/players/puppy/s/eq/parchment","/players/puppy/s/eq/brush","/players/maledicta/cont/weapons/rweapon","/players/hippo/weapons/glue","/players/mythos/closed/guild/forest/misc/prop","/players/puppy/s/eq/collar","/obj/armor","/players/saber/stuff/trink","/players/mythos/aarmor/sode","/players/wren/Area/starbug/items/levis","/players/wren/Area/starbug/items/veil","/players/saber/armor/lpants","/players/ultramagnus/breastplate","/players/mythos/marmor/shirt","/players/wren/Area/starbug/items/cottagecheese","/players/puppy/s/eq/block","/players/scathe/armor/egarb","/players/wren/Area/starbug/items/bouquet",})
+shorts ({"Lister's leather jacket","a lunch box","bottle of refreshing [33mlemonade[0m","Kryten's sparehead 3.","A dusky ring","An ice shard","A Large Shell","Parchment","A paint brush","a [37mSilver[2;37;0m Longsword","a strong, 1 second glue","Essence of Vraith- vine sap","A leather collar","A suit of [1mwhite[0m platemail","A strange metal trinket","Sode","stretched out Levi jeans.","a big wedding veil","Black leather pants","A Black Breastplate with Red Decore","Shirt","a small tub of cottage cheese.","A building block","Elder's garb","a colorful bouquet of 'flowers'",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

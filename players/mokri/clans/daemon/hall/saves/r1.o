@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/daemon/hall/main","east","/players/mokri/clans/daemon/hall/r2","west","/players/mokri/clans/daemon/hall/r11","north",})
+short_desc "Clan Hall - Locker Room Unit #1[0m"
+long_desc "STORAGE Unit #1[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[35mA mystical potion of full healing[2;37;0m","/players/wocket/turtleville/OBJ/heal_potion",0,0,0,"[1;34mLeonardo[2;37;0m'[1;34ms[2;37;0m katana","/players/wicket/ninja_turtles/weapons/lkatana",0,0,0,"[1;30mA [1;31mju[0m[31mju[1;30m trinket[0m","/players/forbin/realms/flame_forest/OBJ/juju",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,2758,6662,"Iron [1;30mDeath[0m Blade","/players/jareel/weapons/mondar_death_sword",0,0,0,})

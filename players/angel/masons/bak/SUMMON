@@ -1,0 +1,24 @@
+(=============================================================================)
+You may summon one of two things:  guardian or djinni
+
+Guardian:
+---------
+   Summon the guardian to keep other players from attacking monsters
+   you're working on.  It will prevent any player beside yourself from
+   using any spells or kill commands in the same room with the guardian.
+   And it will tell you who is trying to attack your monster.
+   You can release the guardian by typing 'dismiss guardian'.
+   You can have your guardian follow you by typing 'follow'
+   This costs:  50 sp + 500 coins
+
+Djinni:
+-------
+   Use the Djinni to transfer items from one player to another.
+   Typing 'transfer <object> to <player>' will move the <object> to the
+   <player> specified.  You must be carrying the object you wish to
+   transfer.
+   This costs:  50 sp + the value of the <object>/ 50 coins
+
+The Guardian Demon will leave after 20 minutes.
+To summon:  summon <guardian or djinni>
+(=============================================================================)

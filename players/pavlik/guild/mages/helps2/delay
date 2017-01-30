@@ -1,0 +1,9 @@
+-=[ Spell Delay ]=-
+
+Spells are often divided into 4 different casting types: protection,
+damage, healing, and alteration.  Sometimes there is a delay before
+you can cast a specific casting group again.  This delay is indicated
+on your Mage Score with the Next_<spell> flag.  You cannot cast another
+spell of the same casting type until the listed time expires.
+Spell types and delays are listed in the individual help files.
+

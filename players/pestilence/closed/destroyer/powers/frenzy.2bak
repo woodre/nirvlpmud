@@ -1,0 +1,82 @@
+frenzy(str) {
+   object victim;
+   string b1,b2;
+   int Dam1;
+   int ncost;
+   int dam2, dam3, heh, bleh, dam4;
+   int str_b;
+   int myob;
+   string *mess;
+   string *mess2;
+   string *mess3;
+   object user;
+   object wep;
+   str_b = USER->query_attrib("str");
+   dam2 = random(20);
+   dam3 = random(30);
+   dam4 = random(20);
+   user = environment(this_object());
+   wep = user->query_weapon();
+/*
+  myob = present("destroyer_ob", this_player());
+  if(myob->query_spell_delay()) {
+    write("You cannot cast a skill again so soon.\n"); return 1; }
+*/
+   if(TP->query_spell_dam()) return 1;
+if(this_player()->query_guild_rank() < 9){ write("You can't use this spell yet.\n"); return 1; }
+    if (!str && !USER->query_attack()){
+        write("You must be fighting to use this skill.\n");
+        return 1;
+    }
+    if (!USER->query_attack()){
+        write("You must be fighting to use this skill.\n");
+        return 1;
+    }
+    if(TP->query_guild_rank() >= 6){
+   Dam1 = (3*random(str_b)/2) + 14;
+   }
+   else{
+   Dam1 = random(24) + 10;
+   }   
+      if (str) victim = present(str, environment(TP));
+     else {
+      victim = TP->query_attack();
+      if(victim && !present(victim, environment(TP)))
+        victim = 0;
+     }
+   if(!str && !victim) return 0;
+   if(!victim) { write("That is not here.\n"); return 1; }
+
+   if (!living(victim)){
+      write("You cannot attack that!");
+      say(TP->query_name() + " foolishly tries to attack "+ str+"\n");
+      return 1;
+   }
+   if(!TP->query_weapon()){
+     write("You must be wielding a weapon to attack in this style!\n");
+     return 1;   
+     }
+   
+   mess = wep->query_message_hit(dam4 + 1);
+   mess2 = wep->query_message_hit(dam2);
+   mess3 = wep->query_message_hit(dam3);
+   if(TP->query_guild_rank() >= 6){
+   ncost = 55;
+   }
+   else{      
+   ncost = 24;
+   }
+
+   heh ="You take a deep breathe.\nYou begin to swing with an intense frenzy.\nYou "+mess[1]+" "+victim->query_name()+""+mess[0]+".\nYou "+mess2[1]+" "+victim->query_name()+""+mess2[0]+".\nYou "+mess3[1]+" "+victim->query_name()+""+mess3[0]+".\n";
+   bleh = TP->query_name()+" takes a deep breath.\n"+TP->query_name()+" begins to swing with an intense frenzy.\n"+TP->query_name()+" "+mess[1]+" "+victim->query_name()+""+mess[0]+".\n"+TP->query_name()+" "+mess[1]+" "+victim->query_name()+""+mess[0]+".\n"+TP->query_name()+" "+mess3[1]+" "+victim->query_name()+""+mess3[0]+".\n";
+
+/*
+  myob->set_spell_delay(15);
+*/
+say(bleh);
+TP->spell_object(victim, "frenzy", Dam1, ncost,
+heh,
+bleh,
+"");
+   return 1;
+}

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A Bob Long Intimidator Paint Ball Gun[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "gun"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "A Bob Long Intimidator Paint Ball Gun[0m"
+damage_type "physical"
+hall_path "/players/catwoman/hall2"
+object_name "gun"
+owner "grudge"
+spell_alias "Blur"
+spell_mess_me "BLURRRRR"
+spell_mess_room "BBLLLUUUUURRRRRRR"
+spell_mess_them "Didn't See That Coming Did You?"
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 0
+public_coffer 332000
+spell_delay 1
+spell_id 1
+spell_cost 25
+last_spell_time 1184781106

@@ -1,0 +1,8 @@
+09/30/03 22:54: Entreri     ((19+37 /Dervish)      22(2/1)
+10/ 7/03 23:45: Imp         ((11    /Warrior)      13(1/1)
+10/17/03 00:51: Grog        ((19+14 /Black circle) 20(2/1)
+10/30/03 16:41: Ribbit      ((19+18 /Neo symbiote) 19(3/1)
+11/ 4/03 04:11: Grog        ((19+12 /Black circle) 19(3/1)
+10/26/05 16:37: Vahiti      ((19+16 /Dervish)      19(3/1)
+10/30/05 21:33: Lloyd       ((19+3  /Shardak)      21(2/1)
+10/30/05 21:34: Artos       ((19+3  /Dark Order)   19(2/1)

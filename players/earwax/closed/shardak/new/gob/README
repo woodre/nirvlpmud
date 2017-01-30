@@ -1,0 +1,11 @@
+Guild Object
+
+loader.c     Autoloaded.  Clones/moves gob to player.
+
+gob.c:
+The guild object itself.  Mainly it's the raw object setup stuff.
+My intent is to keep it mainly as a variable bag, as guild objects should
+be.  The definitions for stats all use GStats[] btw, just for ease of 
+use, although the programmer in me kinda disagrees with the practice.
+
+other files will be inherited through it and commented later.

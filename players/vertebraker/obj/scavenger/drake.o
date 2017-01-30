@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/obj/treasure","/players/snow/shadows/stuff/ring","/players/pain/closed/wands/orb","/obj/armor","/players/puppy/s/eq/quill","/players/hawkeye/armor/fishing","/players/wren/Area/starbug/items/bazookoid","/players/scathe/armor/igarb","/players/mythos/aarmor/shell","/obj/weapon","/players/sado/shop/rose","/players/saber/armor/hardsuit1","/players/mythos/closed/guild/forest/misc/key_myrax","/players/saber/armor/lpants","/players/ultramagnus/bsack","/players/puppy/s/eq/crown","/obj/armor","/players/saber/weapons/hrev","/players/snow/heals/kw_meat","/players/scathe/armor/egarb","/players/wren/Area/starbug/items/leaflets","/players/emerson/weap/pencil","/players/mythos/aarmor/sune-ate","/obj/armor",})
+shorts ({"A suit of [1mwhite[0m chainmail","Arctic Seal pelt","A dusky ring","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","Steel Helmet","A quill","A Fishing Hat","Bazookoid [1;30mmkII[2;37;0m","Initiate's garb","Tortoise Shell","Golden hoof","A beautiful red rose blossom","A light blue Hardsuit","Ebon Key","Black leather pants","A blue sack","A golden crown","Boots","A Colt .68 Heavy Revolver","A hunk of whale meat","Elder's garb","a stack of leaflets","A Sharp Pencil","Sune-ate","Robot Head",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

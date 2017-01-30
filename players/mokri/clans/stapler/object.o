@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;31mSwingline Stapler[0m"
+long_desc "This is Milton's prized possession from the movie OfficeSpace.Type 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "stapler"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is Milton's prized possession from the movie OfficeSpace.Type 'clan_help' for commands."
+clan_short "[1;31mSwingline Stapler[0m"
+damage_type "water"
+hall_path "/room/church"
+object_name "stapler"
+owner "fred"
+spell_alias "staple"
+spell_mess_me "You shoot %hi red%staples%normal% at %AKN%!"
+spell_mess_room "%TPN% shoots %hi red%staples%normal% at %AKN%!"
+spell_mess_them "%TPN% shoots %hi red%staples%normal% at you!"
+abilities ({})
+chan_history ({"[Mon Jun  4 14:12:17 2007] Fred: I'm gonna be a dick and put the locker room after the leadership room so only leaders can use it.","[Mon Jun  4 14:12:25 2007] Mokri: heh, nod","[Mon Jun  4 14:12:57 2007] Fred: or an owner room.  Build my funds so I can have a personal locker room!!","[Mon Jun  4 14:12:57 2007] Mokri: thats great","[Mon Jun  4 14:13:05 2007] Mokri: nod! heh","[Mon Jun  4 14:14:14 2007] Fred: but nod mobs would be fun to mess around with.","[Mon Jun  4 14:14:30 2007] Fred: or even description objects.","[Mon Jun  4 14:14:40 2007] Mokri: then armors/weapons to put on those mobs","[Mon Jun  4 14:15:00 2007] Mokri: -h","[Mon Jun  4 14:15:22 2007] Mokri: wouldnt be hard to add. heh.","[Mon Jun  4 14:15:22 2007] Fred: heh wow...now that's a time stamp.","[Mon Jun  4 14:15:32 2007] Mokri: on the history? ;)","[Mon Jun  4 14:15:36 2007] Fred: nod","[Mon Jun  4 14:15:40 2007] Fred nod","[Mon Jun  4 14:15:59 2007] Mokri snickers.","[Mon Jun  4 14:16:13 2007] Fred: could incorporate the channel emotes like most of the regular channels.","[Mon Jun  4 14:16:23 2007] Mokri: nod. verte said hed do that, but later. heh.","[Mon Jun  4 14:21:19 2007] Mokri: switching back to my clan. wont be able to hear this anymore","[Fri Jun 22 13:20:07 2007] Fred has written a note to the clan board.","[Tue Jul 10 18:57:41 2007] Fred: angelic demonic",})
+leaders ({"mokri",})
+join_type 2
+private_coffer 160000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 70
+last_spell_time 1192478505

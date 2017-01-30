@@ -1,0 +1,251 @@
+                        evil dead area outline
+______________________________________________________________________________
+
+                              I.  Theme
+                             II.  Monsters
+                            III.  Objects
+                             IV.  Rooms
+                              V.  Map
+______________________________________________________________________________ 
+
+I.  THEME -
+
+     My area is based after the great Sam Raimi gore classic "The Evil Dead" (1982?)
+which starred Bruce Campbell as Ash Williams, a Michigan State college student, who,
+with his sister Cheryl, his girlfriend Linda, his best friend Scotty, and Scotty's
+girlfriend Sheila, stays at a remote cabin in the woods.  They soon discover that
+the cabin is housing the Book of the Dead (here called Nonteron Demonto, in other
+films it's known as Necronomicon ex Mortus) - which is a gateway between the demons
+who wander the earth and the humans who live on it.  Accidental recitation of the
+'demon resurrection' passage gives the demons the license to possess the living.
+Anyhoo, like any good possession flick, what basically occurs is: Ash is the only
+one left and after buckets of blood and gore, he gets possessed at the end (or so
+you think).
+
+     In my area, I've tried to recreate the cabin itself, and used my own ingenuity
+to make the cabin more interesting.  Some things from the movie (the EVIL FORCE being
+hurled at the cabin) couldn't have been duplicated (or at least it would have taken
+an extremely long time for me to code them), but i've tried to duplicate as much
+as possible.  Basically you wander around the cabin and the few rooms underneath
+and outside finding a way out - The idea behind it is they must find Linda's pendant
+and simply give it to Ash and he will allow a way out.  
+
+     This is no real hard task, providing a way out for those who are a bit smaller.  
+But, for those craving experience and coins, there are a few items hidden along the way, 
+and of course, possessed humans to kill.
+                           
+
+     I hope you find my area interesting and satisfying.        - Vertebraker
+                                                                 kbilly@supernet.com
+
+______________________________________________________________________________ 
+
+
+II.  MONSTERS - /players/vertebraker/ed/ed/mob/
+
+                                 chart      [ ! means random ]
+                                            [ * means turns after combat starts ]
+
++-----------------+--------+------------+--------+------+----------------+
+|     Name        |   HP   |   Level    |   WC   |  AC  |  Items         |
++-----------------+--------+------------+--------+-----------------------+
+|   Ash           |  400+  |     19     |  24+   | 10 + |  Chainsaw      |
+|    (ash.c)      | !(151) |            |  !(5)  | !(13)|                |
++-----------------+--------+------------+--------+------+----------------+
+|   Linda*        |  375+  |     16     |  20+   | 10 + |  Pendant       |
+|    (linda.c)    | !(50)  |            |  !(5)  | !(7) |                |
++-----------------+--------+------------+--------+------+----------------+
+|   Cheryl*       |  375+  |     16     |  20+   | 10 + |                |
+|    (cheryl.c)   | !(50)  |            |  !(5)  | !(7) |                |
++-----------------+--------+------------+--------+------+----------------+
+|   Shelly*       |  375+  |     16     |  20+   | 10 + |                | 
+|    (shelly.c)   | !(50)  |            |  !(5)  | !(7) |                |
++-----------------+--------+------------+--------+------+----------------+
+|   Scotty*       |  375+  |     16     |  20+   | 10 + |  Log           |
+|    (scotty.c)   | !(50)  |            |  !(5)  | !(7) |                |
++-----------------+--------+------------+--------+------+----------------+ 
+|   EviL ScoTTy   |  375+  |     16     |  20+   | 10 + |                |
+| (evil_scotty.c) | !(50)  |            |  !(5)  | !(7) |                |
++-----------------+--------+------------+--------+------+----------------+ 
+|   EviL LiNDa    |  375+  |     16     |  20+   | 10 + |                |
+| (evil_linda.c)  | !(50)  |            |  !(5)  | !(7) |                |
++-----------------+--------+------------+--------+------+----------------+ 
+|   EviL SHeLLy   |  375+  |     16     |  20+   | 10 + |                |
+| (evil_shelly.c) | !(50)  |            |  !(5)  | !(7) |                |
++-----------------+--------+------------+--------+------+----------------+ 
+|   EviL CHeRyL   |  375+  |     16     |  20+   | 10 + |                |
+| (evil_cheryl.c) | !(50)  |            |  !(5)  | !(7) |                |
++-----------------+--------+------------+--------+------+----------------+ 
+
+
+     Basically as monsters go, I wanted the the kids (except Ash) to go after combat
+started, just so they'd change right away and I wouldnt have to play with monster_died()
+to make them resurrect themselves as evil versions (i can see that bugging out 
+right now).  Anyway I also couldnt figure out a way to put treasure on the actual
+monsters so, instead - I spread an inordinately smaller amount of treasure in the
+rooms (SEE PART IV).  The way I have done it, I think works the best.  It doesn't make
+sense for zombies to be carrying money around ;)
+
+     The evil versions (evil_*.c) all use the weapon mark_of_the_beast, which i setup
+because i didn't know if there was a thing set in /obj/monster that would allow
+for set_message_hit - and it works fine, because when the monster dies, it calls for
+the destruction of the mark, so players cant get it ;)
+
+     And, that concludes my dissertation on monsters.
+
+______________________________________________________________________________
+
+III.  OBJECTS - /players/vertebraker/ed/ed/obj/
+
+- Chainsaw (chainsaw.c)
+
+When I originally created the chainsaw, I thought to myself, "How can I make a chainsaw,
+    and make it realistic enough?"  So I made the chainsaw run on fuel.  It starts out
+    with some fuel and after the fuel is gone, its wc stays the same, but the return
+    of its special is nothing (fairly high return on it too :) )
+    wc of the chainsaw = 15;
+    return while gassed = 5;
+    return while non-gassed = nothing;
+  Also the wep is non-storable - no real reason for this, but *shrug*
+*Found on Ash
+
+- Gas can (gas_can.c)
+
+This is of course, the fuel for the chainsaw :)  everytime you refuel your chainsaw
+    it loses 20 units of fuel.  Eventually its useless.  Value is determined
+    by the equation (500 + (fuel*5))
+*Found in the shed
+
+- Hatchet (hatchet.c)
+
+This is a durable enough weapon to be decent for a player, and, its free!  So the wc
+    is only 14, and its storable.  Value is 1250.  Has some nice msg hits.  Nothing
+    much to see here.  Basically added it for some treasure in the area :)
+*Found in the shed
+
+
+- Linda's Pendant (linda_pendant.c)
+
+AC 2 - an amulet that you can wear.  However, if you want to leave, you have to give it back
+    to Ash regardless.   *added he gives it back now, player can keep it*
+*Found on Linda
+
+- Mark of the Beast (mark_of_the_beast.c)
+
+WC doesn't really matter here - its just an object for the evil_* ones to have cool
+    msg hits.  They get destructed w/ the monster's death.
+*Found on Evil monsters
+
+- Receipt (receipt.c)
+
+No real point to this object, just a neat thing to find.  Lists a few objects
+*Found in the shed
+
+- Rift (rift.c)
+
+This is the portal that is cloned to the room when you play the last section of the
+    tape recorder- in my main castle room (undecided what this is yet).
+*Found in castle
+
+- Scotty's Log (scotty_log.c)
+
+This is a weapon Scotty uses when you initially fight him.  He drops it when he changes
+    into evil scotty, however.  Simple weapon.  ac of 14, fairly heavy.
+*Found on Scotty
+
+- Shed cord (shed_cord.c)
+
+This is an item I added to make the shed more interesting. :)
+    No real purpose, has a value of 1
+*Found in the shed
+
+- Skull scepter (skull_scepter.c)
+
+Another thematic item found in the movie that I added here for treasure value
+   it's worth 850 coins :)
+*Found in the basement
+
+- Tape player (tape_player.c)
+
+The object that clones the rift to the castle - all you gotta do is press play
+   and wait out the call_outs.  You can stop it at any time if you don't wish
+   to hear the rest.  (And it will restart at the place you stopped it :) )
+*Found in castle
+
+______________________________________________________________________________
+
+IV.  ROOMS - /players/vertebraker/ed/ed/room/
+
+  First off, all my rooms utilize the cmd search, but it does nothing here.  It's
+simply a red herring and allows for greater playability.  Second, all the rooms
+are non-portal EXCEPT portal.c (duh) and they all use set_slime() which is a function
+called when the evil ones died - adds slime to the room or whatnot :)
+i put it in all rooms cus i wasn't sure which mobs I was gonna add where until I finally
+created the rooms.
+
+b* rooms = basement
+c* rooms = cabin
+o* rooms = outside
+
+b1 - This is the main fruit cellar room.  Connects to the trapdoor leading to c4
+     Nothing much here, just atmosphere
+
+b2 - Another room dealing with the basement of the cabin.  Connects to b1 and b2
+
+b3 - This room is where you start in after entering the rift from my castle.  A note
+     here tells the player whats up.  Also sly players can find the skull scepter
+     here.
+
+c1 - The master bedroom of the house.  Adds more atmosphere, completes the cabin.
+
+c2 - The back end of the cabin.  Adds more atmosphere, completes the cabin.
+
+c3 - This is where Linda is- the sitting room.  Again, adds more atmosphere in the
+     items, stays true to the movie. :)
+
+c4 - This is where you would have to undo the trapdoor again if you wanted to go
+     back to the basement.  You could say, "hey, why would i undo the trapdoor"???
+     well, I purposely threw that in there to give the feeling of creepiness.
+
+c5 - This is where Scotty is, in the kitchen.
+
+c6 - The guest bedroom
+
+c7 - Cheryl's room / patio
+
+c8 - entrance/exit to the cabin
+
+c9 - bathroom - Shelly is here
+
+o1 - room just outside cabin.  forest prevents exit in any direction.
+
+o2 - room outside shed.  forest again prevents exit in any direction except the ones
+     specified
+
+shed - Here you find the receipt, the hatchet, the gas can, and the shed cord.
+       I made it sos they cant be cloned more than once per reset, preventing
+       cheating.  You get the idear. :)  Ash is also here.  If you wanna leave,
+       this connects you to the portal room
+
+portal - This is the room where the book is.  All you gotta do is follow ash's
+         instructions (open the book) and you get moved to the church.
+
+______________________________________________________________________________
+
+V.  MAP -
+
+
+[c1] - [c2] -  [#c3]                  basement
+  |     |       |                    
+[c4*] -[#c5] - [c6] [@portal]           [$b3]
+  |     |       |      |                  \
+[#c7] - [c8] - [#c9]  [^shed]             [b2]
+        |              |                   /
+       [o1]----------[o2]              [b1*]
+
+* = trapdoor/stairs
+# = monster
+^ = ash
+@ = Portal
+$ = start
+- = direction

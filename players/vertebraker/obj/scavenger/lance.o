@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/pain/closed/wands/orb","/players/mythos/awep/backbite","/players/angel/area/stargate/obj/P90","/players/saber/armor/hardsuit1","/players/maledicta/cont/weapons/rweapon","/players/mythos/aarmor/sune-ate","/players/mythos/closed/guild/forest/misc/key_myrax","/players/snow/shadows/stuff/nightshade","/obj/torch","/obj/armor","/obj/armor","/players/wren/Area/starbug/items/cowboyhat","/players/saber/weapons/lgun","/players/sado/shop/rose","/players/pain/NEW/arm/bplate","/players/ultramagnus/darkweapon","/obj/weapon","/players/mythos/amisc/mirror","/players/scathe/armor/egarb","/players/maledicta/cont/weapons/rweapon","/players/snow/WEAPONS/tsunami","/obj/weapon","/obj/armor","/players/mistress/other/disk","/players/hippo/armour/boots",})
+shorts ({"An Onyx Orb [[31m0[0m] ([34mreadied[0m)","[31mBackbiter[0m","Machine gun","A light blue Hardsuit","a [37mSilver[2;37;0m Longsword","Sune-ate","Ebon Key","[1mNightShade[0m, the Broadsword of Death","sunflower","A magical [1mwhite[0m amulet","A cartoon character's shoes","a tiny cowboy hat","A lazer gun","A beautiful red rose blossom","A battered Breastplate","Dark Rider Spear","a knarled staff","A small mirror","Elder's garb","a Dagger","[34mTsunami[0m","A Deadly Bullwhip","A shoddy [1mwhite[0m cloak","A fragile disk","anti-blood boots",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,10 @@
+SYNOPSIS
+	string typeof( mixed item)
+
+DESCRIPTION
+	Return a string identifying the type of 'item'.
+	Returns "object", "int", "string", or "vector" (for arrays).
+	"" for unknown type.	
+	
+SEE ALSO
+	pointerp(E), mapp(E), intp(E), objectp(E)

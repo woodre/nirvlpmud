@@ -1,0 +1,26 @@
+		-=[ Record ]=-
+
+Usage: record <who> <crime-type> <details of situation>
+Cost:  0
+Piety: 0
+
+   Use this command to record a criminal and place
+them on the crime list.  This is not to be used for
+for personal vendetta's, only REAL crimes. And be sure
+that the crime you set them for is the crime they
+deserve.
+
+*crime-type must be an integer:
+1  Pet/Kid Killer
+2  Thief
+3  Attacking Ally/Knight
+4  Muderering Ally/Knight
+5  Repeat Offender
+6  Sworn Enemy
+
+Examples: 
+record badplayer 1 Badplayer killed my squire
+record badplayer 2 Badplayer stole the coins from my kill.
+record badplayer 3 Badplayer attacked me when I was in Fallen Lands.
+record badplayer 4 Badplayer killed newbie for no reason.
+

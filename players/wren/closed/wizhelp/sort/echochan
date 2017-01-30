@@ -1,0 +1,24 @@
+*************
+
+                     Echochan
+
+Syntax:    echochan <chan> <msg>
+
+Desc:
+           This echo is sent on the specified channel to all players 
+           that are recieving that channel and is saved on that 
+           line's history. Will return how many players saw the msg
+           after sending it.
+
+Warning:   Similar to echoall it can be annoying if overused. Be
+           thoughtful of other users.
+
+Example:   echochan gossip Everyone laughs at Bob's silly hat.
+                  displays
+           "Everyone laughs at Bob's silly hat."
+                  across gossip and tells you how many players saw it
+
+Related:   echo,echoto,echoall
+
+*************
+

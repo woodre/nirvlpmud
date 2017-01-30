@@ -1,0 +1,7 @@
+CURE
+
+usage: cure <num>
+
+Transfers spell/shadow points ( whichever you have your toggle set to ) to 
+hit points.  The ratio is half- in other words, typing cure 20 cures you 10
+hit points, but costs you 20.

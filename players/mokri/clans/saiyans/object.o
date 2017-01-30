@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "Saiyan Tail[0m"
+long_desc "[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "saiyan tail"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[0mType 'clan_help' for commands."
+clan_short "Saiyan Tail[0m"
+damage_type "laser"
+hall_path "/room/forest6"
+object_name "saiyan tail"
+owner "gogeta"
+spell_alias "Kamehameha"
+spell_mess_me "You cup your hands to your side and focus all your energy into your hands as you focus you knotice a ball if light forming u begain to yell..KA...ME..HA...ME...and with the last about of focus you raise ur cuped hands at ur enemy and yell.... HA!..and a beam of laser fires hitting your enemy."
+spell_mess_room "You watch as a member of the Saiyan clan begains to cup his hands to his side, in a amazment you see a ball of light form in there hands, they begain to yell...KA...ME...HA..ME...and with that the ball of light grew in there hands they put there capped hands with the ball of light out in frunt of the enemy and shout....HA!.... and with that the ball of light fires at the enemy in a blue laser beam hitting there mark"
+spell_mess_them "Your opponet takes a weird stance and cups his hands to his side they begain to form a ball of light in there hands you feel the termendis amount of power they are forming they then begain to yell....KA...ME...HA...ME...they put there cuped hands up at you you knotice the ball of light is now bigger and you begain to panic and then you hear them yell...HA!.. as they release the blue light in a amazing laser beam and send it fly at you hitting you with so much power  and force"
+abilities ({})
+chan_history ({"[Wed Jan 15 00:49:28 2014] Gogeta: AC is alot","[Wed Jan 15 00:49:52 2014] Blind: good stuff, an light too","[Wed Jan 15 00:49:58 2014] Gogeta: come here and hit this bitch","[Wed Jan 15 00:50:16 2014] Blind: hold on lemme go git my swords","[Wed Jan 15 00:50:38 2014] Gogeta: u got a fatal right?","[Wed Jan 15 00:50:52 2014] Blind: nope, titan does","[Wed Jan 15 00:51:06 2014] Gogeta: dead!","[Wed Jan 15 00:51:54 2014] Blind: brb","[Wed Jan 15 00:54:18 2014] Gogeta: whatcha doing?","[Wed Jan 15 00:55:12 2014] Gogeta: i need to find armors with better specials and high AC","[Wed Jan 15 00:57:24 2014] Gogeta: want some coins?","[Wed Jan 15 00:57:28 2014] Gogeta: i'll max you?","[Wed Mar 18 16:17:14 2015] Jj has joined the clan!","[Fri Apr  3 16:31:47 2015] Jj: punk","[Fri Apr  3 16:32:05 2015] Jj: lol","[Fri Apr  3 16:32:27 2015] Gogeta: foo","[Thu Sep 17 20:38:56 2015] Gogeta: sup","[Thu Sep 17 23:18:15 2015] Epponini has joined the clan!","[Thu Sep 17 23:18:33 2015] Gogeta: hehe","[Thu Sep 17 23:19:29 2015] Epponini: hi",})
+leaders ({"kyrain","blind",})
+join_type 1
+private_coffer 350000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1482547621

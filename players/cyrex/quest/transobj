@@ -1,0 +1,102 @@
+inherit "obj/armor";
+object polisher;
+
+init() {
+   ::init();
+   
+   add_action("polish", "polish");
+   add_action("amulokt", "amulokt");
+}
+
+polish(arg) {
+   if(arg == "amulokt") {
+      polisher=this_player();
+      amulokt();
+      return 1;
+   }
+   else {
+      return 0;
+   }
+}
+amulokt(arg) {
+   object here;
+   string herestr;
+   here=environment(polisher);
+   herestr=here->realm();
+   if(herestr=="NT"){
+      write("Nothing seems to happen in this area.\n");
+      return 1;
+   }
+   move_object(this_player(), "/players/lancer/quest/hiventrance");
+   write("You are pulled by an unknown force into the Amulokt.\n");
+   write("You find yourself inside the Hive!\n\n");
+   command("look",this_player());
+   command("cringe",this_player());
+   return 1;
+:
+}                                                                              
+amulokt(arg) {
+   object here;
+   string herestr;
+   here=environment(polisher);
+   herestr=here->realm();
+   if(herestr=="NT"){
+      write("Nothing seems to happen in this area.\n");
+      return 1;
+   }
+   move_object(this_player(), "/players/lancer/quest/hiventrance");
+   write("You are pulled by an unknown force into the Amulokt.\n");
+   write("You find yourself inside the Hive!\n\n");
+   command("look",this_player());
+   command("cringe",this_player());
+   return 1;
+:
+}                                                                              .
+amulokt(arg) {
+   object here;
+   string herestr;
+   here=environment(polisher);
+   herestr=here->realm();
+   if(herestr=="NT"){
+      write("Nothing seems to happen in this area.\n");
+      return 1;
+   }
+   move_object(this_player(), "/players/lancer/quest/hiventrance");
+   write("You are pulled by an unknown force into the Amulokt.\n");
+   write("You find yourself inside the Hive!\n\n");
+   command("look",this_player());
+   command("cringe",this_player());
+   return 1;
+:
+}                                                                              .
+21
+amulokt(arg) {
+   object here;
+   string herestr;
+   here=environment(polisher);
+   herestr=here->realm();
+   if(herestr=="NT"){
+      write("Nothing seems to happen in this area.\n");
+      return 1;
+   }
+   move_object(this_player(), "/players/lancer/quest/hiventrance");
+   write("You are pulled by an unknown force into the Amulokt.\n");
+   write("You find yourself inside the Hive!\n\n");
+   command("look",this_player());
+   command("cringe",this_player());
+   return 1;
+}
+
+reset(arg) {
+   set_short("Amulokt of Protoculture");
+   set_long("Amulokt of Protoculture...\n"+
+      "It looks like it has an image of a hive in the center.\n"+
+      "However, it may need some polishing to be certain.\n");
+   set_weight(0);
+   set_save_flag(0);
+   set_value(2000);
+   set_ac(2);
+   set_type("amulet");
+}
+id(str) {return (str == "amulokt");}
+

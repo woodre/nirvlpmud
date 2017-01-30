@@ -1,0 +1,44 @@
+WAH_FILE (May 16, 1995) Weapons/armor/heals file
+ 
+WEAPONS                  FILE                        WC(RETURN)
+rifle      /players/heroin/closed/quests/rifle       15 1 75%   *
+bikini     /players/heroin/hunting_grounds/bikini    15 1 75%
+can        /players/heroin/hunting_grounds/can       16 1 75%
+compound   /players/heroin/hunting_grounds/compound  17 1 75%
+keys       /players/heroin/hunting_grounds/keys      17 1 75%
+killjk     /players/heroin/hunting_grounds/killjk    18 1 80%
+machnguns  /players/heroin/hunting_grounds/mchnguns  17 1 75%
+razor      /players/heroin/hunting_grounds/razor     18 2 75%
+ropechain  /players/heroin/hunting_grounds/ropecha   15 1 75%
+venom      /players/heroin/hunting_grounds/venom     17 1 90%
+predclaws  /players/heroin/hunting_grounds/preds/predclaws  (VARIABLE)
+          (WC 18 (nonstorable) 12 7.5%; 8 20%; 5 25%; 2 37.5%)
+my weapon  /players/heroin/closed/heroins            1000 10000 50%*
+ 
+ARMORS                                                AC TYPE
+biobooster /players/heroin/closed/guild/arm_1         3 (variable) *
+boots      /players/heroin/closed/quests/boots        1 boots
+genarmor   /players/heroin/closed/genarmor            NA           *
+rod_jack   /players/heroin/hunt_newbies/rod_jack      1 shield
+bioarmor /players/heroin/hunting_grounds/preds/bioarmor 4 armor
+bioskull /players/heroin/hunting_grounds/preds/bioskull 2 helmet
+bishield /players/heroin/hunting_grounds/preds/bishield 1 shield
+biocloak /players/heroin/hunting_grounds/preds/biocloak 1 misc
+scales     /players/heroin/hunting_grounds/scales     4 armor
+undies     /players/heroin/hunting_grounds/undies     1 armor
+ 
+HEALS                                                AMT INTOX #SE
+testheal  /players/heroin/closed/testheal            1000 NA   NA  *
+apple     /players/heroin/hunt_newbies/apple         20        1
+cookies   /players/heroin/hunt_newbies/cookies       20        1
+salmon    /players/heroin/hunt_newbies/salmon        20        1
+clippings /players/heroin/hunting_grounds/clippings  20        1
+hotdog    /players/heroin/hunting_grounds/hotdog     20        1
+bioheal /players/heroin/hunting_grounds/preds/booster 25       1   *
+ 
+Items with * are not accessable by players
+ 
+DIRS:
+Hunting_grounds (including Pred offshoot)    approved by Sandman/Unsane
+Hunt_newbies                                 approved by Saber
+        

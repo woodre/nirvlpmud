@@ -1,0 +1,7 @@
+  This area is supposed to simulate a floating chess board.  The unique part
+about it is that if a player attacks a piece of a given color, all the other
+pieces of that color become aggro to him for the remainder of the reboot
+period.  The monsters are pretty straight-forward with the three largest (King,
+Queen, Bishop having good but unstorable armor.
+
+  A special thanks to Maledicta for helping me set up the aggro system.

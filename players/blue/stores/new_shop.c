@@ -1,0 +1,113 @@
+inherit"room/room";
+
+reset(arg) {
+   object elvis;
+  
+   if(!arg) {
+
+   set_light(1);
+   short_desc = "Elvis' Everything Empourium";
+   long_desc = 
+   
+"WELCOME to ELVIS' DISCOUNT EMPOURIUM!!! (where you always save more money)."+
+"You are in a strange shop, where everthing either glitters, is overweight, "+
+"\nor both.  A strange man claiming to be elvis is standing behind the coun"+
+"ter.\n";
+   dest_dir = ({
+      "players/blue/stores/storefront","southwest"
+   });
+
+   if(!present("elvis", this_object())) {
+      elvis = clone_object("players/blue/stores/cant_kill");
+      elvis->set_name("elvis");
+      elvis->set_short("Elvis, the Old King");
+      elvis->set_long("Elvis looks old and haggard, but happy.  From all the"+
+" glories of his\nonce beautiful castle, all that wasn't stolen from"+
+         " him was this strange shop,\n");
+   move_object(elvis, this_object());
+   }
+   }
+}
+
+init() {
+   add_action("value","value");
+   add_action("buy","buy");
+   add_action("east","east");
+   add_action("list","list");
+
+}
+
+   /*
+extra_reset() {
+   object elvis;
+   if(!present("elvis", this_object())) {
+      elvis = clone_object("players.blue/stores/cant_kill");
+      elvis->set_name("elvis");
+      elvis->set_short("Elvis, the Old King");
+      elvis->set_long("Elvis looks old and haggard, but happy.  From all the"+
+         " glories of his\nonce beautiful castle, all that wasn't stolen from"+
+         " him was this strange shop,\n");
+      }
+   }
+   */
+value(item) {
+    int value;
+    string name_of_item;
+
+    if (!item)
+	return 0;
+    name_of_item = present(item);
+    if (!name_of_item)
+      name_of_item = find_item_in_player(item);
+    if (!name_of_item) {
+	if (call_other("room/store", "value", item))
+	    return 1;
+	write("No such item ("); write(item); write(") here\n");
+	write("or in the store.\n");
+	return 1;
+    }
+    value = call_other(name_of_item, "query_value", 0);
+    if (!value) {
+	write(item); write(" has no value.\n");
+	return 1;
+    }
+    write("You would get "); write(value); write(" gold coins.\n");
+    return 1;
+}
+
+buy(item) {
+    if (!item)
+	return 0;
+   call_other("players/blue/stores/nov_store","buy",item);
+    return 1;
+}
+
+east() {
+    if (call_other(this_player(), "query_level", 0) < 25) {
+	write("A strong magic force stops you.\n");
+	say(call_other(this_player(), "query_name", 0) +
+	    " tries to go through the field, but fails.\n");
+	return 1;
+    }
+    write("You wriggle through the force field...\n");
+call_other(this_player(), "move_player", "east#players/blue/stores/nov_store");
+    return 1;
+}
+
+list(obj) {
+   call_other("players/blue/stores/nov_store", "inventory",obj);
+    return 1;
+}
+
+find_item_in_player(i)
+{
+    object ob;
+
+    ob = first_inventory(this_player());
+    while(ob) {
+        if (call_other(ob, "id", i))
+	    return ob;
+	ob = next_inventory(ob);
+    }
+    return 0;
+}

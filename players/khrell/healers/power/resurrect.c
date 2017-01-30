@@ -1,0 +1,1 @@
+resurrect(str) { if(resurrect_var[0] > lev) return 0; call_other(POWER,"resurrect",lev,pow,str); return 1; }

@@ -1,0 +1,20 @@
+*******************************************************************
+
+Name:    at (Do a command at a player without moving)
+
+Desc:    This command allows you to do an action in environment of 
+         player as though you were there
+    
+
+Level:   50   
+
+Warning: 
+
+Syntax:  at <player> <cmd>
+
+Example: at fred punt fred 
+Result:  You punt Fred 43 yards. Damn, you booted Fred's ass!
+
+Related: 
+
+*******************************************************************

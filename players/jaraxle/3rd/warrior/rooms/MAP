@@ -1,0 +1,22 @@
+                 
+                  [ T ]<-H
+                    :
+                  [ T ]
+                    :
+  H               [ T ]
+  ^                /  <- This area is treetop only
+[R&T] - [R&T] - [R&T]    there are no rooms under
+  |       |       |      this area
+[R&T] - [R&T] - [R&T]
+  |       |       |
+[R&T] - [R&T] - [R&T]<-H
+         /\
+         || 
+ This is first room
+
+Key:
+T = Tree top room
+R = Standard room
+: = Climb up direction
+H = Hut in tree top
+

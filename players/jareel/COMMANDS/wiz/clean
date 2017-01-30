@@ -1,0 +1,25 @@
+*******************************************************************
+
+Name:    Clean 
+
+Desc:    This command removes all objects in immediate environment
+         with exception of players.
+   
+Level:   21   
+
+Warning: Will wipe boards, pets, kids 
+
+Syntax:  clean 
+
+Example: clean  
+Result:  Will remove all stuff in the room and show the path of
+         everything removed.
+
+Sweeping players/jareel/areas/chaos/forest3...
+players/jareel/monsters/chaos/broo#1223 A Broo.
+players/jareel/monsters/chaos/broo#1222 A Broo.
+Done.
+
+Related: dest
+
+*******************************************************************

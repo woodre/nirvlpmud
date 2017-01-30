@@ -1,0 +1,105 @@
+Files you will need:
+
+First of all, all Warrior classes go into Closed Dirs.
+/players/Yourname/closed/w/
+
+The sub-directories under the main will be:
+/OBJ
+/obj  
+/power - In this directory you will place all files that 
+         can be used as powers.
+/doc   - make a subdirectory in this directory that has the
+         same name as your guild.
+
+As well as any others you might need: mobs, rooms, items, etc.
+
+in the /obj directory you will most likely need the following
+files:
+
+heart_beat.c  -  Use this file to place any code that requires the use
+                 of the heart beat.  (i.e. counting down a variable, 
+                 regeneration, etc.)
+armor.c       -  Use this file to add defensive moves or returns for
+                 bonus ac, or even ac penalties.
+gen_wc.c      -  Same as armor.c, only with wc.
+
+Also:
+Make a file that has the same name as your guild.  In this file you
+will place variables, settings, commands, and anything else that needs
+to be directly called by the gobj.  Give this file a .h extension.
+
+Another file you will need is the help command file.  This will be named
+nameofyourguild_help.h   I will supply the proper code for this file.
+
+All files with a .c extension will be called with the following function:
+
+main(string str, object gob, object player)
+
+What this will allow for is a direct calling of the file and this function
+from within my own code.  So, if your guild requires heart_beat stuff, I
+will call the file in your directory, calling the main() function...and
+making it easy for you to check back with the gob, or even the player who
+has it.
+
+
+POWERS:
+Powers are pretty easy to deal with.  They use the .c extension, and the
+same function heading as stated above.  I suggest placing a special 
+include into these files, and the ones above (unless there is a .h extension)
+for easy access to query's and such.
+
+An example of a power can be found in /open/maledicta/w/detect.c
+
+
+
+SETTINGS AND VARIABLES:
+
+The most common queries and sets you will need to call in the
+gobj are as follows:
+
+query_skills(i) : returns that skill numbers level.
+query_glvl(): returns the current guild level of the player.
+query_gxp(): return current guild xp.
+query_skill_pts(): returns how many skill pts the player currently
+                   has.
+query_end():  returns how much endurance the player has.
+query_max_end(): returns their max endurance.
+add_end(): add pts of endurance. Will not take it above max.
+
+
+Okay, lets say you have some special variable you need to keep
+track of, we'll call it epower.  Epower is used to boost the wc
+of the player for a certain amount of time.  
+First, you would put the variable int epower in your guilds
+main file(the one that has the same name as your guild). Also
+you would have a query_epower() and set_epower() and maybe
+add_epower() in that same file.
+
+In heart_beat.c you would put in the following lines to count
+down how long the player gets the epower:
+ if(gob->query_epower()){
+    gob->add_epower(-1);
+    }
+
+okay, that keeps it under control for a countdown, now lets add
+in the bonus wc. In gen_wc.c put:
+
+int addwc;
+if(gob->query_epower()){
+  tell_room(environment(player),
+  player->query_name()+" is infused with electric power!!\n");
+  addwc = random(4) + gob->query_skills(300);
+  }
+return addwc;
+
+
+By using the return, you add wc.  You could skip the heart beat as
+the count down and just use a countdown based on when it is used, which
+would go into the gen_wc.c file.
+
+That is basically how you use a variable across the .c files.
+
+The following is a listing of things I will change in my own directory
+when yours add-on is complete:
+
+Score will be updated to show help files available for your guild.

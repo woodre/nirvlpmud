@@ -1,0 +1,25 @@
+From: fred
+ Re:   question
+Date: Jun 27 12:10
+
+I think they are fine.  The problem looks to be that when using an 
+FTP program you have to transfer files in ASCII mode instead of  
+binary mode.  There should be a button you can click or something 
+in the options for it. 
+ 
+It doesn't show up on just lore more <filename> but if you use the  
+mud editor you'll see that it puts a ^M at the end of most of the 
+lines. 
+ 
+Just switch it to ASCII re-transfer them and I think you'll be good. 
+ 
+Fred 
+
+From: dragnar
+ Re:   mob
+Date: Aug 25 05:22
+
+The exit block is easy, just add an init() to your mobs and add_actions to 
+block the room exits. Sure let me  know what you want your obj to do... 
+--John f 
+

@@ -1,0 +1,240 @@
+#include "/players/boltar/things/esc.h"
+#define HELPFILE "/players/mizan/etheriel/environs/SPUGGLEHELP"
+#define BLINK esc+"[0m"+esc+"[1m"+esc+"[5m"+esc+"[32m"+esc+"[40m"
+#define UNBLINK esc+"[0m"
+
+/*  Spuggle machine version 1.0 */
+
+object plyr;
+string plyr_name;
+string icon;
+string icon_desc;
+int icon_value;
+int total_pot;
+int credits;
+int zoofle_tl;
+int standings;
+int icon_one,icon_two;
+int payoff;
+int zoofle;
+
+id(str) { return str == "machine"; }
+short() { return "A Spuggle machine"; }
+long() {
+  write("You can play games of Spuggle on this machine. It is a squat,\n"+
+	"cylindrical, and stumpy thing made of a dense, squishy material.\n"+
+	"There are a series of fat buttons on what appears to be the console.\n"+
+	"For a list of rules, type 'help spuggle'.\n");
+  if(plyr) {
+  write(plyr_name+" is currently playing the game.\n");
+  }
+  if(total_pot) {
+  write("The total pot is currently ["+total_pot+"] coins.\n");
+  }
+}
+
+reset() {
+  if(!icon) {
+    icon=allocate(6);
+    icon[0]="[spoogle]";
+    icon[1]="[pachung]";
+    icon[2]="[benga]";
+    icon[3]="[Moggle]";
+    icon[4]="[Squish]";
+    icon[5]=BLINK+"[SPUGGLE]"+UNBLINK;
+  }
+  if(!icon_desc) {
+    icon_desc=allocate(6);
+    icon_desc[0]="spoogle";
+    icon_desc[1]="pachung";
+    icon_desc[2]="benga";
+    icon_desc[3]=BLINK+"moggle"+UNBLINK;
+    icon_desc[4]=BLINK+"squish"+UNBLINK;
+    icon_desc[5]=BLINK+"SPUGGLE"+UNBLINK;
+  }
+  if(!icon_value) {
+    icon_value=allocate(6);
+    icon_value[0]=5;
+    icon_value[1]=10;
+    icon_value[2]=50;
+    icon_value[3]=100;
+    icon_value[4]=500;
+    icon_value[5]=1000;
+  }
+  total_pot=100;
+}
+
+init() {
+  add_action("play_spuggle","play");
+  add_action("help_spuggle","help");
+  add_action("standings","standings");
+}
+
+static play_spuggle(str) {
+  if(!str || str != "spuggle") return 0;
+  if(plyr) {
+    write(plyr_name+" is currently playing the game. You will have to wait.\n");
+    return 1;
+  }
+  if(this_player()->query_money() < 25) {
+    write("The machine says: You don't have enough money for a single game!\n");
+    return 1;
+  }
+  plyr=this_player();
+  plyr_name=this_player()->query_name();
+  say(plyr_name+" sits down and begins playing a game of Spuggle.\n");
+  write("The machine asks: How many turns would you like to play? ->>");
+  input_to("set_turns");
+  return 1;
+}
+
+set_turns(arg) {
+  int i;
+  write("The machine asks: How many turns would you like to play?\n"+"->>");
+  if(!arg) {
+    write("The machine says: You must enter a number between 1 and 100 turns.\n");
+    input_to("set_turns");
+    return 1;
+  }
+  if(sscanf(arg, "%d", i) != 1) {
+    write("The machine says: You must enter a number!\n"+"->>");
+    input_to("set_turns");
+    return 1;
+  }
+  if(i < 1 || i > 100) {
+    write("The machine says: You must enter a number between 1 and 100.\n"+"->>");
+    input_to("set_turns");
+    return 1;
+  }
+  if(plyr->query_money() < (i * 25)) {
+    write("The machine says: You don't have enough money to play that many turns.\n");
+    write("Pick a smaller number.\n"+"->>");
+    input_to("set_turns");
+    return 1;
+  }
+  credits=i;
+  write("You dump your coins into the Spuggle machine and the game begins.\n");
+  plyr->add_money(-(i * 25));
+  standings = standings + (i * 25);
+  input_to("main_loop");
+  return 1;
+}
+
+static display() {
+  tell_object(plyr, "Options [P]lay [Q]uit [H]elp [D]isplay Pot [T]urns Left:\n->>");
+  input_to("main_loop");
+  return 1;
+}
+
+main_loop(str) {
+  if(!str) {
+    display();
+    return 1;
+  }
+  if(str == "p" || str == "P") {
+    game_play();
+    return 1;
+  }
+  if(str == "q" || str == "Q") {
+    write("The machine asks: Quit the game and lose the money from remaining turns?\n"+
+    "[Y/N] ->>");
+    input_to("quit_game");
+    return 1;
+  }
+  if(str == "h" || str == "H") {
+    cat(HELPFILE);
+    display();
+    return 1;
+  }
+  if(str == "d" || str == "D") {
+    write("The machine says: The pot is currently ["+total_pot+"] coins.\n");
+    display();
+    return 1;
+  }
+  if(str == "t" || str == "T") {
+    write("The machine says: You have ["+credits+"] credits remaining.\n");
+    display();
+    return 1;
+  }
+  display();
+  return 1;
+}
+
+static game_play() {
+  credits = credits - 1;
+
+  icon_one=0;
+  if(1 == random(3)) { icon_one=1; }
+  if(1 == random(6)) { icon_one=2; }
+  if(1 == random(8)) { icon_one=3; }
+  if(1 == random(10)) { icon_one=4; }
+  if(1 == random(20)) { icon_one=5; }
+  icon_two=random(7) - 1;
+  if(1 == random(2)) {
+    zoofle=0;
+  } else {
+    zoofle=random(4);
+  }
+
+  write("You push the spork and the machine buggles...\n"+
+    "The display reads:  "+icon[icon_one]+"  "+icon[icon_two]+"  Zoofle: ["+zoofle+"]\n");
+  if(icon_two=icon_one) {
+    if(zoofle = 0) {
+      write("The zeroed-zoofle takes your winnings and stashes them into the pot.\n");
+      total_pot = total_pot + icon_value[icon_one];
+      zoofle_tl=1;
+      display();
+      return 1;
+    }
+    payoff=icon_value[icon_one] * zoofle;
+    write("DING! ZONG! BOINK! PUNG! "+BLINK+"Congratulations!"+UNBLINK+
+    " A "+icon_desc[icon_one]+" pair! You won ["+BLINK+payoff+UNBLINK+"] coins!\n");
+    say(plyr_name+" struck a "+icon_desc[icon_one]+" pair! Winnings: ["+payoff+"] coins.\n");
+    if(zoofle_tl) {
+      zoofle_tl=0;
+      payoff = payoff + total_pot;
+      write("The contents of the pot are added to your winnings!! Total winnings ["+payoff+"] coins!\n");
+      say(plyr_name+" clears the pot! Total winnings: ["+payoff+"] coins!\n");
+    }
+    plyr->add_money(payoff);
+    standings = standings - payoff;
+    display();
+    return 1;
+  }
+  write("The machine says: Sorry... No matches were made.\n");
+  if(credits = 0) {
+    write("You have no more credits left. The game ends.\n"+
+    "The machine exclaims: Thanks for playing!\n");
+    say(plyr_name+" finishes playing Spuggle and steps away from the machine.\n");  
+    plyr_name=0;
+    plyr=0;
+    return 1;
+  }
+  display();
+  return 1;
+}
+ 
+
+static help_spuggle(str) {
+  if(!str || str != "spuggle") return 0;
+  cat(HELPFILE);
+}
+
+static standings() {
+  if(this_player()->query_level() < 20) return 0;
+  write("The machine is standing at ["+standings+"] coins.\n");
+  return 1;
+}
+
+static quit_game(str) {
+  if(!str || str !="y" || str !="Y") {
+    display();
+    return 1;
+  }
+  write("The machine says: Ok.\n");
+  say(plyr_name+" quits playing the game of Spuggle. The machine is vacant.\n");
+  plyr=0;
+  plyr_name=0;
+  credits=0;
+  return 1;
+}

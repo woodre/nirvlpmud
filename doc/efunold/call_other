@@ -1,0 +1,13 @@
+call_other(ob, str, arg)
+object ob;
+string str;
+
+Call function in another object with an argument. The return value is
+returned from the other object.  
+
+All sorts of wild and wonderful things can happen when calling
+functions in unknown objects.  Try not to assume anything about the
+state of the universe if you use this function on non-standard
+objects.
+
+See also present(), find_living().

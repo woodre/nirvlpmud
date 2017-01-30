@@ -1,0 +1,14 @@
+                    -- DISRUPT --
+
+TYPE: Spell (Variable)
+INT REQ: 1/level
+USAGE: disrupt/di <foe>
+COST TO MAX: 1,110,500 xp
+
+  The is the guilds Primary attack spell.
+      /=LEVEL=COST SP==XP COST===LEVEL REQ=\
+      |   1  |   5   |     500 |    3      |
+      |   2  |  10   |  10,000 |    8      |
+      |   3  |  15   | 100,000 |   12      |
+      |   4  |  20   | 500,000 |   18      |
+      \====================================/

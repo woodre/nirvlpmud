@@ -1,0 +1,15 @@
+Vertebraker [4.28.02]
+
+To calculate the total experience one would receive from killing
+something [alignment bonus and all],
+
+do:
+
+ x = (int)ob->calculate_evaluated_worth(me);
+
+where ob is the monster being slain,
+and me is the prospective slayer of the creature :)
+
+tail /obj/living.c & look at death() for fun
+
+mcV

@@ -1,0 +1,58 @@
+Thu Dec 14 08:24:52 2000--Action: Moved Somnus and Ravennight to church Reason: both trapped in /players/scathe/cave/monk12 due to a mud error ..... returning Bad argument 1 to tell_object() program: players/languilen/tools/projection.c, object: players/languilen/tools/projection#1412  line 122 on any effort to move or quit
+Thu Dec 14 12:39:04 2000--Action: "taped" merchies mouth (tape prevents tells and channel talking) Reason: I don't need level 1 players telling me 'cock'
+Thu Dec 14 13:54:35 2000  test
+Sat Dec 16 10:18:09 2000  Modified /players/softly/winter/pond2.c so that players could buy "hot chocolate", the one option they weren't allowed :(
+Sat Dec 23 14:07:44 2000  Added slightly to the long_desc on Mr. Bryant (at /players/softly/winter/tbryant.c) because players kept complaining about not knowing what to ask him.
+Mon Dec 25 10:00:36 2000  Dropped the chat chance on Mr. Bryant from 10 to 5 ... he talks too much
+Mon Dec 25 10:54:44 2000 [1;34m-->[2;37;0m testing
+Sat Dec 30 19:37:00 2000 [1;34m-->[2;37;0m Changed the forest description in /players/softly/winter/rooms/for3.c  ... said the "forest is has" ... doesn't now
+Sat Dec 30 23:11:33 2000 [1;34m-->[2;37;0m Put Rocky Point area into the game at /players/softly/winter/rooms/for2.c ... east per approval by Maledicta
+Sun Dec 31 11:53:22 2000 [1;34m-->[2;37;0m Fixed spelling error in /players/softly/point/rooms/pt3.c
+Sun Dec 31 11:57:20 2000 [1;34m-->[2;37;0m Fixed spelling error in /players/softly/point/obj/diary.c
+Sun Dec 31 14:25:19 2000 [1;34m-->[2;37;0m Changed the wording in /players/softly/point/mobs/mbryant.c to include the word "summon" which was absent but required to get Erica to pop
+Mon Jan  1 10:54:27 2001 [1;34m-->[2;37;0m Corrected an exit in /players/softly/point/rooms/lh12.c  .... there were 2 southeast exits one of which should have been southwest
+Mon Jan  1 11:48:01 2001 [1;34m-->[2;37;0m Changed "bounders" to "boulders" in /players/softly/point/rooms/pt1.c through pt7.c
+Wed Jan  3 21:57:57 2001 [1;34m-->[2;37;0m Healer tried to heal Ghost of poison .. healer object said "target is now cured, contact a guild wiz if ailment still exists" ... the guild object is advertised to cure all ailments and poisons... I didn't know if the object was messed up or what so I healed Ghost so he didn't die and dested the poison.  The poison object was /players/eurale/Lab/OBJ/acid.c
+Thu Jan  4 12:00:14 2001 [1;34m-->[2;37;0m Made the two mobs just before blackbeard both block entrance to him ... /players/softly/point/mobs/aruj.c and kheir.c per Wocket's suggestion
+Thu Jan  4 13:45:01 2001 [1;34m-->[2;37;0m Added new versions of /players/softly/point/mobs/aruj.c and kheir.c who assist each other ... at Wocket's suggestion to increase the difficulty of access to blackbeard.c
+Fri Jan  5 12:32:42 2001 [1;34m-->[2;37;0m Rewrote /players/softly/point/obj/rod.c at Wocket's suggestion so that it is possible to wave the rod in any location and get a response other than "What?"
+Fri Jan  5 21:18:44 2001 [1;34m-->[2;37;0m Changed the way you get Erica to appear at Wocket's request from say summon erica to say erica erica ... changes made in /players/softly/point/mobs/mbryant.c and /players/softly/point/rooms/for18.c
+Fri Jan  5 21:41:00 2001 [1;34m-->[2;37;0m Fixed typos in /players/softly/point/rooms/pt4.c and pt5.c
+Fri Jan  5 22:14:12 2001 [1;34m-->[2;37;0m Fixed /players/softly/winter/tbryant.c so the word "ask" returned "What?" instead of an error function.
+Tue Jan  9 19:26:58 2001 [1;34m-->[2;37;0m Fixed a bug in /players/softly/point/mobs/bird.c so that the birds clone the correct loot.
+Thu Jan 18 13:43:01 2001 [1;34m-->[2;37;0m fixed typos in /players/softly/point/mobs/read.c and bart.c
+Thu Jan 25 20:13:40 2001 [1;34m-->[2;37;0m Changed /players/softly/point/mobs/kheir.c and aruj.c so they no longer assist each other, but continue to block the entrance to blackbeard per approval by Maledicta
+Fri Jan 26 00:51:42 2001 [1;34m-->[2;37;0m Newbie hall changed to my directories .. now includes updates of all of the directions in the local book (approved by Maledicta)
+Fri Jan 26 00:53:22 2001 [1;34m-->[2;37;0m Changed newbie heals such that 10 and 20 hp/sp heals are now hp only ... changed the price accordingly (blue1,2/decant1,2/green1,2) and changes to /players/softly/nhall/rooms/n2.c to incorporate price changes.  Approved by Maledicta.
+Tue Jan 30 22:48:36 2001 [1;34m-->[2;37;0m Added an explanation of sharpening to the book in the newbie hall (/players/softly/nhall/rooms/n4.c).  Approved by Maledicta
+Wed Jan 31 22:03:21 2001 [1;34m-->[2;37;0m Wrote a new version of the 'help password' file that included information about selecting and protecting a password.  Boltar put it into the game.
+Tue Feb  6 21:07:15 2001 [1;34m-->[2;37;0m In /players/softly/point/mobs and /obj .. changed bkboots.c to ac2 and put them on morgan.c.  Changed the coins on both blackbeard.c and morgan.c accordingly and raised the cost of the boots.  Also changed the long on Morgan to accommodate the new equipment.  Concept approved by Feldegast.
+Wed Feb  7 06:23:44 2001 [1;34m-->[2;37;0m (finally) made a castle.c .. about time ....
+Thu Feb 15 17:21:44 2001 [1;34m-->[2;37;0m Typed restoration of Adidas stuff for Mal cause he was on telnet and it was a pain in the butt for him to do.
+Fri Feb 16 16:42:09 2001 [1;34m-->[2;37;0m Changed the entry to the newbie hall so that guilded players < level 6 could enter (/players/softly/nhall/rooms/n1.c).  Made no sense that they could use the newbie lockers from the chamber of realms but not the newbie hall.  Approved by Feldegast, Wocket and, well, the tacit approval of Maledicta.
+Sat Feb 17 00:11:15 2001 [1;34m-->[2;37;0m Reimbursed Rek for equipment that couldn't be picked up in /players/saber/tower/tower16.c ... Feld is looking at the code to prevent the same problem.
+Fri Feb 23 20:58:30 2001 [1;34m-->[2;37;0m test
+Thu Mar  1 23:43:21 2001 [1;34m-->[2;37;0m Put newbie school (/players/softly/newbie/rooms/ns1.c is entry) into the game ... approved by Maledicta
+Fri Mar  2 07:59:16 2001 [1;34m-->[2;37;0m Fixed typos in ~/newbie/rooms/ns3.c and ns2b.c ... added a few add_commands to nut.c to make it easier for newbies to figure out how to use the heal.
+Fri Mar  2 12:27:22 2001 [1;34m-->[2;37;0m Made a number of small wording and typo changes in newbie school after it was thoroughly tested by a real player (~/newbie/rooms/ns1.c)
+Sat Mar  3 00:36:40 2001 [1;34m-->[2;37;0m Added revised newbie book (~/nhall/obj/nbook.c) to the Hall of the Apprentices (~/nhall/rooms/n4.c).  Approved by Feldegast.
+Sat Mar  3 15:54:34 2001 [1;34m-->[2;37;0m Put a sign (~/newbie/obj/churchsign.c) in the church directing new players (Level <6) to the newbie school.  Autoloads in my castle.c.  Approved by Wocket and Maledicta.
+Sat Mar  3 16:14:58 2001 [1;34m-->[2;37;0m Added a copy of the town center map (~/newbie/obj/tmap.c) to the armory in the Hall of the Apprentices.  Approved by Maledicta.
+Sat Mar  3 22:57:16 2001 [1;34m-->[2;37;0m Mailed Boltar with information about the help files I modified including a new newbie help.  The others are all, channels, channel, and information.  They reflect 'help newbie' and clean up a few things.
+Sun Mar  4 11:48:08 2001 [1;34m-->[2;37;0m Stone's prize from Feld's contest didn't autoload so I cloned him one as a temporary fix (/players/feldegast/obj/prize.c)
+Mon Mar  5 13:04:59 2001 [1;34m-->[2;37;0m I cloned Stone another copy of his description contest prize.  It still isn't autoloading.
+Wed Mar  7 22:18:17 2001 [1;34m-->[2;37;0m Gave Rek a promised color pretitle for finding and immediately reporting a decent bug in newbie school
+Fri Mar  9 06:04:43 2001 [1;34m-->[2;37;0m Added Vertebraker's blacksmith to the newbie hall (/players/vertebraker/misc/nhall/blacksmith) to provide weapon sharpening and repair (and training) at a reasonable cost.  Approved by Maledicta.
+Sat Mar 10 16:07:00 2001 [1;34m-->[2;37;0m Changed the directions in the newbie hall to mash (to reflect the Maledicta's change from "east" to "barracks") and removed directions to sharpening now that the blacksmith is there (~/nhall/rooms/n4.c, etc.)
+Sat Mar 10 16:11:19 2001 [1;34m-->[2;37;0m Also updated the newbie book to reflected the changed directions to the newbie area in MASH
+Tue Mar 13 19:33:26 2001 [1;34m-->[2;37;0m Added if(!this_player())return; to churchsign.c to keep it from bugging on guest
+Fri Mar 16 21:18:30 2001 [1;34m-->[2;37;0m Lowered the stuff on newbie heals (~/newbie/obj/nut.c and cheese.c) from 12 to 8 because level 1 players couldn't use them due to excessive toxicity.
+Sun Mar 18 11:20:44 2001 [1;34m-->[2;37;0m Updated ~/newbie/obj/churchsign.c ... took out the NEW cause it's not new any more.
+Tue Mar 20 20:21:26 2001 [1;34m-->[2;37;0m testing 1, 2, 3, 4
+Mar 20 20:33 [1;31m-->[2;37;0m Changed my logger cause I was bored
+Mar 24 12:10 [1;31m-->[2;37;0m Put the Town of Algiers into the game ... noted at the board.  Approved with appropriate changes by Maledicta.
+Mar 25 08:01 [1;31m-->[2;37;0m Fixed a typo on ~/algiers/rooms/toms.c
+Mar 25 08:51 [1;31m-->[2;37;0m Changed all of the mobs in ~/point/mobs to use set_race instead of set_type ... cause it's the right thing to do and I know better now.
+Mar 25 08:57 [1;31m-->[2;37;0m Updated my castle.c to add Algiers to the signpost
+Apr 11 17:52 [1;31m-->[2;37;0m Woot!  Boltar put extra levels in the game!  Verte carried the heavy load.  Reflex' was seminal in pushing the idea.  I did some too.
+Apr 14 07:54 [1;31m-->[2;37;0m Fixed a bug in the newbie hall ... Thanks Vertebraker for pointing it out

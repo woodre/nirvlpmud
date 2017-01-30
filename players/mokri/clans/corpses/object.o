@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A decaying Corpse.[0m"
+long_desc "This is the clan object of the Corpses. Oddly it resembles a decaying corpse.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "decaying"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is the clan object of the Corpses. Oddly it resembles a decaying corpse.[0mType 'clan_help' for commands."
+clan_short "A decaying Corpse.[0m"
+damage_type 0
+hall_path "/players/catwoman/road2"
+object_name "decaying"
+owner "scavenger"
+spell_alias "digest"
+spell_mess_me "You start to %red%digest%normal% on %AKN%."
+spell_mess_room "%TPN% starts to %red%digest%normal% on %AKN%."
+spell_mess_them "%TPN% starts to %red%digest%normal% on you."
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 396678
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 80
+last_spell_time 1321228801

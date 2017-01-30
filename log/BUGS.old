@@ -1,0 +1,844 @@
+
+Weasel (/players/softly/winter/rooms/pond2.c):
+"Error: function story not found."
+
+Weasel (/players/softly/winter/rooms/pond2.c):
+dood says you can read sign when you type "buy", but you actually have to look at it.
+
+Weasel (room/vill_road3):
+Poly "Weasel appears to be an octopus." then a \n
+
+Weasel (players/eurale/Keep/k33.c):
+splooge is fucked up
+
+Weasel (players/eurale/Dis/Hood/rh24.c):
+should be notify_fail() for wearing objs on the ground
+
+Weasel (/players/trix/castle/town/2str3n.c):
+poly guild who needs color_pad()
+
+Weasel (room/vill_green):
+ppl needs color_pad() support.. ignore above
+
+Weasel (players/mizan/etheriel/ROOMS/spoogle.c):
+fix 0's in poly guild tug.. why do they appear?
+
+Weasel (players/boltar/hotel/motel.c):
+polymorph wait time should be cut in 1/2
+
+Weasel (/players/snow/ROOMS/fort_gate.c):
+don't make ice shuriken decay when on octopus
+
+Weasel (/players/fred/forest/Rooms/forest1.c):
+pestilence's diamond ring should have a sep msg for user
+
+Weasel (players/eurale/Keep/k35.c):
+polys need a deathblow.. wtf
+
+Weasel (players/hawkeye/room/off1.c):
+make multilimb code work with death()
+
+Weasel (players/hawkeye/room/off1.c):
+[not against]
+
+Weasel (players/eurale/Keep/k9.c):
+there supposed to be 2 disirs here?
+
+Weasel (players/mizan/etheriel/ROOMS/spoogle.c):
+emerson's instructions - add id of paper, piece of paper
+
+Weasel (/players/fred/forest/Rooms/forest3.c):
+in this rooms, still can't do "so" for sonic
+
+Weasel (/players/fred/forest/Rooms/forest3.c):
+these rooms even
+
+Weasel (players/eurale/Keep/k58.c):
+make it show when poly strapped wep brks
+
+Weasel (players/eurale/Keep/k59.c):
+chk if dervish other_weps wear
+
+Weasel (/players/fred/forest/Rooms/hshop.c):
+make it so ppl can order by name in this room too
+
+Weasel (players/eurale/RMS/barter):
+in this room.. electrodes don't seem to barter properly
+
+Weasel (players/pain/NEW/shop):
+is this room to the max on coins?
+
+Weasel (players/mizan/etheriel/ROOMS/spoogle.c):
+fix the 0's storing in this room
+
+Ravennight (room/vill_green):
+this is ravennight
+
+Vengenc (/players/softly/nhall/rooms/n1.c):
+the board here says there are 16 notes but when looking at it there are only 14. also when you try to read 15 and 16 you get the message "Hm. This should not happen." then it returns 0 :)
+
+Sweater (/room/vill_green.c):
+i only have one item (pike of the apprentice), and it says i'm carrying too much.
+
+Sylvan (room/vill_green):
+the roht fruit in jaraxles realm can be bought for 1200 coins and when you go to the shop in the hall of images you can sell them for 1277
+
+Weasel (/players/fred/forest/Rooms/ashop.c):
+chk to make sure splooge is chking weight
+
+Weasel (/players/trix/castle/town/butchers.c):
+pouncing kitty kung fu has some possessive errors
+
+Weasel (players/eurale/Glade/eg10.c):
+this room does heal_self() dmg when you go e.. why not hit_player(x, "other|eurale"); ?  stupid to take sps
+
+Weasel (players/eurale/Glade/eg12.c):
+no exits in room/room should display short_desc, not short_desc []
+
+Weasel (players/eurale/Chess/d6.c):
+why do chess pieces carry coins
+
+Weasel (players/eurale/Chess/d5.c):
+there must be a bug.  this area is way too irritating
+
+Orb (players/mizan/w/k1):
+got a sensitiive mind message when smokey summoned me and i typed 'accept summons'
+
+Orb (/players/catt/AREAS/TEMPLE/monkroom1):
+change return value on this to 1....or use notify_fail() so it doesn't give the message AND give 'What?' message
+
+Orb (/players/catt/AREAS/TEMPLE/monkroom1):
+that's regarding doing 'tunnel' at too high of a level
+
+Talon (room/vill_green):
+the pk/magical storage boxes cannot be picked up unless the most recent box is picked up first, even the savation army box cannot have anything deposited unless there are no magic storage boxes on the green
+
+Melody (/players/softly/newbie/rooms/ns1.c):
+board says there are 17 messages but when I try to read number 16 or 17 it just says 'Hm. This should not happen.' and then 'What?'
+
+Orb (/players/dune/closed/guild/rooms/mechshop.c):
+ordering flake gives sensitive mind message
+
+Melody (/players/francesco/univ/rooms/corridor1.c):
+is Erica supposed to have 5 backpacks?
+
+Claw (/players/pestilence/amity/room/texashot.c):
+troll 5w of green seems to register on obituary as 0.
+
+Glaxgor (/players/daranath/qualtor/child_path3.c):
+string daranaths dark figure is buged
+
+Dakeyras (/room/northroad2):
+magic shop isn't showing any inventory
+
+Nelk (room/ptroom):
+the 'time' command lists it as CST, but its EST
+
+Typhon (players/softly/nhall/rooms/n1):
+newbie board. says there are 18 msgs, and there is only 16. also, get a 'this should not happen' message instead of a 'not that many messages' error, going above OR below the number of messages. save_object() and restore_object() of this board probably not working too well
+
+Diabla (/players/pestilence/club2/room/parking.c):
+Joe will not allow me to exit the area
+
+Diabla (players/pathfinder/detroit/rooms/newbie4):
+see more playground south and west?  you can't go south?
+
+Angelita (/players/llew/Toys/rooms/aisle41):
+lost all exp gained yesterday
+
+Talon (room/vill_green):
+when you use mi (maybe other spells) in the last round of combat, and they aren't used, they register as you've used magic this hb
+
+Talon (room/clinic):
+If you are wearing T-Rex plate from Jurrasic park and you barter it to sedjak you still register as wearing an armor class armor
+
+Sionoch (/players/feldegast/shrine.c):
+The exit from the Black Chamber to the Marble Shrine should be removed.  It is no longer valid.
+
+Orb (players/emerson/rooms/freezer.c):
+3 bigfoots in pizza hut...never seen it before, wierd
+
+Diabla (/players/francesco/univ/rooms/classroom.c):
+When you walk in this room you see yourself...in other words "Diabla" was in the room...about the third student in...and when you continue killing studentings...you get to a point where it looks like you are fighting yourself....You SMASHED Diabla with demonic force"
+
+Orb (/players/francesco/univ/rooms/dimec5b.c):
+acid in francesco's .... all syntaxes gave sensitive mind message .... 'throw dazed' 'throw acid at dazed' 'throw at dazed'
+
+Claw (players/boltar/hotel/hotel.c):
+I think this is the next Viabla bug I have noticed, Town Guards can attack you, in church... you can't even spell them because "fighting is not allowed to begin here" or at least I can't use p3
+
+Claw (room/vill_green):
+it says Vertebreaker, no matter who uses the emote, "wookie"
+
+Claw (room/vill_green):
+faremote, pervert registers your own name as calling you a pervert... I think, from an earlier experience... haven't completely confimed. may have been a wiz messin with me
+
+Diabla (/players/francesco/univ/rooms/dimec19.c):
+This small room is very suitable for studying.  It is very quiet and well lit. Tons of literature are stacked on bookcases in this library create a great atmosphere for the scope. A simple wooden desk with a chair behind it are the only other furnishings here.
+
+Diabla (/players/francesco/univ/rooms/dimec18.c):
+I think that in the 'look' of the statue you mean to say 'It is the shiny, bronze torso of a man.'
+
+Blkbear (room/slope):
+Monvalues charisma and dexterity do not work when setting mon all it shows is cha and dex no numbers
+
+Orb (room/vill_green):
+hotel now saves cash...i had 120k saved at one point earlier, i assume it's a bug since it wasn't doing that before
+
+Fang (room/vill_green):
+I believe that the healers defend spell registers as a 0 in the itemtest, causing people to not be able to get another after reboot/crash, if they had one before... also theoretically replacing other actual storable items.
+
+Orb (room/vill_green):
+knight entrance/exit messages are screwed up
+
+Pain (/players/coldwind/desert/rooms/r2.c):
+perhaps you should make mountain stand out a bit more, or change the search command so that it gives you a hint as to what to search. search mountain is rather unintuitive
+
+Pain (/players/coldwind/desert/rooms/r2.c):
+sorry about that.. substitute mountain for sand
+
+Pain (/players/coldwind/desert/rooms/r2.c):
+moving about in this room should be more intuitive.. if you see the hut to the south, you should be able to go south in the room rather than having to track
+
+Pain (/players/coldwind/desert/rooms/r7.c):
+see my mail about Fares and the ask add_action.. that should be applied to Farha as well
+
+Pain (/players/coldwind/desert/rooms/r7.c):
+you may want to make it so that you can't talk to Fares without first talking to his wife or something
+
+Pain (/players/coldwind/desert/rooms/r7.c):
+make it so when you try to sell something other than a weapon here it tells you she only buys weapons rather than returning a What?
+
+
+Pain (players/pain/workroom):
+test this now
+
+Wren (players/eurale/Vamp/RMS/souvenir_shop):
+exit north isn't working, needs to be checked
+
+Wren (players/nooneelse/dim):
+north exit isn't loading correctly, reported by Rek, checked by Wren
+
+Fang (room/vill_green):
+when you get a sharpening stone from the warp it is a weapon. when you type, sharpen stone, your stone sharpens itself and disappears... there has to be a bug in the loss of 1000 coins there
+
+Kaleia (players/francesco/games/rooms/hubnew):
+you can no longer 'read plaque'
+
+Pain (players/coldwind/desert/rooms/r5):
+You should be able to look south here
+
+Pain (players/coldwind/desert/rooms/r6):
+try to avoid the word "you" and direct references to the player in the main description of the room
+
+Pain (players/coldwind/desert/rooms/r7):
+ask farha should return "Ask Farha about what?"
+
+Pain (players/coldwind/desert/rooms/r7):
+You want the command in this room for 'offer' to be <ask farha about offer>. In general, you want to "ask <name> about <thing>"
+
+Pain (players/coldwind/desert/rooms/r7):
+if you try to sell something other than a weapon here it should have Farha say that she only buys weapons
+
+Pain (players/coldwind/desert/rooms/r7):
+Should sell work in here?
+
+Summer (room/vill_road2):
+heh, you can't look at anything in this room
+
+Summer (players/francesco/masterquest/foundry):
+I've reported this several times now
+
+Summer (players/francesco/masterquest/foundry):
+this mastermind game is BROKEN
+
+Summer (players/francesco/masterquest/foundry):
+I'll mail you the log
+
+Forsaken (players/maledicta/cont/rooms/881):
+west from this room sensitive mind
+
+Forsaken (players/boltar/sprooms/daycare):
+in daycare i had one child that died, i went to replace it with another, i did pickup (childname) gave me a sensitive mind and show my child gone from daycare, with no child present
+
+Archangel (players/boltar/hotel/room#4817):
+in knight profession i can't wear main under 3500 value, it won't let me wear shadowVeil which is gauged worth at 5000 coins
+
+Pantera (players/maledicta/closed/w/rooms/sc5):
+i'm guildless and it won't let me join the warriors
+
+Candice (players/dusan/newbie/testroom):
+newbie exam
+
+Candice (players/dusan/newbie/testroom):
+I tried to take the newbie exam but it says I already took it, but I didn't
+
+Typhon (players/dune/closed/guild/rooms/mechshop):
+sensitive mind error on ordering a mech
+
+Grymlok (players/snow/dervish/hall/hall):
+You can page invis wizs and it tells you "You may not page a wizard."
+
+Grymlok (players/vulture/rooms/denver/car):
+Wtf. is here.
+
+Grymlok (room/vill_shore):
+Vulture's area kicks me out here.
+
+Grymlok (players/ultramagnus/orcs):
+??? here
+
+Grymlok (room/vill_green):
+dervish lead conflicts with mud lead still
+
+Sexkitten (players/eurale/VAMPIRES/RMS/basement):
+Right now I have: Coins: 80002  My understanding was that the coins limit was set at 80k, so this might be an issue. Thanks for your time!
+
+Sloan (room/church):
+When I just logged on, I got 10+ messages of: Something grabs you and boots your ass out of here. Followed by a sensitive mind message. Don't know if that was a bug or no. Thanks!
+
+Vengenc (players/beck/room/road3):
+when you give the thief 1000 coins here you get a sensitivce mind error message
+
+Hal (players/wocket/turtleville/tville_kennel):
+I tried to resuscitate my pet and it said I couldn't do it to a pet that I put to sleep.  I didn't put it to sleep though it just died.
+
+Mjirn (room/shop):
+wtf are pizza hut oven mits misc armor and not ring like normal gauntlets
+
+Guest (room/post):
+francesco needs a talking to
+
+Bone (players/eurale/VAMPIRES/RMS/init_room):
+There is no pedestal here.  Yes there is ;)
+
+Diesel (players/beck/room/road3):
+Give 1000 coins to thief, he jumps back into bushes, then sensitive mind error
+
+Sexkitten (players/eurale/VAMPIRES/RMS/coffin#11402):
+I think it would be nice if coffin commands and ring commands were set up so one doesn't mess with the other. I just lost my entire shelf value trying to restore my wedding ring.
+
+Sexkitten (players/eurale/VAMPIRES/RMS/coffin#11402):
+Addenum to the coffin/ring issue: It also prevents reading a ring.
+
+Shadowstone (players/unsane/closed/hell/circle1):
+type judge_me in this room and you get a sensitive mind error
+
+Kammie (room/church):
+smithy in hall won't work, it takes me to the church
+
+Bone (players/jareel/areas/statue/depository):
+I deposited 40k, my balance is now 671962? It looks like it just added my deposit to Coopers
+
+Rreal (players/blue/stores/pub):
+typing in just a period returns the following: Illegal path: bin/play/_..c Illegal path: bin/soul/_..c.     I am not sure, but this might be a possible point of exploit
+
+Zander (players/arrina/tunnel/tunnel10):
+Feline increase_stealth keeps adding 5 to my max stealth everytime I log in..its up to 50 now
+
+Humble (players/gowron/room/moes):
+Monster Moe and I were engaged in normal combat. I left the room and the entire area to go to Snow's Ice Cube for heals during the middle of battle, before I had slain Moe. I came back into the room that Moe was in and we were no longer combatting, most monsters I have encountered look out for you, if you will, so that they can attack you when you have initiated a confrontation with them, Moe however did not, so I typed "kill moe" to resume our earlier battle, he was healed some but when combat resumed I was taking no damage, Moe was just sitting there. I left the room thinking it was odd then went back in to see what was going on. When I went back in the room Moe initiated the combat again and normal fighting resumed. I am not sure exactly what the glitch is, perhaps it is when I left the entire area of Springfield that causes this, for when I just move west then come back in combat resumes as normal, as I said. Just letting you know as it could be used as a cheat. Thank you for your time
+
+Humble (players/mizan/etheriel/ROOMS/ham):
+In the Jello, the 'thinkto <monster>' command gives me a " your sensitive mind notices a wrongness in the fabric of space." message.
+
+Zidane (room/vill_green):
+A friend of mine, scoobydoo and hulk, same person has been abusing a bug to get lots of coins, I don't know how but he said when he was in Wombat form he used a nightstick and the rest I don't know because my phone got cut off, well he said he used the nightstick for something but he said you would get lot's of coins for doing something with it I believe...
+
+Humble (room/vill_green):
+Steel doesn't get hurt when fighting him in Elemental Test, on two occasions
+
+Demonic (room/post):
+the feline mini guild  increae stealth  command
+
+Humble (players/mythos/aroom/forest/bridge):
+Benkei: I was fighting benkei, I got him to 1/10, I ran from the fight for I was toxed. I came back in after detoxing for a short time and benkei didn't attack me, I typed "kill benkei" then to my suprise AHP was 9/10. benkei had reset before I had killed him. Not sure exactly what went wrong
+
+Humble (players/snow/ROOMS/path2):
+When a dervish loses his heartbeat, for some odd reason, after registering and beatfixing numerous times, my tox does not go down
+
+Humble (players/snow/ROOMS/path2):
+Etest : When I do the elemental test with a crystal ball of intellect from ashgan, Steel does not get hurt by me. Not a single bit. So I end up dying, pretty big bug if you ask me
+
+Humble (players/snow/ROOMS/path2):
+Extra eweapons make me lose my heartbeat when their special hits and kills a mob. not the esword but the other eweapons
+
+Humble (players/maledicta/cont/rdragon/rooms/r20):
+when trying to look at symbol in maledicta's cave, the room where I wrote this entry, if you are larn you cannot look at symbol 2 or the symbol that is very important for getting speed bracers
+
+Humble (players/saber/tower/tower10+1):
+Jaraxle's oak tree disappears if a dervish types sacrifice or sacrifice to the sand(s)
+
+Breeti (players/jaraxle/cont/bdragon/rooms/r5):
+so alias for sonic doensn't appear to work in blue dragon caves when fighting blue dragons, gives you a message 'The Blue Dragon steps to intercept you!'
+
+Bone (players/jareel/areas/statue/depository):
+'inquire' don't work
+
+Humble (players/mizan/etheriel/ROOMS/red):
+In the Jello often times the "thinkto" command does not work. Get a sensetive notice dealy.
+
+Humble (players/boltar/casino/room#21729):
+Misty Cloak
+
+Humble (players/boltar/casino/room#21729):
+Misty cloak, I try to wear it and I can't wear it, says I already have armor class. damn shame, would love to see it fixed.
+
+Sexkitten (players/jaraxle/cont/rdragon/rooms/pond2):
+The custom reporting commands do not work in this room.
+
+Humble (players/zeus/desert/r/ec10):
+Misty cloak
+
+Humble (room/vill_road2):
+When you wear a misty cloak then remove it, any other misc you try to wear you cannot, don't know why
+
+Humble (room/vill_track):
+Eweapons with dervish, if we lose our heartbeat our tox and spell delay does not go down sometimes. this happens with eweapons and some various other weapons
+
+Humble (players/jaraxle/cave/rooms/randomcave#20422):
+When offwielding similar items often times you cannot offwield the 'sword 2' don't know why, i drop it then pick it up and try offwield sword , still doesn't work, pretty lame
+
+Humble (players/eurale/Fiend/mm37):
+When a dervish uses esword and the emote "The sky grows dark, hail crashes down from the sky! _____ is pummeled by ice" comes up in the same round when killing a mob, dervish lose their heartbeat and funky stuff happens. sorry about unclearness of before bug notes. erase those pertaining to this situation now that you have more knowledge of EXACTLY what is happening
+
+Puppy (players/hippo/quest_1/brain):
+the short for the board ends in ..
+
+Humble (players/mythos/aroom/forest/bridge):
+Non aggro mob, attacking you after your death when you walk into a room and killing you again, shouldn't happen, check aizen. I walked into the room to retrieve my corpse after dying and she instablicked me, she is non aggro
+
+Humble (players/arrina/grounds/hunttrap):
+In Arrina's dark crystal, Qurd area, when you climb out of the hunting pit, sometimes it lags, you fall down and then a sensetive mind notices a wrongness in the fabric of space.
+
+Humble (players/jaraxle/3rd/pyramid/rooms/mumra):
+When wearing orb of void something funny happens, couldn't tell you, just try wearing it with a test character
+
+Entreri (players/snow/ROOMS/fort_hall):
+got this message recently, not sure what it means or if it is important : error when executing program in destroyed object players/snow/MONSTERS/archwizard#257
+
+Sid (players/vital/spaceport/rooms/sewer4b):
+There is a type on torment it days darkness swirls around you. Darkness destroys <mob> with unatural force....isn't it unnatural?
+
+Sid (players/vital/spaceport/rooms/sewer4b):
+Disregard that, it is a build bug.
+
+Humble (room/vill_green):
+Aizen killed me after I had killed Aizen???? Aizen died then after I sacrificed it's corpse one of my intellegence points was taken and the regular death prompt didn't occur, i just lost 2 mil exp and a stat point, I am still +32 and I have 3 million exp to my next level???? Someone might want to remove Aizen from the game, On a seperate occassion I died to Aizen then came back to get my corpse and combat was still active, I got attacked and died while retrieving my corpse and Aizen is not aggro, and read my bug reports and do something about them (boggle)
+
+Icarus (players/mythos/aroom/forest/bridge):
+when using assist, often times I end up tanking??? Dunno why
+
+Icarus (room/hump):
+WHiteblade the hunter coming into non fighting zones after people to kill them, such as carin's hut, church, etc, etc. Sort of strange
+
+Drizzt (players/boltar/casino/room#7985):
+casino security sucks, anybody can walk in and they know who's in what rooms
+
+Icarus (players/coldwind/desert/rooms/ma5):
+ashgan: after her special your mon occassionaly does not show until the next round after she has already hit you again. If you can't reproduce it with a wizard, try with a character, try multiple time :)
+
+Icarus (players/mizan/etheriel/ROOMS/griffo):
+When attacking a Sarawak, on the 2nd time I tried to kill him, after tickling my way out of his belly, He did not attack me back
+
+Humble (players/coldwind/desert/rooms/v2):
+in coldwind's dahna desert, if you are 2e,se,2e or maybe 3e, if you have a heal that uses squeeze then you go into an exit instead of using it
+
+Humble (players/llew/closed/crystal/crys4):
+Mon Sep 1 3:30:10, I went to the top of the xetras, all up. and there were...... 18 xetras sitting there. usually it's just 3 unless Llew went, insano on us.
+
+Humble (players/forbin/hyperion/flame_forest/RMS/ff21):
+I sifted the sands in mythos area, where raiden, hinotori and orochi pop up. and raiden keeps taking away my hps after I've left th room like 20 minutes ago with his "nast shock as Raiden blocks with the warffan" and this stupid emote. damn Mythos and his freaking buggy shit
+
+Humble (players/llew/closed/crystal/crys12):
+The Infamous Moe Bug!!!! I know some of you haven't believed me or weren't able to 'recreate' it. Again I will explain and I found away to prove it. You enter Springfield, go to Moe's Tavern and type 'kill moe' starting combat, once combat has started you leave Moe's Tavern and then you leave Springfield all together, you re-enter Springfiled once right out the gates, return to Moe's tavern, when you enter Moe's tavern you type 'kill moe' since he does not seem to attack you back sometimes, then combat starts but Moe does not strike back. This is free 60-70k of exp for cheaters and bug abusers. WHich is a good amount for people creating new characters. If you cannot recreate it with a player or what have you, ask me. I cannot be followed because it doesn't work when followed for some reason, but if you port to me you will see, that Moe does not strike back. Thank you, Please remove him from the game or look into it. Feel free to ask me anytime you are on. ~Humble
+
+Humble (players/hurtbrain/castello/dag/dag23):
+Erode in Hurtbrain's machine, roman times. Had 7 tunics and 7 swords on him.
+
+Tarken (players/boltar/casino/room#8391):
+Stuff keeps disappearing from my case de nirvana room.  even when the door is locked
+
+Humble (players/mizan/etheriel/ROOMS/nuck):
+Sarawak "After ingesting you and you tickle out sometimes when you go back to fight the Sarawak it does not hit you."
+
+Humble (players/coldwind/desert/rooms/v7):
+IN COLDWIND'S DESERT. REALLY IS A BUG SO PLEASE DO LOOK AT IT. 2e,se,2e. if you have a heal such as Splooges, like I use. and you want to heal, by typing 'squeeze splooge' or maybe snow's heals 'squeeze goop' then instead of healing, you go out the hidden exit of the room which is 'squeeze crack, or squeeze'. It's  really annoying to be fighting something and having to move east or west to have to heal then return to battle. But maybe the room is designed that way and I'm just a picky player who doesn't know anything. And again if you can't recreate the Moe bug please talk to me because it is NOT getting fixed and people are still using this bug to cheat with.
+
+Humble (room/vill_road2):
+Jaraxle's nuts. The ones in Phoenix tower. sometimes when you try to 'bite nut' to use it to heal you, it says 'you don't see nut anywhere'.
+
+Fellowes (room/church):
+bad file names on voting. didnt add to tally.
+
+Sick (players/catwoman/tl):
+Lockers at reboot didn,t put up stuff and then log back on stuff still on.
+
+Humble (players/dragnar/rooms/Ebase3):
+WHenever someone of the larn nature, (hence is a member of the larn) tries to look at a symbol in a room descript (which is in important, i.e. dragon caves symbol to put scepter in the sun, symbol in wastelands next to chest in the room i wrote this bug report in) you can't do it, and can't look at symbol, 2, leaving larn then joining larn to look at a symbol sucks man
+
+Humble (players/snow/ROOMS/death/cold_lair):
+Ummm check this out, my party member was getting hit by ice ogres that popped up so I typed 'kill ogre' and started attacking them, somehow battle between the normal ogre mage and I ceased and when I started attacking the ogre again, which I should have been atttacking the whole time I was only hitting and ogre mage wasn't doing damage to me, probably just a freak ooccurenceYou tickled Ice Ogre in the stomach.
+
+Humble (room/church):
+Sep 15 11:20:12 2003. I took Glaxgor who is in the warrior guild to the room with the LIngering Spirit, in Jaraxle's area, he is a criminal and folowed me there, we both had pk set. I killed him, but instead of getting a normal death he died but did not lose material form. he was wielding a nodachi, I was wielding scepter of zultayne and offwield a crystal ball. (had problems offwielding crystal ball and steel not dying in etest before). I was wearing chestguard of health, ted lindsay hockey skates,  bug ring, amulet of protection. The battle lasted 3 rounds and I was credited kill and points on pk tracker when he died and it came up on the obituary notice. I typed kill glaxgor again thinking he did not die and got a "yes yes" back. I typed stop and got a "you are not hunting anyone" after this I typed kill glaxgor again and again I received a "yes,yes" also, after this battle I lost my heartbeat. I went to kill a npc and casted a spell, in the same round the npc died I didn't get my spell off, but which
+
+Humble (room/church):
+Sep 15 11:20:12 2003 Continued...... which normally renders a "attack what?" but instead I got a message that said "Glaxgor is hammered by the Sands!". I asked him if he lost exp and if he was hit by my spell and he answered yes to both.
+
+Humble (room/church):
+Sep 15. Humble. I was fighting Demonic in his guild hall, I attacked while he was idle, he was in the room that is 2w and north of 'cyber' exit from snow's realm. After two rounds I noticed I was hitting myself, this has happened before but I thought it was a freak accident. Anyways no shuratos were invloved. I was wielding two crystal balls and wearing chestguard of health, lindsay skates, bug ring, amulet of protection. I let the room for I was getting hit not only Demonic but myself as well and doing no damage to demonic. I went out to snow's area and I was still hitting myself, I almost died. my pk was set and so was his btw. I had to get a wand of calming from warp right before I died and calm a couple times. This happened once before in the wastelands and I was wielding elemental whip and gordie stick offwielded, i was  wearing bracers of speed, red lace teddy and some other things as well. I have fought Grog and Glaxgor after these bugs, seems to be just when I fight cyberninjas or Demonic
+
+Humble (room/church):
+Sept 14 (ETEST) Was wielding whip, offwielding nodachi, wearing bracers of speed, misty cloak, red lace teddy, ted lindsay skates, pentacle of defense. had bottle of painkillers (4) in inventory Ice spheres (6), demon hearts (4) 2 gargle blasters on me and a small amount of lowtox shakes (4-5). and a bag of shakes was lying on the ground. Was doing fine, got to wind, all my stuff dropped to the ground. I picked all my things up and typed ready, now the screen was going by fast as Wind blows spam like windchill, but I checked inventory and I was not re-equipiping anything, so I typed "#" same deal, then I tried manually "wield whip, offwield nodachi first" then wear cloak, by this time I had run out of ice spheres and died.I was told later by Earwax who has a log of the battle that it was a bug.I have bugged on Etest before while offwielding crystal ball.He mailed some of The seniors about it and I was quite disgruntled and mailed a couple people. I apologize for the excessive swearing in the mails.
+
+Sephiroth (players/maledicta/cont/ltown/rooms/l4):
+had all eq "kept", quit out, relogged and still had my katana
+
+Sephiroth (players/maledicta/cont/ltown/rooms/l5):
+I also found in a recent death, with all eq "kept" if you die your eq might stay on your ghost....not fair if the killer is a player, they are jipped out of they rightful prize
+
+Humble (players/gowron/room/moes):
+MOE BUG. PERHAPS IF I PUT THIS IN CAPS YOU WILL GET IT... I HAVE SEEN PEOPLE ABUSE THIS BUG OVER AND OVER AGAIN AND I WON'T INVOLVE OTHER PEOPLE BUT I THINK THAT PLAIN AND SIMPLE, YOU SHOULD TAKE MOE OUT OF THE GAME. IF YOU WANT ME TO WRITE ANOTHER BUG LOG IN ADDITION TO THE 5 or 6 I'VE ALREADY WROTE THAT'S FINE. A SENIOR I WAS TOLD TRIED TO FIX IT, I HAVE SEEN IT STILL BUG< FRANCESCO HAS HELPED ME, THE BUG WAS FIXED WHEN HE RESET THE ROOM, BUT ONLY FOR THAT TIME.  BUT IT's YOUR DEAL, IF YOU WANT PEOPLE TO ABUSE IT KEEP MOE IN THE GAME, IF YOU THINK YOU HAVE IT FIGURED OUT TURN A BLIND EYE......          Humble
+
+Humble (players/boltar/sprooms/weaponsmith):
+When Kept, my main weapon, after dying stays with corpse. I was wielding widowmaker and was in alumni room closest to the exit fighting Black Jack Stewart. I dc'd and came back to corpse, everything else stayed on my incorporal form except widowmaker.
+
+Humble (players/traff/delnoch/town/dmain):
+WHen wearing chestguard oif health, you cannot look at a normal 'guard' in a room, such as village guard, etc.'
+
+Humble (players/pathfinder/detroit/rooms/agency):
+In detriot, that computer and agent who "helps' you find out info on a wiz's area. Doesn't do a damn thing, not sure if it's a bug but all I get is a "that's all the info we have on __________ wizard's castle right now"
+
+Sephiroth (players/wocket/turtleville/tnpath1):
+i'm getting a sensitive mind message when i try to send a tell
+
+Humble (players/stark/forest/tunnel3):
+Stark's room after reading page 2 and going down all south after climbing down rocks and what not. Same room I'm writing this bug log in.  Anyways when you pray to Idol it constantly says 'pray to what?" and it's suppose to pray to idol, is the cmd.  but for some reason it isn't working. Wearing chestguard, bracers of speed, ted skates, wielding 2 strikes of night, got my child with me and have amulet of protection and tarrasque helmet on. not sure why it isn't summonning the mob. Stark's area, read page 2.
+
+Losstarot (room/vill_green):
+I cant set wimpy.
+
+Losstarot (room/vill_road2):
+I cant wimpy and bolt Akjdbiuvadf.
+
+Losstarot (room/vill_green):
+WIMPY BROKER & LAGED.
+
+Losstarot (room/church):
+Wimpy dosent work.
+
+Fenfir (players/mythos/aroom/forest/bridge):
+I was fighting Benkei and I typed back, a ->> came on the screen, I didn't move back but sat there for 2 rounds and died. I'm pretty sure back is the command to leave the room, it's worked billions of other times. May just be a fraek accident
+
+Losstarot (room/wiz_hall):
+Fix Losstarot plese. wimpy wont respond.
+
+Punk (room/depository):
+The bank doesn't keep a running balance, I deposited 10000 coins, came back, deposited 20k more, and it says my balance is 20k....
+
+Forsaken (players/emerson/rooms/room30):
+getting a 0 while fighting pizza the hut every round or so
+
+Becka (players/coldwind/desert/rooms/v7):
+squeeze south doenst work
+
+Rattlehead (players/pathfinder/detroit/rooms/alley):
+the mob is this room gave 5 mil xps took like 30 minutes but still really sick
+
+Humble (room/vill_green):
+Raiden, when he attacks you and you leave the room, and do not kill him, his warfan emote keeps popping up taking about 5 damage from you every so often, not sure why, happen to everyone when he isn't killed and attacks you
+
+Sephiroth (players/beck/Rangers/CommandCenter/CommandCenter):
+logged in after reboot, no crash occured....said the whole Restoring value shiznit, and i have 80001 coins
+
+Rattlehead (players/jaraxle/closed/phoenix/rooms/floor4b):
+room descrip has floor hallway,stairwell u look at them u dont' see them
+
+Rattlehead (players/ultramagnus/folage2):
+brige i think should be bridge
+
+Rattlehead (players/jaraxle/3rd/ooze/rooms/room):
+type cross get Error: function cross not found.
+
+Humble (players/dragnar/rooms/entrance):
+Fighting Demonic, I started hitting myself, had 2 eswords, bracers of speed, cloak of the desert, eammy, shoe lights. THis has happened 3 times now.
+
+Sephiroth (players/boltar/hotel/room#387):
+reboot just happened less than 15 mintues ago and armageddon's already set to do it again in 7 minutes
+
+Humble (players/jaraxle/cont/bdragon/rooms/r10):
+In the room I'm in, not sure where, in blue dragon caves, where there are 2 blue dragon elite guards. the room next to the core. Whenever I type 'so' for sonic. I get a message, The Elite Guard Dragon blocks your way around the core. So I have to fully type out sonic
+
+Humble (players/eurale/Keep/k16):
+Fri Oct 31, 4:17:28 2003. came into the room where the imperial disirs are kept. In the keep I believe it's something like warp, keep touch stone,e,n,e,n,e,3s. that area.  there were about 8 imperial disirs. normally suppose to be 2. I realize this bug is a stinky one and I've seen it happen with bigfoot and such mobs when rooms reset and mobs overlap one another. I'm fine with it but I'm sure a lower level would cry like a baby. heh, considering 8 instead of 2 is a big difference. ANyways. thanks
+
+Humble (players/boltar/casino/room#5844):
+Oct 31. Keep bug: WHen an offwielded weapon is kept you are able to sell it, when you die it stays on your corpse, when the mud crashes it gets lost, when you dc it doesn't go into your box. Really annoying bug
+
+Humble (room/vill_green):
+Nov. 2 12:39:10. I died to a dead man in the graveyard in the wastelands and my stealth when I came back to life was 20. originally it was 30. when I die and my stealth decides to drop a single point it goes down 10 for some reason. Sorry I can't give you more to work with, but it';s been happening a lot off and on.
+
+Kezef (players/wocket/turtleville/tville_kennel):
+to beck check the code there seems to be a conflict when rangers get out of jail
+
+Demonic (players/snow/ROOMS/bar):
+i dieded in a pk fight to humble and respawned with out having to pray and at teh same spot
+
+Sunim (players/eurale/Fiend/mm12):
+push panel does not work
+
+Demonic (room/adv_guild):
+it wont let me quit out
+
+Micah (players/saber/tower/tower10+6):
+you are able to sel a bottomless bag when it is kept
+
+Demonic (players/jaraxle/3rd/alt/rooms/northroad1):
+jar some of your mobs arent killable such as Uriad
+
+Demonic (players/eurale/RMS/barter):
+jaraxle also one of the mobs was hiting liek a 40k mob and only gave 4k
+
+Treebeard (players/wizardchild/darkwood/rooms/forest2):
+I'm in a room called a cmall clearing [<se>] with a beast from the underworld.  When I try to fight it, it stays at 10/10, even though it is a lower level than me
+
+Demonic (players/boltar/casino/room#16865):
+the orb of the void comes up storeable when its isnt
+
+Matrix (room/vill_green):
+Logged in this morning, and who2 would not work.  It told me none of the players I had listed were online, though my argument was simply 'who2'.  Oddly enough, when I typed 'who2 subotai' cuase I saw him on the regular who, who2 is now working fine.  Perhaps a void function needs to be added to the who2?
+
+Humble (room/clearing):
+SUn Dec 14 3:06:20 2003. Humble was fighting glavirnthal, (wizard in snow's area), after killing icingdeath, had two honed longswords wielded and offwielded. he took an incredibly long time to fight, would stay at 9/10 for 10-15 rounds, then heal back up. I don't believe he was tweaked to be a 100k mob. think it's bugged.  WOuld check it out, perhaps just a freak occurance but I write noonetheless. Thanks Humble.
+
+Humble (room/vill_green):
+OFFWIELDED KEPT WEAPON ie ({K} Hockey Stick), when dc'd, when crashed, when killed, it goes away, is looted by mizan's buggy mobs, goes to a box and is never seen again, never sticks with you like a wielded weapon does after a crash or what not. Would be really nice if someone fixed this
+
+Slay (room/forest3):
+If u dont use all of your free stats points you can sve them and use when you die but it dose not take any of your free points or exp.
+
+Slay (players/earwax/area/fields/room/road1):
+One cant hould the goth miniguild statous for more than 5 sec.
+
+Fenfir (room/vill_green):
+Sarawaks- Mizan's Sarawaks eat coins when you tickle out, teddys and offwielded weapons disappear after you are eaten and for anyone who suffers from not owning a T1 modem gets eaten before they have a chance to exit the room upon entry most of the time.
+
+Fenfir (room/vill_road2):
+Offwield/HB bug.  I was fighting in the Alumni room and also in trix's realm.  BOth places during a fight I lost my heartbeat and stopped hitting the opponent.  Unfortunately the opponent kept hitting me and since I was going up against a 50k mob I died.  DCing didn't help and I couldn't leave the room. There were no wizards on to help me.  There is a major problem with the HB and offwield I suspect and certian weapons.  I was using hockey sticks.
+
+Fenfir (players/jaraxle/3rd/pyramid/rooms/stair_room):
+Offwielded weapon, when take by lingering spirit, or when items go into a box from idling out, disappears, is dested, doesn't pop back up, even when kept.  also hb is lost often times with weapons with extra hits and the results often times is the oponnent still hitting you and you dying because you can't hit back or see your monitor and the mob blicks you.
+
+Fenfir (players/mythos/closed/guild/task/hill/drag):
+Addendum Bug Reports "OKay hopefully somehow, someway this will get looked into.  OFFWIELD for dervish is EXTREMELY buggy at times. I have lost heartbeat on many occassions, most often times I will stop hitting the monster I am fighting but the monster will continue to gangrape me.  When I am fighting anything over 50k, often times 3-4 rounds go by and I die for I can't see my mon or heal properly.  Also, sometimes the monster stops hitting and I keep hitting rendering me free exp.  also, when there is a crash, you idle out or you die to a mob, often times an offwielded weapon will just disappear, poof, which isn't very likeable.  I propose this gets looked into, or a quick route is established to give players back their lost offwielded weapons or something of this sort, since the problem will persist""
+
+Unseen (players/mythos/aroom/forest/bridge):
+While fighting benkei he was 0/10. I left the room to go get detox from the dope man and when I returned we were no longer engaged in combat, so I attacked benkei thinking it was the same one and he had repopped I guess and went from 0/10 to 9/10.
+
+Disturbed (players/beren/Rooms/Olgyo/oroom15):
+doesn't seem to be a check on if the mob is already in the room when it repops
+
+Dent (room/vill_green):
+The goggles that the Monster's Guild carry has a bug that causes a sensitive mind message when you look at them.
+
+Dent (room/vill_green):
+I can use ' to say things (like 'Of will make me say Of.  But if I do '? It just says What?
+
+Fenfir (room/vill_road3):
+IN PK BATTLES, dervish vs cyberninja. often times the dervish ends up attacking himself or even if your attacking someone else you fight your friends
+
+Dent (players/francesco/masterquest/machining):
+Fran, shout shouldn't ever be blocked; I think I found a bug in mastermind, and its blocking me from trying to see if a wiz is on.
+
+Dent (players/francesco/masterquest/machining):
+Fran, I think there is a bug in mastermind.  I guessed 56789 and was told 4 were out of place.  So of 5,6,7,8,9, 4 were in the number.  I guessed 9 3 5 6 7, so at LEAST 3 should have been in the number, but it only tells me that 1 was in place and 1 was out of place.  I'll play a few more attemps, and mail you a capture of the review.
+
+Dent (players/francesco/masterquest/machining):
+If the time limit elapses in mastermind, I STILL can't chat.
+
+Fenfir (players/fred/mages/rooms/hall):
+Fenfir, March 2nd, 2004.  I was in the BCM ghall with Dasani, I typed learn auramancery, shadowmancery and necromancery and it took away my exp. heh.  I am going to reimburse myself, mail fred about it. all based upon how many party exp i have. i had about 800k to level, now i have 700k to level.  i'm going to give myself 800k exp because my party exp says I have earned 919298 exp.  THere was also a bug before as another character where I typed the cmd to leave BCMS and lost my life
+
+Dent (players/mizan/etheriel/ROOMS/spoogle):
+The suction pump in the entrance to the jello thinks the mud reboots every 8 hours instead of 12....
+
+Dent (players/mizan/etheriel/ROOMS/spoogle):
+Mizan, superwho doesn't always show all the playuers logged on.  I noticed it with Ninjas; they show up on the who and who2 list (who2 shows them at location unknown), but not in superwho
+
+Dent (players/mizan/etheriel/ROOMS/spoogle):
+charge doesn't error check -- if I need 5 to fully charge, and try to charge 10, I lose 10 sps, even though only 5 go into the clay...could it just transfer what we need and preserve the rest of our sps?  I noticed when I was lazy and didn't want to do the math to figure out how many sps short I was and just did charge 100.
+
+Dent (players/mizan/etheriel/ROOMS/linna):
+If I have balloons in my inventory and do a sell all in a shop, I sometimes drop the balloon and it breaks apart...which is fine.  Except if that happens, I get a sensitive mind message, and the sell all stops.
+
+Dent (players/trix/castle/town/pub):
+the alcohol is listed as healing 50, but it only heals 30.  Either the heal should be fixed, or the description in this room.
+
+Kamilico (room/post):
+I was in my room, room 352.  I had previously dropped all of my things in there a couple days ago, did a restore, restored my nodachi, and dropped all my items which was a balance meter (mizan's monster guild), a firecracker, a pile of shit, a water balloon along with a stilletto dagger of wraith and posion, sohei's robes and the nodachi.  When I returned and did a restore I resotred the nodachi, the daggers, the robes, the pile of shit which I stepped in, the blockbuster firecracker, then I tried to 'store' to store my nodachi and it asked me to do a restore, so I restored and got 6 yummy cookies back.  Not sure if they even heal you but nevertheless it's an odd bug.  it's about 11:50 AM PT.  Probably has to do with Mizan's piles of shit, blockbuster firecracker, balance meter and water balloohn being stored.
+
+Icarus (players/mythos/aroom/forest/bridge):
+I was fighting Benkei, I left to go to the man who sells detox injections.  I got detoxed, which took about 20-30 seconds then came back and Benkei had gone from 2/10 to 10/10 in a matter of seconds.  Why this happens I don't know, this isn't the first time it's happened either.
+
+Tallos (room/vill_green):
+Casa De Nirvana stores gear over across to the next person who gets that room. I can create a newbie and get any of the gear that is in that room from a previous player. This is a major twink...
+
+Geek (room/vill_green):
+the Goalie Mask doesn't show up on the armors list when worn unless you have another helmet in your inventory. Don't know if this is a bug or not, but it's wierd.
+
+Denttle (players/earwax/area/fields/room/sanctuary):
+The info command on the dispenser doesn't deal with invalid entries.  You get a sensitive mind error if you type info foo.
+
+Geek (players/snow/dervish/hall/hall):
+It is my intention to show with this string that the blue crystal where the xetra spawn is a terrible buggey code. One mid level mob that can do up to 350 damage in a single round is crazy hard. I have experienced this damage, and I think it is wrong. If the xetras are there to do that much damage then they should be worth more exp or more coin. This has happened to me in the twice in the past week. I believe that someone should take a very close look at the xetra and figure out a happy medium for the players.
+
+Bloodangle (players/mythos/aroom/forest/around):
+i'm stuck at rope given me the slip and fall thing like 50 tims have wasted at least 30k in coins
+
+Vital (players/vertebraker/workroom):
+fix this
+
+Vital (players/vital/workroom/idlework):
+It would be nice if these bugs had date/timestamps on them
+
+May  9 09:25 Budah (room/vill_green):
+I tried to climb the oak tree in glade, and I died, there must be a bug there, because I didlose all my hps. In my opinion I shouldn't have died, but I'm logging this so a wiz can look into it
+
+May  9 17:08 Fenfir (room/shop):
+offwielded kept weapons do not get "kept"
+
+May  9 17:08 Fenfir (room/shop):
+offwielded kept weapons do not get "kept"
+
+May 10 20:34 Swlabr (room/adv_guild):
+ya aya
+
+May 10 22:28 Swlabr (room/vill_green):
+mythos' healer guild -> "The Shield of Light surrounding Mantis is strenghthened!" or some crazy whackadoodle
+
+May 11 15:28 Swlabr (room/vill_green):
+mal's newbie heals - spam if fail to drink or whatever.
+
+May 11 15:28 Swlabr (room/vill_green):
+[if you have multi]
+
+May 11 15:49 Swlabr (players/eurale/Keep/k16):
+mythos' healer guild.. can't heal forms
+
+May 11 15:49 Swlabr (players/eurale/Keep/k16):
+like BCM deathknight
+
+May 13 12:52 Kirrin (room/vill_green):
+I prayed after a death and sc showed 80k coins and no text of anyone giving them to me
+
+May 19 22:42 Weasel (players/pestilence/hall):
+unkeep should be done automatically when remove item.
+
+May 21 01:41 Mjirn (players/trix/castle/town/2str3n):
+fix blocked by if in party
+
+May 22 01:15 Mjirn (room/slope):
+when you cant carry shit at pesitlences heals it seems to still tally the "we are out" stuff
+
+May 22 01:16 Mjirn (players/eurale/Keep/k16):
+this room fucks up bad, no present check
+
+May 22 01:24 Mjirn (players/eurale/Keep/k17):
+can't remove <armorname> 2
+
+May 22 02:01 Mjirn (players/eurale/RMS/warp):
+my green wand should dest the portal at the green before it makes a new one
+
+May 23 20:15 Mjirn (room/temple/path):
+take mal's guild objects out of game. [book of paladins, etc.]
+
+May 24 23:25 Mjirn (players/unsane/xmen/danger):
+weapons shouldn't call their specials if broke
+
+May 24 23:35 Mjirn (players/hurtbrain/castello/dag/dag32):
+caesar dodging deathblow
+
+May 24 23:47 Mjirn (players/emerson/rooms/room2):
+here, need id's of trump for the mobs
+
+May 25 00:14 Mjirn (players/nightshade/room/c27):
+in this room, present() check needs to be for hephastus, not dragon
+
+May 25 00:17 Mjirn (players/nightshade/room/guild_row4):
+hook plate in this gay area has only an id of armor
+
+May 25 01:24 Mjirn (players/boltar/sprooms/weaponsmith):
+fix elemental wep. whoever jacked that up jacked it bigtime
+
+May 25 17:14 Balyn (players/guilds/bards/bardrooms/enterance):
+guard in this room seems to clone more than one bardsword
+
+May 25 17:27 Balyn (players/guilds/bards/bardrooms/object):
+change_title here refers to 'bard_title_list' with no argument, which it should really point to 'title_list'
+
+May 25 19:56 Psychax (room/depository):
+ROOM:First Depository of Nirvana.  When you withdraw over the 80k coins limit the coins poof with no message.
+
+May 25 23:08 Balyn (players/mizan/etheriel/ROOMS/noobo):
+web shouldn't require a target if i'm fighting
+
+May 25 23:08 Balyn (players/mizan/etheriel/ROOMS/noobo):
+nor should orb [bards]
+
+May 26 01:51 Balyn (players/snow/ROOMS/cave3):
+bard spells force to attack_object() when already query_attack()
+
+May 26 02:36 Balyn (players/mizan/etheriel/ROOMS/wumple):
+bard "know" cmd: Gender: 0 for non-gendered...
+
+May 26 19:48 Balyn (players/guilds/bards/bardrooms/lore):
+this room - teachers = teaches you the art of Shaping
+
+May 26 20:02 Balyn (players/mizan/etheriel/ROOMS/loafy):
+you can web a mob multiple times.. er bind in bard guild
+
+May 28 20:52 Badman (players/boltar/casino/room#3024):
+gator necklace looses teeth when you store it in casa de nirvana hotel
+
+May 29 00:27 Balyn (players/softly/point/rooms/lh9):
+true_name sez da dude recovered from his agony
+
+May 29 00:27 Balyn (players/softly/point/rooms/lh8):
+(Bards guild)!
+
+May 30 07:30 Balyn (room/shop):
+coin getting - shouldn't say 297 coins: too heavy.
+
+May 30 21:14 Vertebraker (players/vertebraker/workroom):
+triceratops.. room where you can enter hole and fight a female tri and dig out an egg with the spade from the ranger.. if they dig egg and it cracks and makes a tri, you can still dig the egg out after you kill it [usagi]
+
+May 30 21:15 Vertebraker (players/vertebraker/workroom):
+casa de nirvana doesnt reset eq from prev owners.. usagi got into his hotel with some goodies, already waiting in storage [usagi]
+
+Jun  2 22:26 Shadowstone (players/deathmonger/UNDERDARK/mycon/mycon2):
+this boy cant look at, used fungus boy, fungus, boy, none works
+
+Jun  2 22:42 Shadowstone (players/deathmonger/UNDERDARK/treasure):
+the chest's id is wrong in here, cant look at it or anything
+
+Jun  4 15:56 Fossil (players/zeus/realm/taus/circle7):
+killed the creature of mist in Zeus' fallen area but didn't get the big exp at the end. bog.
+
+Jun  5 11:47 Rick (room/vill_green):
+mythos's area tunic from jinro, when you use up the charges it disappears but you can't wear main armor, this occured to wicket on 6/5/04 at 9:46 eastern time
+
+Jun 11 15:05 Someone (players/vital/workroom/classroom):
+usagi - casa de nirvana: if wocket pet is in room, can store 1 less thing
+
+Jun 11 15:06 Someone (players/vital/workroom/classroom):
+usagi - 2 gsticks kept, one stick sold anyway, might have been offwielded [dark order?] <test with derv anyway>
+
+Jun 15 22:34 Rick (players/fred/forest/Rooms/forest38):
+not sure but hey fred! The ferret  L A S H E S out at Ferret you with it's huge paws!
+
+Jun 15 22:35 Rick (players/fred/forest/Rooms/forest36):
+was in overlord room, both regular ferrets were saying it, just thought you might want to know fred, Rick
+
+Jun 23 19:39 Rick (room/vill_green):
+sebasiss was 90k the first time i was in a party and killed him with kinshin, this time in a party with mosh killed him 667960 xp

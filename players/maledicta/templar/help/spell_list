@@ -1,0 +1,25 @@
+                        -=[Spell_list]=-
+
+The following is a complete listing of all spells by rank.
+For more info on a spell type: info <spell>
+
+Guild Level  Piety:  Rank Needed:   Spell name:
+===============================================================
+     8       -     Grand Marshall   charge          stamina[25]
+     7       18       Marshall      stamina[24]     
+     6       17    High Commander   sponsor         stamina[23]
+	 5       15       Commander     quick           stamina[22]
+                                    fear            
+     4       13        Knight       defend          stamina[21]
+     3       11     Knight Errant   judge           peek
+     2        9     Shield-Bearer   bash            decorpse
+	                                award           penalize
+     1        8        Squire       alignment       home
+                                    gstat           tc
+							        block           templar
+							        I               tce
+							        fixtitle        compare
+									
+									       
+To leave the guild (!) you can use the command "retire".
+

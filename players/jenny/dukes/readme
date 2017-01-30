@@ -1,0 +1,47 @@
+This area is based on the TV show "The Dukes of Hazzard, which was on
+from 1979-1985.  I tried to incorporate some of the language from the
+show into the descriptions, so much of the poor grammer is intentional.
+It is a low to mid level area.
+
+some things to note include;
+
+1.   	I will replace the entrance room to my area with /players/jenny/next.c.  This allows
+	people to go to hazzard and bundy areas.  It Takes you to a random one of the 16 rooms
+	I have set up as roads.
+
+2.	Bo, Luke, Rosco, Enos, and Cleetus all clone to one of a random 15 rooms that I have
+	the included file /players/jenny/dukes/general.h in.  I have this file in all of the
+	rooms I have set up as roads, with the exception of r14.c
+
+3.	There is some free stuff in the area.  /dukes/rooms/farmhouse.c, and hoggoffice.c
+	give a small amount of coins if you search.  If you search in dr1.c, once every
+	4 resets you will be get a clue to follow a path, that takes you to still.c.  In
+	that room, you can get 1+random(2) of /dukes/items/shine.c
+
+4.	You can get a decent weapon /dukes/items/bow.c by killing bo and luke duke, then
+	opening the trunk of the general lee.  The weapon has a query for will power of 
+	wil > random(20) for one of it's specials.  The people who get this weapon will be
+	unlikely to be maxed in that stat.  weapon averaged 10.28 over 200 rounds with a 
+	piety of 20, 9.94 over 200 rounds with a piety of 15, and 9.65 over 200 rounds with
+	a piety of 10.  Most people who get this will have a piety closer to 10 than 20.
+	The drawbacks on this weapon are you have to kill 2 things, and figure out to open
+	the car's trunk to get it, the will power check on one of the specials, and it is
+	non-savable.
+I said piety earlier in the paragraph, i meant will power.  change that later :)
+in a second test, averaged 10.28 over 200 rounds with will power of 20, 9.23 over 200 rounds with will power of 15 and 9.24 over 200 rounds with will power of 10.
+
+5.	/dukes/mobs/daisy.c, located in /dukes/rooms/nest1.c also serves as a bar.  You can
+	order food, drink, and alcohol from her.  Random prices, and she is very killable.
+
+6.	/dukes/mobs/boss.c has /dukes/items/cigar.c on him.  It is a time based heal.  A
+	call_out heals 4 spell points each round, with a random(9) chance of destructing itself 
+	each time it heals.  Should average 10 heals, and 40 spell points total, but sometimes
+	it will be more, sometimes less.
+
+7	/dukes/items/shine.c and milk.c give an extra 5 in healing if the attribute they are
+	queering is greater than random(40)
+
+8.	have to search in /dukes/rooms/nest1.c to bring up coy and vance.  That room also has
+	a cool jukebox that plays the show's theme song.
+
+9.	2 exits to this area one in /dukes/rooms/r14.c, and the other in /dukes/rooms/r10.c

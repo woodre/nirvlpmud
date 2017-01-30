@@ -1,0 +1,17 @@
+	>>---------<< /players/mizan/etheriel/ROOMS >>---------<<
+
+	All of the rooms that run under the RandomRoom.c and
+	RandomRoomDM.c room drivers reside in this directory.
+
+	Rooms that do not run under at least RandomRoom version 2.6
+	reside in /players/mizan/etheriel/rooms (lowercase)
+
+	All rooms currently run on the 2.6 standard, and I see little
+	possibility in even introducing RandomRoom 3.0 because it
+	seems that 108 rooms is the limit for most people to stand.
+
+	Basically, /players/mizan/etheriel/rooms will see little use,
+	if any, since I plan on making all of the rooms in the
+	castle unique. Rooms will either be using RandomRoom.c (2.6+),
+	a custom setup, or the upcoming LiquidRoom.c which will
+	receive the directory /players/mizan/etheriel/liquid.

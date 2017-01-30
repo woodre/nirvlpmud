@@ -1,0 +1,46 @@
+#include <ansi.h>
+#define tp this_player()->query_name()
+#define ROOT "/players/daranath/wastes/"
+inherit "room/room";
+
+reset(int arg){
+move_object(clone_object(ROOT+"mon/goblin1.c"),this_object());
+move_object(clone_object(ROOT+"mon/goblin1.c"),this_object());
+  if(!arg){
+    
+set_light(1);
+short_desc= (BLK+BOLD+"Gundar Caves"+NORM);
+long_desc=
+"The darkness of the caves is lessened here, a glowing fungus on the walls is\n"+
+"shedding enough light for you to see by. The passage ends here, leaving your\n"+
+"only option to be turning around back torwards the main cave.\n";
+
+items=({
+"darkness","The darkness here is cut buy the glowing fungus",
+"fungus","The softly glowing fungus sheds enough light for you to see by",
+"cave","The main cave is too far to see from here",
+"light","The small amount of light here is cast by a strange glowing fungus",
+"passage","The passage ends here, forcing you to turn back west",
+"walls","The natural rock walls grow darker the further into the cave you look",
+"wall","The natural rock walls grow darker the further into the cave you look",
+    });
+
+    dest_dir=({
+  ROOT+"caves8.c","west",
+    });
+
+    }
+  }
+
+init(){
+  ::init();
+add_action("search","search");
+}
+
+search(){
+write("Nothing of interest is found in the passage.\n");
+  say(tp +" searches the area.\n");
+ return 1;
+}
+
+realm() {return "NT"; }

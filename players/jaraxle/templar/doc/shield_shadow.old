@@ -1,0 +1,94 @@
+object caster;
+object target;
+
+string *valid_dam_types;
+
+reset(x) {
+  if(x) return;
+  valid_dam_types=({
+    "physical", "magical", "other|dark", "other|light",
+    "other|water", "other|fire", "other|wind", "other|earth",
+    "other|ice", "other|electric", "other|laser", "other|evil",
+    "other|good", "other|poison", "other|mental" });
+}
+void start(object ob1, object ob2)
+{
+  target = ob1;
+  caster = ob2;
+  shadow(target, 1);
+}
+
+void stop()
+{
+  shadow(target, 0);
+  destruct(this_object());
+}
+
+/* Translate hit_player to do_damage, just like in player.c */
+
+hit_player(dam1, type1, dam2, type2){
+   return do_damage(({dam1,dam2}),({type1,type2}));
+}
+
+int do_damage(mixed dam, mixed type)
+{
+  int total;
+  int i;
+
+  if(!caster) stop();
+
+  /* mv'd this before the damage-cutting in half */
+  if(member_array(type, valid_dam_types) == -1)
+  {
+    tell_object(find_player("vertebraker"), "INVALID DTYPE " + type + "\n");
+    return (int)target->do_damage(dam, type);
+  }
+  /* Just cut all the damage in half. */
+
+  for(i = 0; i < sizeof(dam); i++)
+  {
+    tell_object(find_player("vertebraker"),
+   "dam[i] "+dam[i]+" becomes "+(dam[i]/2)+"\n");
+    dam[i] = (dam[i]/2);
+  }
+
+  total =  (int)target->do_damage(dam, type);
+  total += (int)caster->do_damage(dam, type);
+  tell_object(find_player("vertebraker"), "dam dealt: " + total + "\n");
+
+
+  /* Emotes */
+
+  if(!random(4))  /* Dilute the spam a little. */
+  {
+    tell_object(caster, "You try to block some of the blow!\n");
+    tell_object(target, (string)caster->query_name()+" blocks some of the blow!\n");
+    tell_room(environment(), (string)caster->query_name()+" tries to protect "+
+                             (string)target->query_name()+"!\n",
+                             ({ caster, target }));
+  }
+  return total;  /* from return dam; */
+}
+
+
+void heal_self(int x)
+{
+  if(x < 0)
+  {
+    if(!caster) stop();
+    target->heal_self(x/2);
+    caster->heal_self(x/2);
+    if(!random(4))  /* Dilute the spam a little. */
+    {
+      tell_object(caster, "You try to block some of the blow!\n");
+      tell_object(target, (string)caster->query_name()+" blocks some of the blow!\n");
+      tell_room(environment(), (string)caster->query_name()+" tries to protect "+
+                               (string)target->query_name()+"!\n",
+                               ({ caster, target }));
+    }
+  }
+/* verte */
+  else target->heal_self(x);
+}
+
+query_shield_shadowed() { return 1; }

@@ -1,0 +1,30 @@
+The critical objects in the polymorphs and their responsibilities are as follows:
+
+PDM.c
+The Polymorph Daemon Master. This is the server object where all of the core guild
+functionality resides. 
+
+gob.c
+The guild object. The guild object acts mostly as a variable container, and a function
+router to the PDM, where a single copy of all guild functionality resides.
+
+mob.c
+The morph object template. This object is what the morph forms inherit from, building
+their functionality from a base of common functions. Similar in interaction and
+design to game objects such as /obj/living.c or /obj/monster.c
+
+rsob.c
+The remote spell object. This is used for casting spells that are of duration, instead
+of the instant command line spells that require an input, generate an output, and
+return. This is used when a spell needs to do callouts and lasts more than one
+instant.
+
+Other important files:
+
+tugDM.c
+The tug-pull daemon. This is the server object used for the tug and push statistics
+functionality associated with ~/etheriel/ROOMS/linna.c
+
+NEWSFILE.o
+The stored object file used by the news system currently resident in PDM.c
+

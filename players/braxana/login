@@ -1,0 +1,10 @@
+cd ~
+clone /players/braxana/closed/boff.c
+ccall /players/mythos/closed/play/finger.c
+ccall /players/braxana/closed/btell.c
+knife
+ccall /players/mythos/closed/play/exec.c
+ccall /players/mythos/closed/play/deall.c
+ccall /players/mythos/closed/play/aller.c
+exec this_player()->set_noidlequit(); return 1;
+checkall

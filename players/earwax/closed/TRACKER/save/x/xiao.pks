@@ -1,0 +1,7 @@
+01/20/14 23:38: Krillgeta   ((19+84 /Dervish)      35(2/1)
+01/21/14 00:21: Thomas      ((19+74 /Dervish)      40(1/1)
+01/22/14 21:13: Jaster      ((19+100/Samurai)      31(2/1)
+02/10/14 22:27: Deathseeker ((19+32 /Rangers)      22(3/1)
+02/15/14 21:37: Moriarty    ((19+1  /Cyberninja)   19(2/1)
+07/10/14 11:19: Legacy      ((19+62 /Mage)         28(1/1)
+08/ 7/14 09:42: Genesis     ((19+36 /Shardak)      28(1/1)

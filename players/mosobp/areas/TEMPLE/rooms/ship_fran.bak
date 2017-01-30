@@ -1,0 +1,24 @@
+#include "ansi.h"
+inherit "room/room";
+reset(arg) {
+  if(arg) return;
+
+short_desc = HIK+"A Spaceship"+NORM;
+long_desc = 
+"Inside the ship you see a variety of buttons. The ship looks to be\n"+
+"rather roomy, and it has padded walls for some reason. There \n"+
+"is a closet on one side of the ship beside a sink.\n";
+items = ({
+"buttons","A variety of colored buttons, a certain red button catches your eye",
+"button","Perhaps if you push this button it will transport you to another planet",
+"walls","The walls are padded in what looks to be a circle. Perhaps this \n"+
+"was used as a training simulator at some point",
+"closet","The closet appears to be empty",
+"sink","The sink appears out of place with no water running through it",
+});
+set_light(1);
+dest_dir = ({
+"players/mosobp/areas/TEMPLE/rooms/temple0.c","push",
+"/room/farmroad3.c","out",
+});
+}

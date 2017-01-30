@@ -1,0 +1,25 @@
+#include "ansi.h"
+
+inherit "room/room";
+
+init ()  {
+::init();
+
+reset(arg)  {
+
+if(!arg) {
+
+set_light (0)
+
+short_desc = "a template room";
+
+long_desc = "this room is here so that you dont have to type in so n"+
+many commands so that making rooms will be easier.\;
+
+dest_dir = ({
+
+"players/data/roomtemp.c", "north",
+});
+}
+}
+

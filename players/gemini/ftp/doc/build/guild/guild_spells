@@ -1,0 +1,74 @@
+Guild Combat Spells 
+4-1-96 Bp 
+Added heal_self() -Bp 20-Aug-98
+ 
+Guild spells may be based upon two lines, the first is the prefered line
+and it follows the basic game spells. The second line are those spells 
+which call hit_player() directly to do damage. 
+The Basic game spells are as follows:
+level 5 missile, damage random(20) cost 10
+level 10 shock, damage random(30) cost 15
+level 15 fireball, damage random(40) cost 20
+level 19+5 sonic, damage 12+random(33) cost 25
+ 
+NOTE: no spell is to be more powerful than sonic.
+
+these spells follow a 1 sp per point of stright damage, 1/2 sp per point
+of random damage. They differ from hit_player() direct spells because
+of how the combat is coded and the damage cap.
+ 
+For basic game spells, and those using spell_object() (a function in
+living.c that allows guild spells to work as basic game spells)
+the damage cap is 50 per round for weapon hit and spell hit.
+ 
+hit_player() calling spells on the other hand have a separate call to 
+hit_player() from the weapon hit. thus, two calls or a combined damage
+cap of 100. hence they must follow this chart.
+ 
+     cost                             damage
+        1 sp                              1 pt random damge
+        2-3 sp                            1 pt damage
+
+heal_self() has been used for damage by some. This SHOULD NOT be
+done unless there is no other way! Consult a senior wiz before
+using it. Cost will be as follows:
+
+     cost                             damage
+        1-2 sp                            1 pt random damge
+        3 sp                              1 pt damage
+
+there must ALWAYS be a random element to the spell that is greater than
+non-random element.
+   this means the bulk of the damage must come from the random part.
+   i.e. 10+random(30) is good 30+random(10) is NOT
+
+using the hit_player chart 10+random(30) would cost between 50 and 60 sp
+ 
+the cost is double, because of damage potential is double. 
+ 
+lastly,
+Area effect spells or multi-monster spells must have an sp cost based 
+on the TOTAL damage done to all monsters based on the system above.
+these are basic guidelines.... devations based ok'd by aproval.\
+ 
+ 
+APPENDIX 5-7-96
+Fixed item cost sp reduction math, now 30coins. (60/2) -Bp 20-aug-98
+
+delays: 
+   time delays between spells can give the following cost savings in
+spell points for the player. I will set this at 2 sp for every one
+minute they cannot cast another guild spell.
+ 
+sacrifices:
+ based on a 1 pt heal = 60 coins. A 1pt heal = 1sp & 1hp.
+   these too can be used to lower the sp cost. their value is what they
+cost the player in coins/30. this keeps it in line with healing costs.
+so a sacrifice that cost 300 coins would be worth a 10 sp savings.
+but the spell must be blocked without the sacrifice. 
+Items found on monsters etc will have to have their savings set up
+based on the monster and will need evaluation on a case by case basis.
+ 
+NEITHER of these can lower the cost of a spell below 65% of its standard
+cost.
+NO spell drawback justifies spell power beyond the limit of the rules.

@@ -1,0 +1,14 @@
+guild_exp 8000000
+beats 365631
+percent 0
+endurance 80
+max_endurance 80
+special_title "Runner"
+weave 1
+endurance_monitor 0
+posendcol "[36m"
+negendcol "[1;31m"
+norm "[2;37;0m"
+old_exp 6346831
+custom_monitor "$R$[fallen] $N$HP: $HY$#hps#$N$/#mhp#  SP: $HY$#sps#$N$/#msp#  E: $HY$#end#$N$%  [#intox#% #stu#% #soa#% #inf#%]   $HY$#ahp#$N$"
+Skills ({"focus","wither corpse","drain","teleport","shield","weaken","meditate","web","blast","empower","shadowform","descend","shadowcloak","dark assistance","repulsion","vanish","rage","dark prayer","weave","see","vigor","beckon shadows","know","embrace","siphon",})

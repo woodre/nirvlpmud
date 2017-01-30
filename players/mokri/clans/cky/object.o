@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;31mThe Mark of the Insane[0m[0m"
+long_desc "[1;31m       You are one of the completely[0m [31mINSANE[1;31m.[0m[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "mark"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[1;31m       You are one of the completely[0m [31mINSANE[1;31m.[0m[0mType 'clan_help' for commands."
+clan_short "[1;31mThe Mark of the Insane[0m[0m"
+damage_type 0
+hall_path "/players/chip/room/apartment/enter"
+object_name "mark"
+owner "blackstar"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 80000
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

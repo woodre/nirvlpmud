@@ -1,0 +1,68 @@
+                           MOB Files
+                           
+     All MOBS
+                                                 
+---  I am starting with the mobs set_long.  As I have said many times
+     there is more than one way to code the same thing and have it work.
+     However, you need to stick to 1 way. It needs to be keep the same
+     for every file.  So, It does not matter whether it is \n\ or \n"+
+     Fix them all to one or the other, but I will not allow it to be back
+     and fourth.
+     
+     This, also includes spells they need to be the same code type.
+     
+    Imp 
+    
+--- when creating a mob you need to follow the mud standards.  I gave you 
+    a file with the level ac wc hp and coin cost.  Now on the coin cost, this
+    is the total allowable amount which includes any item/s a mob drops.
+    This means that the imp drops a belt. You have the value of the belt
+    500 random 500.  So I would take in to count the variance and access 
+    it at 750 coins.  The mob is level 18 so this should be 3500 coins.
+    3500 - 750 = 2750. So, the amount of coins dropped could be up to 2750.
+    I have talked with Fred and Vert about varying from the set levels when
+    using random. President is 4.  What this means is if a level 18 mob is 
+    wc 26 ac 15  then when using random it can be 26 random 4  15 random 4.
+    Now let me say this, I know you can find examples where wizes don't follow
+    the rules, one it is not right and two it does not make it ok for us to
+    do it wrong.  That said set ur levels to follow the mud standards.  Use
+    random, this will get u a little bigger mob and make it where it is not predictable.   
+    ur random is not bad just the base number.  The issue with random is being too
+    random.  If I am a level 16 player and go in ur area with a random of 4 I can prob
+    take the mobs at the different levels with little issue, but add a random of
+    20 then one I can kill and the next one I am killed in the first round.  Not fair to
+    the players.  Funny for us, not for them and they are why we are here.
+    
+    In the long change the 4th sentence to ,which  or change Which to It
+    
+    In the long_desc you need to add \n"); at the end.  You have "); which is wrong.
+    Then readjust the lines to be about the same length....
+
+--- wc 26 random 4
+--- ac 15 random 4
+--- hp 400 random 100
+--- coins 2500 random 1000  plus u have the belt 750 a potential of 4250... 
+    still above set amount, but potential on the bottom side is 3002 coins
+
+
+    Skeleton
+
+
+--- wc 26 random 4
+--- ac 15 random 4
+--- hp 400 random 100
+--- coins 3500 random 1000 
+
+
+    Vermin
+    
+---wc 15 random 4
+---ac 9  random 5
+---hp 165  
+---coins 500 random 250
+
+Vermin it overwhelming in its long_desc Change the 3rd and last Vermin to Its 
+Then readjust the lines to be about the same length....
+
+
+Good job overall with spelling and grammar.....

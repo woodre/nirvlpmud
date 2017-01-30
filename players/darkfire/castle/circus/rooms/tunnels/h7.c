@@ -1,0 +1,43 @@
+#pragma strict_types
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-
+ 8X8 Chess Board Layout
+  -------------------
+8 | + + + + + + + + |
+7 | X + + + + + + + |   ^
+6 | + + + + + + + + |  /+\
+5 | + + + + + + + + |   +
+4 | + + + + + + + + |   +
+3 | + + + + + + + + | North
+2 | + + + + + + + + |
+1 | + + + + + + + + |
+  ------------------/
+    A B C D E F G H
+=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+#include <ansi.h>
+#include "/players/darkfire/castle/circus/circus.h"
+#include "_area.h"
+
+/* Inherit the area's base room. */
+inherit "/players/darkfire/castle/circus/rooms/tunnels/_base.c";
+
+void
+reset(int arg) {
+	int col, row;
+	if(arg) return;
+	::reset();
+
+	set_col(7);
+	set_row(6);
+
+	set_long_deadend();
+
+	add_exits("n");
+	add_exit(PATH_GRAVEYARD + "c1", "graveyard");
+}
+
+void
+init() {
+	::init();
+}

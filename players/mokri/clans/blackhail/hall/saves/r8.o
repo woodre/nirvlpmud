@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/blackhail/hall/r6","east","/players/mokri/clans/blackhail/hall/r26","west","/players/mokri/clans/blackhail/hall/r27","north","/players/mokri/clans/blackhail/hall/r28","south",})
+short_desc "[1;31mMain Armor Room[0m"
+long_desc "[1;31mMain Armor Room[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1m[30mSilk Robe[0m","/players/softly/algiers/obj/srobe",0,0,0,"Armor of the Ages","/players/saber/armor/age",0,0,0,"[1;34mPlate[0m of [1;33mT[1;34m*[1;33mH[1;34m*[1;33mU[1;34m*[1;33mN[1;34m*[1;33mD[1;34m*[1;33mE[1;34m*[1;33mR[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_plate",0,0,0,"[1;34mPlate[0m of [1;33mT[1;34m*[1;33mH[1;34m*[1;33mU[1;34m*[1;33mN[1;34m*[1;33mD[1;34m*[1;33mE[1;34m*[1;33mR[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_plate",0,0,0,"[1;33mEa[1;37mg[1;33mle[0m[33m Armor[0m","/players/jaraxle/3rd/alt/items/eagle_armor",0,0,0,"[1;34mPlate[0m of [1;33mT[1;34m*[1;33mH[1;34m*[1;33mU[1;34m*[1;33mN[1;34m*[1;33mD[1;34m*[1;33mE[1;34m*[1;33mR[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_plate",0,0,0,"[1m[30mShadowVeil[0m","/players/arrina/armor/sveil",0,0,0,"[1;33mEa[1;37mg[1;33mle[0m[33m Armor[0m","/players/jaraxle/3rd/alt/items/eagle_armor",0,0,0,"Iron [1;30mPlate[0m of Death[0m[0m","/players/jareel/armor/mondar_armor",0,0,0,"[1;33mEa[1;37mg[1;33mle[0m[33m Armor[0m","/players/jaraxle/3rd/alt/items/eagle_armor",0,0,0,})

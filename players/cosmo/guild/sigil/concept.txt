@@ -1,0 +1,39 @@
+CONCEPT FOR SIGILISTS TO GAIN SPELLS (Lesser Sigils)
+
+NOTE: The files shown as examples are very crude and
+were just thrown together as a proof-of-concept.
+
+Step 1: The player must defeat a mob or solve a mini-quest
+to attain an item. In this example, the item is a bone.
+See /players/cosmo/guild/sigil/obj/bone.c
+
+Step 2: The player must take the item back to his personal
+Sigilist library room.
+See /players/cosmo/guild/sigil/room/library.c
+
+Step 3: The player must figure out something to do with the
+item. In this case, the player must crack the bone in half.
+If the player isn't in the library, the item is destroyed
+and the player doesn't gain the knowledge. If the player is
+in the room, then the player gains the spell.
+
+In this example, the player learns the "disperse" spell,
+which is for gaining power from and destroying corpses.
+See /players/cosmo/guild/sigil/power/disperse.h
+
+The gained spell is added to the spelllist array in the gob.
+This array is checked by init() and the player gets a
+command for each spell.
+See /players/cosmo/guild/sigil/gobdir/vars.h
+                                   ../init.h
+                                   ../functions.h
+
+Step 4: "Solving" the item also adds a book to the player's
+library. Each book contains the help file for the new spell
+that has been learned.
+< I haven't implemented this part yet. >
+
+-------------
+This is all pretty rough, but at least it's headed in some
+direction. Let me know what you think and we'll build on it.
+- Cosmo

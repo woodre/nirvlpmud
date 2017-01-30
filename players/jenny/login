@@ -1,0 +1,4 @@
+clone /players/jenny/closed/stick/stick.c
+hand jenny /players/mythos/closed/play/finger.c
+invis
+exec TP->set_gender("creature");

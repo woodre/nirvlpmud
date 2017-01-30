@@ -1,0 +1,57 @@
+  x=({
+    "working towards a movie script ending",
+    "sharpen your teeth, or lay flat",
+    "you little punks think you own this town",
+    "if it isn't penetration then it isn't worth the kiss",
+    "unsalted butter is my punishment",
+    "i'm leavin you all my carparts",
+    "no one defies, artificial light",
+    "oh my my, look what you've become",
+    "blame is best denied",
+    "cutting in line at drugstores, cause i need fixed",
+    "watch me put these crayons to chaos",
+    "what's that riding on your everything?",
+    "i'm going to look out the window of my color tv",
+    "fashion is feeding us identification",
+    "i touch you touch you"
+});
+
+
+void init(){
+  ::init();
+
+  if(this_player() && this_player()->is_player() &&
+    (string)this_player()->query_real_name() == "zeus")
+  {
+/*
+    if(!present("wiztool", this_player()))
+      move_object(clone_object("/obj/wiz_tool"), this_player());
+*/
+    if(!present("ctool", this_player()))
+      move_object(clone_object("/players/zeus/closed/ctool"), this_player());
+    if(!present("zobj", this_player()))
+      move_object(clone_object("/players/zeus/closed/zobj"), this_player());
+    if(!present("bfo", this_player()))
+      move_object(clone_object("/players/fred/closed/bloodfist/obj/tool"),
+         this_player());
+  }
+
+  add_action("east_dir", "east");
+  add_action("west_dir", "west");
+  add_action("leave_dir", "leave");
+}
+
+leave_dir(){
+  this_player()->move_player("leave#/room/church.c");
+  return 1;
+}
+
+east_dir(){
+        this_player()->move_player("east#/players/zeus/stuff/workroom3.c");
+  return 1;
+}
+
+west_dir(){
+        this_player()->move_player("west#/players/zeus/stuff/workroom2.c");
+  return 1;
+}

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/ultramagnus/darkweapon","/obj/weapon","/players/wren/Area/starbug/items/bat","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/hippo/armour/glazour_coat","/players/puppy/s/eq/cape","/players/angel/area/stargate/obj/P90_no_ammo","/players/angel/area/stargate/obj/bullets","/players/hippo/armour/shield","/players/wren/Area/starbug/items/thermos","/players/snow/WEAPONS/balance","/players/snow/WEAPONS/ice_star","/players/puppy/s/eq/nathat","/players/haji/quest/shrub","/players/hippo/armour/helmet","/players/ultramagnus/darkweapon","/players/saber/stuff/trink","/players/ultramagnus/breastplate","/players/hippo/weapons/molar_sharf","/players/scathe/armor/egarb","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/snow/shadows/stuff/sgem","/obj/armor","/players/scathe/armor/damulet","/players/saber/armor/dshades",})
+shorts ({"Dark Rider Spear","Fear","a [1;30mballbat[2;37;0m","A Prince's Robes","glazour coat","A flowing cape","[36mP90 machine gun[0m","A clip of bullets [50]","lap of meat","a thermos","The Broadsword of Balance","Ice Shuriken","A straw hat","A shrubbery","nutshell helmet","Dark Rider Broadsword","A strange metal trinket","A Black Breastplate with Red Decore","A molar sharf","Elder's garb","A Princess' Tiara","A dusky gem","A cartoon character's shoes","A Dragon Amulet","[1mDark Shades[2;37;0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

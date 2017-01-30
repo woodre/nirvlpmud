@@ -1,0 +1,64 @@
+#include "/players/zeus/closed/bloodfist/defs.h"
+#include "/players/zeus/closed/bloodfist/obj/valid_attack.h"
+
+status main(string str, object PO, object User)
+{
+  int dmg, cost, activity;
+  string meat, which;
+  object nmy, wep;
+  if(str)
+  { 
+    sscanf(str, "%s", meat);
+    sscanf(str, "%s %s", meat, which);
+    if(sscanf(str, "%s %s", meat, which) != 2) {}
+    nmy = valid_attack(meat, User);
+  }
+  else if(!str)
+    if(User->query_attack())
+      nmy = (object)User->query_attack();
+
+  if(User->query_attack()) 
+  {
+    TOU "You cannot do this while already in combat.\n");
+    return 1;
+  }
+  if(!nmy)
+  {
+    TOU"Who do you want to attack?\n");
+    return 1;
+  }
+
+  if(!which && !nmy->id(str) && str)
+    which = str;
+
+  if(which) 
+    wep = DIR+"power/unsheath.c"->main(which, PO, User);
+  else
+    wep = (object)User->query_weapon();
+
+  activity = (int)PO->activity_bonus();
+  cost = 27 - ((WIS / 20) + (FAI / 50));
+  dmg = (FAI / 10) + (MIT / 25) + (ACC / 50) + random(25) + GOD + activity;
+  dmg = (int)PO->stance_bonus(dmg);
+  PO->add_activity(2);
+
+  if(!wep)
+  {
+    TOU "You attack "+nmy->short()+" with your fists!\n");
+    TRU Name+" attacks "+nmy->short()+" with "+User->POS+" fists!\n",
+      ({ User }));
+  }
+  else {
+    TOU "You attack "+nmy->short()+" with your "+wep->short()+"!\n");
+    TRU Name+" attacks "+nmy->short()+" with "+User->POS+" "+
+      wep->short()+"!\n", ({ User }));
+  }
+  User->attack_object(nmy);
+  nmy->hit_player(dmg);
+
+  if(which)
+    DIR+"power/sheath.c"->main(which, PO, User);
+
+  return 1;
+}
+

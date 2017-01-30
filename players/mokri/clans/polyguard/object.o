@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;32msilly[1;36mputty[0m[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "putty"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;32msilly[1;36mputty[0m[0m"
+damage_type "magical"
+hall_path "/room/wild1"
+object_name "putty"
+owner "springdawn"
+spell_alias "putty"
+spell_mess_me "%hi green%The %hi green%silly%hi cyan%putty %hi yellow%begins to glow %hi cyan%%bold%Brightly %hi yellow%sucking in%normal% %AKN% %hi magenta%causing a lot of%hi black% damage.%normal% "
+spell_mess_room "%TPN% %hi magenta%watches as the %hi cyan%silly%hi green%putty %hi yellow%glows brightly causing %hi red%a lot of %hi yellow%damage to be %red%done.%normal%"
+spell_mess_them "%TPN% %hi magenta%watches as the %hi cyan%silly%hi green%putty %hi yellow%glows brightly causing %hi red%damage to%normal% %AKN%."
+abilities ({})
+chan_history ({"[Sun Dec 28 15:21:19 2008] Shadows has joined the clan!","[Sun Dec 28 15:24:05 2008] Springdawn has promoted Shadows to a clan leader!",})
+leaders ({"shadows",})
+join_type 0
+private_coffer 1704252
+public_coffer 0
+spell_delay 0
+spell_id 1
+spell_cost 15
+last_spell_time 1251001348

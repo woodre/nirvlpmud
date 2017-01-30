@@ -1,0 +1,20 @@
+**************
+
+
+                     Tail
+
+Syntax:    tail <dir>
+
+Desc:
+           Returns the last 15 lines of a file. Counter point to cat.
+
+Warning:   None
+
+Example:   tail /obj/bag.c
+                  results
+           last lines of bag.c are displayed
+
+Related:   cat, more, dump
+
+
+**************

@@ -1,0 +1,1 @@
+[1;33mLittle [2;37;0m[1m: [2;37;0m[1;33mWhat a truely great ally, Little is always there and vigilant whenever you need him. Not only is he a good ally, is is also a good friend.[2;37;0m (borith)

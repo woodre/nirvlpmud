@@ -1,0 +1,135 @@
+Wed Nov 28 14:00:38 2001  changed Coils: Increased WC and Damage from spells
+Wed Nov 28 14:13:23 2001  changed North Road to remove references to the arena
+Wed Nov 28 14:30:57 2001  Removed all trace of the arena from Griffin's Flight
+Wed Nov 28 14:32:57 2001  Removed all trace of the arena from Dagger Alley
+Sat Dec  8 12:30:59 2001  found bug in saber's area, mailed Verte and Boltar
+Tue Dec 11 14:54:16 2001  Added a line to the storage room in redtower to let the otyugh prevent searching
+Tue Dec 11 14:54:46 2001  continued working on the market square within Qualtor
+Tue Dec 11 20:08:32 2001  converted Cheese, Red Wine and Tin into ansi heals
+Tue Dec 11 20:08:56 2001  made new heals: Toadstool, Jello Shot and Gelatinous Ooze
+Wed Dec 12 08:13:24 2001  Tested new heals with a 19th level warrior
+Fri Dec 14 22:20:55 2001  finished new market square and street leading to same
+Fri Dec 14 22:21:09 2001  created new items for sale at marketplace
+Fri Dec 14 22:21:27 2001  blocked access to tugnutt's shop, which will not be open at first
+Tue Dec 18 08:38:23 2001  set up new dirs for new areas `/outside, vale and wyrmskull
+Tue Dec 18 21:21:43 2001  started working on /outside, couple of rooms and mons done
+Sat Dec 22 13:01:26 2001  created new heal: Slime in /newstuff/heals dir
+Sat Dec 22 13:01:44 2001  finished and opened /outside/tallgrass.c
+Sat Dec 22 14:29:15 2001  caught Dabura and Ravennight possibly multiplaying
+Wed Dec 26 12:08:57 2001  continued work on new areas....  mostly in /outside
+Wed Dec 26 17:14:55 2001  continued building new rooms for /outside
+Wed Jan  2 19:38:28 2002  created a couple of new items for the market square
+Fri Jan  4 20:39:41 2002  Did squat, cause I'm lazy
+Fri Jan 11 21:44:04 2002  fixed bug in Black Rose Tavern, reported by Satine
+Fri Jan 11 21:44:48 2002  got about 30/35% of /wastes finished, including the goblin caves
+Tue Jan 22 21:38:17 2002  spent last 2 weeks finishing /wastes. All done except for a couple of room descripts
+Wed Jan 23 16:39:00 2002  Changed /wastes to realm NT to keep out high level players
+Sat Jan 26 07:37:15 2002  added 70k to Roubaix (Forbin's char) for error with my earth elemental
+Sat Jan 26 07:40:17 2002  Earth elemental didn't give him any exp for the kill...
+Sat Jan 26 07:49:06 2002  oh, and I gave roubaix a heal for the trouble of my own, not worth much
+Wed Jan 30 08:57:11 2002  Changed items on Crusader Knight in Qual'tor. Values are same -> only names have changed, to develop area further
+Wed Feb 20 13:50:23 2002  Finished /wastes to Fakirs specs... awaiting approval
+Wed Feb 20 14:23:15 2002  Built Kaya, the Monk to wield Pouncing Kitty kung fu
+Wed Feb 20 15:24:27 2002  Put Kaya up on the mountain, guarding the warlord's wife and mistress
+Wed Feb 20 18:12:36 2002  Pestilence caught Ryoohki and Kelly multiplaying (Kelly was DCed) warned them both as no coins or items were passed and next time both are jailed
+Sat Feb 23 13:25:54 2002  Changed spell damage on Crusader Knight and Necromantic Guardian (increased)
+Wed Mar  6 20:30:06 2002  Further adjusted the Necro Guardian's special
+Thu Mar 14 08:40:36 2002  Closed Qual'tor and my areas for repairs and city upgrade
+Sun Mar 24 10:00:29 2002  Ribbit is helping test out new heals
+Tue Mar 26 15:49:59 2002  started /qualtor/CHANGES to log all changes in my city since shutdown
+Sun Apr  7 22:24:27 2002  Gave Data Kitten for it disappeared from lockers, despite my not moving it at all....  disappeared from my test lockers too
+Mon Apr 29 15:37:57 2002  Helped Vapor fix her lockers, had her clear, gave replacement items as the objects moved pathnames and 2k to restore
+Sat May 18 16:05:29 2002  Ok, forgot to add this -> opened Qual'tor 2 nights ago
+Sat May 18 16:05:37 2002  Finished Marketplace
+Sat May 18 16:05:49 2002  Qual'tor and Marketeers approved by Maledicta
+Sat May 18 16:06:39 2002  Restored item that bugged to raphael - eyepatch
+Sat May 18 19:20:34 2002  Yelled at the mud for bickering over risque and yelling the names of seconds over same
+Sat May 18 19:22:56 2002  today -> fixed bug/typo/pathname in preserve ability of marketplace, flesh.c, leather_cap.c, crystalline tower, bone_shop, paladin.c, crysmal.c and innocent.c
+Sun May 19 09:15:24 2002  Found bug in Dark Blade / fixed / replaced
+Sun May 19 09:35:26 2002  Made it so the market object doesn't count exp from parties torwards your topkill
+Thu May 23 21:08:41 2002  Moved Qual'tor onto the Continent of Maledicta, pocketed the franchise rights that he paid, bought a porsche, saved the rest for my kids education...
+Sun May 26 20:11:37 2002  finished digging through Forbin's flame_forest area and mail Maledicta
+Sat Jun  1 08:35:33 2002  Changed Saber's Bandits so they no longer say 'Bandit 2' during a fight
+Sat Jun  1 22:21:55 2002  Fixed bug in market -> Can no longer exchange purchased corpses
+Sat Jun  1 22:22:13 2002  Reported by Fett, rewarded with /qualtor/wep/tungus_axe.c
+Wed Jun  5 22:45:50 2002  tweaked the cost of heals in the bone marketplace
+Wed Jun  5 22:46:18 2002  lowered the credits given by the wand, players get more creds for carrying corpses back to the market itself
+Wed Jun  5 22:51:22 2002  cleaned up some files in dirs...  removed or moved into storage
+Wed Jun  5 22:52:12 2002  Continued going through Catacomb's files
+Thu Jun  6 18:10:27 2002  Changed a pile of aligns on my mobs ...  too many that were -1000
+Fri Jun  7 09:50:34 2002  Added GraveStorm into the graveyard around the keep
+Fri Jun  7 14:37:35 2002  Fixed Naga Cave so only 1 key is found for treasure chest
+Fri Jun  7 22:34:04 2002  Tweaked Xion and Dralgos in Bone Market, added death logs too
+Sat Jun  8 14:12:44 2002  Added second crystal to the frightcrawler for balance
+Sat Jun  8 19:15:34 2002  Put cap on number of crysmals that can be created by crystalline elemental (5)
+Thu Jun 13 21:53:15 2002  Approved /players/wren/Area/starbug area, as all suggested changes and problems are fixed
+Thu Jun 13 21:53:35 2002  Promoted Wren to level 30 for opening first area
+Sat Jun 15 22:10:58 2002  Opened the Pheonix inn, which holds a login point for the city and my copy of catwoman's lockers
+Sun Jun 23 15:03:46 2002  fixed typo in qualtor/newstuff/heals/gel_ooze.c
+Sun Jun 23 15:41:20 2002  Tried to fix problem with necro guildob - wasn't allowing a member to set a login point anywhere....
+Sun Jun 23 15:41:24 2002  didn't work
+Sun Jun 23 19:14:35 2002  Changed line in new_entry.c to reflect fact that Necromancers have moved
+Mon Jun 24 05:57:05 2002  fixed top of red tower, there were 4 glowing portals
+Fri Jun 28 21:49:34 2002  Added coins to the Morgue Toad for balance
+Sun Jun 30 09:25:38 2002  Changed action command on the Shard of Bone from suck to tear (obvious reasons)
+Sun Jun 30 09:49:19 2002  Added pile of ash to the Ashen Grinder, which didn't give coins before
+Sun Jun 30 09:49:35 2002  Added pile of ash to the Ashen Golem, to match the Grinder
+Sun Jun 30 09:49:53 2002  Lowered the coins of the Ash Golem to match monster guide
+Mon Jul  1 20:26:04 2002  Fixed bug in Ashen Golem - stopped Lair from loading
+Tue Jul  2 21:40:55 2002  balanced sh_master.c in qualtor/mon - lowered hps
+Thu Jul  4 08:37:42 2002  Started the first of the three clans: Lion Clan
+Fri Jul  5 08:31:40 2002  added to the sign on the login point to notify players that some guilds interfere with logining into Qual'tor
+Fri Jul  5 20:56:21 2002  approved Forbins new heal for Flame Forest jaune.c at 1200 coins
+Thu Jul 18 21:21:49 2002  Added a history to the market channel
+Fri Jul 19 16:10:25 2002  Gave Teepo 10k in exp for bringing back Snitch
+Thu Jul 25 18:08:29 2002  approved /pesty/amity/obj/bpie.c at 1200 coins cost...
+Sat Jul 27 06:52:45 2002  Added exit to healerguild in /closed/portal.c
+Sat Jul 27 09:54:59 2002  More work on the clans....
+Tue Jul 30 19:51:43 2002  Approved update to Dr Duke in pestilence's area (added special) /players/pestilence/amity/mob/duke2.c ...players killing far too often...   update at my suggestion
+Tue Aug  6 16:07:19 2002  Fixed Summer's login point, she was logging into Knight guild hall
+Wed Aug  7 20:55:56 2002  Finished the work on the new wizclan...  almost happy with it
+Thu Aug  8 17:07:37 2002  Approved the area in /players/pestilence/club2 (the non pk rooms) to open whenever Pestilence wants...
+Thu Aug  8 17:30:56 2002  Gave pestilence level 45 for new area, its not enough for level 50, but still good
+Thu Aug  8 17:41:53 2002  Pesty's level are past due with the amount of help he has given me
+Fri Aug  9 06:16:06 2002  restored Elven Rapier to casper after bug in my twinblade cost him irreplacable weapon
+Fri Aug  9 16:27:50 2002  Changed consider on the badge...
+Fri Aug  9 16:27:58 2002  because of Verte's meddling ways
+Fri Aug  9 19:54:22 2002  approved /players/pestilence/amity/obj/bluepie.c at a cost of 1200 coins or more
+Fri Aug  9 20:09:08 2002  Completly gave up on the clan idea, I'll let Verte handle that and code the Druids guild instead....
+Sat Aug 10 09:57:12 2002  Change Elemental Amulet so it fits in proper slot...   not sure why it was misc
+Sat Aug 10 10:47:15 2002  Fixed bug on wizclan who listing
+Sat Aug 10 12:10:51 2002  Approved /players/jaraxle/closed/heals/roht.c for sale at 1200 coins...  total intox of 20, value of 1200
+Sat Aug 10 13:14:45 2002  Approved /players/wren/Areas/redbank - Gave no levels though, its only got 2 rooms in it
+Thu Aug 15 19:48:08 2002  Continued work on the Druids all day
+Thu Aug 15 21:53:37 2002  Approved /players/jaraxle/templar/rooms/equipment.c - basic room with nothing in it (of importance)
+Fri Aug 16 20:06:44 2002  Its ok for Spiral to be released from prison whenever he wants...   he apologized to me and its been over a week (first offense in my eyes)
+Fri Aug 16 21:22:36 2002  Took over Sponsorsip of Jack, with Verte's permission
+Fri Aug 16 21:22:44 2002  now lets see if he will actually code
+Sat Aug 17 12:28:38 2002  Continued work on Druid guild
+Sat Aug 17 12:29:06 2002  added exit to druid hall from swirling portal (personal goportal) ~/closed/portal.c
+Sun Aug 18 06:57:14 2002  Rewarded nietzsche 15000 exp for catching the golden snitch in an open contest to all
+Thu Aug 22 22:59:47 2002  Installed a network in my house - so multiple ips to Nirvana might become commonplace....   do NOT jail anyone for 68.14.5.164      ip68-14-5-164.ri.ri.cox.net
+Sun Aug 25 00:14:05 2002  Fixed race on Gloom Assassin to undead - so disruption maces can use it
+Sun Aug 25 09:55:54 2002  added color to the crysmal
+Sun Aug 25 11:11:14 2002  Updated the emotes on the Major Mace of Disruption to work better
+Sun Aug 25 11:11:30 2002  Made the frightcrawlers an undead lizard to fit in with the rest of the graveyard
+Sun Aug 25 11:13:18 2002  Couldn't figure out when Atrocity lost 14k in coins, gave her 7k back
+Mon Aug 26 22:00:51 2002  Jailed assclown for obvious reasons
+Thu Aug 29 14:36:04 2002  updated and fixed the color, name or alias on a half dozen items that needed improvement within my directories
+Mon Sep  2 08:28:02 2002  Updated east road shop in qualtor to /doc/build/RULES/shops specs
+Tue Sep  3 19:32:55 2002  Approved the sewer addition to Pestilence's club. He didn't get levels for the club, so I promoted him to level 50 for good work
+Wed Sep  4 19:29:17 2002  Sickness gets one week...
+Wed Sep  4 19:29:41 2002  For mouthing off to me after I told him to change his offensive pretitle
+Wed Sep  4 19:57:48 2002  Refused to allow Coda to be let out of prison...    its a stolen name
+Fri Sep  6 21:58:16 2002  Approved changes to /forbin/hyperion/ruins/  logged in changes-sep2002-06  simply takes it to a little bit higher level and adds some ansi
+Wed Sep 11 16:36:02 2002  Approved Forbin changing a couple rooms to dark in the ruins
+Wed Sep 11 17:23:54 2002  Promoted Forbin for helping with many approvals
+Thu Sep 12 15:57:56 2002  Updated Stone's armor and shield to Verte's new specs, that he promised before he left. Both items are 1-% more powerful now...
+Thu Sep 12 15:58:42 2002  armor and shield changed from random(100) to random(90)
+Mon Sep 23 16:41:19 2002  Ok'd the release of Fury on one condition, he screws up again and he's done
+Wed Sep 25 21:53:42 2002  Approved the area in /players/catacomb/Cavern after much rework...
+Wed Sep 25 21:54:44 2002  Granted Catacomb level 35 for work on the area
+Wed Sep 25 22:00:41 2002  Approved sps cost addition to /players/jareel/weapons/sword.c
+Sat Sep 28 18:49:45 2002  Added xp to Kat for restoring lost templar skill ranks
+Sat Sep 28 21:00:56 2002  Ran exp race...  Vistar won, exp awarded in /players/daranath/PRIZES
+Sun Sep 29 07:13:39 2002  Re-imbursed poggio to 8.1 mil exp (19+18) after dying to a bug in the Flame Forest. Bug is fixed any everything is taken care of

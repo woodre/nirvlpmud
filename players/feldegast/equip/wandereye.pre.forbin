@@ -1,0 +1,215 @@
+#define MAP "/players/feldegast/realm/JalHab/Map.c"
+#define CHARGES 200
+#define TELE_CHARGE 5   /* Charges to teleport */
+
+#include "defs.h"
+
+int charges;
+int heal_flag;
+
+inherit "/obj/armor.c";
+
+void reset(int arg) {
+  if(arg) return;
+  set_name("eye");
+  SetMultipleIds(({"wandering eye"}));
+  set_alias("jalhab map"); /* Makes it harder to get lost in Jal-Hab area */
+  set_short("The "+CYN+"Wandering "+HIM+"Eye"+NORM);  /* Note to self: Come up with something better */
+  set_type("amulet");  
+  set_long(
+"You hold in your hands the legendary Wandering Eye of Tarakkan, God of\n"+
+"fools, travellers, and sometimes knowledge.  The Eye is a violet hued\n"+
+"jewel in the center of an amulet.  It is said that the jewel gives its\n"+
+"bearer certain powers:\n"+
+"\t eye_wander, eye_loc, eye_bless\n"
+  );
+  set_ac(1);
+  set_weight(2);
+  set_value(1500);
+  charges=CHARGES;
+}
+
+short() {
+  if(TP && this_player()->query_level() > 20)
+    return ::short()+" (Charges: "+charges+")";
+  else return ::short();
+}
+
+void long() {
+  ::long();
+  if(charges)
+    write("The amulet "+HIM+"glows"+NORM+".\n");
+}
+
+void init() {
+  ::init();
+  if(environment()!=this_player())
+    return;
+  add_action("cmd_wander","eye_wander");
+  add_action("cmd_loc","eye_loc");
+  add_action("cmd_bless","eye_bless");
+}
+
+/* A teleport to the Jal-Hab */
+int cmd_wander(string str) {
+  int cost;
+  string where;
+  object dest;
+
+  if((int)this_player()->query_attrib("pie") < 19) {
+    write("You are not worthy of the Wanderering God's blessing.\n");
+    return 1;
+  }
+
+  cost=55+random(5);
+
+  if(!worn) {
+    write("You must wear the Eye first.\n");
+    return 1;
+  }
+
+  /* No teleporting if you're fighting. */
+  if((object)this_player()->query_attack()) {
+    write("You cannot do that while you are fighting.\n");
+    return 1;
+  }
+
+  if((int)TP->query_sp() < cost) {
+    write("You try to teleport yourself from here, but lack the magical\n"+
+          "energy needed to do so.\n");
+    return 1;
+  }
+
+  if(charges < TELE_CHARGE) {
+    write("You have expended the Eye's energy.\n");
+    return 1;
+  }
+
+  if((string)environment(TP)->realm()=="NT") {
+    write("You attempt to teleport yourself from here, but you are in\n"+
+          "a no teleport zone.\n");
+    return 1;
+  }
+
+  this_player()->add_spell_point(-cost);
+
+  /* Check for teleport error */
+  if(where=(string)call_other("obj/base_tele","teleport")) {
+    TP->move_player("with an astonished look#"+where);
+     return 1;
+  }
+
+  write(short()+" glows hot in your hands as its warm light envelops you.\n");
+  say(TPN+" grasps "+short()+" and is enveloped in violet light which slowly\n"+
+      "fades into nothing.\n");
+  dest=(object)call_other(MAP,"query_location",random(10),random(10));
+  charges-=TELE_CHARGE;
+  move_object(this_player(),dest);
+  return 1;
+}
+
+/* Sextant */
+int cmd_loc(string str) {
+  int *coords;
+  if((int)this_player()->query_attrib("pie") < 19) {
+    write("You are not worthy of the Wanderer's blessing.\n");
+    return 1;
+  }
+  if(!worn) {
+    write("You must wear the Eye first.\n");
+    return 1;
+  }
+  coords=(int *)environment(this_player())->query_coords();
+  if(!coords)
+    write("You cannot gauge your current position.\n");
+  else {
+    write("You use the eye to locate your current longitude and latitude.\n"+
+          "X: "+coords[0]+" Y: "+coords[1]+"\n");
+    charges--;
+  }
+  return 1;
+}
+
+int cmd_bless(string str) {
+  if(!worn) {
+    write("You must wear the Eye first.\n");
+    return 1;
+  }
+  if(!heal_flag && charges) {
+    if((int)this_player()->query_attrib("pie") < 19) {
+      write("You are not worthy of the Wanderer's blessing.\n");
+      return 1;
+    }
+    set_heart_beat(1);
+
+    heal_flag=1;
+    write("You bow your head and ask for the Wanderering God's blessing.\n");
+    write("Type 'eye_bless' again to stop.\n");
+  } else
+  if(heal_flag) {
+    set_heart_beat(0);
+    write("You humbly thank the Wandering God for his blessing.\n");
+    heal_flag = 0;
+  }
+  return 1;
+}
+
+void heart_beat() {
+  if(!environment()->is_player() || charges <= 0 || !worn) {
+    set_heart_beat(0);
+    heal_flag=0;
+    return;
+  }
+  if(creator(environment(environment()))!="feldegast") {
+    tell_object(environment(), "You are beyond the sight of the Gods of Allandria.\nBlessing stopped.\n");
+    set_heart_beat(0);
+    heal_flag = 0;
+    return;
+  }
+  if(charges && (int)environment()->query_hp() < (int)environment()->query_mhp() ) {
+    environment()->add_hit_point(1);
+    charges--;  
+    if(!random(10))
+      switch(random(3)) {
+        case 0: tell_object(environment(),"You feel the Wandering God's blessing.\n");
+                break;
+        case 1: tell_object(environment(),"The Eye reinvigorates you.\n");
+                break;
+        case 2: tell_object(environment(),"You feel refreshed.\n");
+                break;
+      }
+  }
+}
+
+int call_armor_special(object owner) {
+  if(charges && !random(10)) {
+    write((string)owner->query_name()+" quickly ducks your blow.\n");
+    if(random(2))
+      tell_object(owner,"The Eye blurs your movements, making you harder to hit.\n"); 
+    else
+      tell_object(owner,"You swiftly duck the blow.\n");
+    charges--;
+    return random(4);
+  }
+  return 0;
+}
+
+locker_arg() {
+  return charges+"";
+}
+
+locker_init(arg) {
+  sscanf(arg,"%d",charges);
+}
+    
+generic_object() { return 1; } 
+
+restore_thing(str) {
+  restore_object(str);
+  return 1;
+}
+
+save_thing(str) {
+  save_object(str);
+  return 1;
+}

@@ -1,0 +1,13 @@
+                    -- FIRE BLADE --
+
+TYPE: Fixed
+INT REQ: 2
+USAGE: fblade on/off
+COST: 500,000
+WEP REQ: Bladed Type Wielded
+
+Also adds +1 to rooms light, mana drain only happens in combat.
+
+      /=LEVEL=COST SPS=DAMAGE=\
+      |   1  | 3/round| fire  |
+      \=======================/ 

@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/mortis/hall/main","south",})
+short_desc "[1;30mBarrows[0m of the dead[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;36mCrystal Longsword[0m","/players/llew/closed/crystal/crystal_sword",0,995,268,"[1;33mAmulet [0mof [1;33mLightning[0m","/players/jaraxle/cont/bdragon/amulet",0,0,0,"A [33mgolden[0m earring","/players/vertebraker/swamp/OBJ/j_earring",0,0,0,"[1m[34mShield of Tears[0m","/players/fakir/ways/ARM/tshield",0,0,0,"Bracers of Speed","/players/maledicta/cont/rdragon/sbracers","-0-",0,0,"[1;30mThe Glove of [0m[36mM[1;36mo[0m[36mlo[1;36mc[0m[36mh[0m","/players/forbin/realms/flame_forest/OBJ/gmoloch",0,0,0,"[35mBreath[1;37m of[0m[35m Souls[0m","/players/jaraxle/3rd/alt/items/mana_orb",0,0,0,"[1;37mChestguard of [1;32mHealth[2;37;0m","/players/maledicta/cont/armor/guard_of_health","1",0,0,"[1;30mA [1;31mju[0m[31mju[1;30m trinket[0m","/players/forbin/realms/flame_forest/OBJ/juju",0,0,0,"[1m[37mUng[30mwel[37mian[30mte's [37mweb[0m","/players/trix/castle/town/monst/web",0,0,0,})

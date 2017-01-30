@@ -1,0 +1,91 @@
+#define NAME "rich"
+#define DEST "room/jetty"
+#undef EXTRA_RESET
+#define EXTRA_RESET extra_reset();
+/*
+ * This is just the facade to a castle. If you want to enable the
+ * "enter" command, move the player to a hall or something (which
+ * you have to design yourself).
+ * The predefined string DEST is where a player should come when he
+ * leaves the castle.
+ *
+ * This file is loaded automatically from "init_file". We have to move
+ * ourself to where we are supposed to be.
+ */
+
+id(str){
+	return str == "point";
+}
+
+short() {
+return "The beam-up point to the Enterprise(type energize)";
+}
+
+long() {
+write("This is the main beam-up point for the Starship Enterprise.\n");
+write("To enter type 'energize', Please visit often as the ship is under\n");
+write("construction, so please visit often to keep in touch with\n");
+write("reality.  thank you the management!\n");
+}
+
+init() {
+  if (!present("log")) {
+  object ob,ob1;
+    ob=clone_object("players/rich/log.c");
+    ob1=clone_object("players/rich/keymy.c");
+    move_object(ob,this_object());
+    move_object(ob1,this_object());
+   }
+    add_action("energize"); add_verb("energize");
+}
+
+energize() {
+    write("You have a strange feeling.\n");
+    write("You see your see your own body from above.\n");
+    write("You`re not dead.\n");
+    write("You are in a transporter beam.\n");
+    write("You rematerialize.\n");
+    write("\n\n\n");
+    write("To get healed either go all the way n to pub,\n");
+    write("or go to upper level all the way s in main hallway.\n");
+    write("To sell something go to the quartermasters[n,n,w,n].\n");
+    write("\n\n\n");
+    write("also if you have any characters related to sci-fi you would like\n");
+    write("to kill,send me(rich) a mail message and i`ll see what i can do.\n");
+    write("\n\n");
+call_other(this_player(), "move_player", "into ship#players/rich/trans_room.c");
+    return 1;
+}
+
+reset(arg) {
+ object test1,test,ob;
+
+   test1=clone_object("obj/treasure");
+     move_object(test1,"room/jetty");
+     if(!present("point",environment(test1))) {
+    move_object(this_object(), DEST);
+     return 1;
+   }
+   destruct(test1);
+    test=find_object("room/quest_room");
+
+
+
+     if(!present("trekkie",test)) {
+
+     ob=clone_object("obj/quest_obj");
+
+       call_other(ob,"set_name","trekkie");
+       call_other(ob,"set_hint","Find the Ultimate Trekkie with the videotape.\n" +
+        "`The Lost Episodes of Star Trek'\n" +
+
+        "then find the jeffries tube and throw the videotape.\n");
+     move_object(ob,"room/quest_room");
+     return 1;
+    }
+    destruct(test);
+    if(arg) {
+      return;
+    }
+    return 1;
+ }

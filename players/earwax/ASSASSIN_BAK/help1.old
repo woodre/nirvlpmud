@@ -1,0 +1,23 @@
+
+################################################################################
+COMMAND:                     COST:    USE:
+ALL ASSASSINS:
+consider <player/monster>  40 sp     Stats a player/monster.
+escape                     40 sp    Escape back to the guild hall from anywhere
+
+JOURNEYMAN ASSASSINS:
+contract <player a> <player b>       Contract with a to assassinate b.
+harm <player/monster>        30sp    Random 60 hp damage spell.
+sneak <player>                75sp    Teleport to player silently.
+stalk <player>                15sp   You have learned how to stalk
+                                     your prey, and not lose it.
+                                     stalk off to quit following.
+
+MASTER ASSASSINS:
+spy <player>                 10 sp   See a player's location.
+fear <player>                25 sp   Scare a player right out of the room.
+
+GODFATHERS:
+recruit <player>                     Recruit a player into the guild.
+
+################################################################################

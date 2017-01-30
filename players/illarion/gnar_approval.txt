@@ -1,0 +1,146 @@
+I do believe i have completed the 'problematic' issues, and all accounted for here. thanks for the review gnar, i appreaciate it. :)
+oh i almot forgot the justification for all the mobs. here is the breakdown.
+
+Eventualy, there will be a Quest in this area, along with some nice gear rewards.  as a Reward for the Quest, you will be presented
+With a 'stake'that will be able to 'kill' the vampires in here, at that point when wielding this weapon, or having it in inv upon death
+it will dest the corpse, and instead replace the corpse with 'corpse dust' the goal is to have a scaling armor system, all 18 slots,
+and have the armor go up in level via battle, the armors will cost 100 corpse dust each, then every 5 levels, (max of 20 on armors) you 
+may spend a additional 100 dust to 'upgrade' the armor in one of so many set ways. hence this will be fairly costly considering 18 slots
+300 dust per armor, 18x500=9000 dusts. hence why so many mobs...but when killed with stake, they will not drop coins or anything, just dust
+
+
+
+NPC
+-----------------------
+***complete***bvampboss.c
+  - set_multi_cast should be either 0 or 1, 5 is the same as 1
+  - Why the set_hp_bonus of 650? It is inflating his exp worth
+  - Need to check the value of the grace and cube. Max coins for level 22 is total of 7k. You have 
+    13,500 avg coins plus 7k weapon and 2 non-tox heals. (lowerd to 1)
+  - What is the special advantage? (multi-Cast?)
+    - obj/grace (7200)
+    - closed/cube x1 now :P 
+    - 13500 coins 1k+rndom 8k, avg 5k
+***Complete***bvamp.c
+  - Max value for level 21 is 6k. Mob has 9500 avg plus
+  - won't require it, but I'd prefer to see the updated add_spell functionality
+    You cannot have more than 1 add_spell_dam, the 2nd call just overrides the
+    first, same with set_spell_mess. This vamp will only fire the 2nd spell. That
+    is why add_spell preferred. Also, you have tpn in the string of the
+    message, it will never pull in the players name.
+      - obj/vmace (1200)
+      - 9500 coins
+***Complete***lvampboss.c
+  - set_hp_bonus ? same as bvampboss
+  - Long has a comment about a ring like mikal, but he doesn't have a ring?  FIXXED.
+  - "other|physical" is wrong, should just be physical. But that is the default so if you pass in 0
+    it will default to physical.                                             FIXXED
+  - Max value for level 20 is 5k. Gear as stated is over 20k plus nontox heals. FIXXED. (UPPED LEVEL UPPED ABILITIES, DECREASED VALUES INCREASED COINS+HPS ACCORDING TO DOC/BUILD/MONSTER/MONSTER.GUIDE)
+    - obj/necklace (5000)
+    - obj/vsword (7200)
+    - obj/pants (10000)
+    - closed/cube x2
+***good to go?***lvampire.c
+  - Same comments about spells as bvamp.c
+    - 3000 coins ok for lev 19
+***complete***mikal.c  lowerd to 1 notox, lowerd value of items, kept hp_bonus.
+  - set_hp_bonus ?
+  - set_multi_cast
+  - Value is high with gear + nontox heals
+    - obj/dring (3000)
+    - obj/vmace (1200)
+    - closed/cube x2
+
+***complete***mvampboss.c  lowerd to 1 heal, lowerd value pants.
+  - set_hp_bonus ?
+  - set_multi_cast 
+    - obj/pants (10000)
+    - closed/cube x2
+***complete***mvampire.c lowerd coins..esc...
+  - set_multi_cast
+  - Max value for level 21 is 6k
+    - 7750 coins
+overall
+  - For each mob over level 20 please have a comment at the top of the file that specifically
+    lists the "special" advantage requirements in the build rules for monsters.
+  - Not sure what to do with the cubes. Snow demons are level 22 with high wc and only give 1 ice sphere.
+    And ice spheres have a drawback of melting. You need to work on the value of your mobs, rethink
+    it and let me know.
+  - Your boss mobs should have more unique long descriptions, they each have
+    pretty much the same description.
+  - Some of the formatting is all over the place. Try to indent evenly, if you are having issues with
+    FTP let me know.
+OBJ
+----------------------
+aura.c
+  - Empty file, remove?
+borb.c
+  - Not used, remove?
+***complete***dring.c lowerd resistance, kept bonus as there are +3's in game...changed heal to random 10
+  - Max 1% or 2% reduction in dark/evil damage
+  - Max 2 Mage bonus
+  - Reduce sps heal to random(10), reduce %, or change firing mechanism to use stats/prestige something unique
+    - 5 + random(5) sps heal
+    - 15% other|dark
+    - 15% other|evil
+    - ac 1
+    - mage evoc +3
+dust.c
+  - Not used, remove?
+***complete***grace.c lowerd vamp heal rate, changed special to heal less hps for non-vamps.
+  - Fix space issue after (non-vamp) special 
+  - vampire add_BLOODPTS - Need to know how this effects a vampire, too lazy to dig.
+    - 20% 3.5 hps
+***complete***necklace.c
+  - Max 2% reduction in dark/evil damage
+  - Reduce sps heal to random(10), reduce %, or change firing mechanism to use stats/prestige something unique
+    - 5 + random(5) sps heal
+    - 10% other|dark
+    - 10% other|evil
+    - -5% other|light
+***complete***pants.c lowerd BF bonus, upped %, lowerd value
+  - Per Fred, +5 to both BF stats would be the max for non main armor
+  - Over 40% chance to heal 5 sps with max luck. Need to fix the fire mechanism 
+    for this bonus.
+***complete***vmace.c
+  - Max return for weapon_hit of 3 unless you add restrictions based on previous comments.
+    - wc 15 + 3 other|evil
+    - 20% chance of return 5
+vsword.c weapons are BS lol, let this one go....rofl
+  - Avg wc of 25 is too high, lower % of special (see previous comments)
+    - wc 20 + 3
+    - 40% chance of return 5
+Zan.c
+  - Not used, remove?
+overall
+  - I like you use of luck stat in the pants, I'd like to see more variety in
+    the gear bonuses and the requirements for them to fire, like use of stats or
+    prestige level or other unique things.
+  - I'd like to see weps and armor in their own dirs, but won't require you
+    update it now. If not then remove wep/armor dirs.
+    
+ROOMS
+-----------------------
+ldeck5.c
+  - add_action search added but function not defined. Search in room gives error.
+  - Hint in room long says covered up door. However the item is "doors". You can have
+    a item for door and doors by using the & notation. You don't want a better hint for going
+    west?
+    "lot", "A Parking Lot",
+    "parking lot", "&lot&",
+labpath3.c
+  - search broken like ldeck5
+abarracks7.c
+  - 3 ways to go n. Search debris only works once, but pass and north always work, was
+    that what was intended?
+medlab4, medlab5, medlab6.c
+  - newline messed up at the end of the room long.
+medlab4.c
+  - Room long map doesn't match exists
+labhall.c
+  - empty file, remove?
+overall
+  - Too many mobs in the area, try to randomize it? I'd suggest 30 / 20 / 12
+  - Why using jareel's define.h? Dependencies like this causes maintenance issues
+  - Avoid putting in the long the item descriptions ex: labpath3 the shelves description
+    is in the long as well as the shelves item.

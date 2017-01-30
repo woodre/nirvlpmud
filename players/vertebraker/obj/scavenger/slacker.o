@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/indianheaddress","players/wren/Area/starbug/items/reddress","/players/snow/WEAPONS/glowknife","/players/hippo/weapons/molar_sharf","/obj/bag","/players/saber/armor/hardsuit1","/players/snow/shadows/stuff/crown","/players/arrina/armor/bedsheet","/players/wren/Area/starbug/items/thermos","/players/ultramagnus/bdiamond","/players/angel/area/stargate/obj/bullets","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/hippo/heals/nucleus","/players/wren/Area/starbug/items/groinal","/players/jamila/beach/mobs/claw","/obj/armor","/obj/treasure","/players/hippo/heals/bubbles","/players/maledicta/cont/rdragon/elven_rapier","/obj/treasure","/players/pain/NEW/arm/tunic","/players/ultramagnus/berries","/players/maledicta/cont/weapons/rweapon","/players/wren/Area/starbug/items/lunchbox","/obj/armor",})
+shorts ({"a tiny indian headdress","spirit blade","A glowing knife","A molar sharf","bag","A light blue Hardsuit","[1mShadowCrown[0m","A Linen Bedsheet","a thermos","A Blue Diamond","A clip of bullets [50]","A Priest's Robes","[35mnucleus of a cell[0m","Kryten's groinal attachment","A Lobster Claw","A [1mwhite[0m helmet","A rattlesnake's rattle","[1;36mbubbles of 7up[0m","[32mElven [1;32mRapier[2;37;0m","Beach Bear pelt","A handsome blue tunic","A Bunch Of Blue Berries","a Two-handed sword","a lunch box","A suit of [1mwhite[0m platemail",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

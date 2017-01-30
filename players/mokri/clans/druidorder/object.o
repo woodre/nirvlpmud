@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;35m Book of History[1;32m[[1;35m*[1;32m][0m[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "shield"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;35m Book of History[1;32m[[1;35m*[1;32m][0m[0m"
+damage_type 0
+hall_path "/room/church"
+object_name "shield"
+owner "angelus"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Wed Dec 23 14:23:29 2009] Horus: we?","[Wed Dec 23 14:23:35 2009] Horus: u did","[Wed Dec 23 14:23:45 2009] Horus: i had nothing to do with this for sure","[Wed Dec 23 14:23:45 2009] Angelus: yeah my idea, and I wrote what the scale said","[Wed Dec 23 14:23:49 2009] Angelus: you did the code","[Wed Dec 23 14:23:56 2009] Horus: ?","[Wed Dec 23 14:24:00 2009] Horus: i did?","[Wed Dec 23 14:24:02 2009] Angelus: yes","[Wed Dec 23 14:24:16 2009] Horus: lol r u sure?","[Wed Dec 23 14:24:22 2009] Angelus: yes im sure","[Wed Dec 23 14:24:36 2009] Horus: heh i don't recall that","[Wed Dec 23 14:24:40 2009] Angelus: I do :)","[Wed Dec 23 14:24:48 2009] Horus: hold on let me log CW","[Wed Dec 23 14:29:42 2009] Horus: ok back","[Wed Dec 23 14:32:46 2009] Angelus: well im glad your gonna get to see your friend","[Wed Dec 23 14:32:54 2009] Angelus: and then you get to show off your wife to him","[Wed Dec 23 14:32:56 2009] Angelus winks","[Wed Dec 23 14:33:26 2009] Angelus: oh wait..make that PREGNANT wife :)","[Wed Dec 23 14:33:48 2009] Angelus: btw dude who from here have you told?","[Wed Dec 23 14:36:48 2009] Angelus: later bro",})
+leaders ({"horus",})
+join_type 2
+private_coffer 180000
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

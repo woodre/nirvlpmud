@@ -1,0 +1,70 @@
+Wed May 15 19:46:25 2002  cloned /players/dune/closed/guild/implants onto dominak (cybers not having guild objects after a crash)
+Wed May 15 21:42:54 2002  hand domanik /players/dune/closed/guild/implants
+Wed May 15 21:50:42 2002  hand miso /players/dune/closed/guild/implants
+Wed May 15 21:57:41 2002  hand domanik /players/dune/closed/guild/implants
+Sun Aug  4 22:44:24 2002  test
+Sun Aug  4 22:44:36 2002  idest doodle set / removed 2 die set objects from doodle that cause a known guild bug when trying to advance others
+Sun Sep 15 20:26:05 2002  added add_property("NF"); to /players/puppy/mem/1.c
+Sun Sep 15 20:26:07 2002  added add_property("NF"); to /players/puppy/mem/2.c
+Sun Sep 15 20:26:11 2002  added add_property("NF"); to /players/puppy/mem/3.c
+Fri Mar  7 20:12:02 2003  /players/dune/closed/guild/doc/renegade.txt  Added these lines to the file (help file) A Renegade has chosen a path of conflict which will bring about many battles.  One must be able and willing to fight those battles.
+Sun Mar  9 12:54:56 2003  se
+Sun Mar  9 12:56:31 2003   3/9/03 /players/dune/closed/guild/fab.c    added commands at the end of the file to remove the die_set when a player exits the room
+Sun Mar  9 20:58:40 2003  /players/dune/closed/guild/doc/honor.txt  changed description for legend honor
+Mon Mar 24 20:52:35 2003  fixed typo in /players/puppy/mem/3.c
+Mon Mar 24 22:56:52 2003  /players/puppy/areaentrance.c command forest now creats a log of who enters /players/puppy/s/1.c
+Tue Apr  1 21:24:45 2003  cleared guild exp from Teepo - trying to join new guild and had old warrior exp
+Mon Apr 14 19:59:16 2003  added 380830 exp to curse - return of extra guild experience
+Wed Apr 16 21:21:21 2003  /players/dune/closed/guild/rooms/emoteon.c added a command to the room "rules" to tell players not to create a guild emote with the same name as a game emote
+Thu May  8 22:55:16 2003  Cloned vamp guild object to emerald.  She logged into the game without one and could not get a replacement through normal means.  (reported to Eurale)
+Thu May 22 20:31:30 2003  added action for kill to /players/puppy/castle.c - approved by pestilence
+Thu Jun  5 19:45:04 2003  /players/puppy/areaentrance.c added item for forest
+Sat Jun  7 20:33:51 2003  Added /players/dune/closed/guild/rooms/hallway3 and arena.c to cyber guild hall ... approved by Jar
+Sat Jun  7 20:34:31 2003  Added west exit in /players/dune/closed/guild/rooms/hallway2.c
+Fri Aug  1 18:29:18 2003  Cleared the guild exp on Bloodangle (old warrior guild exp.)
+Tue Aug  5 23:05:06 2003  Cloned /players/snow/closed/test/amulet.c to Juggernaut.  Had item on floor of shop and it sold.  OK'd by Boltar.
+Wed Aug  6 21:10:05 2003  /players/dune/closed/lib_admCmds/tourney.c Added directive and executor permission to use the command.
+Wed Aug  6 21:10:11 2003  /players/dune/closed/lib_admCmds/report.c Added directive and executor permission to use the command.
+Wed Aug  6 21:11:09 2003  /players/dune/closed/lib_admCmds/report.c Added directive and executor permission to use the command.lick miso
+Wed Aug  6 23:01:01 2003  Removed six (6) knight objects from Ravanne and cloned one (1) to him.
+Mon Aug 11 21:55:50 2003  Cyber Guild - Gave the power of suspend to Executors
+Mon Aug 11 21:56:32 2003  Cyber Guild - When a cyber is unsuspended they now receive a message stating they need a more honorable title.
+Sun Aug 31 23:33:47 2003  changed /players/dune/closed/guild/doc/cmds5short.txt to reflect changed to voting system made by Vert (channged all commands to show the new cvote commands)
+Mon Sep  1 16:27:33 2003  closed cyber arena due to resetting of pk bug
+Mon Sep 15 23:17:00 2003  allowed players access to /players/dune/closed/rooms/stands.c - approved by Vert
+Mon Sep 15 23:17:08 2003  allowed players access to /players/dune/closed/rooms/arena.c - approved by Vert
+Mon Sep 15 23:17:14 2003  allowed players access to /players/dune/closed/rooms/morgue.c - approved by Vert
+Sun Sep 21 20:25:32 2003  changed line 25 in /players/dune/closed/guild/rooms/phase_hall.c to name = capitalize(player->query_real_name()); (was query_name)  approved by Wocket
+Mon Sep 22 22:52:41 2003  /players/dune/closed/guild/lib_admCmds/suspend.c added "+TPN+" to display who is suspending the player
+Mon Sep 22 22:52:49 2003  /players/dune/closed/guild/lib_admCmds/unsuspend.c added "+TPN+" to display who is unsuspending the player
+Wed Sep 24 22:57:17 2003  changed /players/dune/closed/guild/lib_admCmds/nstats.c so that ONLY guild owners can use the command (it was allowed players to view invis cybers/wizards)
+Sun Sep 28 23:24:02 2003  /players/dune/closed/guild/rooms/hallway1.c only guild officers may use the up command
+Sun Sep 28 23:24:42 2003  /players/dune/closed/guild/lib_genCmds/withdraw.c renegades can not use the command anymore.
+Sun Oct  5 23:02:09 2003  manually suspended kia from the cyberninjas  the guild leadership will handle the problem
+Mon Oct 13 18:39:20 2003  refunded 8957 exp to demonic (extra guild exp)
+Mon Oct 13 19:30:05 2003  healed fleshhunter (refund on sps) due to my desting of guild pet
+Mon Oct 13 23:52:23 2003  added the following commands to cyber guild view_task, set_task  (themeatic commands only - no powers granted/taken from guilf)
+Mon Oct 13 23:52:45 2003  added logging of cyber channels to /players/dune/closed/guild/daemons/channels.c
+Sat Oct 18 17:34:06 2003  healed poggio <helping me test something had full hps/sps before testing>
+Tue Oct 28 21:33:29 2003  Edited /players/snow/closed/test/log as an easy way to view the LONG file
+Tue Oct 28 23:19:26 2003  add 22500 exp ro kramm to fix guild bug that causes death
+Tue Oct 28 23:21:50 2003  add add exp kramm  exp ro kramm to fix guild bug that causes death (level)
+Tue Oct 28 23:22:20 2003  add add exp kramm  to fix guild bug that causes death (62584) to gain cyber levels back
+Tue Oct 28 23:22:46 2003  add 34200 guild credits to kramm to purchase guild enhancements
+Sat Nov  1 18:46:52 2003  /players/dune/closed/guild/rooms/arena.c added down exit.  Players can now access NEW ROOMS arena1.c - arena27.c with this change.
+Sat Nov  1 18:47:52 2003  /players/dune/closed/guild/rooms/arena.c added down exit.  Players can now access NEW ROOMS arena1.c - arena27.c with this change. --approved by Jaraxle--
+Tue Nov  4 20:57:12 2003  dested extra elemental aura from hoyle
+Wed Nov  5 18:15:10 2003  snooped cleipa/ssevegte/crip/flip for about 10 minutes reported to me that they were handing off equipment - nothing found
+Mon Dec 15 19:33:39 2003  added /players/dune/closed/guild/rooms/test.c to cyber guild   approved by Pain
+Tue Dec 16 20:42:55 2003  Removed refrence of Pestilence and Puppy from cyber logs.
+Wed Jan  7 20:50:32 2004  add_xp toranaga 320000 (refund of extra guild exp)
+Thu Jan  8 22:09:10 2004  added code to NOT show invos wizards with the cyber command gbalance
+Mon Jan 26 21:14:47 2004  added /players/dune/closed/guild/rooms/stands.c to the cyber guild   approved by Fred
+Tue Jul 20 23:24:15 2004  Added 20 honor to /players/dune/closed/guild/ninjas/tenchu.o to replace honor lost due to helping me test an object
+Mon Aug  9 22:52:36 2004  placed /players/puppy/closed/snoop.c onto raze (with permission) while trying to figure out a heartbeat problem within the game
+Thu Aug 19 22:09:37 2004  added 6584845 exp tp gravedigger due to bug - /players/puppy/PA/gravedigger-exp-giveback.txt if you want the reason
+Thu Aug 19 22:09:57 2004  added 5719189 exp tp gravedigger due to bug - /players/puppy/PA/gravedigger-exp-giveback.txt if you want the reason
+Wed Sep  8 21:25:38 2004  healed chett to replace sps used in re"calling" his guild weapon
+Thu Sep  9 21:45:52 2004  Approved by Vert ... (opened canine mini guild) Added canine mini guild agent to /players/saber/ryllia/slums3.c
+Tue Mar 24 21:07:07 2015  corrected a typo in /players/puppy/areaentrance.c
+Thu Apr  2 15:24:55 2015  /players/puppy/s/mob/cook.c fixed typo

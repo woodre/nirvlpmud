@@ -1,0 +1,135 @@
+After extensive research through the guild objects of Cybers/Snow
+Polymorph/Mizan, Bard/Saber, Vampire/Nooneelse, and Dark Mage/Mythos
+I have come to some observations and conclusions on direct damage spells.
+1) The rules are interpreted in 3 different manners:
+  1a. DAMAGE = random(COST * 2)
+      - Saber and Mizan
+      Though Mizan thought this was not right, he went with this
+      formula to let the polys compete - or so it says in his code
+      comments.
+  1b. COST = 1 * DAMAGE(random) + 2 * DAMAGE
+      - Nooneelse and Snow
+      Actually Boltar made changes on Nooneelse's code to make it
+      conform to this formula. Snow saw this formula as inefficient
+      and changed guild attack spells to spell_object (following
+      COST = 1/2 * DAMAGE(random) + 1 * DAMAGE)
+  1c. No formula and using heal_self damage
+      - Mythos and Snow
+      Take /players/mythos/closed/guild/spells/flare.h and
+           /players/dune/closed/guild/lib/eflux.h as examples:
+      Flare does heal_self damage of 20+random(60) for a
+      cost of 30 sp, 50 sacrifice points (neglible), and addition
+      of 2-5 to the monster's weapon class.
+      Eflux does heal_self damage of:
+      random() with a cap of 50.
+      The average damage for max guild level 10 is 12 with a max of
+      48 damage possible after the three randomizations (not likely)
+      cost = random(guild_level * random(4) + random(20)) + 10
+      An average cost of 22 at guild level 10. In addition, there
+      is a failure chance of 5-15% and failure leads to a loss of
+      random(20) spell points and a chance to take
+      random(guild_level) + 1 hit_player damage. In addition to this,
+      fluxes must be charged at a rate of 10sp per charge with a max
+      of 6 charges at guild level 10.
+ 
+2) Some clarification and notification/enforcement should be made on
+   points 1a and 1b. According to docs, 1b is correct. Truth be told,
+   1b is not cost-effective vs. monsters and guild spells following
+   this formula are much worse than mud spells.
+ 
+3) I suggest modifying the direct damage docs in the following manner:
+  3a. Clarify these rules to cover hit_player damage only (more about this
+      in point 4).
+  3b. Make all guild attack spells static - the point being that
+      players should only be able to cast one attack spell of any type per
+      heartbeat. Guild wizzes should not try to code around static but
+      should adhere to the meaning of this restriction...
+      "ONE ATTACK SPELL PER HEARTBEAT"
+  3c. With these restrictions, guild spells should have an opportunity
+      to be as effective as mud spells in combat. To comply with this
+      goal, I suggest direct damage hit_player guild spells should
+      follow the spell_object cost formula:
+      COST = 1/2 DAMAGE(random) + DAMAGE .
+ 
+4) Some sort of formula should be created to deal with heal_self
+   damage. It is far superior to hit_player and the cost should reflect
+   this. I suggest COST = 1.5 * DAMAGE(random) + 3 * DAMAGE . Attack
+   spells using heal_self are, of course, attack spells and should also
+   be static.
+ 
+5) At one point in time there was a damage cap on spells. If there is
+   such a cap still in existance, it should be defined to include
+   heal_self damage. 
+ 
+6) With all these regulations (except the static) there are neccessary
+   thematic exceptions. A mage-type guild, with drawbacks such as armor
+   and weapon restrictions and stamina reduction, should get a cost
+   advantage in spellcasting (unless, of course, they get more spell
+   points- see point 7).
+ 
+7) In order to justify added power, there must be some drawbacks to
+   being in a guild. Right now (7/2/97) it seems that many guilds have
+   advantages that counteract their drawbacks or have no significant
+   drawbacks whatsoever. For example:
+     Bards - Advantages: extra weapon damage, attack spells following
+       formula 1a, good pets, 'knowledge' spells, enemy ac/wc reduction
+       spells. Disadvantages: must be good alignment, can't pk, when pets
+       die the owner is hurt, must complete guild tasks to gain abilities.
+     Review - most monsters are evil so remaining good alignment is very
+     easy. Pk is rare on Nirvana and not being pk is never a disadvantage.
+     Pet advantage is justified by owner hurt disadvantage. Guild tasks are
+     fairly easy; though they require thought, they provide very little
+     risk or cost to the player.
+     Conclusion - Bard guild has far too few drawbacks for the power it
+     bestows on its members. It should not have extra offensive power
+     through Paladin skill bonuses and great damage spells since there
+     is no risk or cost involved in gaining these powers. The Bard pets are
+     justified, as are Bard knowledge spells. The ac/wc reduction spells
+     are thematically feasible, though perhaps at a greater cost.
+   An example of counteracting advantage/disadvantage/advantage, as
+   mentioned in point 6, would be that of a mage guild that had an
+   improved cost/damage ratio due to theme (advantage), lower stamina
+   (disadvantage), and added spell points to balance the lower stamina...
+   (advantage). Of course it all depends on the relative levels of
+   advantage and disadvantage in each case. If the mage guild threw in
+   significant armor/weapon restrictions, it might be balanced.
+ 
+8) Guild wizzes should make list of advantages and disadvantages to 
+   their respective guilds, trying to be as accurate and detailed as
+   possible. Then they should look at and think about the result. After
+   that, guild wizzes should try to balance their guilds and perhaps cut
+   a few market-driven and wildly unthematic abilities. Also, there are
+   many loopholes in the rules. Most of the time, the intent of the rule
+   is clear and wizzes try to get by this intent on a technicality. Why?
+   To be popular with players and the wizlist or to show what great
+   coding is all about... The guideline should be: follow the intent of
+   the rule. If there is a technical question about the docs, ask Boltar.
+   If you want to make a great new ability (that was probably outlawed years
+   ago), make sure it's approved by at least a senior wiz. If you think 
+   that Boltar wouldn't approve, ask him or don't make it.
+ 
+9) My final point is this: diversity makes guilds interesting. Right now,
+   nearly all the guilds have identical abilities with different emotes.
+   Why is this? Because players want every ability in every guild they
+   have ever been in or heard of. Remember that players have seconds,
+   thirds, etc. in other guilds and that most of their suggestions are
+   merely rip-off ideas.
+   If wizzes cater to player whining and install every 'new'/needed idea,
+   this leads directly to strictly power efficiency competition - all
+   the guilds are the same, so players go to the one that has the most
+   bang for the buck. The guilds drift away from theme and the players
+   kill things until they get bored. If, however, guilds have different
+   powers from one another (along with drawbacks), players will see
+   advantages and disadvantages to each guild and will join the one that
+   they would most like to be in - likely depending on theme.
+   This idea also applies to items that give guild-like powers. If players
+   can simply buy items that will allow them to overcome guild drawbacks
+   or guild theme, the guild system is again thrown out of whack. To
+   avoid this, I propose taking the following sorts of items out of
+   easy circulation (i.e. making them unique on a dangerous monster and
+   not selling them): alignment adjusting items (evil/good), peace items,
+   hp/sp transfer items, speedster items, and items that give information
+   about players/monsters/items. Thus, guilds will again be valuable even
+   without huge damage capabilities - the Bards could identify items and
+   cast peace whereas hopefully other guilds could not (and could not buy
+   the ability).

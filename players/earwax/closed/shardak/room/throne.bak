@@ -1,0 +1,220 @@
+/*
+ * Shardak guild is (tm) Dragnar/John
+ * Change log:
+ * 950422 - created
+ * 030715 - added color, tweaked desc, and made exits visible
+ *          to shardaks only [linus]
+ */
+#pragma strict_types
+#include "/players/balowski/lib.h"
+#include "../include/def.h"
+#include "../include/daemons.h"
+#include "../include/people.h"
+#include "../include/macros.h"
+#include "../include/ansi.h"
+#include <security.h>
+#ifndef __FILE__
+#define __FILE__ file_name(this_object())
+#endif
+
+inherit ROOM;
+static object	Shardak;
+
+void
+create()
+{
+    ::create();
+    set_short(RED+"The throne room"+NORM);
+    set_exits(([
+	"south" : (PATH + "deepdown"), 
+	"west" : (PATH + "niches"),
+	"east" : this_object(),
+        "down" : this_object(),
+	]));
+    set_light(1);
+    set_property("fight area", 1);
+    set_property("no teleport", 1);
+
+    call_other(PATH + "shardak", "");
+    Shardak = find_object(PATH + "shardak");
+    move_object(Shardak, this_object());
+}
+
+status
+down(string arg)
+{
+   object gob;
+
+   if (arg) return 0;
+   if ((gob = present(GUILD_ID, this_player())) &&
+       (gob->GuildClass() >= C_MAGUS))
+      return PATH + "magusroom";
+   write("You are not allowed in there.\n");
+   return 1;
+}
+
+status
+east(string arg)
+{
+    object      gob;            /* guild object */
+
+    if (arg) return 0;
+    if ((gob = present(GUILD_ID, this_player())) &&
+	((int) gob->GuildClass() >= C_LAW))
+      return PATH + "lawroom";
+
+    write("You are not allowed in there.\n");
+    return 1;
+}
+	
+
+/*
+ * Two additional actions
+ */
+void
+init()
+{
+    ::init();
+    add_action("cmd_worship", "worship");
+    add_action("abandon", "abandon");
+}
+
+/*
+ * Abandon guild *sniff*
+ */
+static status
+abandon(string str)
+{
+    if (str != "guild")
+	return 0;
+
+    write("\
+Shardak hisses at you, \"Be aware of the consequences you must suffer\n\
+if you confirm your choice. You will lose all powers given to you by\n\
+me. You will lose all guild experience you may have amassed. And as a\n\
+little extra penalty I will take your life.\"\n\
+Confirm your choice with 'yes' : ");
+    input_to("confirm");
+    return 1;
+}
+
+static void
+confirm(string str)
+{
+    int         exp, gxp, rnk;  /* regular exp, guild exp, guild rank */
+    object      gob;            /* guild object */
+
+    if (str != "yes") {
+	write("You have chosen wisely.\n");
+	return;
+    }
+    if (!(gob = present(GUILD_ID, this_player()))) {
+	write("You are not carrying the mark of Shardak.\n");
+	return;
+    }
+
+    gxp = (int) this_player()->query_guild_exp();
+    rnk = (int) this_player()->query_guild_rank();
+    exp = (int) this_player()->query_exp();
+
+    if (!intp(gxp) || !intp(rnk) || !intp(exp)) {
+	write("Your organism is broken. Contact an arch wizard.\n");
+	return;
+    }
+    write("Shardak hisses, \"I am afraid this may hurt a little.\"\n");
+    this_player()->set_guild_name(0);   /* clear guild name */
+    this_player()->add_guild_exp(-gxp); /* clear guild experience */
+    this_player()->add_guild_rank(-rnk);/* clear guild rank */
+    this_player()->set_home(0);         /* clear alternative login room */
+    CHANNELD->deregister(gob);          /* remove from member list */
+    destruct(gob);                      /* remove the mark of shardak */
+    HIERARCHYD->remove_member((string)this_player()->query_real_name());
+					/* remove the guild file */
+    rm("/" + SAVE_PATH + this_player()->query_real_name() + ".o");
+
+    if ((int) this_player()->query_level() >= APPRENTICE) {
+	write("Wizard are immortals. Skipping final stage.\n");
+	return;
+    }
+    else {
+	/* deduct one sixth experience as prescribed by the guild laws */
+	/* Note: It is currently one fourth. */
+
+	/* Grab the gold from the player. Equip still goes to corpse */
+	int gold;
+	gold = (int) this_player()->query_money();
+	HOARDD->add_hoard(gold);
+	this_player()->add_money(-gold);
+#if 0
+	this_player()->add_exp(-exp/4);
+	this_player()->second_life();
+	gob = clone_object("obj/corpse");
+	this_player()->transfer_all_to(gob);
+	move_object(gob, this_object());
+#else
+	this_player()->attacked_by(this_object());
+	this_player()->hit_player(10000);/* lose one fourth exp */
+/* this is out..
+	this_player()->add_exp(exp/12);  /* get the desired one sixth */
+#endif
+	write("Your ghost drifts back to the church.\n");
+        if(this_player()) { /* verte 7.18.02 */
+	move_object(this_player(), "room/church");
+	log_file("GUILD", ctime() + ":\n" +
+		capitalize((string) this_player()->query_real_name()) +
+		" left the Servants of Shardak. By " + __FILE__ + "\n");
+       }
+    }
+}
+
+/*
+ * Makes the obituary nicer..
+ */
+string
+query_real_name()
+{
+    return "Shardak";
+}
+
+
+void
+long(string arg) {
+ string desc;
+ desc = "";
+  if((int)this_player()->query_brief() != 2) 
+   desc += RED+"The Throne Room\n"+NORM;
+   desc += HIK+"\
+This is the grand throne room. The domed ceiling is barely visible\n\
+high up in the dim light. Your footsteps echo loudly on the black\n\
+marble tiles as you approach the throne. The three steps leading up\n\
+to the throne are covered with the golden hoard belonging to the\n\
+dragon-man himself, Shardak.\n"+NORM;
+  if (present("shardak_mark",this_player())) {
+    desc += "\t"+NORM+RED+"\The exits are: west, south, and the law room is east.\n"+NORM;
+    }
+ write(desc);
+ if (!arg) { 
+  ::long(arg); 
+   if (Shardak && present(Shardak)) 
+    write(RED+" Shardak"+HIK+" sits upon his throne.\n"+NORM); return; }
+     else 
+       write(HIK+"The throne is empty"+NORM); return;
+}
+
+status page(string arg)
+{
+    object ob;
+    if(ob = find_player(arg)) {
+      write("You kneel down and worship the Great Magus " + capitalize(arg) + ".\n");
+      tell_object(ob, "\n\n\t" + (string)this_player()->query_name() + " worships you and demands your presence in the Guild Hall.\n\n");
+      return 1;
+    }
+    else return (notify_fail(capitalize(arg) + " is not online.\n"), 0);
+}
+
+status cmd_worship(string arg)
+{
+    if(!id(arg))
+ if (arg == "earwax" || arg == "mosobp" || arg == "linus") return page(arg);
+    else  return (write("You kneel in worship of Almighty Shardak.\n"), 1);
+}

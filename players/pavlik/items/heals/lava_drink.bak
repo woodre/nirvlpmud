@@ -1,0 +1,68 @@
+#include <ansi.h>
+#define ME capitalize(this_player()->query_name())
+
+/*
+ * A healing object.
+ * Heal: 40
+ * Soak: 13
+ * Uses: 3
+ */
+ 
+int drinks;
+ 
+id(str) {
+  return str == "lava" || str == "lava drink" || str == "lavadrink";
+}
+ 
+reset(arg) {
+  if(arg) return;
+  drinks = 3;
+}
+ 
+long() {
+  write("A stone cup filled with smoking Lavadrink.\n");
+  if(drinks == 3) write("The cup is full.\n");
+  if(drinks == 2) write("The cup is half full.\n");
+  if(drinks == 1) write("The cup is almost empty.\n");
+  return;
+}
+ 
+short() { return HIR+"Lavadrink"+NORM; }
+ 
+query_value() { return (drinks * 300); }
+query_weight() { return 1; }
+get() { return 1; }
+query_save_flag() { return 1; }
+ 
+init() {
+  add_action("drink_lava","drink");
+}
+
+drink_lava(str) {
+  if(id(str)) {
+    if(!this_player()->drink_soft(13)) {
+       write("You couldn't possibly drink the Lava right now.\n");
+       return 1;
+    }
+    write(
+    "You sip a bit of the steaming "+HIR+"Lavadrink"+NORM+".\n"+
+    "The near-boiling liquid scorches your throat, but once it hits\n"+
+    "your stomach you feel much better.\n");
+    say(ME+" sips a boiling "+HIR+"Lavadrink"+NORM+".\n");
+  
+    this_player()->heal_self(40);
+    drinks--;
+  
+    if(drinks == 0){
+       write("You drink the cup dry.\n");
+       this_player()->add_weight(-1);
+       destruct(this_object());
+       return 1;
+    }
+  return 1;
+  }
+}
+
+is_heal() { return "soak"; }
+query_potence() { return 50; }
+

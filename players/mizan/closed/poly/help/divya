@@ -1,0 +1,32 @@
+[DIVYA] Level [5] 760 charges (-sta, +int, ++mag, -str, -ste, ++luck)
+
+  Divya are fearsome Amazon-like, six-armed female constructs of awesome
+  fighting prowess and grace. Their roles were primarily as secretive
+  personal bodyguards and enforcers of the KDY Sisterhood.
+  
+  Also gifted with awesome cunning and versatility in hand-to-hand combat,
+  the ability to channel extra-dimensional forces, the Divya is most
+  feared indeed. Note that this is a FEMALE GENDER ONLY morph form.
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+strap <weapon>   Wield a second weapon offhand.
+
+strap all        Same as above but cycles through inventory and straps
+                 weapons on a first-come, first-serve basis. You can strap
+                 up to five additional weapons.
+
+unstrap <weapon> Remove a weapon wielded offhand.
+
+dswords <mon>    (60 SPS) Dancing Swords. Summon a set of dancing swords
+                 to attack your opponent. Six swords, one for each arm.
+                 The swords attack your target by themselves.
+
+lswords <mon>    (30 SPS) Lunging Swords, single attack on an opponent.
+
+egress           (60 SPS, more in combat) Folds yourself into a gap within
+                 The Plane of Etheriel temporarily shielding you from your
+                 current location.
+
+switch           (50 SPS) Switches you away from your current opponent in
+                 combat.

@@ -1,0 +1,64 @@
+From: francesco
+ Re:   Hi
+Date: Jul 18 02:22
+
+YES!! 
+welcome back, hon :) 
+ 
+fran 
+ 
+
+From: vital
+Subj: Guild Directory Access
+
+Date: May 28 11:12
+
+I'm not entirely sure it is working, but I think you might should have 
+access to the /players/guilds/vampires directory. Right now there isn't a 
+lot in there as it's where I forsee things HEADED but for now it's mostly 
+just contains the directory tree. 
+The tree is laid out as: 
+com/  = commands that we will convert and/or add for the guild 
+doc/  = documentation and help files [I'll send you a template] 
+headers/ = all those pesky .h files 
+lib/  = any standardized code we may want to use over and over 
+log/  = of course we'll want to keep track of what they're doing 
+npc/  = any guild related mobs 
+obj/  = guild related objects 
+rooms/ = the WHERE in all this mess. 
+ 
+If you can think of anything else we need feel free to add it in 
+or let me know and I'll slot it in as well. On second thought I'm 
+going to add a help/ directory to split it out from the documents 
+directory. 
+ 
+That's all for now. 
+vital 
+
+From: vital
+Subj: Guild Directory Access
+
+Date: May 28 11:12
+
+I'm not entirely sure it is working, but I think you might should have 
+access to the /players/guilds/vampires directory. Right now there isn't a 
+lot in there as it's where I forsee things HEADED but for now it's mostly 
+just contains the directory tree. 
+The tree is laid out as: 
+com/  = commands that we will convert and/or add for the guild 
+doc/  = documentation and help files [I'll send you a template] 
+headers/ = all those pesky .h files 
+lib/  = any standardized code we may want to use over and over 
+log/  = of course we'll want to keep track of what they're doing 
+npc/  = any guild related mobs 
+obj/  = guild related objects 
+rooms/ = the WHERE in all this mess. 
+ 
+If you can think of anything else we need feel free to add it in 
+or let me know and I'll slot it in as well. On second thought I'm 
+going to add a help/ directory to split it out from the documents 
+directory. 
+ 
+That's all for now. 
+vital 
+

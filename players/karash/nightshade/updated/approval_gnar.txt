@@ -1,0 +1,192 @@
+Weapons
+-------------------------
+axe_new.c 
+  -OK, weapon_hit to clone the poison obj would be cool, although it would have to be rare.
+==>KARASH: Yes, it would be cool, but I don't think this is the place for additional poision damage.
+		I don't see anyone using this axe just for a rare chance to poison the target.  Plus, see
+		comments I made for the Imp Master below.  He's kind of tough already.
+		
+hammer.c 
+  -Change non-fatal hit to 70-80 dmg.  Should be 2 handed weapon with weight of 4?
+==>KARASH: I changed the non-fatal hit to 80 dmg, but I don't want to go any lower.  I wanted this 
+		damage to be significant damage (like a powerful spell) since the wielder goes through enough
+		trouble with attunement and swinging the hammer that he should be rewarded for it.
+		Also, I initially was going to make this a heavy 2-handed weapon as a drawback to its ability,
+		but the actual Aegis-fang is a 1-handed warhammer, so I made it 1-handed and left the weight
+		as a drawback to using it.  However, once we added the attunement requirement, it doesn't need
+		the extra weight drawback, so I will drop the weight to 3 to match the cleric's mace.
+		
+holy_mace_new.c
+  -OK
+invis_sword.c
+  -OK
+poison_dagger_new.c
+  -OK
+  
+Armor
+--------------------------
+earcuffs_new.c
+  -OK
+  
+shield_magresist_new.c
+  -change resistances to 2. An armor special could temporarily raise them to 15
+==>KARASH: I lowered the resistances for both shields to 2 for all resistances.  I'm not sure I understand
+		how the armor special works to temporarily raise resistances.  Reading the documentation, it seems
+		the set_special for armors is only for physical damage.  So, avoiding having to develop some complex
+		code to do a temporary increase, I'll just leave it like it is.
+		
+shield_natresist_new.c
+  -same as magic shield.
+==>KARASH: See comment on magic shield.
+  
+Misc
+--------------------------
+black_opal.c
+  -OK
+courage_obj_new.c
+  -OK
+
+courage_wand_new.c
+  - 3-5 charges or randomize 10 charges. Can reduce heal to 10% of you want. Increase value per charge accordingly. Or change mob
+    mobs to load only once per boot.
+==>KARASH: Well, I'd like to keep these wands like they are.  I see these wands being used exclusively for OPL
+		(which was the reason they were really created) if they are used at all.  The idea was to give them 
+		enough charges to make it beneficial to carry deep into OPL and not run out of charges.  To justify
+		the number of charges and to avoid being a better option to replace having a member of a guild who can
+		freeze mobs, I wanted a drawback large enough to consider finding a player to cast freeze over using
+		these wands.  This is why there is a 20% heal (or 1000 HP) on the courage wand and a 40% damage bonus
+		on the frenzy wand.  Honestly, the 40% may seem high, but since it is calculated from base WC and uses
+		hit_player to do physical damage, any player with average gear doesn't actually take much damage.  Through
+		testing, I determined that anything less than 40% base WC becomes insignificant damage to the player and
+		doesn't do enough extra damage to be considered a drawback to using the wand.  
+		CONCLUSION: I put a LOT of thought into these wands as you can see and would like to keep the wands
+		as they are, with 10 charges and the larger drawbacks.
+UPDATE: Changing both wands to 5 charges, per approval comments.
+
+frenzy_obj_new.c
+  - Same as courage wand. 40% dmg penalty seems high, can reduce if desired.
+==>KARASH: See comments on the courage wand.
+
+holy_symbol_new.c
+  -OK
+mirror_new.c
+  -OK
+moonstone.c
+  -OK
+nomelee_obj_new.c
+  -OK
+onyx.c
+  -OK
+paralyze_obj_new.c
+  -OK
+parry_obj_new.c
+  -OK
+  
+poison_obj_new.c
+  -OK, add room message?
+==>KARASH: The room message is on the Thief who announces who has been poisoned when he backstabs.
+  
+stun_obj_new.c
+  -OK
+topaz.c
+  -OK
+  
+Rooms
+-----------------------
+  -OK since just fixing typos etc.
+  
+Mons
+-----------------------
+basilisk.c
+  -Level 25 requires 2 specials, paralyze is 1, needs another. Best to list these in the header.
+  -Suggestion, poison?
+  -Max coins for level 25 is 11,000, coins are slightly over currently
+==>KARASH: I intended the 2nd special to be that this mob will cast a spell EVERY round doing a decent
+		amount of damage, which really hurts when the player is paralyzed and cannot heal.  Plus, this 
+		mob has a higher than usual AC.  So, judging by my testing, I think increasing damage with poison
+		would be too much.  I added comments to the header stating this.
+  
+captain2_new.c
+  -I'll update the value of the cleaver when we move everything over.
+captain.c
+  -Optional: Not sure why we need 2 copies of the same mob? Understand that 1 is the real one and the other is the mirror.
+   I would think the room could clone 3 of the same file and set the flags to know which is which. A lot of the code
+   is duplicated in the files. If you want to have 2 files to make it cleaner maybe you should inherit from the other so
+   all of the code can be in a single file. Just yell if you need help with this, should not be a lot of rework, let me
+   know if I am wrong.
+==>KARASH: The captain.c object is just a placeholder mob to hold the code to clone the 3 true mobs.  I did not want this
+		code to be dependant on the room to clone the 3 mobs, so I'm using this object to initiate the encounter.  The
+		only duplicated code with the captain2_new.c object is in the reset, which I duplicated in this object to match 
+		the actual mob stats that will be cloned to allow any guild abilities that can stat a mob to be accurate to the
+		player checking to see how tough the mobs will be when they are cloned (I did not want to undermine those guild
+		abilities).  I see both objects also have a 'calm room' function, but that's the only other similarity in the code.
+		
+		   The reason for the second object is that my preference was to separate the code that interacted with the
+		players with the code that cloned the actual mobs.  So, the captain2_new.c object is the actual mob code that
+		clones both the 'real' and 'image' mobs initiated by the captain.c code.  The captain2_new.c object holds the
+		code for combat interaction, monster death code, and the loot.
+		
+		   So, it is NOT that one object is the 'real' mob and one is the 'image' mob, instead, the captain.c object is 
+		is the code to clone the captain2_new.c mob, which is the actual mob code and can be set to either 'real' or 
+		'image' when cloned.  I'd like to keep these objects like they are instead of trying to combine all of this into
+		one consolidated object that technically serves two purposes.
+   
+cyclo.c
+  -OK
+
+hook_horror.c
+  -OK, can up coins if we reduce the armor value which is nothing special
+==>KARASH: Yes, I was just avoiding having to modify another original file.  
+		Anyway, I changed the value of the hook_plate.c from 4000 to 2000 and increased coins for the 
+		hook horror by 2000 coins.
+  
+imp_master.c
+  -OK, why not use the poison_obj here? In fact adding suggestion to the axe to call this obj as well.
+==>KARASH: The imp master was intended by Nightshade to be a basic tough mob that guarded the newbie area with very high
+		HP and high AC.  I made it level 22, but I left more than twice the required HP, I made half its WC as 
+		non-physical damage (other|poison), gave it heal 5 each round, gave it resist 20, and it still does 100 damage
+		each round like the original.  I figured that adding an additional poison function would be too much and would
+		require increasing its level, making it more of a staple mob, which is not what this mob is intended to be.
+		Therefore, I appreciate the suggestion, but I'd like to keep it as it is.
+  
+kargile.c
+  -Level 25 requires 2 specials, stun is 1, needs 1 more.
+  -Second special idea - have him use the hammers throw command when the player gets below 100 hps! Could manually set
+    the required variables in the weapon so it would work, would be very cool effect.
+==>KARASH: I intended the 2nd special to be covered by the heavy damage spells that have an 80% chance of occurring each
+		round, including one spell that hits ALL attackers.  I thought about using the hammer's abilities, but, at the 
+		time, I chose not to introduce code to the hammer that was specific to Wulfgar to bypass all the player checks
+		already coded.
+		   If you feel he still needs another special, I'll look into it, but he's already pretty tough.  I'll add a 
+		comment to the header regarding specials.
+		
+ltng_elemental_new.c
+  -OK
+master_cleric.c
+   -OK
+  -Ignoring specials for the masters, since they force you to fight more than 1 and coordinate efforts, and each
+   has at least 1 special attack.
+master_fighter.c
+   -OK
+master_mage.c
+  -OK
+red_dragon.c
+  -OK
+master_thief.c
+  -OK
+  
+Suggestions
+-----------------
+I continue to be very impressed with your code for the amount of experience that you have.  You make it very easy
+on me to do your approvals. Your unique mobs/objects really add something to the game, and you really push the
+boundaries of what you've done before. I'd say one thing to try and focus on is creating functions when
+you have similar code in multiple places. For example in the cleric where he heals the other masters, you have
+a function for each one. This could be a function that maybe you pass the object to to heal it. The code in your
+masters heartbeat, although I did not look closely, I think there are most likely places there that could be combined.
+Or maybe you should even have a master mob that inherits from monster.c, and each master type inherits from your master
+npc. Same with the captain, the mirror and the real mob are essentially the same, and I think they could be combined.
+This are obviously not required for approval, but things to look for as you go on to the next project.
+Again, a great job, I am especially excited to try out the dragon, he is very unique (masters a close second).
+Congrats
+
+==>KARASH: I appreciate the comments.  I must have a good teacher.

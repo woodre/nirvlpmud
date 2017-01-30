@@ -1,0 +1,18 @@
+  Spell Name                      Description                        GL    sps
+----------------- ------------------------------------------------- ----  -----
+                   When a vampire has advanced sufficiently in both
+                   the game and the guild, they will be able to
+                   summon small creatures of the night to do their
+                   bidding.  Both bats are affected by player level
+                   and can be dismissed from anywhere in Nirvana
+                   simply by using 'dismiss bat'.
+
+  abat             A small bat that will sit in the location where   12     30
+                   it was summoned and tell the summoner whenever
+                   anyone else approaches it.
+
+  mbat <msg>       A large bat that will greet all those who come    12     30
+                   near it with the summoner's message.  The
+                   messages of this bat are logged and the summoner
+                   can expect repercussions if the message is con-
+                   sidered to be inappropriate.

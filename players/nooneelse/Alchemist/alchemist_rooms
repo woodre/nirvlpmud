@@ -1,0 +1,32 @@
+			Alchemist Guild
+
+			Guild Rooms
+
+
+                         entrance
+                            |
+                            |
+               pub -----  lobby  ----- shop
+                            |
+                            |
+           player -----  central  ----- donation
+           bboard         room          room
+                       /  {member \
+                      /    list}   \
+                     /      |       \
+                    /       |        \
+                shelf     guild    component
+                room      bboard     shop
+                            |
+                            |
+                      prohibit room
+                    (prohibited list}
+
+
+include 'eject <who> command for member use
+
+shelves		store up to 4 items; $30,000 one-time fee
+		syntax:		examine shelf		- list items player has stored
+				retrieve <item>		- get <item> from shelf
+				place <item> on shelf	- place <item> on shelf
+

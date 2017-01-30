@@ -1,0 +1,795 @@
+#include <ansi.h>
+
+int banished, do_backstab, do_garrote, do_eviscerate, do_sap, do_vanish;
+int do_sstep, do_pickpocket, stealthed, combo, poison, sstrike;
+int eviscerate, sap, vanish, backstab, garrote, sstep, kick, bfury;
+int pickpocket, hbcount, do_stealth;
+
+id(str) { return str == "seal" || str == "rogue_seal" || str == "shinshi_rogue_seal" || str == "GI"; }
+
+
+query_auto_load(){
+	save_object("players/shinshi/closed/rogue/members/"+environment(this_object())->query_real_name());
+return "/players/shinshi/closed/rogue/gob.c:"; }
+
+short() {return "A rogue's seal";}
+
+long() {
+   write("Do not worry about this just yet.\n");
+   write("Type 'rhelp' for your guild commands.\n");
+}
+
+get() {
+   return 1;
+}
+
+drop() {
+   return 1;
+}
+
+reset(arg){
+	if(arg) return;
+	set_heart_beat(1);
+}
+
+init() {
+	if(!environment()) return;
+	restore_object("players/shinshi/closed/rogue/members/"+environment(this_object())->query_real_name());
+	if(environment(this_object())->query_level() < 20){
+		environment(this_object())->set_guild_name("Rogue");
+	call_out("rsave", 600);
+	}
+   
+   "/players/shinshi/closed/rogue/objects/chatob.c"->resetchannel();
+
+   add_action("rhelp", "rhelp");
+   add_action("rogue_talk", "rt");
+   add_action("rogue_emote", "rte");
+   add_action("rogue_who", "brothers");
+   add_action("adjust_myself", "clean_seal");
+   add_action("quit", "quit");
+   add_action("stealth", "stealth");
+   add_action("visible", "visible");
+   add_action("apply_poisons", "apply");
+   add_action("s_strike", "sstrike");
+   add_action("evis", "eviscerate");
+   add_action("sap", "sap");
+   add_action("vanish", "vanish");
+   add_action("backstab", "backstab");
+   add_action("garrote", "garrote");
+   add_action("wear", "wear");
+/*   add_action("wield", "wield"); */
+   add_action("dw", "offwield");
+   add_action("shadowstep", "sstep");
+   add_action("kick", "kick");
+   add_action("bladefury", "bf");
+   add_action("pp", "pickpocket");
+   add_action("recruit", "recruit");
+   add_action("skills", "skills");
+   add_action("rsave", "rsave");
+   add_action("guild_quit", "leave");
+   add_action("prevent", "sonic");
+   add_action("prevent", "so");
+   add_action("prevent", "fireball");
+   add_action("prevent", "fi");
+   add_action("prevent", "shock");
+   add_action("prevent", "sh");
+   add_action("prevent", "missile");
+   add_action("prevent", "mi");
+   add_action("prevent", "pose");
+   add_action("prevent", "invisible");
+   add_action("prevent", "invis");
+}
+
+rhelp(str) /* fucktarts */
+{
+	if(!str)
+	{
+		cat("/players/shinshi/closed/rogue/help/main.txt");
+		return 1;
+	}
+	
+	else {
+		cat("/players/shinshi/closed/rogue/help/"+str+".txt");
+		return 1;
+	}
+}
+
+rogue_talk(str){
+	object ob;
+	ob = "/players/shinshi/closed/rogue/objects/chatob.c";
+	
+	if(!ob){
+		write("The guild line is currently down.\n");
+		return 1;
+	}
+	if(!str){
+		write("What would you like to say to your fellow Rogues?\n");
+		return 1;
+	}
+	
+	ob->tell(str);
+	return 1;
+}
+
+rogue_emote(str){
+	object ob;
+	ob = "/players/shinshi/closed/rogue/objects/chatob.c";
+	
+	if(!ob){
+		write("The guild line is currently down.\n");
+		return 1;
+	}
+	if(!str){
+		write("What would you like to emote to your fellow Rogues?\n");
+		return 1;
+	}
+	
+	ob->emote(str);
+	return 1;
+}
+
+rogue_who()   /* shit */
+{
+	int b, level;
+	string title, place;
+	object * iter;
+	object ob, cob;
+	
+	write("\n");
+	write(BOLD+"********************************************************"+
+	    "***********************\n"+OFF);
+	write(BOLD+BLACK+pad("Rogues",     15)+
+	    pad("Level",       11)+
+	    pad("Location",    30)+"\n"+OFF+OFF);
+	write(BOLD+"********************************************************"+
+	    "***********************\n\n"+OFF);
+	
+	cob = /*bitch*/"/players/shinshi/closed/rogue/objects/chatob.c";
+	if(!cob) { write("Rogue Malfunction 1.\n");
+	write_file("/players/shinshi/closed/rogue/logs/brothers", ctime()[4..15] + " " + this_player()->query_real_name() + " got a malfunction #1.\n"); return 1; }
+	cob->resetchannel();
+	iter = cob->query_members();
+	if(!iter) { cob->resetchannel(); iter = cob->query_members(); }
+	if(!iter) { write("Rogue Malfunction 2.\n");
+	write_file("/players/shinshi/closed/rogue/logs/brothers", ctime()[4..15] + " " + this_player()->query_real_name() + " got a malfunction #2.\n"); return 1; }
+	for(b=0;b<sizeof(iter);b+=1)  {
+	if(!iter[b]->query_invis()) {
+	    ob     = iter[b];
+	    write(pad(ob->query_name(), 15));
+	    level = ob->query_level();
+	    write(pad(level, 11));
+	    if(level < 10) write(YELLOW);
+	    if(level >= 10 && level < 19) write(BOLD);
+	    if(level >= 19) write(BOLD+RED);
+	    place = environment(ob)->short();
+	    write(OFF+OFF);
+	  write(place);
+	    write("\n");
+	}
+	}
+	
+	write(BOLD+"\n********************************************************"+
+	    "***********************\n"+OFF);
+	return 1;
+	}
+
+stealth(){
+	
+	
+	if(!do_stealth){
+		return 0;
+	}
+	
+	if(this_player()->query_sp() < 30)
+	{
+		write("You don't have the energy to summon the shadows.\n");
+		return 1;
+	}
+	
+        if (stealthed) {
+		write("You are already stealthed!\n");
+		return 1;
+	}
+        write("You conjure shadows and wrap them about yourself.\n");
+        this_player()->set_invs_sp();
+        this_player()->add_spell_point(-30);
+        stealthed = 1;
+        do_backstab = 1;
+        do_garrote = 1;
+        do_eviscerate = 1;
+        do_sap = 1;
+        do_vanish = 1;
+        do_sstep = 1;
+        do_pickpocket = 1;
+        return 1;
+}
+
+visible(){
+	
+        if (!stealthed) {
+		write("You are not stealthed.\n");
+		return 1;
+	}
+        write("You leave the safety of the shadows.\n");
+        this_player()->unset_invs_sp();
+        stealthed = 0;
+        do_backstab = 0;
+        do_garrote = 0;
+        do_eviscerate = 0;
+        do_sap = 0;
+        do_vanish = 0;
+        do_sstep = 0;
+        do_pickpocket = 0;
+        return 1;
+}	
+
+apply_poisons(str){
+	object poison, shadob, what, what2, weapon;
+	
+	if(!str || sscanf(str, "%s to %s", what, what2) != 2){
+		write("Usage: apply <poison> to <weapon>\n");
+		return 1;
+	}
+
+	poison = present("shinshi_rogue_poison", this_player());
+
+	if(!poison){
+		write("You don't have that poison!\n");
+		return 1;
+	}
+		
+	if(what != "poison"){
+		write("You don't have that!\n");
+		return 1;
+	}
+	
+	weapon = present(what2, this_player());
+	if(!weapon){
+		write("You don't have that weapon!\n");
+		return 1;
+	}
+	
+	if(weapon->is_poisoned()){
+		write("That weapon is already covered in poison.\n");
+		return 1;
+	}
+	
+	destruct(poison);
+	write("You carefully apply the poison onto your weapon.\n");
+	shadob = clone_object("/players/shinshi/closed/rogue/objects/shadow.c");
+	shadob->start_it(weapon);
+	return 1;	
+}
+
+s_strike(str){
+	int randomss, damage;
+	object attacker;
+	string msg1, msg2, msg3;
+
+	randomss = random(5);
+	if(this_player()->query_ghost()){
+		return;
+	}
+	
+	if(this_player()->query_level() < 16){
+		write("You cannot use that ability yet.\n");
+		return 1;
+	}
+	
+	if(this_player()->query_sp() < 30){
+		write("You don't have the energy to do that.\n");
+		return 1;
+	}
+	
+	if(this_player()->query_spell_dam()){
+		write("You can't attack again so soon!\n");
+		return 1;
+	}
+	
+	if(!str && !this_player()->query_attack()){
+		write("What would you like to sinister strike?\n");
+		return 1;
+	}
+	
+	if(!str){
+		attacker = this_player()->query_attack(); }
+	if(!attacker){
+		attacker = present(str, environment(this_player())); }
+	if(!attacker || !present(attacker, environment(this_player()))){
+		write("You don't see "+str+" here.\n");
+		return 1;
+	}
+	if(!living(attacker)){
+		write("That isn't alive to attack.\n");
+		return 1;
+	}
+	
+	switch(sstrike){
+		case 666..1000:
+		damage = random(30);
+		break;
+		case 333..665:
+		damage = random(20);
+		break;
+		default:
+		damage = random(10);
+		break;
+	}
+	
+	switch(damage){
+		case 25..30:
+		msg1 = "slam your weapon hard into "+attacker->query_name()+"'s chest";
+		msg2 = " slams "+possessive(this_player())+" weapon hard into your chest";
+		msg3 = " slams "+possessive(this_player())+" weapon hard into "+attacker->query_name()+"'s chest";
+		break;
+		case 20..24:
+		msg1 = "jam your weapon hard into "+attacker->query_name()+"'s chest";
+		msg2 = " jams "+possessive(this_player())+" weapon hard into your chest";
+		msg3 = " jams "+possessive(this_player())+" weapon hard into "+attacker->query_name()+"'s chest";
+		break;
+		case 15..19:
+		msg1 = "yes's";
+		msg2 = " yes's some more";
+		msg3 = " yes's again";
+		break;
+		case 10..14:
+		msg1 = "no's";
+		msg2 = " no's some more";
+		msg3 = " no's again";
+		break;
+		case 5..9:
+		msg1 = "maybe's";
+		msg2 = " maybe's some more";
+		msg3 = " maybe's again";
+		break;
+		default:
+		msg1 = "so's";
+		msg2 = " so's some more";
+		msg3 = " so's again";
+		break;
+	}
+	
+	this_player()->spell_object(attacker, "sstrike", damage, 30, "You "+msg1+".\n", this_player()->query_name()+msg2+".\n", this_player()->query_name()+msg3+".\n");
+	this_player()->set_spell_dtype("other|physical");
+	if(combo < 5){
+		combo++;
+		return 1;
+	}
+	
+	switch(randomss){
+		case 0..1:
+		sstrike++;
+		break;
+		case 3..4:
+		sstrike += 2;
+		break;
+		default:
+		sstrike += 3;
+		break;
+	}
+		
+	return 1;
+}
+
+evis(str){
+	int randomevis, damage;
+	object attacker;
+	string msg1, msg2, msg3;
+	
+	randomevis = random(5);
+	if(this_player()->query_ghost()){
+		return;
+	}
+
+		
+	if(this_player()->query_level() < 17){
+		write("You cannot use that ability yet.\n");
+		return 1;
+	}
+	
+	if(this_player()->query_sp() < 50){
+		write("You don't have the energy to do that.\n");
+		return 1;
+	}
+	
+	if(this_player()->query_no_spell() || this_player()->checkNM()){
+		write("You cannot use that here!\n");
+		return 1;
+	}
+	
+	if(this_player()->query_spell_dam()){
+		write("You can't attack again so soon!\n");
+		return 1;
+	}
+	
+	if(!str && !this_player()->query_attack()){
+		write("You must be in combat!\n");
+		return 1;
+	}
+	
+	if(combo == 0 && !attacker){
+		write("You must be in combat!\n");
+		return 1;
+	}
+	
+	if(combo == 0 && attacker){
+		write("You must have at least one combo point!\n");
+		return 1;
+	}
+	
+	attacker = this_player()->query_attack();
+	if(!attacker){
+		attacker = present(str, environment(this_player())); }
+	if(!attacker || !present(attacker, environment(this_player()))){
+		write("You don't see "+str+" here.\n");
+		return 1;
+	}
+	if(!living(attacker)){
+		write("That isn't alive to attack.\n");
+		return 1;
+	}
+	switch(eviscerate){
+		case 666..1000:
+			if(combo == 1){
+				damage = 10 + random(10);
+				combo = 0;
+			}
+			
+		  else if(combo == 2){
+			  damage = 15 + random(10);
+			  combo = 0;
+		  }
+		  
+		  else if(combo == 3){
+			  damage = 20 + random(10);
+			  combo = 0;
+		  }
+		  
+		  else if(combo == 4){
+			  damage = 25 + random(10);
+			  combo = 0;
+		  }
+		  
+		  else if(combo == 5){
+			  damage = 30 + random(10);
+			  combo = 0;
+		  }
+		  break;
+		  
+		  case 333..665:
+		  	if(combo == 1){
+			  	damage = 10 + random(5);
+			  	combo = 0;
+		  	}
+		  	
+		  	if(combo == 2){
+		  		damage = 15 + random(5);
+		  		combo = 0;
+	  		}
+	  		
+	  		if(combo == 3){
+		  		damage = 20 + random(5);
+		  		combo = 0;
+	  		}
+	  		
+	  		if(combo == 4){
+		  		damage = 25 + random(5);
+		  		combo = 0;
+	  		}
+	  		
+	  		if(combo == 5){
+		  		damage = 30 + random(5);
+		  		combo = 0;
+	  		}
+	  	 break;
+	  	 
+	  	 default:
+	  	 		if(combo == 1){
+		  	 		damage = 10;
+		  	 		combo = 0;
+	  	 		}
+	  	 		
+	  	 		if(combo == 2){
+		  	 		damage = 15;
+		  	 		combo = 0;
+	  	 		}
+	  	 		
+	  	 		if(combo == 3){
+		  	 		damage = 20;
+		  	 		combo = 0;
+	  	 		}
+	  	 		
+	  	 		if(combo == 4){
+		  	 		damage = 25;
+		  	 		combo = 0;
+	  	 		}
+	  	 		
+	  	 		if(combo == 5){
+		  	 		damage = 30;
+		  	 		combo = 0;
+	  	 		}
+	}
+	
+	switch(randomevis){
+		case 0..1:
+		eviscerate++;
+		break;
+		case 3..4:
+		eviscerate += 2;
+		break;
+		default:
+		eviscerate += 3;
+		break;
+	}
+	
+	this_player()->spell_object(attacker, "evis", damage, 50, "Yes", "Yessir", "Yessim");
+	this_player()->set_spell_dtype("other|physical");
+	return 1;
+}
+
+vanish(){
+	object ob, player, prevent;
+	
+	if(this_player()->query_ghost()){
+		return;
+	}
+	
+	if(this_player()->query_extra_level() < 1){
+		write("You cannot use that ability yet.\n");
+		return 1;
+	}
+	
+	if(present("shinshi_stop_vanish", this_player())){
+		write("You cannot use that ability yet.\n");
+		return 1;
+	}
+	
+	if(this_player()->query_sp() < 50){
+		write("You don't have the energy to do that.\n");
+		return 1;
+	}
+	
+	prevent = clone_object("/players/shinshi/closed/rogue/objects/novanish.c");
+	move_object(prevent, environment());
+	prevent->start_it();
+	ob = first_inventory(environment(this_player()));
+		while(ob){
+			ob->stop_fight();
+			ob->stop_fight();
+			ob->stop_hunter();
+			ob = next_inventory(ob);
+      this_player()->set_invs_sp();
+      this_player()->add_spell_point(-50);
+      stealthed = 1;
+      do_backstab = 1;
+      do_garrote = 1;
+      do_eviscerate = 1;
+      do_sap = 1;
+      do_vanish = 1;
+      do_sstep = 1;
+      do_pickpocket = 1;
+      return 1;
+		}
+}
+		
+
+prevent(){
+	write("As a rogue, you have no need for such non-sense.\n");
+	return 1;
+}
+
+rsave(int i){
+	if(!i)	tell_object(environment(this_object()),	HIK+"Saving Guild Data."+NORM+"\n");
+	save_object("players/shinshi/closed/rogue/members/"+environment(this_object())->query_real_name());
+	if(!i)
+	tell_object(environment(this_object()),	"Done."+NORM+"\n");
+	return 1;
+	call_out("rsavetwo", 600);
+}
+
+quit(){
+	command("rsave", this_player());
+	this_player()->do_quit();
+	return 1;
+}
+
+adjust_myself(){
+	
+	tell_object(environment(this_object()),       HIK+"Restoring Guild Data."+NORM+"\n");
+	save_object("players/shinshi/closed/rogue/members/"+environment(this_object())->query_real_name());
+	tell_object(environment(this_object()), HIK+"Done."+NORM+"\n");
+	move_object(clone_object("/players/shinshi/closed/rogue/gob.c"), environment(this_object()));
+	destruct(this_object());
+	return 1;
+}
+
+recruit(str){
+	object ob, gid;
+	int currentexp;
+	
+	if(!str){
+		write("Whom would you like to recruit?\n");
+		return 1;
+	}
+	ob = find_living(str);
+	
+	if(!ob){
+		write("That person is not online.\n");
+		return 1;
+	}
+	
+	else if(ob->query_level() < 19){
+		write(ob->query_name()+" is not the proper level.\n");
+		return 1;
+	}
+	
+	else if(ob->query_level() == 19 && ob->query_extra_level() < 5){
+		write(ob->query_name()+" is not the proper level.\n");
+		return 1;
+	}
+	
+	else if(query_guild(ob)){
+		write(ob->query_name()+" is already in a guild.\n");
+		return 1;
+	}
+	
+	else if(ob && !present(ob, environment(this_player()))){
+		write(ob->query_name()+" is not present!\n");
+		return 1;
+	}
+	
+	else if(ob && present(ob, environment(this_player())) && ob->query_level() == 19
+		&& ob->query_extra_level() >= 5){
+		gid = clone_object("/players/shinshi/closed/rogue/gob.c");
+		move_object(gid, ob);
+		currentexp = ob->query_exp();
+		ob->add_exp(-currentexp);
+		ob->add_exp(620026);
+		ob->set_level(15);
+		ob->set_extra_level(0);
+		ob->set_guild_name("Rogue");
+		ob->rsave();
+		write("You introduce "+ob->query_name()+" the Way of the Rogues.\n");
+		tell_object(ob, "You have been shown the way of the Rogue. Begin with 'rhelp'.\n");
+		write_file("/players/shinshi/closed/rogue/logs/JOIN", ctime()[4..15] + "  " +this_player()->query_name()+ " has recruited " +ob->query_name()+ " to the guild.\n");
+		return 1;
+	}
+}
+
+query_guild(ob){
+	if(!ob || !ob->is_player()) return 1;
+	if(ob->query_guild_name() != "none" && ob->query_guild_name()) return 1;
+	if(ob->query_guild_exp()) return 1;
+	if(ob->query_guild_rank()) return 1;
+	else return 0;
+}
+
+skills(){
+	
+}
+
+guild_quit(){
+	write("Are you sure you wish to leave the Rogues?\n");
+	write("Once you leave, you will NOT be allowed back by\n");
+	write("any circumstances. You will be set back to level\n");
+	write("15 and all experience you put into the guild will\n");
+	write("be lost. Continue? y or N\n");
+	input_to("request_check");
+	return 1;
+}
+
+request_check(str){
+	object person;
+	int currentexp;
+	
+	if(!str){
+		write("You decided against leaving.\n");
+		return 1;
+	}
+	
+	if(str == "N" || str == "n"){
+		write("You decided against leaving.\n");
+		return 1;
+	}
+	person = this_player();
+	currentexp = person->query_exp();
+	
+	if(str == "y" || str == "Y"){
+		write("You decided to leave the Rogue guild.\n");
+		banished = 1;
+		person->add_exp(-currentexp);
+		person->add_exp(620026);
+		person->set_level(15);
+		person->set_extra_level(0);
+		person->set_guild_name(0);
+		command("save", person);
+		person->set_home("/room/vill_green.c");
+		person->save();
+		write_file("/players/shinshi/closed/rogue/logs/LEFT", ctime()[4..15] + "  " +this_player()->query_name()+ " has left the guild.\n");
+		return 1;
+	}
+}
+heart_beat(){
+	object ob, pob, rob, sob, kob;
+	
+       if(!environment()) return;
+	ob = environment(this_object());
+	
+	   if(ob->query_ghost()){
+		   return;
+	   }
+	   
+	   if(ob->query_pl_k() && hbcount > 0){
+	       hbcount = 0;
+       }
+	
+       if(!ob->query_pl_k()){
+		hbcount++;
+	}
+	
+	if(hbcount > 15 && !ob->query_pl_k()  ){
+		tell_object(ob, "Your conscience eats at your mind to set your PK.\n");
+		tell_object(ob, "You feel a jolt inside you and feel wounded.\n");
+		ob->hit_player(100, "other|physical");
+		hbcount = 0;
+	}
+	
+	if(stealthed && !ob->query_invis())
+	{
+		ob->set_invs_sp();
+	}
+	
+	if(!stealthed && ob->query_invis())
+	{
+		ob->unset_invs_sp();
+	}
+	
+	pob = present("party_object", ob);
+	
+	if(pob){
+		command("party leave", environment(this_object()));
+		tell_object(ob, "You are not allowed to party as a Rogue.\n");
+	}
+	
+	rob = present("honor_ranger_communicator", ob);
+	
+	if(rob){
+		command("rleave", environment(this_object()));
+		tell_object(ob, "You have no need for an alliance.\n");
+	}
+	
+	sob = present("allymark", ob);
+	
+	if(sob){
+		command("leave alliance", environment(this_object()));
+		tell_object(ob, "You have no need for an alliance.\n");
+	}
+	
+	kob = present("KnightInvite", ob);
+	
+	if(kob){
+		command("break_alliance", environment(this_object()));
+		tell_object(ob, "You have no need for an alliance.\n");
+	}
+	
+	if(!ob->query_attack() && combo > 0){
+		combo = 0;
+		tell_object(environment(this_object()), "C-C-C-C-C-C-C-C-COMBO BREAKER!!!\n");
+	}
+	
+	if(!ob->query_attack())
+	{
+		do_stealth = 1;
+	}
+	
+	if(ob->query_attack())
+	{
+		do_stealth = 0;
+	}
+}
+		
+query_hbcount(){ return hbcount; }
+query_combo(){ return combo; }
+query_sstrike(){ return sstrike; }
+query_evis(){ return eviscerate; }

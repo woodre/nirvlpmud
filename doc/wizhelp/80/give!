@@ -1,0 +1,21 @@
+**************
+
+
+                     Give!
+
+Syntax:    give! <obj>
+
+Desc:
+           This command ignores the drop() flag allowing a wizard to 
+           give any object to a player. 
+
+Warning:   Don't give things to players they shouldn't have.
+
+Example:   give! beano to mike
+                  results
+           Bob hands Mike a beano
+
+Related:   get!, drop!, put!
+
+
+**************

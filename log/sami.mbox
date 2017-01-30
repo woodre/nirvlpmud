@@ -1,0 +1,56 @@
+From: dragnar
+Subj: Idle
+
+Date: Nov 17 15:01
+
+You must master the art of the idle...I keep missing you 
+--Gnar 
+
+From: dragnar
+Subj: Update
+
+Date: Mar  2 10:57
+
+DO is pretty much done, almost all the issues had a common 
+source. I need more work to do ;) 
+--John 
+
+From: dragnar
+Subj: Dervish scatter
+
+Cc: (To: fred) sami
+Date: Jul 10 08:27
+
+Suggestion for changing dervish scatter. Currently: 
+heal value of corpse * random(10)+1 
+Suggested change: 
+heal value of corpse * 5 + exp_value of corpse / 1000 
+ 
+Basically remove randomness + exp bonus 
+ 
+At low exp levels it keeps scatter the same on average 
+as it was. After that for each 1000 exp will equate to 
+1 extra sandpoint. For 100k mob the current avg for say 
+Anteaus is 135 (max of 270 with randomness).  
+New calc is 213. A 300k mob would be worth 317. 500k 
+would be 450. 
+ 
+My frustration with sand points is when I go on an exp 
+run I end up losing sandpoints and I have to kill little 
+mobs to increase them. This would fix that. 
+ 
+The only issue I see with this is very large mobs are  
+worth a lot of sand points. A 1mil exp mob is 800 which 
+isn't bad, but a big mob like in Mizan's area that is  
+worth 20mil exp would be worth 13k sand points, so maybe 
+we cap max at 1000 ? 
+
+From: dragnar
+Subj: healmob
+
+Date: Aug 18 14:58
+
+you are using set_spell_mess1 which is the old style way of doing 
+spells. That way does not support the #MN# format. You need to convert 
+to add_spell or manually put in the names. 
+

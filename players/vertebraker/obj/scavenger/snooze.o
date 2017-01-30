@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/bowboot","/players/snow/ITEMS/bdiamond","/players/wren/Area/starbug/items/veil","/players/arrina/weapons/longknif","/players/snow/shadows/stuff/ring","/players/hippo/armour/boots","/players/mythos/aarmor/sune-ate","/players/emerson/obj/instructions","/players/mythos/awep/claw","/players/mythos/closed/guild/forest/misc/key_myrax","/obj/armor","/obj/weapon","/players/hippo/heals/blood","/players/saber/armor/dshades","/players/wren/Area/starbug/items/comb","/obj/treasure","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/mythos/awep/zantetsuken","/players/khrell/weapons/skaven/fellblade","/players/snow/WEAPONS/glass_sword","/players/mythos/aarmor/hara-ate","/players/scathe/armor/bowarmor","/players/puppy/s/eq/hammer","/players/mythos/aarmor/shell","/players/jamila/beach/mobs/claw",})
+shorts ({"Hard Boots","A shimmering black diamond","a big wedding veil","A longknife","A dusky ring","anti-blood boots","Sune-ate","A piece of paper","claws","Ebon Key","Steel Helmet","Axe","[1;31mdrops of blood[0m","[1mDark Shades[2;37;0m","the cat's hair pick","A rattlesnake's rattle","A Princess' Tiara","[34mZantetsuken[0m","[41m[30mFellblade[0m","Glass Sword","Hara-ate","Light Leather Armor","A hammer","Tortoise Shell","A Lobster Claw",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

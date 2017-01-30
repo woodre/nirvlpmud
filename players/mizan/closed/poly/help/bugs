@@ -1,0 +1,40 @@
+>> KNOWN BUGS AND ERRATA
+
+The following is a list of known bugs. If you don't see one here
+please contact Mizan.
+
+
+
+>>Monster Second Life Bug-----------------------------------------<<
+
+FREQUENCY: LOW RISK           AFFECTS: Morphed multilimbed forms
+
+When fighting a monster and it drops to 0/10 HP it will sometimes
+respawn to 3/10 of its hitpoints! Also you will lose your abilities
+to make extra hits!
+
+
+SOLUTION: This has been addressed for the most part. It should not
+happen again but i am documenting it here for posterity. The only
+solution is to RUN AWAY and revert.
+
+
+>>Revert Fail Bug-------------------------------------------------<<
+
+FREQUENCY: LOW RISK           AFFECTS: Morphed multilimbed forms
+
+Sometimes the automatic revert will fail. You will remain polymorphed
+as a tetrapod, wumpus, or golem.
+
+
+SOLUTION: Same as above. This bug has been fixed but remains here for
+posterity.
+
+
+>>Hitpoint/Spellpoint Lossage When 'guild fix'ing-----------------<<
+
+FREQUENCY: COMMON             AFFECTS: Everyone
+
+HP/SP would reduce dramatically when 'guild fix' occurred.
+
+SOLUTION: This bug has been fixed. 

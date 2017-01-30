@@ -1,0 +1,14 @@
+no_clean 0
+cast_here 0
+dest_dir ({"/players/wocket/mages/rooms/hallway.c","out",})
+short_desc "[35mA Mage's Study[2;37;0m"
+long_desc "   Soft candle light flickers shadows throughout the room.  The wallsare lined with bookshelves.  A small writting desk sits in the far cornerThe incence burns as flower scented smoke entangles its way up to theceiling.  This is your study of which you 'store' and 'retrieve' your mostprecious spells.  A 'list' of your archives is posted above the desk."
+items ({"candles","Many of the white wax candles have melted down to near nothingness","walls","Bookshelves line every wall","bookshelves","They are made of a dark oak and hold many ancient books","desk","A small writting desk made of a dark oak.  Papers and an ink well fillits counter","smoke","It entwines against itself as it floats to ceiling","ceiling","A wood panneled ceiling only adding to the feeling of comfort",})
+property 0
+listens ({"You hear soft chanting from down the hallway",})
+smells ({"default","You smell dust and age",})
+no_castle_flag 0
+no_exits 0
+numbers 0
+owner "feldegast"
+a_pages ({})

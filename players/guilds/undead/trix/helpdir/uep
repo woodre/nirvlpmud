@@ -1,0 +1,8 @@
+Spell Name: uep
+Guild Lvl : 1st
+Spell Cost: 5 Spell Points [Free if used on an Undead]
+Syntax    : uep <player> <text bla bla bla> 
+Descript. : Sends an emote to a player, if the message is sent to an
+	    Undead guild mate the command doesn't require Spell Points.
+            Example: uep trix smiles at you.
+See Also  : utp

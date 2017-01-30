@@ -1,0 +1,62 @@
+/*  Modified October 2001 to conform to /doc/build/RULES/monster.guide */
+
+#define TP this_player()
+#include "/players/eurale/closed/ansi.h"
+inherit "obj/monster.c";
+
+reset(arg)  {
+object gold;
+  ::reset(arg);
+  if(arg) return;
+
+set_name("dragon");
+set_alias("kodragon");
+set_race("creature");
+set_short(BOLD+"Kodragon"+NORM);
+set_long(
+	"The Kodragon is an extremely rare species of dragon.  It is a\n"+
+	"furry dragon about the size of a house cat.  At first glance,\n"+
+	"it appears to be a large bat.  Closer inspection reveals that\n"+
+	"it is shaped like a dragon, with four spindly legs, a long\n"+
+	"sinuous neck and leathery wings.  It has fine gray fur instead\n"+
+	"of scales.  It's face has a blunt snout and large luminous\n"+
+	"black eyes.\n");
+
+set_level(21);
+set_hp(500 + random(100));
+set_al(50);
+set_wc(29 + random(12));
+set_ac(22);
+set_heal(random(20),3);
+set_aggressive(1);
+set_dead_ob(this_object());
+
+set_chat_chance(15);
+  load_chat("The kodragon flies out of reach...\n");
+  load_chat("The kodragon darts between your legs..\n");
+  load_chat("The kodragon disappears... and reappears a few feet away..\n");
+set_a_chat_chance(15);
+  load_a_chat("The kodragons darts behind you and BITES you on the ass..\n");
+  load_a_chat("The kodragon flys in a nips at your exposed neck..\n");
+  load_a_chat("You miss widely...\n");
+  load_a_chat("You stumble as you try to strike the quick dragon..\n");
+
+set_chance(20);
+set_spell_dam(45 + random(30));
+set_spell_mess1(
+  "\n\n"+
+  "The Kodragon breaths a cloud of "+HIC+"NOXIOUS GAS"+NORM+"\n\n");
+set_spell_mess2(
+  "\n\nThe Kodragon breathes "+HIC+"NOXIOUS GAS"+NORM+" in your face..\n\n");
+
+gold = clone_object("obj/money");
+gold->set_money(4000 + random(2000));
+move_object(gold,this_object());
+}
+
+monster_died() {
+  move_object(clone_object("players/eurale/Keep/QST/kodragon.c"),
+		this_player());
+  write_file("/players/eurale/Keep/LOGS/dragons",
+  ctime(time())+"     Kodragon         "+query_attack()->query_real_name()+"\n");
+return 0; }

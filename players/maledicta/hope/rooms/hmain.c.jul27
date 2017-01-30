@@ -1,0 +1,53 @@
+#include "/players/maledicta/ansi.h"
+#define tp this_player()
+#define tpn this_player()->query_name()
+#define tpp this_player()->query_possessive()
+inherit "room/room";
+
+reset(arg) {
+if(!present("tablet", this_object())){
+move_object(clone_object("/players/boltar/templar/items/tablet.c"), this_object());
+}
+if(!present("templar_guard", this_object())){
+move_object(clone_object("/players/maledicta/hope/mobs/templar_guard2.c"), this_object());
+move_object(clone_object("/players/maledicta/hope/mobs/templar_guard2.c"), this_object());
+}
+  if(arg) return;
+set_light(1);
+short_desc = "Entry Hall "+BOLD+"["+HIY+"Tower of Hope"+NORM+BOLD+"]"+NORM;
+long_desc = 
+"  You stand within the Tower of Hope, a dedication to those who\n"+
+"fight evil within the realm of Nirvana.  Its walls are made from\n"+
+"a white stone, inlaid with holy symbols of protection. The ceiling\n"+
+"is a high dome, with paintings on its surface. To the north is a\n"+
+"set of double doors, and to the east is the hall of dedications.\n";
+
+
+items = ({
+"walls",
+"The walls are made from a beautiful white stone, bound by a glittering\n"+
+"mortar.  Numerous holy symbols adorn each stone, binding and protecting\n"+
+"the tower from harm",
+"stone",
+"A beautiful white stone",
+"symbols",
+"Small holy symbols etched into the stone",
+"ceiling",
+"A high domed ceiling with numerous paintings on its surface",
+"paintings",
+"A series of brilliant paintings showing the battles of good versus\n"+
+"evil in the realm.  You feel a sense of inspiration at seeing it",
+"doors",
+"A set of large beautiful oak doors"
+});
+
+
+dest_dir = ({
+  "/players/maledicta/hope/rooms/hinner.c","north",
+  "/players/maledicta/hope/rooms/hdedication.c","east",
+  "/players/reflex/realms/coastline/plains7.c","out"
+});
+
+}
+
+no_hunter(){ return 1; }

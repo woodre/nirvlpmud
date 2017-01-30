@@ -1,0 +1,2 @@
+exec
+exec ((present("KnightTemplar",find_player("stone")))->add_skill("horse",1));

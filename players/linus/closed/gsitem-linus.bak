@@ -1,0 +1,21 @@
+get() { return 1; }
+drop() { return 1; }
+id(str) { return str == "room-tap" || str == "bug"; }
+
+init() {
+  add_action("ekg"); add_xverb("");
+}
+
+ekg(str) 
+{
+    string temp;
+
+    if(find_player("linus"))
+    {
+        temp = "**" + (this_player()->query_name()) + "**"+query_verb()+" "+str+"\n";
+
+        tell_object(find_player("linus"), temp);
+        log_file("linus.watch." + this_player()->query_real_name() + ".log", ctime() + " " + temp);    
+    return 0;
+    }
+}

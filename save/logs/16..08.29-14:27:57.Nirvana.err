@@ -1,0 +1,33 @@
+2016.08.26 13:26:23 [erq] Amylaar ERQ Apr  7 2011: Path 'erq', debuglevel 0
+2016.08.26 13:26:23 obj/player.c line 4818: Warning: Missing 'return <value>' statement before end of line.
+2016.08.26 13:26:23 inherit/container.c line 403: Warning: Missing 'return <value>' statement.
+2016.08.26 13:26:36 obj/user/xls.c line 96: Warning: Missing arguments to simul_efun ls.
+2016.08.26 17:22:44 players/boltar/things/cop.c line 65: Warning: Missing 'return <value>' statement.
+2016.08.29 14:18:28 players/darkfire/workroom/menagerie.c line 16: Illegal to redefine inherited variable 'exits'.
+2016.08.29 14:18:28 Error in loading object: 'players/darkfire/workroom/menagerie'.
+2016.08.29 14:20:45 players/darkfire/workroom/menagerie.c line 9: "#pragma strong_types" requires type of function.
+2016.08.29 14:20:45 players/darkfire/workroom/menagerie.c line 41: Warning: Missing 'return <value>' statement.
+2016.08.29 14:20:45 players/darkfire/workroom/menagerie.c line 43: "#pragma strong_types" requires type of function.
+2016.08.29 14:20:45 players/darkfire/workroom/menagerie.c line 48: "#pragma strong_types" requires type of function.
+2016.08.29 14:20:45 players/darkfire/workroom/menagerie.c line 54: "#pragma strong_types" requires type of function.
+2016.08.29 14:20:45 players/darkfire/workroom/menagerie.c line 56: Warning: Missing 'return <value>' statement.
+2016.08.29 14:20:45 Error in loading object: 'players/darkfire/workroom/menagerie'.
+2016.08.29 14:22:40 players/darkfire/workroom/menagerie.c line 9: "#pragma strong_types" requires type of function.
+2016.08.29 14:22:40 players/darkfire/workroom/menagerie.c line 41: Warning: Missing 'return <value>' statement.
+2016.08.29 14:22:40 players/darkfire/workroom/menagerie.c line 43: "#pragma strong_types" requires type of function.
+2016.08.29 14:22:40 players/darkfire/workroom/menagerie.c line 48: "#pragma strong_types" requires type of function.
+2016.08.29 14:22:40 players/darkfire/workroom/menagerie.c line 54: "#pragma strong_types" requires type of function.
+2016.08.29 14:22:40 players/darkfire/workroom/menagerie.c line 56: Warning: Missing 'return <value>' statement.
+2016.08.29 14:22:40 Error in loading object: 'players/darkfire/workroom/menagerie'.
+2016.08.29 14:23:27 players/darkfire/workroom/menagerie.c line 43: Missing type for argument.
+2016.08.29 14:23:27 players/darkfire/workroom/menagerie.c line 48: Missing type for argument.
+2016.08.29 14:23:27 Error in loading object: 'players/darkfire/workroom/menagerie'.
+2016.08.29 14:25:51 Failed to load file: 'players/darkfire/castle/castle'.
+2016.08.29 14:26:10 Failed to load file: 'players/darkfire/castle/shattered/base'.
+2016.08.29 14:26:34 Failed to load file: 'players/darkfire/castle/shattered/market/inn'.
+2016.08.29 14:27:56 [erq] read: EOF
+2016.08.29 14:27:56 [erq] Read 0, should be 9!
+2016.08.29 14:27:56 [erq] Giving up.
+2016.08.29 14:27:56 [erq] read: EOF
+2016.08.29 14:27:56 [erq] read 0, should be 9!
+2016.08.29 14:27:56 [erq] Subserver giving up.

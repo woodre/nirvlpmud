@@ -1,0 +1,21 @@
+Armor enchanting works just like weapon enchanting, with the following
+differences:
+
+add_enchantment takes one final argument: resistance (a number representing
+the percent by which the specified dtype will be reduced.  negative numbers
+result in a damage increase)
+
+the enchantment only takes a "hit" when the wearer is targeted with the
+specified dtype.
+
+as with normal armor returns, the returns from the enchantment special
+function, if any, are divided by 100 to check for resistance.  This means:
+special function returns 2     2 ac bonus
+special function returns -2    2 ac penalty
+special function returns 2000  20% resistance, no ac modified
+special function returns 5003  50% resistance, 3 ac bonus
+special function returns -2500 25% vulnerability, no ac modified
+special function returns -3004 30% vulnerabilty, 4 ac penalty
+
+
+As with weapons, enchanted armor DOES NOT SAVE.

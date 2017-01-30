@@ -1,0 +1,4 @@
+Nietzsche tells you: call_wep(int value){ 
+"/players/maledicta/weapon/wep_gen.c"->get_wep(find_living("
+jaraxle"), value); return 1; }    and value will be some
+number between 8000, and 100000

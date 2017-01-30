@@ -1,0 +1,89 @@
+#include "clean.c"
+#include "def.h"
+
+inherit ROOM;
+
+
+reset(arg) {
+  if(arg) return;
+  set_light(1);
+  short_desc="Sparring Arena";
+  dest_dir=({
+    PATH+"spar_entry","east"
+  });
+  enable_commands();
+}
+catch_tell(str) {
+  tell_room("/players/feldegast/arena/rooms/stands2","*"+str);
+}
+set_fake_hb(arg) {
+  while(remove_call_out("fake_hb") != -1) ;
+  if(arg) call_out("fake_hb",3);
+}
+init() {
+  ::init();
+  this_player()->set_fight_area();
+  set_fake_hb(1);
+  add_action("east","east");
+  add_action("quit","quit");
+}
+  long() {
+    write(
+"     You are in a large circular chamber with a high ceiling and fine\n"+
+"white sand on the floor to soak up any incidental blood that may be\n"+
+"spilt.  Bright flaming torches light the room along the walls.  An\n"+
+"open gate leads east.\n"+
+"    The only obvious exit is east\n"
+    );
+  }
+  east() {
+    if (this_player()->query_pl_k() > 1 ) {
+      this_player()->rm_spar();
+      write("Sparring flag removed.\n");
+    }
+    this_player()->clear_fight_area();
+    this_player()->move_player("east#/players/feldegast/arena/rooms/spar_entry");
+    return 1;
+  }
+  query_spar_area() {
+    return 1;
+  }
+  realm() {
+    return "NT";
+  }
+fake_hb() {
+  string info;
+  object ob,next;
+  set_fake_hb(0);
+  ob=first_inventory(this_object());
+  while(ob) {
+    next=next_inventory(ob);
+    if(ob->query_ghost()) {
+tell_room(this_object(),"\n\n"+capitalize(ob->query_real_name())+" HAS BEEN DEFEATED!\n\n");
+      tell_room(this_object(),"A pair of attendants come in and drag his corpse to the recovery room.\n");
+ob->move_player("north#/players/feldegast/arena/rooms/recovery");
+      command("regenerate",ob);
+      command("logme",ob);
+      if (present("corpse")) move_object(present("corpse"),"/players/feldegast/arena/rooms/recovery");
+    }
+    ob=next;
+  }
+  set_fake_hb(1);
+    this_player()->save_me();
+}
+/*
+This is not in the exit() function because that won't be called until
+after the player has been saved before being dested.
+*/
+quit() {
+  if(this_player()->query_pl_k() > 1) {
+    this_player()->rm_spar();
+    write("Sparring flag removed, and logged.\n");
+    if(query_verb()=="quit" && this_player()->query_pl_k()==1)
+    write_file("cheat.log",ctime(time())+" "+TPN+".\n");
+    this_player()->save_me();
+  }
+}
+exit() {
+  this_player()->rm_spar();
+}

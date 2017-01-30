@@ -1,0 +1,1572 @@
+
+                     N
+
+Syntax:    
+
+Desc:
+           
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+                     Echo
+
+Syntax:    echo <msg>
+
+Desc:
+	   This ability is primarily for entertainment. Function like
+	   an emote but doesn't attach the name of the user allowing 
+ 	   thematic messages or special effects. It displays to 
+           current environment of user. Available at lvl 40.
+
+Warnings:  Tempting to use to harass players. Can be amusing
+	   to have player appear to be doing any action that
+           comes to mind. Not good for happy players and goes
+           against rules of minimum wiz/player interaction to 
+           use overmuch.
+
+Example:   echo A gust of wind swirls through the room.
+                  displays
+	   "A gust of wind swirls through the room."
+                  to anyone in the same room.
+           
+Related:
+	   echoto,echoall,echochan
+
+
+************
+
+		     Echoto
+
+Syntax:	   echoto <target> <msg>
+
+Desc:
+           This is an echo that is displayed to environment of target
+           player. Function is much the same as a regular echo and 
+           all players in the same environment will see the message.
+           Available lvl 40.
+
+Warning:   Easy to mess with players from workroom with this ability.
+           Don't harass or spam users.
+
+Example:   echoto bob Fire dances around your feet.
+                  displays
+           "Fire dances around your feet."
+                  to everyone in the room with Bob.
+
+Related:
+	   echo,echoall,echochan
+
+************
+
+                     Echoall
+
+Syntax:    echoall <msg>
+
+Desc:
+           This is a global version of the echo command. It sends a 
+	   message to all players online. Could be useful for signal 
+           to start event or to get attention of players that aren't 
+           on all channels. Should not be used excessively.
+           Available lvl 40.
+
+Warning:   Abuse of this will have everyone players and wizards 
+           vexed so don't do it. All players see these regardless of 
+           location and blocks so be considerate in usage.
+
+Example:   echoall Rabid monkeys rain down from the sky.
+                  displays
+           "Rabid monkeys rain down from the sky.
+                  to everyone online.
+
+Related:
+           echo,echoto,echochan
+
+*************
+
+                     Echochan
+
+Syntax:    echochan <chan> <msg>
+
+Desc:
+           This echo is sent on the specified channel to all players 
+           that are recieving that channel and is saved on that 
+           line's history. Will return how many players saw the msg
+           after sending it.
+
+Warning:   Similar to echoall it can be annoying if overused. Be
+           thoughtful of other users.
+
+Example:   echochan gossip Everyone laughs at Bob's silly hat.
+                  displays
+           "Everyone laughs at Bob's silly hat."
+                  across gossip and tells you how many players saw it
+
+Related:   echo,echoto,echoall
+
+*************
+
+                     Errormsgs
+
+Syntax:    errormsgs
+
+Desc:
+           Toggles on error messages. Will return errors from load, 
+           clone, goto, exec. Saves having to check /debug.log
+
+Warning:   None
+
+
+Example:   errormsgs
+                  resultes
+           Error messages: ON
+
+Related:   clone, load, goto, exec, log
+
+
+**************
+
+                     Goto
+
+Syntax:    goto <obj>
+
+Desc:
+           This command is a wizard's primary movement ability to get
+           around the mud. It is very flexible and capable of moving
+           a wizard to another player or to a monster or place in 
+           working directory. Available to all levels of wizard.
+           
+Warning:   Command will move you instantly to another point and 
+           display your entry message on arrival and departure. 
+           Courtesy dictates you should inquire with another wizard
+           before teleporting into their workrooms. Should also not 
+           randomly jump into hotel/motel rooms. Aggressive monsters
+           may also take swings at you so be careful not to jump to 
+           players in combat areas.
+
+
+Example:   goto bob, goto hunter
+                  action
+           Wizard would arrive in the room of Bob or hunter.
+                  if no player of that name on game will try to move
+                  you to a monster of similar name.
+
+Related:   place, castle, trans
+
+
+**************
+
+                     Clear_dir
+
+Syntax:    clear_dir <prompt>
+
+Desc:
+           Command should be used cautiously it will remove all the 
+           files in the directory you are currently working in. It 
+           prompts you for a y/n before proceeding with the removal.
+
+Warning:   Be sure you don't want any of the files before they are 
+           all gone. Offline backups are highly recommended. Don't 
+           use in other wizards or in open files that aren't yours.
+
+Example:   clear_dir in directory /players/bob/test/
+                  result
+           Are you SURE you want to remove all files in: /players/bob/test/?
+           yes to delete, no to cancel
+
+Related:   rmdir,rm
+
+
+**************
+
+                     Imprison
+
+Syntax:    imprison <player> <reason>
+
+Desc:
+           This command is used to put the extremely unrulely player 
+           out of everyones way. The offender will not be able to 
+           message out and will lose inventory items that might 
+           facilitate escape. Wizards can also be imprisoned.
+           The string reason is why you put the person in there and 
+           should be detailed so other wizards know why the player
+           is there.
+
+Warning:   Not to be used on casual problems. Try to sort out the 
+           issues and mainly stick unruly players here. Do not zap,
+           dest, or force problem players. Lock the player in here
+           to cool off. Should set a sentence so other wizards know
+           how long they are supposed to remain in prison.
+
+Example:   imprison bob
+                     result
+           Player Bob is put in room prison.
+
+Related:   free
+
+
+**************
+
+
+                     Free
+
+Syntax:    free <player> <reason>
+
+Desc:
+           Free is counterpoint to imprison. This is the command to 
+           release a player when sentence is served. Reason is 
+           entered again to keep consistant logs and confirm 
+           completion of sentence.
+
+Warning:   Don't free somebody unless you are authorized to do so. 
+           If you placed them and sentence is up fine. Make sure
+           with the imprisoning wizard that the issue is settled.
+
+Example:   free bob completed sentence
+                     result
+           player Bob is released from prison to resume play and 
+           "completed sentence" is logged
+
+Related:   imprison
+
+
+**************
+
+                     Cat
+
+Syntax:    cat <filename>
+
+Desc:
+           Cat shows the first 15 lines of a file. 
+
+Warning:   Don't think you can hurt anything with this one.
+
+Example:   cat /obj/monster.c
+                  results 
+           first 15 lines of monster.c are displayed
+
+Related:   tail,more
+
+
+**************
+
+
+                     Origin
+
+Syntax:    origin <obj>
+
+Desc:
+           This command returns the file name of an object in your 
+           inventory or immediate environment. Useful for tracking 
+           down items players are having trouble with or to find 
+           files to examine for code examples.
+
+Warning:   Don't reveal info to players, though Creator gives them
+           part of the information anyhow.
+
+Example:   origin bag
+                  result
+           OBJ(obj/bag) or selbag would be OBJ(players/mythos/prac/bag)
+
+Related:   creator, where
+
+
+**************
+
+
+                     Where
+
+Syntax:    where <obj>
+
+Desc:
+           Command Where returns the filename of the room that an 
+           object is in. If used on a player it gives information 
+           similar to People command. Works on monsters and objects.
+
+Warning:   If multiple objects have a similar name results may not be
+           the desired target. Also only works on mobs that are 
+           currently loaded.
+
+Example:   where beano
+                  results
+           OBJ(players/mizan/etheriel/ROOMS/croco)
+           Plane of Etheriel [oozie,howhow,pago,polar]
+
+           This is a location of a beano
+
+Related:   origin
+
+
+**************
+
+
+                     Attrib
+
+Syntax:    attrib <player>
+
+Desc:
+           This command returns a player's attributes the same as if 
+           you were seeing their sc2. Pretty straight foreward.           
+
+Warning:   Don't use this to gauge pk opponents and don't reveal this
+           information to players.
+
+Example:   attrib bob
+                  results
+           see all of his attribute values as laid out in sc2.
+
+Related:   stat
+
+
+**************
+
+
+                     Castle
+
+Syntax:    castle <wizard name>
+
+Desc:
+           This command moves you to the castle of the wizard you 
+           input. Useful if you are wanting to find where it is.
+
+Warning:   Many castles aren't set up with commands and this places
+           you inside of the castle object. Also if the castle isn't 
+           set to load yet you may clone it. Be careful to not open 
+           a castle to players that isn't approved yet.
+
+Example:   castle bob
+                  results
+           moves you to Castle Bob
+
+Related:   goto, place
+
+
+**************
+
+
+                     Run
+
+Syntax:    run <file>
+
+Desc:
+           This command executes a command file in your directory. 
+           Login or other exec commands can be run with this.
+
+Warning:   Make sure the commands are valid or it will error
+
+Example:   run login
+                  results
+           driver checks and executes each command line by line
+
+Related:   exec
+
+
+**************
+
+
+                     Att/atm
+
+Syntax:    att or atm
+
+Desc:
+           This command gives all the players online and what they 
+           are currently fighting. 
+
+Warning:   Don't use this information for your pk characters.
+
+Example:   att
+                  results
+           name + monster + monster's path
+           are displayed for everyone fighting at that time
+
+Related:   stat, statall
+
+
+**************
+
+
+                     Statall
+
+Syntax:    statall
+
+Desc:
+           Returns information on all characters online at the time
+           the command is issued. Information returned are player 
+           name, money, armor class, weapon class, hit points, max
+           hit points, spell points, max spell points, and experience.
+           Useful for checking general strengths of players.
+
+Warning:   Do not use to help character gauge one another. Also 
+           results only display values for WC and AC of worn/wielded
+           and not values set by guild abilities.
+
+Example:   statall
+                  results
+           player + money + AC + WC + HP + MHP + SP + MHP + Exp
+           are displayed for all players online.
+
+Related:   stat, att/atm
+
+
+**************
+
+
+                     Clone
+
+Syntax:    clone <file>
+
+Desc:
+           This command creates the object from the file specified.
+           One of a wizards most used commands. If in the directory 
+           you only need to type the name else you can clone from 
+           any directory from full path name. Objects appear in your 
+           inventory, monsters in your immediate environment.
+
+Warning:   When testing do not clone monsters in player areas. Also 
+           be aware that players will see a message when you clone 
+           objects and will often look at you to see what you are 
+           doing.
+
+Example:   clone /obj/bag.c
+                  results 
+           a bag is cloned into your inventory
+           if you were in the /obj directory you could also simply 
+           clone bag.c for same effect
+
+Related:   hand
+
+
+**************
+
+
+                     Dest
+
+Syntax:    dest <obj>
+
+Desc:
+           This is a counterpoint of clone. You use this command to 
+           remove an object from your immediate surroundings or 
+           inventory. Be considerate and do not dest things in public
+           areas like green that are not yours or that are still in 
+           use by others.
+
+Warning:   If you dest a monster it drops all its current inventory
+           as it departs so if removing a bugged monster remember 
+           not to leave things for players to find. Don't dest mobs
+           for players and don't dest players without good reason.
+
+Example:   dest bag
+                  results
+           bag is destructed in inventory or if not present there 
+           then in the room
+
+Related:   clean
+
+
+**************
+
+
+                     Load
+
+Syntax:    load <file>
+
+Desc:
+           This command is used to load a file.
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+
+                     Reset
+
+Syntax:    reset <object>
+
+Desc:
+           Triggers a reset in the object specified
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+
+                     More/Nmore
+
+Syntax:    more <file name> or nmore<file name>
+
+Desc:
+           This command allows you to look at a piece of code a page
+           at a time with a prompt for a return to proceed to the 
+           next 20 lines. Entering 'q' will exit more and '!' before
+           a command will allow you to issue commands while in More.
+
+           Nmore displays a bit differently but functions the same. 
+           It also displays file number and a precentage of the file
+           that has already been displayed. Also provides additional
+           commands such as being able to type the line number you 
+           wish to view.
+
+Warning:   None
+
+Example:   more /obj/beer.c
+                  results
+           see first 20 lines of beer with return to display next 20.
+
+Related:   cat, tail, dump
+
+
+**************
+
+
+                     Grep
+
+Syntax:    grep <word> <file>
+
+Desc:
+           This command is used to find instances of a word or string
+           in a file. Useful for tracking names through log files. 
+           Can only use on files you have read access in.
+
+Warning:   Will error if the file is too long or the string to 
+           ambiguous to sort out.
+
+Example:   grep worm /log/PRISON
+                  results 
+           lines containing wrom in the prison log are displayed
+
+Related:   instances
+
+
+**************
+
+
+                     Mv
+
+Syntax:    mv <file name> <new path>
+
+Desc:
+           This command is for moving a file to a different directory
+           Simply enter the file name (or full path if not in same 
+           working directory) of the file to move and then the path 
+           plus file name of its new location. Can also be use in 
+           same directory to change the name of a file.
+
+Warning:   Be careful to not move files that other files inherit or 
+           they will cease to function.
+
+Example:   mv /players/bob/turkey.c /players/bob/mobs/turkey.c
+                  results
+           turkey.c is moved to .../mobs/turkey.c
+
+Related:   cp, rm, ed
+
+
+**************
+
+
+                     Cp
+
+Syntax:    cp <file path> <new path>
+
+Desc:
+           This command copies file to another location without 
+           changing the original. Useful for making second copies
+           of a file for altering and testing alternate versions of
+           an object. File name can also be changed.
+
+Warning:   Remember to observe proper etiquette and credit sources 
+           when borrowing code from other wizards. 
+
+Example:   cp /players/bob/turkey.c /players/bob/food/turkey2.c
+                  results
+           file turkey is copied into .../food/turkey2.c and given
+           a different file name.
+
+Related:   mv, rm, ed, cp_dir
+
+
+**************
+
+
+                     Rm
+
+Syntax:    rm <file>
+
+Desc:
+           This command deletes the specified file.
+
+Warning:   Be sure you do not need the file for its gone
+
+Example:   rm /players/bob/toast.c
+                  results
+           toast.c is deleted
+
+Related:   mv, cp, ed
+
+
+**************
+
+
+                     Ed
+
+Syntax:    ed <file>
+
+Desc:
+           Command enters edit on file specified. Within edit a help
+           menu detailing individual functions can be called typing
+           'h' at the prompt. 'q' exits without saving.
+
+Warning:   This is slower than offline editing but can be useful for 
+           small quick changes.
+
+Example:   ed blah
+                  results
+           file blah is opened to be edited
+
+Related:   mv, cp, rm
+
+
+**************
+
+
+                     Home
+
+Syntax:    home
+
+Desc:
+           Moves a wizard to location set as home. This is usually 
+           /players/<wizname>/workroom.c
+
+Warning:   No warning other than players will see a room exit message
+
+Example:   bob types home
+                  results 
+           bob is moved to /players/bob/workroom.c
+
+Related:   place, goto
+
+
+**************
+
+
+                     Workrm
+
+Syntax:    workrm <file>
+
+Desc:
+           Sets a new path for Home. Could be a second workroom or 
+           another room of your creation
+
+Warning:   Don't set to a player populated area. Generally best to 
+           enter the game in a workroom.
+
+Example:   workrm /players/bob/workroom2.c
+
+Related:   home, set_home
+
+
+**************
+
+
+                     Localcmd
+
+Syntax:    localcmd
+
+Desc:
+           This command lists all available commands on a wizard and 
+           in the immediate environment. This includes all add_action
+           on autoloads, guild objects, and player object.
+
+Warning:   Don't let the big list daunt you.
+
+Example:   localcmd
+                  results
+           All commands are displayed
+
+Related:   
+
+
+**************
+
+
+                     Earmuffs
+
+Syntax:    earmuffs <on/off>
+
+Desc:
+           Earmuffs command blocks hearing all of the public channels
+           as listed under "channels". Namely gossip, equip, shout, 
+           risque, junk, msg, babble, newbie, pk, annouce, wiz, cwiz.
+
+Warning:   You won't be able to hear players including calls for 
+           assistance. Good way to zone out and code in peace though.
+
+Example:   Bob types earmuffs on
+                  results
+           Bob will no longer hear any messages over the public channels
+
+Related:   tellblock
+
+
+**************
+
+
+                     Log
+
+Syntax:    log <>
+
+Desc:
+           This command displays a particular log file. Without an
+           arguement it returns a wizards default log. Error messages
+           from objects malfunctioning and failed clone attempts are 
+           kept here temporarily.
+
+Warning:   None, displays errors.
+
+Example:   log bob
+                  results 
+           read bob's log and displays errors returned by objects in
+           his directory.
+
+
+Related:   rlog
+
+
+**************
+
+
+                     Cd
+
+Syntax:    cd <path>
+
+Desc:
+           This is change directory. It is basic command for 
+           navigating through your files. It can be done layer by
+           layer or the whole path can be entered at once. Without
+           arguement it returns you to your base directory 
+           /players/<wiz_name>.
+
+Warning:   None
+
+Example:   cd /open/bob
+                  results
+           bob's open directory is now his working directory
+
+Related:   pwd, cp, mv, cp, rm, ed 
+
+
+**************
+
+
+                     Pwd
+
+Syntax:    pwd
+
+Desc:
+           Displays the current working directory. Helpful if you are
+           working in several directories and need to check before 
+           trying to manipulate a file.
+
+Warning:   None
+
+Example:   pwd
+                  results
+           Bob's working directory is displayed
+
+Related:   cd, ls
+
+
+**************
+
+
+                     Ls
+
+Syntax:    ls <dir>
+
+Desc:
+           This command lists all files and directories in your 
+           current working directory or with a path will display
+           the contents of that directory. Linux equivalent to "dir"
+           for Dos.
+
+Warning:   None, though you won't be able to ls /players or subdirs
+           of closed directories.
+
+Example:   ls /players/bob/
+                  results
+           all of the files and directories in bob's root directory 
+           are displayed
+
+Related:   cd
+
+
+**************
+
+
+                     Mkdir
+
+Syntax:    mkdir <name>
+
+Desc:
+           This command creates a directory in the current directory
+           or in the path specified.
+
+Warning:   Don't make the directory name to complicated in those 
+           you'll be using often. It becomes a nuisance to type.
+
+Example:   mkdir cheese
+                  results 
+           directory cheese is added to current directory.
+
+Related:   rmdir, cd, cp_dir
+
+
+**************
+
+
+                     Rmdir
+
+Syntax:    rmdir <dir>
+
+Desc:
+           This command removes a directory. It only works on an 
+           empty directory which reduces some of your chance of 
+           removing an active directory.
+
+Warning:   Always becareful deleting if you don't have good offline 
+           backups.
+
+Example:   rmdir blech
+                  results
+           directory blech if containing files is gone
+
+Related:   cp_dir, mkdir
+
+
+**************
+
+
+                     Title
+
+Syntax:    title <message>
+
+Desc:
+           This command sets your title. No arguement returns your 
+           current title.
+
+Warning:   Be sure titles are appropriate for a wizard.
+
+Example:   title the Shiney Wiz
+                  results
+           Bob the Shiney Wiz is now Bob's title
+
+Related:   
+
+
+**************
+
+
+                     Tail
+
+Syntax:    tail <dir>
+
+Desc:
+           Returns the last 15 lines of a file. Counter point to cat.
+
+Warning:   None
+
+Example:   tail /obj/bag.c
+                  results
+           last lines of bag.c are displayed
+
+Related:   cat, more, dump
+
+
+**************
+
+                     Wizlist
+
+Syntax:    wizlist <name>
+
+Desc:
+           Without argument it returns the top 15 wizards and the 
+           two above and two below your position on the wizlist. 
+           Or a specific wizard may be named and it will show
+
+Warning:   Don't take the list as a serious competetive indicator.
+           It primarily indicates which wizards are using the most 
+           system memory.
+
+Example:   wizlist bob
+                  results
+           shows top 15 on list and the two wizards above and below
+
+Related:   
+
+
+**************
+
+                     Setmmin
+
+Syntax:    setmmin <msg>
+
+Desc:
+           This command is to set your personal teleport message for
+           entering an environment via goto and the like. Default is 
+           "arrives in a puff of smoke.
+
+Warning:   Keep the message appropriate and be aware that it still 
+           displays when you are invisible.
+
+Example:   setmmin stumbles onto the stage
+                  results
+           Players see "Bob stumbles onto the stage" when Bob 
+           teleports to them.
+
+Related:   setmmout, setmin, setmout, setmhome, review
+
+
+**************
+
+                     Setmmout
+
+Syntax:    setmmout <msg>
+
+Desc:
+           This command is to set your outbound teleport message from
+           an environment. Default is "disapears in a puff of smoke".
+
+Warning:   Keep appropriate and know that it displays when invis
+
+Example:   setmmout breaks a leg and tumbles off the stage
+                  results 
+           Players see "Bob breaks a leg and tumbles off the stage"
+           When Bob teleports out of the room 
+
+Related:   setmmin, setmin, setmout, setmhome, review
+
+
+**************
+
+                     Setmin
+
+Syntax:    setmin <msg>
+
+Desc:
+           This command sets your movement message for using standard
+           movement ie walking. Default is "arrives".
+
+Warning:   Keep clean and brief
+
+Example:   setmin enters theatrically
+                  results
+           Players would see "Bob enters theatrically" as he enters.
+
+Related:   setmmin, setmmout, setmout, setmhome, review
+
+
+**************
+
+                     Setmout
+
+Syntax:    setmout <msg>
+
+Desc:
+           This command sets your exit message for standard movement
+           ie walking. Default is "leaves" and a direction.
+
+Warning:   Keep clean and brief
+
+Example:   setmout exits stage 
+                  results
+           Players see "Bob exits stage west" for leaving to the west
+
+Related:   setmmin, setmmout, setmin, setmhome, review
+
+
+**************
+
+                     Setmhome
+
+Syntax:    setmhome <msg>
+
+Desc:
+           This command sets message for use with the 'home' command.
+           Default is "goes home"
+
+Warning:   Keep clean and brief
+
+Example:   setmhome flees backstage
+                  results
+           Players see "Bob flees backstage" when Bob goes home to
+           his workroom.
+
+Related:   setmmin, setmmout, setmin, setmout, review
+
+
+**************
+
+                     Review
+
+Syntax:    review
+
+Desc:
+           This command displays your movement messages. It shows 
+           current setting for message out, message in, teleport out,
+           teleport in, and home.
+
+Warning:   None
+
+Example:   review
+                  results
+           Bob enter review and sees all his custom movement messages
+
+Related:   setmmin, setmmout, setmin, setmout, setmhome
+
+
+**************
+
+                     Setal
+
+Syntax:    setal <msg>
+
+Desc:
+           This command allows you set your alignment to whatever 
+           rather than the usual "white lord, nuetral, lord of evil"
+
+Warning:   Keep brief or you'll end up with a multiple line 
+           short_desc. And please keep message appropriate.
+
+Example:   setal beige
+                  results 
+           Bob the Shiney Wiz (beige) is now displayed 
+
+Related:   setaln, title
+
+
+**************
+
+                     Setaln
+
+Syntax:    setaln <#>
+
+Desc:
+           This command sets your alignment based on the number you
+           input. White lord is positive 1000 and Lord of Evil is 
+           negative 1000.
+
+Warning:   none
+
+Example:   setaln -1000
+                  results
+           Bob the Shiney Wiz (lord of evil) is new title
+
+Related:   setal, title
+
+
+**************
+
+                     Light
+
+Syntax:    light <on/off>
+
+Desc:
+           This command activates makes you into a light source so 
+           that you can see in dark environments. It toggles without
+           a message so if you had them on you'll need to toggle them
+           off again manually.
+
+Warning:   Several guilds are light sensitive. Please be aware of 
+           your light levels before jumping into public areas and
+           do not intentionally harrass these players.
+
+Example:   light on
+                  results
+           Bob will be lit so that he can see in the dark room
+           light off returns him to emitting no additional light.
+
+
+Related:   
+
+
+**************
+
+                     Vis
+
+Syntax:    vis
+
+Desc:
+           This command makes you visible. It is the counterpart of
+           invisible and invis.
+
+Warning:   You'll be seen
+
+Example:   vis
+                  results
+           Bob becomes visible to the world
+
+Related:   invisible, invis
+
+
+**************
+
+                     Hands
+
+Syntax:    hands <#>
+
+Desc:
+           This gives you a weapon class on bare hands for testing 
+           monsters. It is limited by your level and improves as your
+           level does. Typing a number over your limit will set it at
+           the limit.
+
+Warning:   Only for hitting monsters
+
+Example:   hands 20
+                  results 
+           Bobs hands now have a WC of 20
+
+Related:   
+
+
+**************
+*            *
+*  lvl 30    *
+*            *
+**************
+
+                     Invis
+
+Syntax:    invis <#>
+
+Desc:
+           This is the improved wizard invisiblity power. It doesn't
+           wear off like the player version by movement and improves
+           with your advancing levels. At lvl 30 player tells still 
+           get through and you are not yet masked as "Someone". You 
+           can intentionally set your invis lower to allow players 
+           above that level to see you. It can't be set higher than
+           your current level and not giving a number will result in
+           max level by default.
+
+Warning:   Without your wiz_tell you won't be able to talk while 
+           invis. Until you get closer to lvl 40 you'll be fairly 
+           noticable to players when moving. In your workroom a bit
+           less so.
+
+Example:   invis 15
+                  results 
+           Bob is basically invisible to players under 15. They'll 
+           still see movement messages and be able to look at him
+           if they know the name or have seen him talking. 
+
+Related:   vis, invisible
+
+
+**************
+*            *
+*  lvl 50    *
+*            *
+**************
+
+                     In
+
+Syntax:    in <file> <action>
+
+Desc:
+           
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+                     At
+
+Syntax:    at <player> <action>
+
+Desc:
+           
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+                     Force
+
+Syntax:    force <player> <action>
+
+Desc:
+           This command is useful for quickly getting a player to do
+           what you need them to do. Be it save or register or drop 
+           something you told them they weren't supposed to have. 
+           Force allows you to use any command that the player can 
+           use as though you were that player.
+
+Warning:   Players don't take kinda to you taking away their illusion
+           of control so running too many commands for them will draw
+           complaints.
+
+Example:   force mike sc
+                  results 
+           Mike is told he is forced to 'sc' and then sees his score
+
+
+Related:   snoop
+
+
+**************
+
+                     Trans
+
+Syntax:    trans <player>
+
+Desc:
+           This is a summon command to move a player to your present
+           location. Be it green or workroom. This is used to bring 
+           characters to rooms that are otherwise inexcessible. It 
+           should not be used to deposit characters in dangerous 
+           locations or to rescue them from rooms they should get 
+           themselves out of.
+
+Warning:   Don't kidnap people that aren't expecting it. Careful not
+           to pull people out of combat or other situations that are
+           not to be interfered with.
+
+Example:   trans mike
+                  results
+           Bob moves Mike to his current location
+
+
+Related:   place
+
+
+**************
+
+                     Snoop
+
+Syntax:    snoop <player>
+
+Desc:
+           This command allows a wizard to observe all the input done
+           by the player under observation. This power is helpful in 
+           diagnosing bugs and catching cheats. Should have reason to
+           spy on players, for wizards its a handy way to see what 
+           they are doing while you are training them.
+
+Warning:   Players don't need to be constantly monitored.
+
+Example:   snoop mike
+                  results
+           Bob sees all commands entered by player Mike
+
+Related:   
+
+
+**************
+
+                     Fix_guild
+
+Syntax:    fix_guild <name>
+
+Desc:
+           This command clears a player's guild stats and name. 
+           Especially useful for fixing test characters and guild
+           work.
+
+Warning:   Don't use on players, many guilds files are tricky to 
+           restore do to closed directories and variables.
+
+Example:   fix_guild mike
+                  results
+           Bob resets Mikes guild name to None and clears guild stats
+
+Related:   
+
+
+**************
+
+                     Zap
+
+Syntax:    zap <player>
+
+Desc:
+           This command is to basically kill a player. It is a 
+           punishment that is usually done only to the most 
+           problematic players. Prison is the perferred disciplinary
+           action now.
+           
+Warning:   Not to be done casually. Prison first.
+
+Example:   zap mike
+                  results
+           Bob zaps Mike and he is slain, drops gear, and dies.
+
+Related:   prison
+
+
+**************
+
+                     Trans!
+
+Syntax:    trans! <player>
+
+Desc:
+           This command is a more powerful version of trans.
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+                     Exec
+
+Syntax:    exec <code>
+
+Desc:
+           This command
+
+Warning:   
+
+Example:   exec this_player()-> set_attrib("str", 30);
+
+Related:   
+
+
+**************
+
+                     Climbin
+
+Syntax:    climbin <player>
+
+Desc:
+           This command lets a wizard enter the inventory of a player
+           
+
+Warning:   
+
+Example:   
+
+Related:   exiv
+
+
+**************
+
+
+                     Exiv
+
+Syntax:    exiv
+
+Desc:
+           This command is used to exit a players inventory.
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+
+                     Get!
+
+Syntax:    get! <obj>
+
+Desc:
+           This command ignores the weight of an object and the get()
+           flag allowing a wizard to pick up most things.            
+
+Warning:   Becareful what you pick up.
+
+Example:   get! board
+                  results
+           Bob picks up a message board
+
+Related:   drop!, give!, put!
+
+**************
+
+
+                     Drop!
+
+Syntax:    drop! <obj>
+
+Desc:
+           This command allows a wizard to drop an object regardless
+           of its drop() flag.
+
+Warning:   Becareful not to leave things where players can get to em.
+
+Example:   drop! wiz_tell
+                  result
+           Bob drops his wiz_tell
+
+Related:   get!, give!, put!
+
+
+**************
+
+
+                     Give!
+
+Syntax:    give! <obj>
+
+Desc:
+           This command ignores the drop() flag allowing a wizard to 
+           give any object to a player. 
+
+Warning:   Don't give things to players they shouldn't have.
+
+Example:   give! beano to mike
+                  results
+           Bob hands Mike a beano
+
+Related:   get!, drop!, put!
+
+
+**************
+
+
+                     Put!
+
+Syntax:    put! <obj> in <container>
+
+Desc:
+           This command allows you to put an object into a container
+           regardless of its drop() flag. 
+
+Warning:   Careful where you leave things.
+
+Example:   put! board in bag
+                  results
+           Bob puts message board in bag
+
+Related:   get!, drop!, give!
+
+
+**************
+
+
+                     Promote
+
+Syntax:    promote <player> <amount>
+
+Desc:
+           This command is used to advance a wizard's levels.
+
+Warning:   Caution
+
+Example:   promote Bob 5
+                  results
+           Bob is advanced 5 levels
+
+Related:   approve
+
+
+**************
+
+
+                     Work
+
+Syntax:    work <message>
+
+Desc:
+           This command sets message of what you're working on.
+           
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+
+                     Approve
+
+Syntax:    approve <name>
+
+Desc:
+           This command shows your approval for a player to join the 
+           ranks of wizards.
+
+Warning:   Talk to players first and make sure you want to deal with 
+           this person on a regular basis. Keep the good of the game
+           in mind.
+
+Example:   approve mike
+                  results
+           Bob shows his approval for Mike to become a wizard, he 
+           still needs two more with one being his sponsor.
+
+Related:   promote
+
+
+**************
+
+
+                     Shutdown
+
+Syntax:    shutdown
+
+Desc:
+           
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+
+                     Time
+
+Syntax:    time
+
+Desc:
+           
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+

@@ -1,0 +1,19 @@
+init1() {
+object test,ob,ob1,test1;
+    if(!present("diaper",this_object())) {
+    ob=clone_object("players/haji/closed/diap.c");
+    move_object(ob,this_object());
+   }
+       test1=find_object("room/quest_room");
+         if(!present("trekkie",test1)) {
+          object ob3;
+            ob3=clone_object("obj/quest_obj");
+          call_other(ob3,"set_name","trekkie");
+          call_other(ob3,"set_hint","Find the Ultimate Trekkie with" +
+             " the videotape,\n `The Lost Episodes of Star Trek'\n" +
+             "Find the Jeffries Tube and toss the tape.\n",);
+             move_object(ob3,test1);
+ }
+    add_action("energize"); add_verb("energize");
+}
+

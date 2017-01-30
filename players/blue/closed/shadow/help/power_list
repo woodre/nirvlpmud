@@ -1,0 +1,28 @@
+COMMAND               DESC
+<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--
+'sh <message>'        Tell all the shadows <message>.
+'she <emote>'         Emote a message to the guild.
+'shw'                 Shadow who- see a list of the shadows currently playing
+                      and their locations.
+'pk'                  See a list of the player killers currently playing and
+                      their locations.
+'ow'                  See a list of all players currently playing.
+'shp <num>'           Sets your hit point monitor to go off every <num> beats.
+                      If <num> is "attack" then the monitor will be on only
+                      when your attacking.
+                      'shp' or 'shp 0' turn the monitor off.
+'update'              Get a new shadow-mark.
+'shay'                Shadow-say- speak in a langauges that only other shadows
+                      know.
+'dd'                  Set the drain damage that 'drain' will do.
+'r'                   Repeat previous command.
+'te <message>'        Tell the last person you told a message.(see 'info te')
+'transfer <pts> <kind>'  Transfer shadow points and spell points.
+'sc'                  Score- see your current stats.
+'info <subject>'       Get help on <subject> (type 'info help' for a list of 
+                      subjects).
+'shi'                 Your inventory, with the weights of items.
+'mon'                 See your current hp, sp, shp.
+'toggle'              Toggles which points will be used first for a guild 
+                      spell- shadow or spell.
+'muffle'              Turns your guild channel off.

@@ -1,0 +1,28 @@
+**************
+
+
+                     Dest
+
+Syntax:    dest <obj>
+
+Desc:
+           This is a counterpoint of clone. You use this command to 
+           remove an object from your immediate surroundings or 
+           inventory. Be considerate and do not dest things in public
+           areas like green that are not yours or that are still in 
+           use by others.
+
+Warning:   If you dest a monster it drops all its current inventory
+           as it departs so if removing a bugged monster remember 
+           not to leave things for players to find. Don't dest mobs
+           for players and don't dest players without good reason.
+
+Example:   dest bag
+                  results
+           bag is destructed in inventory or if not present there 
+           then in the room
+
+Related:   clean
+
+
+**************

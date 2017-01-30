@@ -1,0 +1,41 @@
+#include "std.h"
+int pow_int;
+id(str) { return str == "jug"; }
+short() { return "A jug of healing with ["+pow_int+"] charges"; }
+long() {
+write("This is a jug of healing. To use it, type 'jug X'.\n"+
+"X is the amount of units you want to heal. Each unit heals one hp and one sp.\n"+
+"The jug has a maximum charge of 1000 and can be filled in Mizan's castle.\n"+
+"(From church, s,2w,dive jello).\n"+
+"\n"+
+"This jug has ["+pow_int+"] charges remaining.\n");
+	}
+
+get() { return 1; }
+query_weight() { return 2; }
+query_value() { return 500; }
+
+init() {
+	add_action("jug","jug");
+	add_action("alskdj","alskdj");
+	}
+alskdj(str) {
+	int x;
+	sscanf(str, "%d", x);
+	pow_int=pow_int+x;
+	write(
+	"Current charge is ["+pow_int+"] units.\n");
+	return 1;
+	}
+
+jug(arg) {
+  int x;
+  sscanf(arg,"%d",x);
+	if(!arg) return 0;
+	if(x > pow_int) { write("There are only ["+pow_int+"] charges remaining!\n");	return 1; }
+	this_player()->heal_self(x);
+	pow_int=pow_int-x;
+	write("["+pow_int+"] charges remaining.\n");
+	say((this_player()->query_name())+" guzzles some purple liquid from an ugly brown jug.\n");
+	return 1;
+	}

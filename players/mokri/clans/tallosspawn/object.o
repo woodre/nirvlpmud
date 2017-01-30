@@ -1,0 +1,20 @@
+clan_short "A Small Piece of Paper"
+clan_long "This piece of paper signifies that you are one of Tallos' Spawns. You are blessed!Type 'clan_help' for commands."
+object_name "paper"
+hall_path "/room/south/sforst9"
+owner "tallos"
+leaders ({})
+abilities ({})
+join_type 0
+no_clean 0
+short_desc "A Small Piece of Paper"
+long_desc "This piece of paper signifies that you are one of Tallos' Spawns. You are blessed!Type 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "paper"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})

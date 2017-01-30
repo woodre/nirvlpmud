@@ -1,0 +1,26 @@
+************
+
+                     Echoall
+
+Syntax:    echoall <msg>
+
+Desc:
+           This is a global version of the echo command. It sends a 
+	   message to all players online. Could be useful for signal 
+           to start event or to get attention of players that aren't 
+           on all channels. Should not be used excessively.
+           Available lvl 40.
+
+Warning:   Abuse of this will have everyone players and wizards 
+           vexed so don't do it. All players see these regardless of 
+           location and blocks so be considerate in usage.
+
+Example:   echoall Rabid monkeys rain down from the sky.
+                  displays
+           "Rabid monkeys rain down from the sky.
+                  to everyone online.
+
+Related:
+           echo,echoto,echochan
+
+*************

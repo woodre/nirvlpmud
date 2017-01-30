@@ -1,0 +1,21 @@
+need to figure out how to handle this
+
+do we allow them to know how far to next guild level, and allow them
+to store exp, or just not allow them to know how much exp is necessary,
+or leave it as is
+
+lemme know, if we start storing exp (converting it like warriors or ninja)
+i need to know now, so i can go ahead and start implementing, it'll be
+a major pain in the ass, but if you guys think it's worth it i'll do it.
+
+lemme know how you guys feel i should handle it
+
+gpromote, the joinroom, and abandon guild have all been updated to 
+automatically change the rank of a member for servants and hierarchy
+commands, just have to do a command or two up for magi to remove members
+or update manually, although i'll add a check to the guild object to make
+sure, so that when a player quits, their rank is saved, or so that when
+the guild object clones to them it checks...i kinda like the second one
+better so i'll go with that direction, that way we can clone the object
+to a cerberus, and it'll automatically update, so he doesn't join manually
+and fuck everything up

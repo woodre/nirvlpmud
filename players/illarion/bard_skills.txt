@@ -1,0 +1,29 @@
+Bard Skills:
+
+Fencing:
+  If successful, gen_wc bonus of 1+random(bard level/2)
+  (replaces the 1+random(4) bonus from the alliance)
+
+Parry:
+  Checked on the first (and only the first) physical attack
+  made on a bard in each hb.  If successful, the bard
+  gets 25+bard level*5/2 % damage reduction
+  
+Offhand:
+  5+random(bard level) additional damage on a successful
+  check.  Also must have a bard "dirk" equipped.
+  
+Perform:
+  If successful, adds random(bard level+1) damage (or healing)
+  to applicable abilities.  Some bard abilities have
+  durations- in those cases, the duration is boosted
+  and not the damage/healing.
+  
+Bond:
+  Affects performance of pets in combat- a successful
+  check gives the pet a chance for additional damage,
+  dependant on the pet's basic power.  (only implemented
+  after pets are reworked)
+
+  
+

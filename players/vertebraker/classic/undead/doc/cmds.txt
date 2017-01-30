@@ -1,0 +1,95 @@
+                                                             (V)  _____  (V)
+  |\/\/\/  _     _  _     _  ___      _______  _______  ___   `@_/\   /\_@'
+ .|####/  //    // /_\   // /--.\    /------' /-----,/ /--.\    |@O   O@|
+ |###/   //    // // \\_// //   \\  //___    //____// //   \\   | ~@_@~ |
+.|##/   //    // //   \ / //    // //---'   //----// //    //    \_@ @_/
+|#/    //    // //    // //    // //       //    // //    //    _@|III|@_
+|/     \\___// //    // //____// //_____  //    // //____//   .@  \---/  @.
+'       ----' '-    '- '------' '------' '-    '- '------'   (V)         (V)
+[You become the undead character i.e. a shadow.]
+
+Base Emotes:
+ glare/greet/water/oblige/threaten
+
+[1] Skeleton
+   *comm:  List all undead cmds.
+   *du:    List all undead logged on.
+   *guildleave
+   *hide:  Hide in your soul.
+   *ut/ue: Chat line.
+   *tomb:  Guild rescue.
+   *Add custom says, tells, emotes.
+   *Guild stats in score.
+
+[2] Zombie
+   *Touch: Does variable dmg, variable cost.  Based on guild_level.
+   *burn:  corpse_heal
+   *set_touch
+
+[3] Ghoul
+   *charm:         Does dmg.
+   *dog:           Calls a darkhound.
+   *whystle:       Transports death dog back to you.
+   *ecnart/trance: sp->hp & hp->sp 
+   *fball:         Create a flaming ball [wep].
+   *glow:          dark_sight eyes.
+   *know:          Compare stats.
+   *mvest:         Creates a mystic vest [armor].
+   *umelt:         Melt obj into gold.
+   
+[4] Shadow
+   *vision: See where another character is...
+   *aid:    Donate <x> SPs to someone else.
+   *feign:  Fake death. [calm]
+   *ffield: Create a force field [armor].
+   *fog:    Does dmg.
+   *fwhip:  Create a flaming whip [wep].
+   *scan:   Tells hp% left to a monster.
+
+[5] Wight
+   *Glare:        Does dmg.
+   *animate dead: Summons zombie [only possible from undead guild hall?]
+   *call:         Transport slave zombie back to you.
+   *ulead:        Lead combat.
+   *quartz:       Create a gem of quartz... [needed for shadows]
+   *shadows:      Does dmg.
+
+[6] Wraith
+   *evoke:    Area-atk. Does dmg to all NPCs exc. pets, kids.
+              Variable cost based on # of enemies being hit.
+   *ghp/gsp:  Retrieve HPs/SPs in reserve from life.
+   *shp/ssp:  Store HPs/SPs in reserve from life.
+   *lightning: Does dmg.
+   *Add stored HP/SP to score...
+
+[7] Spectre
+   *possess:  Does dmg.
+   *revive:   Reincarnate dead player [only Undead/Vampire...]
+   *spectral_hand: Create spectral hand pet to fight with ya til fight is over.
+   *chill <monster>: Temporarily lower monster WC.
+   *weaken <monster>: Temporarily lower monster AC.
+   *dfinger <monster>:  Points finger of death at monster [-10% of hps...]
+
+[8] Lich
+   *grab:   Originally set enemy WC to 0 for a short time.  Feared.
+   *fix:    Repair a broken weapon.
+   *plague: Infect monster w. disease
+   *storm:  Longterm dmg on a mob.  Relatively like Shardak.
+   *blast:  Atk spell.
+
+[10] Undead WarLord/GC
+   *gct:    GC channel...
+   *gce:    GC emote channel...
+   *gcw:    Show all L10+ Undead
+   *gcm:    GC channel muffle...
+   *guildfix: Give guild obj to a player who lost it.
+   *promote:  Promote player to next guild level.
+   *gdemote:  Demote player to the last guild level.
+   *turn <player> undead = recruit a player.
+   *flyer:   Create Undead guild flyer.
+
+[GWIZ] Dracolich
+   *set_lev: Set guild level to number.
+
+
+

@@ -1,0 +1,14 @@
+Shops
+1-23-97 Bp
+
+
+All shops are to give the value returned from query_value() 
+in the object being sold or less for items worth less than 1000 coins.
+For objects worth 1000 coins or more the shop may pay out the 
+value or 1000+random(400) coins. whichever is LESS.
+For example an object worth 1250 coins. 1000+random(400) generates
+a value of 1043. the player gets 1043. if on the other hand 1000+random(400)
+generated a value of 1343, the player would get 1250.
+An object worth 1400 or more will ALWAYS get the result of 
+1000+random(400);
+

@@ -1,0 +1,64 @@
+INFO
+	ACL - the access control list system
+
+DESCRIPTION
+	ACL stands for Access Control List, and is a way to control what
+	access a given LPC object or wizard can have to filesystem objects
+	like directories and files.
+
+	The following access rights are defined and implemented:
+	
+		P	Protect, can modify ACLs
+		D	Delete, can delete filesystem objects
+		A	Add, can create filesystem objects
+		L	List, can get a directory listing
+		R	Read, can read files
+		W	Write, can write to already existing files
+
+
+	The following access rights are defined but not implemented:
+
+		U	Use, (not currently implemented)
+		X	eXecute, can clone&load objects (not yet implemented)
+
+	Two abbreviations also exists, ALL is all the above rights, and NONE
+	is none of the above rights.
+
+	Access can be given to a number of types of "objects", for example:
+
+		Lpd		A wizard (interactive player really).
+		/obj/rope	An LPC object.
+		/room/		All objects in the /room directory (as well as
+				subdirs).
+		.ArchWiz	All "objects" in the .ArchWiz group.
+		.Lpd.GuildFoo	All "objects" in Lpd's .GuildFoo group.
+		$REST		A "catchall".
+
+	An ACL can look something like this:
+
+		Lpd:ALL			(Lpd have ALL rights)
+		Oros:LUR		(Oros have List, Use and Read rights)
+		/players/lpd/:ALL	(All objects in ~lpd/ have ALL rights)
+		$REST:NONE		(All other "objects" have no rights)
+
+	One thing to notice is that if there isn't an ACL assigned to a
+	filesystem object then the rights will be inherited from the nearest
+	parent directory to that object. So if you have an ACL assigned to
+	your home directory then the access rights specified in it will
+	automatically apply to all your subdirs and files (unless you assign
+	another ACL to one of the subdirs or files of course).
+
+	The ACL is stored in a file named ".acl". To protect a specific
+	file with ACL you can create a file ".acl:name_of_file" containing
+	the ACL rights.
+
+	Author: Peter Eriksson <pen@lysator.liu.se>, 15 Oct 1993.
+
+NOTE
+	The $REST acts as a minimum acl; if you have an acl like
+	Bastard:NONE
+	$REST:LR
+	the wizard 'bastard' will still get LR rights.
+
+	Beware of giving rights to /obj, /local, etc; then anyone can clone
+	wiztools from there and do whatever to your files.

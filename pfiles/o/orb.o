@@ -1,0 +1,143 @@
+nrpoints 322
+totalpoints 322
+np_xlevel 31
+nbday "071407"
+rlbday 0
+penalty_left 0
+np_age 254
+time_to_heal 0
+hcnum 1
+crime 0
+money 0
+luck2 30
+lucky 250
+name "orb"
+gender "male"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 1
+level 19
+armor_class 0
+hit_point 364
+max_hp 364
+experience 17000000
+mmsgout "disappears in a puff of smoke"
+mmsgin "arrives in a puff of smoke"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 1
+hunted 0
+hunter 0
+hunting_time -103
+cap_name "Orb"
+spell_points 391
+max_spell 391
+spell_name "Power Wield"
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 2016298
+is_invis 0
+frog 0
+whimpy 0
+auto_load "/players/mizan/closed/makadra.c:^!/players/mokri/clans/object.c:^!/players/earwax/closed/TRACKER/loader:0^!/players/maledicta/closed/symbio/clan.c:^!/players/forbin/closed/ftell.c:^!/players/snow/closed/test/aura.c:^!/players/saber/closed/new_mini/blade.c:^!players/fakir/closed/scar.c:^!/players/saber/closed/new_mini/feline.c:^!/players/dragnar/MKScar/scar:^!/players/dune/closed/guild/implants.c:^!"
+current_room "players/snow/ROOMS/bar.c"
+alignment 0
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Armors 0
+Weapons 0
+WeaponBonuses 0
+channel_names ({"equip","pk","msg","shout",})
+BankBalance 212181
+strength 29
+intelligence 29
+stamina 30
+will_power 29
+magic_aptitude 30
+piety 29
+stealth 35
+charisma 29
+dexterity 30
+luck 30
+atrbr ({30,30,30,30,30,30,30,30,30,30,})
+stats ({0,0,0,0,0,0,0,0,0,0,})
+stat_maxes ({0,0,0,0,0,0,0,0,0,0,})
+flag_tester 0
+handshake_data 0
+handshake 0
+quest_point 42
+quests "orc_slayer#t_rexs#archwizard#inculta_creperum"
+pregnancy 0
+pregtoo 0
+monitor_string 0
+saved_aliases ({"g","get all","c","cyber","ge","guildexit","fol","follow","ma","mode attack","ret","retreat","y","pop pill","xx","bootxp","nn","net *** PK in progress, get to orb NOW ***","x","xpnext","rr","search","ms","mode stealth","mh","mode hyper","5","quaff potion","4","give orb to oz","b","tie_laces","wh","who2 bardock","ep","enter portal","heal2","drink shake","sb","sel inbag","nb","nem bows","kk","kill tolbrehn","t","fight","ol","overload","3","give figurine to oz","q","party say","a","alias","p","party","`","access tony","1","brandish wand","ff","fluxcharge","hp","mon","me","l at orb","mn","mode normal","h","inject green","igg","eat_corpse","11","wield gama","dd","deathblow","pr","progress","eheal","drink blaster","gac","get all from corpse","imm","immersion","cn","cyberninja","2","wield gama","er","enter realm","ig","decorpse","hh","pop pill","k","kill","i","inv","tt","assist kyllur",})
+saved_nicknames ({"yoshi","yoshimitsu","splooge_dirs","> 4w,5n,w,enter shrine,angel,9n,2e,enter hole,forest,3e,n","demon_dirs","Dazed tells you: the demons are like 2e,2n,nw,2n,nw,2n,then west into that crazy area, gotta find a cave","wand_quest","Search the dark desert and assemble the wand tofree the Soul of the Desert Sand from its prison.","duncan_dirs","4w,6n,2u,e,enter booth,lift receiver,out,stoop,w,doorway,stairs,door,n,n,alcove,d,barge,door,s,kill man","chupa","chupacabra","jez","jezebel","whisp","nytewhisp","rn","ravennight","lotsarooms","vasto","dak","dakeyras","Shitlist","fawn - coins to darkfyre, when humakt was gonna kill her, being a shitty ninja in general ** ironman - bullshit with doodle, poor ninja ** grit - severe conduct unbecoming a cyberninja ** fury - habit of quitting out in pk ** selena - conduct unbecoming a cyberninja ** shadowstone - flapping, conduct unbecoming ** martha - quitting out in pk, mild, not really going after her.","bask_dirs","s,e,e,e,d,enter portal,s,s,all west,enter wall,n,w,s,s,s,s,e,n,e,kill basilisk.  5k coins and easy 8k mob.\"","juribel_dirs","Fang tells you: 4w,3s,4w,4s,w,enter cave,all w,sw,crossbridge,se,s,3se,knock on the door 3 times","summersword_dirs","4w,5n,w,enter shrine,desert,buy map,2n,5w,enter cave,2n... let me think","ugh_dirs","Fang tells you: in the oak tree, n,e,walk east,e,e,s,se,e,ne,n,entercave,w,kill darklings,n,w,kill dragon (5k but does hit a bithard) free prisoner... then go back to tree entrance, gonorth and two nw and search","sewer_dirs","backdoor move grate enter hole and your in sewers","tom","vertebraker","cerb","cerberus","qualtor_dirs","4w,5n,w,w enter portal, w, enter crytal","steth","stethoscope","middle_earth_dirs","Gohan tells you, \"oh ahm 6w 3s 4w all s till you see book on a pedestal then 2w enter tree and north till you see me\"","yuna","yunalesca","satan_dirs","Rek tells you: satan is in temple of bishamon.  it's like 2n,e,2u..  something like that, there's stairs, you'll find them.  you have to go north and kill all these mobs.  you'll find damion, his son, you have to kill him, then go into hell.  i don't know","wyrmslayer_weapons"," wyrmslyr is blessed longsword (west tower, u,portal,n,e,n on indigo knight), greydeath (d from fortress,w,cave), and souleater in cave of death","headdress_dirs","warp, 2e,3 or 4n,u,w","PPE_dirs",", 1w,enter portal,rift,a bunch east,crawl south,check hole,d,few east, hole in wall in that sewer","andr","andreika","benkei_dirs","10e,pass,ancient,e,n,forest,n,3n,nw,pass cross","ooze_dirs","<t> Mantis chats: n,n,nw,n,n,nw,n,ne,nw,n,n,e,e,enter cave",})
+testchar_var 0
+nirvana_points 0
+clan 0
+sig 0
+wkrm 0
+hostname "ACA2BE92.ipt.aol.com"
+ok_edit "none#"
+mailaddr "dhalek@hotmail.com"
+saved_where 0
+title "the ancient of the mortals"
+pretitle "GrandLord"
+password "x5Zlxqqupme/I"
+spouse 0
+race "bmf"
+al_title "honorable"
+PKGhostCounter 0
+intoxicated 0
+infuse 0
+stuffed 0
+soaked 0
+headache 0
+max_headache 0
+fight_area 0
+mon 1
+phys_at ({1,6,2,194,0,0,})
+no_spell 1
+called_from_ip "172.162.190.146"
+msghome "goes home"
+description "the Renegade stands here.  Rarely out in the open, even rarer for him to be out of the shadows, you can catch a rare glimpse at one of the most lethal of the CyberNinja.  Standing a touch over six feet tall, and extremely bulky even at that height, he's far from what one might expect a CyberNinja - a practioner of the Ninjitsu art of stealth and assassination - to look like.  Standing on the balls of his feet, his eyes searching constantly, the haft of his famous kusari-gama gripped lightly in one hand shows his readiness to enter combat at all times, however.Orb was once a proud leader of the CyberNinja.  Over time, the apathy and lack of honor amongst his fellow ninja wore on him, however, until one day he finally renounced his positions and stepped aside to become a renegade.  As such, he still follows his own honor, but no longer has any compunctions about killing those who he feels have none.  If you live without honor, or are an enemy to the CyberNinja, watch your back, for this man will gladly plant his blade there."
+guild_name "cyberninja"
+clan_name "grandlords"
+clan_master 0
+clan_file 0
+lastime "Oct 18 03:35 2009 to Oct 18 06:05 2009"
+player_killing 0
+invs_count 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 1
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd 0
+errormsgs 0
+guild_rank 27
+guild_exp 1
+guild_file "/players/dune/closed/guild/implants.c"
+home "/room/church.c"
+ex_lv 27
+qc 1
+no_give 0
+aprv 0
+hint "no hint"
+AnsiPref ({"page","[32m","tell","[1;32m","gossip","[1;34m","risque","[31m","junk","[31m","babble","[31m","newbie","[31m","msg","[1;32m","announce","[1;31m","equip","[1;34m","pk","[1;31m","title",0,"pretitle",0,"roomtitle",0,})
+old_last "Sep 11 04:25 2009"
+wiz_soul_light 0
+present_log 0
+present_castle 0
+friends 0
+other_copy 0

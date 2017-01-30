@@ -1,0 +1,23 @@
+                    -- COUNTERMAGIC --
+  
+TYPE: Spell (Variable)
+INT REQ: 1/level
+WIL REQ: Variable
+USAGE: comagic
+COST TO MAX: 5,500,000
+
+This spell reduces spell damage ONLY! Not physical damage.
+
+      /=LEVEL=COST SP=DURATION=SPELL RESISTANCE=WIL REQ====XP COST===\
+      |   1  |   50  |   60   |   10% Damage   |   2   |   100,000   |
+      |   2  |   50  |   70   |   15% Damage   |   2   |   200,000   |
+      |   3  |   50  |   80   |   20% Damage   |   1   |   300,000   |
+      |   4  |   50  |   90   |   25% Damage   |   1   |   400,000   |
+      |   5  |   50  |  100   |   30% Damage   |   1   |   500,000   |
+      |   6  |   50  |  110   |   35% Damage   |   1   |   600,000   |
+      |   7  |   50  |  120   |   40% Damage   |   1   |   700,000   |
+      |   8  |   50  |  130   |   45% Damage   |   1   |   800,000   |
+      |   9  |   50  |  140   |   50% Damage   |   1   |   900,000   |
+      |  10  |   50  |  150   |   60% Damage   |   1   | 1,000,000   |
+      \==============================================================/
+

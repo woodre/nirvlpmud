@@ -1,0 +1,9 @@
+inherit "/players/vertebraker/realms/gta/std/room";
+
+reset(arg){
+set_hood("0");
+set_exits(({
+"/players/vertebraker/realms/gta/rooms/00003",
+"/players/vertebraker/realms/gta/rooms/00004",
+}));
+}

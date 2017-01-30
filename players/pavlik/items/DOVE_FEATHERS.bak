@@ -1,0 +1,55 @@
+#define ME capitalize(this_player()->query_name())
+#define IT capitalize(obj->query_name())
+inherit "obj/treasure";
+int feathers;
+reset(arg){
+ set_short("A bag of feathers");
+ set_long("feathers. wow.\n");
+ set_alias("bag");
+ set_weight(1);
+ set_value(2550);
+ set_feathers(6);
+}
+id(str){ return str == "bag" || str == "feathers" || str == "bag of feathers"; }
+set_feathers(i){ feathers = i; }
+
+long(){
+  write(
+  "A bag of dove feathers.  The feathers have been enchanted by the peaceloving\n"+
+  "Druids of Markune.  The magical feathers have the ability to soothe irate\n"+
+  "beings.  Use 'feather <who>' to invoke the powers of the feather.\n"+
+  "There are "+feathers+" feathers left in the bag.\n");
+  return;
+}
+
+init(){
+ add_action("peace","feather");
+}
+
+peace(str){
+  object ob, obj;
+  if(!str) return 0;
+  obj = present(str, environment(this_player()));
+  if(!obj || !living(obj)) return 0;
+  tell_room(environment(this_player()),
+  ME+" holds a magical dove feather into the air and waves it thrice before "+IT+".\n"+
+  IT+" is mesmermerized by the enchanted feather and becomes peaceful.\n");
+  obj->stop_fight(); obj->stop_fight();
+  ob = first_inventory(environment(this_player()));
+  while(ob){
+    object cur;
+    cur = ob;
+    ob = next_inventory(ob);
+    if(cur->query_attack() == obj){
+      cur->stop_fight(); cur->stop_fight(); cur->stop_hunter();
+    }
+  }
+  feathers--;
+  if(feathers == 0){
+    write("You have used up the last of the enchanted feathers.\n");
+    destruct(this_object());
+    return 1;
+    }
+  write("There are "+feathers+" feathers remaining in the bag.\n");
+  return 1;
+}

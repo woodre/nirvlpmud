@@ -1,0 +1,17 @@
+
+HOW TO EXCLUDE WIZARDS FROM YOUR FILES
+
+just have a list in your top directory called access with
+one wizard name per line.
+
+   NOTES:
+   Do not exclude your wizard group leader, this wont gain you any points.
+   If you put a wizard on the list of level 1000 or greater it will have no
+   effect.
+
+
+WARNING:
+           If a filename has the string 'acces' in it, a wizard of any level
+           may be able to read it, even if locked out. however he will not
+           be able to edit it. This is because his player file must be able
+           to read the list that locks him out.

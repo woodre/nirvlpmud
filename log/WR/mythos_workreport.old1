@@ -1,0 +1,177 @@
+Mon May  4 12:38:49 1998 ** /players/deathmonger/poppies.c made sure a check for this_player() is in place for the drunk() took out recursive callout and increased alchol addition from 10 to 100
+Mon May  4 15:06:36 1998 ** /players/hippo/heals/blood.c made it so that price = drinks * 540 (in query_value())
+Mon May  4 20:25:32 1998 ** /players/paulasx/temple/wineroom.c no longer can sell drinks
+Mon May  4 20:31:18 1998 ** /players/paulasx/temple/temple_altar.c set it up so that shagath can only be summoned once per reset ... increase dthe hp to 800, wc to 50 , and ac to 18
+Wed May  6 20:40:37 1998 ** reset berlinetta's ste from 24 to 19
+Thu May  7 19:42:05 1998 ** reset azazel's stats to 1 (all were negative)
+Mon May 11 11:33:31 1998 ** removed 14780 coins from wakaluk (he was over 80k by that much)
+Sat May 16 15:56:10 1998 ** reset skan's ste from 25 to 20
+Sat May 16 16:17:56 1998 ** /players/saber/closed/new_mini/spells/succubus_bye.h set it up so gone() resets players ste to 20 if above 20
+Mon May 18 13:33:33 1998 ** unguilded handy he had guild xp of 0
+Mon May 18 13:33:50 1998 ** ack i meant 1 the reste were 0
+Thu May 21 12:56:29 1998 ** /players/hippo/c/ery.c placed a check for environment in callout random_move()
+Thu May 21 14:45:48 1998 ** /players/molasar/MONSTERS/guard.c in callout move_function() placed environment check
+Thu May 21 14:50:16 1998 ** /players/hippo/c/hiv.c placed check for environment in random_move() callout... also uncommented the commented include hb_ag,h of mine
+Thu May 21 14:50:22 1998 ** who the hell did that??!?!!
+Thu May 21 14:51:13 1998 ** same with hiv_mizan.c
+Thu May 21 14:53:03 1998 ** environment check in callout random_move in influenza.c
+Thu May 21 14:54:52 1998 ** with leuco.c
+Tue Jun  2 07:37:08 1998 ** /players/wocket/mushrooms/opening.c added in a check for environ in callout and took out unneeded remove_call_out
+Mon Jun  8 20:37:06 1998 ** /players/beck/rangers/cmds/Morph.h
+Mon Jun  8 20:41:38 1998 ** commented out the calls to soul to change the setmin and setmout
+Tue Jun  9 07:01:31 1998 ** /players/snow/MONSTERS/iceoct.c line 51 fixed a typo preventing the callout from reoccuring
+Tue Jun  9 08:56:52 1998 ** decision on the issue with the rangers as been made...
+Tue Jun  9 08:57:20 1998 ** the title/short()/.invis thingy is fine as long as it fiollows invis spell restrictions- like higher levels can see thru
+Tue Jun  9 08:57:28 1998 ** but the msgin and out is not allowed
+Tue Jun  9 13:35:15 1998 ** /players/mizan/closed/lockrae.c and lockmil.c added ina check for query_level() > 0 in callout
+Wed Jun 10 09:56:34 1998 ** promoted beck to 60 because of his coding of the party object and has volunteered to help out with base lib stuff
+Wed Jun 10 14:17:47 1998 ** mved /players/nightshade/closed/obj/purse.c to purse.bak.. a money bag... storing of money? dont think so...
+Wed Jun 10 14:19:38 1998 ** /players/nightshade/mons/cyclo.c commented out the loading of the purse
+Fri Jun 12 14:44:55 1998 ** oked /players/catwoman/monster/heather.c for availability on the mud...   once proper statemenst are made catwoman will mail me and then open it
+Mon Jun 15 09:36:44 1998 ** have okeyed becks new party object setup.. mailed him and boltar about having it become mud standard
+Mon Jun 15 12:05:19 1998 ** have fully okyed catwoman's new hottob idea... she created the sign to establish no responsibility for "exually explicit material":
+Mon Jun 15 12:05:34 1998 ** *blah* i hate having to have to put it in but we cant be liable...
+Mon Jun 15 14:26:51 1998 ** changed one of the destination points for /players/rich/castle.c (the star trek enterprise) from room/church to room/vill_green
+Fri Jun 26 06:42:46 1998 ** took from truth 20464 coins.. had waaaaaay too much over the 80k limit
+Tue Jul  7 22:36:46 1998 ** -1450 coins from caravelle... was over the 80k limit
+Thu Jul  9 20:59:44 1998 ** unguilded bristan.. and reset his home to the church
+Thu Jul  9 21:08:37 1998 ** unguilded and reset nighttime's home as well.. the meijin were being betatested prematurly
+Thu Jul  9 21:29:16 1998 ** reset nighttime's mag from 14 to 20 (sae deal as abaove)
+Fri Jul 10 06:30:12 1998 ** set it up so in /players/saber/closed/new_mini/kenderbag.c the value of the object clones does not exceed 100 coins
+Fri Jul 10 06:34:20 1998 ** actually changed it so that the value limit is the cost for getting the object in the first place
+Fri Jul 10 09:31:43 1998 ** did the same with naika (meijin thingy)
+Tue Jul 14 15:09:50 1998 ** mved /players/pavlik/guild/gob.c to .bak file... opened without approbval
+Tue Jul 14 15:10:06 1998 ** reset bristan's stats and guild file set... because of above
+Thu Jul 16 10:22:54 1998 ** mved /players/hurtbrain/ball.c to closed/ball.c tampering prevention
+Thu Jul 16 10:23:34 1998 ** same with /players/hurtbrain/tool.c
+Thu Jul 16 12:29:24 1998 ** unguilded naika and reset home... meijin
+Thu Jul 16 12:36:22 1998 ** caught geo/nexxus mutiplaying... gave 1 warning.. next time i slam him
+Fri Jul 17 09:45:44 1998 ** reset bristan ;s home and unguilded
+Sun Jul 19 19:04:01 1998 ** reset nighttime's sta to 20 from 24 and unguilded
+Mon Jul 20 09:13:39 1998 ** changed /players/trix/castle/town/monst/web.c to ac 3 from 4.. the changes to the monster does not justify a ac 4 weight 1 SAVEABLE armor
+Tue Jul 21 06:01:24 1998 ** /players/dragnar/rooms/challenge.c commented out the xp addition part... first off there is no float datatype and second no giving out extra xp....
+Tue Jul 21 06:14:04 1998 ** /players/deathmonger/MISC/bull_board.c - added to the short() a msg #indicator
+Tue Jul 21 12:18:33 1998 ** locke up ender... he is worm
+Tue Jul 21 13:34:30 1998 ** reset mortarion (home and guild set)
+Wed Jul 22 06:15:45 1998 ** /players/mizan/closed/lockmil.c and lockrae.c added code to handle enviroment check
+Wed Jul 22 06:20:29 1998 ** /players/mizan/closed/RandomRoom.c reset() calls with arg now
+Wed Jul 22 06:22:27 1998 ** /players/mizan/etheriel/ROOMS/toaster.c reset calls with arg
+Thu Jul 23 20:42:10 1998 ** /players/saber/closed/old_bard/instrument.c  seytup so that if a person has not found the "change" then the obect destructs at drop(). also made it so i dont see the news at login for now
+Sun Jul 26 09:00:19 1998 ** reset bristan's home and guild set
+Tue Jul 28 08:28:12 1998 ** set up /players/sandman/pets/pet.c so that should the owner not exist or the owner is a ghost the pet destructs .. and that no ghost can command the pet
+Tue Jul 28 08:31:26 1998 ** added in a note to the miniguild news indicating me as a reference for fixing probs
+Tue Jul 28 08:33:29 1998 ** /players/saber/closed/new_mini/gothic_dance.c now checks for environment in callouts
+Wed Jul 29 07:43:11 1998 ** /players/wocket/mushrooms/shroom.c weight now 1 not 0
+Wed Jul 29 07:47:45 1998 ** /players/wocket/mushrooms/guard.c set_money from 5k to 4k
+Thu Jul 30 07:37:42 1998 ** added d_check() callout that checks for extra implants and dests them in /players/dune/closed/guild/implants.c
+Thu Jul 30 17:59:26 1998 ** added -53055555 xp from jenny because of abuse of a bug
+Fri Jul 31 06:14:35 1998 ** set it up so terral now logs to my prison
+Mon Aug  3 09:24:31 1998 ** /players/blue/castle/stable.c whips are now wc 15 not 19 (what the hell is a level 10monster with not much stats doing with a wc 19 weapon?? and 3 of them at that??)
+Mon Aug  3 09:25:56 1998 ** /players/blue/castle/courtne.c weight of armor is now 10 not 2 (it is STONE armor)
+Mon Aug  3 09:29:28 1998 ** /players/blue/castle/infount.c spirits now have 1080 hp (was 780) and wc 50 (was 33).. and the weapon are now wc 16 not 19 (come on 4 of them????!!! wc 19+ are supposed to be unique!!!)
+Mon Aug  3 09:32:37 1998 ** /players/blue/castle/courtnw.c same as courtne.c
+Wed Aug  5 08:33:21 1998 ** /players/dragnar/armor/suit.c weight now 5 was 1
+Wed Aug  5 08:33:56 1998 ** same with suit2.c
+Thu Aug  6 08:50:08 1998 ** made the bags in my prac/vending.c sell for 300
+Thu Aug  6 09:00:47 1998 ** players/mizan/etheriel/items/bk-rollers was weight 0 now is 1
+Thu Aug  6 09:03:04 1998 ** /players/hippo/armour/glazour_coat.c wight was 1 now 3 (ac 4)
+Thu Aug  6 12:54:57 1998 ** /players/saber/armor/strring.c is now ac -3 not ac 1.. because the weight is neg -2
+Fri Aug  7 00:27:20 1998 ** players/eurale/Arm/obsidian_plate weight 2 now 3 (ac 4)
+Fri Aug  7 12:07:58 1998 ** moved /players/unsane/closed/extra/crayons.c to .bak file... chaging shorts so easily.. too potentally abusable
+Fri Aug  7 12:09:16 1998 ** /players/unsane/closed/extra/tender.c commented out the crayon cloning
+Fri Aug  7 12:14:30 1998 ** /players/unsane/closed/extra/head.c weight 2 now 10
+Fri Aug  7 12:16:55 1998 ** /players/usane/closed/extra/suit.c weight 1 now is 7
+Fri Aug  7 12:17:00 1998 ** ac 4
+Fri Aug  7 18:52:58 1998 ** reset naika's home and guild settings (meijin)
+Fri Aug  7 18:54:28 1998 ** players/saber/weapons/lightning weight was 1 now 9 (wc 21)
+Fri Aug  7 18:55:40 1998 ** players/saber/armor/ringpro  weight was 0 now 1
+Sat Aug  8 09:04:53 1998 ** /players/mizan/etheriel/items/purple-stick.c weight 1 now 4 (wc 18)
+Sat Aug  8 09:05:56 1998 ** /players/saber/weapons/blue.c weight 1 now 4 (wc 18)
+Sat Aug  8 09:07:36 1998 ** /players/eurale/Wep/shadowstaff.c weight was 1 now 4 (wc 16+rnd 3)
+Sat Aug  8 09:08:12 1998 ** /players/eurale/Wep/stgun.c weight 1 now 5 (wc 18)
+Sat Aug  8 09:22:38 1998 ** /players/snow/cam/mon/red.c weapon is now wc 16 from 18 (geesh 5 of them ??? talk about a quick easy target for lots of high level weaponry)
+Sat Aug  8 09:24:27 1998 ** /players/snow/cam/mon/blue.c wc 18 -? 15  same as above
+Sat Aug  8 09:24:54 1998 ** same dela with /players/snow/cam/mon/green.c
+Sat Aug  8 09:25:22 1998 ** same deal with indigo.c
+Sat Aug  8 09:25:44 1998 ** same deal with violet.c and white.c
+Sun Aug  9 19:31:11 1998 ** players/mizan/etheriel/items/captainblade weight was 1 now 3 (wc 18)
+Mon Aug 10 09:35:43 1998 ** /players/snow/shadows/stuff/crown.c weight was 0 now 5 (ac 2 with damage attack)
+Mon Aug 10 09:41:17 1998 ** geesh.. this helmut is sick.... 15 charges each chage doing 15 + rnd 15 damage for a cost of 5 sp???  now cost of 20 sp aneach usage costs 1-3 charges
+Mon Aug 10 09:42:07 1998 ** /players/snow/shadows/stuff/plate.c weight 1 ow 5 (ac 5)
+Mon Aug 10 09:43:29 1998 ** added in an environment check to the plate as well in the callout
+Mon Aug 10 09:46:27 1998 ** /players/snow/shadows/stuff/axe.c weight was 1 now 3 (wc 16+rnd 3) also added in a rnd 3 check for special against shadowmonsters (i.e. the special against said monsters works 1 in 3)
+Mon Aug 10 09:51:11 1998 ** /players/snow/shadoows/stuff/nightshade.c wweight was 2 now 5 (wc 20) special now goes off of 10 < rnd(15) (was 7) and the extra damage done when alignment checked is 1 in 5
+Mon Aug 10 09:53:42 1998 ** /players/snow/shadows/stuff/ring.c put check ofor enivornment in callout also now 1 in 20 healing is done not 1 in 5
+Mon Aug 10 09:55:33 1998 ** /players/snow/shadows/stuff/spear.c the extra damage aganst shadow monsters goes off 1 in 3 now
+Mon Aug 10 10:00:41 1998 ** /players/saber/closed/bards/instrument.c made it so when dropped is dested
+Mon Aug 10 10:38:38 1998 ** /players/saber/ryllian/ryll3.c  added in olga the plowwoman
+Mon Aug 10 10:39:10 1998 ** /players/saber/closed/bards/olga.c created to reintroduce the bardswords and such.... copied nd modified from laura.c
+Mon Aug 10 10:44:05 1998 ** /players/saber/ryllaion/prtal.c clones olga as well
+Mon Aug 10 14:42:36 1998 ** players/trix/castle/dismonst/record weight was 1 now 6 (wc 18)
+Mon Aug 10 20:56:48 1998 ** approved beck's beta testing for new addition to rangers... added ability to gain usage of weapons as well as abilit of increase in fighting prowess...
+Mon Aug 10 22:18:20 1998 ** /players/pathfinder/garbageman.c put an environment check in the pickup callout as well as a check for query_auto_load()
+Tue Aug 11 01:13:05 1998 ** players/saber/armor/blackcloak2  weight was 0 now is 1
+Tue Aug 11 01:21:31 1998 ** deleted /pplayers/saber/closed/bards/stats_corrupt_rm_ASAP as it was taking up space
+Tue Aug 11 01:42:27 1998 ** players/mizan/etheriel/items/bunny-slippers weight 0 now is 1
+Tue Aug 11 01:43:26 1998 ** /players/saber/armor/smile.c weight was 0 now 1
+Tue Aug 11 01:46:27 1998 ** /players/saber/armor/ozriing.c weight was 0 now 1
+Tue Aug 11 01:52:55 1998 ** same with wedding.c and winring.c
+Tue Aug 11 02:45:43 1998 ** players/hawkeye/weapons/weapon weight 1 now 3 (wc 18)
+Tue Aug 11 03:10:24 1998 ** players/feldegast/island/village1 set up so that the sandals have weight of 1 (was 0)
+Tue Aug 11 08:34:30 1998 ** players/mizan/etheriel/items/squishweapon weight now 2 was 1 (wc 18)
+Tue Aug 11 17:50:49 1998 ** players/mizan/etheriel/items/beast-hide we weight now 1 was 0
+Wed Aug 12 07:43:21 1998 ** /players/saber/closed/bards/bardsword2.c etc (the bardswords) commented out the guild check
+Wed Aug 12 15:19:18 1998 ** bardswords are all wc 17 now (were 18)
+Wed Aug 12 15:21:45 1998 ** /players/saber/monsters/guardian.c wc was 35 now is 40.. ac was 21 now is 30
+Fri Aug 14 13:45:40 1998 ** players/saber/armor/aura weight now 6 was 1
+Sat Aug 15 01:08:00 1998 ** players/mizan/etheriel/items/ering weight now 1 was 0
+Sun Aug 16 07:56:31 1998 ** /players/saber/closed/new_mini/spells/fix_blade.h no longer is in play....
+Sun Aug 16 08:06:52 1998 ** commented out the loading of the smith guy in /players/catwoman/tl.c
+Tue Aug 18 07:10:47 1998 ** players/hawkeye/room/rose.c fixed so that the value of the potion is not 0 (i.e. the setting of value was AFTER being given the potion.. now it is before)
+Tue Aug 18 09:43:48 1998 ** players/cyrex/royf wc 19 is now wc 25  (ac 19 level 19 hp 1500)
+Mon Aug 24 11:58:52 1998 ** added in a sp cost of 12 when the heal goes off in players/snow/ITEMS/shamrock
+Mon Aug 24 12:35:29 1998 ** set it up so that /players/saber/closed/new_mini/larn.c has a min aligent of 100 to use the special abilities
+Tue Aug 25 20:55:14 1998 ** unguilded silence.. *sighs* beck has opened something without approval
+Tue Aug 25 21:01:38 1998 ** mved /players/beck/DarkRangers/RangerCommunicator.c to .bak
+Tue Aug 25 21:02:38 1998 ** as well as the Room/ZedChamber.c
+Wed Aug 26 04:10:09 1998 ** players/catwoman/armor/ssuit weight now 5 was 2 (ac 5)
+Wed Aug 26 09:16:43 1998 ** set up the auto fixer to fix zoe because of wiz cloning experiment with hinotori....it shouldt have been loaded where it was...
+Wed Aug 26 10:17:12 1998 ** reset ravyn's guild stats and home...
+Thu Aug 27 19:58:34 1998 ** Logging AutoFixer Test
+Fri Aug 28 02:16:39 1998 ** players/dragnar/closed/bank added in so guest can not withdraw money
+Fri Aug 28 02:39:40 1998 ** removed the bug from wocket.. he s now bugfree
+Sat Aug 29 15:29:16 1998 ** added 112 coins to ducky... was at neg.... need to track down how
+Sat Aug 29 21:07:18 1998 ** /players/saber/closed/fem/fem_news.c incresaed the max from 30 to 50 msgs
+Sat Aug 29 21:44:13 1998 ** mved /players/sado/prep_nick.c and nick.c to .bak files... im not fixing his code
+Sat Aug 29 21:44:23 1998 ** mailed sado about above
+Sat Aug 29 21:50:35 1998 ** made a /players/sado/prep_nick.c that is simply a object with an id and drop so that in case the prep_nick is being loaded elsewhere that my mving the old object wont interfere
+Wed Sep  9 08:00:20 1998 ** commented out the tell() in my qt.c since tell is no longer static
+Wed Sep  9 10:51:25 1998 ** promoted daranath to 60 he is now part of security
+Wed Sep  9 18:21:49 1998 ** made /h/closed/tell.c for daranath at his request
+Thu Sep 10 08:11:33 1998 ** had to call shutdown combat had become messed up so that a hb of combat happened every 2 min or so
+Fri Sep 11 09:57:10 1998 ** made double sure /players/hawkeye/armor/converse.c doesnt save... added in a query_save_flag() return 1;
+Fri Sep 11 09:58:59 1998 ** also made it weigh 3 instead of 1 (ac 2)
+Fri Sep 11 13:57:24 1998 ** added in so that /players/rich/lower/sco.c checks for sp and does the tele err
+Sat Sep 12 07:36:06 1998 ** /players/wocket/mushrooms/nonge.c are now wimpy and 1 in 2 chance ggressive
+Sat Sep 12 07:49:41 1998 ** /players/wocket/mushrooms/guard.c and hpnonge.c now attack to protect each other....should either one be attacked and the other is not attacked the other jumps in to help
+Sat Sep 12 07:53:46 1998 ** /player/mizan/etheriel/beasties/spuck now sells at rnd(10 + 1000 for greater than 1k value
+Sat Sep 12 07:56:28 1998 ** /players/rich/shop.c now sells at rnd(10) + 1000 for over 1k, and shop1.c sells at 1k for over 1k
+Sat Sep 12 08:17:32 1998 ** gave delphinus 100k xp back.. somehow he died without a combat sequece going on with armblessed.. yet it lists him as being killed by armblessed
+Sat Sep 12 08:27:26 1998 ** /players/dragnar/mons/corpse.c whimpy set ad 1 in 2 aggressive
+Sat Sep 12 22:23:22 1998 ** /players/saber/stuff/mbag.c no save now.. /players/saber/food/magshop.c bags sell or 2k not 1k now
+Sat Sep 12 22:24:45 1998 ** /players/saber/closed/new_mni/kenderbag.c max hold is now 5 was 12
+Mon Sep 14 08:37:09 1998 ** /players/saber/closed/new_mini/spells/dream.h made it so player must be visible to dream to someone
+Mon Sep 14 10:17:16 1998 ** set up so ravyn is to me dungeoned... attempting to impersonate and gain the stats of former faust...*frowns*
+Mon Sep 14 10:24:27 1998 ** tara,exodus,goldberg as well.. bloodhound will be next...
+Mon Sep 14 12:35:41 1998 ** /players/sandman/pet/pet.c now has an upkeep cost of 1 - 2 sps per hb
+Mon Sep 14 12:41:15 1998 ** switched lines 124 and 125 of /players/snow/ITEMS/mystic.c the recalc() wasnt completing ad players were getting heals for free
+Mon Sep 14 19:02:32 1998 ** /players/nooneelse/black/guild_equip.c commenetd out the bag gain
+Mon Sep 14 21:13:31 1998 ** /players/llew/closed/crystal/demon.c nw has a way to prevent players from running away during a fight.... its a percentage
+Mon Sep 14 22:21:32 1998 ** same with demon2.c
+Mon Sep 14 22:24:06 1998 ** same with frag_demon.c
+Tue Sep 15 17:07:39 1998 ** /players/heroin/huting_grounds/preds/predstone.c now has a 35% of fauilure and destruct on usage
+Tue Sep 15 19:42:24 1998 ** banned the name legend for now ... im making sure the issue with faust doesnt occur again
+Sat Sep 19 12:09:34 1998 ** /players/saber/closed/new_mini/kittyclaws.c wc 14 now 10
+Sat Sep 19 12:10:31 1998 ** /players/saber/closed/new_mini/blade_knife.c wc 10 now 8
+Sat Sep 19 12:10:57 1998 ** actually 6
+Sat Sep 19 12:12:38 1998 ** succ.c is now wc 6 from  10

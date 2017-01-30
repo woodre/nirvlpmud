@@ -1,0 +1,8 @@
+12/13/99
+  Dragnar - Feldegast updated potion.c so it now sets the players wc
+    to whatever weapon they have wielded.  Also
+    fixed a few typos.
+8/26/2014
+  Rumplemintz - Changed all add_action("XXX"); add_verb("XXX"); to
+    add_action("XXX", "XXX");
+

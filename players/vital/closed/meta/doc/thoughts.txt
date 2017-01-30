@@ -1,0 +1,84 @@
+NOTES:
+
+
+
+mapping mp;
+
+int red_pts, red_max, red_cap;     // "red" = Redactor House
+
+int coe_pts, coe_max, coe_cap;     // "coe" = Coercer House
+
+int cre_pts, cre_max, cre_cap;     // "cre" = Creator House
+
+int far_pts, far_max, far_cap;     // "far" = Farsensor House
+
+int tel_pts, tel_max, tel_cap;     // "tel" = Telekinetic House
+
+
+
+    red_cap = ASSAYD->capacity();
+
+    red_max = (red_cap - any_modifiers);
+
+    red_pts = restored_pts("red");
+
+
+
+
+
+mp = ([ "red": red_pts; red_max; red_cap,
+
+        "coe": coe_pts; coe_max; coe_cap,
+
+        "cre": cre_pts; cre_max; cre_cap,
+
+        "far": far_pts; far_max; far_cap,
+
+        "tel": tel_pts; tel_max; tel_cap  ]);
+
+
+
+Functions needed in GOBJ:
+
+
+
+    restore_pts(string key)
+
+         restore pts for that house from previous login + healing while logged out
+
+    set_mp(string key, int x)
+
+         quick and dirty setting of the mp[key,0] to x
+
+    set_mp_max(string key, int x)
+
+         setting up the maximum mp[key,1] to x
+
+    set_mp_cap(string key, int x)
+
+         setting the cap for a given player's mp[key,2]
+
+    add_mp(string key, int x)
+
+         adding or subtracting from a player's mp[key,1]
+
+
+
+    query_mp(string key)
+
+         returning the current player's mp[key,0]
+
+    query_mp_max(string key)
+
+         returning the current player's mp[key,1]
+
+    query_mp_cap(string key)
+
+         returning the current player's mp[key,2]
+
+
+
+    heartbeat() or call_out("heal")
+
+         +1 to each mp[key,0] < mp[key,1]
+

@@ -1,0 +1,99 @@
+          Chip's Room Corrections Part #2
+          
+          
+     Ok, guess I will start with the bad news first.
+     
+     1)   You have 40 rooms and 24 are apartments that are the exact
+          same. That is a bit of an issue.  It is one thing to have
+          2 or 3 similar rooms but 24 exact rooms is too much.  You
+          need to make some modifications to the rooms descriptions.
+          One Idea would be for each floor have a different desc for 
+          the rooms.  Also each room does not have to be completely
+          different. If you have 4 sentences then make one or two of
+          them a different line and not just the last line with 
+          direction.....  Get with me if you have any questions
+          on this, I know it is a big one and I did cover it with 
+          Fred first before I sent it to you. 
+        
+     2)   The second issue is the use of "YOU" in your descriptions.
+          You can't use it, sorry. It was hard for me to get use to 
+          as well. I know some old areas still have it but it has not
+          been allowed for a long time. A simple fix could be 
+          "This is" or "It appears this is" just NOT "You stand".
+          
+     File: /players/chip/room/apartment/apt1.c thru /apt24.c
+          
+      --Add "bed" to your items with a description
+      --In items "newspaper" it say "It is wall wadded up" I think you 
+        ment "It is all wadded up" else I dont know what it means
+      --Holes is worded awkwardly.  You could try:
+        The walls and ceiling have many openings, which explains the debris cluttering the floor
+    
+      File: /players/chip/room/apartment/enter.c
+      
+      --remove the YOU
+      --fix holes in items, same as above
+      --spelling should be blatantly, not blatently
+      
+      File: /players/chip/room/apartment/f1h1.c thru f1h3.c
+      
+      --remove the YOU
+      --fix holes in items, same as above
+      --spelling should be blatantly, not blatently
+      --you have a run on sentence in the long desc
+        put a period after "nostrils" delete ", and"
+        then cap The.
+      
+      File: /players/chip/room/apartment/f1stairs.c
+      
+      --remove the YOU
+      --In items "banister" remove should be removed
+      
+      File: /players/chip/room/apartment/f2h1.c  thru /f2h4
+      
+      --remove the YOU
+      --fix holes in items, same as above
+      --spelling should be blatantly, not blatently
+      --you have a run on sentence in the long desc
+        put a period after "nostrils" delete ", and"
+        then cap The.
+      
+      File: /players/chip/room/apartment/f2stairs.c 
+      
+      --remove the YOU
+      --fix holes in items, same as above
+      --Add "banister" to items
+      
+      File: /players/chip/room/apartment/f3h1.c  thru /f3h4.c
+      
+      --remove the YOU
+      --fix holes in items, same as above
+      --spelling should be blatantly, not blatently
+      --you have a run on sentence in the long desc
+        put a period after "nostrils" delete ", and"
+        then cap The.
+      
+      File: /players/chip/room/apartment/f3lndlrd.c
+      
+      --In the lon desc take out "very" before slightly 
+      --fix holes in items, same as above
+      
+      File: /players/chip/room/apartment/f3stairs.c  
+      
+      --remove the YOU
+      --fix holes in items, same as above
+      --Add "banister" to items
+      
+      
+      Now I said I was starting with the bad news so I am guessing you are wondering 
+      where the good news is.  I had Fred review the mob file we worked on and Fred
+      was fine with the hp,wc,ac, and coin level.   :) 
+      
+      The next file I create will be on the mobs for grammar and spelling
+      
+      Correct make all correction I have given you up to this point and I
+      should have the mob file soon. once all correction are made I will
+      make one last sweep to see if I missed anything or if any other 
+      correction need to be made, then we can go to the final approval.
+      
+      Any question just ask....  trying to knock it out quick for you.  

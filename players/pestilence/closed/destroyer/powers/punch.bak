@@ -1,0 +1,57 @@
+punch(str) {
+   object victim;
+   string b1,b2;
+   int Dam1;
+   int ncost;
+   string *mess;
+   object user;
+   object wep;
+   user = environment(this_object());
+   wep = user->query_weapon();
+   if(TP->query_spell_dam()) return 1;
+ 
+   if(TP->query_guild_rank() >= 6){
+   Dam1 = random(32) + 14;
+   }
+   else{
+   Dam1 = random(24) + 10;
+   }   
+   
+   if(sscanf(file_name(environment(TP)),"%stemplar%s",b1,b2) == 2){
+   Dam1 += 10;
+   }  
+
+   if (str) victim = present(str, environment(TP));
+     else {
+      victim = TP->query_attack();
+      if(victim && !present(victim, environment(TP)))
+        victim = 0;
+     }
+   if(!str && !victim) return 0;
+   if(!victim) { write("That is not here.\n"); return 1; }
+
+   if (!living(victim)){
+      write("You cannot attack that!");
+      say(TP->query_name() + " foolishly tries to attack "+ str+"\n");
+      return 1;
+   }
+   if(!TP->query_weapon()){
+     write("You must be wielding a weapon to attack in this style!\n");
+     return 1;   
+     }
+   
+   mess = wep->query_message_hit(Dam1 + 1);
+   if(TP->query_guild_rank() >= 6){
+   ncost = 30;
+   }
+   else{      
+   ncost = 24;
+   }
+
+
+TP->spell_object(victim, "quick attack", Dam1, ncost,
+"You "+mess[1]+" "+victim->query_name()+""+mess[0]+".\n",
+TP->query_name()+" "+mess[1]+" "+victim->query_name()+""+mess[0]+".\n",
+"");
+   return 1;
+}

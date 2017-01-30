@@ -1,0 +1,84 @@
+
+
+inherit "obj/monster";
+
+reset() {
+   set_hp(180);
+   set_name("smith");
+   set_alias("smith");
+   set_short("A Weapon Smith");
+  set_ac(9);
+  set_wc(16);
+   set_al(142);
+   set_long("This is Joe, the Weapon smith.\nAsk him to <sharpen> <weapon>.\n");
+   set_level(12);
+   set_chat_chance(40);
+   load_chat("Smith says:  Carefull now, if it is too good of a weapon it might break?\n");
+   load_chat("Smith looks around briefly.\n");
+   load_chat("Smith says:  So have you seen the weapon out on the island?\n");
+   load_chat("Smith says:  Hard to believe they allow that powerfull weapons out there!\n");
+   load_chat("Smith sighs.\n");
+::reset(0);
+}
+
+/*break*/
+init(){
+add_action("sharpen","sharpen");
+}
+sharpen(str) {
+   object weapon;
+   int old_class;
+   int old_value;
+   string a, b;
+   if(this_player()->query_spell_point() < 40) {
+write("You do not have enough spell points.\n");
+return 1;
+}
+   weapon = present(str, this_player());
+   if (!weapon) {
+      write("You don't have "+str+" with you.\n");
+      return 1;
+   }
+   this_player()->add_spell_point(-40);
+   if (living(weapon)) {
+      write("He try but fail to sharpen this.\n");
+      return 1;
+   }
+   old_class = weapon->weapon_class();
+   old_value = weapon->query_value();
+   if(old_class > 19) {
+destruct(weapon);
+write("The weapon crumbles to powder.\n");
+return 1;
+}
+   if (!old_class) {
+      write("The "+weapon->short()+"is destroyed.\n");
+      say(weapon->short()+" falls and is destroyed.\n");
+      destruct(weapon);
+      return 1;
+   }
+   if (present("blessing",weapon)) {
+      write(weapon->short()+ " has already been sharpened or blessed.\n");
+      return 1;
+   }
+   if (sscanf(weapon->short(),"%swield%s",a,b) == 2)
+      command("unwield "+weapon->query_name(), this_player());
+   if (random(50)>10) {
+      weapon->set_class(old_class + 1);
+      move_object(clone_object("players/bern/guild/blessing"), weapon);
+      write("He pulls out his stone and starts sharpening the "+weapon->short()+".\n");
+      say(this_player()->query_name()+" pulls out "+
+         this_player()->query_possessive()+"  weapon and the Smith starts sharpening the "+
+         weapon->short()+".\n");
+      if (old_class > 18 && random(12)>8) {
+         write("Nuts! He destroyed another one!\n");
+         destruct(weapon);
+       }
+      return 1;
+   }
+   write("He gets carried away sharpening.\nHe shatters "+weapon->short()+".\n");
+   say(weapon->short()+" breaks beyond fixing.\n");
+   destruct(weapon);
+   return 1;
+}
+

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/WEAPONS/souleater","/players/wren/Area/starbug/items/currie","/obj/armor","/players/angel/area/stargate/obj/P90","/players/sado/shop/chocolate","/players/saber/weapons/hrev","/obj/armor","/obj/torch","/players/mythos/closed/guild/forest/misc/key_myrax","/players/puppy/s/eq/crown","/players/puppy/s/eq/cape","/players/wren/Area/starbug/items/ogunit","/players/wren/Area/starbug/items/lunchbox","/players/mythos/amisc/egg","/obj/weapon","/players/snow/WEAPONS/greydeath","/players/saber/armor/slboots","/players/mythos/awep/claw","/players/snow/cam/stuff/plate","/players/pain/NEW/weap/mace","/players/snow/shadows/stuff/crown","/players/snow/chaos/objects/crabmeat","/players/puppy/s/eq/block","/players/mythos/aarmor/sode","/players/mosobp/areas/TEMPLE/OBJ/princerobes",})
+shorts ({"[1mSoulEater[0m","A tin of chicken currie","A pair of [1mwhite[0m boots","Machine gun","A box of delicious Belgian chocolates","A Colt .68 Heavy Revolver","Metal gloves","sunflower","Ebon Key","A golden crown","A flowing cape","a case containing an OG unit.","a lunch box","A strange looking egg","a sword","Grey[36mdeath[0m","Stiletto heeled leather boots","claws","[34m[1mBlessed Plate Armor[0m[0m","A large iron mace","[1mShadowCrown[0m","A slab of giant crabmeat","A building block","Sode","A Prince's Robes",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

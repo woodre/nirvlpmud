@@ -1,0 +1,21 @@
+**************
+
+
+                     Put!
+
+Syntax:    put! <obj> in <container>
+
+Desc:
+           This command allows you to put an object into a container
+           regardless of its drop() flag. 
+
+Warning:   Careful where you leave things.
+
+Example:   put! board in bag
+                  results
+           Bob puts message board in bag
+
+Related:   get!, drop!, give!
+
+
+**************

@@ -1,0 +1,8 @@
+(Joining 2nd mini guild)
+     I overheard some players talking that even though the scroll said you
+had to be 2 days old to join a 2nd mini guild, you could actually join a
+second one at 1 day.  I checked you agents and they were indeed correct.
+So, I changed your age from 43200 to 86400 in each of the agents (approx.
+line 78) so that it would be 2 days.  If this was not your intent and you
+just forgot to change the scroll, then you'll need to change them back to
+43200.  If you have questions, you can contact me...  -Eurale

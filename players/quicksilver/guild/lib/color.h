@@ -1,0 +1,12 @@
+#define ESC ""
+
+#define PURPLE ESC+"[35m"
+#define YELLOW ESC + "[33m"
+#define RED ESC+"[31m"
+#define BLACK ESC+"[30m"
+#define GREEN ESC+"[32m"
+#define BLUE ESC+"[34m"
+#define CYAN ESC + "[36m"
+#define WHITE ESC+"[37m"
+#define NOSTYLE ESC+"[0m"
+#define BOLD ESC+"[1m"

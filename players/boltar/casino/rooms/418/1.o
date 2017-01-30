@@ -1,0 +1,26 @@
+no_clean 0
+wielded 0
+wielded_by 0
+name_of_weapon "Steel Longsword"
+cap_name "Steel Longsword"
+broke 0
+silentwield 0
+eff_wc 0
+misses 0
+hits 0
+alt_name "steel longsword"
+alias_name "longsword"
+short_desc "Steel Longsword"
+long_desc "A well-forged and reliable weapon with finebalance and a keen edge."
+read_msg 0
+save_flag 0
+class_of_weapon 15
+value 400
+local_weight 1
+hit_func 0
+hit_func_fn 0
+wield_func 0
+wield_func_fn 0
+info 0
+type "sword"
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})

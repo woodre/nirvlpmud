@@ -1,0 +1,1 @@
+hhistory() { call_other(POWER,"history"); return 1; }

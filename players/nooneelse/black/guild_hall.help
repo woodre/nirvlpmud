@@ -1,0 +1,107 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~                     Vampire Guild's Abilities                          ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ assess              Compare your strength vs a monster's               ~
+~ backhand enemy      Hit an enemy to damage them                        ~
+~ bat                 Leave a bat here to give a message to anyone who   ~
+~                     comes here.                                        ~
+~ bat/mist/wolf form  Change your form so other players see you          ~
+~                     differently                                        ~
+~ bite                Bite a player to recruit them into the guild       ~
+~                     (must bite 3 times)                                ~
+~ bury hole           Hide the hole (after you find or dig one)          ~
+~ call wolf           Call a wolf to help you fight                      ~
+~ calm                Attemp to stop a fight with a monster              ~
+~ charity             Send item to the guild junk room for other members ~
+~                     use                                                ~
+~ clairvoyance        Sneak a look into a room without entering it       ~
+~ guild news           To get the latest info for the guild              ~
+~ cure disease        Cure yourself of diseases                          ~
+~ damn                Put a slow acting curse on someone                 ~
+~ defend me           Defend your servant/wolf/kid by doing something    ~
+~                     rude to the player attacking them                  ~
+~ defile              Destroy a holy item for experience                 ~
+~ demon wrath         Bring a demon's anger to all npcs in the room      ~
+~ dig hole            Dig a hole to hide stuff in                        ~
+~ disguise            Let others see the member's cape or not            ~
+~ dismiss bat         Dismiss a message bat that was created with 'bat'  ~
+~ drain corpse        Drain a corpse's energy to gain some sp            ~
+~ eyes                See in the dark for a time                         ~
+~ fear                Cause someone to run in fear                       ~
+~ fly <direction>     Fly <direction> as far as you can (ZOOM!)          ~
+~ fly ##<direction>   Fly ## rooms to the <direction>                    ~
+~ fly <direction> to <what>                                              ~
+~                     Fly <direction> until you find <what>              ~
+~                     (or as far <direction> as you can)                 ~
+~ fly -#<dir1>,#<dir2>,#<dir3>,...                                       ~
+~                     Fly # <dir1> then # <dir2> then # <dir3>  etc      ~
+~ forbid              Keep non-vamps from using a specific exit from a   ~
+~                     room for a while                                   ~
+~ friends             List currently playing vampires                    ~
+~ glance              Glance at the room you're in to see it's short     ~
+~                     desc and who/what's there without seeing the long  ~
+~                     desc                                               ~
+~ gohome              Turn into a bat and fly to the guild hall           ~
+~ grasp               Do damage to an enemy with your deathly cold touch ~
+~ health              Constantly monitor your health                     ~
+~ hellfire            Bring hell fire to all npc monsters in the room    ~
+~ help [command]      Display help files on commands                     ~
+~ help tasks          Display clues to guild tasks (mini-quests)         ~
+~                     Also shows effects of doing tasks                  ~
+~ illusion            Create an illusion in a room that others see       ~
+~ infuse              Give some of your spell points to someone else     ~
+~ leave guild         BEWARE!  Leaving the Guild has severe penalties!   ~
+~ login message       Set a message that's displayed to other vamps when ~
+~                     you enter the mud                                  ~
+~ logout message      Set a message that's displayed to other vamps when ~
+~                     you leave the mud                                  ~
+~ paralyze            Keep someone from moving                           ~
+~ remember            Remember this room (useful for mapping)            ~
+~ refresh             Bury yourself in the ground for a while to heal    ~
+~                     faster                                             ~
+~ restart             Reset your guild level to the start.  Used if the  ~
+~                     thing gets screwed up & none of the guild          ~
+~                     leutenants, assistant or master are around to fix  ~
+~                     you up.                                            ~
+~ sanctuary           sanctuary takes you to the guild if your hp
+                      falls below 25 at a high cost of sp                ~
+~ scan                Scan a monster to compare it's general strength    ~
+~                     to yours                                           ~
+~ servant             Make a servant from a corpse                       ~
+~                     (look at it to see what it will do for you)        ~
+~ shadow              Follow someone automatically                       ~
+~ sharpen fangs       Get updated version of the fangs                   ~
+~                     (use if something isn't working in your fangs)     ~
+~ skin corpse/process skins/sew armor                                    ~
+~                     Skin that fresh kill.  Process multiple skins into ~
+~                     one larger, stronger skin.  Sew several different  ~
+~                     kinds of armor from the processed skins.           ~
+~ solve task          Solves your current task.  (You must be in the     ~
+~                     right place to solve the task.)                    ~
+~ startup             from the church, go straight to the guild          ~
+~ summon              Summon a lower level vampire to you                ~
+~ task                Find out what your next guild task is              ~
+~ telekenetics        Attempt to open a door without a key               ~
+~ telepathy <msg>     Tell all vampires <msg> (or te <msg>)              ~
+~                     ('te on' turns it on; 'te off' turns it off)       ~
+~                     ('te buzz' buzzes the guild master, assistant &   ~
+~                      leutenants if theirs are off & you need them.)   ~
+~ telepathyfeel <msg> Emote to all vampires <msg> (or tf <msg>)          ~
+~ .telepathyfeel <who> <msg>                                             ~
+~                     Emote to <who> vampire <msg> (or .tf <who> <msg>)  ~
+~                     (this is for those who've solved the 1st 5 tasks)  ~
+~ title               Set your title to the correct one for the guild    ~
+~ transfer <what> to <who>                                               ~
+~                     Transfer an item to another player at a distance.  ~
+~ translate <what>     Sell <what> to the guild's shop from anywhere     ~
+~ translate all <what> Sell all the <what>s you have                     ~
+~ translate everything Sell everything you have                          ~
+~ wraith form         Toggles on/off invisibility.  Duration depends     ~
+~                     on your level, ac & stealth.                       ~
+~                                                                        ~
+~ (Ability to use the skills depends on your level, stats and solving    ~
+~  tasks (mini-quests) for the guild.)                                   ~
+~                                                                        ~
+~ (Also, be aware: the price of membership is not being able to use the  ~
+~                  regular spells until later levels.                    ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,20 @@
+       ----- Guild Commander Help Menu ----- Welcome oh mighty one! -----
+
+commander_help_badge (chb)  ........... This menu
+commander_tell <str> (ct) ............. Use the chat line as a Guild Commander
+
+dopp_status <plyr> .................... Current guild stats of a member
+dopp_promote <plyr> <lvl> <reason> .... Promote a player to guild level <lvl>
+dopp_demote <plyr> <lvl> <reason> ..... Demote a player to guild level <lvl>
+dopp_recruit <plyr> ................... Recruit a player into the guild
+dopp_remove <plyr> <reason> ........... Remove a player from the guild
+
+-------------------------------------------------------------------------------
+NOTE:  Use these commands sparingly!
+       It's better to show a player where the guild is and have them join
+       instead of using the recruit command, but in some cases it's needed.
+       The commands promote, demote, recruit, and remove are all logged.
+       If you are caught missusing these commands you will be put to guild
+       level 1 and all priveledges will be taken away.
+       (A precaution that HAS to be there)
+       Basically, you have POWER now...be good with it!

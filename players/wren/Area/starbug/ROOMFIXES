@@ -1,0 +1,57 @@
+airlock.c
+
+'scortch' in the long descript should be 'scorch'
+Needs to remove periods after all item descripts.
+
+deck.c
+
+Add a descript for the 'plate' in the 'dishes' description
+Needs to remove periods after all item descripts.
+
+quarters.c
+
+Bad grammer, your call as to how important.  Descript needs to be rethought.
+Descript for 'cycler' needs to be added.
+Add description for 'bunks' mentioned in the 'cigar' and 'dibs' items.
+Needs to remove periods after all item descripts.
+
+bridge.c
+
+Add vaccum from the 'windshield' item.  Needs its own descript.
+Under the descript for the 'toggles' item, 'thought' should be 'though'
+'seats' needs to be added, referenced under 'stations'
+'headset' needs to be added, listed under the 'pilot' item.
+Needs to remove periods after all item descripts.
+
+galley.c
+
+'resently' in the long desc should be 'recently'
+'cigar' and 'dibs' should be covered as they are listed in the 'mugs' desc.
+Desc under 'sink' should end with 'is filled with things that need to be washed'
+What is the descript for 'dustwand' in there for?  No such item in the descr.
+Needs to remove periods after all item descripts.
+
+engine.c
+
+Needs to remove periods after all item descripts.
+
+cargo.c
+
+'strang' should be 'strange' in the long desc
+In the 'supplies' descript there should be an 'and' after 'chains', and remove 
+the comma
+'rope' item should be 'ropes' to match the descript in the 'supplies' item.
+'parts' descript says 'Sparts'.  No idea if thats intentional or not.
+'boxes' does not have a descript, its listed in the 'supplies' item.
+Needs to remove periods after all item descripts.
+
+duct.c
+
+Needs to remove periods after all item descripts.
+
+duct2.c
+
+Needs to remove periods after all item descripts.
+
+Comment - Needs to improve the readability of code, learn to indent long 
+descriptions, make 80 line breaks.

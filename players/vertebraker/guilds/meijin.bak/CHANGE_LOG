@@ -1,0 +1,118 @@
+6/19:	Added skill_actions array to keep track of all the add actions.
+	This keeps the guild object from having to rescan the powers directory
+	everytime it is moved to the player.
+
+6/19:	Add query_ghost check to the pet.  The guild pet will move to the
+	storage room and dest itself when the player dies.
+
+6/19:   Updated the README file some.  Basically just expanded on the information
+	already there.  Added a new item under Disadvantages.
+
+6/19:   Added 'xdonators' command to list players ranked by donation points.  Also
+        removed the current donator bonuses.  I plan to redo that a little better.
+
+6/20:   Added a way for the player to manually stop raging.  It costs an addt'l 10 EPs
+	to do this, but will allow the player to get control again.
+
+6/21:   Upped the maximum endurance (changed from [30+(END*5/2)] to [30+(END*3)].
+	Extensive playtesting by both Beck and Myself revealed that even under
+	conservative methods, EP levels were too low.
+
+6/21:   Added player check in the critical of combat.h  Critical hits are not possible
+	when fighting another player, however offwielding and combat bonuses still apply.
+	Made notes in README to reflect this as well.
+
+6/22:	Added money limit so that guild members cannot have more than 50k coins.
+
+6/25:   Changed the EP total once more, still looking for just the right mix.  Added
+	guild rank into the equation this time, think that will work out well.
+
+6/26:   Add is_pet(){ return 1; } to guild_pet.c  Not having it there was an oversight
+	on my part.
+
+6/30:   Changed obj/corpse_bag.c so that it handles weight properly.  Bag now adds 1/8
+	the weight of its contents to the player, as outlined in /doc/build/RULES/bags
+
+7/1:    Added money cost to xsummon (guild_pet).  It now costs 1800 coins to summon
+	the guild pet.
+
+7/1:    Added some additional doc about the guild pet to README.  I believe the guild pet
+	to be a special case because of the amount of experience needed to train the pet.
+	This is in regards to what Boltar refers in /doc/build/RULES/pets when comparing
+	guild pets to mud kids.
+
+7/2:    Making major changes to the xrage skill.  Will document more when done.
+
+7/2:	Correct xcripple to conform to guidlines set in /doc/build/RULES/stat_alter.  Stat
+	reduction cannot excede 25% of WC or 33% of AC.  Monster recovers stats after a
+	period of time (recovery is much quicker if the player is not present).
+
+7/2:	Teleport error added to xportal
+
+7/6:	Changed the numbers on the bind skill.  Trying to make sure this healing capability
+	stays legal and cannot be abused by players.
+
+7/7:	Yet another major re-work of the endurance point system.  I *really* think I got it
+	down this time so that EPs compare well to SPs.  Please read the file EP_README
+	for more information.
+
+7/8:	Changes the combat_beat() damage to spell_object.  weapon bonuses are now added by
+	using set_spell_dam().  rage_beat() still uses hit_player.  Because of this I also
+	have to change the damage for xkick and xstrike to hit_player, so that there are
+	not two calls to spell_object in the same heart_beat.
+
+7/9:	Updated the all skill costs to reflect the changes made in EP_README.
+
+-------------------------------------------------------------------------------------------------
+
+1/4:	Upped endurance base from 200 to 300.  Going on the 7:1 spell point to endurance point
+	ration, the guild member starts with the equivelent of ~40 spell points.
+
+?  :	Added dexterity check to offwield function.  Offwield weapon class cannot excede the
+	(dexterity/10 + weapon_skill/10)
+
+?  :	Added type "amulet" to armor types that guild members are allowed to wield.  Without
+	being allowed to wimpy the player might need some help standing toe-to-toe.
+
+?  :	Xally command added.  Allows guild members to make Allies of non-Meijin players.  Allies
+	can talk on the guild channel and read basic help files.
+	created ~/guild/ally_gob.c for allies and modified xt and xwho commands.
+
+?  :	Xamine command added.  Allows the player to determine what the set_type of a weapon is.
+	Finding out that there are ALOT of weapons on the mud without set_type.
+
+?  :	Xmeditate command tested and proposed for guild addition.  Pain turned it down for reason
+	that one of the guild disadvantages is not to be able to recover endurance points quickly.
+
+?  :	Xparry command changed code somewhat to allow for different defense modes.  No changes made
+	that will affect players.
+
+?  :	Xtumble command added for testing.  This is a weaker version of the parry skill.  Required
+	updates to combat.h and gob.c  Not avaliable to players.
+
+?  :	Xrage tweaking.  Still trying to determine the best course for Xrage.  Does not affect players
+	since it will be quit awhile until they are high enough level to get xrage.  Need to have the
+	skill reapproved once tweaking is done.
+
+?  :	Xvault command added.  Will allow players to put/get into the guild vault remotely.  Does
+	not work in realm() "NT" or "NM" areas.  Not currently avaliable to players.
+
+?  :	Updates to gob.c to clean up some of the misc. messiness in the code.  Cleaned up mapping code
+	to remove old mapping variables when not being used any more.
+
+?  :	Updates to combat.h -> RAISED critical costs by minor amounts.  These seemed to be a little
+	low after more play testing.  Also changed combat.h to allow for the tumble skill (this change
+	does not affect players)
+
+?  :	ally_gob.c object added for allies.
+
+?  :	defs.h tweaked.  Added some more defines to make coding a little easier.
+
+2/1:	Added a query_ghost check to the xregister command, so that the player cannot reset
+	themselves while dead.
+
+2/1:	Added query_meijin_master(){ return 1; } to guild NPCs for future code possibilities
+
+2/4:	Added guild move function to guild rooms that allows the player to teleport from room
+	to room within the guild hall.  See: ~/guild/room/room.h
+

@@ -1,0 +1,8 @@
+/* Definitions of static variables for Thorns of the Black Willow */
+
+/* Character Related Definitions */
+#define USER environment()
+#define TP this_player()
+#define POS query_possessive()
+#define OBJ query_objective()
+#define PRO query_pronoun()

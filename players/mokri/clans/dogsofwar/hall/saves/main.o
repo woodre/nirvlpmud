@@ -1,0 +1,31 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/dogsofwar/hall/r1","up","/players/mokri/clans/dogsofwar/hall/r2","east","/players/mokri/clans/dogsofwar/hall/r3","down","/players/mokri/clans/dogsofwar/hall/r6","west","/players/mokri/clans/dogsofwar/hall/r15","north","/players/mokri/clans/dogsofwar/hall/r16","south",})
+short_desc "[1;37mTemple of the Dog[0m"
+long_desc "You enter the majestic Temple of the Dog. This palatial temple isdedicated to combat and decadance. Lavish furnishings are strewn aboutthe room and garish tapestries depicting epic battles adorn the marble walls. Bloodstains on the floor remind you that this place is inhabited by men as close to feral as the wolves that they havecome to identify themselves with.[0mType 'exit' to leave."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0

@@ -1,0 +1,62 @@
+/*
+ * Standard Stuffed heal: 3-5 charges, Heal 20+random(40), Stuffed 7
+ */
+
+int bites;
+ 
+id(str) { 
+  return str == "rations" || str == "iron rations" || str == "ration";
+}
+ 
+reset(arg) {
+  if(arg) return;
+  bites = 3+random(3);
+}
+ 
+long() {
+  write(
+  "A pack of dried meat and fruit.  Iron Rations are not the most tasty food,\n"+
+  "but they are known to be a healthy meal.\n");
+  if(bites > 1) write("There are "+bites+" rations left.\n");
+  else write("There is 1 ration left.\n");
+  return;
+}
+
+short() { return "Iron Rations"; }
+
+query_value() { return 100 * bites; }
+
+get() { return 1; }
+ 
+query_weight() { return 1; }
+ 
+query_save_flag() { return 1; }
+ 
+is_heal() { return "stuffed"; }
+query_potence() { return 50; }
+ 
+init() {
+  add_action("eat_ration"); add_verb("eat");
+}
+
+eat_ration(str) {
+  if(id(str)) {
+    if(!this_player()->eat_food(7)) {
+       return 1;
+    }
+    write("You scarf down a quick meal of Iron rations.\n");
+    say(capitalize(this_player()->query_name())+" scarfs some Iron rations.\n");
+    this_player()->heal_self(20+random(40));
+
+    bites--;
+
+    if(!bites) {
+      this_player()->add_weight(-1);
+      destruct(this_object());
+      return 1;
+    }
+
+    return 1;
+  }
+}
+ 

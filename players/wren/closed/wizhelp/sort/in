@@ -1,0 +1,20 @@
+**************
+
+                     In
+
+Syntax:    in <file> <action>
+
+Desc:
+           Allows you to remotely use act in a file or room as though
+           you were in the room yourself.
+
+Warning:   
+
+Example:   in /room/vill_green read notice
+                  results
+           Bob reads the obit notice at the green from afar
+
+Related:   at
+
+
+**************

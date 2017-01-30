@@ -1,0 +1,1 @@
+inherit "/players/pavlik/guild/mages/obj/animate_dead";

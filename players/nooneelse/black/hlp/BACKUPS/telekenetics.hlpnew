@@ -1,0 +1,13 @@
+telekenetics <dir> door
+tk <dir> door
+                     Attempt to open a door without a key (or tk)     5  10
+
+telekenetics safe
+tk safe
+                     You can also attempt to open a safe or similar  50  10
+                     object.
+
+
+                     NOTE:  The tk command will not open every door.
+                            Some are coded such that this will not
+                            work.  All you can do is try & see.

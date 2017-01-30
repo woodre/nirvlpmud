@@ -1,0 +1,18 @@
+*******************************************************************
+
+Name:      Dump
+
+Desc:      Shows you an entire file with no breaks.    
+
+Level:     21   
+
+Warning:   This will scroll your screen a lot 
+
+Syntax:    dump <filename> 
+
+Example:   dump /obj/monster.c 
+Result:    will show you the entire monster.c file
+
+Related:   tail, more, cat 
+
+*******************************************************************

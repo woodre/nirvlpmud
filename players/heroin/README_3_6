@@ -1,0 +1,22 @@
+Relax... you didnt fuck up again. Or at least intentionally i hope
+There is a memory leak in your castle. It is caused by
+setting heart_beat(1) to your monsters. DONT do it... i know your monsters
+have special heartbeat add ons but dont call them, they are handled
+from init() of the monster.c and as long as you include ::init() your
+monsters will work fine. Make sure all of them do not include that
+line. It basically forces heartbeats on and wastes a ton ot f mem.
+Basically get rid of set_heart_beat(1)!
+
+2) This bug is a big more serious. You will have to recode your monsters
+to match monster.c All of the lfuns called (e.g. set_wc(), set_ac(),
+set_hp()) etc must be called in a certain order. Otherwise your monsters
+will default to lower hitpoint/sp values and will be too easy to kill.
+You are not being punished or anything for this, but your castle
+has been closed until you fix it- go into one of the predator rooms
+
+and type 'stat predator' and compare the file you will see what i mean.
+
+You are not being punished but you must recode the monsters for the castle
+to reopen. If you have any questions feel free to ask.
+
+-mizan

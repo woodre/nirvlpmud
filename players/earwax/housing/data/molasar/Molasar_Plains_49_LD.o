@@ -1,0 +1,19 @@
+#0:0
+FileName "players/earwax/housing/data/molasar/Molasar_Plains_49"
+Short "Palace"
+LongDesc ""
+ShortDesc ""
+Ids ({"EARWAXIAN_HOUSING_OBJECT_ID_GOES_HERE",})
+WrapPref 70
+Upgrades ({"color-code converter",})
+Owner "carnage"
+Owners ({"carnage",})
+Privs ({3,})
+ClanName 0
+Entrance "/players/earwax/housing/data/molasar/room/Molasar_Plains_49_0.c"
+LotSize -2
+HouseSize 10
+Cost 0
+LastRoom 0
+IsClanhall 0
+MaxRooms 999

@@ -1,0 +1,15 @@
+#define USER user
+#define USERN user->query_name()
+#define USERRN user->query_real_name()
+#define POS query_possessive()
+#define OBJ query_objective()
+#define PRO query_pronoun()
+#define USERPO user->POS
+#define USERPR user->PRO
+#define USEROB user->OBJ
+#define ATT user->query_attack()
+#define ATTPO ATT->POS
+#define ATTPR ATT->PRO
+#define ATTOB ATT->OBJ
+#define ATTN ATT->query_name()
+#define ATTRN ATT->query_real_name()

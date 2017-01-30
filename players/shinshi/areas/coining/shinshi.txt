@@ -1,0 +1,132 @@
+Ok..  other than what I already mailed you about there's one more general note
+you do need to know.  If there's a noun in a room's long desc, the player
+needs to be able to look at it.  There are a few that I let slide now and then
+but for the most part it's got to be there.  It's just the way I was taught,
+so deal..  *8)  I'll make a note of them where they need added.
+
+outside1.c
+Obviously refer to the mail I sent you.  You really can use that room desc, just
+don't forget to add all the nouns to the items list.
+
+outside2.c
+Add a desc to the items list for "poles"
+
+outside3.c
+This one has a few more of the "you"s..  You continue and you notice..
+Also add a desc for "ladder"
+
+outside4.c
+The long desc for this room is a bit confusing, and I don't even think it's a
+proper sentance.  I did finally get the visual you were trying to create, with just
+one swing rather than a whole set, and I had a go at writing it differently.  Again,
+you can use this if you like.
+     A metal pole, bent in two places, has been anchored into the ground here.  It
+     looks a bit like an arch with a flat top.  Chains have been used to hang a swing
+     from it.
+If you do use that, make sure to add descs for the words pole, chains, and swing.
+
+outside5.c
+Add item descs for seesaw and for tree.  The one for seesaw can be exactly the same
+as the one for board if you like.
+I think also add the word "nearby" after "There is a ladder.." so it doesn't seem
+like the ladder has something to do with the seesaw.  Though that one could just
+be my opinion.
+
+outside6.c
+Most treehouses I've seen have windows.  So I would assume a player can see the ground,
+tree, and branches from up there.  Keeping that assumption in mind, add item descs for
+those words..  *8)
+In the search string, I'm gonna try to make this make sense.  Laff.  "What would you like
+to search for?" doesn't seem right because the proper string is "search treehouse"
+and no one is searching FOR the treehouse.  I think it would make more sense if it
+just said "What would you like to search?"
+For the found message, if someone had no idea what they were looking for, "That has
+already been found" would leave them thinking "What has?"  Maybe try, "There is nothing
+here.  Maybe someone already took the kids' treasure."  Or maybe "The place looks like
+it has been tossed already and anything of value is gone."
+
+rm1.c
+Add item descs for blocks and toys even though they're in the other room.  If you can
+see them through the door you can exa them.
+"for the schools needs"..  it needs to be "school's"..  possessive.
+Also add an item desc for mats, which you can see through the door.
+
+rm2.c
+Add item descs for mats, floor, pillows, blankets, stereo, and shelf.  Ready to
+kill me yet?  *8)
+Check your item descs in this room..  Test and test this?  *8)
+
+rm3.c
+Add item descs for toys, trains, cars, blocks, and floor
+Test is in there right now again
+
+rm4.c
+Add item descs for markings, walls, papers, and artworks
+Test is in there for this room too
+
+rm5.c
+Add item descs for paper, numbers, wall, chalkboard, problem, calculators, crate,
+shelves, and windows.  Now I know you wanna kill me..  grin
+Test is in there again
+
+rm6.c
+Typo in the first word..  Smalls ought to be small..
+Second sentance would sound better as "Each recorder has the initials of the owner
+on it.."  Don't ask me why..  I just think that's more right..  *8)
+Blackboard is one word
+"have" should be "has" in the sentance about the blackboard.
+Add item descs for chairs, floor, recorders, blackboard, and words.  Yes, even words.
+Some of these are real simple to describe.  "Song lyrics written on the board with chalk"
+Test is in your items list here too.
+
+rm7.c
+The third sentance should read "The sinks are fit lower to the ground so the students
+can reach them."
+Add item descs for sinks, urinals, and stalls.
+Test again..  gee, were you testing something?  *8)
+
+rm8.c
+Add a period after the word pink.
+In the second sentance remove the word "it" from after the word "give"
+Add item descs for flowers, walls, sinks, and stalls
+Test again
+
+rm9.c
+First sentance.  Change "give" to "make"..  it's more right when talking about
+an environment.
+Add descs for table, coffee maker, TV, and wall.
+Test is in here again
+The kids get outside by going through the teacher's lounge?  Overall, I doubt
+this matters so much.  Just seemed odd to me.
+
+Now, the items..  for all the items I have only one comment.  If I found
+those items on the ground someplace I would never know a kid ever had
+it, or that he stole it.  That makes sense for the person who killed the
+kid, but if it was left lying around, no one would understand.  Just describe
+the stuff.  Real general descs of that stuff will do.
+
+studentkey.c
+In his long desc it says "This kis is small"
+
+studentlip.c
+His race is adolescent?  He doesn't need a race, and if he had one it'd be
+human I imagine.  And he's a toddler, surely not an adolescent.
+
+studenttampon.c
+Wow..  the first thing I have absolutely no comment to..  *8)
+
+teacher.c
+Her race is teacher?  Didn't know that was a race different than all the
+rest of us..  grin
+Check her alignment.  If you wanted her to be an evil teacher, I think you're
+missing a minus sign in there..  laff
+Ok..  all the rest is in her big speech about her troubles.
+In case 1, teachers ought to be teacher
+Case 5 needs a period after the word around.
+Case 7 needs a period after the word moment.
+Case 8 needs a comma after the word whispers.
+Case 10 could use a "..." whatever that's called after the word these
+Case 12 needs another of those after the word protrude
+Case 15 needs a period after the word money.
+
+All done..  and now I know ya hate me.. *8)

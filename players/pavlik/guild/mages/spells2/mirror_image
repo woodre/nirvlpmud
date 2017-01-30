@@ -1,0 +1,110 @@
+/*
+ * spell : Mirror Image   (illusion)
+ * level : 7
+ * effect: See below for effects
+ * cost  : 30 sp per image
+ * spec  : Can only be cast once every 10 minutes
+ * files : ~/mages/obj/mirror_image.c
+ *
+ * This spell creates 1-4 'images' of the player that the monster
+ * will attack.  The purpose of the images is to redirect the
+ * attack of the monster.  The images do no damage themselves.
+ *
+ * An Image disappears when it fails to pass a stat check.
+ * The stat check is random(100) vs Illu.
+ * The base chance of success decreases every round.  The amount
+ * of decrease also is stat depedent.
+ * Decrease = 20 - (random(Will Power/5))  (Min: 7)
+ *
+ * The spell costs 30 sp (per image) to cast and then 10 sp per turn to maintain
+ * The spell can only be cast once every 5 minutes.
+ *
+ * updated: 11/30/2005 - pavlik
+ *	reduced wait time from 6 minutes to 5 minutes
+ *	reduced initial sp cost from 40 to 30
+ *	basic changes to messages
+ */
+
+mirror_image(str) {
+
+  object ob, obj;
+  int i, num, dec;
+
+  if(!KNOW("mimage")) {
+	write("What?\n");
+	return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  if(!present("platinum mirror", tp)){
+	write("You do not have the proper components for this spell.\n");
+	return 1;
+  }
+
+  if(present("mirror image", env)){
+	write("You cannot cast this spell here right now.\n");
+	return 1;
+  }
+
+  if(guild->query_next_prot() > time()) {
+	write("You can cast this spell yet.\n");
+	return 1;
+  }
+
+  write("You cast a "+HIB+"Mirror Image"+NORM+" spell ...\n");
+
+  if(spell_fail2(7, "illu", "wil")) {
+	write("You "+HIR+"miscast"+NORM+" the spell!\n");
+	write("The platinum mirror crumbles to dust.\n");
+	say(ME+" "+HIR+"miscasts"+NORM+" a spell and platinum mirror disintigrates.\n");
+	destruct(present("mirror", tp));
+	tp->add_spell_point(-20);
+	return 1;
+  }
+
+  write(
+    "You hold a small platinum mirror in the air, it's shiny surface appears to gather rays of light.\n" +
+    "The pool of light spins faster and faster on the mirrors surface ...\n");
+
+  say(
+    ME+" holds a small platinum mirror in the air.\n"+
+    "The tiny mirror reflects a "+HIW+"brilliant beam of light"+NORM+" in your eyes.\n" +
+    ME+" casts a spell over the reflected light and someone steps out of the enchanted mirror!\n");
+
+  /* 1 to 4 images can be created */
+  num = random(guild->query_total_illu())/25 + 1;
+  if(num > 4) num = 4;
+
+  /* this is how much the success chance of the illusion will */
+  /* descrease per turn.  based on will_power stat */
+  dec = 20 - random(guild->query_total_wil())/5;
+  if(dec < 7) dec = 7;
+
+  for(i=1; i<=num; i++) {
+	write("A "+HIC+"Mirror Image"+NORM+" of yourself steps out of the mirror!\n");
+	say("An image of "+ME+" steps out of the mirror!\n");
+	ob = clone_object("players/pavlik/guild/mages/obj/mirror_image");
+	ob->set_name("~"+capitalize(tp->query_real_name()));
+	ob->set_owner(tp);
+	ob->set_target(obj);
+	ob->set_mirror_num(i);
+	/* base chance is our illusion stat */
+	ob->set_chance(guild->query_total_illu());
+	/* amount the base chance decrease per turn */
+	ob->set_decrease(dec);
+	move_object(ob, env);
+	if(i == 1) ob->begin_mirror(obj);
+	tp->add_spell_point(-40);
+  }
+
+  if(tp->query_level() < 20)
+	guild->set_next_prot(300 + time());
+
+  /* note that the spell component is not destroyed */
+
+  return 1;
+
+}
+

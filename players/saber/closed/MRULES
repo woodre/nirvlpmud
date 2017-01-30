@@ -1,0 +1,48 @@
+The Newbee and Advanced Wizard Guide to Monsters.
+
+    Monsters, you know them, you love them (platonic, we hope), and players
+love them (see previous comment).  However, some rules and regulations need to
+be cleared up about them.  If youre seeing this file, it has been approved by
+the powers on high (Boltar/Omega/Hawkeye or something) and it is now law.  So
+deal with it.
+    Monsters are in the game to provide players with something to fight and pit
+their skills against; as a secondary function they also provide treasure and
+experience.  Ideally a monster should be a challenging encounter.  They should
+NOT be a cake walk.  Therefore, these rules are now in effect.
+
+  1)  All monsters of levels higher than 18 MUST be unique.  This means that if
+you have a room with multiple level 19+ monsters, YOU HAVE ILLEGAL MONSTERS.
+This also does not mean that you simply clone twenty versions of the same
+monsters and name them deathgod1, deathgod2, deathgod3, ect...  A level 19+
+monster should be special enough to deserve its own description and items and
+name.  ANY EXCEPTIONS MUST BE CLEARED BY A LEVEL 100+ WIZARD.  This rule is
+retroactive.
+
+  2)  Monster alignment should match the monster.  Dont give it a -1000 or
++1000 alignment simply so that it is worth more xp.  There is no reason that a
+killer bimbo should haven an alignment of +1000, or that a pimp should be
+-1000.  Any monster with an alignment of > +750 or < -750 better have a DAMN
+good reason.
+
+  3)  Treasure on monsters should reflect what they are.  An Orc wouldnt have
+a Staff of Power, and a fire elemental probably shouldnt have a potion (think
+about it).  Things other than coins are cool to give monsters.  There is no
+reason that each level 19 monster has to have 5000 coins.
+
+  4)  Randomness is good. Players get used to monster with 400 hp having 400
+hp.  You may want to set you monsters to that when they clone it is variable.
+set_hp(random(100)+350); is a good thing.  Do the same with coins.  And if you
+want to get really creative, maybe even do it with items.  A monster that has a
+different item each time (out of maybe 4-5 items) is really pretty cool.  Think
+random alignment, wc, ac, ect...  This will keep combat interesting.
+
+  5)  Monster spell use: A monster that is about level 15 should have a percent
+chance to special attack.  Its cool to put them on levels lower than 15, but
+at level 15+ the monster MUST have a random special attack.
+
+  6)  Unique monsters are fun (I mean really unique).  They give players a
+surprise.  Things like monsters that chase players, force them to drop their
+weapons, steal items, run away and such are fun.  Players remember beating
+these more than they do going through cannon fodder.
+  Also, think interactive monsters.  (c.f. trixie)  Use set_frog().  Have fun.
+                                                    -- Saber

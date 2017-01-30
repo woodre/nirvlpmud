@@ -1,0 +1,13 @@
+MONITOR
+
+usage: 'shp <number or "attack" or 0>'
+The shadow monitor is a very flexible tool.  It will give you basic information 
+about your characters status, and if you are fighting will give you some
+idea of how much damage your opponent has sustained.
+
+The command for setting the moniters timing is 'shp'.  Typing 'shp 1' will
+make the monitor go off frequently, while 'shp 10' would make it go only
+every once in a while.  Typing 'shp attack' will make it only go off while 
+you are fighting.  'shp 0' or just 'shp' will turn it off.
+
+Typing 'mon' will show you your monitor but not turn it on.

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;31m Villa's [32mZok[34mBall[0m"
+long_desc "[1;37m this is a[1;31mZok[1;32mBall.[1;37m Keep off Bitches!!![0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "zokball"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[1;37m this is a[1;31mZok[1;32mBall.[1;37m Keep off Bitches!!![0mType 'clan_help' for commands."
+clan_short "[1;31m Villa's [32mZok[34mBall[0m"
+damage_type "poison"
+hall_path "/players/coldwind/desert/rooms/r2"
+object_name "zokball"
+owner "villa"
+spell_alias "zok"
+spell_mess_me "You hold your %hi white%clay%normal% in front of you ant it forms a %hi red%M%hi green%E%hi blue%T%hi yellow%A%hi cyan%L %hi red%Zok%hi green%Ball%normal%. it flails about the room %hi black%DEVESTATEING %AKN%"
+spell_mess_room "%TPN% unleashes %TP_POS% %hi red% HELLISH Zok%hi green%Ball %normal% attack on %AKN%"
+spell_mess_them "%TPN% ueses %TP_POS% %hi red% Zok%hi green%Ball%normal% on you"
+abilities ({})
+chan_history ({"[Wed Aug 26 20:05:15 2009] Villa: is the only one...","[Wed Aug 26 20:05:19 2009] Villa: everything else is fair game","[Wed Aug 26 20:05:27 2009] Villa: ya know u can make ur own room n stuff","[Wed Aug 26 20:05:29 2009] Villa shrug","[Wed Aug 26 20:05:33 2009] Silverpaw: i kno","[Sun Jan 17 10:05:25 2010] Villa: sup ?","[Sun Jan 17 10:05:39 2010] Ancaladar: shrug my boredom level figured id work on this char for a bit","[Mon Sep 19 19:52:33 2011] Villa:  they get me caught up","[Tue Sep 20 01:08:52 2011] Villa: who","[Tue Jan 14 15:15:24 2014] Batman has joined the clan!","[Tue Jan 14 15:15:36 2014] Villa: yo","[Tue Jan 14 15:15:56 2014] Villa: so clan hall is in dahana, 1e","[Tue Jan 14 15:15:56 2014] Batman: way too hard to use this on phone","[Tue Jan 14 15:16:02 2014] Villa: nod lol","[Tue Jan 14 15:16:16 2014] Batman: therr","[Tue Jan 14 15:16:22 2014] Batman: wheres dahana","[Tue Jan 14 15:16:48 2014] Villa: 4w,5n,2e,ride carpet,dahna,e","[Fri May  2 18:31:25 2014] Marsellus has joined the clan!","[Fri May  2 18:35:35 2014] Villa has promoted Marsellus to a clan leader!","[Fri May  2 18:35:55 2014] Villa has removed Silverpaw as a clan leader!",})
+leaders ({"avis","xanadu","marsellus",})
+join_type 1
+private_coffer 3940000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1406240720

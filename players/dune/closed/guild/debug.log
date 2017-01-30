@@ -1,0 +1,242 @@
+Failed to load file.
+Current object was players/pathfinder/garbageman#197, line 23
+"random_movement" in "players/pathfinder/garbageman.c" ("players/pathfinder/garbageman#197") line 97
+"init_command" in "obj/monster.c" ("players/pathfinder/garbageman#197") line 371
+"move" in "room/room.c" ("room/lanceroad3") line 154
+"move_player" in "obj/living.c" ("players/pathfinder/garbageman#197") line 188
+Error in call out.
+Bad argument 1 to tell_object()
+Current object was players/boltar/things/antipk, line 26
+"heart_beat" in "players/boltar/things/antipk.c" ("players/boltar/things/antipk") line 209
+"attack" in "obj/living_pretypes.c" ("players/boltar/things/antipk") line 904
+error when executing program in destroyed object players/boltar/things/antipk
+Heart beat in players/boltar/things/antipk turned off.
+Failed to load file.
+Current object was obj/player#1119, line 14
+"go_north" in "obj/player.c" ("obj/player#1119") line 690
+"move" in "room/room.c" ("players/gemini/pit8") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Error in loading object
+Current object was obj/player#1119, line 23
+"go_east" in "obj/player.c" ("obj/player#1119") line 703
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/pit12") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was players/forbin/hyperion/flame_forest/STORMDAEMON/x-storm, line 17
+"start_storm" in "players/forbin/hyperion/flame_forest/STORMDAEMON/x-storm.c" ("players/forbin/hyperion/flame_forest/STORMDAEMON/x-storm") line 56
+Error in call out.
+Error in loading object
+Current object was obj/player#1119, line 23
+"go_east" in "obj/player.c" ("obj/player#1119") line 703
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/pit12") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Error in loading object
+Current object was obj/player#1119, line 32
+"go_north" in "obj/player.c" ("obj/player#1119") line 690
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t5") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 33
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/line") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Bad argument 1 to call_other()
+Current object was players/dune/closed/guild/lib_tools/overload, line 55
+"qtHook" in "obj/soul.c" ("obj/soul#374") line 4
+"process_hook" in "obj/soul.c" ("obj/soul#374") line 4
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#377") line 317
+"main" in "players/dune/closed/guild/lib_tools/overload.c" ("players/dune/closed/guild/lib_tools/overload") line 79
+Error in loading object
+Current object was obj/player#1119, line 26
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/line") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Error in loading object
+Current object was obj/player#1119, line 28
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/bleacher1") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Error in loading object
+Current object was obj/player#1119, line 28
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/bleacher1") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 20
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t4") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 20
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t4") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Error in loading object
+Current object was obj/player#1119, line 26
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t4") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 29
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/bleacher11") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 29
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/bleacher11") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 105
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/bleacher11") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 46
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/bleacher11") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 29
+"go_west" in "obj/player.c" ("obj/player#1119") line 709
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/bleacher11") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Error in loading object
+Current object was obj/player#365, line 28
+"orin" in "players/saber/ryllian/portal.c" ("players/saber/ryllian/portal") line 146
+"move_player" in "players/dune/closed/guild/objects/shadow.c" ("players/dune/closed/guild/objects/shadow#2974") line 83
+"move_player" in "obj/living.c" ("obj/player#365") line 188
+Error in loading object
+Current object was obj/player#365, line 28
+"orin" in "players/saber/ryllian/portal.c" ("players/saber/ryllian/portal") line 146
+"move_player" in "players/dune/closed/guild/objects/shadow.c" ("players/dune/closed/guild/objects/shadow#2974") line 83
+"move_player" in "obj/living.c" ("obj/player#365") line 188
+Error in loading object
+Current object was players/gemini/nyirp/rooms/t3, line 30
+"go_northwest" in "obj/player.c" ("obj/player#1119") line 715
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t4") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+"reset" in "players/gemini/nyirp/rooms/t3.c" ("players/gemini/nyirp/rooms/t3") line 6
+Bad argument 1 to call_other()
+Current object was players/zeus/museum/NPC/golem#3908, line 285
+"fake_beat" in "players/mizan/closed/poly/tetrapod.c" ("players/mizan/closed/poly/tetrapod#3903") line 114
+"multilimb_synchronized_attack" in "players/mizan/closed/poly/PDM.c" ("players/mizan/closed/poly/PDM") line 4136
+"hit_creature" in "players/mizan/closed/poly/PDM.c" ("players/mizan/closed/poly/PDM") line 4467
+"hit_player" in "obj/living.c" ("players/zeus/museum/NPC/golem#3908") line 239
+"do_damage" in "obj/living.c" ("players/zeus/museum/NPC/golem#3908") line 433
+"death" in "obj/living.c" ("players/zeus/museum/NPC/golem#3908") line 663
+"second_life" in "obj/monster" ("players/zeus/museum/NPC/golem#3908") line 403
+"monster_died" in "players/zeus/museum/NPC/golem.c" ("players/zeus/museum/NPC/golem#3908") line 65
+Error in call out.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Failed to load file.
+Current object was obj/player#1119, line 36
+"go_northeast" in "obj/player.c" ("obj/player#1119") line 721
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t1") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 128
+"go_northeast" in "obj/player.c" ("obj/player#1119") line 721
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t1") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 30
+"go_northeast" in "obj/player.c" ("obj/player#1119") line 721
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t1") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Failed to load file.
+Current object was obj/player#1119, line 25
+"go_northeast" in "obj/player.c" ("obj/player#1119") line 721
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t1") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Error in loading object
+Current object was obj/player#1119, line 29
+"go_northeast" in "obj/player.c" ("obj/player#1119") line 721
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t1") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Error in loading object
+Current object was obj/player#1119, line 29
+"go_northeast" in "obj/player.c" ("obj/player#1119") line 721
+"move" in "room/room.c" ("players/gemini/nyirp/rooms/t1") line 154
+"move_player" in "obj/living.c" ("obj/player#1119") line 188
+Connection reset by peer detected.
+Bad argument 1 to tell_object()
+Current object was obj/monster_lars#4497, line 19
+"heart_beat" in "obj/monster_lars.c" ("obj/monster_lars#4497") line 128
+"attack" in "obj/living_c_lars.c" ("obj/monster_lars#4497") line 511
+error when executing program in destroyed object obj/monster_lars#4497
+Heart beat in obj/monster_lars#4497 turned off.
+Bad argument 1 to environment()
+Current object was players/boltar/things/antipk, line 20
+"heart_beat" in "players/boltar/things/antipk.c" ("players/boltar/things/antipk") line 199
+Heart beat in players/boltar/things/antipk turned off.
+Bad argument 1 to call_other()
+Current object was players/jaraxle/3rd/volcano/weaps/krakin#5945, line 44
+"wither2" in "players/wocket/necro/spells/wither.c" ("players/wocket/necro/spells/wither") line 84
+"attack_object" in "obj/living.c" ("players/jaraxle/3rd/volcano/mons/fire#5944") line 1683
+"attack" in "obj/living.c" ("players/jaraxle/3rd/volcano/mons/fire#5944") line 1294
+"hit" in "obj/weapon.c" ("players/jaraxle/3rd/volcano/weaps/krakin#5945") line 161
+"weapon_hit" in "players/jaraxle/3rd/volcano/weaps/krakin.c" ("players/jaraxle/3rd/volcano/weaps/krakin#5945") line 101
+Error in call out.
+Connection reset by peer detected.
+Error in loading object
+Current object was players/dune/closed/guild/implants#6370, line 23
+"qtHook" in "obj/soul.c" ("obj/soul#6367") line 4
+"process_hook" in "obj/soul.c" ("obj/soul#6367") line 4
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#6370") line 317
+Error in loading object
+Current object was players/dune/closed/guild/implants#6513, line 23
+"qtHook" in "obj/soul.c" ("obj/soul#6512") line 4
+"process_hook" in "obj/soul.c" ("obj/soul#6512") line 4
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#6513") line 317
+Error in loading object
+Current object was players/dune/closed/guild/implants#4606, line 23
+"qtHook" in "closed/wiz_soul.c" ("closed/wiz_soul#4598") line 10
+"process_hook" in "closed/wiz_soul.c" ("closed/wiz_soul#4598") line 10
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#4606") line 317
+Error in loading object
+Current object was players/dune/closed/guild/implants#6789, line 23
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#6789") line 317
+Error in loading object
+Current object was players/dune/closed/guild/implants#6789, line 23
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#6789") line 317
+Error in loading object
+Current object was players/dune/closed/guild/implants#7255, line 23
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#7255") line 317
+Error in loading object
+Current object was players/dune/closed/guild/implants#7497, line 23
+"qtHook" in "obj/soul.c" ("obj/soul#7496") line 4
+"process_hook" in "obj/soul.c" ("obj/soul#7496") line 4
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#7497") line 317
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Error in loading object
+Current object was players/dune/closed/guild/implants#7783, line 23
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#7783") line 317
+Connection reset by peer detected.
+Bad argument 1 to call_other()
+Current object was players/dune/closed/guild/lib_tools/overload, line 37
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#7783") line 317
+"main" in "players/dune/closed/guild/lib_tools/overload.c" ("players/dune/closed/guild/lib_tools/overload") line 79
+Connection timed out detected.
+Error in loading object
+Current object was players/dune/closed/guild/implants#7783, line 23
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#7783") line 317
+Error in loading object
+Current object was players/dune/closed/guild/implants#8677, line 23
+"tools_hook" in "players/dune/closed/guild/implants.c" ("players/dune/closed/guild/implants#8677") line 317
+Failed to load file.
+Current object was obj/player#7626, line 13
+"go_south" in "obj/player.c" ("obj/player#7626") line 696
+"move" in "room/room.c" ("room/lanceroad3") line 154
+"move_player" in "obj/living.c" ("obj/player#7626") line 188
+Bad argument 1 to tell_object()
+Current object was players/boltar/things/antipk, line 21
+"heart_beat" in "players/boltar/things/antipk.c" ("players/boltar/things/antipk") line 209
+"attack" in "obj/living_pretypes.c" ("players/boltar/things/antipk") line 904
+error when executing program in destroyed object players/boltar/things/antipk
+Heart beat in players/boltar/things/antipk turned off.

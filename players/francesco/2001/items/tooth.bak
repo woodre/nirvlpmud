@@ -1,0 +1,105 @@
+#include "/players/francesco/univ/ansi.h"
+inherit "obj/weapon";
+int delay;
+int actual_time;
+string str;
+short() {
+   string tmp_short;
+    if (call_other(this_player(), "query_level", 0) > 30) {
+      tmp_short = short_desc + "  < wc " + class_of_weapon + ","+eff_wc + " >";
+   if (broke) tmp_short = short_desc + " [BROKEN]";
+      if (wielded)
+         return tmp_short + " (roteating)";
+      return tmp_short;
+     }
+ if(wielded && broke) return short_desc + " [BROKEN] (roteating)";
+ if(broke) return short_desc + " [BROKEN]";
+    if (wielded)
+        if(short_desc)
+            return short_desc + " (roteating)";
+    return short_desc;
+}
+long() {
+   int wear;
+  write("The tooth is a war trophy gotten by The Moonwatcher when he \n"+
+        "defeated Big Tooth.  About 3 feet long, it can be 'roteate'd\n"+ 
+        "like a mace to inflict more damage.\n");
+       return 1;
+}
+
+reset(arg){
+  ::reset(arg);
+  if (arg) return;
+   
+set_name("tooth");
+set_alias("mace");
+set_alt_name("weapon");
+set_short("A tooth");
+
+set_type("mace");
+  set_class(16);
+  set_weight(2);
+  set_value(300);
+  set_hit_func(this_object());
+}
+
+
+
+weapon_hit(attacker){
+int W;
+W = random(13);
+ if(W>8)  {return 7;}
+ if(W<1)  { return 4;  }
+return;
+}
+
+init() {
+  ::init();
+  add_action("roteate","roteate");
+  add_action("trade","trade");
+}
+
+query_wear() {
+  int wear;
+  wear = 4*misses/4 + 5*hits/18;
+  return wear;
+}
+
+roteate(){
+  object attacker;
+  attacker=this_player()->query_attack();
+  
+  if(wielded == 0) { write("Wield the bone, before roteating it!\n"); 
+  return 1; }
+  
+  if(!attacker) { write("You aren't fighting anybody!\n"); 
+  return 1; }
+
+  actual_time = time();
+  if(actual_time - delay <= 1)
+  return 1;
+  
+  if(this_player()->query_spell_dam()) { return 1; }
+
+  this_player()->spell_object(attacker,"bone hit",1,random(1));
+
+  delay = time();
+  return 1; 
+}
+trade(str){
+  if(!str) {
+  notify_fail("What do you want to trade?\n");
+  return 0; }
+    if(str=="tooth"){
+       if(!present("narrator",environment(this_player()))){
+         write("The "+(str)+" cannot be traded in this room.\n");
+       return 1;}
+      write("The narrator replies:  This is not exactly my business anymore\n"+
+           "and therefore I can only give you 1100 coins for this "+(str)+".\n");
+      call_other(this_player(),"add_money",(1100));
+      destruct(this_object());
+    return 1;}
+  notify_fail("That is not something you can trade here.\n");
+  return 0;
+}
+

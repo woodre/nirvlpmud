@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/players/ultramagnus/rdiamond","/players/saber/armor/halter","/obj/weapon","/players/hippo/armour/endotheel","/players/snow/heals/kw_meat","/players/hippo/heals/blood","/players/mythos/aarmor/kote","/players/saber/armor/lboots","/obj/treasure","/players/hawkeye/items/stone","/obj/weapon","/players/wren/Area/starbug/items/leaflets","/players/pain/NEW/weap/soulcrusher","/players/scathe/armor/damulet","/players/mythos/awep/kama","/players/jamila/beach/mobs/claw","/obj/treasure","/players/wren/Area/starbug/items/bouquet","/players/sado/shop/chocolate","/players/hippo/heals/dna_repair","/players/mythos/awep/wakizashi","/players/snow/shadows/stuff/sgem","/players/scathe/armor/bowboot","/obj/weapon",})
+shorts ({"button","A Red Diamond","A black halter top","Small knife","endotheel","A hunk of whale meat","[1;31mdrops of blood[0m","Kote","Leather boots","A rattlesnake's rattle","A Stone","Decorated Broadsword","a stack of leaflets","a mace named [1m[31mSoulCrusher[0m","A Dragon Amulet","kama","A Lobster Claw","Zuzu's petals","a colorful bouquet of 'flowers'","A box of delicious Belgian chocolates","[32mdna repair string[0m","Wakizashi","A dusky gem","Hard Boots","Pillow",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

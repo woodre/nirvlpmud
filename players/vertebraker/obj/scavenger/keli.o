@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/treasure","/players/scathe/armor/bowarmor","/players/snow/heals/kw_meat","/obj/weapon","/obj/armor","/players/snow/closed/q/polar_hide","/players/mosobp/areas/TEMPLE/OBJ/nsword","/obj/armor","/obj/armor","/players/eurale/Chess/OBJ/gloves","/players/mythos/aarmor/nodowa","/players/hippo/armour/boots","/players/snow/shadows/stuff/plate","/obj/armor","/players/pain/NEW/weap/mace2","/players/scathe/armor/igarb","/players/wren/Area/starbug/items/lunchbox","/players/mythos/awep/wakizashi","/players/saber/armor/hardsuit1","/players/ultramagnus/berries","/obj/armor","/players/wren/Area/starbug/items/mirror","/players/maledicta/cont/weapons/rweapon","/players/hippo/heals/bubbles","/players/mythos/amisc/mirror",})
+shorts ({"Arctic Wolf pelt","Light Leather Armor","A hunk of whale meat","Whip","Metal gloves","A polar bear hide","A nobleman's shortsword","An [1mwhite[0m metal ring","Steel Helmet","[33mPlatinum chain gloves[2;37;0m","Nodowa","anti-blood boots","[1mBlack Platemail[0m","button","A huge iron mace","Initiate's garb","a lunch box","Wakizashi","A purple Hardsuit <with pink legs!>","A Bunch Of Blue Berries","Steel Shield","a slim pocket mirror","a Two-handed sword","[1;36mbubbles of 7up[0m","A small mirror",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

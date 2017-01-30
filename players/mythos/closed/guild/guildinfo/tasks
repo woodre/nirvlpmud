@@ -1,0 +1,18 @@
+if(tgl == 1 && tl > 5) {
+    write("\nYou feel as if something is calling you deep in the forest.\n\n"); }
+  if(tgl == 2 && tl > 6) {
+   write("\nThe Library calls....  Find the scribe and 'ask' him what is needed.\n\n"); }
+  if(tgl == 3 && tl > 7 && qtf > 4) {
+    write("\nThe fae whisper as you wake,'Find the Jewel of Darm....'\n\n"); }
+  if(tgl == 4 && tl > 8 && qtf > 4){
+    write("\nTouch Masakado's tomb.....\n\n"); }
+  if(tgl == 5 && tl > 9 && qtf > 4) {
+    write("\nFind the DEMON Keeper....\n\n"); }
+  if(tgl == 6 && tl > 14 && qtf > 9) {  
+    write("\nSomething tells you to go into the Black Cavern.....\n\n"); }
+  if(tgl == 7 && tl > 15 && qtf > 9) {
+    write("\nFind the HUNTER....\n\n"); }
+  if(tgl == 8 && tl > 16 && qtf > 9) {  
+    write("\nGo to the Chamber and go to the hills.\n\n"); }
+  if(tgl == 9 && tl > 17 && qtf > 14) {
+    write("\nGo to the Frozen Cave and do what must be done...\n\n"); }

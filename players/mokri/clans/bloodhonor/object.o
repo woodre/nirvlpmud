@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30m Blood Honor[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "BloodHonor"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;30m Blood Honor[0m"
+damage_type 0
+hall_path "/players/jareel/areas/chaos/forest9"
+object_name "BloodHonor"
+owner "maul"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Fri Jul  4 21:48:28 2014] Chaney: ugh ok i guess i'm done then","[Fri Jul  4 21:48:32 2014] Chaney: that's annoying","[Fri Jul  4 21:50:16 2014] Chaney: well i got 40k - thank you","[Fri Jul  4 21:50:42 2014] Maul: xp?","[Fri Jul  4 21:50:58 2014] Chaney: yes","[Fri Jul  4 21:51:18 2014] Chaney: i dont know where i am","[Fri Jul  4 21:51:28 2014] Chaney: and i cant pick the shit up but i guess that doesnt really matter","[Fri Jul  4 21:51:28 2014] Maul: When I get my Mage online and running strong I can power up your Healer","[Fri Jul  4 21:51:58 2014] Maul: You are in the guld hall","[Fri Jul  4 21:53:48 2014] Chaney: your pendent has no value. interesting.","[Fri Jul  4 21:54:04 2014] Chaney: need coins?","[Fri Jul  4 21:54:28 2014] Maul: nope","[Fri Jul  4 21:55:32 2014] Chaney: ok i'm going to get ready and go to bed.","[Fri Jul  4 21:55:40 2014] Chaney: watch some tv relax my back","[Fri Jul  4 21:55:58 2014] Maul: Im going to sleep call you when I have him","[Fri Jul  4 21:55:58 2014] Chaney: do you want to face time? or do you want to go to bed?","[Fri Jul  4 21:56:04 2014] Chaney: oh, ok!","[Fri Jul  4 21:56:12 2014] Chaney: I love you","[Fri Jul  4 21:56:24 2014] Maul: love u too","[Sat Jul  5 22:19:31 2014] Jace has joined the clan!",})
+leaders ({})
+join_type 0
+private_coffer 70000
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

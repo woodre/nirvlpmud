@@ -1,0 +1,14 @@
+A locally defined function can any number of arguments. 
+All uninitialized arguments will be set to zero. All basic
+types can be sent in the argument. A return value is sent with the
+'return' statement. All four types can be used in the return statement.
+The type of the function must not be declared.
+The type of the argument must not be declared. It is illegal to have a
+function with the same name as a global function, or local variable.
+The function is reentrant.
+
+function_name(argument_name {, argument_name}) {
+    statements;
+    ...
+    return value;
+}

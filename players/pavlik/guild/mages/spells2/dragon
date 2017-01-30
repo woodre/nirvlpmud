@@ -1,0 +1,33 @@
+/*
+ * Only command not in the dragon object itself:
+ * dragon summon - brings existing dragon to players location
+ */
+
+dragon_command(str){
+
+  object obj;
+
+  if(tp->query_level() > 20 && str == "new") {
+	write("You get a pet dragon.\n");
+	obj = clone_object("players/pavlik/guild/mages/obj/dragon");
+	move_object(obj, env);
+	obj->set_owner(rlname);
+	obj->configure_dragon();
+	return 1;
+  }
+
+  if(str == "summon") {
+	obj = find_living(tp->query_real_name()+"'s dragon");
+	if(!obj) {
+		write("You do not have a dragon!\n");
+		return 1;
+	}
+	write("You summon your dragon.\n");
+	obj->set_follow(1);
+	obj->reset_follow();
+	tp->add_spell_point(-10);
+	return 1;
+  }
+
+}
+

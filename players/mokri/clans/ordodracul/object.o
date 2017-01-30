@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;31mbloody[0m[1;30mclaws[0m[0m"
+long_desc "[1;30mA pair of[0m [1;31mbloody[0m[1;30mclaws[0m[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "claws"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[1;30mA pair of[0m [1;31mbloody[0m[1;30mclaws[0m[0mType 'clan_help' for commands."
+clan_short "[1;31mbloody[0m[1;30mclaws[0m[0m"
+damage_type "physical"
+hall_path "/players/eurale/VAMPIRES/RMS/vgent"
+object_name "claws"
+owner "saphira"
+spell_alias "claw"
+spell_mess_me "You grow your %hi red%claws%normal% and tear into %AKN% leaving a trail of %red%blood%normal%."
+spell_mess_room "%TPN% grows %hi red%claws%normal% and tears into %AKN% leaving a trail of %red%blood%normal%."
+spell_mess_them "%TPN% grows %TP_POS% %hi red%claws%normal% and tears into you leaving a trail of %red%blood%normal%."
+abilities ({})
+chan_history ({"[Fri Sep  5 13:48:10 2008] Guest has joined the clan!","[Fri Sep  5 13:49:52 2008] Guest: blah","[Fri Sep  5 13:53:10 2008] Guest: c_chat blah","[Fri Sep  5 13:53:14 2008] Guest: c_chat history","[Fri Sep  5 13:53:18 2008] Guest blahs","[Fri Sep  5 13:53:26 2008] Saphira: hi","[Fri Sep  5 13:53:32 2008] Guest: howdy","[Fri Sep  5 13:53:46 2008] Saphira: ok got it","[Fri Sep  5 13:53:58 2008] Saphira: had to make alias for it lol","[Fri Sep  5 13:54:48 2008] Saphira: so what is the critter room for","[Fri Sep  5 14:23:36 2008] Saphira: setting my room shorts","[Fri Sep  5 14:23:52 2008] Saphira: I like being able to use colors","[Mon Sep  8 00:04:04 2008] Gargoyle has joined the clan!","[Mon Sep  8 00:07:16 2008] Saphira has promoted Gargoyle to a clan leader!","[Sun Sep  6 14:14:51 2009] Shadows has joined the clan!",})
+leaders ({"gargoyle",})
+join_type 1
+private_coffer 1495724
+public_coffer 0
+spell_delay 1
+spell_id 1
+spell_cost 15
+last_spell_time 1252809293

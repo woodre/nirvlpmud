@@ -1,0 +1,25 @@
+************
+
+		     Echoto
+
+Syntax:	   echoto <target> <msg>
+
+Desc:
+           This is an echo that is displayed to environment of target
+           player. Function is much the same as a regular echo and 
+           all players in the same environment will see the message.
+           Available lvl 40.
+
+Warning:   Easy to mess with players from workroom with this ability.
+           Don't harass or spam users.
+
+Example:   echoto bob Fire dances around your feet.
+                  displays
+           "Fire dances around your feet."
+                  to everyone in the room with Bob.
+
+Related:
+	   echo,echoall,echochan
+
+************
+

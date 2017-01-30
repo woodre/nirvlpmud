@@ -1,0 +1,38 @@
+**************
+
+
+                     Grep
+
+Syntax:    grep <pattern> <filename>
+
+Desc:      This command allows you to search a file for a pattern.  You can
+           also use wildcards in the pattern.  The following wildcards are
+           supported:
+           .       Match any character.
+           ^       Match begin of line.
+           $       Match end of line.
+           \<      Match begin of word.
+           \>      Match end of word.
+           [..]    Match one of the characters enclosed.
+           [^ ..]  Match none of the characters enclosed. The .. are to
+                     replaced by single characters or character ranges:
+           [abc]   matches a, b or c.
+           [ab0-9] Matches a, b or any digit.
+           [^a-z]  Does not match any lowercase character.
+           \c      match char c even if it's a special character.
+
+Warning:   Using grep on overly large files (huge log files, player.c etc) 
+           will not work.  It also will return non-existant file messages on
+           files that user can't read due to wizard level and access.
+
+Example:   grep 100 /WIZARDS (searches for 100, in /WIZARDS)
+           grep .ragnar /WIZARDS (searches for anything with 'ragnar')
+           grep BOZO* defs.h  (Searches defs.h in pwd for anything beginning
+                with BOZO)
+
+Related:   
+
+
+**************
+->> 
+     

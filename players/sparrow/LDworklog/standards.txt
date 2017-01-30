@@ -1,0 +1,127 @@
+Nirvana LPMUD Code Standards
+
+08/08/06 Earwax
+
+This is the official standards guide for code on Nirvana.  All code must
+conform to these standards if it's to be approvable.
+
+The idea behind following code conventions is that it makes the code more
+readable - which makes it easier to debug, both by the coder and by others.
+With poor code practices, the debugger must spend time figuring out exactly
+what even simple blocks of code do.  Solid code formatting also tends to make
+the code better - writing bad code can conceal simple errors, and the
+discipline inherent in following the conventions also assists in the process
+of designing and writing clean code.
+
+The following are the conventions to be used here.
+
+All files except for very simple rooms and other objects will start with a
+header.  This header will contain, at the least, the filename, a brief
+description of what the file does, the copyright information, and change
+information.  See /doc/build/headers for the preferred (but not mandatory)
+version.  All but the simplest functions will also have a header;  a sample
+function header is also to be found in that file.
+
+All object files (monsters, rooms, items) will have as the first line:
+#include "/sys/lib.h"
+This is the standard definitions file for code.  It contains the definitions
+for ansi color and the lib inherits, among other things.  You may also include
+your own definitions, but they must not conflict with lib.h, nor may they 
+contain code at all.  What should be in a definitions file is the
+paths for everything in the file.  Ie, a mon, obj, room path, etc.
+Nowhere should there be any paths that aren't defined in a definition
+file, as a matter of fact.  The reason for this is that it makes 
+moving files around much easier, and it's simpler to read.
+
+This brings up the next subject:  Including code (via the #include preprocessor
+directive) is never to happen.  There are a number of reasons for this, the
+biggest being that it makes debugging extremely difficult.  This is not open
+for debate, simply don't do it.  By 'code' I mean having functions declared in
+an included file and macros such as #define TP this_player().  Those are 
+completely unacceptable for code, for many reasons.  This is not an arbitrary
+or minor issue, if you wish more information about it approach an elder, but be
+aware that there are to be no exceptions to this policy whatsoever, for code 
+going into the game.  
+
+Next, you'll likely need to inherit a file.  In /sys/lib.h are the 
+abbreviations for the various inherits.  There is to be no such thing as a core
+object type (room/item/monster) that doesn't inherit a main lib object.  This
+includes heals, bags, basically everything, except of course for daemons, 
+guild objects (for now) and things of that nature.  If you wish to create your
+own inherit for one of these types, it must inherit and be fully compatible
+with the lib version.  There are also many reasons for this, see an elder for
+more information, of course.
+
+All code should be within 80 columns.  Some exceptions can occur, but in
+general, it should always be within 80 columns wide.
+
+Global variables, if any, will be given next.  Global variables and prototype
+declarations (if you don't know what prototype declarations are, don't worry
+about this yet) should each be preceded by an appropriate header: a simple
+/* Prototype Declarations */ or /* Global Variables */ will suffice.  Global
+variables (indeed, all variables other than simple loop, counter variables)
+should have appropriate names, so there is no confusion as to what they refer
+to.  More on variable names later.
+
+All functions will be declared fully, starting in the leftmost column.  What
+fully declaring functions means, is that the return type of the function is 
+given, as well as the variable types of all arguments it receives.  In other
+words, reset(x) is not acceptable.  The correct function declaration is
+void reset(status arg).  Reset does not return a value, and it is passed the
+status variable (status variable is an int that is either 0 or 1) by the
+driver.  Sometimes it may take a little delving to find out what types to use,
+but like everything else so far, this is non-negotiable, and for many reasons.
+The code within a block will be indented a consistent number of spaces.  The
+following are the recommended methods:  the first level of indentation may be
+two, four, or five spaces, further indentions are to be two.  My personal 
+preference is for all indentation to be by two spaces.
+
+The opening curly brace for a block of code may be either on the line of the
+code after which the block begins, or on its own line.  The ending brace will
+be in the same column as the first letter of the line of code before the
+beginning of the block.  All code in between the braces will be indented.
+
+  for (i = 0; i < siz; i++) {
+    do this code here;
+    remember to indent.
+  }
+  
+  for (i = 0; i < siz; i++)
+  {
+    do this code here;
+  }
+  
+There will be a blank line before every statement that causes an indent level
+and a blank line after every ending brace }.  All commas will have a space
+after them, and all operators (symbols such as +, -, +=) will have a space
+before and after.  If a loop or conditional statement has no body, put the
+ending ; on its own line, indented of course:
+
+  while(remove_call_out("pick_random_player") != -1)
+    ;
+    
+This makes the code more readable and makes catching mistakes to be easier.
+
+Finally:  variable names, function names, and definition names.  
+
+All defines are to be uppercase, so they are readily identifiable as such.  In
+other words, anything declared with #define will be in all capital letters.
+#define MAX_DAMAGE 30 /* For example */
+
+All variables and function names will have appropriate, meaningful names.  The
+convention on Nirvana is to use lowercase names, with individual words 
+separated by underscores.  My personal convention is to capitalize the first
+letter of each word of a global variable to distinguish them from local
+variables.  This is something I'd prefer to see, but not required.  Other than
+global variables however, no other variables are to have capitals in them.
+Function names will have each word in them separated by an underscore.
+
+A final note on commenting:  it's much preferred that any statements that might
+lead to confusion have a line or two of documentation before them.  Anywhere 
+that an explanation would be helpful, it's advisable to document.  This is for
+the benefit of other coders, or in the case where one might have to go back and
+look at their code after an extended period of time.  
+
+All code on Nirvana will follow these conventions, or it will not go into the
+game.  Any questions should be directed to a senior (level 100 or above) or,
+preferably, an elder (level 1000 or greater).

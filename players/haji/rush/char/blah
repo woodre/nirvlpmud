@@ -1,0 +1,39 @@
+gives(str) {
+  string who,what,whom;
+  object obj, next_obj,dude;
+  int found;
+
+  if(sscanf(str,"%s gives %s to %s.\n",who,what,whom) != 3)
+    return;
+  if(whom != "Hitler")
+    return;
+  if(what == "diary") {
+    obj = first_inventory(hitler);
+    if(!call_other(obj,"id","diary")) {
+      notify("Hitler says: This isn't what I want!!!!.\n");
+      notify("Hitler gives "+what+" to "+who+".\n");
+      transfer(obj,find_living(lower_case(who)));
+      return;
+    }
+    if(call_other(obj,"query_value") != 47) {
+      notify("Hitler says: This isn't the right diary.\n");
+      notify("Hitler says: You shoudn't try to fool me "+who+".\n");
+      destruct(obj);
+      return;
+    }
+    notify("Hitler says: Well done you have brought me the diary.\n");
+    notify("Hitler says: You may now continue on with the quest.\n");
+    notify("Hitler signs the diary and drops it.\n");
+destruct(obj);
+    dude=clone_object("players/haji/quest/diarysub");
+    say("pick up the diary so you may continue your quest.\n");
+    write("pick up the diary so you may proceed.\n");
+    move_object(dude,this_object());
+    return 1;
+   }
+}
+
+notify(str) {
+   write(str);
+   say(str);
+}

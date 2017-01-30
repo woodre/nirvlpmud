@@ -1,0 +1,13 @@
+-=[ Login Commands ]=-
+
+Mages have the unique ability to put themselves right into action as
+soon as they enter the game.  Mages can define a set of Login Commands
+that are executed as soon as you login.
+You can have up to 5 commands in your login string
+
+- Use 'lcmds <commands>' to set up your commands
+- Use 'lcmds?' to see what commands you have set
+- Use 'lcmds none' to clear all login commands.
+
+Example:
+  lcmds gt Here I am!,gw,gm pavlik,bow pavlik

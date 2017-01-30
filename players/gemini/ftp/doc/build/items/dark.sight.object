@@ -1,0 +1,6 @@
+Vertebraker [8.2.2001]
+
+You can now make objects to help ppl see in the dark, pretty simple.
+Simply add an id to the object of "dark_sight_object".  This will
+save memory on shadows and so forth, and will make small items
+more plausible.

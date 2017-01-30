@@ -1,0 +1,68 @@
+int val;
+query_val() { return val;}
+query_save_flag() {return 1;}
+set_val(x) {
+   val = x;
+   }
+id(str) {
+    if (str == "check" ) return 1;
+    return 0;
+   }
+short() {
+   return "A welfare check";
+  }
+long() {
+   write("A welfare check for ");
+   write(val);
+    write(" dollars funded by taxpayer money.\n");
+   write("To cash this check, you need to go to the welfare offices,\n");
+   write("located in New York,Washington D.C., Texas, and the Naval base.\n");
+}
+query_weight() {
+return 1;
+}
+get() {
+return 1;
+}
+init() {
+/*
+object this,that;
+int y1,x1,z1;
+    this=(present("check",environment(this_object())));
+      if(this!=0) {
+      y1=call_other(this,"query_val",0);
+      z1=query_val();
+      x1=z1+y1;
+      set_val(x1);
+      destruct(this);
+}
+*/
+}
+reset(arg){
+    if (arg)
+       return;
+    val = 1;
+}
+check() 
+{
+    object item_o,person_o;
+    string thing;
+      int x1;
+   person_o=this_player();
+  item_o=first_inventory(person_o);
+  while(item_o)
+    {
+      object next;
+      sscanf(item_o,"%s",thing);
+      if(thing=="check") {
+       x1=call_other(item_o,"query_val",0);
+       val=val+x1;
+      next=next_inventory(person_o);
+          destruct(item_o);
+      }
+      next=next_inventory(item_o);
+
+      item_o=next;
+    }
+}
+

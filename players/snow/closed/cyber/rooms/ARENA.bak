@@ -1,0 +1,75 @@
+inherit "room/room";
+#define TR tell_room
+#define TP this_player()
+
+init() { 
+
+  if(TP->query_ghost()) {
+    if(!present("either object",TP)) {
+      TP->quit();
+    }
+    command("followoff",TP);
+    move_object(this_player(),"/room/church");
+    command("look",TP);
+  }
+  add_action("revive","revive"); 
+  add_action("leave_arena","leave");
+  TP->set_fight_area();
+  ::init();
+  }
+
+reset(arg){
+
+if(!present("__statue__")) {
+   move_object(clone_object
+   ("/players/snow/closed/cyber/rooms/arenamon.c"),
+   this_object());}
+
+ if(!arg){
+ set_light(1);
+ short_desc="The CyberNinja Arena";
+ long_desc=
+"     You are in a large metallic dome.  At one end rests the giant\n"+
+"statue of a kneeling ninja.  Its head reaches to the ceiling.\n"+
+"A wide flat field stretches for hundreds of yards all around you.\n"+
+"Overhead, a reader board hovers in mid-air.\n";
+
+items=({
+ "statue", "The black statue is a huge replica of an ancient ninja warrior",
+ "field","The field is of a hard synthetic surface",
+ "board","You read the digital display:\n"+
+"If you die, type 'revive' to come back to life. If you wish to leave\n"+
+"the CyberNinja Arena, type 'leave' to return to the arenalounge",
+ "dome","Neon lights suspend from the metal dome ceiling",
+ });
+
+  dest_dir=({
+      });
+
+ }
+}
+
+revive() {
+  if(this_player()->query_ghost()) {
+    this_player()->remove_ghost();
+    write("Your systems draw from backup power supplies.\n");
+    write("Your body quivers with life again.\n");
+  }
+  return 1; 
+}
+
+leave_arena() {
+  if(TP->query_attack()) {
+    write("You cannot leave while fighting.\n"); return 1; }
+  this_player()->rm_spar();
+  write("You remove the sparring mark and leave the arena.\n");
+  move_object(TP,"/players/snow/closed/cyber/rooms/arenalounge.c");
+  command("look",TP);
+  return 1;
+}
+
+realm() { return "NT"; }
+
+int is_cyberninja_arena() { return 1; }
+query_spar_area() { return 1; }
+feel() { return "no"; }

@@ -1,0 +1,34 @@
+
+inherit "room/room";
+
+reset(arg){
+
+if(!present("butler"))  {
+move_object(clone_object("/players/traff/mon/butler.c"),this_object());  }
+while(!present("minion 6"))  {
+move_object(clone_object("/players/traff/mon/minion.c"),this_object());  }
+
+ if(!arg){
+
+ set_light(1);
+ short_desc="Keep Entry";
+ long_desc=
+("This is the entrance hall of Delnoch Keep.  There are a few chairs\n"+
+"here for the use of waiting guests.  The large windows are covered\n"+
+"with thick velvet drapes.  To the east and west are the main wings\n"+
+"of the keep, however they appear to be blocked off for the moment,\n"+
+"as if for remodeling.  To the north is an open courtyard.\n");
+
+items=({
+"floor","The floor is polished marble from the nearby mountains",
+"chairs","Finely crafted chairs, the wood is polished and the upholstery plush",
+"drapes","Golden velvet trimmed in brown.  They look expensive",
+"windows","Large windows, you notice heavy wooden shutters that can be barred",
+ });
+
+  dest_dir=({
+"/players/traff/room/courtyd.c","north",
+"/players/traff/room/dmain.c","south",
+      });
+  }   }
+

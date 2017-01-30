@@ -1,0 +1,15 @@
+subject "Yamato coins"
+new_mess "The wealth of the Yamato Clan is meant to make the Yamato clan stronger.  The coins are first and foremost for PK.  The coins can aide in the personal rooms for clan members and lockers.  Ask a clanleader to make you a room and lockers if you don't have one.  Generic rooms cost 50k and lockers are 250k.  Any other requests for the coins are to be asked directly to a Yamato leader.  If you have extra coins and wish to donate to the might of the Yamato clan, then the command to store coins is public_coffer deposit <amountValen, Emperor"
+messages ({"valen%DATA_BREAK%1182802272%DATA_BREAK%Ancient Tablet%DATA_BREAK%Every Yamato clan member must read the Ancient tablet.  The tablet is west and north form the entrance from the clan hall.  If you didn't know how to get to the hall it's 7e, 9n,6w,n,enter,enter_clan_hall.  The clan spell is 'center' and can only be used every 10 seconds and cost 75 sps to use.  If you cannot follow the creed of the Yamato Clan.  Then leave.  If you want a room with personal lockers, then mudmail a Yamato leader or myself.  I will not tolerate any smack talking over public channels and no killing mudkids/pets.Valen, Emperor","valen%DATA_BREAK%1182827419%DATA_BREAK%Yamato coins%DATA_BREAK%The wealth of the Yamato Clan is meant to make the Yamato clan stronger.  The coins are first and foremost for PK.  The coins can aide in the personal rooms for clan members and lockers.  Ask a clanleader to make you a room and lockers if you don't have one.  Generic rooms cost 50k and lockers are 250k.  Any other requests for the coins are to be asked directly to a Yamato leader.  If you have extra coins and wish to donate to the might of the Yamato clan, then the command to store coins is public_coffer deposit <amountValen, Emperor",})
+no_clean 0
+short_desc 0
+long_desc "There is no clan_board_obj here."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_board_obj"
+alias_name 0
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})

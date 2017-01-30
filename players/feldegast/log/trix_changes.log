@@ -1,0 +1,33 @@
+This is a list of changes done to Trix's area:
+I removed a few lines from the menu on Trix's vending machine because one of the items was no longer being sold(flirter) and the other was redundant(emoter).
+t/closed/obj/button.c is an autoloading button that produces roses.
+t/closed/obj/lamby.c is basicly an autoloading emoter.
+t/closed/obj/necklace.c is a backdoor to Trix's workroom for a player who no longer exists.
+The flirter is now part of the mudlib...So it doesn't need to autoload either.
+I completely redid t/castle/town/monst/comb.c
+It WAS a blank object with short() and Long() done, but I made it into a treasure item, added weight, and fixed a typo.
+Otherwise, the same.
+I took out about half of the slaughter rooms in front of the EclYpsE since I didn't see any point to them.
+I had to fix a few mapping problems after my first review of the quest.
+When Eurale went over it, he moved some stuff around and forgot to check all of the joints.
+The first problem had to do with the room leading to Ox and the wooden case.
+Before I changed it, there were two ways to get there.
+The first, and original method was to go through 1 of 2 corridors leading there.
+The second, which Eurale implemented was to simply go south from the graffiti room.
+Since the original method seemed to fit better with the room structure, I simply changed the exit to Eurale's version of the graffiti room to Trix's version of the graffiti room.
+Another possible solution would be to remove the passageway leading to the two corridors and leaving Eurale's change as is.
+But I don't think I should leave all those guards there for players to fight for nothing.
+The other snafu involved two corridors from the same intersection.  One leads to a very hostile orc, the other leads to the end of the quest.
+The idol statue room led back to the wrong corridor and I fixed it.
+Some other quest changes: I added 'grate' and 'grating' to the possible words you can use when searching the grating.
+When I did it, using the word 'grid' made no sense to me.
+Players can also use 'put amulet in hole' instead of 'put amulet into hole'.
+That's for the brass hatch.
+I hate syntax puzzles so I see no reason to encourage them.
+I moved the realm entrance from room/townh to room/forest6.
+My reason for this was that I wanted to reduce clutter around the
+village, as well as the fact that it was a silly place to put
+a castle.
+While it might make it harder for players to get there, I
+think having a castle right next the church was an unfair
+advantage which has now been rectified.

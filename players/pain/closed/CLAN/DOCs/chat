@@ -1,0 +1,13 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|     usage: chat <message>                         |
+|                                                   |
+|     The chat command sends the specified message  |
+|     to all Clan members not muffled.              |
+|                                                   |
+|     example:     chat hello all                   |
+|         would return: [Clan] Pain: hello all      |
+|     see also: chate, cmuff                        |
+|                                                   |
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+

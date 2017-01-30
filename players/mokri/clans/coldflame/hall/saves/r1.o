@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/coldflame/hall/main","up","/players/mokri/clans/coldflame/hall/r2","down",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[30m[1mBroadSword of [1;33mHeroes[0m","/players/jaraxle/3rd/alt/items/hero_sword",0,1,1,"The Blade of the Fallen","/players/zeus/realm/OBJ/fallen_blade",0,0,0,"[1;35mSoul[30mthief[0m","/players/feldegast/wep/soulthief",0,20,7,"[1m[31mPentacle [0m[1mof [30mDefense[0m","/players/fred/forest/Obj/pentacle",0,0,0,"[1mSoulEater[0m","/players/snow/WEAPONS/souleater",0,0,0,"The Blade of the Fallen","/players/zeus/realm/OBJ/fallen_blade",0,32,10,"[31mXetra Claws[0m","/players/llew/closed/crystal/xetra_claws",0,0,0,"The Broadsword of Balance","/players/snow/WEAPONS/balance",0,0,0,"[1mSoulEater[0m","/players/snow/WEAPONS/souleater",0,0,0,"Element of [34mAIR[0m","/players/mythos/awep/forest/air",0,0,0,})

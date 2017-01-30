@@ -1,0 +1,18 @@
+/* 07/04/06 Earwax: Changed max weight from 100k to 250, will lower
+ * further, but don't want to get too nasty right away.
+ */
+
+ inherit "obj/container.c";
+ reset(arg) {
+  ::reset(arg); /* changed from reset() */
+    if (arg) return;
+    set_name("bag");
+    set_short("A bag of holding");
+    set_long("A magical bag of holding.\n");
+    set_weight(1);
+    set_value(250);
+/* fucking earwax.  up to 1000.  - ill Aug 2011 */
+    set_max_weight(1000);
+}
+
+query_save_flag() { return 1; }

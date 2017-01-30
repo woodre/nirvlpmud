@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1;37mVial [0mof [1;33mSand[0m"
+long_desc "qqq[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "sand"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "qqq[0mType 'clan_help' for commands."
+clan_short "A [1;37mVial [0mof [1;33mSand[0m"
+damage_type "poison"
+hall_path "/players/zeus/desert/r/ec1"
+object_name "sand"
+owner "theseius"
+spell_alias "sands"
+spell_mess_me "You raise your hands to the%hi yellow%sky%normal%and summon a fierce %yellow%SANDSTORM%normal% upon %AKN%"
+spell_mess_room "%TPN% raises his hands to the%hi yellow%sky%normal%and summon a fierce %yellow%SANDSTORM%normal% upon his%hi red%FOE"
+spell_mess_them "%TPN% summons a fierce %yellow%SANDSTORM%normal% upon %hi red%YOU"
+abilities ({})
+chan_history ({"[Tue Jan 12 00:45:48 2010] Theseius: and use them on a day i will be on all day long and get good use out of it lol","[Tue Jan 12 00:45:54 2010] Fastkill: nod","[Tue Jan 12 00:46:24 2010] Theseius: cause the real good ones always tend to break on your first time using them lol","[Wed Jul 14 02:06:04 2010] Theseius: sup man","[Wed Jul 14 02:06:06 2010] Fastkill: not muchj","[Wed Jul 14 02:06:14 2010] Fastkill: bah i dont got my axe lol","[Wed Jul 14 02:06:44 2010] Theseius: lol","[Wed Jul 14 02:06:46 2010] Fastkill: i chose a new weapon...that chance and Someone else who i dont remember who, has, and ya cant get it no more...and i forgot to get it to level 8, so i cant forge","[Wed Jul 14 02:07:02 2010] Fastkill: lol","[Wed Jul 14 02:07:04 2010] Theseius: damn","[Wed Jul 14 02:07:26 2010] Theseius: i use blackdeath","[Wed Jul 14 02:08:06 2010] Fastkill nod","[Wed Jul 14 02:08:32 2010] Fastkill: it is nice, but im not gonna PK yet...and i Do think it is prolly just about best thing untill u get +35...","[Wed Jul 14 02:08:44 2010] Fastkill: then Finely Honed is best...","[Wed Jul 14 02:08:56 2010] Theseius: well i am outta here i am going to log in another character","[Wed Jul 14 02:09:14 2010] Theseius: my bh is fine for now","[Tue Jan  4 03:30:06 2011] Fastkill: heh","[Tue Jan  4 03:31:14 2011] Fastkill: who all is in clan, is gear safe in lockers?","[Tue Jan  4 03:31:34 2011] Fastkill: nod","[Tue Jan  4 03:31:58 2011] Theseius: so it safe lol",})
+leaders ({"fastkill",})
+join_type 0
+private_coffer 58566
+public_coffer 0
+spell_delay 5
+spell_id 1
+spell_cost 45
+last_spell_time 1396385637

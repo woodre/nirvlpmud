@@ -1,0 +1,85 @@
+/*
+ * Why was this made? Kezef.
+ * 
+ *
+ */
+/* Commented this thing out - what the fuck - Earwax 11/15/05
+
+string victim_name;
+object victim;
+object monster;
+int count;
+int monster_wc;
+
+id(str) { return str == "shot"; }
+
+short() { return "A cheap shot"; }
+
+init()
+{
+    add_action("on_cheapshot","cheapshot");
+}
+
+on_cheapshot(arg) 
+{
+    if(!arg) return 0;
+    
+    victim_name = arg;
+    write("Okay, setting cheap shot for target named '" + victim_name + "'.\n");
+    return 1;
+}
+
+reset(arg)
+{
+    if(arg) return;
+
+   victim_name = "noirceur";
+    remove_call_out("fake_beat");
+    call_out("fake_beat", 1);
+
+}
+
+fake_beat()
+{
+    object ob;
+    object att;
+
+    if(count > 0)
+        count --;
+    if(count == 1)
+    {
+        say("Restoring monster's WC...\n");
+        if(monster)
+        {
+            monster->set_wc(monster_wc);
+        }
+    }
+
+    if(victim_name)
+    {
+        ob = find_player(victim_name);
+
+        if(ob && ob->query_attack())
+        {
+            att = ob->query_attack();
+            say(ob->query_name() + " (" + ob->query_hp() + "HP) fighting " + att->short() + ".\n");
+
+            if(ob->query_hp() < (ob->query_mhp() / 2) && count == 0)
+            {
+                say("Cheapshot engaged...\n");
+                /* temporarily change the attacker's WC to be ridiculous */
+                monster_wc = att->query_wc();
+                monster = att;
+                count = 5;
+                att->set_wc(5000 + random(50));
+
+            }
+            
+        }
+    
+    }
+
+    remove_call_out("fake_beat");
+    call_out("fake_beat", 1);
+}
+*/

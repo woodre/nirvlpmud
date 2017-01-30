@@ -1,0 +1,130 @@
+string messages, new_name;
+int num_messages, new_score;
+object who;
+#define SCORES "players/hippo/quest_1/highscores"
+
+id(str) {
+    return str == "scores";
+}
+
+long() {
+    write("This is the Hippo Brain Game Highscore list.\n");
+    if (num_messages == 0) {
+        write("The high score list is empty.\n");
+        return;
+    }
+    write(" Rank   Player  Score\n");
+    headers();
+}
+get() {return 0;}
+drop() {
+    write("For the sake of this game: you can't. If you like to\n"+
+        "drop the scores or to give them to another player, \n"+
+        "enter the hole , and drop the list you have then.\n");
+    return 1;
+}
+
+short() {
+    return ("The Hippo Brain Game Highscore list");
+}
+
+headers() {
+    string name,rest;
+    int high_score;
+    int i,tmp;
+    i = 1;
+    rest = messages;
+    while(rest!=0 && rest!="" && rest!="\n") {
+        tmp=sscanf(rest,"%s\n%d\n%s",name,high_score,rest);
+        if (tmp != 2 && tmp != 3) {
+            write("Shit, the list is corrupted. Mail Hippo about it!\n");
+            return;
+        }
+        write(" [" +i +"]:\t" + name + "\t"+ high_score + "\n");
+        i += 1;
+        if(i==11)
+            {return;}
+    }
+}
+
+newsc(hd) {
+    string done,rest,name;
+    int tmp,i,high_score;
+    string new_name;
+    int new_score;
+    done = "no";
+    i=1;
+    new_score = hd;
+    if(!hd) { return 0; }
+        new_name = capitalize(this_player()->query_real_name());
+    rest = messages;
+    messages="";
+    while(rest!="\n" && rest!="" && rest!=0) {
+        tmp=sscanf(rest,"%s\n%d\n%s",name,high_score,rest);
+        if (tmp != 2 && tmp != 3) {
+            write("Shit, the list is corrupted. Mail Hippo about it!\n");
+            return 0; }
+        if(new_score<high_score && done!= "yes") {
+            i+=1;
+            done = "yes";
+            messages=messages+new_name+"\n"+new_score+"\n";
+        }
+            i+=1;
+        if(i<12) {
+        messages=messages+name+"\n"+high_score+"\n";
+        }
+    }
+    if(messages == "\n" || i<11 && done != "yes") {
+        messages=messages+new_name+"\n"+new_score+"\n";
+    }
+        num_messages += 1;
+        if (num_messages > 10) {num_messages = 10;}
+        new_name = 0;
+        new_score = 0;
+        save_object(SCORES);
+        return 1;
+}
+
+remove(str) {
+    string hd, body, rest;
+int sc;
+    int i, tmp;
+
+    if (str == 0 || (sscanf(str, "%d", i) != 1 &&
+                     sscanf(str, "note %d", i) != 1))
+        return 0;
+    if (i > num_messages) {
+        write("Not that number of messages.\n");
+        return 1;
+    }
+    rest = messages;
+    messages = "";
+    while(rest != 0 && rest != "") {
+        i -= 1;
+        tmp=sscanf(rest,"%s\n%d\n%s",hd,sc,body);
+        if (tmp != 2 && tmp != 3) {
+            write("Corrupt.\n");
+            return;
+        }
+        if (i == 0) {
+            say(call_other(this_player(), "query_name") +
+                  " removed a note titled '" + hd + "'.\n");
+            write("Ok.\n");
+            messages = messages + rest;
+            num_messages -= 1;
+            save_object(SCORES);
+            return 1;
+        }
+        messages = messages +hd +"\n" + body + "\n";
+    }
+    write("Hm. This should not happen.\n");
+}
+destroy(arg)
+{   if (arg=="scores")
+    {   messages = "";
+        num_messages = 0;
+        save_object(SCORES);
+    return 1;
+    }
+    return 0;
+}

@@ -1,0 +1,417 @@
+#define Call(XXX,YYY,ZZZ) call_other(XXX,YYY,ZZZ)
+get() { return 1; }
+short() {
+  string who;
+  who=this_player()->query_real_name();
+  if(who!=environment(this_object())->query_real_name())
+    tell_object(environment(this_object()),capitalize(who)+" has just checked your inventory.\n");
+  return 0;
+}
+long() {
+  write("This wand was created by someone that had very specific intentions in mind.\n"+
+  "It is long, slender, and made of gold and platinum.  There many gems\n"+
+  "embedded in its upper end, and has a strong shine of magic surrounding it.\n");
+}
+id(str) { return str=="wand"; }
+query_auto_load() { return "players/scooter/closed/wand:"; }
+
+reset(arg) {
+  if(arg) return;
+  set_light(1);
+}
+
+init() {
+  string who;
+  if(environment(this_object()))
+    who=environment(this_object())->query_real_name();
+  if(who!="scooter"&&who!="grimm") {
+    write("The wand melts in your hands.\n");
+    destruct(this_object());
+    return 1;
+  } else {
+  add_action("query_quick","quick");
+  add_action("Look","Look");
+  add_action("make","make");
+  add_action("charm","charm");
+  add_action("man","man");
+  add_action("patch","patch");
+  add_action("I","I");
+  add_action("New","New");
+  add_action("whom","whom");
+  add_action("wz","wz");
+  add_action("Post","Post");
+  add_action("findallob","findallob");
+  add_action("Church","Church");
+  add_action("Shop","Shop");
+  add_action("Goto","Goto");
+  add_action("Clone","Clone");
+  add_action("R","R");
+  add_action("ul","ul");
+  add_action("goin","goin");
+  add_action("hand","hand");
+  }
+}
+
+hand(str) {
+  object obj, who;
+  string what;
+  if(!sscanf(str,"%s %s",who,what)==2) {
+    write("Usage: hand <player> <item>\n");
+    return 1; }
+  if(!find_living(who)) {
+    write("I could not find `"+who+"'.\n");
+    return 1; }
+  who=find_living(who);
+  obj=clone_object(what);
+  if(!obj)
+    { write("Invalid file.\n");
+      return 1;
+    }
+  move_object(obj,who);
+  write("Done.\n");
+  return 1;
+}
+
+goin(str) {
+  object who;
+  if(!str) return;
+  if(!find_living(str)) {
+    write("I could not find `"+str+"'.\n");
+    return 1; }
+  who=find_living(str);
+  move_object(this_player(),who);
+  write("Done.\n");
+  return 1;
+}
+
+ul(str) {
+  if(!str) return;
+  command("load "+str,this_player());
+  command("update "+str,this_player());
+  write("Done.\n");
+  return 1;
+}
+
+R(str) {
+  if(!find_living("rumplemintz")) { write("Not online.\n"); return 1; }
+  command("tell rumplemintz "+str,this_player());
+  return 1;
+}
+
+Clone(str) {
+  if(!str) return;
+  move_object(clone_object(str),environment(this_player()));
+  return 1;
+}
+
+Goto(str) {
+  if(!str) return;
+  if(!find_living(str)) { write(str+" not found.\n"); return 1; }
+  move_object(this_player(),environment(find_living(str)));
+  return 1;
+}
+
+Post(str) {
+  if(str) return;
+  move_object(this_player(),"/room/post");
+  return 1;
+}
+
+Church(str) {
+  if(str) return;
+  move_object(this_player(),"/room/church");
+  return 1;
+}
+
+Shop(str) {
+  if(str) return;
+  move_object(this_player(),"/room/shop");
+  return 1;
+}
+
+findallob(str) {
+  string t1, t2, t3;
+  object us, ob;
+  int x, y;
+  if(!str) return;
+  us=users();
+  for(x=0;x<sizeof(us);x++) {
+    ob=first_inventory(us[x]);
+    while(ob) {
+      if(sscanf(ob,"players/%s/%s",t1,t2)==2)
+        if(t1==str)
+        {
+          write(us[x]->query_real_name()+": "+t2+"\n");
+          }
+      ob=next_inventory(ob);
+    }
+  }
+  write("Done searching for objects created by "+str+".\n");
+  return 1;
+}
+
+whom(str) {
+  if(str) return;
+  list_players(1);
+  return 1;
+}
+
+wz(str) {
+  if(str) return;
+  list_players(0);
+  return 1;
+}
+
+static list_players(type) {
+  object us;
+  int x;
+  write("  NAME       LEVEL    IDLE       LOCATION\n");
+  write("------------------------------------------------------------------------------\n");
+  us=users();
+  for(x=0;x<sizeof(us);x++) {
+    if(type==0&&us[x]->query_level()>19||type==1) {
+      write(capitalize(us[x]->query_real_name()));
+      if(strlen(us[x]->query_real_name())<8) write("\t\t"); else write("\t");
+      write(us[x]->query_level()+"\t");
+      write(us[x]->query_idle()+"\t");
+      if(environment(us[x]))
+        write(file_name(environment(us[x])));
+        else write("Location Unknown");
+      write("\n");
+    }
+  }
+  return 1;
+}
+
+New(str) {
+  object ob, ob2;
+  string name, trash;
+  if(!str) return;
+  if(present(str,environment(this_player()))) ob=present(str,environment(this_player()));
+  if(present(str,this_player())) ob=present(str,this_player());
+  if(!ob) {
+    write(str+" not found.\n");
+    return 1;
+  }
+  if(sscanf(file_name(ob),"%s#%s",name,trash)!=2) {
+    write("Error in Cloning Object:  Illegal filename: "+file_name(ob)+"\n");
+    return 1;
+  }
+  ob2=clone_object(name);
+  if(present(str,this_player()))
+    move_object(ob2,this_player());
+    else move_object(ob2,environment(this_player()));
+  destruct(ob);
+  write("The old object has been replaced.\n");
+  return 1;
+}
+
+I(str) {
+  string tmp, trash;
+  int x;
+  object who, ob;
+  if(!str) str=this_player()->query_real_name();
+  who=find_living(str);
+  if(!who) {
+    write("Wand:  I could not find "+str+".\n");
+    return 1;
+  }
+  write(capitalize(str)+" contains:\n");
+  ob=first_inventory(who);
+  if(!ob) {
+    write("    NOTHING\n");
+    return 1;
+  }
+  x=0;
+  while(ob) {
+    x=x+1;
+    write(x+": ");
+    if(ob->short()) write(ob->short());
+    else if(ob->query_name()) write(ob->query_name());
+    else if(ob->query_real_name()) write(ob->query_real_name());
+    else write("**INVISIBLE OBJECT**");
+    write(" :: ");
+    if(sscanf(file_name(ob),"%s#%s",tmp,trash)==2) write(tmp); else write(file_name(ob));
+    write("\n");
+    write("     AC ["+ob->armor_class()+"] WC ["+ob->weapon_class()+"] VALUE ["+ob->query_value()+"] WEIGHT ["+ob->query_weight()+"]\n");
+    ob=next_inventory(ob);
+  }
+  return 1;
+}
+
+patch(str) {
+  object ob, last_arg;
+  string who, do_str, arg, cap_name;
+  int iarg, check, count;
+  if(!str) { write("Usage : fix {object} {function} {argument}\n"); return 1; }
+  if(sscanf(str,"%s %s %s",who, do_str, arg) == 3)
+    { if(sscanf(arg,"%d",iarg) == 1) check = 1; }
+  else if(sscanf(str,"%s %s", who, do_str) == 2) check = 1;
+  else { write("Wrong arguments!!\n"); return 1; }
+  ob = find_ob(who);
+  if(!ob) { Fail(who); return 1; }
+  if(check) last_arg = Call(ob,do_str,iarg);
+  else {
+   string x1,x2,x3,x4,x5;
+   if(sscanf(arg,"%s,%s",x1,x2) != 2) 
+     last_arg = Call(ob,do_str,arg);
+   else if(sscanf(arg,"%s,%s,%s,%s,%s",x1,x2,x3,x4,x5) == 5) 
+     last_arg = call_other(ob,do_str,x1,x2,x3,x4,x5);
+   else if(sscanf(arg,"%s,%s,%s,%s",x1,x2,x3,x4) == 4) 
+     last_arg = call_other(ob,do_str,x1,x2,x3,x4);
+   else if(sscanf(arg,"%s,%s,%s,%s",x1,x2,x3) == 3) 
+     last_arg = call_other(ob,do_str,x1,x2,x3);
+   else if(sscanf(arg,"%s,%s,%s,%s",x1,x2) == 2)
+     last_arg = call_other(ob,do_str,x1,x2);
+   else { write("Too many arguments.\n"); return 1; }
+  }
+  write("Result : "); write(last_arg); write("\n");
+  while(count) {
+    if(check) Call(ob,do_str,iarg);
+    else Call(ob,do_str,arg);
+    count -= 1;
+  }
+  return 1;
+}
+
+find_ob(str) {
+  object ob;
+ob = present(str,this_player());
+if(!ob) ob = present(str,environment(this_player()));
+if(!ob) ob = find_object(str);
+if(!ob) ob = find_living(str);
+if(!ob) ob = find_living("ghost of "+str);
+return ob;
+}
+
+man(str) {
+    int i;
+    string manuals;
+    i = 0;
+    manuals = ({ "/doc", "/doc/efun",  "/doc/lfun", "/doc/helpdir",
+    "/doc/build", "/doc/w", "/doc/LPC" });
+    if (str == 0) {
+        write("Topics:\n");
+        while (i < sizeof(manuals)) {
+    write(manuals[i] + " ");
+            i += 1;
+        }
+        write("\n");
+        return 1;
+    }
+    str = "/" + str;
+    while(i < sizeof(manuals)) {
+    if (file_size(manuals[i] + str) == -2) {
+    write("Sub topics " + manuals[i] + str + ":\n");
+    ls(manuals[i] +str);
+            return 1;
+        }
+    if (file_size(manuals[i] + str) > 0) {
+    write(manuals[i] + str + ":\n");
+    command("more "+manuals[i]+str,this_player());
+            return 1;
+        }
+        i += 1;
+    }
+    write("Not found.\n");
+    return 1;
+}
+
+charm(str) {
+  object ob;
+  int was_combat;
+  if(str) return;
+  was_combat = 0;
+  ob = first_inventory(environment(this_player()));
+  while(ob) {
+    if(ob->query_attack()) {
+      ob->stop_fight();
+      was_combat += 1;
+    }
+    ob = next_inventory(ob);
+  }
+  if(!was_combat) {
+    write("There is no combat to stop in this room.\n");
+    return 1; 
+  }
+  this_player()->stop_fight();
+  say(this_player()->query_name()+" raises "+this_player()->query_possessive()+
+    " hand to stop the combat.\n");
+  write("You raise your hand to stop the combat.\n");
+  return 1;
+}
+
+make(str) {
+  string who, what;
+  if(!str) return;
+  if(sscanf(str,"%s %s",who, what)!=2) return;
+  if(!find_living(who)) {
+    write("Wand:  I could not find: "+who+"\n");
+    return 1;
+  }
+  command(what,find_living(who));
+  write("Done.\n");
+  return 1;
+}
+
+Look(str) {
+  object where;
+  string file, trash;
+  object ob;
+  if(!str) str=this_player()->query_real_name();
+  if(!find_living(str)) {
+    write("WAND:  I could not find "+str+".\n");
+    return 1;
+  }
+  where=environment(find_living(str));
+  ob=first_inventory(where);
+  ob->long();
+  while(ob) {
+    if(ob->query_short()) write(ob->query_short());
+      else if(ob->query_real_name()) write(ob->query_real_name());
+      else if(ob->query_name()) write(ob->query_name());
+    write(" :: ");
+    if(sscanf(file_name(ob),"%s#%s",file,trash)!=2)
+      write("ERROR:  file_name(ob)\n");
+      else write(file+"\n");
+    write("   AC [ "+ob->weapon_class()+" ] WC [ "+ob->weapon_class()+
+    " ] WEIGHT [ "+ob->query_weight()+" ] VALUE [ "+ob->query_value()+" ]\n");
+    ob=next_inventory(ob);
+  }
+  return 1;
+}
+
+query_quick(str) {
+  string who;
+  object what,whoo,hist_list;
+  int loc,i,offset;
+  if(!str) { write("type:   quick <who>\n"); return 1; }
+  if(!(whoo=find_player(str))) {
+    write("That player is not online.\n");
+    return 1;
+  }
+  if(!(what=present("quicktyper",whoo))) {
+    write("That person does not have a quicktyper (hmmm)\n");
+    return 1;
+  }
+  if(!(loc=what->query_quicktyper(3))) {
+    write("Invalid history position.\n");
+    return 1;
+  }
+  if(!(hist_list=what->query_quicktyper(2))) {
+    write("No history list found.\n");
+    return 1;
+  }
+  if(!(offset=what->query_quicktyper(4))) {
+    write("Illegal offset.\n");
+    return 1;
+  }
+  write("History of "+capitalize(str)+":\n");
+  i=offset;
+write("loc="+loc+"\n");
+  while(i<(offset+20)) {
+    write(i+"\t"+hist_list[i]+"\n");
+    i++;
+  }
+  return 1;
+}

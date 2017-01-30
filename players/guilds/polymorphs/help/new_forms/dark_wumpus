@@ -1,0 +1,27 @@
+[GAMBLER] Level [6] 500 charges (random attributes, ++ or --)
+
+  The Gambler is a creature that gains or loses random attributes and
+  abilites once morphed. The gambler will be randomly able to cast magic,
+  wimpy from combat, have multiple limbs, or be able to gobble and spew
+  things that may be lying on the ground.
+  
+  It is rumored that sometimes the Gambler will hit jackpot and gain
+  a great amount of stat bonuses once in a while.
+
+  
+>>-------------------------------ABILITIES-------------------------------<<
+
+strap <weapon>   Wield a second weapon offhand.
+
+strap all        Same as above but cycles through inventory and straps
+                 weapons on a first-come, first-serve basis.
+
+unstrap <weapon> Remove a weapon wielded offhand.
+
+gobble <item>   Gobble up an item that is lying around in the room.
+                You dont really eat it or anything, it just winds up
+                inside you.
+
+spew <item>     Spit back out something that you gobbled earlier.
+
+

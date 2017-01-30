@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/shadows/stuff/cloak","/players/wren/Area/starbug/items/leaflets","/players/mythos/awep/ring","/players/scathe/armor/igarb","/players/puppy/s/eq/hammer","/players/morgar/say","/players/scathe/armor/bowboot","/players/angel/area/stargate/obj/staff","/players/pain/NEW/weap/mstar","/players/mythos/closed/guild/forest/misc/key_myrax","/players/mythos/aarmor/shell","/players/saber/armor/dshades","/obj/weapon","/players/ultramagnus/darkarmor","/players/saber/stuff/power","/players/pain/NEW/arm/hood","/obj/armor","/players/wren/Area/starbug/items/straw","/players/snow/closed/q/polar_hide","/players/mythos/marmor/shirt","/players/pain/NEW/weap/mace","/players/hippo/heals/dna_repair","/players/maledicta/cont/rdragon/sbracers","/obj/treasure","/players/emerson/obj/political",})
+shorts ({"A dusky cloak","a stack of leaflets","Silver Ring","Initiate's garb","A hammer","say with echo and quotes","Hard Boots","[1;36mSTAFF WEAPON[0m","Morningstar","Ebon Key","Tortoise Shell","[1mDark Shades[2;37;0m","Shark`s tooth","Dark Rider Chainmail","A power system","A Black Hooded Cloak","Robot Head","a long plastic straw","A polar bear hide","Shirt","A large iron mace","[32mdna repair string[0m","Bracers of Speed","A piece of corundum","A Black Book",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

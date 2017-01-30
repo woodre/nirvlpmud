@@ -1,0 +1,6 @@
+02/ 6/14 22:49: Marek       ((19+100/Knights Templar) 37(2/1)
+02/ 6/14 22:49: Marek       ((19+100/Knights Templar) 37(2/1)
+02/ 6/14 22:50: Marek       ((19+100/Knights Templar) 37(2/1)
+02/ 6/14 22:51: Marek       ((19+100/Knights Templar) 37(2/1)
+02/ 6/14 22:51: Marek       ((19+100/Knights Templar) 37(2/1)
+02/ 6/14 22:52: Marek       ((19+100/Knights Templar) 36(3/1)

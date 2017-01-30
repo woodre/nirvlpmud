@@ -1,0 +1,59 @@
+/* This sword is found on Goro in Mortal Kombat. The only way to get it is to go
+   through the entire mortal kombat arena monsters. Has an 8% chance of
+   heal_self(random(12)) and this takes away 5-50 coins from the player. Since
+   it is not a controlled heal and the weapon is hard to get, I like it -Snow 5/30/98 */
+/* Also made it non-save -Snow */
+
+inherit "obj/weapon";
+#define user environment()
+
+void
+reset(int arg) {
+    ::reset(arg);
+    if (arg) return;
+    set_name("sword");
+    set_short("Sword of Angels");
+    set_long(
+"This is the sword you recieved for fighting the warriors on the\n" +
+"island of darkness.  With your victory you gained great power with\n" +
+"the angels.  They will protect your soul now.\n");
+    set_class(17);
+    set_weight(4);
+    set_value(20000);
+     set_save_flag(0);
+    set_hit_func(this_object());
+    set_wield_func(this_object());
+}
+
+mixed
+weapon_hit(object attacker) {
+int amount;
+    if (random(1000) > 920 && ((int) user->query_money() > 1000)) {
+	tell_object(user,
+"\nA circle of 13 angels decend from the heavens.  Each one turns and\n" +
+"touches your sword.  As they ascend back into the sky your wounds\n" +
+"are surrounded by a white light and you feel stronger.\n\n");
+	user->heal_self(random(12));
+	user->add_money(-5-random(10));
+    }
+    if (random (100) < 30) {
+	write("The angels sing as you slice " + attacker->query_name() + ".\n");
+	say("Angels sing as " + this_player()->query_name() + " uses the power of his sword.\n");
+	return(3 + random(6));
+    }
+}
+
+/*
+ * this is a bit shitty..
+ * the command wield is done by a function named wield
+ * that function call_others to "wield" in the wield_func object
+ */
+mixed
+wield(mixed x)
+{
+    if (objectp(x)) {
+	write("You feel the power of the angels watching over you.\n");
+	return 1;
+    }
+    else return ::wield(x);
+}

@@ -1,0 +1,45 @@
+/* Version 1.0 of the Bone Marketeer Status listing, taken from the
+   old necromancer score      -Dar  */
+
+market_score() {
+
+int g_level, glevel;
+int min_xp, c_xp, extra_xp, need_xp;
+int c_val, need_val, amount, amount2;
+string dmsg;
+object ob;
+
+ob = present("market_ob",this_player());
+
+write(tp->short()+"\n");
+write("Race: "+tp->query_race()+"\n");
+write(pad("Level: "+tp->query_level(), 25));
+write("Extra Level: "+tp->query_extra_level()+"\n");
+write(pad("Coins: "+tp->query_money(), 25));
+write("Experience: "+tp->query_exp()+"\n");
+write(pad("Hit Points: "+tp->query_hp()+"/"+
+    tp->query_mhp(), 25));
+write("Spell Points: "+tp->query_sp()+"/"+
+    tp->query_msp()+"\n");
+write("Quest Points: "+tp->query_quest_point()+"\n");
+tp->show_age();
+write("\n");
+write(pad("Str: "+tp->query_attrib("str"), 15));
+write(pad("Wil: "+tp->query_attrib("wil"), 15));
+write("Ste: "+tp->query_attrib("ste")+"\n");
+write(pad("Mag: "+tp->query_attrib("mag"), 15));
+write(pad("Int: "+tp->query_attrib("int"), 15));
+write("Luc: "+tp->query_attrib("luc")+"\n");
+write(pad("Sta: "+tp->query_attrib("sta"), 15));
+write("Pie: "+tp->query_attrib("pie")+"\n\n");
+
+write(WHT+"<----------------------------------------------->"+NORM+"\n");
+write("          "+HIR+"Bone Market Status"+NORM+"\n");
+write(WHT+"<----------------------------------------------->"+NORM+"\n");
+write("Career Market Credits:  "+HIW+ob->query_total()+NORM+"\n");
+write("Current Market Credits: "+HIW+ob->query_current()+NORM+"\n");
+write("\nBiggest Career Kill:    "+HIW+ob->query_bigkill()+NORM+" exp\n");
+write(WHT+"<----------------------------------------------->"+NORM+"\n");
+return 1; 
+}
+

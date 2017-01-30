@@ -1,0 +1,258 @@
+/* *************************************************************************
+ * /players/earwax/closed/TRACKER/daemons/pkd
+ *
+ * PK Tracker Daemon
+ *
+ * Earwax 7/29/03
+ *
+ * *************************************************************************
+ *
+ * Pk tracker daemon.  This is called by the tracker objects when a kill is
+ * made.  Logs the information to the kills files, deaths files, and sends
+ * the information to the killer/corpse tracker objects.  Will provide for
+ * fairly comprehensive statistical information later on.
+ *
+ * Plans:
+ * - Statistics on weapons most used.
+ * - Statistics on weapons used by killers.
+ * - Statistics onf most killed guilds.
+ * - Statistics on most prolific guilds for pk'ing.
+ * - Statistics on gangbangs.
+ * - Gangbang statistics broken up by guild.
+ * - Gangbang statistics broken up by player.  Ie, which players die most
+ *   to gangbangs, which players kill most often in gangbangs.
+ * - Solo statistics: Top solo killers.
+ * - Toplists: Most kills, most deaths, most points, highest kills/deaths
+ *             highest points/kill, highest points/death
+ * - To actually finish all of the above.  Those are longer term plans,
+ *   and things that I won't focus on until my other projects (Shards
+ *   reopening, my area, this tracker, Assassins guild) have been finished.
+ *
+ * *************************************************************************
+*/
+
+#include "../defs.h"
+
+inherit WAXFUNS;
+
+/* Prototype Declarations */
+void find_weapon(object who);
+
+/* *************************************************************************
+ * reset
+ *
+*/
+
+void
+reset(status arg)
+{
+  if (arg)
+    return;
+
+  return;
+}
+
+/* *************************************************************************
+ * find_weapon
+ *
+ * Just a little statistical thing, tracking weapons used in pk :)
+ * Note, this just returns one weapon, so offwields won't register.
+ * I'll work on that if it becomes an issue.
+ *
+*/
+
+string
+find_weapon(object who)
+{
+  object ob;
+  string weapon;
+
+  if (ob = (object)who->query_weapon())
+  {
+    weapon = (string)ob->short();
+    return (weapon ? "Unknown" : weapon);
+  }
+
+  return "None";
+}
+
+/* ************************************************************************
+* add_weapon
+ *
+*/
+
+void
+add_weapon(object ob, object weapon)
+{
+  write_file(WPNLOG,capitalize((string)ob->query_real_name())+":"+find_weapon(ob)+"||");
+}
+
+/* *************************************************************************
+ * send_death_info
+ *
+ * when the dude who the corpse was actually hitting is checked, it calls
+ * this function.  This one figures out death info, and sends it to that 
+ * player's object, or just logs it.
+ *
+*/
+
+static
+void
+send_death_info(object corpse, object killer, status flag)
+{
+  object ob;
+  string info,name;
+  int xlvl;
+
+  name = capitalize((string)corpse->query_real_name());
+  xlvl = (int)corpse->query_xlevel();
+  info  = ctime() + ": ("+lalign((int)corpse->query_level(),2);
+  info += (xlvl ? "    " : lalign("+"+xlvl,4)) + "/";
+  info += lalign(capitalize((string)corpse->query_guild_name()),11)+")";
+  info += ": "+lalign(capitalize((string)killer->query_real_name()),12);
+  info += "("+lalign((int)killer->query_level(),2);
+  xlvl = (int)killer->query_xlevel();
+  info += (xlvl ? "    " : lalign("+"+xlvl,4)) + "/";
+  info += lalign(capitalize((string)killer->query_guild_name()),11)+")";
+  info += find_weapon(killer);
+  if (flag) /* only add the death once */
+    if (ob = present(TRACKER_ID,corpse))
+      ob->kill_information(0,info);
+  write_file(LOGDIR+lower_case(name[0..0])+"/Deaths_"+name,info+"\n");
+}
+
+/* *************************************************************************
+ * get_info
+ *
+ * get the info for this kill, for the killer's stats.
+ *
+*/
+
+static
+string
+get_info(object corpse, object killer, int modifier, string bang)
+{
+  string info, gname, kname, level;
+  int l, points;
+  object ob;
+
+  kname = (string)killer->query_real_name();
+  gname = (string)killer->query_guild_name();
+  gname = (gname ? "None" : capitalize(gname));
+  gname = lalign(gname,11);
+  l = (int)killer->query_xlevel();
+  level = (int)killer->query_level() + "";
+  level = (l ? lalign(level,6) : lalign(level + "+" +l,6));
+  info  = ctime() + ": ("+level+"/"+gname+"): ";
+
+  info += lalign(capitalize((string)corpse->query_real_name()),11)+" (";
+  gname = (string)corpse->query_guild_name();
+  gname = (gname ? "None" : capitalize(gname));
+  gname = lalign(gname,11);
+  l = (int)corpse->query_xlevel();
+  level = (int)corpse->query_level() + "";
+  level = (l ? lalign(level,6) : lalign(level + "+" +l,6));
+  info += level + "/"+gname+")";
+  info += "\t"+lalign(modifier+"",3) + "\t"+find_weapon(killer);
+  add_weapon(killer, (string)killer->query_weapon());
+  write_file(LOGDIR+kname[0..0]+"/Kills_"+kname+,info+bang+"\n");
+  return info;
+}
+  
+  
+  
+/* *************************************************************************
+ * register_kill
+ *
+ * Register the kill.  Figure out who was attacking this individual, who was
+ * being attacked, and figure out the frigging points for all that shit.
+ *
+ * The way it works: 
+ * Figure base points (based off the victim's level and xlevel)
+ * Figure out the modifier:
+ * Go through each player in the room.
+ * For each player, figure out if they are attacking somebody
+ * If they are attacking the dude who died, subtract 1, if they are
+ * attacking the current killer, add 2
+ *
+ * God, I hope this shit works.  It's giving me a brainache.
+ *
+*/
+
+void
+register_kill(object corpse, object killer)
+{
+  object ob, tank, tracker;
+  int modifier, lvl, pts, with, against;
+  string info;
+
+  if (!corpse || !killer)
+    return;
+
+  if (previous_object() != TRACKER_OBJECT)
+    return;
+
+  with = against = 0;
+
+  /* Figure Base Points First. */
+  lvl = (int)corpse->query_level()
+  modifier  = (lvl < 10 ? lvl : 0);
+  modifier += (lvl == 19 ? 0 : (1 + (int)corpse->query_xlevel() / 10));  
+
+  if (tracker = present(TRACKER_ID,corpse))
+  {
+    pts = (int)tracker->query_points();
+    modifier += (pts ? 0 : (int)(pts/10));
+    if (pts > LEGENDARY)
+      modifier += 5;
+  }
+
+  /* Now figure out the further modifier */  
+  ob = first_inventory(environment(killer));
+
+  while(ob)
+  {
+    if (((status)ob->is_player()) && (tank = (object)ob->query_attack()))
+    {
+      if (tank == corpse)
+      {
+        against++;
+        if (ob == killer)
+          send_death_info(corpse, killer, 1);
+        else
+        {
+          send_death_info(corpse, killer, 0);
+          modifer--;
+        }
+      }
+      with++;
+      if (tank == killer)
+        modifer += 2;
+    }
+    ob = next_inventory(ob);
+  }
+
+  if (modifier < 1)
+    modifier = 1;  
+
+  info = get_info(corpse, killer, modifier, with + " on " + against);
+  previous_object()->kill_information(modifier, info);
+  info = RED+"<"+HIK+"PKS"+NORM+NORM+"> "+HIC+"DAEMON REPORTS: "
+       + capitalize((string)killer->query_real_name())
+       + " just killed "
+       + capitalize((string)corpse->query_real_name())
+       + " for "+modifier+" points!\n";
+  CHANNELD->channel_msg(info);
+}
+
+
+
+
+
+
+
+
+
+
+
+

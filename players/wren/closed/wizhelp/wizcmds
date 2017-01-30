@@ -1,0 +1,98 @@
+echoto    - echo msg to player
+errormsgs - toggle error msgs on or off
+echo      - echo msg to room
+echoall   - echo msg to everybody online
+echochan  - echo msg on specific channel
+            think syntax is echochan chan msg
+goto      - duh
+clear_dir - clear an entire dir, will prompt you
+imprison  - imprison a dood
+free      - free a dood
+cat       - cat a file
+origin    - display filename of an obj
+where     - determine filename of a player's environ
+attrib    - list player's attribs
+castle    - goto a wiz's castle
+run       - run a cmd file, i.e. 'run login'
+att/atm   - both list all players + their opponents
+statall   - stat all players!
+clone     - duh
+dest/destruct - duh
+load      - duh
+reset    -  call reset(0) in a specific file
+more     - duh
+nmore    - alternative to more
+grep <s> <f> - display all instances of <str> in <filename>
+               i.e. 'grep symbio /log/PRISON'
+mv,cp,rm,ed   - duh
+home - go home!
+workrm - set the path of your workrm you go home to..
+         i.e. workrm /players/yappy/workroom2.c
+localcmd - list all avail object based cmds
+earmuffs - put on yer earmuffs.. don't hear shouts
+log      - read a particular /log file or default: your own
+cd       - duh
+pwd      - print current directory
+mkdir/rmdir  - duh
+title - duh
+tail - duh
+wizlist - display wizlist
+setmmin - teleport msg in
+setmmout - teleport msg out
+setmin - move msg in
+setmout - move msg out
+setmhome- teleport msg home
+review   - review above msgs
+setal   - set alignment
+setaln - set alignment #
+light  - light up
+vis    - visible
+hands <x> - set wc to x
+
+
+30+
+invis <x> - invis
+
+50+
+ in - in <file> <action>
+      do action in room file
+ at - at <player> <action>
+      do action in player's environs
+ force
+ trans
+
+
+60+
+ snoop - snoop play
+ fix_guild - change guildname of a player
+ 
+
+70+
+ zap
+
+80+
+ trans! - power trans
+ exec   - execute a piece of code, i.e. 
+          exec this_player()->set_attrib("str", 3000);
+ climbin - climbinto a player's inv
+ exiv    - exit player's inv
+ get!    - pick up obj regardless of get() flag
+ drop!   - drop obj regardless of drop() flag
+ give!   - give obj regardless of drop() flag
+ put!    - put obj in contain regardless of drop() flag
+
+100+
+ promote
+ work - set what you are working on
+ approve - approve a dood for wizship
+
+1000+
+ shutdown - shutdown game
+ time     - change game time
+  
+everything in /bin/wiz/ [Some of these are probably level specific]
+and on /obj/wiz_tool.c
+
+eventually wiz_tool stuff will be put in /bin/wiz/
+so just categorize like normal cmds
+

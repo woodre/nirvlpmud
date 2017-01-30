@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/snow/shadows/stuff/plate","/players/snow/WEAPONS/greydeath","/obj/treasure","/players/angel/area/stargate/obj/bullets","/players/ultramagnus/rdiamond","/players/puppy/s/eq/collar","/players/haji/quest/shrub","/players/puppy/s/eq/hammer","/players/pain/NEW/weap/mace","/players/wren/Area/starbug/items/gauntlet","/players/snow/WEAPONS/hon_sword","/players/snow/ITEMS/ice_shard","/players/wren/Area/starbug/items/sequinjacket","/obj/weapon","/players/puppy/s/eq/crown","/players/wren/Area/starbug/items/straw","/obj/armor","/players/scathe/armor/hood","/players/wren/Area/starbug/items/indianheaddress","/obj/weapon","/obj/weapon","/players/wren/Area/starbug/items/bat","/players/hippo/weapons/glue","/players/wren/Area/starbug/items/currie","/players/mistress/other/disk",})
+shorts ({"[1mBlack Platemail[0m","Grey[36mdeath[0m","Arctic Wolf pelt","A clip of bullets [50]","A Red Diamond","A leather collar","A shrubbery","A hammer","A large iron mace","Time gauntlet","A finely honed longsword","An ice shard","Cat's red sequin jacket","Blaster","A golden crown","a long plastic straw","button","Hood","a tiny indian headdress","Curved sword","A glowing lightsabre","a [1;30mballbat[2;37;0m","a strong, 1 second glue","A tin of chicken currie","A fragile disk",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,})
+loaded 0

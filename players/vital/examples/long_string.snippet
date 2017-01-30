@@ -1,0 +1,18 @@
+/* If you have a long bit of text to enter, say for a description
+ * or for a help file or similar, then the best way to do that is
+ * to enter it as one long string [up to a limit] to avoid using
+ * extra memory and resources.
+ * The string that follows could be inserted into a write or tell type
+ * function that will display correctly and save on resources to boot.
+ */
+
+"This is the first line of the string and it goes on for awhile and\n\
+then comes to a slash n slash which puts a return into our string and\n\
+allows the string to continue on the next line without needing to use\n\
+a quote + at the end and a new quote at the beginning of the next\n\
+line. This saves each of the strings being loaded, then the first is\n\
+added to the second, then those two are added to the third and so on\n\
+until the whole string has been connected. Meanwhile, each of the ones\n\
+that were used before is stored in memory in the case that they are\n\
+needed again.\n"
+

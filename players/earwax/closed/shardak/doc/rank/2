@@ -1,0 +1,17 @@
+Rank 2
+
+   Burn [New cmd]:
+     Major attack spell.  Requires a task and a conjured
+     flame.  Damage/cost based on guild rank, player
+     level, and adds a bonus for high extra levels.
+
+   Drain [Rewritten]:
+     Drain a corpse for energy.  Requires a task.
+     Optional argument "for bones" costs 10 spell
+     points, gives no energy, but gives a higher
+     chance of creating a skeleton to summon
+     a Spinal with.
+
+   Scan [Untouched]:
+     A comparison cmd.. 'who is stronger.  Costs 10
+     spell points, gives relative information.

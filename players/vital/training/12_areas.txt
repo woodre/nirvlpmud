@@ -1,0 +1,44 @@
+On your first area...
+
+I will start by pointing out that these are recommended guidelines for planning, setting up, coding and maintaining your area both initially and later on as a whole. It is much easier for you to organize things from the beginning than to go back and try to rearrange things that rely on a certain directory structure later. [The voice of experience, as I have screwed this up before.]
+
+Also, you may receive different or slightly altered instructions from your particular mentor/sponsor and I encourage you to adhere to them, as they will be deciding when and if your new area is approved and enters the realm of Nirvana.
+
+Main Thoughts:
+  1). The best project to start on is probably not the 150 room, lvl
+  	19+35, uber-quest. Unless you have extensive LPC coding skills and
+  	have experience working with Nirvana's mudlib, something slightly
+  	smaller will better serve to get you introduced to the mud as a
+  	whole and into a rhythm for later coding.
+
+  2). A structured and planned directory structure can help keep your
+  	code from growing unmanageable and easier for other coders to
+  	evaluate, critic and otherwise help you with. As a suggestion, it
+  	is good to keep like file types together and divide them along
+  	usage lines [rooms in one directory, items in another, monsters in
+  	a third etc]. Something like the following:
+
+          P L A Y E R   R O O T  D I R E C T O R Y
+
+   area/       closed/    log/    doc/   temp/
+       room
+       obj
+       item
+       armor
+
+  3). You may find it easier to layout your area on paper first or in
+  	a drawing program to help keep the directions and connectivity of
+  	your area in place. Coders in the past have used everything from
+  	graph paper to Excel to keep their designs in.
+
+  4). As you begin to work on the rooms [and perhaps the monsters
+  	therein] consider typing the descriptions up in a Word or
+  	OpenOffice document and using the spell and grammar
+  	checks/helpers. A suprisingly large number of initial coders'
+  	areas have a LOT of missed typos. It's easier to catch them up
+  	front in something like Word than to have to go back and edit a
+  	bunch of files when your mentor/sponsor goes through it to approve
+  	it. It will also make you at least APPEAR much, much smarter than
+  	everyone else if you don't have to make a bunch of typo repairs to
+  	your files.
+

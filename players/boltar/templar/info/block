@@ -1,0 +1,11 @@
+Cmd: block
+     block enter
+Piety: 8
+Cost:  none
+
+Toggles your block on the Templar channel.
+
+'block enter' turns off the templar enter/exit messages. No enter/exit
+messages are sent to your screen and the channel remains on. 'block' turns
+off the channel COMPLETELY
+

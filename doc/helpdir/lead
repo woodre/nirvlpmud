@@ -1,0 +1,25 @@
+
+
+                          [help lead]
+-----------------------=========+=========-----------------------    
+
+Usage: "lead <who>"
+       "lead stop"
+       "lead stop <who>"
+
+    When a player wishes to have someone follow them, 
+    they use 'lead <who>' where <who> is a player they wish to lead
+    around the MUD.  Both players must be in the same room.
+
+    The named player is asked to follow. To allow the follow,
+    the named player must only type 'y' at the prompt.  To disallow
+    the lead the named player types 'n'.
+
+    'lead stop' clears all current followers the player
+    may have picked up.
+
+    'lead stop <who>' stops a specific player from following
+    the leader, where <who> is the player they wish to stop following.
+
+Notes:
+     'fstatus' shows all current followers.  

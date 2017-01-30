@@ -1,0 +1,5 @@
+09/23/03 01:04: Ironman     ((19+7  /Cyberninja)   19(2/1)
+09/23/03 01:49: Kadabra     ((19+22 /Dervish)      19(4/1)
+01/ 1/04 16:50: Banks       ((10    /Dervish)      12(1/1)
+09/26/06 21:14: Muerte      ((19+20 /Dark Order)   22(2/1)
+11/14/09 21:01: Wicket      ((19+31 /Warrior)      25(1/1)

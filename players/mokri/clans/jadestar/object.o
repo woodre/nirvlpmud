@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;32mJ[30made [32mS[30mtar [32mS[30mhield[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "shield"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;32mJ[30made [32mS[30mtar [32mS[30mhield[0m"
+damage_type 0
+hall_path "/room/station"
+object_name "shield"
+owner "fantasy"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Sun Dec 13 01:37:36 2009] Fantasy: staff of spellpower","[Sun Dec 13 01:39:54 2009] Fantasy: ready","[Sun Dec 13 02:28:26 2009] Fantasy: ouch","[Sun Dec 13 02:28:28 2009] Wicket: sorry","[Sun Dec 13 02:28:44 2009] Fantasy: i was out of heals that sucked","[Sun Dec 13 02:29:36 2009] Fantasy: where?","[Sun Dec 13 02:29:40 2009] Wicket: gordie","[Sun Dec 13 02:31:16 2009] Fantasy: i don't know how to get there","[Sun Dec 13 02:38:22 2009] Fantasy: hrmm","[Sun Dec 13 02:38:28 2009] Fantasy: i am not dead?","[Sun Dec 13 02:38:30 2009] Wicket: something is wrong with that one","[Sun Dec 13 02:39:44 2009] Wicket: im sorry","[Sun Dec 13 02:39:52 2009] Fantasy: it's ok","[Sun Dec 13 02:40:00 2009] Fantasy: how did i live though?","[Sun Dec 13 02:40:00 2009] Wicket: bitch wasnt suppose to do that","[Sun Dec 13 02:40:08 2009] Fantasy: come back to life","[Sun Dec 13 02:40:10 2009] Wicket: not sure","[Sun Dec 13 02:40:32 2009] Wicket: im rather irrate","[Sun Dec 13 02:41:00 2009] Fantasy: sok","[Sun Dec 13 02:41:04 2009] Fantasy: shit happens man",})
+leaders ({})
+join_type 0
+private_coffer 0
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

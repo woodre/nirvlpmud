@@ -1,0 +1,15 @@
+/* ========================================================================== */
+/*   THORAD_DEFS                                                              */
+/*   (c) 2007 Rumplemintz@Nirvana                                             */
+/*                                                                            */
+/*   Thorad area Path defines                                                 */
+/* ========================================================================== */
+
+/* room/room with colors for short, long, and exits */
+#define COLOR_ROOM "/players/rumplemintz/room/color_room.c"
+
+/* Castle room file - Where castle.c is that will enter thorad */
+#define CASTLE_ROOM "/players/rumplemintz/workroom.c"
+
+/* Path to Thorad area room files */
+#define THORAD "/players/rumplemintz/room/thorad/"

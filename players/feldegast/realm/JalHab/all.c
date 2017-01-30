@@ -1,0 +1,27 @@
+remove_object() {
+  destruct("/players/feldegast/realm/JalHab/mound1.c");
+  destruct("/players/feldegast/realm/JalHab/mound2.c");
+  destruct("/players/feldegast/realm/JalHab/mound3.c");
+  destruct("/players/feldegast/realm/JalHab/mound4.c");
+  destruct("/players/feldegast/realm/JalHab/mound5.c");
+  destruct("/players/feldegast/realm/JalHab/mound6.c");
+  destruct("/players/feldegast/realm/JalHab/mound7.c");
+  destruct("/players/feldegast/realm/JalHab/mound8.c");
+  destruct("/players/feldegast/realm/JalHab/mound9.c");
+  destruct("/players/feldegast/realm/JalHab/mound10.c");
+  destruct("/players/feldegast/realm/JalHab/mound11.c");
+  destruct("/players/feldegast/realm/JalHab/mound12.c");
+  destruct("/players/feldegast/realm/JalHab/mound13.c");
+  destruct("/players/feldegast/realm/JalHab/mound14.c");
+  destruct("/players/feldegast/realm/JalHab/mound15.c");
+  destruct("/players/feldegast/realm/JalHab/mound16.c");
+  destruct("/players/feldegast/realm/JalHab/mound17.c");
+  destruct("/players/feldegast/realm/JalHab/mound18.c");
+  destruct("/players/feldegast/realm/JalHab/mound19.c");
+  destruct("/players/feldegast/realm/JalHab/mound20.c");
+  destruct("/players/feldegast/realm/JalHab/mound_room.c");
+  destruct("/players/feldegast/mon/myrm-queen.c");
+  destruct("/players/feldegast/mon/myrm-leader.c");
+  destruct("/players/feldegast/mon/myrm-warrior.c");
+  destruct("/players/feldegast/mon/myrm-worker.c");
+}

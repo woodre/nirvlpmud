@@ -1,0 +1,20 @@
+2016.08.31 09:14:12 [erq] Amylaar ERQ Apr  7 2011: Path 'erq', debuglevel 0
+2016.08.31 09:14:13 obj/player.c line 4823: Warning: Missing 'return <value>' statement before end of line.
+2016.08.31 09:14:13 inherit/container.c line 403: Warning: Missing 'return <value>' statement.
+2016.08.31 14:53:35 players/boltar/things/cop.c line 65: Warning: Missing 'return <value>' statement.
+2016.08.31 16:18:42 obj/user/xls.c line 96: Warning: Missing arguments to simul_efun ls.
+2016.08.31 16:19:58 Failed to load file: 'players/guilds/necro/guildobj'.
+2016.08.31 16:20:51 Failed to load file: 'players/guilds/necro/obj/daemons/channel_d'.
+2016.08.31 16:21:34 Failed to load file: 'players/guilds/necro/obj/daemons/channel_d'.
+2016.09.05 10:18:53 players/oberon/closed/jewel.c line 3: illegal to inherit after defining functions.
+2016.09.05 10:18:53 players/oberon/closed/jewel.c line 9: "#pragma strong_types" requires type of function.
+2016.09.05 10:18:53 players/oberon/closed/jewel.c line 19: Warning: Missing 'return <value>' statement.
+2016.09.05 10:18:53 players/oberon/closed/jewel.c line 21: "#pragma strong_types" requires type of function.
+2016.09.05 10:18:53 players/oberon/closed/jewel.c line 34: Warning: Missing 'return <value>' statement.
+2016.09.05 10:18:53 players/oberon/closed/jewel.c line 36: "#pragma strong_types" requires type of function.
+2016.09.05 10:18:53 players/oberon/closed/jewel.c line 52: "#pragma strong_types" requires type of function.
+2016.09.05 10:18:53 players/oberon/closed/jewel.c line 60: "#pragma strong_types" requires type of function.
+2016.09.05 10:18:53 Error in loading object: 'players/oberon/closed/jewel'.
+2016.09.05 10:28:06 [erq] read: EOF
+2016.09.05 10:28:06 [erq] Read 0, should be 9!
+2016.09.05 10:28:06 [erq] Giving up.

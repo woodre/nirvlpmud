@@ -1,0 +1,53 @@
+/*
+ * Phantasmagoria
+ * Concept:
+ * a series of illusions that do damage to the target.
+ * - this spell will have a casting time.
+ * - all of the spell timers must be free for this spell to be cast.
+ * - no other spells can be cast while this spell is being cast.
+ * - once the spell is cast and in effect the player may cast other spells,
+ * - except for type alteration.
+ * Cost and Damage have yet to be determined
+ */
+
+phantasmagoria(str) {
+  object ob, obj;
+  int dmg;
+  int y;
+
+  if(!KNOW("phantasm")) {
+    write("What?\n");
+    return 1;
+  }
+
+  write("disabled temporarily.\n-verte\n");
+  return 1;
+  y = time();
+
+  if(guild->query_next_dmg() > y || guild->query_next_prot() > y ||
+     guild->query_next_altr() > y || guild->query_next_heal() > y) {
+    write("You cannot cast this spell yet.\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  write("You begin casting a "+HIM+"Phantasmagoria"+NORM+" spell ...\n");
+  say(ME+" begins casting a complex spell ...\n");
+
+  guild->set_next_dmg(y + 120);
+  guild->set_next_prot(y + 120);
+  guild->set_next_altr(y + 120);
+  guild->set_next_heal(y + 120);
+
+  ob = clone_object("/players/pavlik/guild/mages/obj/phantasmagoria");
+  ob->set_target(obj);
+  ob->set_owner(tp);
+  move_object(ob, obj);
+
+  return 1;
+}
+
+
+

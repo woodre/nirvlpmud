@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/omodaka/hall/r2","east",})
+short_desc "[35mStorage Room [1;32m<[1;37mOdani Castle[1;32m>[0m[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[31mXetra Claws[0m","/players/llew/closed/crystal/xetra_claws",0,0,0,"[31mBackbiter[0m","/players/mythos/awep/backbite",0,18,9,"[41m[30mFellblade[0m","/players/khrell/weapons/skaven/fellblade",0,0,0,"[1mSoulEater[0m","/players/snow/WEAPONS/souleater",0,0,0,"[33m[1mGlowing Sword[0m","/players/snow/WEAPONS/glow_sword",0,20,8,"Grey[36mdeath[0m","/players/snow/WEAPONS/greydeath",0,0,0,"The Broadsword of Balance","/players/snow/WEAPONS/balance",0,1,1,})

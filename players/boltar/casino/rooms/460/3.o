@@ -1,0 +1,29 @@
+no_clean 0
+name "black boots"
+alias 0
+short_desc "[1m[30mA pair of black boots[2;37;0m"
+long_desc "These are a pair of black leather boots.  Each one is veryworn and a bit torn up from all the use they've had.  Despitethis fact each boot looks very stylish."
+worn_tag_short_flag 0
+buy_value 0
+value 1400
+weight 2
+type "boots"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 1
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"boots",})
+params ({"physical",1,0,"do_special",})
+enchantments 0

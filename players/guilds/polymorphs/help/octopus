@@ -1,0 +1,24 @@
+
+[OCTOPUS] Level [4] 500 charges (+sta, ++int, +mag, -str, -ste, -luck)
+
+  Octopus are normally gentle and shy creatures, but look out if they
+  are driven to fight! The octopus can carry up to eight weapons at a
+  time which they use to deliver pain and suffering to their foes.
+  They also are gifted with the confusion of the inkjet to allow them
+  a quick escape if they are too involved in the heat of combat.
+
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+
+strap <weapon>   Wield a second weapon offhand.
+
+strap all        Same as above but cycles through inventory and straps
+                 weapons on a first-come, first-serve basis.
+
+unstrap <weapon> Remove a weapon wielded offhand.
+
+inkjet           (60 sps) Flee from a combat situation that is undesireable
+                 and stun your opponent so much that they forget they were
+                 fighting you. This ability can be used during combat only.
+

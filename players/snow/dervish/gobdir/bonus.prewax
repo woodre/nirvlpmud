@@ -1,0 +1,21 @@
+/* recursive including -Bp
+#include "/players/snow/dervish/def.h"
+*/
+
+gen_wc_bonus(){
+  object me, myob;
+  int sands, bonus;
+  me = this_player();
+  myob = present(GID, me);
+  sands = myob->query_sand_points();
+  if(me->query_extra_level() < 21) return 0;
+  if(sands > 100000) bonus = (3+random(4));
+  else if(sands < 100000 && sands > 74999) bonus = 2+random(5);
+  else if(sands < 75000 && sands > 49999) bonus = 2+random(4);
+  else if(sands < 50000 && sands > 29999) bonus = 1+random(4);
+  else if(sands < 30000 && sands > 10000) bonus = 1+random(2);
+  else bonus = 0;
+  if(!me->query_attack()) return;
+  if(me->query_real_name() == "fred") tell_object(me, "Bonus is: "+bonus+"\n");
+  return bonus;
+ }

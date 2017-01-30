@@ -1,0 +1,8 @@
+muffled 0
+drain_damage 50
+monitor -1
+summon 1
+points 0
+mshpts 0
+in "has left the game"
+out "has entered the game"

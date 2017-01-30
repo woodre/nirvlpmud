@@ -1,0 +1,40 @@
+id(str){return str=="crayons" || str == "box";}
+short(){return "A lousy box of crayons";}
+get(){return 1;}
+long(){write("This is the artist's box of crayons.  Apparently you can use them to change\n"+
+"the way an object looks.  You just type hack <name of item> to <new name> and\n"+
+"it's done!  I take no responsibility for people who hack worthless items\n"+
+"into looking like expensive ones.  *grin*\n");
+write("Note: This ability doesn't work on everything, but usually works on weapons\n"+
+"and armor at least.\n");
+}
+init(){
+add_action("hack","hack");
+}
+hack(str){
+object ob;
+string old,new;
+sscanf(str,"%s to %s",old,new);
+if (!old || !new) {write("Usage hack <name of item> to <new name>\n");
+      return 1;}
+ob = (present(old,this_player()));
+if (!ob){write("You don't have a "+old+".\n");
+return 1;}
+ob->set_short(new);
+say(this_player()->query_name()+" whips out his crayons and tries to change his "+old+" into a "+new+".\n");
+write("You whip out your crayons and try to change your "+old+" into a "+new+".\n");
+/* ADD BY MIZAN */
+/* players have been abusing this thing. */
+  if(1 == random(2)) {
+    write("You fail.\n");
+  destruct(this_object());
+  return 1;
+}
+
+/* CD8790144 */
+/* DO NOT remove these lines. */
+return 1;}
+
+summerhead() { return 1; }
+query_magick() { return "CD8790144"; }
+query_lastedit() { return "950227"; }

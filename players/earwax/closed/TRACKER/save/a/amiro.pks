@@ -1,0 +1,7 @@
+04/23/05 04:20: Sticks      ((19+10 /Vampire)      24(1/1)
+05/17/05 00:36: Hula        ((8     /None)         -1(2/1)
+05/19/05 03:34: Pike        ((19+100/Cyberninja)   32(3/2)
+05/20/05 00:08: Demonic     ((19+8  /Cyberninja)   23(1/1)
+05/22/05 03:30: Demonic     ((19+10 /Cyberninja)   24(1/1)
+05/22/05 20:03: Sweetmisery ((17    /None)         16(4/1)
+05/24/05 00:05: Mantis      ((19+64 /Necromancer)  25(2/1)

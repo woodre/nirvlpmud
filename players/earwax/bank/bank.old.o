@@ -1,0 +1,16 @@
+no_clean 0
+cast_here 0
+dest_dir ({"/room/bank","south",})
+short_desc "[1;33mEarwaxian National Bank[0m[0m"
+long_desc "Beautiful stained glass windows adorn this temple to money; here, gold is the god, and tellers are its priests and priestesses.  There is a small [1;37msign[0m[0m you can [1;37mread[0m[0m or [1;37mlook[0m[0m at."
+items ({"windows","A beautiful tribute to money in its various forms","stained glass windows","They depict money in its various forms","glass windows","They dipict money in its various forms","sign","You can do the following here:[1;37mbalancedeposit[1;30m <amount> (or 'all')[1;37mwithdraw[1;30m <amount>[0m[0m","small sign","You can do the following here:[1;37mbalancedeposit[1;30m <amount> (or 'all')[1;37mwithdraw[1;30m <amount>[0m[0m","tellers","Their eyes are lit with avarice","priests","Their eyes are glowing with greed","priestesses","Their eyes are glowing with greed","temple","This is a temple dedicated to the gods of gold","god","Gold is god here","gold","It's locked away nice and safe - from you",})
+property 0
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+Xfers ({({({}),}),({({}),}),({({}),}),({({}),}),({({}),}),({({}),}),({"martha",0,"06/03/04 20:07: [1;31m XFER [0m[0m(10000000) Earwax to Martha (online): Cuz she's a sexy hot mama",}),({"vertebraker",0,"06/04/04 17:08: [1;31m XFER [0m[0m(10000) Earwax to Vertebraker (online): cuz he's verte",}),({"vertebraker",0,"06/04/04 17:09: [1;31m XFER [0m[0m(10000) Earwax to Vertebraker (online): bribe",}),({"martha",50000,"06/04/04 17:09: [1;31m XFER [0m[0m(50000) Earwax to Martha (player): HAHAHAHA",}),({"humble",0,"06/04/04 18:01: [1;31m XFER [0m[0m(10000000) Earwax to Humble (online): Cuz you rock dude! i mean that, shit, yeah!",}),({"mizan",0,"06/05/04 02:07: [1;31m XFER [0m[0m(5000000) Earwax to Mizan (online): cuz you rock dude",}),({"forbin",0,"06/05/04 09:00: [1;31m XFER [0m[0m(5000000) Earwax to Forbin (online): For that great head he's been offering to give me...",}),({"wocket",0,"06/06/04 17:00: [1;31m XFER [0m[0m(10000000) Earwax to Wocket (online): Cuz he's level 200 and he threatened to demote me to level -15 if i didn't",}),({"rive",0,"09/22/05 08:46: [1;31m XFER [0m[0m(6000000) Vital to Rive (online): test housing",}),})

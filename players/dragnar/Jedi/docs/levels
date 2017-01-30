@@ -1,0 +1,33 @@
+------------------------------------------------------------------
+                          Apprentice
+Level:  Exp Cost:   Skill Points:
+1       0           0
+2       50,000      5  
+3       130,000     5
+4       280,000     5
+------------------------------------------------------------------
+                         Jedi Knight
+Level:  Exp Cost:   Skill Points:
+5       480,000     6+4
+6       680,000     6
+7       880,000     6
+8       1,080,000   6
+------------------------------------------------------------------
+                            Jedi
+Level:  Exp Cost:   Skill Points:
+9       1,480,000   7+4
+10      1,880,000   7 
+11      2,280,000   7
+12      2,680,000   7
+------------------------------------------------------------------
+                         Jedi Master
+Level:  Exp Cost:   Skill Points:
+13      3,680,000   10+4
+
+** Skill can not exceed guild level, i.e guild level 5 is limited
+   to a max of 5 in each skill.
+** Total 89 skill points used on 40 skills and 84 stats.  i.e. if
+   all stats are maxed, user will only have 5 points to spend on
+   jedi skills.  If all jedi skills are maxed, all stats will
+   average 15 max.  Player has control on where to spend
+   the skill points.

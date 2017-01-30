@@ -1,0 +1,46 @@
+<Area Name> by <YourName>@Nirvana
+
+The entire area is located in
+/players/<yourname>/<subdir>
+
+There are <#> rooms located in
+/players/<you>/<dir>/<dir>
+
+There are <#> mobs located in 
+/players/<you>/<dir>/<dir>
+
+Here is a breakdown of each mob, what they carry, etc.
+
+<mobname> (/path/to/mob/<mobfilename.c>)
+level <#>, ac<#>, wc<#>, hp<#>, <amount> coins 
+    Does mob do anything special? [says, attacks, etc]
+    What does the mob carry?
+
+EXAMPLE
+
+SnoopDogg (/players/martha/area/mobs/snoopdogg.c)
+level 5, ac4, wc9, hp75, 50 coins, he says "Fo shizzle, ma nizzle!",
+he also serenades female players when they walk into the room
+He is carrying
+  Gold Necklace (/players/martha/area/items/gnecklace.c)
+  Amulet, value of 70 coins, ac1
+  Gun (/players/martha/area/weps/gun.c)
+  wield as a gun, value of 100 coins, wc1
+  Gin and Juice( /players/martha/area/heals/gandj.c)
+  which is a heal and has a value of 100 coins
+
+There are <#> heals located in
+/players/<you>/<dir>/<dir>
+
+Breakdown of heals <hps, sps> healed, <sell value>, available elsewhere?
+
+There are <#> items(weps, heals, etc.) located in 
+/players/<yourname>/<dir>/<dir>
+
+Breakdown of weapons, armors, heals and objects/treasure
+
+<This is where you will write anything else you need
+to let your sponsor know about your area.  About a 
+mob in general, an item, heal, etc. Or if there is
+anything else that is special about your area.>
+

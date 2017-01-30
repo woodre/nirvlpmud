@@ -1,0 +1,31 @@
+                       [Prestige Score]
+-----------------------=========+=========-----------------------
+
+    Prestige score will represent your amount of prestige. It 
+  will be impacted by three different factors:
+    * Prestige Level
+    * Prestige Experience
+    * Total Quest Points
+  
+    Total experience will have the largest impact to your
+  score. When you prestige your experience is converted to
+  prestige experience which represents your total experience.
+  Prestige experience will be converted by dividing experience
+  by 1000.  
+
+    Each cycle of prestige requires additional work by the 
+  player. Gold has to be paid, guild powers given up temporarily.
+  This is why prestige level plays the second largest role in
+  prestige score. A player with a billion experience who is
+  prestige level 1 will have a much lower score than a player
+  who is prestige level 10 who has also invested a billion xp.
+  
+    The last factor is total quest points. When you prestige 
+  quests are reset and prestige quest points represent the
+  total quest points for the player. Your prestige quest points
+  will increase your prestige score.
+  
+  The score command has been updated to show prestige score. 
+  If your guild score command doesn't allow you to view it, 
+  use the psc command instead.
+-----------------------=========+=========-----------------------

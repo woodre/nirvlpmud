@@ -1,0 +1,307 @@
+/players/brittany/kadath/armor:
+
+blrobe.c - You need to set_type() on this item. A robe is usually
+           either type armor or type misc.  If this doesn't
+           fall under type armor not sure why it should be ac 2.
+           Also, if a person sells this at a high-end shop, they
+           can get as much out of it as if traded. With the
+           randomness, maybe more maybe less...nothing wrong with
+           that, but something to think about.
+CORRECTION - set_type - armor, AC2; set_value (500+random(350),
+trade (1000+random(350)
+
+cloak.c - Same as above, you need to set_type(), most likely misc
+          Here you have a difference in the value and trade value, 
+          makes a little more sense. What makes this worth being
+          ac 2 though? it is a bloodstained cloak, not magical, or
+          special other than it might be worth something to someone
+          else.
+CORRECTION - set_type - misc, AC1; set_value(500+random(400),
+trade (900+random(400)
+
+crucifix.c - need to set type here also, most likely to amulet. This
+             Items is also ac 2, reason? Weight 3 seems heavy for
+             something this size also.
+CORRECTION - set_type - amulet, AC1; set_weight(1)
+
+lightmail.c - looks good except you might want to change the name from
+              light mail to lightmail since that is what it is called in
+              the short. Also need to set_type()
+CORRECTION - set_type - armor, AC4; changed light mail - lightmail in name
+
+mask.c - ac 2, not sure why. This mud has a few select ac 2 items, not to
+         say you can't code any, but we need to limit items that are 
+         armor to ac 4 for main armor, and ac 1 for everything else unless
+         hard to get or special.  
+CORRECTION - set_type - helmet, AC1, set_value (350+random(250),
+trade (750+random(500)
+
+medallion.c - Ac2 problem again, no set_type().  Also, get rid of the
+              period at the end of the first line in the long, change to
+              a comma and un-capitalize Which.
+CORRECTION - set_type - amulet, AC1, removed comma and period, uncapped Which.
+
+turban.c - You will need to add set_type(), do something about the ac2,  and
+           add set_save_flag(1) in the reset. This item cannot save
+           because of the ruby that you can twist off.
+
+CORRECTION - set_type - helmet, AC1, added set_save_flag(1)
+
+Overall, you have amulet, helmet, misc, and armor...a person could walk into your
+area and be fitted up very very well instead of walking across the mud to find
+the items they might need.  Cannot concentrate powerful items like this into one
+area.
+
+COMMENT - All of the armor in my area will require the player to fight a lot
+in the area.  It will cost them a substantial amount of coins, heals, etc.
+The turban will not be available until I have finished my quest room.
+
+
+/players/brittany/kadath/item:
+
+
+/players/brittany/kadath/npc:
+
+anzoogs.c - Long:  add ' to your "doesnt" on line 1 and your "dont" on line 3
+            add an s to appearance on line 3.  Next, he is level 18 and wc is
+            supposed to be around 26 for this size of mob, although it can be
+            slightly lower because of the special you have added. There is no
+            reason for: gold = clone_object("obj/money");
+                        gold->set_money(0);
+                        move_object(gold,this_object());
+            if it doesn't give money. Lose this.
+            set_spell_mess1() tells the room what is to be seen, while mess2
+            tells the person being hit. Also, try to make more sense out of
+            set_spell_mess2().
+CORRECTION - Changed doesnt - does not, dont - do not, wc - 22, rm gold code.
+fixed set_spell_mess1/2
+
+Calli.c - Get rid of the gold part again, since it sets to 0.  Also, you have
+          confused the set_spell_mess1 and mess2 again, the mess1 is for everyone
+          but who is attacked.  The monster_died() message you give doesn't quite
+          make sense, redo it.
+CORRECTION - removed monster Calli.c from area, it was an error.
+
+carter.c - Long desc: hierglyphics needs to be hieroglyphics
+           also in the long you seem to slip into past tense, wore in the 4th line
+           and were and looked in the 5th.
+           You need to put the set_wc and set_ac AFTER the wear and wield commands
+           on him.  Otherwise his ac and wc sets to whatever the wep and armor is.
+           he has no set_spell_mess2(), although the mess1 is correct.
+           Also, You have the shakujo, turban, and 3200+ coins given for killing
+           this guy. The wep is very nice, so I would knock the coin gain down
+           to 1/4 or so. This is too much gain.
+CORRECTIOM - moved wc/ac after the wear/wield, adjusted coins (2000+random(375),
+Also carter will be part of the quest room.  Added /players/brittany/kadath/npcs/one.c
+One has the same code as Carter with a few deletion, the shakujo and turban
+will destruct after death.  Corrected hieroglyphics
+
+ghast.c - spell_mess2() need to change stumps to stomps...change mess1() to what it
+          needs to be(tells the room, not the opponent).  Get rid of the gold set
+          since it sets to 0.  monster_died(): hoofs break, change to hooves break off?
+          Also, the hoof trades for a great deal of coins, max for a level 19 is
+          2000 coins, adjust this.  Corrected stomps.
+
+CORRECTION - fixed set_spell_mess1/2, rm gold code, changed hoofs - hooves
+adjusted coins (2000+random(750)
+
+gugs.c - need to ditch the gold set.  Need to adjust the fang.c to fit the 
+         monster.guide rules.  He is somewhat tough so some allowance can
+         be in order here. Not much tho.
+CORRECTION - rm gold, adjusted fang value (2500+random(900)
+
+Kaman.c - Did you want messages for his attacks(mess1 and mess2)?
+          monster_died(): The slight, maybe changed to A slight?
+          In monster died you have clone_object("obj"), fix this.
+CORRECTION - added mess1/2 message, changed The slight - A slight, rm clone_object
+
+Nasht.c - no mess1 or mess2, unless you want it that way?
+          monster_died() your message here says: msg...need to change this
+CORRECTION - fixed mess1/2, updated monster_died msg.
+
+nyar.c - Need to set ac and wc AFTER the wield and wearing in reset().
+         mess1 needs to be towards the room, or change it to mess2.
+CORRECTION - moved ac/wc after wield/wear, correct mess1/2
+         
+pooka.c - Need to either remove the mess1 and mess2 or do something with them, remove
+          gold set since it doesn't give anything.
+          With monster_died having nothing in it, you can remove it as well as the
+          set_dead_object in reset.
+CORRECTION - removed monster from the area..do not belong.
+
+sages.c - Need to move the set ac and wc after the wear and wield command in reset()
+          remove the gold sets, since they give 0
+CORRECTION - moved ac/wc after wear/wield, removed gold, set mess1
+
+spirit.c - Need to move the set ac and wc after the wield command in reset()
+           The dagger that is found on this mob is WAY to tough for a level 5,
+           MUST CHANGE.
+CORRECTION - moved ac/wc after wield/wear, changed dagger to ac 15
+dagger will destruct after death.
+
+tarasque.c - Monster_died i think belongs to something else, need to change it.
+             get rid of the gold set since it gives 0.  Mess1 and mess2 need to
+             be fixed to tell the appropriate person/people.  Also, you seem to
+             slip into past tense in the long and in load_chat. Also, mess2 uses
+             the message from another mob, change it.
+CORRECTION - removed monster from the area.
+
+trader.c - Need to get rid of set_dead_object and monster_died if you aren't going
+           to use them. You can also ditch message_hit since it doesn't set to 
+           anything special.
+CORRECTION - rm set_dead_object/monster_died, ditched mess_hit
+
+zoogs.c - load_a_chat: change gazes to gaze
+          get rid of the gold set since it gives 0
+CORRECTION - load_a_chat, changed gazes to gaze, rm gold.
+
+/players/brittany/kadath/treasure:
+
+gold_box.c - recalculate the weight after the destruction.
+CORRECTION - will not be used until quest object
+
+rubie.c - I think this should actually be ruby, not rubie.  
+CORRECTION - will not be used until quest object.  I know rubie
+is spelled wrong technically, but it is the way I want it.
+
+tail1.c - you have short(){ and set_short...need to get rid of one of these.
+CORRECTION - rm short(){
+
+/players/brittany/kadath/weapons:
+
+boomerang.c - ""+HIW+"fissured"," skin, slicing into the bone", can be changed to
+              ""+HIW+"fissured","'s skin, slicing into the bone", which 'might' 
+              help.  In the spell itself, you check for if sp < 2, when the casting
+              cost is 10...need to change this.  This throw spell looks like it
+              is usable against a player, but having a base of 5 damage with a
+              random 14 is illegal for the cost of 10 sps. This cannot pass as is,
+              read the rules in doc/build/RULES on spells and costs.
+CORRECTION - corrected 's in fissured, adjusted sp <2 - 10, throw spell corrected.
+
+dagger.c - Wc 25, this is very very powerful...cannot have it this high.
+CORRECTION - Changed dagger to 15
+
+scimiter.c - Actual spelling is scimitar.  There is no reason to set the
+             message_hit since it uses normal messages.
+CORRECTION - scimiter is spelled both ways in the dictionary, I chose this one
+because there are already scimitars in the game
+
+scimiter1.c - is this used in the game? wc 30, i am assuming its not.
+CORRECTION - rm from area
+
+shakujo.c - Might want to look at the messages for your hits, some need
+            changed...Also, you have a return 4 AFTER the {}'s which means
+            it always returns 4...need to put it inside the {}
+CORRECTION - What is the problem with the messages for hits?
+moved 4 inside {}
+
+tbow.c - spelled poisonous, go through and change it in the wep.  Also,
+         a random 10 will give a return of 0-9...so you can never get
+         the special which asks if it is a 10. Need to change that also.
+CORRECTION - corrected poisonous throughout, changed random to 9
+ 
+/players/brittany/kadath:  [ROOMS]
+
+6altars.c -  The last line of the long, need to change it to make more sense: either
+             change hand to hands or do to does.  There is no reason for out(str) when
+			 you have it setup as a setting in your exits.  A concept you need to learn
+			 is that random() numbers start at 0. So if you do a random(10) your results
+			 will be 0-9...no 10.  In your gaze function you have a random(6) but no
+			 0, instead you have it range from 1-6, need to fix this.
+
+CORRECTION - will be redone for a quest room in the future.
+burrow.c - When cloning your mobs you search for monster2 and monster3, but the name of
+           the mob is monster.  You will need to change this otherwise you will get a
+		   large number of zoogs showing up after each reset.
+CORRECTION - corrected check for zoog, rm redundant room exits.
+
+burrow1.c - You need to make the same changes as above with the monster2 and monster3
+            check.  Also, You can ditch the add_actions for back and tunnel since you have
+			them setup in dest_dir.
+CORRECTION - corrected check to zoog, rm redundant exits.
+
+burrow1a.c - Same changes as burrow1.c
+CORRECTION - same corrections as above.
+
+cave1.c - Long desc:  Need to change run to runs in the 2nd line, also look to looks in
+          the 4th line.
+CORRECTION - changed run - runs, look - looks
+
+enroom2.c - Might want to change the medallion's check for present to something a little
+            more uncommon than if(present("medallion"....could be replaced for another
+			rather easily.
+CORRECTION - changed medallion - britmedal
+
+enroom3.c - There is a much easier way to do the check without cloning the dummy, ask
+            Snow or another wiz for further help on doing this.  Also, the clues are
+			very vague here in finding the pentagram and twisting it. If you want it
+			to be this vague that is fine, otherwise....
+CORRECTION - redone w/o cloning the dummy.  The pentagram portion will be
+part of my quest.
+
+enroom4.c - Need to have an item desc for: plains, roofs
+CORRECTION - made desc for plains, roofs.
+
+enrooms.c - 4th line in long desc: change begin to begins
+CORRECTION - correct begin - begins
+
+kadath2.c - Need an item desc for lanes.
+CORRECTION - made desc for lanes
+
+koth.c - Long desc: Maybe change 'was vaster than' to 'is more vast than'? try and keep
+         things in present tense also.
+CORRECTION - change to is more vast than, updated past tense.
+
+kothup.c - long desc: seem to seems. Once again you use the dummy, there is an easier
+           way, consult an experienced wizard.
+
+CORRECTION - changed seem - seems, updated w/o cloning dummy.
+
+monstary.c - should be monastery. Also, you are using past tense to describe something
+             they are looking at in your long.
+CORRECTION - changed monstary - monastery, updated past tense.
+
+room3.c - No reason for the functions up() and down() since you have exits in reset,
+          ditch them.
+CORRECTION - rm redundant exits.
+
+room4.c - Same as room3.c
+CORRECTION - rm redundant exits.
+
+room5.c - Ditch the up() and east() functions since they have no real purpose.
+CORRECTION - rm redundant exits.
+
+tdown.c - Need to ditch the exit functions you have setup here like in room4.c etc.
+CORRECTION - rm redundant exits.
+
+tdown1.c - same as tdown.c and in the long you need to change called to calls.
+CORRECTION - changed called to calls, rm redundant exits.
+
+tdown2.c - ditch south() and north() functions since they are redundant.
+CORRECTIONS - rm redundant exits.
+
+temple.c - Long desc: change seem to seems.
+CORRECTIONS - changed seem - seems
+
+templedoor.c - You have no check for the mob here! with it setup this way you will get
+               a new mob no matter what each reset. Also, ditch your redundant exits
+CORRECTION - added check for monster, rm redundant exits.
+
+tunnel.c - can't look at 'face' add to item descs.
+CORRECTION - added desc for face.
+
+villa.c - Long desc: 1st line change seem to seems and breathe to breath.
+CORRECTIONS - changed seem - seems, breathe - breath
+
+villa2.c - redo the 1st line in the long. Can't look at tavern, river, or path...add these
+CORRECTIONS - redid the room description.
+
+villashop and villabar.c - Might want to play with the longs more, i understand that this
+                           is taken directly from the shop and pub code, but it needs more
+						   atmosphere.
+CORRECTION - added more atmosphere to the bar and shop.
+			   
+ADD-ONs - added two new rooms, since I decided to redo the 6altars for a quest object.
+The files are /players/brittany/lair.c and lair1.c
+
+Sorry for the extra work, but the 6altars wasnt working for me.

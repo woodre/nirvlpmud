@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/obj/armor","/players/blue/weapons/obsidian_sword","/players/wren/Area/starbug/items/veil","/players/snow/heals/kw_meat","/players/hippo/armour/glazour_coat","/obj/armor","/players/angel/area/stargate/obj/P90_no_ammo","/players/softly/nhall/obj/green2","/players/wren/Area/starbug/items/currie","/obj/level_list","/players/pain/NEW/weap/mace","/players/hippo/heals/bubbles","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/snow/WEAPONS/ice_star","/players/pain/closed/wands/orb","/players/snow/WEAPONS/balance","/players/pain/NEW/arm/tunic","/players/mythos/awep/arrow","/players/wren/Area/starbug/items/straw","/obj/weapon","/players/puppy/s/eq/apron","/obj/armor","/players/saber/armor/mshades","/players/mythos/mwep/voice","/players/scathe/weap/baxe",})
+shorts ({"A suit of [1mwhite[0m platemail","An Obsidian Sword","a big wedding veil","A hunk of whale meat","glazour coat","A [1mwhite[0m helmet","[36mP90 machine gun[0m","Healing Balm [32m(green)[2;37;0m [2]","A tin of chicken currie","A list of the top players","A large iron mace","[1;36mbubbles of 7up[0m","A nobleman's shortsword","Ice Shuriken","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","The Broadsword of Balance","A handsome blue tunic","arrow","a long plastic straw","Bow","An apron","A pair of [1mwhite[0m boots","Mirrorshades","Voice","A Huge Double Bladed Axe",})
+found ({1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,})
+loaded 0

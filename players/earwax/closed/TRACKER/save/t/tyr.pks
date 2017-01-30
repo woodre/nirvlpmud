@@ -1,0 +1,6 @@
+06/13/04 13:54: Pike        ((19+100/Cyberninja)   28(4/1)
+06/13/04 13:54: Tenchu      ((19    /Cyberninja)   16(4/1)
+07/16/04 22:18: Doodle      ((19+33 /Cyberninja)   27(2/1)
+02/ 7/07 23:59: Achilles    ((19+22 /Cyberninja)   27(2/1)
+02/ 7/07 23:59: Dara        ((19+100/Bloodfist)    32(1/1)
+03/ 8/07 02:05: Achilles    ((19+21 /Cyberninja)   30(2/2)

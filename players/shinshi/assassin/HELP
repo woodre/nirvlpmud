@@ -1,0 +1,23 @@
+################################################################################
+COMMAND:                   COST:            USE:
+ALL ASSASSINS:
+license1                            Show the other help list.
+ac <str>                   0 sp     Assassin's cant.  All assassins can hear.
+assassins                           Lists assassins logged on.
+pkers                               Lists player killers logged on.
+hitlist                    0 sp     The Most-Wanted List.
+levels                              Shows guild levels.
+rank                                Your present rank in the guild.
+news                                Assassin news.
+quest                               Quest you need to solve to advance level.
+disguise <level>           0 sp     Sets your title to another level.
+gtitle                     0 sp     Sets your guild title.
+stalk <who> or off         15sp     Follow person around. Neato.
+preview <direction>        15 sp     Allows you to peer into the next room.
+o                                    Toggles health monitor on/off.
+backstab <player/monster>           A powerful first attack.
+earplugs <in/out>                   Blocks out ac.
+adjust_myself                       Resets your license.
+leaveguild                          Leave the guild (Be sure with this command)
+code                                The Code of Assassins. (Very important!)
+################################################################################

@@ -1,0 +1,41 @@
+move_check(str)  {
+
+  object HERE;
+  
+  if(str == "north" || str == "n" || str == "south" || str == "s" ||
+     str == "west" || str == "w" || str == "east" || str == "e" ||
+     str == "northwest" || str == "nw" || str == "southwest" || str == "sw" ||
+     str == "up" || str == "u" || str == "down" || str == "d")  {
+  
+  HERE = environment(this_player());
+  
+  command(str, this_player());
+  if(HERE != environment(this_player()));
+    command("look", this_player());
+    return 1;
+  
+        }
+        }
+*/
+/*      
+    write("\n"+BOLD+"The world comes into focus."+NORM+"\n\n");
+    return 1;
+          }
+  
+  if(str == "off")  {
+  
+    SIGHT_ON = 1;
+    
+    write("\n"+BOLD+"The wor"+NORM+"l"+BOLD+"d d"+NORM+"ro"+
+           BOLD+"ps"+NORM+" o"+BOLD+"u"+NORM+"t of focus.\n\n");
+    return 1;
+           }
+
+    write("\n");
+    write("Key:  \t"+BOLD+"PLAY"+NORM+" = Player       "+HIR+"MON"+NORM+"  = Monster\n");
+    write("      \t"+HIB+"PET"+NORM+"  = Kid or Pet   "+BOLD+"AUTO"+NORM+" = Autoload Object\n");
+    write("      \t"+HIM+"WEAP"+NORM+" = Weapon       "+HIG+"ARMR"+NORM+" = Armor\n");
+    write("      \t"+HIC+"OTHR"+NORM+" = Other\n");
+    return 1;
+          }
+*/

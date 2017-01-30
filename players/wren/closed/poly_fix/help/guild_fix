@@ -1,0 +1,9 @@
+[GUILD FIX]
+
+  Disposes of the guild object (clay) currently in your inventory
+  and hands you a new one. Use in case bugs start occurring that are
+  traceable to guild spells. If an error is detected in the object,
+  some or all environment variables in 'set' may be destroyed.
+
+Usage:  guild fix
+

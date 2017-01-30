@@ -1,0 +1,16 @@
+Vertebraker: [5.13.02]
+
+New efun .. "delete_spaces()"
+
+Sample usage of it:
+
+string str;
+str = "My name is Ted.";
+str = delete_spaces(str);
+
+Now str is .. "MynameisTed.";
+
+You got it chief, it just deletes all the spaces in a string.
+[and returns the result].
+
+tail /obj/simul_efun.c for the pathetically simple code.

@@ -1,0 +1,19 @@
+#0:0
+FileName "players/earwax/housing/data/molasar/Molasar_Plains_50"
+Short "House"
+LongDesc ""
+ShortDesc ""
+Ids ({"EARWAXIAN_HOUSING_OBJECT_ID_GOES_HERE",})
+WrapPref 0
+Upgrades ({})
+Owner "usagi"
+Owners ({"usagi",})
+Privs ({3,})
+ClanName 0
+Entrance "/players/earwax/housing/data/molasar/room/Molasar_Plains_50_0.c"
+LotSize 9
+HouseSize 4
+Cost 0
+LastRoom 0
+IsClanhall 0
+MaxRooms 6

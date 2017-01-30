@@ -1,0 +1,34 @@
+#0:0
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/kanjimuno/hall/main","west","/players/mokri/clans/kanjimuno/hall/r4","east",})
+short_desc "Meditation Chamber[0m"
+long_desc "generic clan hall locker room.\n"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"Strike of [30m[1mNight[0m","/players/jaraxle/closed/phoenix/weaps/strike",0,16,8,"A Hockey Stick","/players/jenny/wings/items/gstick",0,0,0,"[1;37mNature's [1;32mBlessing[0;0m","/players/jaraxle/3rd/alt/items/nature_orb",0,0,0,"bottle of [1;37mwhite wine[0m <7>","/players/saber/food/bigwine","7",0,0,"bottle of [1;37mwhite wine[0m <7>","/players/saber/food/bigwine","7",0,0,"bottle of [1;37mwhite wine[0m <2>","/players/saber/food/bigwine","2",0,0,"[1mbottle of dark ale[0;0m <2>","/players/arrina/heals/ale","2",0,0,"[1mbottle of dark ale[0;0m <2>","/players/arrina/heals/ale","2",0,0,"A Hockey Stick","/players/jenny/wings/items/stevestick",0,0,0,"Many large stacks of gold coins [[1;33m1287[0;0m]","/obj/money",1287,0,0,})

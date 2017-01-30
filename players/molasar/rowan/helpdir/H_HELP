@@ -1,0 +1,24 @@
+
+[============================================================================]
+
+You are able to ride your horse, have it follow you, or it can carry items.
+
+Commands available:
+-------------------
+mount, dismount             Self-explanatory
+pack                        Will list items in horse's pack
+pack <item>, unpack <item>  Will put or remove item in pack
+lead                        Causes the horse to follow you
+tie off, tie off horse      Horse will stop following
+dismiss horse               Return your horse to the stables
+setname <name>              Set your horse's name
+horsedir                    A list of directions you can ride your horse
+
+While mounted you are able to look and say things, but must
+dismount before you can issue commands towards objects in the room...
+such as 'slap molasar' , 'kill orc' 
+You are now able to get items in the room while mounted.
+
+Any complaints, suggestions mail Molasar, thanks
+
+[============================================================================]

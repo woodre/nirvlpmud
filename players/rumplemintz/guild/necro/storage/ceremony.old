@@ -1,0 +1,14 @@
+raise_portal() {
+  object targ;
+  
+  if(!str) { write("WTF?\n"); return 1; }
+  if(!find_player(str)) { write("NOt a player.\n"); return 1; }
+  if(!(targ = present(str,environment(tp)))) { write("who?\n"); return 1; }
+  if(targ != find_player(str)) { write("laugh\n"); return 1; }
+  if(targ->query_level() < 5 || targ->query_level() > 19) { write("ah..  dont think so.\n"); return 1; }
+  if(targ->query_guild_rank() || targ->query_guild_name() ||
+     targ->query_guild_exp() || targ->query_guild_file()) {
+	   write("have a wiz check.\n"); return 1; }
+  targ->set_guild_name("necromancer");
+  targ->add_guild_rank(1);
+return 1; }

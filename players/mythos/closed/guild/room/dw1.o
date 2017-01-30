@@ -1,0 +1,28 @@
+name_of_weapon "dark weapon"
+alt_name "sword"
+alias_name "sword"
+short_desc "Sword of Angels[36m  * Cold Fire * [2;37;0m"
+long_desc "Sword of Angels[36m  * Cold Fire * [2;37;0m"
+read_msg "[31mA Weapon of BLOOD- forged by Dw.[2;37;0m"
+info 0
+hit_func 0
+wield_func 0
+save_flag 0
+class_of_weapon 18
+value 10000
+local_weight 4
+storage 350
+owner "dw"
+slay 0
+vampire 0
+life 0
+soul_steal 0
+sharp 0
+berserk 0
+speed 0
+wounding 0
+spell 0
+norm 0
+ego 0
+type_s ({})
+path "players/dragnar/weapons/angel"

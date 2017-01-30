@@ -1,0 +1,11 @@
+C Y B E R N I N J A
+
+Ability: mwho
+Usage: mwho
+
+Effect: Shows all players, regardless of invisible status.
+        Displays HP/SP status, as well as coins on hand.
+        
+Optional argument: list of player names, separated by commas
+Effect: Show information for only those players
+

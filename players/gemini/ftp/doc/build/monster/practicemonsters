@@ -1,0 +1,13 @@
+The note is titled 'practice/worthless monsters(boltar, Mar 30, 100000)':
+
+ 
+ all practice monsters using the /obj/living.c 
+must call set_no_exp_value();
+just calling this function blocks any and all experience
+to be gained by a player.
+in other words the player recieves 0 exp from the practice monster.
+this system MUST be added to all practice monsters or a similar one
+to non standard monsters of this purpose. other wise they will be fixed
+or removed by the senior wizard who finds them.
+agian the player must not receive exp for practice/sparing/test/etc monsters
+

@@ -1,0 +1,23 @@
+**************
+
+
+                     Ed
+
+Syntax:    ed <file>
+
+Desc:
+           Command enters edit on file specified. Within edit a help
+           menu detailing individual functions can be called typing
+           'h' at the prompt. 'q' exits without saving.
+
+Warning:   This is slower than offline editing but can be useful for 
+           small quick changes.
+
+Example:   ed blah
+                  results
+           file blah is opened to be edited
+
+Related:   mv, cp, rm
+
+
+**************

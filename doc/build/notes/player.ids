@@ -1,0 +1,13 @@
+Vertebraker: [4.22.02]
+
+If you have any code where you wish to add an id to
+a player, use:
+
+add_player_id(arg) : add an Id.
+remove_player_id(arg) : remove an Id.
+query_player_ids() : Return player_ids.
+
+~v
+
+p.s. This variable, player_ids, is static.
+So.. it doesn't save.

@@ -1,0 +1,15 @@
+[1;30m01/16/04 14:59[2;37;0m[2;37;0m: Wrote this command.
+[1;30m01/16/04 15:01[2;37;0m[2;37;0m: Tweaked this command slightly.
+[1;30m01/16/04 16:52[2;37;0m[2;37;0m: Changed add_news command: now it just takes news as the arguement.
+[1;30m01/16/04 16:52[2;37;0m[2;37;0m: Helped Jareel with a few bugs.
+[1;30m01/16/04 16:52[2;37;0m[2;37;0m: Changed over defs, commands, gob for shards to use array for all stats.
+[1;30m01/16/04 16:53[2;37;0m[2;37;0m: Changed tracker to incorporate lib changes Boltar made for it.  Should be pretty error-proof now..
+[1;30m01/16/04 16:53[2;37;0m[2;37;0m: Removed daemonization from fields area.  Was wasted eval..
+[1;30m01/16/04 16:53[2;37;0m[2;37;0m: Changed dispenser long.
+[1;30m01/16/04 16:53[2;37;0m[2;37;0m: Changed the dispenser that jareel clones to clone new one..
+[1;30m01/17/04 03:23[2;37;0m[2;37;0m: Wrote a grep command, bolts replaced previous bin grep with it.
+[1;30m01/18/04 06:38[2;37;0m[2;37;0m: Added support for custom error messages (failure_msg() in command inherit).  Commands daemon should be in its final form.  Also adjusted the documentation in notes/Commands and bin/README accordingly..
+[1;30m01/18/04 07:09[2;37;0m[2;37;0m: Added vrep command to view workreports..
+[1;30m01/24/04 02:41[2;37;0m[2;37;0m: Added three commands to wiztool: bump, force, Force (with logging on forces).
+[1;30m11/22/05 11:52[0m[0m: Added lrep command to my wiztool - to view libreports (verte, illarion presently have them, i will if i ever reach 1000).
+[1;30m12/05/05 10:15[0m[0m: Shadow_dagger is a more efficient spell than blister - higher damage, higher average damage, and lower cost - according to the headers at least.

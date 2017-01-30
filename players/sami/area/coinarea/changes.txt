@@ -1,0 +1,344 @@
+Changes for Sami
+
+RRRR  OOOO  OOOO MM MM  SSSS
+R  R  O  O  O  O M M M  S
+RRRR  O  O  O  O M   M  SSSS
+R R   O  O  O  O M   M     S
+R  R  OOOO  OOOO M   M  SSSS
+
+r1.c
+-Capitalize "shadows" in the second sentence.
+-Not sure if I would use "AGAINST the shadowy archway" maybe on? Up to you.
+-"An almost metallic substance" instead of "A almost
+-disappear* not dissapear
+-menacing* not mennicing
+-As for the archway description, try not to use the word "you". It
+assumes that the player is doing certain things that they may NOT be doing.
+**I would still suggest adding one for substance/metallic substance to the item description
+
+r2.c
+-Holo cavern? Is it supposed to be a HOLLOW cavern or a holographic cavern?
+-I believe it should be a living entity; breathing and listening.
+**I would still suggest adding one for substance/metallic substance to the item description
+
+r3.c
+-Same changes as r2.c
+
+r4.c
+
+-Same changes as r2.c
+
+r5.c
+
+-Same changes as r2.c
+
+r6.c
+
+-Same changes as r2.c
+
+r7.c
+
+-Same changes as r2.c
+
+r8.c
+
+-Same changes as r2.c
+
+r9.c
+
+-Same changes as r2.c
+
+r10.c
+
+-Same changes as r2.c
+
+r18.c
+
+-Same changes as r2.c
+
+r17.c
+
+-Same changes as r2.c
+-Loki has been cloned multiple times. Check the code. You have it as loki_1 but the file is LOKI_1
+
+r16.c
+
+-Same changes as r2.c
+
+r15.c
+
+-Same changes as r2.c
+-Meganman has been cloned multiple times. Check the code. You have it as meganman_1 but the file is ko_megaman
+
+r14.c
+
+-Same changes as r2.c
+
+r13.c
+
+-Same changes as r2.c
+-Zero has been cloned multiple times. Check the code. You have it as zero_1 but the file is ko_zero
+
+r12.c
+
+-Same changes as r2.c
+
+r11.c
+
+-Same changes as r2.c
+
+r19.c
+
+-Same changes as r2.c
+-Simon has been cloned multiple times. Check the code. You have it as batman_1 but the file is belmont
+
+r20.c
+
+-Same changes as r2.c
+
+r21.c
+
+-Same changes as r2.c
+
+r22.c
+
+-Same changes as r2.c
+
+r23.c
+
+-Same changes as r2.c
+
+r24.c
+
+-Same changes as r2.c
+
+r25.c
+
+-Same changes as r2.c
+-finally* not finaly
+
+Rooms Overview: The rooms are basically all the same. Kinda lame but that's just my opinion =P
+
+MM MM OOOO BBBB SSSS
+M M M O  O B  B S
+M   M O  O BBB  SSSS
+M   M O  O B  B    S
+M   M OOOO BBBB SSSS
+
+Sonic.c
+
+-don't* not dont
+-He basically casts both attacks EVERY round. I don't find it very fair but that's up to you
+-"Sonic Charges his Super Spin Dash and shoots at You." Lowercase charges and you.
+-"Sonic runs to you with Super Speed and S L A M S You." I would suggest "S L A M S into you" Lowercase "you"
+-When looking at it from a third person, "Sonic devastates his Yesman with a Super Spin Dash." Get rid of the word "his"
+
+Venom.c
+
+-Lowercase "dark" "except" "whites" and "Horrifying"
+-Should be "except for the whites of his eyes."
+-Add specials. He has a weapon class of 40?!?! He doesn't even do anything special!!! He's worth like 26k and tough as fuck
+
+batman.c
+
+-Lowercase "black" "grey" "yellow" "utility"
+-As Yesman was battling him, Shinshi saw "Batman shoots his hookshot at You and you fall cracking your S K U L L"
+This shouldn't say "you"
+
+belmont.c
+
+-waist* not waste
+-an* extremely long whip not a extremely long whip
+-Nice specials! Extremely difficult
+-"Simon ~EVISERATED~ Yesman blood gushes everywhere." Should be eviscerated. Put a period after the players name
+and capitalize blood
+-"Simon delivers a deadly Roundhouse to your Abdomen." Lowercase Abdomen and maybe roundhouse?
+-"Simon's Whip hums with a Righteous aura." Lowercase Whip and Righteous
+
+cptamm.c
+
+-Lowercase "Hero" and "Shield"
+-Capitalize "This" in "This is the ultimate"
+-He better kill people. I'm scratching my nuts right now.
+
+darkwing.c
+
+-"Tremendous amounts of light leak" should be "leaks" Holy shit my fingers stink from my ball scratching...
+-Lowercase "Hero" "Purple" "Purple" (again) "Gloves"
+-"Almost translucent Darkwing" put a , in between translucent and Darking
+-"Purple mask covering his what? His DILDO?
+-What of his pants? I'm confused. Change that. "Where are his pants?!" or something... I dunno
+
+death.c
+
+-You don't have to do this but fix the alignment. I'd put \n after "drape to the floor"
+and probably after "some unknown alloy."
+-"Grim raises his scythe and brings it down lodging it into your spine." put a , after "brings it down"
+-"Grim summons Spirits that D E V I S T A T E you." Lowercase Spirits.
+-As Shinshi, I see "Grim cuts deep into the spine of Grim." Should be "Grim cuts deep into the spine of Yesman."
+-As Shinshi, I see "Grim Absorbs SOULS and feels Rejuvenated." Lowercase absorbs and rejuvenated"
+-As Shinshi, I see "Grim's Scythe glows with a Deadly aura." Lowercase "Scythe" and "Deadly"
+
+deku.c
+
+-As Yesman, I see "Deku screams and spins twords you and C R A S H E S into YOU." Lowercase YOU and it's towards* not twords
+-As Shinshi, I see "Deku Devastates his opponent with a Bubble Shot to the C H E S T." Lowercase "Devastates"
+
+goron.c
+
+-Lowercase "Large" "Large" (again) "Grey"
+-As Shinshi, I see "Goron Devastates his opponent with a Right hook to the S K U L L." Lowercase "Devastates" and "Right"
+-As Shinshi, I see "Goron Balls up and C R A S H E S into Yesman." Lowercase "Balls" HAH! Balls....
+
+link.c
+
+-Holy fuck he just wrecked my face...
+-Remove the period from Long green robes
+-"It appears he is carrying an entire armory!" Just use what I just typed. It's easier haha
+-Roy's a fucking idiot
+-"its Link" should be "It's Link!" with or without the ! i dont give a fuck
+-Capitalize "This" in "This hero"
+-As Shinshi, I see "Link strikes Yesman in the S K U L L with his ARROW" followed by "Yesman burst into FLAMES" make it say "bursts"
+-As Shinshi, I see "Link CHOPED Yesman viciously" Should be "CHOPPED"
+-Link's BOMB after the BOMB graphic should say "You burst into FLAMES". Capitalize "you"
+-As Yesman, I see "Link finds his mark and Devastates you with his A R R O W" Lowercase "Devastates"
+-I might kill myself by the time I finish reviewing this just so you know
+
+loki.c
+
+-equipped* not equiped
+-"M A I M S" not "M A M E S"
+
+luigi.c
+
+-"its the peoples Hero" change it to "it's the peoples Hero"
+-As Yesman, I see the fire graphic and then it says "and Yesman burst into flames" Lose the "and" then make it "bursts"
+-As Shinshi, I see "Yesman bursts into F I R E.Luigi hit Yesman hard" Don't forget the \n!
+
+mario.c
+
+-Fucking killlll meeeeeee! I need a cigarette
+-"its the peoples Hero" change it to "it's the peoples Hero"
+-As Yesman, I see the fire graphic and then it says "and Yesman burst into flames" Lose the "and" then make it "bursts"
+
+megaman.c
+
+-"Tremendous amounts of light leak" make it "leaks"
+-Should be "shiny" not "shiney" and lowercase "Right" hand
+-As Yesman, I see "Megaman Charges his Mega Buster blah blah blah" Lowercase "charges"
+-As Yesman, I see "Megaman Absorbs your attack blah blah blah" Lowercase "Absorbs" and "You"
+-As Shinshi, same as Yesman.
+
+scientist.c
+
+-Why not make the room a no fight room instead of the warning?
+-His chat should be "Norm says: If you find any broken projectors, bring them to me. I'll buy them!"
+-He's a wimp. I'd kill him.
+-As Yesman, I see "Scientist draws back and unleashes a crittical blah blah blah" Change it to critical.
+-Change his short to say "An important scientist"
+
+spiderman.c
+
+-OOZING not oozeing (Fix that shit for previous mobs too haha)
+-A huge menacing mouth* (Fix that shit, bro)
+-Glaring* not glareing
+-. after eyes. Capitalize "It"
+-'Carnage hisses, ' welcome to our play place! '   Capitalize "welcome"
+-Make one of his names "carnage" since that's who he is talking as
+-Chat chance is kinda annoying. Set it to like a 1 or something.
+
+symb.c
+
+-OOZING not oozeing
+-A huge menacing mouth* (Fix that shit, bro)
+-. after eyes. Capitalize "Its"
+-changing not changeing
+
+zero.c
+
+-"Tremendous amounts of light leak" change to "leaks"
+-As Yesman, I see "Zero Charges his Z sabre and blah blah" Lowercase charges and maybe do Z-Sabre?
+-As Shinshi, I see "Zero devastates his Yesman" get rid of "his"
+
+zora.c
+
+-"its a beast known as a Zora" change it to it's
+-Put a period at the end of the long description
+-As Yesman, I see the tidal wave graphic, then I see "you are Washed away by amazing Power" lowercase "washed" and "power". Capitalize "You" Slight color bleeding
+-As Shinshi, holy fucking color bleed. Message isn't going completely through. Fix this ASAP
+
+Mobs Review: Holy fuck. Chill with the capitalize. I'll stab my eyes out if I ever have to fix your shit again >:D
+
+OOOO BBBBB JJJJJJ SSSS
+O  O B   B    J   S
+O  O BBBB     J   SSSS
+O  O B   B J  J      S
+OOOO BBBBB JJJJ   SSSS
+
+ammshield.c
+
+-Capitalize "The"
+-Good to go!
+
+ring.c
+
+-In short, capitalize "Ring"
+-In long, lowercase "ring"
+-Capitalize "the" in "the light seems to make the shadows"
+-Make it add_spell_point(3 + random(12)); Take more chance.
+
+sandles.c
+
+-Lowercase legendary
+
+shield.c
+
+-Capitalize "it" in "it is strangely cool"
+
+ubelt.c
+
+-Just do this: set_short(HIY+"Utility Belt"+NORM);
+-In long, lowercase "ring"
+
+projector.c
+
+-In the short, lowercase "Projector"
+-In the long, lowercase "Exchange"
+
+msword.c
+
+-Just do this: set_short(BOLD+"Master Sword"+NORM);
+-In the long, lowercase "Legendary" and "The"
+-message_hit "EVISERATED" needs to be "EVISCERATED"
+-"CHOPPED" not "CHOPED"
+-"Master Sword summons HOLY SPIRITS upon its FOE!!!." lighten up on the !'s or get rid of the .
+-"You eviserated Lizardman blood gushes everywhere" Don't forget the \n and to capitalize "Blood"
+-Weapon_hit() change Raging fury to raging fury
+-Weapon_hit() the special can NOT return 30;. Reduce it MAJORLY or this weapon will not be approved.
+
+scythe.c
+
+-Just do this: set_short(HIK+"Death's Scythe"+NORM);
+-Lowercase "Scythe of Legend" to "scythe of legend".
+-Interpret not interoperate
+-"EVISERATED" needs to be "EVISCERATED"
+-HIG+" slashed"+NORM,", drawing a little blood",
+-Weapon_hit() lowercase Deadly.
+-Weapon_hit() the special can NOT return 20;. Reduce it MAJORLY or this weapon will not be approved.
+-Get rid of return 0; as well
+
+whip.c
+
+-Just do this: set_short(HIK+"Belmont's Whip"+NORM);
+-Lowercase "Whip"
+-Capitalize "It is said"
+-EVISERATED needs to be EVISCERATED
+-Weapon_hit() lowercase Holy
+-Weapon_hit()  the special can NOT return 15;. Reduce it MAJORLY or this weapon will not be approved.
+
+Object Notes: Just keep in mind that Gordie's stick does a weapon_hit() maximum of like 3.
+
+
+
+That's it. It's a lot to change but once you get it done, send me a tell or a message on Facebook
+and I'll go over these changes.

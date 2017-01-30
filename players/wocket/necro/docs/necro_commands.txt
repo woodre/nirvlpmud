@@ -1,0 +1,34 @@
+    [------------------------NECROMANCERS-------------------------]
+         
+         Guild Commands
+
+     Many of the mud commands have been replace by guild versions
+     which hopefully will be more convient and helpful.  If, however,
+     you wish to use the old command simply type a " -old " after 
+     the command and the original version of the function will be used.
+
+         Who Command 
+     Gives a listing of all the players visible to you
+     along with other data depending on which switch
+     is used.
+
+           Syntax:  who [-b,-s,-t,-old]    
+           -b     gives a list of whos in battle
+           -s     gives a list of players stats
+           -t     gives a list of titles
+           -old   the old who
+       
+           Legend:
+           magenta  yellow  blue    blue    white   red
+              [       *       *       X       i       *
+           editing   dead   invis  non-tele  idle   pk area
+
+     
+        Tell Command
+     An improved tell which will allow for multiple names as well
+     as giving more info on the person that you are telling to.
+ 
+          Syntax: tell [-old] <name>,<name2>,...,<nameN> 
+       
+
+    [-------------------------------------------------------------]

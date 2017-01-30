@@ -1,0 +1,142 @@
+C Y B E R N I N J A S
+
+Fax File: tier1
+Usage: fax <topic>
+
+
+     Tier 1 wizards are the guild owners.
+Around 1995, the CyberNinja guild was written by two Tier 1
+wizards in a collaborative thought exploring effort.
+Since then, the guild has evolved significantly, and several 
+other wizards have lent their skills and talents as code 
+contributors and policy makers.
+
+     There is nothing an administrator cannot do, and no
+limit per se to his involvement in how the guild runs.
+However, it is the purpose that the CyberNinja guild be
+player run, and that players determine what a CyberNinja
+really is.
+
+     Tier 1 wizards have final say and responsibility for 
+the guild. All changes to the guild code must be approved
+by a Tier 1 wizard, unless that change is minor or made by 
+a Nirvana senior/admin wiz for purposes of rule compliancy.
+And of course, if none of the Tier 1 wizards ever log on
+(which is OK because the guild is self-maintaining), 
+the approval process is given to the manager-appointee.
+
+_______________Administrative Commands________________
+add_credits <member> <credit_amount>
+     'add_credits' adds on an amount of credits specified.
+addxp <member> <xp_points>
+     'addxp' adds on an amount of guild experience specified.
+change_honor <member> <#honor_points>
+     Changes the number of honor points a member has to the
+     points specified.
+dnet <message>
+     Send a message through CyberDaemon. This will reach
+     all ninjas whether they are muffled or not.
+empower <member> <position> [yes/no]
+     The 'empower' command is the all powerful command
+     that gives members guild offices or takes them away.
+     'yes' means give the player the position, 
+     'no' means take the position away.
+     Type 'empower' by itself for a list of types.
+enhance <member> <quality_level>
+     'enhance' changes the quality level of a guild member.
+     The quality level is the numeric rating of a neural
+     chip. Chip rankings go from 1 to 10.
+     Use this command sparingly, because the chip name
+     string must also be changed... which is a hassle.
+enhancements <who>
+     By typing in a name of a guild member after the
+     enhancements command, you may see their enhancements.
+     You may see your own by normally just typing
+     'enhancements'.
+execute <member>
+     This is a last resort. Use very sparingly.
+     Execution kills the guild member and destroys
+     all guild status. It is a way to kick a guild member
+     out of the guild, dishonorably.
+fax <topic>
+     Allows you to view the Cyberninja officer files. 
+     Usage is exactly like the 'cyber' command.
+     By typing 'fax' alone, a list of topics is presented.
+     Please keep the contents of these files to yourself
+     and other officers.
+gbalance
+     Allows you to see the credit account balances of all 
+     currently logged on guild members.
+logend/logall <logFile>
+     Allows you to view all CyberNinja guild logs.
+     logend looks at the tail end of the log, logall looks
+     at the entire file.. page by page. Typing in logend
+     or logall without an argument will list all logs.
+onet <message>
+     Guild officer channel tell. Use this command exactly
+     like 'net', your message goes to only guild officers.
+onem <message>
+     Guild officer channel emote. See also 'onet'.
+recruit <player>
+     Allows you to recruit a player into the guild.
+     See 'cyber recruit' for more info.
+recruits
+     Allows you to see who you are currently counseling
+     as well as your remaining recruit slots.
+rehash <member>
+     This command refreshes the guild command mapping.
+     It should be used when a command is either added
+     or removed from the guild.
+report <what>
+     Allows you to report the winner of a match.
+     Tournament name should be included.  Comments or
+     disqualifications may be noted as well.
+set_art_level <member> <number>
+     'set_art_level' changes a ninja's belt level to the
+     level specified.  The level must be a number.  
+     Level 1 is a white belt, level 7 and above are black 
+     belts. For example, black belt degree 10 is art level 17.
+     Guild experience is not modified.
+set_immortal <wizard> <sphere>
+     Assigns a guild wizard into a sphere of influence.
+     Use this command to set/change a guild wizard's role
+     in the guild. Type 'set_immortal' with no arguments
+     to obtain a list of spheres. No wizard shall be
+     in the guild without having a defined role.
+set_weapon <member> <weapon>
+     'set_weapon' changes a ninja's weapon to the weapon
+     specified. Guild credits and guild experience are not
+     modified. Be careful when setting a ninja's weapon.
+     If you type in the wrong name, the ninja will not be
+     able to summon his/her weapon.
+suspend/unsuspend <member>
+     Allows you to suspend a member from the guild.
+     Unsuspend removes suspension. Suspension will disable
+     the member's guild object, but object will still
+     remain on the player.
+tourney
+     This shows the contents of the tournament report file.
+     All reports written will be shown.
+uncounsel <player>
+     Allows you to uncounsel a player you have recruited.
+     If you use this command to uncounsel a player who
+     is already a member of the guild, then you will lose
+     honor but your recruit slot will be freed up, so try to
+     recruit players who might be successful in the guild.
+     If you uncounsel a player who is not a member of the
+     guild, there is no honor penalty.
+unrenegade <member> [commit]
+     Without typing "commit", lets you see the Renegade
+     status of a member. If you type "commit" after the
+     name of the ninja (as specified in usage above), it
+     removes the Renegade status from a Renegade ninja.
+     That ninja will then again follow the path of honor.
+     Honor is reset to that of a new guild member.
+upall
+     This will update the guild object of all guild members.
+     This works by destroying the old object and cloning a
+     new object to every guild member.
+view_honor <member>
+     Allows you to view the number of honor points and the
+     accompanying rank name that the guild member has.
+______________________________________________________

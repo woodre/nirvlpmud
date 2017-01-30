@@ -1,0 +1,132 @@
+Thu May 24 12:27:25 2001 Offered to let anyone kill ~/realm/NPC/ooze.c  Hugh took me up, died once.  He knew the conditions ahead of time, no refund.  He killed it on his 2nd try.
+Thu May 24 12:51:06 2001 Gave hugh a one-time title for killing the ooze :)
+Thu May 24 14:59:33 2001 Added a side attack to Jerek and shorted the hunt time
+Sat May 26 13:58:37 2001 Updated ~/realm/taus to be follow and added in ~/realm/taus/cave8.c with ~/realm/NPC/ooze.c
+Sat May 26 14:06:01 2001 Updated ~/realm/city to be follow
+Sat May 26 14:07:55 2001 Increased wc/ac/coin val of some gurthers
+Sat May 26 19:24:06 2001 Added follow code for X and D
+Sat May 26 19:54:33 2001 Modified/fixed pill dispenser: now has 20 zp1 and 10 zp2 and displays correct number of remaining pills before price hike
+Sun May 27 17:51:30 2001 Reset Alexl's login to church from Necro guildhall
+Sun May 27 19:53:39 2001 Added a level check in wield() to ~/museum/OBJ/light_dagger.c at Worm's suggestion.
+Sun May 27 22:07:11 2001 Added a 5 minute enchantment Tyborlek can cast on players to protect them from the demon curse.  costs about 90 sps.
+Sun May 27 23:30:17 2001 Refunded worm a million xp for my light_dagger getting him killed when he already had it wielded.  fixed the wep to not do dmg if already wielded.
+Mon May 28 17:43:56 2001 Removed mist_creature's heart_beat and gave it a junk shout upon death.
+Tue May 29 19:29:32 2001 Gave revenge 155000 xp cause a bug killed him a couple days ago.
+Tue May 29 19:40:38 2001 Gave hugh 900k xp cause a little goof in the blob made it do a big ass hit_player() to him which killed him, 254 -> 0.
+Wed May 30 18:55:43 2001 Wonka had 3 items in his lockers error cause Eurale changed the paths.  Gave him 3k coins and the items, 2 bswords and a royal ring.
+Wed May 30 22:01:06 2001 Gave Kylie ~/closed/OBJ/es.c for winning my spur of the moment contenst.  First player to bring me items starting with "a" through "d"
+Wed May 30 23:49:22 2001 Refunded Julie a bsword and 1000 coins cause of Eurale.
+Thu May 31 20:59:35 2001 Fixed some oozeball.c issues. thanks Jareel & Jenny
+Sat Jun  2 16:45:46 2001 I added 20% light and good resistance to ~/realm/OBJ/onyx_res.c, but I don't know if that's a lot or what so it's just a file in my directory right now.
+Sat Jun  2 17:51:21 2001 Gave symbio 40k coins for a bug notification.
+Sat Jun  2 18:16:43 2001 Gave ~/realm/NPC/dolan.c a 1,1 heal_rate
+Sat Jun  2 18:40:18 2001 Made it so player's with tyb's enchantment or who have solved the fallen lands quest are immune to demons in ~/realm/X and demons won't block movement.
+Sat Jun  2 21:17:53 2001 Updated ~/museum/NPC/mage.c to use dmg types.
+Sat Jun  2 21:19:39 2001 Updated ~/museum/NPC/light.c to use dmg types.
+Sun Jun  3 20:30:34 2001 Added a min sp check in ~/realm/OBJ/tyb_ench.c
+Sun Jun  3 21:37:56 2001 Dusan asked if we could restore an elemental test reward lost in the crash.  Fakir and I informed him we don't do that, even if it's been done before.
+Sun Jun  3 23:46:26 2001 Added a "writing" item to the circle guild hall.
+Mon Jun  4 11:19:44 2001 Had an error in /x/demon_check.h, pulled darian out twice.
+Tue Jun  5 12:34:56 2001 Worked on reseting Dusan's stats, including lowering him to lvl 19, fixing guild, etc.  his xp needs to be set at 2mil still.
+Wed Jun  6 02:16:23 2001 Made some changes to ~/realm/NPC/ooze.c incl randomizing ac and wc a bit, adding a new special if it takes enough weak hits and some other number tweaks to try and make its difficulty equal to its value.
+Wed Jun  6 18:33:09 2001 Put in tougher ~/realm/NPC/Murdok.c apd by Mal
+Sun Jun 10 20:18:34 2001 Forgot to mention, restore'd slag's gob after boot, mailed mal.
+Wed Jun 13 21:34:10 2001 Refunded Hottentot tarrasque eq that restored from his coffin as "0".  This is generic eq i don't think should store.  Also healed him cause he showed me where tarrasque was and it attacked him.
+Thu Jun 14 12:00:32 2001 Refunded Wicket 2k coins for trying to buy dogs at sado's shop, mailed mal asking him to fix it.
+Thu Jun 14 21:25:15 2001 Added a max dmg check to demon_large.c
+Thu Jun 14 22:48:30 2001 Modified xp value of demon_large.c based on level of opponent.  seems undervalued.
+Fri Jun 15 00:06:18 2001 Mythos' pet errored when it took a hit_player of dmg type poison, not sure exactly why, compensated Kage and Konya 8k coins each for having to deal with it healing on them.
+Tue Jun 19 16:53:59 2001 Gave Dust an apple for winning a contest.
+Tue Jun 19 16:57:23 2001 Gave Cricket a lame apple for "winning" too.
+Thu Jun 21 01:19:55 2001 got promoted by V 70->75 for being helpful and shit :)
+Fri Jun 22 12:17:14 2001 Gave Saladin an apple and Naz a lame apple for winning a contest.
+Sun Jul 15 01:23:35 2001 Gave 15k coins to Symbio cause the party object bugged out on him.
+Thu Aug  2 13:01:17 2001 Demoted to level 21 for not living up to Mal's high expectations of me.
+Thu Aug 16 12:04:06 2001 Halved the cost of tyb's enchantment from -10 every 35 seconds to -5
+Mon Aug 20 02:19:42 2001 Allowed Bobby to be an honorary ranger
+Mon Aug 27 12:12:11 2001 Added a catch_tell to ~/realm/NPC/druid.c for the mist vertices, hinting at how to kill the creature.
+Sun Sep 16 14:25:10 2001 added okay_follow(){ return 1; } to ~/realm/city/path9.c
+Mon Oct  1 22:17:22 2001 I gave Ireland credit for my quest since he deserved it (led a party to the end, just didn't get any demon spirit kills so the quest wouldn't let him complete it).  I need to figure out a better way to prevent cheating, that doesn't have such a high potential of hurting players that actually do the work and get unlucky.
+Wed Dec  5 14:32:02 2001 Gave 10k coins to Dent for doing math quickly
+Fri Dec  7 18:51:16 2001 Fixed a mistake in gstaff.c that would cause the special to go off with the wrong monsters name in it.
+Tue Dec 25 01:43:39 2001 I cast a spell of sps regeneration in the village green to celebrate the spirit of Santa.
+Fri Jan 25 14:47:25 2002 Oden says I coded a guild, is that true?
+Sun Apr  7 18:27:04 2002 Lowered Gemini's mag from 30 to 20 since he is no longer a dm(?) - Pestilence pointed it out.
+Wed Apr 17 02:46:42 2002 Added a year 2002 log for Fallen changes
+Tue Apr 30 16:40:39 2002 Reimbursed Jaz the items he had in his ranger pack when it errored on him.
+Wed May  8 16:37:07 2002 Gave an apply to Kyllur for guessing my number (between 1-100)
+Sat May 11 15:06:13 2002 I made a few syntax changes to the hermit in the fallen lands quest, but i left out a { so it errored when Vodka was trying to do my quest again.  Refunded him a robe cause he hadn't been able to kill the hermit (lost hb), dested the hermit and fixed the code.
+Mon May 13 17:21:13 2002 Made some minor changes to bug_storm.c, including rm'ing the life draining treasure (players would just spam the cmd to dest them).
+Wed May 15 10:52:41 2002 Added unguilder code to ghall for Sparks.  He seemed to leave the guild but have it work only half way somehow.  Told him in a mail i'd give him 13k xp back for a death that occured after he logged into the fallen lands after quitting the guild (demons).
+Fri May 17 02:18:50 2002 I opened my ~/desert area w/ V's approval, updated main.c accordingly.
+Fri May 17 10:28:17 2002 Modified ~/desert/OBJ/desert_daemon.c to reload NPCs if there are none, as opposed to each time it resets.
+Fri May 17 16:14:11 2002 Added in brute_lord.c to ec9.  Updated daemon and added some error checking.  Added bigmon death log to brute lord.
+Fri May 17 16:14:37 2002 Approved by Maledicta
+Sun May 19 17:27:32 2002 Modified ~/desert/NPC/fiend_large to not agro to players <= lvl 15.
+Sun May 19 17:31:06 2002 Modified fallen_blade to respawn every 3.75 - 7.5 days from 7.5 - 15 days
+Tue May 21 14:40:20 2002 Rm'd the ac += 2 from the brute_lord special since ac starts at 27 which is already very high, and from there the heal rate increases.
+Wed May 22 14:29:19 2002 logit added new ID tag to all ~/desert npcs;  added search code to all ~/desert rooms;  added pieces of wand to random rooms in ~/desert;  upgraded ~/desert/OBJ/desert_daemon a lot;  finished all aspects of new quest and submitted to eurale for approval.
+Thu May 23 19:15:11 2002 Refunded Yorick 72827 xp after he died fighting ~/jenny/bundy/mobs/al.c when he wasn't in the same room.  added a present check to al's special
+Fri May 24 02:13:16 2002 Moved notes by Verte from the Green board to the Advance board (cause they're small and .. ha ha, powwer, pooweeerrrr!)
+Fri May 24 04:03:48 2002 excited U.C.
+Thu May 30 14:14:47 2002 Changed wc on evil_aura from 0 to 19 (actual wc still varies)
+Thu May 30 16:03:56 2002 Added a unique ID to all the elemental weapons
+Fri May 31 12:02:28 2002 Added a present() check to /players/daranath/qualtor/scim_alley.c for "children"
+Fri May 31 19:31:59 2002 Approved and Sponsored Linus.  Put his castle down, went over wiz commands, rules, whatever I could think of.  Gave him some examples, a filer, talked about first area... all that good stuff.
+Fri May 31 22:15:13 2002 Added guild code to /open/info/
+Fri May 31 22:15:19 2002 yay!!! :)
+Wed Jun  5 10:07:18 2002 added a this_player() check to the short() of feld's nifty_staff.c
+Thu Jun  6 19:30:50 2002 Fixed present checks in ~/softly/point/rooms/lh7.c
+Wed Jun 12 13:20:10 2002 Added ~/heals/delaa.c to ~/realm/taus/grove.c
+Wed Jun 19 02:21:13 2002 gave massacre 25k coins because of a necro bug he mailed wocket about
+Fri Jun 21 12:58:18 2002 updated /players/sandman/ASGARD/cave.c to only have 1 Loki
+Sun Jun 23 16:37:56 2002 Added temporary descriptions for the guilds that weren't yet in /open/info/guilds.
+Mon Jun 24 02:20:18 2002 added "barter bandaging" syntax to players/eurale/Fiend/OBJ/bandages.c
+Mon Jun 24 11:57:39 2002 Fixed 'ask' in /open/info/room.c
+Wed Jun 26 19:24:01 2002 Approved Forbin's players/forbin/hyperion/flame_forest/NPC/aurtos.c.  The items it carries have already been approved.
+Fri Jun 28 10:37:14 2002 die
+Wed Jul 17 11:29:42 2002 Added cloning of Bloodfist gob to my castle
+Wed Jul 17 20:09:23 2002 fixed an error in snow's treasury.c room that allowed for infinite coins, albeit 1 coin at a time while spamming the error log.
+Thu Jul 18 15:54:33 2002 added jatar as a beta tester yesterday
+Thu Jul 18 17:14:00 2002 added Yorick as the 2nd beta tester
+Fri Jul 19 12:27:56 2002 Added Marlboro as the 3rd beta tester.
+Fri Jul 19 12:37:54 2002 refunded marlboro 71711 + 8000 xp for dying somehow when joining guild.
+Fri Jul 19 20:01:56 2002 added calvin, pestilence's testchar, as the 4th beta tester.
+Sat Jul 20 04:13:05 2002 refunded yorick 118k xp for a bug related death.
+Fri Jul 26 10:48:03 2002 crashed the mud. refunded diesel a backbiter, shadowman geo robes and SOS, and haze 35k gold.
+Fri Jul 26 11:25:49 2002 commented out the exit from players/mythos/aroom/forest/tower4 to his dark room.
+Fri Jul 26 14:39:43 2002 gave 28k gold to raz who lost it in his hotel room when cerberus sac'd his corpse.  known bug.
+Tue Jul 30 10:07:49 2002 refunded marlboro 6k gold and a gem of combat skills.
+Wed Jul 31 12:15:39 2002 the 5th beta char is Ricochet, and the 6th is Bfist, a temp test char who will be played by Subotai.
+Sun Aug  4 23:46:17 2002 why don't wizards log their actions?
+Sun Aug  4 23:46:29 2002 CLOSED BLOODFIST BETA
+Wed Oct 30 14:13:44 2002 Added a this_player() check in monster_died() of ~/museum/NPC/golem.c
+Thu Oct 31 11:41:45 2002 commented out increased attribs from Fallen (~/circle/rooms/advance.h) due to changes to the way attribs now work on nirvana.
+Wed Nov 20 15:28:56 2002 fixed (again) the error that resulted from commenting out the code in advance.c back on 10/31.  the code that was commented out had comments in it, so it fucked up.  what's weird is i already fixed it once, and tested it, and it worked, but somehow the comments got back in there, like the room was restored from a previous version.  whatever, fixed now.
+Wed Nov 20 15:30:30 2002 advance.h in ~/circle/rooms, not advance.c
+Tue Sep 30 17:20:17 2003 closed museum due to bugs
+Fri Oct 17 11:13:27 2003 updated ~/realm/OBJ/paperhello.c to reflect closure of ~/museum/
+Mon Feb 21 22:11:48 2005 gave budah ~/closed/OBJ/hr2.c
+Fri Apr  8 22:11:39 2005 gave a major gem of cleansing to ribbit for winning a contest against vegeta
+Sat Apr  9 20:00:32 2005 added a check in ~/fred/closed/bloodfist/power/raise.c to make sure a player can't raise an attrib higher than the amount of free attribs they have available.  I can't believe this check wasn't already there.  thx to vegeta
+Sat Apr  9 22:09:53 2005 Updated ~/fred/closed/bloodfist/help/unsocket to fix a grammatical mistake.
+Sun Apr 10 23:28:17 2005 Modified query_study() in gob.c ~line 750 to omit the last 3 characters of a mobs file name so that mobs with sequential file names are grouped together as one kind of mob to study (for example, qurds).
+Thu May 26 20:22:47 2005 Gave Oz back a Blessed shield, hocket skates, golden earring, shadowcrown and temblor after he lost them and some other stuff in his hotel room.
+Thu Jun  2 02:13:56 2005 added 900000 xp to Wipeout because of two deaths from a BF bug.
+Sun Jun  5 15:52:12 2005 Updated ~/realm/OBJ/onyx_platemail.c with 4 year old resistance code :D
+Sun Jun 12 00:12:15 2005 OMFG I CODED SPELL 4 FALLEN ITS GOSU AND MUST NERF AND NOT APPROVED I MAIL VERTE K THX
+Sun Jun 12 05:48:23 2005 I think I changed it so Auseth will spawn more frequently (more than once a day)
+Sun Jun 12 20:32:58 2005 Increased wc on ~/realm/NPC/auseth.c from 18 to 32
+Sun Jun 12 20:33:30 2005 oh wait that won't work...   nevermind
+Sun Jun 12 20:37:00 2005 Buffed Auseth's specials
+Sun Jun 12 22:34:55 2005 added lode to fl_d.o because he did do the quest and get credit.  i think the save file was erased at some point years ago.
+Sun Jun 19 22:27:03 2005 replaced Worm a ~/snow/WEAPONS/hon_sword.c that he claims vanished from his Shardak lockers.  whatever
+Mon Jun 27 02:27:36 2005 Made changes to ~/realm/OBJ/siphon_stone.c  See Fallen WR for more info
+Wed Jun 29 19:04:16 2005 Updated ~/realm/OBJ/siphon_stone.c to drain hp as well as sp.
+Fri Jul  1 23:11:20 2005 changed siphon stone heat from ++ to +=3 per usage.
+Sat Jul  2 20:26:39 2005 Changed the drain msg on the stone from 33% to 100% since it's more dangerous now.
+Mon Jul 11 16:24:41 2005 Decreased the value of bartered Fallen components to 1/10th original value since they are storable now.
+Sun Sep  4 04:35:35 2005 changed bug ring flaw chance from 1:2500 to 1:5000 based on player feedback [upus]
+Sun Sep  4 04:37:59 2005 rather, took out chance entirely :D
+Mon Sep 19 05:11:42 2005 coded cool stuff for my workroom (and didn't crash the mud)
+Tue Nov 29 09:39:47 2005 told Earwax he could let players build houses in the Fallen Lands so long as he doesn't ugly up the place.  THEN HE WAS MEAN TO ME!  *cries*

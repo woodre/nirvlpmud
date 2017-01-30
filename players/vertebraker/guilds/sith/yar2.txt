@@ -1,0 +1,234 @@
+The Sith
+
+----------------------------------------------------------------
+
+Guild writeup by Vertebraker@Nirvana 
+
+----------------------------------------------------------------
+
+The Sith are a race of humanoids, from a faraway planet. They have
+landed on Nirvana running away from a Dark Jedi extermination of
+their kind. Hoping to preserve their racial magic and manipulation
+of the Force, they have started a new Sith Order, recruiting
+potential members and altering their DNA, amalgamating their former
+characteristics with those of the Sith race.
+
+The Sith race itself is one strongly magic-based. They are masters
+of dark and destructive magic. They are most blatantly evil, and
+diametrically opposed to all that is Good in the universe.
+
+They are beings of darkness and rest their bones there....,
+
+----------------------------------------------------------------
+
+They have a loose Hierarchy, one that will manifest itself in the
+Guild as:
+
+Force Incarnate - Guild Wizard
+
+10. Sith'ari   - Guild Commander
+9.  Jen'dari   - Dark Lord of the Sith, Guild Lieutenant
+8.  Karzye     - Hero
+7.  Meistras   - Master
+6.  Maras      - Bane
+5.  Sergeti    - Guardian
+4.  Ranka      - Hand
+3.  Kissai     - Acolyte
+2.  Ver'Juslus - Force Sensitive
+1.  Suaukes    - Adult
+0.  Kudik      - Baby
+
+For each rank, player may learn x of y spells from each rank.
+Because of this, players may customize their player versus
+another. Even the Sith'ari does not have knowledge of every spell....
+
+Advancement requires XP, Monetary Sacrifice and Live Sacrifice.
+Advancement to rank 9  requires the approval of the Sith'ari.
+Advancement to rank 10 requires the approval of the Force Incarnate.
+
+----------------------------------------------------------------
+
+Sacrifice -
+
+ a) Monetary Sacrifice
+
+ Sacrifice to the Sith cause is a component of advancement and is required
+ for advancement and the gaining of new knowledge. Cash only!
+
+ b) Live Sacrifice
+
+ After a monster has been weakened to 0/10, it may be sacrificed by the
+ player. This accumulates points in the gob.
+
+ sac_pts = (monster_xp_value / 100);
+ if(sac_pts > 1000)  /* 100k mob xp cap */
+  sac_pts = 1000; 
+
+ 
+----------------------------------------------------------------
+
+Circles -
+
+ Each Jen'dari may form a circle... this is sort of a clan within
+ the Sith. From within the circle, players may...
+
+ 1) Teleport to each other
+ 2) Have a communal chat line
+ 3) Leave messages for each other
+ 4) ???  needs expansion
+
+---------------------------------------------------------------
+
+Powers [currently unranked]
+
+ hatebolt -
+   Summon a bolt of pure hatred to damage an enemy.
+
+ darkweb - 
+   a web wraps around enemy, Continuously saps energy from enemy.
+
+ tendrils -
+   a black shadow, tentacles emerge and start pulling enemy apart.
+
+ mind control -
+   ???
+
+ illusion -
+   probably similar to BCM
+
+ hallucination -
+   cause enemy to run, stop fighting, or dance, other stuff...
+
+ memory rub -
+   pacify enemy
+
+ shroud - 
+   no one can view me, see my inventory, shown as "Shroud of Darkness" on who etc.
+
+ heal 
+
+ revive 
+
+ uneasiness -
+   anyone who atks me is stopped from combat
+
+ runes -
+   ward a room, anyone who enters is pushed out
+
+ create zombie -
+   a necromantic pet
+
+ sithspawn -
+   change a monster into a sithspawn pet
+
+ essence - 
+   heal another with own blood
+
+ sense force -
+   sense all invisibles .. but don't know who they are
+
+ rage - 
+   explode in multiple attacks with a weapon
+
+ pain -
+   DoT
+
+ wound -
+   DoT
+
+ hibernate -
+   heal faster, in a trance
+
+ suffocate -
+   DoT
+
+ shadows - 
+   whistle up the shadows to arrive, causes extra healing
+
+ fly - 
+   travel "above" the rooms
+
+ forcewind -
+   a wind that makes it difficult to strike the caster, +AC
+
+ windshove -
+   stun a monster, prevents from attacking
+
+ serpent -
+   Change an object to a snake...
+
+ dark double -
+   like fallen shadowform i think, causes enemy to attack a duplicate Me
+
+ emplace rune -
+   mark someone with the Sith [mainly cosmetic]
+
+ body manipulation -
+   digestion
+
+ lethargic sleep -
+   feign death
+
+ manipulate -
+   make a monster aggressive or calm.
+   Heh. You could make Harry aggro with this one.
+
+ shapeshift -
+   Take on the appearance of anything
+
+ crystallize -
+   Send a freezing bolt at 0/10, Can cause a monster to become an ice sculpture which...
+
+ shatter -
+   ...Can be shattered.
+
+ siphon - 
+   Suck life from something else (opp --HP, me ++HP)
+
+ dark prophet - 
+   See a living thing, where it is, its condition.
+
+ parallel -
+   Damage something through its dreams.
+
+ charge stone -
+   Charge a stone with the Force and...
+
+ detonate stone -
+   Detonate it like a bomb.
+
+ dark ball -
+   Create a ball that swirls around you to absorb damage.
+
+ ignite -
+   Ignite an object with flames, only you can pick it up
+
+ levitate -
+   float, ++ AC
+
+ rift <x> -
+   create a portal to enter a room tagged with tag_rift <x>
+
+ havoc -
+   Cause tsunami, earthquake
+
+ thought bomb -
+   Enemy assaulted with mental energy
+
+ Nightmare - 
+   Warn somebody with a bad dream (mainly cosmetic)
+
+ fear -
+   Cause enemy to run
+
+ black gaze -
+   bolts leap from eyes
+
+ cloak object -
+   no one sees the object 
+
+ eye of edor -
+   view enemy surroundings
+
+ darkness -
+   --light

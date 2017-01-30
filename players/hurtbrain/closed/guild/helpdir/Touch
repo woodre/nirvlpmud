@@ -1,0 +1,9 @@
+Spell Name: Touch
+Guild Lvl : 2nd
+Spell Cost: xx  [max(xx) = guild_level * 5, see set_touch about it]
+Syntax    : Touch <opponent>   [note the capital T]
+Descript. : It's an attack spell, that damages your opponent. The damage
+	    depends on how high the power of this spell is set.
+            When already fighting you don't need to repeat the name of
+	    your opponent, "Touch" alone will do.
+See Also  : set_touch

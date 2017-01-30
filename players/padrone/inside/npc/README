@@ -1,0 +1,4 @@
+Created this dir to move npc objects out of the room code.  It's just easier
+to debug and change.  Objects they carry will be in the 'obj' dir inside
+of this npc dir.
+--Rumplemintz

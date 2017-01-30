@@ -1,0 +1,76 @@
+#include "defs.h"
+inherit "/room/room.c";
+ 
+#define MY_NAME "airwoman" 
+#define CAP_NAME capitalize(MY_NAME)
+#define LEVEL call_other(this_player(),"query_level")
+int shld;
+
+reset(arg) {
+   if(arg) R TO(ME, "Game has just reset.\n");
+   shld = 0;
+   short_desc = CAP_NAME+"'s Workroom";
+   long_desc = short_desc+CR+
+"Before you, you see an ethereal space. The air is misty and slowly you\n"+
+"begin to see what you had always imagined to be Utopia.\n"+
+"There are trees and birds everywhere. The SKY is so blue.\n"+
+"And you think...how lucky you are to be in this world!!!\n"+
+"\n"+
+"     An archway filled with emerald flames is set in the far wall....\n"+
+"    On the stones of the archway are inscribed the words:\n"+
+"			CARPE DIEM! (SEIZE THE DAY!)\n"+
+"    Above the arch is inscribed : WIZARD'S PORTAL\n\n";
+        dest_dir=({"/room/church","church","/room/post","post","/room/shop","shop"});
+  
+    set_light(10);
+}
+ 
+ 
+init() {
+   if(Mqrn == MY_NAME) {
+      ACT("set_shield","shield");
+      ACT("invite","invite");
+   }
+   else {
+      if(allowed(M)) {
+        TO(M,"Welcome to "+CAP_NAME+"'s humble abode :)\n"+CR);
+      }
+      else {
+        TO(M,""+CAP_NAME+" isn't receiving any visitors at this time.\n");
+        MO(M,"/room/void");
+        R 1;
+      }
+  ::init();
+}
+}
+
+long(str) { ::long();     if(SELF) W(CR+"Shield setting at==> "+shld+CR); }
+
+set_shield(arg){
+  int temp;
+  if(!arg) { W("Workroom shields are currently at level "+shld+"."+CR); R 1; }
+  if(sscanf(arg, "%d", temp)) {
+    if(temp >= 0) {
+      W("Workroom shields are changed.\n");
+      W("Access is allowed to levels > " + temp + "\n");
+      shld = temp;
+    }
+    else { W(arg + " is an invalid paramter.\n"); }
+  }
+  R 1;
+}
+
+invite(str) {
+  int tmp;
+  if(!str) { W("Who shall I invite?\n");  R 1; }
+  if (!V) { W(CAP(str)+" is not around.\n");  R 1; }
+  tmp = shld;    shld = 0;
+  TO(V,"You have been invited to Airwoman's Workroom.\n");
+  V->move_player(V->query_mmsgout()+"#players/airwoman/workroom");
+  W("You have invited "+V->QN+" to your workroom.\n");
+  shld = tmp;   R 1;
+}
+
+allowed(who) {
+if(who->query_level() > shld) return 1;
+}

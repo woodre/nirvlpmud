@@ -1,0 +1,39 @@
+
+06.11 - added a new spell 'siphon' at 8m guild xp.  this channeled dmg
+        spell also increases regen of hp/sp/end while sacrificing the
+        ability to cast other spells in combat.  Requires a component
+        which only Auseth carries but is storable and must be held in
+        the inventory (approved by Verte).
+06.11 - increased sp regen from 1+r(gxp/1.6m) to 2+r(gxp/1.6m) to somewhat
+        compensate for their lack of increased sps (from years ago).
+06.11 - added a new ability deweave to accompany shadowweave.  players can
+        now remove the weave from a weapon in order to store it.  small
+        sp/hp/end cost to cast.  not a learned spell in and of itself.
+06.12 - Forbin added locker save code to the pouch so that a Fallen can
+        store components over boots.  I see no reason why this shouldn't
+        be in the game as it encourages the use of less common spells.
+06.12 - Reduced dmg of siphon from 24 to 20 a hb and hp/sp regen from 18
+        to 16 a hb.
+06.19 - Added a hp check in hb.h so siphon wont kill a target
+06.25 - Forbin rewrote the embrace code cause it wasn't working right.  It
+        still seems to be broken, however now his version is broken instead
+        of mine.  That's an improvement, right?
+06.25 - Added a call_out to ~/realm/OBJ/siphon_stone.c that drains
+        spell points from Fallen who carry it outside of combat.
+06.26 - Modified Siphon / Siphon Stone.  The stone itself now drains
+        sps when the owner is out of combat, anywhere from 25 to 78
+        every 34 to 62 seconds.  Amount drained is based on level and
+        the number of times siphon has been cast with the stone.
+        Nerfed the initial dmg of siphon from 20/hb to 15, however
+        with every 90 casts of siphon (excluding recasts) it gains 1
+        total damage for a maximum of 15 + 11 = 26.  Made the stone
+        store the variable and made additional cosmetic modifications.
+        HP/SP regen also increase by 1/hb with every 180 casts of siphon,
+        so they each start at 16 and max at 21 with 900 casts.  Also
+        changed end bonus from 9/hb to 7-10/hb with every 270 casts.
+06.29 - Per Forbin's suggestion I added a 'heat' variable to the stone which
+        increases as the stone is used and decreases with time.  When it gets
+        to over 36 it drains hp at the same time the stone drains sp.  Max dmg
+        for one set of 7 dmg cycles, which is also max, is around 500 dmg.
+      - Modified ste contrib to rage dmg formula since Fallen no longer get 30.
+07.04 - Removed the new who2 spell.  can use mud who2 now.

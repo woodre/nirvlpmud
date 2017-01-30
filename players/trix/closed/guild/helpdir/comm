@@ -1,0 +1,10 @@
+Spell Name: comm
+Guild Lvl : 1st
+Spell Cost: --
+Syntax    : comm <command>
+Descript. : If used alone it shows the complete list of Undead Guild
+	    Spells. While if a command name is typed behind it, it will
+	    show the detailed description of that command.
+	    Example: comm du
+	    Example: comm
+See Also  : --

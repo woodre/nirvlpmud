@@ -1,0 +1,70 @@
+C Y B E R N I N J A S
+
+Room File: holodeck
+Usage: cyber <topic>
+
+
+     Holodeck is a special room for your entertainment.
+It is a computer-controlled room where fantasy can become
+reality.  Intangible thoughts can become material. It is
+your private office or workroom.
+
+     Holodeck is controlled by a central computer, so all
+commands must be directed at the computer.  Use the 'say'
+command, followed by 'computer, <command>'.  For example,
+to terminate a program, type 'say computer, terminate program'.
+Do not forget to include the comma and to 'save program' 
+after every change you want kept.
+
+___________________How to Use Holodeck____________________
+Command line:  'say computer, '  (preceeds following commands)
+
+allow me to change environment
+   This allows you to change your surroundings so you see
+   what you want to see, instead of a grid.
+
+set object [1-4] name <one word name> short <title>
+   This allows you to actually create an object with the
+   id of what you type in for the name (the name it gets called
+   by) and the title so specified.  For example, the line:
+   set object 1 name tree short A tall fern tree
+   will create a tall fern tree
+
+clear object [1-4]
+   This command erases any settings object
+   1 through 4 may have had.  In other words, all settings
+   and preferences for the chosen number of object
+   are erased.
+
+make object [1-4]
+   This will do the actual forming of the object.  
+   Use the set commands above to choose a few settings, 
+   use this make command to make the object
+   actually appear.
+
+remove object [1-4]
+   This will destroy the object in question.
+
+terminate program
+   This will end the current holodeck program.  The room
+   will change back to a black void with yellow grid lines.
+
+execute program <name>
+   This will retrieve and execute a program in memory.
+   Specify a name, and that person's holodeck program will
+   be executed.
+
+save program
+   This will save the current program as your own program.
+   Programs may be restored by the execute program command.
+   1 program in memory at any one time per person.
+   Remember to save your program if you want to see it again.
+
+show program
+   Shows the specifics of the current program.
+
+lock/unlock doors
+   Locks are unlocks the doors to Holodeck. If doors are
+   locked, nobody else may enter holodeck.
+__________________________________________________________
+

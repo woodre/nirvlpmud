@@ -1,0 +1,16 @@
+Fri Jun  2 06:14:33 2000  Test
+Fri Jun  2 06:19:53 2000  Ok... Made a new filer that actually loads to me
+Fri Jun  2 06:20:33 2000  I changed ~/forest/mon/sithos.c so that he now has a death emote and leves ~/forest/obj/fang.c  Reason:  This was the original intent that Feld and I agreed upon
+Sat Jun  3 06:39:32 2000  Added ::init();  to ~/forest/obj/dress.c /17plate.c and /snakehelm.c  So they all can be worn now as per intent
+Thu Jun  8 15:15:39 2000  fixed ~/forest/obj/snakehelm.c  minor typo: shapped -> shaped
+Sat Jun 17 05:02:30 2000  dested    players/eurale/Park/NPC/raptor1#15590  in room: players/eurale/Park/jp69
+Sat Jun 17 05:03:10 2000  reason:  was killed, gave sensitive error msg and brought back to 3/10.
+Mon Oct  9 15:33:10 2000  moved kid to church... he was stuck in  OBJ(players/morgoth/CASTLE/Easteroid) withouth a torch.   Annoying area for newbies...
+Thu Oct 26 17:19:05 2000  Using /obj/wiz_tool, set my test char Tesutoko to lvl 20 on accident
+Thu Oct 26 17:19:29 2000  Note:  You can set to lvl 20 but not back to lvl 19
+Thu Oct 26 17:19:39 2000  Having Wocket set her back for me
+Sun Nov 26 22:22:37 2000  Put Utena into the game
+Sun Nov 26 22:22:51 2000  Change ~/castle.c for exit
+Mon Nov 27 01:11:36 2000  Utena is officially in game per approval by Feld.
+Mon Nov 27 01:11:44 2000  I'm now lvl 40!  WOOOOO!
+Wed Nov 29 17:16:09 2000  Changed ~/utena/room/connection.c - Added code to log people entering

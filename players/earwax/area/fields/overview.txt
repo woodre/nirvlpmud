@@ -1,0 +1,38 @@
+Earwaxian National Guard Fields
+
+- Earwax 12/03
+
+This area is a group of fields, with a guard shack, located 4w, all n from the green.  There are a number of wandering national guard soldiers to kill, all mid-level, and a little bit of coinage here.  The guards all are rather incompetant, and proud of it generally.  This area will be to the south of where I'd like to put a castle, complete with dungeons and portals and all that nonsense.
+
+----------------------------------------------------------------------------
+
+Rooms:  (~/area/fields/room/)
+
+26 rooms altogether, one of them has a hidden entrance, and another is 
+specifically for having a place to keep NPC's out of the only real special room in the place: sanctuary.
+
+The sanctuary allows accelerated healing, a slight change in alignment (makes knights, rangers, bards more good, dark order, shards more evil), is a no-fight room, and an NPC-free zone.  Mobs that enter are moved into an NPC room, but can follow out of there when their owner leaves.
+
+
+
+Items:  None (swords are cloned from /obj/weapon and directly to the mob)
+
+----------------------------------------------------------------------------
+
+Monsters: (~/area/fields/room/mon/mob_setup.c and mob_daemon.c)
+
+The mobs are cloned from /obj/monster.c and configured in mob_setup.
+The daemon runs them, has them getting items from the floor, looting any 
+corpses they come across, attacking beanos, and wandering around.
+
+They all follow the rules in the monster guide for ac/wc/coins/level
+
+Level #  movement   rank/type     Level   WC   Ac  Coins
+
+ 13:  6  wandering  (privates)     13     17   10  600 on average
+ 13:  3  stationary (privates)     13     17   10  600 on average
+ 14:  2  wandering  (corporals)    14     18   11  750
+ 15:  1  stationary (sergeant)     15     20   12  1500
+ 16:  1  stationary (lieutenant)   16     22   13  1500
+ 17:  1  stationary (captain)      17     24   14  2100
+

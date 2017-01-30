@@ -1,0 +1,81 @@
+/*
+ pie_shop.c
+*/
+
+inherit "room/room";
+
+object purchase_item;
+string str, str2, pie_type;
+
+init() {
+  ::init();
+
+  add_action("read_sign",      "read");
+  add_action("purchase",       "order");
+}
+
+read_sign(str) {
+  if (!str) return;
+  str2=0;
+  sscanf(str, "at %s", str2);
+  if (str=="sign" || str2=="sign") {
+    command("look at sign", this_player());
+    return 1;
+  }
+}
+
+purchase(str) {
+  if (!str) {
+    write("What'll you have friend?\n");
+    return 1;
+  }
+  if (this_player()->query_money() < 25) {
+    write("That costs 25 gold coins, which you don't have.\n");
+    return 1;
+  }
+  sscanf(str, "%s pie", pie_type);
+  if (!pie_type) {
+    write("Please read the sign to learn how to order.\n");
+    return 1;
+  }
+  purchase_item=clone_object("/players/nooneelse/obj/pie");
+  purchase_item->set_pie_type(pie_type);
+  move_object(purchase_item, this_player());
+  call_other(this_player(), "add_money", - 25);
+  write("You pay 25 coins for a "+pie_type+" pie.\n");
+  say(this_player()->query_name()+" purchases a "+pie_type+" pie.\n");
+  return 1;
+}
+
+reset(arg) {
+  if (arg) return;
+
+  set_light(1);
+  no_castle_flag=1;
+  short_desc=("the Rainbow Inn Pie Shop");
+  long_desc="This is small room is bare except for a small window with\n"+
+            "a sign on the wall next to it.\n";
+  items =
+    ({
+      "window", "It is a small delivery window.",
+      "sign",
+"It's lights are so bright, they light up the entire room in a soft glow.\n\n"+
+"         Welcome to the Rainbow Inn Pie Shop.\n\n"+
+"...............................................................\n"+
+": We carry several kinds of pies and will take special orders :\n"+
+": for any kind of pie not shown on the list.                  :\n"+
+":                                                             :\n"+
+": Standard pies:                                              :\n"+
+":   apple  cherry  blueberry  chocolate cream  lemon custard  :\n"+
+":                                                             :\n"+
+": All our pies cost 25 coins.  To order one, type:            :\n"+
+":                                                             :\n"+
+":     order <pie type> pie                                    :\n"+
+":                                                             :\n"+
+"..............................................................",
+    });
+  dest_dir=
+    ({
+    "players/eurale/Vamp/RMS/souvenir_shop","north",
+    });
+}

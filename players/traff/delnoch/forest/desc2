@@ -1,0 +1,18 @@
+/**********************************************
+"The forest quickly surrounds you.  It is hard to see very far\n"+
+"because of the thick growth.  You can hear sounds from the\n"+
+"town of Delnoch nearby, but even now you are not quite sure\n"+
+"which direction would take you back there.  Occasionaly you\n"+
+"glimpse some movement out of the corner of your eye, but\n"+
+"you're not quite sure whether it is caused by a breeze in\n"+
+"the leaves, or some small creature moving along quietly.\n"+
+"\n"+NORM);
+
+items=({
+"ground","What you can see of the ground is covered with pine needles",
+"trees","Mostly conifers, they are tall and green",
+"leaves","There are a lot of leafy plants here, as well as trees",
+"growth","Vines, weeds, and other plants grow among the trees",
+"mountains","The mountains rise steadily to the north.  You see snow capped peaks",
+ });
+**********************************************/

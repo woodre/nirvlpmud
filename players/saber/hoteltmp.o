@@ -1,0 +1,32 @@
+charges_count 0
+no_clean 0
+name "aura of death"
+alias "aura"
+short_desc "[1;33m[30mAura [1;37mof [30mDeath[2;37;0m"
+long_desc "A hazy [1;33m[30mblack aura of death[2;37;0m, once worn by a banshee.It is obviously a strongly magical item.To use type 'banshee <monster>' <limited charges>."
+worn_tag_short_flag 0
+buy_value 0
+value 7000
+weight 1
+type "misc"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 2
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"misc",})
+params ({"other|magical",2,0,0,"physical",2,0,"do_special",})
+enchantments 0
+n 0
+ahp 0

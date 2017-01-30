@@ -1,0 +1,15 @@
+Name : Ward <type> <target>
+Level: 16
+Rank : 4
+Cost : 60 sp
+Description:
+  Place a protective ward around the target.  The target will be
+shielded against the type of damage that is specified.  Recasting
+this spell on a player who already has a ward will increase the
+duration of the existing ward.
+  The following wards are available: fire, water, air, earth, ice
+dark, evil, and poison.
+
+Note: Damage types are not fully implemented at this time.
+This spell may or may not have an effect upon the damage of the
+monster you are fighting.

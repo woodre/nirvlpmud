@@ -1,0 +1,141 @@
+#include "defs.h"
+
+status circle;
+mixed *profs;
+int sac;
+
+static status restored;
+
+void load_cmds(string path);
+void save_me();
+
+int id(string str){
+  return (str == "druid_object");
+}
+
+string short() {
+  return "druid_object";
+}
+
+string query_auto_load() {
+  return "/players/x/guilds/druid/gob:0";
+}
+
+void remove_object(){
+  save_me();
+}
+
+void init_arg(string x){
+  if((int)this_player()->query_level() < 21) {
+    if(circle){
+      tell_object(environment(),
+      "\n\tWelcome, Druid of the Circle.\n\n");
+    }
+    else {
+      tell_object(environment(),
+      "\n\tWelcome, Druid of the Grove.\n\n");
+    }
+  }
+}
+
+int get() { return 1; }
+int drop() { return 1; }
+
+void init(){
+
+  if(!CHANNEL->is_people(environment())){
+    CHANNEL->add_people(environment());
+  }
+  
+  if(!restored){
+    restore_object(SAVE+(string)environment()->query_real_name());
+    restored = 1;
+  }
+
+  load_cmds(SPELLS);
+  load_cmds(EMOTES);
+  
+  if((int)environment()->query_level() >= 21) {
+    load_cmds(WIZ);
+  }
+  
+  if(circle) {
+    load_cmds(CIRCLE);
+  }
+}
+
+void save_me() {
+  save_object(SAVE+(string)environment()->query_real_name());
+}
+
+void load_cmds(string path){
+  int s;
+  string *files;
+  
+  s = sizeof(files = get_dir(path));
+  
+  while(s--)
+  {
+    if(sscanf(files[s], "_%s.c", files[s])) {
+      add_action("cmd_hook", files[s]);
+    }
+  }
+}
+
+int cmd_hook(string arg){
+  string action, path;
+  
+  action = query_verb();
+  
+  if(file_size(path=(SPELLS+"_"+action+".c")) > 0) {
+    return (int)path->main(arg);
+  }
+  if(file_size(path=(EMOTES+"_"+action+".c")) > 0) {
+    return (int)path->main(arg);
+  }
+  if((int)environment()->query_level() >= 21) {
+    if(file_size(path=(WIZ+"_"+action+".c")) > 0) {
+      return (int)path->main(arg);
+    }
+  }
+  if(circle) {
+    if(file_size(path=(CIRCLE+"_"+action+".c")) > 0) {
+      return (int)path->main(arg);
+    }
+  }
+}
+
+mixed * query_profs(){
+  return profs;
+}
+
+int query_prof(string spell){
+  int i,c;
+  if(sscanf(spell,"%d",c) || (i=member_array(spell,profs)) == -1)
+    return -1;
+  else {
+    return profs[i+1];
+  }
+}
+
+int add_prof(string spell, int value) {
+  int i;
+  if((i=member_array(spell,profs))== -1) {
+    profs += ({ spell, value });
+    return value;
+  }
+  else {
+    profs[i+1] += value;
+    if(profs[i+1] > 100)
+    {
+      profs[i+1] = 100;
+    }
+    return profs[i+1];
+  }
+}
+
+void add_sac(int x){ sac += x; }
+int query_sac() { return sac; }
+
+void set_circle(int x){ circle = x; }
+int query_circle() { return circle; }

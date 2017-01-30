@@ -1,0 +1,58 @@
+/*
+  cause_fear.h
+*/
+
+#include "/players/eurale/defs.h"
+
+/* -------- Fear ---------- */
+cause_fear(str) {
+  object target_obj;
+
+if(!str) {
+  write("You must specify who you want to frighten.\n");
+  write("Use: fear <who>\n");
+  return 1; }
+
+if(TPL < 17 || TPGEXP < 669 || TP->query_attrib("luc") < 18) {
+  write("You don't have the skills to do that yet.\n");
+  return 1; }
+
+if(TPSP < 25) {
+  write("You lack the magic to do that!\n");
+  return 1; }
+
+TP->add_spell_point(-25);
+target_obj = present(str, ROOM);
+
+if(!target_obj) {
+    write(capitalize(str)+" is not in the room.\n");
+  return 1; }
+
+if(!target_obj->query_npc() && target_obj->query_level() > 19) {
+  write("Don't be foolish... NO wizards!\n");
+  return 1; }
+
+if(target_obj->query_exl() > TP->query_exl()) {
+  write("You are not of sufficient power to cause fear in this target.\n");
+  return 1; }
+else if(target_obj->query_level() > TP->query_level()) {
+  write("The target is too powerful to fear,\n");
+  return 1;}
+
+if(!target_obj->query_wimpy()) {
+  write(capitalize(str)+" withstands your "+HIR+"FEASOME GLARE"+
+       NORM+"!\n");
+  return 1; }
+
+write("You "+HIR+"GLARE"+NORM+" at "+capitalize(str)+" and they "+
+      HIR+"PANIC"+NORM+"!\n");
+tell_object(target_obj,
+  capitalize(TPRN)+HIR+" GLARES "+NORM+"at you and you "+HIR+
+  "RUN IN PANIC"+NORM+"!\n");
+target_obj->run_away();
+
+write_file("/players/eurale/Vamp/lib/FEAR",ctime(time())+"  "+
+  capitalize(TPRN)+" cast FEAR on : "+
+  capitalize(target_obj->query_real_name())+".\n");
+return 1;
+}

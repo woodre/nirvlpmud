@@ -1,0 +1,34 @@
+no_clean 0
+name "wizard's hat"
+alias "hat"
+short_desc "[1;34mWizard's Hat[0m"
+long_desc "[1;34mWizard's Hat[0m."
+worn_tag_short_flag 0
+buy_value 0
+value 0
+weight 0
+type "helmet"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 1
+ac 1
+res 0
+siz 1
+silently 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"helmet",})
+params ({"physical",1,0,"do_special",})
+enchantments 0
+k 0
+backp ({"","","","",0,0,0,0,0,0,})
+bpatt ({"","","","",0,0,0,0,0,0,})
+patt ({"","","","",0,0,0,0,0,0,})
+ggg "rift"
+comment ({0,0,0,0,0,0,0,0,0,0,})

@@ -1,0 +1,99 @@
+                  Shardak Armors
+=================================================
+  The following is a breakdown of the guild armor
+for the Servants of Shardak.  
+SIDE NOTE:  Any player outside of the guild may 
+            use these armors, however, none of
+            the specials will work for them.
+dragonscales:  received either from dragons in
+               Red Dragon Caves [Maledicta] or
+               Blue Dragon Caves [Jaraxle]
+bone shards:   received from thermal wraiths in
+               Flame Forest [Forbin]       
+gator teeth:   received from large and small
+               gators in Shi'ah Swamp [Verte]                                   
+=================================================
+armor.c  [AC 5, weight 3, main armor]
+  -Requires: 5 dragonscales
+             3 bone shards 
+             1 AC 5 armor
+             10000 coins
+   [takes 40 minutes for guild smith to build]
+  do_special:
+    1 in 10 chance 5+random(5) physical hit_player()
+  20% resistance to fire
+  fire_special:
+    1 in 8 chance 20% resistance, 5 AC boost
+
+shield.c [AC 2, weight 2, shield]
+  -Requires: 2 dragonscales
+             2 bone shards
+             7 gator teeth
+             1 AC 2 shield
+             4000 coins
+   [takes 35 minutes for guild smith to build]
+  do_special:
+    1 in 10 chance of 5+random(11) physical hit_player()
+    else 1 in 10 chance of 3+random(7) physical hit_player() + return 1;
+    else 1 in 8 chance of return 2;
+    else 1 in 10 chance of 5+random(6) other|fire hit_player()
+  15% resistance to fire
+  fire special:
+    1 in 6 chance 15% resistance, 3 AC boost       
+        
+helm.c  [AC 2, weight 2, helmet]
+  -Requires: 2 dragonscales
+             4 gator teeth
+             2 AC 2 helm
+             3000 coins 
+   [takes 30 minutes for guild smith to build]
+  -Has special visor feature that can obsurce a
+   player via query_player_short() when lowered
+  do_special:
+    1 in 20 chance of return 2;
+  15% resistance to fire
+  fire_special:
+    1 in 8 chance 10% resistance, 3 AC boost
+
+boots.c [AC 2, weight 1, boots]
+  -Requires: 2 dragonscales
+             2 bone shards
+             1 AC 2 boots
+             2500 coins
+   [takes 20 minutes for guild smith to build]
+  do_special:
+    1 in 12 chance of return 2
+  5% resistance to fire
+  fire special:
+    1 in 10 chance 5% resistance, 1 AC boost   
+
+symbol.c [AC 2, weight 1, amulet]
+  -Requires: 1 dragonscales
+             1 bone shards
+             1 AC 2 amulet
+             2000 coins
+   [takes 15 minutes for guild smith to build]
+  5% resistance to fire
+  fire special:
+    1 in 10 chance 5% resistance, 1 AC boost          
+    
+gauntlets.c [AC 2, weight 1, ring]
+  -Requires: 2 dragonscales
+             2 gator teeth
+             1 AC 2 ring
+             1800 coins
+   [takes 15 minutes for guild smith to build]
+  5% resistance to fire
+  fire special:
+    1 in 10 chance 5% resistance, 1 AC boost     
+    
+neckguard.c [AC 1, weight 1, misc]
+  -Requires: 3 dragonscales
+             4 bone shards
+             1500 coins
+   [takes 20 minutes for guild smith to build]
+  do_special:
+    high ac (fairly constant return 2)
+  5% resistance to fire
+  fire special:
+    1 in 10 chance 5% resistance, 1 AC boost     

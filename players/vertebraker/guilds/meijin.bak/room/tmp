@@ -1,0 +1,33 @@
+ north() {
+  int x, f;
+  string jj;
+
+  x = 0;
+  f = 0;
+  jj = this_player()->query_real_name();
+  while (x <= guest_count) {
+      if(guests[x]==jj){
+         guest_no = x;
+         f = 1;
+         x = guest_count;
+        }
+     x += 1;
+    }
+if (!f) {
+  write("You bounce off the portal.\n");
+  write("A voice says: You are not a guest, please register.\n");
+  return 1;
+ }
+  say(call_other(this_player(), "query_name",0) + " enters the portal.\n");
+  call_other("players/boltar/hotel/book.c","set_date",guest_no);
+       if(!box[guest_no])
+          {
+         box[guest_no] = clone_object("players/boltar/hotel/room.c");
+         move_object(box[guest_no],"players/boltar/lv1/unfin.c");
+         call_other(box[guest_no], "set_owner", guests[guest_no]);
+           }
+ move_object(this_player(), box[guest_no]);
+  call_other(box[guest_no], "long");
+  return 1;
+}
+

@@ -1,0 +1,42 @@
+This chart should make the life of whoever approves this area a little easier.
+Monsters only clone a certain percent of the time.
+
+All monsters on this chart are in the /players/jenny/wings/mobs/players/ directory.
+Each one of these monsters is a player on the Detroit Red Wings.  The chart contains
+the file name, then the percent chance of that monster loading in a reset, then
+the room it loads in.  Rooms being in the /players/jenny/wings/rooms/directory
+
+osgood.c -------------------80   locker3.c
+lidstrom.c -----------------80   parking.c
+duchesne.c -----------------50   locker4.c
+gill.c ---------------------37   locker1.c
+yzerman.c ------------------100   locker2.c
+willilams.c -----------------5   locker4.c
+kuznetsov.c -----------------15   locker1.c
+
+chelios.c -------------------75   fit2.c
+larionov.c -----------------60    fit4.c
+verbeek.c  -----------------50    fit1.c
+draper.c  ------------------50    fit1.c
+ward.c     -----------------38    fit3.c
+devereaux.c ----------------20    parking.c
+fischer.c ----------------40      ice1.c
+fedorov.c ----------------100     ice2.c
+dandenault.c -------------50      bench1.c
+legace.c -----------------40      ice1.c
+murphy.c ---------------60        shower.c
+maltby.c -------------- 40        toilets.c
+kozlov.c ----------------55       meeting.c
+holmstrom.c -------------45       meeting.c
+
+shanahan.c --------------80       sauna.c
+
+brown -------------------35       i4.c
+
+gilchrist.c ------------ 30       trainingroom.c
+
+butsayev.c  -----------------7    bench1.c
+wallin.c    -----------------5    bench1.c
+
+lapointe.c ------- clones when you fight fedorov.c
+mccarty.c -------- clones when you fight yzerman.c

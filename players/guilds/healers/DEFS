@@ -1,0 +1,11 @@
+/*  Guild object defines - NO CODE  */
+
+#include <ansi.h>
+#include "./COSTS"   /* Spell costs */
+
+#define HOME_H PATH+"/room/hall.c"
+#define FLAGCOUNT 10
+#define FLAGRND 7
+#define SAVE "players/guilds/healers/members"
+#define GUILD_ID "healer_ob"
+#define PATH      "/players/guilds/healers"

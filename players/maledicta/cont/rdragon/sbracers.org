@@ -1,0 +1,69 @@
+#include "/players/maledicta/ansi.h"
+inherit "obj/armor.c";
+
+status ghetto_fix;
+int nogo;
+int no_go;
+#define USER environment()
+#define ATT USER->query_attack()
+#define WEP USER->query_weapon()
+
+reset(arg) {
+if(arg) return;
+::reset(arg);
+no_go = 0;
+set_name("bracers");
+set_short("Bracers of Speed");
+set_long(
+  "  These items appear to be arm guards of heavy material,\n"+
+  "however, on further examination they are very lightweight\n"+
+  "and yet sturdy.  Symbols of wind and fire are carved upon\n"+  
+  "their golden surface, with small flecks of diamond dust\n"+
+  "accenting the raised forms.\n");
+set_type("ring");
+set_weight(0);
+set_value(20000);
+}
+
+init() {
+  ::init();
+  add_action("do_atk", "a_completely_ghetto_fix");
+}
+
+do_special(owner){
+ if(!worn) return 0;
+if(!ATT) return;
+
+ if(ATT->query_hp() > 20 && random(100) < 15){
+  if(random(500) == 222){ 
+  no_go = 1; 
+  tell_object(USER, HIY+"Something has happened...\n"+NORM); 
+  }
+  if(nogo < time()){
+ tell_room(environment(USER),
+ HIB+USER->query_name()+"'s form "+HIW+"|| |  | "+NORM+BOLD+"blurs"+HIW+""+
+ " |  | ||"+HIB+" as "+USER->query_possessive()+" bracers "+HIY+"glow"+HIW+"..."
++NORM+"\n");
+ ghetto_fix = 1;
+ command("a_completely_ghetto_fix", USER);
+  nogo = time();
+ ghetto_fix = 0;
+   }
+ }
+return 0;
+}
+
+query_save_flag(){ if(no_go) return 1; else return 0; }
+
+heh() {
+object wepp;
+  this_player()->toggle_already_fight(1);
+  if(wepp = this_player()->query_weapon()) wepp->hit(this_player()->query_attack());
+  this_player()->attack(); }
+
+do_atk()
+{
+  if(ghetto_fix < 1) return 0;
+  heh();
+  return 1;
+}

@@ -1,0 +1,106 @@
+channel_names ({"msg","shout","gossip",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 0
+luck 20
+lucky 411
+name "naomi"
+gender "female"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 0
+level 12
+armor_class 0
+hit_point 234
+max_hp 234
+experience 217945
+mmsgout "disappears in a puff of smoke"
+mmsgin "arrives in a puff of smoke"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -127
+cap_name "Naomi"
+spell_points 169
+max_spell 170
+spell_name "electric weapon spell"
+spell_cost 0
+spell_dam 0
+age 101301
+is_invis 0
+frog 0
+whimpy 40
+auto_load "/players/mythos/prac/qt.c:;.X.Z;cc command get all~;.X.Z;af allow_follow~;.X.Z;g eat biscuits~;.X.Z;pb drink juice~;.X.Z;f fight~;.X.Z;ec eat_corpse~;.X.Z;dd decorpse~;.X.Z;ps party say~;.X.Z;fs follow stop~;.X.Z;um inject um~;.X.Z;gg get tin from bag~;.X.Z;gp get jug from bag~;.X.Z;p party~;.X.Z;al alignment~;.X.Z;pg put tin in bag~;.X.Z;pp put jug in bag~;.X.Z;.Y;16;^!/players/saber/closed/new_mini/gothic.c:^!"
+current_room "players/catwoman/tl"
+alignment 1064
+Weapons 0
+handshake_data 0
+handshake 0
+quest_point 12
+quests "ring#toy_store"
+pregnancy 0
+pregtoo 0
+monitor_string 0
+wkrm 0
+hostname "10-164.110.popsite.net"
+ok_edit "none#"
+mailaddr "none"
+saved_where 0
+title "[1mKnight Errant [[2;37;0m[34mTemplar[2;37;0m[1m][2;37;0m"
+pretitle "@>--`--"
+password "dMtvC1KVsoH8I"
+race "elf"
+al_title "white lord"
+PKGhostCounter 0
+intoxicated 0
+fight_area "players/maledicta/templar/rooms/phase_hall"
+mon 0
+phys_at ({1,3,5,79,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "66.19.112.164"
+msghome "goes home"
+description 0
+guild_name "Knights Templar"
+lastime "Mar 16 02:19 2002 to Mar 16 02:22 2002"
+player_killing 0
+invs_count 0
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd 0
+dead 0
+guild_rank 3
+guild_exp 120001
+guild_file "players/boltar/templar/templar"
+home "/players/maledicta/templar/rooms/phase_hall.c"
+ex_lv 0
+qc 1
+strength 20
+intelligence 20
+stamina 20
+will_power 20
+magic_aptitude 12
+piety 20
+stealth 10
+stuffed 0
+soaked 0
+no_give 0
+aprv 0
+hint "none"
+cmd_dirs ({"/bin/play/","/bin/",})
+other_copy 0

@@ -1,0 +1,41 @@
+[DARK TETRAPOD] Level [6] 840 charges 
+                (++sta, -int, -mag, ++str, -ste, ++luck)
+
+  A more evolved version of the average tetrapod, the dark tetrapod has
+  several major advantages; increased stamina and strength, better 
+  bonuses in combat, night vision, and a cloaking ability second
+  only to the Necromonger that provides for cat-like cover.
+  Dark tetrapods suffer from the same difficulties that ordinary tetrapods
+  face, such as an unstable duration of morph time, and a general
+  ignorance of magic.
+
+  Dark tetrapods can still wield up to four weapons at a time.
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+strap <weapon>    Wield a second weapon offhand.
+
+strap all         Same as above but cycles through inventory and straps
+                  weapons on a first-come, first-serve basis.
+
+unstrap <weapon>  Remove a weapon wielded offhand.
+
+blitz             (60 SPS) Charge whatever you are fighting and hopefully
+                  land as many hard hits as possible in one combat round.
+
+cloak             (50 SPS) Phase yourself out of observability, where you
+                  hide and nobody can detect you. Costs considerably more 
+                  if called upon during combat.
+
+decloak           Re-emerge in the same phase as reality, in full view.
+
+calm              (55 SPS) Attempt to calm the fighting in the room.
+
+raar <sp>         (variable, or automatic by default) Regenerate
+                  hp to sp on a 2sp : 1 hp heal ratio.
+
+vigor <charges>   (variable) Heals your hitpoints, albeit inefficiently
+                  by drawing energy from your clay.
+
+crhit             (40 SPS) Attempt to land a serious, fatal hit on an 
+                  already seriously wounded opponent.

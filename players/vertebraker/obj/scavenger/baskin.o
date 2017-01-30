@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/currie","/players/saber/weapons/hrev","/players/puppy/s/eq/ruler","/obj/armor","/players/pain/NEW/arm/hood","/players/wren/Area/starbug/items/charisma","/players/jamila/beach/mobs/claw","/obj/treasure","/players/snow/WEAPONS/greydeath","/players/wren/Area/starbug/items/lunchbox","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/hippo/armour/endotheel","/obj/armor","/players/ultramagnus/bsack","/players/snow/closed/q/orb","/obj/armor","/players/wren/Area/starbug/items/mirror","/players/mythos/aarmor/sode","/players/mythos/awep/dstaff","/players/mythos/awep/quiver","/players/mythos/marmor/shirt","/players/saber/armor/hardsuit1","/players/saber/armor/slboots","/players/mythos/awep/kama","/obj/weapon",})
+shorts ({"A tin of chicken currie","A Colt .68 Heavy Revolver","A wooden ruler","stone platemail","A Black Hooded Cloak","a charismatic aura","A Lobster Claw","Ruby","Grey[36mdeath[0m","a lunch box","A nobleman's shortsword","endotheel","An [1mwhite[0m metal ring","A blue sack","Orb of the Ancients","A suit of [1mwhite[0m chainmail","a slim pocket mirror","Sode","Dream Staff","A quiver","Shirt","A purple Hardsuit <with pink legs!>","Stiletto heeled leather boots","kama","A huge spiked club",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

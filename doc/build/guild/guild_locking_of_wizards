@@ -1,0 +1,42 @@
+
+8-Oct-2002
+Boltar
+
+Guild lock outs of wizards has become an issue again. This time I have
+decided to write an offical ever lasting document on the topic. 
+
+1) It will now be considered wrong for a wizard to retain guild objects
+   or membership to a guild he was not in at the time of becoming 
+   wizard or invited to by the guild wizard. 
+
+2) All guilds should be *EASILY* accessible to senior wizards level 100
+   and higher. This means that the guild object should be clonable by 
+   seniors for *TEMPORARY* use. Such wizards may be denied the use of 
+   guild channels and such. If there is *compelling* reason for a 
+   senior not to be able to clone the guild object, then it should 
+   present a message with how to gain access, easily.  
+
+Conditions can be easily code enforced with a query_autoload that doesn't
+set for those not allowed, etc etc. I expect guild wizards to be able 
+to modify their own code. If a test character is required, then the guild
+wizard should make it an extremely simple process that is well defined 
+so it takes someone no more than a few seconds to follow it. 
+examples of a compelling reason to force a test character are:
+ 1) guild members must be joined by a proper method or the code is 
+    non-functional, breaks function for players, or other such dependencies.
+ 2) corruption of guild save files, guild data, etc.
+
+Examples of non-compelling reasons that should be delt with by code: 
+
+   1) wizards are a disturbing influence. 
+   2) wizards will just clone the object and keep it everyday. (illegal 
+      via this document, btw) 
+   3) wizards will spy on what guild members are saying. (they can anyway)
+
+Responsible use:
+
+Wizards are only to clone other guild objects for investigational purposes
+only. Not to hang out, not sit there. Just to do any approval, balance, 
+judgements, etc as required by their rank and duties.
+
+**

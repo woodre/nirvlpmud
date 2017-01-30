@@ -1,0 +1,51 @@
+#include "/players/pavlik/guild/mages/defs.h"
+inherit "players/pavlik/guild/mages/inherit/command";
+
+reset(arg) {
+  if(arg) return;
+  set_verb("gtitle");
+  set_name("Guild Title");
+  set_color_name(HIC+"Guild Title"+NORM);
+  set_rank(1);
+  set_descrip(
+	"Set your Guild Title.\n"
+  );
+}
+
+
+cmd()
+{
+  int rank, x;
+  string title;
+  int fem;
+  if(tp->query_gender()=="female") fem = 1;
+  rank = tp->query_guild_rank();
+  if(rank > 70){ title = "of "+BBLU+HIW+"Time"+NORM; x = 70; }
+  else if(rank > 60){ title = "of "+BBLU+HIW+"Time"+NORM; x = 60; }
+  else if(rank > 50){ title = "of "+HIY+"Stars"+NORM; x = 50; }
+  else if(rank > 40){ title = "of "+HIK+"Storms"+NORM; x = 40; }
+  else if(rank > 30){ title = "of "+CYN+"Dragons"+NORM; x = 30; }
+  else if(rank > 20){ title = "of "+HIR+"Fire"+NORM; x = 20; }
+  else if(rank > 10){ title = "of "+HIC+"Air"+NORM; x = 10; }
+  else if(rank > 0){ title = "of "+GRN+"Earth"+NORM; x = 10; }
+  else { title = "the Apprentice"; x = 10; }
+  rank = rank - x;
+  if(tp->query_guild_rank() < 1) title = "the "+BOLD+"A"+NORM+"pprentice";
+  else if(rank == 1) title = "the "+BOLD+"A"+NORM+"pprentice "+title;
+  else if(rank == 2) title = "the "+BOLD+"A"+NORM+"dept "+title;
+  else if(rank == 3) title = "the "+BOLD+"J"+NORM+"ourney"+(fem?"woman":"man")+" "+title;
+  else if(rank == 4) title = "the "+BOLD+"M"+NORM+"age "+title;
+  else if(rank == 5) title = "the "+BOLD+"S"+NORM+"enior "+BOLD+"M"+NORM+"age "+title;
+  else if(rank == 6) title = "the "+BOLD+"S"+NORM+"orcere"+(fem?"ss":"r")+" "+title;
+  else if(rank == 7) title = "the "+BOLD+"W"+NORM+(fem?"itch":"arlock")+" "+title;
+  else if(rank == 8) title = "the "+BOLD+"M"+NORM+(fem?"istress":"aster")+" "+title;
+  else if(rank == 9) title = "the "+BOLD+"A"+NORM+"rch"+BOLD+"M"+NORM+(fem?"istress":"aster")+" "+title;
+  else if(rank == 10) title = "the "+BOLD+"G"+NORM+"rand "+BOLD+"M"+NORM+(fem?"istress":"aster")+" "+title;
+  if(tp->query_guild_rank() > 70) title = "the "+BOLD+"G"+NORM+"rand "+BOLD+"M"+NORM+
+                                     (fem?"istress":"aster")+" of "+
+                                      BBLU+HIW+"Time"+NORM;
+  tp->set_title(title);
+
+  return 1;
+
+}

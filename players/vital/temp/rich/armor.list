@@ -1,0 +1,47 @@
+Recommended armour classes.
+Types other than "armor" should not have a class higher than 1.
+If you adjust the price for an item, put something in the long description that might
+indicate to the players it is more/less valuable.
+Ex:  Plate armor with a rampant lion inlaid in gold on the chest.  Worth 1700.
+
+Armor       max class	weight    value/class
+----------------------------------------------
+Leather		1	   1	     20
+Ring		2	   2	    180
+Scale		3	   3	    375
+Chain		4	   4	    800
+Plate		5	   5	   1250
+
+
+Types:
+----------------------------------------------
+armor:     (anything worn over torso)
+           chainmail, platemail, armor
+
+boots:     (anything worn over feet)
+           boots, slippers, shoes, socks 
+
+helmet:    (anything worn over head)
+           hat, helmet, earmuffs, hood, coif
+
+cloak:     (anything that could be worn over armor)
+           cloak, coat, vest
+
+vambraces: (anything worn on the arms)
+           bracers, wristbands
+
+greaves:   (anything worn on the legs)
+           shin guards, chaps, kneepads, greaves
+
+gloves:    (anything worn over hands)
+           gloves, gauntlets
+
+ring:	   (anything worn on fingers)
+           rings
+
+shield:    (anything that could be used as a shield)
+           shield, buckler
+
+amulet:    (anything that doesn't fit another catagory)
+           amulets, necklace
+	   

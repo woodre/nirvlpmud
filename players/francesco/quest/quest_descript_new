@@ -1,0 +1,123 @@
+                T H E   U N I V E R S I T Y   Q U E S T 
+
+THEME
+
+The theme of the quest is the graduation in Mechanical Engineering.
+Thus, the player needs to study all the subjects of the curriculum.
+Then he goes into the University library and wanders around the various 
+shelves over there.  The librarian asks for help about an italian word.
+A tag is suspended on the shelves which might help to make the italian 
+-> english translation.  The player has to type  "whisper ....".  If it 
+is correct, then a bookworm of the library is cloned and the player must 
+kill it.  When the bookworm dies, a book is cloned which is corresponding 
+to the subject of that room,  i.e. chemistry -> chemistry, applied 
+mechanics -> applied mechanics and so on. The player can now grab the 
+book and then move back and enter a new shelf, with a new subject .... 
+and so on until he has done all the subjects and got the corresponding 
+credits.  Now he can go back to the librarian and do:
+1. leave all books on the desk and apply for degree;
+2. return the books for money.
+
+ 
+SOLUTION
+
+ 1  go to Marian in the library of the University.
+ 2  show id              (moves to front_library)
+ 3  enter doorway        (moves to back_library)
+ 4  wander <subject)     (moves to the selected shelf)
+ 5  whisper <answer>     (if the answer is correct, it clones the bookworm)
+ 6  kill bookworm        (clones an invisible monster to grab a book)
+ 7  grab book from shelf (clones the book to player's inventory)
+ 8  go back              (moves to back_library)
+ 9  <repeat step 4 through 8 for getting the 21 books needed>
+10  back                 (moves back to front_library)
+11  pass passage         (moves back to the librarian)
+12  leave book on desk   (moves one book and increments the counter)
+13  <repeat step 12 for the 21 books>
+14  apply for degree     (clones a certificate to player's inventory)
+15  w,n,n,nw             (moves to the dean for the final graduation ceremony)
+16  graduate             (clones a diploma to player's inventory which will
+                          allow him to choice within four options, see below)
+
+
+COMMENTS AND FEATURES
+
+The rooms are NT and no exits.  Also, there is an invis object in the
+room which makes people unable to communicate to other players.  They
+cannot receive any hints nor advices while questing.
+
+The quest can be entered only once per reboot and when the player exits
+the area, he cannot re-enter.  Thus, he has to carry all the heals 
+needed to solve it.
+
+There will be 21 rooms, corresponding to the general subjects of a
+bachelor degree in mechanical engineering.
+
+Each room will have about 5 different questions to be made, randomized. 
+The player must answer only to the one proposed.
+
+The bookworms are cloned of a level close to the level of the player so
+that the quest could be solved at any level.  Their wc is increased 
+and their ac is decreased, making them stronger than usual.  The wc
+increase is more than the ac decrease, according to the monster.guide 
+file.  Further, for players of lev 19, it might clone a 750 hps mob.
+
+Each book has a value corresponding to the level of the bookworm killed 
+and can be cashed at the librarian by typing "return book".  Of course
+in this case the player will get the coins but not the credits.
+If he decides to go for the quest, then he has to leave all the books on
+the desk and apply for the degree.  He will be given a temporary diploma.  
+He then would go to the Dean of the Department for the final graduation 
+ceremony.
+
+Upon graduating he will be given a diploma degree which will allow him to:
+1: ask for a unique item to be coded by myself (of course a legal one);
+2: ask for an item chosen within a prefixed set of items and he will only
+   add and change some description and statistics of the item;
+3: ask for money;
+4: ask for quest points.
+Of course, only one of the four choices can be done.
+(these four options still to be decided together with the seniors)
+
+
+CHEAT SHEETS
+
+It would be possible to share all the 120 randomized answers to the 
+questions only after several repeated attempts, because the combinations 
+of the answers are almost endless.  Moreover, the player will still 
+need to kill all the bookworms to get the books.
+
+
+FILES
+
+/players/francesco/quest/rooms/dimec13test.c  (starting room)
+/players/francesco/quest/rooms/front_library.c
+/players/francesco/quest/rooms/back_library.c
+/players/francesco/quest/rooms/xxxxxx.c
+/players/francesco/quest/items/book.c
+/players/francesco/quest/items/desk2.c
+/players/francesco/quest/items/degree.c
+/players/francesco/quest/items/finaldegree.c
+/players/francesco/quest/items/silent.c
+/players/francesco/quest/mobs/voice_xxxxxx.c
+/players/francesco/quest/mobs/monster_lib.c
+/players/francesco/quest/mobs/grabber.c
+/players/francesco/quest/mobs/exit_to.c
+
+
+
+
+thank you
+
+fran
+
+
+revised 03.30.00
+revised 04.18.00
+revised 04.29.00
+revised 08.30.00 (fully revamped)
+revised 11.24.01 
+revised 04.04.02
+
+
+

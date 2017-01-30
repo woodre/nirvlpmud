@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/awep/kama","/obj/weapon","/obj/armor","/players/wren/Area/starbug/items/lightbee","/players/hippo/heals/blood","/players/puppy/s/eq/quill","/players/wren/Area/starbug/items/bazookoid","/obj/weapon","/players/wren/Area/starbug/items/comb","/obj/armor","/players/mythos/aarmor/mempo","/players/ultramagnus/bdiamond","/players/mizan/etheriel/heals/carbo-blast","/players/snow/ITEMS/bdiamond","/obj/armor","/players/mythos/aarmor/shell","/obj/treasure","/obj/discon","/players/scathe/armor/suit","/players/snow/WEAPONS/hon_sword","/players/saber/armor/hardsuit1","/obj/weapon","/players/scathe/armor/rgarb","/players/ultramagnus/apple","/players/mythos/aarmor/sune-ate",})
+shorts ({"kama","Blaster","A cartoon character's shoes","a strange object called a 'light bee'","[1;31mdrops of blood[0m","A quill","Bazookoid [1;30mmkII[2;37;0m","Fear","the cat's hair pick","A [1mwhite[0m helmet","Mempo","A Blue Diamond","A bottle of Carbo Blast","A shimmering black diamond","Boots","Tortoise Shell","A piece of corundum","A magical storage box","Black Suit","A finely honed longsword","A light blue Hardsuit","Baby powder","Monk's garb","A Red Apple","Sune-ate",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,1 @@
+potion() { if(potion_var[0] > lev) return 0; call_other(POWER,"potion",lev,pow); return 1; }

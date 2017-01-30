@@ -1,0 +1,21 @@
+                          [help follow]
+-----------------------=========+=========-----------------------    
+
+Usage: "follow <name>"
+       "follow stop"
+       "fstatus"
+
+    When a player wishes to follow someone, they use 'follow <name>' 
+    where <name> is a player they wish to follow.  Both players must
+    be in the same room.
+
+    The named player is asked to allow the follow. To allow the follow
+    the named player must only type 'y' at the prompt.  To disallow
+    the follow the named player types 'n'.
+
+    'follow stop' completely clears all follows.  It stops the player 
+    from following any current leader, and also clears any followers.
+
+Notes:
+     Up to 12 players can follow one leader. 
+     'fstatus' shows your follow status.

@@ -1,0 +1,55 @@
+
+
+Changes made to the Knights Templar:
+			[ Spells Removed ]
+   Ice and Electric have been removed for thematic reasons.
+
+			[ Spells and Abilities added ]
+Holy Ground :
+     Rank 8 spell.  Needs Piety of 20, and 50 spell points to use.
+     Adds the query_NM(); property to any room.
+     Cannot be cast into any !creator() rooms.  Duration
+     time call_out("stop", 30+random(30));
+     Uses ~/templar/doc/room_shadow.c object for this action.
+Protect:
+     Rank 7 spell.  Piety of 17.  Initial sp cost of 50 to start
+     with upkeep of 10sp per round of protection.  Takes damage
+     from target and splits it in 1/2.  Giving 1/2 to the caster
+     and 1/2 to the target.
+     Uses ~/templar/doc/shield_shadow.c object for this action.
+Strike:
+     Rank 6 spell. (replaces ice) Piety of 17 and 25 spell points
+    to use.  Gives  plus_dam=((int)TP->query_weapon()->weapon_class()*3/4);
+     Must have a weapon wielded to use.
+     Gets a +10 random damage bonus if used in Templar Castle.
+Retribution:
+     Rank 7 Elite only spell.  Costs 40sp.  Deals damage to up to
+     2 targets that the player is currently fighting. 10+random(30)
+     damage to each target.
+Pickup:
+     Rank 8 command.  Allowes the Templar to use a Horse with gstat
+     of 10 to send their horse to pick up another player and
+     bring them to the Templar. [ 50 sp cost ]
+Holy Aura:
+     Rank 5 Elite only spell.  Costs 100sp.  Must have alignment over
+     1100 and piety of 20.  Adds shadow to shield for attack and
+     healing special. Uses ~/templar/doc/elite_aura.c shadow.
+
+			[ Spells Changed, and Relocated ]
+Minor:
+     Rank 2 spell, costs 20sp to heal 15hp.
+Medium:
+     Rank 4 spell, costs 35sp to heal 30hp.
+Major:
+     Rank 7 spell, costs 55sp to heal 40+random(16).
+     Elite cannot use Major, but can use Minor and Medium.
+Bash:
+     Changed Bash from an Elite only spell to replace Electric.
+Finish:
+     Moved from rank 8 to rank 4.
+Tt:
+     Moved from rank 1 to rank 5.
+Castle:
+     Moved form rank 1 to rank 3.
+Helper:
+     Moved from rank 1 to rank 3.

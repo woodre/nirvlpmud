@@ -1,0 +1,7 @@
+This directory contains various library functions that I use sometimes.
+If you want to use any of these functions, just #include lib.h into your code,
+and use it like you had written the function in your own code. Please don't
+inherit these modules, since they aren't set up for it. The lib.h file should
+support everything in this dir. If you want to add a function into this lib, 
+then please let me know.
+-Wiz-

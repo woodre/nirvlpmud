@@ -1,0 +1,12 @@
+SYNOPSIS
+	void delete_attribute( string attr)
+	void delete_attribute( string attr, object obj)
+
+DESCRIPTION
+	Delete the attribute with the name 'attr'.
+	If no object 'obj' is given, the current object is used.
+	Attempts to delete a protected attribute will result in a error.
+
+SEE ALSO
+	attributes(C), add_attribute(E), add_prot_attribute(E),
+	get_attribute(E), query_attribute(E)

@@ -1,0 +1,19 @@
+[BABOON] Level [6] 200 charges (+sta, -int, -mag, +str, +ste)
+
+  The baboon is a smart, tough, somewhat fearless creature that has a
+  tendency to throw its own feces at enemies. Excellent. Baboons work
+  very well when other baboons are present, as additional polymorphs with
+  the same form will find that their combat effectiveness will improve
+  tremendously when hunting together.
+  
+  Baboons have an ability to strap an extra weapon, and can apply charges
+  directly to their clay. 
+  
+>>-------------------------------ABILITIES-------------------------------<<
+
+strap <weapon>   Wield a second weapon offhand.
+
+unstrap <weapon> Remove a weapon wielded offhand.
+
+feces <monster>  (40 sps) Throw a lump of feces at an opponent.
+

@@ -1,0 +1,58 @@
+      int newexp;
+      newexp = call_other("room/adv_guild", "check_exp", experience,-2);
+      if(this_object()->query_extra_level() > 2)
+        newexp = call_other("room/exlv_guild", "check_exp", experience,-3);
+      experience = (experience * 3) / 4;  /* Take away 1/4 of exp. */
+      if(newexp > experience) experience = newexp;
+
+
+
+      /* Give some more experience for staying in your alignment
+       * All the following basically works out to
+       * exp_bonus = abs(monster's align - player's align)/75000 * exp;
+       * Of course we can't just say that because of underflow problems.
+       */
+      if (is_npc && experience > 1000000) {
+/*
+      log_file("EXTRA_EXP", name + " " + creator(this_object()) + call_other(att
+acker_ob, "query_name",0) + "\n");
+*/
+         experience = 1000000;
+          }
+      exp_diff = (alignment - call_other(attacker_ob,"query_alignment",0));
+      exp_diff = (alignment - call_other(attacker_ob,"query_alignment",0));
+      if (exp_diff < 0)
+        exp_diff = -exp_diff;   /* Get absolute value */
+      exp_diff /= 10;   /* Scale this down so we don't overflow! */
+      exp_bonus = experience / 100;
+      exp_bonus *= exp_diff;
+      exp_bonus /= ALIGN_EXP_DIVISOR;
+      /* Base bonus regardless of alignment is experience/75 */
+      base_bonus = experience/EXP_DIVISOR;
+      if(level < 5) base_bonus = experience/(EXP_DIVISOR/3);
+      /* Don't let the alignment bonus exceed 1/2 the base bonus */
+      if (exp_bonus > base_bonus/2)
+        exp_bonus = base_bonus/2;
+      exp_bonus += base_bonus;
+      wa_bonus = weapon_class * armor_class * WA_FACTOR;
+      if (wa_bonus > base_bonus/3)
+           wa_bonus = base_bonus/3;
+       exp_bonus += wa_bonus;
+       party=present("party object", attacker_ob);
+/* Old party adjustment, removed jun 99 -Bp
+       if(party) exp_bonus = 24*exp_bonus/30;
+*/
+       if(!no_exp_value) {
+       if (party) party->share_exp(exp_bonus);
+       if(!party)
+       call_other(attacker_ob, "add_exp", exp_bonus);
+       }
+    }
+    move_object(corpse, environment(this_object()));
+    dieing = 0;
+    if (!call_other(this_object(), "second_life", 0))
+      destruct(this_object());
+  }
+   if(this_player()&& is_npc)h_check=this_player();
+  return dam;
+}

@@ -1,0 +1,22 @@
+  This is a fairly high level area.  It will take some better than average
+exploration skills to get through it.  Most of the monsters are level 19 or
+higher with higher WC than the monster chart.  All the monsters have items
+that can be bartered with either Madame Rue or my newest tradesman, Sedjak.
+There are a couple of items of interest:
+  ~/Lab/OBJ/tadji.c - this wc16 dagger does not dull and has specials akin
+                      to the Sword of Spirits and Pearl Handled Broadsword.
+                      Players must kill to get to it (3 large mobs) and risk
+                      being burned by acid (autoload object) that does
+                      continual damage until removed.
+  ~/Lab/OBJ/shadowscale - this armor replaces the std game say with bold
+                      'hissing' says.  Other than that, it is std.
+
+There are a number of mobs that poison the player in some way and I've made
+all of them curable with items that I've had in the game for ages (ie. the
+tempstick to detect their ailment and the dmso to get rid of it).
+
+There are also 2 other objects not in this directory.  They are ~/RMS/barter
+and ~/NPC/sedjak which are the room and npc the players will need to barter
+the treasure they get from this area.  Sedjak is killable and I suspect that
+other players will kill him to keep others from bartering their goods.  I'll
+log that to keep an eye on it.

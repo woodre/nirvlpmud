@@ -1,0 +1,180 @@
+                       Sewer Profile
+______________________________________________________________________________
+
+                              I.  Theme
+                             II.  Monsters
+                            III.  Objects
+                             IV.  Rooms
+                              V.  Map
+______________________________________________________________________________ 
+
+I.  THEME -
+
+     This area is a sewer that goes from the alley way behind the strip 
+club to north main street in Amity.  It also has a maze it in where it
+comes to an end, where 3 brothers from amity are plotting revenge on the
+ants.
+______________________________________________________________________________ 
+
+
+II.  MONSTERS - /players/pestilence/club/mob
+
+
+                                 chart      [ ! means random ]
+                                            
+
+
+
+
+6 animal.c  3 jimbob.c   3 ray.c    3 jamie.c   
+
+
+
++-----------------+--------+------------+--------+------+----------------+
+|     Name        |   HP   |   Level    |   WC   |  AC  |  Items         |
++-----------------+--------+------------+--------+-----------------------+
+|   Jamie         | 550    |    20      | 36     | 18   |  coins+axe     |
+|   jamie.c       |        |            |        |      | 2000!600       |
++-----------------+--------+------------+--------+------+----------------+
+|   animal        |        |            |        |      |                |
+|   animal.c      |        |            |        |      |                |
+|   random        |        |            |        |      |                |
+|   rat           |300     |    16      | 21!5   | 13   | whiskers.c     |
+|   small croc    |400!100 |    17      | 22!6   | 14   | scskin.c       |
+|   snake         |300!100 |    18      | 22!10  | 15   | snakeskin.c    |
+|   large croc    |550!200 |    19      | 22!15  | 16   | lcskin.c       |
++-----------------+--------+------------+--------+------+----------------+
+|   Jim Bob       |500     |    19      | 32     | 16   | 2000!600       |
+|   jimbob.c      |        |            |        |      |shirt+booeyknife|
++-----------------+--------+------------+--------+------+----------------+ 
+|   Ray           |500     |    19      | 32     | 16   | 1500!600       | 
+|   ray.c         |        |            |        |      |jackknife.chat.c|
++-----------------+--------+------------+--------+------+----------------+
+
+______________________________________________________________________________
+
+III.  OBJECTS - /players/pestilence/club/obj/
+
+1 lcskin.c     1 scskin.c    1 snakeskin.c     1 whiskers.c 
+
+
+WEAPONS - /players/pestilence/amity/wep
+
+    2 axe.c      2 booey.c      1 jackknife.c 
+
+
+ARMOR - /players/pestilence/amity/arm
+
+    1 hat.c    1 shirt.c 
+
+
+Details
+
+1 lcskin.c   
+        Barter item from large croc 3700!300
+   
+1 scskin.c
+        Barter item from small croc 2000!300
+   
+1 snakeskin.c     
+        Barter item from snake 3200!300
+
+1 whiskers.c
+        Barter item from rat 1300!300
+
+2 axe.c
+        Weapon from Jamie wc 18 1/4 chance hit player!15 and return 1!3
+
+2 booey.c
+        Weapon from Jim Bob wc 17 1/4 return 6
+
+1 jackknife.c
+        Weapon from Ray wc 16 1/4 return 6
+ 
+1 hat.c  
+        Armor from Ray ac 1 5/50 chance of return 1
+  
+1 shirt.c 
+        Armor main armor from Jim Bob ac 3 no special
+
+
+______________________________________________________________________________
+
+
+
+
+
+IV.  ROOMS - /players/pestilence/club/room
+    These rooms are in sewer pipes with a small maze, the rooms are
+no teleport and no quit.
+
+   4 alley.c      2 sewer5.c      
+   2 sewer6.c   
+   2 sewer.c      3 sewer7.c 
+   2 sewer2.c     2 ssewer.c 
+   2 sewer3.c     2 ssewer2.c 
+   2 nsewer.c     2 sewer4.c     2 ssewer3.c 
+
+  
+
+4 alley.c
+      Alley behind strip club must open manhole to enter and key
+to unlock door to club
+      
+2 sewer5.c
+      has animal.c cloned
+         
+2 sewer6.c
+      no mob
+   
+2 sewer.c
+      entrance to ladder to alley no mob
+      
+3 sewer7.c
+      Dead end of sort where the Johnson boys are
+ 
+2 sewer2.c
+      animal.c
+     
+2 ssewer.c
+      animal.c
+ 
+2 sewer3.c
+      animal.c
+     
+2 ssewer2.c
+      animal.c
+ 
+2 nsewer.c
+      no mob
+     
+2 sewer4.c
+      animal.c
+     
+2 ssewer3.c
+      ladder to get to north main in Amity no mob
+ 
+
+______________________________________________________________________________
+                                                                
+V.  MAP -                                                             
+NS = nsewer.c                                                                N
+S3 = sewer3.c                                                              W-|-E         
+S4 = sewer4.c                                                                S
+S5 = sewer5.c
+S6 = sewer6.c
+@ = enter manhole
+# climb ladder         S4                  S6
+                        |                   |
+                 S4.c-nsewer.c-S3 S4   S4-sewer6.c-sewer7.c
+                         |        |         |
+alley#@sewer.c-sewer2.c-sewer3.c-sewer4.c-sewer5.c-S3
+                         |        |         |
+                       ssewer.c  NS        NS
+                         |
+                       ssewer2.c
+                         |
+                       ssewer3.c
+                         #
+                   ~/amity/room/nmain1.c
+*note all rooms that are abbreviated are copies of the original one with full file name

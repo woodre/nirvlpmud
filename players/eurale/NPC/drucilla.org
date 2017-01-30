@@ -1,0 +1,169 @@
+
+#include "/players/eurale/closed/ansi.h"
+#define tp this_player()
+inherit "obj/monster";
+object item;
+int value,m;
+int TRI,PROD,STONES;
+
+reset(arg) {
+object buyer;
+
+::reset(arg);
+TRI = 5;  /*  number of triangles available  */
+PROD = 1;  /*  only 1 cattle prod per reset  */
+STONES = 12;  /* 12 honing stones per reboot  */
+if(arg) return;
+set_name("drucilla");
+set_race("human");
+set_short(BOLD+"Matron"+NORM+" of the "+BOLD+"Warp"+NORM+", Drucilla");
+set_alias("matron");
+set_long(
+	"Drucilla, the Matron of the Warp, is a stout, cherub-faced lady\n"+
+	"with long flowing red hair.  She carries a large sack with items\n"+
+	"inside that she will gladly share with the needy adventurer if\n"+
+	"they but [ask].  Her freckled face gives her the look of youth\n"+
+	"but she has been around long enough to know how to take good\n"+
+	"care of herself.\n");
+set_level(20);
+set_hp(1050);
+set_al(0);
+set_wc(55);
+set_ac(24);
+set_heal(30,2);
+set_no_clean(1);
+set_aggressive(0);
+
+set_chat_chance(4);
+  load_chat("Drucilla asks: Can I get something for you?\n");
+  load_chat("'I hear there's more stones at the Rainbow Inn', says Drucilla\n");
+
+}
+
+init() {
+  ::init();
+add_action("go_warp", "north");
+add_action("go_warp", "down");
+add_action("go_warp", "out");
+add_action("go_warp", "gulch");
+add_action("go_warp", "park");
+add_action("go_warp", "phantasm");
+add_action("go_warp", "fiendsville");
+add_action("go_warp", "keep");
+add_action("go_warp", "chess");
+add_action("go_warp", "glade");
+add_action("go_warp", "enter");
+add_action("ask","ask");
+add_action("buy","buy");
+}
+
+ask(str) {
+if( (!str) || str == "drucilla" || str == "matron" ) {
+  write("Drucilla smiles at you and begins.... \n"+
+	"  Many an adventurer has found themself in need of an item now\n"+
+	"and then that they forgot to [buy].  I've taken it upon my-\n"+
+	"self to pick up a few of these items and keep them with me just\n"+
+	"in case someone needs them.  Here's what I have in my sack at\n"+
+	"the moment....\n"+
+	"  \n"+
+"     large leather pocket              375 coins\n"+
+"     a tempstick                       710 coins\n"+
+"     Magic [triangle]                  925 coins\n"+
+"     Ugly club                        1000 coins\n"+
+"     rock candy                       1400 coins\n"+
+"     an oiled honing [stone]          1450 coins\n"+
+"     Wand of Calming                  2500 coins\n"+
+"     Cattle prod                      4200 coins\n"+
+"\n");
+  return 1; }
+}
+
+buy(str) {
+m = 0;
+
+if(str == "candy" || str == "rock candy") {
+  item = clone_object("/players/eurale/OBJ/rock_candy.c");
+  value = 1400;
+  m = 1; }
+
+if(str == "pocket" || str == "leather pocket") {
+  item = clone_object("/players/eurale/OBJ/lbag.c");
+  value = 375;
+  m = 1; }
+
+if(str == "wand") {
+  item = clone_object("/players/eurale/OBJ/calm_wand.c");
+  value = 2500;
+  m = 1; }
+
+if(str == "stone" || str == "honing stone") {
+  if(STONES == 0) { write(
+    "'I'm fresh out of honing stones', laments Drucilla. 'Maybe "+
+    "another time'\n");
+    return 1; }
+  item = clone_object("/players/eurale/OBJ/honing_stone.c");
+  value = 1450;
+  STONES = STONES - 1;
+  m = 1; }
+
+if(str == "club" || str == "ugly club") {
+  item = clone_object("/players/eurale/OBJ/ugly.c");
+  value = 1000;
+  m = 1; }
+
+if(str == "tempstick") {
+  item = clone_object("players/eurale/OBJ/tempstick.c");
+  value = 710;
+  m = 1; }
+
+if(str == "triangle" || str == "magic triangle") {
+  if(TRI == 0) {
+    write("Drucilla says, 'Sorry, just sold my last one but I might\n"+
+	"have more later.... check back.\n");
+    return 1; }
+  if(present("triangle",this_player())) {
+    write("Drucilla pokes you and says, 'You're a greedy little\n"+
+	"feller but I only sell one to a customer. *wink*\n");
+    return 1; }
+  item = clone_object("/players/eurale/OBJ/triangle.c");
+  value = 925;
+  TRI = TRI - 1;
+  m = 1; }
+
+if(str == "prod" || str == "cattle prod") {
+  if(PROD == 0) {
+    write("Drucilla frowns and says, 'I'm sorry, I just sold the\n"+
+	  "only prod I had.  Maybe next time.'\n");
+    return 1; }
+  item = clone_object("/players/eurale/OBJ/cattle_prod.c");
+  value = 4200;
+  PROD = 0;
+m = 1; }
+
+
+if(m) {
+if(this_player()->query_money() <value) {
+  write("You do not have enough to purchase this item! \n");
+return 1; }
+
+if(!call_other(tp,"add_weight",call_other(item,"query_weight"))) {
+write("You'll have to lighten your load first!\n"); return 1; }
+
+this_player()->add_money(-value);  /* take coins from player  */
+/* this_object()->add_money(value);  -Abuse [v] */
+
+move_object(item,this_player());
+
+say(capitalize(this_player()->query_real_name())+" purchases a "+str+" \n"); }
+else {
+  write("That item cannot be purchased here. \n"); }
+return 1;
+}
+
+go_warp()
+{
+ if(attacker_ob) { 
+  write("Drucilla laughs.\n");
+  return 1;
+ }
+}

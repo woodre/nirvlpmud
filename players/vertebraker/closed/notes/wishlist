@@ -1,0 +1,32 @@
+piety increases/decreases heal_self()/add_hp/add_sp from other players
+throw dex in with hit_player() physical
+ .. should be a hitroll and a damroll
+ .. strength counts on damroll.
+Charisma in with ALL shops, all buying, etc.
+Count levels with weapon hitting
+Force existing guilds to use stats on everything
+set_room_type() for room
+Door obj - bash/picklock
+traps - trap_detection_object
+Parties- [max #?]
+  frontline/backline
+  shares need to be increased.. 19+100 should suck more exp
+  shares should not be able to be changed
+can we check the players lvl and int, and have a small random chance
+ of spells backfiring?
+        1: Fred told you: nod, charisma could also be incorporated into how many
+ coins a mob drops, well maybe, I've seen it done other places.
+        2: Fred told you: how about some added coded dealing with dexterity and 
+weight so it affects how much damage you take? You think being sluggish and weig
+hted down you'd be more open to attacks.
+        4: Fred told you: or just a random chance of non-save.
+[+luck based on nonsave after break]
+        5: Fred told you: yeah could prolly do something with luck, heck you cou
+ld add in something with charisma to even repair the wep.
+[wc should determine repair/sharpen cost with charisma]
+a
+New "ideal" format:
+1.  Everything saves
+2.  You can only wear/wield items you get yourself.
+
+I propose that small players not be able to follow or party

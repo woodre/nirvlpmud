@@ -1,0 +1,13 @@
+This file is to keep track of all the changes/updates I've made to the Bards
+
+
+Updated <sphere> spell to generate the proper number of spheres, and
+adjusted the damage to match the rules.
+
+Added a history to the bard line
+
+Moved the extra objects true_name uses into ~bards/obj/
+
+Brought the damage/cost of the starfire spell in line with mud rules
+
+Changed the damage of true_name from 50 physical to 20+random(30) magical

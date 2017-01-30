@@ -1,0 +1,6 @@
+10/ 3/09 21:11: Ovrpowrlord ((11    /Fallen)       12(2/1)
+10/11/09 11:33: Darkfyre    ((19+5  /Neo symbiote) 21(2/1)
+07/11/10 13:01: Gogeta      ((19+57 /Black circle) 28(2/1)
+07/17/10 17:46: Gogeta      ((19+61 /Black circle) 32(1/1)
+07/17/10 17:59: Mobic       ((19+52 /Neo symbiote) 26(2/1)
+07/17/10 22:00: Krylos      ((19+13 /Neo symbiote) 23(1/1)

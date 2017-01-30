@@ -1,0 +1,71 @@
+General List of bugs found.
+
+
+polymorph guild object wont load
+healer guild object wont load
+
+4w
+Several Hoth's loaded
+
+alias command dont work
+
+Jail visiting room wont load.
+
+Shardak guild entrance
+Bard Guild entrance
+
+4e,2n - east of here is the old hotel...the room wont load
+
+
+Ranger bugs
+Upon login got
+GUILD_LOGIN
+Setting your Power Levels...
+Ok.
+Bad file name.
+Bad file name.
+
+Looks like something with the guild power levels, cant morph till fixed. 
+
+Poly Bugs
+
+Bard Bugs
+Guild Hall doesnt appear to be enterable.
+
+Fallen Bugs
+
+Templar Bugs
+   ally command cwho returns bad file name where players name would go
+ 
+ Samurai Bugs
+ gobj wont load, and login leads to partial login with a empty room
+ 
+ Shardak Bugs
+ Being in a church does nothing.
+ help files
+ 
+ Mage Bugs
+ 
+ 
+ Healer Bugs
+ 
+ 
+ 
+ Black Circle Mages Bugs
+ cc test
+(Circle) Tormentor: test                                                        ->> ce test
+(Circle) Tormentor test                                                        ->> 
+"not sure how id classify this, the returns should be on a new line instead its on the same line.
+
+Mini Guild Bugs
+goportal returns error
+
+errors with data
+Error in loading object: 'players/mizan/opl/core/vending-creature' (inherited by 'players/mizan/opl/environs/vending-machine-junkfood').
+Error in loading object: 'players/mizan/opl/core/vehicle-creature' (inherited by 'players/mizan/opl/beasties/easy/gundroid').
+Could not open players/data/players/mizan/logs/NITROGLYCERIN for append: (2) No such file or directory.
+Error in loading object: 'players/coldwind/desert/items/carpet'
+/players/daranath/qualtor/newstuff/new_entry.c - bugged
+Error in loading object: 'players/vertebraker/swamp/forest/f4
+/players/snow/ROOMS/fort_hall.c
+Error in loading object: 'players/snow/shadows/hilltop

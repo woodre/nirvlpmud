@@ -1,0 +1,26 @@
+                       [help playerkilling]
+-----------------------=========+=========-----------------------
+
+Player killing, or PK for short, is an optional form of combat that
+involves player versus player.  It may happen in one of two ways:
+
+First, a player has the option of setting PK by using 'kill_players'.
+By doing so, a player may fight another player that has this option
+set, in almost any room that combat may take place.  
+
+The second way, is to enter a PK area - which you will be notified of
+when you do so with a message.  PK may take place in these areas at
+any time, as long as combat may take place in that room.
+
+If you set your PK and die to another player, you will lose experience.
+All of your gear and money will go into your corpse where your killer
+can take it or leave it as they please.  What, if anything, is returned
+to you is completely up to the player who killed you.
+
+NOTE:
+Level restrictions have been added to pk. If a player is below level 8
+he is restricted to attacking and being attacked by players +/- 3 levels
+from him. This is intended to prevent newbies from being hunted while
+still allowing them to participate in PK with their peers.
+(Please see help kill_players for more information)
+

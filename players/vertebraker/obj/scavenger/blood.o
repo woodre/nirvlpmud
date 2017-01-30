@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/angel/area/stargate/obj/bullets","/players/wren/Area/starbug/items/bat","/players/saber/stuff/power","/obj/weapon","/obj/armor","/players/softly/nhall/obj/green2","/players/pain/closed/weapons/widow","/players/arrina/weapons/revenant","/players/wren/Area/starbug/items/laundry","/players/hippo/heals/bubbles","/obj/armor","/players/pain/NEW/arm/boots","/players/scathe/armor/hood","/players/mythos/aarmor/sode","/players/pain/NEW/weap/mace2","/players/puppy/s/eq/crown","/players/wren/Area/starbug/items/thermos","/obj/weapon","/players/hippo/heals/dna_repair","/players/sado/shop/rose","/players/emerson/obj/political","/players/jamila/beach/mobs/skin","/players/wren/Area/starbug/items/guitar","/players/morgar/say","/players/wren/Area/starbug/items/sparehead",})
+shorts ({"A clip of bullets [50]","a [1;30mballbat[2;37;0m","A power system","short sword","Steel Boots","Healing Balm [32m(green)[2;37;0m [2]","the Widowmaker, the sword of the Berserker","Revenant Blade","Lister's dirty laundry","[1;36mbubbles of 7up[0m","An [1mwhite[0m metal ring","Heavy work boots","Hood","Sode","A huge iron mace","A golden crown","a thermos","Baby rattle","[32mdna repair string[0m","A beautiful red rose blossom","A Black Book","A Lizard Skin","Lister's guitar","say with echo and quotes","Kryten's sparehead 3.",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

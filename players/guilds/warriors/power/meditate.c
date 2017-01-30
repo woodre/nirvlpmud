@@ -1,0 +1,31 @@
+/*
+Meditate for Monks
+*/
+
+#include "/players/guilds/warriors/sdefine.h"
+
+
+main(string str, object gob, object player)
+{
+ 	if(USER->query_ghost()) return 0;
+   if(ATT){
+     tell_object(USER, "You are fighting!\n");
+     return 1;
+     }
+   if(GOB->query_meditate() < 4 && GOB->query_meditate() > 0){
+     tell_object(USER, "You are already reviving!\n"); 
+     return 1;
+     }
+   if(GOB->query_meditate() == 4){
+     tell_object(USER, "You begin reviving yourself from meditation.\n");
+     GOB->set_meditate(3);
+     return 1;
+     }
+   else{
+     GOB->set_meditate(4);
+     tell_room(environment(USER), USER->query_name()+" sits down to meditate.\n", ({USER}));
+     tell_object(USER, "You sit down to meditate.\n");
+     return 1;
+     }
+ } 
+

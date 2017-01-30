@@ -1,0 +1,53 @@
+Your descriptions are very good;
+But you made the same mistakes over and over and over again,
+since basically you just copied the same rooms over and over
+and edited the exits.
+
+Here are the problems :)
+
+
+SMELL AND LISTEN NEED A PERIOD AND THEY HAVE AN EXTRA NEWLINE
+------------------------------------------------------------
+101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 
+114, 115, 116, 117, 118, 119, 120, 121, 122
+
+				BROKEN EXITS
+------------------------------------------------------------
+I. <room1> - <exit> to <room2> .. the reverse does not lead back.
+
+  i.e. 105 - SW to 124..
+       If you go southwest from f105, you end up in f124.
+       But from f124, you can't go back northeast to f105.
+
+104 - SW to 123 & SE to 125
+105 - SW to 124
+109 - NW to 137
+111 - NW to 152
+112 - NW to 157
+146 - E to 147 & N to 138
+150 - SE to 157
+152 - S to 111
+151 - N to 144 & NE to 145
+153 - S to 119
+156 - S to 114
+157 - S to 112
+
+II. <room1> - <exit> to <room2> -- <exit> to <room3>
+  Leads back to another direction instead
+
+   i.e. 114 - NW to 155 -- SE to 159
+     If you go northwest from 114, you end up in 155.
+     But if you go southeast from 155, you end up in 159.
+
+114 - NW to 155 -- SE to 159
+       [also both NW and W lead to 159]
+121 - SE to 153 -- NW to 146
+138 - SE to 146 -- NW to 122
+144 - SW to 151 -- NE to 144
+153 - SE to 158 -- NW to 146
+157 - SW to 113 -- NE to 112
+158 - NW to 146 -- SE to 153
+
+                  NEEDS A NEWLINE IN THE LONG DESC
+------------------------------------------------------------
+         123, 135, 137, 140, 146, 149, 159

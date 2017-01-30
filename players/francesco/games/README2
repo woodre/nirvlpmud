@@ -1,0 +1,44 @@
+MASTERMIND QUEST
+
+The goal of the quest is to solve some mastermind games.
+
+The player will be requested to solve two games
+per every level of difficulty both for the colored
+one and for the numbered one. Then the total number 
+of games to solve will be 12. Two solutions are 
+requested in order to minimize the effect of luck.
+
+He will have to spend some money on the quest, so 
+the bet must always be equal to the maximum allowed,
+to let the solution be eligible for the quest. 
+Thus, the minimum cost for the player will be:
+(500+1000+2000)*2*2=14,000. Considering that 
+there is about 1/3 of chance of solving a game,
+the total average cost would be 40,000.
+
+When the player will solve one game, he will
+receive a hidden item (a counter?). When he will 
+have 12 items, he will go to the gamemaster 
+for the reward (something like the Ranger in 
+Jurassic Park quest?). 
+Question: the 12 items must be collected within 
+one reboot or can they be stored?.
+
+During the solution, the player has all his 
+communication channels blocked, so he cannot 
+get help from outside.
+
+Proposed reward is the same than Hippo's, 
+namely 9 qps.  (MC 9,  PC 0)
+
+files 
+/players/francesco/games/rooms/mastermindhub.c
+/players/francesco/games/items/mastermind4.c
+/players/francesco/games/items/mastermindcol.c
+/players/francesco/games/items/comments.c
+/players/francesco/games/items/mastermindlog/
+
+thanks
+
+
+fran

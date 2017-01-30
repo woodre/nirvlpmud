@@ -1,0 +1,297 @@
+Bad argument 1 to call_other()
+Current object was players/shinshi/closed/rogue/gob2, line 100
+"rogue_save" in "players/shinshi/closed/rogue/gob2.c" ("players/shinshi/closed/rogue/gob2") line 44
+Error in call out.
+Connection reset by peer detected.
+Connection timed out detected.
+Connection reset by peer detected.
+Connection timed out detected.
+Connection reset by peer detected.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 33
+"reset" in "players/tristian/realms/ClubFed/rooms/ca01.c" ("players/tristian/realms/ClubFed/rooms/ca01") line 28
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca01") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 196
+"reset" in "players/tristian/realms/ClubFed/rooms/ca09.c" ("players/tristian/realms/ClubFed/rooms/ca09") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca09") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 196
+"reset" in "players/tristian/realms/ClubFed/rooms/cb09.c" ("players/tristian/realms/ClubFed/rooms/cb09") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/cb09") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 47
+"reset" in "players/tristian/realms/ClubFed/rooms/ca06.c" ("players/tristian/realms/ClubFed/rooms/ca06") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca06") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 47
+"reset" in "players/tristian/realms/ClubFed/rooms/ca03.c" ("players/tristian/realms/ClubFed/rooms/ca03") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca03") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 47
+"reset" in "players/tristian/realms/ClubFed/rooms/ca02.c" ("players/tristian/realms/ClubFed/rooms/ca02") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca02") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 47
+"reset" in "players/tristian/realms/ClubFed/rooms/cb07.c" ("players/tristian/realms/ClubFed/rooms/cb07") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/cb07") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Connection reset by peer detected.
+add_action from object that was not present.
+Current object was room/church, line 30
+"heart_beat" in "obj/monster" ("players/pestilence/Eurale/Keep/disir_shaman#7260") line 294
+"wimpy_out" in "obj/monster" ("players/pestilence/Eurale/Keep/disir_shaman#7260") line 1453
+"move" in "room/room.c" ("players/pestilence/workroom") line 297
+"move_player" in "obj/living.c" ("players/pestilence/Eurale/Keep/disir_shaman#7260") line 211
+"init" in "room/church.c" ("room/church") line 39
+Heart beat in players/pestilence/Eurale/Keep/disir_shaman#7260 turned off.
+Bad argument 1 to tell_room()
+Current object was players/jaraxle/3rd/alt/items/defense_orb#7573, line 51
+"command_me" in "obj/kid.c" ("obj/kid#7567") line 675
+"activate" in "players/jaraxle/3rd/alt/items/defense_orb.c" ("players/jaraxle/3rd/alt/items/defense_orb#7573") line 61
+Too long evaluation. Execution aborted.
+Current object was players/pain/NEW/items/star#6165, line 93
+"qtHook" in "obj/soul.c" ("obj/soul#6582") line 5
+"process_hook" in "obj/soul.c" ("obj/soul#6582") line 5
+"cmd_hook" in "obj/player.c" ("obj/player#6578") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#6578") line 57
+"cmd_get" in "bin/play/_get.c" ("bin/play/_get") line 28
+"get_all" in "bin/play/_get.c" ("bin/play/_get") line 103
+"init" in "obj/armor" ("players/khrell/armors/skaven/warpamulet#6368") line 75
+"objtracker_init_check" in "obj/objtracker.c" ("players/khrell/armors/skaven/warpamulet#6368") line 93
+"emit_channel" in "obj/simul_efun/emit_channel.c" ("obj/simul_efun") line 36
+"on_channel" in "obj/user/channel.c" ("obj/player#6159") line 159
+"id" in "players/pain/NEW/items/star.c" ("players/pain/NEW/items/star#6165") line 34
+Type mismatch to operator *=
+Current object was players/pestilence/Eurale/Keep/disir_shaman#8003, line 40
+"cmd_hook" in "obj/player.c" ("obj/player#3992") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#3992") line 33
+"cmd_stat" in "bin/wiz/_stat.c" ("bin/wiz/_stat") line 31
+"show_stats" in "obj/living.c" ("players/pestilence/Eurale/Keep/disir_shaman#8003") line 1381
+"calculate_worth" in "obj/living.c" ("players/pestilence/Eurale/Keep/disir_shaman#8003") line 3325
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 48
+"reset" in "players/tristian/realms/ClubFed/rooms/ca03.c" ("players/tristian/realms/ClubFed/rooms/ca03") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca03") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Type mismatch to operator *=
+Current object was players/pestilence/Eurale/Keep/disir_shaman#8201, line 54
+"cmd_hook" in "obj/player.c" ("obj/player#3992") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#3992") line 33
+"cmd_stat" in "bin/wiz/_stat.c" ("bin/wiz/_stat") line 31
+"show_stats" in "obj/living.c" ("players/pestilence/Eurale/Keep/disir_shaman#8201") line 1381
+"calculate_worth" in "obj/living.c" ("players/pestilence/Eurale/Keep/disir_shaman#8201") line 3325
+Connection reset by peer detected.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 47
+"reset" in "players/tristian/realms/ClubFed/rooms/ca06.c" ("players/tristian/realms/ClubFed/rooms/ca06") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca06") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 47
+"reset" in "players/tristian/realms/ClubFed/rooms/ca02.c" ("players/tristian/realms/ClubFed/rooms/ca02") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca02") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 47
+"reset" in "players/tristian/realms/ClubFed/rooms/cb04.c" ("players/tristian/realms/ClubFed/rooms/cb04") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/cb04") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Connection reset by peer detected.
+Error in loading object
+Current object was players/pestilence/closed/destroyer/gob#9224, line 251
+"guild_update" in "players/pestilence/closed/destroyer/gob.c" ("players/pestilence/closed/destroyer/gob#9224") line 17
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 48
+"reset" in "players/tristian/realms/ClubFed/rooms/ca09.c" ("players/tristian/realms/ClubFed/rooms/ca09") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/ca09") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 48
+"reset" in "players/tristian/realms/ClubFed/rooms/cb07.c" ("players/tristian/realms/ClubFed/rooms/cb07") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/cb07") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection timed out detected.
+Indexing on illegal type.
+Current object was players/tristian/realms/ClubFed/ClubFedMobs, line 76
+"reset" in "players/tristian/realms/ClubFed/rooms/cb04.c" ("players/tristian/realms/ClubFed/rooms/cb04") line 26
+"Add_Monster" in "players/tristian/realms/ClubFed/rooms/ClubFedRoom.c" ("players/tristian/realms/ClubFed/rooms/cb04") line 8
+"create_npc" in "players/tristian/realms/ClubFed/ClubFedMobs.c" ("players/tristian/realms/ClubFed/ClubFedMobs") line 56
+Error in look_for_objects_to_swap.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Too long evaluation. Execution aborted.
+Current object was obj/player#12945, line 40
+"heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/khrell/monster/skaven/warlord#14251") line 357
+"::heart_beat" in "obj/monster" ("players/khrell/monster/skaven/warlord#14251") line 304
+"attack" in "obj/monster" ("players/khrell/monster/skaven/warlord#14251") line 1047
+"execute_spell" in "obj/monster" ("players/khrell/monster/skaven/warlord#14251") line 1024
+"do_damage" in "obj/living.c" ("obj/player#12945") line 475
+Heart beat in players/khrell/monster/skaven/warlord#14251 turned off.
+Too long evaluation. Execution aborted.
+Current object was obj/player#9638, line 30
+"heart_beat" in "obj/player.c" ("obj/player#12945") line 1575
+"attack" in "obj/living.c" ("obj/player#12945") line 1982
+"do_damage" in "obj/living.c" ("players/illarion/high/mon/duncan#14281") line 655
+"death" in "obj/living.c" ("players/illarion/high/mon/duncan#14281") line 959
+"second_life" in "obj/monster.c" ("players/illarion/high/mon/duncan#14281") line 542
+"monster_died" in "players/illarion/high/mon/duncan.c" ("players/illarion/high/mon/duncan#14281") line 96
+"short" in "obj/player.c" ("obj/player#9638") line 813
+"query_title" in "obj/player.c" ("obj/player#9638") line 979
+Heart beat in obj/player#12945 turned off.
+Too long evaluation. Execution aborted.
+Current object was obj/player#704, line 30
+"heart_beat" in "obj/player.c" ("obj/player#704") line 1575
+"attack" in "obj/living.c" ("obj/player#704") line 1982
+"do_damage" in "obj/living.c" ("players/illarion/high/mon/duncan#14281") line 655
+"death" in "obj/living.c" ("players/illarion/high/mon/duncan#14281") line 750
+"kill_check" in "players/guilds/Rangers/Communicator/Communicator.c" ("players/guilds/Rangers/RangerCommunicator#9784") line 215
+"kill_check" in "players/guilds/Rangers/Master/KillCheck.c" ("players/guilds/Rangers/Master/KillCheck") line 32
+"ABuildPoints" in "players/guilds/Rangers/Communicator/Train.c" ("players/guilds/Rangers/RangerCommunicator#9784") line 38
+"SaveRanger" in "players/guilds/Rangers/RangerCommunicator.c" ("players/guilds/Rangers/RangerCommunicator#9784") line 267
+"valid_read" in "obj/player.c" ("obj/player#704") line 3036
+Heart beat in obj/player#704 turned off.
+Too long evaluation. Execution aborted.
+Current object was obj/player#9783, line 30
+"heart_beat" in "obj/player.c" ("obj/player#14029") line 1575
+"attack" in "obj/living.c" ("obj/player#14029") line 1982
+"do_damage" in "obj/living.c" ("players/illarion/high/mon/duncan#14281") line 655
+"death" in "obj/living.c" ("players/illarion/high/mon/duncan#14281") line 750
+"kill_check" in "players/guilds/Rangers/Communicator/Communicator.c" ("players/guilds/Rangers/RangerCommunicator#9784") line 215
+"kill_check" in "players/guilds/Rangers/Master/KillCheck.c" ("players/guilds/Rangers/Master/KillCheck") line 32
+"ABuildPoints" in "players/guilds/Rangers/Communicator/Train.c" ("players/guilds/Rangers/RangerCommunicator#9784") line 38
+"SaveRanger" in "players/guilds/Rangers/RangerCommunicator.c" ("players/guilds/Rangers/RangerCommunicator#9784") line 273
+"query_real_name" in "obj/living.c" ("obj/player#9783") line 1270
+Heart beat in obj/player#14029 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#14929, line 133
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#14929") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#14929 turned off.
+Bad argument 2 to <OTHER>()
+Current object was players/mizan/opl/environs/ied#15118, line 344
+"on_light_explode" in "players/mizan/opl/environs/ied.c" ("players/mizan/opl/environs/ied#15118") line 147
+Error in call out.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113, line 30
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113") line 1882
+Heart beat in players/mizan/opl/vehicles/m113 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#14929, line 276
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#14929") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#14929 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#14929, line 15
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#14929") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#14929 turned off.
+Too long evaluation. Execution aborted.
+Current object was players/mizan/opl/beasties/easy/goliathbeano#15610, line 249
+"heart_beat" in "obj/player.c" ("obj/player#9783") line 1575
+"attack" in "obj/living.c" ("obj/player#9783") line 1982
+"do_damage" in "obj/living.c" ("players/mizan/opl/beasties/easy/goliathbeano#15610") line 655
+"death" in "players/mizan/mbv3/monsterplus.c" ("players/mizan/opl/beasties/easy/goliathbeano#15610") line 929
+"::death" in "players/mizan/core/monster.c" ("players/mizan/opl/beasties/easy/goliathbeano#15610") line 164
+"::death" in "obj/living.c" ("players/mizan/opl/beasties/easy/goliathbeano#15610") line 750
+"kill_check" in "players/guilds/Rangers/Communicator/Communicator.c" ("players/guilds/Rangers/RangerCommunicator#14694") line 215
+"kill_check" in "players/guilds/Rangers/Master/KillCheck.c" ("players/guilds/Rangers/Master/KillCheck") line 24
+"calculate_worth" in "obj/living.c" ("players/mizan/opl/beasties/easy/goliathbeano#15610") line 3320
+"query_heal_intv" in "obj/monster.c" ("players/mizan/opl/beasties/easy/goliathbeano#15610") line 798
+Heart beat in obj/player#9783 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#14929, line 227
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#14929") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#14929 turned off.
+Too long evaluation. Execution aborted.
+Current object was players/guilds/Rangers/RangerZord#14385, line 29
+"heart_beat" in "obj/player.c" ("obj/player#14692") line 1575
+"attack" in "obj/living.c" ("obj/player#14692") line 1982
+"do_damage" in "obj/living.c" ("players/mizan/opl/beasties/easy/gundroid#15739") line 655
+"death" in "players/mizan/opl/core/vehicle-creature.c" ("players/mizan/opl/beasties/easy/gundroid#15739") line 2411
+"::death" in "players/mizan/opl/core/monster.c" ("players/mizan/opl/beasties/easy/gundroid#15739") line 374
+"::death" in "obj/living.c" ("players/mizan/opl/beasties/easy/gundroid#15739") line 746
+"id" in "players/pain/NEW/items/star.c" ("players/pain/NEW/items/star#711") line 34
+"id" in "obj/monster.c" ("players/guilds/Rangers/RangerZord#14385") line 213
+Heart beat in obj/player#14692 turned off.
+Bad argument 1 to call_other()
+Current object was players/mizan/opl/environs/poop-volcano#15788, line 23
+"heart_beat" in "players/mizan/opl/environs/poop-volcano.c" ("players/mizan/opl/environs/poop-volcano#15788") line 142
+Heart beat in players/mizan/opl/environs/poop-volcano#15788 turned off.
+Too long evaluation. Execution aborted.
+Current object was obj/player#14924, line 38
+"unleash_backup" in "players/mizan/mbv3/tacticalDM.c" ("players/mizan/mbv3/tacticalDM") line 1161
+"heart_beat" in "players/mizan/mbv3/monsterplus.c" ("players/mizan/opl/beasties/easy/goliathbeano#15986") line 250
+"do_attack_player_killer" in "players/mizan/mbv3/monsterplus.c" ("players/mizan/opl/beasties/easy/goliathbeano#15986") line 4
+"do_attack_player_killer" in "players/mizan/mbv3/monsterDM.c" ("players/mizan/mbv3/monsterDM") line 482
+"query_pl_k" in "obj/player.c" ("obj/player#14924") line 3477
+Error in call out.
+Too long evaluation. Execution aborted.
+Current object was obj/simul_efun, line 38
+"heart_beat" in "obj/player.c" ("obj/player#14029") line 1575
+"attack" in "obj/living.c" ("obj/player#14029") line 1982
+"do_damage" in "obj/living.c" ("players/mizan/opl/beasties/easy/goliathbeano#15981") line 655
+"death" in "players/mizan/mbv3/monsterplus.c" ("players/mizan/opl/beasties/easy/goliathbeano#15981") line 929
+"::death" in "players/mizan/core/monster.c" ("players/mizan/opl/beasties/easy/goliathbeano#15981") line 164
+"::death" in "obj/living.c" ("players/mizan/opl/beasties/easy/goliathbeano#15981") line 750
+"kill_check" in "players/guilds/Rangers/Communicator/Communicator.c" ("players/guilds/Rangers/RangerCommunicator#705") line 215
+"kill_check" in "players/guilds/Rangers/Master/KillCheck.c" ("players/guilds/Rangers/Master/KillCheck") line 32
+"ABuildPoints" in "players/guilds/Rangers/Communicator/Train.c" ("players/guilds/Rangers/RangerCommunicator#705") line 38
+"SaveRanger" in "players/guilds/Rangers/RangerCommunicator.c" ("players/guilds/Rangers/RangerCommunicator#705") line 267
+"valid_read" in "obj/player.c" ("obj/player#14029") line 3057
+"valid_write" in "obj/player.c" ("obj/player#14029") line 2789
+"object_name" in "obj/simul_efun.c" ("obj/simul_efun") line 50
+Heart beat in obj/player#14029 turned off.
+Too long evaluation. Execution aborted.
+Current object was players/maledicta/cont/mobs/darkling#8641, line 23
+"reset" in "players/boltar/castle.c" ("players/boltar/castle") line 82
+"id" in "obj/monster" ("players/maledicta/cont/mobs/darkling#8641") line 213
+Error in look_for_objects_to_swap.
+Connection timed out detected.
+Connection reset by peer detected.
+Connection timed out detected.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/mizan/etheriel/beasties/symidryl#17277, line 24
+"explodey" in "players/mizan/etheriel/environs/exploder.c" ("players/mizan/etheriel/environs/exploder#17271") line 102
+"move_player" in "obj/living.c" ("players/mizan/etheriel/beasties/symidryl#17277") line 225
+Error in call out.

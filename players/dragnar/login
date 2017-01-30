@@ -1,0 +1,4 @@
+cd ~
+clone wiztool/tool.c
+clone /obj/mail_reader
+exec "/bin/channel_daemon.c"->add_channel( "star", this_player() );

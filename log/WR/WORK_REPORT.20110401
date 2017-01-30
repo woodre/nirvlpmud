@@ -1,0 +1,483 @@
+[Nov 10 2007 04:45] Earwax: A: as the old workreport was getting quite large, and i still haven't changed log_file() to automatically move large logs into .old i did it manually to 10NOV07
+[Nov 13 2007 17:40] Mokri: A: added 'black' and 'hi black' as options for clan descriptions where appropriate
+[Nov 24 2007 22:19] Rumplemintz: A: /players/llew/Toys/monsters/joe_sergeant.c  added check for query_worn
+[Nov 24 2007 22:32] Mizan: A: Rumplemintz found a bug in the desc of /room/lanceroad4. I did an edit change to it.
+[Nov 24 2007 22:42] Rumplemintz: 
+  A: /players/anshar/forest/room/path3.c added leading 
+  R:  to include statement - Vital changed to std ansi and forgot the #
+[Nov 24 2007 23:04] Rumplemintz: A: ~/paulasx/temple/temple_west made 'evil monks' evil
+[Nov 24 2007 23:10] Rumplemintz: A: ~/coldwind/desert/rooms/ma3 - Added 'trees' desc
+[Nov 24 2007 23:25] Rumplemintz: A: ~/scathe/closed/rod* added 'part' alias to all rods
+[Nov 24 2007 23:32] Rumplemintz: A: ~/cyrex/quest/mchamber.c fixed type in long_desc
+[Nov 24 2007 23:41] Rumplemintz: A: ~/mokri/clans/omodaka/hall/r2 Added !str func to retrieve func
+[Nov 24 2007 23:48] Rumplemintz: A: ~/dune/closed/castle/rooms/sroad3 - fixed endless mosquitos
+[Nov 24 2007 23:53] Rumplemintz: A: ~/forbin/realms/ruins/OBJ/newscloak - change return value in 'shroud' function
+[Nov 25 2007 00:05] Mizan: A: added the function 'query_name' to /obj/leo.c - Rumplemintz found this bug
+[Nov 28 2007 19:02] Mokri: A: edited avants ranger .o file. he was showing as an incorrect color.
+[Dec  2 2007 18:20] Fakir: A: Added 720k exp to Morpheus
+[Dec  6 2007 01:34] Fakir: A: I cloned and restored to Sticks (my own char) armors lost in a jello bug. B is aware of this and advised me to do so.
+[Dec  8 2007 22:22] Angel: A: Tierno got gear from an alt char. said it was accident and put it right back.
+[Dec 20 2007 22:10] Angel: A: updated room to have list / walmart/room/walmart_checkout.c
+[Dec 20 2007 22:47] Fred: A: added a new Ranger command.  /players/guilds/Rangers/Commands/Rpt.c   It allows Rangers to transfer unused skill points to fellow Rangers.
+[Dec 21 2007 09:57] Fred: A: ~maledicta/cave/rooms/randomcave.c -- fixed it so Rangers wouldn't get stuck in there.
+[Jan  7 2008 21:15] Fred: A: ~/dragnar/MKScar/cmds/scar.c -- fixed some color issues.  When the ansi was changed to include the generic <ansi.h> it didn't have the same ansi codes as the one Dragnar was using.
+[Feb 15 2008 22:40] Angel: A: fix Tierno one more time/ Fred fixed him 3 times/ keeps dropping level 17 to 16/ see if this works Angel
+[Mar  3 2008 09:13] Fred: A: Hacked Deathseeker's guild file.  I have posted on it several times told them the concequences yet it was ignored.
+[Mar  6 2008 22:35] Sparrow: A: Giving lost gear back to tyr due to inactivity
+[Mar  7 2008 20:57] Sparrow: A: Approval of mob /players/angel/area/town/npc/bradly.c
+[Mar  7 2008 20:57] Sparrow: A: Approval of mob /players/angel/area/town/npc/burglar.c
+[Mar  7 2008 20:58] Sparrow: A: Approval of mob /players/angel/area/town/npc/cashier.c
+[Mar  7 2008 20:58] Sparrow: A: Approval of mob /players/angel/area/town/npc/cashier_02.c
+[Mar  7 2008 21:33] Sparrow: A: Approved /players/angel/area/town/npc/customer.c
+[Mar  7 2008 21:39] Sparrow: A: Approved /players/angel/area/town/npc/florist.c
+[Mar  7 2008 21:48] Sparrow: A: Approved /players/angel/area/town/npc/grimace.c
+[Mar  7 2008 21:57] Sparrow: A: Approved /players/angel/area/town/npc/johnny.c
+[Mar  7 2008 22:07] Sparrow: A: Approved /players/angel/area/town/npc/max.c
+[Mar  7 2008 22:24] Sparrow: A: Approved /players/angel/area/town/npc/ronald.c
+[Mar  7 2008 22:25] Sparrow: A: Approved /players/angel/area/town/npc/teller.c
+[Mar  7 2008 22:25] Sparrow: A: Approved /players/angel/area/town/npc/multi.c
+[Mar  7 2008 22:25] Sparrow: A: Approved /players/angel/area/town/npc/multi_02.c
+[Mar  7 2008 22:26] Sparrow: A: Approved /players/angel/area/town/npc/multi_mover.c
+[Mar  8 2008 11:30] Fred: A: edited player.c so the monitor defaulted on so newly created chars wouldn't have to type 'mon on' to see their monitor in combat.
+[Mar 10 2008 17:52] Sparrow: A: Non-approval of /players/jareel/areas/chaos/woods2/athgor.c Reason: creature attempts to clone and equip dagger and shield that do not exist in provided path
+[Mar 10 2008 17:55] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf1.c
+[Mar 10 2008 17:57] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf10.c
+[Mar 10 2008 17:59] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf11.c
+[Mar 10 2008 22:19] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf2.c
+[Mar 10 2008 22:19] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf3.c
+[Mar 10 2008 22:23] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf4.c
+[Mar 10 2008 22:27] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf5.c
+[Mar 10 2008 22:30] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf6.c
+[Mar 10 2008 22:30] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf7.c
+[Mar 10 2008 22:30] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf8.c
+[Mar 10 2008 22:43] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/cwf9.c
+[Mar 10 2008 22:54] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave1.c
+[Mar 10 2008 23:06] Sparrow: A: Not-Approved /players/jareel/areas/chaos/woods2/demoncave10.c - attempts to clone creature with errors (/players/jareel/monsters/chaos/woods2/cacodemon.c)
+[Mar 11 2008 00:01] Sparrow: A: Not Approved /players/jareel/monsters/chaos/woods2/cacodemon.c Reason: Syntax error line 1, Illegal character (hex 0d) '' needs to be hex 0a (new line) instead
+[Mar 11 2008 00:07] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave2.c
+[Mar 11 2008 00:10] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave3.c
+[Mar 11 2008 00:13] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave4.c
+[Mar 11 2008 00:13] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave5.c
+[Mar 11 2008 00:14] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave6.c
+[Mar 11 2008 00:16] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave7.c
+[Mar 11 2008 00:17] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave8.c
+[Mar 11 2008 00:17] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/demoncave9.c
+[Mar 11 2008 00:26] Sparrow: A: Not Approved - humakt1.c - typo, "small, stout temble." Guessing that should be temple.
+[Mar 11 2008 00:28] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/humakt2.c
+[Mar 11 2008 00:30] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/humakt4.c
+[Mar 11 2008 00:32] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/mt1.c
+[Mar 11 2008 00:35] Sparrow: A: Not Approved /players/jareel/areas/chaos/woods2/mt2.c - typo, "the paths that leads..."
+[Mar 11 2008 00:38] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/mt3.c
+[Mar 11 2008 00:40] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/mt4.c
+[Mar 11 2008 00:42] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/mt5.c
+[Mar 11 2008 00:43] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/mt6.c
+[Mar 11 2008 00:45] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/mt7.c
+[Mar 11 2008 00:50] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/mt8.c
+[Mar 11 2008 00:51] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/mt9.c
+[Mar 11 2008 00:54] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/path1.c
+[Mar 11 2008 00:55] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/path2.c
+[Mar 11 2008 00:57] Sparrow: A: Approved /players/jareel/areas/chaos/woods2/path3.c
+[Mar 11 2008 01:20] Sparrow: A: Approved /players/angel/area/town/obj/bm.c
+[Mar 11 2008 01:21] Sparrow: A: Approved /players/angel/area/town/obj/cash.c
+[Mar 11 2008 01:30] Sparrow: A: Not Approved /players/angel/area/town/obj/coke.c - cost should be 3400 4uses * 9 tox / 200heal points = .18 or 17 coins per heal point. 200*17 = 3400
+[Mar 11 2008 01:44] Sparrow: A: Not Approved /players/angel/area/town/obj/dcb.c - cost should be 2100 3 uses * 12 tox / 150 heal points = .24 or 14 coins per heal point. 150*14 = 2100 coins
+[Mar 25 2008 10:33] Fred: A: fixed a HB issue with ~jareel/weapons/orlanth/fiona_sword.c
+[Mar 25 2008 12:19] Fred: A: promo'd Jareel back to lvl 40 for new area and I think he was lvl 40 or above before he took a leave
+[Mar 25 2008 12:20] Fred: A: ~me/closed/bloodfist/daemons/wep_daemon.c -- made changes to code for the gem of provoked aggression.  Nerfed it so to speak.
+[Mar 25 2008 12:34] Jareel: A: fixed the hbt problems in my weapons. add     if(!attacker) return 1 to the specials Thanks Fred
+[Mar 26 2008 15:58] Fred: A: downgraded ~pavlik/guilds/mages/spells/mimage.c  -1 to max images, lowered, base, upped chance of busting mirror in failure cast.
+[Apr 11 2008 19:22] Fred: A: did some patchwork on Brooks.  He was in the mages and was purged awhile back, had old guild obj, gave him new guild obj, comp'd his old guild exp and made him restart in the guild since the costs have all changed.
+[Apr 12 2008 15:36] Fred: A: patched daycare2.o to change a parent.
+[Apr 12 2008 15:36] Fred: A: patched the Rangers teleport command so Rangers can't teleport to wizes that have a Ranger communicator.
+[Apr 20 2008 18:45] Xiu: A: Registered Test Character: Xiuxiu
+[Apr 28 2008 21:21] Fred: A: I updated attack_damn.h in the Vamps.  Sticks had an idea for it.  Seemed reasonable so went with it.
+[Apr 28 2008 22:05] Fred: A: patched Teepo's mage save file.  I still need to look into saving issues.  Until another day.
+[May  7 2008 18:44] Angel: A: Beaker could not drop a piece of paper from Emerson's area, so I forced him.
+[May  8 2008 18:59] Angel: A: connected new parts of Gas City to the old/ Fred approved.
+[May  8 2008 21:29] Angel: A: jaster/beaker/ myself were kicked off the mud but no crash. There boxes were empty I retrieved Items from void.
+[May  8 2008 22:18] Angel: A: Chants box was also empty and stuff in void/ I retrieved
+[May 10 2008 11:40] Angel: A: healed Mosh he had SP: -21518097/610
+[May 30 2008 13:59] X: A: Made some Shardak changes per Baskin .. we will see if they are too much
+[Jun  6 2008 22:16] Fred: A: ~jareel/weapons/chaos/woods2/chaos_axe.c -- I changed the % chance of the special going off and reduced the dmg from said special.
+[Jun  6 2008 22:39] Fred: A: rewized Mosobp.
+[Jun 14 2008 21:49] Angel: A: goddess droped bag in ooze/ replaced it for a 1st time stupidity
+[Jun 16 2008 17:38] Fakir: A: /fred
+[Jun 19 2008 09:00] Fred: A: patched object.o in the Greycouncil clan.  It was corrupted from the channel history and wasn't loading.
+[Jun 19 2008 20:57] Angel: A: Goddess had bug complaint / ooze eating droped bags / test and lost no bag / I think she left room
+[Jun 27 2008 09:43] Angel: A: fixed two mosobp files/stoped loading/  areas/BATTLE/NPC/saibaman2.c and android.c
+[Jun 27 2008 18:48] Angel: A: healed nolee, forgot he was a vamp he was in a no leave room and I steeped in
+[Jul  1 2008 16:11] Mokri: A: added 'wall' spell, 'critter' room, and appropriate documentation to clans. approved by fred.
+[Jul  1 2008 19:36] Mokri: A: modified the price of purchasing a 'critter' room (~mokri/clans/hall_rooms/templates/critter.c). change approved by fred.
+[Jul  4 2008 00:40] Angel: A: arya picked up amulet after her hubby logged off / he left it / I let her keep it this time
+[Jul  7 2008 20:02] Angel: A: transed Joab to void for his 28 gogurt heals/ his armor was still on him but no box or heals/ he was dced by his ISP
+[Jul  9 2008 20:16] Mokri: A: added check in clan 'wall' command to test if the room is nofight
+[Jul 10 2008 15:13] Mokri: A: fixed bug with sami ninja .o file
+[Jul 11 2008 18:58] Angel: A: bug/ gave sparkle 28500 to get +100 back/ did not die but level change to 99 after entering Phantoms/ verfied with DEATH log
+[Jul 15 2008 21:41] Fred: A: gave Mosobp final approval to add his BATTLE area.
+[Jul 17 2008 16:33] Mosobp: A: angel pre-approved and fred approved area /players/mosobp/areas/BATTLE
+[Aug  1 2008 00:01] Angel: A: retrieve bannock's gear from arena recovery room / he left out without picking it up
+[Aug  5 2008 16:26] Angel: A: Fred gave approval to add /atlantis
+[Aug  5 2008 22:36] Star: A: Approved Angel's Nox area to add
+[Aug  5 2008 23:05] Angel: A: Star approved /Nox to be put in system
+[Aug  6 2008 09:02] Fred: A: Promo'd Mosobp for completed area.
+[Aug  6 2008 09:03] Fred: A: Promo'd Angel to lvl 100 for new area, help with approvals, and helping new wizes with coding.
+[Aug  6 2008 09:03] Fred: A: fixed a couple of Jareel's rooms from spawning multiple mobs.
+[Aug  6 2008 21:31] Angel: A: gave Valen 3mil exp for death caused by bug / checked Death log for exp value
+[Aug  6 2008 22:24] Angel: A: fixed halling / teyla / ronon
+[Aug 13 2008 19:12] Angel: A: replaced worm's dragon scales from smithy's bug
+[Sep 14 2008 00:36] Mosobp: A: replaced jacob's gear to take a load off angel's back
+[Sep 14 2008 00:51] Mosobp: A: was one piece short couldnt figure out which one of the samurai addition pieces it was
+[Oct 27 2008 17:44] Angel: A: reset guest to level 5, guest was leveled up to 10 / guess they nothing else to do...
+[Nov  3 2008 19:58] Angel: A: replaced saphira chestguard... it was not storing.
+[Nov  6 2008 18:29] Sami: A: Registered Test Character: Samitest
+[Dec 18 2008 00:58] Angel: A: darkheart claimed to get dc'ed around 2am and logged right back on and stuff was gone/ i replaced 1 time only
+[Jan 16 2009 22:27] Chip: A: reimbursed Jacob for a couple pieces of EQ he lost on the night of January 15th when he got DCed and was unable to reconnect
+[Mar 18 2009 15:48] Chip: A: cloned the cyber guild obj to Glaxgor. he left warriors but it said he's still in a guild when Shinshi tried to recruit him
+[Mar 20 2009 03:59] Chip: A: added 360K experience back to Shotcallin. Viewed a log he sent me about a bug in the Kaleidoscope area, when fighting a Platinum Kale, he left the room into an empty room, then died moments later for no apparent reason.
+[Mar 23 2009 15:00] Fred: A: patched Jaster with the Sam's guild object he messed his up.
+[Mar 23 2009 15:00] Fred: A: patched Jaster's guild rank.
+[Mar 23 2009 15:00] Fred: A: patched Jaster's clan object.  The Channel history was corrupted.
+[Mar 24 2009 09:34] Fred: A: ~softly/nhall/notice.o -- patched the number of msgs.  Board showed [21] but there were only 20.
+[Mar 25 2009 16:04] Fred: A: ~/players/guilds/warriors/test_obj4/leave_guild.h -- needed to reset the guild file so they can join other guilds.
+[Mar 25 2009 17:41] Fred: A: reset the password for Blizzard.
+[Mar 28 2009 09:13] Chip: A: reimbursed Maximus exp from a bug in which he died for no reason in a fight where he was assisting on a mob with no room specs, he then died instantly at the room spuck sent him to, then again instantly at green, all within a matter of a couple seconds
+[Apr  8 2009 09:56] Fred: A: reset the password for Chou
+[Apr  8 2009 09:56] Fred: A: incorporated a Double Experience and Improved Faster heal rate functions in game.
+[Apr 11 2009 03:05] Chip: A: Registered Test Character: Bug
+[Apr 13 2009 00:04] Angel: A: warned crip on eq switching with his players, if he does it again I will jail...
+[Apr 13 2009 10:17] Fred: A: I wized Shinshi.  Myself and Star will watch over him for the most part.
+[Apr 13 2009 13:49] Shinshi: A: Registered Test Character: Shintest
+[Apr 13 2009 14:32] Fred: A: at Iridel's request I remove them from the Mages guild completely and Re-joined them.
+[Apr 14 2009 12:21] Chip: A: reimbursed Iridel 3 of Jareel's heals he lost when Shinshi crashed the mud.
+[Apr 14 2009 12:33] Shinshi: A: reimbursed Iridel 6 heals that he lost when I crashed the MUD as Fred had me test something
+[Apr 14 2009 15:39] Fred: A: comp'd Gogeta some equipment that didn't save in his room.
+[Apr 17 2009 11:20] Shinshi: A: Registered Test Character: Maik
+[Apr 17 2009 13:40] Chip: A: Registered Test Character: Neotesticle
+[Apr 21 2009 23:20] Chip: A: Imprisoned Worm for 7 days. He attacked one of my Beta Testers even knowing the rules. Stated he does not care. Example made.
+[Apr 22 2009 03:46] Star: A: Reimbursed xp to Maximus and Coercion due to Harry getting his hands on a wiz's mega weapon and killing them
+[Apr 22 2009 10:11] Shinshi: A: ATTEMPTED to reimburse xp to Maximus due to Harry getting his hands on a wiz's mega weapon and killing them but did not show the experience when he typed 'freexp' so star dealt with it (above this)
+[Apr 22 2009 11:22] Fred: A: removed Abk from the the Neo Beta Testers for cheating and lying about cheating.
+[Apr 22 2009 11:23] Fred: A: removed Sami from wiz status for adding 31 million xp to his player char.
+[Apr 22 2009 23:40] Chip: A: added 675804 xps back to webslinger, something in the mini golems when he was fighting made it so he was no longer fighting back. saw a heartbeat loss in the minigolem, but not in Webslinger. can someone help me figure this out?
+[Apr 23 2009 11:51] Star: A: Approved Shinshi's Pre-K area to add to the game
+[Apr 23 2009 11:52] Star: A: Promoted Shinshi to 30 due to him finishing his first little area
+[Apr 23 2009 12:08] Fred: A: added Shinshi's castle to the file to load at reboots
+[Apr 26 2009 21:01] Fred: A: Promo'd Chip to lvl 40 for continued work on the Neo's guild.
+[Apr 28 2009 19:41] Fred: A: added a Heal Cost Calculator.  Just type 'healcalc' and follow the instructions :)
+[May  3 2009 15:49] Chip: A: added 43400 xps to desterus and 50000 coins for being a real newbie and being harassed and stolen from by Wicket
+[May  3 2009 21:49] Chip: A: Imprisoned Crip for harassment of multiple people and bringing others' personal info onto the mud in open channels
+[May  3 2009 21:53] Chip: A: imprisoned Sephira for harassment of Crip after both were told to stop. she's in 60 days, crip in for 90
+[May  4 2009 02:44] Star: A: Approved Chip's apt building area..  Fred, he's gonna get with you about the castle autoloading and all that
+[May  4 2009 23:01] Star: A: Promoted Chip to 45 for his nifty new area
+[May  5 2009 10:52] Fred: A: added Chip's castle to the preload listing
+[May  5 2009 10:53] Fred: A: Restored some equip to Jaster a couple days back, Said his hotel room didn't restore.
+[May  5 2009 10:54] Fred: A: Put Shinshi in charge of the dervish guild.  All changes will go through me.  I get to zap him or demote him 1 lvl everytime he breaks something :)  Rawr!
+[May  5 2009 10:56] Fred: A: on a side note.  I had a glazed donut this morning that tasted extra delicious.  I might add it to the log in news to justify the post to this log :)
+[May  7 2009 09:16] Fred: A: Promo'd Cloud back to lvl 30 wiz status.  He used to be a wiz was autodemoted by V's system
+[May  7 2009 16:36] Fred: A: comp'd Smack exp from old Neo Symb for beta testing.
+[May  7 2009 16:37] Fred: A: /obj/partymaster.c -- added a check so players couldn't add members that were fighting.  Will stop potential cheating of adding a player that is close t okilling a mob.
+[May 12 2009 13:44] Fred: A: made some changes to the Sams to try to bring them more in line with other guilds.
+[May 12 2009 13:45] Fred: A: approved Shinshi adding of two commands to the dervish guild.
+[May 13 2009 11:14] Fred: A: added rank checks to 9 commands in Knight GOB.
+[May 13 2009 17:49] Fred: A: fixed a syntax error in /players/mythos/closed/guild/forest/rooms/cave.c it was spamming the lpmud.log shrug
+[May 18 2009 20:25] Gideon: A: Registered Test Character: Gidtest
+[May 30 2009 00:26] Gideon: A: Kyria asked me where to get a bottomless bag, I wasnt sure, I went to check at pass. I bought one, found out I was right, told her where to go, she went, I had bought the last one, they cost 5k. I told her to give me the 5k, she did, I dropped the bag I had bought, she grabbed it. Just reporting it so noone thinks I cheated. Thanks.. and Sorry if it was any trouble.
+[Jun  2 2009 19:50] Fred: A: ~eurale/VAMPIRES/lib/attack_damn.h -- fixed the sp cost on it.  Wasn't subtracting.
+[Jun  3 2009 13:31] Fred: A: ~euraleVAMPIRES/OBJ/coffin_obj.c -- Fixed it so they work like lockers on retriev command.  So they can retrieve 1 instead of retrieve shield.
+[Jun  6 2009 09:41] Angel: A: talked with Armadillo/Mcgregor about eq sharing, dealt w/ issue.  Next time he is to go to jail!
+[Jun  8 2009 09:00] Fred: A: Promo'd Cloud to lvl 40.  Was lvl 40 before coming back so seemed reasonable.
+[Jun  9 2009 08:31] Fred: A: ~eurale/VAMPIRES/OBJ/summons.c -- fixed a typo on it.  chek to check.
+[Jun  9 2009 20:07] Angel: A: made coldwind level 40 his old level, Fred agreed.
+[Jun  9 2009 21:15] Fred: A: Moved Tigers Ranger gfile from Beck's old files to the new directory.  His char was zeroed out.
+[Jun  9 2009 21:18] Fred: A: ~eurale/VAMPIRES/lib/attack_(backhand, damn, demon, grasp, scratch).h -- changed each file so if !str it would cast on whatever they were attacking.  It used to be set up to attack a str so if you were fighting a qurd it was at 3/10 and a different qurd roamed in the room your spell would attack the new qurd instead of the one you were already fighting.
+[Jun 15 2009 22:06] Fred: A: ~eurale/VAMPIRES/vampob.c -- added a lvl check so not every wiz out there is cloning an object.  I only removed the lvl check a few weeks back, re-added my own version.
+[Jun 21 2009 19:01] Angel: A: Warned Sin / Stardrifter on eq sharing next time jail him
+[Jun 21 2009 19:07] Angel: A: tested eq sharing with shop, did not use items and sold back to shop. used joab and nelapsi
+[Jun 23 2009 16:45] Fred: A: comp'd Mistaken some exp for a buggy guild trial death.  Fixed the guild trial too.
+[Jun 29 2009 08:45] Fred: A: Comp'd Worm a couple equip pieces.
+[Jun 29 2009 08:46] Fred: A: Promo'd Aingeal back to her previous lvl 40.  She was demoted to 20 as inactive from Verte.
+[Jun 29 2009 08:46] Fred: A: patched Wulfe's Cyber object he didn't have a guild file after his restore.
+[Jun 30 2009 23:57] Star: A: Approved Cloud's Fayawyn area
+[Jul  5 2009 21:32] Fred: A: patched Marlboro guild exp.  he was maxed but then they raised the total exp needed to max and it was screwing up other guild things.
+[Jul  5 2009 22:12] Fred: A: ~pavlik/guild/mages/obj/corpse_bag.c -- had some major color bleed issues.
+[Jul 11 2009 15:46] Fred: A: patched Angelus, he was patched exp but his guild converted it all into guild exp.
+[Jul 14 2009 20:07] Angel: A: Gargoyle's box was empty when returning from a DC. He told me each item and it was exactly what was in the void, so I returned it to him.
+[Jul 18 2009 20:50] Angel: A: nerfed /players/jareel/armor/DWARFFORGE/demon/cloak.c  to mud standards.
+[Jul 18 2009 22:06] Angel: A: ed 2 jareel files
+[Jul 20 2009 19:08] Angel: A: quoted out Heart beat in all 3 files of area/town/npc/multi / was causing mob to not fight
+[Jul 21 2009 15:01] Sparrow: A: Edited /players/guilds/Rangers/kezef.o to restore his guild stats
+[Jul 26 2009 19:41] Chip: A: Opened the Neos, just forgot to log it here. Logged now.
+[Jul 26 2009 21:50] Fred: A: ~cosmo/apt/obj/bizarro.c -- nuked it so rangers can't use it.  Darn them and their trickery.
+[Jul 27 2009 00:41] Angel: A: tried to follow Mokri dir on renaming a clan for Joab/didn't work/will try to figure it out or reset clan
+[Jul 27 2009 08:58] Fred: A: ~cloud/Fayawyn/mobs/doorknob.c -- added a heal_self to the HB so people would stop killing it.  As it was never meant to be killed as commented at the top.
+[Jul 27 2009 17:16] Angel: A: handed nelapsi ~rewards/belt.c testing autoload
+[Jul 27 2009 22:34] Star: A: Gave Worm back his Warpstone armor..  was in the void after a DC..  everything else saved and he asked for nothing else
+[Jul 30 2009 10:23] Rumplemintz: A: Registered Test Character: Angmar
+[Jul 30 2009 10:24] Rumplemintz: A: Registered Test Character: Padrone
+[Jul 31 2009 17:53] Rumplemintz: A: Registered Test Character: Kantele
+[Aug  2 2009 04:33] Chip: A: reimbursed Samru 4 wocket full heals after a crash
+[Aug  2 2009 04:36] Shinshi: A: reimbursed Lazar shock sword and an element of air after a crash
+[Aug  2 2009 04:39] Shinshi: A: reimbursed equilibrium a cloak of the night sky and a chestguard of health after a crash
+[Aug  2 2009 04:39] Chip: A: reimbursed Crom 6 injectors, 2 bags of holding, and an ice sphere he lost in the same crash
+[Aug  2 2009 04:40] Shinshi: A: reimbursed thomas his der englesense and a bag due to the same crash as above
+[Aug  3 2009 16:23] Angel: A: Wipeout asked to be dewized/he coded nothing/dewiz granted
+[Aug  4 2009 00:13] Angel: A: gave Valen approval for wizship...
+[Aug  4 2009 01:13] Angel: A: ed /players/guilds/necro/obj/misc/handbook.c missing / would not work.
+[Aug  6 2009 11:15] Angel: A: Valen got his castle / Helped him setup files / gave hime the rundown on basics / promoted him to 21
+[Aug  6 2009 13:19] Star: A: Reimbursed Wipeout 2485282 exp..  was killed in his hotel while idle, killer unknown..  wizzes reported having seen him with VD, but when shown the hooker he did not remember ever killing her..  I made the call, suspecting the possibility that it was cloned to him as a joke when he was a wiz
+[Aug  8 2009 00:17] Angel: A: jailed wipeout for 1 day.  He was being unruly and disrespectful through Star and tells. He would not follow any directions when told he needed to stop.  I did not snoop anyone can check the file.  His behavior was unacceptable.  Tired of these types of players running others off.  His info is wrong.  Also though not needed to explain in my mind but Worm made my test player a shard to help fix guild errors, ask him.  No wrong doing on my part.
+[Aug  8 2009 00:18] Angel: A: freed wipeout from his 1 day sentence for his untruthful rants.
+[Aug 11 2009 18:17] Angel: A: approved Valen's writeup for his first area / he is clear to start coding
+[Aug 13 2009 20:44] Sparrow: A: Letting worm test out Tears of the Willow to make sure it doesn't break anything with Shards
+[Aug 13 2009 22:30] Sparrow: A: giving marek a piece of equipment from my monks because he found a HUGE bug with it
+[Aug 14 2009 17:23] Illarion: A: restored 400k to arrow - he lost it due to the cyberJesus special attack firing when he was no longer in the room
+[Aug 15 2009 16:54] Valen: A: Registered Test Character: Vtest
+[Aug 16 2009 09:11] Shinshi: A: Sharkrla's gear disappeared from a room in Mythos' ancient area so I got it and got it back to Sharkrla
+[Aug 19 2009 12:05] Sparrow: A: Gave tears to trojan to test out viability on low levels to see if I need to block low levels
+[Aug 19 2009 14:02] Fred: A: reinstated Data to lvl 21 instead of the inactive lvl 20
+[Aug 19 2009 21:10] Data: A: Registered Test Character: Dtest
+[Aug 20 2009 19:23] Illarion: A: /players/chip/closed/other/SATAN/room2.c no longer dests itself as soon as someone uses the exit.
+[Aug 20 2009 21:42] Shinshi: A: restored med kits, full heals, and some ice spheres that i KNEW Fervens had when he died to satan and the room dested everything
+[Aug 21 2009 04:21] Shinshi: A: test
+[Aug 22 2009 17:43] Angel: A: idest hcl from cypher. there is no way to remove it or a time duration. not fair to players.   players/eurale/Lab/OBJ/acid / needs to be adjusted. will look at it...
+[Aug 22 2009 18:31] Angel: A: ok, well I found out that madam rue's dsmo heals the hcl.  Thought that he used one and didn't work.  I read the file and it does cure it.  Whish folks made things more clear in code...
+[Aug 24 2009 23:54] Illarion: A: Normal death code will now log previous_object if there is no this_player
+[Aug 26 2009 08:21] Shinshi: A: Registered Test Character: Yesman
+[Aug 27 2009 22:30] Angel: A: I added an access file for Khrell to get to active vamps files since he is guild wiz. some active files are still used in noon's files.  "/players/nooneelse/black%s"
+[Aug 28 2009 00:11] Angel: A: ed /players/nooneelse/black/guild_traitor_plaque.o to add a player for Khrell.
+[Aug 28 2009 18:57] Illarion: A: updated air to sap the stats of a spinal's owner.  since spinals return 0 for is_pet they are completely avoiding one of the drawbacks of this very powerful weapon
+[Aug 28 2009 18:58] Illarion: A: filename: /players/mythos/awep/forest/air.c
+[Aug 29 2009 12:35] Illarion: A: corrected exits in  /players/saber/ryllian/arena4.c and /players/saber/ryllian/arena1.c
+[Aug 29 2009 14:52] Illarion: A: one more adjustment to /players/mythos/awep/forest/air.c - chance of stat lost is now 1/250 instead of 1/200 as stats cost more now
+[Aug 29 2009 16:27] Illarion: A: restored 285965 exp enigma lost to a bug
+[Sep  7 2009 00:49] Angel: A: approve valen's first area in /players/valen/area/catacombs
+[Sep  7 2009 20:49] Star: A: Approved Shinshi's very intersting idea of a one room area..  and promo'd him to 40
+[Sep  7 2009 21:35] Angel: A: Promoted Valen to 30.  First area complete.
+[Sep  7 2009 21:45] Valen: A: angel approved first area and it is in the system
+[Sep  9 2009 22:14] Fred: A: Promo'd Khrell to lvl 100.  He's going to be doing area approvals with Star.
+[Sep 15 2009 10:27] Fred: A: mizan
+[Sep 15 2009 18:37] Khrell: A: fred
+[Sep 15 2009 19:22] Mizan: A: fred
+[Sep 15 2009 19:23] Mizan: A: is
+[Sep 15 2009 19:23] Mizan: A: cool
+[Sep 16 2009 01:06] Angel: A: Fred
+[Sep 16 2009 01:06] Angel: A: is
+[Sep 16 2009 01:06] Angel: A: Cool!!!!
+[Sep 17 2009 12:31] Fred: A: fixed a problem in Neo's with assigning tentacles.  should be a lvl 3 control skill but was coded as > 3, rather than > 2.
+[Sep 17 2009 12:31] Fred: A: why must you mock me!! :(
+[Sep 17 2009 21:15] Mizan: A: i stick my peepee in fans for fun
+[Sep 23 2009 10:11] Fred: A: patched Quagmire 410672 from a death where he says he got dc'd and reconnected to being dead.  ENTER log shows a throw reconnect, Gave him the benefit of the doubt.
+[Sep 23 2009 13:33] Fred: A: made an adjustment to /players/chip/venom2/obj/weapon.h -- nerfing move see code for specific.  It was too far off legal.
+[Sep 28 2009 12:43] Rumplemintz: A: modified sandman/NEWBIE/newbie_dispenser so short shows for wizards as well as newbies
+[Sep 30 2009 00:51] Rumplemintz: A: changed /players/pavlik/items/ilstkarn/lava_shield.c so it loads to stop heartbeat error when killing lava_dragon.c
+[Oct  2 2009 15:30] Rumplemintz: A: Changed sandman/NEWBIE/newbie_dispenser.c to allow wizards to enter/see it, etc...
+[Oct  2 2009 15:40] Rumplemintz: A: /players/softly/nhall/obj/ all heals - changed return value to stop the What? messages on the stuff/intox checks
+[Oct  5 2009 10:23] Shinshi: A: Restored shock sword to Brenar due to a weird magical box problem which is being investigated
+[Oct  5 2009 14:56] Fred: A: /players/chip/venom2/OBJ/deepbag.c -- fixed it so it wouldn't bug when looking at it when the owner logs out.
+[Oct  5 2009 17:45] Rumplemintz: A: /players/jareel/general_stuff/demonhide.c Changed long to reset ansi
+[Oct  5 2009 18:11] Rumplemintz: A: /players/molasar/FOREST/UPPER/plat8.c fixed directions
+[Oct  5 2009 18:13] Rumplemintz: A: /players/molasar/FOREST/UPPER//plat7.c fixed directions
+[Oct  6 2009 10:57] Sparrow: A: removed all files from /players/sparrow/areas/bwo/rms. They sucked and I'm rewriting them
+[Oct  6 2009 12:11] Sparrow: A: created /players/sparrow/areas/bwo/rms/willow1.c
+[Oct  6 2009 12:22] Sparrow: A: created /players/sparrow/areas/bwo/rms/willow3.c
+[Oct  6 2009 12:57] Sparrow: A: created /players/sparrow/areas/bwo/rms/willow5.c
+[Oct  7 2009 22:16] Angel: A: Highlander lost bag in ooze.... told him no to reimbursement.
+[Oct  8 2009 14:05] Sparrow: A: Tested a hunch about wizard->player object sharing. If a wizard clones an object and drops it, a ranger can donate it without throwing up any flags. I figured as much but was curious.
+[Oct  9 2009 11:19] Sparrow: A: transed whitehawk out of "broken" ooze
+[Oct 14 2009 11:31] Rumplemintz: A: dested party object on quagmire - got bugged on his disconnect
+[Oct 20 2009 11:45] Shinshi: A: grabbed quagmire's stuff from void and returned it to him due to his magical box disappearing
+[Oct 24 2009 11:34] Fred: A: cloned /players/snow/closed/test/aura.c to Tenchu.  His got destroyed somehow and I know he's done the E-test.
+[Oct 25 2009 06:44] Mosobp: A: Registered Test Character: Mosotest
+[Nov  4 2009 12:53] Rumplemintz: A: Went through Jareel's code for YELMALIAN and changed all instances of Alcamist to Alchemist
+[Nov  9 2009 21:20] Angel: A: gave highlander morgar heals he dropped  they disappear Know he knows...
+[Nov 19 2009 13:26] Rumplemintz: A: changed /players/jaraxle/3rd/alt/rooms/forest/clearing.c typo
+[Nov 19 2009 13:29] Rumplemintz: A: /players/tallos/7tigers/rooms/room240.c typo
+[Nov 23 2009 09:10] Rumplemintz: A: /players/khrell/area/skaven/skavenpestilenhall added 's in longdesc
+[Nov 23 2009 21:53] Angel: A: after screwing up the Mcleod clan using Mokri's direction I reset a new clan for Joab.
+[Nov 23 2009 22:37] Angel: A: imprisoned wipeout for giving players wizzes alts
+[Nov 25 2009 14:08] Rumplemintz: A: gave Yodel an item worth 501 to retry the bard quest in valley_q.c - bugged on him first time.  Worked on second try
+[Dec  1 2009 11:20] Rumplemintz: A: fixed warriors 'firstaid' 'first aid' command
+[Dec 02 2009 15:46] Rumplemintz: A: /players/francesco/quest/mobs/monster_lib.c - fixed for LD compat
+[Dec 02 2009 15:50] Rumplemintz: A: /players/francesco/quest/mobs/grabber.c - fixed for LD compat
+[Dec  2 2009 17:15] Rumplemintz: A: commented out and dested Francesco's 'mastermind' quest, someone removed the entry point from the game, so you cannot get to it
+[Dec  2 2009 17:22] Rumplemintz: A: put mastermind quest back in - Fran had changed it from /games dir to /masterquest dir
+[Dec  4 2009 11:05] Rumplemintz: A: removed chan_history from 'warped' clan object (mokri's) to fix bugged player 'Swoop'
+[Dec 04 2009 13:40] Rumplemintz: A: /players/zeus/realm/NPC/tyborlek - changed all_inventory() to all_inventory(this_object())  - LD doesn't like missing arguments
+[Dec  4 2009 14:38] Rumplemintz: A: /players/zeus/closed/fl_demon.h add 'else return 0;' to all functions
+[Dec  4 2009 15:39] Rumplemintz: A: scratch that - put it back
+[Dec 04 2009 16:17] Rumplemintz: A: /players/zeus/realm/city/* updated all files to use full direction insstead of abbreviation in functions
+[Dec  4 2009 16:56] Rumplemintz: A: /players/zeus/realm/x/dirs.h - removed casting on file_name lines
+[Dec  4 2009 18:36] Angel: A: replaced Horus's exp from an unknown death.  1708902 exp from death log.
+[Dec 10 2009 00:06] Rumplemintz: A: /players/pestilence/club/mob/* changed all 'stradles' to 'straddles' per typo report by Mythago
+[Dec 11 2009 14:14] Rumplemintz: A: /players/dune/closed/castle/rooms/moonshrine.c redid the moonphase time() calculations with more efficient way - shockingly clever
+[Dec 14 2009 00:12] Illarion: A: restored 300k to theseius in partial compensation for multiple deaths from typing get all around a shardak bonfire
+[Dec 14 2009 10:24] Fred: A: patched Amiro's mage player file.  It was buggy and he wasn't gaining exp towards the guild.
+[Dec 14 2009 23:56] Rumplemintz: A: /players/bastion/obj/destwand.c Changed to make quest work with LD
+[Dec 23 2009 17:53] Angel: A: replace Joab with the orb and bracers that did not save in clan lockers
+[Dec 24 2009 14:04] Angel: A: giving all player I see log on a Turkey for Christmas
+[Jan  9 2010 22:48] Shinshi: A: used fix_guild on severance to allow him to join the cybers. wasn't in a guild. not sure what happened
+[Jan 11 2010 14:56] Fred: A: comp'd some equipment for Amiro after he lost his from a crash.
+[Jan 14 2010 07:43] Shinshi: A: Cloned the neo guild obj to krylos after checking the log. he DID win the battle against the symbiote but did not receive the gobj.
+[Feb  8 2010 00:01] Shinshi: A: Dested a bugged party object from Newkil and granted him back his Neruumsh that he lost during the problem
+[Mar 31 2010 22:33] Angel: A: comp'ed gogeta his prize ring from Vert after crash
+[May  3 2010 21:24] Fred: A: patched Avant some neo guild stuff that got messed up.
+[May  6 2010 12:27] Fred: A: com'd Cgi a prize item he lost due to inactivity.
+[May 10 2010 11:12] Fred: A: edited skill_setup.h, variables.h, hb.h, and /OBJ/sphere.c in ~chiip/venom2 to fix a bug
+[May 24 2010 22:18] Star: A: Reimbursed Mode some gear that mysteriously disappeared..  Bracers of Speed, Nature's Blessing, Amulet of Lightning, and Gold Dragon Leggings
+[Jun  7 2010 13:50] Fred: A: fixed a bug with /bin/wiz/attrib.c and also updated /bin/play/_score2.c
+[Jun  9 2010 00:21] Illarion: A: restored exp mode lost due to additional deaths from forbidden forest worms that stayed on him as a ghost
+[Jun 28 2010 22:22] Fred: A: patched Mode's mage file since he had problems starting.  Just reset him to glvl 1 and cleared all his guild stats so he could restart.
+[Jun 29 2010 09:58] Fred: A: added a calcxp file to /players/pavlik/guild/mages/help directory.
+[Jun 29 2010 11:44] Fred: A: gave Shinshi access to /players/dune/closed/guild/ to oversee the Cybs guild.  Any changes will go through me.
+[Jun 29 2010 13:39] Shinshi: A: added doasis (calm), dsharpen (weapon sharpening ability), and didea (a way to express the guildies ideas to me) to the dervish guild with fred's approval
+[Jun 29 2010 13:40] Shinshi: A: Created a mob in the dervish hallway with fred's approval. a non-dervish kills it, coins drops, a dervish kills it, an hourglass drops which speeds up spell delay. star approved of it shortly before her vacation
+[Jul  8 2010 00:54] Shinshi: A: boosted p1, p2, and p3 to do slightly more damage
+[Jul 11 2010 13:43] Shinshi: A: Fixed Netdeaths for Cyberninjas to actually work once again.
+[Jul 12 2010 17:28] Fred: A: patched Mode's guild anfile and his exp vs guild exp for a mage bug.
+[Jul 15 2010 21:45] Fred: A: ~dune/closed/guild/snow/weapons/wepmanager.c -- added a little boost to bionics based on processor level to keep things zesty.
+[Jul 20 2010 17:01] Fred: A: ~jareel/weapons/chaos/woods2/humakt_+sword.c -- I nerfed it.  See code for details.  bah.
+[Aug 27 2010 16:07] Rumplemintz: A: ~/lew/elof/virus1 and virus2.c - Changed to put stat back - mobs just aren't worth enough to take permanently
+[Aug 27 2010 16:08] Rumplemintz: A: set Msagro stats back to pre lew quest
+[Aug 30 2010 17:29] Rumplemintz: A: patch msagro for fallen_lands quest, need to revisit to see if the quest still works
+[Aug 31 2010 16:29] Rumplemintz: A: changed /doc/helpdir/xxlevels to make the numbers in parenthesis correct
+[Sep 15 2010 10:11] Fred: A: ~zeus/museum/NPC/tiny_golem.c and golem.c -- tweaked slightly to make it harder to kill.  It's too easy for the experience.
+[Sep 15 2010 10:12] Fred: A: ~bastion/monster/hermit.c -- I updated this.  Used to have an WC of 3 and almost 9000 hps, players could attack it and idle for 20 minutes whilke it died.  reduced hps, upped wc, overall same experience value.
+[Sep 15 2010 15:16] Rumplemintz: A: /players/chip/castle.c added 'apartment' id
+[Sep 16 2010 13:41] Gogeta: A: Registered Test Character: Gotest
+[Sep 17 2010 10:35] Rumplemintz: A: changed /obj/user/reports/reporter.c added date to time stamp of rep reports
+[Sep 17 2010 10:42] Rumplemintz: A: /obj/player.c added date to SPONSOR log on approvals
+[Sep 17 2010 11:17] Rumplemintz: A: /obj/player.c added date to all ctime() entries, also removed redundant ctime(time()) calls, don't need to pass time() as arg
+[Sep 17 2010 11:23] Rumplemintz: A: /obj/living.c removed redundant ctime(time()) entries, replaced with ctime()
+[Sep 17 2010 11:24] Rumplemintz: A: /obj/living.c POINTS logging for heal_self, added 'by' entry
+[Sep 17 2010 11:30] Rumplemintz: A: /players/earwax/bank/bankd.c updated TRANSFER log to add year
+[Sep 17 2010 11:32] Rumplemintz: A: /bin/wiz/cmd_defs.h added year to 'msg'
+[Sep 18 2010 22:21] Wicket: A: Registered Test Character: Fuzzyone
+[Sep 22 2010 08:27] Fred: A: patched ~vertebraker/prizes/krillgeta.c -- It was set up to only sharpen a specific weapon, I changed it so any weapon would work.
+[Oct 19 2010 16:59] Rumplemintz: A: changed /obj/leo.c to update SPONSOR log with better information
+[Oct 20 2010 09:31] Fred: A: I reset Gogeta's extra lvl to +72, the last lvl I could find in the advance log.
+[Oct 21 2010 08:19] Fred: A: reset gogeta's guild exp and guid rank on his pfile from when he was in BCM.  Also edited /log/user/testChars.txt so he doesn't show a test char on finger.
+[Oct 21 2010 12:22] Rumplemintz: A: added xp to Gaara for PK bug with Khrell's warlord (uses verte's monster.c)
+[Oct 26 2010 16:46] Rumplemintz: A: /obj/quest_pt.c Added padrone and angmar quests and points
+[Oct 28 2010 13:41] Rumplemintz: A: Fixed typo in ~/illarion/hart/room/mspring.c
+[Oct 28 2010 13:41] Rumplemintz: A: Fixed typo in shocksword
+[Oct 28 2010 13:42] Rumplemintz: A: fixed typo in eurale/Lab/l17.c
+[Oct 28 2010 13:43] Rumplemintz: A: Fixed typo in /room/south/sislnd17.c
+[Oct 28 2010 13:46] Rumplemintz: A: Fixed typo in /room/south/sshore26
+[Oct 30 2010 17:54] Angel: A: Joab died but could not be revived/quit out and back but still dead after praying/ so I killed him again then he was able to revive... odd, I added his second death back.
+[Nov  1 2010 22:58] Rumplemintz: A: promoted Jareel to 21
+[Nov 11 2010 01:02] Rumplemintz: A: updated /bin/play/_donate.c to actually set_donated_item(1); when donating an item
+[Nov 12 2010 12:36] Rumplemintz: A: added monster.talk.c back into /obj - not sure when it got removed but things were complaining on mud boot
+[Dec  2 2010 05:56] Sparrow: A: gave elemental gear back to my character
+[Dec  2 2010 14:31] Fred: A: changed the dervish kill function to not be static so you can alias it.
+[Dec  3 2010 11:51] Rumplemintz: A: Added Wicket's area into the game
+[Dec  5 2010 16:39] Fred: A: promoted Wicket to lvl 30 for completion of first area.
+[Dec  9 2010 23:37] Sparrow: A: replaced Heinous' gear due to donation bug with khrell's area. He gave me the bugged gear
+[Dec 10 2010 00:11] Sparrow: A: testing changes to wep with wulfgar
+[Dec 10 2010 21:58] Sparrow: A: testing my tears with wulfgar
+[Dec 17 2010 16:19] Rumplemintz: A: changed _donate.c to make it so you have to be carrying item you're donating, code made you pick it up anyway
+[Dec 17 2010 16:36] Rumplemintz: A: Changed /obj/treasure.c - changed set_doanted_item to set_donated_item
+[Dec 17 2010 17:08] Rumplemintz: A: /players/mizan/closed/sbox added queryKept for stash command
+[Dec 25 2010 22:45] Sparrow: A: had to refund jester 500k xps for accidentally killing him with a runaway mob of mine
+[Dec 28 2010 01:37] Sparrow: A: Added xp to wulfgar to fix his guild
+[Jan 11 2011 13:19] Fred: A: demoted Wicket back to player status per his request.  He doesn't feel that being a wiz is right for him.
+[Jan 28 2011 12:24] Fred: A: added /bin/play/_coinmerge.c -- The command just merges stacks of coins in your inventory (bags not included) into 1 larger stack of coins.
+[Jan 29 2011 14:06] Angel: A: added 2011 to the top score board in players/cosmo/apt/rooms/lobby
+[Feb  9 2011 11:30] Rumplemintz: A: updated /WIZNEWS
+[Feb 11 2011 14:28] Rumplemintz: A: updated _who3 and _who4 to correctly sort players and wizards
+[Feb 13 2011 17:06] Vertebraker: A: undid kadaj's pk flag... i am a nice admin :P
+[Feb 14 2011 00:51] Vertebraker: A: ~heroin/hunting_grounds/GameMaster - examined for the report that he wasn't worth enough. replied to Humble that the xp value for a monster based on his HP is not as exponential as one would think.
+[Feb 14 2011 00:55] Vertebraker: A: ~mokri/clans/cmds/generic_heal - added a TP check so they can cast heal spells on themselves while invis
+[Feb 14 2011 01:00] Vertebraker: A: ~saber/armor/aura - added a query_attack() check before the player's attack_object() has been called
+[Feb 14 2011 01:04] Vertebraker: A: ~eurale/Keep/OBJ/dragon_ring - added a worn check to not allow players to fuck up their armor while invoking the ring
+[Feb 15 2011 16:15] Vertebraker: A: Checked out a bug reported about Bloodfist guards continuing to fight after you flee - this is not a bug, it was coded for that exact purpose
+[Feb 15 2011 16:21] Vertebraker: A: passed on a bug to boltar about Humble not being able to restore his mudkids.
+[Feb 15 2011 16:25] Vertebraker: A: updated ~eurale/Keep/NPC/demon_pet - changed "sit" to "demon_stay"
+[Feb 15 2011 16:27] Vertebraker: A: ~eurale/Keep/NPC/demon_pet - changed "sit" to "demon_stay", was blocking "sit" commands usable by players like "sit chair"
+[Feb 15 2011 16:27] Vertebraker: A: opened an investigation into the cause of sensitive mind messages after Brenar kills an NPC. Contacted for more info
+[Feb 15 2011 16:29] Vertebraker: A: ~jareel/weapons/orlanth/fiona_sword - added an id of "shock"
+[Feb 15 2011 16:31] Vertebraker: A: ~mosobp/areas/TEMPLE/rooms/ship_fran - adjusted so it checks if a TP is "living" rather than a player, so when it blows up, it doesn't destruct any mudkids/pets
+[Feb 15 2011 16:33] Vertebraker: A: ~heroin/hunting_grounds/gordqrtrsu - added if(arg) return check to prevent room from showing "no obvious exits". not sure if this will fix it, but worth a shot. If this isn't just a random odd bug, the whole area may need this fix or something else.
+[Feb 15 2011 17:15] Vertebraker: A: ~coldwind/desert/weapons/sword - added attacker checks before hit_player is called so player doesn't bug out
+[Feb 15 2011 17:17] Vertebraker: A: could not duplicate reported bug that joining felines caused loss of 5k coins and no mini guild
+[Feb 15 2011 18:41] Vertebraker: A: ~cosmo/hslist/svds_new - Fixed so the VDS will show alltime scores for 2011
+[Feb 15 2011 18:42] Vertebraker: A: ~cosmo/hslist/vds_new - Replaced with an inherit to svds_ , this got confusing
+[Feb 15 2011 20:47] Vertebraker: A: ~lew/castle - added a warning in castle entrance as some mobs in this area suck attribs
+[Feb 15 2011 22:20] Vertebraker: A: ~guilds/necro/guildob - changed set_pretitle on guild ob reset to 0 instead of "|"
+[Feb 16 2011 09:11] Fred: A: ~fred/closed/bloodfist/NPC/elder.c - added a check in the advance portion to see if they have done the trial.  If they have it no longer tells them to do the trial again.
+[Feb 16 2011 13:00] Vertebraker: A: ~bagera/castle - Reopened
+[Feb 16 2011 13:04] Vertebraker: A: ~trix/castle/disco/wc - added "list" action, the function was in place but no action for it. *boggle*
+[Feb 16 2011 13:14] Vertebraker: A: ~tristian/castle - added an id of "sign"
+[Feb 16 2011 13:16] Vertebraker: A: ~pavlik/guild/mages/room/library - removed newline at end of portal item desc
+[Feb 16 2011 13:20] Vertebraker: A: ~llew/Toys/armor/redshirt - added id of shirt
+[Feb 16 2011 13:30] Vertebraker: A: ~guilds/bards/martin - Updated to check for "is_armor" instead of "armor_class" when identifying something
+[Feb 16 2011 13:50] Vertebraker: A: ~trix/castle/quest/monst/case - changed id(str){str="case" to str=="case" -- was causing the case to have any id imaginable.
+[Feb 16 2011 13:53] Vertebraker: A: ~lew/card2 - updated to print "id card" not "meal card"
+[Feb 16 2011 13:55] Vertebraker: A: ~catacomb/Cavern/items/FireArmor - added id of "suit"
+[Feb 16 2011 13:57] Vertebraker: A: ~zeus/realm/taus/cave8 - changed present() check on clone of ooze to "ooze" instead of "primordial ooze", as the ooze did not have that id.
+[Feb 16 2011 14:00] Vertebraker: A: ~maledicta/cont/armor/guard_of_health - changed return; to return 1; to avoid "Rub what? What?"
+[Feb 16 2011 14:03] Vertebraker: A: ~jaraxle/closed/heals/* - added query_charges() function so displayable with heals+
+[Feb 16 2011 14:05] Vertebraker: A: ~boltar/sprooms/weaponsmith - added "read sign" as an option
+[Feb 16 2011 14:07] Vertebraker: A: ~/misc/cj/cj_face - cut damage in half, used way too much
+[Feb 16 2011 14:25] Fred: A: ~snow/dervish/lib/offwield.h - added a line check so Dervish couldn't offwield forged and socketed bloodfist weapons.  The standard wield function was previously covered.
+[Feb 16 2011 14:56] Vertebraker: A: ~/guilds/samurai/bin/_disarm - checks for attacker before attempting rewield
+[Feb 16 2011 14:57] Vertebraker: A: ~boltar/things/antipk - this_object() check - boggle
+[Feb 16 2011 15:00] Vertebraker: A: ~jenny/workoom - commented out her/his vds display due to bugs
+[Feb 16 2011 15:01] Vertebraker: A: ~jaraxle/3rd/alt/mobs/phantom2 - env check in spec3()
+[Feb 16 2011 15:05] Vertebraker: A: ~fred/mages/mon/drakyr - points to /room/void when desting
+[Feb 16 2011 15:06] Vertebraker: A: ~fred/mages/mon/ghoul - returns destruct(TO) in decay if no owner
+[Feb 16 2011 15:11] Vertebraker: A: ~jaraxle/cont/mobs/bdragon* - updated with alt_attacker_ob checks on tail strike in case AAO is dead, that way it doesn't kill HB
+[Feb 16 2011 17:05] Vertebraker: A: ~/ed/ed/room/portal - adjusted so the exit points to the village green
+[Feb 16 2011 19:44] Vertebraker: A: ~/swamp/x1/g-necklace - fixed to change to armor. this should address some of the bugs.
+[Feb 16 2011 20:48] Vertebraker: A: ~/swamp/OBJ/denim_shorts - moved to ac 1, not sure who the fuck made them ac 2.
+[Feb 17 2011 00:03] Vertebraker: A: ~cosmo/apt/armor/babyblue - changed to type chest
+[Feb 17 2011 00:03] Vertebraker: A: ~cosmo/apt/armor/goldenboy - changed to type chest
+[Feb 17 2011 10:00] Vertebraker: A: Made a guild .nfo file for Samurai in /open/info/guilds
+[Feb 17 2011 10:01] Vertebraker: A: Updated mages.nfo
+[Feb 17 2011 10:05] Vertebraker: A: ~sandman/NEWBIE/newbie_bag - boosted MAX_WEIGTH to 40
+[Feb 17 2011 10:07] Vertebraker: A: ~/guilds/samurai/obj/fireblade - changed from 1/4 to 1/6 chance of going off.
+[Feb 17 2011 11:06] Vertebraker: A: ~zeus/museum/NPC/tiny_golem - environment() check in attack_function()
+[Feb 17 2011 11:08] Vertebraker: A: ~nooneelse/graveyard/g_path_crypte - door2 check in reset
+[Feb 17 2011 11:10] Vertebraker: A: ~jareel/monsters/town/kassea - K_heal2 - TO check
+[Feb 17 2011 12:54] Vertebraker: A: Reopend Daranath's area
+[Feb 17 2011 13:04] Vertebraker: 
+  A: ~saber/closed/esc.h - 
+  R: endif
+[Feb 17 2011 19:45] Vertebraker: A: ~khrell/armors/skaven/warparmor
+[Feb 17 2011 19:45] Vertebraker: A: oops
+[Feb 17 2011 20:41] Vertebraker: A: With Sparrow, debugged ~cosmo/hslist/vds_new so it updates properly [finally]
+[Feb 17 2011 20:44] Vertebraker: A: ~heroin/hunting_grounds/predator - changed paths to ~heroin/hunting_grounds/preds/ for cloning of objects
+[Feb 17 2011 21:34] Vertebraker: A: ~chip/venom2/neo_venom
+[Feb 17 2011 21:34] Vertebraker: A: oops (above) - added an id of GI
+[Feb 17 2011 21:49] Vertebraker: A: w/ Fred, updated all guild objects to have an id of "GI"
+[Feb 18 2011 13:20] Vertebraker: A: ~feldegast/obj/poison2 - environment() check before wearing off
+[Feb 18 2011 15:51] Sparrow: A: fixed /players/sparrow/areas/bwo/obj/bwo_acc.c so it will only store in hotel rooms
+[Feb 18 2011 16:46] Vertebraker: A: Edited Casa de Nirvana / Hotel room code so as to allow query_save_flag() { return 2; }
+[Feb 18 2011 20:59] Fred: A: ~angel/area/atlantis/obj/rgun.c -- the return on it was 2010 it's a weapon not an armor return :P
+[Feb 18 2011 22:06] Sparrow: A: reimbursed Cannabinoid 5000 xp for bug death
+[Feb 19 2011 01:36] Vertebraker: A: Updated all guilds to get rid of autoloads, switched to guild files instead
+[Feb 19 2011 01:51] Vertebraker: A: ~pavlik/guild/mages/rooms/*.c - moved all files to attic/ ..
+[Feb 19 2011 01:51] Vertebraker: A: ~pavlik/guild/mages/room/*.c - edited all files to point to the correct subdir, "room/" not "rooms/", was causing basically a duplicate tower complete with duplciate mobs
+[Feb 19 2011 14:58] Fred: A: forgot to log yesterday but reimbursed Kadaj almost 700K exp and 1 int point for an instablick death due to my fix on rgun.c that was logged.
+[Feb 19 2011 14:59] Fred: A: well his death wasn't due to my fix but it was the cause for the fix.  Whatever. I'm tired.
+[Feb 20 2011 21:31] Vertebraker: A: ~guilds/samurai/gob - increased damage taken
+[Feb 21 2011 14:19] Vertebraker: A: ~valen/area/catacombs/belt - changed "armors" object pointing to the belt clone to "armor". was fucking up wear
+[Feb 21 2011 21:03] Vertebraker: A: ~snow/dervish/lib/sandblast.h & objects/verte_sb.c - recoded so not to use set_ac() and not effect xp rate
+[Feb 21 2011 21:03] Vertebraker: A: ~dusan/area1/armors/bring - changed id from ring to gauntlets
+[Feb 21 2011 21:06] Vertebraker: A: Added 1mil xp to Jeanyus for warrior guild advance bug caused by double loading objects
+[Feb 21 2011 21:36] Vertebraker: A: ~sparrow/areas/bwo/obj/bwo_acc - added (worn) flag to short()
+[Feb 23 2011 02:43] Sparrow: A: restored 700k xps to chett for disconnection death
+[Feb 24 2011 12:45] Highlander: A: Registered Test Character: Hightest
+[Mar  1 2011 02:32] Vertebraker: A: ~catt/castle - opened
+[Mar  3 2011 12:26] Vertebraker: A: ~catt/MAGICAL/flamestrike - changed find_living() in the spell cast to present() check
+[Mar  4 2011 00:08] Vertebraker: A: ~angel/area/walmart/npc - added id of "manakin" cause all these rooms were cloning based on that id
+[Mar  8 2011 16:30] Rumplemintz: A: Heinous had -2147437959 exp.  I changed him to last login exp + BIGEXP log of his kills since then to 2141930035
+[Mar  8 2011 18:29] Illarion: A: subtracted some exp from heinous, who managed to find maxint
+[Mar 13 2011 23:14] Sparrow: A: dested gob off of grain, left dervish and keeps coming back. autoload must still be set up
+[Mar 15 2011 14:31] Rumplemintz: A: moved /players/pavlik/guild/mages/room/master_room.c to /players/pavlik/guild/mages/rooms/master_room.c - not sure how it got moved, but it broke the donation-master
+[Mar 17 2011 23:56] Angel: A: Darkfyre and Xaltocan issue / Both get 30 days jail if either one messes with the other with any alt
+[Mar 18 2011 00:34] Angel: A: The file is /players/angel/darkvexalt.txt
+[Mar 27 2011 02:19] Sparrow: A: sparrow
+[Mar 27 2011 02:20] Sparrow: A: hahaha I must be tired, just look at that last entry
+[Mar 31 2011 14:36] Rumplemintz: A: changed Tsukune to Yoshiko
+[Apr  1 2011 23:20] Illarion: A: fixed /obj/verte/sanitizer.c   It was getting stuck in an infinite loop so any profanity was generating an error instead of posting to channels
+[Apr  1 2011 23:26] Illarion: A: updated /players/snow/dervish/hall/hall.c to hopefully fully remove all references to the guild when players quit

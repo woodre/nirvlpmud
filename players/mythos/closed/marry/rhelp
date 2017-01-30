@@ -1,0 +1,25 @@
+---==========  Odin  =====< Ring Help >=====  Akasha  ==========---
+                  
+  ring_help              shows this screen
+  rgoto                  moves you to spouse
+  rsummon                moves spouse to you 
+  rt <message>           says <message> over ring line
+  rte <message>          emotes <message> over ring line
+  rtf <message>          echos <message> over ring line
+  ring_in <message>      sets login message for ring line 
+  ring_in                no argument will show current message
+  ring_out <message>     sets logout message for ring line 
+  ring_out               no argument will show current message
+  ring_title <title>     sets post title
+  ring_title             no argument will show current title
+  ring_etch <message>    sets inscription for 'read inscription on ring'
+  ring_etch              no argument will show current inscription
+  scry                   no argument shows battle monitor of spouse
+  scry room              shows 'look' from spouse's view
+  scry <object>          shows 'look at <object>' from spouse's view
+  trans                  no argument shows coin level of spouse
+  trans # coins          transfers # coins to spouse (less 10%)
+  trans # hp             transfers # * 1/2 hps to spouse (takes #)
+  trans # sp             transfers # * 1/2 sps to spouse (takes #)
+  trans <itemname>       transfers <item> to spouse from inventory
+------------++++++++++++++======<)(>======++++++++++++++------------

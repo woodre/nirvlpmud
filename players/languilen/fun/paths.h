@@ -1,0 +1,5 @@
+#define BASE "/players/languilen/fun/"
+#define AREA   BASE  + "rooms/"
+#define MON    BASE  + "mons/"
+#define OBJ    BASE  + "objs/"
+#define DOORWAY "/players/languilen/doorway.c"

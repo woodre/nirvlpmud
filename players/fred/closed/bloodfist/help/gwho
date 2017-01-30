@@ -1,0 +1,17 @@
+
+Bloodfist Help:  Guild Who
+
+  Gwho will only show bloodfist members who are online.  As well as
+showing their location and level, it shows their guild level, their
+honor, and 6 more true or false variables in the form of [p a i c d h].
+You can see invisible players but not invisible wizards with gwho.
+
+  p - this player has their pk flag set
+  a - this player is in a pk area
+  i - this player is idle
+  c - this player is currently fighting something
+  d - this player is a ghost
+  h - this player is invisible
+
+Usage: gwho
+

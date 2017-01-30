@@ -1,0 +1,12 @@
+no_clean 0
+short_desc "a spike of many heads [8]"
+long_desc "A long spike containing 8 heads."
+info 0
+save_flag 0
+value 329
+local_weight 1
+name "headspike"
+alias_name "spike"
+read_msg 0
+shop_dest_flag 1
+multipleIds ({})

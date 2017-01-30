@@ -1,0 +1,5 @@
+messages "esp site(data):**http://sprott.physics.wisc.edu/pickover/esp.html**checkings(data):**if(this_player()->query->real_name() != "data" &&this_player()->query_level() >20){write("You cant have this!!");destruct(this_object());}}**newcheck(data):**if(member == "data" || member "coldwind" || member "mishtar")**card(data):**/players/saber/magic/twiddle**ftp(data):**www.smoothftp.com**"
+new_hd 0
+new_body 0
+num_messages 5
+who 0

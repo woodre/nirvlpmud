@@ -1,0 +1,587 @@
+|-------------------------|
+| THE LOST CITIES QUEST   |
+|_________________________|
+
+Recommended for players around the levels of 13 to 17.
+Much more mentally challenging than physically.
+
+General Overview and Purpose:
+     The Lost Cities quest is a time-consuming quest where the
+adventurers must find all six of the Lost Cities and there must
+recover the Lost Sithi Stones.  Only then will they rescue the souls
+of the Sithi.
+
+Motives:
+     The Lost Cities Quest has the strong underlying theme of 
+patience and listening.  It is not possible for the adventurer
+to finish the quest in less than 12 days (assuming no cheating).
+This is because each city that must be found only appears every 
+certain amount of moon phase shifts.  Only one city exists at any 
+one time.  Every phase in moon lasts about 4 hours in duration.
+     In addition, the players must talk with NPC's and learn what
+they must do.  They must search the entire world throughout, and
+learn the moon phases and city 'hot spots'.
+
+Solution:
+     The actual steps to solving the quest are as follows.
+Order is not entirely important, as long as the diagram is
+done last.  Note, all files listed will be under the directory:
+/players/dune/closed/castle/rooms    if indicated with a CR
+/players/dune/closed/castle/objects  if indicated with a CO
+/players/dune/closed/castle/monsters if indicated with a CM
+/players/dune/room                   if indicated with an ER
+/players/dune/objects                if indicated with an EO
+/players/dune/armor                  if indicated with an EA
+/players/dune/monsters               if indicated with an EM
+/players/dune/weapons                if indicated with an EW
+
+1) Find Amerasu (located at CR/shrine.c), start asking her questions.
+   She'll ask for help.  So say/tell/emote/whatever something with
+   the word 'help' in it. She'll explain the required tasks
+   to be done. Specifically that the cities and stones need to
+   be found. She mentions that they should find the Moonshrine and
+   to talk to Doctor Morgenes.
+
+2) The players explore the land for Doctor Morgenes.  He is located
+   in the Elemental Tower (room ER/doctor.c).  There they must say/
+   tell/whatever something with the word 'moonstone' in it.  The doctor
+   then gives them the moonstone (only once per reset).  With the
+   moonstone, the players are able to leave the Sithi Cities because they
+   can enter them but not leave.  All rooms are no teleport, so the
+   moonstone is the only way to leave.  Also, the moonstone only
+   works for rooms in my directories.  The moonstone teleports the
+   players to a random room situated in a circular path about the
+   moonshrine.
+
+3) The players must go to the Moonshrine (at CR/green11.c).  There they
+   will learn what phase of moon it is.  Then they should explore and
+   try to find the cities.  Because the moonshrine randomly picks from 12
+   places upon where to put a city, the players must search the land.
+   When they find it, they'll enter the city and search for the stone.
+   Each city has a Sithi Lord.  They must kill this lord in order to 
+   get the stone the lord carries.
+     Sithi Stone locations:
+     Name of Stone     Lord who has it     Room of Lord
+     --------------------------------------------------
+     Minneyar          Smaonte             CR/jao_tinukaii/meditation.c
+     Resurieni         Desnon              CR/jao_tinukaii/lordchambers.c
+     Mayesa            Avera               CR/daai_chikiza/sealord.c
+     Sesuadra          Soultephar          CR/mezutua/firelord.c
+     Shisaeron         Dais                CR/hikehikayo/hikehikayo8.c
+     Yasira            Evacuu              CR/tumetai/tumetai16.c
+     Zaeymiritha       Noiar               CR/kementari/kementari13.c
+
+4) If the moon has not changed phase, the players may continue to
+   explore and get familiar with the area or find Ebudee, the wytch lady
+   that lives in the swamp. Doctor Morgenes mentions Ebudee when the
+   players obtain the moonstone from him.
+   If the moon has changed phase, the player may search for another city.
+
+5) It is not necessary to meet Ebudee (located at CR/tempent.c), but she
+   gives further hints about how the Sithi cities appear. She also mentions
+   how often Shaosaye, the last Sithi city, shows up. There is no stone
+   in Shaosaye, but the players must go there when they have all the
+   seven Sithi stones.
+
+6) Now the players must go to Amerasu and say/tell/whatever the
+   word 'diagram' in it. Amerasu mentions that they must do this when
+   they first start the quest. She also mentions that when they have
+   all the stones, they must ask her to sing the word 'jingizu', which
+   causes Amerasu to walk towards the city of Shaosaye. The player
+   must follow Amerasu unless he/she already knows where the city is.
+
+7) Shaosaye, the last Sithi city, appears on all phases of the moon
+   except that of a Dark moon. And, this city is different from the
+   other cities in that it always appears in the same place.
+   The Diagram is in Shaosaye, and the players must have all the
+   seven Sithi stones to enter the Diagram. The point of the Diagram
+   is that the players must use all the Stones to unlock it, and only
+   then may they fight the end monster and collect quest points.
+   To unlock the Diagram, the player must 'place' each Sithi Stone in the
+   following manner:
+   place zaeymiritha upon mirth glyph
+   place yasira upon beauty glyph
+   place shisaeron upon summer glyph
+   place sesuadra upon farewell glyph
+   place mayesa upon cat glyph
+   place resurieni upon tranquility glyph
+   place minneyar upon universe glyph
+   place hand upon imprint
+   The player will receive an orb (CO/questcheck.c) which stores
+   quest info and allows for quest points to be added, but doesn't
+   do the actual quest point adding.  A room (CR/end.c) does that.
+   The player will then be teleported to a room where that player
+   must fight Demosater one on one.  If the player wins, then that
+   player may leave the room.  Upon leaving the room, and only upon
+   leaving the room, the player receives quest points.
+   The player is then deposited in a place where he/she may reach
+   the village church.
+
+
+Special Note:  Mezutua, the Sithi City of Fire, has a sort of mini-quest
+               inside of it.  Players must find and gather the four
+               orbs in order to reach the Sithi Lord and some treasure.
+               (lord is at CR/firelord.c, treasure is in CR/archive.c)
+               The treasure is a firesword (CO/firesword.c) and a suit
+               of armor (CO/armageddon.c).  The orbs must be named
+               their real names in order to unlock the door which 
+               blocks access to the treasure and Sithi Lord.  The orbs
+               must be named in the following manner:
+               name steel orb katana
+               name blood orb heart
+               name black orb spider
+               name glass orb mirror
+               The names will be hinted to on the riddles inside the orb
+               rooms.  When the players reach the door, they must drop all
+               the orbs on the ground and 'position sphere into claw'
+               The door opens and they may get through.
+
+Workings of the Moonshrine:
+     The Moonshrine works on the ctime clock cycle. It finds the number
+of seconds that have passed, in the current year, working on a special
+Lothlorien calendar (like ours but simplified, 30 days per month, 12
+months). It then calculates the month, which it divides into 10 different 
+moon sections. Every section causes a moon to shift in phase.  This causes 
+the shrine to clone a city object which goes randomly to 1 in 12 different 
+rooms. Any old city objects are destructed. The new city object remains in
+the room it was sent to until the next moon phase.
+Months change every 12 hours, phases change every other hour.
+Months are (in order from left to right):
+Jonever, Feyever, Marris, Avrel, Maia, Yuven, Tiyagar, 
+Anitul, Septander, Octander, Novander, Decander
+Random room directions are:
+tempent.c, bush.c, 2east.c, 1sw2.c, brown2.c, brown4.c, brown8.c, 
+brown1.c, hill4.c, hill5.c, hill9.c, outdoor2.c
+
+
+
+
+___________________________MAPS___________________________
+
+All maps use the normal N, E, S, W compass as show on the below map.
+M stands for moon phase dependent.  (only appearing certain moon phases).
+H stands for hidden.
+
+
+
+
+
+                   THE WORLD OF LOTHLORIEN
+                                                    N
+                          FARM    r                 |
+              FOREST       LAND   r   SWAMPS      W---E
+                          ppppppp r                 |
+          fffffppppppppppppppppppp r                S
+MOUNTAINS  fffffppppppppppppppppp  r  o   o   o
+       MOUNTAINS ffppppppppppppppppp o
+                fffpppppppppppppp o
+            MOUNTAIN fffppppppppppp o
+                     ffffffppppppp o            K E Y
+                  MOUN  ffffppppp o            --------
+                    TAINS ffpp o               r - river
+                            o                  o - coastline
+                          o                    p - plains
+                                               f - foothills
+
+
+
+
+
+
+
+LOTHLORIEN
+
+
+                 FOREST                             green6--green1
+                   |                                  |       |
+                   H                       green10--green7--green2
+                   |                          |       |       |
+hill10-green19--green17--green15--green13--green11--green8--green3--SWAMPS
+  |       |        |        |       |         |       |
+hill11--hill9---green18--green16--green14--green12--green9--green4
+                   |        |       |         |       |       |
+                 hill7---brown9---brown8---brown4---brown1--green5--shore1
+                   |        |       |         |       |       |       |
+                 hill8----hill6---hill1----brown5---brown2--shore3--shore2
+                                    |         |       |       |
+                      MOUNTAINS---hill2----brown6---brown3--shore4
+                                    |         |       |       |
+                                  hill3----brown7---shore6--shore5
+                                    |         |       |
+                                  hill4----shore8---shore7
+                                    |         |
+                                  hill5----shore9
+
+
+
+
+
+SWAMPS
+
+                       swampentrance.c
+                          |
+                          |
+              bush.c---many_tracks.c
+                          |
+                          |
+                       sroad1.c
+                      /   |    \
+                     /    |     \
+                1sw2.c    |     2se1.c------2east.c
+                  /       |        | \       |
+                 /        |        |   \     |
+            1sw2.c        |        |     \   |
+                          |        |      \  |
+                       sroad2.c-2south1.c  \ |
+                          |                 \|
+       tempent.c--H----sroad3.c-------------2sse1.c
+
+
+
+
+
+MOUNTAINS
+
+    outdoor2.c
+       |
+    outdoor1.c
+       |
+    mountainentrance.c
+
+
+
+
+
+FOREST
+
+               diagram.c
+              /
+   shaosaye.c
+       |
+       M
+       |
+   forestpath1.c
+       |
+   forestpath2.c-----forestpath3.c
+                         |
+                     forestpath4.c
+
+
+
+
+
+MEZUTUA
+
+                  fire    lava3    lava4   lava5
+                    |       |        |       |
+smoke6---smoke7  smoke8   lava1---lavapit--lava6
+   |       |   /    |       |        |       |
+smoke5---smoke4  smoke9   lava2----lava8---lava7
+       \   |   /    |                           \
+  orb2   smoke1--passage1                         treasurehall--firelord
+   |   /   |   \    |                                             |
+smoke3   smoke2  north4            bridge                       armory
+                        \        /        \                  
+                          north3           spout3--orb4
+                        /                    |       |
+                 north2  passage1  spout5--spout2--spout4
+                    |       |                |
+                 north1  passage2   orb1   spout1
+                    |       |         |      |
+                  tube----east1----east2---east3---east4
+                                                        \
+                                                        secret--orb3
+
+
+
+
+
+JAO-E TINUKAI'I
+
+        deck.c              meditation.c                 armory.c
+          |                     |                             |
+          |                     |                             H
+    spiral_stairs.c          guardsportal.c                   |
+            \                  /                              |
+              \              /                  room4.c---sithiguards.c
+                \          /                   /      |
+                  \      /                    /       |
+                 fountain.c     altar.c      /        |
+                     |             |        /         |
+                     |             |       /          |
+      dining.c----room2.c       pews.c    /           |
+       |             |             |     /            |
+       |             |             |    /             |
+  guardslord.c----room1.c---------room3.c-----------sithichambers.c
+       |                         |
+       |                           |
+  lordchambers.c                   |         upnorth.c---mastersuite.c
+                                   |            |
+                                   |
+                               foyer.c-------upmain.c
+                                   |            |
+                                   |            |
+                               tstart.c      upsouth.c---sidesuite.c
+
+
+
+
+
+TUMETAI                          
+
+                            tumetai16                
+                               |                  
+    tumetai13               tumetai15                
+       |                       |                 
+    tumetai12---tumetai11---tumetai14                
+                    |                            
+                tumetai10---tumetai2--tumetai1        
+                               |
+    tumetai7----tumetai6----tumetai3          
+       |                       |              
+    tumetai8    tumetai5----tumetai4               
+       |                               
+    tumetai9                           
+
+
+
+
+
+HIKEHIKAYO
+
+    hikehikayo1
+        |
+    hikehikayo2
+        |
+    hikehikayo3---hikehikayo4   hikehikayo7
+        |             |            |
+    hikehikayo8---hikehikayo5---hikehikayo6
+
+
+
+
+
+KEMENTARI
+           kementari8  kementari13
+               |          |
+           kementari18-kementari12-kementari14
+               |          |            |
+kementari1-kementari2--kementari3--kementari4-kementari5-kementari6-kementari7
+               |          |            |
+           kementari9--kementari10 kementari15
+               |          |
+           kementari11 kementari16-kementari17
+
+
+
+
+
+DA'AI CHIKIZA
+
+                             daientrance
+                                 |
+                    skulls----stairs
+                                |             |                  
+hall6--hall4--hall2--hall1--hall3--shore1--hall5--hall7--hall10
+  |             |                    |             |       |
+shore3        shore2             water6          hall8     |
+  |             |                /   |             |       |
+water1-water2-water3-------water4--water5        hall9     |
+     \   |   /  |   \        |    /      \        /        |
+      water10-water9- w a t e r 8 ------water7-shore4      |
+         |  \/  |     /                                    |
+         |  /\  |    /                                   hall11
+      water11-whirlpool                                   |
+         |    /        \                                  |  room2
+        water12         sealord                           |  /
+                                                  room1--hall12
+                                                         /
+                                                        /
+                                                    hall13---room3
+                                                      |
+                                                    room4
+
+
+
+
+
+___________________________LISTING OF FILES___________________________
+
+Files in /players/dune/closed/castle/rooms:
+Total 127
+
+   2 1sw1.c           2 green12.c      1 jao_tinukaii/
+   2 1sw2.c           1 green13.c      1 kementari/
+   2 2east.c          1 green14.c      3 many_tracks.c
+   1 2se1.c           1 green15.c      1 marble1.c
+   1 2south1.c        1 green16.c      1 marble2.c
+   2 2sse1.c          1 green17.c      1 mezentrance.c
+   1 brown1.c         1 green18.c      1 mezutua/
+   1 brown2.c         1 green19.c      6 moonshrine.c
+   1 brown3.c         1 green2.c       1 mountainentrance.c
+   1 brown4.c         1 green3.c       1 outdoor1.c
+   2 brown5.c         2 green4.c       1 outdoor2.c
+   2 brown6.c         1 green5.c       1 shaosaye.c
+   1 brown7.c         2 green6.c       2 shore1.c
+   1 brown8.c         1 green7.c       2 shore2.c
+   1 brown9.c         2 green8.c       2 shore3.c
+   1 bush.c           1 green9.c       2 shore4.c
+   1 daai_chikiza/    1 hikehikayo/    2 shore5.c
+   2 definitions.h    1 hill1.c        2 shore6.c
+   6 diagram.c        1 hill10.c       2 shore7.c
+   2 end.c            1 hill11.c       2 shore8.c
+   3 fightroom.c      1 hill2.c        2 shore9.c
+   2 forestpath1.c    1 hill3.c        1 shrine.c
+   1 forestpath2.c    1 hill4.c        2 sroad1.c
+   1 forestpath3.c    1 hill5.c        2 sroad2.c
+   1 forestpath4.c    1 hill6.c        3 sroad3.c
+   2 green1.c         1 hill7.c        2 swampentrance.c
+   1 green10.c        1 hill8.c        1 tempent.c
+   2 green11.c        1 hill9.c        1 tumetai/
+
+
+
+SITHI CITY ROOM FILES____________________________________
+The directories daai_chikiza, hikehikayo, mezutua, tumetai,
+and jao_tinukaii all contain the room files for the six Sithi
+cities.  Each Sithi city room file are as follows.  Note, all
+Sithi city monsters and objects/weapons/armor are all in
+/players/dune/closed/castle/objects as are all the room monster
+and object/weapons/armor files of the rooms listed above.
+Elemental tower has different files altogethor, but they are listed
+later.  Here are the Sithi city room files:
+
+Files in /players/dune/closed/castle/rooms/mezutua:
+Total 81
+   3 archive.c        2 lava3.c      2 orb2.c        1 smoke7.c
+   1 bridge.c         3 lava4.c      2 orb3.c        2 smoke8.c
+   2 definitions.h    2 lava5.c      2 orb4.c        1 smoke9.c
+   1 east1.c          3 lava6.c      1 passage1.c    2 spout1.c
+   2 east2.c          3 lava7.c      1 passage2.c    1 spout2.c
+   2 east3.c          2 lava8.c      1 secret.c      2 spout3.c
+   1 east4.c          2 lavapit.c    2 smoke1.c      2 spout4.c
+   3 fire.c           1 north1.c     1 smoke2.c      2 spout5.c
+   2 fire2.c          1 north2.c     1 smoke3.c      2 treasurehall.c
+   1 firelord.c       1 north3.c     1 smoke4.c      2 tube.c
+   3 lava1.c          1 north4.c     2 smoke5.c
+   2 lava2.c          2 orb1.c       2 smoke6.c
+
+Files in /players/dune/closed/castle/rooms/jao_tinukaii:
+Total 48
+   5 altar.c          2 guardslord.c      2 room2.c            2 tstart.c
+   2 armory.c         1 guardsportal.c    1 room3.c            2 upmain.c
+   2 deck.c           3 lordchambers.c    2 room4.c            1 upnorth.c
+   2 definitions.h    2 mastersuite.c     2 sidesuite.c        1 upsouth.c
+   2 dining.c         3 meditation.c      1 sithichambers.c
+   2 fountain.c       2 pews.c            2 sithiguards.c
+   1 foyer.c          2 room1.c           1 spiral_stairs.c
+
+Files in /players/dune/closed/castle/rooms/daai_chikiza:
+Total 72
+   1 daientrance.c    1 hall2.c         2 sandshore3.c    2 water3.c
+   2 dairoom1.c       2 hall3.c         2 sandshore4.c    3 water4.c
+   2 dairoom2.c       1 hall4.c         2 sealord.c       2 water5.c
+   1 dairoom3.c       1 hall5.c         1 skulls.c        2 water6.c
+   2 dairoom4.c       1 hall6.c         1 stairs1.c       2 water7.c
+   2 definitions.h    2 hall7.c         1 stairs2.c       2 water8.c
+   1 hall1.c          2 hall8.c         2 water1.c        3 water9.c
+   1 hall10.c         1 hall9.c         2 water10.c       2 whirlpool.c
+   2 hall11.c         3 lab.c           3 water11.c
+   1 hall12.c         2 sandshore1.c    2 water12.c
+   1 hall13.c         2 sandshore2.c    2 water2.c
+
+Files in /players/dune/closed/castle/rooms/kementari:
+Total 20
+   2 definitions.h    1 kementari13.c    1 kementari18.c    1 kementari6.c
+   1 kementari1.c     1 kementari14.c    1 kementari2.c     1 kementari7.c
+   1 kementari10.c    1 kementari15.c    1 kementari3.c     1 kementari8.c
+   1 kementari11.c    1 kementari16.c    1 kementari4.c     1 kementari9.c
+   1 kementari12.c    1 kementari17.c    1 kementari5.c
+
+Files in /players/dune/closed/castle/rooms/tumetai:
+Total 19
+   2 definitions.h    1 tumetai13.c    1 tumetai3.c    1 tumetai8.c
+   1 tumetai1.c       1 tumetai14.c    1 tumetai4.c    1 tumetai9.c
+   2 tumetai10.c      1 tumetai15.c    1 tumetai5.c
+   1 tumetai11.c      1 tumetai16.c    1 tumetai6.c
+   1 tumetai12.c      1 tumetai2.c     1 tumetai7.c
+
+Files in /players/dune/closed/castle/rooms/kementari:
+Total 20
+   2 definitions.h    1 kementari13.c    1 kementari18.c    1 kementari6.c
+   1 kementari1.c     1 kementari14.c    1 kementari2.c     1 kementari7.c
+   1 kementari10.c    1 kementari15.c    1 kementari3.c     1 kementari8.c
+   1 kementari11.c    1 kementari16.c    1 kementari4.c     1 kementari9.c
+   1 kementari12.c    1 kementari17.c    1 kementari5.c
+
+
+
+WEAPON/ARMOR/ITEM FILES____________________________________
+All weapon/armor/item files are in the following directory.
+Note: elemental tower as seperate files altogethor.  As listed
+later.  Here are the weapon/armor/item files:
+
+Files in /players/dune/closed/castle/objects:
+Total 52
+   2 armageddon.c        1 knife.c       1 questcheck.c
+   1 armor.c             1 mayesa.c      1 resurieni.c
+   1 corpse.c            1 mezutua.c     1 seal.c
+   1 cursed_mace.c       1 minneyar.c    1 sesuadra.c
+   1 daai_chikiza.c      1 moondial.c    1 shisaeron.c
+   2 definitions.h       2 orbobj1.c     2 stone.c
+   2 firesword.c         2 orbobj2.c     1 tumetai.c
+   1 hikehikayo.c        2 orbobj3.c     2 voulge.c
+   1 jao_e-tinukaii.c    2 orbobj4.c     1 yasira.c
+   1 kementari.c         2 potion.c      1 zaeymiritha.c
+
+mayesa.c, minneyar.c, resurieni.c, sesuadra.c, shisaeron.c,
+yasira.c, and zaeymiritha.c are the seven sithi stones.
+
+orbobj1.c, orbobj2.c, orbobj3.c, orbobj4.c constitute the 4 
+Mezutua city mini-quest items.  They must be named appropriately
+to allow passage to a Sithi lord, and some treasure 
+(namely armageddon.c, firesword.c).
+
+daai_chikiza.c, hikehikayo.c, jao_e-tinukaii.c, kementari.c,
+mezutua.c, tumetai.c are the 6 sithi cities.  They do an 
+add_action which moves the player to the city entrance.
+The cities will be dested or cloned upon appropriate moon
+phase by the moon shrine
+
+
+
+MONSTER FILES____________________________________
+All monster files are in the following directory.
+Note: elemental tower as seperate files altogethor.  As listed
+later.  Here are the monster files:
+
+Files in /players/dune/closed/castle/monsters:
+Total 46
+   7 amerasu.c           3 doctor.c         1 seagull.c
+   1 avera_lord.c        1 evacuu_lord.c    1 sithi_knight.c
+   1 buffalo.c           1 frogs.c          1 sithi_man.c
+   1 catoblepas.c        1 hawk.c           1 sithi_priest.c
+   1 crab.c              1 horse.c          1 smaeonte_lord.c
+   1 dais_lord.c         1 mosquitos.c      1 snakes.c
+   1 darkshadow.c        1 munchkin.c       1 soultephar_lord.c
+   1 definitions.h       1 noiar_lord.c     1 thing.c
+   1 desnon_lord.c       1 ogre.c           1 willow.c
+   3 devil_duke.c        4 omni.c           1 wraith.c
+   2 devil_greatera.c    1 orc.c            3 wytch.c
+   1 devil_lesserc.c     1 rabbit.c
+   1 devil_lessern.c     1 scarnose.c
+
+The seven sithi lords are appended with a _lord.c at the end, for
+easy identification.  Each lord has a stone, which the player
+must kill for.
+
+
+
+ELEMENTAL TOWER FILES____________________________________
+The elemental tower files are all in seperate directories.
+Since the elemental tower was my old castle, they are in my
+old castle files.  These are as follows:
+
+Doctor Morgenes is located in /players/dune/room/doctor.c
+His monster file is /players/dune/monsters/doctor.c
+

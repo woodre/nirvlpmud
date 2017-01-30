@@ -1,0 +1,84 @@
+C Y B E R N I N J A S
+
+Fax File: tier3
+Usage: fax <topic>
+
+
+     Tier3 wizards are those who are members of the guild,
+but are not full "guild wizards" in the traditional sense
+of the word. Tier3 wizards, called contributors, do exactly
+that. They contribute to the guild by helping to think of
+new ideas, resolving guild issues, handling player questions, 
+or by just simply being a member.
+
+     Contributors are not given administrative commands,
+because that is not their role. Instead, contributors
+enhance theme by being guiding entities (somewhat similar
+to the classical mortal vs. immortal relationship in myths).
+Contributors do this in either a development fashion or
+player relations fashion.
+
+     Just as there are different tiers of wizards, there
+are different types of Tier3 wizards. Each type is devoted
+to enhance role-playing and guild quality in the area
+specified. This promotes organization within the guild
+wizard system.
+
+___________________Wiz Tier3 Abilities_________________
+enhancements <who>
+     By typing in a name of a guild member after the
+     enhancements command, you may see their enhancements.
+     You may see your own by normally just typing
+     'enhancements'.
+fax <topic>
+     Allows you to view the Cyberninja officer files. 
+     Usage is exactly like the 'cyber' command.
+     By typing 'fax' alone, a list of topics is presented.
+     Please keep the contents of these files to yourself
+     and other officers.
+gbalance
+     Allows you to see the credit account balances of all 
+     currently logged on guild members.
+logend/logall <logFile>
+     Allows you to view all CyberNinja guild logs.
+     logend looks at the tail end of the log, logall looks
+     at the entire file.. page by page. Typing in logend
+     or logall without an argument will list all logs.
+nstats
+     A special who command that shows detailed information
+     about all online ninjas. This information includes
+     current/max hit point and spell point totals, etc.
+onet <message>
+     Guild officer channel tell. Use this command exactly
+     like 'net', your message goes to only guild officers.
+onem <message>
+     Guild officer channel emote. See also 'onet'.
+recruit <player>
+     Allows you to recruit a player into the guild.
+     See 'cyber recruit' for more info.
+recruits
+     Allows you to see who you are currently counseling
+     as well as your remaining recruit slots.
+report <what>
+     Allows you to report the winner of a match.
+     Tournament name should be included.  Comments or
+     disqualifications may be noted as well.
+tourney
+     This shows the contents of the tournament report file.
+     All reports written will be shown.
+train <member>
+     Allows you to train a fellow CyberNinja in the martial
+     arts, thus allowing that ninja to advance in art level.
+     The student ninja will need to have the required xp
+     in order to be trained successfully.
+uncounsel <player>
+     Allows you to uncounsel a player you have recruited.
+     If you use this command to uncounsel a player who
+     is already a member of the guild, then you will lose
+     honor but your recruit slot will be freed up, so try to
+     recruit players who might be successful in the guild.
+     If you uncounsel a player who is not a member of the
+     guild, there is no honor penalty.
+unsuspend <member>
+     Allows you to unsuspend a suspended guild member.
+_______________________________________________________

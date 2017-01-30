@@ -1,0 +1,117 @@
+Symbiotes
+-----------------------------------------------------------------------
+Overview
+
+The symbiote guild is one based on a symbiotic relationship between the
+player (the host) and the symbiote mob.  Guild is joined by the player 
+touching a ball of dark matter - as they do, the symbiote enters their
+body and forms a bond.  Players will give their symbiote A name.  The
+player will have no special powers until they 'changeform', letting the
+symbiote cover them with darkmatter.
+-----------------------------------------------------------------------
+Drawbacks
+
+ Randomly attack everything ... .
+ 
+   ESPECIALLY other symbiotes ..
+   
+ 1. Most abilities require the use of MP or matter points to use them.
+    MP are gained from draining corpses or items and this amount is
+    saved on the gobj over boot, etc. [essentially an added cost]
+ 2. Abilities require 'changeform'.  When unchanged, player receives no 
+    special powers and cannot use the general mud spells.
+ 3. No mud pets or kids.  The symbiote is a jealous organism and will 
+    fight at ALL costs for your total attention.
+ 4. No mini guilds.
+ 5. Major weakness to "other|fire".  [one and one half damage]
+ 6. Severe weakness to "other|sonic". [double damage]          
+ 7. Reduced SPs.
+ 8. Reduced spell point healing rate.
+ 9. Infusion harms the symbiote.
+10. Take greater damage than normal players.
+11. Extreme damage can cause player to revert to normal [quite painful
+    to the symbiote and therefore the player as well]   
+-----------------------------------------------------------------------
+Advantages
+
+1. Increased WC.
+2. Increased physical resistance. [10% res]
+3. Major resistance to "other|mental". [75% resistance]
+4. Increased HPs.
+5. Increased hit point healing rate.
+town gong
+-----------------------------------------------------------------------
+Abilities (given in general order acquired)
+
+mimic other players temporairly.
+
+
+changeform [costs sps and MPs]
+  Allows symbiote to cover player with dark matter.  Most of the guild
+  abilities do not work when player is not changed.  The exception is
+  'absorb'.
+say [auto ability]
+  When changed, says and tells are changed to support the host/symbiote
+  relationship, i.e. I = We, Me = Us, etc.  [mainly thematic]
+absorb <living> | <item> [no cost] <automatic>    
+  Allows player to absorb an enemy into the symbiote at 0/10 for MP.
+  Can also absorb items.
+tentacles [auto ability, pushed through gen_wc_bonus()]
+  Tentacles are an automatic ability that either attempts to attack or
+  defend based on player specified settings.  Players can assign each,
+  some, or all of the 10 tentacles to either defend or attack.  The
+  amount in each mode affects its effectiveness (sort of like having to
+  home in on a target).  The amount of armor that the player wears 
+  while changed affects the number of free tentacles (mimicing armor
+  does not affect the number of tentacles). [note:  later in the guild, 
+  the player gains the ability to place tentacles into either burn off 
+  or regen, also]
+  Tentacle forms: Axe, Knife, Shield, Regen, Digest, Carry, Wear, Wield [2x]
+  Tentacles constantly drain MP. Need <num of tentacles> MP to continue.
+                   
+web [cost sps]
+  Player can shoot a weblike substance at an attacker causing them to
+  stay in place and lowering ac.
+mimic [costs sps and MPs]
+  Player can touch armor/weapon and mimic it, giving the player 0 
+  ac/wc and the special from the armor/wep, at 1/2 of its return value.
+  Mimicing an armor/wep will destroy it.
+swing <dir / speed> / memorize <locs>
+  Webswing around the mud.  Can swing to level / 10 memorized
+  locations.
+wallcrawl
+  Retreat from combat.
+create [costs sps and MPs]
+  Player creates a ball of dark matter that can be 'form'ed several 
+  into MP storage for themselves or other symbiote.
+KO [costs sps]
+  Allows player to knock a mob unconcious.  Player can then drag this
+  unconcious mob around and either: devour, feed, or later dominate it.
+  Player receives no exp when KO'ing a mob.  Mob will eventually wake
+  up.
+camouflage [costs sps and MPs]
+  Total invisibility, unseen by any player except wizards.  Moving 
+  forces visibility, so only useful as an ambush tactic.
+alarm [costs sps and MPs]
+  Leave a piece of dark matter behind to alert you to someone else 
+  entering the room.
+ambush [costs sps]
+  A strong initial attack.  Can only be used once on a given mob, and
+  player must be camouflaged to use it.
+wound [costs sps and MPs]
+  An attack that can wound a mob with dark matter.  Use is delayed to
+  simulate player looking for the right opportunity.  Does damage over 
+  time after successful wounding.
+frenzy [costs sps and MPs]
+  For the duration of combat, gain possiblity of up to two extra 
+  attacks per round.  Can only be initiated from combat. [note: similar
+  to bloodfist bloodfury]
+decoy <self>
+  have them attack a clone of you
+tentacles only last 1-level/10 rounds.
+claws
+spawn [baby symbiote you can xp]
+breed <x> - induct someone else as a symb
+teeth
+web shield
+spider tracer

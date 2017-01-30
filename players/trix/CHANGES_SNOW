@@ -1,0 +1,15 @@
+These monsters were changed due to their great number and high level.
+Plus, they have too little creativity to be more powerful than dancers...
+/players/trix/castle/dismonst/
+
+  gentleman.c - from lev10 to lev6 stats
+  elewoman.c - from lev9 to lev6 stats
+  guy.c - from lev20 to lev14-16
+          from wc30 to wc23-27 (strong under influence)
+          from ac17 to ac7-9 (defenses are low)
+          from 4700 coins to 800
+          random chance for xtc from 90% to 30%
+  girl.c - from lev13 to lev10-12
+           from wc16 to wc14-16
+           from ac10 to ac8
+           from 550 coins to 450-550

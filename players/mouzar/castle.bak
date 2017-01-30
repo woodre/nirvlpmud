@@ -1,0 +1,45 @@
+#define NAME "Mouzar"
+#define DEST "room/sunalley1"
+/*
+ * This is just the facade to a castle. If you want to enable the
+ * "enter" command, move the player to a hall or something (which
+ * you have to design yourself).
+ * The predefined string DEST is where a player should come when he
+ * leaves the castle.
+ *
+ * This file is loaded automatically from "init_file". We have to move
+ * ourself to where we are supposed to be.
+ */
+
+id(str) { return str == "cave" || str == "mountain" || str == "rock" || str == "range" || str == "mcastle"; }
+
+short() {
+    return "A dark mountain range";
+}
+
+long() {
+    write("A dark mountain range.  It looks like it would be full of danger.\n"+
+	  "The mountain range looks impossible to cross but as you look closer\n"+
+	  "you can see a cave.  There are sounds of the unknown coming from it.\n"+
+	  "You can barely make out a little tower on top of one of the many peaks.\n"+
+	  "Will you enter the cave or chicken out?\n");
+}
+
+init() {
+    add_action("enter"); add_verb("enter");
+}
+
+enter(str) {
+    if (!id(str))
+	return 0;
+  call_other(this_player(),"move_player","enter#/players/mouzar/castle/inter");
+    return 1;
+}
+
+reset(arg) {
+object ob;
+    if (arg)
+	return;
+    move_object(this_object(), DEST);
+}
+is_castle(){return 1;}

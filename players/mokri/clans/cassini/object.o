@@ -1,0 +1,33 @@
+no_clean 0
+short_desc "An antenna[0m"
+long_desc "              ______           ,'"       "-._         ,'              "-._ _._         ;              __,-'/   |        ;|           ,-' _,'"'._,.        |:            _,'      |\ `.        : \       _,-'         | \  `.         \ \   ,-'             |  \   \          \ '.         .-.     |       \           \  \         "      |        :[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+drop_flag 0
+name "clan_object"
+alias_name "antenna"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "              ______           ,'"       "-._         ,'              "-._ _._         ;              __,-'/   |        ;|           ,-' _,'"'._,.        |:            _,'      |\ `.        : \       _,-'         | \  `.         \ \   ,-'             |  \   \          \ '.         .-.     |       \           \  \         "      |        :[0mType 'clan_help' for commands."
+clan_short "An antenna[0m"
+damage_type "electric"
+hall_path "/players/softly/nhall/rooms/n1"
+object_name "antenna"
+owner "enceladus"
+spell_alias "probe"
+spell_mess_me "You probe %AKN%."
+spell_mess_room "%TPN% probes %AKN%."
+spell_mess_them "%TPN% probes you."
+abilities ({})
+chan_history ({"[Fri Dec 30 10:59:38 2016] Cassini has joined the clan!","[Fri Dec 30 10:59:42 2016] Enceladus: hi :)","[Fri Dec 30 11:01:52 2016] Cassini: test","[Fri Dec 30 11:02:02 2016] Enceladus :)","[Fri Dec 30 11:02:04 2016] Cassini: i did it wrong the first time","[Fri Dec 30 11:02:14 2016] Enceladus: have to afk real quick. back shortly :)",})
+leaders ({})
+join_type 2
+private_coffer 0
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 2
+last_spell_time 1485558910

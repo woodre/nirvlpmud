@@ -1,0 +1,11 @@
+SYNOPSIS
+	mapping deletem( mapping map, mixed key)
+
+DESCRIPTION [A]
+	Remove the entry with index 'key' from mapping 'map'. The
+	changed mapping 'map' is also returned as result.
+	If the mapping does not have an	entry with index 'key',
+	nothing is changed.
+
+SEE ALSO
+	mappings(LPC), allocate_mapping(E), keys(E), sizeof(E), mapp(E)

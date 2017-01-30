@@ -1,0 +1,21 @@
+Type         cost         healing          effects [short]   
+
+combat      10000         50 + 1wc 2 sta  lose of sta/wc/ac
+acid (LSD)  10000         40 + 1ac 2 mag  lose of mag/wc/ac
+new_heroin   8000         400 - ctol      lose of wc/ac and hp max
+cocaine      5000         100 - ctol      lose of wc/ac and sp max /impotence
+XTC          4000          75 - ctol      lose of wc/ac and hp max
+speed        2000          50 - ctol      lose of wc/ac
+weed         1000          30 - ctol      lose of wc/ac
+barbs        3000         -25 + ctol intox     lose of wc/ac
+
+types             effects [long] 
+
+combat            lose of hp and sta with hp max overhead
+acid (LSD)        lose of sp and mag with sp max overhead
+new_heroin        lose of hp and wil and int
+cocaine           lose of sp/hp and mag
+XTC               lose of hp and str
+speed             lose of hp and sta
+weed              lose of luc
+barbs             lose of ste

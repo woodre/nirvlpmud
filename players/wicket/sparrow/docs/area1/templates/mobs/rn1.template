@@ -1,0 +1,25 @@
+<RN1>
+
+Short Desc: Duffy Snodgrass (RN)
+Long Desc: An older woman about in her fifties, Duffy has aged very well.
+        She has long red hair down to the shoulderblades on her back and
+        grey eyes. She carries a very business like attitude and is very
+        focused on her work. She wears very comofortable scub tops that
+        seem to express her attitude and personality. She walks around
+        pushing the medicine cart tending to the residents and handing
+        out medication. She takes control of the CNA on the hall and 
+        manages her work as well as responds to the alerts from the cna.
+        She is a very busy person with alot of responsibilities.
+Name: duffy
+Alt_name: snodgrass
+Race: Human
+Gender: Female
+Level: 4
+Wc: 8
+Ac: 4
+Hp: 60
+Gold: 150
+Spell: codeblue
+        add_spell("codeblue","#MN# $HY$snaps$N$ #MP# fingers, You shake $HR$violently$N$ gasping for $HW$air$N$.\n",
+                     "#MN# $HY$snaps$N$ #MP# fingers, #TN# shakes $HR$violently$N$ gasping for $HW$air$N$.\n",
+                     20(2d7),"other|mental");

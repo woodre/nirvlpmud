@@ -1,0 +1,53 @@
+
+Bard Pet Info
+
+Bards get different pets depending upon their levels.
+At bard level 2 they get a raven (ac 3, wc 5, hp 15)
+        level 4 they get a hawk  (ac 5, wc 10, hp 75)
+        level 6 they get a drake (ac 5, wc 15, hp 175)  (standard)
+        level 8 they get a phoenix (ac 8, wc 18, hp 200)(special)
+
+the reason bard pets at 8th level are better than standard is because of the
+limitations which the animals have.
+
+LIMITATION - Bards take damage when their pet dies.  The bard will take
+               random(d3) for a raven, d(15) for a hawk, (d35) for a drake
+               and random (d15 + 25) for a phoenix.  The limitation is for all
+               bard levels, even though only the phoenix is 'better' than
+               the normal pet.
+
+Bard Pets can not attack players, kids or pets.  Bards can not attack players.
+There is no 'auto attack' command on a pet to make it defend its master.  I
+have therefore coded 'protection' into the bard pets to keep the bard safe
+(since the bard takes damage if the pet dies) from pet killing players.  If
+the bard pet is attacked by a player/kid/pet, the bard may type in <guard 
+pet type>  (example, <guard raven>).  This will 'summon' the goddess Crysea
+(Who watches over the Bardic Guild) to tell the players/pet/kid that this
+animal is under HER protection.  And pet/kid attacking will be set to 1/2th
+of their current hp, while a player will loose 1/4 their hp/sp and be ported
+to the church.  This may seen a bit exteme, but you must realize that no bard
+can EVER attack a player (even in a pk zone), nor can a pet EVER attack a player
+/pet/kid.  The only time this would ever be used is therefore in defense of
+a pet from a malicious player.  This is a form of discouragement, it will
+never kill a player/kid/pet.  And it looks really cool.
+
+Bard pets have the is_pet() id thingy.
+
+Bard pets cost 40 sp to summon.
+
+Bard pets have some abilities built into them, which a bard may use.
+These abilities are:
+   Talk/Silent (the animal has certain 'talks' built into it.
+   Guard       (see above)
+   Sic         (make the pet attack a monster)
+   Bye         (dismiss the pet)
+   Give        (have the animal take a player an item from the bard)
+   Munch       (eat a corpse for healing)
+   Hand        (have the animal give a <player> (most be present) an object
+                 that they have in their inventory)
+
+Note that to use these abilities, the bard must first summon an animal.
+
+Bard pets always follow their masters.  They will auto dest if their
+master leaves the game.  They follow on a call_out system, set to every
+6 heartbeats.

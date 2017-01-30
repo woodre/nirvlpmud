@@ -1,0 +1,588 @@
+Bad argument 1 to call_other()
+Current object was players/shinshi/closed/rogue/gob2, line 22
+"rogue_save" in "players/shinshi/closed/rogue/gob2.c" ("players/shinshi/closed/rogue/gob2") line 44
+Error in call out.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Division by zero
+Current object was players/mizan/closed/poly/PDM, line 30
+"fake_beat" in "players/mizan/closed/poly/gob.c" ("players/mizan/closed/poly/gob#2259") line 477
+"monitor_display" in "players/mizan/closed/poly/gob.c" ("players/mizan/closed/poly/gob#2259") line 506
+"superstat" in "players/mizan/closed/poly/PDM.c" ("players/mizan/closed/poly/PDM") line 3749
+Error in call out.
+Connection timed out detected.
+Connection timed out detected.
+Bad argument to [ .. ] range operand.
+Current object was players/guilds/dopplegangers/power/12_imp, line 2
+"spells12" in "players/guilds/dopplegangers/guildob.c" ("players/guilds/dopplegangers/guildob#7302") line 399
+"main" in "players/guilds/dopplegangers/power/12_faction_pet.c" ("players/guilds/dopplegangers/power/12_imp") line 82
+Bad argument 1 to call_other()
+Current object was players/guilds/dopplegangers/obj/faction_pet#7426, line 23
+"heart_beat" in "players/guilds/dopplegangers/obj/faction_pet.c" ("players/guilds/dopplegangers/obj/faction_pet#7426") line 33
+Heart beat in players/guilds/dopplegangers/obj/faction_pet#7426 turned off.
+Indexing on illegal type.
+Current object was players/jaraxle/closed/phoenix/mons/knight#7860, line 23
+"heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/jaraxle/closed/phoenix/mons/knight#7860") line 368
+"WimpyOut" in "players/vertebraker/closed/std/monster.c" ("players/jaraxle/closed/phoenix/mons/knight#7860") line 244
+Heart beat in players/jaraxle/closed/phoenix/mons/knight#7860 turned off.
+Indexing on illegal type.
+Current object was players/jaraxle/closed/phoenix/mons/knight#8048, line 61
+"heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/jaraxle/closed/phoenix/mons/knight#8048") line 368
+"WimpyOut" in "players/vertebraker/closed/std/monster.c" ("players/jaraxle/closed/phoenix/mons/knight#8048") line 244
+Heart beat in players/jaraxle/closed/phoenix/mons/knight#8048 turned off.
+Bad argument 1 to call_other()
+Current object was players/mizan/services/mudwho, line 179
+"fake_beat" in "players/mizan/services/mudwho.c" ("players/mizan/services/mudwho") line 39
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/pavlik/guild/mages/objects/wiz_hat#8091, line 79
+"cmd_hook" in "obj/player.c" ("obj/player#8078") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#8078") line 57
+"cmd_remove" in "bin/play/_remove.c" ("bin/play/_remove") line 20
+"remove" in "obj/armor.c" ("players/pavlik/guild/mages/objects/wiz_hat#8091") line 470
+Connection reset by peer detected.
+Error in loading object
+Current object was players/rumplemintz/closed/staff#4386, line 25
+"command_hook" in "players/rumplemintz/closed/staff.c" ("players/rumplemintz/closed/staff#4386") line 25
+Too long evaluation. Execution aborted.
+Current object was obj/player#7784, line 23
+"Sell" in "players/dragnar/WalkingDead/mons/lucas.c" ("players/dragnar/WalkingDead/mons/lucas#2148") line 344
+"sell" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 280
+"sell_all" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 242
+"do_sell" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 139
+"short" in "obj/armor" ("obj/armor#867") line 161
+"query_level" in "obj/living.c" ("obj/player#7784") line 1511
+Too long evaluation. Execution aborted.
+Current object was players/jaraxle/3rd/alt/rooms/forest/fforest#11832, line 22
+"heart_beat" in "players/jaraxle/3rd/alt/mobs/wolf.c" ("players/jaraxle/3rd/alt/mobs/wolf#11833") line 80
+"run_away" in "obj/living.c" ("players/jaraxle/3rd/alt/mobs/wolf#11833") line 2908
+"neweast" in "players/jaraxle/3rd/alt/rooms/forest/fforest.c" ("players/jaraxle/3rd/alt/rooms/forest/fforest#11832") line 161
+error when executing program in destroyed object players/jaraxle/3rd/alt/mobs/wolf#11833
+Heart beat in players/jaraxle/3rd/alt/mobs/wolf#11833 turned off.
+Bad argument 1 to call_other()
+Current object was players/jaraxle/3rd/alt/rooms/forest/fforest#12053, line 11
+"heart_beat" in "players/jaraxle/3rd/alt/mobs/wolf.c" ("players/jaraxle/3rd/alt/mobs/wolf#12054") line 80
+"run_away" in "obj/living.c" ("players/jaraxle/3rd/alt/mobs/wolf#12054") line 2910
+"forgetting" in "players/jaraxle/3rd/alt/rooms/forest/fforest.c" ("players/jaraxle/3rd/alt/rooms/forest/fforest#12053") line 92
+error when executing program in destroyed object players/jaraxle/3rd/alt/mobs/wolf#12054
+Heart beat in players/jaraxle/3rd/alt/mobs/wolf#12054 turned off.
+Bad argument 1 to call_other()
+Current object was players/jaraxle/3rd/alt/rooms/forest/fforest#12739, line 247
+"heart_beat" in "players/jaraxle/3rd/alt/mobs/wolf.c" ("players/jaraxle/3rd/alt/mobs/wolf#12747") line 80
+"run_away" in "obj/living.c" ("players/jaraxle/3rd/alt/mobs/wolf#12747") line 2911
+"forgetting" in "players/jaraxle/3rd/alt/rooms/forest/fforest.c" ("players/jaraxle/3rd/alt/rooms/forest/fforest#12739") line 92
+error when executing program in destroyed object players/jaraxle/3rd/alt/mobs/wolf#12747
+Heart beat in players/jaraxle/3rd/alt/mobs/wolf#12747 turned off.
+Bad argument 1 to call_other()
+Current object was players/jaraxle/3rd/alt/rooms/forest/fforest#12742, line 247
+"heart_beat" in "players/jaraxle/3rd/alt/mobs/wolf.c" ("players/jaraxle/3rd/alt/mobs/wolf#12740") line 80
+"run_away" in "obj/living.c" ("players/jaraxle/3rd/alt/mobs/wolf#12740") line 2910
+"forgetting" in "players/jaraxle/3rd/alt/rooms/forest/fforest.c" ("players/jaraxle/3rd/alt/rooms/forest/fforest#12742") line 92
+error when executing program in destroyed object players/jaraxle/3rd/alt/mobs/wolf#12740
+Heart beat in players/jaraxle/3rd/alt/mobs/wolf#12740 turned off.
+Too long evaluation. Execution aborted.
+Current object was players/mizan/etheriel/beasties/wombat#772, line 43
+"reset" in "players/boltar/castle.c" ("players/boltar/castle") line 82
+"id" in "obj/monster" ("players/mizan/etheriel/beasties/wombat#772") line 213
+Error in look_for_objects_to_swap.
+Connection timed out detected.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113, line 60
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113") line 1882
+Heart beat in players/mizan/opl/vehicles/m113 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15985, line 67
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15985") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15985 turned off.
+Error in loading object
+Current object was obj/player#8354, line 198
+"go_south" in "obj/player/dr/dirs.c" ("obj/player#8354") line 15
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid3/hall3") line 297
+"move_player" in "obj/player.c" ("obj/player#8354") line 4339
+"::move_player" in "obj/living.c" ("obj/player#8354") line 211
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15985, line 38
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15985") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15985 turned off.
+Too long evaluation. Execution aborted.
+Current object was obj/player#16375, line 12
+"cmd_hook" in "obj/player.c" ("obj/player#16375") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#16375") line 57
+"cmd_ready" in "bin/play/_ready.c" ("bin/play/_ready") line 33
+"cmd_hook" in "obj/player.c" ("obj/player#16375") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#16375") line 57
+"cmd_save" in "bin/play/_save.c" ("bin/play/_save") line 3
+"save_character" in "obj/player.c" ("obj/player#16375") line 672
+"save_me" in "obj/player.c" ("obj/player#16375") line 2574
+"compute_treasure" in "obj/player.c" ("obj/player#16375") line 2687
+Bad argument 1 to call_other()
+Current object was players/mizan/opl/environs/poop-volcano#16348, line 23
+"heart_beat" in "players/mizan/opl/environs/poop-volcano.c" ("players/mizan/opl/environs/poop-volcano#16348") line 142
+Heart beat in players/mizan/opl/environs/poop-volcano#16348 turned off.
+Bad argument 1 to call_other()
+Current object was players/mizan/opl/environs/poop-volcano#16348, line 23
+"heart_beat" in "players/mizan/opl/environs/poop-volcano.c" ("players/mizan/opl/environs/poop-volcano#16348") line 142
+Heart beat in players/mizan/opl/environs/poop-volcano#16348 turned off.
+Too long evaluation. Execution aborted.
+Current object was players/khrell/monster/goblins/gobmob3#9915, line 332
+"check_wicket" in "players/shinshi/closed/penishaha.c" ("players/shinshi/closed/penishaha#17141") line 250
+"id" in "obj/monster" ("players/khrell/monster/goblins/gobmob3#9915") line 213
+Too long evaluation. Execution aborted.
+Current object was players/trix/castle/primonst/nun#9784, line 332
+"check_wicket" in "players/shinshi/closed/penishaha.c" ("players/shinshi/closed/penishaha#17141") line 250
+"id" in "obj/monster" ("players/trix/castle/primonst/nun#9784") line 218
+Too long evaluation. Execution aborted.
+Current object was players/trix/castle/primonst/nun#9784, line 332
+"check_wicket" in "players/shinshi/closed/penishaha.c" ("players/shinshi/closed/penishaha#17141") line 250
+"id" in "obj/monster" ("players/trix/castle/primonst/nun#9784") line 218
+Too long evaluation. Execution aborted.
+Current object was obj/monster.talk#8701, line 14
+"reset" in "players/boltar/castle.c" ("players/boltar/castle") line 82
+"id" in "obj/monster" ("obj/monster.talk#8701") line 213
+Error in look_for_objects_to_swap.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15985, line 27
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15985") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15985 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15985, line 118
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15985") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15985 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15985, line 23
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15985") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15985 turned off.
+Too long evaluation. Execution aborted.
+Current object was players/jaraxle/closed/heals/roht#10500, line 49
+"cmd_hook" in "obj/player.c" ("obj/player#406") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#406") line 33
+"cmd_goto" in "bin/wiz/_goto.c" ("bin/wiz/_goto") line 38
+"move_player" in "obj/player.c" ("obj/player#406") line 4339
+"::move_player" in "obj/living.c" ("obj/player#406") line 240
+"id" in "players/pain/NEW/items/star.c" ("players/pain/NEW/items/star#411") line 34
+"id" in "obj/generic_heal.c" ("players/jaraxle/closed/heals/roht#10500") line 136
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15985, line 108
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15985") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15985 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15985, line 86
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15985") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15985 turned off.
+Too long evaluation. Execution aborted.
+Current object was players/angel/area/stargate/npc/corporal#14238, line 67
+"reset" in "players/boltar/castle.c" ("players/boltar/castle") line 82
+"id" in "obj/monster" ("players/angel/area/stargate/npc/corporal#14238") line 213
+Error in look_for_objects_to_swap.
+Failed to load file.
+Current object was players/mizan/opl/beasties/medium/knobgoblin-bully#19294, line 85
+"go_south" in "obj/player/dr/dirs.c" ("obj/player#18730") line 15
+"move" in "players/mizan/opl/core/room.c" ("players/mizan/opl/CELLS/C216") line 247
+"load_neighbors" in "players/mizan/opl/core/room.c" ("players/mizan/opl/CELLS/C336") line 489
+"load_neighbors" in "players/mizan/opl/daemons/gridDM.c" ("players/mizan/opl/daemons/gridDM") line 201
+"reset" in "players/mizan/opl/CELLS/C455.c" ("players/mizan/opl/CELLS/C455") line 40
+"reset" in "players/mizan/opl/beasties/medium/knobgoblin-bully.c" ("players/mizan/opl/beasties/medium/knobgoblin-bully#19294") line 83
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15985, line 23
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15985") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15985 turned off.
+Too long evaluation. Execution aborted.
+Current object was obj/player#18730, line 46
+"Sell" in "room/shop.c" ("room/shop") line 75
+"sell" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 315
+"sell_all" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 242
+"do_sell" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 129
+"query_weapon" in "obj/living.c" ("obj/player#18730") line 3140
+Connection timed out detected.
+Bad argument 1 to call_other()
+Current object was players/angmar/o/doomsgiver#19990, line 62
+"heart_beat" in "players/angmar/o/doomsgiver.c" ("players/angmar/o/doomsgiver#19990") line 46
+Heart beat in players/angmar/o/doomsgiver#19990 turned off.
+Error in loading object
+Current object was players/jareel/monsters/chaos/caves/trolls/scarab#20198, line 66
+"go_east" in "obj/player/dr/dirs.c" ("obj/player#8354") line 16
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/room2") line 297
+"move_player" in "obj/player.c" ("obj/player#8354") line 4339
+"::move_player" in "obj/living.c" ("obj/player#8354") line 209
+"catch_tell" in "players/jareel/monsters/chaos/caves/trolls/scarab.c" ("players/jareel/monsters/chaos/caves/trolls/scarab#20198") line 42
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/hall6") line 297
+"move_player" in "obj/living.c" ("players/jareel/monsters/chaos/caves/trolls/scarab#20198") line 211
+Error in loading object
+Current object was players/jareel/monsters/chaos/caves/trolls/scarab#20018, line 66
+"go_east" in "obj/player/dr/dirs.c" ("obj/player#8354") line 16
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/hall6") line 297
+"move_player" in "obj/player.c" ("obj/player#8354") line 4339
+"::move_player" in "obj/living.c" ("obj/player#8354") line 209
+"catch_tell" in "players/jareel/monsters/chaos/caves/trolls/scarab.c" ("players/jareel/monsters/chaos/caves/trolls/scarab#20018") line 42
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/hall6") line 297
+"move_player" in "obj/living.c" ("players/jareel/monsters/chaos/caves/trolls/scarab#20018") line 211
+Error in loading object
+Current object was obj/player#8354, line 66
+"go_east" in "obj/player/dr/dirs.c" ("obj/player#8354") line 16
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/hall6") line 297
+"move_player" in "obj/player.c" ("obj/player#8354") line 4339
+"::move_player" in "obj/living.c" ("obj/player#8354") line 211
+Error in loading object
+Current object was players/jareel/monsters/chaos/caves/trolls/scarab#20198, line 66
+"go_east" in "obj/player/dr/dirs.c" ("obj/player#8354") line 16
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/hall6") line 297
+"move_player" in "obj/player.c" ("obj/player#8354") line 4339
+"::move_player" in "obj/living.c" ("obj/player#8354") line 209
+"catch_tell" in "players/jareel/monsters/chaos/caves/trolls/scarab.c" ("players/jareel/monsters/chaos/caves/trolls/scarab#20198") line 42
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/hall6") line 297
+"move_player" in "obj/living.c" ("players/jareel/monsters/chaos/caves/trolls/scarab#20198") line 211
+Error in loading object
+Current object was obj/player#8354, line 66
+"go_east" in "obj/player/dr/dirs.c" ("obj/player#8354") line 16
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/hall6") line 297
+"move_player" in "obj/player.c" ("obj/player#8354") line 4339
+"::move_player" in "obj/living.c" ("obj/player#8354") line 211
+Error in loading object
+Current object was obj/player#8354, line 66
+"go_east" in "obj/player/dr/dirs.c" ("obj/player#8354") line 16
+"move" in "room/room.c" ("players/jareel/areas/chaos/cave/grid4/hall6") line 297
+"move_player" in "obj/player.c" ("obj/player#8354") line 4339
+"::move_player" in "obj/living.c" ("obj/player#8354") line 211
+Too deep recursion.
+Current object was players/angel/area/nox/room/f04, line 47
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#19612") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#19612") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#19612") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#19612") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#1623") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#1623") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#1623") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#1623") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#1625") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#1625") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#1625") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#1625") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#1640") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#1640") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#1640") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#1640") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#12683") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#12683") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#12683") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#12683") line 211
+"init" in "obj/monster" ("players/angel/area/nox/npc/fenri#12683") line 603
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#10163") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#10163") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#10163") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#10163") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#13608") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#13608") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#13608") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#13608") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#5042") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#5042") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#5042") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 297
+Error in look_for_objects_to_swap.
+Too long evaluation. Execution aborted.
+Current object was players/trix/castle/dismonst/dj#16754, line 16
+"reset" in "players/boltar/castle.c" ("players/boltar/castle") line 82
+"id" in "obj/monster" ("players/trix/castle/dismonst/dj#16754") line 213
+Error in look_for_objects_to_swap.
+Too deep recursion.
+Current object was players/mosobp/areas/BATTLE/NPC/saibaman2#5730, line 18
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20290") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20290") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20290") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b2") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20290") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20290") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20019") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20019") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20019") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b4") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20019") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#8714") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#8714") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#8714") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b4") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#8714") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18327") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18327") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18327") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b4") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18327") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18327") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18588") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18588") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18588") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b5") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#18588") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#9026") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#9026") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#9026") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b5") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#9026") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#14033") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#14033") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#14033") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b5") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#14033") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#5730") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#5730") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#5730") line 1267
+Error in look_for_objects_to_swap.
+Connection timed out detected.
+Too deep recursion.
+Current object was players/angel/area/nox/npc/fenri#1640, line 50
+"reset" in "players/molasar/CASTLE/cpath1.c" ("players/molasar/CASTLE/cpath1") line 16
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#20461") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#20461") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#20461") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#20461") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#12683") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#12683") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#12683") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#12683") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#1627") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#1627") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#1627") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#1627") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#14031") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#14031") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#14031") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#14031") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#2700") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#2700") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#2700") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f04") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#2700") line 211
+"init" in "obj/monster" ("players/angel/area/nox/npc/fenri#2700") line 603
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#4464") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#4464") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#4464") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#4464") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#19612") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#19612") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#19612") line 1310
+"move" in "room/room.c" ("players/angel/area/nox/room/f01") line 297
+"move_player" in "obj/living.c" ("players/angel/area/nox/npc/fenri#19612") line 176
+"reset" in "players/angel/area/nox/npc/fenri.c" ("players/angel/area/nox/npc/fenri#1640") line 23
+"::reset" in "obj/monster" ("players/angel/area/nox/npc/fenri#1640") line 107
+"wander" in "obj/monster" ("players/angel/area/nox/npc/fenri#1640") line 1267
+Error in look_for_objects_to_swap.
+Too deep recursion.
+Current object was players/mosobp/areas/BATTLE/NPC/saibaman1#5502, line 97
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20288") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20288") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20288") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b2") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20288") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#20288") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b6") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#15922") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#15922") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#15922") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b6") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#15922") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#15922") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#9679") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#9679") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#9679") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b10") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#9679") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#9679") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11527") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11527") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11527") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b15") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11527") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#5506") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#5506") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#5506") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b15") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#5506") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#4470") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#4470") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#4470") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b15") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#4470") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#5502") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#5502") line 107
+Error in look_for_objects_to_swap.
+Too long evaluation. Execution aborted.
+Current object was players/mizan/opl/beasties/easy/cobold#15961, line 49
+"reset" in "players/boltar/castle.c" ("players/boltar/castle") line 82
+"id" in "obj/monster" ("players/mizan/opl/beasties/easy/cobold#15961") line 213
+Error in look_for_objects_to_swap.
+Too deep recursion.
+Current object was players/mosobp/areas/BATTLE/NPC/saibaman1#2782, line 15
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20873") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20873") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20873") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b5") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20873") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b5") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#16749") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#16749") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#16749") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b6") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#16749") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b6") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6103") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11582") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11582") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11582") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b7") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11582") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b7") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#16501") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#16501") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#16501") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b7") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#16501") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#2782") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#2782") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#2782") line 1267
+Error in look_for_objects_to_swap.
+Connection timed out detected.
+Connection timed out detected.
+Too long evaluation. Execution aborted.
+Current object was players/mizan/opl/beasties/medium/sheep/garb#17534, line 94
+"clean_up" in "obj/armor" ("players/mizan/opl/beasties/medium/sheep/garb#17534") line 2
+"is_player_here" in "obj/armor" ("players/mizan/opl/beasties/medium/sheep/garb#17534") line 2
+Error in look_for_objects_to_swap.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Too deep recursion.
+Current object was players/mosobp/areas/BATTLE/NPC/saibaman2#16749, line 382
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19618") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19618") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19618") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b11") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19618") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19618") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#6097") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#6097") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#6097") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b7") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#6097") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11582") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11582") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11582") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b7") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#11582") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b7") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#7961") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b6") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#18590") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#11524") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#11524") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#11524") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b6") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#11524") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#8095") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#8095") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#8095") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b6") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#8095") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#16749") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#16749") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#16749") line 1267
+Error in look_for_objects_to_swap.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Too deep recursion.
+Current object was players/mosobp/areas/BATTLE/NPC/android#7957, line 4
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20978") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20978") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20978") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b6") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20978") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#20978") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19482") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19482") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19482") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b9") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#19482") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#7504") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#7504") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#7504") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b9") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#7504") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#7504") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#10161") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#10161") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#10161") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b14") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#10161") line 211
+"reset" in "players/mosobp/areas/BATTLE/rooms/b19.c" ("players/mosobp/areas/BATTLE/rooms/b19") line 26
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#5502") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#5502") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#5502") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b19") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#5502") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#2881") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#2881") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#2881") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b19") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#2881") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13992") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13992") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13992") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b19") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13992") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13992") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/android.c" ("players/mosobp/areas/BATTLE/NPC/android#7957") line 25
+Error in look_for_objects_to_swap.
+Too long evaluation. Execution aborted.
+Current object was players/angel/area/nox/npc/fenri#13608, line 239
+"go_south" in "obj/player/dr/dirs.c" ("obj/player#21323") line 15
+"move" in "room/room.c" ("room/slope") line 297
+"move_player" in "obj/player.c" ("obj/player#21323") line 4339
+"::move_player" in "obj/living.c" ("obj/player#21323") line 211
+"reset" in "players/boltar/castle.c" ("players/boltar/castle") line 82
+"id" in "obj/monster" ("players/angel/area/nox/npc/fenri#13608") line 213

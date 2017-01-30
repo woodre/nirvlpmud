@@ -1,0 +1,20 @@
+                    -- Criticle Strike --
+
+DEX REQ: 1/per level
+TOTAL XP COST: 1,070,000
+LEVEL REQ: 10
+TOTAL COIN COST: 150,000
+WEAPON REQ: A weapon skill at 3
+SKILL TYPE: Automatic
+
+This skill allows you ignore your opponents armor.  
+Chance to ignore armor will increases with each level.
+
+         /LEVEL=CHANCE==XPCOST==COIN COST\
+         |  1  |  2%  | 20,000 | 10,000  |
+         |  2  |  4%  | 50,000 | 20,000  |
+         |  3  |  6%  |100,000 | 30,000  |
+         |  4  |  8%  |400,000 | 40,000  |
+         |  5  | 10%  |500,000 | 50,000  |
+         \===============================/ 
+ 

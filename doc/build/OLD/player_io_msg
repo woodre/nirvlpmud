@@ -1,0 +1,21 @@
+
+SETTING PLAYER IN AND OUT MESSAGES
+
+I have now added the necessary code to set a player's in and out msg.
+what you need to do to use this is to call the set_mwhatever in their soul
+object. this means you have to find what their soul object is first by doing
+a present() or using query_soul() in player or going through their inventory.
+Once the reason is gone for having their in/out message changed you must
+change it back to the default using the same procedure.
+The following is consider illegal and will result in demotion:
+            allowing a player to set his own messages.
+            having special messages that stay between logins.
+            having special messages for a guild.
+There are many objects in the game that depend on the standard in/out
+messages in order to work properly. Any changes in this can result in
+allowing players to cheat. I suggest that the words arrives and leaves
+should remain in the message right after the player's name. such as
+Bob arrives riding on the back of a purple dog.
+Failure to this will most likely result in correction being required, and
+making me very unhappy since I will have to change it.
+-Bp

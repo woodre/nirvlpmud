@@ -1,0 +1,17 @@
+spell_object(ob,name,dam,cost,at_msg,vi_msg,rm_msg) {
+    if(!valid_attack(ob)) {
+       write("You can't attack " + call_other(ob,"query_name",0) + "!\n");
+       return 0;
+    }
+     if (spell_points < cost || checkNM()) {
+       write("Too low on power.\n");
+       return;
+     }
+    if(at_msg) { asf = 1; tell_object(this_object(), at_msg); }
+    if(vi_msg) { vsf = 1; tell_object(ob,vi_msg); }
+    if(rm_msg) { rsf = 1; say(rm_msg); }
+     spell_name = name;
+    spell_dam = dam;
+     spell_cost = cost;
+     attacker_ob =ob;
+}

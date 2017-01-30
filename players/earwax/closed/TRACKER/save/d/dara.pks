@@ -1,0 +1,8 @@
+02/ 7/07 23:59: Achilles    ((19+22 /Cyberninja)   25(2/1)
+02/16/07 01:04: Knytemayre  ((19+8  /Knights Templar) 16(5/1)
+03/ 4/07 15:01: Artos       ((19+64 /Dark Order)   41(3/1)
+04/30/07 23:03: Thork       ((18    /Cyberninja)   16(3/1)
+04/30/07 23:33: Achilles    ((19+19 /Cyberninja)   26(2/1)
+05/ 1/07 00:14: Achilles    ((19+17 /Cyberninja)   31(1/2)
+05/ 6/07 02:04: Artos       ((19+60 /Dark Order)   38(7/1)
+09/ 6/07 00:14: Donkey      ((19+100/Samurai)      29(3/1)

@@ -1,0 +1,13 @@
+[3.30.??] by Boltar
+
+I have made it easy for people to add tellblock 
+support to any command. simply replace tell_object()
+with tell_object_wblock(). It takes the same arguements.
+the code can be found at the end of /obj/simul_efun.c
+It supports the possible expanison of tell_block to  a list
+of names, but currently that is not supported in player.c
+it works with the present system.
+send any comments or notice of odd behavior to me.
+
+You peoples now have no excuse for your private communication commands 
+not to support tell block

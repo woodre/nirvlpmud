@@ -1,0 +1,9 @@
+Spell Name: ghp
+Guild Lvl : 6th
+Spell Cost: --
+Syntax    : ghp <nn>
+Descript. : Allows you to get <nn> Hit Points from the reserve in your
+	    "life", if you have any Hit Points stored, of course. To see
+	    if you have, just type "stored".
+	    Example: ghp 15
+See Also  : gsp, shp, ssp, stored 

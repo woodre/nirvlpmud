@@ -1,0 +1,15 @@
+#define SWORDCOST 65
+#define DAGGERCOST 45
+#define BLADECOST 85
+#define SERVANTCOST 75
+#define SERVCALLCOST 30
+#define CHAINCOST 65
+#define GUILD_FADE 40
+#define FADE 0
+#define SUMMON_COST 0
+#define GUILD_COST 0
+#define FOLLOWCOST 30
+#define STEALTHCOST 10
+#define CALMCOST 40
+#define PEACECOST 35
+#define SCANCOST 20

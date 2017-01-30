@@ -1,0 +1,39 @@
+#include "/players/snow/dervish/def.h"
+
+confuse(str) {
+  object ob, myob, conshad;
+  int obwc, obac;
+  if(TP->query_level() < 15) {
+    write("You are not high enough level to confuse yet.\n");
+    return 1; }
+  if(TP->query_ghost()) {
+    write("You cannot confuse while you are a ghost.\n");
+    return 1; }
+  if(TP->query_sp() < 80) {
+    write("You lack the energy to confuse.\n"); return 1; }
+  if(TP->query_attrib("pie") < 20) {
+    write("You lack in faith.\n"); return 1; }
+  myob = present(GID, TP);
+  if(myob->query_spell_delay()) {
+    write("You cannot cast a spell again so soon.\n"); return 1; }
+  if(!str) { write("Confuse what?\n"); return 1; }
+  ob = present(str, environment(TP));
+  if(!ob) {
+    write("You can't see "+str+".\n"); return 1; }
+  if(!living(ob)) {
+    write("You cannot confuse inanimate objects.\n"); return 1; }
+  if(ob->is_player()) {
+    write("You cannot confuse players.\n"); return 1; }
+  if(ob->is_confused()) {
+    write(ob->query_name()+" is already confused.\n"); return 1; }
+  write("You scream and whirl maniacally!\n");
+  say(TP->query_name()+" screams and whirls maniacally!\n");
+  tell_room(environment(TP), BOLD+ob->query_name()+
+    " is surrounded by whipping particles of sand!\n"+OFF);
+  conshad = clone_object("/players/snow/dervish/objects/conshad.c");
+  conshad->set_victim(ob);
+  conshad->set_time(TP->query_level());
+  /* myob->set_spell_delay(200); */
+  myob->set_spell_delay(275-(TP->query_level() * 5)-(TP->query_extra_level()/3));
+  TP->add_spell_point(-80);
+  return 1; }

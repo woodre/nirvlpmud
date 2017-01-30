@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/NEW/weap/sword","/players/saber/weapons/hrev","/players/wren/Area/starbug/items/fish","/players/puppy/s/eq/scepter","/players/forbin/realms/keats/OBJ/nazal_owr","/players/mythos/awep/katana","/players/snow/heals/ice_sphere","/players/scathe/weap/baxe","/players/hippo/armour/shield","/obj/armor","/players/mythos/aarmor/hara-ate","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/mythos/awep/ring","/players/saber/armor/hardsuit1","/players/angel/area/stargate/obj/P90_no_ammo","/players/wren/Area/starbug/items/lunchbox","/players/puppy/s/eq/block","/players/scathe/armor/suit","/obj/weapon","/players/wren/Area/starbug/items/arrogance","/players/snow/WEAPONS/hon_sword","/players/boltar/things/gwand","/players/pain/closed/weapons/widow","/players/angel/area/stargate/obj/P90","/players/mythos/awep/quiver",})
+shorts ({"Sword","A Colt .68 Heavy Revolver","A box of trout ala crem","A scepter ","[1;37mOp[0m[37mal [1;37mWiz[0m[37mard [1;37mRo[0m[37mbes[0m","Katana","An [1;36mIce[0m Sphere","A Huge Double Bladed Axe","lap of meat","button","Hara-ate","A Princess' Tiara","Silver Ring","A light blue Hardsuit","[36mP90 machine gun[0m","a lunch box","A building block","Black Suit","A Deadly Bullwhip","Rimmers arrogance.","A finely honed longsword","A dark green wand","the Widowmaker, the sword of the Berserker","Machine gun","A quiver",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

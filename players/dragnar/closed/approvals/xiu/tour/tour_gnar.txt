@@ -1,0 +1,74 @@
+General Notes:
+----------------
+* inherit should always be the first line in the file
+* #include <ansi.h> instead of player specific ansi.h definitions
+* /doc/build/monster/monster.guide 
+  * Follow as a guideline for level/hp/sp/gold value
+* We need mid level areas, and your mobs need to be updated to match the monster guide,
+  so please update them to be mid level, level 15 - 24, xp of 2k - 70k
+* Cleanup files that are 0 sized or broken or not being used (armor)
+
+Rooms
+----------
+* Make sure all nouns are items in the room, example car and vomit in e3.c
+* When an item has a noun in it, you also need an item for that as well.
+  * Example in 1.c trash is an item which shows cans, cans needs to be an item.
+* You have multihip cloned 26 times, limit to 8 - 12 (with increased level)
+  
+Items
+---------
+beer.c - OK
+belt.c
+  * Should be ac 0 with a value of 50
+necklace.c
+  * Should be ac 0 with a value of 50
+pants.c
+  * Should be ac 0
+shank.c
+  * special can either do heal_self or a return, not both
+speedo.c
+  * ac 0 for the value
+whiskey.c - OK
+  * Not being used, why not put it on phish hidden somewhere?
+
+Mobs
+-----------
+chick2.c 
+  * Should be level 10 as is
+  * Update to level 18
+chick.c
+  * level 10 as is
+  * Update to level 18
+frat.c
+  * random(0) in add_money should be removed
+  * level 10 as is
+  * Update to level 20
+guard.c
+  * level 20 as is
+  * add_spell last parameter is not valid, should be 0 - 7 refer to:
+    /doc/build/monster/monster.spells
+  * update to level 21/22 by adding special ability and increased spell dam
+  * increase hp/wc/ac spells so mob is ~ 50k
+guy2.c
+  * won't clone, file is screwed, missing inherit and other issues
+hip2.c
+  * as is should be level 6 or 7 with max coins of 300
+  * Update to level 19
+multihip.c
+  * set level
+  * wc/ac is way too low, follow the guild to set hps/wc/ac/gold
+  * Suggest update to level 21 ~ 25k xp
+phish.c
+  * Trey is slightly hurt when first cloned
+  * Mike/John kept hitting when dead.
+  * Should be level 25 with max coins of 11k, check monster guide, will need another special ability
+  * No need to add_xp when the members die
+  * Suggestion (optional)
+    * use add_spell for the attacks for each band member
+      * 50% rate
+      * turn on multi cast
+    * use remove_spell in heart_beat to turn off spell when member "dies"
+    * use #define for the hps at which they die, then use that define in extra_long and heart_beat 
+    * use add_wc_bonus to add a bonus for the spells which will be removed when mob dies
+vendor.c
+  * Update to level 21, add to a room or move file

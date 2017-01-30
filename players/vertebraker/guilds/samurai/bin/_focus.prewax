@@ -1,0 +1,33 @@
+#include "../def.h"
+
+cmd_focus(str){
+  object atk;
+  
+  if(TP->query_guild_rank() < 1) return 0;
+  if(TP->query_ghost()) return 0;
+  if(!(atk = TP->query_attack()))
+  {
+    write("You must be in combat to focus.\n");
+  }
+  
+  else
+  {
+    if(present("focus_object", TP))
+    {
+      destruct(present("focus_object", TP));
+    }
+    else
+    {
+      object f;
+      
+      write("You "+BOLD+"Focus"+NORM+" intently on "+
+        atk->query_name()+".\n");
+      say(TP->query_name()+" "+BOLD+"focuses"+NORM+
+        " on "+atk->query_name()+".\n");
+      
+      f = clone_object(OBJDIR+"focus");
+      move_object(f, TP); 
+    }
+  }
+  return 1;
+}

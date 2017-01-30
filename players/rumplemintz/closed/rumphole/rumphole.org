@@ -1,0 +1,70 @@
+/*
+ * rumphole.c - A room for my test character to store and retrieve
+ *              equipment. Why should I use a locker or hotel room?
+ *              /boggle
+ */
+
+#pragma strong_types
+
+#include <ansi.h>
+
+inherit "/players/rumplemintz/room/color_room";
+
+void
+reset(status arg)
+{
+  if (arg)
+    return;
+  ::reset(arg);
+  set_short(YEL, "Rump's Hole");
+  set_long(YEL,"\n"+
+    "Large yellow hole.  Planning on having deposit and retrieve services\n"+
+    "here later.  Just coding room right now.\n"+
+    "Adding 'rput' and 'rget' to commands.\n");
+  set_exit_color(CYN);
+  dest_dir = ({
+    "/room/church", "church",
+    "/room/adv_guild", "advguild",
+    "/players/grimm/closed/obj/badge_stuff/guild_pr","dopple"
+  });
+  items = ({
+    "hole", "It's a big yellow hole, what do you expect?",
+  });
+}
+
+void
+init()
+{
+  ::init();
+  if ((string)this_player()->query_name()=="Rump" ||
+      (string)this_player()->query_name()=="Rumplemintz" )
+  {
+    add_action("rump_deposit","rput");
+    add_action("rump_retrieve","rget");
+    add_action("rump_list","rlist");
+  }
+}
+
+status
+rump_deposit(string str)
+{
+  if (!str)
+  {
+    write("Usage 'rput <what>'\n");
+    return 0;
+  }
+  if (str == "all")
+  {
+    object current_item;
+    string item_path;
+    /* Recursively scan inventory and make entry to file for each path
+       of each item, transferring the item to /room/void to make sure
+       weight is calculated, then desting the item
+     */
+  }
+  if (!present(str, this_player()))
+  {
+    write("You do not have a "+str+".\n");
+    return 0;
+  }
+  rstore()

@@ -1,0 +1,14 @@
+Bard Monitor
+
+Rank: 1
+Uses: special
+Mana: 0
+
+Bards can add three special arguments to the Nirvana 'setmon' command:
+&dist&  -  Shows disort
+&regen& -  Shows Bardic Regeneration
+&bat&   -  Shows Battlesong
+Add a -b to an option to only show a letter instead of showing the
+full word.  For example, &dist-b& shows a D if you have a distort.
+If you do not use setmon, the status of these three spells shows up
+below your prompt instead.

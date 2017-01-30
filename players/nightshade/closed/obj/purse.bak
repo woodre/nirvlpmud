@@ -1,0 +1,76 @@
+inherit "obj/treasure";
+int amount, money;
+reset(arg) 
+{
+if(arg) return;
+set_short("A nifty magical purse");
+set_id("purse");
+set_weight(2);
+set_value(1);
+amount=0;
+}
+
+long() { 
+  write("This is a really nifty invention. You can store money in it.\n"+
+        "To activate the purse type 'stash <amount>' or to retrieve \n"+
+        "money type 'gimme <amount>.\n"+
+        "Right now the purse contains "+amount+"\n");
+       }
+init()
+{
+::init();
+add_action("do_store", "stash");
+add_action("do_remove", "gimme");
+}
+do_store(str)
+{
+int amt;
+if(!str) return;
+sscanf(str, "%d", amt);
+if(!amt)
+{
+write("Syntax: Stash <amount>\n");
+return 1;
+}
+money = this_player()->query_money();
+if(amt < 1)
+{
+write("Ha! Tried to use the 'ol money bug ehh? I knew it too ya dork!\n");
+return 1;
+}
+if(money < amt)
+{
+write("Ha! Tried to put in what you don't have!\n");
+return 1;
+}
+if((amt+amount) > 5000)
+{
+write("Ha! Tried to put in more money than the purse can hold!\n");
+return 1;
+}
+write("You stash "+amt+" into the purse.\n");
+amount = amt+amount;
+this_player()->add_money(-amt);
+return 1;
+}
+do_remove(str)
+{
+int amt;
+if(!str) { write("Ha! The purse requires an amount first!\n"); return 1; }
+sscanf(str, "%d", amt);
+if(!amt) { write("Huh!\n"); return 1;}
+if(amt < 1)
+{
+write("Ha! There aint that much in there!\n");
+return 1;
+}
+if(amt > amount)
+{
+write("HA! The purse aint got that much dork!\n");
+return 1;
+}
+write("You extricate "+amt+" gold coins. Yehawww!\n");
+amount = amount - amt;
+this_player()->add_money(amt);
+return 1;
+}

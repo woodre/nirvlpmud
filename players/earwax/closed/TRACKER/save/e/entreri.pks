@@ -1,0 +1,7 @@
+09/15/03 19:55: Rattlehead  ((12    /Cyberninja)   13(2/1)
+09/15/03 20:35: Helpme      ((19    /Cyberninja)   18(2/1)
+12/12/03 22:59: Jexster     ((19+8  /Cyberninja)   22(1/1)
+01/21/04 19:44: Valon       ((19+8  /Dark Order)   20(2/1)
+08/ 1/04 17:38: Tenchu      ((19+7  /Cyberninja)   20(3/1)
+09/10/04 22:24: Lloyd       ((19+5  /Cyberninja)   24(3/2)
+06/ 5/05 14:19: Lloyd       ((19    /Shardak)      23(1/1)

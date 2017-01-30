@@ -1,0 +1,36 @@
+%->> % w
+%??? []%.
+%- * myst * -
+%] DARKNESS [
+%Protege, the Guardian of the Paladins.
+%->> % wimpy 50 e
+%Wimpy set at 50% in e direction.
+%->> % focus
+%
+                Your spell fails!
+
+%->> % focus
+%You focus the shadows around you.
+%->> %Protege recites: Take a look at the world we've come to know,
+Does it seem much more than a crazy circus show?
+But maybe from the madness,
+Something beautiful will grow.
+% sh protege
+%Shadows explode from your body, tearing into Protege.
+%->> %Endurance: %|%|%|%|%|%|%|%|%|%|%
+%You bow your head and whisper softly...
+The shadows converge on Protege, weakening him.
+%Protege died.
+%[ Party [Hudson] ] The party has gained 75725 experience.
+%[ Party [Hudson] ] You have gained 75721 experience.
+%You killed Protege.
+% snicker
+%You snicker.
+%->> %Hudson arrives.
+%You lose focus of the shadows.
+% wither corpse
+%
+                Your spell fails!
+
+%->> %Hudson takes: The Holy Avenger.
+% l

@@ -1,0 +1,20 @@
+scar info            Command help                       ---
+scar challenge       Information on MK Tournament       ---
+scar challenge2      NPC's that can be challenged       ---
+scar fatality        Information on Fatality            ---
+bdt                  Blood tell to members              ---
+bbe                  Blood emote to members             ---
+bts                  Blood tell silence                 ---
+stats                See the stats of members           ---
+restore_me           Restore your kill stats            ---
+save_me              Save your kill stats               ---
+heal_scar            Get rid of your scar               ---
+ppl                  See pkers and pk areas             ---
+check_log            Read the give_scar log file        ---
+scarcolor            Turn on color                      ---
+mtell p1,p2,p3 <msg> Tell to multiple players           1*n
+reply                Temporarily disabled               ---
+challenge <name>     Enter Mortal Kombat                25
+forfeit              Decline a challenge                ---
+rankings             Show Top 15 MK List                ---
+victims              Show MK Victims & Score            ---

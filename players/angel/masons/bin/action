@@ -1,0 +1,28 @@
+/* To-do */
+
+/* Finished commands */
+    add_action("lay_hands","treat");
+    add_action("mason_tell","mt");
+    add_action("munch","munch");
+    add_action("help_seal","seal");
+    add_action("logged_on","masons");
+    add_action("rank","rank");
+    add_action("news","news");
+    add_action("muffles","muffles");
+    add_action("greet","greet");
+    add_action("rank_titles","gmtitle");
+    add_action("register","reset");
+    add_action("battlescore","bsc");
+    add_action("spy","spy");
+    add_action("check_ranks","check");
+    add_action("cast_light","cast");
+    add_action("mason_emote","me");
+    add_action("summon","summon");
+    add_action("xsell","xsell");
+    add_action("assess","assess");
+
+/* Obsolete/non-implemented commands */
+    add_action("emote","emote");
+    add_action("teleport","teleport");
+    add_action("shadow","shadow");
+    add_action("battlescore","battlescore");

@@ -1,0 +1,39 @@
+
+                         [help setmon]
+-----------------------=========+=========-----------------------
+
+Usage: "setmon"
+       "setmon <newmon>"
+
+To set your customizable combat monitor, type 'setmon <newmon>'
+where <newmon> is the text block of associated values [HP, SP, Intox, etc]
+and colors that are translated into your combat monitor.  This text block
+will save with your character, so you need only enter it once.
+If you wish to view your current monitor text block, type 'setmon'
+by itself, and it will display the block to you.
+
+For information on toggling your combat monitor, type 'help monitor'.
+
+EXAMPLE
+
+   A player named Bing's default combat monitor looks like this:
+
+   <<<<  HP 150/200 SP 150/200 I 0% F 0% S 0% T 0% AHP 10/10  >>>>
+
+   Bing just wants to display his current hit points and his enemy's
+   hit points, and he wants to colour it a bit, so he types:
+
+   setmon BING: $HR$#hps#$N$  ENEMY: $HB$#ahp#$N$
+
+   And the combat monitor will display:
+
+        BING: [1m[31m150[2;37;0m  ENEMY: [1m[34mAHP: 10/10[2;37;0m
+
+You can also switch back to the MUD's default combat monitor
+by typing 'mon default'.  This will purge your existing monitor
+text block, however.
+
+For information on values you can use [HP, SP, etc.], type 'help monvalues'.
+For info on how to add color to your monitor, type 'help moncolor'.
+And for more examples, type 'help monexamples'.
+

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/snow/shadows/stuff/sgem","/obj/bag","/players/mosobp/areas/TEMPLE/OBJ/tiara","/obj/weapon","/players/maledicta/cont/weapons/rweapon","/players/wren/Area/starbug/items/sparehead","/obj/armor","/players/snow/ITEMS/ice_shard","/players/wren/Area/starbug/items/lunchbox","/players/hippo/armour/boots","/players/mythos/awep/naginata","/players/scathe/armor/damulet","/players/wren/Area/starbug/items/fish","/players/maledicta/cont/armor/rhelmet","/players/hawkeye/armor/fishing","/players/puppy/s/eq/cape","/players/jamila/beach/mobs/claw","/players/angel/area/stargate/obj/P90_no_ammo","/players/wren/Area/starbug/items/indianheaddress","/players/ultramagnus/cap","/obj/weapon","/players/mythos/awep/tanto","/players/snow/cam/stuff/plate","/players/snow/WEAPONS/glowknife","/obj/armor",})
+shorts ({"A dusky gem","bag","A Princess' Tiara","Baby powder","a Spiked club","Kryten's sparehead 3.","Metal gloves","An ice shard","a lunch box","anti-blood boots","Naginata","A Dragon Amulet","A box of trout ala crem","great helm","A Fishing Hat","A flowing cape","A Lobster Claw","[36mP90 machine gun[0m","a tiny indian headdress","An Elven Cap","A glowing lightsabre","Tanto","[34m[1mBlessed Plate Armor[0m[0m","A glowing knife","button",})
+found ({0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,50 @@
+OVERALL
+
+  you're not using many chats.  pretty boring.
+  you don't have to add any..  just a suggestion.
+  uh.. what is "set_type()"? that's not even a function :)
+  i assume you mean set_race() :)
+
+* thibideaux.c -
+   set_gender("male");
+   set_race("human");
+
+* snakes.c -
+   set_gender("creature");
+   set_race("snake");
+   Did you want to make the rattlesnake poisonous?
+
+* rita.c -
+   set_gender("female");
+   set_race("human");
+   What's up with the negative alignment?
+
+* reverend.c -
+   set_gender("male");
+   set_race("human");
+
+* peacie.c -
+   set_gender("female");
+   set_race("human");
+
+* octave.c -
+   set_gender("male");
+   set_race("human");
+
+* nick.c -
+   set_gender("male");
+   set_race("human");
+   in one chat, it says "his brown knotted."  i assume you mean
+   "his brow knotted" :)
+
+* marie.c -
+   set_race("human");
+   set_gender("female");
+
+* lloyd.c -
+   set_race("human");
+   set_gender("male");
+
+* kids.c -
+   these need set_genders() in the funcs 
+   and a set_race("human"); in the reset()

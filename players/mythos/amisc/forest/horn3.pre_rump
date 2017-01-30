@@ -1,0 +1,56 @@
+#define tp this_player()->query_name()
+#define tg this_player()->query_gender()
+
+inherit "obj/treasure";
+
+reset(arg) {
+  if(arg) return;
+
+  set_id("horn");
+  set_short("A beautiful horn");
+  set_long("A horn off the head of a Kirin.\n\n"+
+           "There seems to be something odd about this horn.\n"+
+           "Perhaps if you 'tap'ped it on your 'weapon' something may happen.\n");
+  set_weight(4);
+  set_value(2000);
+}
+
+
+init() {
+  ::init();
+  add_action("tap","tap");
+  }
+  
+tap(str) {
+int before;
+object after, brkWep;
+string path, num;
+  if(!str) {write("What do you wish to tap?\n"); return 1;}
+/* [Sparrow 2/24/2011] Added following to avoid 'bug' granting extra
+    wc if a broken weapon is tapped then fixed by samurai */
+  brkWep = present(str,this_player());
+  if(brkWep && brkWep->query_broke()) {
+    write("You try to tap your BROKEN weapon but the horn does nothing.\n");
+    return 1;
+  }
+
+  if(present(str,this_player())) {
+    if(present(str,this_player())->weapon_class() > 0) {
+    before=(present(str,this_player())->weapon_class());
+     if(present(str,this_player())->namer() == "cold") { write("The horn seems to rebel against the powers of the cold fire...\n"); return 1; }
+    present(str,this_player())->set_class(before +1);
+   present(str,this_player())->set_weight(present(str,this_player())->query_weight() + 2);
+    write("The "+str+" glows and somehow you realize it has become a bit stronger.\n");
+  if(present(str, this_player())->query_wielded()) {
+    command("unwield "+str,this_player());
+    command("wield "+str,this_player());
+   }
+  write_file("/players/mythos/logs/horn",ctime(time())+" "+this_player()->query_real_name()+"  "+object_name(present(str,this_player()))+" wc: "+before+"\n");
+    destruct(this_object());
+    return 1;}
+    write("That is not a weapon!\n");
+    return 1;}
+    write("You do not have that.\n");
+return 1;}
+
+nondup() { return 1; }

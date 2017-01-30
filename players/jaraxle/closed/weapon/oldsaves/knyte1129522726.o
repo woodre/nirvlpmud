@@ -1,0 +1,39 @@
+no_clean 0
+wielded 1
+name_of_weapon "hammer"
+cap_name "Hammer"
+broke 0
+silentwield 0
+eff_wc 0
+misses 168
+hits 0
+alt_name 0
+alias_name "hammer"
+short_desc "Hammer"
+long_desc "You see nothing special."
+read_msg 0
+save_flag 0
+class_of_weapon 12
+value 5000
+buy_value 0
+local_weight 3
+hit_func_fn "/players/jaraxle/3rd/alt/items/hammer"
+wield_func 0
+wield_func_fn 0
+info 0
+type "club"
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+multipleIds 0
+params ({"physical",12,"hit",})
+offwielded 0
+offwield_desc 0
+time_delay 0
+two_handed_wield 0
+two_handed_wep 0
+no_break 0
+special_damage 0
+special_chance 0
+special_message 0
+special_rmessage 0
+special_fun 0
+yup 0

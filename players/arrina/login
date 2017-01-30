@@ -1,0 +1,21 @@
+clone /players/arrina/closed/awt.c
+invis
+hand arrina /players/saber/closed/bards/pool.c
+drop pool
+dest dgc
+clone /players/arrina/closed/stuff.c
+hand arrina /players/arrina/closed/mtell.c
+clone /players/arrina/closed/trip.c
+hand arrina /players/mythos/closed/play/finger.c
+exec this_player()->set_noidlequit();
+clone /players/arrina/closed/play/mr.c
+hand arrina /players/mythos/healerguild/guildob.c
+hand arrina /players/mythos/closed/play/aller.c
+hand arrina /players/arrina/closed/reporter.c
+clone /obj/mail_reader.c
+clone /players/arrina/closed/logins.c
+clone /players/arrina/closed/myth.c
+clone /players/arrina/closed/play/color.c
+do_color
+dest colorob
+wiz list

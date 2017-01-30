@@ -1,0 +1,9 @@
+Fri Mar 19 10:58:57 1999 ** Testing Mobster change report log.
+Fri Mar 19 11:48:43 1999 ** Added in CDIR defines to mob.h and mobdefs.h
+Fri Mar 19 12:00:22 1999 ** Changed the butt_cmd in guild_d.c to reference my function.
+Fri Mar 19 13:00:56 1999 ** Modified the guild_help() function in gob.c
+Fri Mar 19 13:01:56 1999 ** There seem to be access problems in getting files from my dirs. It is a problem with the help files, and with the butt.h function.
+Fri Mar 19 16:32:25 1999 ** Editing gob.c and guild_d.c to reflect having mhelp_cmd() called from the daemon.
+Fri Mar 19 17:15:24 1999 ** Moved all files over to /players/languilen/guild/mob/.. since Snow said it won't work any other way.
+Fri Mar 19 17:15:42 1999 ** Edited mob.h and mobdefs.h to remove CDIR
+Fri Mar 19 17:16:48 1999 ** Edited /././guild/mob/power/mhelp.h to reflect all help files now in /././guild/mob/help

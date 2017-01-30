@@ -1,0 +1,32 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/gunslingers/hall/r1","north","/players/mokri/clans/gunslingers/hall/r2","up","/players/mokri/clans/gunslingers/hall/r4","west",})
+short_desc "Meeting Hall of the [1;37mGunslingers[0m[0m"
+long_desc "A vast room opens up to huge fireplace on the wall to right and a long bar to your left. The walls and floor are made from stone so cold that you can feel it through your boots. Furs and heads of various animal species line the walls and floors above and below you. Couches and chairs are scattered about the room, allowing the [1;37mGunslingers [0mof [1;36m Nirvana[0m to trade stories and share their tales of battle with each other. To the north lies the hallway to the private rooms and storage rooms of the [1;37mGunslingers[0m.~f[0mType 'exit' to leave."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0

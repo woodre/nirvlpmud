@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/jamila/beach/mobs/skin","/players/hippo/weapons/glue","/players/pain/NEW/arm/pmail","/players/ultramagnus/darkweapon","/players/arrina/heals/ale","/players/scathe/armor/egarb","/players/wren/Area/starbug/items/bat","/players/snow/shadows/stuff/plate","/obj/torch","/players/hippo/heals/dna_repair","/obj/weapon","/players/pain/NEW/weap/soulcrusher","/players/puppy/s/eq/crown","/obj/weapon","/players/wren/Area/starbug/items/wrench","/players/mizan/etheriel/heals/carbo-blast","/players/snow/WEAPONS/glass_sword","/obj/weapon","/players/pain/NEW/weap/mace2","/players/saber/stuff/mic","/players/wren/Area/starbug/items/straw","/players/sado/shop/rose","/players/hippo/weapons/molar_sharf","/players/wren/Area/starbug/items/gauntlet","/obj/weapon",})
+shorts ({"A Lizard Skin","a strong, 1 second glue","Gleeming Platemail","Dark Rider Broadsword","[1mbottle of dark ale[0m","Elder's garb","a [1;30mballbat[2;37;0m","[1mBlack Platemail[0m","torch","[32mdna repair string[0m","a sword","a mace named [1m[31mSoulCrusher[0m","A golden crown","Baby powder","small pipe wrench","A bottle of Carbo Blast","Glass Sword","Shark`s tooth","A huge iron mace","A microphone","a long plastic straw","A beautiful red rose blossom","A molar sharf","Time gauntlet","Axe",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

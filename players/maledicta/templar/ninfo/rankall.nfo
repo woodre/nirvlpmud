@@ -1,0 +1,28 @@
+		-=[ Rankall ]=-
+
+	The following is a listing of all powers and skills
+available to all Knights:
+
+skill/spell: Cost:   Piety: Information:
+
+block         0       0     Toggles the block for the templar
+			    line.   
+fixtitle      0       0     Sets your title according to rank.
+home          0       0     Toggles login to either church
+			    or Templar Castle.     
+*tc           0       0     The main communication line.
+*tce          0       0     Emote on the templar line.
+templar       0       0     A listing of all knights currently on.
+*att          0       0     The alliance channel.
+*ate          0       0     Emote on the alliance channel.
+*cwho         0       0     A listing of all criminals.
+awho          0       0     A listing of all allies.
+ahelp         0       0     A call for assistance over the ally channel.
+*criminal     0       0     A detailed description of a criminal.
+*pardon       0       0     Pardon a criminal.
+*record       0       0     Record a criminal.
+leave_templar 0       0     (!)Leave the Knights Templar(!)
+
+A * signifies that there is more information available
+by typing: info <topic>
+

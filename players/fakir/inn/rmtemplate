@@ -1,0 +1,28 @@
+#define TP this_player()
+#define TPN this_player()->query_name()
+#define TPP this_player()->query_possessive()
+inherit "room/room";
+
+reset(arg) {
+  if(arg) return;
+set_light(1);
+
+short_desc = "Winespring Inn";
+long_desc =
+   "\n";
+
+items = ({
+   
+});
+
+dest_dir = ({
+   "/players/fakir/inn/room5.c", "north",
+   "/players/fakir/inn/room9.c", "east",
+   "/players/fakir/inn/room3.c", "south",
+   "/players/fakir/inn/room8.c", "northeast",
+   "/players/fakir/inn/room10.c", "southeast",
+   "/players/fakir/inn/room1.c",  "west",
+   
+});
+
+}

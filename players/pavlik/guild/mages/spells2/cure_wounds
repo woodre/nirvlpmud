@@ -1,0 +1,72 @@
+/*
+ * spell : Cure Wounds   (necromancy)
+ * level : 2
+ * effect: Heals: 20 + random(Necr/5) (max 40) 
+ * cost  : 40 sp
+ * spec  : 
+ * files : none
+ */
+
+cure_wounds(str){
+  object obj;
+  int amt;
+
+  if(!KNOW("cure")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(!str) obj = tp;
+  else obj = present(str, env);
+
+  if(guild->query_next_heal() > time()) {
+    write("You can't cast this type of spell right now.\n");
+    return 1;
+  }
+
+  if(!obj){
+    write("That person is not here.\n");
+    return 1;
+  }
+
+  if( (obj != tp) && !present(obj, env) ){
+    write("That person is not here.\n");
+    return 1;
+  }
+
+  if(tp->query_sp() < 0) {
+    write("You are too tired to cast this spell.\n");
+    return 1;
+  }
+
+  write("You cast a "+HIC+"Cure Wounds"+NORM+" spell ...\n");
+
+  tell_room(environment(obj),
+  ME+" speaks a word of magic and a soft "+BLU+"blue"+NORM+
+  " aura encompasses "+IT+".\n");
+  tell_object(obj, "A soft blue aura encompasses your body.\n");
+
+  if(spell_fail2(2, "necr", "pow")){
+    tell_room(environment(obj),
+    "Something goes wrong with the spell ...\n"+
+    "The blue aura turns to a "+HIR+"violent red glow!\n"+
+    IT+"'s body is racked with agonizing pain!\n");
+    tell_object(obj, "You are overcome with agonizing pain!\n");
+    tell_room(environment(obj), "The aura quickly fades away.\n");
+    obj->hit_player(random(15));
+    command("mon",tp); /* Earwax 10/07/05 */
+    if (tp != obj) command("mon",obj); /* EW again */
+    return 1;
+  }
+
+  tell_object(obj,
+  "Soothing healing magic courses through your body.\n");
+  tell_room(environment(obj), IT+"'s blue aura slowly fades away.\n");
+  tell_object(obj, "You feel better.\n");
+  amt = 20 + random(guild->query_total_necr() / 5);
+  obj->add_hit_point(amt * 5 / 4);
+  tp->add_spell_point(-40);
+  command("mon",tp); /* Earwax 10/07/05 */
+  if (tp != obj) command("mon",obj); /* EW again */
+  return 1;
+}

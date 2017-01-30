@@ -1,0 +1,69 @@
+	Alchemist Guild Spells & Abilities
+                 by guild rank
+
+assess <target>                     student
+cpr                                 student
+aemote <msg>                        student
+fellows                             student
+ahelp <topic>                       student
+launder pouch                       student
+alevels                             student
+alight                              student
+loginmsg <msg>                      student
+logoutmsg <msg>                     student
+anews                               student
+process skin                        student
+refine corpse                       student
+resign alchemy guild                student
+road home                           student
+set home here                       student
+sew skins                           student
+skin corpse                         student
+solve task                          student
+stone skin                          student
+tasks                               student
+atell <msg/on/off>                  student
+athink <msg>                        student
+awho                                student
+
+cure <who>                          acolyte
+detect disease                      acolyte
+dig hole                            acolyte
+etheral door                        acolyte
+flash <direction>                   acolyte
+ice <target>                        acolyte
+reserve <monster>                   acolyte
+sanctuary [on/off] <hp>             acolyte
+
+acid <target>                       learned
+air elemental <msg>                 learned
+dismiss <air/earth/fire> elemental  learned
+earth elemental                     learned
+fire elemental                      learned
+grease <who>                        learned
+peace dust                          learned
+transport <component> to <who>      learned
+
+aid <who> <amount>                  adept
+charity [<item>]                    adept
+create raven <name>                 adept
+fear <who>                          adept
+poison <who>                        adept
+scan <target>                       adept
+
+call vampire                        master
+hail <target>                       master
+repair <item>                       master
+sharpen <item>                      master
+asell <item>                        master
+
+acheck <who>                        grandmaster
+ademote <who>                       grandmaster
+aexpell <who> <E/CE/R/P/Q>          grandmaster
+apromote <who>                      grandmaster
+apunish <who>                       grandmaster
+areplace pouch <who>                grandmaster
+remove <who>                        grandmaster
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+see also: help solve task, help spell category

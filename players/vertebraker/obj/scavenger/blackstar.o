@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/awep/dstaff","/obj/treasure","/players/ultramagnus/bdiamond","/players/scathe/armor/igarb","/players/pain/NEW/arm/tunic","/players/angel/area/stargate/obj/P90_no_ammo","/players/puppy/s/eq/nathat","/players/angel/area/stargate/obj/staff","/players/snow/heals/ice_sphere","/players/puppy/s/eq/quill","/players/scathe/weap/lbow","/players/ultramagnus/staff","/players/hippo/armour/boots","/players/wren/Area/starbug/items/arrogance","/obj/weapon","/players/snow/WEAPONS/glowknife","/players/pain/NEW/weap/soulcrusher","/players/pain/NEW/arm/helm","/players/ultramagnus/darkweapon","/obj/armor","/players/wren/Area/starbug/items/bat","/players/snow/WEAPONS/tsunami","/obj/weapon","/players/hippo/armour/helmet","/players/ultramagnus/darkarmor",})
+shorts ({"Dream Staff","A piece of corundum","A Blue Diamond","Initiate's garb","A handsome blue tunic","[36mP90 machine gun[0m","A straw hat","[1;36mSTAFF WEAPON[0m","An [1;36mIce[0m Sphere","A quill","Longbow of Force","An Old Long Staff","anti-blood boots","Rimmers arrogance.","Fire collar","A glowing knife","a mace named [1m[31mSoulCrusher[0m","A horned helm","Dark Rider Longsword","A large leaf","a [1;30mballbat[2;37;0m","[34mTsunami[0m","A Deadly Bullwhip","nutshell helmet","Gold",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

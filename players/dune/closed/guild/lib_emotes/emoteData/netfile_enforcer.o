@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "netfile_enforcer"
+myMsgU "$HG$~~~$K$Enforcers$G$@CyberNet>>$N$  Orb--Shadowstorm--Doodle are the $HM$Enforcers of Cybernetica$N$"
+myMsgD 0
+roomMsgU "%SRC% connects to CyberNet."
+roomMsgD 0
+tellMsg 0
+farMsg 0
+owner "pike"

@@ -1,0 +1,14 @@
+
+Bloodfist Help:  Swap Weapons
+
+  Swap allows you to quickly change weapons between the weapon you
+currently have wielded any any sheathed weapon.  This can be ideal in
+the heat of combat in case your weapon breaks, or if you need to switch
+weapons for any reason.  The weapon you swap with will be automatically
+wielded.  It is possible that you could not carry the added weight of
+the new weapon, if it is heavier than your current one.  Typing 'swap'
+alone will swap your current weapon with your first sheathed weapon.
+
+Usage: swap
+       swap <wep|number>
+

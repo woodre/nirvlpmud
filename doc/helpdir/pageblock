@@ -1,0 +1,20 @@
+
+                         [help pageblock]
+-----------------------=========+=========-----------------------               
+                   
+
+Usage: "pageblock <who>"
+       "pageblock all"
+       "pageblock list"
+
+You may block someone from paging you by typing 'pageblock <name>',
+or allow the person to page you once again by typing 'pageblock <name>'
+again.
+
+You may block ALL incoming pages by typing 'pageblock all', or allow
+them again by typing the same.
+
+To see who you are blocking from paging you, type 'pageblock list'.
+
+
+

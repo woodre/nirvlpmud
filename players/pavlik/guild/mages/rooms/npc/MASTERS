@@ -1,0 +1,86 @@
+string *spells;
+
+display_spell_list(str) {
+  int i;
+
+  spells = PAV->query_spell_list();
+
+  write("~~~ The Spells of "+HIC+capitalize(str)+NORM+" ~~~\n");
+  write("Spell Name:\t\tCommand:\tCost to Learn:\n");
+  write("---------------------------------------------------\n");
+
+  for(i=0; i<sizeof(spells)-3; i+=4) {
+    if(spells[i+2] == str) {
+      write(PAV->bufstr(spells[i], 18)+"\t");
+      write(PAV->bufstr("["+spells[i+1]+"]", 10)+"\t");
+      write(spells[i+3]+"\n");
+    }
+  }
+
+  write("---------------------------------------------------\n");
+  return 1;
+}
+
+teachable_spell(str, school) {
+  int i;
+  int match;
+
+  spells = PAV->query_spell_list();
+  match = 0;
+  for(i=0; i<sizeof(spells)-3; i+=4) {
+    if(spells[i+1] == str && spells[i+2] == school)
+      match = 1;
+  }
+
+  return match;
+}
+
+can_learn_spell(str) {
+  int i;
+  string lvl;
+
+  spells = PAV->query_spell_list();
+  for(i=0; i<sizeof(spells)-3; i+=4) {
+    if(spells[i+1] == str)
+      lvl = spells[i+3];
+  }
+
+  /* make sure we are high enough guild rank */
+  if(lvl == "2" && tp->query_guild_rank() < 10) return 0;
+  if(lvl == "3" && tp->query_guild_rank() < 20) return 0;
+  if(lvl == "4" && tp->query_guild_rank() < 30) return 0;
+  if(lvl == "5" && tp->query_guild_rank() < 40) return 0;
+  if(lvl == "6" && tp->query_guild_rank() < 50) return 0;
+  if(lvl == "7" && tp->query_guild_rank() < 60) return 0;
+
+  return 1;
+}
+    
+get_spell_cost(str) {
+  string trash;
+  int i, cost;
+
+  spells = PAV->query_spell_list();
+
+  for(i=0; i<sizeof(spells)-3; i+=4) {
+    if(str == spells[i+1]) trash = spells[i+3];
+  }
+  if(!trash) return 0;
+  sscanf(trash, "%d", cost);
+  return cost;
+}
+
+get_spell_type(str) {
+  string type;
+  int i;
+
+  spells = PAV->query_spell_list();
+
+  for(i=0; i<sizeof(spells)-3; i+=4) {
+    if(str == spells[i+1]) type = spells[i+2];
+  }
+  type = extract(type, 0, 3);
+  return type;
+}
+
+

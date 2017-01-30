@@ -1,0 +1,44 @@
+meditate() {
+
+  if(tp->query_guild_rank() < 26) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(guild->query_meditate()) {
+    int n;
+    n = time();
+    write("You stop meditating.\n");
+    guild->set_meditate(0);
+    if(guild->query_next_prot() < n + 10)
+      guild->set_next_prot(n + 10);
+    if(guild->query_next_dmg() < n + 10)
+      guild->set_next_dmg(n + 10);
+    if(guild->query_next_heal() < n + 10)
+      guild->set_next_heal(n + 10);
+    if(guild->query_next_alter() < n + 10)
+      guild->set_next_alter(n + 10);
+    return 1;
+  }
+
+  if(tp->query_attack()) {
+    write("Not while you are fighting!\n");
+    return 1;
+  }
+
+  if(tp->query_attack()) {
+    write("You cannot use this skill right now.\n");
+    return 1;
+  }
+
+  if(tp->query_hp() < 10) {
+    write("You are not healthy enough to do this now.\n");
+    return 1;
+  }
+
+  write("You bow your head in meditation.\n");
+  say(ME+" bows "+PO+" head in meditation.\n");
+  guild->set_meditate(tp->query_hp());
+  return 1;
+}
+

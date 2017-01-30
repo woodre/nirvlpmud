@@ -1,0 +1,21 @@
+**************
+
+
+                     Church
+
+Syntax:     church <name>
+
+Desc:
+           This command moves a player of wizard to /room/church.
+           If no name is given the wizard moves themself. 
+
+Warning:   
+
+Example:   church mike
+                  results
+           Bob moves Mike from his workroom to the church.
+
+Related:   place, trans
+
+
+**************

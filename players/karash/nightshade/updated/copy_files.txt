@@ -1,0 +1,33 @@
+All objects containing file paths have been updated for their new folders.
+
+There are 5 folders containing files under /players/karash/nightshade/updated/ 
+that need to be copied to /players/nightshade/
+
+/players/karash/nightshade/updated/armor
+/players/karash/nightshade/updated/misc
+/players/karash/nightshade/updated/mons
+/players/karash/nightshade/updated/room
+/players/karash/nightshade/updated/weap
+
+to be copied to:
+
+/players/nightshade/armor
+/players/nightshade/misc
+/players/nightshade/mons
+/players/nightshade/room
+/players/nightshade/weap
+
+
+Some of the files have the original in the nightshade folders, so they need to be overwritten.
+Each file to be overwritten has a .bak file that will also be copied for archive.
+
+
+Folders:
+
+/armor -- 5 files
+/misc -- 19 files
+/mons -- 24 files
+/room -- 9 files
+/weap -- 7 files
+
+

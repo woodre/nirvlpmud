@@ -1,0 +1,79 @@
+               
+____________________________________________________________________________
+  [Swamp Area] [/players/vertebraker/swamp/ROOMS]
+
+        [s26] -- [s25] - [s27] -[s28]         [s35]
+                   |              |             |
+                 [s46]            |             |
+                   |            [s10]           |
+                   |           /  |  \        [s14]
+                   |          / [s19] \         |
+           [s23]-[s24]-----[s7]      [s18]      |
+             |  \            |         |        |
+             |    \          |     [s16]------[s13]-[s15%]
+             |      \        |      /           /
+           [s22]----[s6]---[s2]-[s5]            /
+             |               |    |           /
+   [s21]---[s20]-----[s4]--[s1*]-[s3] -- [s12]
+             |      /             |        |
+             |   /                |        |
+            [s9]      [s8]------[s11]      |
+             /         |                 [s38]--[s40]
+           [s42] ---- [s43]                |         \
+                       |                 [s39]       [s41&]
+                      [s45@]             
+                       /                 
+                    [s44]
+
+ KEY: @ = to sky_view
+      % = squeeze crevice to cavern swamp path.
+      * = trail to village
+      & = to the eternal fire
+                                           ===CAVERN SWAMP PATH===
+ ===MISC ROOMS===                             [s34%]
+ [sky_view]       ====CAVERN===                 |
+                    [c1] - [c3]               [s36] - [s37E]
+ [d1]                 |                             E = entrance to cave.
+                    [c2!]   != changeling.
+
+ _____________________________________________________________________________
+    [ Village ] /players/vertebraker/swamp/village/
+
+  to FOREST
+      |
+      |                        @= trail to SWAMP
+    [path1]
+          \
+   [shop]--[path2]
+                \
+              [path3]   
+                  \      
+                   \ [pool]   [shut]
+                    \  |         |
+                     [path4]--[path5]
+                       |           \
+                     [jhut]       [path6@]
+ _____________________________________________________________________________
+   [ Forest ] /players/vertebraker/swamp/forest/
+
+                                    
+     @ = to rope bridge
+
+                              [hidden]
+                                x
+           [@f1]--[f2]--[f3]--[f4]
+                                 \
+                                 [end]
+                                   |
+                                to VILLAGE
+
+to f1 -[bridge2]-[bridge1]- to e4
+
+            [e3]-[e2]-[e1]- to CASTLE ENTRANCE
+           /
+        [e4@]
+
+ _______________________________________________________________________________
+
+
+SwampLands (tm) Vertebraker@Nirvana

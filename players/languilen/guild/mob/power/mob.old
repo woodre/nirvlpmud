@@ -1,0 +1,9 @@
+/*
+ *  Mob.h
+ *  Mob Misc Abilities
+ */
+
+mob_cmd(string str){
+     if(!str || str == "") return mwho_cmd("mob");
+     return 1;
+}

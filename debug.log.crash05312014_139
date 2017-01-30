@@ -1,0 +1,211 @@
+Bad argument 1 to call_other()
+Current object was players/shinshi/closed/rogue/gob2, line 762
+"rogue_save" in "players/shinshi/closed/rogue/gob2.c" ("players/shinshi/closed/rogue/gob2") line 44
+Error in call out.
+Failed to load file.
+Current object was players/pathfinder/garbageman#189, line 291
+"heart_beat" in "players/pathfinder/garbageman.c" ("players/pathfinder/garbageman#189") line 201
+"random_movement" in "players/pathfinder/garbageman.c" ("players/pathfinder/garbageman#189") line 100
+"init_command" in "obj/monster" ("players/pathfinder/garbageman#189") line 510
+"move" in "room/room.c" ("players/grimm/newbie/rooms/entrance") line 297
+"move_player" in "obj/living.c" ("players/pathfinder/garbageman#189") line 211
+Heart beat in players/pathfinder/garbageman#189 turned off.
+Bad argument 1 to call_other()
+Current object was players/zeus/museum/OBJ/light_dagger#748, line 51
+"heart_beat" in "obj/player.c" ("obj/player#718") line 1575
+"attack" in "obj/living.c" ("obj/player#718") line 1896
+"hit" in "obj/weapon" ("players/zeus/museum/OBJ/light_dagger#748") line 374
+"weapon_hit" in "players/zeus/museum/OBJ/light_dagger.c" ("players/zeus/museum/OBJ/light_dagger#748") line 159
+Heart beat in obj/player#718 turned off.
+Failed to load file.
+Current object was players/pathfinder/garbageman#189, line 139
+"heart_beat" in "players/pathfinder/garbageman.c" ("players/pathfinder/garbageman#189") line 201
+"random_movement" in "players/pathfinder/garbageman.c" ("players/pathfinder/garbageman#189") line 100
+"init_command" in "obj/monster" ("players/pathfinder/garbageman#189") line 510
+"move" in "room/room.c" ("players/grimm/newbie/rooms/entrance") line 297
+"move_player" in "obj/living.c" ("players/pathfinder/garbageman#189") line 211
+Heart beat in players/pathfinder/garbageman#189 turned off.
+Failed to load file.
+Current object was players/pathfinder/garbageman#189, line 47
+"heart_beat" in "players/pathfinder/garbageman.c" ("players/pathfinder/garbageman#189") line 201
+"random_movement" in "players/pathfinder/garbageman.c" ("players/pathfinder/garbageman#189") line 100
+"init_command" in "obj/monster" ("players/pathfinder/garbageman#189") line 510
+"move" in "room/room.c" ("players/grimm/newbie/rooms/entrance") line 297
+"move_player" in "obj/living.c" ("players/pathfinder/garbageman#189") line 211
+Heart beat in players/pathfinder/garbageman#189 turned off.
+Bad argument 1 to call_other()
+Current object was players/chip/venom2/neo_venom#5561, line 114
+"heart_beat" in "players/chip/venom2/neo_venom.c" ("players/chip/venom2/neo_venom#5561") line 13
+Heart beat in players/chip/venom2/neo_venom#5561 turned off.
+Bad argument 1 to atoi()
+Current object was players/mokri/clans/mossy/hall/r7, line 30
+"cmd_retrieve" in "players/mokri/clans/mossy/hall/r7.c" ("players/mokri/clans/mossy/hall/r7") line 98
+Bad argument 1 to atoi()
+Current object was players/mokri/clans/mossy/hall/r7, line 30
+"cmd_retrieve" in "players/mokri/clans/mossy/hall/r7.c" ("players/mokri/clans/mossy/hall/r7") line 98
+Bad argument 1 to atoi()
+Current object was players/mokri/clans/mossy/hall/r7, line 30
+"cmd_retrieve" in "players/mokri/clans/mossy/hall/r7.c" ("players/mokri/clans/mossy/hall/r7") line 98
+Bad argument 1 to atoi()
+Current object was players/mokri/clans/mossy/hall/r7, line 30
+"cmd_retrieve" in "players/mokri/clans/mossy/hall/r7.c" ("players/mokri/clans/mossy/hall/r7") line 98
+Bad argument 1 to atoi()
+Current object was players/mokri/clans/mossy/hall/r7, line 30
+"cmd_retrieve" in "players/mokri/clans/mossy/hall/r7.c" ("players/mokri/clans/mossy/hall/r7") line 98
+Bad argument 1 to environment()
+Current object was players/jareel/monsters/town/kassea#7807, line 34
+"heart_beat" in "players/jareel/monsters/town/kassea.c" ("players/jareel/monsters/town/kassea#7807") line 74
+"K_lightningstrike" in "players/jareel/monsters/town/kassea.c" ("players/jareel/monsters/town/kassea#7807") line 107
+error when executing program in destroyed object players/jareel/monsters/town/kassea#7807
+Heart beat in players/jareel/monsters/town/kassea#7807 turned off.
+Connection reset by peer detected.
+Index out of bounds
+Current object was players/chip/venom2/neo_venom#2768, line 23
+"heart_beat" in "players/llew/closed/crystal/demon2.c" ("players/llew/closed/crystal/demon2#8479") line 37
+"::heart_beat" in "obj/monster.c" ("players/llew/closed/crystal/demon2#8479") line 304
+"attack" in "obj/monster.c" ("players/llew/closed/crystal/demon2#8479") line 1066
+"::attack" in "obj/living.c" ("players/llew/closed/crystal/demon2#8479") line 1982
+"do_damage" in "obj/living.c" ("obj/player#2767") line 477
+"armor_special" in "players/chip/venom2/neo_venom.c" ("players/chip/venom2/neo_venom#2768") line 10
+"defense_tentacles" in "players/chip/venom2/neo_venom.c" ("players/chip/venom2/neo_venom#2768") line 24
+"get_number" in "players/chip/venom2/neo_venom.c" ("players/chip/venom2/neo_venom#2768") line 24
+Heart beat in players/llew/closed/crystal/demon2#8479 turned off.
+Connection timed out detected.
+Connection reset by peer detected.
+Too deep recursion.
+Current object was obj/player#425, line 57
+"cmd_hook" in "obj/player.c" ("obj/player#425") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#425") line 33
+"cmd_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 48
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 65
+"valid_read" in "obj/player.c" ("obj/player#425") line 3043
+Too deep recursion.
+Current object was obj/player#425, line 57
+"cmd_hook" in "obj/player.c" ("obj/player#425") line 3375
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#425") line 33
+"cmd_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 48
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 107
+"do_grep" in "bin/wiz/_grep.c" ("bin/wiz/_grep") line 65
+"valid_read" in "obj/player.c" ("obj/player#425") line 3043
+Bad argument 2 to tell_object()
+Current object was players/angel/area/nox/npc/anteaus#11170, line 23
+"heart_beat" in "obj/monster" ("players/angel/area/nox/npc/anteaus#11170") line 304
+"attack" in "obj/monster" ("players/angel/area/nox/npc/anteaus#11170") line 1047
+"execute_spell" in "obj/monster" ("players/angel/area/nox/npc/anteaus#11170") line 1011
+error when executing program in destroyed object players/angel/area/nox/npc/anteaus#11170
+Heart beat in players/angel/area/nox/npc/anteaus#11170 turned off.
+Connection reset by peer detected.
+Connection timed out detected.
+Connection reset by peer detected.
+Too long evaluation. Execution aborted.
+Current object was obj/player#11136, line 291
+"heart_beat" in "obj/player.c" ("obj/player#11136") line 1575
+"attack" in "obj/living.c" ("obj/player#11136") line 1982
+"do_damage" in "obj/living.c" ("players/illarion/high/mon/duncan#13961") line 655
+"death" in "obj/living.c" ("players/illarion/high/mon/duncan#13961") line 959
+"second_life" in "obj/monster.c" ("players/illarion/high/mon/duncan#13961") line 542
+"monster_died" in "players/illarion/high/mon/duncan.c" ("players/illarion/high/mon/duncan#13961") line 98
+"valid_write" in "obj/player.c" ("obj/player#11136") line 2780
+Heart beat in obj/player#11136 turned off.
+Too long evaluation. Execution aborted.
+Current object was obj/player#11999, line 87
+"heart_beat" in "obj/monster.c" ("players/illarion/high/mon/duncan#13961") line 304
+"attack" in "players/illarion/high/mon/imm_mon.c" ("players/illarion/high/mon/duncan#13961") line 336
+"::attack" in "obj/monster.c" ("players/illarion/high/mon/duncan#13961") line 1066
+"::attack" in "obj/living.c" ("players/illarion/high/mon/duncan#13961") line 1982
+"do_damage" in "obj/living.c" ("obj/player#11999") line 477
+"do_special" in "players/jareel/armor/DWARFFORGE/demon/bracelet.c" ("players/jareel/armor/DWARFFORGE/demon/bracelet#12184") line 48
+"ghetto_it" in "players/jareel/armor/DWARFFORGE/demon/bracelet.c" ("players/jareel/armor/DWARFFORGE/demon/bracelet#12184") line 63
+"attack" in "obj/living.c" ("obj/player#11999") line 1982
+"do_damage" in "obj/living.c" ("players/illarion/high/mon/duncan#13961") line 655
+"death" in "obj/living.c" ("players/illarion/high/mon/duncan#13961") line 959
+"second_life" in "obj/monster.c" ("players/illarion/high/mon/duncan#13961") line 542
+"monster_died" in "players/illarion/high/mon/duncan.c" ("players/illarion/high/mon/duncan#13961") line 84
+"valid_write" in "obj/player.c" ("obj/player#11999") line 2788
+Heart beat in players/illarion/high/mon/duncan#13961 turned off.
+Too long evaluation. Execution aborted.
+Current object was obj/simul_efun, line 87
+"heart_beat" in "obj/player.c" ("obj/player#11999") line 1575
+"attack" in "obj/living.c" ("obj/player#11999") line 1982
+"do_damage" in "obj/living.c" ("players/illarion/high/mon/duncan#13961") line 655
+"death" in "obj/living.c" ("players/illarion/high/mon/duncan#13961") line 959
+"second_life" in "obj/monster.c" ("players/illarion/high/mon/duncan#13961") line 542
+"monster_died" in "players/illarion/high/mon/duncan.c" ("players/illarion/high/mon/duncan#13961") line 80
+"valid_write" in "obj/player.c" ("obj/player#11999") line 2787
+"object_name" in "obj/simul_efun.c" ("obj/simul_efun") line 50
+Heart beat in obj/player#11999 turned off.
+Connection reset by peer detected.
+Bad argument 1 to call_other()
+Current object was players/mizan/etheriel/beasties/edgar-a-poe#14673, line 16
+"explodey" in "players/mizan/etheriel/environs/exploder.c" ("players/mizan/etheriel/environs/exploder#14662") line 102
+"move_player" in "obj/living.c" ("players/mizan/etheriel/beasties/edgar-a-poe#14673") line 225
+Error in call out.

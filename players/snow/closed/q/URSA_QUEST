@@ -1,0 +1,31 @@
+*Ursa Major Quest*
+ 
+What the players need to do:
+ 
+1) Find the soul of a vampire. This is fairly difficult since the
+   souls are found on my dark vampires - which randomly
+   clone in my Dark Arena area (pk zone with unpeaceable, fully
+   aggressive, following monsters). The entire area is hard to find
+   since it is connected through Pain's TinyRealms area.
+ 
+2) Find a cold sphere of healing. Relatively easy. The Ice Spheres
+   are found on my Snow Demons (which put up a fairly good fight).
+   Snow Demons are, however, found only in one room in a very 
+   dangerous area.
+ 
+3) Figure out how to reanimate Ursa Major. Basically, they figure
+   that Ursa Major means "big bear" and find the largest of the
+   three bears in my areas - the Polar Bear. Once they kill this
+   bear, on it is a bear hide that they can wear, eat, or use the
+   command "reanimate" with. If they have the Vampire Soul, the
+   Ice Sphere, and the Hide, they can reanimate and the quest is
+   solved.
+ 
+Paths:
+ 
+Vampire: /players/snow/dark/mons/vampire.c
+Vampire Soul: /players/snow/dark/stuff/vheal.c
+Snow Demon: /players/snow/MONSTERS/snow_demon.c
+Ice Sphere: /players/snow/heals/ice_sphere.c
+Polar Bear: /players/snow/MONSTERS/polar_bear.c
+Bear Hide: /players/snow/closed/q/polar_hide.c

@@ -1,0 +1,96 @@
+when changed -> sp-max = 5
+if sp > 5 ->  sp=5 hp=+1
+hp-max=sp-max+hp-max
+
+cmds
+
+pray->uses sp
+used only to gain first lvls
+after that, gains NO levels.
+
+pray to gaea
+Change to Wearwolf
+cost hp and sp must be full.
+random->Weak, Med, Strong
+random->VERY low chance of becomming PK.  "Seen as a monster"
+weak=wc+5+var, ac=1
+timer=10mins
+med=wc+8+var, ac=3
+timer=15mins
+high=wc+10+var, ac=4
+timer=10mins
+hp=20
+sp=0
+-
+change back->
+give msg 1min before.
+sp=0
+hp=10
+stun=1min
+
+leave scent
+leaves a silent obj that only wolves can see.
+Can eventually leave msgs
+
+claw
+attack
+
+howl->guild chan
+
+grab
+attack
+
+growl->random(2): attack mob, mob attacks you, or just cool emote.
+yes... useless.
+
+rip
+attack
+
+fury->wc+5 ac-5 +claw
+fury=1
+Cannot do any other cmd.  Cannot wimpy.
+each round:  random(10)<1=attack, random(attacks known)-> do attack or 0.
+countdown1=2 mins
+countdown2=3 mins
+
+alert 
+show names of those to fear
+
+meld <weapon name>
+take weapon, dest, add wc
+can break=> every min, random(X)!=break x=70,  every 1min x=-1
+meld=1
+meld=2
+break-> meld=0
+timer 7mins
+timer 10mins
+
+gnaw
+attack
+
+sight
+mud who
+
+rage->wc+10 ac-15 +rip
+rage=1
+Cannot do any other cmd.  Cannot wimpy.
+each round:  random(10)<1=attack, random(attacks known)-> do attack or 0.
+countdown1=1 mins
+countdown2=7 mins
+
+calm
+stop being werewolf
+
+bite
+attack
+
+absorb <weapon name>
+absorb <weapon name>
+take weapon, dest, add wc
+can break=> every min, random(X)!=break x=50,  every 1min x=-1
+meld=1
+meld=2
+break-> meld=0
+timer 10mins
+timer 20mins
+

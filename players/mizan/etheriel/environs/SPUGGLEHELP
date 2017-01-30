@@ -1,0 +1,25 @@
+The game of Spuggle is very easy to learn and is based almost
+entirely on chance. Spuggle works very much like a slot machine.
+There are several sets of icons, represented here in their value forms:
+
+            Icon        Value
+          [spoogle]       5 coins
+          [pachung]      10 coins
+          [benga]        50 coins 
+          [Moggle]      100 coins
+          [Squish]      500 coins
+          [SPUGGLE]    1000 coins 
+
+You recieve three icons per game. If the first two icons match, you win!
+Your winnings are reflected as above. 
+
+The third icon displays a number. That number is the Zoofle, or your
+prize multiplier. Whatever is in that slot gets multiplied to your winnings.
+The number ranges from zero to four. Zero has the _greatest_ chance of
+appearing. Supposing you win and recieve a zoofle of zero, the money you
+would have won goes back into the pot. The next player to win anything
+gets their winnings plus whatever is in the pot.
+
+Simple, is'nt it? Why not give it a shot? Only 25 coins per game.
+
+>>----------------<<Type 'play spuggle' to begin!>>----------------<<

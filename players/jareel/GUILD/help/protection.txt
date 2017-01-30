@@ -1,0 +1,15 @@
+                    -- PROTECTION --
+
+TYPE: Spell (Variable)
+INT REQ: 1/level
+USAGE: protect <player>
+COST TO MAX: 1,000,000 xp
+
+Protect yourself from incoming attacks.
+
+      /=LEVEL=COST SP=DURATION=XP COST=\
+      |   1 |   25   |100 secs|100,000 |
+      |   2 |   30   |200 secs|200,000 |
+      |   3 |   35   |300 secs|300,000 |
+      |   4 |   40   |400 secs|400,000 |
+      \================================/

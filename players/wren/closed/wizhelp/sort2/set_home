@@ -1,0 +1,21 @@
+****************
+
+                     Set_home
+
+Syntax:    set_home <player> <file>
+
+Desc:
+           This command sets the home or login point for a player.
+           Useful for setting testers to load in workrooms or to
+           fix a player whose been set to incorrect room.
+
+Warning:   Don't move a players login without reason.
+
+Example:   set_home mike /room/church
+                  results
+           mike now logs in to church
+
+Related:   workrm
+
+
+****************

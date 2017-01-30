@@ -1,0 +1,16 @@
+no_clean 0
+name_of_weapon "knife"
+broke 0
+misses 0
+hits 0
+alt_name "succubus knife"
+alias_name 0
+short_desc "A Succubus Knife"
+long_desc "A long single edged knife with a wicked point and curved blade.It is made of a black iron alloy, and covered in silver runes."
+read_msg "Type cut <player_name> (must be male) for fun."
+class_of_weapon 13
+value 200
+local_weight 1
+info 0
+deny_save 0
+weapon_type "sword"

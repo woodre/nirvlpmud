@@ -1,0 +1,24 @@
+This is an area based on Highlander: The series
+Practically, this means that the monsters players kill should get back up
+again after a short while, and that while not visibly armed, they always
+keep a sword nearby (some of the monsters, anyway)
+To facilitate that, I've coded some extra inheritors, which are
+documented within themselves.
+I've also defined the three basic paths of the area in ~/dfns.h,
+which hopefully will make the code more readable, and easier to
+move, if that becomes necessary
+
+Access to most of the area is provided through "flashbacks", something
+which happens a lot in the TV series: Duncan stares at something, and
+the story shifts to something that happened to him in the past.  The
+observant player will notice that some of the words in item descriptions
+are highlighted in bold, and represent add_actions.  Eventually, those
+will allow the player to access a "flashback".  (making this
+a very expandible area)
+
+Eventually this could lead to several quests, along the lines of:
+  1> Find a way to kill an immortal
+  2> Stop the watchers from killing immortals (see the show for details)
+  3> influence the Gathering (when the immortals finally dwindle to 1)
+  4> save <insert name here> (some immortals are in the rescue business)
+  5> learn to use a type of sword (ie raise the special)

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/lunchbox","/players/wren/Area/starbug/items/indianheaddress","/obj/armor","/players/wren/Area/starbug/items/reddress","/players/mythos/awep/claw","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/puppy/s/eq/hammer","/players/wren/Area/starbug/items/hair","/players/saber/armor/hardsuit1","/players/paulasx/weapons/godsword","/players/eurale/Glade/OBJ/elven_boots","/obj/armor","/players/softly/newbie/obj/cheese","/players/wren/Area/starbug/items/cowboyhat","/players/hippo/heals/dna_repair","/players/pain/closed/weapons/widow","/obj/weapon","/players/mythos/awep/arrow","/obj/weapon","/players/maledicta/cont/weapons/rweapon","/players/pain/NEW/arm/boots","/players/angel/area/stargate/obj/P90","/players/hawkeye/weapons/weapon","/players/mosobp/areas/TEMPLE/OBJ/robes",})
+shorts ({"a lunch box","a tiny indian headdress","Robot Head","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","claws","An evil-looking lightsabre","A nobleman's shortsword","A hammer","Perfect Hair","A light blue Hardsuit","Godsword","[1mElven boots[2;37;0m","A small [1mwhite[0m shield","[1;33mCheese[2;37;0m","a tiny cowboy hat","[32mdna repair string[0m","the Widowmaker, the sword of the Berserker","Studded collar","arrow","Golden hoof","a Shortsword","Heavy work boots","Machine gun","Hawkeye's Scalpel","A Priest's Robes",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

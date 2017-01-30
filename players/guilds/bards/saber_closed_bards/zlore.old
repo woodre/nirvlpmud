@@ -1,0 +1,628 @@
+ string name, pretitle, title, gender;
+ string guild_name, al_title, lastime;
+string description;
+string cap_name;
+ int level, ex_lv;
+
+history(str)  {
+ if(!str)  {
+  write("To get history on a player < History 'player name' >\n");
+  return 1;
+        }
+  if(!restore_object("players/"+str))  {
+   write("That player has not visited the realms of magic.\n");
+   return 1;
+        }
+  write("\n");
+  write("    This is the history and lore of "+cap_name+".\n");
+  write("\n");
+if(guild_name == "none" || guild_name == 0)  {
+  write(cap_name+" is a "+gender+" player who does not belong to a guild.\n");
+        }
+  else  {
+  write(cap_name+" is a "+gender+" player who belongs to the "+guild_name+" guild.\n");
+        }
+  write("\n");
+write("You once heard somebody call "+cap_name+":\n");
+  write("  "+pretitle+" "+cap_name+" "+title+"\n");
+  write("and you realized that this was their full name & title.  (go figure...)\n");
+  write("\n");
+  write(cap_name+" could roughly be described as:\n");
+if(description == 0)  {
+  write("Actually, come to think of it, "+cap_name+" has no distinctive features...\n");
+        }
+  else  {
+  write(cap_name+" "+description+" ");
+        }
+  write("\n");
+  write(cap_name+" has advanced to rank "+level+".\n");
+if(ex_lv > 0)  {
+  write(cap_name+" has also earned "+ex_lv+" extra levels.\n");
+        }
+  write("\n");
+  write("Considering the history of "+cap_name+", you believe they are of "+al_title+" alignment. "+esc+"[0m"+"\n");
+  write("\n");
+  write("You know that "+cap_name+" has been around for ");
+  check_age(name);
+  return 1;
+        }
+
+identify(str)  {
+object ob;
+string temp, CHECKIT, ARMOR;
+int CHECK, AV;
+  if(!str)  {
+  write("Levels of identification:\n\n"+
+  "Weapons:\n"+
+  "  You call that a weapon?\n"+
+  "  Pitiful\n"+
+  "  Poor\n  Not that bad...\n  Average\n"+
+  "  Decent\n  Good\n  Excellent\n  Exceptional\n"+
+  "  Superb\n  Godlike\n\n"+
+  "Armor:\n"+
+  "  Strong\n  Good\n  Stalwart\n  Tough\n  Bitchin\n\n");
+  return 1;
+        }
+  if(spell(-100,3,30) == -1)  return 0;
+  ob = present(str,environment(TP));
+  if(!ob)  ob = present(str,TP);
+  if(!ob)  {
+  write("You do not see a "+str+" here to identify.\n");
+  return 1;
+        }
+  if(ob)  {
+  temp = ob->query_save_flag();
+  if(temp == 0)  temp = "yes";
+  else temp = "no";
+  if(ob)  {
+  CHECK = ob->weapon_class();
+/* reactivated word desc -Bp */
+  if(CHECK > -1)  CHECKIT = "You call that a weapon?";
+  if(CHECK > 3)  CHECKIT = "Pitiful";
+  if(CHECK > 5)  CHECKIT = "Poor";
+  if(CHECK > 7)  CHECKIT = "Not that bad...";
+  if(CHECK > 9)  CHECKIT = "Average";
+  if(CHECK > 11)  CHECKIT = "Decent";
+  if(CHECK > 13)  CHECKIT = "Good";
+  if(CHECK > 15)  CHECKIT = "Excellent";
+  if(CHECK > 17)  CHECKIT = "Exceptional";
+  if(CHECK > 19)  CHECKIT = "Superb";
+  if(CHECK > 21)  CHECKIT = "Godlike...";
+        }
+  if(ob)  {
+  AV = ob->armor_class();
+  if(AV > -1)  ARMOR = "Thats not armor...";
+  if(AV > 0) ARMOR = "Good";
+  if(AV > 1) ARMOR = "Strong";
+  if(AV > 2) ARMOR = "Stalwart";
+  if(AV > 3) ARMOR = "Tough";
+  if(AV > 4) ARMOR = "Bitchin";
+        }
+  write("\n* "+ob->short()+"\n\n");
+  write("* Value:                           "+ob->query_value()+"\n");
+  write("* Armor:                           "+ARMOR+"\n");
+  write("* Weapon:                          "+CHECKIT+"\n");
+  write("* Weight:                          "+ob->query_weight()+"\n");
+  write("* Name:                            "+ob->query_name()+"\n");
+  write("* Can it save:                     "+temp+"\n");
+  write("\n");
+  call_other(TP, "add_spell_point", -30);
+  return 1;
+        }
+        }
+
+detect_magic(str)  {
+string temp1, temp2, aaa;
+int a, b;
+object ob;
+  if(!str)  {
+  write("Play the ditty of Magic Divination upon what item?\n");
+  return 1;
+        }
+  if(spell(-100,2,5,this_object()) == -1)  return 0;
+  ob = present(str,environment(TP));
+  if(!ob)  ob = present(str,TP);
+  if(!ob)  {
+   write("You have no "+CAP+" to sing the divinition over.\n");
+   return 1;
+        }
+  a = ob->armor_class();
+  b = ob->weapon_class();
+  aaa = "********";
+say(tp+" plays a simple ditty upon "+TP->query_possessive()+" "+this_object()->query_instrument()+".\n");
+  write("You play the Ditty of Magic Divinition upon your "+this_object()->query_instrument()+".\n\n");
+  write("\n   "+ob->short()+"\n");
+  write("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n");
+  write("<>\n");
+  write("<> Weapon:  ");
+ if(b > 5)  write("*");
+  if(b > 8)  write(aaa);
+  if(b > 11) write(aaa);
+  if(b > 14) write(aaa);
+  if(b > 17) write(aaa);
+  if(b > 20) write(aaa);
+  if(b > 23) write(aaa+"   (YIKES!)");
+  write("\n");
+  write("<> Armor:   ");
+  if(a > 0) write("*");
+  if(a > 0)  write(aaa);
+  if(a > 1)  write(aaa);
+  if(a > 2)  write(aaa);
+  if(a > 3)  write(aaa);
+  if(a > 4)  write(aaa+"    (YIKES!)");
+  write("\n");
+  write("<>     ___________________________________________________\n");
+  write("<> Rank:    1       2       3       4       5       6\n");
+  write("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>\n\n");
+  call_other(TP, "add_spell_point", -5);
+  return 1;
+        }
+
+strength(str)  {
+object ob;
+int health;
+string aa;
+  if(!str)  {
+  write("You must play the melody to a creature.\n");
+  return 1;
+        }
+  if(spell(-100,2,5,this_object()) == -1)  return 0;
+  ob = present(str,environment(TP));
+  if(!ob)  {
+  write("You don't see "+CAP+" here.\n");
+  return 1;
+        }
+say(tp+" plays a simple melody upon "+TP->query_possessive()+" "+this_object()->query_instrument()+".\n");
+write("You play the Melody of Strength upon your "+this_object()->query_instrument()+".\n\n");
+  aa = "___";
+  health = ob->query_hp() * 100 / ob->query_mhp();
+  write("** "+CAP+" is at "+health+" percent of "+ob->query_possessive()+" total health.\n");
+  write("  _____________________________________________________________\n");
+  write("  ");
+  if(health > 4)   write(aa);   if(health > 9)   write(aa);
+  if(health > 14)  write(aa);   if(health > 19)  write(aa);
+  if(health > 24)  write(aa);   if(health > 29)  write(aa);
+  if(health > 34)  write(aa);   if(health > 39)  write(aa);
+  if(health > 44)  write(aa);   if(health > 49)  write(aa);
+  if(health > 54)  write(aa);   if(health > 59)  write(aa);
+  if(health > 64)  write(aa);   if(health > 69)  write(aa);
+  if(health > 74)  write(aa);   if(health > 79)  write(aa);
+  if(health > 84)  write(aa);   if(health > 79)  write(aa);
+  if(health > 94)  write(aa);   if(health > 99)  write(aa);
+write("\n");
+  write("  _____________________________________________________________\n");
+  write("     5  10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 MAX\n\n");
+  call_other(TP, "add_spell_point", -5);
+  return 1;
+        }
+
+song_of_balance(str)  {
+object ob;
+  if(!str)  {
+  write("Who do you want to analyze?\n");
+  return 1;
+        }
+  ob = find_player(str);
+  if(!ob) ob = find_living(str);
+  if(!ob)  {
+  write("You cannot find "+CAP+" to analyze.\n");
+  return 1;
+        }
+  if(spell(-100,3,5,this_object()) == -1)  return 0;
+say(tp+" gazes at "+ob->query_name()+" as "+TP->query_pronoun()+" plays an haunting series of fifths upon "+TP->query_possessive()+" "+this_object()->query_instrument()+".\n");
+write("You gaze upon "+ob->query_name()+" as you play a haunting series of fifths upon your "+this_object()->query_instrument()+".\n");
+  write(ob->query_name()+" has a soul of cosmic index number "+ob->query_alignment()+"\n");
+  call_other(TP, "add_spell_point", -5);
+  return 1;
+       }
+
+watch_creature(str)  {
+  object ob;
+  int health;
+  if(!str)  {  
+    write("You must watch a creature.\n");
+    return 1;
+        }
+
+  if(spell(-100,10,5) ==-1)  return 0;
+
+  ob = present(str, environment(TP));
+  if(!ob)  {
+    write("You don't see "+CAP+" here.\n");
+    return 1;
+        }
+
+  say(tp+" begins to watch "+CAP+".\n");
+  write("You begin to watch "+CAP+".\n");
+  track_monster = str;
+  call_out("track_it",4);
+  call_other(TP, "add_spell_point", -10);
+  return 1;
+        }
+
+track_it()  {
+  object ob, ob2;
+  int health;
+  ob2 = environment(TO);
+  ob = present(track_monster, environment(ob2));
+
+  if(!present(track_monster, environment(ob2)))  {
+    say("You have stopped watching "+track_monster+".\n");
+    return 1;
+        }
+
+  say("check 2.\n");
+  health = ob->query_hp() * 100 / ob->query_mph();
+  say("check 3.\n");
+  say("**-> "+ob->short()+" is at "+health+" percent of "+ob->query_possessive()+" total ealth.\n");
+  call_out("track_it", 6);
+  return 1;
+        }
+
+wealth(str)  {
+string temp3, how_rich;
+int a;
+object ob;
+  if(!str)  {
+  write("Play the rhythm of wealth upon who?\n");
+  return 1;
+        }
+  if(spell(-200,6,10,TO) == -1)  return 0;
+  ob = present(str,environment(TP));
+  if(!ob)  {
+   write("There is no one named "+capitalize(str)+" to play the rhythm of wealth upon.\n");
+   return 1;
+        }
+  a = ob->query_money();
+  temp3 = "****";
+  say(tp+" sways slightly.\n");
+  write("You play the rhythm of wealth upon your "+TO->query_instrument()+".\n");
+  if(a > -1)    how_rich = "poverty level";
+  if(a > 3000)  how_rich = "dirt poor";
+  if(a > 6000)  how_rich = "poor";
+  if(a > 15000) how_rich = "average";
+  if(a > 25000) how_rich = "well off";
+  if(a > 45000) how_rich = "rich";
+  if(a > 60000) how_rich = "wealthy";
+  if(a > 70000) how_rich = "filthy rich";
+  write("\n$$ "+capitalize(str)+" is "+how_rich+"\n");
+  write("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+  write("$                                                                    $\n");
+  write("$ ");
+  if(a > 0)     write("*");
+  if(a > 5000)  write(temp3);
+  if(a > 10000) write(temp3);
+  if(a > 15000) write(temp3);
+  if(a > 20000) write(temp3);
+  if(a > 25000) write(temp3);
+  if(a > 30000) write(temp3);
+  if(a > 35000) write(temp3);
+  if(a > 40000) write(temp3);
+  if(a > 45000) write(temp3);
+  if(a > 50000) write(temp3);
+  if(a > 55000) write(temp3);
+  if(a > 60000) write(temp3);
+  if(a > 65000) write(temp3);
+  if(a > 70000) write(temp3);
+  if(a > 75000) write(temp3);
+  if(a > 79900) write(temp3);
+  write("\n");
+  write("$____________________________________________________________________$\n");
+  write("$ 0   5   10  15  20  25  30  35  40  45  50  55  60  65  70  75  80\n");
+  write("$                                                                    $\n");
+  write("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+  call_other(TP, "add_spell_point", -10);
+  return 1;
+        }
+
+weather()  {
+int n;
+ if(spell(-100,2,5,TO) == -1) return 0;
+write("You play some chords upon your "+TO->query_instrument()+".\n");
+say(tp+" plays some chords upon "+TP->query_possessive()+" "+TO->query_instrument()+".\n");
+  write("You detect that ");
+ n = random(6);
+if(n == 0) { write("there is a high chance of rain.\n");
+        }
+if(n == 1) { write("it will be a sunny day.\n");
+        }
+if(n == 2) { write("it will be a cloudy day.\n");
+        }
+if(n == 3) { write("there is a small chance of rain.\n");
+        }
+if(n == 4) { write("that it will be an unusually warm day.\n");
+        }
+if(n == 5) { write("that is will be an unusually cold day.\n");
+        }
+
+  call_other(TP,"add_spell_point",-5);
+  return 1;
+        }
+
+hawk_eyes(str)  {
+object ob;
+ if(!str)  {
+   write("What do you wish to search out?\n");
+   return 1;
+       }
+ if(spell(-150,4,10,ob) == -1) return 0;
+ write("You send forth your music into the realms of magic in search of "+capitalize(str)+".\n\n");
+ say(tp+" plays a light tune upon "+TP->query_possessive()+" "+TO->query_instrument()+".\n");
+ if(ob = present(str, TP))  {
+   write("You have the object for which you search in your inventory.\n");
+         }
+ else if(ob = present(str,environment(TP)))  {
+   write("The object of your search is in your room.\n");
+        }
+ else if(ob = find_living(str))  {
+  write(capitalize(str)+" can be found in '"+call_other(environment(ob),"short")+"'.\n");
+        }
+ else if(ob = find_object(str))  {
+   write(capitalize(str)+" can be found in '"+call_other(environment(ob), "short")+"'.\n");
+       }
+ else if(str == "silversword")  {
+  write("Silversword can be found in the 'Circle'\n");
+        }
+ else if(!ob)  {
+   write("You can find no traces of "+capitalize(str)+".\n");
+       }
+  call_other(TP,"add_spell_point", -10);
+  return 1;
+        }
+
+know_monster(str)  {
+object ob;
+string AAA, BBB, CCC, EEE, WIMP;
+int health, zzz, DDD;
+  if(!str)  {
+    write("What creature would you like to play the song of knowledge upon?\n");
+    return 1;
+        }
+  ob = present(str,environment(TP));
+  if(!ob)  {
+    write("There is no "+CAP+" here to play the song of knowledge upon.\n");
+    return 1;
+        }
+  if((ob->query_level()) > 25)  {
+    write("Your mind can not grasp the knowledge of "+CAP+".\n");
+    return 1;
+        }
+  health = ob->query_hp() * 100 / ob->query_mhp();
+  if(ob->query_wimpy())  { WIMP = "yes"; }
+      else { WIMP = "no"; }
+  if(spell(-185,4,30,TP) ==-1)  return 0;
+  write("***********************************************************************\n\n");
+  write("**  Name:       "+pad(ob->short(),52)+" **\n");
+  write("**  Race:       "+pad(ob->query_race(),22)+" Is wimpy:     "+pad(WIMP,15)+" **\n");
+  write("**  Level:      "+pad(ob->query_level(),22)+" Extra_level:  "+pad(ob->query_extra_level(),15)+" **\n");
+  write("**  True name:  "+pad(ob->query_real_name(),22)+" Gender:       "+pad(ob->query_gender_string(),15)+" **\n");
+  write("**  Alignment:  "+pad(ob->query_alignment(),52)+" **\n");
+  write("\n");
+  write("**  Weapon Class & Armor Class\n");
+  write("**\n");
+  write("**       ");
+  AAA = "****";
+  CCC = "*  <off the scale>";
+  zzz = ob->query_wc();
+  if(zzz > 0) write("**");  if(zzz > 2) { write("********"); }
+  if(zzz > 4)  { write(AAA); }    if(zzz > 6)  { write(AAA); }
+  if(zzz > 8)  { write(AAA); }    if(zzz > 10) { write(AAA); }
+  if(zzz > 12) { write(AAA); }    if(zzz > 14) { write(AAA); }
+  if(zzz > 16) { write(AAA); }    if(zzz > 18) { write(AAA); }
+  if(zzz > 20) { write(AAA); }    if(zzz > 22) { write(CCC); }
+  write("\n");
+  BBB = ob->query_ac();
+  write("**       ");
+  if(BBB > 0)  write("**");    if(BBB > 2)  { write("********"); }
+  if(BBB > 4)  { write(AAA); }    if(BBB > 6)  { write(AAA); }
+  if(BBB > 8)  { write(AAA); }    if(BBB > 10) { write(AAA); }
+  if(BBB > 12) { write(AAA); }    if(BBB > 14) { write(AAA); }
+  if(BBB > 16) { write(AAA); }    if(BBB > 18) { write(AAA); }
+  if(BBB > 20) { write(AAA); }    if(BBB > 22) { write(CCC); }
+  write("\n");
+  write("**       _______________________________________________\n");
+  write("**        0   2   4   6   8  10  12  14  16  18  20  22\n\n");
+  write("**\n**  Health:  "+health+" percent of total.\n");
+  write("\n");
+  DDD = ob->query_hp();
+  EEE = "****";
+  write("**       ");
+  if(DDD > 0)   { write("***"); }     if(DDD > 30)  { write(EEE); }
+  if(DDD > 60)  { write(EEE); }     if(DDD > 90)  { write(EEE); }
+  if(DDD > 120) { write(EEE); }     if(DDD > 150) { write(EEE); }
+  if(DDD > 200) { write(EEE); }    if(DDD > 250) { write(EEE); }
+  if(DDD > 300) { write(EEE); }    if(DDD > 400) { write(EEE); }
+  if(DDD > 500) { write(EEE); }    if(DDD > 600) { write(EEE); }
+  if(DDD > 700) { write(CCC); }
+  write("**\n");
+  write("**       _______________________________________________\n");
+  write("**        0   30  60  90 120 150 200 250 300 400 500 600+\n\n");
+  call_other(TP,"add_spell_point",-30);
+  return 1;
+        }
+
+ayre_of_ability(str)  {
+object ob;
+int STR, STA, MAGI, LUC, INT, WIL, PIE, STE;
+int count, number;
+string AAA, BBB, CCC, DDD;
+string EEE, FFF;
+  if(!str)  {
+    write("To use < ayre <player name> >\n");
+    return 1;
+        }
+  if(spell(-123,5,15,ob) == -1) return 0;
+  ob = present(str,environment(TP));
+  if(!ob)  {
+    write("You must be able to see the player to play the ayre.\n");
+    return 1;
+       }
+  write("You play the Ayre of Ability upon "+CAP+".\n");
+  write("\n __________________________________________________________\n");
+  write(" |      |                                                  |\n");
+  STR = ob->query_attrib("str");  STA = ob->query_attrib("sta");  LUC = ob->query_attrib("luc");
+  MAGI = ob->query_attrib("mag");  STE = ob->query_attrib("ste");  PIE = ob->query_attrib("pie");
+  WIL = ob->query_attrib("wil");  INT = ob->query_attrib("int");
+  number = 20;
+  count = 0;
+  AAA = "***   ";
+  BBB = "      ";
+  CCC = "****  ";
+  DDD = "      ";
+  EEE = "  ***   ";
+  FFF = "        ";
+ while(count < 9)  {
+  if(count < 99)  { write(" "); }
+  if(count == 0)  { write("|21+   |"); }
+  if(count == 1)  { write("|19-20 |"); }
+  if(count == 2)  { write("|17-18 |"); }
+  if(count == 3)  { write("|15-16 |"); }
+  if(count == 4)  { write("|13-14 |"); }
+  if(count == 5)  { write("|11-12 |"); }
+  if(count == 6)  { write("| 9-10 |"); }
+  if(count == 7)  { write("| 7-8  |"); }
+  if(count == 8)  { write("| 6-   |"); }
+  if(STR > number)  { write(EEE); } else { write(FFF); }
+  if(STA > number)  { write(AAA); } else { write(BBB); }
+  if(MAGI > number)  { write(AAA); } else { write(BBB); }
+  if(STE > number)  { write(AAA); } else { write(BBB); }
+  if(INT > number)  { write(AAA); } else { write(BBB); }
+  if(WIL > number)  { write(AAA); } else { write(BBB); }
+  if(PIE > number)  { write(AAA); } else { write(BBB); }
+  if(LUC > number)  { write(CCC); } else { write(DDD); }
+  if(number > -1)   { number = number -2; }
+  if(count < 11)    { count = count + 1; }
+  if(count < 99)    { write("|\n"); }
+        }
+  write(" |      |                                                  |\n");
+  write(" |______|__STR___STA___MAG___STE___INT___WIL___PIE___LUCK__|\n\n\n");
+  return 1;
+        }
+
+true_name(str)  {
+object ob;
+int aaa,bbb,ccc;
+  if(!str)  {
+    write("To use type < true_name <monster> >\n");
+    return 1;
+       }
+  ob = present(str,environment(TP));
+  if(!ob)  {
+    write("You must see the creature to utter its true name.\n");
+    return 1;
+        }
+  if(present("zzzz",ob))  {
+    write("You may only command the True Name of a creature once.\n");
+    return 1;
+        }
+  if(attack_spell(-189,9,100,ob) == -1)  return 0;
+  tell_room(environment(TP), "\n\n");
+  write("You speak the TRUE NAME of the creature called "+ob->query_name()+".\n");
+  say(tp+" speaks the TRUE NAME of the creature called "+ob->query_name()+".\n");
+  tell_room(environment(TP), "You watch as "+ob->query_name()+" writhes in\n\n");
+  tell_room(environment(TP),
+    "                  *\n"+
+    "                *  *\n"+
+    "              *    *\n"+
+    "             * ** *   ****  *****  ****   *   *\n"+
+    "            *    *   *  *   *   *   *  *   *   *\n"+
+    "           *    *   *  *    *   *    *  *   *   *\n");
+  tell_room(environment(TP),
+    "          *    *   * **     *****     *  *   *****\n"+
+    "                     *                            *\n"+
+    "                    *                       *      *\n"+
+    "               *****                       **********\n\n");
+  tell_room(environment(TP),
+    "                                at the sound of its TRUE NAME.\n\n\n");
+  call_other(ob,"set_heal", 0, 100);
+   ccc = 50;
+  if (ccc > ob->query_hp())  ccc = ob->query_hp() - 1;
+  TP->attack_object(ob);
+  ob->hit_player(ccc);
+  if(living(ob))  ob->attack_object(TP);
+  aaa = ob->query_ac() - random(4);
+  bbb = ob->query_wc() - random(4);
+  ob->set_ac(aaa);
+  ob->set_wc(bbb);
+  call_other(TP,"add_spell_point", -100);
+  move_object(clone_object("/players/saber/bards/mark.c"),ob);
+  return 1;
+        }
+
+reflect()  {
+if(spell(-159,8,40) ==-1) return 0;
+write("You play the Canticle of Reflection upon your "+TO->query_instrument()+"\n"+
+  "\n");
+say(tp+" plays a Canticle upon "+TP->query_possessive()+" "+TO->query_instrument()+"\n\n");
+tell_room(environment(TP), "A small cloud of silver mist comes forth from chaos.\n"+
+  "\nIt begins to rain.\n\n"+
+    "A dark pool of water forms upon the ground.\n");
+  move_object(clone_object("/players/saber/closed/bards/pool.c"),environment(TP));
+  call_other(TP,"add_spell_point",-40);
+  return 1;
+        }
+
+wander_music(str)  {
+object ob, ob2;
+string there, short_str;
+if(!str)  {
+ob = find_object("music");
+if(!ob)  { ob = find_living("music");  }
+  if(!ob)  {
+      write("There is no living music within the realms of magic.\n");
+    return 1;
+        }
+  write("You see music:\n");
+  there = call_other(environment(ob),"long");
+  ob2 = first_inventory(environment(ob));
+   while(ob2)  {
+   short_str = call_other(ob2, "short");
+   if(short_str)  {
+   write(short_str+".\n");
+        }
+   ob2 = next_inventory(ob2);
+        }
+    return 1;
+         }
+if(str == "music")  {
+if(spell(-195,5,25) ==-1) return 0;
+move_object(clone_object("/players/saber/closed/bards/music.c"),environment(TP));
+  call_other(TP,"add_spell_point",-25);
+  write("You summon living music.\n");
+  say(tp+" plays a tune upon "+TP->query_possessive()+" "+TO->query_instrument()+" and summons living music.\n");
+  return 1;
+        }
+if(str == "kill")  {
+ob = find_living("music");
+  if(!ob) { ob = find_object("music");
+        }
+    if(!ob)  {
+      write("There is no living music within the realms of music.\n");
+      return 1;
+        }
+tell_room(environment(ob), "The chords of music fade away.\n");
+destruct(ob);
+  write("You release the chords of living music.\n");
+  return 1;
+        }
+if(spell(-111,5,25) ==-1) return 0;
+move_object(clone_object("/players/saber/closed/bards/music2.c"),environment(TP));
+  ob = find_living("chord");
+  if(!ob)  write("NO OBJECT!\n");
+  command(str,ob);
+  write("You play a single note upon your "+TO->query_instrument()+" and send it "+str+".\n");
+  say(tp+" plays a single note upon "+TP->query_possessive()+" "+TO->query_instrument()+" and directs it "+str+".\n");
+  write("You see music:\n");
+  there = call_other(environment(ob), "long");
+  ob2 = first_inventory(environment(ob));
+   while(ob2)  {
+   short_str = call_other(ob2, "short");
+    if(short_str)  {
+    write(short_str+".\n");
+        }
+  ob2 = next_inventory(ob2);
+        }
+  destruct(ob);
+  call_other(TP,"add_spell_point",-25);
+    return 1;
+        }

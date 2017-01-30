@@ -1,0 +1,20 @@
+Speedster v.2.0  (c) Grimm Enterprises, Inc.
+ 
+The idea behind the speedster is to let you the player speed up your normal
+direction running (i.e. if you go from the pub to somewhere in the mud 400 
+times in a session you can do it in a flash (and avoid the lag that may
+occur)).  A suggestion for using the speedster is that you may want to turn
+"brief" on and let it run its path and then switch back to "verbose" mode
+(do this by typing "brief" (it toggles between the two modes)).
+ 
+An example of using the speedster:
+Go to the church and type "learn shop s,e,e,e,n"
+then type "go shop"
+finally type "backtrack shop"
+ 
+this will let you run the 3 main parts of the speedster.
+ 
+NOTE: This is version two of the Speedster.  You may enter any command to be
+      executed in the learned path, but the backtrack function will only work
+      if ALL the commands in the path are cardinal directions.
+

@@ -1,0 +1,56 @@
+A Party Object that works for prestiged players to promote parties.
+
+Why a Prestige Party?
+Bonus Prestige powers
+  In a prestige party you "Pool" the prestige powers everyone has chosen, and
+  add the bonus to the group. Examples:
+  Cooper Has 8 Points   Dreadbane has 5 Points   Chant has 1 Point
+    +3 Bonus Exp          +2 Bonus Exp             +1 Bonus EXP
+	+2 WC                 +1 Detox
+	+1 AC                 +1 Sp Regen
+	+1 HP Regen           +1 Hp Bonus
+	+1 HP Bonus
+So the total bonus pool would be
+   +6 Bonus EXP, +2 WC, +1 AC, +1 HP Regen, +1 Sp Regen, +2 HP Bonus
+   The Party object would add all totals up in the party and/2 to give the
+   party an extra bonus for having a party.
+
+   
+Party Shares - Power leveling is just a joke as it is shares should be simple and non-adjustable
+Party shares - Base Level + Prestige Level/Party Members 
+  Cooper level 19+43 {8} 
+    would have 27 shares in the party but would contribute the most powers to
+	the party so the five and take would be worth the exp suck. Also the drain 
+	exp is not so crazy as once you hit level 19 as it is now where level a 19
+	has little want to party with a +100.
+  Chant Level 19+5 {1}
+    Would have 20 shares in the party he would contribute less extra power wise 
+	to the party.
+  Dreadbane Level 19+87 {4}
+    Would have 23 shares in the party and so on and so fourth.
+  Mode Level 19+20
+    Would have 19 Shares in the Party but could still party
+
+
+Some interesting Ideas on Prestige party objects.
+  Party Add
+  Add Chant -> Dreadbane would like to add you to the party do you wish to join Dreadbanes party <YorN>?
+  
+  Make it a quest item or a Raid Item, once you have one you have one but you have to earn it.
+  
+  Party Object stats
+  Current Party
+  Total Xp/Players in the party Xp Similar to current in game Object.
+  All time Party
+  Who has the most Xp in your parties everyone you party with all time
+
+  Party Powers
+  Bring Party Member to you Teleport to the party Object.
+
+  Party Who
+  Show where party members are, Current Level, 
+
+  Party report
+  Shows the whole parties Current Monitor What Prestige stats they have
+
+  No Tanking Bonus (The Bonus everyone will get from Prestige will be better)

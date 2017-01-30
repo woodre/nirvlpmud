@@ -1,0 +1,173 @@
+This is Version 0.02 of the WIZ TREE docs, please feel free to edit and add
+comments as you see fit.  Mail me back your suggestions and we'll see if they
+will be incorporated into the next version.  This structure is far from being
+finished and complete as you well can see.  Speeling and grammar corrections
+be they will ignored.  =)  leesung1@elof.acc.iit.edu
+
+Index:  WIZ_TREE.3.24.1994, GROUP LEADERS/SPONSORS, DESCRIPTIONS OF EACH
+POSITION AND DUTIES, PROMOTION GUIDELINES, WIZARD CONDUCT GUIDELINES, NOTES,
+UNRESOLVED ISSUES, RESOLVED ISSUES, CHANGES.
+
+WIZ_TREE.3.24.1994
+~~~~~~~~~~~~~~~~~~
+                   IMPLEMENTER
+                 *Boltar(100000)*
+                        |
+MORTAL PROBLEMS --- GUILD BALANCE ---------- LAW              SECURITY
+*Hawkeye(10000)*   *Sandman(10000)*    *Omega(10000)*      *Conquest(100)*
+      |                   |                   |                  |
+  Assistant           Assistant           Assistant         Assistant(2)
+*Pavlik(200)*          (open)              (open)        *Cal(90)* & *Kain(90)*
+      |                   |                   |                  |
+  2nd Asst.           2nd Asst.           2nd Asst.        Security Detail
+ *Pain(100)*           (open)              (open)              21-60
+                                                            
+GROUP LEADERS/SPONSORS
+I.  *Airwoman(100)*      Assistants(80) - empty, empty
+         *Ares(21)*, *Sado(40)*, *Lew(40)*, *Hurtbrain(30)*,
+         *Gorgan(30)*, *Zakk(21)*, *Cream(21)*, *Virus(21)*,
+
+II. *Nooneelse(100)*     Assistants(80) - empty, empty
+         *Nancy(30)*, *Morgoth(60)*, *Predator(50)*, *Hippo(30)*,
+         *Kelvin(30)*, *Grimreaper(21)*, *Leatherneck(21)*, *Jux(21)*,
+
+III.*Molasar(200)*       Assistants(80) - empty, empty
+         *Static(60)*, *Paulasx(50)*, *Azane(40)*, *Mathiast(30)*,
+         *Deus(30)*, *Arthur(21)*, *Dodger(21)*, *Bloodlocke(21),
+
+IV. *Saber(100)*         Assistants(80) - empty, empty
+         *Aleena(21)*, *Bagera(30)*, *Mouzar(30)*, *Sado(30)*,
+         *Kain(21)*, *Kirkion(21)*, *Rumplemintz(40)*, *Torture(21)*,
+         *Emerson(21)*, *Cal(90)*, *Kain(90)*,
+
+V.  *Blue(100)*          Assistants(80) - empty, empty
+         *Bismarck(50)*, *Trix(50)*, *Vulture(40)*, *Dragnar(30)*,
+         *Gorgan(30)*, *Miek(21)*, *Yaeger(21)*, *Mizan(21)*,
+
+VI. *Ladyfinger(200)*    Assistants(80) - empty, empty
+         *Dersharp(40)*, *Nightshade(40)*, *Astaroth(30)*, *Catt(30)*,
+         *Darq(30)*, *Flaw(21)*, *Samhain(21)*, *Cyrex(60)*,
+
+VII.*Persephone(100)*    Assistants(80) - empty, empty
+         *Lan(30)*, *Tyro(30)*, *Slothie(30)*, *Turk(30)*,
+         *Yaeger(21)*, *Sage(21)*, *Zek(21)*, *Scooter(21)*,
+
+NOTE:  New groups will be added as needed.  The current
+       group leaders will all nominate wizards they think can
+       or want the job, then leaders will be selected by the gods.
+       If you think your name should be up here, mail a letter to
+       nirvana@elof.acc.iit.edu telling why.  We'll review all applicants.
+
+WIZPOOL
+     All wizards of level 20.  Where they wait to be chosen by a group leader.
+If they are not chosen by anyone.  They must wait for a week minimum to pass
+where they will then be put into a random group by one of the gods.
+
+
+
+DESCRIPTION OF EACH POSITION AND DUTIES:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* IMPLEMENTER:  Focuses on general quality and efficiency of mud code.  Updates
+the mud driver as needed, keeps the mud running, and owns it all!
+* MORTAL PROBLEMS:  Handles problems with players (e.g. wedding rings).
+* GUILD BALANCE:  Keeps the guilds balanced in terms of game play.  Decides
+which guilds are allowed and what they can do.
+* LAW:  What's legal and what's not.  Rules & Regs, finance, bookkeeping (yuk!)
+* SECURITY:  Checks on cheaters both players and wizards and has the power to
+demote on the spot.  Especially unruly players or wizards may be banished by a
+god at the recommendation of the Security Chief.  Coding experience not needed.
+* GROUP LEADERS/SPONSORS: Train new wizards, approve castles, promote/demote
+wizards within their group, can serve as assistants to gods as needed to help
+out in special projects or functions (e.g. castle relocation, internal audit
+of all castles, etc.)  Any wizard that fails to meet the expectations of the
+group leader can be dismissed and put back into the WIZPOOL, especially unruly
+wizards may be banished by a god at the recommendation of the group leader.
+* GROUP ASSISTANTS:  Must be available to train the other members of the group
+on the finer points of mud coding.  Has authority over group when group leader
+is not present.  Assists group leader with other group functions.  Position is
+limited because you can't directly edit other wizard's files.
+* WIZPOOL:  All new wizards, allowed to peruse the docs and trans randomly
+around at leisure, if caught helping another player will be immediately banished
+and forgotten.  Should write a letter to the groups they want to join and ask
+for sponsorship.
+      
+
+
+PROMOTION GUIDELINES:
+~~~~~~~~~~~~~~~~~~~~~
+1.   For now use the following levels of promotion:
+* 21 - New group wizard, try and find a personal mentor within the group for
+this guy!  We don't want bad habits forming.
+* 30 - Wizard who has an approved/open castle.
+* 40 - Trusted wizard with a fair knowledge of LPC so that they can assist other, also for a wizard with a quest contribution.
+wizards with coding, or for trusted wizards who you want to allow to peruse the
+group's files. 
+* 50,60,70 - as desired.  We may group all these level's powers together.
+I'm not quite sure what duties to put on these levels.  Guild coders will also
+probably receive this level at the discretion of the group leaders/gods.
+* 80 - Assistant Group Wizard, someone you trust enough to represent you when
+you're not around and to help you out with group admin.  Maximum of 2 per
+group, this may increase later.  This person will most likely be the
+next candidate for group leadership if a new group is formed or if a group
+leadership position becomes vacant.  This is the highest level within a group.
+* 90 - Reserved for security assistants so they can 'snoop' the majority.
+Who watches the watchmen?  The gods will, but the buck stops here.  =)
+
+2.   Promotions above 30 in increments of 1 are not allowed, as it only leads
+to pettiness since there's no real gain.  We may have a use for increments of 1
+at a later date.  
+
+
+WIZARD CONDUCT GUIDELINES
+~~~~~~~~~~~~~~~~~~~~~~~~~
+<New section for the doc.  Suggestions needed and welcome.>
+
+
+NOTES
+~~~~~
+1.   In order to minimize code changes, the level numbers and corresponding
+numbers will not be changed.  However, incremental promotions (i.e. level 61,
+31) will no longer be allowed.  All wizards below 100 with such a level will
+be moved to the lowest level which will still enable them to retain their
+current 'powers'.
+
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~
+(Items in parentheses have been resolved, see below)
+2.   How to handle the allotment of guilds.  One idea was to allow only group
+leaders to run a guild.  This may or may not apply to current guild wizards.
+3.   The idea of realms was tossed about, where each group leader would design
+a realm in which to put their groups castles within.  This could be applied as
+an extension of the current mud backbone or be like placing the group's castles
+within the castle of the group leader.
+(4.) Should we change the way wizards are sponsored (i.e. Leo and the 
+portable castle) since it requires both the sponsor and newbie wiz to be on at
+the same time, or modify it.
+5.   Still no good solution to wizard access problems.  Old idea was tossed.
+(6.) Should we modify the way certain powers are allocated amongst the wiz
+levels (e.g. move 'localcmd' to level 20, combine level 21-30 for invis).
+(7.) Possible voting board, made up of the group leaders and gods to decide
+on rule changes or standards.  Would be another priviledge of being a group
+leader.
+8.   Whether or not to allow wizards in security positions to also code.
+Possiblity of conflict of interest, plus goes against group 
+
+RESOLVED ISSUES
+~~~~~~~~~~~~~~~
+4.   Leo is going to stay.  Sponsorships will be conducted in the usual manner
+where both the player and the sponsor have to be logged in at the same time.
+6.   Power distribution is going to remain the way it is.
+7.   Voting board was approved by Boltar, and is in the process of being coded.
+
+
+CHANGES
+~~~~~~~
+a.   Wizard assistants will receive level 200 or 100.  They will be doing the
+lion's share of busy work.
+b.   Promotion guidelines have been changed to be more like the old standards.
+c.   Wizard Conduct guidelines are going to be added.
+d.   Certain wizards will receive level 200 or more for contributions to Nirvana
+as a sort of "honorary" title or tenureship.  These are bestowed by Boltar only
+and are only reversible by Boltar.  These wizards deserve special respect and
+will be noted as such.

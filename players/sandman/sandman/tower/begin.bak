@@ -1,0 +1,10 @@
+#include "std.h"
+
+TWO_EXIT("players/sandman/tower/gate","west",
+         "players/sandman/SURR/path2","east",
+         "a path [e,w]",
+         "\n"
++ "You step from the obscuring mist into a landscape of bleak desolation.\n"
++ "For as far as you can see the landscape is made up of dismal shards of\n"
++ "of black rock thrust up from the ground. The only notable feature is a\n"
++ "smooth black tower that rises up to the west.\n", 1)

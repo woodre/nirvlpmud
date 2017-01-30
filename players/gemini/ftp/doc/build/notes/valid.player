@@ -1,0 +1,23 @@
+Vertebraker [6.17.04]
+
+You can check for the validity of a player name
+with an sfun i wrote,
+
+int flag;
+flag = valid_player("yoyo");
+
+Flag should return 0 since there isn't currently
+a player Yoyo.
+
+flag = valid_player("boltar");
+Flag should return 1 since Boltar *is* a player,
+[well, a wizard/GOD anyway].
+
+Anyway, you can do wizard checks as well,
+the associated functions are in
+
+/obj/simul_efun/valid_player.c
+
+  while the code itself is in
+
+/obj/user/valid_player.c

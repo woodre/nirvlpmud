@@ -1,0 +1,27 @@
+
+currently:  wc < 19 can store with restrictions on specials
+            nothing else can store, w/ exception of elemental weapons
+
+idea: all weps store, but great weps have a % chance when used to
+      become unstorable.
+
+Wep category
+  basic    - avg wc < 20 
+           - store outright
+             found on any npc/store/etc
+  powerful - avg wc < 27
+           - moderate misc bonuses
+           - store w/ 1:2500(+/-) to change to unstorable
+             found on lvl 20+ npcs, quest rewards
+  godly    - avg wc > 26 or excessive additional dmg done
+           - very good or copious misc bonuses
+           - store w/ 1:2000(+/-) to change to unstorable
+             found on lvl 24+ npcs, quest rewards.  hardest to get
+
+Factors on odds of changing: difficulty to obtain, built in drawbacks
+Exceptions would have to be allowed to accomodate for the elemental weapons
+
+Other ideas:
+  mal's idea:  powerful weps take up more locker spaces than normal weps.
+  feld's idea: have all eq autoload.
+

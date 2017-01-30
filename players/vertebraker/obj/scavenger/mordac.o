@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/bowboot","/players/saber/armor/mshades","/players/hippo/armour/helmet","/players/mythos/awep/naginata","/players/pain/NEW/weap/mace2","/players/jamila/beach/mobs/claw","/players/scathe/armor/igarb","/obj/armor","/players/snow/ITEMS/bdiamond","/obj/armor","/players/mythos/awep/wakizashi","/obj/weapon","/players/wren/Area/starbug/items/jacket","/players/boltar/things/stove2","/players/mythos/aarmor/sode","/players/snow/shadows/stuff/crown","/players/ultramagnus/apple","/players/hippo/heals/grain","/obj/treasure","/players/wren/Area/starbug/items/groinal","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/wren/Area/starbug/items/ogunit","/players/wren/Area/starbug/items/cowboyhat","/obj/armor",})
+shorts ({"Hard Boots","Mirrorshades","nutshell helmet","Naginata","A huge iron mace","A Lobster Claw","Initiate's garb","A magical [1mwhite[0m amulet","A shimmering black diamond","button","Wakizashi","A glowing lightsabre","Lister's leather jacket","A stove","Sode","[1mShadowCrown[0m","A Red Apple","[33mcrumbs of grain[0m","Arctic Wolf pelt","Kryten's groinal attachment","An [1mwhite[0m metal ring","A nobleman's shortsword","a case containing an OG unit.","a tiny cowboy hat","a hat",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

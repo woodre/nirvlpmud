@@ -1,0 +1,9 @@
+#define CORPSE_TASK 1
+#define TELEPORT_TASK 2
+#define FLAMES_TASK 4
+#define AVENGER_TASK 8
+#define DRAGON_TASK 16
+#define CHILD_TASK 32
+#define WASTE_TASK 64
+#define DARKNESS_TASK 128
+#define STORM_TASK 256

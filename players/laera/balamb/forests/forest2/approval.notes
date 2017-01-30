@@ -1,0 +1,29 @@
+
+     approval notes [5.25.01]
+
+		[Laera's Forest2 Area]
+
+This area isn't anything different, just a nice expansion.
+I like :)  There definitely isn't as much to fix as last time.
+
+Anyways, all ya gotta do is link it, and fix a few, completely
+minor and trivial things i found.
+
+1] All rooms have an item 'maples', which when you look at it,
+   has a period in the middle of the line.
+2] In almost all rooms, the item 'ground' is missing, but it's
+   referred to by at least one item.  This is nitpicky,
+   but may as well make it interesting. :)
+3] f214 links a northwest exit to f238, which doesn't
+   link back southeast to f214.
+4] f223, f225, f233, f236, f238, f242 all need a \n
+   in the long desc.
+
+After you finish/fix these few, petty, trifling things,
+you may go ahead and link the new area, and announce it
+and whatever else you need to do ;)
+
+Thanks for the patience.
+
+						verte
+

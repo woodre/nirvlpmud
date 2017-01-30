@@ -1,0 +1,24 @@
+
+                -=[ Color ]=-
+
+Color can be used on the Templar channel, or in your
+battle cries (bcry), through use of a token-like system.
+
+Examples:
+1] Knightguy types:
+[1;37m" [2;37;0mtc $R$Hi everybody!$N$ [1;37m"[2;37;0m and sees:
+[32m(templar) Knightguy[2;37;0m:[2;37;0m [31mHi everybody!
+
+[2;37;0m2] Knightguy types:
+[1;37m" [2;37;0mbcry 1 beats his enemy to a $H$R$bloody $N$M$pulp$N$! [1;37m"[2;37;0m,
+and when attacking a monster he sees:
+Knightguy beats his enemy to a [1;31mbloody[2;37;0m [35mpulp[2;37;0m!
+
+     Colors must always be in the syntax: $<color>$
+
+Valid colors:
+ [35mM[2;37;0m = Magenta  [30mK[2;37;0m = blacK  [36mC[2;37;0m = Cyan  [32mG[2;37;0m = Green
+ [33mY[2;37;0m = Yellow   [37mW[2;37;0m = White  [31mR[2;37;0m = Red   [34mB[2;37;0m = Blue
+Note:  [1mH[2;37;0m will make the color Bold and N is used to
+       reset the color scheme if you should need to (see examples)
+

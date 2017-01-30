@@ -1,0 +1,33 @@
+README
+     RoboMech is a multiple-room player interaction game.
+Basically, players get inside mechs and fight eachother.
+The winner is the player who destroys the other player's
+mech.  All battle takes place upon a 28 room battlefield.
+Mechs are able to move around and fire long range weapons
+at eachother.
+     Core files:  The files listed below are the vital
+files of RoboMech.  All other files are either plain old
+room files, help files, or basically unimportant.
+All files below have the assumed /players/dune/pavilion/
+directory left off.
+mech.c              the actual RoboMech
+living.c            edited living.c so mechs work
+cockpit.c           object that allows control of the mech
+control.c           daemon (slave object) for the cockpit.c
+tracer.c            actual bullet that gets fired from mech
+rooms/roboshop.c    room where the mech is created
+
+cockpit.c/control.c are the crucial files in RoboMech and
+contain all the basic functions.  cockpit.c gets cloned up
+and moved inside mech.c upon creation of a mech.  This 
+cockpit.c object does all the add_actions.
+
+mech.c and tracer.c are both monsters.  They are the
+RoboMech and bullet, respectively.
+
+roboshop.c sets all mech variables.  RoboMechs are 
+assembled here, with all variables 'burned' into the mech.
+
+living.c is the edited living.c file that allows proper
+mech movement and blast radius.
+

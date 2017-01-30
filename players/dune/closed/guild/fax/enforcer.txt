@@ -1,0 +1,48 @@
+C Y B E R N I N J A S
+
+Fax File: enforcer
+Usage: fax <topic>
+
+
+     Enforcers are the "punishers" and security of the
+guild. They must be experienced and effective in PK, as
+the guild's reputation in PK highly relies upon this
+office. Enforcers also serve as law enforcement inside
+the guild, as dictated by the Enforcer's Executor or
+Directive. Enforcers must mostly be PK while in office.
+
+___________________Enforcer Abilities__________________
+
+dnet <message>
+     Send a message through CyberDaemon. This will reach
+     all ninjas whether they are muffled or not.
+empower <member> <position> [grant/remove]
+     The 'empower' command is the all powerful command
+     that gives members guild offices or takes them away.
+     'yes' means give the player the position, 
+     'no'  means take the position away.
+     Type 'empower' by itself for a list of types.
+fax <topic>
+     Allows you to view the Cyberninja officer files. 
+     Usage is exactly like the 'cyber' command.
+     By typing 'fax' alone, a list of topics is presented.
+     Please keep the contents of these files to yourself
+     and other officers.
+logend/logall <logFile>
+     Allows you to view all CyberNinja guild logs.
+     logend looks at the tail end of the log, logall looks
+     at the entire file.. page by page. Typing in logend
+     or logall without an argument will list all logs.
+onet <message>
+     Guild officer channel tell. Use this command exactly
+     like 'net', your message goes to only guild officers.
+onem <message>
+     Guild officer channel emote. See also 'onet'.
+report <what>
+     Allows you to report the winner of a match.
+     Tournament name should be included.  Comments or
+     disqualifications may be noted as well.
+tourney
+     This shows the contents of the tournament report file.
+     All reports written will be shown.
+_______________________________________________________

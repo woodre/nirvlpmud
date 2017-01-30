@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/baldknobbers/hall/r96","south",})
+short_desc "Panda's Box[0m"
+long_desc "Panda's Private Storage[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[31m~ [0m[34mEle[0m[32mmen[0m[1mtal War[0m[32mScy[0m[34mthe[0m[31m ~[0m","/players/snow/closed/test/elem_scythe",0,134,19,"Robes of the Archwizard","/players/snow/armor/arch_robes","--5--",0,0,"[34mRockbreaker[0m","/players/pavlik/ilstkarn/weapons/rockbreaker",0,0,0,"Iron [1;30mPlate[0m of Death[0m[0m","/players/jareel/armor/mondar_armor",0,0,0,"Iron [1;30mDeath[0m Blade","/players/jareel/weapons/mondar_death_sword",0,0,0,"[1;30mDemon Guard[0m [[1;33mSun Forged[0m]","/players/jareel/armor/DWARFFORGE/demon/chest","1",0,0,"[1;30mDemon Tentacles [0m[[1;33mSun Forged[0m][0m","/players/jareel/armor/DWARFFORGE/demon/misc",0,0,0,})

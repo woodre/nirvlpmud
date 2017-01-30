@@ -1,0 +1,355 @@
+/* Mini Guild object, based on the guild object of the Bards.
+* From the object base.c
+* Version 2.0 by Saber
+* This is a master object for all the mini guilds.
+* One ring to rule them all, one ring to bind them.
+*/
+
+#include "/players/saber/closed/bards/extra.h"
+#ifndef CAP
+#define CAP capitalize(str)
+#endif
+#ifndef TO
+#define TO this_object()
+#endif
+#ifndef tp
+#define tp this_player()->query_name()
+#endif
+#include "/players/saber/closed/new_mini/spells/restore_me.h"
+
+int line_flag;
+string QUOTE;
+
+reset()  {
+   line_flag = 1;
+}
+
+id(str)  {
+   return str == "base_obj" ||
+   str == "canine_obj" ||
+   str == "blade_obj" ||
+   str == "gypsy_obj" ||
+   str == "rings"  ||
+   str == "meow_obj" ||
+   str == "larn_obj" ||
+   str == "gothic_obj" ||
+   str == "succubus_obj" ||
+   str == "kender_obj" ||
+   str == "master rings";
+}
+
+drop()  { return 1; }
+get()   { return 1; }
+can_put_and_get()  { return 0; }
+query_auto_load()  { return "/players/saber/closed/master.c:"; }
+
+short()  { return "A Master Ring (worn)"; }
+
+long()  {
+   write("A Master Ring covered with runes.\n");
+   write("\n");
+   write("It reads:\n"+
+      "     One Ring to rule them all, One Ring to find them,\n"+
+      "     One Ring to bring them all and in the darkness bind them...\n\n");
+   write("Commands: master, polish_rings, mastoggle, mtalk, memote\n"+
+      "          sab, n_finger, kick_out (not in yet)\n"+
+      "Also: join_me <blade,feline,canine,gothic,gypsy,kender,larn,succubus>\n");
+}
+
+
+init()  {
+   if(tp == "Saber" || tp == "Puppy" || tp == "Stone" || tp == "Nikki" || tp == "Terpsichore" || tp == "Galadriel" || tp == "Daranath" || tp == "Snowfire") {
+      restore_me();
+      add_action("master_update","polish_rings");
+      add_action("toggle","mastoggle");
+      add_action("join_me","join_me");
+      add_action("master_who","master");
+      add_action("master_talks","mtalk");
+      add_action("succor","goportal");
+      add_action("master_emotes","memote");
+      add_action("saber_talk","sab");
+      add_action("n_finger","n_finger");
+      
+   }   else   {
+      write("This ring was not ment for you!\n");
+      write("You feel your brain melting...\n");
+      say(tp+" touches the Master Ring and is fried by a blue bolt.\n");
+      call_other(TP,"add_spell_point", -10000);
+      return 1;
+   }
+}
+
+
+int toggle()  {
+   if(line_flag)
+      write(
+      "You silence your Master Ring.\n");
+   else write(
+         "You attune your Master Ring.\n");
+   line_flag=1-line_flag;
+   return 1;
+}
+
+int query_on()  { return line_flag;}
+
+sort_list(str)  {
+   int i,j,k;
+   object tmp;
+   j = sizeof(str) - 1;
+   for(i=0;i<j;i++)  {
+      for(k=0;k<j;k++)  {
+         if(str[i]->query_level() < str[i+1]->query_level())  {
+            tmp=str[i];str[i]=str[i+1];str[i+1]=tmp;
+          }  }  }
+   return str;
+}
+
+join_me(str)  {
+   object ob;
+   string line;
+   int club_count;
+   
+   if(!str)  {
+      write("Syntax: join_me <blade,feline,canine,gothic,gypsy,kender,larn,succubus>\n");
+      return 1;
+   }
+   
+   if(str == "blade")        line = "/players/saber/closed/new_mini/blade.c";
+   else if(str == "canine")  line = "/players/saber/closed/new_mini/canine.c";
+   else if(str == "feline")  line = "/players/saber/closed/new_mini/feline.c";
+   else if(str == "gothic")  line = "/players/saber/closed/new_mini/gothic.c";
+   else if(str == "gypsy")   line = "/players/saber/closed/new_mini/gypsy.c";
+   else if(str == "kender")  line = "/players/saber/closed/new_mini/kender.c";
+   else if(str == "larn")    line = "/players/saber/closed/new_mini/larn.c";
+   else if(str == "succubus")  line = "/players/saber/closed/new_mini/succubus.c";
+   else write("That was not a valid choice.  Type join_me for a list.\n");
+   
+   if(present("base_obj", this_player()))  {
+      ob = first_inventory(this_player());
+      while(ob)  {
+         if(call_other(ob, "id", "base_obj"))  {
+            club_count = club_count + 1;
+            }
+         ob = next_inventory(ob);
+      }
+   }
+   /*  Since this ring is a base_obj, a mini guild master */
+   /*  can join 3 mini guilds at any one time. */
+   if(club_count > 10)  {
+      write("You belong to too many mini guilds.\n"+
+         "Remove yourself from one before you join a new one.\n");
+      return 1;
+   }
+   ob = clone_object(line);
+   move_object(ob, this_player());
+   write("You have joined the "+str+" mini guild.\n");
+   return 1;
+}
+
+/*
+tell_object(ob,"Your veins have been filled with gypsy blood.\n");
+tell_object(ob,"You grow fangs and a tail.\n");
+tell_object(ob,"You grow a tail and whiskers.\n");
+tell_object(ob,"You polish your holy symbol of Larn.\n");
+tell_object(ob,"You feel the great desire to tempt men.\n");
+tell_object(ob,"You pick up a hoopak and grin innocently.\n");
+tell_object(ob,"You place the black armband of the necros on your arm.\n");
+*/
+
+master_update()  {
+   move_object(clone_object("/players/saber/closed/master.c"),this_object());
+   destruct(this_object());
+   write("You polish your master ring.\n"+
+      "The golden runes glow brightly...\n");
+   return 1;
+}
+
+query_QUOTE()  {
+   return QUOTE;  }
+
+master_who()  {
+   int a, b;
+   string NO, YES;
+   object ob, ob2;
+   ob = users();
+   NO = " *       ";
+   YES = "Yes      ";
+   write("\n\n");
+   write("Player Name    Larn     Blade    Feline   Canine   Succu    Gypsy    Kender   Goth\n");
+   write("\n");
+   for(b=0;b<sizeof(ob);b+=1)  {
+      write("* ");
+      write(pad(ob[b]->query_name(),13));
+      if(present("larn_obj", ob[b])) { write(YES); }
+      else { write(NO);  }
+      if(present("blade_obj", ob[b])) { write(YES); }
+      else { write(NO);  }
+      if(present("meow_obj", ob[b])) { write(YES); }
+      else { write(NO);  }
+      if(present("canine_obj", ob[b])) { write(YES); }
+      else { write(NO);  }
+      if(present("succubus_obj", ob[b])) { write(YES); }
+      else { write(NO);  }
+      if(present("gypsy_obj", ob[b])) { write(YES);  }
+      else { write(NO);  }
+      if(present("kender_obj", ob[b])) { write(YES); }
+      else { write(NO);  }
+      if(present("gothic_obj", ob[b]))  { write(YES); }
+      else { write(NO);  }
+      
+      write("\n");
+   }
+   write("\n");
+   return 1;
+}
+
+dest_mark(str)  {
+   string target, varb, var;
+   object ob, ob2, check;
+   
+   if(!str || sscanf(str, "%s %s", target, varb) !=2)  {
+      write("kick_out: <player> <blades,feline,canine,gothic,gypsy,kender,larn,succubus>\n");
+      return 1;        }
+   
+   if(varb == "blade") var = "scabbard";
+   else if(varb == "canine")  var = "collar";
+   else if(varb == "feline")  var = "ball";
+   else if(varb == "gothic") var = "attitude";
+   else if(varb == "gypsy")  var = "gpysy medallion";
+   else if(varb == "kender") var = "hoopak";
+   else if(varb == "larn") var = "holy symbol";
+   else if(varb == "succubus") var = "choker";
+   else { write("That was not a valid option.  Type kick_out to see a list.\n");
+      return 1;
+   }
+   
+   if(!(ob=find_living(target)))  {
+      write(capitalize(target)+" is not within the realms of magic.\n");
+      return 1;        }
+   
+   if(!(ob2 = present(var,ob)))  {
+      write(capitalize(varb)+" is not on "+capitalize(target)+".\n");
+      return 1;       }
+   if(present("base_obj", ob))  {
+      check = first_inventory(ob);
+      while(check)  {
+         if(check->id() == var && check->id() != "rings")  {
+            destruct(ob2);
+            }
+         check = next_inventory(check);
+      }
+   }
+   write("You kicked "+capitalize(target)+" out of the "+varb+"'s.\n");
+   return 1;
+}
+
+master_talk(string str, int i_emote)  {
+   object member, person, *list;
+   int i, c;
+   string temp;
+   member = present("base_obj",TP);
+   if(!member) { notify_fail(NO_INSTRUMENT); return 0;  }
+   /*
+   if(!member->query_master_flag()) { notify_fail(
+            "You must turn on your Master Ring line. <mastoggle>\n");
+      return 0;   }
+   */
+   if(!str)  { notify_fail  ("You talk silently.\n");  return 0;    }
+   temp = "||| (Ring Master) "+tp;
+   if(this_player()->query_gender() == "female")  {
+      temp = "||| (Ring Mistress) "+tp;
+   }
+   if(!i_emote) temp = temp+" says:";
+   temp = temp+" "+str;
+   c = 0;
+   list = users();
+   for(i=0; i<sizeof(list); ++i)  {
+      person = list[i];
+      member = present("base_obj",person);
+      if(member && (int)member->query_on())  {
+         tell_object(person,format(temp));
+         ++c;   }
+   }
+   return 1;
+}
+
+master_talks(string str)  { return master_talk(str,0); }
+master_emotes(string str)  { return master_talk(str,1);  }
+
+saber_talk(str)  {
+   object ob;
+   string name, message;
+   if(!str)  {
+      write("What do you want to say to Saber?\n");
+      return 1;
+   }
+   name = "saber";
+   if(!(ob = find_player(name)))  {
+      write(capitalize(name)+" is not on right now.\n");
+      return 1;
+   }
+   write("You tell "+capitalize(name)+" "+str+".\n");
+   tell_object(ob, this_player()->query_name()+" tells you: "+str+".\n");
+   return 1;
+}
+
+succor()  {
+   object ob;
+   ob = this_player();
+   if(spell(-2000,1,55) == -1) return 0;
+   if(REALM !="NT")  {
+      say(tp+" touches the Master Ring and is gone!\n");
+      move_object(ob,"/players/saber/ryllian/portal.c");
+      say(tp+" fades into view.\n");
+      write("You touch your Master Ring.\n"+
+         "You are now in the chamber of portals.\n");
+      call_other(ob,"add_spell_point",-55);
+      return 1;
+   }
+   write("You can not goportal from here.\n");
+   return 1;
+}
+
+n_finger(str)  {
+   object ob;
+   string YES, NO;
+   YES = "Yes\n";
+   NO = "No\n";
+   if(!str || !(ob = find_living(str)))  {
+      write(capitalize(str)+" can not be found by the Master Ring.\n");
+      return 1;
+   }
+   write("\n");
+   write("Name:     "+ob->query_pretitle()+" "+ob->query_name()+" "+ob->query_title()+"\n");
+   write("Guild:    "+ob->query_guild_name()+"\n");
+   write("Age:      "+ob->query_age()+"  (10800 for one, 82000 ish for 2)\n");
+   write("Sex:      "+ob->query_gender()+"\n");
+   write("\nMini Guilds:\n\n");
+   write("  Larn:     ");
+   if(present("larn_obj", ob))  { write(YES); } else { write(NO); }
+   write("  Canine:     ");
+   if(present("canine_obj", ob))  { write(YES); } else { write(NO); }
+   write("  Gothic:   ");
+   if(present("gothic_obj", ob)) { write(YES); } else { write(NO); }
+   write("  Feline:   ");
+   if(present("meow_obj", ob)) { write(YES); } else { write(NO); }
+   write("  Succubus: ");
+   if(present("succubus_obj", ob)) { write(YES); } else { write(NO); }
+   write("  Gypsy:    ");
+   if(present("gypsy_obj", ob))  { write(YES); } else { write(NO); }
+   write("  Kender:   ");
+   if(present("kender_obj", ob)) { write(YES); } else { write(NO); }
+   write("  Blade:    ");
+   if(present("blade_obj", ob)) { write(YES); } else { write(NO); }
+   write("\n\n");
+   return 1;
+}
+
+query_blade_flag()  { return line_flag; }
+query_gothic_flag()  { return line_flag; }
+query_succubus_flag()  { return line_flag; }
+query_necro_flag()  { return line_flag; }
+query_gypsy_flag()  { return line_flag; }
+query_kender_flag()  { return line_flag; }
+query_canine_flag() { return line_flag; }
+query_meow_flag() { return line_flag; }

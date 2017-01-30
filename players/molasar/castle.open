@@ -1,0 +1,65 @@
+#define NAME "Molasar"
+#define DEST "room/sunalley2"
+
+id(str) { return str == "keep"; }
+
+short() {
+  return "A dusty trail begins to the north.\n"+
+         "The Town of Rowan lies west of here along a dirt road";
+}
+
+
+long() {
+     write("This is " + short() + ".\n");
+    write(NAME + " is a spectacular wizard capable of any form of\n");
+    write("mutilation or maiming to those who enter without leave.\n");
+    write("The Keep is partially open for adventuring.  BEWARE!\n");
+}
+
+init() {
+  add_action("north","north");
+  add_action("west","west");
+}
+
+west() {
+   this_player()->move_player("west#players/molasar/rowan/road1");
+    return 1;
+}
+
+
+
+north() {
+     call_other(this_player(),"move_player",
+                    "north#players/molasar/UNDER/path1");
+/*
+   write("This area has been temporarily closed.\n");
+*/
+     return 1;
+}
+
+
+
+reset(arg) {
+    object facade, ob, ob1;
+    if(!arg) 
+      call_other("/players/molasar/rowan/obj/clock","????");
+    ob = find_object("room/quest_room");
+    if(!present("medallion", ob)) {
+      ob1 = clone_object("obj/quest_obj");
+      ob1->set_name("medallion");
+      ob1->set_hint("Retrieve the lost medallion.\n"+
+                    "See the wizard Galileo on top of castle beyond the "+
+                    "mountains.\nAsk him about the orc tunnels.\n");
+      move_object(ob1, ob);
+    }
+    if (arg)
+	return;
+/*
+    move_object(this_object(), "players/molasar/ad_ent");
+*/
+    move_object(this_object(), DEST);
+/*
+    call_other("/players/sandman/paladin/obj/boots","???");
+*/
+}
+is_castle() { return 1; }

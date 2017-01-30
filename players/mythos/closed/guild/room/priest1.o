@@ -1,0 +1,27 @@
+name_of_weapon "cold"
+alt_name "fire"
+alias_name "cold fire"
+short_desc "[36mCold Fire Blade[2;37;0m"
+long_desc "A blade made of PURE COLD FIRE![1;31mSlayer of Demon[2;37;0m[1mVampiric[2;37;0m[1;31mSoul Stealer[2;37;0m[1mSharpness[2;37;0m[1mBerserker[2;37;0m[1mSpeed[2;37;0m[1mParalyzing[2;37;0m[1mSpell Cleaver[2;37;0m"
+read_msg 0
+info 0
+wield_func 0
+save_flag 0
+class_of_weapon 18
+value 10000
+local_weight 1
+storage 0
+owner "priest"
+slay 1
+vampire 1
+life 1
+soul_steal 1
+sharp 1
+berserk 1
+speed 1
+wounding 1
+spell 1
+norm 1
+ego 0
+type_s ({"demon",})
+path "players/mythos/awep/forest/air"

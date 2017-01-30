@@ -1,0 +1,25 @@
+
+/*
+ * If the object allows limited shadowing, the file name of the object
+ * attempting to shadow will be compared to the list in /obj/shadow_master.c
+ * If it matches the shadowing will be allowed, otherwise no.
+ */
+
+int query_allow_shadow(object ob) {
+    string *shadows, file, junk, who;
+
+    if(ob->query_limited_shadow()) {
+      shadows = (string *)call_other("/obj/shadow_master","query_shadows");
+      file = file_name(previous_object());
+      sscanf(file, "%s#%d", file, junk);
+      if(member_array(file, shadows) == -1)
+	return 0;
+      who = (string)ob->short();
+      if(!who)
+	who = "Unknown";
+      log_file("shadows", "[*] "+file+" => "+who+" => "+ctime(time())+"\n");
+      return 1;
+    }
+    return !ob->query_prevent_shadow(previous_object());
+}
+

@@ -1,0 +1,21 @@
+=============================================================================
+Monk Weapons                                              June 94
+-----------------------------------------------------------------------------
+Ok Monks, I've also decided to redo the Monk Weapons System.  The previous
+system, with the Monk Styles wasn't working out very well.  Styles are just
+hard to incorporate into the game.
+Now, Monks can wield any weapon they chose.
+Monks can also use a spell to summon a weapon for them.  The spell is for
+any rank, and it creates a Monk Staff for you to use.  The spell 'staff'
+creates a weapon for you at the cost of 30 spell points.  The weapons
+effectiveness depends on your guild rank.  The higher rank you are, the
+better the weapon is, and the more damage it can do, but for 30 spell points,
+it definitly makes a good weapon.  Use the command 'staff' to get the weapon.
+Also, some of the special attacks that were included in the Monk Styles, im
+going to make a basic function for all monks.  That way you can attack with
+any weapon you want, and possibly get extra attacks from you Monk Fighting
+Abilities.  These will take a little time to set up, but it wont be too long.
+The abilities are now in and automatically added into attacks.
+(note: command 'body weapon' was removed , use 'staff' instead.)
+------------------------------------------------------------------------------
+==============================================================================

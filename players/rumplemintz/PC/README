@@ -1,0 +1,7 @@
+This directory contains the files for the Player Channel.
+This was coded separate from the channel daemons to keep it mainly wizard
+free.  Wizards will not show up on the who list no matter if they are vis or
+not.  Wizards are also not allowed to use the channel, although they can
+listen (though only on request please!).
+
+-- Rumplemintz

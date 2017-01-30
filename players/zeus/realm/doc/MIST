@@ -1,0 +1,50 @@
+
+**TAUS EXPANSION**
+
+ All rooms in players/zeus/realm/taus directory
+ All objects in          ~/realm/OBJ dir
+ All npcs in             ~/realm/NPC dir
+
+ * 18 new rooms
+   * 8 rooms have a 22% chance of having 1 or 2 gurther.c instances.
+
+ * guth13 .. 18 
+ * road5 .. 7
+ * circle1 .. 9
+ 
+ * plus:  new_guth10, new_guth12, new_road2
+
+
+                               c1
+                              /  \
+                 -18-17     c2    c3
+                     |     /        \
+             -13-14-15-16-c4   c9   c5
+                     |     \        /
+                    r7      c6    c7
+                     |        \  /
+                    r6         c8
+                     |
+                   -r5
+ 
+
+  circle9:
+    OBJ
+     * fallen_blade.c  [can only be gotten once every 7.5-15 days]
+     * flat_stone.c    [where the sword is held]
+    NPC
+     * mist_creature.c [guardian of the sword]
+     * mist_vortex.c   [creatures source of power] 
+
+  When they pull the sword from the stone, all circle.c rooms become NT
+  and circle4.c is blocked so there is no escape until mist_creature.c is
+  dead unless the player quits out.
+
+  To defeat mist_creature.c, the player must destroy 5+ instances of
+  mist_vortex.c which will appear randomly around the circle rooms.
+
+  mist_creature casts spells at all players in the circle rooms.
+
+  the sword is a very nice non-storable weapon, with multiple heal_self specials.  It can only be pulled from the stone every 15 to 30 days, and just because it is pulled doesn't mean the player will escape with it and their life intact.
+
+/players/zeus/realm/OBJ/wand.c is used to clean the titles dir

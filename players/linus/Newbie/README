@@ -1,0 +1,90 @@
+The area is based on Winnie the Pooh and Friends.  I must add that it 
+probably is not 100% accurate, but should still provide some fun for
+newbies and low level players...which the area is intended for.
+A Map of the area and summary of the files follows:
+
+Key: 
+  [ ] = room
+   #  = room number "/players/linus/Newbie/room/n#.c"
+   -  = horizontal direction
+   |  = verticle direction
+  <-  = move_player()
+   V  = move_player()
+
+                   [6]
+                    |
+                   [5]          [12]
+                    |            |
+     [8a]<-[8]-[7]-[4]-[9]-[10]-[11]
+                    |   V   V
+             [3a]<-[3] [9a] [10a]
+                    |
+                   [2]
+                    |
+                   [1]->["/room/deep_forest1"]
+
+".../Newbie/room/n#.c"
+
+n1     Entrance/Exit
+n2     Clones 5 bees ".../Newbie/NPC/bee.c"
+n3     Move_player->"enter door"->n3a, clones ".../Newbie/NPC/Tigger.c"
+n3a    Clones ".../NPC/Roo.c",".../Kanga.c"
+n4     Intersection, nothing to note
+n5     Clones 2 ".../frog_turtle.c"
+n6     Clones  ".../bird.c" and ".../Eeyore.c"
+n7     Clones random(3) ".../critter.c"
+n8     Move_player->"enter garden"->n8a, clones ".../Rabbit.c"
+n8a    Clones ".../gopher.c", ".../gopher2.c", ".../gopher3.c"
+       add_action to "enter hole", just for fun
+n9     Clones random(3) ".../critter.c"
+       Move_player->"enter bush"->n9a
+n9a    Clones ".../Heffalump.c"
+n10    Move_player->"climb steps"->n10a, clones 1 ".../critter.c"
+n10a   Add_action->"knock door"->clones ".../Owl.c" with call_out()
+n11    Clones ".../Piglet.c", ".../Pooh.c", add_action to "ring bell", just
+       for fun
+n12    Clones ".../Christoper.c"
+
+".../Newbie/NPC/..."
+
+Name           Level  Treasure                    Special notes
+bee.c            2    ".../Newbie/obj/stinger.c"  n/a
+bird.c           2    ".../obj/feather.c"         n/a
+critter.c      4 random mobs, listed below: each has it's own monster_died()
+ rabbit          4    ".../obj/r_foot.c"          3 different colors
+ raccoon         5    ".../obj/r_tail.c"          n/a
+ squirrel        3    ".../obj/s_tail.c"          n/a
+ chipmunk        3    ".../obj/c_tail.c"          n/a
+gopher.c         4    ".../obj/g_teeth.c"         n/a
+frog_turtle.c  2 random mobs, listed below:  
+ frog            2    ".../obj/f_legs.c"          legs are a small (5) heal/a
+ turtle          2    ".../obj/t_shell.c"         wears shell(AC 1)
+Piglet.c         5    ".../obj/striped_shirt.c"   wears shirt(AC 1)
+Roo.c            5    ".../obj/blue_shirt.c"      wears shirt(AC 1)
+Christopher.c    8    300+random(101) coins       15hp spell
+Eeyore.c         8    ".../obj/e_tail.c"          n/a
+Kanga.c          8    300+random(101) coins       15hp spell
+Owl.c            8    ".../obj/owl_feathers.c"    n/a
+Pooh.c           8    ".../obj/pooh_shirt.c"      wears shirt(AC 1)+15hp spell
+Tigger.c*        10   ".../obj/t_spring.c"        20hp spell
+ *wanders with special in/out message
+Heffalump.c      8    300+random(101) coins       Random colored name
+                                                  see /players/linus/color.c for code
+
+".../Newbie/obj/..."
+
+Object          Value          Special
+blue_shirt.c    200            Ac 1
+c_tail.c        120            n/a
+e_tail.c        350            n/a
+f_legs.c        150+random(100) heals 5 hp
+feather.c       100+random(100) n/a
+g_teeth.c       120            n/a
+hoe.c           350            Wc 8  
+r_foot.c        150            n/a
+r_tail.c        200            n/a
+s_tail.c        120            n/a
+stinger.c       90             n/a
+striped_shirt.c 200            Ac 1
+t_shell.c       120            Ac 1
+t_spring.c      350            Add_action "hop spring"

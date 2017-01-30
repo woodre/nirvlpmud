@@ -1,0 +1,92 @@
+Purpose:
+------------
+1. Fix my mess of directories
+2. Update Wastelands by making mobs current
+3. All rooms stay the same.
+
+Original directories:
+  /players/dragnar/rooms
+  /players/dragnar/code
+  /players/dragnar/items
+  /players/dragnar/past
+  /players/dragnar/armor
+  /players/dragnar/mons
+  /players/dragnar/weapons
+  
+Updated to root directory: /players/dragnar/WasteLands
+  * past moved to a sub-directory in /rooms
+  * items is now obj
+
+ARMOR
+  * suit.c
+    - Changed weight to 1, ninjas don't wear heavy armor
+    - Added mage illusion bonus
+    - Added do_special that adds sps based on stealth attrib
+WEAP
+  * sword.c
+    - Updated WC from 18 to 19
+    - Updated weapon hit to do heal_self after large amount of weapon usage.
+MONS
+  * deleted files not used in WasteLands including MK mobs
+  * cult.c
+    - Updated spell dam to 30
+    - coins now r(7500) + 1000
+  * cult2.c
+    - Lev 21, HP600, WC55, AC20, spell dam 45
+    - Coins r(9000) + 1000
+  * cultmaster.c
+    - Lev 22, WC40, AC23, heal(50, 5), 50 spell damage
+    - Coins r(8000) + 3000
+  * cultmaster2.c
+    - Lev 23, HP900, WC90, AC21, heal(75, 5), 50 spell dam
+    - coins r(8000) + 4000
+  * corpse.c
+    - obj/bag.c updated to have 4500 coins.
+  * ninja.c
+    - coins changed to 2000 + r(6000)
+  * pirate.c
+    - coins changed to r(2000) + 1000
+  * master.c
+    - Lev29, 2000HP, WC70, AC28, heal(100, 5)
+    - roundhouse spells, 30-160 dam
+    - high damage will knock player from room
+    - Will do HIGH range damage if player is knocked from room or runs/wimpies
+      * Range damage will only work in adjoining room
+      * Adjoining room has aggro mobs
+      * Dam can be as high as 400 based on luck stat
+    - Coins 10000 + r(20000)
+  * dragon.c
+    - Lev 30 WC80 AC60, 7000 hps
+    - "Heads" have been changed to spells
+    - 4 head spells, added as mobs hps get lower. 
+    - Each spell does 20-100 and has 25% chance, all pick random player
+    - Room damage spell for tail spike, 8% 100-200
+    - Multicast on so 1 round could be 680 damage
+    - Killing this solo is certain death:
+      2% chance of 380 damage
+      0.5% chance of 480 damage
+      small chance of 680 damage
+    - 2 players still could be killed instantly
+    - Coins now 20000 + r(50000)
+  * demon.c
+    - Level 29 WC80 AC50
+    - flame spear spell, 60-120, 20%
+    - flame spell added, room damage 100-160, 10%
+    - pet flame spell, 50-200, 50%, hits all attacking pets
+    - Updated so sps stolen from player heals demon, hp bonus of 600
+    - Double ice damage
+    - No damage from fire
+    - Coins now r(40000) + 10000
+  * ogre.c
+    - Lev 25, WC50, AC30,  heal(50, 5)
+    - Stomp spell 25-75, 15%
+    - Stone Wolf spell, clones a WC50 mob for a few rounds
+    - 8% change of stealing 50 + r(50) sps
+    - Coins r(12000) + 5000
+  * tyme.c
+    - Updated to level 27
+    - 1550 HPS, WC60, WC45, heal 50 hps every 3 HB, 14,500 coins
+    - added sonic blast spell: 60-120, 20%
+    - added swing reaper spell: 80-120, 10%, area damage
+    - multicast on
+  

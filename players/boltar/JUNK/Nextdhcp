@@ -1,0 +1,24 @@
+There is a package for dhcp2.0b1pl6 (note that this is a beta) on peak 
+for OpenStep at
+
+ftp://ftp.next.peak.org/pub/openstep/mach/apps/utils/networks/
+
+This is compiled for OpenStep 4.2 (Intel and m68k) only, although the 
+bpf the package installs works on NS 3.3 or OpenStep 4.2 (Intel and 
+m68k).
+
+I tested this with one cablemodem provider that used dhcp and it works 
+fine, but configuring the /etc/dhclient.conf script to work with your 
+particular (ISP) provider can be tricky.
+
+Tim Luoma's page has very clear, detailed instructions on setting 
+Netinfo up for a static ip address in his "articles":
+
+http://www.peak.org/~luomat/
+
+JP
+--
+Please respond to (slight mods needed to address):
+jpmeia (@ ) ix.netcom.com
+NeXTMail/MIME welcome
+

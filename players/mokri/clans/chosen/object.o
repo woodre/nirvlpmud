@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30mAn Onyx Ring[0m"
+long_desc "A ring made of solid onyx stone. This ring is worn by the 13 chosen of the lord of the dark. The Thirteen chosen are the assassins of the dark.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "ring"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A ring made of solid onyx stone. This ring is worn by the 13 chosen of the lord of the dark. The Thirteen chosen are the assassins of the dark.[0mType 'clan_help' for commands."
+clan_short "[1;30mAn Onyx Ring[0m"
+damage_type 0
+hall_path "/room/plane10"
+object_name "ring"
+owner "severance"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Mon Oct 18 04:10:01 2010] Gaara has joined the clan!","[Mon Oct 18 04:10:45 2010] Gaara: lol","[Wed Mar 13 01:58:23 2013] Demonic has joined the clan!","[Wed Mar 13 01:58:31 2013] Severance: clan hall is right outside of gate","[Wed Mar 13 01:58:37 2013] Demonic: kk","[Wed Mar 13 01:58:57 2013] Demonic: gonna work on levels more","[Wed Mar 13 01:59:07 2013] Demonic: been tryin to level as fasta s i can","[Wed Mar 13 01:59:15 2013] Severance: only has one locker room in it right now I have not worried too much abuot clan lockers lol","[Wed Mar 13 01:59:47 2013] Severance: I just keep my 10 lockers stocked with syringes and thats about it.","[Mon May 18 20:39:14 2015] Curse has joined the clan!",})
+leaders ({})
+join_type 0
+private_coffer 33414
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

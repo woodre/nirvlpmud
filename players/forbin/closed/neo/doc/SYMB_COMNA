@@ -1,0 +1,31 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+     COMBAT SKILLS
+SKILL
+LEVEL  NAME           AFFECT 
+  1    Wep            Main symbiote attack spell.
+         cost=  25 sps
+         damage=  random(COM*2)+5
+  2    Strike         Seconday symbiote attack spell.  There is a delay of 
+                     (10-COMBAT)+(COM/2).
+         cost=    35 sps
+         damage=  5+(COM*2)+random(COM)
+  3    KO             Knocks a mob unconcious (non-pk), allowing the player to
+                      use it in feeding and pet abilities.  Player receives no
+                      experience for the kill.
+         cost=  25 sps
+  4    Fatal          Finisher move.  Target must have less than 50 hps.
+         cost=  1/3 targets remaining hp in hp
+  5    Darts          Attack spell.  Will only work when not in direct combat.
+                      So in other words, if the player is not tanking.   
+         cost=  COM*3 sps
+                3 MP
+         damage=  random(COM*4)+(COM*2)
+  6    Left open for future expansion.
+  7    Lance          High level attack spell.  Major delay on this one of
+                      20+random(25).
+         cost=  60 sps
+         damage=  random(COM*5)+(COM*4)
+  8    Hypermode      Adds to WC.  Player MUST be Permanent PK to use this.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

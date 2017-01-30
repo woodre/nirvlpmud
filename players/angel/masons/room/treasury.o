@@ -1,0 +1,16 @@
+no_clean 0
+cast_here 0
+dest_dir ({"/players/angel/masons/room/guild_hall","north","/players/angel/area/town/room/wmain_02.c","south",})
+short_desc "The Guild Lodge"
+long_desc "You are in the meeting hall of the Guild.  A large vaultedceiling rises up to an elaborate stained glass skylightdepicting two figures clad in sun god robes fighting theirway to glory.  Hanging on a wall of black and white marble isa solid gold plaque.  In the center of the room on a raiseddias is an item of great importance to the guild.COMMANDS:  advance, treasury, donate <amt>, borrow <amt>, repay"
+items 0
+property 0
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+treasury 62313

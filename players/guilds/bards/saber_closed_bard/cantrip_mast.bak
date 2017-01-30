@@ -1,0 +1,103 @@
+/*
+ *  The master object for 3.0 Bard Cantrips
+ *  By Saber / Geoffrey Z.
+ *
+ */
+
+
+#include "/players/saber/closed/bard/extra.h"
+#include "/players/saber/closed/esc2.h"
+#include "/players/saber/closed/ansi.h"
+
+object ob;        
+int COINS, ALI_CHANCE;
+
+/* cantrip spell */
+
+cantrip_spell(str)  {
+string CAN, CAN2;
+
+if(!str)  {
+
+  write("\n");
+  cat("/players/saber/closed/bard/CANTRIP_LIST");
+  write("\n");
+  return 1;
+        }
+ 
+if(sscanf(str, "%s %s", CAN, CAN2) < 2)
+  { sscanf(str, "%s", CAN); }
+ 
+ /* 29 */
+
+       if(CAN == "alarm")       { alarm();           return 1; }
+  else if(CAN == "bauble")      { bauble();          return 1; }
+  else if(CAN == "bubble")      { bubble();          return 1; }
+  else if(CAN == "charity")     { charity(CAN2);     return 1; }
+  else if(CAN == "conjure")     { conjure(CAN2);     return 1; }
+  else if(CAN == "dance")       { dance();           return 1; }
+  else if(CAN == "exterminate") { exterminate(CAN2); return 1; }
+  else if(CAN == "firestorm")   { firestorm(CAN2);   return 1; }
+  else if(CAN == "fleas")       { fleas(CAN2);       return 1; }
+  else if(CAN == "groan")       { groan();           return 1; }
+  else if(CAN == "haunt")       { haunt();           return 1; }
+  else if(CAN == "health")      { health();          return 1; }
+  else if(CAN == "inform")      { inform();          return 1; }
+  else if(CAN == "intox")       { intox();           return 1; }
+  else if(CAN == "kiss")        { kiss(CAN2);        return 1; }
+  else if(CAN == "leap")        { leap();            return 1; }
+  else if(CAN == "lighten")     { lighten(CAN2);     return 1; }
+  else if(CAN == "mark")        { mark(CAN2);        return 1; }
+  else if(CAN == "pixie")       { pixie(CAN2);       return 1; }
+  else if(CAN == "preserve")    { preserve(CAN2);    return 1; }
+  else if(CAN == "protect")      { protect(CAN2);     return 1; }
+  else if(CAN == "rainbow")     { rainbow(CAN2);     return 1; }
+  else if(CAN == "spook")       { spook(CAN2);       return 1; }
+  else if(CAN == "strand")      { strand();          return 1; }
+  else if(CAN == "summon")      { summon();          return 1; }
+  else if(CAN == "tease")       { tease(CAN2);       return 1; }
+  else if(CAN == "vandalize")   { vandalize(CAN2);   return 1; }
+  else if(CAN == "weight")      { weight(CAN2);      return 1; }
+  else if(CAN == "wilt")        { wilt(CAN2);        return 1; }
+         
+  else if(CAN == "help")        { help(CAN2);        return 1; }
+        
+  else  {  
+  write("\nYou know of no cantrip by that name...\n\n");
+  return 1;
+        }
+        }
+
+/* Cantrips */
+
+#include "cantrip/alarm.h"
+#include "cantrip/bauble.h"
+#include "cantrip/bubble.h"
+#include "cantrip/charity.h"
+#include "cantrip/conjure.h"
+#include "cantrip/dance.h"
+#include "cantrip/exterminate.h"
+#include "cantrip/firestorm.h"
+#include "cantrip/fleas.h"
+#include "cantrip/groan.h"
+#include "cantrip/haunt.h"
+#include "cantrip/health.h"
+#include "cantrip/help.h"
+#include "cantrip/inform.h"
+#include "cantrip/intox.h"
+#include "cantrip/kiss.h"
+#include "cantrip/leap.h"
+#include "cantrip/lighten.h"
+#include "cantrip/mark.h"
+#include "cantrip/pixie.h"
+#include "cantrip/preserve.h"
+#include "cantrip/protect.h"
+#include "cantrip/rainbow.h"
+#include "cantrip/spook.h"
+#include "cantrip/strand.h"
+#include "cantrip/summon.h"
+#include "cantrip/tease.h"
+#include "cantrip/vandalize.h"
+#include "cantrip/weight.h"
+#include "cantrip/wilt.h"
+

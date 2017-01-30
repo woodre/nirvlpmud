@@ -1,0 +1,9 @@
+it's rough, but it works thus far
+
+lemme know what you guys think
+whichever of you wants to add headers to it and so on, feel free :)
+to add the headers, do it in daemons/hierarchy.c 
+the servants function is dump_members() 
+the hierarchy command (or whatever it's named) will be dump_hierarchy()
+to add headers and neaten it up at that point
+you'll get the idea on where to put stuff when you look at it

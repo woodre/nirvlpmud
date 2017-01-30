@@ -1,0 +1,33 @@
+#0:0
+no_clean 0
+short_desc "Hockey Stick (wielded)[0m"
+long_desc "360000 pieces of Nirvana's main currency: the gold coin.\n[0m\nType 'clan_help' for commands.\n"
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "goldcoins"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "360000 pieces of Nirvana's main currency: the gold coin.\n[0m\nType 'clan_help' for commands.\n"
+clan_short "Hockey Stick (wielded)[0m"
+damage_type 0
+hall_path "/room/eastroad1"
+object_name "goldcoins"
+owner "deathseeker"
+spell_alias "mame"
+spell_mess_me "You surround your target in a %hi green%POISONOUS%normal% cloud"
+spell_mess_room "%TPN% surrounds his target in a %hi green%POISONOUS%normal% cloud"
+spell_mess_them "%TPN% surrounds you in a %hi green%POISONOUS%normal% cloud"
+abilities ({})
+chan_history ({"[Sun May  4 11:16:22 2014] Silverpaw: heh","[Mon May  5 23:11:07 2014] Vanilla has joined the clan!","[Mon May  5 23:11:35 2014] Ravenstar: welcome","[Mon May  5 23:11:49 2014] Ravenstar: c_chat","[Mon May  5 23:11:55 2014] Vanilla: hmm","[Mon May  5 23:12:01 2014] Vanilla: we need an attack spell heh","[Mon May  5 23:12:13 2014] Vanilla: with lowest delay","[Mon May  5 23:12:17 2014] Deathseeker: well","[Mon May  5 23:12:19 2014] Ravenstar: lol","[Mon May  5 23:12:25 2014] Deathseeker: cant be changed so deal with it :)","[Mon May  5 23:12:35 2014] Deathseeker: or get a new clan...","[Mon May  5 23:12:55 2014] Ravenstar: i like how you can store coins","[Mon May  5 23:40:13 2014] Xypher: yea","[Sun Jun 22 14:41:05 2014] Silverwind: hmm","[Sun Jun 22 14:41:25 2014] Silverwind: missing damn hourglass too","[Fri Jul  4 19:57:58 2014] Silverwind: heh","[Fri Jul  4 19:58:28 2014] Silverwind: debating on when i should raise my stats lol","[Sat Jul 26 17:04:28 2014] Silverpaw: want me to get rid of em?","[Sat Jul 26 17:04:36 2014] Silverpaw: want me to get rid of em?","[Sat Jul 26 22:42:29 2014] Silverpaw: heh",})
+leaders ({"peter","krash","silverwind",})
+join_type 0
+private_coffer 5839
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 80
+last_spell_time 1410652232

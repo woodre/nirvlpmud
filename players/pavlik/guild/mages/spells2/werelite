@@ -1,0 +1,33 @@
+/*
+ * spell : Werelight   (conjuration)
+ * level : 5
+ * effect: Create a magical light (torch)
+ * cost  : 15
+ * spec  : 
+ * files : none
+ */
+
+werelite(str){
+  object obj;
+
+  if(!KNOW("werelite") && !KNOW("light")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(tp->query_sp() < 10) {
+    write("You are too tired to cast this spell.\n");
+    return 1;
+  }
+
+  write("You say: miska puem litya ...\n");
+  write("A mystical werelite appears in your hand!\n");
+  say(ME+" says: miska puem litya ...\n");
+  say("A mystical werelite appears in "+ME+"'s hand!\n");
+
+  move_object(clone_object("players/pavlik/guild/mages/obj/werelite"), tp);
+  command("rub light", tp);
+  tp->add_spell_point(-15);
+  return 1;
+}
+

@@ -1,0 +1,54 @@
+/*
+ * spell : Faerie Fire   (conjuration)
+ * level : 1
+ * effect: Reduces the targets armor class (amount varies)
+ * cost  : 25 sp
+ * spec  : 
+ * files : ~/mages/obj/faerie_fire.c
+ * approved by Pain: 3/5/97
+ */
+
+faerie_fire(str){
+  object ob, obj;
+
+  if(!KNOW("ffire")) {
+    write("What?\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  write("You cast a "+HIR+"Faerie Fire"+NORM+" spell ...\n");
+
+  if(spell_fail2(1, "conj", "int")) {
+    write("You fail the spell miserably.\n");
+    write("Nothing happens.\n");
+    say(ME+"'s spell fizzles.\n");
+    tp->add_spell_point(-5);
+    return 1;
+  }
+
+  if(guild->query_next_alter() > time()) {
+    write("You cannot cast this type of spell again yet.\n");
+    return 1;
+  }
+
+  /* Can't be done twice to the same target */
+  if(present("faerie_fire", obj)) {
+    write("Faerie fire has already been cast on "+IT+".\n");
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" conjures a glowing "+HIR+"faerie fire"+NORM+" around "+IT+"'s body!\n"+
+  "You can't seem to look away from the magical aura.\n"+
+  IT+" has become a target that is hard to miss!\n");
+
+  ob = clone_object("players/pavlik/guild/mages/obj/faerie_fire");
+  move_object(ob, obj);
+  ob->do_spell(tp);
+  tp->add_spell_point(-25);
+
+  return 1;
+}

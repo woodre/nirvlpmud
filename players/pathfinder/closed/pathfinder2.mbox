@@ -1,0 +1,94 @@
+From: mizan
+Subj: new monster stuff
+
+Cc: (To: sandman) boltar,saber,bastion,pain,hawkeye,mythos,dune,snow,wizardchild,nooneelse,pathfinder
+Date: May 28
+
+
+Monsters seem to be the cause of a good percentage of the game lag.
+Especially monsters that are loaded individually from files.
+My castle alone has about a hundred different ones, and it really shows up
+as clutter on wizlist. They hog memory because even for cloning just one
+monster, there are really two copies in the game. One resides in memory,
+and the other copy sits in the room, correct me if am wrong.
+
+I just opened my guild, which uses a drop in the bucket in resources
+compared to my castle. During playtesting I cloned several hundred guild
+objects (300 something) and it didnt do a dent to the mud in lag.
+I got bored and couldnt see anything i was carrying, that's why I stopped.
+Out of curiousity I changed the call_out function in my guild object to
+heart_beat instead. The mud started getting choppy and almost crashed
+after I cloned about 70-75 of the darn things.
+
+
+Ok.. getting closer to the point. I was going to recode the monsters in
+my castle so they were'nt going to use so much memory, by daemonizing a
+lot of common functions and using call_out instead of heart_beat.
+
+But I figured it would just be a better idea to build a daemonized monster.c
+from scratch that the whole mud can use. It WILL to be 100% compatable
+with the original, which isnt too hard. Not a single monster file
+should be changed to accept the new object.
+In essence, this is a guild object/master for monsters.
+I plan on cutting down the monster.c to about 7k, versus the 40k each
+that it is running around now (30k living.c, included, 9k monster.c)
+The master object for this new monster.c can be more specialized, as
+monsters wont need paladin additions and such.
+
+Ok. Here's the point. I want feedback on this. I'd like to hear what kind
+
+of specialied function calls you would like in the monster object.
+Perhaps hit_magic()? Perhaps multiple limb combat? Multilimb is already
+coded into my polymorph guild object. We can go crazy with this if we
+wanted, as all kinds of special monster attacks can be coded
+in. Imagine.. 'hit_stun().. hit_paralyze()... hit_critical()' shrug.
+Future guilds would rock too, with less overhead code and new attack
+ideas. Of course, dont leave out the monsters, they should get some cool
+new anti-player attacks too... track_player()... paralyze_player().. etc.
+
+Oh well. Let me know whats on your mind, I'd rather create these two files
+from dirt scratch than recode the 100+ silly monsters in my castle which
+are publicly embarrassing me on wizlist.
+
+-mizan
+
+
+From: boltar
+ Re:   new monster stuff
+Cc: (To: mizan) sandman,saber,bastion,pain,hawkeye,mythos,dune,snow,wizardchild,nooneelse,pathfinder
+Date: May 28
+
+If you can code it to be 100% compatible thats fine with me.
+I have always argued that coding monsters from within the rooms was best
+but nobody wanted to listen.... as normal... boltar is
+just a funny old god and doesnt know what he's talking about sort of thing.
+hey I coded in the days of i files!! 
+but getting wizards to follow good practice is like pulling teeth..
+without you miz I dont think as many wizards would 
+have changed their ways that have.
+anyway as far as excess functions go, why not just get 
+a good working copy that has all the present functions
+that works and worry about adding new capabilities later.
+
+From: quicksilver
+Subj: Retiring.
+
+Cc: (To: autumn) vapor,chevren,alison,alana,pathfinder,amie,arlon,reaver,khristel,reflex
+Date: Jun  7
+
+Well, the subject pretty much sums it up...  I just need some time away from
+the muds, etc.  This is all my own decision, and it's not anyone's fault.  I
+just think that I need a reality check.  
+
+I'm writing because although I need time away from the muds, I don't want to
+lose contact with the friends I have made here over the past year and a half.
+(ugh...every time I say that, I feel ancient.  heh)  Anyway, as far as my
+chances of return....I can't say.  When/If I think I'm ready, I'll be back. 
+But until then, please keep in touch.
+
+        Russell Rawlings (a.k.a. Quicksilver <retired>)
+        13802 Quail Forest Dr.
+        Cypress, TX 77429
+        Phone: (713) 320-2669  /  (713) 320-0900
+        Email: rawlings@sam.neosoft.com
+

@@ -1,0 +1,48 @@
+no_clean 0
+wielded 0
+wielded_by 0
+name_of_weapon "dark weapon"
+cap_name "Dark weapon"
+broke 0
+silentwield 0
+eff_wc 0
+misses 0
+hits 0
+alt_name "toaster"
+alias_name "toaster"
+short_desc "The Toaster of Moo [0][36m  * Cold Fire * [0m"
+long_desc "You see nothing special.[1;31mSlayer of Dragon[0m[1;31mSlayer of Shadow[0m[1;31mSlayer of Demon[0m[1;31mSlayer of Spirit[0m[1mVampiric[0m[1mSharpness[0m[1mBerserker[0m[1mSpeed[0m[1mParalyzing[0m[1mSpell Cleaver[0m[1;31mSoul Stealer[0m"
+read_msg "[31mA Weapon of BLOOD- forged by Vertebraker.[0m"
+save_flag 0
+class_of_weapon 16
+value 10000
+buy_value 0
+local_weight 4
+hit_func 0
+hit_func_fn 0
+wield_func 0
+wield_func_fn 0
+info 0
+type 0
+message_hit 0
+multipleIds 0
+owner "vertebraker"
+ids 0
+params ({"physical",16,"hit",})
+offwielded 0
+offwield_desc 0
+storage 20000
+owner 0
+slay 1
+vampire 1
+life 1
+soul_steal 1
+sharp 1
+berserk 1
+speed 1
+wounding 1
+spell 1
+norm 1
+ego 12
+type_s ({"dragon","shadow","demon","spirit",})
+path "players/mizan/etheriel/items/moo-toaster"

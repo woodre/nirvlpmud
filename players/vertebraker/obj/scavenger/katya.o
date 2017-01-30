@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/WEAPONS/greydeath","/players/mosobp/areas/TEMPLE/OBJ/tiara","/obj/armor","/players/arrina/heals/honeyc","/players/hippo/armour/helmet","/players/puppy/s/eq/hammer","/obj/armor","/players/snow/chaos/objects/crabmeat","/players/mythos/awep/zantetsuken","/players/wren/Area/starbug/items/straw","/players/sado/shop/oreo","/players/wren/Area/starbug/items/mirror","/players/arrina/heals/ale","/players/angel/area/stargate/obj/staff","/players/wren/Area/starbug/items/flibble","/players/wren/Area/starbug/items/leaflets","/players/puppy/s/eq/parchment","/players/angel/area/stargate/obj/P90","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/pain/NEW/arm/helm","/players/saber/armor/mini","/obj/armor","/players/softly/nhall/obj/green2","/players/hippo/heals/bubbles","/players/hippo/armour/endotheel",})
+shorts ({"Grey[36mdeath[0m","A Princess' Tiara","A Jedi Cloak","[33mgooey honeycomb[0m","nutshell helmet","A hammer","A small [1mwhite[0m shield","A slab of giant crabmeat","[34mZantetsuken[0m","a long plastic straw","A box of oreo cookies","a slim pocket mirror","[1mbottle of dark ale[0m","[1;36mSTAFF WEAPON[0m","a [1;30mpe[37mngu[1;30min[2;37;0m handpuppet","a stack of leaflets","Parchment","Machine gun","A Priest's Robes","A horned helm","A skin tight leather mini skirt","Steel Shield","Healing Balm [32m(green)[2;37;0m [2]","[1;36mbubbles of 7up[0m","endotheel",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

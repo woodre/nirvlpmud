@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/thermos","/players/wren/Area/starbug/items/cottagecheese","/players/arrina/armor/sveil","/obj/armor","/players/wren/Area/starbug/items/hair","/players/wren/Area/starbug/items/mirror","/players/arrina/weapons/revenant","/players/wren/Area/starbug/items/jacket","/players/wren/Area/starbug/items/bat","/players/emerson/armor/toupee","/players/hippo/heals/bubbles","/obj/weapon","/players/arrina/heals/honeyc","/players/snow/WEAPONS/glowknife","/players/hippo/armour/helmet","/players/eurale/Glade/OBJ/elven_boots","/obj/weapon","/obj/armor","/players/snow/WEAPONS/greydeath","/players/wren/Area/starbug/items/ogunit","/players/jamila/beach/mobs/skin","/players/mythos/marmor/shirt","/players/mythos/awep/naginata","/players/mythos/awep/backbite","/players/wren/Area/starbug/items/sequinjacket",})
+shorts ({"a thermos","a small tub of cottage cheese.","[1;37mShadowVeil[2;37;0m","Steel Shield","Perfect Hair","a slim pocket mirror","Revenant Blade","Lister's leather jacket","a [1;30mballbat[2;37;0m","A Bad Toupee","[1;36mbubbles of 7up[0m","Shark`s tooth","[33mgooey honeycomb[0m","A glowing knife","nutshell helmet","[1mElven boots[2;37;0m","A rolling pin","A suit of [1mwhite[0m chainmail","Grey[36mdeath[0m","a case containing an OG unit.","A Lizard Skin","Shirt","Naginata","[31mBackbiter[0m","Cat's red sequin jacket",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

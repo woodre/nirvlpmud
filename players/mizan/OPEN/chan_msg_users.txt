@@ -1,0 +1,234 @@
+./pavlik/items/CHAN:1:chan_msg(str){
+./pavlik/junk/one_chan.c:1:chan_msg(str,chan) {
+./mizan/mines/items/shit/shit.c:498:      chan_msg( capitalize(describe_shit_size()) + " of fecal matter has just struck " + (arg->query_name()) + ".\n");
+./mizan/mines/items/shit/shit.c:557:           chan_msg("Being hit by " + capitalize(describe_shit()) + " sends " + arg->query_name() + " sprawling!\n");
+./mizan/mines/items/pile/shit.c:498:      chan_msg( capitalize(describe_shit_size()) + " of fecal matter has just struck " + (arg->query_name()) + ".\n");
+./mizan/mines/items/pile/shit.c:557:           chan_msg("Being hit by " + capitalize(describe_shit()) + " sends " + arg->query_name() + " sprawling!\n");
+./mizan/mines/core/mbv3/monsterDM.c:1389:        chan_msg("A terrifying explosion is felt coming from the vicinity of "+orders_objective_object_name+".\n");
+./mizan/mines/core/mbv3/monsterDM.c:1444:        chan_msg("A terrifying explosion is felt coming from somewhere on the MUD...\n");
+./mizan/mines/core/mbv3/monsterDM.c:4435:                chan_msg(arg->query_name() + " junks: Someone's trying to avoid me by hiding in their hotel room... CHICKEN!\n");
+./mizan/mines/core/mbv3/monsterDM.c:4437:                chan_msg(arg->query_name() + " junks: SOMEONE IS SCARED of me. Heh!\n");
+./mizan/mines/core/mbv3/monsterDM.c:4447:                chan_msg(arg->query_name() + " junks: Hiding in the casino from me won't help. You know who you are.\n");
+./mizan/mines/core/mbv3/monsterDM.c:4449:                chan_msg(arg->query_name() + " junks: All your corpse are belong to us!\n");
+./mizan/mines/core/mbv3/monsterDM.c:4459:                chan_msg(arg->query_name() + " junks: Hiding in the motel from me? Yarr!\n");
+./mizan/mines/core/mbv3/monsterDM.c:4461:                chan_msg(arg->query_name() + " junks: Feh! Hiding in the motel is so TEH LOSE!\n");
+./mizan/mines/core/vehicle-primarygun.c:561:    chan_msg((my_projectile->short()) + " is fired from a " + my_alias + " and smashes violently into " + (target->query_name()) + "!\n"); 
+./mizan/mbv3/monsterDM.c:1384:        chan_msg("A terrifying explosion is felt coming from the vicinity of "+orders_objective_object_name+".\n");
+./mizan/mbv3/monsterDM.c:1439:        chan_msg("A terrifying explosion is felt coming from somewhere on the MUD...\n");
+./mizan/mbv3/monsterDM.c:4458:                chan_msg(arg->query_name() + " junks: Someone's trying to avoid me by hiding in their hotel room... CHICKEN!\n");
+./mizan/mbv3/monsterDM.c:4460:                chan_msg(arg->query_name() + " junks: SOMEONE IS SCARED of me. Heh!\n");
+./mizan/mbv3/monsterDM.c:4470:                chan_msg(arg->query_name() + " junks: Hiding in the casino from me won't help. You know who you are.\n");
+./mizan/mbv3/monsterDM.c:4472:                chan_msg(arg->query_name() + " junks: All your corpse are belong to us!\n");
+./mizan/mbv3/monsterDM.c:4482:                chan_msg(arg->query_name() + " junks: Hiding in the motel from me? Yarr!\n");
+./mizan/mbv3/monsterDM.c:4484:                chan_msg(arg->query_name() + " junks: Feh! Hiding in the motel is so TEH LOSE!\n");
+Binary file ./mizan/mbv3/.monsterDM.c.swp matches
+./mizan/OPEN/vehicles/primarygun.c:525:    chan_msg((my_projectile->short()) + " is fired from a " + my_alias + " and smashes violently into " + (target->query_name()) + "!\n"); 
+./mizan/etheriel/heals/shit.c:238:        chan_msg("A pile of fecal matter has just struck " + (arg->query_name()) + ".\n");
+./mizan/etheriel/items/shit100.c:498:      chan_msg( capitalize(describe_shit_size()) + " of fecal matter has just struck " + (arg->query_name()) + ".\n");
+./mizan/etheriel/items/shit100.c:557:           chan_msg("Being hit by " + capitalize(describe_shit()) + " sends " + arg->query_name() + " sprawling!\n");
+./mizan/etheriel/items/blockbuster.c:146:        chan_msg("You hear a very large explosion coming from the vicinity of " + (victim->query_name()) + ".\n");
+./mizan/etheriel/items/blockbuster.c:196:    chan_msg("You feel the shockwave of a large explosion.\n");
+./mizan/etheriel/items/shit.c:498:      chan_msg( capitalize(describe_shit_size()) + " of fecal matter has just struck " + (arg->query_name()) + ".\n");
+./mizan/etheriel/items/shit.c:557:           chan_msg("Being hit by " + capitalize(describe_shit()) + " sends " + arg->query_name() + " sprawling!\n");
+./mizan/etheriel/items/nitro-glycerin.c:127:    chan_msg("You hear a tremendous explosion coming from somewhere on the MUD.\n");    
+./mizan/etheriel/items/nitro-glycerin.c:132:        chan_msg(this_player()->query_name() + " was just blown to fist-sized chunks by a vial of nitroglycerin.\n");
+./mizan/etheriel/items/nitro-glycerin.c:136:            chan_msg("You may now refer to " + name + " as 'some stinky red mist'.\n");
+./mizan/etheriel/items/nitro-glycerin.c:164:    chan_msg("You feel the shockwave of tremendous explosion far off in the distance.\n");
+./mizan/etheriel/items/bbx.c:109:        chan_msg("You hear a very large explosion coming from the vicinity of " + (victim->query_name()) + ".\n");
+./mizan/etheriel/items/bbx.c:156:    chan_msg("You feel the shockwave of a large explosion.\n");
+./mizan/etheriel/items/shitplus.c:574:      chan_msg( capitalize(describe_shit_size()) + " of fecal matter has just struck " + (arg->query_name()) + ".\n");
+./mizan/etheriel/items/shitplus.c:633:           chan_msg("Being hit by " + capitalize(describe_shit()) + " sends " + arg->query_name() + " sprawling!\n");
+./mizan/closed/poly/catapult-form.c:310:  chan_msg((thingo->short()) + " rockets across the MUD and knocks " + (target->query_name()) + " to the ground!\n");
+./mizan/closed/poly/guild-catapult-unr.c:191:    chan_msg((thingo->short()) + " rockets across the MUD and knocks " + (target->query_name()) + " to the ground!\n");
+./mizan/closed/poly/guild-catapult.c:197:    chan_msg((thingo->short()) + " rockets across the MUD and knocks " + (target->query_name()) + " to the ground!\n");
+./mizan/mbv2/monsterDM.c:1383:        chan_msg("A terrifying explosion is felt coming from the vicinity of "+orders_objective_object_name+".\n");
+./mizan/mbv2/monsterDM.c:1438:        chan_msg("A terrifying explosion is felt coming from somewhere on the MUD...\n");
+./mizan/mbv2/monsterDM.c:4427:                chan_msg(arg->query_name() + " junks: Someone's trying to avoid me by hiding in their hotel room... CHICKEN!\n");
+./mizan/mbv2/monsterDM.c:4429:                chan_msg(arg->query_name() + " junks: SOMEONE IS SCARED of me. Heh!\n");
+./mizan/mbv2/monsterDM.c:4439:                chan_msg(arg->query_name() + " junks: Hiding in the casino from me won't help. You know who you are.\n");
+./mizan/mbv2/monsterDM.c:4441:                chan_msg(arg->query_name() + " junks: All your corpse are belong to us!\n");
+./mizan/mbv2/monsterDM.c:4451:                chan_msg(arg->query_name() + " junks: Hiding in the motel from me? Yarr!\n");
+./mizan/mbv2/monsterDM.c:4453:                chan_msg(arg->query_name() + " junks: Feh! Hiding in the motel is so TEH LOSE!\n");
+./mizan/opl/environs/catapult.c:201:    chan_msg((thingo->short()) + " rockets across the MUD and knocks " + (target->query_name()) + " to the ground!\n");
+./mizan/opl/environs/ied.c:164:    chan_msg("You feel the shockwave of a large explosion.\n");
+./mizan/opl/items/snot.c:508:        chan_msg( capitalize(describe_shit_size()) + " of fecal matter has just struck " + (arg->query_name()) + ".\n");
+./mizan/opl/items/snot.c:567:            chan_msg("Being hit by " + capitalize(describe_shit()) + " sends " + arg->query_name() + " sprawling!\n");
+./mizan/logs/snoop/mizan:61768:Thu Feb 17 23:48:26 2011 (127.0.0.1) [71849/201048h 10943/20941s] #nc# [1] wiz i wonder if there is a need to migrate things away from chan_msg() to emit_channel()
+./mizan/core/vehicle-primarygun.c:561:    chan_msg((my_projectile->short()) + " is fired from a " + my_alias + " and smashes violently into " + (target->query_name()) + "!\n"); 
+./sandman/sandman/closed/thi5.c:666:   chan_msg(msg,chan);
+./sandman/closed/thi5.c:666:   chan_msg(msg,chan);
+./haji/x:1:chan_msg(str) {
+./boltar/things/antipk.c:147:   if(qq=90) chan_msg("Batarsis gossips: Anyone got the guts to fight me?\n","gossip");
+./boltar/things/thi6.c:723:   chan_msg(msg,chan);
+./boltar/things/thi5.c:686:   chan_msg(msg,chan);
+./boltar/things/scud.c:46:   chan_msg(load->short() + " separates from the SCUD.\n");
+./boltar/things/scud.c:63:   chan_msg("A SCUD missile flys through the sky.\n");
+./boltar/things/scud.c:64:   chan_msg("There is a streak of light and large explosion.\n");
+./boltar/things/scud.c:65:   chan_msg("A patriot missile has shot down the incoming SCUD.\n");
+./boltar/test/jj.c:683:   chan_msg(msg,chan);
+./boltar/closed/guild/log3.c:55:   chan_msg("You hear the rumbling of a log rolling.\n");
+./boltar/closed/guild/log3.c:56:    chan_msg("It rolls down stairs, alone or in pairs, and runs over "+str+"\n");
+./boltar/closed/guild/log.c:44:   chan_msg("You hear the rumbling of a log rolling.\n");
+./boltar/closed/guild/log.c:45:   chan_msg("It rolls down stairs, alone or in pairs, and runs over "+capitalize(str)+"!\n");
+./boltar/closed/guild/log2.c:37:   chan_msg("You hear the rumbling of a log rolling.\n");
+./boltar/closed/guild/log2.c:38:    chan_msg("It rolls down stairs, alone or in pairs, and runs over "+str+"\n");
+./boltar/closed/guild/gem.c:47:chan_msg("The sky glows orange for a second.\n");
+./jaraxle/3rd/batarsis.c:144:   if(qq=90) chan_msg("Batarsis gossips: Anyone got the guts to fight me?\n","gossip");
+./rumplemintz/player.c:381:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./rumplemintz/player.c:385:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./rumplemintz/player.c:400:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./rumplemintz/player.c:405:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./rumplemintz/closed/guilds/Rangers/Commands/Morph.c:141:      "obj/user/one_chan.c"->chan_msg("" + 
+./rumplemintz/closed/guilds/Rangers/RangerSpaceship.c:415:  "obj/user/one_chan.c"->chan_msg(msg,"gossip");
+./rumplemintz/wiz/player.c:381:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./rumplemintz/wiz/player.c:385:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./rumplemintz/wiz/player.c:400:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./rumplemintz/wiz/player.c:405:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./rumplemintz/obj/player.c:381:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./rumplemintz/obj/player.c:385:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./rumplemintz/obj/player.c:400:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./rumplemintz/obj/player.c:405:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./wocket/sorcs/spells/spiritwalk.c:43:  chan_msg("Storm clouds gather and lightning flashes in the distance.\n","junk");
+./wocket/sorcs/spells/bookbind.c:55:mage->chan_msg(HIY+"Lightning strikes and magic binds itself to paper and leather.\n"+NORM,"junk");
+./wocket/sorcs/obj/bauble_ob.c:35:  mage->chan_msg("You can see a small light rise and fall in the distance.\n","junk");
+./wocket/wedding/priest2.c:133:  sucker1->chan_msg(RED+"   @"+GRN+"}-,-`---"+OFF+BOLD+
+./wocket/wedding/marrymaker.c:48:this_player()->chan_msg(RED+"   @"+GRN+"}-,-`---"+NORM+BOLD+
+./wocket/mages/spells/spiritwalk.c:43:  chan_msg("Storm clouds gather and lightning flashes in the distance.\n","junk");
+./wocket/mages/spells/bookbind.c:55:mage->chan_msg(HIY+"Lightning strikes and magic binds itself to paper and leather.\n"+NORM,"junk");
+./wocket/mages/obj/bauble_ob.c:35:  mage->chan_msg("You can see a small light rise and fall in the distance.\n","junk");
+./wocket/necro/power_admin/wiz.bak:9:  tp->chan_msg("["+HIY+"wiz"+OFF+"] "+tp->query_name()+" says, \""+str+"\"\n"+OFF,"wiz");
+./wocket/closed/wockettell.c:64:  this_player()->chan_msg(msg,"wiz");
+./wocket/turtleville/NPC/preist_bk.c:133:  sucker1->chan_msg(RED+"   @"+GRN+"}-,-`---"+OFF+BOLD+
+./wocket/turtleville/NPC/priest.c:134:  sucker1->chan_msg(RED+"   @"+GRN+"}-,-`---"+OFF+BOLD+
+./wocket/turtleville/NPC/preist.c:134:    sucker1->chan_msg(RED+"   @"+GRN+"}-,-`---"+OFF+BOLD+
+./wocket/junk/tagobject.c:21:  this_player()->chan_msg(HIG+"\t*- "+this_player()->query_name()+" is now IT -*\n"+NORM,"junk");
+./wocket/junk/tagobject.c:28:this_player()->chan_msg(HIG+"\t*- The game has ended -*\n"+NORM,"junk");
+./eurale/VAMPIRES/OBJ/pie.c:63:  chan_msg("A "+pie_type+" pie sails through the sky at "+
+./eurale/Abyss/NPC/despoina.c:92:chan_msg(
+./eurale/Abyss/NPC/despoina.c:103:chan_msg(
+./astaroth/p.c:174:    chan_msg(nom + " ( player " +lvl+ " ) has entered the game.\n","msg");
+./astaroth/p.c:176:   else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./astaroth/p.c:187:    chan_msg(nom+ " ( player " +lvl+ " ) has left the game.\n","msg");
+./astaroth/p.c:189:    else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./pain/NEW/mon/hunter.c:129:   if(qq=90) chan_msg("Batarsis gossips: Anyone got the guts to fight me?\n","gossip");
+./vital/closed/tool/wk/_spam.c:31:    chan_msg("You see "+player->query_name()+"'s sorry butt fly streaking across the mud, covered in spam.\n", "junk");
+./vital/pgr/Commands/Morph.c:141:      "obj/user/one_chan.c"->chan_msg("" + 
+./vital/pgr/RangerSpaceship.c:415:  "obj/user/one_chan.c"->chan_msg(msg,"gossip");
+./vital/temp/player.c:235:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./vital/temp/player.c:239:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./vital/temp/player.c:254:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./vital/temp/player.c:259:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./guilds/vampires/obj/pie.c:63:  chan_msg("A "+pie_type+" pie sails through the sky at "+
+./guilds/Rangers/Commands/Morph.c:141:      "obj/user/one_chan.c"->chan_msg("" + 
+./guilds/Rangers/RangerSpaceship.c:415:  "obj/user/one_chan.c"->chan_msg(msg,"gossip");
+./guilds/polymorphs/catapult-form.c:310:  chan_msg((thingo->short()) + " rockets across the MUD and knocks " + (target->query_name()) + " to the ground!\n");
+./guilds/polymorphs/guild-catapult-unr.c:191:    chan_msg((thingo->short()) + " rockets across the MUD and knocks " + (target->query_name()) + " to the ground!\n");
+./guilds/polymorphs/guild-catapult.c:197:    chan_msg((thingo->short()) + " rockets across the MUD and knocks " + (target->query_name()) + " to the ground!\n");
+./illarion/test/blockbuster.c:105:        chan_msg("You hear a very large explosion coming from the vicinity of " + (victim->query_name()) + ".\n");
+./illarion/test/blockbuster.c:155:    chan_msg("You feel the shockwave of a large explosion.\n");
+./illarion/toys/mizan-catapult.c:197:    chan_msg((thingo->short()) + " rockets across the MUD and knocks " + (target->query_name()) + " to the ground!\n");
+./fred/closed/player.c:381:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./fred/closed/player.c:385:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./fred/closed/player.c:400:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./fred/closed/player.c:405:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./daranath/docs/player.c:188:    chan_msg(nom + " ( player " +lvl+ " ) has entered the game.\n","msg");
+./daranath/docs/player.c:191:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./daranath/docs/player.c:205:    chan_msg(nom+ " ( player " +lvl+ " ) has left the game.\n","msg");
+./daranath/docs/player.c:208:  else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./daranath/necro/power_admin/wiz.bak:9:  tp->chan_msg("["+HIY+"wiz"+OFF+"] "+tp->query_name()+" says, \""+str+"\"\n"+OFF,"wiz");
+./hair/examples/player.c:174:    chan_msg(nom + " ( player " +lvl+ " ) has entered the game.\n","msg");
+./hair/examples/player.c:176:   else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./hair/examples/player.c:187:    chan_msg(nom+ " ( player " +lvl+ " ) has left the game.\n","msg");
+./hair/examples/player.c:189:    else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./forbin/closed/fix/player.c:214:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./forbin/closed/fix/player.c:218:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./forbin/closed/fix/player.c:232:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./forbin/closed/fix/player.c:236:  else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./vulture/closed/player.c:174:    chan_msg(nom + " ( player " +lvl+ " ) has entered the game.\n","msg");
+./vulture/closed/player.c:176:   else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./vulture/closed/player.c:187:    chan_msg(nom+ " ( player " +lvl+ " ) has left the game.\n","msg");
+./vulture/closed/player.c:189:    else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./sparrow/closed/guild/player.c:372:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./sparrow/closed/guild/player.c:376:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./sparrow/closed/guild/player.c:391:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./sparrow/closed/guild/player.c:396:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./sparrow/closed/reference/player.c:381:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./sparrow/closed/reference/player.c:385:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./sparrow/closed/reference/player.c:400:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./sparrow/closed/reference/player.c:405:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./azane/spec/wizring.c:655:   chan_msg(msg,chan);
+./nooneelse/hunt/hunt_control.c:127:  chan_msg("\n\n\nBong!  Bong!  Bong!  Come one, come all!  Enter the next\n"+
+./nooneelse/hunt/hunt_control.c:258:      chan_msg("\n\n\nBong!  Bong!  Bong!  "+
+./nooneelse/closed/magic_shop/bomb.c:93:  chan_msg("You hear the echoes of an explosion.\n");
+./nooneelse/obj/pie.c:64:    chan_msg("A "+pie_type+" pie sails across the sky.  It seems to be flying "+
+./llew/tool/cg.c:16:   "/obj/user/one_chan"->chan_msg(capitalize(this_player()->query_real_name())+" gossips: "+chwhat+"\n","gossip");
+./llew/junk/firework.c:39:   chan_msg("A firework shoots into the sky...  WHOOSH!\n");
+./llew/junk/firework.c:52:   chan_msg(fire);
+./llew/junk/firework.c:68:   chan_msg(fire);
+./llew/junk/firework.c:82:   chan_msg(fire);
+./llew/junk/firework.c:103:   chan_msg(fire);
+./llew/junk/firework.c:127:   chan_msg(fire);
+./grimm/rooms/cannon1.c:41:      chan_msg("You hear a cannon go off in the distance and a second later "
+./feldegast/sorcs/spells/spiritwalk.c:43:  chan_msg("Storm clouds gather and lightning flashes in the distance.\n","junk");
+./feldegast/sorcs/spells/bookbind.c:55:mage->chan_msg(HIY+"Lightning strikes and magic binds itself to paper and leather.\n"+NORM,"junk");
+./feldegast/sorcs/obj/bauble_ob.c:35:  mage->chan_msg("You can see a small light rise and fall in the distance.\n","junk");
+./feldegast/oldmages/spells/spiritwalk.c:43:  chan_msg("Storm clouds gather and lightning flashes in the distance.\n","junk");
+./feldegast/std/player.c:198:    chan_msg(nom + " ( player " +lvl+ " ) has entered the game.\n","msg");
+./feldegast/std/player.c:201:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./feldegast/std/player.c:215:    chan_msg(nom+ " ( player " +lvl+ " ) has left the game.\n","msg");
+./feldegast/std/player.c:218:  else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./feldegast/std/player.old:198:    chan_msg(nom + " ( player " +lvl+ " ) has entered the game.\n","msg");
+./feldegast/std/player.old:201:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./feldegast/std/player.old:215:    chan_msg(nom+ " ( player " +lvl+ " ) has left the game.\n","msg");
+./feldegast/std/player.old:218:  else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./dragnar/docs/player.c:190:    chan_msg(nom + " ( player " +lvl+ " ) has entered the game.\n","msg");
+./dragnar/docs/player.c:193:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./dragnar/docs/player.c:207:    chan_msg(nom+ " ( player " +lvl+ " ) has left the game.\n","msg");
+./dragnar/docs/player.c:210:  else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./dragnar/mons/shangTsung.c:57:chan_msg("Shang Tsung has defeated "+
+./dragnar/mons/shangTsung.c:73:chan_msg(capitalize(query_attack()->query_real_name())+
+./earwax/player.c:381:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./earwax/player.c:385:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./earwax/player.c:400:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./earwax/player.c:405:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./earwax/guest.c:381:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./earwax/guest.c:385:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./earwax/guest.c:400:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./earwax/guest.c:405:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./earwax/closed/test/pp.c:250:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./earwax/closed/test/pp.c:254:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./earwax/closed/test/pp.c:269:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./earwax/closed/test/pp.c:274:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./earwax/closed/pp.c:250:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./earwax/closed/pp.c:254:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./earwax/closed/pp.c:269:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./earwax/closed/pp.c:274:    chan_msg(nom + " ( "+wi+" ) has left the game.\n", "msg");
+./vertebraker/closed/cryo/storage.code:64:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./vertebraker/closed/cryo/storage.code:68:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./beck/MortalKombat/Temple.c:353:   "obj/user/one_chan.c"->chan_msg(RED+"<"+YELLOW+"<"+OFF+winner+" has defeated "+loser+" in Mortal Kombat."+YELLOW+">"+OFF+RED+">"+OFF+"\n"+
+./beck/MortalKombat/MKWarrior.c:33:            "obj/user/one_chan.c"->chan_msg("Shang Tsung has defeated "+
+./beck/MortalKombat/MKWarrior.c:38:            "obj/user/one_chan.c"->chan_msg(name+" has defeated "+
+./beck/MortalKombat/MKWarrior.c:54:   "obj/user/one_chan.c"->chan_msg(""+
+./beck/MortalKombat/MKWarrior.c:59:      "obj/user/one_chan.c"->chan_msg(capitalize(query_attack()->query_real_name())+
+./beck/MortalKombat/MKWarrior.c:67:      "obj/user/one_chan.c"->chan_msg(RealAttack->query_name()+" has defeated "+name+" in Mortal Kombat.\n"+
+./beck/monster/pack.c:68:"obj/user/one_chan.c"->chan_msg(message,"junk");
+./beck/DarkRangers/MasterInc/Morph.h:23:      "obj/user/one_chan.c"->chan_msg(""+
+./beck/Rangers/Commands/Morph.bak:63:         "obj/user/one_chan.c"->chan_msg(""+
+./beck/Rangers/RangerSpaceship.c:322:   "obj/user/one_chan.c"->chan_msg(msg,"gossip");
+./beck/Rangers/MasterInc/Morph.h:26:      "obj/user/one_chan.c"->chan_msg(""+
+./beck/rangers/cmds/Morph.h:21:      "obj/user/one_chan.c"->chan_msg(""+
+./beck/castle.c:86:         "obj/user/one_chan.c"->chan_msg(message,"junk");
+./beck/object/tractor.c:245:   "obj/user/one_chan.c"->chan_msg(msg,"gossip");
+./wizardchild/tool/spam.c:20:      chan_msg("You see "+who->query_name()+"'s ass fly streaking across the mud, covered in spam.\n", "junk");
+./wizardchild/toys/scooby.c:58:    chan_msg("("+chan+") Scooby "+str+"\n",chan);
+./wizardchild/toys/scooby.c:60:    chan_msg("Scooby "+chan+"s: "+str+"\n",chan);
+./wizardchild/toys/pingme.c:9:  chan_msg("Wizardchild is launched from a catapult and goes flying across the mud!\n",
+./wizardchild/toys/pingme.c:20:      chan_msg("  He *pings* off "+ob[i]->query_name()+" for "+pt+" points!\n",
+./wizardchild/toys/pingme.c:24:  chan_msg("  The high scorer is "+high+" for "+x+" points!\n",use_chan);
+./gemini/tractor.c:245:   "obj/user/one_chan.c"->chan_msg(msg,"gossip");
+./stark/player.c:229:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./stark/player.c:233:  else chan_msg(nom + " ( " + wi + " ) has entered the game.\n","msg");
+./stark/player.c:247:    chan_msg(nom + " ( player " + lvl + (ex_lv ? 
+./stark/player.c:251:  else chan_msg(nom + " ( "+wi+" ) has left the game.\n","msg");
+./lew/disc2.c:23:    chan_msg(capitalize(find_player(str)->query_real_name())+" is struck down by a Tron disc.\n");
+./lew/disc.c:25:    chan_msg(capitalize(find_player(str)->query_real_name())+" is struck down by a Tron disc.\n");

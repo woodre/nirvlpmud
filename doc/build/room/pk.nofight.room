@@ -1,0 +1,14 @@
+10-14-96 
+PK / NO fighting in a room
+ 
+To allow player killing of all those in a room use:
+ 
+when a player enters a room this_player()->set_fight_area();
+when he leaves the room, or the area in question, 
+this_player()->clear_fight_area(); there are suffcient safe guards
+in player.c to insure that players must be the room that set their
+fight area to fight each other.
+ 
+no dis-allow fighting of any kind in a room: 
+ 
+query_no_fight() { return 1; }

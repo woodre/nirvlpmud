@@ -1,0 +1,20 @@
+This area has no theme, kinda just things that Ive seen on tv that I enjoyed
+
+main.c : The "beginning" of the area. holes in the ground do nothing
+as of yet, but are in there for future expansion.
+
+school.c : Entrance to a highschool.
+
+highschool.c : A classroom with 2 monsters (mrhand.c  lvl-13 wc-10 ac-5 and spicoli.c lvl-7 ac-5 wc-10) spicoli drops a joint when dying, with a value of 50 coins. Mr.hand gives out a book upon death that is worth 1000.
+
+yankerburger.c : Monster specialed.c lvl-3 ac-5 wc-10, Ed gives out a helmet class=helmet worth 1000 upon dying
+
+main2.c : You can listen to the voices and that hints to another adjoining room. 
+
+muppetland.c : Has kermit lvl-3 ac-5 wc-10, and Ms.piggy lvl-3 ac-5 wc-10 in the room. When kermit dies he turns the player into a frog. When they kill mspiggy they turn human. Thinking of adding a button in the room to make them human if they kill piggy before kermit, but it makes it too easy for the player. this way they will have to think what to do the next time they are back to kill. Kermit gives out "warts" which are value=150. mspiggy gives a pigfoot worth 150
+
+gamestore.c : Standard room, some listens and stuff.
+
+mpcroom.c : Tron resides here lvl-20 ac-5 wc-10. Yron has a weapon "deadly disc" disc.c. It has some special functions and is similiar to an older weapon of nirvana. It may need some changes to it to conform. need senior feedback.
+
+la.c : This is ali g's area. Alig is a monster lvl-11 ac-5 wc-10. When killed he gives a "afto" class=helmet ac=1 value=1000

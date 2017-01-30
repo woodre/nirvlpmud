@@ -1,0 +1,1 @@
+salve() { if(salve_var[0] > lev) return 0; call_other(POWER,"salve",lev,pow); return 1; }

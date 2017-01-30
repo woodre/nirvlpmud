@@ -1,0 +1,121 @@
+/*
+ * spell : Curse   (necromancy)
+ * level : 7
+ * effect: see below
+ * cost  : 200 sp
+ * spec  : see below
+ * files : ~/mages/obj/curse.c
+ *
+ * This powerful spell has the following effects on a monster:
+ * 1) reduces the weapon class
+ * 2) reduces the armor class
+ * 3) changes heal_rate and heal_interval to damage the monster
+ *
+ * Weapon Class & Armor Class are reduced using the following:
+ * total = Necr / 20                     (max of 6)
+ * wc reduction = random(total)
+ * ac reduction = total - wc reduction   (what ever is left)
+ * 
+ * Heal Rate & Heal Interval use the following:
+ * heal rate = -random(Necr)/33          (min of -3)
+ * heal interval = 40 - random(Necr)/5   (min of 20)
+ *
+ * The spell lasts for as long as the player is attacking the
+ * monster.  If the player stops attacking or leaves the spell
+ * will end.
+ *
+ * No other spells can be cast for 3 minutes after this spell has
+ * been cast.
+ *
+ */
+
+curse(str) {
+
+  object obj;
+  object curse;
+  int factor, necro;
+  int aclass, wclass;
+  int rate, interval;
+
+
+  if(!KNOW("curse")){
+	write("What?\n");
+	return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  rate = time();
+
+  /*
+   * All timers must be clear in order to cast this spell.
+   */
+  if(guild->query_next_alter() > rate ||
+     guild->query_next_prot() > rate ||
+     guild->query_next_heal() > rate ||
+     guild->query_next_dmg() > rate) {
+	write("You cannot cast this spell right now.\n");
+	return 1;
+  }
+
+  if(tp->query_sp() < 100) {
+	write("You are too tired to cast this spell.\n");
+	return 1;
+  }
+
+  if(present("curse", obj)) {
+	write(IT+" is already cursed.\n");
+	return 1;
+  }
+
+  write("You cast a "+HIR+"Curse"+NORM+" spell ... \n");
+
+  if(spell_fail2(7, "necr", "pow")) {
+	write("You "+HIR+"miscast"+NORM+" the spell!\n");
+	write("You feel weak and tired.\n");
+	say(ME+" casts a spell but nothing happens.\n");
+	tp->add_spell_point(-tp->query_sp());
+	guild->set_next_alter(time() + 240);
+	return 1;
+  }
+
+  tell_room(env, "\n"+
+  ME+" holds "+PO+" arm in the air and slashes a silver knife across\n"+
+  PO+" wrist.  A thin stream of blood runs down "+ME+"'s arm and drips\n"+
+  "onto the ground.\n"+
+  HIC+"The ground shakes violently beneath your feet!\n"+NORM);
+  tell_room(env,
+  ME+" begins to chant softly.\n");
+
+  necro = guild->query_total_necr();
+
+  /* calculate WC and AC reductions */
+  factor = random(necro)/10;
+  wclass = random(factor) * 3 / 2;
+  aclass = factor - wclass;
+
+  /* calculate changes to heal_rate and heal_interval */
+  rate = -(random(necro) / 25);
+  if(rate < -5) rate = -5;
+  interval = 40 - random(necro) / 3;
+
+  curse = clone_object("players/pavlik/guild/mages/obj/curse");
+  curse->set_owner(tp);
+  curse->set_target(obj);
+  curse->do_wc_reduce(wclass);
+  curse->do_ac_reduce(aclass);
+  curse->do_heal_change(rate,interval);
+  move_object(curse, obj);
+
+  tp->add_spell_point(-200);
+
+  /* set all the spell timers */
+  guild->set_next_prot(time() + 60);
+  guild->set_next_heal(time() + 60);
+  guild->set_next_alter(time() + 60);
+  guild->set_next_dmg(time() + 60);
+
+  return 1;
+}
+

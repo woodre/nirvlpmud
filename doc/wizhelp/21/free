@@ -1,0 +1,26 @@
+**************
+
+
+                     Free
+
+Syntax:    free <player> <reason>
+
+Desc:
+           Free is counterpoint to imprison. This is the command to 
+           release a player when sentence is served. Reason is 
+           entered again to keep consistant logs and confirm 
+           completion of sentence.
+
+Warning:   Don't free somebody unless you are authorized to do so. 
+           If you placed them and sentence is up fine. Make sure
+           with the imprisoning wizard that the issue is settled.
+
+Example:   free bob completed sentence
+                     result
+           player Bob is released from prison to resume play and 
+           "completed sentence" is logged
+
+Related:   imprison
+
+
+**************

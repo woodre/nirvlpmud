@@ -1,0 +1,21 @@
+SYNOPSIS
+	mixed *get_attribute( void)
+	mixed *get_attribute( object obj)
+	int    get_attribute( string attr)
+	int    get_attribute( string attr, object obj)
+
+DESCRIPTION
+	Get the value of a given attribute 'attr' or an array containing all
+	attributes, both names and values.
+	If no object 'obj' is given, the current object is used.
+
+	If an attribute name is given, then the value of that attribute is
+	returned if found. -1 is returned if it is not found
+
+	When the attribute name is not given, an array of the following
+	format is returned:	
+	({ attr_name0, attr_value0, .., attr_nameN, attr_valueN })
+
+SEE ALSO
+	attributes(C), add_attribute(E), add_prot_attribute(E),
+	delete_attribute(E), query_attribute(E)

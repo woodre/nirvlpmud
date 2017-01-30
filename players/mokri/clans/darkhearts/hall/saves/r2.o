@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/darkhearts/hall/r1","west","/players/mokri/clans/darkhearts/hall/r3","north","/players/mokri/clans/darkhearts/hall/r20","east",})
+short_desc "Casiers de Chateau[0m"
+long_desc "Casiers de ChateauAlong the walls of this room are ten beautiful marble lockers that can be used to store items that might be needed at a later time. The room is very dark except for a faint light from a red candle burning softly in the corner.[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;36mRonon's Gun[0m","/players/angel/area/atlantis/obj/rgun",0,0,0,"[1;30mTail of the Cacodemon[0m","/players/jareel/weapons/chaos/woods2/demon_tail",0,146,71,"[1;30mWard of [1;30mDarkness[0m [[1;32mSet of Shadows[0m][0m","/players/jareel/SoulboundObjects/ARMOR/SetOfShadows/ArmorOfDarkness","teepo",0,0,"Hockey Skates","/players/jenny/wings/items/tedskates",0,0,0,"[1;30mThe Foul Pendant[0m","/players/khrell/armors/skaven/foulpendant",0,0,0,"A [33mgolden[0m earring","/players/vertebraker/swamp/OBJ/j_earring",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,807,2242,})

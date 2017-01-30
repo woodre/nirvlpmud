@@ -1,0 +1,8 @@
+main()
+{
+    if (this_player()->query_attrib("mag") > 20) {
+        this_player()->set_attrib("mag",20);
+    previous_object()->save_me();
+    return 0;
+}
+}

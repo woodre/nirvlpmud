@@ -1,0 +1,14 @@
+humanity 73
+bloodpts 5000
+skills ({"^^^Sanguisugency^^^",50,110,"wil","int",100,75,25,10,100,"^^^Corruption^^^",10,2,"wil","int",100,75,25,10,100,"^^^Telepathy^^^",75,18,"wil","int",100,75,25,10,100,"^^^Celerity^^^",100,165,"dex","int",100,75,25,10,100,"^^^Fortitude^^^",25,127,"sta","int",100,75,25,10,100,"^^^Beastcalling^^^",10,0,"cha","int",100,75,25,10,100,})
+custom_emotes ({"name",({"You gesture casually, and #TN#'s blood streams to your mouth.","#MN# gestures casually, and your blood streams into #MP# mouth.","#MN# gestures casually, and #TN#'s blood streams into #MP# mouth!",}),"name",({"You gesture casually, and #TN#'s blood streams to your mouth.","#MN# gestures casually, and your blood streams into #MP# mouth.","#MN# gestures casually, and #TN#'s blood streams into #MP# mouth!",}),"blood_feeding",({"You gesture casually, and #TN#'s blood streams to your mouth.#N#","#MN# gestures casually, and your blood streams into #MP# mouth.#N#","#MN# gestures casually, and #TN#'s blood streams into #MP# mouth!#N#",}),})
+btox 16
+ttox 0
+ctox 0
+btox_max 21
+ttox_max 122
+ctox_max 25
+tribute 800
+tribute_max 20000
+tox_pref 14
+max_heals 2

@@ -1,0 +1,22 @@
+[Mar 16 2006 07:32]: added my test shadow to /obj/shadow_master.c for advanced combat testing
+[Mar 16 2006 07:52]: mkdir /obj/player and living ... gonna start separating and using inherits to handle a lotta the shit in player and living.c for clarity, and streamlining
+[Mar 17 2006 02:48]: documented/recoded /room/clean.c cuz it was disgusting, and so it wouldn't possibly clean a room with a player in it
+[Mar 17 2006 03:41]: undid clean change as they thoroughly broke the mud :)
+[Mar 17 2006 04:35]: fixed and re-replaced /room/clean.c
+[Mar 17 2006 07:48]: added ownership code to locker saving ~catwoman/tl.wax for right now, tested it in my dir, works flawlessly, now it's a matter of finding all the different storages that use that style and fixing it in them
+[Mar 17 2006 07:50]: added ownership code to /obj/weapon.c - for now, to use it wizards will have to set that weapon to hotel-only storage meaning query_save_flag() { return 2; }
+[Mar 20 2006 23:52]: moved autosave/autoheal calls to use heart_beat() rather than call_out()
+[Mar 21 2006 07:12]: added query_dest_dir functionality to /room/std_old.h
+[Mar 21 2006 07:16]: same for /room/std.h
+[Mar 23 2006 03:11]: cp'd pavlik's monster.c over to lib...should cut down on wander callouts significantly, been tested, works flawlessly thus far with inclusion of the above lib changes to the room stds
+[Mar 24 2006 06:52]: added add_hit_point() to /obj/living.c
+[Mar 29 2006 08:52]: switched autosave in /obj/player.c from using save_me() directly to commanding 'save'
+[Mar 29 2006 08:58]: also added an argument of 'silent' to the 'save' command in player.c
+[Mar 30 2006 19:51]: added 'editing' status to devs/wizes command /bin/play/_wizes.c
+[Apr  1 2006 09:05]: switched autoloads to be displayed first in inventory: /bin/_inv.c
+[Apr  2 2006 12:20]: obj/living.c made so wizards receive testchar defense messages
+[Apr 10 2006 09:21]: changed line 1705 in /obj/living.c from this_player() to this_object() at pavlik's behest to fix an error
+[Apr 20 2006 14:13]: moved shout from player.c to bin
+[May 15 2006 15:19]: various changes to player.c - recoded, reformatted bunch o minor stuff, made some glitches, fixed those glitches
+[May 15 2006 15:20]: will be using liblog from now on
+[May 15 2006 15:20]: should just say that now so i don't log in 2 places every friggin thing i do

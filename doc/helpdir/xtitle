@@ -1,0 +1,29 @@
+
+                          [help xtitle]
+-----------------------=========+=========-----------------------
+
+Any player can set their pretitle.
+At level 19+22 and above the player may set their own title.
+At level 19+50 and above they may set a color title and pretitle.
+
+Usage: xtitle <newtitle>
+
+    These colours are used for adding color to your title.
+
+                      Low Intensity Colours:
+ [===========================================================]
+
+  $R$ = [31mRed[2;37;0m     $B$ = [34mBlue[2;37;0m      $G$ = [32mGreen[2;37;0m     $M$ = [35mMagenta[2;37;0m
+  $C$ = [36mCyan[2;37;0m    $Y$ = [33mYellow[2;37;0m    $W$ = [37mWhite[2;37;0m     $K$ = [30mBlack[2;37;0m
+
+                     High Intensity Colours:
+ [===========================================================]
+
+  $HR$ = [1;31mRed[2;37;0m    $HB$ = [1;34mBlue[2;37;0m     $HG$ = [1;32mGreen[2;37;0m    $HM$ = [1;35mMagenta[2;37;0m
+  $HC$ = [1;36mCyan[2;37;0m   $HY$ = [1;33mYellow[2;37;0m   $HW$ = [1;37mWhite[2;37;0m    $HK$ = [1;30mBlack[2;37;0m
+
+
+  $N$ is used for resetting the ANSI scheme.  Use this if you
+  wish to switch from one color to another.  You can also
+  use $H$ to bold text.
+

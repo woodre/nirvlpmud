@@ -1,0 +1,26 @@
+#include "../define.h"
+inherit ITEM;
+int x;
+
+reset(arg) {
+   if(arg) return;
+   set_id("sp_heal"); }
+
+drop() { return 1; }
+
+init() {
+   ::init();
+   if(USER) tell_object(USER,
+         "Your spell points begin to heal rapidly.....\n");
+   call_out("sp_heal",1); }
+
+sp_heal() {
+   if(!random(6)) tell_object(USER,"Your magic powers seem to increase....\n");
+   USER->add_spell_point(20);
+   if(x == 50) {
+      tell_object(USER,
+         "Your increased magic power dwindles....\n");
+      return 1; }
+   x += 1;
+   call_out("sp_heal",1);
+   return 1; }

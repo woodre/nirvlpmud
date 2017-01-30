@@ -1,0 +1,34 @@
+
+Bloodfist Help:  Control
+
+Guild level:  7
+Honor Req:    0
+Base Cost:    var
+
+  If a monster is weak enough you can force them into submission.  The
+monster will follow you around and obey a limited number of commands,
+it may choose to occasionally attack while you are in combat, however 
+it will not fight for you like normal pets.  These are the commands:
+
+  pet call              - summon pet to your side if it gets lost
+  pet hide              - tell your pet to run off and hide until you
+                          call it back
+  pet dismiss           - let your pet go forever
+  pet send <what> <who> - send <what> item you have to <who> player
+                          (<who> will have to accept the delivery)
+  pet get <what|all>        - pick <what> up to carry
+  pet drop <what|all>   - drop <what> on the ground
+  pet give <what>       - give <what> they have back to you 
+  pet sell <what|all>   - have pet go sell <what> and return with coins 
+  pet say <what>        - tell the room <what>
+  pet emote <what>      - emote to the room <what>
+
+  Any complex code the monster had it will not retain after you force
+it into submission (in other words, if you control a quest monster or
+something, you won't be able to still use it for whatever purpose it
+had before it was controlled).  Any items or gold the monster had it
+will retain until it dies.  Any "death code" will be executed at the
+time the monster is controlled.
+
+Usage:  control
+

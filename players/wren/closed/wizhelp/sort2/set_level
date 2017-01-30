@@ -1,0 +1,19 @@
+****************
+
+                     Set_level
+
+Syntax:    set_level <name> <level>
+
+Desc:
+           This command sets the level of a test character 
+
+Warning:   
+
+Example:   set_level mike 15
+                  results
+           Mike's level is now 15
+
+Related:   set_extra, set_attrib
+
+
+****************

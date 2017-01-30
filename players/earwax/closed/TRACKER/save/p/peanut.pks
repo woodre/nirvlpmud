@@ -1,0 +1,7 @@
+03/13/14 22:54: Googleplex  ((19+31 /Dervish)      25(1/1)
+04/ 1/14 23:01: Googleplex  ((19+36 /Dervish)      25(1/1)
+10/ 7/14 19:38: Dred        ((15    /None)         17(1/1)
+11/16/14 18:49: Gratch      ((19+22 /Neo symbiote) 25(1/1)
+08/21/15 22:22: Darude      ((19+2  /Dervish)      21(2/1)
+08/21/15 22:42: Humble      ((19+26 /Dervish)      27(2/1)
+08/21/15 22:45: Chrono      ((19+22 /Dark Order)   21(2/1)

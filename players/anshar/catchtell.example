@@ -1,0 +1,48 @@
+catch_tell(string str) {
+  string msg;
+  if(sscanf(str,"quest%s",msg) || sscanf(str,"%squest%s",msg) ||
+     sscanf(str,"%squest",msg) ) {
+    call_out("qtell",3,this_player());
+    return 1;
+  }
+  if(sscanf(str,"swords%s",msg) || sscanf(str,"%sswords%s",msg) ||
+     sscanf(str,"%sswords",msg) ) {
+    call_out("swtell",3,this_player());
+    return 1;
+  }
+  if(sscanf(str,"smith%s",msg) || sscanf(str,"%ssmith%s",msg) ||
+     sscanf(str,"%ssmith",msg) ) {
+    call_out("smtell",3,this_player());
+    return 1;
+  }
+  return 1;
+}
+
+qtell(object ob) {
+    tell_object(ob,
+      "Glarvinthal whispers to you:\n"+
+      "  'Give the three great swords to the smith of darkness.'\n");
+    tell_object(ob,
+      "  'Fulfill the mighty purpose.'\n"+
+       "  'Seek above the trees for your final task.'\n");
+  return 1; }
+
+swtell(object ob) {
+    tell_object(ob,
+      "Glarvinthal whispers to you:\n"+
+      "  'The great swords... I know but little.\n");
+    tell_object(ob,
+      "   One contains a vortex within it. It is known by its weight.\n"+
+      "   Another feeds on its wielder to enhance its power.\n"+
+      "   The last is a sword of the corrupted flower.\n");
+    tell_object(ob,
+      "  Explore the worlds of the Vortex and you will find these weapons.'\n");
+  return 1; }
+
+smtell(object ob) {
+     tell_object(ob,
+     "Glarvinthal whispers to you:\n"+
+      "  'The smith of darkness may be found in the living realm.\n"+
+      "  Ask him to forge you a weapon.\n"+
+      "  'He may have a price for his services. I do not know.'\n");
+  return 1; }

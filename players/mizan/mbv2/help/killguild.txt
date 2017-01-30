@@ -1,0 +1,11 @@
+>> ORDER: KILL BY GUILD NAME
+
+Usage:
+order <indexnum> killguild <name> <duration>
+
+Example:
+'order 3 killguild wankerguild 10'
+
+Description:
+This simply instructs the monster to kill anything it meets in 
+its travels matching the guild name specified.

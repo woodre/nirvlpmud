@@ -1,0 +1,267 @@
+/*******************************************************/
+/*  The main entrance room to all of my realms.        */
+/*  While holding the paper, movement is prevented.    */
+/*******************************************************/
+
+inherit "room/room";
+#include "/players/zeus/closed/all.h"
+string *touched;
+int area;
+
+   reset(arg) {
+
+ touched = ({});
+ if(!present("zeus_paper"))
+	MO(CO("/players/zeus/realm/OBJ/paperhello.c"), TO);
+
+   if(!arg){
+
+  short_desc=BOLD+BLK+"A black room"+NORM;
+  set_no_clean(1);
+  long_desc=
+"This is a square black room, 10 feet wide, deep and tall.  On the back\n"+
+"wall there is a single door.  A soft light is eminating from the walls\n"+
+"of the room.  There is a large inscription in the front wall.  In the\n"+
+"center of the room a clear orb is sitting on a black pedestal.\n";
+  set_light(1);
+  items=({
+   "door",
+"The black door is made of an unknown material.  It is extremely hard\n"+
+"and is eminating a soft light, which is slowly flowing towards the\n"+
+"orb in the center of the room.  Right now the door is open.  Through\n"+
+"the doorway some green grass and trees can be seen",
+   "orb",
+"The crystal orb is sitting securely on top of the black pedestal in the\n"+
+"center of the room.  It is about a foot in diameter, and is perfectly\n"+
+"smooth.  The dark light being eminated by the room is slowly being\n"+
+"absorbed and trapped within the crystal orb.  The trapped light can be\n"+
+"seen flickering within the orb",
+   "walls",
+"All of the walls are pure black.  Staring into them, they almost seem\n"+
+"to pour into themselves.  Each one is eminating a soft, dark light",
+   "floor",
+"The floor is black and perfectly smooth.  It is glowing softly.  There\n"+
+"is a black pedestal in the center of the floor",
+   "ceiling",
+"The ceiling is black and perfectly smooth.  A soft, dark light is\n"+
+"slowly pouring from it",
+   "pedestal",
+"The black pedestal is made of the same material as the rest of the room\n"+
+"It is sitting in the center of the room, and is holding a clear orb",
+   "inscription",
+"The inscription has been carved into the back wall of the room by a\n"+
+"very sharp object.  The jagged and uneven inscription can be 'read'",
+   "light",
+"The soft, dark light be eminated by this room is very strange.  It\n"+
+"looks as though it is moving very slowly, coming out of the walls and\n"+
+"slowly being drawn towards and into the crystal orb.  It is a very\n"+
+"magnificent sight to see",
+  });
+  dest_dir=({
+   "/players/zeus/realm/entrance.c", "leave",
+  });
+}  }
+
+check_touch(){
+	if(query_touched(this_player()))
+		sub_touched(this_player());
+}
+
+   init(){
+   ::init();
+   area = 0;
+   if(this_player()) check_touch();
+   add_action("read_cmd", "read");    /*  read the inscription         */
+   add_action("say_cmd", "say");      /* for teleporting w/ orb        */
+   add_action("say_cmd", "'");        /* for teleporting w/ orb        */
+   add_action("touch_cmd", "touch");  /* to enable teleport            */
+   add_action("note_zeus", "note");   /*  leave me a comment           */
+   add_action("stop_cmd",  "stop");    /*  stop touching the orb :)     */
+   add_action("leave_cmd", "leave");   /*  unset touching orb on exit   */
+}
+
+realm(){  return "NT"; }
+okay_follow() { return 1; }
+
+/*  These 3 functions are for interacting with the orb itself  */
+add_touched(string str) {
+  if(!query_touched(str))
+    return touched += ({ str, });
+  return 0;
+}
+
+sub_touched(string str) {
+  if(query_touched(str))
+	return touched -= ({ str, });
+  return 0;
+}
+
+query_touched(string str) {
+  if(!touched || !sizeof(touched)) return 0;
+  if(index(touched, str) > -1) return str;
+  return 0;
+}
+
+
+
+status read_cmd(string str)      /*  so you can read the inscription  */
+{ 
+ if(!str) return 0;
+ if(str=="inscription" || str == "wall")
+ {
+  write("The inscription on the back wall reads:\n\n"+
+"Okay..  I think I finally figured it out..  you have to 'touch' the orb\n"+
+"and then 'say' where you want to go...   Available locations...\n"+
+"   ...The Fallen Lands...  ...The Museum...  ...Inculta Creperum...\n\n");
+  say(TP->QN+" reads the inscription.\n");
+  return 1;
+ }
+ return 0; 
+}
+
+
+status say_cmd(string str)   /* SAY lets player use the orb  */
+{ 
+ if(!query_touched(TP->QN))
+	 return 0;
+
+          /*       This is for the warp      */
+ if(str == "the fallen lands" || str == "fallen" || str== "The Fallen Lands" || 
+    str =="The fallen lands" || str =="fallen lands" || str =="Fallen Lands" ||
+	str == "The Fallen lands" || str== "tfl" || str == "TFL")
+   area = 1;
+ else if(str == "the museum" || str == "museum" || str == "The Museum" ||
+	 str == "Museum" || str == "The museum" ||
+	 str == "the museum of legendary warriors")
+   area = 2;
+ else if(str == "inculta" || str == "inculta creperum" || str == "Inculta"
+   || str == "Inculta Creperum" || str == "desert" || str == "Desert"
+   || str == "desert darkness" || str == "Creperum")
+   area = 3;
+ else if(str == "bloodfist" || str == "encampment" || str == "guild"
+   || str == "guild hall" || str == "bf")
+   area = 4;
+ else
+   area = 0;
+ if(area)
+ {
+   if(present("zeus_paper",TP))
+   {
+	  write("A mysterious force is preventing you from leaving...\n");
+	  say("A mysterious force prevents "+TP->QN+" from leaving...\n");
+	  return 1;
+   }
+   say(TP->QN+" says: "+str+".\n\n"+
+	  "A great flash of light erupts from within the orb...\n"+
+	  "When the light fades, "+TP->QN+" is gone.\n");
+
+   write("You say \""+str+"\" into the orb...\n\n"+
+"A great flash of light erupts from within the orb...\n"+
+"It consumes you, and when it fades, you find yourself somewhere new.\n\n\n");
+   if(1 == area){
+     MO(TP, "/room/void.c");
+     TP->MP("yeah#/players/zeus/realm/city/ent.c");
+   }
+   else if(2 == area){
+     MO(TP, "/room/void.c");
+     TP->MP("yeah#/players/zeus/museum/entrance.c");
+   }
+   else if(3 == area){
+     "/players/zeus/desert/OBJ/desert_daemon.c"->load_npcs();
+     MO(TP, "/room/void.c");
+     TP->MP("yeah#/players/zeus/desert/r/ec14.c");
+   }
+   else if(4 == area && present("bloodfist_gob", this_player())){
+     MO(TP, "/room/void.c");
+     TP->MP("yeah#/players/zeus/closed/bloodfist/r/courtyard.c");
+   }
+   sub_touched(TP->QN);
+ }
+ else return 0;
+ return 1; 
+}
+
+
+status touch_cmd(string str)  /*  can't T-port if not touching orb   */
+{ 
+ if(!str) return 0;
+ if(str=="orb" || str=="the orb")
+ {
+  if(query_touched(TP->QN))
+  {
+	  write("You are already touching the orb.\n");
+	  return 1;
+  }
+  if(present("zeus_paper",TP))
+  {
+	  write("A mysterious force is preventing you from touching the orb...\n");
+	  say("A mysterious force prevents "+TP->QN+" from touching the orb...\n");
+	  return 1;
+  }
+  else 
+  {
+        write("You place your hand on the orb.\n");
+        say(TP->QN+" places "+TP->POS+" hand on the orb.\n");
+		add_touched(TP->QN);
+  return 1; 
+  }
+  return 1;
+ }
+ return 1; 
+}
+
+
+note_zeus(str)    /*  lets players send me logged comments   */
+{
+ if(!str)
+ {    
+   write("Usage:  'note <what>'\n");    
+   return 1; 
+ }
+   write_file("/players/zeus/log/player_notes",
+     GRN+ctime(time())+" "+NORM+HIC+capitalize((string)TP->QRN)+
+     " "+NORM+str+"\n");
+   write("You speak into the orb, leaving a note for Zeus.\n");
+   say(TP->QN+" says something into the orb.\n");
+   if(find_player("zeus"))
+   {
+     tell_object(find_player("zeus"), HIG+this_player()->query_name()+
+       " just sent you a note.\n"+NORM);
+   }
+ return 1; 
+}
+
+
+status stop_cmd(string str)     /*   To stop touching the orb   */
+{
+ if(!str) return 0;
+ if(str == "touching orb" && query_touched(TP->QN))
+ {
+  write("You take your hand off the orb and step away from it.\n");
+  say(TP->QN+" takes "+TP->POS+" hand off the orb.\n");
+  sub_touched(TP->QN);
+ return 1;
+ }
+ else 
+ {
+	 write("You're not touching the orb.\n");
+  return 1;
+ }
+ return 1;
+}
+
+
+status leave_cmd() 
+{ 
+  if(present("zeus_paper",TP))
+  {
+	  write("A mysterious force is preventing you from leaving...\n");
+	  say("A mysterious force prevents "+TP->QN+" from leaving...\n");
+	  return 1;
+  }
+  write("You leave through the door...\n");
+  TP->MP("through the door#players/zeus/realm/entrance");
+  if(query_touched(TP->QN)) 
+	  sub_touched(TP->QN);
+return 1; 
+}

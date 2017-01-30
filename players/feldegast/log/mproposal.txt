@@ -1,0 +1,131 @@
+
+I. Introduction
+
+	This document is a preliminary proposal as part of Mythos' mud
+renovation project.  This document contains the ideas and concepts
+that the "Monster team" consisting of Feldegast, Snow, Zeus, and
+Maledicta, will be working on as part of that project.
+
+II. Monster
+
+	The monster object itself doesn't seem to have many glaring
+flaws, however it does not support many features.  What we propose is
+to add many generic features to monsters so that it would be easy to
+create interesting monsters with a new bag of tricks.  Some of these
+modifications would best be implemented from living.c and have been
+placed in the section for combat.
+
+  Modifications:
+    1. Multiple spells: It is absurd to limit monsters to just one
+       kind of spell attack when it is so easy to implement multiple 
+       ones.
+
+    2. Player name: The spells should also be able to identify a 
+       string in the spell emotes so that they can substitute the
+       player's name. This can be implemented in one line of code
+       (implode(explode())) and would make it much easier to write
+       emotes.
+                   
+    3. Friend/Foe Identification: Basicly, we need to make more 
+       discriminating monsters.  Good monsters should attack bad
+       players and bad monsters should attack good players.
+
+    4. Interaction: We should standardize a system for monsters to 
+       interact with players.  This would mostly involve setting up an
+       array of search strings for catch_tell and a series of responses,
+       with optional function calls.
+
+    5. Experience: The experience system is not inherently bad, but 
+       the current monster charts don't reflect realistic assumptions
+       about player capabilities.  The monster chart needs to be
+       expanded to reflect the many level 20+ monsters on Nirvana, the
+       gap between levels 15 and 16 needs to be smoothed, and the
+       reward for killing monsters generally needs to be made
+       reasonable.  A preliminary monster xp chart is in
+       /open/feldegast/monster_chart.new.  If you have any suggestions
+       for it, please feel free to comment...after you have exhaustively
+       tested your hypothesis and explicitly justified your reasons
+       for making any changes.  The xp values will be detached from the
+       player xp levels, as there doesn't seem to be any reason for
+       these to correlate.
+
+    6. Chasing monsters: This is fairly self-explanatory.  But we
+       should make it an ability of generic monsters.  Naturally, they
+       would restrict themselves to their creator's area.
+
+    7. Monster wimpy: Updated so that chance of running and % health
+       can be specified.
+
+III. Combat
+	Combat on Nirvana seems rather dull and uninteresting.
+Basicly, it is just a bunch of spells being tossed around while heals
+are being imbibed.  Weapons are all the same, armor is all the same, 
+etc.
+
+  Changes:
+    1. Damage types: It doesn't make sense for a player to take damage
+       from fire, spells and physical damage the same way.  There
+       should be about 10 standardized values for damage type, and
+       there should be ways to give players and monsters protection
+       from each damage type.  Perhaps a monster is immune to all forms
+       of physical damage, or can only be poisoned to death.  The point
+       is to not only make the game more realistic, but to also force
+       the player to think about which kind of attack he should use.
+       This idea was detailed in greater depth by Beck a while back, and
+       the file he wrote should still be around:
+         /open/beck/new_styles_concept.txt
+
+    2. Blocking: Both players and monsters should have code in them 
+       for blocking the retreat of opponents.  Monster wimpies are
+       annoying and don't add much to the game.  But rather than remove
+       it altogether, we can use it to add a new dimension to combat.
+       Simultaneously, this will also encourage partying in order to 
+       block as many exits as possible.  If players can't cover all of
+       the exits, they'll have to try herding the monster into a room
+       where they can, adding a strategic element as well.  Naturally,
+       monsters will be able to do this as well.
+
+    3. Multiple hits: This applies to both monsters and players.  
+       Monsters should not just routinely hit a player every round,
+       some should hit several times in a row while others hit every
+       other round.  Players should be able to get in more than one
+       attack as their level increases.  In addition, dual wielding
+       should be a part of the lib rather than recoded every time
+       somebody wants to implement it.  There should also be routines
+       for allowing guilds to change these factors.  A spellcasting
+       guild should hit less often and with a single weapon, while a
+       warrior guild should be able to hit his opponent 3-4 times
+       while dual wielding.  On the other end, some monsters should hit
+       hard and consistently, while others should wear the player down
+       with many little scratches.
+
+IV. Pets and mudkids
+	While pets are fun, interesting, and an important part of the
+Nirvana experience, the current generic pets are stifling any 
+improvements on the design.  What is the point in coding a new form of
+pet when players can obtain generic ones with a wide variety of
+abilities absurdly easily?  Pets should be like mudkids, requiring
+training and care.  Naturally, the first stage of any improvements to 
+pets would be to yank the old generic variety(sorry Mythos).
+	Players should be limited in how many pets they can have 
+following them.  This would require the creation of a lib pet object.
+For example, suppose a player has 5 concentration points to use.  He 
+can have two mid-sized pets and a small one, or one big pet that takes
+up all 5 of them.  This can be used to limit players from having huge
+entourages of mudkids and guild pets.  I imagine this should also be
+allowed to vary with guild, as some would guilds would naturally be very
+pet friendly, while others would tend to be loners.
+	Commands to pets and mudkids should not be automatically obeyed!
+Commands should work depending upon the player's intelligence, will
+power, level, and whether or not the player is currently distracted.
+Pets should run away when frightened, just like mudkids(btw, nice job on
+them, Boltar).
+
+V. Renovations
+	Implicit in this project is the idea of going back and renovat-
+ing old monsters.  Animals should have 0 alignment instead of being
+evil, nor should they have coins.  The players should not avoid fight-
+ing monsters because there is nothing to gain from them.  A monster
+should be good xp, good treasure, have good items, or be for quest or
+thematic purposes.  Many areas could be rehabilitated into usefulness
+simply by changing their monsters.

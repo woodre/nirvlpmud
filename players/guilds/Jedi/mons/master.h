@@ -1,0 +1,261 @@
+init() {
+  add_action("start_training","kneel");
+  add_action("end_training","stand");
+}
+
+/********************************************************
+ **   HB makes the Jedi Master look like a real Jedi   **
+ **   The NPC actually has a jedi guild object for     **
+ **   effect, and to get the lightsaber                **
+********************************************************/
+heart_beat() {
+  ::heart_beat();
+  
+  if(Trainee && !present(Trainee->query_real_name())) {
+    tell_object(Trainee, "\n"+Name+" tells you: \"Come back another time then.\"\n");
+    ResetVar();
+  }
+  if(this_object()->query_attack()) {
+    if(!present("lightsaber",this_object())) {
+      command("unlatch saber", this_object());
+      command("ignite saber", this_object());
+    }
+    else {
+	  command("ignite saber",this_object());
+	  if(present("lightsaber",this_object()));
+        present("lightsaber",this_object())->set_modifier(random(50)+25);
+      counter = 0;
+	}
+  }
+  else {
+    if(present("lightsaber",this_object())) {
+      if(counter > random(8)) command("collapse saber", this_object());
+      if(counter == 12) command("latch saber", this_object());
+    }
+    if(counter < 13) counter++;
+  }
+}
+
+/*************** Commands the players can do ****************/
+status start_training() {
+  if(BUSY) {
+    write("\n"+Name+" says:  \"I'm am already training someone.  Come back later.\"\n");
+    return 1;
+  }
+  BUSY = 1;
+  Trainee = this_player();
+  Jedi = present("jedi_object", this_player());
+  write("You kneel before the master in a sign of respect.\n");
+  if(Jedi) Member = 1;
+  if(Member)
+    StartPoints = (int) Jedi->query_skill_points();
+  call_out("TellTrainee",2,0);
+  return 1;
+}
+
+status end_training() {
+  if(!BUSY) return 0;
+  if(this_player() != Trainee) return 0;
+  write("You stand to your feet and end the training session.\n");
+  if(Member && StartPoints > Jedi->query_skill_points())
+    write_file(LOG, ctime(time())+" "+capitalize((string) this_player()->query_real_name())+
+    " trained with "+Name+" & used "+(StartPoints - (int) Jedi->query_skill_points())+" points.\n");
+  call_out("TellTrainee",3,3);
+  return 1;
+}
+
+/*********** Catch tell, makes the NPC 'interactive' **********/
+void catch_tell(string str) {
+  string who,what,junk;
+
+  if(!BUSY) return;
+  if(sscanf(str, "%s says: %s",who, what) == 2) {
+    what = lower_case(what);
+    if(who == (string) Trainee->query_name()) {
+      if(sscanf(what, "%sknowledge", junk)) {
+        Training = 0;
+        call_out("TellTrainee",TIME,1);
+      }
+      if(sscanf(what, "%straining", junk)) {
+        if(Member) {
+          Training = 1;
+          call_out("TellTrainee",TIME,4);
+        }
+        else call_out("TellTrainee",TIME,5);
+      }
+      if(sscanf(what, "%slist", junk)) {
+        call_out("TellTrainee",TIME,2);
+      }
+      if(sscanf(what, "%s"+skills[0]+"",junk)) {
+        call_out("SkillTrain",TIME,0);
+      }
+      if(sscanf(what, "%s"+skills[1]+"",junk)) {
+        call_out("SkillTrain",TIME,1);
+      }
+      if(sscanf(what, "%s"+skills[2]+"",junk)) {
+        call_out("SkillTrain",TIME,2);
+      }
+      if(sscanf(what, "%s"+skills[3]+"",junk)) {
+        call_out("SkillTrain",TIME,3);
+      }
+      if(sscanf(what, "%s"+Info[0]+"", junk)) {
+        if(!Training) call_out("InfoMsg",TIME,0);
+      }
+      if(sscanf(what, "%s"+Info[1]+"", junk)) {
+        if(!Training) call_out("InfoMsg",TIME,1);
+      }
+      if(sscanf(what, "%s"+Info[2]+"", junk)) {
+        if(!Training) call_out("InfoMsg",TIME,2);
+      }
+    }
+  }
+}
+
+TellTrainee(int arg) {
+  string temp;
+
+  if(!BUSY || !Trainee ) return;
+  if(!present(Trainee->query_real_name())) {
+    ResetVar();
+  }
+  switch(arg) {
+  case 0:
+    if(Member) temp = "Jedi";
+    else temp = "warrior";
+    tell_object(Trainee, "\n"+Name+" says: \"Greetings young "+temp+", do you come here seeking knowledge\n"+
+      Space+"or training?\"\n");
+    break;
+  case 1:
+  if(Member) {
+    tell_object(Trainee, "\n"+Name+" says: \"Ahh, Knowledge is an ally with the Force.  Your first step\n"+
+      Space+"on the path of becoming a Jedi Master begins here.\n"+
+      Space+"Which topic are you interested in? If you ask for a list \n"+
+      Space+"I will glady tell you the Force powers that I have mastered.\"\n");
+
+  }
+  else {
+    tell_object(Trainee, "\n"+Name+" says: \"Ahh, so you wish to learn about the Jedi?  State the topic\n"+
+      Space+"you wish to learn more about, or ask for a list of topics.\"\n");
+  }
+    break;
+  case 2:
+    if(Training) {
+      tell_object(Trainee, "\n"+Name+" says: \"Very well, listen and consider carefully, \n"+
+        Space+"the choices you make decide much for your future.  Each\n"+
+        Space+"skill will grant you an additional level of power, but\n"+
+        Space+"you must use it wisely.\"\n");
+      call_out("ListPowers",TIME);
+    }
+            else ListPowers();
+    break;
+  case 3:
+    tell_room(environment(this_object()), ""+Name+" says: \"May the Force be with you,  "+Trainee->query_name()+".\"\n");
+    ResetVar();
+    break;
+  case 4:
+    if(Jedi && Jedi->query_skill_points() > 0) {
+      Skills = 1;
+      tell_object(Trainee, "\n"+Name+" says: \"Yes, I feel your readiness.  You have grown stonger with\n"+
+        Space+"the Force.  If you know the skill you wish to train, state\n"+
+        Space+"it.  Otherwise, ask for a list and I will gladly tell you.\"\n");
+    }
+    else {
+      Skills = 0;
+      Training = 0;
+      tell_object(Trainee, "\n"+Name+" says: \"I understand your eagerness, but you are not yet ready to\n"+
+        Space+"take on the responsibility of more power.  Come back when\n"+
+        Space+"you have gained more control of the Force.\"\n");
+    }
+    break;
+  case 5:
+    tell_object(Trainee, "\n"+Name+" says: \"Training to become a Jedi is a life long obligation.  A\n"+
+      Space+"Jedi has the most serious mind; the highest dedication.\n"+
+      Space+"Until you have gone before the Council and taken the oath,\n"+
+      Space+"I cannot train you.  If you want to learn about the Force\n"+
+      Space+"however, just ask for knowledge and I will tell you\n"+
+      Space+"about the Jedi.\"\n");
+    break;
+  case 6:
+    Skills = 0;
+    Training = 0;
+    tell_object(Trainee, "\n"+Name+" says: \"I understand your eagerness, but you do not have enough\n"+
+      Space+"expierence to take on the responsibility of more power.\n"+
+      Space+"Come back when you have gained more control of the Force.\"\n");
+    break;
+  default:
+    tell_object(Trainee, "\n"+Name+" says: \"I don't seem to know about that.\"\n");
+    break;
+  }
+}
+
+ResetVar() {
+  BUSY = 0;
+  Trainee = 0;
+  Member = 0;
+  Jedi = 0;
+  Training = 0;
+  StartPoints = 0;
+}
+
+void SkillTrain(int num) {
+  if(Training && Skills && Jedi) {
+    /********** Check for high enough guild level **********/
+     if(Trainee->query_guild_rank() < 
+       (Jedi->query_skill(skills[num])+1)) {
+      TellTrainee(6);
+      return;
+    }
+    if(!Jedi->query_skill_points()) {
+      TellTrainee(4);
+      return;
+      }
+    if(Jedi->query_skill(skills[num]) >= MAX) {
+      tell_object(Trainee, "\n"+Name+" says: \"You have learned all that you need to know about\n"+
+        Space+skills[num]+". I have nothing left to teach you.\"\n");
+      return;
+    }
+    tell_object(Trainee, "\n"+Name+" says: \"Yes, you have become stronger with the power "+skills[num]+".\n"+
+      Space+"May you use it wisely, and beware of the Darkside of\n"+
+      Space+"the Force.\"\n");
+    Jedi->adj_skill_points(-1);
+    Jedi->adj_skill(skills[num], 1);
+    return;
+  }
+  else SkillInfo(num);
+  return;
+}
+
+string CreateString(string *Array, int And) {
+  int i;
+  string temp;
+
+  temp = "";
+  for(i=0; i<sizeof(Array); i++) {
+    temp += Array[i];
+    if(i != sizeof(Array)-1) {
+      if(i == sizeof(Array)-2 && And) temp += ", and ";
+      else temp += ", ";
+    }
+    else if(!And) temp += ", ";
+  }
+  return temp;
+}
+
+string ListPowers() {
+  int i;
+  string temp, temp2;
+
+  if(Training) temp2 = "assist with your training are:";
+  else temp2 = "help you with are:";
+  tell_object(Trainee, "\nKiran says: \"The Force powers I can "+temp2+"\n"+Space);
+  temp = "";
+  if(!Member) temp = CreateString(Info, 1);
+  if(Member) {
+    if(!Training) temp = CreateString(Info, 0);
+    temp += CreateString(skills, 1);
+  }
+  temp += "\"\n";
+  if(Trainee) tell_object(Trainee, temp);
+  return temp;
+}
+

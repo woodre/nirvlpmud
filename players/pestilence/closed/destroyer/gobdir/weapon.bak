@@ -1,0 +1,128 @@
+static status wielded;
+static int no_go_time;
+static int no_go_over;
+static object wielded_by;
+static int broke;
+static int eff_wc;
+static int misses,hits;
+static int save_flag,class_of_weapon;
+static object hit_func;
+static string type;
+/* repeat, ld no like -Bp
+static string *message_hit;
+*/
+weapon_class() {
+   return class_of_weapon;
+}
+hit(attacker)
+{
+   if (hit_func)
+      return call_other(hit_func,"weapon_hit",attacker);
+   return 0;
+}
+set_class(c) { class_of_weapon = c; }
+weapon_breaks(){
+   if(broke) return 1;
+   return 1;
+}
+count_misses() {
+   misses += 1;
+   return 1;
+}
+count_hit_made(w) {
+   hits += 1;
+   eff_wc=((hits-1)*eff_wc + w)/hits;
+   return 1;
+}
+query_wear() {
+   return 0;
+}
+add_wear(arg) {
+   misses = 0;
+   hits = 0; 
+}
+fix_weapon() {
+   if (!broke) {
+      return 0;
+   }
+   broke = 0;
+   return 1;
+}
+re_break() { 
+   broke = 1;
+   return 1;
+}
+
+query_broke(){return broke;}
+
+query_pro_weapon(){ return 1;}
+
+
+query_message_hit(tmp) {
+  string *mess; 
+
+ if (tmp > 55) {
+  mess = ({message_hit[1],message_hit[0]}); 
+  }
+  else if (tmp > 45){
+  mess = ({message_hit[3],message_hit[2]});
+  }
+  else if (tmp > 35){
+  mess = ({message_hit[5],message_hit[4]});
+  }
+  else if (tmp > 30) {
+  mess = ({message_hit[7],message_hit[6]});
+  }
+  else if (tmp > 25) {
+/*
+  mess = ({message_hit[9],message_hit[8]});
+*/
+  mess = (""+HIW+"Smashed"+NORM+""," with a bone crushing sound");
+  }
+  else if (tmp > 20) {
+  mess = ({message_hit[11],message_hit[10]});
+  }
+  else if (tmp > 10) { 
+  mess = ({message_hit[13],message_hit[12]});
+  }
+  else if (tmp > 5) {
+  mess = ({message_hit[15],message_hit[14]});
+  }
+  else if (tmp > 3) {
+  mess = ({message_hit[17],message_hit[16]});
+  }
+  else if (tmp > 1) {
+  mess = ({message_hit[19],message_hit[18]});
+  }
+  else if (tmp == 1){
+  mess = ({message_hit[21],message_hit[20]});
+  }
+  
+  return mess;
+}
+
+
+gen_wc_bonus(){ 
+        int total,str_bonus,dex_bonus,otherbonus,inf_bonus;
+        total = 0;
+   if(no_go_time < time()) no_go_over = 0;
+   if(no_go_over >= 2) return;
+   no_go_time = time();
+   no_go_over += 1;
+        if(!USER) return 0; /* just a test!  added by verte 6.23.01 */
+            if(USER->liched()) otherbonus = 5;
+            str_bonus = present("destroyer_ob",this_player())->query_combat();
+            inf_bonus = present("destroyer_ob",this_player())->query_infantry();
+
+        if(!USER->query_weapon()){
+                total += inf_bonus * 3 + random(6);
+}
+        else {
+                total += str_bonus + otherbonus; 
+             }
+        
+        if(!environment(this_object())->query_attack()) return 0;  /* added by verte 6.23.01 */ 
+
+if(USER->query_real_name() == "pestilence") tell_object(USER, "Destroyer Total IS: "+total+".\n"); 
+        return total;
+}

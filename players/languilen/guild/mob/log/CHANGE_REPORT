@@ -1,0 +1,20 @@
+Tue Mar 30 13:43:29 1999 ** cosmo ** Added mlog(str) for logging any guild changes.
+Wed Mar 31 16:08:19 1999 ** cosmo ** Updated ../help/w_abilities and added ../help/w_family to show a listing of all mobster abilities.
+Thu Apr  1 17:52:31 1999 ** cosmo ** Added help files for blackmail, block, intimidate, kidnap, protect, and w_graft.
+Thu Apr  1 17:52:41 1999 ** cosmo ** Modified the graft help file
+Fri Apr  2 10:40:45 1999 ** cosmo ** Modified ../power/mwho.h to reflect 'different' location.  Moved old mwho.h to mwho.old
+Sat Apr  3 05:51:30 1999 ** languilen ** added /././guild/mob/power/protect.h skeliton.
+Sat Apr  3 05:54:46 1999 ** languilen ** Updated /././guild/mob/gob.c - added the protect cmd.
+Sat Apr  3 05:55:42 1999 ** languilen ** Updated /././guild/mob/guild_d.c - included protect.h
+Sat Apr  3 05:56:52 1999 ** languilen ** Updated /././guild/mob/power/guns.h - Quick fix for bad arg to keys()
+Sun Apr  4 05:08:19 1999 ** languilen ** Added /././guild/mob/power/spray.h skeliton.
+Sun Apr  4 05:09:07 1999 ** languilen ** Updated /././guild/mob/gob.c - added the spray cmd.
+Sun Apr  4 05:09:59 1999 ** languilen ** Updated /././guild/mob/guild_d.c - included spray.h
+Sun Apr  4 05:11:47 1999 ** languilen ** Added /././guild/mob/obj/protect.c - cloned to those who are protected.
+Sun Apr  4 05:13:48 1999 ** languilen ** Updated /././guild/mob/power/graft.h - so find_graft() checks against protection.
+Fri Apr  9 16:07:41 1999 ** languilen ** Updated /,,/,,/,,/mob/gob.c - to use the mapping minfo.
+Fri Apr  9 16:08:01 1999 ** languilen ** Updated /,,/,,/,,/mob/guild_d.c - to use the mapping minfo.
+Fri Apr  9 16:08:30 1999 ** languilen ** Updated /,,/,,/,,/mob/mobdefs.h - defined the mapping minfo.
+Fri Apr 23 12:58:59 1999 ** cosmo ** Redid power/mwho.h (again).  Saved the previous version to power/mwho.old
+Fri Apr 23 13:01:47 1999 ** cosmo ** We need a conversion for mtitle from a number to the string that it represents.  e.g., mtitle(2)="hitman"
+Thu Apr 29 14:09:32 1999 ** cosmo ** power/mwho.h - changed query_realm() to realm() so that the NT check works.

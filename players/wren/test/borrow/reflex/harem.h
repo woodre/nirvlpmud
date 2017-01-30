@@ -1,0 +1,17 @@
+#include "/players/reflex/lib/include/ansi.h"
+
+#define TO this_object()
+#define TP this_player()
+#define PO previous_object()
+#define TPN this_player()->query_name()
+#define TPRN this_player()->query_real_name()
+#define ETPN environment(this_object())->query_name()
+#define CAP(x) capitalize(x)
+#define ENV(x) environment(x)
+#define ENVTP environment(this_player())
+#define ENVTO environment(this_object())
+#define FN(x) file_name(x)
+#define FNTO file_name(this_object())
+#define QI(x) x->query_invis()
+#define QL(x) x->query_level()
+#define QEL(x) x->query_extra_level()

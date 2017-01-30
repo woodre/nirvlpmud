@@ -1,0 +1,13 @@
+
+
+                           [help say]
+-----------------------=========+=========-----------------------   
+
+Usage: say <message>
+       ' <message>
+        " <message>
+
+  This command will display the message to all players in the
+ same room. Example: say can I have coins?
+          Will show: Myname says: can I have coins?
+

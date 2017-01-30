@@ -1,0 +1,11 @@
+inv_no 0
+done 1
+shield 0
+notin 0
+hit_val ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+miss_val ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+locker_arg ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+filename ({"none","none","none","none","none","none",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+long_dsc "You enter Lacar's room, which has three walls coveredwith posters of Unicorns. The fourth wall is painted red,with shelves for any trophies Lacar might get. It also hasthe light switch on it."
+owner_name "lacar"
+lighton 1

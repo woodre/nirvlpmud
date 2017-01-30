@@ -1,0 +1,26 @@
+(=============================================================================)
+
+The guild (at this time) is based on 17 levels.  All new recruits begin
+at the 3rd rank.  You gain ranks by the amount of experience you spend.
+(For a list of the cost of experience vs rank type 'seal ranks'.
+When you wish to advance goto the guild lodge.  East of adventueres guild
+then north twice.  Type 'advance'.
+
+As you advance ranks you will have a different title and will also gain new
+commands at certain levels.  For now the commands are:
+
+                 Rank:      Command:
+                 ------     --------
+                   3        judge <living>, recon <player>, munch corpse
+                   5        xsell <item>
+                   8        spy <player>
+                  10        recruit <player>
+                  15        treat <player>
+                  16        dream <player/monster>
+                  18        assess <weapon/armor> <item>
+                  20        teleport <member/lodge>
+                  30        check <member>, confer
+
+The commands not listed here are executable by all members.
+New commands will most likely be added in the near future.
+(=============================================================================)

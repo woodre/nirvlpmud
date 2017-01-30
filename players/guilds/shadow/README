@@ -1,0 +1,61 @@
+SHADOW GUILD
+
+Files:
+
+The path to almost all the files is /players/guilds/shadow
+That directory contains:
+   shadow.c - The main file.  Defines variables, calls reset, directs compiler,
+              contains init() and auto_load functions.
+   spells.h - Contains all spells that depend on level.
+   utilities.h - Contains non-init() functions, like queries and level checks.
+   standard.h - Contains init() functions like guild talk, hp monitor, etc.
+   commander.h - Contains promote/revoke, and other commander functions.
+   define.h - Contains #define s.
+   help.h - Directs help functions.
+
+also, /players/guilds/shadow/shadow_lib/color.h contains ansii color stuff ( not yet
+           really used.
+
+Every file and subdirectory in /players/guilds/shadow is used in the guild
+somewhere.
+
+Here is an overview of how some of the things work:
+
+Shadow points:  Each player has 10*guild level shadow points.  The shadow
+    points (shp) can be used on any guild spell, or transfered to spell 
+    points.  The transfer ratio centers around 1/2, worse for newbies,
+    better for higher level guild members. 
+      The player selects whether shadow points or spell points are drained 
+   for spells.
+
+Servants:   The servant is not disposable.  Its hit points are remembered.
+   The character can dismiss his servant ( if he/she/it doesn't want it 
+   attacked ) or call it back.  If the player doesn't have a servant, a new
+   one can be created.  The servant has 300hp.  The creation cost 200 points,
+   and calling/dismissing an already created servant costs 30 points.  The 
+   servant can carry things.  If dismissed, the servant is moved to 
+   /players/guilds/shadow/rooms/servant_store, holding onto its items.
+   The player can quit, and come back and recall the same servant.  The items
+   are lost at the reboot.
+   As of yet, the servants cannot attack.
+   Players can heal their servant at a 3/4 heal to spell point ratio.
+
+Attack spells:  Drain is for all levels, with a variable damage up to 5 times
+   guild level.   Cost is the same.
+   Death is for 12th level only.  It does 85 points of damage, costs 70 sp and
+      15 hp ( the player who casts this spell at 13 hit points will die.)
+   Chain is an area attack spell.  The damage is 5 * guild level, and the 
+      cost varies between 3-5 times guild level.  The more monsters, the less
+      it costs.  The justification for the lower cost is that the player can't 
+      control the the damage (a lot of spell points could be wasted), and that
+      all the monsters in the room will begin to attack.
+   
+Advance costs are in /players/guilds/shadow/obj/black_orb.c.  There is 
+   no xp swapping.  The player simply advances when the go to the orb and type
+   advance with enough free experience.  
+
+The 'info <topic>' command gives help on <topic>. 'info help' gives a list of
+topics.   You may find this useful.
+
+Also, for some reason some wizzes have had problems getting this object to 
+work for them.  It may be file persmission stuff.  It works fine for players.

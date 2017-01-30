@@ -1,0 +1,35 @@
+compute_treasure() {
+    object ob;
+    int v,b,c;
+    string str,a;
+
+    treasure = 0;
+    while(c<NUMOBS_STOR) {
+      treasure_str[c]=0;
+      c+=1;
+    }
+    c=0;
+    ob = first_inventory(this_object());
+    b=0;
+    while (ob) {
+       if(ob->weapon_class() || ob->armor_class() )
+         if(!ob->query_save_flag() && !ob->query_auto_load() &&
+            !ob->generic_object() && !ob->locker_arg()){
+           str = file_name(ob);
+           if(sscanf(str, "players/%s#%d",a,c)==2) {
+             sscanf(str,"%s#%d",a,c);
+             str = a;
+             if(b<NUMOBS_STOR)
+               treasure_str[b] = str;
+             b += 1;
+           }
+         }
+      if(!c || b > NUMOBS_STOR-1) {
+        v += call_other(ob, "query_value");
+        if (v <= 1000) treasure += v;
+        else treasure += 1000;
+      } else treasure += 1;
+        c = 0;
+        ob = next_inventory(ob);
+    }
+}

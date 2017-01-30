@@ -1,0 +1,6 @@
+k 10
+backp ({"n,n,n,n,w,w,w,w,n","n,w,w,w,n","w,w,nw,n,w,w,n","s,s,w,n","n,n,n","s,s,s,s,s","n,n,w,w,n","e,s,e,s,s,e,e,e,e,n","e,n,e,e,e","w,s,w,w,w,w,w,n",})
+bpatt ({"s,s,s,s,e,e,e,e,s","s,e,e,e,s","e,e,se,s,e,e,s","s,s,s","n,n,n,n,n","s,s,e,e,s","w,n,w,n,n,w,w,w,w,s","w,s,w,w,w","s,s,s,w,w,w,w,w","e,n,e,e,e,e,e,s",})
+patt ({"s,e,e,e,e,s,s,s,s","s,e,e,e,s","s,e,e,s,se,e,e","s,s,s","n,n,n,n,n","s,e,e,s,s","s,w,w,w,w,n,n,w,n,w","w,w,w,s,w","w,w,w,w,w,s,s,s","s,e,e,e,e,e,n,e",})
+ggg "e"
+comment ({0,0,0,0,0,0,0,0,0,0,})

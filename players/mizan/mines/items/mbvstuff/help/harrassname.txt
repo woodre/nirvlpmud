@@ -1,0 +1,13 @@
+>> ORDER: HARRASS PLAYERS BY NAME
+
+Usage:
+order <indexnum> harrassname <plyrname> <duration>
+
+Example:
+'order 3 harrassname mizan 10'
+
+Description:
+Similar to the basic harrass command, but applies to players by specific
+name. Be aware that if a player logs out, and logs back in again the 
+monster will still harrass them. This is the strength of this command.
+

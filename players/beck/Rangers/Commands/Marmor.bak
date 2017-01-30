@@ -1,0 +1,77 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+string *Rangers;
+
+QMax(){ return 20; }
+
+QSkill(string person){ 
+   if(!Rangers)
+      Rangers = ({});
+   if(member_array(person, Rangers) != -1){
+      return 1; 
+   }
+   else
+      return 0;
+}
+
+RangerPower(){
+   if(!Rangers)
+      Rangers = ({});
+
+   if(!(PO->QMorphed())){
+      if(member_array(TPRNAME, Rangers) != -1)
+         Rangers -= ({ TPRNAME });
+      write("You can only use your Metallic Armor when Morphed.\n");
+      return 1;
+   }
+
+   if(member_array(TPRNAME, Rangers) < 0){
+      tell_room(ENVTP, TPNAME+" yells: Metallic Armor, Power Up!\n");
+      Rangers += ({TPRNAME});
+      return 1;
+   }
+
+   
+   write("You Power down your Metallic Armor.\n");
+   Rangers -= ({ TPRNAME });
+   return 1;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   write("Your Mettalic Armor gives you better protection in battle.\n"+
+         "Metallic Armor does come at a price however.\n"+
+         "The power cost is equivelent to your skill level in Armor (5-20 Power Points)\n"+
+         "each time you are hit by the enemy.\n"+
+         "If power levels are too low, your Mettalic Armor will turn off.\n"+
+         "");
+   return 1;
+}
+
+DefSkill(int level){
+
+   if(!Rangers)
+      Rangers = ({});
+
+   level = PO->QuerySkillLevel("armor");
+
+   if(member_array(ENV(PO)->query_real_name(), Rangers) >= 0){
+      if(!PO->QMorphed()){
+         Rangers -= ({ ENV(PO)->query_real_name() });
+         return 0;
+      }
+      if(MASTER->QPowerPoints(PO->QRangerAlign()) > level){
+         MASTER->APowerPoints(-level, PO->QRangerAlign());
+         tell_object(ENV(PO), "[ "+BOLD+BLUE+"METALLIC ARMOR"+OFF+" ] "+"Your Armor flashes as it absorbs some damage\n");
+         return 100*(level/2);
+      }
+      else {
+         Rangers -= ({ ENV(PO)->query_real_name() });
+         return 0;
+      }
+   }
+   else
+      return 0;
+}

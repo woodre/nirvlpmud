@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/emerson/weap/pcutter","/players/wren/Area/starbug/items/lunchbox","/players/mythos/awep/arrow","/players/wren/Area/starbug/items/currie","/obj/armor","/players/wren/Area/starbug/items/guitar","/obj/weapon","/players/scathe/armor/mgarb","/obj/weapon","/players/puppy/s/eq/crown","/players/mythos/awep/tanto","/players/wren/Area/starbug/items/bouquet","/players/wren/Area/starbug/items/indianheaddress","/players/wren/Area/starbug/items/wrench","/players/puppy/s/eq/ruler","/players/pain/closed/wands/orb","/obj/torch","/obj/weapon","/players/ultramagnus/rsack","/players/saber/stuff/trink","/obj/armor","/obj/armor","/players/ultramagnus/wiz_cloak","/players/emerson/heal/lpizza","/players/snow/heals/kw_meat",})
+shorts ({"Pizza Cutter","a lunch box","arrow","A tin of chicken currie","A Jedi Cloak","Lister's guitar","Blaster","Black Monk Robes","a sword","A golden crown","Tanto","a colorful bouquet of 'flowers'","a tiny indian headdress","small pipe wrench","A wooden ruler","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","sunflower","A gardening hoe","A red sack","A strange metal trinket","Robot Head","Metal gloves","An Old Grey Cloak","large pizza","A hunk of whale meat",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

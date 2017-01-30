@@ -1,0 +1,6 @@
+clone /players/stark/staff.c
+clone /obj/wiz_tool
+clone /players/stark/no_quit.c
+stop_it
+iwho
+wiz history

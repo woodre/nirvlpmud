@@ -1,0 +1,21 @@
+****************
+
+                     Upd_dir
+
+Syntax:    upd_dir <dir>
+
+Desc:
+           This command is used to update an entire directory.
+           Useful for debuging a directory that has been recently
+           ftp'd onto the game.
+
+Warning:   
+
+Example:   upd_dir /players/bob/rex
+                  results
+           directory rex is updated
+
+Related:   update, mkdir
+
+
+****************

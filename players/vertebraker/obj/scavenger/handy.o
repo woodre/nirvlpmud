@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/lunchbox","/players/snow/ITEMS/ice_shard","/players/scathe/armor/damulet","/players/wren/Area/starbug/items/jacket","/players/hawkeye/weapons/weapon","/players/wren/Area/starbug/items/thermos","/obj/torch","/obj/armor","/obj/weapon","/players/hippo/weapons/molar_sharf","/players/wren/Area/starbug/items/reddress","/players/wren/Area/starbug/items/cottagecheese","/players/wren/Area/starbug/items/sparehead","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/puppy/s/eq/apron","/players/snow/WEAPONS/souleater","/players/ultramagnus/staff","/obj/weapon","/players/ultramagnus/bdiamond","/players/wren/Area/starbug/items/flibble","/players/emerson/obj/instructions","/obj/armor","/players/ultramagnus/wiz_cloak","/players/wren/Area/starbug/items/leaflets","/players/hippo/heals/bubbles",})
+shorts ({"a lunch box","An ice shard","A Dragon Amulet","Lister's leather jacket","Hawkeye's Scalpel","a thermos","torch","A suit of [1mwhite[0m platemail","Decorated Broadsword","A molar sharf","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","a small tub of cottage cheese.","Kryten's sparehead 3.","A nobleman's shortsword","An apron","[1mSoulEater[0m","An Old Long Staff","Bow","A Blue Diamond","a [1;30mpe[37mngu[1;30min[2;37;0m handpuppet","A piece of paper","Metal gloves","An Old Grey Cloak","a stack of leaflets","[1;36mbubbles of 7up[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

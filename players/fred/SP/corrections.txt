@@ -1,0 +1,151 @@
+Notes/Corrections
+Fred's South Park area
+by Feldegast
+
+r1.c
+
+  Don't forget to change the exit to the south to the location of your
+castle, and you need to modify your castle so that it can be used as
+an entrance to your area.  I will need to see this done before I can
+approve your area.
+
+r3.c
+
+  In the description for "school", change "redish" to "reddish".
+  In the description for "gym", you repeated "to".
+
+r4.c
+
+  Is the meter maid parked illegally, or is the car?
+  In the "maid" description, change "writting" to "writing".
+  There is no r5.  You might want to add r5, or you can just connect
+  it up to r6.
+
+r6.c
+
+  "...and it is hard to see off the glare of the windows on the houses."
+  should perhaps be,
+  "...and it is hard to see because of the glare from the windows on
+all the houses."
+  Change "lays" to "lies".
+  Don't forget to fix the exit to r5 here.
+
+r7.c
+
+  In the description for "wall", you omitted the word "wall".
+kenny.c
+
+  Change "get" to "gets".
+  The value of the hood plus his money is 700 coins.  His level only
+allows him to have 400 coins worth of loot total.  A weight of 2 seems
+excessive for the orange hood(which appears orange, btw).
+
+r8.c
+
+  Change "enrire" to "entire".
+
+cartman.c
+
+  Change his alias to "eric".
+  In his attack emote, is "Authorita" part of his accent, or is it a
+typo?
+  You can't have a 900 coin heal on a 350 coin monster.   
+
+mkitty.c
+
+  You can get rid of the variable 'microphone' at the top.  You can't
+give a cat coins, unless the cat has been eating them...I suggest 
+coding up a collar or something that's worth 100 coins.  Maybe even a
+cat dish.
+
+r9.c
+
+  In the description for "pictures", you need to break that up into
+two sentences.
+  In the description for "window", "The windows are very clean and you
+can see outside."  Oh...This is purely optional, but I could show you
+how to set this up so that you could literally look outside when you
+look at the window.  It might be something cool to do, if you want to.
+
+stan.c
+
+  Get rid of the variable hood.
+
+r10.c
+
+  Change "signing" to "singing".
+
+r11.c
+
+  In the description for "fireplace", you repeated "a" twice.
+
+kyle.c
+
+  Remove the variable 'hood'.
+
+r13.c
+
+  In the description for "bar", "South Park's only...".
+
+ned.c
+
+  You forgot to set his ac.
+
+sgun.c
+
+  In the attack emote, change "aimes" to "aims".
+  In general, I think you did a good job on this weapon(except for your
+spacing).  You might want to jack the wc up to 16 on it.
+
+r15.c
+
+  In the description for "case", "school's".
+
+r16.c
+
+  You forgot the period on the first sentence.  A poster hangs from
+the one wall?  There's only one wall?
+
+chef.c
+
+  He can't have 600 coins and a 300 coin microphone.  The microphone
+needs to have weight.
+
+r17.c
+
+  You repeated the word "on".
+  In the description for "chalkboard", break that up into two 
+sentences.
+  In the description for "window", shouldn't it be "...you can see the
+parking lot outside."?
+
+mrg.c
+
+  Change "boys" to "boys'".  Break up the second sentence between the
+words "mean" and "His".
+  In the attack chat, change "crys" to "cries".
+  Mr. Hat is worth 200, so you should lower Mr. Garrison's coins to 
+400 coins so the total will be 600.
+
+bbrady.c
+
+  I'm guessing that this monster is in the missing room r5, since I
+didn't see him anywhere else.
+  You need to lower his coins to 500 because of the badge.
+
+
+Summation:
+
+  You did a good job on this area.  Not only was it quickly done, but
+there were relatively few typos, and I probably wouldn't've noticed
+them if I weren't looking so closely.  Although I am not thrilled 
+about the theme, I suspect other people will enjoy it more and newbies
+to midlevels will enjoy fighting here.  Your area is not very flashy,
+but it is not difficult to navigate and all of the monsters are unique,
+and most of them have unique items on them.  This is a very good job
+for a first effort, but I hope you choose to stretch your coding
+muscles a little more if you plan on making another area.
+  When you have finished correcting everything on this list, I will be
+glad to ask Boltar to make your castle autoload so your area can open
+and promote you to level 30.
+

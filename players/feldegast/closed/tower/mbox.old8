@@ -1,0 +1,826 @@
+From: boltar
+ Re:   Two cents
+Cc: (To: mythos) eurale,dragnar,scatahe,scathe,arrina,pain,feldegast,snow
+Date: Dec 31 11:40
+
+
+
+
+
+My intent on the approval process, when I put it in was to make a couple
+extra stages for questioable wizards to slow it down. As far
+as debate has been concerned, it has happened. 
+
+The problem of seniors not thinking things through is someting different
+entirely. And I will not open up level 20 because of that.
+
+The other smart-ass comments about pogg and usagi are simply uncalled for.
+If we had denied every questionable wizard, we would have had maybe 2
+new wizards in last couple of years. Because there are very few that 
+NO ONE objected to.
+
+oh the uncalled for also goes for other bring back the misfit comments too.
+
+As far as matrix goes, go there, see how it that mud is. I don't seen
+er see any reason to be very paranoid about it.
+I log in there from time to time. If I see transference. People will be gone.
+Its an empty mud. If they like that better, I will force that upon them.
+
+
+From: set
+Subj: thanks
+
+Date: Jan  1 23:09
+
+happy new year feldegast. you're quite wonderful.
+set
+
+
+From: cosmo
+ Re:   Environment Proposal
+Date: Jan  4 17:09
+
+I haven't put too much thought into the implementation of this
+yet. It was Wocket's idea and I thought it was a good one, so
+I included it in the proposal. If you want more details on it
+I suggest you talk to him. Also, feel free to pass along any
+suggestions that you might have on implementing it.
+
+Cosmo
+
+From: wocket
+Subj: r
+
+Cc: wocket,cosmo
+Date: Jan  5 05:40
+
+what?huh?
+I kinda mentioned it just like I've kinda mentioned it with you a couple times, 
+but nothing concrete.  Some possible ideas would be incorporate it into a 
+type of party system were some members are in front and some in back.  If your
+in back you have to have a ranged combat item to do damage.  Others are
+the room i showed you (not practical) and I saw on another mud once where there
+are three steps from a monster in a close to far distance and it might take
+x ammount of time to get from a close to a far or vice versa and with that the monster
+or you have to have a weapon that is sutible for that range.  say you have a broadsword
+which does amazing damage mid no damage far and weak damage close.  a bow might do
+mid damage far, strong damage mid, and weak damage close.  A dagger might do amazing damage
+close but weak mid and none far.  Right now im just figuring out this in my head.  But if
+monsters are moving in and out of distances players are going to have to be more aware of
+combat and more participitory making it more interactive.  That could also probably be put
+into conjunction with the party object.  Note when i saw the three stages of distance on 
+another mud it was so long ago i dont remember how they implimented it or how much it did 
+overall.  That idea is more of a monster / player thing so ill toss it to you to ponder, but
+rooms could be imcorporated to only have certain distances like only close or only close and mid
+depending on how large the room is and how many ppl are in it.  Again I havent given these ideas to anybody
+yet cause im just now thinking of them.
+  anyhow... have fun
+    -wocket
+
+From: wocket
+Subj: heh
+
+Date: Jan  6 00:50
+
+i was kinda just passing the ball to you and seeing what ideas you came up with..
+ -wocket
+
+From: cosmo
+Subj: Your full heals & Catwoman's lockers
+
+Date: Jan 18 18:09
+
+Feld -- Hugh asked for my help today b/c he had the following stored
+in his locker: A healing potion *0*.  I looked through your code and
+Catwoman's locker code and couldn't figure out how the charge could
+become set to 0. Hugh said that he stored it a long time ago, so my
+only conclusion was that maybe you didn't track charges in your heal
+code at the time he stored it. I noticed that your generic_heal.c
+file was last modified Dec 30, and I read a note that said all yours
+heals were modified last October. Hugh thinks he stored it prior to
+October, so perhaps that was the issue.  Anyway, I cloned a new heal
+for him (/players/feldegast/heals/fullheal.c) and now he's happy.
+Just wanted to let you know.
+- Cosmo
+
+From: scorpion
+Subj: hiya
+
+Date: Jan 22 22:25
+
+hello, i figured what i think a nice pretitle
+
+Knight of the Sandcastles, Deadly Scorpion
+make the whole title in bold blue except Deadly Scorpion that should be in bold yellow..thanks
+
+From: catacomb
+Subj: vamp probs
+
+Date: Feb 16 12:15
+
+I had a problem with levitate earlier and lost all my inventory.  I did mail
+Eurale also, but haven't seen him on lately so I was hoping you could help 
+me if you could.  Was just hoping to get my fangs back if I could.
+Thanks for your time,
+Catacomb
+
+From: phobeus
+Subj: the burn
+
+Cc: phobeus
+Date: Feb 25 21:22
+
+i figured out what caused it... my fangs to have light.
+if you go to bageras jungle and then within there go to where the rhinos are...
+if you go north you get a "your mind detects a space fabric" whatever message and then you start to burn.
+if you sharpen fangs it stops it.
+just thought you'd like to know.
+phobeus
+
+From: fakir
+Subj: tourney
+
+Cc: **
+Date: Feb 27 13:08
+
+I dont want to make a bunch of code work for ya...but consider if this is possible.  Take a look at the disc. I have started for room2.  Would it be possible when the player in room2 "looks at figure" they see themselves and a list of players they have fought in the past and whether they won or lost the battle?  Is there a way to do this?  If its too hard or complicated...just forget it, but I thought it might be a nice touch.  Let me know what you think.
+
+From: fakir
+Subj: arena rooms
+
+Cc: **
+Date: Feb 27 13:14
+
+We need to decide for sure how many rooms we "push" the player through in the preperation process.  Personally, I think we can do away with room three. Let room2 drop all, and let them select gear there, then move to the wait room where they will enter arena to actually fight after healing up (for dms and vamps). Let me know if ya agree, cuz that will cut out one room in the loop.
+
+From: eurale
+Subj: login room
+
+Date: Feb 28 08:05
+
+I'll take a look at fixing the login room.... thanks
+
+From: phobeus
+Subj: death
+
+Date: Mar  2 20:50
+
+hello. i died about a halfhour ago, 8:15 EST march 2nd. I died due to "light damage." Feldegast had told me that we could not die because of that. I lost 300K+xp. could you please look into this? i died in the marble shrine/island/lady maria's room. please let me know. thank you. phobeus.
+
+From: maddog
+Subj: question
+
+Date: Mar  6 23:09
+
+Do you know anything about IP's?  I guess I'm just asking what the numbers mean.  I have lots that are just one number off from the rest and was wondering if you knew what/why.  Thanks. 
+MD
+
+From: maddog
+Subj: heh
+
+Date: Mar 17 20:40
+
+patch md set_sp (-1000)
+MD
+
+From: feldegast
+Subj: Vampires
+
+Cc: (To: eurale) wocket,feldegast
+Date: Mar 28 00:12
+
+Eurale,
+
+This note is just to point out a few minor bugs...
+1. If a player quits out while in a form, the form flag in their fangs
+is still set.  I had to repair Berlinetta and Stark tonight.
+2. If a vampire is invited to somebody else's coffin, they can't 
+leave.  Coffins are also no-teleport, so they have to quit out or be
+teleported by a wiz.
+3. In coffins, when you look at the plate you just see the coffin
+description again.  
+4. When you walk into an errored room, it lights up your fangs.
+5. There is still no way to set your login room to the guild hall for
+current members, and it is not set when old or new members join the
+guild.
+6. Fangs still lose heartbeat and don't regain it after they've been
+disconnected.  This could be a fairly serious problem, and might
+effectively nullify one of their disadvantages, but I think most of
+the vamps are a fairly honest lot and the ones who know about it
+wouldn't abuse it.
+
+You might want to think about deputizing a guild wizard to help you
+out some with the vampires.  I'm willing, Wocket's probably willing,
+and god knows there're plenty of young wizards who could use some
+experience with guild code and who'd be willing to do it for the
+prestige.  Maybe Fakir, he's had a vampire character for a long time
+and he might have some ideas.
+
+Feldegast
+
+From: tiger
+Subj: blah
+
+Cc: tiger
+Date: Apr  9 23:21
+
+Rai says: The same thing a Fantasy is good for
+
+:kicks the ball and scores.
+You kicks the ball and scores.
+
+->> Rai says: Or, an Enigma
+
+Alpha cries: Aye, Aye, Aye!
+say ?
+Drkwngdck arches an eyebrow inquisitively.
+You say: ?
+
+->> Rai the spuckball draws his bow and Arrow
+Rai the spuckball freezes in the Coldwind :(
+Rai the spuckball gets stung by a Scorpion. Ouch!
+~*~Boltar~*~: Naked Chicks!  http://www.6u.com/chicks/
+tell rai who the fuck are you?
+Rai the spuckball gets mauled by a Panther and falls off a cliff. :~(
+
+From: boltar
+Subj: Objects rendered into base code
+
+Cc: snow,mythos,mizan
+Date: Apr 17 19:12
+
+ 
+ In an effort to reduce autoloads and overhead, feldegast has recoded
+various commands into base code. I have installed them
+The autoloads can be removed as soon as possible. This is best done
+by removing the preloading and taking the query_autoload out of the 
+object.
+
+Thanks to feldegast for cleaning up some of the clutter...
+
+
+The following is Felde's summary:
+
+The following objects are replaced by these bin commands:
+/players/snow/ITEMS/feeler.c
+        _emto.c
+        _farem.c
+/players/mythos/mmisc/watch.c
+        _register.c
+        _time.c
+        _wizes.c
+/players/mythos/mmisc/speed.c
+        _run.c
+/players/mizan/etheriels/items/beatfixer.c
+        _beatfix.c
+
+The command _form.c is new, and simply creates a party object if
+there isn't one already.
+
+The speedster is the only item that has been changed significantly.
+I changed the command to 'run' because that seemed more thematic,
+and I added the directions 'in' 'out' 'enter' and 'leave'.
+
+
+From: boltar
+Subj: chatter box
+
+Cc: (To: mythos) feldegast
+Date: Apr 17 19:13
+
+
+Also, the chatter box commands have been integrated into /obj/soul by 
+felde. 
+
+
+From: mythos
+Subj: nice work..:>
+
+Date: Apr 18 10:39
+
+just wanted to say.. nice work on the integration of items into soul/bin
+- Mythos
+
+From: mythos
+Subj: vampob.c
+
+Cc: (To: eurale) feldegast
+Date: Apr 21 12:13
+
+just letting you know i changed in_a_form and levitating variables to static
+saving accross boots etc was causing wierd problems 
+- Mythos
+
+From: cosmo
+Subj: Room for approval
+
+Cc: mythos,snow
+Date: Apr 24 11:21
+
+Feldegast,
+
+I've added a room and a few NPCs to my area that I would
+like for you to review for approval. The room is:
+   /players/cosmo/apt/rooms/rreggies.c
+
+It contains 3 NPCs:
+   /players/cosmo/apt/mon/feldman.c, kevin.c, gene.c
+
+And there is one object:
+   /players/cosmo/apt/mon/bizarro.c
+
+Mythos is currently reviewing the bizarro.c object for
+approval, but I was hoping you could look at the room and
+the NPCs concurrently.
+
+Thanks, Cosmo
+
+
+From: jara
+Subj: Sponsor
+
+Date: Apr 24 19:59
+
+I'm only 34 qps away from wizhood..*grin* And I am in need of a sponsor.
+I was wondering if it was something you could do, or if not, if you 
+could aim me in the direction of someone that possibly could.
+Congrats on the levels, btw :)
+
+From: mythos
+Subj: workreport
+
+Date: Apr 27 11:18
+
+make sure eveything is loogged..:> including sponsorships.. *grins*
+- Mythos
+
+From: fred
+Subj: hi
+
+Date: Apr 28 12:31
+
+Well I talked to Mythos and he said he would approve me if he was sure that somebody was going to sponsor me so I figured I'd double check to see if you were just approving me or if you were actually going to sponsor me, so I could let him know.  Thanks.
+Fred
+
+From: stark
+Subj: Wizards...
+
+Date: May  3 05:18
+
+Hi Feld.
+
+I'm really close now to +16
+About 252k away.
+
+I'm looking for approvals and a sponsor.  I'd like it if either you or Eurale were
+my sponsor.  But that's up you 2.  Just thought I'd let ya know.  I'll probably
+see you on tommorow.  But I'm mailing you anyways just to let ya know.
+
+Hopefully you'll be around when I get +16.
+
+See ya around
+Stark
+
+From: brittany
+Subj: Done
+
+Date: May  3 19:11
+
+I have fixed all the changes.  The 6altars is not completed yet, I will work on it for the part of the quest.
+
+Laters, Britt
+
+From: kazer
+Subj: Revamped Chatter Box
+
+Cc: (To: boltar) feldegast,mythos
+Date: May  4 17:48
+
+I've i'm not mistaken it now runs on the soul, when a player
+quits the line is not closed, as well as when they DC
+if there isnt' another player on the line to readd them, the
+line registers as already created until the mud reboots.
+-Kazer
+
+From: feldegast
+Subj: Quest Points
+
+Cc: (To: boltar) mythos,arrina,snow,eurale,feldegast
+Date: May  4 20:21
+
+I think we should raise the quest points required to wiz from
+284 to at least 300, and perhaps 310.  This should slow the
+rush of players becoming wizards.  If we're ever low on wizards
+then we can lower it back down again.  Thoughts, everybody?
+
+Feldegast
+
+From: jara
+Subj: questions
+
+Date: May  6 15:23
+
+had some questions for you when you get online.. it's about /players/jara/misc/doll.c
+and some things I wanted to learn how to do with it *grin* I'll be on this afternoon
+and evening 
+-Jara
+
+From: jara
+Subj: doll.c
+
+Date: May  8 04:32
+
+I'm having trouble getting this to work right.. If you could take a look at
+it and see if you notice anything right off, I'd appreciate it.. 
+Also, I had some questions for you next time you're on.. *lick*
+-Jara
+
+From: zeus
+Subj: re: snakes
+
+Date: May  8 15:06
+
+doh, thanks.  I was messing around with that for a sec yesterday, guess I accidentally deleted the file.
+
+~zeus
+
+From: jara
+Subj: rooms
+
+Date: May  9 01:58
+
+I have 14 rooms total, if you want me to have more for this first one, 
+just let me know. I'd like you to look over the descriptions and make 
+notes of anything you think should change. Also, had some questions
+for you on how to add ..hrm.. random emotes into the room.. some breezes
+and waves crashing. Also, to fix up the pub with some drinks when we
+finish looking over the room descs.. hrm.. what else.. location of the 
+monster chart and some examples. Weapons/Equip and some examples. That's
+all I can think of for the moment.. I'll be around tomorrow
+-Jara
+
+From: eurale
+Subj: nirvana titles
+
+Cc: (To: boltar) mythos,arrina,pain,snow,feldegast
+Date: May  9 08:36
+
+I have coded a room to allow nirvana players to set/reset their nirvana
+titles.  For various reasons, titles get changed to something a player
+doesn't deserve or want and this allows them to get their game title
+back without cost or color.  If you have objections to this room, please
+let me know.  Thanks..      -Eurale
+
+From: mythos
+Subj: rumba
+
+Cc: (To: dragnar) maledicta,snow,arrina,eurale,feldegast
+Date: May  9 12:19
+
+looks like BEEZ the original owner of Rumba has given his char over to his son WORM
+Unfortunately my conclusion is a bit circumstantial..
+i was wondering if you guys could confirm it
+if so the char Rumba is to be imprisoned 
+- Mythos
+
+From: fred
+Subj: Area
+
+Date: May  9 12:26
+
+Well got my area coded for you to look at it's all under the SP directory.  Just thought I would let you know.  Just mail me back or let me know what I all need to change and things like that.
+
+Fred
+
+From: jara
+Subj: misc
+
+Date: May 10 06:39
+
+I found a monster chart in your open directory.. is this the one to use?
+Also, needed to know what length the lines should be, was it 70 or 75?
+-Jara
+
+From: brittany
+Subj: Area approval
+
+Cc: (To: eurale) snow,mythos,boltar,feldegast
+Date: May 10 15:34
+
+Eurale, I have never asked for anything much, but I really need your help.
+I have been waiting for months to have my area approved and
+I keep receiving the shaft.  First, Snow started to look at it and had Maledicta look over
+it.  I changed it twice with him.  Then he got busy irl and Feldegast was appointed a Senior
+and got the task of approving my area.  It is going on the 3rd time with
+corrections, he fails to realize I am writing the area, not him.  If you
+read over his notes in my main file you will see what I mean.  I am not 
+a child and he doesnt have to write to me that way.
+I dont mind correcting things that are illegal or plain wrong, but
+to change everything because one might write differently is plain uncalled for.
+Also, I do not like to played like I am a child.  Sorry this is so long, maybe we can talk more when you are around.
+
+I usually dont get this upset, but this has really gone too far.
+I apologize for that.  Any help will be appreciated.  I will
+send out courtsey copies to Snow, Feld, Mythos and Boltar.
+
+Thanks, Britt
+
+From: feldegast
+Subj: Fred's area
+
+Cc: (To: boltar) mythos,arrina,snow,eurale,feldegast
+Date: May 11 01:31
+
+Fred has completed an area based upon the tv show South Park.
+I have gone over it and found it to be legal and free of typoes.
+It is rather simple, but it is very good considering he was
+still learning how to code in LPC a week ago.
+
+I would appreciate if you would add Fred's castle to the init
+file.
+
+Feldegast
+
+From: maledicta
+Subj: Prob
+
+Cc: (To: eurale) snow,feldegast
+Date: May 11 04:03
+
+players/eurale/Glade/OBJ/ankheg_shell.c uses a special
+inherit from pavliks directory that is causing probs
+when a player attempts to unwear or drop it. It will
+need to inherit the armor.c in obj, or require a 
+fix of some sort.  Just letting you knowm
+                    Mal
+
+From: eurale
+Subj: ankheg shell
+
+Cc: (To: maledicta) snow,feldegast
+Date: May 11 07:22
+
+Fixed the ankheg shell.  Pavlik and I worked on a joint project with some
+additional code for his guild and some is still floating around.  Thanks
+for pointing it out....   -E
+
+From: snow
+Subj: beck
+
+Cc: (To: boltar) mythos,arrina,pain,eurale,feldegast
+Date: May 11 15:35
+
+Anyone have any opposition to Beck promo 100? He's been doing a ton of good
+work lately and it would help to fix up stray cases of incompatibility with the
+changes. -Snow
+
+From: mythos
+Subj: kazer
+
+Cc: (To: boltar) eurale,feldegast,arrina,beck,feldegast,snow
+Date: May 12 15:41
+
+I just discussed Kazer with eurale
+this is the suggestion we do
+Eurale will be his direct sponsor with me backing it up.. this way we have the basic chain of 
+Kazer->Eurale->Mythos
+I agree with Eurale that kazer has potential, and to be honest he hasnt done anything that would merit a complete demotion..
+so in any case under eurale's close supervision and guidance Kazer is to be given level 21 
+and we shall see from there
+- Mythos
+
+From: mythos
+Subj: kazer
+
+Cc: (To: boltar) eurale,feldegast,arrina,beck,feldegast,snow
+Date: May 12 15:41
+
+I just discussed Kazer with eurale
+this is the suggestion we do
+Eurale will be his direct sponsor with me backing it up.. this way we have the basic chain of 
+Kazer->Eurale->Mythos
+I agree with Eurale that kazer has potential, and to be honest he hasnt done anything that would merit a complete demotion..
+so in any case under eurale's close supervision and guidance Kazer is to be given level 21 
+and we shall see from there
+- Mythos
+
+From: jara
+Subj: area
+
+Date: May 14 00:56
+
+I can't think of anything more I was wanting to do with this one, so
+if you have time, if you could go over it and let me know what I will
+need to change/do/fix so we can get it approved, that would be great.
+I'll be making a few changes tonight.. and probably won't be on until
+tomorrow evening, so hopefully I will see you around then.
+-Jara
+
+From: mythos
+Subj: listen
+
+Cc: (To: rumba) boltar,maledicta,eurale,arrina,feldegast,beck,
+Date: May 14 23:18
+
+listen.. i really could care less about your problems with maledicta
+but your harrassment has to to stop.. 
+i.e. your notes, the creation of chars that insult the person involved (i.e. malsgay) and so forth
+in short stop acting like your son - worm. 
+however if you do intend to continue harrassing a wiz then i will have to do as was done to your son.
+
+in summary, stop being a child and either ignore maledicta or discuss the issues at hand and leave the rest of the mud of it...
+or i will have to take action
+
+pps im mailing maledicta, and the seniors so they are informed of anything that occurs
+- Mythos
+
+From: mythos
+Subj: rumba/worm, etc
+
+Cc: (To: boltar) snow,eurale,arrina,maledicta,feldegast,feldegast,beck
+Date: May 15 10:10
+
+I i have set it up so all chars coming from the orbitworld.net host will end up in the prison
+he didnt heed my warning
+- Mythos
+
+From: mythos
+Subj: rumba/worm, etc
+
+Cc: (To: boltar) snow,eurale,arrina,maledicta,feldegast,feldegast,beck
+Date: May 15 10:10
+
+I i have set it up so all chars coming from the orbitworld.net host will end up in the prison
+he didnt heed my warning
+- Mythos
+
+From: eurale
+Subj: Laera's first area
+
+Cc: (To: mythos) arrina,pain,snow,feldegast,beck,laera
+Date: May 16 20:14
+
+Snow and I have gone over Laera's first area and have approved it for
+play.  I've mailed Boltar to add it to the game and have also promoted her
+to level 30 for her efforts.  I believe she will be a welcome addition to
+our immortal family.
+
+From: jara
+Subj: entrance
+
+Date: May 17 02:06
+
+had a thought, that the syntax to 'touch reflection' might be too hard,
+as 'touch' is not hinted at in the rooms.. is this something I can
+change?
+
+From: jara
+Subj: updates
+
+Date: May 17 02:53
+
+Am I allowed to make updates or do you need to approve each change? 
+I wanted to add in some more item descriptions to several of the rooms.
+
+From: snow
+Subj: /players/jara/area1/docks/mon/hand.c
+
+Date: May 17 20:15
+
+You note that the monster is a little off of the values, but that is ok, because it
+is fairer. Deckhand has 1050 coins + a 450 value dagger = 1500 coin value for a
+level 16 monster. Max for the level is 890 coins, and I don't see much of a reason
+for a deckhand to be particularly rich. What makes the added coin value fairer?
+
+From: feldegast
+Subj: p_weap.c
+
+Cc: (To: pain) feldegast,jenny
+Date: May 18 16:36
+
+Your generic weapon object doesn't have some of the newer
+function calls that're used to sharpen weapons.  In some
+cases, that makes sense not to be able to sharpen a mace
+or something, but you might want to update p_weap.c with
+the functions set_hits and set_misses so that your swords
+and axes can be sharpened.
+
+Feldegast
+
+From: pain
+ Re:   p_weap.c
+Date: May 18 20:18
+
+Couple things, had I known that changes were gonna be made I woulda
+made em, two, I'll phase these generic weapons out eventually. And
+three, why on earth did you cc jenny on this?
+
+From: maledicta
+Subj: clock tower
+
+Cc: (To: boltar) mythos,snow,feldegast,beck
+Date: May 19 15:01
+
+I have a new version of the clock_tower in my
+main directory.  It is tied in to my guild, the
+symbiotes.  When it 'dongs' it does damage to any
+symbiote within its range, thereby following the
+theme of sounds doing damage to a symbiote. If you
+would look this over, I would appreciate if it
+could be placed into the game.  I have tested
+it out, and everything seems to be fine.  Thanks,
+                      Mal
+
+From: mythos
+Subj: Healers and xp changes
+
+Cc: (To: boltar) snow,wocket,feldegast,eurale,beck,arrina
+Date: May 22 10:03
+
+I have added into the healers aa change which should help smooth things out on the healer end of things
+I have added in a combat flag to the healers.. basically it works like this:
+if a healer is in combat the flag is set.. this flag will cause ALL xp that the healer gains (thru the party object OR healing) to be reduced to 1/2, 1/3 or 1/4 
+this flag stays set until approx. 3 - 5 hb after the healer no longer shows as query_attack()
+if the healer is not query_attack() he gains xp normally.
+
+why? this is to reduce healers tanking and getting large amounts of xp
+- Mythos
+
+From: fakir
+Subj: ways area
+
+Cc: **
+Date: May 23 11:08
+
+If you have time, would you look at my ways area for approval.  I have a write up on the area and a monster chart in my main directory.  At present, Shin.c (the main and largest monster) has no treasure/item to give when killed.  I will be working on this in the future, but sence he is fairly unkillable anyhow, not too worried about it at present.  I would like to get the area online.  I mailed Snow about a week ago, but he is not logging in again, so if you would not mind, I would appreciate it.  I know you been working on your own area of late, so if ya dont have time, I can wait for Snow to eventually log in....
+                                          Thanks,
+                                         Fakir da area maker.
+
+From: stark
+Subj: /players/stark/feld_note.txt
+
+Date: May 24 03:24
+
+that's the basic idea
+
+From: eurale
+Subj: new area
+
+Cc: (To: mythos) arrina,snow,pain,beck,feldegast
+Date: May 24 15:30
+
+I have a new area ready to put into play.  It is /players/eurale/Lab.
+It is a fairly straight forward high-level area that requires some pretty
+good exploration techniques.  All mobs have items that relate to their type
+rather than coins.  I welcome any comments about this area and will be 
+making arrangements to put it into play unless I hear of some objection.
+..
+
+From: mythos
+ Re:   new area
+Cc: (To: eurale) snow,pain,beck,feldegast,arrina
+Date: May 25 10:08
+
+took a look at the items you notated as questionable..
+looks good to me..
+- Mythos
+
+From: stark
+Subj: Sithos
+
+Date: May 26 19:24
+
+Okies..
+The area is done...
+Or at least done for now...
+dir is /players/stark/forest
+starts at /players/stark/forest/forest1.c
+
+monsters are in /mon
+objects in /obj
+
+I'm going to work on the book(enterance to my areas) next...
+Thanks for your time...  Hope it's not too pitiful
+
+stark
+
+From: fakir
+Subj: area
+
+Cc: **
+Date: May 27 02:32
+
+I decided you were right.  I changed all the mosters to exact chart values.  Now when players go in the area, they will know exactly how many heals to take each time, and just how each monster acts and fights.  This will be much more interesting for the players...and of course, the monsters will all fit nicely into the little boxes here.  I have not checked, but now it will prolly be a plus coin area too...so it should be very nicely 'balanced'.  Blah.
+
+From: stark
+Subj: /players/stark/castle2.c
+
+Date: May 27 05:20
+
+
+That's my castle / enterance idea
+
+Hope you like it.
+
+Stark
+

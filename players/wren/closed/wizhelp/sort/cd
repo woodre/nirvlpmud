@@ -1,0 +1,25 @@
+**************
+
+
+                     Cd
+
+Syntax:    cd <path>
+
+Desc:
+           This is change directory. It is basic command for 
+           navigating through your files. It can be done layer by
+           layer or the whole path can be entered at once. Without
+           arguement it returns you to your base directory 
+           /players/<wiz_name>.
+
+Warning:   None
+
+Example:   cd /open/bob
+                  results
+           bob's open directory is now his working directory
+
+Related:   pwd, cp, mv, cp, rm, ed 
+
+
+**************
+

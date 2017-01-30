@@ -1,0 +1,171 @@
+#pragma strict_types
+#include "/players/vertebraker/closed/shardak/std.h"
+#include "/players/vertebraker/closed/shardak/def.h"
+#include "/players/vertebraker/closed/shardak/macros.h"
+#include "/players/pestilence/ansi.h"
+#define path "players/pestilence/closed/dark/room/"
+#define USER environment()
+inherit CMD;
+
+#define COST 100
+
+status
+SummonSpinal()
+{
+    object bones;
+    object spinal;
+    int lvl;
+    string loc;
+    needrank(7);
+    if(this_player()->query_sp() < 160){
+        write("You do not have the spell points available for this spell.\n");
+        return 1; 
+    }
+    loc = file_name(environment(this_player()));
+    if (path != loc[0..strlen(path) - 1]
+    ||  (loc == path + "whall") || (loc == path + "adv5")) {
+        write("Nothing happens.\n");
+        return 1;
+    }
+  if(find_living("Spinal"+this_player()->query_real_name())) {
+    write("You already have a guild pet.\n"); return 1; }
+    write("\
+You reach through the realms of darkness and call forth a\n\
+Soul Demon to serve you.\n");
+    say(this_player()->query_name() + "\
+ reaches through the realm of darkness. " +
+this_player()->query_pronoun() + "\n\
+chants a few sayings a portal of darkness opens.\n");
+
+    this_player()->add_spell_point(-170);
+    call_out("AwakeSpinal", 2, this_player());
+    return 1;
+}
+
+void
+AwakeSpinal(object summoner)
+{
+    object dead, bones;
+    int lvl;
+
+    if (!summoner) return;
+    
+    /* 
+     * since 3.1.2-DR does not support more than 1 extra arg for
+     * call_outs, I have to duplicate some code. Argh! :-)
+     */
+
+
+    lvl = 10;
+    dead = clone_object("/players/pestilence/closed/dark/souldemon.c");
+    dead->set_owner(summoner);
+    dead->set_alias("Spinal"+summoner->query_real_name()+"");
+    dead->set_name("irritator");
+    dead->set_short(summoner->query_name()+"'s Irritator, the Soul Demon");
+    dead->set_long("\
+Darkness envelopes this being.  Floating silently next to it's\n\
+owner, this Soul Demon awaits to be called into action.  Where\n\
+it thrives on chaos and violence\n");
+    dead->set_level(lvl);
+    dead->set_ep(0);
+    dead->set_al(-350);         /* black knight range */
+    dead->set_wc(3);            /* bare handed */
+    dead->set_ac(0);
+    dead->set_hp(lvl*5 - random(lvl));
+
+    tell_object(summoner, "Soul Demon rises from the darkness to serve you.\n"); 
+    say("Irritator, the Soul Demon rises from the dark portal.\n", summoner);
+    destruct(bones);
+    move_object(dead, environment(summoner));
+}
+
+
+status
+Summonwolverine()
+{
+    object bones;
+    object spinal;
+    int lvl;
+    string loc;
+    needrank(5);
+    if(this_player()->query_sp() < 120){
+        write("You do not have the spell points available for this spell.\n");
+        return 1; 
+    }
+    loc = file_name(environment(this_player()));
+    if (path != loc[0..strlen(path) - 1]
+    ||  (loc == path + "whall") || (loc == path + "adv5")) {
+        write("Nothing happens.\n");
+        return 1;
+    }
+  if(find_living("Spinal"+this_player()->query_real_name())) {
+    write("You already have a guild pet.\n"); return 1; }
+    write("\
+You reach through the realms of darkness and call forth a\n\
+possessed wolverine to serve you.\n");
+    say(this_player()->query_name() + "\
+ reaches through the realm of darkness. " +
+this_player()->query_pronoun() + "\n\
+chants a few sayings a portal of darkness opens.\n");
+
+    this_player()->add_spell_point(-120);
+    call_out("Awakewolverine", 2, this_player());
+    return 1;
+}
+
+void
+Awakewolverine(object summoner)
+{
+    object dead, bones;
+     int lvl;
+
+    if (!summoner) return;
+    
+    /* 
+     * since 3.1.2-DR does not support more than 1 extra arg for
+     * call_outs, I have to duplicate some code. Argh! :-)
+     */
+
+
+    lvl = 10;
+    dead = clone_object("/players/pestilence/closed/dark/wolverine.c");
+    dead->set_owner(summoner);
+    dead->set_alias("Spinal"+summoner->query_real_name()+"");
+    dead->set_name("wolverine");
+    dead->set_short(summoner->query_name()+"'s "+HIR+"demonic"+HIK+" wolverine"+NORM+"");
+    dead->set_long("\
+This is a fierce animal with very sharp teeth.  It has been\n\
+summoned from the depths of eternal darkness to help assist\n\
+it's owner.\n");
+    dead->set_level(lvl);
+    dead->set_ep(0);
+    dead->set_al(-350);         /* black knight range */
+    dead->set_wc(19);            /* bare handed */
+    dead->set_ac(0);
+    dead->set_hp(110);
+
+    tell_object(summoner, "A viscious wolverine arrives from the darkness.\n"); 
+    say("A possessed wolverine arrives from teh darkness.\n", summoner);
+    move_object(dead, environment(summoner));
+}
+
+
+status
+main(string arg)
+{
+    if (!arg)
+      return (notify_fail("Summon what?\n"), 0);
+    if (!environment(this_player()))
+      return (notify_fail("You are nowhere.\n"), 0);
+    switch (lower_case(arg)) {
+    case "irritator":
+        return SummonSpinal();
+        notify_fail("Summon what?\n");
+        return 0;
+
+    case "wolverine":
+        return Summonwolverine();
+        notify_fail("Summon what?\n");
+        return 0;
+    }
+}

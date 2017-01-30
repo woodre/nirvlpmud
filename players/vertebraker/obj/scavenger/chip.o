@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/awep/tanto","/players/mythos/aarmor/mempo","/obj/weapon","/players/mythos/awep/zantetsuken","/players/arrina/weapons/punchknife","/obj/weapon","/players/ultramagnus/staff","/players/saber/weapons/lgun","/players/scathe/armor/suit","/players/boltar/things/emoter","/players/snow/shadows/stuff/crown","/obj/torch","/players/sado/shop/oreo","/players/snow/cam/stuff/shield","/players/ultramagnus/darkarmor","/players/mythos/awep/katana","/players/ultramagnus/darkarmor","/obj/weapon","/players/wren/Area/starbug/items/leaflets","/obj/armor","/players/mythos/aarmor/haramaki","/players/pain/NEW/arm/tunic","/players/snow/closed/q/orb","/players/maledicta/cont/rdragon/dragonscale","/players/wren/Area/starbug/items/currie",})
+shorts ({"Tanto","Mempo","a knarled staff","[34mZantetsuken[0m","[1;30mObsidian [1;31mPunchknife[2;37;0m","A Deadly Bullwhip","An Old Long Staff","A lazer gun","Black Suit","An emoter","[1mShadowCrown[0m","sunflower","A box of oreo cookies","[34m[1mBlessed Shield[0m[0m","Dark Rider Hood","Katana","Dark Rider Gloves","Longsword","a stack of leaflets","An [1mwhite[0m metal ring","Haramaki","A handsome blue tunic","Orb of the Ancients","[31ma dragonscale[2;37;0m","A tin of chicken currie",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

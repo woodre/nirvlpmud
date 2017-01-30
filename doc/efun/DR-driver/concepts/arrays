@@ -1,0 +1,101 @@
+CONCEPT
+	Arrays. A kind of tutorial by Bal.
+
+DESCRIPTION
+	Arrays: What the heck are they there for?
+	-----------------------------------------
+	They are used quite frequently if you use the "room/room.c" file for
+	rooms.
+	Obvious exits and examinable items are stored in arrays. Essentially an
+	array is just a fixed number of variables organized in a common group.
+	You can make an array of arrays. Possibly also an array of arrays of
+	arrays, but really, I have yet to find a use for it..
+
+	Declaring a variable for an array
+	---------------------------------
+	The way you declare a variable for an array in not very strict. But for
+	the readability of your creations, it is good to use the most
+	explanatory way.
+
+	  array of strings:	string *slist;
+	  array of objects:	object *olist;
+	  array of many different types of variables:	mixed *mlist;
+	  (The names (slist,olist,mlist) are only examples)
+
+	In general, the game driver is very large with the declaration of
+	variables. (as long as you do not use #pragma strict_types, but never
+	mind that)
+	You could desclare:	int i;
+	and then use it for an array of objects, but why would you do that?
+
+	Making the actual array
+	-----------------------
+	Now you have a variable for an array, and like for every other variable
+	in lpc, it will start out 0. You have 2 ways of making the array.
+
+	  string *slist;
+	  slist= allocate( 3);
+	  slist[ 0]= "am";
+	  slist[ 1]= "is";
+	  slist[ 2]= "are";
+
+	or
+
+	  string *slist;
+	  slist= ({ "am", "is", "are" });
+
+	The second is obviously a lot shorter, but you do not necessarily
+	know what you are about to put into the array to start with, and that
+	is when you use the allocate() function.
+	It is possible to make empty arrays, either by allocate( 0); or ({ });
+	and then the variable will _really_ be handled like an array by the
+	driver.
+	The way you use the individual elements of the array should be clear
+	from the first example. Indexes go from 0 to the size of the array
+	minus 1.
+
+	Sharing and freeing an array
+	-----------------------------
+	When you pass an array to another function ( fun( arr); ), only a
+	reference to the array is passed to the function. The array is in a
+	way shared by all the variables pointing to it. A change to an element
+	of an array goes to the shared part of the array.
+	The lpc driver remembers how many variables point to the array, and
+	when no variables no longer point to it, the array is deallocated/freed
+
+	Adding elements to an array
+	---------------------------
+	You can add new elements to arrays.
+
+	  arr+= ({ 27 });
+
+	And the following happens:
+	  - an array of size 1, the element being 27, is allocated.
+	  - an array the size of the combined sizes of arr and ({ 27 }) is
+		allocated.
+	  - the elements are copied into the new array. arr copied first,
+		then ({ 27 })
+	  - arr is set to point to the new array.
+	  - the ({ 27 }) array is freed
+	  - if no other variable points to the array, that arr originally
+		pointed to, it is freed as well.
+
+	Not a thing you want to do every other second..
+	But it is pretty handy to be able to add to an existing array.
+	(Check also the reallocate() efun out)
+
+	And now a little teaser:
+	------------------------
+	In the files room/clean.c & obj/clean.c you can find:
+
+	  object list_no;
+	  list_no= allocate( 70);
+	  list_no= all_inventory( this_object());
+
+	all_inventory returns an array of objects located in the given object
+	I hope it is now clear, that it would be better off looking like this:
+
+	  object *list_no;
+	  list_no= all_inventory( this_object());
+
+	-= Fin =-

@@ -1,0 +1,140 @@
+
+  $$$$$$$$$$$$$$$$$$$$$$$
+  $                     $
+  $    Mud Monopoly     $
+  $                     $
+  $$$$$$$$$$$$$$$$$$$$$$$
+
+            By Jubal E. Harshaw (the LP Jubal, not the MudOS one :)
+
+Description
+-----------
+
+Mud Monopoly is played much like real Monopoly, but on a 'mud-life-size'
+board.  This document assumes that you already know how to play Monopoly.
+If not, type 'rules' to see the entire set of rules that came with the
+Monopoly game (sorry if they seem antiquated, I wanted them to be as
+authentic as possible, including the annoying usage of all-caps.
+If you think you can figure it out, try 'help' or 'help topics' for a list
+of commands.  You can also use the form 'help <command>' to get quick
+information on a certain Monopoly command.
+
+Starting the game
+-----------------
+
+Go to the Monopoly main entrance.  One of the players must name the game
+and type in 'new <name>'  (for example, 'new jubalalwayswins')
+Then, all the other players can join the game by: 'join <name>'
+You can see the games currently in use by typing 'games'
+
+Game play
+---------
+
+The game moves in normal fashion except for one major change.  The mud
+version of Monopoly is a type of 'speed Monopoly.'  As long as everyone
+is caught up to the turn that you are on, you can take your next turn at
+any time.  This means that there can sometimes be races to buy a property
+that people land on at the same time.  However, if any player is behind
+one turn, none of the other players will be able to 'roll,' so don't take
+too long.
+
+The main commands for the game are:
+  roll       roll the dice, take a turn
+  buy        buy a property or a house
+  sell       sell houses
+  i          inventory
+  l          (as in look).  Try looking at players and properties.
+
+For dealing with other players:
+  mwho       show all players and some info
+  mshout     yell something to everyone in the game
+  mgive      for making deals
+
+And also, very important commands are:
+  help       try the following arguments:  topics, id, and any command name
+  rules      The authentic Monopoly rules
+  return     Puts you back on the right space on the board
+  exit game  exit the game
+
+Deals
+-----
+
+Deals must be made as agreements between players.  There is no code
+to enforce this, so its on the honor system.  Use the 'mgive' command.
+Examples:
+mgive boardwalk to jubal
+mgive $1000 to jubal
+
+Bankruptcy
+----------
+
+As soon as your amount of cash goes negative, you will be stuck in
+bankruptcy.  You will be unable to move ('roll') until you go back
+into positive amounts.  Your options are to try to mortgage
+properties, sell houses, sell to other players, and so forth, in
+order to get back up to positive amounts.  If you can't, then you
+must exit the game.  You cannot just hold the game up until someone
+gives you the money you need.
+
+It is considered highly unfair to make a deal with a player that is
+unbalanced just before quitting the game.  (For example, giving all
+your property and cash to another player for $1 and then quitting)
+
+Miscellaneous
+-------------
+
+If you are in brief mode, your descriptions will be without the ascii graphics.
+(This includes houses and die rolls)
+
+The Chance card: "Advance token to nearest utility" is not fully correct.
+The original Monopoly had you pay 10 times the rent for landing there.
+There was no easy way to implement this.
+
+The cards are not really drawn from a 'stack' per se.  They are picked
+randomly from all 16 cards, so it is possible to get the same card twice.
+There was no easy way to implement this.
+
+Each person can only have one Monopoly player at a time.
+
+It is of course, unfair to use wiz powers to cheat at Monopoly.
+
+It is unfair to join a game without the other players permission.
+
+Check out the bleachers.  You can watch all the Monopoly games going on.
+
+Known Bugs
+----------
+
+This really depends on how well the code is ported to the mud you are on.
+Net dead players should be able to return to the game.  On some systems
+this doesn't work, it has to do with when inventory is moved from the net
+dead object to the new character.
+
+Author
+------
+
+Monopoly is a creation of Parker Brothers
+
+Mud Monopoly was written by David Ljung
+                            Spawning Cow! Productions
+                            3404 East Harmony Road
+                            Mailstop 55
+                            Fort Collins, CO. 80525
+                            (970) 229-2379
+                            dxl@fc.hp.com
+
+Copyright
+---------
+
+Monopoly is Copyright 1961, Parker Brothers
+
+This code is Copyright 1993, David Ljung
+
+It may not be rewritten without consent of the author, except for the sake
+of fixing bugs or porting to new platforms.
+
+If you want to use the game structure that Mud Monopoly is built on to
+create new games, send me some mail.
+
+It may be freely redistributed, but it may not be sold in any form.
+

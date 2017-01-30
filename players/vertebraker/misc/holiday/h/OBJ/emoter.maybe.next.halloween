@@ -1,0 +1,72 @@
+#include "../std.h"
+string *msgs;
+string date;
+int x;
+
+id(str)
+{
+   return str == "halloween_thing";
+}
+
+get()
+{
+   return 0;
+}
+
+reset(x)
+{
+   string uno,dos,tres,cuatro;
+   if(x) return;
+   date = ctime();
+   sscanf(date,"%s %s %s %s",uno,dos,tres,cuatro);
+   if((date = dos+" "+tres) != "Oct 31") return;
+   msgs = ({
+         "You feel like you are being watched...",
+         "A wisp of smoke forms near you...",
+         "You hear the rustling of leaves....",
+         "An unearthly light shines down on you from above...",
+         "Something very wrong is going on...",
+         "You hear the midnight call of a wolf in the distance....",
+         "A bat flaps right past your head!",
+         "You hear a witch cackling in the distance....",
+         "You see a ghostly vision in the distance...\n"+
+         "When you look closer, it vanishes....",
+         "A dark shadow falls upon the room",
+         "Shadows dance against the pale moonlight.....",
+         "You look up in the sky, and see the silhouette of a witch\n"+
+         "riding her broom dance across the star-strewn night horizon...",
+         "A thick fog rises around the room, temporarily blinding you...\n"+
+         "Suddenly, it falls and everything is clear again.....",
+         "You see the ghostly vision of a.. a.. samurai rabbit?!\n"+
+         "It dissipates and you are left to wonder.....",
+         "A dark night falls upon the MUD......",
+         "The moon turns "+RED+"blood-red"+NORM+".....\n"+
+         "What exactly is going on?",
+         HIW+"\n\t\tBOO!\n"+NORM, });
+   call_out("mudemote",450 + random(100));
+}
+
+
+mudemote()
+{
+   int a; object *us;
+   us = users();
+   for(a=0;a<sizeof(us);a++)
+   if(us[a]->on_chan("junk"))
+      tell_object(us[a],msgs[random(17)]+"\n");
+   call_out("mudemote",450 + random(100));
+}
+
+/* testing */
+/*
+vertemote()
+{
+   int a; object *us;
+   us = users();
+   for(a=0;a<sizeof(us);a++)
+   if(us[a]->RN == "vertebraker")
+      tell_object(us[a],msgs[random(17)]);
+   call_out("vertemote",1);
+}
+*/
+

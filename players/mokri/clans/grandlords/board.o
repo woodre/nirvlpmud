@@ -1,0 +1,15 @@
+subject "Grandlord Temple"
+new_mess "The ancient Grandlord Temple is located directly inside Snow's Nexus.  Inside the Temple you will find a room for each Grandlord Elder along with a storage area.  You may ask why ninjas need storage?  Store syringes, full heals, and with the recent removale of the clan bank store objects that can be bartered for coins. etc...  "
+messages ({"pike%DATA_BREAK%1184734205%DATA_BREAK%Welcome%DATA_BREAK%Welcome to the Grandlords. I will post a more in depth intro later.  For now all you need to know is that our attack is 'grandpower'.","pike%DATA_BREAK%1186525965%DATA_BREAK%Grandlord Temple%DATA_BREAK%The ancient Grandlord Temple is located directly inside Snow's Nexus.  Inside the Temple you will find a room for each Grandlord Elder along with a storage area.  You may ask why ninjas need storage?  Store syringes, full heals, and with the recent removale of the clan bank store objects that can be bartered for coins. etc...  ",})
+no_clean 0
+short_desc 0
+long_desc "There is no clan_board_obj here."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_board_obj"
+alias_name 0
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})

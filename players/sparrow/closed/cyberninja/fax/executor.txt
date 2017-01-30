@@ -1,0 +1,80 @@
+C Y B E R N I N J A S
+
+Fax File: executor
+Usage: fax <topic>
+
+
+     The Executor is the right hand man/woman of the Directive.
+This office handles managing the Directive's entourage of
+lower officers... there should be only one Executor per
+Directive. The Executor also provides replacement authority
+while the Directive is not present.
+
+     Executors should have extensive PK experience so that
+they may provide effective direction while the Directive
+is not present. Executors should attempt to be PK while in office,
+but this is somewhat flexible as Enforcers serve as the PK guard.
+
+___________________Executor Abilities__________________
+dnet <message>
+     Send a message through CyberDaemon. This will reach
+     all ninjas whether they are muffled or not.
+empower <member> <position> [grent/remove]
+     The 'empower' command is the all powerful command
+     that gives members guild offices or takes them away.
+     'yes' means give the player the position, 
+     'no'  means take the position away.
+     Type 'empower' by itself for a list of types.
+fax <topic>
+     Allows you to view the Cyberninja officer files. 
+     Usage is exactly like the 'cyber' command.
+     By typing 'fax' alone, a list of topics is presented.
+     Please keep the contents of these files to yourself
+     and other officers.
+gbalance
+     Allows you to see the credit account balances of all 
+     currently logged on guild members.
+onet <message>
+     Guild officer channel tell. Use this command exactly
+     like 'net', your message goes to only guild officers.
+onem <message>
+     Guild officer channel emote. See also 'onet'.
+recruit <player>
+     Allows you to recruit a player into the guild.
+     See 'cyber recruit' for more info.
+recruits
+     Allows you to see who you are currently counseling
+     as well as your remaining recruit slots.
+train <member>
+     Allows you to train a fellow CyberNinja in the martial
+     arts, thus allowing that ninja to advance in art level.
+     The student ninja will need to have the required xp
+     in order to be trained successfully.
+uncounsel <player>
+     Allows you to uncounsel a player you have recruited.
+     If you use this command to uncounsel a player who
+     is already a member of the guild, then you will lose
+     honor but your recruit slot will be freed up, so try to
+     recruit players who might be successful in the guild.
+     If you uncounsel a player who is not a member of the
+     guild, there is no honor penalty.
+unrenegade <member> [commit]
+     Without typing "commit", lets you see the Renegade
+     status of a member. If you type "commit" after the
+     name of the ninja (as specified in usage above), it
+     removes the Renegade status from a Renegade ninja.
+     That ninja will then again follow the path of honor.
+     Honor is reset to that of a new guild member.
+report <what>
+     Allows you to report the winner of a match.
+     Tournament name should be included.  Comments or
+     disqualifications may be noted as well.
+tourney
+     This shows the contents of the tournament report file.
+     All reports written will be shown.
+suspend <member>
+     Allows you to suspend a member from the guild.
+     Unsuspend removes suspension. Suspension will disable
+     the member's guild object, but object will still
+     remain on the player.
+_______________________________________________________

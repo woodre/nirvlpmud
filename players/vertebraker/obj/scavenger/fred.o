@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/shadows/stuff/ring","/obj/weapon","/players/maledicta/cont/armor/guard_of_health","/obj/weapon","/players/puppy/s/eq/brush","/players/snow/WEAPONS/tsunami","/players/pain/NEW/arm/bplate","/players/arrina/weapons/punchknife","/players/mosobp/areas/TEMPLE/OBJ/robes","/obj/armor","/players/snow/WEAPONS/glowknife","/players/jamila/beach/mobs/skin","/players/mythos/closed/guild/forest/misc/key_myrax","/players/mythos/awep/kama","/players/ultramagnus/rsack","/players/wren/Area/starbug/items/arrogance","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/wren/Area/starbug/items/cottagecheese","/players/hippo/heals/dna_repair","/obj/weapon","/players/snow/WEAPONS/souleater","/obj/weapon","/players/mythos/awep/tanto","/players/ultramagnus/darkweapon","/players/saber/armor/slboots",})
+shorts ({"A dusky ring","Golden hoof","[1;37mChestguard of [1;32mHealth[2;37;0m","a knarled staff","A paint brush","[34mTsunami[0m","A battered Breastplate","[1;30mObsidian [1;31mPunchknife[2;37;0m","A Priest's Robes","An [1mwhite[0m metal ring","A glowing knife","A Lizard Skin","Ebon Key","kama","A red sack","Rimmers arrogance.","A Prince's Robes","a small tub of cottage cheese.","[32mdna repair string[0m","Baby rattle","[1mSoulEater[0m","Axe","Tanto","Dark Rider Longsword","Stiletto heeled leather boots",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

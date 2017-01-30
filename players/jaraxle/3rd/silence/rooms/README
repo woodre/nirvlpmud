@@ -1,0 +1,6 @@
+
+silence.c is the special room inherit, it loads the map key add_action
+and the j_help tags.
+
+no_exit.c is a cp of room.c w/ a modification to dest_dir so the 
+"no obvious exit" string does not show up on my maps. ;)

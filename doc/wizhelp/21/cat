@@ -1,0 +1,20 @@
+**************
+
+                     Cat
+
+Syntax:    cat <filename>
+
+Desc:
+           Cat shows the first 15 lines of a file. 
+
+Warning:   Don't think you can hurt anything with this one.
+
+Example:   cat /obj/monster.c
+                  results 
+           first 15 lines of monster.c are displayed
+
+Related:   tail,more
+
+
+**************
+

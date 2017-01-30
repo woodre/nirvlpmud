@@ -1,0 +1,12 @@
+CHAIN
+
+Usage: 'chain'
+
+'Chain' is an area attack spell.  It attacks anything in the room except a
+player, an inanimate object, and a shadow servant.  The damage is 5 times 
+your level, and the cost depends on how many creatures are in the room (the
+more people to attack the cheaper it is).  You will cast a fireball at the 
+first monster in the room, then the next, until you run out of points or out
+of monsters.
+
+Note:  All the monsters that you attack with this spell will then attack you.

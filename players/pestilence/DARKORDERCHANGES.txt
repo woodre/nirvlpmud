@@ -1,0 +1,49 @@
+proposed additions
+add levels of combat up to 20 from 8 with total cost of 60 million
+        combatxp[1] = 0;
+        combatxp[2] = 15000; 
+        combatxp[3] = 60000;
+        combatxp[4] = 140000;
+        combatxp[5] = 460000;
+        combatxp[6] = 800000;
+        combatxp[7] = 1175000;
+        combatxp[8] = 1600000;
+        combatxp[9] = 2600000;
+        combatxp[10] = 3900000;
+        combatxp[11] = 5500000;
+        combatxp[12] = 7250000;
+        combatxp[13] = 9000000;
+        combatxp[14] = 11000000;
+        combatxp[15] = 15000000;
+        combatxp[16] = 21000000;
+        combatxp[17] = 28000000;
+        combatxp[18] = 37000000;
+        combatxp[19] = 47000000;
+        combatxp[20] = 60000000;
+general wc bonus is 1+ random combat so ranges 0-21, or if considered too much drop it to /2
+add dwield to last guild rank, gives weapon a shadow, similiar to fireblade, 
+but can't give to other players, you unwield, or drop weapon it disappears.
+
+only be able to wear certain types of main armor.
+give monster sickness, allowing you to hit him slightly better limited time, at high sp cost, and spell delay
+change cost of spells to be based off combat level, so the stronger the spell/the higher the cost
+and if your combat sucks, the spell will suck but atleast won't cost u a fortune for a sucky spell
+for the benefit of the other skills etc, remove the guild pets from the old version
+
+
+
+
+Changes
+changed punch to pain spell, punch was lame
+added an option for fatal, which is death, same as fatal, just 
+different message, so you can choose which you like better
+moved light_hurt align_hurt, test_stats to HB from call_outs
+made align_hurt = to combat, so bigger you are the more it hurts
+you can now die from align_hurt
+change slash spell to more themetic corrupt
+change wound to infect
+change wolverine to be named fiend, change fiend to be named Archfiend
+Change wolverine pet, to a minor demon or something more
+thematic based
+Change the way to join, to drink the blood of your
+mentor to gain the powers

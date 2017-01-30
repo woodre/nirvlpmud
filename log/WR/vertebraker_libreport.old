@@ -1,0 +1,410 @@
+Jul  8 18:52: bleh.
+Jul  8 19:07: Fixed /room/exlv_tablet - Added protection so a player can't record on the tablet twice.  Also protection against Wizards advancing with their test chars to +100 and recording on the tablet.  And a way for Seniors to manually add/delete players from the tablet
+Jul  8 19:16: Deleted Konya's double instance from /room/exlv_tablet.o
+Jul  9 11:25: Added QueryWeapons() and QueryArmors() to /obj/living.c
+Jul  9 12:48: Created /bin/arg_check.h [a standard way of checking in emotes if a player is there, invis, or has tellblock, etc]
+Jul  9 13:04: Added Shardak to the list of Fake fingers in /bin/_finger.c
+Jul  9 16:14: Created /bin/def.h [some quick shortcuts] and all.h as a quick shortcut to include all the necessary files for each emote in /bin/
+Jul  9 16:14: Changed the emote /bin/_ack over as a test
+Jul  9 21:20: Fixed a bug Maledicta found. added invs_flag = 0; to
+Jul  9 21:20: [Sorry about the new line] visible() in player.c so the counter would run down too.
+Jul  9 22:59: Added interactive(this_object()) checks for Infuse, soak, and stuff, so they don't go down when a player disconnects
+Jul 10 00:20: Added /open/ansi.h and esc.h to /obj/ at Feldegast's request
+Jul 10 00:22: Rm'd a couple help files that were sitting in /obj/ .. boggle :)
+Jul 10 01:02: Fixed /open/NEWEXPGUIDE's Wc bonus section
+Jul 10 01:03: Cp'd NEWEXPGUIDE to /doc/build/RULES/monster.bonuses
+Jul 10 10:31: Moved about 20 notes to /doc/notes/, reshuffled /doc/ a bit and moved old stuff to /doc/old/ so it isn't as confusing.
+Jul 10 11:01: Changed death() to log in /log/PK for true PK deaths and /log/SPAR for true sparring deaths.
+Jul 10 11:02: [That change was in /obj/living.c, old backed up as /obj/living.VERTE]
+Jul 10 23:33: Blah!  Changed back NEWEXPGUIDE and etc.  Bolts and I had a miscommunication
+Jul 11 00:46: Changed calculate_worth() to halve the spell wc bonus
+Jul 11 20:15: Made it so Shardaks can't pray in /room/church
+Jul 13 23:54: Added kill_check_object and stuff to living.c - note at adv_inner
+Jul 14 01:17: /doc/helpdir/monvalues - changed 'help monvalues' to 'help monexamples'
+Jul 14 18:17: Added more IPs for me to use
+Jul 14 18:17: [in player.c]
+Jul 18 10:57: Cp'd /log/TYPO and log/BUGS to .old's
+Jul 18 10:58: Changed bug(str) in player.c to fail with one argument.. too many people think "bug" is an emote, spams the logs.
+Jul 18 11:56: /closed/wiz_soul - added a catch() check in clone(str) so it doesn't bug out if it tries loading a bad file name
+Jul 18 12:22: /obj/living - Commented out the annoying "Bug ! The weapon was marked as wielded ! (fixed)" message in stop_wielding()
+Jul 18 13:49: /obj/living - Added kill_check_object support for all attacks
+Jul 18 13:49: er, attacks = attackers
+Jul 18 13:53: Added a few more IPs for me to access the mud by
+Jul 18 16:27: /room/adv_guild - check against illegal index
+Jul 18 16:27: [in get_exp() ? ]
+Jul 19 15:10: /obj/wiz_tool_master - added catch() support to place and hand cmds
+Jul 19 15:14: /obj/catch_talk_include.c - did a check for talk_ob_str[i] && talk_func[i] - keeps popping up in debug.log
+Jul 19 15:14: Backed up the old as catch_talk_include.verte
+Jul 19 15:17: /closed/wiz_soul - added catch() support to exec_code(str)
+Jul 19 15:22: Removed the "static" from communicate(str) in player.c
+Jul 19 15:42: /obj/user/vdsfuns.c - added m_delete
+Jul 19 20:38: /obj/kid_soul - added a catch() check in cmd_hook() to prevent errors in debug.log
+Jul 19 20:57: Changed the check in stop_wielding() from if(!name_of_weapon to if(!objectp(name_of_weapon
+Jul 20 01:23: /closed/wiz_soul - added a catch() check in load(str)
+Jul 20 02:20: /bin/_bleed - changed query_max_hp() to query_mhp() so you can't bleed at full hp
+Jul 20 03:03: Made it so long() in player.c returns "a" or "an" dependent on whatever race the player is
+Jul 20 19:55: /bin/_creator - Implemented, announced, and put in help files
+Jul 20 20:48: /obj/player - Made it so discon_quit() doesn't bug out if the player doesn't have an environment/is logging in.  Moves those logging in players' boxes to /room/church [needed to put 'em somewhere]
+Jul 20 21:05: /obj/living.c - added an if(!w) return; check in wield() to return 0
+Jul 20 21:27: /bin/_emote .. fixed emotef to not show "<F1Q]" and so forth. weird bug
+Jul 23 15:42: /obj/armor - added if(!this_player()) return short_desc; in the short() func
+Jul 23 15:44: /obj/weapon - added if(!this_player()) return short_desc;
+Jul 24 03:40: /obj/living.c Changed generic_wc_bonus code so it could be used in infinite objects on a player, not just 1
+Jul 24 03:40: [Old backed up as living.verte]
+Jul 24 04:42: Made it so you can "look <what>" as well as "look at <what>" in /obj/player.c  Backed up as /obj/player.verte
+Jul 24 04:56: Added Shardaks to help guilds, with a "beta" tag
+Jul 24 05:18: /bin/_rlog.c - added support if they are specifying an argument that is their own name, for mk and other such cmds.
+Jul 24 07:23: Rewrote a lot of the /bin emotes, got through _grin.c
+Jul 24 07:23: [Alphabetically from 'a']
+Jul 24 07:27: moved /doc/helpdir/vintage to /doc/helpdirold/vintage
+Jul 24 14:12: /obj/player.c - added a stringp() check in quit() .. was giving Bad arg 1 to strlen()
+Jul 27 20:46: added "dark_sight_object" present check to test_dark in this_player() .. trying to enable a quick way of seeing in the dark
+Jul 27 20:46: in above scrambled msg, this_player() = player.c
+Jul 27 20:48: Made same change to /obj/living, in move_player()
+Jul 28 04:18: Changed "blah is carrying:" to "You are carrying" if you look at yourself.
+Jul 28 04:18: [in player.c]
+Jul 28 07:23: /obj/corpse. - added *ids and add_id()
+Jul 28 08:00: /obj/corpse - added is_corpse() { return 1; }
+Aug  2 06:26: Added public plans .. note on Wizboard
+Aug  2 23:37: /closed/wiz_soul.c - added an if(!al) check in set_alignment_num()
+Aug  3 00:48: Disabled the base emotions for Guest.  They can create a real character to spam and face the consequences
+Aug  3 01:39: Added a toggle_already_fight() func to the end of /obj/living
+Aug  4 00:19: Added an exit to /room/orc_dump.c for Maledicta's "Knights vs. Goblins" war
+Aug  4 09:50: Added set_spar() to player.c
+Aug  4 10:57: Changed remove_ghost() msgs in player.c to tell_object(this_object(), and tell_room(environment() for resurrect spells, etc.
+Aug  4 13:07: Added is_dieing() { return dieing; }) to /obj/living.c
+Aug  4 16:35: /room/post - added a "no_light_damage() { return 1; }" for Vampires
+Aug  5 14:01: /obj/shadow_master - added the shardak shadow
+Aug  6 14:57: /obj/player.c - added set_guild_rank(arg) { guild_rank = arg; }
+Aug  6 15:01: /obj/player.c - added set_guild_exp(arg) { guild_exp = arg; }
+Aug  7 00:16: obj/shadow_master - added ~/closed/shardak/obj/circle
+Aug  7 11:36: Added object special2; to the extra_look() stuff in look() cos it was erroring, made the next_inventory() happen before the call, cos something is desting in extra_look().
+Aug  8 13:08: /obj/living - added add_hp(x) and add_sp(x) - mirror funcs of add_hit_point/spell_point
+Aug  8 14:39: /obj/living - Added mirror function query_hit_point() to query_hp()
+Aug  8 16:04: Added Replyer / reply stuff to /obj/player.c, coded /bin/_reply.c and put it in the game
+Aug  8 16:09: /bin/_reply.c - changed this_player()->tell(str) to a command() based tell so gobjs and such will pick it up
+Aug  8 16:44: Added test_if_any_monsters_attacking() in /obj/living.c
+Aug  8 16:44: Made it so corpses cloned when players die in spar areas are only worth 1 corpse level
+Aug  8 16:51: If a sparring room has a func player_spar_only() in it, and a player dies while a monster is attacking them, the player's death will be considered "real" and not sparring
+Aug  8 18:12: Updated /doc/helpdir/all .. Wrote a cmd to autogenerate a help all .. ~/closed/hat/cmds/genhelp.c
+Aug  9 15:17: Moved the inactive restoration stuff before the password hint and mail address stuff, was causing errors so inactive players couldn't get out of inactivity
+Aug  9 16:59: Added dark_sight_object checks in /room/room.c and /room/std.h
+Aug 10 03:39: Added a present("no_msg_hit", this_object()) check in /obj/living.c - If this is here, then it doesn't display hit msgs
+Aug 11 06:23: /closed/wiz_soul - added if(!arg) check in imprison(arg)
+Aug 23 22:10: Added a cmd, /bin/_armors.c .. announced, etc
+Aug 23 22:55: set it up so players can now drop x am't of coins
+Aug 23 23:00: Made it so you can drop 'x' am't of coins
+Aug 28 13:19: changed access so lvl 21+ wizs can see other wizplans
+Sep 12 22:33: /obj/player.c - added fix_beat(x) in player.c - quick macro for ob->set_heart_beat(x)
+Sep 12 22:34: /obj/catch_talk_include - added if(catch_nr > sizeof(talk_ob_str)) return; to prevent bad index errors [this thing should be rewritten]
+Sep 12 22:35: [oops] a few days ago i added a check, if damage_report_object is on the player, it sends data to a func on the player, see living.c for more info [do_damage func]
+Sep 12 22:35: blech, receiver of data is the obj, not the player
+Sep 14 11:52: room/room.c - short() now returns a dark description even if the light is less than 0
+Sep 17 11:21: /obj/ask_lead & /obj/ask_follow - added drop() { return 1; }
+Sep 18 20:47: /obj/player.c - added a save after players login to prevent the bug that Reflex found where it would wipe your char if you were dested after coming back from inactivity [hah]
+Sep 20 21:39: /obj/monster.c - added set_ghost(x)
+Oct  4 14:23: /bin/_spit - changed query_real_name() in if(!str) to query_name()
+Oct  4 14:49: Updated boltar's nirvana email address in /doc/helpdir/wiz_behavior
+Oct  4 14:51: And again in /doc/helpdir/nirvana
+Oct 10 17:24: Updated /doc/helpdir/guilds to reflect 'open' status of Warriors guild
+Oct 15 17:45: Added an arg of previous_object() to damage_report_object
+Oct 17 17:22: Created regen code [see /open/verte/regen] for details -- mod to player.c
+Oct 24 09:45: /obj/catch_talk_include - patched catch_nr > to catch_nr >= sizeof(talk_ob_str)
+Oct 30 00:47: Created a valias cmd for wizards to diagnose player problems
+Nov  1 11:24: Created a display cmd on Oghma's suggestion [/bin/_display.c]
+Nov  1 11:59: Added help files for armors, display. Updated help all
+Nov  1 11:59: Added Jenny as a Cyber wizard in "help guilds"
+Nov  4 21:23: Setup /obj/box & it autoloads in green [suggestion box]
+Nov  4 21:24: Gave full write to /ideas for the use of the box
+Nov  5 00:18: Created /bin/std.c for standard emotes
+Nov  5 00:18: Wrote /bin/_cemote.c for Jaraxle and I to use
+Nov  5 00:19: Refers to ~/emotes/editor.c
+Nov  5 11:53: Changed /bin/_display to a different system.  Thanks Fran for pointing out flaws.  I think it's fixed now
+Nov  5 17:47: Added a bite emote
+Nov 13 11:44: Added cmd directory code </closed/verte/cmd_dirs.h>, cmds themselves are unimplemented
+Nov 16 13:55: /bin/_ping - if(str) chec
+Nov 16 13:57: Added a living() check in wield_and_wear() [player.c]
+Nov 18 02:25: Created a clear_dir cmd
+Nov 30 01:32: /obj/partymaster.c - Added channel histories
+Nov 30 01:37: /obj/kid - if(daycare) check in second_life()
+Nov 30 01:38: Also created an upd_dir cmd
+Nov 30 01:59: Removed /log/TYPO - all typo's fixed
+Nov 30 02:07: /obj/player - Shuffled short() to be a bit more efficient, also took out the extra space when someone (usually a wizard) eliminates their title
+Nov 30 02:10: Removed /log/BUGS - All bugs fixed
+Nov 30 02:20: /bin/std - Updated the code to be more helpful with the editor I wrote
+Nov 30 02:31: Added a shitload of emotes
+Nov 30 02:54: Created /doc/helpdir/assist and updated Help files
+Nov 30 02:58: Updated help all
+Dec  5 10:30: /obj/stethoscope - added a listen_ob check in heart_beat()
+Dec 10 12:20: /obj/kid - if(!str) check
+Dec 11 03:31: /bin/_display - Added even more functional code.  function_exists() check and etc.  Mv'd display_merf to /obj/user per Boltar's instructions
+Jan  7 17:03: Rm'd my dupe AOL ips
+Jan  7 17:03: from /obj/player
+Feb  8 02:39: Small adjustment in living.c do_damage() for a yautja bonus.
+Feb 12 22:34: ~obj/living - Updated set_message_hit() to reflect the ancient typo of "massacre" to "massacred"
+Feb 13 14:27: Granted Reflex write access to Saber's directory
+Feb 25 21:13: /bin/_emote - Moved query_idle() check after interactive() .. :)
+Mar 13 17:34: Made major Pk changes for mally boy
+Mar 14 00:49: Edited my changes to PK, tested it, brought it up to speed.  Mal announced, Boltar already okay'd
+Mar 14 00:49: Updated help atmosphere/help emotes.  Created a script to auto-gen this
+Mar 15 15:12: Added in new wimpy failure code for PK'ers.
+Mar 15 15:12: (Formula stl*2/3 + luc*2/3 + lev*2/3 + xlv/10) < random(100)), then fail
+Mar 18 14:16: Added query_long() to /obj/armor, /obj/monster, /obj/weapon, /obj/treasure
+Mar 18 16:42: Moved my mail stuff to a .bak in post_dir
+Mar 18 17:19: Instituted "help ansiprefs"
+Mar 18 22:13: Disabled Guest from being able to see his IP.  Cos obviously they could see someone else's
+Mar 19 12:51: Made it so people can clear their descriptions
+Mar 28 00:44: Tossed in Felde's addition
+Mar 28 00:44: er to monster.c [spell damage types]
+Apr  1 14:56: /bin/_stat - Adjusted it so it checks for the critter inside your room before trying somewhere else
+Apr  1 15:54: A couple days ago I updated "help guilds" to a more current status.
+Apr  1 16:09: test
+Apr  1 16:09: Yay, moved this here.
+Apr  1 16:19: Fixed all the TYPO, BUG reports, rm'd the logs
+Apr  1 21:56: Gave idiot access to my files for testing
+Apr  1 23:45: Implemented Jaraxle's new help files for babble, channels, equip
+Apr  2 00:50: /room/room - Fixed a minor error i made in okay_follow(), Felde found it
+Apr  2 01:23: did void wizlist(); in /obj/simul_efun
+Apr  2 04:09: Created /obj/exists.c to get around a bug. Talk to me for more info
+Apr  3 01:40: Addeed in stuff to move_player() so it doesn't print a msgout/msgin msg if you present("silent_move_object") on the player
+Apr  4 17:48: Added unset_invs_sp() to /obj/player.c : Unset invisibility without a silly message
+Apr  4 18:07: /closed/wiz_soul - goto/teleport(str) doesn't error out anymore when you give a bad filename or monster name
+Apr 10 02:01: Added in /obj/monster2.c, an amalagamic beast of a code, which uses both Felde and my std monsters
+Apr 10 02:01: Made a mod to /bin/_finger.c and /obj/player.c so that you can't tell if a wizard is invisible by their "finger" information
+Apr 11 03:20: Made another mod to /bin/_finger.c at Reflex's request.  Now it prints the IP name as well as the ip # for wizards.
+Apr 11 22:57: /obj/corpse - added add_decay(x);
+Apr 12 19:40: Added an admin channel
+Apr 12 19:40: Also made it list in channels at Wocket's request
+Apr 12 19:40: Fixed /obj/exp_store so Guest's exp won't count on top list
+Apr 16 12:02: Fixed a bug with PK death reported by Tartis..
+Apr 16 12:53: /obj/living - !this_object() [bog] check in run_away()
+Apr 16 12:54: /obj/living - this_object() [huh?] check in attack()
+Apr 16 12:57: /room/adv_guild - arg < 0 check in check_exp for guest so it doesn't bug out and kill hb on monsters
+Apr 16 22:01: /bin/_emote - query_spell_point() check in emotef
+Apr 17 00:10: /bin/_dump.c - Fixed a small bug that printed a line twice.
+Apr 17 00:51: Reset Toorima/Stardream's password so she could log on.
+Apr 18 11:32: /obj/partyob - Party objects don't destruct when you "sell all" now
+Apr 18 13:12: /obj/player - Added in > support and added /bin/_talk - Undocumented yet
+Apr 18 15:06: /room/farmroad2 - Commented out the old Monk guild entrance
+Apr 18 15:48: /obj/living & /obj/player - Patched heal_self() and add_hit_point() so their negative args record to damage_report_object() as well.  Also added a new func, query_dam_taken_this_round() , which returns the total dam taken the heart_beat it is queried in
+Apr 19 03:46: /closed/wiz_soul - wizlist() now takes an argument
+Apr 19 03:53: /bin/_dump - Changed to read_bytes() [wonder if it will work now]
+Apr 19 04:09: /bin/clean - Changed it to dest ALL objects, including objects on NPC's
+Apr 19 15:09: Updated help emotes/atmosphere again
+Apr 19 17:00: /closed/wiz_soul.c - Added more catch() support to exec_code()
+Apr 19 17:46: /obj/weapon - added a write("Ok.\n"); for when you unwield weapons.
+Apr 19 22:25: /obj/wiz_tool_master - For place, If there is no player target for it, it tries a find_living()
+Apr 20 04:16: /obj/player - Fixed valid_attack() so Jedi may attack each other any time.
+Apr 20 19:15: /obj/player - Fixed it so you can't put can_put_and_get() items into other can_put_and_get() items.  Except armors like Patchwork cloak, etc, will still go in
+Apr 20 19:18: /bin/_xpnext - Updated it so it just displays "You are ready for your next level" if you actually are.
+Apr 20 19:18: [suggested by Forbin]
+Apr 20 22:15: /room/farmroad2 - took out the no_castle_flag so Puppy could drop his castle
+Apr 21 00:47: /obj/player - other_copy check in move_player_to_start()
+Apr 21 16:51: /room/room - Made it so if a room has 6 exits or more, the short() returns += "many exits"
+Apr 21 17:39: /obj/player - Oops, forgot I didn't make it so weapons can go in bags as well
+Apr 22 00:21: /obj/player - Added add_player_id(arg) / remove_player_id(arg) / query_player_ids()
+Apr 22 02:37: /obj/living.c - Updated say() in move_player() to tell_room() cause it was still telling itself the msgs.  Not really a good thing, when you have an object inside it [like my Shardaks inside their dragons]
+Apr 22 02:49: /closed/wiz_soul - fixed grep() so it returns an error msg rather than bugs out if you do if(!str) or don't give proper args
+Apr 25 16:14: /obj/shadow_master - Commented out obsolete Paladin, Dark Mage shadows from loading
+Apr 26 13:38: /bin/_emote - changed if(query_idle(ob) to else if(query_idle(ob)
+Apr 26 22:46: /obj/player - ob check in load_auto_obj()
+May  9 21:31: /obj/player - !this_object() check in heart_beat()
+May 12 03:22: /obj/discon - added query_box_owner() { return box_owner; }
+May 12 03:23: /bin/_instances - Testing out a new wiz cmd, afraid to test it due to possible too long eval err, waiting until less ppl are on
+May 12 03:31: /obj/player - Added an array system to keep trk of discon boxes
+May 12 05:09: Moved my load_object.h & resolve_path.h to /obj/user/, updated /bin/_mk
+May 13 05:46: /obj/simul_efun - Added a skip_spaces() efun
+May 13 06:50: Added all my m_efuns as efuns
+May 13 06:59: /bin/std - updated so the prompts show w/ tell_object() [->>]
+May 14 05:22: /bin/_finger - Now it displays how long a player has been online [thanks Fran]
+May 14 06:41: /obj/shadow_master - Added my Jedi shadow for testing
+May 14 07:45: Added page, page cmds, funcs in lib
+May 14 07:50: Updated a few help files
+May 14 14:38: /room/adv_guild - Fixed the advancement so warriors who are honorary members of the Knights can adv their stealth/mag
+May 16 05:11: /obj/weapon - added set_broke(b)
+May 16 22:58: Gave write access to Daranath for Saber and Bagera's areas
+May 30 00:09: added "custom_attacker_death_mess" & "custom_attacker_room_mess" string variables to /obj/living with apropos set_ funcs
+May 30 00:17: added set_wielded(), set_wielded_by() funs to /obj/weapon
+May 30 01:10: Added in loadObject() to /obj/simul_efun [/obj/simul_efun/loadObject.c]
+May 31 10:15: Adjusted /obj/living so people can only lose 3 mil max exp when they die
+Jun  2 03:52: Gave Fran access to Trix's dir to look thru the Undead
+Jul  5 23:14: /obj/monitor.c - added if(o) o->print_monitor(); in the print_monitor() fun
+Jul  6 00:42: /obj/player - Added PK-area support to heart_beat() [notifies the player when they enter/leave]
+Jul  7 02:02: /obj/player - added a this_object()->check_fight_area(); in logon2()
+Jul  8 03:16: introduced /closed/verte/qt/play_inc.h
+Jul  8 04:19: Rm'd Fawkes' banish
+Jul  8 10:16: /obj/player - Patched it so fight_area clears on login again [hopefully]
+Jul  8 10:29: /obj/base_tele - Adjusted from 10-15% failure to 5-10% failure
+Jul 10 09:03: Introduced all my QT code into the game
+Jul 10 10:03: put Zeus's bloodfist shadow in the game, removed mine
+Jul 11 00:03: /obj/weapon - added on query_message_hit_array() { return message_hit; }
+Jul 11 00:05: /obj/weapon & /obj/monster - added on query_message_hit_array()
+Jul 11 00:55: Added a "pk" channel
+Jul 11 02:44: Added a new efun: /obj/simul_efun/matching_arrays
+Jul 11 02:52: /closed/wiz_soul - if(ob) check in clone(str)
+Jul 11 12:48: Prevented a weird restore_object() bug [see LPC board] by editing /bin/_nickname, /bin/_alias
+Jul 11 12:48: Added on about wimpy rules in PK to /doc/helpdir/wimpy
+Jul 11 15:51: Added ANSI support to the mud's exec cmd [/closed/wiz_soul.c - exec_code(str)]
+Jul 11 19:05: /obj/player - made kill non-static
+Jul 11 22:04: Hacked up /bin/ and separated the stuff. Altered obj/user/cmd_hook.c to reflect the changes
+Jul 11 22:22: /closed/verte/vhistory.h - Updated it so the last cmd comes last
+Jul 11 23:17: Removed Guenhwyvar's player file at his request.
+Jul 12 00:36: introduced /obj/simul_efun/expand_month.c
+Jul 12 02:48: /obj/corpse - added query_decay()
+Jul 12 02:50: /obj/money - id() changes for "coin" and "coins"
+Jul 12 03:28: Added /bin/play/_offer.c & /doc/helpdir/offer
+Jul 12 15:30: /obj/player - took out cmd_dir stuff [and /closed/verte/cmd_dirs.h]
+Jul 12 15:36: /obj/user/channel - fixed admin channel so it tells who the invis wiz is when he admin emotes
+Jul 14 03:45: Added /bin/_<mudspells> to fix the old spells and make them have interesting messages
+Jul 14 04:00: /closed/wiz_soul - Moved add_action("qtHook"); et. al at the end of init() so it picks up wizard cmds AFTER the add_xverb()
+Jul 14 04:00: /closed/verte/qt/soul_inc.h - Fixed it so !cmds .. [used when a wiz is in edit] now work with aliases and so forth
+Jul 16 21:05: /bin/play/_emotef - updated to /bin/play/_emote
+Jul 17 00:54: Rewrote who2
+Jul 18 02:49: /obj/player - Juggled dam_taken_this_round code until it worked for Zeus' purposes
+Jul 18 14:52: /obj/player - Uncommented out invisibility [oops]
+Jul 18 22:53: /bin/play/_ansiprefs - Fixed to new /bin/
+Jul 20 00:29: /obj/player - in short() : if(pt_ob=present("player_short_object")) return (string)pt_ob->query_player_short();
+Jul 20 00:29: /closed/verte/soul_inc.h [& /obj/soul] - took out the history-logging of bloodfist and necro "auto" cmds
+Jul 25 14:00: /obj/player - added if() checks to numerous variables in reset() to prevent them from resetting
+Jul 25 14:10: /obj/soul - added more "fix"/this_player() cmds to qtHook()
+Jul 25 14:12: /doc/helpdir/guilds - took out "Healers"
+Jul 25 14:43: /obj/monster - !environment() check in pick_any_obj()
+Jul 25 15:43: /closed/verte/qt/play_inc.h - added security to query_action_history() stuffs
+Jul 25 15:53: /doc/helpdir/guilds - Updated so Dar is gwiz of Healers
+Jul 26 01:12: /obj/living - add a pk_spell() check to death() to not whack pk'ers if they are killed by a pk spell [like inferno] that doesn't have a this_player() defined.
+Jul 28 21:04: /bin/soul/_shins - Fixed nontarget() cuz it used targeted emotes [which caused it to bug out]
+Jul 28 21:36: /obj/generic_heal - added set_empty_msg() for Eurale
+Jul 31 17:18: /obj/armour - changed to inherit /obj/armor
+Aug  5 00:42: /obj/user/cmd_hook - fixed ".." bug .. see line commented "dot dot bug"
+Aug  5 21:44: /room/init_file - added reflex's castle
+Aug  6 04:16: /bin/wiz/_player_record - put in a test version
+Aug  7 16:22: Gave Jaraxle write access to Boltar's
+Aug  7 16:49: Rearranged privs so i can wipe /players/ files [i can already wipe /pfiles/]
+Aug  8 14:04: /obj/simul_efun - fixed resolv_path() [stringp() check needed]
+Aug  8 14:44: moved the suggestion box back to the village green
+Aug  8 14:44: [wasn't being used]
+Aug  8 19:42: coded /obj/wiz_daemon
+Aug  8 19:43: added /obj/wiz_daemon to /room/init_file
+Aug  8 21:39: wizboards note when a wizard posts a new note
+Aug  9 00:20: /closed/verte/qt/qt_master - fixed %<n> err
+Aug  9 16:04: added /bin/play/_consider
+Aug  9 16:04: fixed /obj/wiz_daemon code a bit [added no_clean and stuff]
+Aug  9 16:23: /bin/play/_consider - now you can't cast it upon yourself.
+Aug 10 15:46: /obj/clean - added can_put_and_get() check to not clean stuff in bags.
+Aug 10 20:54: /obj/armor - added !special chk [special="do_special"] at felde/jaraxle request
+Aug 10 21:17: /obj/living - did say(rm_msg, ob) in spell_object() rather than say(rm_msg) .. dbl msgs
+Aug 12 00:06: rm'd a bunch of backups from /obj
+Aug 12 00:07: removed about a meg of templar object backups
+Aug 12 00:15: re-added set_spell_type() to /obj/monster.c .. maybe bolts restored a backup, why was it gone?
+Aug 12 00:28: /bin/wiz/_instances - added invis, query_level() checks
+Aug 12 00:54: added a cmd wizhelp and gave reflex access to /doc/w/
+Aug 12 22:25: /closed/wiz_soul - add destruct()/save_me() props to promotions... automatically kicks a promoted player off-line
+Aug 14 00:51: updated /room/def_workroom to felde's new version
+Aug 14 02:14: gave wren full access to mizan's dir
+Aug 14 02:28: /obj/armor - made environment() !=this_player() stuff in wear(str) notify_fail() not wear/return 1, blocking all other armors you might be able to wear.
+Aug 16 14:30: /obj/simul_efun/m_efuns - forced a new NORM in colour_pad() .. we had commented it out when it broke, and then we'd forgotten to put an ansi code in its place.. now it's in.
+Sep 19 14:55: /obj/monitor - added "nexp" variable, thanks Sleepwalker
+Sep 19 14:55: /bin/play/_yoda - Reactivated [took out new, buggy version]
+Sep 24 13:00: /closed/wiz_soul - added !errormsgs support per Boltar
+Sep 26 02:36: updated /open/Nirchart
+Sep 26 02:57: Added /bin/play/_invasion
+Sep 26 03:08: /obj/discon - added is_magic_box()
+Sep 29 13:26: rm'd reflex's access to /doc/ files since he's not interested anymore.
+Oct  2 16:03: /obj/discon - Updated it so only "players" can open the discon boxes
+Mar 12 23:38: created /obj/verte/nd-daem.c
+Mar 13 00:02: /bin/play/_time.c - Night/day stuff shows on "time" as well
+Mar 13 14:45: added dervish spell delay to custom combat mon
+Mar 14 14:12: Added new_communicate
+Mar 14 14:27: Fixed say to work with ask and exclaim
+May 13 21:10: obj/living.c added query_second_weapon()
+May 14 20:15: added ob->short() check in /bin/play/_armors
+May 14 22:13: added reset() { } to /room/room ? why?  for inheritance..
+May 15 19:46: Fucked up wiz_soul.  Then Boltar fixed it.
+Aug 28 02:37: created a new wizsoul
+Aug 28 02:37: added earmuffs support to /obj/simul_efun/emit_channel
+Aug 28 19:04: /obj/player - level check in location_unk
+Aug 28 19:12: fixed the invis/visible bug
+Aug 28 20:20: /obj/player - added You are support to long()
+Sep 15 21:39: obj/player.c - added this_player() check in visible()
+Sep 15 22:12: obj/corpse - this_player() check in can_put_and_get()
+Sep 16 04:04: opened depository
+Sep 25 17:25: added "me" syntax to obj/simul_efun - present() fun
+May  4 15:54: added time log to the bugs/typos/etc
+May 11 00:25: /obj/player - made it so you can detox your soak/stuff if you are over 100%.  stupid bug
+May 12 15:12: added bcm's to help guilds, took shadows out.
+May 12 15:28: added basename efun
+May 13 04:39: /room/adv_guild - added set_player_ob to make title setting easier
+May 14 12:22: put in security to command efun.  Thanks Wax.
+May 18 21:35: added detox in death() new body should probably be hungry.
+May 19 17:57: added if(guild_name == "none") guild_name = 0 checks .. not sure where that is coming from.
+May 19 23:11: added silent_leave(dir) to move_player()
+May 19 23:11: btw took out guild_name none check after i figured out the culprit [bard guild]
+May 20 12:47: put in earwax's ls change
+May 20 12:47: and man cmd
+May 20 21:12: added promote/demote verbage to log/PROMOTIONS
+May 20 22:01: put emote editor in play.. did i log this?
+May 20 22:01: also put earwax's resolve_path in
+May 21 06:04: player.c, living.c added some >0 checks for healers... so they damage the living shit out of my undead guild
+May 21 06:36: added !ob check in move_player() for next_inventory() fbog
+May 22 04:52: added QueryArmor/QueryWeapon
+May 22 07:04: obj/shadow_master - added wocket's clerics shadow
+May 22 07:04: obj/simul_efun - added save_object() hack to omit leading /
+May 22 11:04: /obj/player - changed short() to this_object()->short() in score to support shadows. fboggle
+May 22 11:38: added a unkeep to death(). fucking stupidass, i am.
+May 23 18:06: fixed ls clear
+May 23 18:06: [bad syntax to m_delete]
+May 23 22:29: wrote bag/unbag
+May 24 02:33: added earwax's bank funs /obj/play/bank.h
+May 24 03:09: put in a_or_an() / is_vowel() efun support
+May 26 23:19: took out paladins book, paladins exit from /room/temple/pastgate
+May 27 04:19: took out monks thing as well
+Jun  3 06:24: /obj/clean - added environment() check in is_player_here(), is_kid() and is_pet() checks in are_we_alone() so having a pet or kid doesn't let it clean up the room
+Jun  3 17:46: this_object() check in /obj/clean
+Jun  5 08:44: added a 'display_notarmor_msg' thing in /obj/armor
+Jun  5 08:56: /obj/armor - added some query_guild_bonus(), add_guild_bonus() code etc to /obj/armor cos i like it. [thanks pav]
+Jun  5 09:43: /obj/weapon - did same for armor
+Jun  6 00:44: put in text sanitization code on channels
+Jun  6 11:11: updated /doc, removed old notes. Being a janitor rulz!
+Jun  6 11:13: var "myself" check in my soul_inc - processHook
+Jun  6 12:34: /bin/play/_display - disabled displaying to wizards due to command() security
+Jun 11 20:01: [dark order and dervish]
+Jun 14 20:41: /obj/more_ob - updated to ill's new code
+Jun 14 20:52: /obj/living - put in ill's calculate_worth() mod
+Jun 14 21:41: gave QS write access to /doc/helpdir/
+Jun 14 22:12: made it so it shows how much xp you get from a kill.
+Jun 15 07:14: /obj/monster - root() check for hb so it kills if it's not a clone.
+Jun 15 17:47: removed the /bin/play/_vote cmds...
+Jun 16 17:57: took out find_player() mod..
+Jun 17 20:07: adjusted ill's more cmd after i put it in [level check cos resolv_path bombs out if not a wiz]
+Jun 17 20:07: also adjusted resolv_path() for players only, except that part got kinda jacked.  but at least it still works :D
+Jun 19 02:37: simul_efun/emit_channel - !people[index] check
+Jun 19 15:23: copied over ill's ls cmd text
+Jun 20 20:53: /obj/monster - this_object() check in attack()
+Jun 20 21:53: /obj/living - this_object() check in do_damage()
+Jun 23 00:30: /obj/living - this_object() check in attack()
+Jun 29 22:59: /room/path1 - added a nonexistent exit to future housing
+Jun 30 23:42: /obj/player - valid_write() : added priveliges for room/housing
+Jun 30 23:50: put in play/weight.h
+Jun 30 23:55: score shows % of weight out of max now
+Jun 30 23:55: [that was a player.c mod]
+Jul  1 02:22: /obj/security.h - rearranged into /obj/lib/security/ by parts.
+Jul  1 22:52: added /obj/user/timestamp.h
+Jul  1 22:53: [renamed dt_stamp.h]
+Jul  2 18:45: /obj/player - give_object() : !item_ob check
+Jul  2 21:21: /bin/wiz/_wlog - rewrote.
+Jul  4 06:55: added vlog cmd
+Jul  4 06:56: added /obj/user/testchar-d [functional now]
+Jul  4 06:56: added [obj/user] paths.h, testchar.h, wizard.h includes to player.c [tested]
+Jul  4 18:46: /obj/exp_store - added testchar check
+Jul  4 19:30: /room/bank/bank - added no_clean
+Jul  4 20:01: put in rest of testchar crap.
+Jul  5 17:20: /room/lib/sensory - fixed it to allow array syntaxes for sensory
+Jul  5 17:21: /obj/user/sensory - added a notify_fail() for feel/touch | taste
+Jul  5 17:42: /obj/user/sensory - added anti-newline, punc, and space code
+Sep  2 23:04: changed guildname padding to colour_padding in who2
+Sep 30 22:59: /obj/user/xls - threw in an ill fix
+Oct 29 15:33: made Hogath's castle autoload.
+Nov 11 00:08: put illarion's emotes cmd into play
+Nov 11 00:10: put in illarion's ls change
+May  4 14:09: fool->set_home() call in /bin/wiz/_fix_guild [fred]
+Aug  2 23:46: /obj/generic_heal - changed full stuffed/soaked/intox msgs from notify_fail to write()

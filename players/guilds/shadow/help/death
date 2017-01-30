@@ -1,0 +1,9 @@
+DEATH
+
+usage: 'death'   cast the spell on a monster your already attacking.
+       'death <monster> '  cast the spell on a monster your not attacking.
+
+The death spell is a powerful attack spell.  It does 85 points of damage to
+a monster.  The cost is 70 sp, and 15 hp.  
+
+Warning- If you have 14 hit points, and you cast this spell, you will die.

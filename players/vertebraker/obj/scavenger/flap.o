@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/NEW/weap/mace2","/players/mythos/aarmor/sode","/obj/treasure","/players/ultramagnus/rdiamond","/players/hippo/armour/endotheel","/players/scathe/armor/hood","/obj/weapon","/players/maledicta/cont/armor/rhelmet","/players/mythos/awep/quiver","/players/boltar/things/emoter","/players/wren/Area/starbug/items/indianheaddress","/players/pain/NEW/arm/gloves","/players/snow/cam/stuff/shield","/players/mythos/aarmor/hara-ate","/players/mosobp/areas/TEMPLE/OBJ/tiara","/obj/armor","/players/puppy/s/eq/nathat","/players/wren/Area/starbug/items/charisma","/players/saber/stuff/trink","/players/wren/Area/starbug/items/bazookoid","/obj/armor","/players/ultramagnus/breastplate","/players/mythos/awep/katana","/obj/armor","/players/maledicta/cont/weapons/rweapon",})
+shorts ({"A huge iron mace","Sode","Beach Bear pelt","A Red Diamond","endotheel","Hood","An evil-looking lightsabre","great helm","A quiver","An emoter","a tiny indian headdress","Leather work gloves","[34m[1mBlessed Shield[0m[0m","Hara-ate","A Princess' Tiara","A suit of [1mwhite[0m platemail","A straw hat","a charismatic aura","A strange metal trinket","Bazookoid [1;30mmkII[2;37;0m","Ring of Death","A Black Breastplate with Red Decore","Katana","button","a Dagger",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

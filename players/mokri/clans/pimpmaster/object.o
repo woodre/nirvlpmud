@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A PimpMaster Cane with a crystal knob[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "cane"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "A PimpMaster Cane with a crystal knob[0m"
+damage_type "mental"
+hall_path "/players/morgar/mountain"
+object_name "cane"
+owner "tristian"
+spell_alias "PimpSlap"
+spell_mess_me "You reach out and %hi red%PimpSlap%normal% %AKN% upside %AK_POS% fucking head."
+spell_mess_room "%TPN% reaches out and %hi red%PimpSlaps%normal% %AKN% upside %AK_POS% fucking head."
+spell_mess_them "%TPN% reaches out and %hi red%PimpSlaps%normal% you upside your fucking head."
+abilities ({})
+chan_history ({"[Fri Jun  8 19:22:40 2007] Tristian: blah","[Fri Jun  8 19:34:30 2007] Tristtest has joined the clan!","[Fri Jun  8 19:34:34 2007] Tristtest: hi","[Fri Jun  8 19:47:42 2007] Chip has joined the clan!","[Fri Jun  8 19:48:36 2007] Tristian has removed Chip from the clan!","[Mon Jun 11 20:46:07 2007] Tristian: hehe","[Mon Jun 11 20:46:24 2007] Artos has joined the clan!","[Mon Jun 11 20:46:28 2007] Tristian: heh","[Mon Jun 11 20:46:59 2007] Artos: nice","[Mon Jun 11 20:47:09 2007] Tristian: clan_spell","[Mon Jun 11 20:47:21 2007] Artos: LMAO","[Mon Jun 11 20:50:09 2007] Artos: bbl","[Thu Apr 10 22:36:14 2014] Tristian: hmm",})
+leaders ({})
+join_type 2
+private_coffer 2
+public_coffer 0
+spell_delay 0
+spell_id 1
+spell_cost 30
+last_spell_time 1181609395

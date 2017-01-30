@@ -1,0 +1,45 @@
+
+Bloodfist Help:  Abilities
+
+Ability               GL Honor Cost   Effect
+
+Vigor                  0  0     18    Secondary attack 
+Rest                   0  0     0     Recouperate endurance
+Preserve corpse        0  0     0     Slow the decay of a corpse
+**
+Light/Extinguish torch 1  0     0     Create or extinguish light
+Sacrifice corpse       1  0     0     Sacrifice a corpse
+**
+Bash                   2  0     27    Force target to attack you
+Fatal                  2  0     27    Finish off a weak target
+Bloodcloak             2  100   40    Lasting invisibility
+**
+Examine                3  0     28    More information on something
+Attack                 3  0     27    Stronger first hit on a target
+Throw                  3  0     30    Throw a weapon at a target
+Retrieve               3  0     0     Get a thrown weapon back
+Bloodprayer            3  200   40    Minor heal spell
+**
+Guard                  4  0     0     Protect target from combat
+Battle Cry             4  0     40    Increase healing and detoxing
+Socket                 4  0     0     Socket a gem into a forged weapon
+Unsocket               4  0     0     Unsocket a gem that has been socketed
+Bloodboil              4  400   30    Convert hp to sp over time
+**
+Concentrate            5  0     var   Increase your combat attributes
+Stun                   5  0     27    Remove you and target from combat
+Study                  5  0     18    Fight better against a target
+Unstudy                5  0     0     Remove a mob from your list
+Bloodstep              5  600   65    Teleport back to Guild Hall
+**
+Dodge                  6  0     2/hb  Attempt to dodge attacks
+Absorb Corpse          6  0     0     Absorb energy of corpse into weapon
+Pain Aura              6  0     75    Gain endurance from combat
+Bloodomen              6  800   60    Major heal spell
+**
+Iron Skin              7  0     70    Gain AC based on dmg taken
+Control                7  0     var   Force a weak target into submission
+Bloodfury              7  1000  120   Gain multiple attacks
+**
+Construct Bloodward    8  0     80    Create a healing ward from 3 corpses
+Bloodlust              8  1200  110   Increased damage in combat

@@ -1,0 +1,11 @@
+Sentences:    6609  132180 (  490    9800)
+Objects:      3134 1243704
+Arrays:       4760  404864
+Mappings:     1223  112316
+Prog blocks:  1907 5324276 (0 swapped, 0 Kbyte)
+Memory reserved:              0
+hash table overhead                         20012
+Strings malloced                   55253  1976372 + 399562 overhead
+call out:                             60     1680 (current length 60)
+                                         --------
+Total:                                    9801026

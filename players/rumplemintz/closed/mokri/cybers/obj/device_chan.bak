@@ -1,0 +1,18 @@
+#include "/players/mokri/define.h"
+#define GOBJ present("guild_implants",this_player())
+
+device_channel(string str)
+{
+   int x;
+   object *us;
+   
+   us = users();
+   
+   for(x = 0; x < sizeof(us); x++)
+   {
+      if(present("guild_implants",us[x]) && present("guild_implants",us[x])->query_device_channel())
+         tell_object(us[x],str+"\n");
+   }
+   
+   return 1;
+}

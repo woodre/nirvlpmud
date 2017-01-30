@@ -1,0 +1,247 @@
+Sun Jan 11 13:56:18 1998 Just got and figured out how to use this thing.
+Sun Jan 11 15:15:56 1998 Made test char 'Meatpuppet'
+Sat Jan 17 17:35:56 1998 Made test char 'Fatemu'
+Mon Apr 12 12:00:02 1999 Created test chars:  Ztest and Ztwo
+Sun Apr 18 14:23:40 1999  My test chars are:  Ztest and Ztwo
+Mon May  3 16:52:24 1999 My area just opened officially :)  1s, 4w, 3n, 3w from church
+Mon May  3 16:52:37 1999 changed the long desc of /players/zeus/realm/OBJ/paperhello.c
+Mon May  3 21:44:30 1999  Made /../zeus/realm/NPC/demon1.c aggressive.
+Mon May  3 23:32:47 1999 /../zeus/realm/NPC/troll1.c  changed AC from 14+random(3) to 17+random(3)
+Tue May  4 00:20:48 1999 /../zeus/realm/NPC/hunter1.c   changed AC from 13 to 15
+Tue May  4 00:21:06 1999 /../zeus/realm/NPC/murdok.c   changed AC from 12 to 12+random(3)
+Tue May  4 12:14:38 1999  Implemented a new version of fl_demon.h and demon1.c    Changes:  agro, 1/5 chance demon blocks movement, demons selfdestruct in 3-4 minutes
+Tue May  4 14:50:52 1999 Problems with my code, Mythos fixed it.  oops
+Tue May  4 14:51:33 1999  For some reason the hp weren't declared in /../zeus/realm/NPC/troll1.c so I put it in there, 400+random(150);
+Tue May  4 14:52:11 1999 And also for some reason, an exit error I fixed a while ago I must've unfixed a while later.  path1.c6 leads south to path12.c instead of path13.c  fixed.
+Tue May  4 14:55:55 1999 /../zeus/realm/OBJ/snakeskin.c  can now 'cash skin' as well as 'cash snake skin'
+Tue May  4 14:56:11 1999 /../zeus/realm/OBJ/beartuft.c  can now 'cash fur' as well as 'cash tuft'
+Tue May  4 15:41:40 1999 Fixed /../zeus/realm/NPC/tyborlek.c  so now the catch_tells work properly when more than 1 person is in the room.
+Tue May  4 15:55:12 1999 Changed /../zeus/realm/OBJ/gdagger.c   lowered stat requirements from maxed all stats to mag 14, with Snow's approval.
+Tue May  4 16:51:47 1999 I changed the short desc of /../zeus/realm/OBJ/gdagger.c  because it is not a light source, it shouldn't be [glowing]
+Tue May  4 20:30:25 1999 Updated /../zeus/realm/OBJ/gdagger.c so that the special works properly  [thanks Snow]
+Wed May  5 13:03:08 1999 Updated /../zeus/closed/fl_demon.h  to include the directions nw, ne, se, and sw
+Wed May  5 13:08:53 1999 Updated /../zeus/realm/city/path19.c so if somebody has already searched and discovred the secret exit, it displays a message that makes sense.
+Wed May  5 13:14:03 1999 Updated /../zeus/realm/city/path23.c so if somebody has already searched and discovred the secret exit, it displays a message that makes sense.  :)
+Wed May  5 18:43:04 1999 Changed my castle short so it's not bold.
+Wed May  5 21:51:58 1999 I updated /../zeus/realm/city/path1.c   path4.c  and  path6.c    Each room had an infinite money loop in it because a variable was being defined in init().   Also, the function sw_dir was being called twice in path1.c because I updated fl_demon.h earlier today.
+Thu May  6 13:00:00 1999 /../zeus/realm/city/ent.c path4.c path7.c path9.c path13.c path14.c path17.c path22.c shrine.c   Fixed how npcs were cloned to room, so there won't be multiples after the room resets.
+Thu May  6 14:17:39 1999 Fixed /../zeus/realm/OBJ/portal1.c so it can't be taken.
+Thu May  6 14:18:12 1999 Updated /../zeus/realm/main.c so that the ' cmd for say works w/ the teleport.
+Thu May  6 19:12:42 1999 Changed /../zeus/realm/city/ent.c  so that the portal is part of the room, and thus the object portal1.c is no longer needed.
+Fri May  7 14:40:23 1999 Updated /../zeus/realm/NPC/murdok.c so it logs every time it's killed :)
+Mon May 10 16:58:29 1999 Fixed /../path14.c so you can 'drink' other things
+Mon May 10 16:59:49 1999 Changed the set_short() on /../OBJ/lionman.c  so it isn't all capitals.
+Thu May 13 20:57:17 1999 Created a temporary log file for every time someone touches my orb in main.c   I'm curious to see who, if anyone, is visiting my area.
+Sun May 16 14:05:33 1999 Made it so Tyborlek's special actually does damage...  30+random(15);  w/ a 10% chance of going off each hb
+Tue May 18 17:06:31 1999 Taleo said he was polymorphed as a Golem, and wielding a death mace as his 2nd wep.. he also had a lblast and a phb.  he dc'd, and when he came back, his mace was gone from the dc box, but the other 2 things were there.  I cloned him a new death mace, trusting that he's not lying to me.
+Thu May 20 02:22:21 1999 Changed tyborlek.c so he has a heal spell, also fixed the bow cmd (again)
+Thu May 20 03:03:47 1999 Updated fl_demon.h so it checks to see that the player isn't a ghost.
+Fri Jun  4 17:52:33 1999 A couple weeks ago I raised the ac's on a couple npcs.. I now see there was no reason for doing that, becuase for players the demons are a pain.  the ac's are what Snow originally approved.   // hunter1:  lowered ac from 15 to 13, gave it random(1000) coins    // murdok:     lowered ac from 12+random(3) to 12   // troll1:     lowered ac from 17+random(3) to 14+random(3);
+Fri Jun  4 17:56:12 1999 Oh I also removed the wield msg on the gdagger.c  Nobody will know it was ever there, because no player has ever gotten the weapon yet.  *smirk*
+Fri Jun  4 18:12:19 1999 Fixed the death log on Murdok so it won't error if they player isn't wielding a weapon.
+Sat Jun  5 22:35:28 1999 Changed path25.c so when the player moves east, instead of cloning 3 agro demons, it clones random(3);
+Mon Jun  7 17:45:38 1999 Changed realm/NPC/murdok.c = level to 21, wc to 38, ac to 18, money to random(1000), wep to /realm/OBJ/nightpike.c
+Tue Jun  8 15:36:38 1999 Changed murdok to have 600+random(190); hp to have 850
+Tue Jun  8 15:43:16 1999 Changed path25.c => moving east clones 0,1,2 or 3 agro demons
+Sat Jun 12 04:45:48 1999 Moved Stark to the church cause he got trapped in a glitched room in the Hidden Valley......:>
+Mon Jun 14 22:28:17 1999 I got rid of the log on entering my area
+Tue Jun 15 20:09:53 1999 fixed minor stuff in path5.c path9.c and hunter1.c
+Mon Jun 21 10:14:24 1999 Made minor changes to main.c && castle.c
+Mon Jun 21 18:44:01 1999 Updated paperhello.c // Snow added my realm(s) to 'feelfollow'
+Mon Jun 21 22:31:07 1999 Ztwo joined Dervish guild [and changes made to stats]
+Tue Jul  6 07:31:56 1999 Made -= zeustest =- testchar
+Mon Jul 12 15:57:56 1999 Changed grove.c so the druid only loads once per reboot, and made it so all purchases go straight to him.  He has a death log on him, so if I find players killing him i'll make him harder.
+Mon Jul 12 15:58:30 1999 ( not that the area is approved yet! )
+Tue Jul 27 13:25:42 1999 Unguilded Cyper [a mage] using felds tool
+Tue Jul 27 13:26:06 1999 uh...  Cypher not Cyper
+Tue Jul 27 15:18:05 1999 Minor changes to ~/realm/taus/cave7.c
+Tue Jul 27 15:31:07 1999 Minor changes to ~/realm/NPC/druid.c && ~/realm/taus/grove.c
+Tue Jul 27 19:18:39 1999 Minor changes to new tyborlek.c [added log]
+Wed Jul 28 02:21:42 1999 Pulled Jenny out of Mortal Kombat after there was an error [something to do with her wep] and she couldn't fight back.
+Wed Jul 28 21:32:12 1999 Pulled Jenny from MK again, another error made it so she couldn't fight.
+Wed Jul 28 22:20:04 1999 Added some checks to evil_aura.c so that it shouldn't error if a special drops the player below 0 hps.
+Thu Jul 29 13:29:49 1999 changed castle, linked to ~/realm/entrance.c
+Thu Jul 29 13:32:42 1999 opened taus, incl - replaced fl_demon.h tyborlek.c demon1.c beartuft.c lionmane.c snakeskin.c gorhand.c ghorn.c path1.c path21.c path4.c, wolf1.c - added wolfhair.c
+Thu Jul 29 13:56:17 1999 Added some checks and made some changes to g-old.c to prevent some errors I just found upon testing.
+Thu Jul 29 14:51:02 1999 Re-updated path1.c && path4.c and made it so Tyborlek will buy the horns without erroring...    grumble
+Thu Jul 29 15:10:41 1999 Promoted Zeus for producing another good area and general helpfulness around the mud.
+Thu Jul 29 15:45:09 1999 Updated heals so the %'s in the tox readout are accurate
+Thu Jul 29 18:27:46 1999 Updated g-old and demon_heart so you can't barter it after it's been used as a heal
+Thu Jul 29 19:36:30 1999 transed Mysery out of MK cause of a bug similar to the first one Jenny experienced.
+Thu Jul 29 20:29:45 1999 Added a new define to all.h - could possibly cause problems, I don't think so though.  Also, changing weapons to not use this_player() in weapon_hit()
+Thu Jul 29 21:34:04 1999 Added logs to demon1.c, and demon_large.c and changed logs on murdok.c, auseth.c, and dolan.c
+Sat Jul 31 10:03:28 1999 Changed align of gurther.c to 500+r(500)
+Tue Aug  3 07:08:16 1999 Put version 3 of fl_demon.h into the game.
+Wed Aug  4 20:42:00 1999 fixed creature1.c so the value of horn was correct
+Thu Aug  5 06:55:36 1999 Updated all my heals, because query_intoxication() != query_intoxination() ...  heh
+Thu Aug  5 09:46:32 1999 Changed line 165 in guth10.c so it would work
+Sat Aug  7 05:44:22 1999 made a /heals directory and moved all grove heals into it, updated paths in grove.c
+Fri Aug 13 10:09:28 1999 Fixed a mistake in demon1.c
+Mon Aug 16 05:07:38 1999 Changed Ayn's extra_level to 0, it was 1 and she only had 2.01mil xp.
+Thu Aug 19 09:46:42 1999 I fixed some problems in hermit5.c, including the item descriptions and and math problems.  I'm fairly confident it's working properly now.  Also gave mysery the object which he should have found in the room yesterday, however it was broken.
+Thu Aug 19 12:24:12 1999 Increased dolan's wc by 10 and made some changes to the onyx_platemail -approved by Snow
+Mon Aug 23 09:13:16 1999 moved demon_heart into the /heals dir
+Mon Aug 23 11:46:15 1999 Added a call_out in paperhello.c
+Mon Aug 23 13:52:28 1999 Added an id of 'daemon' to my fallen demons
+Thu Aug 26 13:13:56 1999 Opened up the Museum with Snow's approval of monsters and items, and Eurale's approval of rooms.
+Thu Aug 26 14:18:50 1999 Removed taus_entry log from my area.
+Thu Aug 26 14:22:18 1999 Removed log for killing small demons.
+Thu Aug 26 22:56:20 1999 Fixed numerous spelling mistakes in the museum, thanks to Feldegast for looking things over.
+Fri Aug 27 14:17:54 1999 Made small changes to Museum npcs after Snow seemed to breeze through most of them...  need to wait to see how 'real' players do.  :)
+Sun Aug 29 18:20:43 1999 Fixed mistakes in the id()'s of all the projections in the museum..  thanx to Kazer for catching it.
+Mon Aug 30 01:42:37 1999 Added weapon_class minimum checks to most museum npcs
+Tue Aug 31 01:39:03 1999 Pill dispenser didn't reset purchase count after 10 purchases, which caused the prices to shoot up.
+Tue Aug 31 01:42:52 1999 Reset pill count on pills1 and 3 back to zero, they were at 11.
+Tue Aug 31 02:15:41 1999 Added a movement call_out in sd.c
+Sun Sep  5 15:17:19 1999 Recoded hermit5.c so I think it works now.
+Mon Sep  6 12:55:06 1999 Added a check in pilld.c so wizards can't buy them.
+Tue Sep  7 17:28:39 1999 Put in a new version of the evil_aura -approved by Snow
+Thu Sep  9 19:19:10 1999 Changed some of the shorts in the fallen lands to use short();
+Fri Sep 10 17:12:32 1999 Logged on Zeus while I was dc'd as a char to fix a hb problem with Auseth and his new wep.
+Mon Sep 13 03:10:49 1999 Logged on Zeus while a char was dc'd cause of an error in my code, had a mistake in the minimum money check in the pill dispenser, quickly fixed.
+Tue Sep 14 17:55:08 1999 Added an environment check to demon_heart
+Tue Sep 14 19:14:50 1999 Added something in the entrance of my castle for settings one of my chars' title/pretitle [rattlesnake].
+Thu Sep 16 18:20:02 1999 Patched up Tyb after Dragnar saw it talking to itself.
+Thu Sep 16 23:27:22 1999 Updated the id of my hello paper so it's unique
+Sat Sep 18 17:11:22 1999 Replaced Brittany a trex skin because it was erroring in her locker.  This happened because -Eurale- changed all his dirs around.
+Thu Sep 23 15:00:52 1999 Opened /x: added exit to guth6, added logs to every NPC [at seniors' request], and put the wizard check back into the rooms.
+Fri Sep 24 15:55:31 1999 Dested Jezebel's new baby 'kitty.' on request.
+Mon Sep 27 15:08:07 1999 Added a demon_check in ~/city/ent.c
+Tue Sep 28 14:10:38 1999 Opened my /dealer stuff, incl change short of castle.
+Fri Oct  8 16:11:23 1999 Added a location to /open/TELE_ERR, guth8.c
+Fri Oct  8 16:41:29 1999 Changed TELE_ERR location to museum/lounge
+Sun Oct 10 17:54:39 1999 Note:  TELE_ERR location removed by Mythos
+Wed Oct 13 00:37:11 1999 I replaved Brittany a Holy Avenger sword.  She drained the corpse in her motel room, and it vanished.  We have proved his is a valid bug that needs to be fixed.
+Wed Oct 13 23:42:11 1999 I told Fred if he brought me a Dark Aura and an Onyx Platemail I'd give him a permanent title or pretitle.  All he brought me was a Dark Aura, so I gave him a temporary title, 'HIM+"the Harvester of Souls"+NORM'  This was a one time deal.
+Thu Oct 21 17:57:45 1999 Gave Mustaine Wocket's quill, he said he lost his.
+Sun Oct 24 14:10:15 1999 Added a line regarding ghosts in fl_demon.h/c
+Thu Nov  4 14:35:09 1999 Set Budah's ex_lvl to 0 from 1, has 2.2 mil xp
+Fri Nov  5 17:39:51 1999 Put in version 4.0 of fl_demon.h/c
+Sat Nov  6 17:36:57 1999 Changed id on ruby_amulet.c
+Sat Nov  6 18:34:01 1999 Removed log from demon_large death
+Sat Nov  6 21:42:08 1999 Added obvious checks to fl_demon.c what were needed.  Fixed an error in ent.c due to no checks.  Gave temp title to Vach because he asked, and I should've cought that.
+Sat Nov  6 21:45:23 1999 'Zen Vach the Bounty Hunter', for finding the bug...   sigh
+Mon Nov  8 01:32:56 1999 Decreased bad chances on dealer by 2/3 and 1/2
+Wed Nov 10 15:11:59 1999 Moved Jareel to the church, she got stuck in /players/sandman/ASGARD/entrance.c, mailed Dragnar the error
+Fri Nov 12 21:34:37 1999 Fixed error in ice_ball_spell
+Sat Nov 13 13:48:49 1999 Set Sephiroth's home to church, he is guildless logging into Vamp ghall
+Sun Nov 14 01:11:16 1999 Fixed exit errors in path1 and path2.c
+Sun Nov 14 16:49:55 1999 Set Zephyra's home to church, she is guildless logging into Vamp ghall  [that makes 2]
+Mon Nov 15 18:21:41 1999 Put in the new Murdok approved by Dragnar.  This includes the nightpikeS.c
+Mon Nov 15 19:01:03 1999 Put in new versions of balwa.c, kalowa.c, plum.c and grove.c where they are sold.  2400 coins each, plus tip.
+Wed Nov 17 01:57:32 1999 Updated paperhello.c
+Thu Nov 18 14:07:01 1999 Fixed write_file mistake in grove.c *chuckle*
+Mon Nov 29 14:40:46 1999 Gave mysery the new MK scar, he lost his somehow.  told dragnar ;>
+Tue Nov 30 14:51:38 1999 Added some error checking to tower5.c
+Fri Dec  3 16:47:43 1999 Added ghost check to demon_large.c and meat check to murdok.c
+Fri Dec  3 16:50:06 1999 Added ghost check to X version of demon_large.c also.
+Fri Dec  3 18:26:04 1999 Added barter code for demon gore
+Tue Dec  7 16:08:32 1999 Changed ninja_gloves from type misc to ring
+Tue Dec  7 17:30:51 1999 Added heal_self protection to sd.c and ani.c for now.
+Tue Dec  7 17:37:00 1999 Added heal_self protection to golem.c as well.
+Sat Dec 11 12:46:22 1999 Added 'mist info' to druid.c
+Sun Dec 12 20:42:26 1999 Patched up Auseth a bit, made code nicer.
+Sun Dec 12 20:48:20 1999 I'm going to lower the min value of my pill heals for a while.  -Nobody- buys them.  They've been sitting at min value almost constantly.
+Mon Dec 13 16:46:14 1999 Patched up light_dagger code, added some new messages
+Tue Dec 14 17:07:44 1999 Increased sd heal_self armor by 10%
+Sat Dec 18 04:28:42 1999 Cleaned up code in evil_aura.c
+Tue Dec 21 12:32:00 1999 Added a check in init for the armor in hermit5.c
+Tue Dec 21 15:02:47 1999 Opened the mist taus expansion, approved by Dragnar.  Updated paperhello and linked the area to tfl in 3 places.
+Wed Dec 22 10:08:46 1999 Added min level check for pulling sword from stone
+Wed Dec 22 11:13:54 1999 Put in new versions of my 5 demons to take advantage of the demon_daemon.  Put in new catch_tell tyb with quest code included but commented out for now.
+Thu Dec 23 14:24:10 1999 Somehow doombunny killed 0 demons.  Will watch this.
+Thu Dec 23 15:53:45 1999 Added name to ids of demon1 and demon_large
+Sat Dec 25 17:46:47 1999 Pulled Click out of Languilen's dunk tank, which errored.  Mailed error to Languilen and Dragnar.
+Tue Dec 28 00:19:06 1999 Reset sword in the stone
+Sat Jan  1 10:40:04 2000 Reloaded pathfinder, snow, mythos and llew castles
+Thu Jan 27 16:05:44 2000 Added to fl_demon.c:  when a demon blocks movement, it attacks the player and all other demons not in combat have a 50% chance of attacking the player as well.
+Thu Jan 27 17:13:19 2000 Made the Fallen Lands non PK [x / d excluded].
+Fri Jan 28 19:45:41 2000 Slightly changed what Tyb says about demons.  Also added a return 1; around like 165 that was missing.
+Tue Feb  1 19:36:27 2000 Made it less likely to die from drug heals.
+Wed Feb  2 16:02:06 2000 Made it so demon1 doesn't dest corpse upon death.
+Fri Feb  4 21:27:09 2000 Scorpion cought an error in path16 that made it so you couldn't use 'eat' heals.
+Fri Feb  4 21:29:41 2000 Fixed an identical error in path14.c
+Mon Feb 14 17:39:52 2000 Dested about 12 Xetras from the green that Guest [204.221.242.160  netopia160.cloudnet.com] made.  Were making horrible spam/lag.
+Sun Feb 20 15:26:25 2000 Moved demon_kills cleanup code into entrance.c
+Wed Feb 23 19:59:41 2000 Gave ravyn 21k xp because the hb isn't checking gxp gain correctly.
+Wed Feb 23 20:06:11 2000 once again, cause the gob stole it
+Wed Feb 23 20:09:35 2000 one more time
+Thu Feb 24 00:21:40 2000 Dested an antiFOS button off Blackstar.
+Thu Feb 24 09:32:29 2000 Should have entered that yesterday at 3:00 pm EST I opened the Fallen up for beta testing.  Kezana, Lily, Sephiroth, Kaos, and Ravyn have access to the guild hall.
+Fri Feb 25 19:47:03 2000 Added some 'fallen info' to Tyborlek.
+Sat Feb 26 15:28:39 2000 Gave Blackstar his DM gob which he says he lost in the tornado
+Sat Feb 26 16:30:26 2000 I added a 'winners board' and the ability to recover your corpse to the Museum.
+Sat Feb 26 16:40:54 2000 Lowered time for the mist creature to reset from 2-4 weeks to 7.5-15 days.
+Sat Feb 26 17:55:40 2000 Cleaned up g-old.c a bit, added a catch_tell.
+Sat Feb 26 21:33:42 2000 Accidentally dested Drucilla, cloned a new one. ;)
+Wed Mar  1 18:48:55 2000 Ancient was killed by some shoddy code of Maledicta's.  I reset his xp and stat and mailed Maledicta.
+Wed Mar  1 18:50:43 2000 took back the xp and stat and gave the annoying bugger a title instead
+Wed Mar  1 19:06:02 2000 He wanted 'The ancient warrior' in bold white, running through his name.  I gave him the next best thing (no bleeding).  Oh and I hate players.
+Wed Mar  1 19:08:28 2000 Ahh, justice.  Ancient just died and lost his title.
+Fri Mar  3 17:31:58 2000 I loaded Paulasx's castle.  Quantos' was in its place.  What's the deal?
+Sat Mar  4 13:04:43 2000 Gave some gxp and xp to Kaos that he lost because of init problems with the gob.
+Sat Mar  4 19:36:34 2000 Blackstar pulled the fallen blade and (eventually) killed the creature, but what is strange is that he says the wep disappeared.  He quit out a lot, and the fight took him 70 min from start to finish.  Not sure what could've happened, unless he lied.  Anyway, handed him a new one since he killed the creature.
+Sat Mar  4 20:50:31 2000 Put kblades.c in place of glob_heal.c on mutant.c [museum]
+Wed Mar  8 23:19:16 2000 Gave Stark 40 free demon kills cause he playtested my code and found a bug.  Was the first person to kill something in X since 12/1
+Fri Mar 10 22:03:17 2000 Call me soft but I rm'd chance of instant death from dealer.
+Wed Mar 15 14:52:28 2000 Switched the rest of the fallen lands to non-pk.
+Wed Mar 15 20:24:15 2000 Lowered wc of vulture and spider to 20, per Snow's suggestion.
+Thu Mar 16 20:00:34 2000 Changed shadow.c heal from 7 or 7 stuff soak to 4 and 4 stuff soak.
+Thu Mar 16 20:06:16 2000 Lowered hunt chance on headless and wraith from 1:10 to 1:15
+Thu Mar 16 20:07:04 2000 Lowered death chance on all x npcs from 30 to 33.
+Thu Mar 16 20:38:48 2000 Made seizure in dealer twice as likely
+Sat Mar 18 12:39:54 2000 Cleaned up gurther.c.  More likely to call help, but only at < 200 hps.
+Sun Mar 19 01:24:45 2000 Opened my ~/realm/d/ area, quest with Eurale/Snow/Dragnar approval.
+Sun Mar 19 23:12:23 2000 added a "how many" catch tell to tyborlek
+Sun Mar 19 23:57:23 2000 Added some "security" stuff to my quest.
+Mon Mar 20 12:34:24 2000 Added a "prize list" to the museum
+Tue Mar 21 14:02:32 2000 Put in new Auseth approved by Snow.
+Sat Mar 25 11:00:53 2000 Added some pos align agro code to demon_medium.c
+Sat Mar 25 12:09:47 2000 Added some new code to demon_planar.c  can dual hit and has some new msgs, plus can attack good players like demon_medium.c
+Sat Mar 25 13:57:35 2000 Reset Budah's xlvl from 1 to 0.  has just over 2 mil xp atm.
+Thu Apr  6 17:51:55 2000 Added a check in tyb regarding demon summoning and his demon catch_tell
+Fri Apr  7 15:18:57 2000 Gave 1000 coins and 400 xp to Lynette, who stored 2 pieces of armor in her newbie lockers that could not be restored.
+Mon Apr 10 15:52:52 2000 Put old dealer back into the game, commented out money storing [Snow's primary gripe].
+Thu Apr 13 17:09:49 2000 Gave 50k xp to Blood because he died due to my error.
+Thu Apr 13 17:12:11 2000 Raised his pie from 19 to 20 too.
+Sun Apr 16 16:21:37 2000 Opened my guild [yesterday].  Allowed access into the guild hall to anyone.
+Tue Apr 18 16:31:06 2000 Added some checks to bug_storm.c and ice_ball_spell.c
+Mon Apr 24 16:54:06 2000 Fixed a couple things in ~/museum/OBJ/bug.c
+Sun May  7 23:58:59 2000 Gave Devi 200 "corpse points" because my code stole his guild object and put him in a bad situation.  Was only fair.
+Thu May 11 16:58:01 2000 Added bonuses to my monsters.  see ~/zeus/doc/bonuses/
+Wed May 24 19:40:53 2000 'Upgraded' many of my ~/city NPCs. wc, ac, hp, etc.  See ~/realm/doc/changes and CITY files.
+Mon Jun 12 19:55:02 2000 Put in a slightly modified version of light.c.  It wanders on a call_out and heals more from hb than from set_heal().
+Mon Jun 19 04:11:06 2000 Dested blackstar on request, had him give me the difference in coins.
+Mon Jun 19 04:11:26 2000 27600
+Thu Jul 20 16:43:24 2000 Refunded Hepcat 6k for a component cause weave errored.
+Sat Jul 29 02:37:41 2000 Reset Cobain's gxp from 1504055 to 700000 and removed the weaken, meditate and web spells.  Eurale gave him a chunk of experience w/o toggling the xp gain off, so 80% was moved into the guild.  It looks as though Cobain still needs to be refunded about 100k exp.
+Sun Jul 30 05:18:01 2000 Gave 66000 xp to Cobain.  He died, which is why it was no longer 100k.
+Wed Aug 23 13:19:46 2000 Made Chupacabra give me 36500 coins that he got from one of his other characters (Grudge) whom died.
+Thu Sep  7 14:35:14 2000 Fixed some messages on kblades.c (thanks to Coda)
+Fri Sep  8 12:38:00 2000 Gave 4 full heals to Sire, who had 4 really god damn old ones that were changed disappear on him.
+Tue Sep 12 17:17:52 2000 healed Stone has he had -10k sps after he died.
+Tue Dec 19 11:04:22 2000 Put in changed versions of bug_ring.c battle_axe.c and light_dagger.c in Museum that Feldegast approved a few months ago.  Still need to update mage_robe.c
+Tue Mar 20 22:30:19 2001 Reset Dusan's int from 15 to 19, dested ~/lew/elof/virus1.c which was draining his int even though he had left the area.  Why didn't hb stop?
+Tue Apr  3 00:36:27 2001 Modified bug_ring.c to drain hp if sp < 0.  will kill
+Mon Apr 16 20:22:22 2001 Updated ~/museum/OBJ/bug.c to dest outside of museum
+Mon May  7 13:49:10 2001 Lowered ac of bug ring from 2 to 1.
+Sat May 12 21:07:19 2001 Changed heal rate of ~/museum/NPC/ninja.c from 2,3 to 6,2 and wc from 40 to 60
+Sat May 12 21:15:37 2001 Raised ac of ~/museum/NPC/light.c from 5 to 17, increased wc bonus from 12 to 60 to refect overall difficulty of monster.  xp val raised from 20k to 70k.
+Sat May 12 21:19:41 2001 Raise ~/museum/NPC/tol'kor.c's wc from 49 to 60 and ac from 22 to 25.
+Sat May 12 21:23:18 2001 ~/museum/NPC/bug_storm.c gains 50 more HP every time it rebuilds for a total of 200 more hp.
+Sat May 12 21:26:46 2001 Raised ~/museum/NPC/mage.c's HP from 1000 to 1400
+Sat May 12 21:43:51 2001 Fixed a minor text bug in ~/museum/OBJ/bug_ring.c (heh)
+Sat May 12 21:54:25 2001 Removed all heal_self protection from ~/museum/NPC/ because the DMs closed and it was not done properly.
+Mon May 14 18:59:32 2001 Coded an obj to pull Kasia's kids out of a bag for her.
+Mon May 14 19:16:57 2001 Watched Xtreme multiplay with my permission with Gothchic so they could marry.  1 time thing, snooped entire time.
+Mon May 14 19:31:31 2001 Put in the new version of ~/museum/OBJ/mage_robe.c approved by Mal.
+Mon May 14 19:33:35 2001 Gave ~/museum/NPC/golem.c 200 more hp.
+Wed May 16 23:22:58 2001 Changed ~/museum/OBJ/poison.c to dest outside of arena.
+Mon May 21 11:12:07 2001 Sold ~/closed/OBJ/hollow_ring on Risque for 5k coins, Hal was the only interested party.
+Mon May 21 11:21:11 2001 Refunded Hal xp for my ring getting him killed instantly without even taking a hit.
+Mon May 21 19:17:31 2001 Put in slightly modified version of ~/museum/OBJ/gstaff.c and replaced ninja_gloves.c with gem.c approved by Maledicta.
+Mon May 21 19:21:05 2001 Added hunt code to ~/museum/NPC/mutant.c
+Mon May 21 19:49:57 2001 Modified ~/museum/OBJ/pilld.c to only sell 2 heals, modified ~/heals/zp1.c to be a 3/3 soak/stuff instead of a 6 soak, eliminating the need for a 3rd pill.
+Mon May 21 22:33:59 2001 Changed ~/heals/shadow.c from a 3 to a 6 shot heal so 2 didn't need to be dropped from ~/realm/x/NPC/wraith.c
+Mon May 21 22:34:53 2001 Made some coin/xp improvements to ~/realm/x/NPC/ monsters to make the area slightly more enticing to risk fighting in.  The area hasn't been used in over 6 months.
+Wed May 23 11:35:52 2001 Increased amount of gold in Auseth's chest by 1500+r(1800)

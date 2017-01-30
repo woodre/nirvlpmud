@@ -1,0 +1,110 @@
+                      Nox Homeworld by Angel@Nirvana
+
+
+
+There are 14 rooms located in   /players/angel/area/nox/room
+
+There are 5 mobs located in     /players/angel/area/nox/npc 
+
+There are 1 objects located in  /players/angel/area/nox/obj
+
+
+                            Nox Homeworld
+
+	Nox Homeworld is another area Stargate SG1 has explored. Though they appear to be
+primitive forest-dwellers, the pacifist, nature-loving Nox are one of the galaxy's
+oldest and most advanced races. Capable of living hundreds of Earth years, the Nox
+believe they are symbiotically linked with nature, and treasure the world in which they
+live.  Physically, Nox are very similar to humans, though their hair is elaborately 
+different. Both hair and clothing reflect their forest surroundings. Many live in hut's
+with in the forests, basking in shade. Others reside in a massive, floating city near the 
+Stargate. They love to eat, and appear to be simple vegetarians.  The nox are one of the
+original four races in the greatest alliance's protecting the universe.
+	At this time I coded a small forest area with the main four nox SG1 team has meet. They
+are a Grand father, daughter, her husband, and their son.  The nox become invisible at 
+will so I made them invis all the time since they never want to get involved with others
+and are pacifist, but much stronger and technological than the humans.  I also coded a
+Fenri, a dragon like with hummingbird speed bird, and placed several in the area.  I plan 
+to come back to this area and expand down the road but want to add more areas to explore 
+through the Stargate first.
+	
+         
+
+                        Layout of Nox Homeworld
+
+If one is desired I can e-mail it to them.
+
+
+								Mobs
+
+Here is a breakdown of each mob and what they carry
+/players/angel/area/atlantis
+ 
+<mobname> (/path/to/mob/<mobfilename.c>)
+level <#>, ac<#>, wc<#>, hp<#>, spell %chance-damages, <amount> coins +ramdom
+Does mob do anything special? [says, attacks, etc]
+What does the mob carry? 
+
+File:             /players/angel/area/nox/npc/nafrayu.c
+level <23>, ac<21 + random (3)>, wc <40 + random (3)>, hp <2000>, coins<random(500)+8000>
+load_chat("You feel a tug at your hair as something moves by!\n");
+load_chat("A cool breeze moves through the air!\n");
+set_multi_cast(3);
+add_spell("forcefield",
+"#MN# concentrates and a $HW$FORCEFIELD$N$ surrounds his body reflecting your attack!\n",
+"#MN# concentrates and a $HW$FORCEFIELD$N$ surrounds his body reflecting your attack!\n",
+10,({25,25}),({"physical","physical"}));
+
+
+File:             /players/angel/area/nox/npc/ohper.c
+level <26>, ac<24 + random (3)>, wc <46 + random (3)>, hp <1200>, coins<random(1000)+14000>
+load_chat("There is an erie feeling about, you think you are being watched!\n");
+load_chat("A cool breeze moves through the air!\n");
+set_multi_cast(2);
+add_spell("forcefield",
+"#MN# concentrates and a $HW$FORCEFIELD$N$ surrounds his body reflecting your attack!\n",
+"#MN# concentrates and a $HW$FORCEFIELD$N$ surrounds his body reflecting your attack!\n",
+10,({25,25}),({"physical","physical"}));
+
+
+File:             /players/angel/area/nox/npc/lya.c
+level <28>, ac<26 + random (5)>, wc <52 + random (5)>, hp <1800>, coins<random(1000)+24000>
+load_chat("A sweet smell moves through the air!\n");
+load_chat("A cool breeze moves through the air!\n");
+set_multi_cast(2);
+add_spell("forcefield",
+"#MN# concentrates and a $HW$FORCEFIELD$N$ surrounds her body reflecting your attack!\n",
+"#MN# concentrates and a $HW$FORCEFIELD$N$ surrounds her body reflecting your attack!\n",
+10,({25,25}),({"physical","physical"}));
+
+
+File:             /players/angel/area/nox/npc/anteaus.c
+level <29>, ac<28 + random (4)>, wc <55 + random (4)>, hp <2000>, coins<random(1000)+30000>
+load_chat("You feel a tug at your hair as something moves by!\n");
+load_chat("A cool breeze moves through the air!\n");
+set_multi_cast(3);
+add_spell("forcefield",
+"#MN# concentrates and a $HW$FORCEFIELD$N$ surrounds his body reflecting your attack!\n",
+"#MN# concentrates and a $HW$FORCEFIELD$N$ surrounds his body reflecting your attack!\n",
+10,({25,25}),({"physical","physical"}));
+add_spell("fist",
+"#MN# swiftly swings his fist $G$B U S T I N G$N$ #TN#, directly in your head!\n",
+"#MN# swiftly swings his fist $G$B U S T I N G$N$ #TN#, directly in your head!\n",
+20,({5,40}),({"physical","physical"}));
+
+
+File:             /players/angel/area/nox/npc/fenri.c
+level <15>, ac<12 + random (3)>, wc <20 + random (3)>, hp <250>, coins<random(200)+1000>
+load_chat("You feel a tug at your hair as something moves by!\n");
+load_chat("A cool breeze moves through the air!\n");
+
+
+
+                               Objects
+
+Here is a breakdown of each object 
+/players/angel/area/nox/obj
+
+Type:                     Class:      Weight:    heal:    charges:    cost:    Path:
+
+silent_move_object(boots)   0           0          0         0          0      /boots.c    

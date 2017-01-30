@@ -1,0 +1,25 @@
+
+id(str) { return str=="rock" || str=="ice"; }
+reset () {}
+short() {
+	return "A rock of ice";
+}
+long() {
+write("As you gaze at the rock...you notice a face smiling\n"+
+"back at you. You recognize it as the face of DRAGNAR, the biggest\n"+
+"Rock on Nirvana\n");
+}
+init() {
+	add_action("touch","touch");
+	}
+touch() {
+	write("The rock seems to vibrate!  You feel yourself moving through space...\n");
+	this_player()->move_player("trough the rock#players/dragnar/rooms/cave1-1.c");
+	return 1;
+}
+get() {
+	tell_object(this_player(), "It is too heavy.\n");
+	return 0;
+	}
+query_weight() { return 0; }
+query_value() { return 5000; }

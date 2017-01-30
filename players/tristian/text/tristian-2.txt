@@ -1,0 +1,374 @@
+2/4/03   Walk-through on Tristian's "goblin" area
+(I laughed my butt off at the goblin chats - they're a riot!)
+
+
+g_room1.c:
+Recommended changes or errors:
+
+8.	The "south" exit leads to Tristian's castle, and the 
+player cannot get back to the room.
+
+
+g_room2.c:
+Recommended changes or errors:
+
+
+g_room3.c:
+Recommended changes or errors:
+
+
+g_room4.c:
+Recommended changes or errors:
+
+
+g_room5.c:
+Recommended changes or errors:
+
+
+g_room6.c:
+Recommended changes or errors:
+
+
+g_tent.c
+Recommended changes or errors:
+
+1.	Main description:  Try not to use "you" (e.g. "You have entered...",
+"you see a table...", "You think you have....")
+
+2.	Main description:  The first sentence is a run-on sentence.  The 
+logical sentence break is between "area" and "you see a table...."  Also,
+there should be a comma after "but".
+
+
+NOTE:  I'll try to finish the walk-through of the rest of the rooms tomorrow 
+evening.  Please mail me if you have any questions, either via mudmail
+or at aingeal_the_wiz@hotmail.com.
+
+
+****************************************************************
+
+****************************************************************
+
+
+2/8/03	Completion of walk-through.
+
+
+
+
+ALL rooms -- be sure to even up the length of the lines in your descriptions.
+Some are hanging over.
+Also, you may want to consider putting in some combat chats for your mobs.
+
+
+g_room7.c:
+Recommended changes or errors:
+
+7
+
+
+
+
+g_room8.c
+Recommended changes or errors:
+
+
+.
+
+
+g_room9.c:
+Recommended changes or errors:
+
+1.	Main description:  The first sentence needs to be split into two
+sentences.  (The break should be after "bare here.")  The description also 
+refers to a corral (singular) in the first sentence, then to corrals (plural)
+in the second and third sentences.  
+	The sentence beginning "Some tents stand over...." should be split
+into two sentences.  (The break should be after "by the corrals" and a new
+sentence started with "These tents are....")  The second half is also not
+grammatically correct.  Hrm...it's probably easier just to change the second 
+sentence as follows:  "Some tents stand over by the corral which are slightly
+larger than the tents in the rest of the camp."
+	The third sentence either needs 1) a semicolon in the place of the
+comma, or 2) "and" inserted before "even the ever...."  Also, "by corrals" 
+should be "by the corrals".
+
+2.	You need an item description for "water troughs".
+
+3.	In your main description, you describe the troughs as "water
+troughs"; however, in the item "troughs" you describe them as "food or
+water troughs".  These need to be consistent.
+
+4.	In the description for the item "carcass", "grizzly" should be "grisly".
+Also, "half eaten" should be "half-eaten".
+
+
+5.	You should have the wolf clone the wolf pelt when it dies, rather 
+than having it carry the pelt.  (It's not realistic to have it carry its
+
+own pelt.)
+
+6.	(two typos)  The wolf's description should read:  "A snarling wolf 
+whose rider lies dead on the ground."
+
+
+
+
+7.	You need to even up the line length of the main description.  ("Over"
+		hangs over past the rest.)
+
+
+g_room10.c:
+Recommended changes or errors:
+2.	Main description:  The first sentence is a run-on sentence, and the
+second half is inconsistent with the first (i.e. bare and containing practice
+dummies).  A better alternative might be:  "The clearing is bare, save for some
+practice dummies that are off to one side."  
+	The second sentence is also two sentences stuck together.  You could
+1) restructure the sentence as follows: "Straw that probably came from inside
+the dummies is strewn about the ground."  or 2) substitute a semicolon for
+the comma.
+	"scribed" should be "inscribed".
+
+3.	There is a type mismatch in the description for the item "clearing"
+(e.g. the hard packed dirt did not come from the foot traffic).  You might
+try something like this instead:  "An open area where the ground is packed
+hard from frequent foot traffic."
+
+4.
+
+5.	You need item descriptions for: practice dummies, ground, circle
+
+
+g_room11.c
+Recommended changes or errors:
+
+1.	Eliminate "you" and "your" from the main description and the mob
+descriptions.  
+
+2.	The "listen" description is in conflict with the main description.
+
+3.	Main description: The first sentence is a run-on sentence.  The natural
+break is between "area" and "the camp".
+
+
+4.	The "listen" description is inconsistent with the main room description.
+
+5.	The description for item "tent":  The first sentence is a run-on
+sentence.  The natural breaks are between "days" and "it probably", then
+between "caravan" and "chanting".  Again, stylistically it would flow better
+to say "blows the flap open" rather than "blows open the flap".
+
+6.	You need item descriptions for: flap, ground, scrub grasses, grasses.
+
+
+
+
+
+
+g_tent2.c
+
+1.	Main description: There should be a comma between "hot" and "and".
+"Hang" should be "hangs".  "the contents" is referring to "a low cot" --
+if you mean that the balls of fire are shedding light over the contents of
+the room, you need to add "of the room".
+
+2.	The description for item "tent" doesn't match the main room description.
+(The item description is in plural, rather than singular.)  Also, eliminate 
+"you" from the description.  "previous ones" doesn't make sense from inside 
+the tent.  Perhaps "other tents in the goblin camp" might work better.
+
+3.	You may want to add "smell" to this room.
+
+4.	You need item descriptions for: fire
+
+5.	In the item description for "books", eliminate "you".  Also, there 
+are typos ("dont" rather than "don't" and "thier" rather than "their"). 
+Perhaps this would work better:  "Spell books, written in the gutteral 
+language of the goblin.  They have little value to one who does not read 
+their language."
+
+6.	In the item description for "scrolls", you have a run-on sentence.  
+The break should be between "goblin" and "The figures...."  (Also, you need 
+a comma after "page".)
+
+7.	The pentagram is uneven at one point on the right-hand side.  
+(Nifty idea, though!)
+
+8.	In the goblin wizard's chat, "breathe" should be "breath".
+
+9.	In the goblin wizard's description:  "mutting" should be "muttering".
+"breathe" should be "breath".  The second sentence is a run-on sentence.  
+You can either: a) split it into two sentences (...high quality.  He is 
+muttering....), or b) put a comma between "quality" and "and" (this 
+technically fixes the sentence structure, but is less readable than 
+splitting it into two sentences.)
+
+10.	Velvet robes description:  You have a run-on sentence.  You can either 
+break the sentence after "robes" (where you have the comma) (preferred), or 
+after "clean".
+
+
+
+g_room12.c
+1.	Main description:  (First sentence) "sparrodic" should be "sporadic".
+(Second sentence) You need a comma between "tents" and "and".
+
+2.	You need item descriptions for: grasses, cook fires, stump
+
+3.	You really should spell out your single-digit numbers (i.e. one fire 
+rather than 1 fire)(This is in your description for item "fires".)
+
+4.	In both item descriptions for "trash" and "debris", you need to 
+uncapitalize "garbage".
+
+5.	The description for item "forest" does not describe how the forest 
+looks. Eliminate the use of "your"-- "tower overhead" would work just as well.
+Also, there is a typo in the first sentence ("dazzaling" should be "dazzling".)
+
+6.	In the description for item "picket", "stick" should be "sticks".  
+Eliminate the use of "you".
+
+7.	In the description for the mobs: "lookin" should be "looking".  
+Eliminate the use of "you".
+
+
+g_room13.c
+1.	Main description:  The first sentence is a run-on sentence.  The 
+sentence break should be after "...across the area."  The next part of the 
+sentence doesn't make sense -- what does the dirt share the landscape with?  
+This should be a full, grammatically correct sentence.  "uptight" is not 
+the correct usage for that word in the last sentence -- did you mean next 
+to the tree line?
+
+2.	In the description for item "grass":  "sparrodic" should be "sporadic".
+
+3.	In the description for item "stream", there is a run-on sentence.  
+It should break between "water" and "buckets".  Also, "laying" should be
+"lying".
+
+4.	In the description for item "trees", there is an extra period at 
+the end of the sentence.  Also, delete the comma and insert "that have" 
+between "pines" and "probably".
+
+5.	You need an item description for: tree, fence
+
+6.	In the description for the goblin: "looking" instead of "lookin".
+
+
+
+g_room14.c
+1.	Main description: The first sentence is a run-on sentence.  The
+logical break is between "camp" and "small trees".  Typo -- "brids" should
+be "birds" and "farther" should be "further".  "Amongst" should be "among".
+
+2.	Description for item "forest" -- same as above.  It doesn't describe
+what the forest looks like, and eliminate "your" from the description.
+
+3.	Description for item "trees":  "ten" instead of "10".
+
+4.	You need item descriptions for:  grasses
+
+5.	The description for item "grass" is inconsistent with the main
+room description.
+
+6.	Eliminate "you" from the description for item "picket".
+
+7.	In the description for "smell", it should be "waft" instead of "wafts".
+
+
+g_room15.c
+1.	Eliminate "you" from the main description.
+
+2.	Description for item "grass": eliminate "you".  Also, you should make
+this a grammatically correct sentence.  Perhaps: The taller grass, about
+waist high, makes a perfect hiding area for a goblin.
+
+3.	Description for item "trees": see above.
+
+4.	You need item descriptions for: zones, kill zones, lines, sight lines
+
+5.	Description for item "forest" -- same as above.  It doesn't describe
+what the forest looks like, and eliminate "your" from the description.
+
+6.	Description for "goblin sentry": "lookin" should be "looking".
+Eliminate "you" from the description.
+
+
+7.	Description for "rusty sword": This is a run-on sentence.  Break 
+between "days" and "rust".  
+
+
+tower2.c
+1.	Eliminate "you" from the description.
+
+2.	Descriptions for "north", "east" and "west": Eliminate "you".  
+
+3.	Description for "south":  Run-on sentence.  Break between "goblin
+camp" and "there is".  Eliminate "you".  There should be a comma after
+"corrals".  Sentence break again after "fire pit."  
+
+4.	Description for "goblin sentry": "lookin" should be "looking".
+Eliminate "you" from the description.
+
+
+tower.c
+
+1.	Eliminate "you" from the description.
+
+2.	Descriptions for "north", "east" and "south": Eliminate "you".  
+
+3.	Description for "nouth":  Run-on sentence.  Break between "goblin
+camp" and "there is".  Eliminate "you".  There should be a comma after
+"corrals".  Sentence break again after "fire pit."  
+
+tower1.c
+
+1.	Eliminate "you" from the description.
+
+2.	Descriptions for "west", "east" and "south": Eliminate "you".  
+
+3.	Description for "north":  Run-on sentence.  Break between "goblin
+camp" and "there is".  Eliminate "you".  There should be a comma after
+"corrals".  Sentence break again after "fire pit."  
+
+
+tower3.c
+
+1.	Eliminate "you" from the description.
+
+2.	Descriptions for "west", "east" and "north": Eliminate "you".  
+
+3.	Description for "south":  Run-on sentence.  Break between "goblin
+camp" and "there is".  Eliminate "you".  There should be a comma after
+"corrals".  Sentence break again after "fire pit."  
+
+
+
+g_room16.c
+1.	Main description:  This is a run-on sentence.  Break between "still"
+and "grass", then again between "ground" and "stacks of logs".  Eliminate
+"you" from the description.
+
+
+5.	You need item descriptions for: ground, stacks, 
+
+6.	Descriptions for "north", "east" and "west": Eliminate "you".  
+
+7.	Description for "south":  Run-on sentence.  Break between "goblin
+camp" and "there is".  Eliminate "you".  There should be a comma after
+"corrals".  Sentence break again after "fire pit."  
+
+8.	Description for "goblin sentry": "lookin" should be "looking".
+Eliminate "you" from the description.
+
+
+
+g_tent1.c
+3.	You need item descriptions for: floor, dirt, coals, instruments
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+Okay, these are the typos I got just after a casual walkthrough of your area.
+I might've missed a few of the alternate monster descriptions, but I've
+gotten two pages of notes, so I figure that'd be enough. :)
+
+Yours truly,
+Feldegast
+
+
+gr1.c - petrude -> protrude
+gr2.c - remove 'in' and 'the' from the 1st sentence
+gr3.c - petrude -> protrude
+stone dryant - he/it need to decide gender in desc.
+gr4.c - 2nd sentence comma necessary?
+      - 3rd line liter -> litter
+gr6.c - a fire -> afire
+ghost - flows through what?
+air zombie - predeter -> predator
+           - your -> you're
+gr5.c - down-pour -> downpour
+ghost - seen -> see
+      - mearly -> merely
+gr7.c - "grave stricken" ?
+      - lead->leads
+      - remove "in" and "the" 2nd line
+      - 3rd sentence sounds weird
+gr8.c - "appears to be closed in..."
+      - "It seems like it's"
+gr9.c - comsumes -> consumes
+ghost - just redo all of these descriptions
+stone zombie -> "as he wanders"
+gr11.c - swears -> swerves?
+gr13.c - taht -> in that
+      - fainly -> faintly
+      - "for a long time."
+gr14.c - rethink line 1
+       - threatons -> threatens
+       - existance -> existence
+       - upon, -> upon it
+       - sence -> sense
+gr15.c - untill -> until
+       - sparer -> sparser
+gr16.c - "south it leads"
+       - "east it leads"
+       - "from being disturbed."
+gr17.c - along side -> alongside
+       - walk way -> walkway
+       - continuing -> continues
+       - step -> steps
+temple.c - enought -> enough
+         - Ther -> There
+         - hand -> hang (tapestry descrip)
+         - brutle -> brutal (same)
+marthi - advisary -> adversary (attack emote)
+       - "huge rings are on her hands"
+       - shouldn't she have a 'mummy' id?
+crypt1.c - everwhere -> everywhere
+         - mearly -> merely
+crypt1b, 2, 2b, etc.        "
+        - I recommend making all of these duplicate rooms inherit crypt1.c and just change the exits.
+ruby.c - is -> it
+

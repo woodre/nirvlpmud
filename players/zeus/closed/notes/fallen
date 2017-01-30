@@ -1,0 +1,91 @@
+=====================================================================
+Sacrifice corpse (requires casting time)   (gain @ 950000 exp)
+Command:  'sacrifice <arg optional>'
+Components:  corpse
+             blood iris (700)  [new component]
+             
+Player tears open blood iris and smears a crude circle onto the 
+corpse.  They then smear a drawing of the First Symbol [power] in the
+center of the circle.  Piercing their hand, they trace a line of 
+their blood (hp cost) around the circle before placing their hand on
+the symbol.  As they speak a binding word, shadows stream from their
+mouth to the symbol.  The corpse turns into a husk (quickly finishes
+decomposing) and the player rises with shadows swirling around their
+hand.
+
+Player may look at fist to get a general idea of the amount of shadow
+'charge' (for lack of better word) around their hand and have an 
+extra look that shows other players.
+
+Charge is based on corpse level (CL):
+  CL < 19 :        CL
+  CL > 18 & < 21 : CL + random(CL)
+  CL > 20 & < 23 : (CL * 2) + random(CL)
+  CL > 22 :        (CL * 3) + random(CL * 2)
+
+Charge is controlled in hb.h and gives the following benefits:
+  While charge, player receives gen_wc_bonus of 1+random(1)
+  Messages in hb about shadows swirling around hand.
+  If end < max:
+    add_endurance 1+random(guild_exp / 1600000)
+    charge -random(2)
+  If sp < max:
+    add_spell_point 1+random(guild_exp / 1600000)
+    charge -random(2)
+    add_hit_point -(1+random(guild_exp / 1600000)
+  Shadowblast receives bonus hit_player() damage of charge/2, with
+    max damage of 10
+=====================================================================
+Ward (requires casting time)              (gain @ 450000 exp)
+Command:  'ward'
+Components:  stick of chalk (600) [new component]
+
+Player draws concentric circles on the ground and carefully traces
+the Seven Symbols of the Circle about the inner circle's 
+circumference.  Pricking their finger, the player drops blood onto
+each symbol.  As the last symbol is bloodied, there is a flash of
+light and the drawing fades from view.
+
+The ward is unseen by non-fallen players.  Any fallen can see the
+ward and may destroy it in one of two ways.  1. They are able to
+'dispell' a ward and 2. They could cast their own ward, thereby 
+destroying the fist.
+
+The ward then acts two fold:
+  1.  It serves as an alarm, with shadows reporting when someone
+      other than the player enters the room.
+  2.  It also becomes a spot the player can teleport to via the
+      teleport spell.  [Location 8.  Ward]
+      
+The ward will last until player logs out, it is dispelled, or reboot
+occurs.  Player may have only one active ward at a time.
+=====================================================================
+Shadowfield (requires casting time)         (gained @ 4300000 exp)
+Command: 'shadowfield'
+Components:  glowing oil (1000)
+             piece of obsidian (3000)
+             
+Player digs a small depression into the ground, and places the piece
+of obsidian in it.  The player pours the glowing oil onto the 
+obsidian.  As he does, dark whisps of shadow coalese and strengthen.
+Slowly they slither up the players extremities and finally surrounds
+his whole being.  Unbearable pain [hp cost/end cost] drops them to
+all fours.  Their eyes turn black and their rise from the ground.
+
+Endurance is set to zero for 2-4 minutes (it takes time to recover
+from this casting)
+
+Player is surrounded in shadows (in effect an invis armor object 
+similar to shardak dragonskin or healer defend spell.  Lasts until
+player logs out.             
+=====================================================================
+Creeping shadow (requires casting time)   (gained @ 6000000 exp)
+Command:  'creeping shadow'
+Components:  kudzu leaf (500) [new component]
+
+Player summons a 'creeping shadow' object that does damage over time
+to all living things in the room (except guild members).  [similar to
+Dervish sandstorm]  If there isn't anything in the room, the shadow
+will creep (move) into adjacent rooms looking for living things via
+querying of exits until it's time is up.  Cannot be cast in /room
+=====================================================================

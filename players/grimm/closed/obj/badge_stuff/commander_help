@@ -1,0 +1,24 @@
+       ----- Guild Commander Help Menu ----- Welcome oh mighty one! -----
+commander_help_badge ........... This menu
+   or chb ......................
+query <plyr> ................... Get the current guild stats of a player
+Commander_emote <str> ............ Guild Commander's emote line
+     or ce <str> .................
+Commander_tell <str> ............. Guild Commander's talk line
+     or ct <str> ................
+banish <plyr> ................... Banish a player from all guilds (you better
+              ...................   have a damn good reason for this (like if
+              ...................   they attack one of my guilders then its ok))
+promote <plyr> <amt> ........... Will add AMT to the player's guild level
+                     ...........   (can be a negative amount also)
+badge <plyr> ................... Give a badge to a player that has lost it
+             ...................   (be sure to make sure that they are NOT
+             ...................   in another guild (use "ow"))
+revoke <plyr> .................. Strips a player of their badge, level, and
+              ..................   guild experience
+-------------------------------------------------------------------------------
+NOTE:  Use these commands sparingly, especially "promote", "badge", and
+       "revoke", which are all logged.  If you are caught missusing these
+       commands you will be put to guild level 1 and all privaledges will 
+       be taken away.  (a precaution that HAS to be there)  Basically, you 
+       have POWER now...be good with it!

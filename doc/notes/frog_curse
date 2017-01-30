@@ -1,0 +1,10 @@
+Feldegast [8.10.2000]
+
+If a player is having trouble carrying more than half of their 
+usual capacity, then it is probably due to the frog curse.  
+Usually this sets a player's title, but it's easy enough to reset titles,
+and then the player doesn't realize that they are a frog because there's 
+no other indication.  This is not a bug.  
+If you want to diagnose a player, check query_frog() in the player object.
+
+Feldegast

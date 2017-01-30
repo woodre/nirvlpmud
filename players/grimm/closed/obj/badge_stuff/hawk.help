@@ -1,0 +1,16 @@
+Hawk Commands:
+    hawk help ................. Shows this menu
+    hawk summon ............... Summon a hawk to your side (100sp)
+    hawk say <str> ............ Let your hawk talk for you
+    hawk emote <str> .......... Let your hawk emote a message
+    hawk tell <who> <what> .... Let your hawk tell somebody something
+    hawk look ................. Let you see through the eyes of your hawk
+    hawk leave ................ Release your hawk
+    hawk bring ................ Brings your hawk back to you
+    hawk follow ............... Command your hawk to follow you
+    hawk stay ................. Command your hawk to stay in the current room
+    attack <monster> .......... Command your hawk to attack a monster
+    hawk north, south, east, .. Command your hawk to move around
+      west, n, s, etc, etc ....
+ 
+NOTE: Anything the hawk sees will have a # in front of it.

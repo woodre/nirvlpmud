@@ -1,0 +1,18 @@
+/players/mouzar/misc/shadwand.c: player.c shadowing method?
+  -I have no clue on this, never seen any shit like it before..
+/players/mouzar/closed/wand.c: probably a wiztool (21k)
+/players/mouzar/workroom.c: some wiz commands, nothing big
+/players/mouzar/whee.c: heal 1000, it HAD BEEN LOADED when i checked
+/players/mouzar/castle.c: autoloads 
+/players/mouzar/castle/inter.c: room with hb, auto-refreshing monsters
+/players/mouzar/castle/armor/reaper.c: questionable weapon
+/players/mouzar/castle/monsters/bah.c: level 20, wc0,ac0,hp0 monster..
+  -6k xp in no time..!
+/players/mouzar/castle/newbie/inn.c: batch of heals..
+Name:  Cost:  Heal:  Problem:
+Newbie   20      4    Cost should be 240 (non intox: 60/pt)
+Advent   50      8    Cost should be 480
+Wiz      90     12    Cost should be 720
+Beer      2      -    intox 2, incorrect add_money call
+/players/mouzar/castle/weapons/robe.c: ac5 type armor (weight 1)
+/players/mouzar/castle/weapons/stinger.c: the apparently tweaked weapon

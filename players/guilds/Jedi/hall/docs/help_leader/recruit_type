@@ -1,0 +1,14 @@
+Syntax: recruit_type [type]
+
+Set or display the recruitment policy for the clan.
+
+With no argument, displays the policy.
+
+With argument of 'all', allows all members to recruit
+new members.
+
+With argument of 'leaders', allows only the clan leaders
+to recruit new members.
+
+With argument of 'owner', allows only the owner to recruit
+new members.

@@ -1,0 +1,7 @@
+Boltar 10-9-2002
+
+
+ 
+ because of rutine abuse of the no idle quit flag, I've made it such
+   that those below level 100 setting the flag  will get 1 hour of 
+idle time. Those 100+ still get it the way it's always been.

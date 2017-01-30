@@ -1,0 +1,26 @@
+<CNA2>
+
+Short Desc: Cassi Anderson (CNA)
+Long Desc: An older woman about in her mid-forties, Cassi carries a really.
+        good attitude and practice of her medical background with her. All
+        though she seems to be very short tempered at times. She has very
+        short blonde hair and blue eyes. When she talks she has a very
+        country sounding dialect to her. She is very short in stature but
+        do not let this fool anyone. She is very strong in strength and
+        very quick on her feet. She is wear a soft and comfortable pair of
+        scrub panst and top. A stethoscope hands out of her scrub top along
+        with some papers and pens the stick out of the top of her pockets.
+        
+Name: cassi
+Alt_name: anderson
+Race: Human
+Gender: Female
+Level: 3
+Wc: 7
+Ac: 4
+Hp: 45
+Gold: 120
+Spell: sedative
+        add_spell("sedative","#MN# $HR$stabs$N$ you in the neck $HK$injecting$N$ a very $HY$powerful$N$ sedative.\n",
+                     "#MN# $$HR$stabs$N$ #TN# in the neck $HK$injecting$N$ a very $HY$powerful$N$ sedative.\n",
+                     20(2d6),"other|poison");

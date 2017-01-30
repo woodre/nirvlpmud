@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/hawkeye/items/good","/obj/armor","/players/hippo/weapons/molar_sharf","/players/scathe/weap/lbow","/players/puppy/s/eq/cape","/players/arrina/weapons/revenant","/obj/weapon","/players/snow/armor/arch_robes","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/puppy/s/eq/collar","/obj/armor","/players/mythos/mwep/voice","/players/hawkeye/items/bourbon","/obj/weapon","/obj/weapon","/players/mythos/awep/katana","/obj/treasure","/players/snow/shadows/stuff/plate","/players/mythos/awep/dstaff","/obj/treasure","/obj/weapon","/players/wren/Area/starbug/items/flibble","/players/jamila/beach/mobs/shell","/players/mistress/other/disk","/players/puppy/s/eq/quill",})
+shorts ({"A potion","stone platemail","A molar sharf","Longbow of Force","A flowing cape","Revenant Blade","Blaster","Robes of the Archwizard","Peasant Rags","A leather collar","A suit of [1mwhite[0m platemail","Voice","bottle of bourbon","Golden hoof","A Deadly Bullwhip","Katana","Arctic Wolf pelt","[1mBlack Platemail[0m","Dream Staff","Zuzu's petals","A huge spiked club","a [1;30mpe[37mngu[1;30min[2;37;0m handpuppet","A Large Shell","A fragile disk","A quill",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

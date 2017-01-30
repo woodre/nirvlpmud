@@ -1,0 +1,109 @@
+#define NAME "Jaraxle"
+#define DEST "/room/eastroad2"
+#define DEST2 "/room/south/sshore1"
+#define DEST3 "/room/plane11"
+
+#include "/players/jaraxle/define.h"
+
+object autoload_ob, autoload2_ob, autoload3_ob, autoload4_ob, autoload5_ob, autoload6_ob;
+object teller;
+object templar_castle;
+object new_ares;
+object castle_lock;
+object rek_eyes;
+object dbz_halo;
+object phoenix_halo;
+object magus;
+object GUILD;
+object shardakfire;
+string FireDest;
+int FLAMES;
+id(str) { return str == "tree" || str == "oak"; }
+
+short() {
+   return "A large "+GRN+"oak tree"+NORM;
+}
+
+long() {
+   write("A large, looming tree towers above you.  The bark is rough and\n");
+   write("dark looking.  There is moss that entwines itself on the many\n");
+   write("thick branches which reach out into the forest. There is a large\n");
+   write("hole at the bottom of this oak that you could "+HIW+"enter"+NORM+".\n");
+}
+
+init() {
+  add_action("enter", "enter");
+}
+
+enter(arg) {
+   if(arg == "hole" || arg == "opening" || arg == "oak" || arg == "oak tree" || arg == "tree"){
+      write("You enter the large opening of the oak tree.\n");
+      write_file("/players/jaraxle/3rd/warrior/enter.log",ctime(time())+" "+HIR+""+this_player()->query_name()+""+NORM+" entered the tree.\n");
+      this_player()->move_player("into the oak#/players/jaraxle/3rd/warrior/rooms/entrance");
+      write("\nDo not forget to read the signpost for updates!\n");
+
+/* DUMB
+write(HIY+"Closed"+NORM+" until further notice. "+BLK+BOLD+"["+NORM+YEL+"Un"+BLK+BOLD+"de"+NORM+YEL+"r C"+BLK+BOLD+"on"+NORM+YEL+"st"+BLK+BOLD+"ru"+NORM+YEL+"ct"+BLK+BOLD+"io"+NORM+YEL+"n"+BLK+BOLD+"]\n"+NORM);
+*/
+      return 1; }
+}
+
+reset(arg) {
+/* 11/12/05 Earwax: unnecessary code now, incorrect as well (== ?)
+switch(random(6)){
+case 0: DEST3 == "/players/jaraxle/3rd/volcano/rooms/a_cave5.c";
+break;
+case 1: DEST3 == "/players/jaraxle/3rd/volcano/rooms/b_cave6.c";
+break;
+case 2: DEST3 == "/players/jaraxle/3rd/volcano/rooms/c_cave3.c";
+break;
+case 3: DEST3 == "/players/jaraxle/3rd/volcano/rooms/d_cave6.c";
+break;
+case 4: DEST3 == "/players/jaraxle/3rd/volcano/rooms/e_cave7.c";
+break;
+case 5: DEST3 == "/players/jaraxle/3rd/volcano/rooms/f_cave4.c";
+break;
+}
+*/
+   if (arg)
+      return 1;
+FLAMES = 0;
+   move_object(this_object(), DEST);
+/* guild defunct
+   clone_object("/players/jaraxle/closed/guild/gob.c");
+*/
+
+/* nope. rek is toast.
+   clone_object("/players/jaraxle/rek_eyes");
+*/
+   clone_object("/players/jaraxle/closed/dbz/halo.c");
+   clone_object("/players/jaraxle/closed/phoenix/halo.c");
+/*
+   clone_object("/players/jaraxle/closed/castle_lock.c");
+*/
+   clone_object("/players/jaraxle/closed/teller_save.c");
+/*
+  unnecessary item for player.
+   clone_object("/players/jaraxle/closed/magus.c");
+*/
+/* umm. .. nope.
+  verte
+if(FLAMES == 0){
+   shardakfire = clone_object("/players/jaraxle/3rd/volcano/items/flame.c");
+   move_object(shardakfire, DEST3);
+FLAMES +=1;
+}
+*/
+   call_other("room/south/sshore1","short",0);
+   if(!present("tower", find_object("/room/south/sshore1"))) {
+      /*NEEDED for multiple towers appearing -Bp*/
+      templar_castle = clone_object("/players/jaraxle/templar/rooms/hope.c");
+      move_object(templar_castle, DEST2);
+   }
+   clone_object("/players/jaraxle/closed/forbin/str.c");
+   clone_object("/players/jaraxle/closed/forbin/ste.c");
+   clone_object("/players/jaraxle/closed/forbin/ste2.c");
+   clone_object("/players/jaraxle/closed/forbin/mag.c");
+   clone_object("/players/jaraxle/closed/forbin/sta.c");
+}
+is_castle(){return 1;}

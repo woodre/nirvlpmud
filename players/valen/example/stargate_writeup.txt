@@ -1,0 +1,129 @@
+Stargate (SG-1) by Angel@Nirvana 
+
+The entire area is located in 
+/players/angel/area/stargate 
+
+There are 33 rooms located in  
+/players/angel/area/stargate/room
+
+There are 9 mobs located in  
+/players/angel/area/stargate/npc 
+
+There are 7 objects located in
+/players/angel/area/stargate/obj
+
+
+Stargate
+
+  Stargate command is inside Cheyenne Mountain beneath the N.O.R.A.D. facility.
+This is Earth's base of operation for off-world travel.  I laid out Stargate 
+similar to the T.V. series SG-1 with a few changes.  One change is the use of
+rings to get from Nirvana to the gate room.  This is due to it taking too long
+to travel down 28 stories in an elevator.  I have keep the area to the bottom
+three levels of Stargate command which are levels 26-28 which use an elevator
+to move from floor to floor.  This will be my new castle area. 
+  Gas City will still be keep.  Since the Stargate goes to many different planets
+and encounter many different types of people and races Gas City will be one of the
+planets they travel to.  I have already started coding two other areas that will be
+completed shortly along with finishing the town of Gas City.  The other two are
+Lowthar's Land and Nox Homeworld.  Travel is done through the Stargate which also
+has an explode file for a picture of the Stargate each time they go through it.
+  This area has three main weapons: Goa'uld Staff weapon, Zat gun, and a P90 machine
+gun. The Goa'uld Staff weapon is coded as a staff with a special hit for the laser
+beam they shoot out.  The Zat gun was created as a modified Goa'ule Zat laser gun 
+with a special hit and can be used to disintegrate corpses.  The Zat gun in the show
+can actually kill any living thing in two hit and disintegrate them on the third hit
+which I know we can't have that here so; it is modified with a special hit and the 
+ability to disintegrate a corpse.  The P90 machine gun is a little bit more playful.
+It not only can be loaded with bullets but, has many different attachable parts that
+players either buy from the private in the main armory and others that come at random
+while fighting npc's in my area.  There is a field manual for the P90 they can use to
+find all the different accessories. 
+
+ 
+Layout of the Stargate
+
+I created a map that I can e-mail anyone who nwould like it.
+
+
+Mobs
+The mobs in this area are created for mid to high level players.
+
+Here is a breakdown of each mob and what they carry
+/players/angel/area/stargate/npc 
+<mobname> (/path/to/mob/<mobfilename.c>)
+level <#>, ac<#>, wc<#>, hp<#>, spell %chance-damages, <amount> coins +ramdom coins, item 
+Does mob do anything special? [says, attacks, etc] What does the mob carry? 
+
+Carter (/carter.c)
+Level 22, ac 20 + random (9), wc 38 + random (9), hp 600 + random (100), spell 75-30, coins 0, P90.c and bullets.c
+says "I have to figure out how to make this work" 
+" Where did that part go?"
+(mob name) shoots his P-90 piercing you"
+
+Jackson (/jackson.c)
+Level 22, ac 20 + random (9), wc 38 + random (9), hp 600 + random (100), spell 75-30, coins 0, P90.c and bullets.c
+says "It pays off to know so many different languages!" 
+" Wow, I can't believe I just found Atlantis"
+(mob name) shoots his P-90 piercing you"
+
+Landry (/landry.c)
+Level 22, ac 20 + random (9), wc 38 + random (9), hp 600 + random (100), spell 75-30, coins 0, P90.c and bullets.c
+says "Damit, I have to call the President again!" 
+" I need a vacation!"
+(mob name) shoots his P-90 piercing you"
+
+Mitchell (/mitchell.c)
+Level 22, ac 20 + random (9), wc 38 + random (9), hp 600 + random (100), spell 75-30, coins 0, staff.c
+"says, Ycan't take us on!" 
+" INTRUDER, call for backup!"
+(mob name) shoots his P-90 piercing you"
+
+Teal'c (/tealc.c)
+Level 30, ac 20 + random (9), wc 38 + random (9), hp 600 + random (100), spell 75-30, coins 0, P90.c and bullets.c
+"Teal'c raise his eyebrow and makes you crumble to your knees."
+"Teal'c stairs you down. You feel insignificant to his massive stature."
+(mob name) shoots his STAFF WEAPON burning your flesh"
+
+Vala (/vala.c)
+Level 28, ac 20 + random (9), wc 38 + random (9), hp 600 + random (100), spell 75-30, coins 0, vala.c
+"says, Baby I got something for you!"
+" What do you need, I could make you a great deal!"
+(mob name) shoots her Zat gun burning your flesh"
+
+Corporal (/corporal.c)
+Level 18, ac 20 + random (9), wc 38 + random (9), hp 500 + random (100), spell 75-30, coins 0, P90.c and bullets.c
+"says, You are not allowed beyond this point!"
+" This is a highly secure area!"
+(mob name) shoots his P-90 piercing you"
+
+Sargent (/sargent.c)
+Level 20, ac 20 + random (9), wc 38 + random (9), hp 550 + random (100), spell 75-30, coins 0, P90.c and bullets.c
+"says, You are not allowed beyond this point!"
+" This is a highly secure area!"
+(mob name) shoots his P-90 piercing you"
+
+Private (/private.c)
+Level 14, ac 12 + random (5), wc 20 + random (5), hp 250 + random (50), spell 50-15, coins 0,
+"says, You are not allowed beyond this point!"
+" This is a highly secure area!"
+
+
+
+Objects
+There are only three main weapons with one weapon that has several attachments.
+
+Here is a breakdown of each object 
+/players/angel/area/stargate/obj
+
+Type:                            Class:  Weight:                Path:
+P90 machine gun                    15       2                   /P90.c
+                                                                /P90_no_ammo.c
+Zat gun                            19       2                   /zat.c
+Staff weapon                       19       2                   /staff.c
+
+
+Additional information
+
+I plan to add all my new areas to the gate room.  
+I also plan on making 10 to 15 small areas that will be focused on SG1 worlds.

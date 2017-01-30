@@ -1,0 +1,293 @@
+                  -=[The Shi'ah SwampLands]=-
+                by Vertebraker@Nirvana 7-8-2000
+
+___________________________________
+Sections
+___________________________________
+
+I. Overview
+II. Objects
+III. Monsters
+IV. Misc
+___________________________________
+
+1] OVERVIEW -
+
+ My new area is out near the southern forests, starting with
+a small forest area [~/swamp/forest/] linked to my castle [castle.c],
+stretching into a small village with a few interesting items
+[~/swamp/village/] where a little girl has gone missing.
+The town elder [~/NPC/juribel] drops hints that the girl
+is in the swamp, but does not no for sure.  What the player
+does not know is that the girl is already dead, as result
+of a changeling <a shape-shifter> attack.  What this provides
+is a theme/mini-quest for the player to delve into, hunting
+for the girl.  Also, themewise, this area is well-crafted,
+and has thematic links to Zeus's area.
+
+ As far as the swamp goes, that is the meat of the area.
+Originally I made the swamp and intended it to be a stand-alone
+area, but I thought up the idea of the village and figured
+it would be a bit more thematic than the standard "swamp"
+exit at my castle ;).  Movement in the swamp is very limited,
+it checks stealth vs random(25) just_to_move.  With
+half of the rooms no-teleport and all of the rooms pk, this
+is very deadly.  Also, 1/3 of the time that moving fails,
+random(-10) heal_self dmg is called on the player [he trips].
+So it is very taxing...  The monsters are random [SEE SECTION III]
+so players cannot just go to a room and expect a kill, they are practically
+forced to wander.
+
+ The swamp is a very unique area, and I hope you will enjoy.
+___________________________________
+
+2] OBJECTS [~/swamp/OBJ] -
+
+ I will go through the directory file by file.
+
+a. bladed_staff - 
+   The guards [~/swamp/NPC/swamp_guard + guard] use
+   this weapon. It's two handed, non savable, wc 16, 
+   and has a random 1/2 chance of calling its special.
+   if the users stealth is less than random(30),
+   it can call hit_player(-10) dmg on the user.
+   the dmg on the special is 1-8 if they did not
+   mishandle it. weight 4, value 1000+random(100)
+
+b. bracelet  -
+   This is an emerald bracelet solde by the jeweller,
+   it does nothing outside of being jewelry :)
+   weight 1, 500+random(100) value.
+
+c. d_amulet -
+   ac 1 non savable sold item, costs 10k.
+   This is a mood amulet.. Everytime it is hit,
+   it adds to an int up to 10.  when the int is reached,
+   it changes to a different mood that can either
+   hurt or help the user. 12 diff emotions,
+   with a 10% chance of doing each's random effect.
+   weight 1, value 2000+random(500)
+
+d. d_bottle - 
+   enchanted bottle sold by the shaman, costs 2k.
+   this is only used to bottle up the acid slime
+   that the changeling leaves. (~/OBJ/slime).
+   you bring back the bottle to the shaman,
+   and if you come back 5 minutes later, he
+   gives you ~/OBJ/potion. weight 1, 10 value.
+
+e. d_scroll -
+   savable sold item, costs 40k.
+   scroll of restoration.  this clones sp_heal
+   to the player when read.  lasts for 50
+   hbs, adds 20 sps to the player.  random
+   chance of you losing a strength point
+   when you read the scroll. weight 1, 2000 value.
+   only one use.
+
+f. deer_hide -
+   a hide cloned when the 'deer' type of
+   monster.c dies.  sellable for coins -
+   weight 1, 900+random(100) value.
+
+g. denim_shorts -
+   pants that ~/NPC/shaman wears. ac 1,
+   savable, 1/8 chance of returning 1.
+
+h. duck_beak -
+   a duck's beak, weight 1, value 150.
+   cloned when a duck dies.
+
+g. flame -
+   this is an eternal flame, has no real point
+   but for something to look at and possibly
+   make the player think there is something more
+   there.  i might expand on this later,
+   but it does nothing as of yet. ungettable,
+   just sits in a room making a lot of light.
+
+h. gator_tooth - 
+   you get this when the adult gator dies.
+   value 5000+random(1000) but you only get
+   the full value when you barter it at
+   zeus's old gurther. can be used as wc 16 knife,
+   the mob is fairly difficult.
+
+i. gold_ring -
+   simple ac 2 non savable ring.
+   value 500+random(100), the intelligent players
+   will give this to the jeweller to receive
+   a 4000 coin reward. with the slime, this is generated
+   by the changeling (hard mob).
+
+j. heron_talons -
+   when you kill the heron, it drops this.
+   value 300 coins. weight 1, wc 10 knife.
+
+k. j_earring -
+   if the player can kill juribel,
+   he drops this.  a golden earring that
+   one can wear with their armor,
+   calls an addition of 1-2 sps every 10 hbs.
+   non savable, weight 1. not an armor with any ac.
+
+l. j_robes -
+   another item juribel drops.
+   100+random(30) value, weight 1. type misc,
+   ac 1 robes.
+
+m. necklace -
+   pearl necklace sold by jeweller, does nothing
+   except look cool, no ac or anything, weight 1.
+
+n. otter_fur -
+   otter fur gen'ed when you kill an otter.
+   weight 1, value 450, type armor. ac 1.
+
+o. potion -
+   full detox, gained when you give the full bottle
+   to the shaman and wait 5 minutes.
+   1,2, or 3 charges, its random.
+   weight 1, value 500.
+
+p. ring -
+   diamond ring sold by jeweller, does nothing.
+   weight 1, value 1000+random(100).
+
+q. rusty platemail -
+   found in the forest. unwearable, weight 4, value 300+random(100).
+   it stinks ;)
+
+r. skull -
+   found in the swamp cave.  weight 2, 10 value free item. 
+   well you search for it ;). basically its celia's skull. 
+
+s. slime -
+   goo left by changeling when monster_died is called.
+   heal_self -(120+random(40)) dmg if you try to get it,
+   gotta buy a bottle for 2k to "pick it up".
+
+t. snakeskin -
+   left by snakes in swamp when they die. 150 coin value, weight 1.
+
+u. sp_heal -
+   object cloned when scroll of restoration [see d_scroll] is used.
+
+v. spell_flames -
+   a "poison" type flame obj that is cloned to juribel's attacker
+   as one of his spells. does heal_self(30+random(10)) dmg every 10
+   hb's, wears off after 50.
+
+w. splint_mail -
+   the guards' armor.  weight 4, ac 3 type armor. 1/3 chance of
+   returning in in the armor special.
+
+x. staff -
+   terrible wep juribel drops. type staff, weight 2, wc 10,
+   50+random(10) value. only here 'kuz juribel should have a staff.
+   he's chief ;)
+
+y. stork_leg -
+   weight 1, value 500+random(200).  dropped when stork dies.
+
+z. young_tooth -
+   weight 1, value 900+random(100) wc 13 knife. dropped when
+   young alligator dies :)
+
+___________________________________
+
+3] MONSTERS - [~/swamp/NPC/]
+
+  Again, file by file.
+
+a. beast -
+   this is the big mob obj for the swamp.  upon clone, it turns into
+   1 of random 10 mobs.  4/7 of the time is it a small mob, 
+   2/7 it is a medium mob. 1/7 it can be a high level mob. the items
+   they clone upon death (if applicable) fall within monster.guide specifications.
+   also, this thing wanders if not in combat for a few hbs.
+
+stats ===
+ 
+              lev       wc       ac       hp        
+small -
+
+dragonfly -   1         5        3        15         
+leech     -   1         5        3        15
+watersnake-   4         8        4        60
+duck      -   4         8        4        60
+heron     -   7         11       6        105
+
+medium - 
+otter     -   10        14       8        150
+stork     -   12        16       9        180
+y. gator  -   14        18       11       210
+
+large -
+deer      -   17        24       14       425
+a. gator  -   21        40       20       500+random(100)
+ * adult gator has 3/10 chance of "casting" a spell with random(90) dmg.
+
+changeling -
+ the blobous form that killed celia. every 5 hbs,
+it changes form(name, id, chats, everything).
+this is a BIG pain for players to reinitialize combat
+all the time [i want them to work for the items it drops],
+so i made a small ac bonus too to compensate.
+
+stats = wc 40, hp 1000, level 21, ac 16.
+drops ~/OBJ/slime and ~/obj/gold_ring when it dies,
+no coins.
+
+guard -
+ a wandering guard mob. holds ~/OBJ/bladed_staff and ~/OBJ/splint_mail.
+ wc = 33, ac = 20. hp = 500. wanders around town if not in combat.
+
+juribel -
+ the leader of the town.  holds ~/OBJ/j_earring, ~/OBJ/j_robes, and ~/OBJ/staff.
+wc = 28, ac = 16, hp = 450+random(50). drops 200+random(100) coins too.
+3/10 chance of casting a spell worth 1-60 sps. also casts another spell
+every hb. one is a hb's worth of a 20 wc bonus, a hb's worth of a 10 ac bonus,
+a heal worth 25 hps, and the other clones ~/OBJ/spell_flames to the attacker.
+
+sardka -
+  the jeweller of the town. no eq or anything, 500+random(200) coins.
+  level 12, standard stats. if he isn't there, no jewelry can be sold
+  and no ring can be redeemed from the changeling.
+
+shaman -
+  the shaman of the town (duh). sells ~/OBJ/d_amulet, d_bottle,
+  and d_scroll. lvl 20. with an wc += 12, ac -= 4.  if you give
+  a full potion to him, he gives you ~/OBJ/potion about 5 minutes
+  later when you come back.
+
+swamp_guard -
+  same exact mob as guard.c, except this one doesnt wander.
+
+villager -
+  small mobs, 4 different ones. coins = 100+random(200).
+
+          lev      wc      ac        hp  
+stats -
+   boy     5       7       6         60
+   woman   5       9       5         75
+   angry   5       12      5         75
+   strong  5       12      5         100.
+
+___________________________________
+
+misc -
+
+*the rusty platemail is found by searching in the forest.
+ unwearable, cheap ass armor, might do something with
+ it later.
+
+*you can ask juribel and denis questions about various
+ things..
+
+*~/swamp/std/room.c holds the code for the swamp inherit..
+
+___________________________________
+Thanks for reading my pamphlet.
+
+SwampLands (tm) Vertebraker@Nirvana

@@ -1,0 +1,45 @@
+list of items to be checked: <9-18-97>
+
+  in ~/black dir
+
+    guild_mist.c - illegal (an item that
+                   blinds everyone and no
+                   way to prevent it- a nono
+                   also, a large negative set_light
+                   is a nono as well
+
+    guild_shop.c - line 161 1000+rnd(400)
+                   400 random should be lowered
+    
+    patrol_guard.c - line 21 set_ep(15500) is way
+                     too high
+
+    guild_coffin.c - needs a check for invis in the 
+                     invite_guest()
+                 
+    guild_bag.c - needs a set_weight() of at least 1
+
+    guild_equip.c - needs some sort of cost for the 
+                    equipment
+
+    guild_coffin_shelf.c - line 82 > 1200 should be > 1000
+
+    new_guild_rooms.c -no cost for the reduction in stuff/soak/intox
+                       and healself of 2 every hb or so????  a nono
+
+    new_guild_coffin.c - needs a check for invis for the invite
+
+    servant_new.c - has the same error as the vamp_servant.c
+                    i.e. present("vampirefangs")
+
+    in the guild object the sanctuary should cost 40 sp
+    
+ in ~/black/lib dir
+
+    forbid_entry.h - illegal (stopping actions of a player a nono)
+
+    hell_fire.h - cost should be determined by TOTAL damage
+
+    scan_monster.h - line 36 should be 10 not 100
+
+

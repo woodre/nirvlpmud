@@ -1,0 +1,166 @@
+Tue Jan 30 20:44:54 2001--Action: testplayer Reason: Needed to make a test char
+Tue Jan 30 20:45:18 2001--Action: testplayer Reason: Needed to make a test char, name ' Codeslave '
+Sun Feb  4 21:21:20 2001--Action: Made a tell device Reason: So I can talk to other wizes while invis
+Wed Feb  7 04:36:22 2001--Action: Edited all of the "bridge" rooms in my area Reason: The exits emotes on move_player were not correct
+Wed Feb  7 13:17:44 2001--Action: I added logs for the entrance of my area, and the 'prize kill' Reason: I wanna know what's up in my area.
+Wed Feb  7 13:18:52 2001--Action: Changed the bow in dir/3rd/warrior/weaps to TPN instead of TPRN Reason: Easy way to make playername capped
+Thu Feb  8 02:36:55 2001--Action: Updated my area to now record messages to me Reason: To keep track of players ideals on my area
+Thu Feb  8 02:37:07 2001--Action: added a signpost to the entrance Reason: To tell players how to write to me
+Thu Feb  8 03:21:07 2001--Action: Changed the boy monster to make him more annoying Reason: So players would be more inclined to kill him
+Mon Feb 12 20:14:37 2001--Action: Changed the rabbits in main/3rd/warrior to give an item (rabbit's foot) and not coins Reason: More thematic.
+Fri Feb 16 04:23:32 2001--Action: Changed items in /players/jaraxle/3rd/volcano/items to be allowed to "Cash" anywhere there is a "jeweller" mob Reason: more thematic for jewels, 1k in coins was unfair for an item on a lvl 17 mob
+Wed Mar  7 22:39:25 2001--Action: returned 753057 exp points to Hudson for unworthy deaths to overpowered demon Reason: per Feldegasts investigation and request after looking into the situation we deemed the demon had a wc of 360(something) therefor was unfair.
+Tue May 29 04:56:25 2001--Action: gave Oden a potion of str (from Hurtbrains) Reason: I dested one off of him by mistake trying to get rid of the multiple clocks
+Wed Jun  6 19:34:45 2001--Action: added a j_help function to my room inherit so players can get the area cmds anywhere Reason: Easier for players to recall what to do to log stuff
+Mon Jul 23 18:40:16 2001--Action: I removed 15k exp from Autumn to dest her wedding ring Reason: She did not want it to show as 'divorced' but I still wanted to charge her for it
+Sat Jul 28 14:24:36 2001--Action: Moved Stone from ShadowKing(Snow's shadowgate) to guild hall,recloned ShadowKing, returned 3 gems to Stone Reason: ShadowKing was not responding to the gem, Stone had given him 4 gems to leave.
+Fri Sep 21 20:52:20 2001--Action: Gave 30k to kid Reason: My monster was bugged and didn't have the proper coins on it from killing a player.
+Fri Sep 21 20:52:44 2001--Action: added exp to Lingering Spirit Reason: She was only 80k.. I did my math wrong ;(
+Sat Nov 24 02:14:11 2001--Action: changed orb of void to be "orb" type armor, and made the do special give - armor and have the item use 0ac Reason: More realistic, and better coded this way. :)
+Tue Jan  1 15:36:28 2002--Action: Made Liljar (a new testchar) Reason: I totally fucked up Codeslave.. now not usable ;(
+Mon Jan 14 12:09:16 2002--Action: Gave 11000 coins to Baskin Reason: I had him come to my room to help me with fixing a bug, and zapped his pets by mistake.  coins were to repay for the pet, and mech.
+Mon Jan 14 12:11:10 2002--Action: Gave 14000 coins to Baskin (in addition to the 1100) Reason: I had him come to my room to help me with fixing a bug, and zapped his pets by mistake.  coins were to repay for the pet, and mech. (I screwed it up 2 times [heh])
+Tue Jan 15 13:08:25 2002--Action: Gave 8k coins to stone for reimbursing him after making him withdraw all his locker stuff Reason: To keep a list of his special items while he goes inactive for the year /players/jaraxle/Stone_stuff
+Thu Feb 14 00:39:05 2002--Action: gave oden spec item Reason: mass bug reports on said item
+Wed Mar 20 00:30:35 2002--Action: I vote in favor of Vital and a Senior to maintain the Rangers guild. Reason: [duh]
+Sun Mar 31 01:20:42 2002--Action: coded easter bunny for easter (~/xmas/*.*) Reason: It's Easter.
+Mon Apr  8 00:02:09 2002--Action: I updated ~/templar/items/p_tome, i_tome, r_tome, with new descriptions Reason: Easier to understand how to use them now.
+Sat Apr 13 11:20:25 2002--Action: logged on Jar w/ Ghost still on to fix a bug w/ player death Reason: noone else was on
+Sat Apr 13 11:27:23 2002--Action: again . ..  [I hate players btw] Reason: *Heh*
+Tue Apr 30 00:22:12 2002--Action: raise Cere's mag from 16 to 20, charged her 24k exp. Reason: Warriors do not have the mag restriction Knights do, but it still stopped her from raising it.
+Wed May  1 02:15:57 2002--Action: Logged on Jar w/ Ghost disconnected about 2hrs ago Reason: To clean up a 'Wren' made mess when noone else was on.
+Wed May  1 02:19:23 2002--Action: Dested, and reloaded venom.c object on sleepwalker Reason: His object was acting funny, this fixed it.
+Wed May  1 02:20:39 2002--Action: ran a 'clean' command in Dervish guild room, then recloned the board Reason: some object was in there, w/o an id [sigh]
+Sun May  5 12:20:01 2002--Action: made ooze ~/3rd/ooze/slab.c heal throwable to other players Reason: B/c it's fun. :)
+Sun May  5 12:20:27 2002--Action: fyi: Ooze can not be throw to/from NT rooms. Reason: Uh.. ? duh.
+Sat May 11 18:11:46 2002--Action: changed code format of ~/3rd/ooze/*.* Reason: New style of coding should enhance the play of my area
+Sat May 11 18:12:12 2002--Action: [cont] I did not change any of the npc, or items Reason: Just room style.
+Sun May 12 21:32:35 2002--Action: Healed Doodle Reason: He tested something for me, restored his sp
+Wed May 22 00:08:18 2002--Action: Reloaded /players/snow/ROOMS/cave3 Reason: Room did not reset properly (2times)
+Wed Jun  5 18:45:14 2002--Action: Gave ac2 non storable boots to whoa as welcome gift for joining Knights Reason:  ~/3rd/pyramid/items/e_boots2.c Ok per Daranath.
+Sun Jun  9 03:58:29 2002--Action: players/wocket/graveyard/crypt4 had about 50 aggressive npc mobs in the room, cleaned them off Reason: instant blick is not kosher for an exit to a guild room.
+Sun Jun  9 04:09:25 2002--Action: refunded 511661exp to vertigo Reason: due to death to problem in above log
+Sun Jun  9 04:26:31 2002--Action: reimbursed 100k exp to scavenger for same reason as above Reason: this, and previous action ok through Mal. [grumble]
+Mon Jun 17 23:50:07 2002--Action: Copied Knights Templar guild files to my own dir Reason: So I can edit and update the guild.
+Mon Jun 17 23:50:37 2002--Action: Uhm, Copied the files from Boltar's directory, to my own Reason: With Dr. Mal's permission.
+Fri Jun 21 21:47:36 2002--Action: dested Mort Reason: disrespecting Wizards...
+Fri Jun 21 21:48:18 2002--Action: dested Mort again Reason: he threatened me.
+Fri Jun 21 21:50:50 2002--Action: This was right after a crash ;(, he had nothing on him both times Reason: was just sitting in Ghall. (FYI)
+Fri Jun 21 21:53:28 2002--Action: gave sweetpea a "chestguard of health" (/players/maledicta/cont/armor/guard_of_health.c) Reason: lost in crash... 2x
+Sat Jun 22 15:06:28 2002--Action: changed value of /players/jaraxle/3rd/pyramid/items/void.c from 1 coin, to    set_value(2500+random(10000)); Reason: Uhm, 1 coin was stupid of me.
+Tue Jul  2 12:57:47 2002--Action: Changed /players/jaraxle/3rd/warrior/mon/bl_rabbit.c Reason: updated w/ color, and a new wander function from Verte's monster inherit.
+Tue Jul  2 12:57:53 2002--Action: Changed /players/jaraxle/3rd/warrior/mon/w_rabbit.c Reason: updated w/ color, and a new wander function from Verte's monster inherit.
+Tue Jul  2 13:00:50 2002--Action: changed /players/jaraxle/3rd/warrior/mon/maiden.c Reason: lowered ac from 15 ->13, changed hp from 275 ->250+r25
+Tue Jul  2 13:10:42 2002--Action: updated /players/jaraxle/3rd/warrior/mon/boy.c Reason: added new monster inherit from Vertebraker for wander.
+Tue Jul  2 13:14:24 2002--Action: changed /players/jaraxle/3rd/warrior/mon/carin.c Reason: raised from lvl 2 to lvl 16 (she had lvl 16 stats)
+Tue Jul  2 13:14:40 2002--Action: changed /players/jaraxle/3rd/warrior/mon/carin.c Reason: added extra chat to help players locate the heal shop
+Wed Jul 24 21:10:43 2002--Action: Updated and restored ~zeus/closed/bloodfist/r/arena.c Reason: inothing loaded in the room
+Wed Jul 24 21:11:13 2002--Action: fucking telnet Reason:  ^Above^ Nothing loaded in the room
+Fri Jul 26 23:20:16 2002--Action: idested/handed vistar a new triangle Reason: his wasn't working properly
+Fri Jul 26 23:20:38 2002--Action: new triangle wasn't working in dark rooms either Reason: gave vistar free Etorch (from Sabers)
+Fri Jul 26 23:20:54 2002--Action: Oops, I did that backwards Reason: I am a fucking moron [blah]
+Thu Aug  1 16:54:35 2002--Action: imprisoned juanita Reason: She had offensive titles after I asked her to change them 3x in a row.
+Thu Aug  8 00:50:45 2002--Action: gave 800000exp to pegasas Reason: To raise knight levels in guild (reimbursment)
+Thu Aug  8 23:26:09 2002--Action: restored weapons/amror to sweetpea from crash Reason: 3 crashes on her tonight.
+Thu Aug  8 23:26:23 2002--Action: asked players about refunds for crashes tonight Reason: noone else wanted anything
+Thu Aug  8 23:26:40 2002--Action: (cept fart players asking for insane stuff Reason: you know how they are)
+Thu Aug  8 23:27:11 2002--Action: Cheer for Vertebraker Reason: Helping me finish up my Knight Templar updates :)
+Fri Aug  9 22:34:17 2002--Action: Implimented the new update to Knights Templar Reason: Approved by Vertebraker [8/9/02]
+Fri Aug  9 23:59:30 2002--Action: Added color to some spells in templar object Reason: Looks nice :)
+Sat Aug 10 12:10:47 2002--Action: ~/closed/heals/roht.c  Reason:  Approved by Daranath [8/10/02]
+Sat Aug 10 12:30:31 2002--Action: added sharpen command to Templar Weaponsmith for 750 coins Reason: Thematic, and requested by players (reasonable request imho)
+Sat Aug 10 12:30:53 2002--Action: Sharpen command approved by Fakir Reason: [8/9/02] (thanks dewd)
+Sat Aug 10 21:51:44 2002--Action: gave backwards a spirit shield /players/fakir/ways/ARM/sshield.c  Reason: I had to dest his for a bad Templar spell.
+Mon Aug 12 22:43:56 2002--Action: Added a room w/ a board for Elite Knights. Reason: Message system for Elite Knights
+Mon Aug 12 22:47:53 2002--Action: edited /players/maledicta/templar/rooms/dark_hall Reason: placed a new exit for additional elite room.
+Mon Aug 12 22:49:02 2002--Action: ~/templar/rooms/command_post.c Reason: approved by Daranath [8/12/02]
+Tue Aug 13 03:07:01 2002--Action: Warned Haunt/Locke about multiplaying Reason: Suspected of dropping an item for his other to pickup (no proof so just a warning)
+Wed Aug 14 21:39:16 2002--Action: Used Knyte to kill Jarana Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Wed Aug 14 21:43:53 2002--Action: Used Knyte to kill Desiree Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Wed Aug 14 21:48:49 2002--Action: Used Knyte to kill Whoa Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Wed Aug 14 21:53:36 2002--Action: Used Knyte to kill Casper Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Wed Aug 14 21:57:05 2002--Action: Healed Casper Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Wed Aug 14 21:58:09 2002--Action: Used Knyte to kill Backwards Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Wed Aug 14 22:00:28 2002--Action: Heal Backwards Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Wed Aug 14 22:51:52 2002--Action: Used Knyte to kill Arrow Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Wed Aug 14 22:52:00 2002--Action: Heal Arrow Reason: Unset Elite pk during Beta Testing [ok per Vertebraker]
+Thu Aug 15 22:05:43 2002--Action: ~/templar/rooms/equipment.c Reason: Approved by Daranath
+Fri Aug 16 19:50:25 2002--Action: Did a pfileClean on /players/boltar/templar/members Reason: Clean up the members dir of non-existent players
+Sat Aug 17 00:19:19 2002--Action: coded ~/templar/rooms/storage.c Reason: theme, flair, player happiness.. whatever you wanna call it
+Sat Aug 17 00:25:21 2002--Action: edited ~/maledicta/templar/rooms/warroom.c Reason: added exit to new storage room
+Sat Aug 17 01:21:28 2002--Action: ~/templar/rooms/shop.c Reason: Theme, flair, ect - a standard shop room w/ storage to lockershop
+Sun Aug 18 13:13:22 2002--Action: replace 292900 exp to Handy Reason: restore lost guild stats
+Tue Aug 20 00:39:24 2002--Action: added 1443001 to Whoa Reason: had to restore Knight obj, and skills
+Tue Aug 20 00:40:04 2002--Action: handed (5) players/jareel/armor/yelmalian_elite_helm to Whoa Reason: To raise guild donation to 5k (was lost due to reloading guild)
+Tue Aug 20 00:40:34 2002--Action: Going to kill Pesti Reason: above two were b/c of him [punt]
+Sat Aug 24 17:07:14 2002--Action: replaced Angelus' lost items from templar switch Reason: were stored in templar lockers (cont)
+Sat Aug 24 17:07:30 2002--Action: He was Templar/Warrior mix Reason: From Maledicta removing Warriors. [cont]
+Sat Aug 24 17:08:08 2002--Action: Items:/players/hurtbrain/castello/dag/crown , /players/fakir/ways/ARM/tshield Reason: /players/snow/chaos/objects/fscim
+Sun Aug 25 14:13:49 2002--Action: Added a gkill_check ability to Templar Reason: Allows GC's to see who is killing good [done w/o approval]
+Tue Aug 27 01:57:15 2002--Action: Changed Mode's title Reason: b/c I felt like it
+Fri Aug 30 15:08:39 2002--Action: CHanged it so only lvl 39 and lower will show on Templar login/out Reason: Annoying players can see invis wizards logging in
+Sat Aug 31 23:22:31 2002--Action: Used Knyte to kill Tyr to unset pk Reason: Elite Templar reset.
+Sat Aug 31 23:22:47 2002--Action: healed Tyr for above action Reason: Fair is fair ;)
+Sun Sep  1 17:27:48 2002--Action: Opened ~/cave area connected to Living Ooze Reason: Approved by Daranath
+Sun Sep  1 17:28:00 2002--Action: Opened ~/cont/ltown area connected to Main Forest Reason: Approved by Daranath
+Sun Sep  1 19:11:39 2002--Action: opened ~cont/rdragon/*.* Reason: Approved by Daranath
+Thu Sep 12 01:29:04 2002--Action: fixed an idiot bug in my area Reason: Was cloning way too many npc's b/c I changed the id by mistake
+Thu Sep 12 23:52:38 2002--Action: dested 9 full heals from stone, and replaced w/ updated version Reason: b/c of heal change, old stored ones are broke-ded
+Sun Sep 15 03:10:35 2002--Action: added 64521 exp to Cgi for npc bug Reason: E-Amulet reduced npc's ac to -amnt, therefor the npc gave neg exp at death [wierd]
+Wed Sep 18 01:07:49 2002--Action: gave 10000 coins to Hugh for fullheal storage bug Reason: he had to remove/then restore heals
+Wed Sep 18 01:08:05 2002--Action: cloned 10 new players/hurtbrain/castello/pillow heals to hugh Reason: same as above reason
+Wed Sep 18 01:40:32 2002--Action: gave Tremgar /players/jaraxle/3rd/pyramid/items/e_boots2 Reason: welcome gift to Templar
+Fri Oct 11 14:13:38 2002--Action: Edited /players/deathmonger/MONSTERS/tarrasque.c Reason: To fall into monster.guide
+Fri Oct 11 14:27:09 2002--Action: added 4000+r1001 to tarrasque Reason:  lvl 25mob, no coins, shitty armor - c'mon :)
+Tue Oct 15 05:30:51 2002--Action: refunded china exp - she died reading a board Reason: blah
+Tue Oct 15 05:33:45 2002--Action: kicking myself from the tongue lashing I am getting Reason: heh, oh to be a wiz :)
+Wed Oct 23 19:27:36 2002--Action: [sigh] i placed Rek in the church b/c he pissed me off and was spamming Reason: the room I was in after I told him not to..
+Wed Oct 23 19:27:48 2002--Action: [sigh] I forgot Shardaks can't be int he church.. Reason: he died (heh)...
+Wed Oct 23 19:28:02 2002--Action: [sigh] so, I refunded him all lost, and apologized Reason: He was ok :)
+Wed Oct 23 19:28:32 2002--Action: Changed the Knight Templar board to show when a note is read Reason: kinda cool huh? :)
+Thu Oct 24 17:44:19 2002--Action: I changed the shadow for weapons purchased in Templar Castle to as follows: Reason: 1) Will only give
+Thu Oct 24 17:45:05 2002--Action: special if alignment is over 250. Reason: 2) Adds random(3) per special, if total >=250 enchantment fades.
+Sat Oct 26 20:08:45 2002--Action: Edited ~/saber/portal.c Reason: changed dir to 'Templar' exit to work.
+Sat Oct 26 20:25:35 2002--Action: Edited ~/reflex/realms/coastling/path.c Reason: Do not need this room - Templar Castle is in another locale
+Tue Oct 29 17:39:34 2002--Action: Closed forbins castle Reason: He removed all the NPC's so it was fucking up all over the place
+Tue Oct 29 17:40:02 2002--Action: He left the rooms in place, and entrance open Reason: So.. iz closed.
+Wed Oct 30 15:16:09 2002--Action: Approved changes to Dervish as follows: Reason: They are no longer able to start [cont]
+Wed Oct 30 15:16:33 2002--Action: combat on another monster if  Reason: a) the npc is in combat w/ another player AND said npc is at 15% health
+Fri Nov  1 03:43:10 2002--Action: Gave Galfin a pair of ac2 boots (no store) Reason: He was with 2 other newbies.. only people on @ 4am.  good PR ;)
+Sat Nov  2 11:03:56 2002--Action: gave rek 85k exp Reason: He killed masakado, shows in kill log, but not in bigkill- he got no exp for the kill (as far as I can tell)
+Tue Nov 12 03:48:54 2002--Action: Edited Dervish guild max stats from 15 for str and sta to 20 str, 18sta max (respectively) Reason: Raising of standard stats to 30 led to this.
+Wed Nov 13 17:06:05 2002--Action: removed the set_wc_bonus(50) from players/pestilence/club/mob/bill.c Reason: Not justified.
+Sat Nov 16 05:23:25 2002--Action: Edited /players/mythos/aroom/forest/tower3.c Reason: Changed the clear fight (causing shardak bugs)
+Wed Jan 15 19:51:29 2003--Action: Edited castle room to disallow access to everyone Reason: Someone added in some areas which allowed full access to Templar Castle.. which is not wanted.
+Sat Mar 22 01:52:57 2003--Action: added scrag to dervish Reason: Fred ok'd
+Sat Apr 26 21:47:50 2003--Action: replaced /players/fred/closed/g_amulet.c to Cgi Reason: Zantetsuken broke special reward.
+Tue Jun  3 13:20:24 2003--Action: refunded two minor weapons to Bleh and Starfire Reason: mud crashed :(
+Tue Jun 10 19:15:49 2003--Action: changed /players/saber/monsters/supertroll.c Reason: too easy to kill (tail file for changes)
+Mon Jun 16 03:32:17 2003--Action: replaced items from crash Reason: crash crash crash ;(
+Sun Jun 22 22:53:13 2003--Action: handed cooper /players/jaraxle/cave/mobs/orb.c Reason: should have saved from crash, but I fucked it up
+Sat Jul 26 22:37:16 2003--Action: replaced oghmas esword Reason: turned nostore due to pujoi blood (being nice)
+Sat Aug 30 16:04:18 2003--Action: restored 1mil of the 3mil lost from pike's death Reason: Cyber guild object was acting very strange during combat (unknown reason)
+Sat Aug 30 16:04:42 2003--Action: restored various items from void to kia Reason: when she dc'd her items wound up in the void [wha?]
+Sat Aug 30 16:04:56 2003--Action: Kicked Forbin square on his little ass Reason: I felt like it
+Sat Sep  6 17:22:52 2003--Action: -MAJOR- changes to all NPC for Elemental Test Reason: it needed to be updated [see each npc for notations]
+Sun Sep  7 00:33:36 2003--Action: edited ~/dune/closed/guild/objects/shadow.c line 518 Reason: was creating a bug in the hit_player on some hb spells (done w/ illarions help)
+Sun Oct 19 06:42:02 2003--Action: [sigh] I killed Shadowman by mistake, refunded exp/items/2 heals Reason: I'm an ass and cloned an Uber hard NPC in my workroom while we were chatting, he's lvl 5-heh
+Fri Nov 14 21:27:51 2003--Action: Added 2.5mil exp to Hoyle Reason: My npc fucked up and killed him wrongly (fixed now)
+Mon Dec  1 02:12:17 2003--Action: cloned Gordie sticks to Humble Reason: his bugged out when he relogged and I had to dest them off him (replacement)
+Mon Dec 29 18:39:15 2003--Action: Promoted Earwax to lvl 40 Reason: level +pk tracker ect.
+Sun Jan  4 13:19:45 2004--Action: Changed ~/eurale/VAMPIRES/OBJ/maalox.c Reason: Updated detox rate and drawback to new rules
+Sun Jan  4 13:20:05 2004--Action: Changed ~/eurale/VAMPIRES/RMS/souvenir_shop.c Reason: Updated cost of maalox due to new rules
+Sun Jan  4 13:20:17 2004--Action: Changed ~/eurale/VAMPIRES/NPC/figure.c Reason: Updated cost of maalox due to new rules
+Mon Jan  5 04:21:10 2004--Action: fixed players/gowron/room/obj/moe & abu Reason: needed ::init(); (boggle)
+Mon Jan  5 18:54:34 2004--Action: edited /players/emerson/heal/x-lax.c Reason: updated to new detox standards
+[Jul 12 2004 02:26] A: Registered Test Character: Knyte
+[Jul 12 2004 02:26] A: Registered Test Character: Liljar
+Mon Jul 12 17:59:42 2004--Action: Closed my castle for unknown length of time Reason: Renovations, upgrades, new lib code has been implimented and it's time to clean my shit up.  :)
+Thu Jul 15 10:18:49 2004--Action: Changes Amulet of lightning from ac 1 to ac 0 Reason: Balance issues [decreed by myself]
+Thu Jul 15 10:19:42 2004--Action: Changes: Amulet of lightning from 5+randon21 to 1+random26 Reason: Ballance issues [decreed by myself, yet again]
+Thu Jul 15 10:25:10 2004--Action: Changed rate of heals won in Phoenix Tower by killing NPC Reason: Balance issues [again]
+Wed Dec  8 13:49:29 2004--Action: Had Illarion make edits to the max MAG and STE stats for Templar in /room/adv_guild Reason: I never changed this when we upped the stats from 20 to 30
+Fri Jan 14 14:03:21 2005--Action: Made adjustments to Squire mob for Templar Reason: added more HP/SP per lvl, changed format of death.
+Mon Jan 24 20:03:25 2005--Action: set Casper's stats to: mag 25, ste 20. Reason: When he joined templar, it reduced his stats to the old numbers [my bad]
+Sat Oct 15 09:57:27 2005--Action: added 'nwho' command to newbie_helper obj Reason: Allow helpers to see other helpers easilly
+Sat Oct 15 09:57:53 2005--Action: added 'nidea' to newbie_helper obj Reason: allow helpers to add ideas to a write ifle so we can access.

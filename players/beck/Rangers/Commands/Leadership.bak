@@ -1,0 +1,45 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+RangerInit(){
+   if(PO->QuerySkillLevel("leadership") >= 1){
+      PO->AHiddenSkill("study","beck");
+   }
+   if(PO->QuerySkillLevel("leadership") >= 2){
+      PO->AHiddenSkill("lead","beck");   
+   }
+   if(PO->QuerySkillLevel("leadership") >= 5){
+      PO->AHiddenSkill("retrain","beck");   
+   }
+   if(PO->QuerySkillLevel("leadership") >= 10){
+      PO->AHiddenSkill("recruit","beck");
+   }
+}
+
+RangerPower(str,Align){
+   
+}
+
+QMax(){
+   return 20;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(str){
+   write("Leadership is the essence of a Power Ranger.\n"+
+         "Power Rangers should set an example to all other players.\n"+
+         "Increasing leadership will help you and your whole team.\n"+
+         "\n"+
+         "Leadership Skills:\n\n"+
+         BOLD+RED+"Study"+OFF+"                      1\n"+
+         BOLD+RED+"Lead "+OFF+"                      2\n"+
+         BOLD+RED+"Retrain "+OFF+"                   5\n"+
+         BOLD+RED+"Recruit"+OFF+"/Remove Allies      10\n"+
+BOLD+RED+"Recruit"+OFF+" Power Ranger       15\n"+
+         "Team Leader Title          20\n"+
+         "\nOthers in the future as well\n"+
+         "");
+
+}
+

@@ -1,0 +1,16 @@
+>> ORDER: EXPLODE SELF AT LOCATION
+
+Usage:
+order <indexnum> explodespot <roomfile>
+
+Example:
+'order 3 explodespot room/wild1'
+
+Description:
+This command turns the monster into a suicide bomb detonating at the
+location specified. Unlike the similar command 'explode' the monster
+does not do damage to the players, but might leave a sticky residue
+all over them.
+
+<NOTE: Not implemented yet.>
+

@@ -1,0 +1,671 @@
+Thu Mar 27 22:44:50 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 23:Variable GROOM not declared !
+Thu Mar 27 22:44:50 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 148:Bad argument 1 type to efun capitalize()
+Thu Mar 27 22:44:52 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 23:Variable GROOM not declared !
+Thu Mar 27 22:44:52 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 148:Bad argument 1 type to efun capitalize()
+Thu Mar 27 22:44:56 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 23:Variable GROOM not declared !
+Thu Mar 27 22:44:56 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 148:Bad argument 1 type to efun capitalize()
+Thu Mar 27 22:45:04 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 23:Variable GROOM not declared !
+Thu Mar 27 22:45:04 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 148:Bad argument 1 type to efun capitalize()
+Fri Mar 28 10:01:17 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 23:Variable GROOM not declared !
+Fri Mar 28 10:01:17 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 148:Bad argument 1 type to efun capitalize()
+Fri Mar 28 10:35:15 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 23:Variable GROOM not declared !
+Fri Mar 28 10:35:15 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 148:Bad argument 1 type to efun capitalize()
+Fri Mar 28 11:18:39 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 23:Variable GROOM not declared !
+Fri Mar 28 11:18:39 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 148:Bad argument 1 type to efun capitalize()
+Fri Mar 28 11:19:37 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 23:Variable GROOM not declared !
+Fri Mar 28 11:19:37 2014: players/guilds/dopplegangers/room/mystic_entrance.c line 148:Bad argument 1 type to efun capitalize()
+players/guilds/dopplegangers/room/guild_entrance.c line 126: Missing 'return <value>' statement
+Mon Apr  7 17:00:57 2014: players/guilds/dopplegangers/room/guildhall.c line 13:Variable board not declared !
+Mon Apr  7 17:00:57 2014: players/guilds/dopplegangers/room/guildhall.c line 14:Variable board not declared !
+Mon Apr  7 17:00:57 2014: players/guilds/dopplegangers/room/guildhall.c line 15:Variable board not declared !
+Mon Apr  7 17:00:57 2014: players/guilds/dopplegangers/room/guildhall.c line 16:Variable board not declared !
+players/guilds/dopplegangers/room/guild_entrance.c line 126: Missing 'return <value>' statement
+players/guilds/dopplegangers/room/guild_entrance.c line 126: Missing 'return <value>' statement
+players/guilds/dopplegangers/room/guild_entrance.c line 126: Missing 'return <value>' statement
+Thu Apr 10 11:20:35 2014: players/guilds/dopplegangers/room/guild_entrance.c line 127:Must return a value for a function declared: "int "
+Fri Apr 11 11:17:47 2014: players/guilds/dopplegangers/obj/spirits_ob.c line 13:Variable str not declared !
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/Commands/Machine.c line 15: Missing 'return <value>' statement
+players/guilds/Rangers/Commands/Leadership.c line 19: Missing 'return <value>' statement
+Mon Apr 28 14:58:16 2014: players/guilds/warriors/rooms/sc7.c line 33:Undefined function no_die
+Mon Apr 28 14:58:16 2014: players/guilds/warriors/rooms/sc7.c line 51:syntax error
+Mon Apr 28 14:58:16 2014: players/guilds/warriors/rooms/sc7.c line 60:syntax error
+Tue Apr 29 12:42:15 2014: players/guilds/dopplegangers/power/01_score.c line 10:Variable messages not declared !
+Tue Apr 29 12:42:15 2014: players/guilds/dopplegangers/power/01_score.c line 12:Variable new_mail not declared !
+Tue Apr 29 12:42:15 2014: players/guilds/dopplegangers/power/01_score.c line 44:Wrong number of arguments to query_mail
+Thu May 22 23:08:48 2014: players/guilds/dopplegangers/power/20_dopp_recruit.c line 42:Variable HIR not declared !
+Thu May 22 23:08:48 2014: players/guilds/dopplegangers/power/20_dopp_recruit.c line 42:Variable NORM not declared !
+players/guilds/dervish/gob.c line 13: Illegal to redefine global variable 'offwep'
+players/guilds/dervish/gob.c line 13: Illegal to redefine global variable 'firstwep'
+Wed Jun 11 09:24:17 2014: players/guilds/dopplegangers/room/barbarian_guildhall.c line 38:Variable WL_WIZARD not declared !
+Wed Jun 11 12:10:32 2014: players/guilds/dopplegangers/obj/spirits_ob.c line 13:Variable str not declared !
+Wed Jun 11 12:10:42 2014: players/guilds/dopplegangers/obj/spirits_ob.c line 13:Variable str not declared !
+Wed Jun 11 12:17:54 2014: players/guilds/dopplegangers/obj/spirits_ob.c line 13:Variable str not declared !
+Wed Jun 11 12:25:40 2014: players/guilds/dopplegangers/obj/spirits_ob.c line 13:Variable str not declared !
+Wed Jun 11 12:26:20 2014: players/guilds/dopplegangers/obj/spirits_ob.c line 13:Variable str not declared !
+Wed Jun 11 14:11:30 2014: players/guilds/dopplegangers/power/15_death.c line 31:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:30 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:11:30 2014: players/guilds/dopplegangers/power/15_death.c line 31:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:30 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:11:30 2014: players/guilds/dopplegangers/power/15_death.c line 31:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:30 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:11:34 2014: players/guilds/dopplegangers/power/15_death.c line 31:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:34 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:11:34 2014: players/guilds/dopplegangers/power/15_death.c line 31:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:34 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:11:34 2014: players/guilds/dopplegangers/power/15_death.c line 31:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:34 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:11:40 2014: players/guilds/dopplegangers/power/15_death.c line 31:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:40 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:11:56 2014: players/guilds/dopplegangers/power/02_fang.c line 41:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:58 2014: players/guilds/dopplegangers/power/02_fang.c line 41:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:11:58 2014: players/guilds/dopplegangers/power/02_fang.c line 41:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:12:48 2014: players/guilds/dopplegangers/power/15_death.c line 31:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:12:48 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:12:50 2014: players/guilds/dopplegangers/power/02_fang.c line 41:Bad assignment. Rhs: "unknown "
+Wed Jun 11 14:13:30 2014: players/guilds/dopplegangers/power/15_death.c line 62:syntax error
+Wed Jun 11 14:28:40 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 23:Variable GROOM not declared !
+Wed Jun 11 14:28:40 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 26:Variable GROOM not declared !
+Wed Jun 11 14:28:40 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 29:Variable GROOM not declared !
+Wed Jun 11 14:28:44 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 23:Variable GROOM not declared !
+Wed Jun 11 14:28:44 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 26:Variable GROOM not declared !
+Wed Jun 11 14:28:44 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 29:Variable GROOM not declared !
+Wed Jun 11 14:29:34 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 23:Variable GROOM not declared !
+Wed Jun 11 14:29:34 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 26:Variable GROOM not declared !
+Wed Jun 11 14:29:34 2014: players/guilds/dopplegangers/room/mystic_guildhall.c line 29:Variable GROOM not declared !
+players/guilds/fallen/circle.c line 311: Missing 'return <value>' statement
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/Commands/Leadership.c line 19: Missing 'return <value>' statement
+players/guilds/Rangers/Commands/Machine.c line 15: Missing 'return <value>' statement
+players/guilds/Rangers/Master/RangerMaster.c line 87: Missing arguments to simul_efun file_name
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/bards/bard_lib/std/base.c line 86: Missing 'return <value>' statement
+players/guilds/bards/bard_lib/std/random/atmos.c line 15: Missing 'return <value>' statement
+players/guilds/bards/bard_lib/std/random/atmos.c line 96: Undefined function 'copy_mapping'
+players/guilds/bards/bard_lib/std/random/atmos.c line 97: Function copy_mapping undefined
+players/guilds/bards/bard_lib/std/random/atmos.c line 97: Wrong number of arguments to copy_mapping: expected 0, got 1
+players/guilds/bards/bard_lib/std/random/atmos.c line 97: Bad assignment (mixed vs unknown)
+players/guilds/bards/bard_lib/std/random/atmos.c line 98: Function copy_mapping undefined
+players/guilds/bards/bard_lib/std/random/atmos.c line 98: Wrong number of arguments to copy_mapping: expected 0, got 1
+players/guilds/bards/orin/orin2.c line 6: Too few arguments to move_object
+players/guilds/bards/orin/orin2.c line 6: Too few arguments to move_object
+players/guilds/bards/spells/01_sco.c line 41: Missing 'return <value>' statement
+players/guilds/bards/spells/01_sco.c line 51: Missing 'return <value>' statement
+players/guilds/bards/spells/01_sco.c line 70: Missing 'return <value>' statement
+players/guilds/warriors/test_obj5/init.h line 104: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/healers/guildob.c line 85: Too few arguments to add_action
+players/guilds/healers/guildob.c line 86: Too few arguments to add_action
+players/guilds/healers/guildob.c line 85: Too few arguments to add_action
+players/guilds/healers/guildob.c line 86: Too few arguments to add_action
+players/guilds/healers/guildob.c line 85: Too few arguments to add_action
+players/guilds/healers/guildob.c line 86: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/dervish/objects/sandstone.c line 40: Too few arguments to add_action
+players/guilds/dervish/objects/sandstone.c line 41: Too few arguments to add_action
+players/guilds/dervish/objects/sandstone.c line 42: Too few arguments to add_action
+players/guilds/dervish/gob.c line 13: Illegal to redefine global variable 'offwep'
+players/guilds/dervish/gob.c line 13: Illegal to redefine global variable 'firstwep'
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/dervish/gob.c line 13: Illegal to redefine global variable 'offwep'
+players/guilds/dervish/gob.c line 13: Illegal to redefine global variable 'firstwep'
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/Rangers/CommandCenter/CommandCenter.c line 689: Undefined function 'files'
+players/guilds/dervish/objects/sandstone.c line 40: Too few arguments to add_action
+players/guilds/dervish/objects/sandstone.c line 41: Too few arguments to add_action
+players/guilds/dervish/objects/sandstone.c line 42: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/warriors/test_obj5/init.h line 104: Too few arguments to add_action
+players/guilds/Rangers/ViewingGlobe.c line 121: Too few arguments to add_action
+players/guilds/Rangers/ViewingGlobe.c line 121: Undefined function 'add_verb'
+players/guilds/Rangers/ViewingGlobe.c line 122: Too few arguments to add_action
+players/guilds/Rangers/ViewingGlobe.c line 122: Function add_verb undefined
+players/guilds/Rangers/ViewingGlobe.c line 122: Wrong number of arguments to add_verb: expected 0, got 1
+players/guilds/Rangers/ViewingGlobe.c line 126: Too few arguments to add_action
+players/guilds/Rangers/ViewingGlobe.c line 359: Missing 'return <value>' statement
+players/guilds/Rangers/ViewingGlobe.c line 408: Missing 'return <value>' statement
+players/guilds/Rangers/ViewingGlobe.c line 126: Too few arguments to add_action
+players/guilds/Rangers/ViewingGlobe.c line 126: Undefined function 'add_verb'
+players/guilds/Rangers/ViewingGlobe.c line 127: Too few arguments to add_action
+players/guilds/Rangers/ViewingGlobe.c line 127: Function add_verb undefined
+players/guilds/Rangers/ViewingGlobe.c line 127: Wrong number of arguments to add_verb: expected 0, got 1
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+Tue Jul 15 09:42:10 2014: players/guilds/dervish/objects/mound.c line 196:Variable exlude not declared !
+Tue Jul 15 09:42:10 2014: players/guilds/dervish/objects/mound.c line 198:Variable exlude not declared !
+Tue Jul 15 09:42:10 2014: players/guilds/dervish/objects/mound.c line 209:Variable junk2 not declared !
+Tue Jul 15 09:42:30 2014: players/guilds/dervish/objects/mound.c line 196:Variable exlude not declared !
+Tue Jul 15 09:42:30 2014: players/guilds/dervish/objects/mound.c line 198:Variable exlude not declared !
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 46: Too few arguments to add_action
+players/guilds/necro/obj/misc/guildboard.c line 47: Too few arguments to add_action
+players/guilds/Rangers/Master/RangerMaster.c line 87: Missing arguments to simul_efun file_name
+players/guilds/Rangers/Commands/Machine.c line 15: Missing 'return <value>' statement
+players/guilds/Rangers/Commands/Leadership.c line 19: Missing 'return <value>' statement
+players/guilds/Rangers/Master/RangerMaster.c line 87: Missing arguments to simul_efun file_name
+players/guilds/Rangers/Commands/Leadership.c line 19: Missing 'return <value>' statement
+players/guilds/Rangers/Commands/Machine.c line 15: Missing 'return <value>' statement
+players/guilds/Rangers/Master/RangerMaster.c line 87: Missing arguments to simul_efun file_name
+players/guilds/Rangers/Commands/Leadership.c line 19: Missing 'return <value>' statement
+players/guilds/Rangers/Commands/Machine.c line 15: Missing 'return <value>' statement
+players/guilds/Rangers/Master/RangerMaster.c line 87: Missing arguments to simul_efun file_name
+players/guilds/Rangers/Commands/Leadership.c line 19: Missing 'return <value>' statement
+players/guilds/Rangers/Commands/Machine.c line 15: Missing 'return <value>' statement
+players/guilds/Rangers/Master/RangerMaster.c line 87: Missing arguments to simul_efun file_name
+players/guilds/Rangers/Commands/Machine.c line 15: Missing 'return <value>' statement
+players/guilds/Rangers/Commands/Leadership.c line 19: Missing 'return <value>' statement
+players/guilds/Rangers/Master/RangerMaster.c line 87: Missing arguments to simul_efun file_name
+players/guilds/Rangers/Commands/Machine.c line 15: Missing 'return <value>' statement
+players/guilds/Rangers/Commands/Leadership.c line 19: Missing 'return <value>' statement

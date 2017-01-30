@@ -1,0 +1,64 @@
+#include "../DEFS.h"
+#include DEFS_MECHS
+
+
+int findMechCost(string str) {
+  switch(str) {
+    case LASER:    return COST_LASER;
+    case SHURIKEN: return COST_SHURIKEN;
+    case ROLLING:  return COST_ROLLING;
+    case WHIRLI:   return COST_WHIRLI;
+    case FLAKE:    return COST_FLAKE;
+    }
+  return -1;
+}
+
+
+void list(object ob) {
+  tell_object(ob, 
+  pad("MECH", 20) + "COST\n" +
+  "_____________________________\n" +
+  pad(LASER,    20) + findMechCost(LASER)    +"\n"+
+  pad(SHURIKEN, 20) + findMechCost(SHURIKEN) +"\n"+
+  pad(ROLLING,  20) + findMechCost(ROLLING)  +"\n"+
+  pad(WHIRLI,   20) + findMechCost(WHIRLI)   +"\n"+
+  pad(FLAKE,    20) + findMechCost(FLAKE)    +"\n"+
+  "_____________________________\n");
+}
+
+
+object findMechObject(string str) {
+  object mech;
+  mech = clone_object(MECHDIR+"/"+str+".c");
+  return mech;
+}
+
+
+status buy(object ob, string str) {
+  int cost;
+  string name;
+  object mech;
+  if(!IPOB) return 0;
+  name = lower_case(str);
+  if(findMechCost(name) == 0) {
+    tell_object(ob, "No mech called "+name+".\n");
+    return 0;
+  }
+  cost = findMechCost(name);
+  if(IPOB->balance() < cost) {
+    tell_object(ob, "Insufficient credits.\n");
+    return 0;
+  }
+  if(find_living(MECH_ID + ob->query_real_name())) {
+    tell_object(ob, "You already have a mech.\n");
+    return 0; 
+  }
+  IPOB->addToBalance(-cost);
+  IPOB->save_me();
+  mech = findMechObject(name);
+  move_object(mech, environment(ob));
+  mech->set_master(ob);
+  mech->init();
+  tell_object(ob, capitalize(name)+" mech purchased.\n");
+  return 1;
+}

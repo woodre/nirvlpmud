@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/heh/hall/r1","east","/players/mokri/clans/heh/hall/r7","west",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;31mA Flowing Scarf[0;0m","/players/angel/area/school/obj/flow_scarf_01",0,0,0,"A Hockey Stick","/players/jenny/wings/items/stevestick",0,0,0,"A Hockey Stick","/players/jenny/wings/items/gstick",0,65,24,"A Hockey Stick","/players/jenny/wings/items/gstick",0,0,0,"[31m[[1m[33mSkan[0m[31m] [1m[33mElite Shield[0m ","/players/jareel/armor/chaos/yelmalian_elite_shield",0,0,0,"[2;37;0m[34mThe Cloak of the [1;30mNight[2;37;0m[34m Sky[2;37;0m","/players/zeus/museum/OBJ/cloak","--0--",0,0,"[1;30mAlucard's[0;0m necklace","/players/sami/area/GPO/obj/necklace",0,0,0,"[0m[33mGold Dragon Leggings[0m","/players/tallos/7tigers/objects/dragon_legs",0,0,0,})

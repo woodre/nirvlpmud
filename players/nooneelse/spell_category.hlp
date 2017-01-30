@@ -1,0 +1,105 @@
+	Vampire Guild Spells & Abilities
+		by category & level
+
+               sp cost  level  task level
+
+combat
+------
+defend against    50      3        1
+drain corpse       0      3        1
+fumble curse      35      1        1
+scratch           10      1        1
+sanctuary          0      1        1
+
+calm              20      5        2
+scan               5      5        2
+
+fear              25      7        3
+backhand          15     10        3
+magic dart        ??      7        3
+regenerate        50     10        3
+
+damn              30     12        4
+hellfire          25     12        4
+paralyze          50     12        4
+
+demon wrath       50     16        5
+shift             ??     15        5
+
+grasp             25     18        6
+mesmerize        250     19        6
+rip               ??      4        2
+
+communication
+-------------
+emote              0      1        1
+msg bat            5      1        1
+telepathy          0      1        1
+think              0      1        1
+
+information
+-----------
+assess            10      1        1
+glance             0      1        1
+guild news         0      1        1
+help               0      1        1
+remember           3      1        1
+task               0      1        1
+
+general
+-------
+bury hole          0      1        1
+charity           15      1        1
+cure disease      30      3        1
+defile             0      1        1
+disguise           0      1        1
+eyes               5      1        1
+fix title          0      1        1
+form               0      1        1
+friends            0      1        1
+leave              0      1        1
+paths              0      1        1
+process skin       0      1        1
+reset guild exp    0      1        1
+sew skins          0      1        1
+sharpen fangs      0      1        1
+skin corpse        0      1        1
+solve task         0      1        1
+startup            0      1        1
+title              0      1        1
+
+emit mist         15      4        2
+gohome            40      5        2
+infuse            ??      5        2
+servant           30      5        2
+transfer          25      5        2
+translate         25      5        2
+
+call wolf         50     10        3
+fly                0      7        3
+telekenetics       5     10        3
+wraith form       25     10        3
+
+vampire speed     75     12        4
+summon            50     13        4
+
+bite               0     16        5
+
+illusion          40     17        6
+cancel             0     19        6
+
+guild master/lieutenant
+-----------------------
+back               0
+check              0
+expell             0
+office             0
+punish             0
+release            0
+repair fangs       0
+replace            0
+shelf              0    100
+tel                0
+
+
+see also: help solve task, help spell levels

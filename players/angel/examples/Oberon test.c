@@ -1,0 +1,10 @@
+#include <ansi.h>
+inherit "/room/room.c";
+
+reset(arg) {
+        if(arg) return;
+        set_light(1);
+        set_short("Inside the South Gate of Amber");
+        set_long("Along the southern wall.");
+        add_exit("/players/oberon/amber/city/rooms/southgate", "east");
+}

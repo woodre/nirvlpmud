@@ -1,0 +1,19 @@
+---===ROBOMECH REPAIR===---
+
+     You may repair your RoboMech by typing
+'repair [minor/average/major]'.  This will
+divert all systems into self-repair mode.
+The only action available to you will be
+to 'bail' out of your cockpit.  
+     While in repair, your mech repairs
+damage to armor and attempts to cool down.
+The difference between minor/average/major
+repairs is the time spent in repairing damage.
+Minor repairs stall you by 5 time units.
+Average repairs stall you by 10 time units.
+Major repairs stall you by 15 time units.
+     Be warned, while you repair damage,
+you are vulnerable to attack.  If another
+mech finds you while you are in repair, you
+are a sitting duck.
+

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/sado/shop/rose","/players/puppy/s/eq/parchment","/players/mythos/awep/wakizashi","/obj/weapon","/obj/weapon","/players/forbin/heals/dhuez","/players/snow/heals/ice_sphere","/players/sado/shop/oreo","/players/puppy/s/eq/crown","/players/puppy/s/eq/collar","/players/mythos/awep/katana","/players/wren/Area/starbug/items/thermos","/obj/armor","/players/wren/Area/starbug/items/dreds","/players/hippo/weapons/glue","/players/snow/WEAPONS/tsunami","/players/softly/newbie/obj/cheese","/players/wren/Area/starbug/items/straw","/obj/armor","/players/scathe/armor/suit","/players/saber/stuff/power","/players/mythos/amisc/mirror","/obj/treasure","/obj/treasure","/players/wren/Area/starbug/items/cottagecheese",})
+shorts ({"A beautiful red rose blossom","Parchment","Wakizashi","Axe","A Deadly Bullwhip","d[0m[32m'[0mHuez [0m[32mleaves[0m","An [1;36mIce[0m Sphere","A box of oreo cookies","A golden crown","A leather collar","Katana","a thermos","Metal gloves","Lister's crusty deerstalker with dreds.","a strong, 1 second glue","[34mTsunami[0m","[1;33mCheese[2;37;0m","a long plastic straw","An [1mwhite[0m metal ring","Black Suit","A power system","A small mirror","Arctic Wolf pelt","Arctic Seal pelt","a small tub of cottage cheese.",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

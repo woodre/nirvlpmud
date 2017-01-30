@@ -1,0 +1,16 @@
+no_clean 0
+name_of_weapon "lifeblood"
+broke 0
+misses 78
+hits 258
+alt_name 0
+alias_name "lifeblood"
+short_desc "Lifeblood, the long sword"
+long_desc "Lifeblood is an ancient rune-sword that waslost long ago.  It has been rediscovered, andits powers are those of mystic destruction.Lifeblood has a laced silver and gold hilt, witha gleaming runed blade."
+read_msg "This blade was forged by Dune."
+class_of_weapon 18
+value 40000
+local_weight 6
+info 0
+deny_save 0
+weapon_type "sword"

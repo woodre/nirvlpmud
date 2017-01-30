@@ -1,0 +1,151 @@
+inherit "room/room";
+
+int shield, room_mode, goto_mode, sequencer;
+object kettle;
+
+reset (arg)
+{
+ if (arg) return;
+ short_desc = "Merlyn's workroom";
+ long_desc =
+    "This room looks just like Merlyn's house in the Disney film, the Sword in\n"+
+    "the Stone.  It is a shamble of a hut, looking more like an impoverished\n"+
+    "shack than the home to the most powerful wizard in the world.\n"+
+    "\n"+
+    "The inside of the hut is covered with a million alchemical books and potions\n"+
+    "as well as various experiments littering the floor.  In the far corner of the\n"+
+    "room is a pot boiling over a light fire ... the aroma of delicious soup fills\n"+
+    "the room.  By one window rests a birdstand upon which is perched an owl.\n";
+  set_light(1);
+  dest_dir = ({"room/ruin", "out",
+               "room/church", "church",
+               "room/post", "post",
+               "players/merlyn/closed/guild/hall1", "mage"});
+}
+
+init() {
+   ::init();
+   room_mode = 0;
+   add_action("set_shield", "shield");
+   add_action("snap", "snap");
+   check();
+}
+
+set_shield(str) {
+   if(this_player()->query_name() != "Merlyn") {return;}
+   if(!str) {
+      write("Shield is currently set to "+shield+".\n");
+      return 1;
+   }
+   if(str == "on") {
+      write("You set the shield on.\n");
+      say("You feel a strong force surround the room.\n");
+      shield = 1;
+      return 1;
+   }
+   if(str == "off") {
+      write("You set the shield off.\n");
+      say("The globe surrounding the room disappears.\n");
+      shield = 0;
+      return 1;
+   }
+   write("Set shield to what?\n");
+   return 1;
+}
+
+check() {
+   if(shield && this_player()->query_name() != "Merlyn") {
+      write("You are unable to enter Merlyn's house at this time ...\n");
+      say(this_player()->query_name()+" tries to enter the room.\n");
+      move_object(this_player(), "/room/church");
+   }
+   return 1;
+}
+
+snap(str)
+{
+  if (this_player()->query_name() == "Merlyn") {
+    say("Merlyn snaps his fingers.\n");
+    set_heart_beat(1);
+    switch(str) {
+      case "home" : goto_mode = 1; break;
+      case "beach": goto_mode = 2; break;
+      case "dance": goto_mode = 3; break;
+      case "fire" : goto_mode = 4; break;
+      case "water": goto_mode = 5; break;
+    }
+    sequencer = 0;
+    return(1);
+  }
+  return(0);
+}
+
+heart_beat()
+{
+  if (goto_mode == room_mode) { set_heart_beat(0); return; }
+  else {
+    switch (sequencer) {
+      case 0: say("The room fades from view.\n");
+              short_desc = "You can see nothing.\n";
+              long_desc = "You can see nothing.\n";
+              break;
+      case 1: say("You feel disoriented ... reality is swimming around you ...\n");
+              break;
+      case 2: say("All of a sudden the world appears again!\n");
+              switch (goto_mode) {
+                case 1: short_desc = "Merlyn's workroom [out,shop,church,wm,wa,pub,guild]";
+                        long_desc =
+    "This room looks just like Merlyn's house in the Disney film, the Sword in\n"+
+    "the Stone.  It is a shamble of a hut, looking more like an impoverished\n"+
+    "shack than the home to the most powerful wizard in the world.\n"+
+    "\n"+
+    "The inside of the hut is covered with a million alchemical books and potions\n"+
+    "as well as various experiments littering the floor.  In the far corner of the\n"+
+    "room is a pot boiling over a light fire ... the aroma of delicious soup fills\n"+
+    "the room.  By one window rests a birdstand upon which is perched an owl.\n";
+                        break;
+                case 2: short_desc = "A calm and peaceful beach";
+                        long_desc =
+    "You are standing on the cool sand of a beach ... it is just about sunset,\n"+
+    "just as the last rays of the sun are shining down upon the gentle wavecrests.\n"+
+    "Everything is calm and peaceful ... the breeze whistles through the mango\n"+
+    "groves slightly inland and caresses your cheek.  The ocean itself is calm ...\n"+
+    "The sunset reflects off the waters, glimmering with a light that can only be\n"+
+    "compared to that of the heavens themselves.\n";
+                        break;
+                case 3: short_desc = "A formal ballroom";
+                        long_desc =
+    "Below you the heavily waxed floor shines with the soft light from a giant\n"+
+    "chandelier, laden with crystals and frosted glass, and the light bathes you\n"+
+    "with warmth and radiance.  The high ceiling is supported by elegant greek\n"+
+    "columns, standing tall and strong, wrapped with thin marble blue paint the\n"+
+    "exact same color as the floor ... In the distance slow, emotional music plays\n"+
+    "from the band pit, and you feel slightly giddy ...\n";
+                        break;
+                case 4: short_desc = "A mountain cabin";
+                        long_desc =
+    "The gentle crackling of a warm fire in the fireplace beckons to you as its\n"+
+    "sound mingles with the sounds of the wind outside ... You can almost feel\n"+
+    "the snowstorm that rages outside, and the wind rattles the windowpanes once\n"+
+    "every few minutes ... You warm yourself by the fire, the flames flickering\n"+
+    "gently, and the soft bearskin rug tickling your feet as you lounge on it.\n";
+                        break;
+                case 5: short_desc = "A waterfall";
+                        long_desc =
+    "You hear the steady roar of water, thundering down into a small glade, green\n"+
+    "and glowing in the soft light filtering through the forest canopy.  The\n"+
+    "sound of birds is faintly heard through the sound of the waterfall, a sweet\n"+
+    "song making its way through the fine mist, floating up into the air and\n"+
+    "reflecting each single shaft of sunlight that penetrates the enormous ever-\n"+
+    "greens which tower over you ... The small pool that collects at the foor of\n"+
+    "the falls beckons with crystal clear waters ...\n";
+                        break;
+              }
+              room_mode = goto_mode;
+              set_heart_beat(0);
+              break;
+         }
+         sequencer++;
+     }
+}
+

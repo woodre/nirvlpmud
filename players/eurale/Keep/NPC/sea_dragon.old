@@ -1,0 +1,58 @@
+/*  Modified October 2001 to conform to /doc/build/RULES/monster.guide */
+
+#include "/players/eurale/defs.h"
+inherit "obj/monster.c";
+
+reset(arg)  {
+  ::reset(arg);
+  if(arg) return;
+
+set_name("dragon");
+set_alias("sea dragon");
+set_race("creature");
+set_short(HIG+"Sea Dragon"+NORM);
+set_long(
+	"This dragon is related to the dragon turtle.  It resembles a giant\n"+
+	"turtle with a dragon's head and massive flippers.  A thick shell\n"+
+	"which is very dark green or maybe even black covers most of it's\n"+
+	"body.  The webbed toes and paddlelike flippers make land travel\n"+
+	"very difficult.  This dragon has no teeth and so uses it's 'breath\n"+
+	"weapon' to kill it's enemies.\n");
+
+set_level(21);
+set_hp(800);
+set_al(-300);
+set_wc(45);
+set_ac(21);
+set_aggressive(1);
+set_dead_ob(this_object());
+
+set_chat_chance(15);
+  load_chat("The Sea Dragon slowly turns its gaze to you....\n");
+set_a_chat_chance(18);
+  load_a_chat("The dragon ducks into his shell for protection..\n");
+  load_a_chat("The Sea Dragon swats at you with its huge flipper..\n");
+  load_a_chat("The Dragon just missed crushing you with its jaws...\n");
+
+set_chance(25);
+set_spell_dam(60 + random(30));
+set_spell_mess1(
+  "\n\n"+
+  "The Sea Dragon breathes a "+HIC+"CONE OF STEAM"+NORM+"\n\n");
+set_spell_mess2(
+  "\n\nA "+HIC+"CONE OF STEAM"+NORM+" engulfs you...\n\n");
+
+}
+
+monster_died() {
+  object ob;
+  tell_room(environment(this_object()),
+    "\nWith a gigantic SPLASH, the sea dragon hits the water...dead!\n\n");
+  move_object(clone_object("players/eurale/Keep/OBJ/dragon_shell.c"),
+    environment(this_object()));
+  if(attacker_ob)
+  move_object(clone_object("players/eurale/Keep/QST/seadragon.c"),
+                attacker_ob);
+  write_file("/players/eurale/Keep/LOGS/dragons",
+  ctime(time())+"     Seadragon        "+query_attack()->query_real_name()+"\n");
+return 0; }

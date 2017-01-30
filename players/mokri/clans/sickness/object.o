@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "The [1;30mMark [0mof [1;31mMadness [0m([1;33mGlowing[0m)[0m"
+long_desc "A strange mark around your wrist. This is the proof of your ranks amongst the clan of sickness and madness.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "mark"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A strange mark around your wrist. This is the proof of your ranks amongst the clan of sickness and madness.[0mType 'clan_help' for commands."
+clan_short "The [1;30mMark [0mof [1;31mMadness [0m([1;33mGlowing[0m)[0m"
+damage_type 0
+hall_path "/room/vill_track"
+object_name "mark"
+owner "wicket"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Thu May 30 11:05:37 2013] Wicket has removed Redmischief as a clan leader!","[Thu May 30 11:05:51 2013] Wicket has removed Badass as a clan leader!","[Wed Jan 15 17:16:59 2014] Mysticfire has joined the clan!","[Wed Jan 15 17:17:07 2014] Wicket has promoted Mysticfire to a clan leader!","[Sat Apr 26 13:58:44 2014] Fastkill has joined the clan!","[Sat Apr 26 13:59:02 2014] Wicket has promoted Fastkill to a clan leader!","[Sun Apr 27 15:11:47 2014] Marsellus has joined the clan!","[Sun Apr 27 15:15:41 2014] Fastkill has removed Marsellus from the clan!","[Fri Oct  3 09:36:49 2014] Wicket has joined the clan!","[Sun Jul 26 06:09:37 2015] Sektor has joined the clan!","[Sat Sep 12 15:07:14 2015] Rumi has joined the clan!","[Mon Sep 21 18:50:55 2015] Rumi: lol","[Sun Oct  4 13:16:44 2015] Silverwind has joined the clan!","[Sun Oct 11 09:53:06 2015] Shojiro has joined the clan!","[Sun Oct 11 13:09:04 2015] Shojiro has joined the clan!","[Sun Oct 11 13:10:43 2015] Someone has promoted Shojiro to a clan leader!","[Sat Oct 24 14:38:34 2015] Thor has joined the clan!","[Sat Oct 24 14:38:44 2015] Someone has promoted Thor to a clan leader!","[Sat Oct 24 14:38:52 2015] Someone has removed Shojiro as a clan leader!","[Sat Oct 24 14:39:02 2015] Someone has removed Mysticfire as a clan leader!",})
+leaders ({"fastkill","thor",})
+join_type 1
+private_coffer 11189879
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

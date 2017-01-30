@@ -1,0 +1,48 @@
+starta_doctor() {
+object doctor,unif;
+    if(!doctor || !find_living("doctor")) {
+	doctor = clone_object("obj/monster.c");
+call_other(doctor, "set_name", "doctor");
+call_other(doctor, "set_short", "A doctor");
+call_other(doctor, "set_long", "A doctor (male).\n"+
+         "An ordinary older man, wearing a lab coat\n"+
+          "\n");
+	call_other(doctor, "set_ac", 0);
+	call_other(doctor, "set_level",3);
+	call_other(doctor, "set_al",50);
+	call_other(doctor, "set_hp",66);
+	call_other(doctor, "set_wc",5);
+	call_other(doctor, "set_aggressive", 0);
+call_other(doctor, "add_money", 276);
+	move_object(doctor, "players/boltar/sprooms/clinic/sbank");
+	call_other(doctor, "set_chat_chance", 3);
+	call_other(doctor, "load_chat", "The doctor says: Hello and welcome.\n");
+	call_other(doctor, "load_chat", "The doctor says: " +
+		   "Hello there!\n");
+	call_other(doctor, "load_chat", "The doctor says: " +
+                  "hmmm.... what do we have here...\n");
+call_other(doctor, "load_chat", "The doctor says: " +
+   "Please get on to the table.\n");
+	call_other(doctor, "load_chat", "The doctor says: " +
+		   "Who are you?\n");
+	call_other(doctor, "load_chat", "The doctor says: " +
+                   "Are you ready?\n");
+	call_other(doctor, "load_chat", 
+		   "The doctor grins evilly.\n");
+        call_other(doctor, "load_chat", "The doctor smiles.\n");
+
+	unif = clone_object("obj/armor");
+	call_other(unif, "set_name", "uniform");
+	call_other(unif, "set_short", "A doctor's lab coat");
+	call_other(unif, "set_alias", "coat");
+        unif->set_long("A lab coat.\n");
+        unif->set_size(1);
+	call_other(unif, "set_value", 20);
+	call_other(unif, "set_weight", 1);
+	call_other(unif, "set_ac", 1);
+	call_other(unif, "set_type", "armor");
+move_object(unif, doctor);
+call_other(doctor, "init_command", "wear uniform");
+}
+}
+

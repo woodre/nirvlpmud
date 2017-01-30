@@ -1,0 +1,45 @@
+inherit "/obj/treasure.c";
+
+reset() {
+  set_id("orb");
+  set_alias("orb of wishes");
+  set_short("Orb of Wishes");
+  set_long("\n\tYou gaze upon the fabled Orb of Wishes.\n"+
+"It is a small spherical object seemingly made of coherent quicksilver.\n"+
+"As you peer into it, a voice echoes in your mind:\n\n"+
+"\tYou, valiant one, may wish for a weapon, armor, coins, or experience.\n"+
+"\tDo this by commanding: wish <choice>.\n"+
+"\tYou have one wish. Choose well.\n\n");
+  set_weight(1);
+  }
+
+init() {
+  ::init();
+  add_action("do_wish","wish");
+  }
+
+do_wish(string str) {
+  object ob;
+  if(!str) { notify_fail("..*.. wish <weapon, armor, coins, or experience>\n");
+             return 0; }
+write_file("/players/snow/closed/test/prizes", ctime(time())+" "+this_player()->query_real_name()+" "+str+"\n");
+  if(str != "weapon" && str != "armor" && str != "coins" && str != "experience") {
+    notify_fail("You may wish for a weapon, armor, coins, or experience.\n"); return 0; }
+  if(str == "weapon") {
+    ob = clone_object("/players/snow/closed/test/elem_sword.c");
+    write("A weapon of might is the reward of your wish!\n"); }
+  if(str == "armor") {
+    ob = clone_object("/players/snow/closed/test/amulet.c");
+    write("Armor of might is the reward of your wish!\n");
+  }
+  if(str == "coins") {
+    this_player()->add_money(80000);
+    write("A fabulous wealth is the reward of your wish!\n"); }
+  if(str == "experience") {
+    this_player()->add_exp(100000);
+  write("A bonus in experience is the reward of your wish!\n"); }
+  if(ob) move_object(ob, this_player());
+  move_object(this_player(), "/players/snow/gate.c");
+  command("look", this_player());
+  destruct(this_object());
+  return 1; }

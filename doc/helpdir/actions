@@ -1,0 +1,28 @@
+
+
+                            [Actions]
+-----------------------=========+=========-----------------------           
+                
+                            
+     The following is a listing of all commands available when
+  manipulating objects, whether in your environment or in your
+  inventory.
+  For further information on each topic type: help <topic name>
+
+     Actions:   Visual:      Equipment:      Other:
+  ---------------------------------------------------------------
+      drop      examine       ready          afk
+      get       look          wield          idea
+      give      inventory     unwield        typo
+      put       consider      wear           bug           
+      take      look (dir)    remove
+      follow                  armors
+      lead                    creator
+      fstatus                 display
+      assist                  cashmoney
+      putall                  itemtest
+                              check_item
+                              dtypes   
+                              heals
+                                                               
+  For further information on each topic type: help <topic name>

@@ -1,0 +1,30 @@
+GUILD LEVELS:
+There are seven guild levels in the Mobster guild:  bullie, thug,
+muscle, racketeer, goodfella, mafioso, and wiseguy.  Every new guild member
+starts out as a bullie.  Guild levels are attained through graft
+and experience. The chart below illustrates the requirements.
+
+GUILD LEVEL   EXPERIENCE COST   GRAFT COST
+-----------   ---------------   -----------
+Bullie               none            0
+Thug                6,000           xx
+Muscle            100,000           xx
+Racketeer         700,000           xx
+Goodfella       1,500,000           xx
+Mafioso         4,000,000           xx
+Wiseguy         6,000,000           xx
+
+The guild also has levels within individual families.  Getting promoted
+within a family costs graft, requires a minimum mud level, and must be
+approved by the family leaders.  All guild members start out as Soldiers
+and whenever they die, they are returned to Soldier status.  Death also
+results in a loss of graft.  To advance past the Soldier level, members
+must turn on their player killing status.
+
+FAMILY LEVEL   MINIMUM MUD LEVEL    GRAFT COST
+------------   -----------------    ----------
+Soldier             none                 0
+Hitman                15                xx
+Lieutenant            19                xx
+Don                19+10                xx
+

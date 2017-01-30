@@ -1,0 +1,33 @@
+#include "../def.h"
+
+cmd_kiai(str){
+  object atk;
+  
+  if(TP->query_guild_rank() < 1) return 0;
+  if(TP->query_ghost()) return 0;
+  if(!(atk = TP->query_attack()))
+  {
+    write("You must be in combat to kiai.\n");
+  }
+  
+  else
+  {
+    if(present("kiai_object", TP))
+    {
+      destruct(present("kiai_object", TP));
+    }
+    else
+    {
+      object f;
+      
+      write("You "+BOLD+"KIAI"+NORM+" loudly at "+
+        atk->query_name()+"!\n");
+      say(TP->query_name()+" "+BOLD+"KIAIS"+NORM+
+        " loudly at "+atk->query_name()+"!\n");
+      
+      f = clone_object(OBJDIR+"kiai");
+      move_object(f, TP); 
+    }
+  }
+  return 1;
+}

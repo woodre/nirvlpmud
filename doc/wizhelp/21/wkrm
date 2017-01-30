@@ -1,0 +1,21 @@
+**************
+
+
+                     Workrm
+
+Syntax:    wkrm <file>
+
+Desc:
+           Sets a new path for Home. Could be a second workroom or 
+           another room of your creation
+
+Warning:   Don't set to a player populated area. Generally best to 
+           enter the game in a workroom.
+
+Example:   wkrm /players/bob/workroom2.c
+
+Related:   home, set_home
+
+
+**************
+

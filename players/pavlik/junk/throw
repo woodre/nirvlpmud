@@ -1,0 +1,23 @@
+
+throw_it(str) {
+    if(!str) {
+        write("You need to give a player's name to do that.\n");
+        return 1;
+    }
+    if(!find_player(str)) {
+     write("You can't egg a player that isnt on!\n");
+        return 1;
+    }
+    write("You toss the Easter egg to "+capitalize(str)+"!\n");
+    if(!present(find_player(str), environment(this_player()))) {
+    say(this_player()->query_name()+" tosses "+capitalize(str)+" an Easter egg into the air!\n");
+    }
+    else {
+        say(this_player()->query_name()+" tosses "+capitalize(str)+" an Easter egg high into the air!\n", find_player(str));
+    }
+tell_object(find_player(str), this_player()->query_name()+" throws an Easter egg to you!\n"+
+"You catch it carefully so it doesnt break!\n");
+    move_object(this_object(), find_player(str));
+   this_player()->add_spell_point(-5);
+    return 1;
+}

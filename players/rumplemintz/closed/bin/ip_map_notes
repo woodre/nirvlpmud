@@ -1,0 +1,17 @@
+m_save_object()  to save the mapping to a file
+m_restore_object() to read the mapping from a file
+
+initial creation
+mkmapping(mixed indarr, mixed valarr)
+where the indarr (indice array) will equal the ip address
+and the valarr (value array) will equal the player name
+
+mapping ip_dump(mixed indarr, mixed valarr)
+string *ind_arr, *val_arr;
+mapping mp;
+
+for users()
+ind_arr = ({ query_ip_number(users[i]) });
+val_arr = ({ users[i]->query_real_name() });
+mp = mkmapping(ind_arr, val_arr);
+mp += ({ query_ip_number(users[i+1])

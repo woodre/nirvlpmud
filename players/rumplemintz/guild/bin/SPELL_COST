@@ -1,0 +1,18 @@
+/* Spell costs - tune this to balance
+ */
+
+#define COST3 5
+#define COST6 10
+#define COST9 20
+#define COST12 30
+#define COST15 40
+#define COST17 50
+#define COST18 55
+#define COST19 60
+#define COST20 10
+#define COST21 10
+#define COST23 70
+#define COST25 80
+#define COST27 90
+#define COST29 100
+#define COST30 10

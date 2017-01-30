@@ -1,0 +1,136 @@
+[31m==>[2;37;0m /players/catacomb/Cavern/
+[31m==>[2;37;0m ~items
+[31m==>[2;37;0m ~CurseAmulet.c:
+[31m==>[2;37;0m The first line of the long() is not a sentence
+[31m==>[2;37;0m If it is not supposed to be dropped, that needs to be added
+[31m==>[2;37;0m Additionally the long() says something about embedding in the chest, which might imply it couldn't be removed either. Suggestion: allow drop, but not removal or drop once worn.
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~CurseHelmet.c
+[31m==>[2;37;0m See comments for ~CurseAmulet.c
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Dhelmet.c
+[31m==>[2;37;0m long() needs to be wrapped for most people.
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Dscimitar.c
+[31m==>[2;37;0m The weight on a slender sword would be closer to 2
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Dspear.c
+[31m==>[2;37;0m ~Dcloak.c
+[31m==>[2;37;0m ~Dboots.c
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Dthaxe.c
+[31m==>[2;37;0m Most axes are a bit heavier than equivalent swords, set_weight(3)
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~FireArmor.c
+[31m==>[2;37;0m In the first line of long(), "then" should be "than"
+[31m==>[2;37;0m As more "flame" than "armor", weight could also be 2
+[31m==>[2;37;0m Is there supposed to be resistance code in it?
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~FireSword.c
+[31m==>[2;37;0m Might use a switch() statement at the end for economy
+[31m==>[2;37;0m switch(random(3)) { case 0: this_player()->heal_self(-5); break; etceteras
+[31m==>[2;37;0m instead of using the Fdamage variable, assigning it a value,
+[31m==>[2;37;0m and then evauating 3 if() statments
+[31m==>[2;37;0m Code economy suggestion only.
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Forb.c
+[31m==>[2;37;0m ~Lclub.c
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Mbring.c
+[31m==>[2;37;0m ~Mrobe.c
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~SGfang.c
+[31m==>[2;37;0m 'fang' in first line of the long needs to be 'fangs'
+[31m==>[2;37;0m might seem redundant, but a check for is_player() in the mental_protect() would help avoid errors
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Sdagger.c
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Sscale.c
+[31m==>[2;37;0m random(5) seems a bit much...should be 7 or more
+[31m==>[2;37;0m this is true for several of the armors
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~batwing.c
+[31m==>[2;37;0m ~blood.c
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~dragonbane.c
+[31m==>[2;37;0m 1 in 4 chance of 21; 1 in 8 chance of 20;
+[31m==>[2;37;0m should have more weight if it's a spear, or something to offset the WC
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~gem1.c
+[31m==>[2;37;0m ~gem2.c
+[31m==>[2;37;0m ~gem3.c
+[31m==>[2;37;0m ~silk.c
+[31m==>[2;37;0m ~trident.c
+[31m==>[2;37;0m ===============
+[31m==>[2;37;0m /players/catacomb/Cavern/mobs/
+[31m==>[2;37;0m Dguard.c
+[31m==>[2;37;0m Good mob. One particular comment that applies to all the mobs
+[31m==>[2;37;0m and their items: You might add some kind of randomness to
+[31m==>[2;37;0m their value, i.e. random(100)+value
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m As an aside, for efficiency sake, those mobs
+[31m==>[2;37;0m with a monster_died() func that moves an
+[31m==>[2;37;0m object onto the corpse, declare the variable
+[31m==>[2;37;0m inside of monster_died(). The cuts down on
+[31m==>[2;37;0m the number of global variables and the over-
+[31m==>[2;37;0m head of memory required for each mob. The
+[31m==>[2;37;0m total amount saved per mob is negligible, but
+[31m==>[2;37;0m mudwide it can add up.
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m Dmage.c
+[31m==>[2;37;0m Acknowledging artistic license w/ the lower
+[31m==>[2;37;0m hitpoints and weapon class for a mage, I still
+[31m==>[2;37;0m think perhaps their spell damage should be a
+[31m==>[2;37;0m bit higher and/or more often.
+[31m==>[2;37;0m If you are worried about monotony of the
+[31m==>[2;37;0m spell msgs over and over again, I can show
+[31m==>[2;37;0m you how to set up a random array of msgs
+[31m==>[2;37;0m for the same spell.
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m Dumage.c
+[31m==>[2;37;0m See comments for Dmage.c
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m Duwarrior.c & Dwarrior.c
+[31m==>[2;37;0m Need to either lower the coins these mobs
+[31m==>[2;37;0m have on them, or lower the price of the
+[31m==>[2;37;0m objects they give when they die. There
+[31m==>[2;37;0m isn't a compelling reason for them to
+[31m==>[2;37;0m give more than the monster.guide allows.
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m Actually, all the mobs need to have
+[31m==>[2;37;0m the level of coins they give checked
+[31m==>[2;37;0m to bring them into line w/ monster.guide
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m FElem1.c & FElem2.c
+[31m==>[2;37;0m Not sure if these need anything or not. The
+[31m==>[2;37;0m code is good, but #1 only has a 10% chance of
+[31m==>[2;37;0m casting a spell and #2 drops to 5%, but the
+[31m==>[2;37;0m damage is other|fire which makes up for it.
+[31m==>[2;37;0m I recommend upping the frequency for more
+[31m==>[2;37;0m excitement. It's not like players can kill
+[31m==>[2;37;0m monsters on Nirvana. A couple lvl 20 mobs
+[31m==>[2;37;0m will fall like butter.
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m Jumak1.c
+[31m==>[2;37;0m Jumak2.c
+[31m==>[2;37;0m bigbat.c
+[31m==>[2;37;0m lizard1.c
+[31m==>[2;37;0m lizard2.c
+[31m==>[2;37;0m spider.c
+[31m==>[2;37;0m lich1.c
+[31m==>[2;37;0m lich2.c
+[31m==>[2;37;0m durkorScout.c
+[31m==>[2;37;0m maijan.c
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m soulFire.c
+[31m==>[2;37;0m Would be nice if it also had an id for
+[31m==>[2;37;0m 'soul fire' as people might try to look at that
+[31m==>[2;37;0m first thing.
+[31m==>[2;37;0m ---------------
+[31m==>[2;37;0m ~Sgloom.c
+[31m==>[2;37;0m long() will bleed, need to terminate the color
+[31m==>[2;37;0m codes at least at the end of the long. Also,
+[31m==>[2;37;0m some people won't be able to see black on
+[31m==>[2;37;0m black text.
+[31m==>[2;37;0m Coins are a bit high. 1k-3k more than the
+[31m==>[2;37;0m level posted in monster.guide

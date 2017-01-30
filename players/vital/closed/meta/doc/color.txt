@@ -1,0 +1,41 @@
+Creator                 Cyan
+Coercer                 Blue
+Telekinetic             Magenta
+Farsensor               Yellow
+Redactor                Red
+
+Combinations:
+
+Secondary
+FS + CR                 Yellow on Cyan
+FS + CO                 Blue on Yellow
+FS + TK                 Yellow on Magenta
+FS + RD                 Red on Yellow
+CR + CO                 Cyan on Blue
+CR + TK                 Magenta on Blue
+CR + RD                 Cyan on Red
+CO + TK                 Magenta on Blue
+CO + RD                 Blue on Red
+TK + RD                 Red on Magenta
+
+Tertiary
+FS + CR + CO            Green
+FS + CR + TK            Hi Cyan
+FS + CR + RD            Hi Red
+FS + CO + TK            Hi Magenta
+FS + CO + RD            Hi Yellow on Green
+FS + TK + RD            Hi Yellow on Blue
+CR + CO + TK            Green on Magenta
+CR + CO + RD            Hi Blue on Magenta
+CR + TK + RD            Hi Magenta on Red
+CO + TK + RD            Blue on Hi Cyan
+
+Quatanary
+FS + CR + CO + TK       Hi Magenta on Hi Yellow
+FS + CR + CO + RD       Hi Green
+FS + RD + TK + CO       Hi Red on Blue
+FS + RD + TK + CR       Hi Red on Cyan
+RD + TK + CO + CR       Hi Cyan on Magenta
+
+Quintary
+FS + CR + CO + TK + RD  Hi White

@@ -1,0 +1,37 @@
+Walking Dead Overview
+-----------------------------------
+Loosely based on the Walking Dead TV show.
+  - Walkers roam the forest.
+  - Walkers will join into larger mobs if they are in the same room.
+    - When joined, 1 mob is destroyed and level of 2nd mob increased.
+      - Increasing level increases stats, spell damage, etc.
+    - Walkers range from level 20 to 26 depending on number of walkers in the mob.
+    - Walkers are aggro
+    - Walkers will follow a player slowly, they can easily be outrun, but dangerous for wimpy
+    - Groan spell will call walkers in adjoining rooms
+    - Corpses must be "searched" to find items, which can be sold in the survivors town
+  - Players can see how badly the area is infested at the entrance.
+  - Corpses in this area will of course re-animate into Walkers
+    - Zombie corpses do not re-animate
+  - When player dies in the area their information is forever saved in a .o file
+    - Corpse will re-animate into the walker within 2 mins, including lost gear, coins
+    - They have a random chance of being cloned as a walker at any point in the future.
+  - Walkers are controlled by a daemon object so when max reached corpses will no 
+    longer turn into zombies. Players cannot overrun the area.
+     - Max is set to 21. A level 20 mob counts for 1, while a level 26 horde counts for 7.
+       Ex: 21 level 20 mobs
+       Ex: 2 level 26 mobs (horde), 1 level 25, 1 level 20
+     - Daemon resets every 90 minutes
+  - Town to the north has some survivors that have banded together
+    - Lucas functions as a shop
+      - Buys items found on walkers
+      - Very nice shop system with added features
+      - Sells food heals
+        - Ability to buy a bag of heals
+    - Other survivors are very dangerous
+      - Range damage - Will hit players in adjoining rooms using ranged weapons
+      - Spell will cause mobs to wander causing ranged damage
+      - High heal rates
+      - High spell damage
+    
+    

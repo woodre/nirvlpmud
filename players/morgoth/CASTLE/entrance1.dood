@@ -1,0 +1,31 @@
+inherit "room/room";
+reset(arg){
+if(!arg){
+
+  set_light(1);
+
+
+/*  This will set the short description, seen when verbose mode is
+    used, or when people check a who2, ect.          */
+  short_desc="The entrance to Castle Morgoth";
+
+
+/*  The long_desc is what people see when they enter a room.   */
+long_desc=
+ "The walls are a patch work of spackle and dirt.  Wires dangle from the ceiling.\n"+
+ "The floor is covered with construction tools, buckets, workbenches,\n"+
+ "empty soft drink bottles and sawdust.\n"+
+ " \n"+
+ "A sign is taped to the wall.\n"+
+ "Perhaps you should look at it.\n";
+
+items=({
+  "sign", "Excuse our dust.  Castle Morgoth is being renovated.\n"+
+  "Look for our grand reopening in October, 2004 !"
+   });
+
+dest_dir=({
+ "room/plane7","out",
+           });
+        }
+        }

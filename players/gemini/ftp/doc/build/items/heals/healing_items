@@ -1,0 +1,19 @@
+  A healing item would be any item that increases or improves the recover rate
+of either hit points(hps) or spell points(sps).  These items should be very rare
+and only found on NPCs that are impossible to kill except by the most experienced
+players.  In other words, players should not be able to equip with a full set of
+healing armor and weapon that will almost guarantee that they will not take any
+damage in fights.  If you feel the need to code one of these items, the following
+rules must be strictly adhered to:
+
+  *No healing item or weapon is to be storable.
+  *Healing armors except body armor cannot exceed an armor class of 1.
+  *Body armors that heal cannot exceed an armor class of 3.
+  *Weapons that heal cannot exceed a weapon class of 18 including returns.
+  *Any healing item must be worn or wielded to function, not just in inventory.
+  *The healing rate must be variable and not exceed the formula '1+random(5)'.
+  *Healing total cannot exceed 5 and may be split between hps and sps.  A
+    heal_self(3) would not be acceptable as it would be a total of 6.
+  *Any healing item must have some kind of drawback. (ie. heavy weight,
+     alignment restrictions, timer to dest it, etc)
+  *The healing cannot happen more than 5% of the time.  (i.e. random(20))

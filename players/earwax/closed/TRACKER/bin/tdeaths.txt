@@ -1,0 +1,25 @@
+/* *************************************************************************
+ * /players/earwax/closed/TRACKER/bin/tdeaths.c
+ *
+ * This will show you who has killed you
+ *
+ * Earwax 7/28/03 - Jareel 9/14/03
+ *
+ * *************************************************************************
+ * 
+ * 
+ *   =========================Morpheus's Killers========================== 
+ *   |    Killer       Date          Weapon Used      Opponents/Allies   |
+ *   =====================================================================
+ *   |                                                                   |
+ *   | 1:  Chant      9/14/03      ~ Elemental Sword ~       3/1         |
+ *   | 2:  Bleh       9/14/03      Element of Air            1/1         |
+ *   |                                                                   | 
+ *   =====================================================================
+ *
+ *   This will allow a player to see who has killed him the most over time
+ *   and will allow him to see what weapons he loses to the most, will be 
+ *   a good pk traingin list to show weaker pkers, some of the weapons the 
+ *   better pkers are using and to see how often people die to pack.
+ *
+*/

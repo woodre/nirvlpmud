@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/aarmor/sune-ate","/obj/armor","/players/snow/WEAPONS/souleater","/players/wren/Area/starbug/items/thermos","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/emerson/heal/pepsi","/players/mythos/awep/zantetsuken","/players/snow/WEAPONS/glass_sword","/players/mythos/aarmor/do","/players/mythos/aarmor/kabuto","/players/wren/Area/starbug/items/cowboyhat","/players/emerson/armor/jacket","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/mythos/aarmor/hara-ate","/players/puppy/s/eq/scepter","/players/snow/cam/stuff/sword","/players/pain/NEW/weap/sword","/players/pain/NEW/arm/boots","/obj/armor","/players/wren/Area/starbug/items/veil","/players/wren/Area/starbug/items/bat","/obj/armor","/players/wren/Area/starbug/items/laundry",})
+shorts ({"Sune-ate","A Jedi Cloak","[1mSoulEater[0m","a thermos","A Prince's Robes","A huge spiked club","Peasant Rags","can of Diet Pepsi","[34mZantetsuken[0m","Glass Sword","Do-Maru","Kabuto","a tiny cowboy hat","A Pizza Hut Jacket","A nobleman's shortsword","Hara-ate","A scepter ","[34m[1mBlessed Longsword[0m[0m","Sword","Heavy work boots","An [1mwhite[0m metal ring","a big wedding veil","a [1;30mballbat[2;37;0m","A small [1mwhite[0m shield","Lister's dirty laundry",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

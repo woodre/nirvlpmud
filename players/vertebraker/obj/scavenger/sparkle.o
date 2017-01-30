@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/snow/heals/ice_sphere","/players/emerson/armor/hat","/players/puppy/s/eq/ruler","/players/ultramagnus/breastplate","/obj/armor","/obj/treasure","/players/pain/NEW/weap/mace","/players/wren/Area/starbug/items/sequinjacket","/obj/armor","/players/wren/Area/starbug/items/leaflets","/players/wren/Area/starbug/items/arrogance","/obj/armor","/obj/weapon","/players/wren/Area/starbug/items/comb","/players/emerson/heal/lpizza","/players/wren/Area/starbug/items/bazookoid","/players/arrina/armor/torque","/players/pain/closed/weapons/widow","/players/sado/shop/chocolate","/players/mythos/awep/claw","/players/scathe/armor/bowarmor","/players/hippo/heals/dna_repair","/players/saber/armor/hardsuit1","/players/mosobp/areas/TEMPLE/OBJ/nsword","/obj/level_list",})
+shorts ({"An [1;36mIce[0m Sphere","Driver's Hat","A wooden ruler","A Black Breastplate with Red Decore","A suit of [1mwhite[0m chainmail","Beach Bear pelt","A large iron mace","Cat's red sequin jacket","A [1mwhite[0m helmet","a stack of leaflets","Rimmers arrogance.","Steel Helmet","Axe","the cat's hair pick","large pizza","Bazookoid [1;30mmkII[2;37;0m","Silver Torque","the Widowmaker, the sword of the Berserker","A box of delicious Belgian chocolates","claws","Light Leather Armor","[32mdna repair string[0m","A purple Hardsuit <with pink legs!>","A nobleman's shortsword","A list of the top players",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

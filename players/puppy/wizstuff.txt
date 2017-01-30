@@ -1,0 +1,31 @@
+LD is 3505
+
+/bin/wiz 	all wiz commands
+
+ed file.c, then n, then z (n puts the number there, z shows the list)
+load	loads a file
+update updates it and the next time the mud loads it it will be live
+log	equals tail /log/puppy
+rlog clears your /log/puppy errors
+
+target->Replyer((string)this_player()->query_real_name())
+
+
+
+
+long()
+(
+if(present("cyber_ob", this_player()) (write("desc"); 
+else {write ("other desc");) }
+
+
+
+if(present("implants", this_player())    or...
+if(this_player()->query_guild_name() == "Cyberninja")
+
+
+
+
+long() {if(BLAH) return "This is the description."
+else return "This is the other description."
+

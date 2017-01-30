@@ -1,0 +1,18 @@
+You have the following commands for your helper:
+
+command drop (item)             : Commands your helper to drop an item
+command drop all                : Commands your helper to drop all
+command drop all money          : Commands your helper to drop all money
+command get (item)              : Commands your helper to get an item
+command get all                 : Commands your helper to get all
+command emote (str)             : Makes your helper emote
+command sell (str)              : This only works in a shop
+command buy (str)               : Likewise, this only works in a shop
+command call                    : Calls your helper if he lags behind
+crush                           : Destroy Helper
+
+
+Your helper won't be able to help you in fighting
+as he is not trained for battle.  In fact, he is
+so frail that he could die any moment.
+

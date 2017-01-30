@@ -1,0 +1,33 @@
+
+
+                         [Communication]
+-----------------------=========+=========----------------------- 
+                             
+  The following is a listing of all commands and topics
+  available for communicating with other players or on
+  public channels.
+
+  Type "help ansipref" to enable ANSI preferences to highlight
+  your public channels or tells.
+
+For further information on each topic type: help <topic name>
+
+   Player to player:     Room only:      Public:    Emotes:
+ ---------------------------------------------------------------
+    tell                   say           channel     emote 
+    tellhistory            whisper       channels    emotef
+    tellblock              talk          channels    allemotions
+    reply                  yoda          converse
+    page                                 chatting
+    pageblock                            emergency
+    afk                                  gossip
+                                         msg
+                                         junk
+                                         muffle
+                                         risque
+                                         shout
+  
+  ***Player to Wizard: idea, typo, bug
+  
+For further information on each topic type: help <topic name> 
+

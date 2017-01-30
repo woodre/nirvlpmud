@@ -1,0 +1,127 @@
+time_to_heal 0
+hcnum 1
+crime 0
+money 110869
+luck2 0
+lucky 232
+name "summerhead"
+gender 0
+msgin "arrives"
+msgout "leaves"
+is_npc 1
+brief 0
+level 100
+armor_class 228
+hit_point 46400
+max_hp 46400
+experience 2019453
+mmsgout 0
+mmsgin 0
+h_check 0
+weapon_class 65
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir 0
+local_weight 8
+hunted 0
+hunter 0
+hunting_time 10
+cap_name "Summerhead"
+spell_points 0
+max_spell 0
+spell_name 0
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 80666
+is_invis 0
+frog 0
+whimpy 0
+auto_load 0
+current_room "room/shop"
+alignment 850
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+WeaponBonuses 0
+no_clean 0
+talk_match 0
+talk_func 0
+talk_ob_str 0
+talk_type 0
+talk_hold_func 0
+talk_hold_type 0
+talk_hold_ob 0
+catch_nr 0
+talk_done 0
+short_desc "Summerhead"
+long_desc "You see nothing special."
+alias 0
+alt_name 0
+race 0
+hbflag 0
+info 0
+move_at_reset 0
+aggressive 0
+can_kill 0
+kill_ob 0
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+my_tot_wc 65
+my_tot_ac 228
+desc_ob 0
+heal_start 1
+heal_rate 2
+heal_intv 35
+chat_chance 0
+a_chat_chance 0
+the_text 0
+have_text 0
+wander 0
+wander_interval 0
+wander_count 0
+wander_realm 0
+dead_ob 0
+init_ob 0
+random_pick 0
+spell_chance 0
+spell_dam_mon 0
+spell_mess1 0
+spell_mess2 0
+spell_type 0
+armor_params ({"physical",228,0,0,})
+weapon_params ({"physical",65,0,})
+spells 0
+multi_cast 0
+saved_hr 2
+saved_hi 35
+saved_wc 65
+saved_ac 228
+corpse_short 0
+corpse_long 0
+corpse_name 0
+death_emote 0
+multipleIds 0
+wimpy_health 0
+wimpy_chance 0
+wimpy_exit 0
+wimpy_msg 0
+luck 0
+busy_catch_tell 0
+summer_pretitle "Mostly harmless, "
+summer_title "loves you."
+summer_al_title "evil"
+summer_gender "male"
+espion_path "/open/SCAPTURE"
+owner_name "mizan"
+invis_name "Someone"
+curr_name "Summerhead"
+lcase_curr_name "summerhead"
+curr_path "players"
+cmd_prompt "^^"
+exit_mess "fades from view"
+enter_mess "fades into view"
+descriptor "                                            _   __,----'~~~~~~~~~`-----.__                                     .  .    `//====-_             ___,-' `                     -.            \_|// .   /||\\  `~~~~`---.___./               ______-==.       _-~o~  \/    |||  \\           _,'`         __,--'   ,=='||\=_    ;_--~/_-'|-   |`\   \\        ,'      _-'      ,='    |  \\`.   '-'~7  /-   /  ||   `\.     /    .'       ,'       |   \\ \_    /  /-   /   ||      \   /   / _____  /         |     \\.`-_/  /|- _/   ,||       \ /  ,-'     `-|--'~~`--_ \     `==-/  `| \'--===-'       _/`            '         `-|      /|    )-'\~'      _,--~'                        '-~~\_/ |    |   `\_   ,~             /\                             /  \     \__   \/~               `\__                         _,-' _/'\ ,-'~____-'`-/                 ``===\                        ((->/'    \|||' `.     ~`-/ ,                _||                                   \_     ~      `^---|__i__i__\--~'_/                                  __-^-_    `)  \-.______________,-~'                                 //,-'~~`__--^-  |-------~~~~~'                                        //,--~~`-\Summerhead says: Yeah.. I look something like this. Got a problem?"
+access_lvl 1203
+sg_name "vampire"

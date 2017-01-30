@@ -1,0 +1,21 @@
+---===ROBOMECH MOVEMENT===---
+
+     Movement in RoboMechs is similar to
+movement as a player.  The normal 
+north, east, south, west, northeast,
+southeast, northwest, and southwest
+commands can be used as usual.
+The normal shortcuts n, e, s, w, ne, nw,
+se, and sw can also be used as usual.
+     However, when moving to a room
+with an exit other than the above, you 
+must type 'walk <direction>', where
+direction is the exit direction you wish
+to go.  Example: 'walk up' to walk
+up, 'walk hangar' to leave in the
+'hangar' exit.
+     Note: mech movement operates on a
+delay according to your RoboMech's speed.
+Lancer mechs move faster and Full mechs
+are relatively slow.
+

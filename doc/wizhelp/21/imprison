@@ -1,0 +1,29 @@
+**************
+
+                     Imprison
+
+Syntax:    imprison <player> <days>
+
+Desc:
+           This command is used to put the extremely unrulely player 
+           out of everyones way. The offender will not be able to 
+           message out and will lose inventory items that might 
+           facilitate escape. Wizards can also be imprisoned.
+           The string reason is why you put the person in there and 
+           should be detailed so other wizards know why the player
+           is there.
+
+Warning:   Not to be used on casual problems. Try to sort out the 
+           issues and mainly stick unruly players here. Do not zap,
+           dest, or force problem players. Lock the player in here
+           to cool off. Should set a sentence so other wizards know
+           how long they are supposed to remain in prison.
+
+Example:   imprison bob 5
+                     result
+           Player Bob is put in prison for 5 days.
+
+Related:   free
+
+
+**************

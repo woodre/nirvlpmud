@@ -1,0 +1,19 @@
+cast_here 0
+dest_dir ({"/players/snow/closed/cyber/rooms/hallway2.c","east",})
+short_desc "The CyberNinja Arena Lounge"
+long_desc "     This room is a comfortable players' lounge.  It is designedfor watching the arena action.  A panel lies under the arena display.Upon the arena desk in the center of the room lies the tournamentsign up sheet."
+items ({"arena","The huge arena is blocked off by thick perma-windows","desk","This is the Head Referee's tournament desk","panel","The arena display may be turned on/off by 'display <on/off>'","sheet","Type 'register' to learn more about tournament sign-up",})
+property 0
+no_castle_flag 0
+no_exits 0
+numbers 0
+name "Shogun"
+sstatus "tournament over"
+dead "May 28"
+type "open"
+draw "The following is the line up for tonights Shogun TournamentGood luck to all participants!Sire vs StingScorpio vs DaedalusPan vs PikeDrakkar vs JennyMassa vs Korwrath"
+notes "The tournament is for Shogun Title Held on May 29, 1997 at 11:00 PM EST.  be here 30 mins in advance.  You will receive Honor points for participating and winning each round.  Rules are as follows:No heals.No armor.Only guild wepsSingle EliminationAny attacks, fluxes, power spells, reg, rej, conversion, bionics, blades are all legal.Do commands are legalThe winner of this tournament will have the opportunity to fight our currnet shogun for the title.Good luck and happy hunting!"
+writingdraw "The following is the line up for tonights Shogun TournamentGood luck to all participants!Sire vs StingScorpio vs DaedalusPan vs PikeDrakkar vs JennyMassa vs Korwrath"
+writingnotes "The tournament is for Shogun Title Held on May 29, 1997 at 11:00 PM EST.  be here 30 mins in advance.  You will receive Honor points for participating and winning each round.  Rules are as follows:No heals.No armor.Only guild wepsSingle EliminationAny attacks, fluxes, power spells, reg, rej, conversion, bionics, blades are all legal.Do commands are legalThe winner of this tournament will have the opportunity to fight our currnet shogun for the title.Good luck and happy hunting!"
+cost 0
+on 0

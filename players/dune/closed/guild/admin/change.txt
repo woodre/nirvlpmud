@@ -1,0 +1,96 @@
+Note: NO SPELL/POWER MAY BE USED AGAINST PLAYERS
+      (make sure all complies with this)
+
+mechs/mech.c   change this to cover the changes made to
+               /players/snow/closed/cyber/mech.c
+               said changes:
+                 set_heart_beat() call to be placed in
+                 reset(arg) not in init()
+                 in heartbeat take out the sp drain to
+                 the attacker if the attacker is a player
+               also look below at snow/mechs and compare
+
+objects/driod.c  change this so that the droids may not pick up
+                 nor carry money (this is so that the unlimited
+                 money bag is not created)
+                 
+object/cyber_mail.c  no offense but isnt one mail system enough?
+                     i feel there is no need for more mem for mail
+                     
+lib_genCmds/transfer.c  redo to follow /doc/build/RULES/teleports
+
+lib_genCmds/xfer.c  same as above
+
+lib_advCmds/lead.c  make sure it can not be used vs players 
+
+lib_advCmds/ncon.c  make the 100's into 10's- no exact numbers!
+
+lib_advCmds/p1.c  make the random(21) to random(20) and why exactly do
+                  guild leaders get extra bonuses above that of norm?
+                  (or make the cost match that of /doc/build/RULES/
+                  guild_spells)
+                  
+lib_advCmds/p2.c  same as above except nubers are different
+
+lib_advCmds/p3.c  same as above
+
+lib_advCmds/retreat.c  cost of "peace" spells will be changed to about
+                       100 sp for mass, 120 for specific
+
+lib_advCmds/roomspy.c is illegal, this is not to be used at all
+
+lib_advCmds/shadows.c should follow costs of teleports, i.e. 55 sp
+                      i suggest 40 noncombat, 70 in combat
+                      
+lib_advCmds/stun.c  is illegal
+
+lib_advCmds/transto.c  cost of 200 is fine but this should follow the
+                       other requirements in /doc/build/RULES/teleports
+                       (i.e. usage of obj/base_tele.c)
+
+lib_tools/digest.c  justification of cost for this power is needed
+                    otherwise this is illegal (in short: the cost is 
+                    not enough to merit this power at all)
+                    
+lib_tools/eflux.c   why does the guild leaders get the extra punch?
+
+lib_tools/emt.c  take a look above at retreat.c
+
+lib_tools/hflux.c  same as eflux.c
+
+lib_tools/mflux.c  same as above
+
+lib_tools/overload.c  make sure that this does not affect players
+
+lib_tools/reg.c    there should be some random loss in transfer
+
+lib_tools/rej.c    same as above
+
+snow/mechs   the pricing of mechs of 2k to 20k is a bit low 
+             i suggest 8k to 60k
+             also, make sure that set_heart_beat(1) is ONLY called 
+             in the reset(arg) of the mech.c [laser.c for instance
+             calls it again]
+             also, add_exp() in mech.c  - the amount handed over to
+             the player should be a fraction, else the player could 
+             have the pet attack and never lift a finger and get xp
+             suggestion of fraction would be 1/10 or 1/15
+             make sure that when stopping a mech in combat that the
+             opponent does not completely stop the attack should
+             it be attacking another- i.e. no free peace spells
+             make sure "kami" does not allow for mechs to smash into
+             pets
+             there should be a sp cost of the player as well when doing
+             a "kami"
+             mech_guard- make sure can not be used in combat with a pet
+             
+snow/weapons  wepmanager.c- drop the multiple attack max to 3
+              5 attacks per round every hb is waaaay too much on 
+              cpu- in short lag producer
+              note: the weapons are still subject to scrunity
+                    as a very close examination is needed
+                    
+arena.c   note: set_pl_k() is a static function and thus can not be
+                called.  in short a player can drop pk without a
+                "real" death
+                i.e. this is not approved

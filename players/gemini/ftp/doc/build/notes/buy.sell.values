@@ -1,0 +1,15 @@
+Bolts [10.5.04]
+
+armors and weapons now support different values for buying and selling.
+the regular set_value() will do the value used for the player to sell
+the item. 
+set_buy_value() will set the base value used by the shop  to determine
+how much to sell it for. 
+query_value(); and query_value(1); return the regular value (sell)
+query_value(2); returns the buy value. 
+
+Only the village shop supports this until people start rolling the support 
+into their own shops.
+those that use the village shop storeroom will support it because they are
+using the back end of the village shop.
+

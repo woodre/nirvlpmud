@@ -1,0 +1,24 @@
+<CNA1>
+
+Short Desc: Denise Phillipson (CNA)
+Long Desc: An older woman about in her fifties, Denise has aged very well.
+        She has long brown hair down to the shoulderblades on her back and
+        deep hazel green eyes. She carries a half smile on her face and
+        something seems to be a little off with her. She is wearing a clean
+        pair of medical scrubs and has a stethoscope hanging from her neck.
+        all kinds of pens and notepads fill her pockets to keep track of
+        her residents information and vitals. She seems to wander around 
+        slowly as if she is exhausted from all the patient care.
+Name: denise
+Alt_name: phillipson
+Race: Human
+Gender: Female
+Level: 3
+Wc: 7
+Ac: 4
+Hp: 45
+Gold: 120
+Spell: rageblast
+        add_spell("rageblast","#MN# $HY$blasts$N$ you across the room with a $HK$ball$N$ of $HR$hatred$N$.\n",
+                     "#MN# $HY$blasts$N$ #TN# across the room with a $HK$ball$N$  of $HR$hatred$N$.\n",
+                     20(2d6),"other|mental");

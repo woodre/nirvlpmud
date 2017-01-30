@@ -1,0 +1,124 @@
+#define MROOT "players/wizardchild/"
+#define DEST "room/plane12"
+is_castle() { return 1; }
+id(str) { 
+  return str == "castle" || darkwood_id(str) || farside_id(str);  
+}
+darkwood_id(str) { 
+  return str == "trail" || str == "dark forest" || str == "darkwood"; 
+}
+farside_id(str)  {
+  return str == "path";
+}
+#ifdef GUILD_OPEN
+guild_id(str)    {
+  return str == "meadow" || str == "entrance" || str == "guild"; 
+}
+#endif
+short() { 
+  return "A path leading to the Farside (path).\n"+
+#ifdef GUILD_OPEN
+         "The entrance to the Logger's Guild (meadow)"+
+#endif
+         "A dimly lit trail to Darkwood (trail)"; 
+}
+darkwood_long() {
+  write("A dimly lit trail, leading the the forests of Darkwood.\n");
+  write("Judging by the looks of it, you probably wouldn't make it out alive.\n");
+  write("Type \"trail\" to enter this realm.\n");
+  return 1;
+}
+farside_long()  {
+  write("A narrow path through the forest, leading to a small industrial valley.\n");
+  write("From here, you can see the ACME marble company, and various other\n");
+  write("companies. Type \"path\" to enter the FarSide Realm.\n");
+  return 1;
+}
+#ifdef GUILD_OPEN
+guild_long()    {
+  write("The entrance to the much acclaimed Logger's Guild. You may enter here\n");
+  write("without necesarily joining the guild. Type \"meadow\" to enter.\n");
+  return 1;
+}
+#endif
+init() { 
+  add_action("look_at", "look", 1);
+/*
+  add_action("move_me", "trail");
+  add_action("move_me", "path");
+#ifdef GUILD_OPEN
+  add_action("move_me", "meadow"); 
+#endif
+*/
+}
+look_at(s) {
+  string str;
+  if(!s || !sscanf(s, "at %s", str)) return 0;
+  if(darkwood_id(str) || id(str)) 
+    return darkwood_long();
+  if(farside_id(str))
+    return farside_long();
+#ifdef GUILD_OPEN
+  if(guild_id(str))
+    return guild_long();
+#endif
+  return 0;
+}
+move_me() {
+  string s;
+  s = query_verb();
+  if(s == "path") {
+    write("You walk down the narrow path.\n");
+    this_player()->move_player("down the path#"+MROOT+"rooms/entry");
+  } else if(s == "trail") {
+    write("You enter the forests of Darkwood.\n");
+    this_player()->move_player("to the forests#"+MROOT+"darkwood/rooms/entry");
+#ifdef GUILD_OPEN
+  } else if(s == "meadow") {
+    write("You walk to the meadow.\n");
+    this_player()->move_player("to the meadow#"+MROOT+"closed/logger/room/join");
+#endif
+  }
+  return 1;
+}
+reset(arg) {
+  if(arg) return;
+  call_other("/room/plane12", "??"); /* maybe this will load my shit?*/
+  move_object(this_object(), DEST);
+  load_auto_obj();
+}
+load_auto_obj() {
+#ifdef QUEST_UP
+  object ob;
+#endif
+  call_other("/players/wizardchild/closed/no_channels","??");
+  call_other("/players/wizardchild/toys/hickey","??");
+  call_other("/players/wizardchild/toys/ering","??");
+  if(!check_inv("dispenser","/room/plane12"))
+    move_object(clone_object("players/wizardchild/toys/dispense"),"room/plane12");
+  if(!check_inv("dispenser","/players/mizan/etheriel/ROOMS/linna"))
+    move_object(clone_object("players/wizardchild/toys/dispense"),"players/mizan/etheriel/ROOMS/linna");
+  if(!check_inv("vr headset", "room/vill_green"))
+    move_object(clone_object(MROOT+"vrinfo/vrinfo"), "room/vill_green");
+  if(!find_object("/players/wizardchild/liquid/guild_ob"))
+    call_other("/players/wizardchild/liquid/guild_ob", "???");
+#ifdef QUEST_UP
+  ob = clone_object("/obj/quest_obj");
+  ob->set_name("lpc_god");
+  ob->set_hint("You must pass the test of the LPC God.\n"
+              +"(This, alone, is not a joke)\n");
+  move_object(ob, "/room/quest_room");
+#endif
+call_other("/players/wizardchild/workroom.c", "??");
+call_other("/players/wizardchild/closed/bug_load","load");
+}
+check_inv(what, where) {
+  object ob;
+  ob = first_inventory(where);
+  while(ob) {
+    if(ob->id(what))
+      return 1;
+    ob = next_inventory(ob);
+  }
+  return 0;
+}

@@ -1,0 +1,17 @@
+>> ORDER: DEFEND POSITION
+
+Usage:
+order <indexnum> defend <roomfile> <duration>
+
+Example:
+'order 3 defend room/wild1 10'
+
+Description:
+This command issued to a monster makes it aggressively defend a room.
+Any player, monster, pet, mudkid, anything that enters the room that
+is not a monster guild member will be attacked.
+
+Be careful when using this command especially in an area where newbies
+would frequent. The monster will hold this position and fight as long
+as it can.
+

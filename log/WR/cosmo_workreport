@@ -1,0 +1,22 @@
+Fri Dec  4 14:17:50 1998--Action: Gave 30k coins to Katrin -  Reason:  - Bug related to divorce cmd for Dreamspeakr's wedding rings. I mailed Dreamspeakr about it.
+Fri Jan  8 10:47:30 1999 ** testing
+Mon Jan 11 16:05:04 1999 ** Finished initial version of my own daemonized wizard tool.  Will be slowly adding powers to it over the next few weeks.
+Tue Mar  9 11:35:51 1999 ** Set Blackstar's extra level to 0.  It was 1 at lvl 15 and that was causing him guild problems.
+Mon Mar 15 13:03:15 1999 ** Changed Hercules' race from elf to human. He asked for it and I thought it seemed more thematic anyway.
+Wed Apr 14 13:54:58 1999 ** Added tellhistory to ~/closed/batt.c
+Tue May 11 16:03:36 1999 ** Completed ~/hslist/vds.c - added svds.c to load in ~/apt/rooms/lobby.c
+Mon Jun 28 17:15:14 1999 ** Changed my castle description and added in ~/dc/rooms/path/ rooms as an entrance to my area.
+Tue Jul 20 17:05:25 1999 ** ~/apt/obj/msprings.c sbowl.c scup.c, added environment check so heals can only be used in a players' inventory.
+Wed Jul 21 10:00:51 1999 ** ~/closed/batt.c added mute_bat() so that players can get rid of this object if they want.
+Wed Aug 18 20:07:22 1999 ** Gave William a suit of platemail from the Smithy since his got zapped by Mythos' newbie lockers.
+Wed Nov 10 16:41:09 1999 ** Moved the query_color(ob) function from ~/apt/mon/rats.c to ~/closed/tools.c so that all of my generic monster files can call it.
+Wed Nov 10 16:44:14 1999 ** Forgot to add this last week: added zulu command to my wiz tool. Snow approved usage in accordance with wizard behavior.
+Tue Jan 18 18:03:23 2000 ** Gave Hugh /players/feldegast/heals/fullheal.c to replace one that had a problem in Catwoman's lockers. Mailed Feldegast about the problem so he can investigate.
+Wed Jan 19 14:32:41 2000 ** Replaced ~/hslist/vds.c and svds.c with vds_new.c and svds_new.c. Objects were changed to reflect separate alltime score lists for 1999 and 2000.
+Wed Feb  9 17:50:18 2000 ** ~/apt/obj/msprings.c Fixed a minor bug caused by a misplaced return.
+Wed Feb  9 17:58:00 2000 ** Gave Coldwind a bottle of "bug-free" water (msprings.c) for pointing out this bug.
+Wed Feb  9 18:02:31 2000 ** Created /obj/partylist.c on Jan 21, but forgot to log it.
+Wed Feb  9 18:03:31 2000 ** Today I fixed it to track party leader instead of party name, since some of the names were causing the array format to get messed up. (e.g., \ in name)
+Tue Apr 25 12:25:12 2000 ** Created ~/apt/obj/bizarro.c, ~/apt/mon/feldman.c gene.c kevin.c, ~/apt/rooms/rreggies.c rs5new.c
+Tue Apr 25 12:26:00 2000 ** Above items approved by Feldegast, except bizarro.c which is in review by Mythos.
+Wed Apr 26 15:39:34 2000 ** bizarro.c approved by Mythos. Made room, NPCs, and obj active in my area.

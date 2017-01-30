@@ -1,0 +1,31 @@
+road1.c  - fix forest desc, add a trees desc, add an intersection desc.
+road2.c - add descs for: pines, oaks, needles, leaves, mist.
+road3.c - add desc for pines, oaks, dust. And fix the error in trees desc:
+          as if struggling to grown in the...grow.
+road4.c - need descs for weeds, grasses, earth, branches, oaks.
+road5.c - need descs for steeple, yard, earth. and fix the desc for house.
+road6.c - need desc for steeple
+road9.c - need descs for building, and roof.  Long(): building to the west has (a) large window with racks
+road10.c - Need descs for door, supports.
+road14.c - need desc for tables, door, toys, papers. and the long(): East is (a) blue building.
+       Also, extra space before the period in building desc.
+nicks.c - need desc for lamps, drawers
+           also need desc for rack.
+road16.c - need desc for sign, window.  Building has an extra period in it.
+road17.c - need desc for walls, wall
+a
+mill.c - need descs for torches, walls, floor.
+bellep.c - need descs for flowers, floor, carpet.
+schlyrd.c - need descs for yard.
+aschl.c - long(): line 1, seems large inside...seems larger inside
+road11.c - need descs for porch, shutters, windows.
+porch.c - need descs for earth, door
+road13.c - trees desc: unfamiliard = unfamiliar. 
+toms.c - need desc for floor
+lvcshop.c - need desc for ceiling
+yard.c - need desc for earth.
+rhouse.c - need desc for orb.
+road7.c - need descs for gravel, sign, steeple
+road8.c - need descs for: weeds, grasses, earth, branches
+church.c - need desc for door.
+churchkitch.c - long(): An = A...first word in long. need desc for wood, parts, bag, plates, pans, pot....and cookware has a misspelling....several bisuit pans.  need desc for board also(sinks).

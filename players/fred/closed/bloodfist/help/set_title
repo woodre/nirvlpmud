@@ -1,0 +1,19 @@
+
+Bloodfist Help:  Set Guild Title
+
+  With each guild level in the Bloodfist there are a number of guild
+titles that can be chosen.  To see a list of the titles available to
+you, type 'set_title'.  Each title can be picked in a number of different
+colors:  red   hir   blk   yel.
+  If you have mastered a chosen weapon, you can also set your guild
+title to corespond with the name of the weapon.  To see if any of your
+weapons qualify, type 'set_title wep'.  If you set your title with this
+option, it will look like "the Master of the weapon name".  If the word
+"the" in the title does not fit, then enter a '1' for the tog variable
+and the word will not be added to your title.
+
+Usage:  set_title
+        set_title <num> <color>
+        set_title wep
+        set_title wep <num> <tog>
+

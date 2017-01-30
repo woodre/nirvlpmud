@@ -1,0 +1,7 @@
+    test=find_object("room/quest_room");
+      if(!present("keivjam", test)) {
+       ob1=clone_object("obj/quest_obj");
+       call_other(ob1,"set_name","keivjam");
+       call_other(ob1,"set_hint","Find Keivjam and end this lag.\n");
+       move_object(ob1,test);
+     }

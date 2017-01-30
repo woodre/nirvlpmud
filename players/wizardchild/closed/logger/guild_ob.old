@@ -1,0 +1,371 @@
+/* players/wizardchild/closed/logger/guild_ob.c: Logger's guild object     */
+/* This is the first version of this object. If you are tinkering around in*/
+/* here, you better be a God, or have a damn good excuse                   */
+
+#define MASTER   "/players/wizardchild/closed/logger/masterob.c"
+#define ROOT_DIR "/players/wizardchild/closed/logger/"
+#define SAVE_DIR "players/wizardchild/closed/logger/users/"
+#define ME   this_player()
+#define OB   this_object()
+#define NAME this_player()->query_name()
+#define CP(s) capitalize(s)
+#define ENV(s) environment(s)
+
+/********PLAYER VARIABLES********/
+int gmuffle, mon, grank, gxp, gpoints, stable_mode, max_gpoints;
+int gstatus, swap_at, swap_amt;
+status autoswap;
+string *in_cabin;
+string outside, cabin_long;
+
+static string myname, following;
+static object pet, truck;
+static status has_loaded, ac_plus, freeze;
+static object master;
+/******END PLAYER VARIABLES******/
+/*********VISUAL ASPECTS*********/
+short() { return CP(myname)+"'s logger pack"; }
+long()  {
+  object ob;
+  ob = first_inventory(OB);
+	write("A sturdy leather pack that is strapped around your back.\n");
+  write("Type 'lhelp logger' for more info.\n");
+  if(ob) write("    Inside your backpack, their lies:\n");
+  while(ob) {
+    if(ob->short()) write(ob->short()+"\n");
+    ob = next_inventory(ob);
+  }
+  return 1;
+}
+id(str) { return str == "backpack" || str == "pack" || str == "logger pack" || str == "GI"; }
+lights() { set_light(1); }
+get()  { return 1; }
+drop() { return 1; }
+query_weight() { return 2; }
+/*******END VISUAL ASPECTS********/
+reset(arg) {
+  if(arg) return 0;
+  grank = gpoints = gxp = gmuffle = 0;
+  stable_mode = mon = 1;
+	gstatus = max_gpoints = 1;
+  following = 0;
+  in_cabin = allocate(10);
+  autoswap = ac_plus = has_loaded = 0;
+  swap_at = swap_amt = 20;
+  myname = 0;
+  load_master_var();
+}
+init() {
+	if(has_loaded || (myname && myname != lower_case(NAME))) {
+    write("You should not have this!\n");
+		log_drop(ENV(OB)->short());
+    destruct(OB);
+  } else {
+    myname = ME->query_real_name();
+    has_loaded = 1;    
+  }
+  restore_player(myname);
+  if(cat(ROOT_DIR+"WELCOME")) ;
+	else write("No guild news at this time.\n");
+  if(!master && !load_master_var()) {
+    write("Unable to load master object. Self-destructing.\n");
+    destruct(this_object());
+  }
+  master->lmaster(NAME+" steps in from the forest.");
+  /* common commands     */
+  add_action("look", "look", 1);       /* speedster oriented */
+  add_action("save_me", "gsave");      /* guild save         */
+	add_action("lhelp", "lhelp");        /* help               */
+  add_action("lt", "lt");              /* talk               */
+	add_action("le", "le");              /* emote              */
+  add_action("lchan", "lchan");        /* toggle muffle      */
+  add_action("lw", "lw");              /* see other loggers  */                  
+  add_action("nwho", "nwho");          /* see other mudders  */
+  add_action("end_game", "quit");      /* okey dokey logout  */
+  add_action("new_pack", "new_pack");  /* update the pack    */                    
+  add_action("stable_mode", "stable"); /* toggle pet type    */
+  add_action("guild_score", "gs");     /* see guild score    */
+	add_action("store", "store");        /* drop item in pack  */
+  add_action("retrieve", "retrieve");  /* get item from pack */
+  add_action("switch_bak","switch_bak");  /* enable a backup */
+
+  add_action("guild_bug", "guild_bug");
+  add_action("guild_typo", "guild_typo");
+  add_action("guild_comment", "guild_comment");
+
+  if(grank >=  1) {
+		add_action("light", "light");       /* make light    */
+    add_action("forge", "forge");       /* create weapon */
+		add_action("swap_gp", "gp");        /* add gp's      */
+    add_action("set_follow", "follow"); /* set follow    */
+    add_action("toggle_mon", "lmon");   /* toggle mon    */
+  }  
+  if(grank >=  2) {
+    add_action("chips", "chips");     /* wood chip attack      */
+    add_action("send", "send");       /* transfer hp|sp|gp|obj */
+    add_action("butcher", "butcher"); /* corpse->guild points  */
+		add_action("truck", "truck");     /* get a truck (speedstr)*/
+    add_action("splinter", "splinter"); /* splitner a foe      */
+    add_action("autoswap", "autoswap"); /* toggle autoswapping */
+  }
+  if(grank >=  3) {
+    add_action("call_pet", "call");   /* call a pet    */
+    add_action("flannel", "flannel"); /* create armor  */
+    add_action("swap", "swap");       /* swap hp to sp */
+    add_action("heal_me", "lheal");   /* swap sp to hp */
+		add_action("hall", "hall");       /* tport home    */
+  }
+	if(grank >=  4) {
+    add_action("end_fight", "end");     /* stop fighting */
+    add_action("camp_out", "camp_out"); /* heal spell    */                  
+    add_action("flame", "flame");       /* attack - fire */
+    add_action("load_home", "ghome");   /* set_home      */
+  }
+  if(grank >=  5) {
+    add_action("sharpen_weap", "sharpen"); /* fix a weapon */
+		add_action("freeze", "plant");        /* turn a monster into a 'tree' */
+    add_action("toss_log", "tlog");       /* toss a log at a monster */
+    add_action("set_swap", "set_swap");   /* handle autoswap stuff */
+  }
+  if(grank >=  6) {
+    add_action("branch", "branch");
+    add_action("grow_bark", "bark");       /* grow a protective */
+  }  
+  if(grank >=  7) {
+		add_action("snap", "snap");
+    add_action("sizeup", "sizeup");
+	}
+  if(grank >= 8) {
+    add_action("tree", "tree");     /* chop-a-tree attack */
+    add_action("paul_bunyun", "PAUL");
+  }
+  /* rank 15 && > (gc)   */
+  if(grank >= 15) {
+    add_action("lct", "lct");
+		add_action("lce", "lce");
+    add_action("gstat", "gstat");
+    add_action("npack", "npack");
+    add_action("gprom", "gprom");
+  }
+  /* rank 20 && > (gwiz) */
+  if(grank >= 20) {
+    add_action("banish", "ban_logger");   
+    add_action("guild_ver", "gver");
+	}
+  /* give myself a neat-o command or two */
+	if(myname == "wizardchild" || ME->query_level() >= 10000) {
+    add_action("gob", "gob");
+    add_action("slogo", "slogo");
+    add_action("disp_mon", "disp_mon");
+  }
+  heart_on();
+}
+/* daemonized stuff, in order of rank */
+/* Player's */
+lhelp(str)         { return master->lhelp(str);       }
+lt(str)            { return master->lt(str);          }
+le(str)            { return master->le(str);          }
+lchan(str)         { return master->lchan(str);       }
+lw()               { return master->lw();             }
+nwho()             { return master->nwho();           }
+end_game()         { master->end_game();              }
+new_pack()         { return master->new_pack();       }
+stable_mode(str)   { return master->stable_mode(str); }
+guild_score()      { return master->guild_status();   }
+store(str)         { return master->store(str);       }
+retrieve(str)      { return master->retrieve(str);    }
+
+guild_typo(str)    { return master->guild_typo(str);    }
+guild_bug(str)     { return master->guild_bug(str);     }
+guild_comment(str) { return master->guild_comment(str); }
+
+light(str)         { return master->light(str);      }
+forge(str)         { return master->forge(str);      }
+swap_gp(str)       { return master->swap_gp(str);    }
+set_follow(str)    { return master->set_follow(str); }
+toggle_mon(str)    { return master->toggle_mon(str); }
+
+chips(str)         { return master->chips(str);    }
+send(str)          { return master->send(str);     }
+butcher()          { return master->butcher();     }
+truck()            { return master->truck();       }
+splinter(str)      { return master->splinter(str); }
+autoswap(str)      { return master->autoswap(str); }
+
+call_pet(str)      { return master->call_pet(str); }
+swap(str)          { return master->swap(str);     }
+heal_me(str)       { return master->lheal(str);    }
+flannel(str)       { return master->flannel(str);  }
+hall()             { return master->hall();        }
+
+end_fight(str)     { return (str == "fight" && master->end_fight()); }
+camp_out()         { return master->camp_out(); }
+flame(str)         { return master->flame(str); }
+load_home()        { return master->load_home();}
+
+freeze(str)        { return master->freeze(str);       }
+sharpen_weap(str)  { return master->sharpen_weap(str); }
+toss_log(str)      { return master->toss_log(str);     }
+set_swap(str)      { return master->set_swap(str);     }
+
+grow_bark()        { return master->grow_bark(); }
+branch(str)        { return master->branch(str); }
+
+snap(str)          { return master->snap(str);   }
+sizeup(str)        { return master->sizeup(str); }
+
+tree(str)          { return master->tree(str);     }
+finish_tree(me)    { return master->finish_tree(me); }
+paul_bunyun(str)   { return master->paul_bunyun(str); }
+
+/* GC's and GWiz's */
+lct(str)    { return master->lct(str);    }
+lce(str)    { return master->lce(str);    }
+gstat(str)  { return master->gstat(str);  }
+npack(str)  { return master->npack(str);  }
+gprom(str)  { return master->gprom(str);  }
+banish(str) { return master->banish(str); }
+guild_ver() { return master->guild_ver(); }
+/* All me */
+gob(str)    { return master->gob(str);    }
+slogo(str)  { return master->slogo(str);  }
+disp_mon()  { return master->display_mon(); }
+/* end daemonized crap */
+heart_beat() {
+/* the pet will turn on its follow when led into combat; no need to check it here */
+  if(!mon && !following) 
+    set_heart_beat(0);
+  if(mon == 2) master->display_mon(ENV(this_object()));
+  else if(mon == 1 && ENV(this_object())->query_attack()) master->display_mon(ENV(this_object()));
+  if(!following || !find_player(following)) following = 0;
+	if(following && ENV(ENV(this_object())) != ENV(find_player(following))) {
+    ENV(this_object())->move_player("leaves following "+CP(following)+"#"+file_name(ENV(find_player(following))));
+    tell_object(ENV(this_object()),"You continue following "+CP(following)+".\n");
+  }
+  if(autoswap && gpoints <= swap_at)
+    auto_swap();  
+}  
+heart_on()  { set_heart_beat(1); }
+heart_off() { set_heart_beat(0); }
+static auto_swap() {
+  int x;
+	x = ENV(this_object())->query_sp();
+	if(x > swap_amt) x = swap_amt;
+  tell_object(ENV(this_object()), "Auto-swapping "+x+" sp to gp.\n");
+  ENV(this_object())->add_spell_point(-x);
+  gpoints += x;
+}
+look(str) {
+  if(truck && ENV(truck) != ENV(ME)) 
+		move_object(truck, ENV(ME));
+  return 0;
+}
+switch_bak() {
+  string mst;
+  mst = ROOT_DIR+"masterbak";
+  if(!query_verb()) 
+    return ((master=find_object(mst)) ? 1 : 0);
+  if(master == find_object(mst)) {
+		write("Switching to main object.\n");
+    if(find_object(MASTER)) master = find_object(MASTER);
+		else write("Error - switch aborted.\n");
+	} else {
+    write("Switching to backup object.\n");
+    if(find_object(mst) || 
+      (call_other(mst,"lmaster","Guildmaster enters the game.") && find_object(mst))) 
+      master = find_object(mst);
+    else write("Error - switch aborted.\n");
+  }
+  if(!master && this_player()) load_master_var();
+	return 1;
+}
+/******INTERNAL CHAR MANAGEMENT********/
+load_master_var() {
+  if(!(master = find_object(MASTER))) {
+    MASTER->lmaster("Guildmaster enters the game.");
+    if(!(master = find_object(MASTER)))
+      return switch_bak();
+  }
+	return 1;
+}
+save_me() {
+	guild_maintenance();
+  if(!save_object(SAVE_DIR+myname)) {
+    write("Error saving guild stats.");
+    log_err("error saving guild stats.");
+  } else 
+		write("Saving guild status...done.\n");
+	if(query_verb()) return 1;
+}
+restore_player(name) {
+	string pname;
+	int clean_out;
+	if(!name) name = myname;
+	write("Restoring your guild stats...\n");
+	restore_object(SAVE_DIR+name);
+        clean_out = master->checked_restore(find_player(name),gstatus);
+	if(clean_out)
+		destruct(OB);
+  guild_maintenance();
+	return 1;
+}
+guild_maintenance() {
+  max_gpoints = (grank*30 > 300 ? 300 : grank*30);
+	gpoints = (gpoints > max_gpoints ? max_gpoints : gpoints);
+  ME->set_guild_name("logger");
+  ME->set_guild_file(ROOT_DIR+"guild_ob.c");
+}
+wait_func(fn, dl, arg) {
+  call_out("execute", dl, fn+"////"+arg);
+  return 1;
+}
+execute(str) {
+  string fn, arg;
+  sscanf(str, "%s////%s", fn, arg);
+  call_other(master, fn, arg, find_player(myname));
+  return 1;
+}
+/*****END INTERNAL CHAR MANAGEMENT*****/
+/**********EXTERNALLY CALLED***********/
+query_gmuffle()     { return gmuffle;     }
+query_gpoints()     { return gpoints;     }
+query_max_gpoints() { return max_gpoints; }
+query_grank()       { return grank;       }
+query_gxp()         { return gxp;         }
+query_gstatus()     { return gstatus;     }
+query_stable_mode() { return stable_mode; }
+query_pet()         { return pet;         }       
+query_mon()         { return mon;         }
+query_following()   { return following;   }
+query_in_cabin()    { return in_cabin;    }       
+query_cabin_long()  { return cabin_long;  }
+query_cabin_outside() { return outside;   }
+query_ac_plus()     { return ac_plus;     }
+query_freeze()      { return freeze;      }
+query_has_truck()   { return truck;       }
+query_autoswap()    { return autoswap;    }
+
+set_grank(x)   { grank = x; guild_maintenance();    }
+add_gpoints(x) { gpoints += x; guild_maintenance(); }
+add_gxp(x)          { gxp += x;        }
+
+set_gmuffle(x)      { gmuffle = x;     }
+set_in_cabin(blah)  { in_cabin = blah; }
+set_cabin_long(st)  { cabin_long = st; }
+set_cabin_outside(s){ outside = s;     }
+set_following(str)  { following = str; }
+set_mon(i)          { mon = i;         }
+set_pet(obj)        { pet = obj;       }
+set_stable_mode(i)  { stable_mode = i; }
+set_gstatus(x)      { gstatus = x;     }
+set_ac_plus()       { ac_plus = !ac_plus; }
+set_freeze()        { freeze = !freeze; }
+set_truck(obj)      { truck = obj;     }
+set_autoswap(x)     { autoswap = x;    }
+set_swap_amt(x)     { swap_amt = x;    }
+set_swap_at(x)      { swap_at  = x;    }
+                                       
+dest_pet()          { destruct(pet);   }
+dest_truck()        { destruct(truck); }
+/********END EXTERNALLY CALLED*********/
+

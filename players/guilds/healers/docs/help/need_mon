@@ -1,0 +1,17 @@
+need_mon   [level 5]: turns Need Monitor On/Off
+
+                      syntax: need_mon
+                      
+add_need            : adds target to Need List
+                      no target shows Need List Members
+ 
+                      syntax: add_need <target>
+                              add_need
+                      
+clear_need          : clears target from Need List
+                      'all' will clear the whole list
+                      
+                      syntax: clear_need <target>
+                              clear_need all
+
+

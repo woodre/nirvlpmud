@@ -1,0 +1,23 @@
+inherit "obj/weapon.c";
+reset(arg){
+object troll,sting;
+       set_name("Sting");
+      set_alias("sting");
+       set_short("Sting");
+      set_long("A Blue Crystal Dagger ....\n"+
+              "It has an Elven aura about it...\n");
+set_class(18);
+      set_weight(3);
+set_value(5000);
+      set_hit_func(this_object());
+}
+weapon_hit(attacker)
+{
+int n;
+n =random(5);
+if(n>3){
+write("The Dagger emits a Blinding Blue Light...!!!\n");
+return n;
+}
+return 0;
+}

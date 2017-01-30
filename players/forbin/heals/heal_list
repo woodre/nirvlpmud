@@ -1,0 +1,42 @@
+* All heal calculations made in accordance with HEAL1 & HEAL2 
+  in /doc/build/RULES/heals/.
+
+Maillot Jaune [jaune.c] 20 tox (10 soak/10 stuff) 3 use/50,50 heal
+  (20*3)/(50*3) = 0.40 = 8/pt. = 150*8 = 1200 coins
+
+d'Huez Leaves [dhuez.c] 18 tox (9 soak/9 stuff) 3 use/50,50 heal
+  (18*3)/(50*3) = 0.40 = 10/pt. = 150*10 = 1500 coins
+
+Galibier Root [galibier.c]  12 tox (6 soak/6 stuff) 3 use/50,50 heal
+  (12*3)/(50*3) = 0.24 = 14/pt. = 150*14 = 2100 coins
+
+Mayias Bark [mayias.c] 6 tox (3 soak/3 stuff) 3 use/50,50 heal
+  (6*3)/(50*3) = 0.12 = 22/pt. = 150*22 = 3300
+
+Museeuw Tonic [museeuw.c] 8 tox (3 soak/3 stuff) 3 use /0,50 heal    
+  (8*4)/((50*4)*2/3) = .24 => .24 -> 14 * ((50*4)*2/3) = 1862 -> 1900
+
+  
+  
+12 tox(6/6) 4 use/50 hps only heal  
+  (12*4)/((50*4)*2/3) = .36 => .35 -> 10 * ((50*4)*2/3) = 1330 -> 1350
+
+12 tox(6/6) 4 use/50 heal sps only 
+  (12*4)/((50*4)*2/3) = .36 => .35 -> 10 * ((50*4)*2/3) = 1330 -> 1350
+
+8 tox (4/4) 4 use/50 heal hps only   
+  (8*4)/((50*4)*2/3) = .24 => .24 -> 14 * ((50*4)*2/3) = 1862 -> 1900
+  
+8 tox (4/4) 4 use/50 heal sps only   
+  (8*4)/((50*4)*2/3) = .24 => .24 -> 14 * ((50*4)*2/3) = 1862 -> 1900
+  
+4 tox (2/2) 4 use/50 heal hps only 
+  (4*4)/((50*4)*2/3) = .12 => .12 -> 22 * ((50*4)*2/3) = 2926 -> 3000
+
+4 tox (4/4) 4 use/50 heal sps only   
+  (4*4)/((50*4)*2/3) = .12 => .12 -> 22 * ((50*4)*2/3) = 2926 -> 3000
+  
+  
+
+
+

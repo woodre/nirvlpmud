@@ -1,0 +1,311 @@
+From: vertebraker
+Subj: check this out
+
+Date: Sep 25 10:44
+
+http://davesource.com/Projects/WizPort/ 
+
+From: khrell
+Subj: Thomas
+
+Cc: (To: stardream) vertebraker,vital,francesco
+Date: Sep 26 00:59
+
+Thomas was once again logged on with another char from the same ip. 
+I'm frankly quite tired of his usual BS, but i'm not a PA or a Senior/Elder, 
+so I'm doing my 'job' and report it thusly. 
+ 
+-Khrell- 
+
+From: vital
+Subj: more fixes
+
+Cc: (To: angel) vital
+Date: Sep 26 06:54
+
+From the typo logs... 
+Reports for: /players/angel/area/school/room/entrance 
+ 
+Sep 25 06:39 :: ribbit        
+the item descrip for 'doors' has an extra period at the end 
+Sep 25 06:40 :: ribbit        
+item for 'hallway' has an unneccessary comma 
+Sep 25 06:56 :: ribbit        
+parent volunteer in this room needs an alias of parent 
+ 
+Reports for: /players/angel/area/school/room/nurse_office_01 
+ 
+Sep 25 06:57 :: ribbit        
+school nurse needs some punctuation...and a better description 
+Sep 25 06:59 :: ribbit        
+item for cabinets reads 'cabinet's hang'...the cabinet doesn't 
+possess hang...idiot 
+ 
+[also, "...student's meds." in the item cabinets desc should be "...students' meds." -- Vital] 
+ 
+Reports for: /players/angel/area/school/room/main_office_01 
+ 
+Sep 25 06:59 :: ribbit        
+office worker here needs some punctuation in long descrip 
+Sep 25 07:00 :: ribbit        
+teacher needs a little punctuation in the long 
+Sep 25 07:08 :: ribbit        
+I give up...this place it UTTER CRAP... 
+Sep 25 07:09 :: ribbit        
+btw item 'phones' has 'stays' where 'stay' is needed 
+ 
+Thanks, 
+vital 
+
+From: boltar
+ Re:   tarball
+Date: Sep 26 11:34
+
+ 
+how much of the mud? 
+ 
+
+From: vertebraker
+ Re:   Thomas
+Cc: (To: khrell) stardream,vital,francesco
+Date: Sep 26 12:12
+
+roanan is thomas' brother .. 
+
+From: vertebraker
+Subj: frep
+
+Cc: (To: stardream) fred,vital
+Date: Sep 26 13:49
+
+Freddy will check the logs with you for now, 
+until we get another PA wiz. 
+
+From: vital
+Subj: tarball
+
+Cc: (To: boltar) vital,vertebraker
+Date: Sep 26 14:13
+
+Would like to start with the whole dir, though probably don't need any 
+of the current logs. 
+
+From: vital
+Subj: mushroom update
+
+Cc: (To: symbio) vital
+Date: Sep 28 08:41
+
+Just wanted to let you know that we added the ability to 
+eat the mushrooms as you suggested. Thanks for the input. 
+Vital 
+
+From: vital
+Subj: pa bug on dc
+
+Cc: (To: verte) vital
+Date: Sep 28 15:43
+
+Bad argument 1 to call_other() 
+Current object was obj/soul#6130, line 96 
+"qtHook" in "obj/soul.c" ("obj/soul#6130") line 6 
+"handle_def_query" in "obj/soul.c" ("obj/soul#6130") line 6 
+ 
+ 
+not sure, but I had to reconnect and when I did it errored 
+"Something has gone wrong...." 
+and disconnects me. 
+ 
+emote ) 
+vital 
+
+From: vital
+Subj: Newsreader
+
+Cc: (To: boltar) vital,vertebraker,fred,francesco,fakir,forbin
+Date: Sep 28 18:30
+
+I've written a modest news group system and a newsgroup 
+reader that has been slipped into the /bin/play/_read command 
+to allow players access to it. 
+ 
+Postings from boards all over the mud have and can be moved 
+to the newsgroups. 
+Vital 
+
+From: boltar
+ Re:   Newsreader
+Cc: vital,vertebraker,fred,francesco,fakir,forbin
+Date: Sep 28 20:02
+
+ 
+damn... quite an undertaking. 
+ 
+Let the flame wars and trolling begin!  
+ 
+(I hope not)  
+ 
+
+From: boltar
+ Re:   Newsreader
+Cc: (To: vital) vital,vertebraker,fred,francesco,fakir,forbin
+Date: Sep 28 20:02
+
+ 
+damn... quite an undertaking. 
+ 
+Let the flame wars and trolling begin!  
+ 
+(I hope not)  
+ 
+
+From: angel
+Subj: Wal-mart
+
+Cc: **
+Date: Sep 28 22:01
+
+Ok, I have finished the Wal-Mart heal shop and asked a couple folks to check over the area. I am going to stat on the area write up and send it to you!!    
+Thanks, Angel!!  :):) 
+ 
+ 
+
+From: vertebraker
+Subj: double cloning
+
+Cc: (To: fred) vital
+Date: Sep 29 03:44
+
+the double templar cloning bug is fixed 
+if it happens to any other guild file things, 
+they HAVE to have an id of "GI" in all set_guild_file 
+based gobs. 
+
+From: vertebraker
+Subj: mokri
+
+Cc: (To: fred) stardream,vital
+Date: Sep 29 05:11
+
+leave any mokri logs up in /pa/log until i review them. 
+
+From: boltar
+Subj: rangers
+
+Cc: vertebraker
+Date: Sep 29 10:29
+
+ 
+ Ok, I thought it was agreed the files would be moved into the guilds 
+directory.  
+ 
+What the hell is going on? Beck starts moving them and you demote him 
+to stop it?  
+ 
+
+From: vital
+ Re:   rangers
+Cc: (To: boltar) vertebraker,vital
+Date: Sep 29 12:22
+
+laf, no. I have started moving them to guilds. The files that are there 
+ones that have been put there by me. Beck was demoted because he's never 
+here, serves no useful purpose and only causes people to get upset when he 
+logs on. He has repeatedly said that he is more interested in playing "high 
+tech" and "graphically intensive" games rather than Nirvana. If he wants to 
+come back, log in more regularly and help the other developers, that's 
+great. 
+ 
+In the meantime I've been working hard on the Rangers to keep them uptodate 
+and semi-competitive [though less so that most other guilds as Beck's 
+original intent was for it to an RP- focused guild.  
+ 
+Beck's situation is hardly unique or special and not worth the 
+effort to fuss about. It has happened in the natural course of 
+the life of the game that seniors have come and gone, Mythos, 
+Mizan, Eurale, Snow, Pain... the list goes on. The game however 
+moves on in a stateful life of its own. 
+  
+"If we want to all go running around chasing butterflies with 
+the end part of an ants' nest, fine, but let's call it that 
+and not an expodi-whatever-it-was-Pooh said." --a.a. milne 
+
+From: vertebraker
+Subj: pavlik
+
+Cc: fred
+Date: Sep 30 03:20
+
+I'm going to rewiz Pav with boltar's permission. 
+I'm going to stick a logging device on him. And I'll 
+approve everything of his. Just youse guys keep an eye 
+on him as well. First sign of trouble, we'll boot him. 
+
+From: vertebraker
+Subj: tristian
+
+Cc: fred
+Date: Sep 30 03:59
+
+tristian has been bugging the shit out of eveyrone. 
+now he is bugging sparkle about not looking at his area 
+in the past 2 days. i'm getting seriously fed up 
+with him. he's a fukin jackass 
+and completely ignorant. he pissed me off thru the whole 
+mage beta test. 
+
+From: vertebraker
+Subj: notes
+
+Cc: stardream,fred
+Date: Oct  1 05:28
+
+1 ]tristian is just an asshole. i've talked with him. 
+2 ]if it continues, he's done. 
+3 ] 
+4 ]i'm sick of getting bothered by him. 
+5 ] 
+6 ]pavlik is the least we have to worry about. if anything, 
+7 ]his only problem would be not logging in, i think. 
+8 ]but he seems pretty enthusiastic and interested that 
+i would want him back. 
+9 ]10]he is very creative and has experience with programming 
+11]and so forth. 
+12] 
+13]sparkle has a good heart, she is just a bit talkative. 
+14]i have sort of taken her under my wing and made friends 
+15]with her while keeping tabs on her behavior. i don't necessarily 
+16]agree with everything she does, but i think we don't have 
+to worry about her being so much of a drain for wiz information. 
+18]i'm going to keep the bug on just so we are all agreed. 
+19] 
+20]i am worried MOST about khrell, because he is completely 
+21]unstable and has been acting very erratic recently. his 
+22]jealous behavior towards every woman on the mud is annoying. 
+23]i must say that i'm sick of giving him breaks. i know he 
+24]has rl mental problems, but i would guess that is true with 
+25]most people on the mud to some degree or another. 
+26] 
+27]mosobp seems fine now. i have been keeping some tabs on him 
+28]and trying to build up his confidence in himself again. just 
+29]treat him like a wizard again -- his faults weren't that big. 
+30]he is my age too, which is pretty young, and he doesn't 
+31]take the mud as seriously as he should properly -- but he 
+32]isn't a sinkhole for information and actually RESPECTS me, 
+33]so there is a leg up. 
+34] 
+35]who else ? oh.. 
+ 
+36]37]mokri is another to watch. he acts like khrell in the 
+38]same two-faced, jealous manner. he also is extremely good 
+39]with code, so watch for him making snoop tools and the like, 
+40]then removing them when he's not using them. 
+41] 
+42]make sure you clean this mudmail out so others can't spy on 
+43]it. i don't like my feelings about other wizards being passed 
+44]on. 
+45] 
+46]anyway, i think all of these people are potentially good coders. 
+47]they just need guidance. out of all of them, i think khrell is 
+48]the most incorrigible. 
+

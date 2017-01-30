@@ -1,0 +1,55 @@
+Mon Nov 29 03:40:55 1999 I jailed Soundgarden for insulting Boltar (he called him a nerd) and for various other acts of stupidity.
+Mon Nov 29 04:17:47 1999 My test char is Fakirdude. Made him a while back and did not report it.
+Fri Dec  3 18:59:27 1999 I released Soundgarden today. He served one week and I felt that was enough. He is a dip and will no doubt get in trouble again.
+Thu Dec  9 01:25:55 1999 test
+Thu Dec  9 01:26:59 1999 Hrmmm..stupid filer...heh..I coded a Tinker tonight and played around killing it with my test char. Was good practice for a novice. Heartbeat fails when I kill it. I will have to ask someone why.
+Sun Dec 12 21:15:25 1999 Coded a new wep...aielstaff.  Added some ansi and worked out most of the bugs. Francesco helped me fix one problem in the query player part. Thanks Fran.
+Tue Dec 21 05:49:18 1999 I accidentaly went into a room jenny was fighting in. Well, I went there on purpose to watch invisible, but the mob was aggro and attacked me. I dont think I did any harm to the player, and apologised.  I also checked later and Jenny said no harm done.  Doh...dont trans into an aggro room to watch I guess.
+Sat Mar  4 17:15:09 2000--Action: Opened first area today with Snows help. Made a few minor changes as required by Snow.  Reason: So it would load...heh.
+Tue Mar  7 03:08:20 2000--Action: Began work on second area. It will be for level five and under, 27 rooms total.  Reason: As per request it be a newbie area.
+Mon Mar 20 15:16:26 2000--Action: I rebuilt /players/fakir/inn/room31.c   Reason:  cuz I overcopied it and messed it up.
+Thu Mar 23 17:23:46 2000--Action: Linked my second area, Whispering Woods to my castle  Reason:  Snow gave me the approval.
+Tue Mar 28 21:22:14 2000--Action: Fixed discriptions in ~/woods/room23 that were not working and added a reference to the fact there were diggers in the area.  Reason:  Cuz it needed fixing.
+Sun Apr  2 19:59:49 2000--Action: I dested a badge off zajonc  Reason:  He was going to do the elemental test and did not want to quit out to lose the badge.
+Sun May 21 02:48:44 2000--Action: submitted "Ways" area to Snow for approval.   Reason: Will wait to hear back on outcome.
+Thu Jul  6 23:22:53 2000--Action: submitted /players/fakir/ways to Boltar for approval Reason: it was ready for game play imo.
+Sun Jul  9 03:01:33 2000--Action: Put Ways area into play from the basement room of my inn  Reason: Boltar approved it.
+Thu Jul 13 22:25:18 2000--Action: I adjusted Jareels mag stat from 20 to 12  Reason: That is all Knights are allowed.
+Tue Sep 19 17:36:09 2000--Action: took high level protect off whispering woods area  Reason: feld oked it and I want to promo exploration.
+Sun Oct 22 11:36:11 2000--Action: took a point from softly's ste and luc  Reason: for a good kill
+Tue Feb  6 03:16:51 2001--Action: Jaraxle's Treetop Area Reason: Approved the rooms and descriptions. He worked hard. It looked good.
+Tue Feb 27 01:46:15 2001--Action: added 19000 exp to summer for contest on aniversary Reason: boltar oked it
+Tue Feb 27 01:46:55 2001--Action: added 41000 exp to hadies for contest participation on aniversary Reason: same as above
+Tue Feb 27 01:47:36 2001--Action: added 94000 to Kid for contest participation Reason: same as above
+Tue Feb 27 01:48:06 2001--Action: added 136000 exp to Primal for contest partic Reason: same as above
+Tue Feb 27 01:48:28 2001--Action: added 194k exp to Hottentot Reason: same as above
+Tue Feb 27 01:48:46 2001--Action: added 22000 exp to Stone Reason: same as above
+Tue Feb 27 01:49:06 2001--Action: added 227000exp to coldwind Reason: same as above
+Tue Feb 27 01:49:32 2001--Action: added 291000 exp to mosaic(the winner) Reason: same as above
+Tue Feb 27 01:50:44 2001--Action: Prizes were 50%bonus for exp gained in a given time for top three..40% for next three..and 30% for last two Reason: Boltars ok
+Sun May 20 00:04:55 2001--Action: gave 38k coins to kasia Reason: she decorpsed her corpse in a hotel room and it ate the coins
+Mon May 28 12:26:42 2001--Action: took down some old notes from green board Reason: been there long enuff
+Fri Jun  1 11:57:33 2001--Action: cloned a summersword to borith Reason: his room ate it
+Sun Sep  9 21:09:58 2001--Action: updated monsters in the inn to proper treasure levels Reason: they were way undervalued per moblevel
+Sun Sep  9 21:11:02 2001--Action: changed weight on shield from 2 to 1 Reason: Mal ok'd the change as it is an ac1 shield
+Sat Oct  6 18:33:06 2001--Action: ran an exp contest Reason: see /log/EXPERIENCE for prizes
+Wed Nov 14 22:50:02 2001--Action: Added ~/ways/NPC/ballrok.c to ways Reason: Mal approved it.
+Mon Nov 19 21:46:12 2001--Action: Gave 80000 coins to luckycurse Reason: payoff on an odds bet of Tristian doing the icing quest.
+Sun Dec 30 19:19:00 2001--Action: approved jaraxle/3rd/warrior/mon/melody.c Reason: 12/29/01
+Sat Feb  2 00:36:23 2002--Action: approved /players/francesco/kale for game play Reason: no level promo as Fran just got one recently from Vert.
+Wed Mar 20 00:31:33 2002--Action: Decided as Seniors to let Vital suggest maintenance of Rangers...and to be assisted by a senior in code changes. Reason: guild needs work
+Thu Mar 21 22:38:23 2002--Action: approved /players/forbin/stargate for game play Reason: nice area and well done.
+Sun Mar 31 12:06:00 2002--Action: promoted jaraxle to lev60 Reason: code work and good game play as well and he deserves it.
+Mon May 20 21:20:03 2002--Action: approved /players/puppy/s/heal/berries as a free heal Reason: limited to five
+Sat Aug 10 00:51:56 2002--Action: approved templar weaponsmith for weapon sharpening per jaraxle's request Reason: cost of 750 coins non portable and its thematic
+Sun Aug 18 21:35:15 2002--Action: free'd subotai from prison Reason: time served
+Sun Jun  8 10:25:39 2003--Action: reset balmarks stats to beginning 8's across the board Reason: some wiz nuked him long time ago
+Sat Jul 19 22:08:43 2003--Action: added back exp and coins to mantis Reason: illegal wep used in pk resulting in death
+[Jul 12 2004 16:56] A: test
+[Jul 21 2006 00:38] A: /vertebraker
+[Nov  5 2006 20:24] A: p i
+[Oct 23 2007 01:17] A: test
+[Oct 23 2007 01:17] A: Cloned some stuff to soul...he lost in a dc. amulet,leggings,and misc armor.
+[Dec  2 2007 18:20] A: Added 720k exp to Morpheus
+[Dec  6 2007 01:34] A: I cloned and restored to Sticks (my own char) armors lost in a jello bug. B is aware of this and advised me to do so.
+[Jun 16 2008 17:38] A: /fred

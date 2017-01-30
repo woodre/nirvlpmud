@@ -1,0 +1,23 @@
+BAL 950217: lib/judge.h		Minor change
+	    Use of find_living removed, now uses present() and living()
+BAL 950217: lib/assess.h	Small fixes
+	    Armour class 15 would return 0. Added a full stop in health line
+BAL 950219: lib/track.h		Added
+	    New tracking command
+BAL 950219: helpdir/cmds1	Extended - new cmd
+	    Brief description of the tracking commands
+BAL 950219: medal.c		Extended - new cmd
+	    action "track" and "lose" added. calls to MAIN. static var added
+BAL 950219: powers.c		Extended - new cmd
+	    #include "lib/track.h"
+BAL 950225: lib/wimpy.h		Minor change
+	    You can now clear the wimpydir, for a random flee
+BAL 950226: lib/forge.h		Small fix
+	    Mistake in message sent when not having the specified weapon
+BAL 950226: lib/id_obj.h	Small fix
+	    Changed weapons would return "< type: 0 >", now it's "bastard"
+BAL 950226: locker/locker.c	tampering
+	    Prevented save of changed weapons, more to come
+	Inserted weap->drop() in store command
+	Used transfer instead of move_object() in retrieve
+	Moved clone_object outside loop in list command

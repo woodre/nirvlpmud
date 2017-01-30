@@ -1,0 +1,14 @@
+[SUPERWHO]
+
+  A more detailed alternative to 'who' or 'who2'.
+
+Usage:  superwho [/a,/c,/p]
+
+Parameters:
+
+ /a	Displays the name of what the player is attacking, if any.
+
+ /c	Displays the approximate physical condition of each player.
+
+ /p	Displays the phys. attributes (height, weight) of each player.
+

@@ -1,0 +1,23 @@
+  ____________________________________________________________________________
+ /                                                                           /|
+(---------------------------------------------------------------------------( |
+| Loggers Guild rank 3 & 4 abilities                                        |/|
+|>-------------------------------------------------------------------------<|/|
+| Spell name         | Rank | GP/$$$ | Description                          |/|
+|>-------------------+------+--------+-------------------------------------<|/|
+| call <pet_type>    |    3 | ??/??? | Call yourself a pet; refer to help   | |
+| swap <x>           |    3 |  0/0   | Turn x hps into sps                  | |
+| lheal <x>          |    3 |  0/0   | Heal yourself with x sps             | |
+| flannel <...>      |    3 | ??/0   | Make a flannel jacket, hat, gloves   | |
+| hall               |    3 | 30/0   | Escape to the guild hall             | |
+| gdonate <amt>      |    3 | amt/0  | Donate amt gp to the guild gp bank   | |
+| gborrow <amt>      |    3 |  0/0   | Borrow amt gp from the gp bank       |/|
+|>-------------------+------+--------+-------------------------------------<|/|
+| end fight          |    4 | 15/0   | Stop the fighting in a room          | |
+| camp_out           |    4 | 20/0   | Rest a while and regain strength     | |
+| ghome              |    4 |  0/0   | Toggle your startup place            | |
+| flame <monster>    |    4 | 35/0   | Burn a foe with a flaming stick      | |
+| set_swap <amt> <a> |    4 |  0/0   | Set autoswap to swap amt gp at a sp  |/|
+|>-------------------+------+--------+-------------------------------------<|/|
+| More abilities can be found on: rank1, rank3, rank4                       | |
+|___________________________________________________________________________|/

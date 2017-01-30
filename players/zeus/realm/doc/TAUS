@@ -1,0 +1,47 @@
+Taus is an expansion of the Fallen Lands.  road1.c connects w/ path21.c of
+the city.
+
+Features:
+	blacksmith who can sharpen eq
+	heals (limited -- and need to be looked at)
+	npcs w/ good money, no eq, higher wc, lower ac
+	all "cash" items need to be 'barter'ed or 'sold' to 2 dif npcs
+	rooms still use fl_demon.h although I have a revamped version of it
+	area is pk except for the grove
+
+Notes:
+*	fl_demon.h was changed so that if the player is above 95% health,
+	there is -no- chance that a demon will come.
+*	the OBJ's the npcs drop in /city will need to be changed, and a new
+	version of Tyborlek will go in to take the gurther horns for coins.
+	right now they are 'cash'ed.. just need to change desc and rm func.
+	the old gurther will barter for the items in /city
+*	the npc Auseth has a great wep (needs to be looked at [fine tuned])
+	the npc Dolan has a great main body armor
+*	the main NPC gurther.c has a special to call a guard into the room
+	value of horns is set by the npc
+	all occasions of gurther.c are random.  [look at the rooms]
+*	there are some big demons in the cave w/ nice heals
+*	if you kill enough demons you can get your title set by Tyborlek
+*	cave7.c has a bunch of treasure in it.
+*      SEE ~/realm/taus/MAP for a general layout of the area
+
+NPCS:  all in ~/realm/NPC/   OBJS:    ~/realm/OBJ/
+
+
+auseth.c                                        evil_aura.c
+g-blacksmith.c                                  onyx_platemail.c
+dolan.c                                         demon_counter.c
+druid.c                                         ruby.c
+g-old.c                                         ruby_amulet.c
+gurther.c                                       berry.c
+hermit.c                                        hermit_robe.c
+gguard.c                                        hermit_key.c
+gguard2.c                                       demon_heart.c
+demon_large.c                                   string.c
+hunter.c                                        
+NEW/
+new tyborlek.c                         
+new_demon.c                                     
+
+heals: pamua.c, balwa.c, kalowa.c, plum.c, scroll_mag.c, scroll_vit.c

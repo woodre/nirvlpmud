@@ -1,0 +1,23 @@
+#include "/players/pestilence/define.h"
+
+cmd_lich(){
+ object me, lich;
+ string name;
+   if(USER->query_ghost()){
+     write("You can't cast a spell in your condition.\n"); return 1;}
+   if(USER->query_sp() < 60) {
+     write("You don't have enough energy.\n"); return 1;}   
+   if(USER->liched()){
+     write("You already are a Lich.\n"); return 1;}
+   if(USER->dknighted()){
+     write("You are already a Deathknight.\n"); return 1;}
+   me = this_player();
+   USER->add_spell_point(-60);
+   write(BOLD+RED+"\n\tYou transform into a horrible hulk.\n"+NORM);
+   say(BOLD+RED+capitalize(TPRN)+" transforms into a horrible hulk.\n"+NORM);
+   name = this_player()->query_real_name();
+   lich = clone_object("/players/pestilence/closed/destroyer/obj/hulk.c");
+   lich->do_shadow(me);
+   lich->set_name(name);
+   return 1;
+}

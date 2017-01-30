@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "a 'Straight Outta Compton' t-shirt (worn)[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "A monsterous gold chain (worn)"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "a 'Straight Outta Compton' t-shirt (worn)[0m"
+damage_type 0
+hall_path "/players/snow/gate"
+object_name "A monsterous gold chain (worn)"
+owner "lebronjames"
+spell_alias "he"
+spell_mess_me "%newline% %newline% %newline%          %hi yellow%You engulf %AKN% with a mini SandStorm!!! %newline% %newline% %newline%"
+spell_mess_room "%newline% %newline% %newline%          %hi yellow% SANDS FILL %AKN%'S WOUNDS!  %newline% %newline% %newline%"
+spell_mess_them "%newline% %newline% %newline%          %hi yellow% SANDS FILL YOUR WOUNDS!  %newline% %newline% %newline%"
+abilities ({})
+chan_history ({"[Sun Oct 11 21:55:29 2015] Rumi: brilliant","[Sun Oct 11 21:55:33 2015] Lebronjames: bring a like...10k mob to 0/10, a 25k mob to 0/10","[Sun Oct 11 21:55:51 2015] Lebronjames: oops, mischan","[Sun Oct 11 21:55:59 2015] Lebronjames: then pop the easy one, get to level 5, get some more armors","[Sun Oct 11 21:56:09 2015] Lebronjames: then the number 2 one, get to like level 8, more armors, heals","[Sun Oct 11 21:56:17 2015] Lebronjames: then the 200k, all armors, some heals, pop biago and myla","[Sun Oct 11 21:56:23 2015] Lebronjames: and boom, level 19 in like 5 mins","[Sun Oct 11 21:56:35 2015] Rumi: great idea","[Sun Oct 11 21:56:35 2015] Lebronjames: all by yourself","[Sun Oct 11 21:56:37 2015] Lebronjames: snicker","[Sun Oct 11 21:56:49 2015] Rumi: i knew that masters degree would come in handy for something","[Sun Oct 11 21:56:57 2015] Lebronjames: it kinda worked today","[Sun Oct 11 21:56:59 2015] Lebronjames: lol","[Sun Oct 11 21:57:01 2015] Lebronjames: fucker","[Sun Oct 11 21:57:09 2015] Lebronjames: except i didn't bother computing how much xp i'd need","[Sun Oct 11 21:57:17 2015] Lebronjames: and i only got like 1,650,000","[Sun Oct 11 21:57:23 2015] Lebronjames: so i had to kill shit to get to 2,000,000","[Sun Oct 11 21:57:49 2015] Rumi: nod","[Sun Oct 11 21:58:11 2015] Lebronjames: so you could basically almost get sonic back","[Sun Oct 11 21:58:47 2015] Rumi: peace",})
+leaders ({"rumi",})
+join_type 2
+private_coffer 112770
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 50
+last_spell_time 1465678835

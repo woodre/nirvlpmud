@@ -1,0 +1,87 @@
+
+Rooms
+***************
+faeriering.c
+ - use ruler to fix long desc lengths.
+
+garden1.c
+ - use ruler to fix long desc length, line 6.
+
+garden2.c
+ - add desc for dirt.
+ - change your listen main to invades not invases.
+ - add desc for woods.
+ 
+garden3.c
+ - use ruler to fix long desc lengths.
+ - add desc for garden.
+ - add desc for dirt
+ - um in the long desc it says shrubs that seem to 
+   have been heavily damaged, but if you look at shrubs
+   it says they seem completely undamaged.
+ 
+tent.c
+ - l fire s/b "well built fire" not just well built.
+ 
+garden4.c
+ - add desc for path.
+ 
+wizhut.c
+ - use ruler to fix long desc lengths.
+ - add desc for brush.
+ - add desc for wall
+ 
+wizhut2.c
+ - need a . at the end of 1st line in long.
+ - add desc for sheets
+ - fix desc for wall describe it. Maybe something like
+   The wall is made of packed dirt and small twigs. or 
+   Beams of light streak through the small openings between
+   the wooden boards used to make the wall.
+ - add desc for bush or rose bush.
+ 
+path1.c
+ - 2nd line of the long 'fenced' s/b 'fence'
+ - then add a desc for the fence.
+ - add desc for garden.
+ - add desc for dirt
+ 
+path2.c
+ - use ruler to fix long.
+ - change desc for 'l woods' should describe the woods more not distance.
+ - 3rd line of long desc 'your' s/b 'you're' or 'you are'.
+
+path3.c
+ - add desc for moon
+ - 3rd line of long desc 'in' should be 'into'
+
+path4.c
+ - add desc for dirt
+ - add desc for trees
+
+spritering.c
+ - change this whole long desc.  Shouldn't have things that mention things about mobs
+   in the room.  Once you kill the mobs your room desc doesn't make sense.
+
+path5.c
+ - add desc for dirt
+ - 2nd line of the long 'trail the' should just be 'trail'.
+ - In your long desc I'm not liking this line try revising it:
+   'Who knows what is in store for the adventurer who follows this path'
+
+path6.c
+ - long desc 'Further to the north is a small garden much like the one you dropped into.'
+   Get rid of the much like the one you dropped into.
+
+
+************
+Mobs
+************ 
+
+bigdwarf.c
+ - follow monster.guide this is a newb area
+ - ac 12, hps 250
+ - adjust coins. Coins listed on monster.guide include the value of items.
+
+heh just change all your mobs for monster.guide
+

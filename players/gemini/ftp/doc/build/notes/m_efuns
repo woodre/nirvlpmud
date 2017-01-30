@@ -1,0 +1,9 @@
+Vertebraker: [5.13.02]
+
+I just added my m_efuns such as colour_pad(), etc
+into simul_efun [You may find a copy in /obj/simul_efun/m_efuns.c],
+and they are documented in /open/verte/std/m_efuns.txt
+
+If you are calling my m_efuns file from anywhere, it will
+remain there for a while, but you should just take out the call
+and replace it since it's now an efun.

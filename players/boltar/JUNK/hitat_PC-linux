@@ -1,0 +1,77 @@
+Path: 
+                          nntp.cig.mot.com!newshost.mot.com!newsgate.mot.com!news.xnet.com!news.pprd.abbott.com!news.abbott.com!attcg1!news.jeeves.net!attbt1!ip.att.net!newsf1.elp.rr.com!news-out.cwix.com!newsfeed.cwix.com!news.maxwell.syr.edu!nntp2.deja.
+                    From: 
+                          gandalf007@my-deja.com
+              Newsgroups: 
+                          comp.sys.next.hardware
+                   Subject: 
+                          Re: NeXT 21" Hitachi Monitor Frequencies???
+                     Date: 
+                          Tue, 20 Jun 2000 21:16:25 GMT
+              Organization: 
+                          Deja.com - Before you buy.
+                    Lines: 
+                          45
+             Message-ID: 
+                          <8iomv9$915$1@nnrp2.deja.com>
+               References: 
+                          <6Gi25.3989$lU5.39345@news1.rdc1.nj.home.com>
+      NNTP-Posting-Host: 
+                          iw8.deja.com
+                 X-Trace: 
+                          nnrp2.deja.com 961535785 9253 10.12.1.135 (20 Jun 2000 21:16:25 GMT)
+         X-Complaints-To: 
+                          usenet@deja.com
+      NNTP-Posting-Date: 
+                          20 Jun 2000 21:16:25 GMT
+ X-Article-Creation-Date: 
+                          Tue Jun 20 20:21:08 2000 GMT
+      X-Http-User-Agent: 
+                          Mozilla/4.0 (compatible; MSIE 5.01; Windows NT)
+            X-Http-Proxy: 
+                          1.1 x68.deja.com:80 (Squid/1.1.22) for client 207.141.120.1
+
+
+
+
+I use one of these on my Linux box.  Assuming
+you've got the right cables, you can make it work
+in X-windows by putting these modelines in your
+XF86Config.  Note that it won't work in windows
+w/o a special fixed-frequency graphics card.
+It's Horiz sync is fixed 64kHz, but I usually
+tell XF86 60-66kHz.  Vsync does not seem to be a
+problem--the Hitachi tube syncs from about 55 to
+80 Hz.  The sync polarities (-hsync and -vsync)
+are quite important however.  You also need to
+enable sync on green (for Matrox:
+Option "syncongreen" in the Device section) or
+build a separate sync to sync-on-green converter
+if your video card won't do it.
+These modes are 1280x960@64Hz (less flicker than
+standard 1280x1024@60Hz), 1120x840@72Hz,
+1024x768@78Hz:
+
+Modeline "960" 108 1280 1396 1576 1680  960 960
+963 1025 -hsync -vsync
+
+Modeline "1120"  94.6  1120  1136  1344  1456
+840 840  850 877 -hsync -vsync
+
+Modeline "1024x768good"     85.23   1024 1116
+1252 1328    768  768  776  81
+0 -hsync -vsync
+In article <6Gi25.3989
+$lU5.39345@news1.rdc1.nj.home.com>,
+  "Ahsan Farooqi" <afarooqi@home.com> wrote:
+> I have a NeXT Hitachi 21" Black Monitor with
+Model No.: (N4005A) I use it
+> with my PC. I am trying to Se tit with Linux. I
+need to know the Horizontal
+> and Vertical Refresh rates. Does anyone have a
+manual so I can make copies
+> of it. Thanks.
+> Ahsan Farooqi
+>
+>
+

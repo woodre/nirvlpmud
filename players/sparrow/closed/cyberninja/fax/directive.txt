@@ -1,0 +1,94 @@
+C Y B E R N I N J A S
+
+Fax File: directive
+Usage: fax <topic>
+
+
+     A Directive is exactly that: one who directs others.
+The guild is essentially managed by this office, as the
+CyberNinja guild wizards have relinquished all involvement
+to the Directive(s). There may be multiple Directives, 
+but this should be limited to only a very few players at
+most. A Directive must be an active player who can respond
+to guild issues as they arise... or forfeit the office.
+
+     Directives should have extensive PK experience so
+that they may provide proper guild direction. However, it
+is not necessary that Directives currently be PK.
+
+     A Directive must ensure that, either by appointment
+or popular vote, they have an entourage of lower officers 
+to help deal with issues. These officers report to only
+their Directive and not to another Directive (each Directive
+must form their own entourage).
+
+___________________Directive Abilities_________________
+make_law <message>
+     Make a new law that all Ninjas may view with the law command.
+laws
+     View the Directive laws.
+dnet <message>
+     Send a message through CyberDaemon. This will reach
+     all ninjas whether they are muffled or not.
+empower <member> <position> [grent/remove]
+     The 'empower' command is the all powerful command
+     that gives members guild offices or takes them away.
+     'yes' means give the player the position, 
+     'no'  means take the position away.
+     Type 'empower' by itself for a list of types.
+enhancements <who>
+     By typing in a name of a guild member after the
+     enhancements command, you may see their enhancements.
+     You may see your own by normally just typing
+     'enhancements'.
+gbalance
+     Allows you to see the credit account balances of all 
+     currently logged on guild members.
+nstats
+     A special who command that shows detailed information
+     about all online ninjas. This information includes
+     current/max hit point and spell point totals, etc.
+onet <message>
+     Guild officer channel tell. Use this command exactly
+     like 'net', your message goes to only guild officers.
+onem <message>
+     Guild officer channel emote. See also 'onet'.
+recruit <player>
+     Allows you to recruit a player into the guild.
+     See 'cyber recruit' for more info.
+recruits
+     Allows you to see who you are currently counseling
+     as well as your remaining recruit slots.
+train <member>
+     Allows you to train a fellow CyberNinja in the martial
+     arts, thus allowing that ninja to advance in art level.
+     The student ninja will need to have the required xp
+     in order to be trained successfully.
+uncounsel <player>
+     Allows you to uncounsel a player you have recruited.
+     If you use this command to uncounsel a player who
+     is already a member of the guild, then you will lose
+     honor but your recruit slot will be freed up, so try to
+     recruit players who might be successful in the guild.
+     If you uncounsel a player who is not a member of the
+     guild, there is no honor penalty.
+unrenegade <member> [commit]
+     Without typing "commit", lets you see the Renegade
+     status of a member. If you type "commit" after the
+     name of the ninja (as specified in usage above), it
+     removes the Renegade status from a Renegade ninja.
+     That ninja will then again follow the path of honor.
+     Honor is reset to that of a new guild member.
+suspend/unsuspend <member>
+     Allows you to suspend a member from the guild.
+     Unsuspend removes suspension. Suspension will disable
+     the member's guild object, but object will still
+     remain on the player.
+report <what>
+     Allows you to report the winner of a match.
+     Tournament name should be included.  Comments or
+     disqualifications may be noted as well.
+tourney
+     This shows the contents of the tournament report file.
+     All reports written will be shown.
+_______________________________________________________

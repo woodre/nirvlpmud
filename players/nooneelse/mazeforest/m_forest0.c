@@ -1,0 +1,31 @@
+/*
+  m_forest0.c
+*/
+
+inherit "room/room";
+
+realm() { return "NT"; }
+
+reset(arg) {
+  if (arg) return 0;
+
+  set_light(0);
+  short_desc="A dark forest";
+  long_desc="You are in part of a dark forest.  It would be very\n"+
+           "easy to lose your bearings in here.\n";
+  items=({
+          "forest", "It is a full of trees",
+          "trees", "They are mostly oak",
+          "tree", "This one seems to be a sturdy redwood",
+          "trails",
+            "They seem to be somewhat clear paths between the trees",
+          "trail",
+            "It seems to be a somewhat clear path between the trees",
+        });
+  dest_dir=({
+             "players/nooneelse/mazeforest/m_forest1", "north",
+             "players/nooneelse/entryforest/e_forest8", "east",
+             "players/nooneelse/entryforest/e_forest8", "south",
+             "players/nooneelse/entryforest/e_forest8", "west",
+           });
+}

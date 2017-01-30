@@ -1,0 +1,67 @@
+#include "/players/wocket/closed/ansi.h"
+#include "/players/wocket/mages/def.h"
+
+string *a_pages;
+string sect;
+static int pagenumber;
+static object book;
+static object mage;
+
+query_auto_load(){ return "/players/wocket/mages/mageautoload.c:"; }
+
+id(str){ return (str == "mageautoload" || str == "secret_mage_autoload_name"); }
+drop(){  return 1; }
+get(){   return 0; }
+
+reset(){
+  a_pages = ({});
+  pagenumber = 0;
+}
+
+init(){
+  mage = this_player();
+  if(!restore_object(SAVEDIR+mage->query_real_name()))
+    save_book();
+  book = clone_object(MAGEDIR+"book.c");
+  get_pages();
+  book->set_pagenumber(pagenumber);
+  book->set_sect(sect);
+  move_object(book,mage);
+}
+
+get_pages(){
+  int i,a;
+  string temp;
+  object page;
+  if(!a_pages) return;
+  for(i=0,a=sizeof(a_pages);i<a;i++){
+    temp = SPELLDIR+a_pages[i]+".c";
+    if(file_size(temp) > 0){
+      page = clone_object(temp);
+      pagenumber += page->query_pages();
+      move_object(page,book);
+    }
+  } 
+}
+
+add_page(str){
+  a_pages += ({ str });
+  save_book();
+}
+
+remove_page(str){
+  int i;
+  i = member_array(str,a_pages);
+  if(i > -1)
+  a_pages = a_pages - a_pages[i];
+  save_book();
+}
+
+save_book(){
+  save_object(SAVEDIR+mage->query_real_name());
+  write(HIR+"Guild object saved...\n"+NORM);
+}  
+
+set_sect(str){ sect = str; save_book(); }
+query_sect(){  return sect; }
+  

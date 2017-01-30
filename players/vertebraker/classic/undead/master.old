@@ -1,0 +1,107 @@
+#include <ansi.h>
+
+
+inherit "/obj/guilds/guild_master";
+#include "lib/masterData.h"
+#include "lib/aliases.h"
+#include "lib/varKeys.h"
+
+void reset(status arg)
+{
+   if(arg) return;
+   fill_in_data();
+   ::reset(arg);
+}
+
+void clearStatics()
+{
+  CALLER->set_var(V_HEAD, 0);
+  CALLER->set_var(V_LARM, 0);
+  CALLER->set_var(V_LLEG, 0);
+  CALLER->set_var(V_RLEG, 0);
+  CALLER->set_var(V_RARM, 0);
+}
+
+string get_title(object shadowee)
+{
+  string title;
+  if((int)shadowee->query_level() < 21)
+      title = (string)TO->retrieve_title(shadowee);
+  if(title) title = "the " + title + NORM;
+  return title;
+}
+
+object query_poison(object obj)
+{
+  return (present("toadtox", obj) || present("scorptox", obj) ||
+          present("toxin", obj) || present("toxin2", obj) ||
+          present("crotchrot", obj) || present("flu", obj) ||
+          present("cold", obj) || present("headcold", obj) ||
+          present("disease", obj) || present("poison", obj) ||
+          present("toxin3", obj) || present("virus", obj) ||
+          present("worm", obj)   || present("illness", obj) ||
+          present("sickness", obj) || present("darkness", obj) ||
+          present("ill", obj)   || present("sick", obj) ||
+          present("curse", obj) || present("rot", obj));
+}
+
+
+void rot_objs(object *objs)
+{
+  object sh, inv, n_inv;
+  object wop, obj;
+  obj = objs[0];
+  wop = objs[1];
+  if(!obj || !wop) return;
+  inv = first_inventory(wop);
+  while(inv)
+  {
+    n_inv = next_inventory(inv);
+    if(inv->short() && inv->get() && !inv->drop())
+    {
+     if(!inv) continue;
+     if(inv->can_put_and_get()) rot_objs(({obj,inv}));
+     else if(!inv->query_rotting()) {
+      sh = clone_object(OBJDIR + "rot_shadow");
+      if(sh->query_worn() || sh->query_wielded())
+      {
+        sh->set_eq(1);
+        sh->set_rot_time(((int)obj->QGR*200)+random((int)obj->QGR*100));
+      }
+      else
+        sh->set_rot_time(((int)obj->QGR*350)+random((int)obj->QGR*200));
+      sh->start_rot_shadow(inv);
+     }
+    }
+    else if(inv->query_rotting() && !inv->query_eq() &&
+            (inv->query_wielded() || inv->query_worn()))
+    {
+      sh = clone_object(OBJDIR+"rot_shadow");
+      sh->set_rot_time((int)inv->query_rot_time());
+      sh->set_rot_status((int)inv->query_rot_status());
+      sh->start_rot_shadow(obj);
+      sh->set_eq(1);
+    }
+    inv = n_inv;
+  }
+}
+
+string retrieve_title(object shadowee)
+{
+    string title;
+    switch((int)shadowee->query_guild_rank())
+    {
+      case 1: title = HIW+"Skeleton"; break;
+      case 2: title = HIR+"Zombie"; break;
+      case 3: title = HIC+"Ghoul"; break;
+      case 4: title = HIK+"Shade"; break;
+      case 5: title = HIK+"Wr"+NORM+"ai"+HIK+"th"; break;
+      case 6: title = HIW+"Spectre"+NORM;
+        break;
+      case 8: title = HIK+"Lich"; break;
+      case 10: title = RED+"DracoLich"+NORM;
+        break;
+      default: title = "Undead whom is bugged out the @$$"; break;
+    }
+    return title;
+}

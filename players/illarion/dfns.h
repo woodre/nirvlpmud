@@ -1,0 +1,39 @@
+#include <ansi.h>
+#define ROOT "/players/illarion/"
+#define MAZEROOM "/players/illarion/maze/room/"
+#define MAZEOBJ "/players/illarion/maze/obj/"
+#define MAZEMON "/players/illarion/maze/mon/"
+#define HROOM "/players/illarion/high/room/"
+#define HMON "/players/illarion/high/mon/"
+#define IMM_MON "/players/illarion/high/mon/imm_mon.c"
+#define HROOM2 "/players/illarion/high/room2/"
+#define HMON2 "/players/illarion/high/mon2/"
+#define HOBJ2 "/players/illarion/high/obj2"
+#define HOBJ "/players/illarion/high/obj/"
+#define PROOM "/players/illarion/poke/room/"
+#define POBJ "/players/illarion/poke/obj/"
+#define PMON "/players/illarion/poke/mon/"
+#define HARTROOM "/players/illarion/hart/room/"
+#define HARTOBJ "/players/illarion/hart/obj/"
+#define HARTMON "/players/illarion/hart/mon/"
+#define KOTORROOM "/players/illarion/kotor/room/"
+#define KOTOROBJ  "/players/illarion/kotor/obj/"
+#define KOTORMON  "/players/illarion/kotor/mon/"
+#define TO this_object()
+#define ETO environment(this_object())
+#define TP this_player()
+#define TPN (string)this_player()->query_name()
+#define TPRN (string)this_player()->query_real_name()
+#define FAIL(x) { notify_fail(x); return 0; }
+#define BLD(x) "\""+BOLD+x+NORM+"\""
+#define IBUG(x) if(find_player("illarion")) tell_object(find_player("illarion"),x)
+#define CLF "/players/illarion/closed/colorformat.c"
+#define VILLA "/players/illarion/closed/villa/"
+#define GUIDE "/players/illarion/poke/mon/monster_guide"
+#define OBJ(x) (string)x->query_objective()
+#define PRO(x) (string)x->query_pronoun()
+#define POS(x) (string)x->query_possessive()
+#define NAME(x) (string)x->query_name()
+#define ENV(x) environment(x)
+#define ansi_pad(x,y) (string)call_other("/players/illarion/obj/ansi_pad.c","ansi_pad",x,y)
+#define ansi_format(x,y) (string)call_other("/players/illarion/obj/ansi_pad.c","ansi_format",x,y)

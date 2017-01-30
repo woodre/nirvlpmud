@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/forbin/heals/dhuez","/players/hippo/heals/bubbles","/players/saber/armor/lpants","/players/mythos/closed/guild/forest/misc/key_myrax","/players/hippo/weapons/glue","/players/hippo/armour/glazour_coat","/players/scathe/weap/lbow","/players/pain/NEW/weap/soulcrusher","/players/emerson/armor/hide","/players/scathe/armor/hood","/players/emerson/obj/pin","/players/scathe/armor/bowarmor","/players/wren/Area/starbug/items/sparehead","/players/arrina/armor/bonering","/players/scathe/armor/mgarb","/players/emerson/obj/instructions","/players/mosobp/areas/TEMPLE/OBJ/nsword","/obj/weapon","/obj/armor","/players/wren/Area/starbug/items/lightbee","/players/ultramagnus/apple","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/rags","/obj/weapon","/obj/armor",})
+shorts ({"d[0m[32m'[0mHuez [0m[32mleaves[0m","[1;36mbubbles of 7up[0m","Black leather pants","Ebon Key","a strong, 1 second glue","glazour coat","Longbow of Force","a mace named [1m[31mSoulCrusher[0m","Bigfoot Hide","Hood","A pinball machine","Light Leather Armor","Kryten's sparehead 3.","A Carved Bone Ring","Black Monk Robes","A piece of paper","A nobleman's shortsword","a knarled staff","A suit of [1mwhite[0m chainmail","a strange object called a 'light bee'","A Red Apple","Small knife","Peasant Rags","Razor collar","A shoddy [1mwhite[0m cloak",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

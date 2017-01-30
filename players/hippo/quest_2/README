@@ -1,0 +1,68 @@
+Setup of Quest #2 by Hippo (27/8/97)
+++++++++++++++++++++++++++++++++++++
+
+~/quest_2/    <rooms>
+~/quest_2/c/ <creatures>
+~/quest_2/t/ <things>
+
+filename(#)   not part of this quest (entrance or exit)
+filename(***) previously mentioned on the 3rd level of this overview
+
+<ROOMS>
+willosi(#) <-> sex_brain  <-> er_penis --> vagina <-> uterus(*)
+uterus     <-> vagina  
+           <-> ut_blood   <-> glom     --> urine        <-> jetty2(#)
+                          <-> lblood   --> ltuba3       <-> ltuba2(***)
+                                                        <-> lfimbria
+                                       --> lovarium     --> lfimbria(*****)
+                          <-> rblood   --> rtuba3       <-> rtuba2(***)
+                                                        <-> rfimbria
+                                       --> rovarium     --> rfimbria(*****)
+           <-> ltuba1     <-> ltuba2   <-> ltuba3(****) 
+           <-> rtuba1     <-> rtuba2   <-> rtuba3(****)
+epididimus <-> prostate   <-> penis
+           <-> testis     --> blood8(#)
+
+<THINGS>
+22chrf: 22 chromosomes of the female <in cell22.c, cloned in uterus.c>
+xchr:   X chromosome of the female <in cellx.c, cloned in uterus.c>
+eggn:   egg nucleus <sometimes present in r/l-ovarium.c>
+
+<IDEA>
+1. goto sex_brains and have an erection to enter the female
+2. find the egg nucleus. It sometimes appears in the left, sometimes
+   in the right ovarium. It's only there for a short time, so be on
+   the right time at the right place).
+3. find the 22 chromos and the X chromo to complete the egg.
+   Those are located in 2 different cells that run very quickly 
+   through the left and right tuba and the uterus. Just keep on 
+   chasing and attacking to kill them. Low level, but it takes 
+   some time to kill as they have stong armour and high hp.
+4. Drop the intact egg in the ovarium. 
+   NB: At this time, save player_name with the egg, as only this
+   player could fertilize this specific egg to finish the quest!
+5. force an ovulation
+   Catch some hormones in the blood and release them in the
+   ovarium where you implanted the egg. As the ovulation will start,
+   the egg 'jumps' into space, where they are cought by the fimbriae.
+6. Now quickly leave the female, because there is only little
+   time left to finish the quest. The egg is and slowly transported 
+   through the tube to the uterus, from where it will leave to the
+   vagina during a menstruation (how much time? -> test personally).
+   NB: if leaving the female with a sperm-head, dest sperm-head.
+7. find a sperm head in the epididimis. 
+   This should always be available, but hidden. Some 'search'
+   command clones a sperm-head if it's not available yet. Now
+   catch one of the sperm cells that twirl around. Use the 
+   sperm head for that.
+8. Find some nutricien for the sperm to feed it. Doesn't matter
+   when it is feeded, as long as this is done at least ones and
+   before fertilization. Otherwise, the sperm dies at the time
+   of fertilization.
+9. goto sex_brains and have another erection
+10. choose whether to go left or right (to where the egg is) 
+   You can only go 'deeper' into the tuba/ovarium with a sperm_head.
+   if you go back, you loose the sperm and you'll have to catch a 
+   new one in the testis.
+   If you encounter the egg, type 'use sperm head to enter egg' 
+   and finally 'fertilize egg with sperm'.

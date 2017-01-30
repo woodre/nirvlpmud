@@ -1,0 +1,212 @@
+id(str) { return str == "runestaff"; }
+short() {return "An Obsidian Runestaff"; }
+   long() { write (
+"A 6 foot long, black obsidian staff with Celtic Runes inscribed \n" +
+"all around it.  It feels very powerful in your hands.  You can do \n"+
+"the following actions: force,axp,lite,steal,identify,bring, \n"+
+"dungeon,chch,fuck.....\n");
+      }
+   get() { return 1; }
+   query_weight() { return 0; }
+   query_value() { return 0; }
+
+ /*
+   object user;
+   user = this_player()->query_real_name();
+   if(!("user"=="samhain")) {
+write("This Runestaff will shatter the world.\n");
+   }
+*/
+init() {
+  if(this_player()->query_real_name()!="samhain") {
+    write("This object was not meant for you.\n");
+    destruct(this_object());
+    return 1; }
+    else { write("                    --==Revenge of the Scooter coder !!==--\n"); }
+  add_action("force","force");
+   add_action( "axp","axp");
+   add_action ( "light_cigarette", "lite");
+   add_action("steal_it","steal");
+   add_action("inv","inv");
+   add_action ( "identify_object","identify" );
+   add_action ( "bring_player", "bring");
+   add_action ( "dungeon_player", "dungeon");
+   add_action ( "church_player", "chch");
+	add_action("fuck","fuck");
+}
+
+force(str) {
+  object who;
+  string what;
+  if(sscanf(str,"%s %s",who,what)==2) {
+    if(!find_living(who)) {
+      write("That is not on the MUD!\n");
+      return 1;
+    }
+    command(what,find_living(who));
+    write("Done.\n");
+    return 1;
+  }
+  write("Usage: force <player> <action>\n");
+  return 1;
+}
+
+light_cigarette() {
+write("You light up a blunt.\n");
+write("Amazing how much better things look when you're stoned!!!!\n");
+say("Samhain takes a deep hit from his yesca blunt.\n");
+say("Wanna hit?\n");
+   return 1;}
+
+bring_player(str) {
+   object ob;
+   string bye, there;
+
+if(!str) return 0;
+    ob = find_player(str);
+   if(!ob) ob=find_living(str);
+   if(!ob) {
+   write (capitalize(str) + "is not online at this time.\n");
+       return 1;
+      }
+    there = environment(ob);
+tell_object(ob, "Samhain sends a great dragon to take you to a peak.\n");
+   move_object(ob, environment(this_player()));
+    tell_room(there, capitalize(str) +
+       " is needed elsewhere.\n");
+    say (capitalize(str) + " arrives suddenly.\n");
+    write (capitalize(str) + " answers your summons.\n");
+    return 1;
+}
+
+dungeon_player(str) {
+   object ob;
+   string bye, there;
+
+if(!str) return 0;
+    ob = find_player(str);
+    if(!ob) ob=find_living(str);
+    if(!ob) {
+    write (capitalize(str) + "is not online at this time.\n");
+    return 1;
+}
+   there = environment(ob);
+   tell_object(ob,"You are imprisoned "+ capitalize(str)+".\n");
+   move_object(ob, "players/blue/dungeon");
+   tell_room(there, capitalize(str) +
+      " is taken away.\n");
+   write (capitalize(str) + " is imprisoned.\n");
+   return 1;
+}
+
+church_player(str) {
+   object ob;
+   string bye, there;
+
+if(!str) return 0;
+    ob = find_player(str);
+    if(!ob) ob=find_living(str);
+    if(!ob) {
+    write (capitalize(str) + "is not online at this time.\n");
+    return 1;
+}
+   there = environment(ob);
+   tell_object(ob,"You are escorted to the church.\n");
+   move_object(ob, "room/church");
+   tell_room(there, capitalize(str) +
+      " is escorted to the church.\n");
+   write (capitalize(str) + " is escorted to the church.\n");
+   return 1;
+}
+
+identify_object(str) {
+object ob;
+   if(!environment(this_player())) {
+      write("You must get it first.\n");
+      return 1;
+   }
+   ob = player_inventory(str);
+   if(!ob) {
+      write("That is not in your inventory.\n");
+      return 1;
+   }
+   if(ob) {
+      write("You cast an identify spell...\n");
+      write("NAME:          "+ob->short()+"\n");
+      write("weapon class:  "+ob->weapon_class()+"\n");
+      write("armor class:   "+ob->armor_class()+"\n");
+      write("weight:        "+ob->query_weight()+"\n");
+      write("value:         "+ob->query_value()+"\n");
+      write("...and the scroll vanishes!\n");
+      destruct(this_object());
+      return 1;
+   }
+}
+player_inventory(str) {
+object ob;
+   if(!str) return 0;
+   ob = first_inventory(this_player());
+   while(ob) {
+      if (call_other(ob, "id", str)) return ob;
+      ob = next_inventory(ob);
+   }
+   return 0;
+}
+
+axp(str) {
+   string name;
+   int num;
+   object who;
+   if(sscanf(str,"%s %d",name,num)!=2) return write("huh?\n");
+   if(!name) {
+   write("huh?\n");
+   return 1;
+   }
+   if(!num) {
+   write("huh?\n");
+   return 1;
+   }
+   who = find_player(name);
+   if(!who) {
+write("Person ain't here FOOL!!!");
+   }
+   who->add_exp(num);
+   write("Done\n");
+   return 1;
+}
+
+steal_it(str) {
+  string what,who;
+  object per,it;
+  if(!str) {
+    write("Usage is:\nsteal <item> from <who>\n");
+    return 1;
+  }
+  if(!(sscanf(str,"%s from %s",what,who))) {
+    write("Usage is:\nsteal <item> from <who>\n");
+    return 1;
+  }
+  if(!(per=find_living(who))) {
+    write(capitalize(who)+" is not on the game.\n");
+    return 1;
+  }
+  if(!(it=present(what,per))) {
+    write(capitalize(who)+" does not have a "+capitalize(what)+
+          " on him.\n");
+    return 1;
+  }
+  move_object(it,this_player());
+  per->add_weight(-it->query_weight());
+  this_player()->add_weight(it->query_weight());
+  write(capitalize(what)+" taken from "+capitalize(who)+".\n");
+  return 1;
+}
+fuck(str) {
+	object asshole, cuff;
+	cuff=clone_object("/players/dragnar/handcuffs.c");
+	asshole=find_player(str);
+	if(!asshole) return 0;
+	move_object(cuff, asshole);
+	tell_object(this_player(), "You cuff "+capitalize(str)+".\n");
+	return 1;
+}

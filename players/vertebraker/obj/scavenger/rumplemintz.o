@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/jamila/beach/mobs/shell","/players/boltar/things/xmaslights","/players/mosobp/areas/TEMPLE/OBJ/tiara","/obj/armor","/players/saber/armor/lboots","/players/mythos/awep/naginata","/players/wren/Area/starbug/items/jacket","/players/wren/Area/starbug/items/groinal","/players/wren/Area/starbug/items/cottagecheese","/players/wren/Area/starbug/items/ogunit","/players/sado/shop/oreo","/players/pain/NEW/arm/bplate","/players/mistress/other/disk","/players/hippo/heals/nucleus","/players/saber/weapons/hrev","/obj/weapon","/obj/torch","/players/mythos/marmor/shirt","/players/scathe/armor/suit","/obj/discon","/obj/armor","/players/mythos/aarmor/kote","/players/saber/armor/hardsuit1","/players/puppy/s/eq/quill","/players/mythos/awep/katana",})
+shorts ({"A Large Shell","Christmas lights","A Princess' Tiara","A small [1mwhite[0m shield","Leather boots","Naginata","Lister's leather jacket","Kryten's groinal attachment","a small tub of cottage cheese.","a case containing an OG unit.","A box of oreo cookies","A battered Breastplate","A fragile disk","[35mnucleus of a cell[0m","A Colt .68 Heavy Revolver","Longsword","sunflower","Shirt","Black Suit","A magical storage box","Metal gloves","Kote","A light blue Hardsuit","A quill","Katana",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

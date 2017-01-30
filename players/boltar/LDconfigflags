@@ -1,0 +1,13 @@
+--enable-use-mysql=yes
+
+
+Mokri tells you: as an aside, if you do plan on using mysql (would kick ass),
+the file i was talking about is pkg-mysql.c in the 'src'
+directory. looking for the only call to
+'mysql_real_connect'. call should become 'if (!mysql_real_connect(tmp->mysql_dat, "localhost",
+"user","password", "database", 0, 0, 0))'
+
+Mokri admins: but way at the bottom, theres a 'mysql' section that says
+'oh! and that step you did 232302 steps ago? dont forget to add this
+switch!'
+:z

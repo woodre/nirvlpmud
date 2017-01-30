@@ -1,0 +1,75 @@
+SLIPGATE OUTPOST
+Area by Karash
+
+OBJECT DIRECTORY
+
+
+FILES
+
+All files related to the area are found at:
+/players/karash/Outpost/OutpostSummary - This file.
+/players/karash/Outpost/rooms - All room objects
+/players/karash/Outpost/mobs - All mob objects in area
+/players/karash/Outpost/items - All weapons, armor, items created for this area
+
+
+MAP
+
+The area is only 10 object rooms.
+
+       so03   so06   so09
+         |      |      |
+so01 - so02 - so05 - so08
+         |      |      |
+       so04   so07   so10
+
+
+	   
+ALL OBJECTS LISTED BY ROOM
+
+   Rooms              		NPC                                           Items
+   -----              		---                                           -----
+1) (so01) - Outpost Entrance
+  
+2) (so02) - Outpost Walkway
+
+3) (so03) - Outpost Mess Hall
+     |
+     --------------> Adrian Carmack (a_carmack)
+
+4) (so04) - Outpost Munitions
+     |
+     --------------> Tom Hall (t_hall)
+
+5) (so05) - Outpost Walkway
+     |
+     --------------> 2 Guards (guard) ----------------------------> Shotgun (shotgun)
+
+6) (so06) - Outpost Barracks
+     |
+     --------------> American McGee (a_mcgee)
+     |
+     --------------> Sandy Petersen (s_petersen)      
+
+7) (so07) - Outpost Infirmary
+  
+8) (so08) - Entrance to Slipgate
+     |
+     --------------> Commander Keen (keen) ----------------------> Pogo Stick (pogo)
+  
+9) (so09) - Slipgate Command Center
+     |
+     --------------> John Romero (romero) -----------------------> Daikatana (daikatana)
+                     John Romero the Proud (romero_proud) -------> Inflated Ego (ego)
+	                 John Romero the Criticized (romero_crit) ---> Daikatana (empowered) (daikatana_emp)
+	                  |
+		             Fanboy (fanboy) ----------------------------> Floppy Disk (floppy)
+			  	                                                   Gamepad (gamepad)
+				  												   Mouse (mouse)
+					  											   SpaceOrb (spaceorb)
+																   Press Pass (presspass)
+		
+10) (so10) - Slipgate Room
+      |
+      ---------------> John Carmack (j_carmack)
+  

@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "cfear"
+myMsgU 0
+myMsgD "You grab$R$%TRG%$N$ by the neck, and punch %TRGOBJ% in the kidney."
+roomMsgU 0
+roomMsgD "%SRC% grabs $R$%TRG%$N$ by the neck, and punches %TRGOBJ% in the kidney."
+tellMsg "%SRC% grabs you by the neck, and punches you in the kidney."
+farMsg "%SRC% grabs you by the neck, and punches you in the kidney."
+owner "pike"

@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/guc/hall/main","up","/players/mokri/clans/guc/hall/r7","down","/players/mokri/clans/guc/hall/r11","west","/players/mokri/clans/guc/hall/r117","east",})
+short_desc "[1;30mG.U.C[0m [1;31mClan Members[0m [1;33mTreasury.[0m[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1mElven boots[0m","/players/eurale/Glade/OBJ/elven_boots",0,0,0,"[1;30mGrey onyx-cluster ring[0m","/players/eurale/Chess/OBJ/ring",0,0,0,"[31mAncient Ninja Katana[0;0m","/players/dragnar/WasteLands/weap/sword",0,0,0,"[31mAncient Ninja Katana[0;0m","/players/dragnar/WasteLands/weap/sword",0,0,0,"[31mAncient Ninja Katana[0;0m","/players/dragnar/WasteLands/weap/sword",0,0,0,"Iron [1m[30marmor[0m of death","/players/jareel/armor/mondar_armor2",0,0,0,"[1m[30mBlack Ninja Suit[0;0m","/players/dragnar/WasteLands/armor/suit",0,0,0,"[31mNeruumsh[0m the Waraxe","/players/forbin/realms/salam/OBJ/neruumsh",0,1,1,"[1;30mThe Hourglass of Time[0;0m","/players/guilds/dervish/objects/hourglass","3",0,0,"A Hockey Stick","/players/jenny/wings/items/gstick",0,0,0,})

@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/omodaka/hall/r2","up","/players/mokri/clans/omodaka/hall/r17","east","/players/mokri/clans/omodaka/hall/r18","west","/players/mokri/clans/omodaka/hall/r21","north","/players/mokri/clans/omodaka/hall/r24","south","/players/mokri/clans/omodaka/hall/r26","down",})
+short_desc "[35mStorage Room [1;32m<[37mOdani Castle[1;32m>[0m[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A [33mgolden[0m earring","/players/vertebraker/swamp/OBJ/j_earring",0,0,0,"Shamanic [34mboxer shorts[0m","/players/vertebraker/swamp/OBJ/denim_shorts",0,0,0,"Robes of the Archwizard","/players/snow/armor/arch_robes","--5--",0,0,"[31mP[36ma[33mt[1mc[33m[1mh[32mw[34mo[31mr[35mk[0m Cloak","/players/fakir/inn/ARM/patchcloak",0,0,0,"A [1;37mcrystal[2;37;0m ring with a [1m[1mblack[2;37;0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"[1;30mThe Glove of [0m[36mM[1;36mo[0m[36mlo[1;36mc[0m[36mh[0m","/players/forbin/realms/flame_forest/OBJ/gmoloch",0,0,0,"[1;30mCowl of Assassination[0m","/players/khrell/armors/skaven/acowl",0,0,0,"[1;30mCowl of Assassination[0m","/players/khrell/armors/skaven/acowl",0,0,0,"A [1;37mcrystal[0m ring with a [1m[1mblack[0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"Shamanic [34mboxer shorts[0m","/players/vertebraker/swamp/OBJ/denim_shorts",0,0,0,})

@@ -1,0 +1,9 @@
+Syntax: build_room [direction] [type]
+
+While in the clan hall, you may build additional
+rooms.
+
+No argument will give a list of rooms and their costs.
+
+The room will appear off of the current room in direction
+'direction', and will be of type 'type'.

@@ -1,0 +1,14 @@
+#include "../DEFS.h"
+
+status main(string str) {
+  if(!((status)IPTP->item_eyes()) && !IPTP->guild_wiz()) return 0;
+  if(!str) { 
+    write(BOLD+"**CyberMove**"+OFF+" in which direction?\n");
+    return 1; }
+  write(BOLD+"**CyberMove** "+capitalize(str)+OFF+"\n"+GREEN);
+  IPTP->do_light(2);
+  command(str, TP);
+  IPTP->do_light(-2);
+  write(OFF);
+  return 1;
+}

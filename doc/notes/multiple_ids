@@ -1,0 +1,20 @@
+Vertebraker [10.1.03]
+
+Any object inheriting /obj/weapon, /obj/armor, or /obj/treasure
+may now call the SetMultipleIds()/QueryMultipleIds() function.
+It's integrated fully into the id() lfuns of those objects.
+
+Example:
+
+  set_name("bosco");
+  set_alias("bosco bubba");
+  SetMultipleIds(({"guy", "bubba", "chief bubba"}));
+
+
+So obviously id() still works just perfectly with name, alias, race, etc,
+but it now also accepts a near-infinite number of arguments in one
+compact little package without having to screw internally with id()
+
+Let me know if you have any questions.
+
+verte

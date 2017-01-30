@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/closed/weapons/widow","/players/hippo/heals/nucleus","/players/sado/shop/rose","/players/mythos/closed/guild/forest/misc/prop","/players/wren/Area/starbug/items/sparehead","/players/scathe/armor/bowboot","/players/mythos/awep/quiver","/players/wren/Area/starbug/items/bat","/obj/treasure","/players/hippo/armour/glazour_coat","/obj/weapon","/players/maledicta/cont/weapons/rweapon","/players/ultramagnus/darkweapon","/players/puppy/s/eq/brush","/players/snow/WEAPONS/glass_sword","/players/puppy/s/eq/collar","/players/emerson/obj/pin","/players/emerson/heal/spizza","/players/hippo/weapons/molar_sharf","/players/hippo/heals/grain","/players/mythos/awep/arrow","/players/wren/Area/starbug/items/mirror","/obj/armor","/players/snow/armor/arch_robes","/players/mythos/awep/ring",})
+shorts ({"the Widowmaker, the sword of the Berserker","[35mnucleus of a cell[0m","A beautiful red rose blossom","Essence of Vraith- vine sap","Kryten's sparehead 3.","Hard Boots","A quiver","a [1;30mballbat[2;37;0m","Beach Bear pelt","glazour coat","Studded collar","a [37mSilver[2;37;0m Longsword","Dark Rider Longsword","A paint brush","Glass Sword","A leather collar","A pinball machine","large stuffed-crust pizza","A molar sharf","[33mcrumbs of grain[0m","arrow","a slim pocket mirror","stone platemail","Robes of the Archwizard","Silver Ring",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

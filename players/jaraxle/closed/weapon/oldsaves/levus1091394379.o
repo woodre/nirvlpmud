@@ -1,0 +1,35 @@
+no_clean 0
+wielded 1
+name_of_weapon "broadsword of heroes"
+cap_name "Broadsword of heroes"
+broke 0
+silentwield 0
+eff_wc 20
+misses 17
+hits 90
+alt_name 0
+alias_name "broadsword"
+short_desc "[30m[1mBroadSword of [1;33mHeroes[2;37;0m"
+long_desc "  This is the famed BroadSword of Heroes which wasbestowed upon Thomas, the Hero from the village ofNirvana when he outcasted the Phantoms.  The BroadSwordglows with a yello haze of mysterious power.  This Broad-Sword has been known to slay dragons, zombies, anddemons of the like with ease."
+read_msg 0
+save_flag 0
+class_of_weapon 18
+value 50000
+local_weight 2
+hit_func_fn "/players/jaraxle/3rd/alt/items/hero_sword"
+wield_func 0
+wield_func_fn 0
+info 0
+type "sword"
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+multipleIds 0
+time_delay 0
+two_handed_wield 1
+two_handed_wep 1
+no_break 0
+special_damage 0
+special_chance 0
+special_message 0
+special_rmessage 0
+special_fun ({"/players/jaraxle/closed/weapon/powers/speed.c","/players/jaraxle/closed/weapon/powers/lawful_slayer.c","/players/jaraxle/closed/weapon/powers/dragon_slayer.c","/players/jaraxle/closed/weapon/powers/demon_slayer.c","/players/jaraxle/closed/weapon/powers/undead_slayer.c",})
+yup 1

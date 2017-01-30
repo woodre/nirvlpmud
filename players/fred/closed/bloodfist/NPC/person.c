@@ -1,0 +1,235 @@
+#include "/players/fred/defs.h"
+#include "/players/fred/ansi.h"
+inherit "obj/monster";
+#define ON owner->query_name()
+#define MEAT TO->query_attack()
+#define MEATN MEAT->query_name()
+string *poop,poof;
+object owner;
+int craps;
+ 
+reset(arg)
+{
+  ::reset();
+  if(arg) return;
+  set_race("human");
+  set_level(5);
+  set_wc(9);
+  set_ac(5);
+  set_gender("male");
+  set_hp(75);
+  set_ep(1);
+  set_dead_ob(this_object());
+  set_can_kill(1);
+  poop = ({"kyle","mark","jason","rick","mike","alex","tom","tim","steve","bob","tom",
+           "hank","jared","nathan","brent","fred","jeff","leon","brian","wally","sam",
+           "nick","chuck","joe","aaron","brady","kevin","lee","keith","matt","david",
+           "travis","george","paul","peter","ken","john","dave","fran","robert","jerry",
+           "walt","harry","tony","scott","dean","ron","bruce","pat","mike","dan","bobby"});
+  set_name(snarf());
+}
+
+id(str)
+{
+  return str == poof || str == "fan" || 
+         str == "human" || str == "bf_fan" ||
+         str == "bf_person_one";
+} 
+
+snarf()
+{
+  int x,y;
+  x = sizeof(poop);
+  y = random(x - 1);
+  poof = poop[y];
+  return poof;
+}
+     
+patch_owner(o)
+{ 
+  owner = o; 
+}
+
+query_owner()
+{ 
+  return owner; 
+}
+
+short()
+{
+  if(owner)
+    return capitalize(poof)+", one of "+ON+"'s adoring fans";
+  return capitalize(poof)+", someone's adoring fan";
+}
+
+long()
+{
+  if(owner)
+  {
+    write("This is one of "+ON+"'s adoring fans.  "+capitalize(poof)+"'s only purpose\n"+
+          "in life is to follow "+ON+" around and shower her with\n"+
+          "compliments.  Kind of sad don't you thing?\n");
+  }
+  else
+  {
+    write("This is someone's adoring fan.  "+capitalize(poof)+"'s only purpose\n"+
+          "in life is to follow someone around and shower them with\n"+
+          "compliments.  Kind of sad don't you think?\n");
+  }
+}
+
+heart_beat()
+{
+  ::heart_beat();
+  if(!environment()) return;
+  if(!owner) return;
+  if(owner && owner->query_ghost() && (craps < 1))
+  {
+    tell_room(environment(TO),
+      capitalize(poof)+" looks down at the lifeless body of his beloved "+ON+" and screams out in rage.\n");
+    craps = 1;
+    call_out("grief", 4);
+  }
+  if(owner && !owner->query_ghost())
+  {
+    if(ENV(TO) != ENV(owner))
+    {
+      say(capitalize(poof)+" races after "+ON+".\n");
+      MO(TO, ENV(owner));
+      say(capitalize(poof)+" races in after "+ON+".\n");
+      set_heart_beat(1);
+    }
+    if(!random(15) && MEAT && MEATN != ON)
+    {
+      int woo;
+      string ding;
+      woo = random(5);
+      switch(woo)
+      {
+        case 0: ding = "Knock it off!"; break;
+        case 1: ding = "Leave us along, she's mine."; break;
+        case 2: ding = "She doesn't like you, she likes me..."; break;
+        case 3: ding = "I'll mess you up foo!"; break;
+        case 4: ding = "Get away from us!"; break;
+        case 5: ding = "Hey, leave the lady alone!"; break;
+        case 6: ding = "Stop it!"; break;      
+        case 7: ding = "Back off punk!"; break;
+      }
+      tell_room(environment(TO),
+        capitalize(poof)+" yells at "+MEATN+" \""+ding+"\"\n");
+    }
+    if(!random(5) && MEAT && MEATN == ON)
+    {
+      int heh;
+      string hungry;
+      heh = random(6);
+      switch(heh)
+      {
+        case 0: hungry = "Don't you love me anymore?"; break;
+        case 1: hungry = "Why are you doing this to me?"; break;
+        case 2: hungry = "Why won't you let me love you?"; break;
+        case 3: hungry = "Please stop, I need you."; break;
+        case 4: hungry = "Why can't we be together?"; break;
+        case 5: hungry = "I thought you loved me..."; break;
+      }
+      tell_object(owner,
+        capitalize(poof)+" cries out to you, \""+hungry+"\"\n");
+      tell_room(environment(TO),
+        capitalize(poof)+" cries out to "+ON+" \""+hungry+"\"\n", ({ owner })); 
+    }   
+    if(!random(40) && !MEAT)
+    {
+      int x;
+      string what;
+      x = random(20);
+      switch(x)
+      {
+        case 0:  what = "beautiful"; break;
+        case 1:  what = "gorgeous"; break;
+        case 2:  what = "lovely"; break;
+        case 3:  what = "wonderful"; break;
+        case 4:  what = "great"; break;
+        case 5:  what = "stunning"; break;
+        case 6:  what = "breath taking"; break;
+        case 7:  what = "hot"; break;
+        case 8:  what = "alluring"; break;
+        case 9:  what = "appealing"; break;
+        case 10: what = "charming"; break;
+        case 11: what = "dazzling"; break;
+        case 12: what = "divine"; break;
+        case 13: what = "elegant"; break;
+        case 14: what = "radiant"; break;
+        case 15: what = "shapely"; break;
+        case 16: what = "exquisite"; break;
+        case 17: what = "enthralling"; break;
+        case 18: what = "enticing"; break;
+        case 19: what = "provacative"; break;
+      }
+      tell_object(owner, capitalize(poof)+" says to you, \"Oh "+owner->query_name()+", you're so "+what+"!!\"\n");
+      tell_room(environment(owner), capitalize(poof)+"exclaims, \"Oh "+owner->query_name()+", you're so "+what+"!!\"\n", ({ owner }));
+    }
+    if(!random(40) && !MEAT)
+    {
+      int y;
+      string huh;
+      y = random(10);
+      switch(y)
+      {
+        case 0: huh = "faints"; break;
+        case 1: huh = "drools slightly"; break;
+        case 2: huh = "looks flustered"; break;
+        case 3: huh = "winks"; break;
+        case 4: huh = "says, \"How you doing?\""; break;
+        case 5: huh = "smiles and nods"; break;
+        case 6: huh = "grovels"; break;
+        case 7: huh = "bows down"; break;
+        case 8: huh = "smiles happily"; break;
+        case 9: huh = "wiggles his bottom"; break;
+      }
+      tell_object(owner, capitalize(poof)+" looks at you and "+huh+".\n");
+      tell_room(environment(owner), capitalize(poof)+" looks at "+owner->query_name()+" and "+huh+".\n", ({ owner }));
+    }
+    if(!random(5) && !MEAT)
+    {
+      object a,b,c;
+      tell_room(environment(owner),
+        capitalize(poof)+" looks around for any threats.\n");
+      a = first_inventory(environment(TO));
+      while(a)
+      {
+        b = next_inventory(a);
+        if(a->query_bf_mob())
+        {
+          tell_room(environment(owner),
+            capitalize(poof)+" screams in a jealous rage and attacks "+a->query_name()+"!\n");
+          attacker_ob = a;
+        }
+        a = b;
+      }
+    }
+  }
+}
+
+grief()
+{
+  tell_room(environment(TO),
+    "Large tears begin to well up in "+capitzlie(poof)+"'s eyes.\n");
+  call_out("grief2", 5);
+}
+
+grief2()
+{
+  tell_room(environment(TO),
+    Capitlize(poof)+" sighs and says, \"I no longer have any reason to go on in life.\"\n");
+  call_out("grief3", 5);
+}
+
+grief3()
+{
+  tell_room(environment(TO),
+    "With one last final glance at "+ON+" "+capitalize(poof)+" runs out of the room to go kill himself.\n");   
+  move_object(TO, "/room/void");
+  destruct(TO);
+}
+
+    

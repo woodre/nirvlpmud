@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "Three balls[0m"
+long_desc "Jugglers are jesters that entertain nobles.**[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "three balls"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "Jugglers are jesters that entertain nobles.**[0mType 'clan_help' for commands."
+clan_short "Three balls[0m"
+damage_type 0
+hall_path "/players/saber/ryllian/mountain_quest"
+object_name "three balls"
+owner "jester"
+spell_alias "heal"
+spell_mess_me "Juggling of the three balls heals you"
+spell_mess_room "The juggling balls cast a heal."
+spell_mess_them "The juggling balls cast a heal."
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 232029
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 80
+last_spell_time 1319762538

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/players/snow/WEAPONS/tsunami","/players/maledicta/cont/armor/rarmor","/players/wren/Area/starbug/items/bazookoid","/players/emerson/armor/ntag","/players/saber/armor/hardsuit1","/players/mythos/awep/zantetsuken","/players/maledicta/cont/weapons/rweapon","/players/hippo/armour/boots","/players/mythos/aarmor/nodowa","/players/wren/Area/starbug/items/laundry","/obj/weapon","/players/mythos/awep/arrow","/players/mythos/awep/katana","/players/snow/WEAPONS/ice_star","/players/saber/armor/slboots","/players/ultramagnus/rdiamond","/players/wren/Area/starbug/items/straw","/players/softly/nhall/obj/green2","/players/angel/area/stargate/obj/bullets","/players/emerson/weap/spatula","/players/mythos/amisc/mirror","/players/mythos/awep/wakizashi","/players/sado/shop/oreo","/players/wren/Area/starbug/items/groinal",})
+shorts ({"button","[34mTsunami[0m","leather armor","Bazookoid [1;30mmkII[2;37;0m","Name Tag","A purple Hardsuit <with pink legs!>","[34mZantetsuken[0m","a Scimitar","anti-blood boots","Nodowa","Lister's dirty laundry","Blaster","arrow","Katana","Ice Shuriken","Stiletto heeled leather boots","A Red Diamond","a long plastic straw","Healing Balm [32m(green)[2;37;0m [3]","A clip of bullets [50]","Spatula","A small mirror","Wakizashi","A box of oreo cookies","Kryten's groinal attachment",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

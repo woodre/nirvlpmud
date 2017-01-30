@@ -1,0 +1,11 @@
+STEALTH
+
+usage: stealth <movement command>
+
+This command allows you to move without making any sound.  As of now, because
+certain rooms are programmed certain ways, most places in town and some
+castle rooms will not work, but most places in castles should.  The command
+must be listed in the 'obvious exits' part of the room description.
+
+Your stealth stat and your shadow level influence the chance that someone 
+in the room you are leaving or entering will see you.

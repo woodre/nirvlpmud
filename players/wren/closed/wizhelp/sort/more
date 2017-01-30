@@ -1,0 +1,29 @@
+**************
+
+
+                     More/Nmore
+
+Syntax:    more <file name> or nmore<file name>
+
+Desc:
+           This command allows you to look at a piece of code a page
+           at a time with a prompt for a return to proceed to the 
+           next 20 lines. Entering 'q' will exit more and '!' before
+           a command will allow you to issue commands while in More.
+
+           Nmore displays a bit differently but functions the same. 
+           It also displays file number and a precentage of the file
+           that has already been displayed. Also provides additional
+           commands such as being able to type the line number you 
+           wish to view.
+
+Warning:   None
+
+Example:   more /obj/beer.c
+                  results
+           see first 20 lines of beer with return to display next 20.
+
+Related:   cat, tail, dump
+
+
+**************

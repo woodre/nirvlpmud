@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/vertebraker/classic/undead/room/f6","north","/players/vertebraker/classic/undead/room/f4","south",})
+short_desc "[1;30mCastle[0m of the [1;34mEternal Night[0m"
+long_desc "  The ancient altar before you was once devoted to the ancient wizardGorhurtrix of the Damned. A frozen human skeleton is bound to theancient stone. Its [1;31mred eyes[0m stare into your soul.  A stone daggerplunged deep into its ribcage, the skeleton has its left hand firmlyclenched.You may "pull" the dagger from the skeleton."
+items ({"altar","","skeleton","","stone","","dagger","","crystal tablet","","tablet","","eyes","","hand","","left hand","",})
+property 0
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 0
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+playing 1
+num 0
+guys 7
+dood 0
+org_long "  The ancient altar before you was once devoted to the ancient wizardGorhurtrix of the Damned. A frozen human skeleton is bound to theancient stone. A stone dagger plunged deep into its ribcage; a smallcrystal goblet clutched in its left hand, tightened into a deathgrip.You think you might be able to "pull" the goblet from the hand."
+ppl ({"budce","grit","ravyn","wicket","raz",})

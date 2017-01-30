@@ -1,0 +1,29 @@
+no_clean 0
+name "boots"
+alias "riding boots"
+short_desc "A finely tooled pair of riding boots."
+long_desc "A pair of riding boots which are somewhat worn, but still haveplenty of use left in them."
+worn_tag_short_flag 0
+buy_value 0
+value 700
+weight 2
+type "boots"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 1
+res 0
+siz 0
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"armor",})
+params ({"physical",1,0,"do_special",})
+enchantments 0

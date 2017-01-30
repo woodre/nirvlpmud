@@ -1,0 +1,40 @@
+notes on sacrifice:
+
+  the following are the things that may be sacrificed 
+        (* denotes they gain xp as well as sac points):
+  
+    <itemname>*, self, child*, spouse*, stat, money
+	
+	items:  
+	        the amount gained in xp is the amount of sac / 1+rnd(3) 
+			the amount is determined by the following:
+			  if the item has query_sac() in it then that query_sac() amount is the amount
+			  if the item is armor and is greater than ac 3 then amount = (ac  -  1) * 550
+			     else amount = random 10
+			  if the item is a weapon and is greater than wc 16 then amount = (wc - 10) * 350
+			      else amount = random 10
+              if the item is not a weapon or armor then amount = value / 1000
+			  if the item is a "common item" then the amount = 0
+		   	  if the item is a "unique item" then the amount = amount + 1000
+			    NOTE: a common item is an item with the id that is a member of an array called commonitems
+				      a unique item is an item with the id that is a member of an array called uniqueitems
+					  
+	child:
+	        NOTE: the child must be one's own child (this is tested)
+			amount of sac points gained is child's level * 1000
+			amount of xp gained is child's level * 1000 / 3
+			
+    spouse:
+	        NOTE: the spouse must accept to be sacrificed.  this is not a forced thing.
+			amount of sac points gained is  30000 * (spouselevel + spouseextralevel)/4
+			amount of xp gained is 1/2 of the above
+	
+	self : 
+	        the amount of sac points gained is level * (500 + rnd(100)) + extralevel * 1000
+			
+    stat:   
+	        the amount of sac points gained for sacrificing a fae point is 7500
+			the amount of sac points gained for sacrificing a stat other than fae is 750
+	        
+	money:
+	        the amount of sac points gained is amount of money / 5005

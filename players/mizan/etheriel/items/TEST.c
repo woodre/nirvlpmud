@@ -1,0 +1,62 @@
+int rounds;
+inherit "obj/weapon";
+
+init() {
+::init();
+	add_action("load","load"); }
+         
+reset(arg) {
+  if(arg) return;
+::reset(arg);
+  rounds=115;
+set_name("spuckball shotgun");
+set_alias("shotgun");
+set_class(19);
+set_weight(4);
+set_value(14000);
+set_short("A Spuckball shotgun ["+rounds+"]");
+set_long("This is the reknown and feared Spuckball shotgun, a flexible\n"+
+	"firearm that is standard issue in the league of the Spucks.\n"+
+	"There are ["+rounds+"] rounds left.\n");
+set_hit_func(this_object());
+}
+
+load(str) {
+   object ammo;
+	if(!str) return 0;
+   if(str == "shotgun"){
+      if(rounds) {
+        write("The shotgun already has spuckballs in it.\n");
+        return 1;
+        }
+        ammo=present("spuckballs",this_player());
+        if(!ammo) {
+         write("You don't have any spuckball tubes.\n");
+         return 1;
+         } 
+     destruct(ammo);
+	 this_player()->add_weight(-1);
+           rounds=115;
+           write("You pour the spuckballs into the cannon. Somehow, they all fit.\n"+
+	   "There are ["+rounds+"] rounds remaining.\n");
+           say(capitalize(this_player()->query_name()) + " pours some spuckballs into the shotgun.\n");
+	   return 1;
+         }
+ return 0;
+}
+
+weapon_hit(attacker) {
+     object clip;
+    if(rounds > 0) {
+  write("PUNG! You cackle gleefully as "+capitalize(attacker->query_real_name())+" gets nailed by a spuckball.\n");
+  say(capitalize(this_player()->query_name())+" smashes "+capitalize(attacker->query_real_name())+" with a spuckball shotgun.\n");
+  rounds=rounds-1;
+     if(attacker)attacker->hit_player(3);
+        if(rounds < 1){
+          destruct(clip);
+            }
+        return 1;         
+       }
+  write("You are out of spuckballs!\n");
+  return -13;
+}

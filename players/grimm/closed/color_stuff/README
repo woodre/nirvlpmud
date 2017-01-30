@@ -1,0 +1,6 @@
+To install the color online you only need to:
+  1. read and do what is noted in "put_in_player.c"
+  2. read and do what is noted in "put_in_inherited_files"
+  3. copy the file "color_func.h" to /obj/color_func.h
+  4. copy the file "color_help" to /doc/efun/color_help
+       (which will be added later on, once all this is approved and tested)

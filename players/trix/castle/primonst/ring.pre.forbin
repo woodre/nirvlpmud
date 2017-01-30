@@ -1,0 +1,27 @@
+#include "/open/ansi.h"
+inherit "obj/armor";
+
+reset(arg){
+   ::reset(arg);
+set_short(HIY+"B"+NORM+"ishop's "+HIY+"R"+NORM+"ing");
+   set_long("You are looking at a wonderful gold made ring , symbolizing the power of the \n"+
+      "Catholic church , and you are sure it is a great protection against danger.\n");
+   set_ac(2);
+   set_weight(1);
+   set_value(1000);
+   set_alias("ring");
+   set_params("other|evil", 1, 5, "do_spec");
+   set_name("ring");
+   set_type("ring");
+/* made save, Forbin 2005.05.28
+ set_save_flag(); */ /* added by wizardchild 8/2/95 */
+}
+
+do_spec(object owner){
+    if(!random(5)){
+      tell_object(owner, 
+      "The ring glows as it resists the evil before it!\n");
+      return 0501;
+      }
+return 0;
+}

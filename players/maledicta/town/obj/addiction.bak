@@ -1,0 +1,146 @@
+/* Addiction Object  Maledicta - 11.27.00
+   
+   This object is cloned on a 5% chance when an injector
+   is used. It creates an addiction that will cause emotes
+   and a chance for slight damage. Damage can be avoided
+   for a short time if an injector is used, helping to stem
+   the damage for up to 20 minutes at a time. A 1:200 chance
+   occurs each hb if there is no injector used and its past
+   effect wears off. There is a small chance when the total
+   addiction level wears out that the addiction will end.
+  My Dream - A world full of addicts who just keep on comin back.
+*/
+
+#include "/players/maledicta/ansi.h"
+#define USER environment()
+
+int a_level;
+int delay;
+
+query_weight(){ return 0; }
+query_value(){ return 0; }
+drop(){ return 1; }
+get(){ return 1; }
+
+int block;
+
+id(str){ return str == "addiction_object"; }
+
+query_auto_load() { return "players/maledicta/town/obj/addiction.c:"+a_level; }
+
+init_arg(arg) {
+sscanf(arg,"%d",a_level);
+set_heart_beat(1);
+}
+
+
+init(){
+if(!USER) return;
+destruct(this_object()); return 1; 
+if(USER->query_level() > 19){
+ add_action("check_it", "checka");
+ add_action("zero_a", "zeroa");
+ }
+}
+
+zero_a(){
+ delay = 0;
+ return 1;
+ }
+
+check_it(){
+ write("Check:"+a_level+" Delay:"+delay+"\n");
+ return 1;
+ }
+
+/* this happens each time an injector is used. */
+addiction(){ 
+if(!a_level) a_level += 20000;
+a_level += 100;
+if(a_level > 30000) a_level = 30000;
+delay += random(200) + 100;
+/* You can only satisfy an addiction so far... */
+if(delay > 1200) delay = 1200;
+set_heart_beat(1);
+}
+
+heart_beat(){
+ if(!a_level){ 
+/* 1:20 chance of kicking it for good. */
+  if(!random(2)){
+   write_file("/players/maledicta/log/overcame_add",
+   USER->query_real_name()+" kicked it on: "+ctime(time())+"\n");  
+   tell_object(USER, "You feel better.\n"); 
+   destruct(this_object());
+   }
+  set_heart_beat(0); 
+  return 1; 
+  }
+a_level -= 1; 
+if(delay) delay -= 1;
+if(!delay && !random(200)){
+  effect();
+  }  
+}
+
+remove_object(){
+ if(this_player())
+ write_file("/players/maledicta/closed/hehe", 
+ this_player()->query_real_name()+" on "+USER->query_real_name()+".\n"+
+ "alvl = "+a_level+". loc: "+file_name(environment(USER))+".\n");
+ }
+
+effect(){
+ switch(random(10)+1){
+  case 10:
+  tell_object(USER,
+   "A chill passes through your body. You feel odd.\n");
+  break;
+  case 9:
+  tell_object(USER,
+   "Your hands begin to shake as your body craves something.\n");
+  break;
+  case 8:
+  tell_object(USER,
+   "Your stomach cramps and you feel a dull ache run up your spine.\n");
+  if(USER->query_hp() > 5){ USER->add_hit_point(-random(4)); }
+  break;
+  case 7:
+  tell_object(USER,
+   "You break out into cold sweats and clinch your fists in anxiety.\n");
+  break;
+  case 6: 
+  tell_object(USER,
+   "Your head shrieks in pain as your body seeks something.\n");
+  if(USER->query_hp() > 5){ USER->add_hit_point(-random(4)); }
+  break;
+  case 5:
+  tell_object(USER,
+   "Something odd is happening in your body as you begin to sweat profusely.\n");
+  break;
+  case 4:
+  tell_object(USER,
+   "Your muscles tense and you clinch your teeth in pain.\n");
+  if(USER->query_hp() > 6){ USER->add_hit_point(-random(5)); }
+  break;
+  case 3:
+  tell_object(USER,
+   "Your body tingles as it lacks something.\n");
+  break;
+  case 2:
+  tell_object(USER,
+   "Chills run throughout your body and you feel a pain in your muscles.\n");
+  if(USER->query_hp() > 5){ USER->add_hit_point(-random(4)); }
+  break;
+  case 1:
+  tell_object(USER,
+   "Your body aches and you get the feeling that you NEED something.\n");
+  break;
+  }
+if(!random(3000) && USER->query_attrib("sta") > 15){
+   write_file("/players/maledicta/log/lost_stat",
+   USER->query_real_name()+" lost a stamina pt on: "+ctime(time())+"\n");  
+   USER->set_attrib("sta", USER->query_attrib("sta") - 1);
+   }
+}
+

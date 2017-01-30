@@ -1,0 +1,190 @@
+inherit "/obj/treasure.c";
+#include "/players/zeus/closed/all.h"
+int feather, pearl, bone_powder, leaf, root, orb, liquid, gem;
+int web, sgem, blossom, geode;
+
+reset(arg){
+  if(arg) return;
+
+/* Inititalize values to 0  */
+  feather = 0;        pearl = 0;
+  bone_powder = 0;    leaf = 0;
+  root = 0;           orb = 0;
+  liquid = 0;         gem = 0;
+  web = 0;            sgem = 0;
+  blossom = 0;        geode = 0;
+
+  set_id("guild_comp_pouch");
+  set_alias("pouch");
+  set_short("A leather pouch");
+  set_weight(1);
+  set_value(100);
+  set_save_flag(1);
+}
+
+void init(){
+  ::init();
+  add_action("stock_cmd", "wizstock");
+}
+
+long(){
+  write(
+    "This is a leather pouch.  You can use it to hold your spell\n"+
+    "components.  It looks rather new, and very well made.\n");
+  if(!feather && !bone_powder && !root && !liquid && !web && !gem
+    && !blossom && !pearl && !leaf && !orb && !sgem && !geode)
+    write("The pouch is empty.\n");
+  else
+    write("The pouch contains:\n\n");
+  if(feather > 0)
+  {
+    if(feather > 1)
+      write("\t* "+feather + " crows feathers.\n");
+    else
+      write("\t* "+feather + " crows feather.\n");
+  }
+  if(pearl > 0)
+  {
+    if(pearl > 1)
+      write("\t* "+pearl + " black pearls.\n");
+    else
+      write("\t* "+pearl + " black pearl.\n");
+  }
+  if(bone_powder > 0)
+  {
+    if(bone_powder > 1)
+      write("\t* "+bone_powder + " bags of bone powder.\n");
+    else
+      write("\t* "+bone_powder + " bag of bone powder.\n");
+  }
+  if(leaf > 0)
+  {
+    if(leaf > 1)
+      write("\t* "+leaf + " black leaves.\n");
+    else
+      write("\t* "+leaf + " black leaf.\n");
+  }
+  if(root > 0)
+  {
+    if(root > 1)
+      write("\t* "+root + " dark roots.\n");
+    else
+      write("\t* "+root + " dark root.\n");
+  }
+  if(orb > 0)
+  {
+    if(orb > 1)
+      write("\t* "+orb + " dark orbs.\n");
+    else
+      write("\t* "+orb + " dark orb.\n");
+  }
+  if(liquid > 0)
+  {
+    if(liquid > 1)
+      write("\t* "+liquid + " bottles of black liquid.\n");
+    else
+      write("\t* "+liquid + " bottle of black liquid.\n");
+  }
+  if(gem > 0)
+  {
+    if(gem > 1)
+      write("\t* "+gem + " ruby red gems.\n");
+    else
+      write("\t* "+gem + " ruby red gem.\n");
+  }
+  if(web > 0)
+  {
+    if(web > 1)
+      write("\t* "+web + " spider webs.\n");
+    else
+      write("\t* "+web + " spider web.\n");
+  }
+  if(sgem > 0)
+  {
+    if(sgem > 1)
+      write("\t* "+sgem + " shadow gems.\n");
+    else
+      write("\t* "+sgem + " shadow gem.\n");
+  }
+  if(blossom > 0)
+  {
+    if(blossom > 1)
+      write("\t* "+blossom + " ash blossoms.\n");
+    else
+      write("\t* "+blossom + " ash blossom.\n");
+  }
+  if(geode > 0)
+  {
+    if(geode > 1)
+      write("\t* "+geode + " geodes.\n");
+    else
+      write("\t* "+geode + " geode.\n");
+  }
+  if(feather || bone_powder || root || liquid || web || gem ||
+     blossom || pearl || leaf || orb || sgem || geode)
+     write("\n");
+}
+
+status stock_cmd(){
+  if(TP->query_level() < 21) return 0;
+  write("You stock your pouch with goodies.\n");
+  say(TP->QN+" stocks "+TP->POS+" pouch with goodies.\n");
+  feather = 100;      pearl = 100;
+  bone_powder = 100;  leaf = 100;
+  root = 100;         orb = 100;
+  liquid = 100;	      gem = 100;
+  web = 100;          sgem = 100;
+  blossom = 100;      geode = 100;
+  write_file("/players/zeus/circle/log/pouch_stock",
+  ctime(time())+" - "+capitalize((string)TP->QRN)+"  "+TP->query_level()+
+  "+"+TP->query_extra_level()+"\n");
+  return 1;
+}
+
+query_feather(){ return feather; }
+use_feather(){ feather--; }
+buy_feather(int x){ feather += x; }
+
+query_pearl(){ return pearl; }
+use_pearl(){ pearl--; }
+buy_pearl(int x){ pearl += x; }
+
+query_bpowder(){ return bone_powder; }
+use_bpowder(){ bone_powder--; }
+buy_bpowder(int x){ bone_powder += x; }
+
+query_leaf(){ return leaf; }
+use_leaf(){ leaf--; }
+buy_leaf(int x){ leaf += x; }
+
+query_root(){ return root; }
+use_root(){ root--; }
+buy_root(int x){ root += x; }
+
+query_orb(){ return orb; }
+use_orb(){ orb--; }
+buy_orb(int x){ orb += x; }
+
+query_liquid(){ return liquid; }
+use_liquid(){ liquid--; }
+buy_liquid(int x){ liquid += x; }
+
+query_gem(){ return gem; }
+use_gem(){ gem--; }
+buy_gem(int x){ gem += x; }
+
+query_sgem(){ return sgem; }
+use_sgem(){ sgem--; }
+buy_sgem(int x){ sgem += x; }
+
+query_web(){ return web; }
+use_web(){ web--; }
+buy_web(int x){ web += x; }
+
+query_blossom(){ return blossom; }
+use_blossom(){ blossom--; }
+buy_blossom(int x){ blossom += x; }
+
+query_geode(){ return geode; }
+use_geode(){ geode--; }
+buy_geode(int x){ geode += x; }

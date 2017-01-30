@@ -1,0 +1,24 @@
+inherit "obj/weapon";
+int die, attacker, pain, dmg;
+reset(arg) {
+::reset(arg);
+        if(!arg) {
+                set_name("sword");
+                set_class(18);
+                set_value(8000);
+                set_weight(10);
+                set_alias("sword");
+                set_short("Drunken Sword");
+set_long("There appears to be three blades on this sword but at second glance you realize there is only one.\n");
+set_hit_func(this_object());
+}
+}
+weapon_hit(attacker)
+{
+int dmg;
+dmg = this_player()->query_intoxination();
+if (random(40) < dmg) return dmg/2;
+attacker->hit_player(dmg);
+this_player()->hit_player(dmg);
+return 1;
+}

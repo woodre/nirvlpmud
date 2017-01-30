@@ -1,0 +1,79 @@
+/* 
+ * A stone with which to test cantrips.  (bard)
+ * By Saber (Geoffrey Z.)
+ * Version 3.0
+ *
+ */
+
+#define PWR "/players/saber/closed/bard/cantrip_mast"
+
+#include "/players/saber/closed/esc2.h"
+#include "/players/saber/closed/ansi.h"
+#include "/players/saber/closed/bard/extra.h"
+
+ int C1;
+
+reset(arg)  {
+  if(arg) return;
+
+  C1 = 0;
+         }
+
+
+  drop()  { return 1; }
+  get()   { return 1; }
+  can_put_and_get()  { return 0; }
+
+  id(str)  {  return str == "cantrip" ||   str == "stone";  }
+
+short()  {
+  if((TP != environment()) && this_player()->query_level() < 20) 
+    { inform(); }
+  return "A cantrip stone"; 
+        }
+
+
+long()  {
+  write("The cantrip stone lets you cast cantrips.\n");
+         }
+
+
+inform()  {  
+  tell_object(environment(this_object()),
+    tp+" is a "+TP->query_gender()+" player of level "+TP->query_level()+", xlvl "+
+    TP->query_extra_level()+".\n");
+        }
+
+
+init()  {
+   add_action("cantrip","cantrip");
+   add_action("cantrip","C");
+   add_action("set_know","set_know");
+        }
+
+
+/* Cantrip */
+
+cantrip(str)        { PWR->cantrip(str);  return 1;  }
+
+
+set_know(str)  {
+object STONE;
+
+    if(str == "C1") C1 = 1;
+    
+    else { write("Set what?\n");  }
+ 
+  return 1;
+        }
+
+query_cantrip(str) {
+  if(str == "C1") return C1;
+  return 1;
+  }
+
+/*
+    yes = 1;  no = 0;
+    STONE = present("stone", this_player());
+    if(str == "C1")   call_other(STONE, "add_spell_point", yes);
+*/

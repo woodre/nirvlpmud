@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1;33msunset[0m medallion [Alcione Order][0m"
+long_desc "This golden medallion is the symbol of the Alcione order.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "medallion"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This golden medallion is the symbol of the Alcione order.[0mType 'clan_help' for commands."
+clan_short "A [1;33msunset[0m medallion [Alcione Order][0m"
+damage_type 0
+hall_path "/players/vertebraker/guilds/samurai/room/dojo_foyer"
+object_name "medallion"
+owner "tynian"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Sun Jun 13 21:21:42 2010] Tynian: test","[Wed Feb 26 22:32:35 2014] Isabeau has joined the clan!","[Wed Feb 26 22:33:53 2014] Tynian has promoted Isabeau to a clan leader!",})
+leaders ({"isabeau",})
+join_type 0
+private_coffer 160000
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

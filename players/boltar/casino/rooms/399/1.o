@@ -1,0 +1,12 @@
+no_clean 0
+short_desc "Arctic Seal pelt"
+long_desc "The pelt of an Arctic Seal. It should be worth something at the shop."
+info 0
+save_flag 0
+value 400
+local_weight 1
+name "pelt"
+alias_name "seal pelt"
+read_msg 0
+shop_dest_flag 1
+multipleIds ({})

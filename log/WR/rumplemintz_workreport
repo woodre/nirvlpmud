@@ -1,0 +1,509 @@
+[Oct  7 2006 14:57] A: Registered Test Character: Rump
+[Dec 21 2006 02:21] A: Removed ; from include in guilddaem.c healers
+[Dec 21 2006 09:26] A: added \n to healer channel on LD (ifdef)
+[Dec 21 2006 09:26] A: changed all paths in healer guild - in testing phase now
+[Dec 21 2006 09:32] A: updated /players/mythos/enterance - bug in items
+[Dec 21 2006 10:54] A: added dex and cha to healers guildhall
+[Dec 21 2006 11:41] A: updated /players/mythos/healerguild/guildob to clone new object in /players/guilds/healers
+[Dec 21 2006 11:42] A: updated /players/mythow/enterance.c to change exit to guilds/healers/room/hall
+[Dec 21 2006 13:13] A: updated old healerguild hall to automove to new healerguild hall
+[Dec 22 2006 23:25] A: changed /players/zeus/realm/city/path4.c changed south exit to go to /players/guilds/fallen instead of /players/zeus/circle
+[Dec 22 2006 23:26] A: Fallen should be gtg on LD
+[Dec 22 2006 23:28] A: update /players/zeus/circle/obj/init.h to clone new guildob on login
+[Jan 14 2007 23:46] A: patched Talen to set_guild_file to new Fallen guildob path
+[Jan 15 2007 00:45] A: Removed "guild_monitor" id and all 'mon' functions from fallen guildob
+[Jan 15 2007 14:17] A: helped marek get to necro 'join' room - this area needs to be reworked - can't find 'sponsor' code - and no way for non-necros to get to join area
+[Feb  7 2007 23:44] A: update mythos guildob.c to change set_guild_file to new healer guildob.c
+[Oct 24 2007 17:27] A: fixed west exit - players/molasar/CASTLE/entry.c
+[Oct 24 2007 17:27] A: fixed north exit - players/molasar/CATSLE/garden1.c
+[Oct 24 2007 17:38] A: added longsword alias in ~/tallos/7tigers/objects/holylongsowrd.c
+[Oct 24 2007 17:56] A: fixed enter() per bug report - ~/jaraxle/3rd/pyramid/rooms/room3
+[Oct 26 2007 12:58] A: ~/tallos/7tigers/mobs/golddragon1.c - Fixed include statement
+[Oct 26 2007 14:22] A: /players/tallos/7tigers/rooms/dragonchambers.c - Fixed 'out' exit to remove call_out
+[Oct 26 2007 16:13] A: ~/hippo/thrombo.c - Fixed 'alias' and name
+[Oct 26 2007 16:14] A: ~/hippo/weapons/glue.c - fixed Include statement
+[Nov 05 2007 19:46] A: fixed /players/mythos/prac/pet.c
+[Nov 24 2007 22:19] A: /players/llew/Toys/monsters/joe_sergeant.c  added check for query_worn
+[Nov 24 2007 22:42] 
+  A: /players/anshar/forest/room/path3.c added leading 
+  R:  to include statement - Vital changed to std ansi and forgot the #
+[Nov 24 2007 23:04] A: ~/paulasx/temple/temple_west made 'evil monks' evil
+[Nov 24 2007 23:10] A: ~/coldwind/desert/rooms/ma3 - Added 'trees' desc
+[Nov 24 2007 23:25] A: ~/scathe/closed/rod* added 'part' alias to all rods
+[Nov 24 2007 23:32] A: ~/cyrex/quest/mchamber.c fixed type in long_desc
+[Nov 24 2007 23:41] A: ~/mokri/clans/omodaka/hall/r2 Added !str func to retrieve func
+[Nov 24 2007 23:48] A: ~/dune/closed/castle/rooms/sroad3 - fixed endless mosquitos
+[Nov 24 2007 23:53] A: ~/forbin/realms/ruins/OBJ/newscloak - change return value in 'shroud' function
+[Jul 30 2009 10:23] A: Registered Test Character: Angmar
+[Jul 30 2009 10:24] A: Registered Test Character: Padrone
+[Jul 31 2009 17:53] A: Registered Test Character: Kantele
+[Sep 28 2009 12:43] A: modified sandman/NEWBIE/newbie_dispenser so short shows for wizards as well as newbies
+[Sep 30 2009 00:51] A: changed /players/pavlik/items/ilstkarn/lava_shield.c so it loads to stop heartbeat error when killing lava_dragon.c
+[Oct  2 2009 15:30] A: Changed sandman/NEWBIE/newbie_dispenser.c to allow wizards to enter/see it, etc...
+[Oct  2 2009 15:40] A: /players/softly/nhall/obj/ all heals - changed return value to stop the What? messages on the stuff/intox checks
+[Oct  5 2009 17:45] A: /players/jareel/general_stuff/demonhide.c Changed long to reset ansi
+[Oct  5 2009 18:11] A: /players/molasar/FOREST/UPPER/plat8.c fixed directions
+[Oct  5 2009 18:13] A: /players/molasar/FOREST/UPPER//plat7.c fixed directions
+[Oct 14 2009 11:31] A: dested party object on quagmire - got bugged on his disconnect
+[Nov  4 2009 12:53] A: Went through Jareel's code for YELMALIAN and changed all instances of Alcamist to Alchemist
+[Nov 19 2009 13:26] A: changed /players/jaraxle/3rd/alt/rooms/forest/clearing.c typo
+[Nov 19 2009 13:29] A: /players/tallos/7tigers/rooms/room240.c typo
+[Nov 23 2009 09:10] A: /players/khrell/area/skaven/skavenpestilenhall added 's in longdesc
+[Nov 25 2009 14:08] A: gave Yodel an item worth 501 to retry the bard quest in valley_q.c - bugged on him first time.  Worked on second try
+[Dec  1 2009 11:20] A: fixed warriors 'firstaid' 'first aid' command
+[Dec 02 2009 15:46] A: /players/francesco/quest/mobs/monster_lib.c - fixed for LD compat
+[Dec 02 2009 15:50] A: /players/francesco/quest/mobs/grabber.c - fixed for LD compat
+[Dec  2 2009 17:15] A: commented out and dested Francesco's 'mastermind' quest, someone removed the entry point from the game, so you cannot get to it
+[Dec  2 2009 17:22] A: put mastermind quest back in - Fran had changed it from /games dir to /masterquest dir
+[Dec  4 2009 11:05] A: removed chan_history from 'warped' clan object (mokri's) to fix bugged player 'Swoop'
+[Dec 04 2009 13:40] A: /players/zeus/realm/NPC/tyborlek - changed all_inventory() to all_inventory(this_object())  - LD doesn't like missing arguments
+[Dec  4 2009 14:38] A: /players/zeus/closed/fl_demon.h add 'else return 0;' to all functions
+[Dec  4 2009 15:39] A: scratch that - put it back
+[Dec 04 2009 16:17] A: /players/zeus/realm/city/* updated all files to use full direction insstead of abbreviation in functions
+[Dec  4 2009 16:56] A: /players/zeus/realm/x/dirs.h - removed casting on file_name lines
+[Dec 10 2009 00:06] A: /players/pestilence/club/mob/* changed all 'stradles' to 'straddles' per typo report by Mythago
+[Dec 11 2009 14:14] A: /players/dune/closed/castle/rooms/moonshrine.c redid the moonphase time() calculations with more efficient way - shockingly clever
+[Dec 14 2009 23:56] A: /players/bastion/obj/destwand.c Changed to make quest work with LD
+[Aug 27 2010 16:07] A: ~/lew/elof/virus1 and virus2.c - Changed to put stat back - mobs just aren't worth enough to take permanently
+[Aug 27 2010 16:08] A: set Msagro stats back to pre lew quest
+[Aug 30 2010 17:29] A: patch msagro for fallen_lands quest, need to revisit to see if the quest still works
+[Aug 31 2010 16:29] A: changed /doc/helpdir/xxlevels to make the numbers in parenthesis correct
+[Sep 15 2010 15:16] A: /players/chip/castle.c added 'apartment' id
+[Sep 17 2010 10:35] A: changed /obj/user/reports/reporter.c added date to time stamp of rep reports
+[Sep 17 2010 10:42] A: /obj/player.c added date to SPONSOR log on approvals
+[Sep 17 2010 11:17] A: /obj/player.c added date to all ctime() entries, also removed redundant ctime(time()) calls, don't need to pass time() as arg
+[Sep 17 2010 11:23] A: /obj/living.c removed redundant ctime(time()) entries, replaced with ctime()
+[Sep 17 2010 11:24] A: /obj/living.c POINTS logging for heal_self, added 'by' entry
+[Sep 17 2010 11:30] A: /players/earwax/bank/bankd.c updated TRANSFER log to add year
+[Sep 17 2010 11:32] A: /bin/wiz/cmd_defs.h added year to 'msg'
+[Oct 19 2010 16:59] A: changed /obj/leo.c to update SPONSOR log with better information
+[Oct 21 2010 12:22] A: added xp to Gaara for PK bug with Khrell's warlord (uses verte's monster.c)
+[Oct 26 2010 16:46] A: /obj/quest_pt.c Added padrone and angmar quests and points
+[Oct 28 2010 13:41] A: Fixed typo in ~/illarion/hart/room/mspring.c
+[Oct 28 2010 13:41] A: Fixed typo in shocksword
+[Oct 28 2010 13:42] A: fixed typo in eurale/Lab/l17.c
+[Oct 28 2010 13:43] A: Fixed typo in /room/south/sislnd17.c
+[Oct 28 2010 13:46] A: Fixed typo in /room/south/sshore26
+[Nov  1 2010 22:58] A: promoted Jareel to 21
+[Nov 11 2010 01:02] A: updated /bin/play/_donate.c to actually set_donated_item(1); when donating an item
+[Nov 12 2010 12:36] A: added monster.talk.c back into /obj - not sure when it got removed but things were complaining on mud boot
+[Dec  3 2010 11:51] A: Added Wicket's area into the game
+[Dec 17 2010 16:19] A: changed _donate.c to make it so you have to be carrying item you're donating, code made you pick it up anyway
+[Dec 17 2010 16:36] A: Changed /obj/treasure.c - changed set_doanted_item to set_donated_item
+[Dec 17 2010 17:08] A: /players/mizan/closed/sbox added queryKept for stash command
+[Feb  9 2011 11:30] A: updated /WIZNEWS
+[Feb 11 2011 14:28] A: updated _who3 and _who4 to correctly sort players and wizards
+[Mar  8 2011 16:30] A: Heinous had -2147437959 exp.  I changed him to last login exp + BIGEXP log of his kills since then to 2141930035
+[Mar 15 2011 14:31] A: moved /players/pavlik/guild/mages/room/master_room.c to /players/pavlik/guild/mages/rooms/master_room.c - not sure how it got moved, but it broke the donation-master
+[Mar 31 2011 14:36] A: changed Tsukune to Yoshiko
+[Apr  7 2011 10:17] A: fixed typos in room/vill_road2 in item descs
+[Apr  7 2011 10:19] A: room/vill_road3 fixed typos in item descs
+[Apr  7 2011 10:20] A: /room/northroad1.c Fixed typos in long()
+[Apr  7 2011 10:21] A: /room/northroad2 fixed typo in long()
+[Apr  7 2011 10:23] A: room/eastroad1 Fixed typos in item descs
+[Apr  7 2011 10:25] A: room/eastroad2 Fixed typos in long and item descs
+[Apr  7 2011 10:27] A: room/eastroad3 fixed typos in long and item descs
+[Apr  7 2011 10:44] A: room/eastroad4 fixed typos in long and item descs
+[Apr  7 2011 10:45] A: room/eastroad5 fixed typos in long and item descs
+[Apr  8 2011 11:21] A: /room/temple/path fixed typos in long and item desc
+[Apr  8 2011 11:45] A: /room/temple/pal fixed typos in long
+[Apr  8 2011 11:47] A: /room/temple/1 fixed typos in long and item descs
+[Apr  8 2011 13:21] A: /players/mythos/amisc/forest/horn3.c changed so that a weapon can only be upgraded once (no more multiple horn uses on one weapon)
+[Apr  8 2011 14:34] A: /players/mythos/forest/amisc/horn3 Made it change long and short of the weapon
+[Apr 27 2011 12:41] A: /players/zeus/museum/NPC/tiny_golem.c fixed typos in chat
+[Apr 27 2011 12:44] A: /players/khrell/area/skaven/skavenlordharem.c - Changed 'larders' to 'breeders' in long()
+[Apr 27 2011 12:45] A: /players/mythos/aroom/forest/clear.c - Typo in item desc for 'somethine' urg -> urge
+[Apr 27 2011 12:49] A: /players/illarion/high/room/dojomain.c - Typo in cmd_gaze() - saitisfied -> satisfied
+[May 27 2011 11:33] A: /players/mythos/closed/guild/task/8/knife4.c took worms out of init()
+[May 27 2011 11:35] A: /players/mythos/closed/guild/forest/mon/worm.c Added check for player_killing
+[Jun  8 2011 11:18] A: updated /bin/play/_wait.c to check for present()
+[Jun  8 2011 11:25] A: /obj/user/reports/report_tool.c - Changed to announce bug fixes
+[Jun  8 2011 13:39] A: /players/angel/area/walmart/room/hardlines.c - Typo
+[Jun 21 2011 11:54] A: Added environment check to emit_channel simul_efun to stop bug of users listening at logon prompt
+[Jun 21 2011 15:05] A: remove Kyrian from symbiotes - logs showed he had left twice already, did clear guild_file
+[Jun 22 2011 10:56] A: /sys/driver_hook.h Added new hooks
+[Jun 22 2011 10:56] A: /secure/master.c Added in changes for LD 3.3.720
+[Jun 22 2011 11:06] A: /obj/simul_efun_ldmud.c Modified for LD 3.3.720
+[Jun 22 2011 11:11] A: /obj/simul_efun/same_array added compatibility for LD 3.3.720
+[Jun 22 2011 11:13] A: /obj/simul_efun/resolv_path Added compatibility for LD 3.3.720
+[Jun 22 2011 11:17] A: /obj/simul_efun/mysql.h Changed to LD 3.3.720 compatibility
+[Jun 22 2011 11:20] A: /obj/simul_efun/m_efuns_ldmud.c Adapted for LD 3.3.720
+[Jun 22 2011 11:22] A: /obj/simul_efun/basename.c Adapted for LD 3.3.720
+[Jun 22 2011 11:34] A: /obj/simul_efun/DR-to-amylaar.c Compatible to LD 3.3.720
+[Jun 22 2011 11:40] A: /room/church updated for LD 3.3.720 compatibility
+[Jun 22 2011 11:46] A: /room/post.c Changed for LD 3.3.720 compatibility
+[Jun 22 2011 11:50] A: /room/test.c LDMud 3.3.720 compatibility
+[Jun 22 2011 11:59] A: /obj/player.c changed for LD 3.3.720 compatibility
+[Jun 22 2011 12:10] A: /room/adv_guild LD 3.3.720 compatibility
+[Jun 22 2011 12:12] A: /room/pub2 LD compatibility
+[Jun 22 2011 12:15] A: /room/pub3 LD compatibility
+[Jun 22 2011 14:31] A: updated 100 rooms in /room/south to get ready for LD 3.3.720
+[Jun 22 2011 15:43] A: all rooms in /room/* should now be updated to work with LD driver
+[Jun 23 2011 11:43] A: /obj/weapon.c cleaned up a bit type cast
+[Jun 23 2011 11:45] A: /obj/tunnel.c changed add_verb
+[Jun 23 2011 11:55] A: /obj/treasure.c Cleaned up a bit and type cast
+[Jun 23 2011 12:02] A: /obj/torch.c Cleaned up a bit, type cast, and removed add_verb
+[Jun 23 2011 12:18] A: /obj/stone - cleaned up, fixed, type cast, not sure if it's even used
+[Jun 23 2011 12:25] A: /obj/stethoscope.c type cast, removed add_verb
+[Jun 23 2011 12:34] A: /obj/soul_com.c type cast, removed add_xverb, cleaned up
+[Jun 23 2011 12:39] A: /obj/shout_curse.c type cast and removed add_verb
+[Jun 23 2011 12:41] A: /obj/shadow_master.c type cast, changed member_array to member
+[Jun 23 2011 12:43] A: /obj/say.c removed add_verb - type cast
+[Jun 23 2011 12:48] A: /obj/safe.c type cast and removed add_verb
+[Jun 23 2011 12:54] A: /obj/rope.c type cast and removed add_verb
+[Jun 23 2011 12:55] A: /room/init_file took out quicktyper
+[Jun 23 2011 14:01] A: /obj/newspaper.c type cast - removed add_verb
+[Jun 23 2011 14:58] A: /obj/money.c type cast and removed add_verb
+[Jun 23 2011 15:01] A: /obj/level_list type cast and removed add_verb
+[Jun 23 2011 15:11] A: /obj/drink.c type cast and removed add_verb
+[Jun 23 2011 15:20] A: /obj/discon.c type cast and removed add_verb
+[Jun 23 2011 15:32] A: /obj/corpse.c type cast and removed add_verb
+[Jun 23 2011 15:40] A: /obj/container.c type cast and removed add_verb
+[Jun 23 2011 15:43] A: /obj/chest.c type cast and removed add_verb
+[Jun 23 2011 16:11] A: /obj/bull_board.c type cast and removed add_verb
+[Jun 23 2011 16:15] A: /obj/book.c type cast and removed add_verb
+[Jun 23 2011 16:22] A: /obj/beer.c type cast and removed add_verb
+[Jun 23 2011 16:26] A: /obj/autoshut.c removed add_verb
+[Jun 23 2011 17:01] A: /obj/armor.c type cast and removed add_verb
+[Jun 29 2011 10:42] A: /obj - armor.c, autoshut.c bandit.c beer.c dice.c heal.c kid_soul.c newtreasure.c partylist.c quicktyper.c say.c shout_curse.c soul.c soulchat.c soul_com.c stethoscope.c stone.c torch.c town_note.c tunnel.c - Removed add_verb
+[Jun 29 2011 12:29] A: /room/init_file cleaned up and moved packed/guests/inactive to different files
+[Jun 29 2011 14:10] A: morgar/castle.c removed add_verb
+[Jun 29 2011 14:11] A: morgar/f1.c removed add_verb
+[Jun 29 2011 14:12] A: morgar/f2.c removed add_verb
+[Jun 29 2011 14:12] A: aislinn/castle.c removed add_verb
+[Jun 29 2011 14:13] A: quantos/castle.c removed add_verb
+[Jun 29 2011 14:14] A: earwax/castle.c removed add_xverb
+[Jun 29 2011 14:14] A: hagbard/castle.c removed add_verb
+[Jun 29 2011 14:15] A: boltar/castle.c removed add_verb
+[Jun 29 2011 14:16] A: boltar/santaland/trail removed add_verb
+[Jun 29 2011 14:22] A: B/things/thi6 removed add_verb
+[Jun 29 2011 14:36] A: /room/pub3 changed 'function' variable to 'Func' - 'string function' bombs on LD
+[Jun 29 2011 14:38] A: morgar/spells/full_heal removed add_verb
+[Jun 29 2011 14:38] A: B/things/clock_tower removed add_verb
+[Jun 29 2011 14:39] A: haji/castle.c removed add_verb
+[Jun 29 2011 14:40] A: haji/castle2 removed add_verb
+[Jun 29 2011 14:41] A: rich/castle.c removed add_verb
+[Jun 29 2011 14:41] A: astaroth/castle removed add_verb
+[Jun 29 2011 14:42] A: sandman/castle removed add_verb
+[Jun 29 2011 14:42] A: airwoman/castle removed add_verb
+[Jun 29 2011 14:43] A: mistress/castle removed add_verb
+[Jun 29 2011 14:43] A: ultramagnus/castle removed add_verb
+[Jun 29 2011 14:45] A: blackadder/castle removed add_verb
+[Jun 29 2011 14:46] A: saber/castle removed add_verb
+[Jun 29 2011 14:46] A: deathmonger/castle removed add_verb
+[Jun 29 2011 14:46] A: morgoth/castle removed add_verb
+[Jun 29 2011 14:47] A: catt/castle removed add_verb
+[Jun 29 2011 14:47] A: catt/portal removed add_verb
+[Jun 29 2011 14:48] A: lew/castle removed add_verb
+[Jun 29 2011 14:48] A: catwoman/castle removed add_verb
+[Jun 29 2011 14:49] A: catwoman/road2 removed add_verb
+[Jun 29 2011 14:49] A: emerson/castle removed add_verb
+[Jun 29 2011 14:50] A: scathe/castle removed add_verb
+[Jun 29 2011 14:53] A: doctor/castle removed add_verb
+[Jun 29 2011 14:54] A: persephone/castle removed add_verb
+[Jun 29 2011 14:54] A: nightshade/castle removed add_verb
+[Jun 29 2011 14:55] A: hawkeye/castle removed add_verb
+[Jun 29 2011 14:56] A: trix/castle removed add_verb
+[Jun 29 2011 14:56] A: dersharp/castle removed add_verb
+[Jun 29 2011 14:57] A: bagera/castle removed add_verb
+[Jun 29 2011 14:57] A: hurtbrain/castle removed add_verb
+[Jun 29 2011 14:58] A: paulasx/castle removed add_verb
+[Jun 29 2011 14:58] A: mouzar/castle removed add_verb
+[Jun 29 2011 15:00] A: sado/shop/drunk removed add_xverb
+[Jun 29 2011 15:01] A: zone/castle removed add_verb
+[Jun 29 2011 15:01] A: dragnar/castle removed add_verb
+[Jun 29 2011 15:01] A: hippo/castle removed add_verb
+[Jun 29 2011 15:02] A: pain/castle removed add_verb
+[Jun 29 2011 15:03] A: pain/closed/items/ct removed add_xverb
+[Jun 29 2011 15:04] A: pain/closed/items/nlace removed add_xverb
+[Jun 29 2011 15:05] A: unsane/castle removed add_verb and add_xverb
+[Jun 29 2011 15:07] A: beren/castle removed add_verb
+[Jun 29 2011 15:08] A: heroin/castle removed add_verb
+[Jun 29 2011 15:08] A: pathfinder/castle removed add_verb
+[Jun 29 2011 15:09] A: pathfinder/trashcan removed add_verb
+[Jun 29 2011 15:12] A: wizardchild/engage/engagering removed add_xverb
+[Jun 29 2011 15:13] A: dune/castle removed add_verb
+[Jun 29 2011 15:15] A: dune/voting/polls changed allocate_mapping to m_allocate
+[Jun 29 2011 15:15] A: snow/bull_board removed add_verb
+[Jun 29 2011 15:19] A: mythos/closed/play/xtell removed add_xverb
+[Jun 29 2011 15:20] A: mythos/closed/play/itell removed add_xverb
+[Jun 29 2011 15:32] A: cosmo/hslist/svds_new removed add_verb
+[Jun 29 2011 15:44] A: /obj/shut.c added check for LD to use secure/master instead of obj/master
+[Jun 30 2011 11:09] A: snow/dervish/gob/init.h removed add_xverb
+[Jun 30 2011 11:11] A: mythos/closed/play/garble removed add_xverb
+[Jun 30 2011 11:12] A: mythos/amisc/tochau removed add_verb
+[Jun 30 2011 11:13] A: mythos/amisc/tsolin removed add_verb
+[Jun 30 2011 11:14] A: mythos/closed/marry/omring removed add_xverb
+[Jun 30 2011 11:15] A: mythos/closed/play/moo/moo3 removed add_verb
+[Jun 30 2011 11:16] A: mythos/closed/play/moo/MOOO removed add_verb
+[Jun 30 2011 11:17] A: mythos/healerguild/guildob removed add_xverb
+[Jun 30 2011 11:18] A: traff/castle removed add_verb
+[Jun 30 2011 11:19] A: gowron/castle removed add_verb
+[Jun 30 2011 11:19] A: gemini/castle removed add_verb
+[Jun 30 2011 11:20] A: cosmo/castle removed add_verb
+[Jun 30 2011 11:21] A: cosmo/workroom removed add_verb
+[Jun 30 2011 11:24] A: eurale/castle removed add_verb
+[Jun 30 2011 11:25] A: eurale/closed/shut_up removed add_xverb
+[Jun 30 2011 11:25] A: daranath/castle removed add_verb
+[Jun 30 2011 11:27] A: daranath/druid/guildob commented out redifined variables
+[Jun 30 2011 11:27] A: anshar/castle removed add_verb
+[Jun 30 2011 11:49] A: wocket/necro/guildob removed add_xverb
+[Jun 30 2011 11:55] A: guild/necro/guildob removed add_xverb
+[Jun 30 2011 11:58] A: feldegast/castle removed add_verb
+[Jun 30 2011 11:58] A: snakespear/castle removed add_verb
+[Jun 30 2011 11:59] A: dreamspeakr/castle removed add_verb
+[Jun 30 2011 12:00] A: francesco/castle removed add_verb
+[Jun 30 2011 12:00] A: languilen/castle removed add_verb
+[Jun 30 2011 12:02] A: /players/francesco/quest/items/finaldegree added enrironment check
+[Jun 30 2011 12:03] A: maledicta/castle removed add_verb
+[Jun 30 2011 12:04] A: maledicta/closed/emoter/emoter removed add_xverb
+[Jun 30 2011 12:05] A: vertebraker/closed/shardak/mark removed add_xverb
+[Jun 30 2011 12:08] A: obj/simul_efun/compatible added allocate_mapping conversion to m_allocate
+[Jun 30 2011 12:26] A: saber/closed/quest/larn/pool removed add_verb
+[Jun 30 2011 12:28] A: fakir/castle removed add_verb
+[Jun 30 2011 12:28] A: brittany/castle removed add_verb
+[Jun 30 2011 12:29] A: jenny/castle removed add_verb
+[Jun 30 2011 12:30] A: jara/castle removed add_verb
+[Jun 30 2011 12:31] A: vital/castle removed add_verb
+[Jun 30 2011 12:34] A: guilds/Rangers/Communicator/RangerArmor, RangerWeapon - add missing return values
+[Jun 30 2011 12:34] A: guilds/Rangers/RangerCommunicator added missing retrun values
+[Jun 30 2011 12:35] A: catacomb/castle removed add_verb
+[Jun 30 2011 12:35] A: jaraxle/castle removed add_verb
+[Jun 30 2011 12:36] A: dusan/castle removed add_verb
+[Jun 30 2011 12:36] A: coldwind/castle removed add_verb
+[Jun 30 2011 12:43] A: pestilence/closed/destroyer/gob/action.h rewrote add_cmds() function for LD
+[Jun 30 2011 12:44] A: puppy/castle removed add_verb
+[Jun 30 2011 12:46] A: wocket/std/wiztell removed add_xverb
+[Jun 30 2011 12:47] A: tristian/closed/shank removed add_verb
+[Jun 30 2011 12:47] A: martha/castle removed add_verb
+[Jun 30 2011 12:48] A: khrell/castle removed add_verb
+[Jun 30 2011 12:48] A: jamila/castle removed add_verb
+[Jun 30 2011 12:48] A: star/castle removed add_verb
+[Jun 30 2011 12:49] A: lacar/castle removed add_verb
+[Jun 30 2011 12:49] A: sparrow/castle removed add_verb
+[Jun 30 2011 12:50] A: sparrow/areas/bwo/include/mob_funcs added missing return values
+[Jun 30 2011 12:50] A: sparrow/areas/bwo/include/gear_funcs added missing return value
+[Jun 30 2011 12:51] A: chip/castle removed add_verb
+[Jun 30 2011 12:52] A: cloud/castle removed add_verb
+[Jun 30 2011 12:52] A: shinshi/castle removed add_verb
+[Jun 30 2011 12:53] A: mizan/etheriel/items/spuckballs-extinf removed add_verb
+[Jun 30 2011 13:01] A: fred/mages/homedir/init.h removed add_xverb
+[Jun 30 2011 13:01] A: B/things/corpse removed add_verb
+[Jun 30 2011 13:04] A: quicksilver/666/include/room_ext removed add_xverb
+[Jun 30 2011 13:09] A: fred/closed/venom/venom removed add_xverb
+[Jun 30 2011 13:16] A: chip/venom2/obj/id_init.h removed add_xverb and fixed flags in add_action calls
+[Jun 30 2011 13:20] A: balowski/std/base fixed missing return value
+[Jun 30 2011 13:21] A: dune/closed/guild/boards/cboard fixed missing return value
+[Jun 30 2011 13:22] A: earwax/lib/waxfuns fixed missing return values
+[Jun 30 2011 13:23] A: sparrow/areas/bwo/obj/bwo_acc fixed missing return value
+[Jun 30 2011 13:23] A: vertebraker/closed/std/monster fixed missing return value
+[Jun 30 2011 13:24] A: zeus/circle/obj/settings.h fixed missing return value
+[Jul 05 2011 10:49] A: B/motel/front_desk removed add_verb
+[Jul 05 2011 10:49] A: B/hotel/front_desk removed add_verb
+[Jul 05 2011 10:51] A: B/casino/hall1e1.c removed add_verb
+[Jul 05 2011 12:30] A: aislinn/* Verified/fixed for LD
+[Jul 05 2011 12:30] A: angmar/* Verified/fixed for LD
+[Jul 05 2011 12:30] A: kantele/* Verified/fixed for LD
+[Jul 05 2011 13:04] A: morgar/* Verified/fixed for LD
+[Jul 15 2011 16:37] A: /obj/money.c added a check for variable before switch()
+[Aug 12 2011 16:10] A: updated /obj/player/dr/read_write.c to allow for ELDER+ editing of /kernel, /global, /basic, and /complex dirs
+[Sep  2 2011 11:15] A: /players/dune/closed/enterload.c - changed to send tells to Dune - not console on castle load
+[Sep  2 2011 11:17] A: /players/boltar/lv1/eat_maker - changed to send message to B instead of console
+[Sep 20 2011 15:00] A: /players/dreamspeakr/WEDDING/hera.c updated
+[Sep 21 2011 10:44] A: ~/mythos/closed/play/updates.c removed write to stdout
+[Sep 21 2011 10:47] A: ~/mizan/etheriel/heals/dirtbag - removed add_verb
+[Sep 21 2011 10:48] A: ~/mizan/etheriel/items/ringpop removed add_verb
+[Dec 29 2011 14:02] A: /players/pestilence/closed/dark/obj/action.h fixed add_action
+[Dec 29 2011 14:05] A: /players/guilds/Rangers/Room/RangerRoom.c changed file_name to object_name
+[Jul 09 2012 10:18] A: /players/mizan/etheriel/heals/pickles.c changed add_action
+[Jul 09 2012 10:29] A: /players/dreamspeakr/WEDDING/garden.c fixed add_action
+[Jul  9 2012 14:10] A: /players/dreamspeakr/WEDDING/motel.c fixed add_action
+[Jul 10 2012 14:01] A: restored Dragnar to wizard status, set him to level 60.
+[Jul 11 2012 14:05] A: room/room.c changed file_name to object_name for LD
+[Jul 11 2012 14:10] A: /obj/objtracker.c changed - took out channel broadcast for ldmud, not sure if we even care on LP anymore either, but left it in
+[Jul 11 2012 14:16] A: /obj/armor.c changed 'keys' to 'm_indices' if on LD
+[Jul 11 2012 14:24] A: /obj/weapon.c changed 'keys' to 'm_indices' for LDMUD
+[Jul 11 2012 14:32] A: /obj/weapon.c changed file_name to object_name for LD
+[Jul 11 2012 14:56] A: /obj/living.c replace file_name with object_name for LD
+[Jul 11 2012 15:07] A: /obj/monster.c replace filter_array with filter() for LD
+[Jul 11 2012 15:11] A: ~/cosmo/hslist/vds.c replaced keys with m_indices for LD
+[Jul 11 2012 15:17] A: ~/cosmo/hslist/bunch_of_files - replace file_name with object_name, keys with m_indices for LD
+[Jul 11 2012 15:32] A: ~/deathmonger/castle.c got rid of silly earwax stuff
+[Feb  5 2013 15:40] A: removed Castiel from Healers guild - applied XP penalty to do so
+[Feb 12 2013 12:12] A: /players/mizan/etheriel/heals/portable_cow removed add_verb
+[Feb 12 2013 12:13] A: /players/mizan/etheriel/heals/bandages removed add_verb
+[Feb 12 2013 12:14] A: /players/mizan/etheriel/heals/benzine removed add_verb
+[Feb 12 2013 12:16] A: /players/mizan/etherial/heals/bunupill removed add_verb
+[Feb 12 2013 13:54] A: /players/mizan/etheriel/heals/bunupuradah-pill.c removed add_verb
+[Feb 12 2013 13:55] A: /players/mizan/etheriel/heals/cappio.c removed add_verb
+[Feb 12 2013 13:56] A: ~/mizan/etheriel/heals/carbo-blast.c removed add_verb
+[Feb 15 2013 10:43] A: ~bastion/closed/ring and ringz - add check for LDMUD for filter()
+[Feb 17 2013 14:14] A: /players/pain/NEW/items/star added in_editor check to broadcasting
+[Jul 30 2013 12:24] A: player.c changed long()
+[Aug  6 2013 11:29] A: fixed ~/aislinn/2tennis
+[Aug  6 2013 11:31] A: ~/catwoman/a.c fixed
+[Sep 18 2013 15:28] A: Approved Dragnars updates to wastelands
+[Sep 18 2013 17:41] A: gave Blazko elemental cloak - name is in log
+[Oct  1 2013 11:04] A: added query_items to room/room to return items array
+[Oct  4 2013 15:09] A: updated titles room in vamp guild
+[Oct  7 2013 11:22] A: vampob - fixed a typo in vampire_strength_bonus()
+[Oct  9 2013 17:07] A: player.c made it cat new MANAGEMENT file on login
+[Oct  9 2013 17:08] A: NEWS / WIZNEWS - removed upper portion into new MANAGEMENT file
+[Oct 11 2013 10:33] A: player.c removed esc define and changed usage to use ansi.h
+[Oct 14 2013 13:06] A: /obj/user/xls.c changed str[1..-1] notation to str[1..<1] notation for compatibility with LD driver
+[Oct 14 2013 15:46] A: ~/eurale/VAMPIRES/OBJ/dboard - fixed add_action
+[Oct 14 2013 16:01] A: ~/zeus/desert/OBJ/desert_daemon fixed destruct() call for LD
+[Oct 14 2013 16:01] A: ~/forbin/realms/misc/OBJ/saddlebag fixed missing return value
+[Oct 14 2013 16:02] A: ~/vertebraker/misc/cj/cj_face fixed missing return value
+[Oct 15 2013 16:15] A: /daemons/logins.c fixed string notation for LD
+[Oct 15 2013 16:23] A: _mk.c fixed str notation for LD
+[Oct 15 2013 16:25] A: /bin/play/_description.c fixed string notation for LD
+[Oct 15 2013 16:26] A: /bin/play/_emotes.c fixed string notation for LD
+[Oct 15 2013 16:28] A: mk.c fixed string notation for LD
+[Oct 15 2013 16:32] A: /bin/wiz/_update_items fixed string notation for ld
+[Oct 15 2013 16:36] A: /bin/wiz/_combat.c fixed string notation for LD
+[Oct 15 2013 16:39] A: /obj/daemons/commands fixed string notation for LD
+[Oct 15 2013 16:50] A: /obj/player.c fixed string notation for LD
+[Oct 15 2013 16:58] A: /obj/user/text_edit.c fixed string notation for LD
+[Oct 15 2013 17:01] A: /obj/armor.c fixed various things for LD
+[Oct 15 2013 17:06] A: /obj/player/dr/read_write.c fixed string notation for LD
+[Oct 15 2013 17:07] A: /obj/time_check2.c fixed string notation for LD
+[Oct 15 2013 17:08] A: /obj/weapon.c fixed string notation in long for LD
+[Oct 15 2013 17:10] A: ~/mizan/mines/core/room.c fixed string notation for LD
+[Oct 15 2013 17:15] A: ~/mizan/temp/armor.c and weapon.c fixed string notation
+[Oct 15 2013 17:16] A: ~/zeus/stuff/strlen.c fixed string notation for LD
+[Oct 15 2013 17:24] A: ~/angel/masons/bin/seal.c fixed string notation
+[Oct 15 2013 17:29] A: ~/balowski/std/editor.c fixed string notation for LD
+[Oct 15 2013 17:32] A: ~/guilds/bards/martin.c fixed string notation for LD
+[Oct 15 2013 17:34] A: ~/illarion/obj/xcp.c fixed string notation for LD
+[Oct 15 2013 17:36] A: bloodfist wep_daemon fixed string notation for LD
+[Oct 15 2013 17:37] A: blooodfist gob fixed string notation for LD
+[Oct 15 2013 17:40] A: ~/snow/dervish/sp_checker.c
+[Oct 15 2013 17:45] A: /room/room.c fixed string notation for LD
+[Oct 15 2013 18:11] A: people command - added ctime()
+[Oct 16 2013 15:48] A: ~/miza/etheriel/beasties/sarawak fixed add_action
+[Oct 16 2013 15:48] A: ~/quantos/desert/oasis fixed add_action
+[Oct 16 2013 16:42] A: /players/llew/Other/misc/obituary and deathlog - fixed so that we never have to update the year again
+[Oct 29 2013 17:35] A: dopple badge - fixed Tonic spell to actually charge *2 sps
+[Oct 30 2013 10:01] A: dopple badge - fixed 'gget' command for no str
+[Oct 30 2013 10:04] A: created uptime command for wizards
+[Oct 31 2013 17:57] A: dopple badge - fixed an add_xverb and a casting
+[Nov  4 2013 11:17] A: added decay to mystic faction (dopple) enchant armor spell
+[Nov  4 2013 11:36] A: dopple board include file - added year to headers
+[Nov  4 2013 11:41] A: added year to wiz bulleting board
+[Nov  4 2013 12:37] A: cleaned up the announcement board
+[Nov  5 2013 12:25] A: master.c - added a timestamp to error logging
+[Nov  5 2013 12:44] A: changed ~/catwoman/armor/bcape from type shield to cloak
+[Nov  5 2013 12:46] A: ~/catwmon/armor/mask changed type from helmet to misc
+[Nov 11 2013 16:49] A: dopple 'coat' command updated
+[Nov 25 2013 18:06] A: /players/catt/NPC/TEM_master_hunter.c added a return value to tunnel() function to suppress 'What?'
+[Dec  3 2013 14:19] A: deleted the /log dir by accident (should put some checks on 'rm') - restored from last night backup
+[Dec  5 2013 12:52] A: forgot to change owner:group on said /log dir above - did that now
+[Dec  5 2013 15:25] A: /players/mizan/opl/items/tripod_card changed some commands because of interferance with regular player commands (3s does 3 south, etc...)
+[Dec 11 2013 11:40] A: /players/catt/castle - changed the way the path/portal loads
+[Dec 12 2013 12:52] A: added callouts command for wizzies
+[Dec 12 2013 13:42] A: Dopple sleep command ported to daemon
+[Dec 13 2013 13:02] A: added lpc channel for lpc code talking
+[Dec 17 2013 17:38] A: restored Darkfyre xp to 27000000 (19+37) - bugs in doppleganger swap command
+[Dec 17 2013 17:58] A: fixed bugs in Doppleganger swap command to allow for extra levels and maximum swappage
+[Dec 23 2013 12:34] A: Fixed melko (trix) quest
+[Dec 23 2013 12:34] A: /players/trix/castle/quest/monst/ring.c - auto wear/wield was causing ring not to be available for quest - changed ring.c to check for npc or player
+[Dec 24 2013 12:00] A: ~/grimm/guild.c recoded guild entrance
+[Jan  7 2014 16:13] A: /players/cosmo/hslist/svds_new.c -- UPDATED SO NO FURTHER UPDATES REQUIRED - EVER - STOP IT - REALLY - :)
+[Jan  8 2014 13:03] A: /obj/monitor - cleaned up ansi
+[Jan 13 2014 16:46] A: ~/pain/items/NEW/star_daemon - added code to see new guilds
+[Jan 21 2014 13:19] A: added 103317 xp to Grey (20664 going to xp, rest to guildxp) 5 times to make up for loss - not sure where it went.
+[Jan 23 2014 16:13] A: player.c added Crime back in
+[Jan 23 2014 16:16] A: living.c crime
+[Jan 24 2014 16:35] A: ~/boltar/things/cop.c - Made them tougher
+[Jan 24 2014 16:35] A: ~/maledicta/town/rooms/t9 - Added whiteblade the hunter back in
+[Jan 24 2014 16:36] A: /room/police.c Recoded
+[Jan 29 2014 17:52] A: /players/jaraxle/3rd/volcano - Changed just about every file in this directory to put it back into the game
+[Jan 30 2014 13:10] A: /players/vertebraker/closed/shardak/room/othrone.c - removed reference to caelin's universal.h file
+[Jan 30 2014 13:19] A: promoted Gemini to 30 for open area
+[Feb 10 2014 16:41] A: /obj/player.c - /obj/play/new_communicate.h - Changed to evaluate query_name() instead of using variable that was already set
+[Feb 25 2014 18:11] A: Changed ~/gemini/workroom to remove wizard commands (similar to wiz tool)
+[Feb 26 2014 10:21] A: promoted Dragnar to 1000 for work on new channel daemon
+[Feb 27 2014 10:47] A: updated /doc/admin/mail for new admins/seniors
+[Mar 24 2014 17:09] A: /obj/player.c Made it so the player count on the welcome screen counts invis PK'ers
+[Mar 25 2014 14:23] A: ~/wren/castle.c changed to use <ansi.h>
+[Mar 26 2014 11:37] A: gave 10k coins to Kai for bug troubleshooting in dopps
+[Mar 26 2014 12:08] A: Replaced all instances of 'check_file' with 'file_size' in ALL files - created backup of files changed with .check_file extension
+[Mar 26 2014 12:27] A: /obj/player.c changed caller() calls to previous_object() calls
+[Mar 26 2014 12:44] A: and.... changed them back
+[Mar 26 2014 12:45] A: the caller() changes
+[Mar 28 2014 12:42] A: /daemons/nrpoints replaced file_name with object_name
+[Apr 11 2014 12:51] A: Changed Mizan's python script that generates the opl area to remove set_light(1); - was causing light to increment by 1 for every object loaded, which would eventually hit the max for set_light and send it negative
+[Apr 11 2014 15:58] A: added a Driver's manual for the M113 in opl area
+[Apr 21 2014 15:58] A: ~/catt/castle.c added a call to set_no_clean(1); to room/vill_track to make it so the castle isn't dested
+[Apr 21 2014 16:16] A: ~/catt/portal added is_castle function
+[Apr 21 2014 16:16] A: ~/catt/castle removed set_no_clean call
+[May 12 2014 11:26] A: Promoted Dragnar to 5000
+[May 15 2014 16:11] A: Updated angmar's treasury to fix quest
+[May 15 2014 18:21] A: made Xypher a newbie helper
+[May 21 2014 17:26] A: Demoted Mokri from lvl 100 to level 60
+[Jun 13 2014 10:57] A: changed xlevel guild to not log advancement of test chars
+[Jun 13 2014 11:05] A: promote Jareel to lvl 30
+[Jun 13 2014 11:06] A: promote jareel to 40 (has castle online)
+[Jun 19 2014 11:00] A: /room/temple/pal.c - recoded
+[Jun 19 2014 12:16] A: verified all books active now that paladin book fixed (warriors guild)
+[Jun 23 2014 14:49] A: updated ~/grimm/newbie/entrance - wandering mobs/castles bugging on the way the exit functions were coded - so I redid it
+[Jun 26 2014 15:35] A: /players/grimm/newbie/room/entrance.c fixed typo that i created
+[Jul 14 2014 17:23] A: promoted Mokri to lvl 1000 for working on LD under supervision from Gnar
+[Jul 28 2014 16:15] A: ~/snow/ITEMS/notice.c added Date stamp to message headers
+[Aug 12 2014 10:03] A: Rewarded demonic a heal spell for finding bug
+[Aug 19 2014 13:23] A: changed Sparrow to lvl 999
+[Aug 22 2014 16:07] A: Changed /room/clean to log into /log/CLEAN when a room is actually cleaned
+[Aug 22 2014 16:11] A: /players/coldwind/desert/items/carpet.c removed add_verb
+[Aug 25 2014 11:00] A: Fixed big bug in Dopple swap command - Nagasaki credit for helping me find it
+[Aug 25 2014 15:35] A: implemented Dark Order pk block
+[Aug 26 2014 14:17] A: /players/eurale/NPC/drucilla.c Modified code so it would work on LD, and optimized it a bit.
+[Aug 26 2014 14:24] A: ~/vertebraker/swamp/forest/f4.c Fixed for LD
+[Aug 26 2014 14:30] A: /players/hurtbrain/obj/* Fixed all add_verb instances
+[Aug 27 2014 11:22] A: ~/airwoman fixed nonloading stuff
+[Aug 27 2014 11:32] A: /players/maledicat/cave4/rooms/randomcave - tries to load workroom2 - which has a guild board from B's area - which had add_verbs in it
+[Sep  3 2014 14:59] A: Demoted mokri to lvl 21 for Log file manipulation
+[Sep  3 2014 15:27] A: Set Oregon's XP back to Level 5 - not sure how much was illegally gained.
+[Sep  3 2014 15:44] A: reimbursed Chant and Colbey for lost bags / heals
+[Sep  3 2014 15:50] A: Crashed mud twice with an object intended for LD - careful with loading/cloning objects not meant to be here.
+[Sep  4 2014 15:53] A: Banished Mokri
+[Sep 10 2014 14:29] A: added id of "npc" to all things that inherit /obj/monster.c
+[Sep 24 2014 08:43] A: /players/emerson/mons/manager.c - Changed Pizza Hut Manager, added Ninja Turtle quest for Wicket
+[Sep 24 2014 08:43] A: /players/wicket/ninja_turtles/quest/* added a few files for the Ninja Turtle quest
+[Oct  9 2014 14:50] A: /obj/player.c added Elementalist into Beta (no PK)
+[Oct 14 2014 13:19] A: ~/trix/castle/town/bank3 - was cloning lots of clerks...
+[Oct 14 2014 13:20] A: Nevermind ^^^^^^^
+[Oct 14 2014 13:22] A: ^^^^^^^^^^ fixed move_object() call
+[Oct 14 2014 13:36] A: /open/color.h - changed to just include /sys/ansi.h
+[Oct 14 2014 13:37] A: ~/sami/emoter.c - Changed to use ansi.h
+[Oct 14 2014 13:38] A: ~/airwoman/closed/evil.c - changed to use ansi.h
+[Oct 14 2014 13:38] A: ~/airwoman/titler.c changed to use ansi.h
+[Oct 14 2014 13:39] A: ~/wocket/closed/cyber/COLOR.h - changed to use ansi.h
+[Oct 14 2014 13:39] A: ~/eurale/closed/JUNK/color.h - changed to just be ansi.h
+[Oct 14 2014 13:40] A: ~/pain/color.h - changed to just use ansi.h
+[Oct 14 2014 13:40] A: ~/pain/closed/items/color.h - changed to just use ansi.h
+[Oct 14 2014 13:41] A: ~/snow/closed/cyber/color.h - changed to juse use ansi.h
+[Oct 14 2014 13:41] A: ~/sparrow/closed/cyberninja/COLOR.h - changed to just be ansi.h
+[Oct 14 2014 13:42] A: ~/nooneelse/color.h - changed to just be ansi.h
+[Oct 14 2014 13:42] A: ugh.. changed a bunch of stuff to use ansi.h instead of individual ansi def files.... ridiculous...
+[Nov 11 2014 12:39] A: recoded /bin/soul/healcalc.c to work on LDmud - made some changes for LP as well
+[Jan 15 2015 12:26] A: fixed doppleganger spice command
+[Jan 15 2015 12:34] A: fixed release command in dopplegangers
+[Jan 24 2015 12:10] A: fixed typo in _enter_clan_hall command in morki's clans
+[Jan 24 2015 12:18] A: ~/boltar/things/cop.c took out environment check that Ill put it, was causing it to clone invisible and not set vars
+[Feb  2 2015 13:26] A: ~/guild/dopplegangers wolf command fixed
+[Feb  2 2015 14:00] A: fixed a few issues in Pain's area
+[Apr  1 2015 10:57] A: ~/vertebraker/closed/std/monster.c - took out offwield stuff
+[Apr  1 2015 17:05] A: living.c - query_name changes
+[Apr  1 2015 17:05] A: player.c new int variable called security_level
+[Apr  2 2015 12:45] A: crashed mud by reloading master.c
+[Apr  3 2015 11:36] A: added proficiency_hit stuff back into living.c (part of paladin code) because rangers and bards apparently use it
+[Apr  3 2015 15:35] A: added 2475347 xp to Skan for death as ranger while living.c was messed by me
+[Apr 14 2015 08:10] A: rebooting host to apply patches
+[May 12 2015 14:27] A: messed with _finger.c a bit
+[May 12 2015 14:30] A: removed Kyrain wiz dir - nothing in it anyway
+[May 13 2015 10:38] A: some changes to adv_guild.c
+[Aug 18 2015 10:51] A: tar'd plasma wizdir
+[Aug 18 2015 10:52] A: rm'd cmds and room dirs from mokri dir
+[Aug 18 2015 14:06] A: promoted wicket to 60 - area, quest, and guild
+[Oct 14 2015 14:08] A: sefun destruct.c - added logging

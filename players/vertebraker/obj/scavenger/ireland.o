@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/obj/weapon","/players/snow/armor/arch_robes","/obj/torch","/players/puppy/s/eq/cape","/obj/weapon","/players/ultramagnus/darkarmor","/players/maledicta/cont/weapons/rweapon","/players/hawkeye/items/bourbon","/players/wren/Area/starbug/items/gauntlet","/players/saber/armor/mini","/players/pain/NEW/arm/hood","/players/boltar/things/toy","/obj/armor","/obj/armor","/players/ultramagnus/darkarmor","/players/mythos/awep/tanto","/players/ultramagnus/darkweapon","/players/snow/ITEMS/ice_shard","/players/saber/armor/hardsuit1","/players/maledicta/cont/rdragon/scepter","/players/scathe/armor/rgarb","/players/saber/armor/dshades","/players/wren/Area/starbug/items/mirror","/obj/armor",})
+shorts ({"Ring of Death","An evil-looking lightsabre","Robes of the Archwizard","sunflower","A flowing cape","A rolling pin","Dark Rider Gloves","a Shortsword","bottle of bourbon","Time gauntlet","A skin tight leather mini skirt","A Black Hooded Cloak","A small wood top","Robot Head","An [1mwhite[0m metal ring","Dark Rider Hood","Tanto","Dark Rider Broadsword","An ice shard","A purple Hardsuit <with pink legs!>","[1;32mJe[1;34mwe[1;31mll[1;35med[1;37m Scepter[2;37;0m","Monk's garb","[1mDark Shades[2;37;0m","a slim pocket mirror","A pair of [1mwhite[0m boots",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,82 @@
+GRAFT:
+     The definition of graft- The act of gaining personal advantage
+or profit by dishonest or unfair means, especially through political
+connections.
+
+GRAFT ABILITIES:
+   - Block <dir> This will stop any player attempting to leave
+     <dir> and inform them that to do so they must 'pay <mobster>'.
+     ie: Whoaa there!  If you wanna go that way, you gotta pay!
+     But i'm only askin' <###> coins, whaddaya' say?  <Y or N>:
+
+     There ae several rules that govern the use of this ability.
+   1) The player blocking the exit must remain in that room.
+   2) The mobster may only block one exit at a time.
+   3) The mobster may not block an exit blocked by another mobster.
+   4) Players in combat (or whimpying) are not affected.
+   4) May not be used in any room in the /room/ dir.
+   5) May not be used in the locker area.
+   6) May not be used in other guild halls.
+   7) See below -Basic Graft-
+
+
+   - extort <player> / protect <player> - Forces a player to fork over some
+cash.  ie: <mobster> pushes you up against a wall and growls 'gimmie your
+money or else punk!' - or somesuch.  This method should be considered a
+week version of blackmail except the victem must be in the same room with
+the mobster.
+
+     Blackmail- Can be done to anyone anywhere. (only once per boot?)
+
+ 
+BASIC GRAFT:
+     Much like players exchange exp for guild experience mobsters
+exchange coins for graft.  Yes there is a catch!  Players may not
+exchange coins for graft directly, they must use the guild methods
+availible.  Money gained through grafting is devided and distributed
+among the family leaders. See below -graft distribution table-
+
+     Some of the rules regarding grafting:
+1) Players under level 6 will not be affected. (when using block <dir>
+   newbies with less than 1k will be GIVEN coins instead)
+2) Graft abilities directed at a player cannot be used when the target
+   is in combat.
+3) Graft may NOT be exchanged for coins.
+
+
+Here are some average coin statistics from the mud.  Just to put you in the mood...
+
+ LEV AVG(MONEY)
+---- ----------
+   1  2616.87269       11 28709.7065
+   2  5296.925         12 32748.293
+   3 16654.823         13 41412.4622
+   4 14139.4085        14 41769.0272
+   5 26217.3614        15 35325.993
+   6 19052.8852        16 44187.2306
+   7 22168.4224        17 43271.2227
+   8 19849.6783        18 40907.3486
+   9 30836.8707        19 52429.3353
+  10 29030.8614
+
+     Extortion/Blackmail levels:
+This is the first table i made to represent possible graft percentages.
+Because newbie levels aren't used i simply used the formula:
+ (LEV-4)% * coins = graft%
+to come up with a 2%-15% range.  This formula uses the TARGETS level.
+so  Target level     target's coins:   1k        10k        50k        80k
+           6   (2%)                    20        200        1000       1600
+          14   (10%)                  100        1000       5000       8000
+          19+  (15%)                  150        1500       7500      12000
+
+After considering this chart i think it should reflect an overall picture
+of all of the graft abilities.
+
+GRAFT DISTRIBUTION TABLE:
+     Godfather   25%
+     Don         25%
+     Mobster     50%
+If the mobster has not joined a family the don's portion is sent to the
+godfather.   I have not decided whether or not to give the player a part
+of the graft in coins.
+

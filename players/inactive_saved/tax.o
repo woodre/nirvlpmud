@@ -1,0 +1,116 @@
+channel_names ({"gossip","msg","risque","newbie","shout",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 253
+luck 13
+lucky 365
+name "tax"
+gender "male"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 0
+level 5
+armor_class 0
+hit_point 117
+max_hp 122
+experience 12643
+mmsgout "disappears in a puff of smoke"
+mmsgin "arrives in a puff of smoke"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time 10
+cap_name "Tax"
+spell_points 74
+max_spell 122
+spell_name "rock"
+spell_cost 0
+spell_dam 0
+age 47133
+is_invis 0
+frog 0
+whimpy 0
+auto_load "/players/wocket/necro/guildob.c:^!"
+current_room "/players/wocket/graveyard/crypt4.c"
+alignment 432
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Armors 0
+Weapons 0
+handshake_data 192
+handshake 3777497
+quest_point 0
+quests 0
+pregnancy 0
+pregtoo 0
+monitor_string "$W$Tax:  $N$HP:$B$#hps#$N$/#mhp#  SP:$B$#sps#$N$/#msp#  #intox# #soa# #stu#  $R$#ahp#"
+saved_aliases ({"sac","sacrifice corpse","la","look at",})
+saved_nicknames ({})
+wkrm 0
+hostname "cdm-66-233-149-64.fayt.cox-internet.com"
+ok_edit "none#"
+mailaddr "none"
+saved_where 0
+title ", [33mthe Harvester of the Dead[0m"
+pretitle 0
+password "BXmZEgRwfcg16"
+race "drow elf"
+al_title "paladin"
+PKGhostCounter 0
+intoxicated 0
+fight_area "players/wocket/necro/room/necro2"
+mon 2
+phys_at ({1,5,5,146,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "66.233.149.64"
+msghome "goes home"
+description 0
+guild_name "necromancer"
+lastime "Mar 29 18:12 2004 to Mar 29 18:14 2004"
+player_killing 0
+invs_count 0
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd 0
+dead 0
+guild_rank 3
+guild_exp 125000
+guild_file 0
+home "/players/wocket/necro/room/necro2.c"
+ex_lv 0
+qc 1
+strength 13
+intelligence 10
+stamina 13
+will_power 10
+magic_aptitude 13
+piety 9
+stealth 11
+charisma 8
+dexterity 8
+atrbr ({8,8,10,13,13,9,13,11,13,10,})
+stuffed 0
+soaked 0
+no_give 1080602070
+aprv 0
+hint "doing number 2"
+AnsiPref ({"page",0,"tell",0,"gossip",0,"risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"pk",0,"title",0,"pretitle",0,})
+old_last "Dec 31 17:02 2002 to Dec 31 17:03 2002"
+other_copy 0

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/straw","/players/forbin/heals/dhuez","/players/saber/armor/lboots","/obj/bag","/players/maledicta/cont/ltown/objects/dshield","/players/emerson/armor/hide","/players/pain/NEW/arm/bplate","/players/mistress/other/disk","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/angel/area/stargate/obj/P90_no_ammo","/players/mythos/aarmor/hara-ate","/players/snow/WEAPONS/glass_sword","/players/emerson/obj/pin","/players/wren/Area/starbug/items/comb","/obj/armor","/players/pain/NEW/weap/mace2","/players/snow/WEAPONS/ice_star","/players/hippo/armour/glazour_coat","/players/wren/Area/starbug/items/cottagecheese","/obj/weapon","/players/mythos/awep/arrow","/players/scathe/armor/hood","/obj/weapon","/players/wren/Area/starbug/items/fish",})
+shorts ({"a long plastic straw","d[0m[32m'[0mHuez [0m[32mleaves[0m","Leather boots","bag","[32mShield of the [1;32mDrake[2;37;0m","Bigfoot Hide","A battered Breastplate","A fragile disk","Steel Shield","A Princess' Tiara","[36mP90 machine gun[0m","Hara-ate","Glass Sword","A pinball machine","the cat's hair pick","An [1mwhite[0m metal ring","A huge iron mace","Ice Shuriken","glazour coat","a small tub of cottage cheese.","Rabbit foot","arrow","Hood","Steel Longsword","A box of trout ala crem",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

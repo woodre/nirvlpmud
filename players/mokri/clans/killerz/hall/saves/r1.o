@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/killerz/hall/main","west","/players/mokri/clans/killerz/hall/r2","east","/players/mokri/clans/killerz/hall/r3","south",})
+short_desc "[1;31mHead Assassin's [1;30mMain Storage Room[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"Black Rose hilted dagger","/players/daranath/qualtor/wep/brose_dag",0,0,0,"White pearl hilted dagger","/players/daranath/qualtor/wep/zyagx_dag",0,261,11,"Jeweled dagger","/players/daranath/qualtor/wep/jewl_dag",0,1,1,"Jeweled dagger","/players/daranath/qualtor/wep/jewl_dag",0,0,0,"Jeweled dagger","/players/daranath/qualtor/wep/jewl_dag",0,241,43,"Stiletto Dagger of [32mPoison[2;37;0m [right]Stiletto Dagger of [1mthe Wraith[2;37;0m [left]","/players/maledicta/ares/weapons/daggers",0,96,6,"[1mtadji[0m","/players/eurale/Lab/OBJ/tadji",0,0,0,"White pearl hilted dagger","/players/daranath/qualtor/wep/zyagx_dag",0,195,24,"Dark Knife","/players/mythos/closed/guild/task/8/knife5",0,212,28,"A rod of corpse processing","/players/saber/stuff/process",0,0,0,})

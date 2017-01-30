@@ -1,0 +1,27 @@
+object line_listen; 
+
+reset(arg){
+   if(arg) return; 
+   line_listen = ({});
+}
+
+listener(ob,arg,n){
+   int h;
+   if(ob){
+      if(arg){
+         if (member_array(ob, line_listen) == -1)
+            line_listen += ({ ob });
+      }
+      else line_listen -= ({ ob });
+   }
+   else {
+      line_listen = filter_array(line_listen,"is_object",this_object());
+      for(h=0;h<sizeof(line_listen);h++) {
+         if(member_array(line_listen[h],users()) == -1) 
+            line_listen -=  ({ line_listen[h] });
+      }
+   if(n) return line_listen;
+   }
+}
+
+is_object(ob) { return objectp(ob); }

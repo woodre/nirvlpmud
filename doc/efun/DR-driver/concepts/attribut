@@ -1,0 +1,18 @@
+CONCEPT
+	Attributes, only in 3.01.02-DR?
+	Implemented by Raistlin. Amylaar style doc by Balowski.
+
+DESCRIPTION
+	In every object there is a list of attributes.
+	Attributes are identified by a string, and has a value (int) and a
+        protection state (int).
+
+	I don't quite know what the initial purpose of these attributes was.
+	They seem to be good for adding special attributes to weapons for
+	instance, but they are lost when the object is dest'ed, and they are
+	not saved with save_object().
+	I think I will put magic resistance into armour this way.. perhaps.
+
+SEE ALSO
+	add_attribute(E), add_prot_attribute(E), delete_attribute(E),
+	get_attribute(E), query_attribute(E)

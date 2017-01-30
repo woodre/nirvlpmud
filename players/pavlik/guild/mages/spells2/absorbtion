@@ -1,0 +1,83 @@
+/*
+ * spell : Absorb   (evocation)
+ * level : 5
+ * effect: gives bonus to guild stat
+ * cost  : 50 sp
+ * spec  : 
+ * files : ~/mages/obj/absorb_obj.c
+ */
+
+absorbtion(){
+
+  string what;
+  int x, much;
+  object ob;
+
+  if(!KNOW("absorb")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(guild->query_next_alter() > time()) {
+    write("You cannot cast this spell yet.\n");
+    return 1;
+  }
+
+  if(present("absorb_obj", tp)) {
+    write("You cannot cast this spell again yet.\n");
+    return 1;
+  }
+
+  write("You cast an "+HIC+"Absorb"+NORM+" spell ...\n");
+
+  if(spell_fail2(5, "evoc", "wis")) {
+    write("You "+HIR+"miscast"+NORM+" the spell.\n");
+    say(ME+" casts a spell but nothing happens.\n");
+    tp->add_spell_point(-20);
+    return 1;
+  }
+
+  /* amount of increase is based on present guild stat */
+  much = random(guild->query_total_evoc()/20) + 1;
+
+  write("You tap the magical resources of your surroundings...\n");
+  say(ME+" casts a spell and the air tingles with magic.\n");
+
+  /* chance of getting a bonus to ALL guild stats */
+  if(random(guild->query_total_evoc()) > 91) {
+    write(HIC+"All"+NORM+" of your abilities increase!!! ...what a rush!\n");
+    for(x=0; x<9; x++) {
+      what = select_absorb_stat(x);
+      call_other(guild, "add_"+what+"_bonus", much);
+    }
+    what = "allstats";
+  }
+  else {
+    what = select_absorb_stat(random(9));
+    write("Your "+HIC+what+NORM+" stat increases.\n");
+    call_other(guild, "add_"+what+"_bonus", much);
+  }
+
+  ob = clone_object("players/pavlik/guild/mages/obj/absorb_obj");
+  ob->set_stat(what);
+  ob->set_much(much);
+  move_object(ob, tp);
+  tp->add_spell_point(-50);
+  return 1;
+}
+
+
+select_absorb_stat(i) {
+  string stat;
+  if(i == 0) stat = "int";
+  else if(i == 1) stat = "wis";
+  else if(i == 2) stat = "wil";
+  else if(i == 3) stat = "pow";
+  else if(i == 4) stat = "conj";
+  else if(i == 5) stat = "ench";
+  else if(i == 6) stat = "evoc";
+  else if(i == 7) stat = "illu";
+  else if(i == 8) stat = "necr";
+  return stat;
+}
+

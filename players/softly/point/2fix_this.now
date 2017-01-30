@@ -1,0 +1,51 @@
+The stuff marked "*" has been completed ... see lh2.c for 
+something you might want to look at...
+
+*dchain.c - is still ac 2...needs to be ac 1
+
+*for10.c - long(): "...touches a small almost devoid of vegetation."
+          Doesn't make sense.
+*for11.c - Item desc:  "forest","The forest is has many..." <-
+*for16.c - Describe 'boulders', 'water'
+          items desc: "the sand and the surface of the sea, <- needs a
+          '.' instead of a ',' Put a '.' at the end of the write and
+          say at the end of the east() and north() functions.
+*for17.c - item desc: and the surface of the sea,  <- change to a '.'
+          describe 'forest'
+*for18.c - Same as for17.c with the ',' and describe 'forest'
+*for4.c - Item descs: "The forest is has a few pines..."
+*for9.c  - Same as for4.c
+*h1.c    - I was thinking, the long() says there is something glinting
+          in the crack, but if the nuggest is gone, then nothing would
+          be glinting...soooo, why not have the return message if 
+          already found say: "There is nothing in the crack. Maybe it
+          was just the water beneath?"  or something to that effect
+*h2.c    - describe the pile and maybe do like in h1.c above?
+*lh1.c   - describe the items that are in the item desc "furnishings"
+          also describe 'windows'
+*lh10.c  - item desc: in 'walls', chuncks = chunks. same with 'surface'
+          also, describe 'railing'.  Describe 'darkness' describe 'paint'
+*lh11.c  - Same as lh10.c
+*lh2.c   - Describe the items in 'furnishings', and describe 'windows'
+           DOH ... It was a copy of the living room that I never fixed.
+           I turned it into a kitchen, which was intended all along.
+*lh3.c   - item desc: 'photograph', 'children playing playing together'
+          long(): last line "white chenille.  here is.." here = There
+*lh4.c   - describe 'mirror'
+*lh5.c   - fix the word 'chuncks' throughout the item descs. Describe
+          'floor' 'railing' and 'paint'
+*lh6.c   - describe 'paint' 'light' 'railing' and 'darkness' and fix the
+          word 'chuncks'
+*lh7.c   - same as lh6.c
+*lh8.c   - same as lh6.c
+*lh9.c   - same as lh6.c
+*pt1.c   - item desc: "mist", "...surface of the sea,  It is..." need the
+          ',' to be a '.'   Also, add a '.' to the end of the write and
+          say functions in the east() and west()
+*pt2.c   - same as pt1.c
+*pt3.c   - same as pt1.c
+*pt4.c   - same as pt1.c + describe 'rocks'
+*pt5.c   - same as pt1.c
+*pt6.c   - fix the 'mist' describe as in pt1.c also, misspelled 'boardwalk'
+*pt7.c   - item desc: misspelled 'boardwalk' also, fix the 'mist' desc
+ 

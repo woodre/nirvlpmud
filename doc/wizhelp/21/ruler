@@ -1,0 +1,22 @@
+**************
+
+                     Ruler
+
+Syntax:    ruler
+
+Desc:
+           This command returns the line length of long_desc() text 
+           in the room. Useful for setting up rooms which should be
+           no longer than 70 characters in length.
+
+Warning:   
+
+Example:   ruler 
+                  results
+           Line lengths for the room description are displayed.
+
+Related:   
+
+
+**************
+

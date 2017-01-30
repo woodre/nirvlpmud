@@ -1,0 +1,64 @@
+/* *************************************************************************
+ * /players/earwax/closed/TRACKER/bin/tl.c
+ *
+ * Talks on the Trackers Flap Line
+ *
+ * Earwax 7/28/03 - Jareel 9/14/03
+ *
+ * *************************************************************************
+ * 
+ * 
+ * Usage for the will be 'tl <enter flap here>
+ * 
+ * As of 9/14/03 only players with PK set or Players in a PK
+ * area will be allowed to Flap on this line.  I am rethinking 
+ * this as I like when people Flap.
+ *
+ * The line should look like this.
+ * 
+ * [PK Legend] Orb says: I'd rather kill an Elite Knight than Beat my Meat.
+ * [Tracker] EliteRandom says: Heh
+ * [Legend] Cooper says: Why not try me Orb?
+ * [Pk Legend] Chant says: Your a pussy Cooper shut up...8)
+ *      
+ * The channel I would like to have on the channel show the players who are 
+ * 
+ * Legends -------------------- In Bold White
+ * Pk Legends ----------------- In Red
+ * Both PK and Normal Legends - Bold Red
+ * Just a Tracker-------------- Bold Black
+ * 
+ * Would make Flapping on the channel more impressive for the players who
+ * achieved Legend or Pk legend Status.  Separating them from the pack
+ * 
+*/
+#include "../defs.h"
+
+inherit WAXFUNS;
+
+void tell_wax(string arg) { object ob; if (ob = find_player("earwax")) tell_object(ob,arg); }
+
+tracker_talk(str)  {
+   object member, list;
+   int i;
+   string temp;
+   member = present("tracker", this_player());
+   if(!str){
+      write("Try saying something next time.\n");
+      return 0;        
+   }
+   temp = BLU+"["+HIK+"Tracker"+NORM+BLU+"] "+NORM+CAPNAME+" says:";
+   if(this_player()->query_invis()){
+      temp = BLU+"["+HIK+"Tracker"+NORM+BLU+"] "+Norm+"Someone says:";
+   }
+   temp = temp+" "+str;
+   temp = temp+"\n";
+   list = users();
+   for(i = 0; i < sizeof(list); i++)  {
+      member = present("tracker", list[i]);
+      if(member && !member->query_muff()){
+         tell_object(list[i], temp);
+      }
+   }
+   return 1;
+}

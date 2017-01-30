@@ -1,0 +1,24 @@
+
+
+                           [help sell]
+-----------------------=========+=========-----------------------
+
+Usage: sell <item>
+       sell all
+       sell <item> from <container>
+       sell all from <container>
+
+  In shops, you can sell your hard-won items for well-deserved gold
+coins.  You can even use the last two variations of the command to
+sell items that are inside bags without taking them out first. Of
+course, you can't sell items with no value, items that can't be 
+dropped, or items that you've used the keep command on.
+
+  Note that if you sell a bag with items in it, you most likely
+will not get the value of those items.  Use the keep command to
+prevent this from happening by mistake.
+
+  Please note that this help file may not apply to all shops.  The
+only shop you can count on all sell commands working in is the shop
+in the main village.
+

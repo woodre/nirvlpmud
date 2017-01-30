@@ -1,0 +1,99 @@
+Every spell has additional specific information in ~/mages/help/.
+Each spell belongs to a single school or to the universal category.  
+Univeral spells are gained along with guild levels and are basically guild commands.
+Learned spells belong to one of the eight schools of magic, listed with their abbrevations:
+
+abju [Abjuration]  conj [Conjuration]  ench [Enchantment]  evoc [Evocation]
+divi [Divination]  illu [Illusion]     necr [Necromancy]   tran [Transmutation]
+
+LVL SPELL               SCHOOL COMMAND    COST TIME   COMP       EFFECTS
+--- ------------------- ------ -------    ---- ---- ------------ ----------------------------------------------
+ 1  Augury               divi  augury      30   --   ----------  gives relative info on monster strength   
+ 1  Color-Spray          illu  cspray      27   --   ----------  10+r(21) other|light dmg      
+ 1  Continual Flame      evoc  cflame      40   --   any object  surrounds object with fire, giving off light
+ 1  Darkvision           tran  darkvis     30   --   ----------  dark_sight object - limited time
+ 1  Death Knell          necr  dknell     spec  --   ----------  finish move, costs 1/3 of AHP in sps   
+ 1  Detect Alignment     divi  detect      20   --   ----------  relative alignment
+ 1  Emote                illu  emote        2   --   ----------  colorized emote
+ 1  Erase                tran  erase       15   --   ----------  ability to erase arcane mark, wizard mark, or glyphs
+ 1  Faerie Fire          evoc  ffire       25   --   ----------  reduces opponent's AC
+ 1  Heal Light Wounds    conj  lheal       30   --   ----------  heal hps 20+r(21)
+ 1  Magic Missle         evoc  mssle       27   --   ----------  5+r(31) magical dmg, up to 5 missles based on evoc stat
+ 1  Unseen Servant       conj  userv       35    1   ----------  sell to shop remotely
+ 1  Absorption           tran            
+
+ 2  Acid Arrow           evoc  aarrow      46   --   ----------  15+r(21) dmg + 4 rounds r(3) dmg (see ~OBJ/acid_arrow_obj.c)
+ 2  Alarm                abju  alarm       40   --   ----------  notifies when anyone enters room - only 1 at time
+ 2  Chromatic Orb        evoc  orb         34   --   ----------  r(51) other|light dmg
+ 2  Death Watch          necr  dwatch     spec  --   ----------  % of hps for all in room, costs 15 sps per target
+ 2  Enchant Weapon       ench  enchant     200  --   any weapon  gives +1 WC bonus to a weapon, only cast once on item
+ 2  Instant Summons      conj  isummon     50   --   wep w/mark  teleports any item that has player's arcane mark to them 
+ 2  Sigil                abju  sigil       50    4   amber rod   summons monster to protect kill (see ~NPC/sigil_mon.c)
+ 2  Stone Skin           abju  stoneskin   75   25   stone       AC 9, no other armor can be worn (see ~OBJ/stone_armor.c)
+ 2  Tongues              divi  tongue      4    --   ----------  mage talk, only other mages understand it
+
+ 3  Animate Dead         necr  animate     170   5   corpse      makes a corpse into a zombie, a weak pet (see ~NPC/zombie.c)
+ 3  Break Enchantment    abju  benchant    100  10   ench item   removes the enchantment from armor or weapon, makes storable/sellable
+ 3  Confuse              ench  confuse     40    5   ----------  calm spell 
+ 3  Darkness             evoc  darkness    80   --   dark onyx   creates an aura of darkness around player, time-limited
+ 3  Divine               divi  divine      30   --   ----------  general info about items
+ 3  Endure Elements      abju  endure      150  --   ----------  gives 25% res to earth/fire/wind/water/ice/elec dmg for short time
+ 3  Entangle             tran  entangle   spec   3   venus ess.  lowers opponent's AC, costs 3*reduction*round (see ~OBJ/entangle_obj.c) 
+ 3  Fireball             evoc  fball       10   --   ----------  10+r(41) other|fire dmg
+ 3  Khirstel             conj  khirstel    65   10   ----------  summons Khirstel pet (see ~OBJ/khirstel.c)
+ 3  Telekensis           tran  telek       40    5   ----------  transport item to another player
+ 3  Wizard Mark          illu  wmark       30    3   ----------  leave a message on the ground
+
+ 4  Blind                tran  blind      spec  --   ----------  lowers opponent's WC, cost 4*reduction*round (see ~OBJ/blind_obj.c)     
+ 4  Enchant Armor        ench  enchant     225  --   any armor   increases AC +1 (all except extra worn items)
+ 4  Eenervation          necr  enerv       55   --   ----------  10+r(25) other|dark dmg, heals caster r(35) hps
+ 4  Glyph of Warding     abju  glyph
+ 4  Poison Bolt          evoc  pbolt       55   --   ----------  10+r(21) other|poison dmg + 3 rounds 3+r(8) other|poison dmg
+ 4  Ray of Frost         evoc  rfrost      48   --   ----------  10+r(51) other|ice dmg
+ 4  Regenerate           tran  regen       
+ 4  Summon Monster       conj  summon      100  --   ----------  summons a monster to aid in attack (see ~OBJ/summoned_mon.c)
+ 4  Telepathic Bond      divi  tbond       75   --   s. thread   long-distance biometer, requires 2 silver threads per target
+ 4  Ventriloquism        illu  vent        10   --   ----------  ability to throw voice (caster's name is appended at the end)
+ 
+ 5  Contagion            necr  contagion   190   5   corpse      15+r(26) dmg for 5 rounds (see ~OBJ/contagion_obj.c)
+ 5  Entrophic Shield     abju  eshield     70    4   ----------  gives 20% res to physical/magical attacks for short time
+ 5  Fire Whip            ench  fwhip       50    2   cord        creates 17 WC weap, return 7 - lasts 1 + ench/10 rounds
+ 5  Gate                 conj  gate      70/85  --   ----------  teleport spell, creates portal to guild hall or other learned locations
+ 5  Heal Serious Wounds  conj  sheal       55   --   ----------  heal hps 40+r(41)
+ 5  Keen Edge            tran  keen        80   --   ----------  sharpen weapon & lowers wear for a while
+ 5  Phantasmal Assassin  illu  phansassin  100  --   ----------  conjures an illusion of an assasin (see ~OBJ/phan_assassin.c)
+ 5  Sunburst             evoc  burst       55   --   ----------  25+r(31) other|light dmg
+ 5  Vanish               tran  vanish      50   --   ----------  invisibility spell - costs r(3) sps each 60 seconds to maintain
+ 5  Wyrm (dragon)        conj  summon      250  --   heartstone  summons dragon pet (see ~OBJ/wyrm.c)
+
+ 6  Antimagic Field      abju  afield      60   --   ----------  turns room into no_magic zone for 60 seconds
+ 6  Bind                 ench  bind        250  10   mith. chain keeps monster from attacking for ench/10 + r(ench/10) rounds
+ 6  Chain Lightning      evoc  chainl      95   --   ----------  15+r(26)[1st] & 10+r(21)[2nd] other|electric dmg to two targets
+ 6  Change Self          illu  change      100   5   clay lump   assume the shape of any object
+ 6  Detect Life          divi  detect      50   --   amythest    determines # (vis/invis) and names (vis only) or people in same realm
+ 6  Earthquake           evoc  quake      spec  15   ----------  10+r(41) other|earth dmg to all npc in room - costs 60 sps * target
+ 6  Righteous Might      tran  might       100  --   ----------  gives target a temporary strength bonus of 10
+ 6  Wail of the Banshee  necr  wail        55   --   ----------  15+r(51) other|dark dmg
+
+ 7  Cloak of Chaos       abju  ccloak                            doubles all hit_player damage received
+ 7  Creeping Doom        conj  doom        165  --   corpse      10+r(26) dmg + 5 rounds of 10+r(21) dmg (see ~OBJ/c_doom.c)
+ 7  Flame Strike         evoc  fstrike     150  --   sulfur      20+r(31) other|fire dmg & clones fire (see ~OBJ/strike_fire.c)
+ 7  Haste                tran  haste       200  --   ----------  gives possible 2nd attack in round for limited time (see ~OBJ/haste_obj.c)
+ 7  Meteor Swarm         evoc  swarm        70  --   ----------  25+r(51) other|earth dmg
+ 7  Mirror Image         illu  mimage     spec  --   plat mirror creates 1+r(4) mirror images that mob attacks instead of caster
+ 7  Resurrect            necr  resurrect  spec  60   corpse      ressurects player with stat & 1/20 exp replaced - costs 200 sps & 100 hps
+ 7  Scrying              divi  scry        100       eagle eye   shows location of an invis player - can only be used every 5 minutes
+ 7  Strangulation        ench  strangle   spec  10   au circlet  r10+(31) inital + 10+r(15) dmg - costs 35 sps initial, 25 sps round continuation
+
+ 
+ other possible components:
+   disir slime
+   demon's heart
+   demon's tooth
+   demon gore
+   ice sphere
+   ice shard
+   raptor's eye
+      
+   
+-make component pouch a container - variables tell how much of what you have?

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "An old pair of leather [1;30mgun[1;37m holsters[0m[0m"
+long_desc "A pair of old worn [1;30mgun[0m holsters. They look like they have seen many battles.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "holsters"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A pair of old worn [1;30mgun[0m holsters. They look like they have seen many battles.[0mType 'clan_help' for commands."
+clan_short "An old pair of leather [1;30mgun[1;37m holsters[0m[0m"
+damage_type 0
+hall_path "/room/lanceroad3"
+object_name "holsters"
+owner "erik"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 2
+private_coffer 860000
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

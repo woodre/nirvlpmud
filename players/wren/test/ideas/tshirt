@@ -1,0 +1,20 @@
+Nirvana Apparel      Target store
+      -  T-shirts :     Polymorphs "What do you want to be today?"
+                        Vampires "We do it with the lights off"
+                        Shardak "Didn't I kill you?"
+                        Rangers "Skin tight, and full of fight"
+                        Cybers "We're wired to kick your butt"
+                        Knights "Hunting Smooth Criminals since 96"
+
+
+forest cloak 
+        if this_player()->query_inventory
+        has elven cloak + camoflauge
+        (arg)= hide, "disappears into the foliage"
+        usable to hide when not moving
+
+loup garou - lycanthropes
+             pack based on creature type
+
+dragon_dissect - dragon teeth that can be sown for warriors
+

@@ -1,0 +1,26 @@
+string short()
+{
+  return "The Tower of Mages";
+}
+
+void init()
+{
+  add_action("cmd_enter", "enter");
+}
+
+int id(string str)
+{
+  return str=="tower" || str == "tower of mages";
+}
+
+int cmd_enter(string str)
+{
+  if(!id(str)) return 0;
+  this_player()->move_player("X#/players/pavlik/guild/mages/room/tower");
+  return 1;
+}
+
+void long()
+{
+  "/players/pavlik/guild/mages/rooms/tower"->long();
+}

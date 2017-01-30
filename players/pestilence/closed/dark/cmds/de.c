@@ -1,0 +1,39 @@
+#include "/players/pestilence/define.h"
+main(str)
+{
+   int who;
+   string what;
+   object *us; int x;
+   if(!str)
+      {
+      write("Emote what?\n");
+      return 1;
+   }
+   if(sscanf(str,"%s",what) < 1)
+      {
+      write("Emote what?\n");
+      return 1;
+   }
+   else {
+    string em, arg, file;
+    
+    if(sscanf(str, "%s %s", em, arg) != 2) {
+      em = str;
+    }
+    em = implode(explode(em, "."), "");
+    if(file_size(file="/bin/soul/_"+em+".c") > 0) {
+      return (int)file->guildcast("Dark Order", arg);
+    }
+  }
+write_file("/players/pestilence/closed/dark/log/darktell",""+HIK+"<"+HIR+"DARK"+NORM+HIK+"> "+capitalize(this_player()->query_real_name())+" "+what+""+NORM+HIW+ctime()+NORM+"\n");
+   us = users();
+   for(x=0;x<sizeof(us);x++)
+   {
+      if(present("dknight_ob",us[x]) && !(present("dknight_ob",us[x])->query_muff()))
+         {
+tell_object(us[x],HIK+"<"+HIR+"DARK"+NORM+HIK+"> "+capitalize(this_player()->query_real_name())+" "+what+""+NORM+"\n");
+       }
+   }
+   write("\n");
+   return 1;
+}

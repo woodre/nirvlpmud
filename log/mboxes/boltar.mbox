@@ -1,0 +1,101 @@
+From: brandi
+Subj: sorry
+
+Date: Dec 10 23:41
+
+I am sorry to bother you, but something has to be
+done, Wendy brought her and Moadeep/Howdy/Dispair's
+real life problems to the mud, and as the wizards
+see it, Mizan, Pain, Data, when they see
+him on, they jail his char. She was/is dating Data in real life
+as we found out later.
+
+From: jamaj
+Subj: mizan is being Extrmely unfair
+
+Date: Sep  6 15:35
+
+mizan has decided to take things in his own hands. he has made it so that any wizard may kill any of my chars at will esc..it will be luck if i am not killed before i am finnished typeing this note. i would appreacieate it if you would be able to talk to me. for some reason, what has happend is he believes that i have been lieing to him, and yet i did not. i believe that if he does not want me on the mud, tell me and site ban me i am thinking, just do not have wizards sport any of my chars at will. please respond to my dire situation. 
+
+From: earwax
+Subj: player accounts
+
+Date: Oct 24 11:49
+
+Wanted to see if vital/verte/fred thought this viable first, they do, 
+mon 
+so now your turn :)  This is something that I envision purely as a 
+player character management tool, NOT a means for us to know every 
+alt that someone has...we can find out that kinda stuff without this 
+kinda work, and really, it'd be a stupid thing to try to pull with 
+players...I personally want to see this as straightforward as possible, 
+so they'll take to it and get some use for it...The advantages are 
+pretty obvious I think, but additionally, you could do all this from 
+the web. 
+ 
+On the implementation side, the hard parts are the mysql implementation, 
+but since the worst part of that is in the mud-side code that drives 
+mysql, it's irrelevant because we need that code done anyways, the  
+rest of it isn't too bad.  Another sticky part is coordination between 
+the mud-side coder (me most likely) and the web developer (mizan), but 
+that shouldn't be too bad as well.   
+ 
+Anyways, next mail is the outline for it, lemme know what you think. 
+-ew 
+
+From: earwax
+Subj: Player accounts
+
+Date: Oct 24 11:49
+
+Member Accounts 
+ 
+This is not an attempt to watch people or track them, or to be 'big brother' in  
+any way, shape, or form.  It's to facilitate being able to do tasks like  
+transfering points between chars, reading mudmail, and news from the login  
+sequence or from the web, or on the game, with hopefully other applications  
+fitting into it in the future.  Note, they should be able to directly login and 
+bypass this menu by entering their profile name:char name. 
+For example, for me to directly logon earwax: dhalek:earwax    
+ 
+================================================================================ 
+Welcome to the the Nirvana character management system.  The following options 
+are available to you from here: 
+ 
+1. Change password. 
+2. Transfer points from main account to character. 
+3. Transfer points from character to main account. 
+4. Transfer points from character to character. 
+5. Read news/boards. 
+6. Review personal information and settings. 
+7. Help. 
+ 
+Account: dhalek 
+Last login: 2/30/04 
+Nirvana Points accrued: 5342 
+You (do not) have new news to read. (different colors) 
+ 
+Characters:   Level   Guild         Unread Mail?  Points   Last Login 
+ 
+Earwax         5000   None          5/109          1721     1/32/07 
+Lungbutter   19+100   Bloodfist     1/5             43      1/01/07 
+ 
+Options: play <charname> (play or create this character) 
+         mail <charname> (enter the mailer with this character) 
+         news <charname> (enter news reader/poster with this char) 
+================================================================================ 
+ 
+Playing a char not listed will check for existing char, then ask to bring it 
+into this account, after checking password against it, or it will create a  
+char under this account. 
+ 
+This all needs to be done via mysql. 
+ 
+general aliases and nicknames option for ALL chars to use the same set. 
+ 
+this requires creation of a specific account object, or objects, depending on  
+if we need one for doing it from the web. 
+ 
+break transfer stuff into another menu (vita/verte mentioned) 
+option to play <number> where each char has a number (vital) 
+

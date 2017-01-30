@@ -1,0 +1,11 @@
+inv_no 6
+done 1
+shield 0
+notin 0
+hit_val ({1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+miss_val ({1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+locker_arg ({0,0,0,"-1-",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+filename ({"players/snow/closed/test/elem_sword","players/maledicta/closed/stone_armor","players/snow/closed/test/amulet","players/maledicta/cont/rdragon/sbracers","players/maledicta/closed/stone_shield","players/hurtbrain/castello/dag/crown",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+long_dsc " You have found yourself in a small courtyard, surrounded by squires andknight-errants running about, polishing armors and sharpening blades.  Thereis a weapons rack to the side, holding Stone's gear."
+owner_name "stone"
+lighton 1

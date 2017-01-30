@@ -1,0 +1,65 @@
+This chart was constructed using a combat simulator written in C++
+that would quickly simulate 3000 fights with an average monster,
+total up all the damage done and how many sps were used, and divide
+by the number of fights to give the average damage done and average
+spell points used.  The number listed on this chart is the total of
+average hps expended per fight, plus the number of sps expended.
+
+The monster's attributes were assumed to be the same as they are on
+the chart, with the exception of the level 20 monster which had a 
+30% chance of doing 30 points of damage.
+
+On the chart, 'resources expended' means hitpoints+spellpoints used.
+- Feldegast
+
+
+Level		Res	Coins	$/R	BXp	Xp/Res	New$	$/R	NewXp
+----------------------------------------------------------------------------------------------------
+1		22	30	1.36	0	0	65	2.9
+2		29	60	2.07	2	0.07	90	3.0
+3		40	100	2.5	3	0.08	120	3.0
+4		51	150	3.0	4	0.08	-	3.0
+5		64	200	3.12	12	0.19	-	3.1
+6		75	250	3.33	26	0.36	-	3.1
+7		91	300	3.26	56	0.68	-	3.3
+8		105	350	3.33	84	0.8	-	3.3
+9		118	400	3.37	126	1.07	-	3.4
+10		137	450	3.26	189	1.58	-	3.3
+11		158	500	3.33	284	1.76	-	3.3
+12		174	600	3.46	411	2.36	-	3.3
+13		196	700	3.57	622	3.17	-	3.5
+14		221	850	3.8	1036	4.67	-	3.8
+15		255	875	3.45	1305	5.11	1000	3.9
+16		475	890	1.87	1726	3.65	1800	3.8
+17		538	950	1.77	2189	4.07	2100	3.9
+18		610	1000	1.66	2874	4.71	2500	4.1
+19		700	2000	2.86	4210	6.01	3000	4.3
+20		847	5000	5.9	5263	6.21	-	5.9
+
+
+Level	Xp(1)	Res	Xp/Res
+-------------------------------
+1	15	22	1.4
+2	32	29	1.1
+3	49	40	1.2
+4	65	51	1.3
+5	91	64	1.4
+6	124	75	1.6
+7	179	91	2.0
+8	232	105	2.2
+9	303	118	2.6
+10	402	137	2.9
+11	543	158	3.4
+12	728	174	4.2
+13	1024	196	5.2
+14	1591	221	7.2
+15	1965	255	7.7
+16	2701	475	5.7
+17	3343	538	6.2
+18	4287	610	7.0
+19	6029	700	8.6
+20	7293	847	8.6
+
+
+
+1. Includes base, wc/ac, and hit bonuses, but not alignment bonus.

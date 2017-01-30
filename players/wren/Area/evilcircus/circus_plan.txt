@@ -1,0 +1,46 @@
+Plans for the evil circus 6/1/02.
+
+3 Ring Circus like crazier Circ de sole (sp)
+
+Entrance   -   Side tent second ring. Tear in tent to enter,3 rooms
+               Center Big Ring. Main entrance.5 rooms
+               Side tent third ring. 3 rooms.
+               Outside. 2 rooms
+Monsters:
+
+    Ring Master - Big mob, Whip of Thorns...Talking mob
+    Beast Keeper - chair, whip, stun wand.
+           Oliphant - primitive mastadon thingy , tusks to sell
+           Smilidon - sabertoothed tiger, hide and fangs to sell
+           D-raptor - spiny raptor, does wound poison obj
+    Aboth - avenger, has slain an evil performer and has its wep,
+                  good guy, Blade of Virtue, Spear of Sin -
+                  weapon with fire specials that improves evil in 
+                  wielder. Corpse of Siguel the Scourge
+
+    Shiv - Vampire Clown - 
+    Koth - Ghoul Mime - Performers with nasty attacks, crazy mean
+    Blade acrobats - bonuses to AC while dodging around. Carry daggers
+    Hell hounds - guard main entrance to main tent    
+    Barker - Illithid at the tent door promoting the show with a mix 
+                  of telepathy and speaking.
+    Tusk - the troll cannonball. He can fire himself out of the cannon.
+                  has smokepowder flask needed to prime the cannon...
+                  Cannon can be used to randomly fire players to another 
+                  point in my area. Improved chance for using more powder 
+                  but also take more damage
+
+                  Cannon - move_player() switch(random(5)) rooms
+                           Dark keep, Forest Vale, Circus Entrance,
+                           Blue midget, Nirvana road . 
+                           heal_other(-50+charge)
+                           charge increase probability of getting to 
+                           the Dark Keep.
+
+Make a moving object that will simulate the roving of the circus check with 
+Maledicta and Vertebraker about having several places it can pop up.
+          One spot in forest :
+          On the continent.
+          At green ;)
+          In southern forest.
+          Beck's park

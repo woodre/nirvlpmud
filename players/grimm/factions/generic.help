@@ -1,0 +1,21 @@
+The following is a listing of what the Generic Doppleganger Faction can do:
+-------------------------------------------------------------------------------
+generic_help  or  gh  ...... Get this menu
+gsay <str>  ................ Say a <str> to all the other people in the
+                                room who are in your faction.  The 
+                                people NOT in the faction will see:
+                                "Jojo says something in a cryptic tongue"
+genwho  .................... Get a listing of who is in your faction
+gentell <str>  ............. Tell a <str> to the other people online in your
+                                faction
+genemote <str>  ............ Emote a <str> to the other people online in your
+                                faction
+genshaddup  ................ Turn on/off the faction lines
+genatak <monster>  ......... Generically attack a monster for 10 sp
+genupdate  ................. Get a new faction object
+genheal <amt>  ............. Swap <amt> coins for <amt>/10 hp and sp
+ 
+NOTE TO THE FACTION LEADERS:  These are just generic function that should
+  have their names changed.  The above is just given to begin a basis for
+  the faction.  Other than that, the faction commands, after being approved
+  by Grimm, are up to you to code and maintain.

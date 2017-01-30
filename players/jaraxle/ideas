@@ -1,0 +1,25 @@
+
+Changes
+-calm <specific_npc>
+
+Additions
+valour <player>
+  Cast a spell that lasts for about 10 min.  Every 10 seconds, it will
+  give the player 1-3 hp for leading a fight.  Can only have one
+  valour cast on one player.
+
+undead_ward
+  Create a ward of protection against low-level NPC spirits, demons etc.
+  [It might kick necromancer pets right out of the room.  Boy I'm evil.]
+
+spirit_armor
+  Cast a spell to create a bonus against other|evil dmg and
+  physical attacks by evil alignment attackers.
+
+brotherhood
+  All united knight brothers in combat receive a +1 wc while
+  this spell lasts.
+
+
+
+ 

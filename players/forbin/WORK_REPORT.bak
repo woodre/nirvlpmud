@@ -1,0 +1,67 @@
+Aug 20 05:53 2003 [1;32m**[2;37;0m Action=  Moved by workreport to /log/WR/forbin_workreport.old & /players/forbin/WORK_REPORT.old
+                  Comment= Was starting to get crowded
+                               That and it was starting to look U G L Y!!!
+Aug 20 05:56 2003 [1;32m**[2;37;0m Action=  Started work on Dervish trail code
+                     Comment= Boltar gave Fred the ok 2003.08.19
+Aug 29 17:18 2003 [1;32m**[2;37;0m Action=  patched Chant back with coins/eq after I crashed the mud
+                     Comment= None
+                              crimson cape, sblocker, 2 esword, eamulet,bracers of speed, 52800 coins
+Sep  7 18:27 2003 [1;32m**[2;37;0m Action=  gave preston eq after his didn't save during crash
+                     Comment= elemental amulet, hammer, and mace, crown of laurels
+                                        bracers of speed, lindsay skates, and misty cloak (Fred ok'd reimbursement)
+Sep 12 17:07 2003 [1;32m**[2;37;0m Action=  Currently working on a Dervish Trial/Quest
+                     Comment= So if you see my name in ED_OTHER besides some files in
+                              /players/snow/dervish/trials - have no fear - I have permission for it :)
+                              Any questions, contact myself or Fred.  Thank you...that is all!
+Sep 27 12:01 2003 [1;32m**[2;37;0m Action=  logged on Forbin while on as a pker
+                     Comment= trying to straighten out a bank depository bug
+                              still unresolved - mailed Vertebraker and Vital comp'd my pkers lost coins
+Sep 28 10:03 2003 [1;32m**[2;37;0m Action=  patched Billy back to exp in death log
+                     Comment= tetrapod multihit called a secondlife on ani and it blicked him
+                              figured it was the nice thing to do
+                              for more info check out debug.log and DEATHS
+Oct 20 18:18 2003 [1;32m**[2;37;0m Action=  cloned mythos/awep/backbiter.c to Ribbit (a player character of mine)
+                     Comment= itemtest shows backbiter will save across boot
+                              it didn't save, instead it dropped
+Oct 24 07:03 2003 [1;32m**[2;37;0m Action=  dest an INVIS obj/armor.c item from Ribbit's (my player character) room
+                     Comment= was restoring as 0 and INVIS
+                              originally a store Ring of Death, but obviously doesn't restore correctly
+Jan 23 21:36 2004 [1;32m**[2;37;0m Action=  edited /players/forbin/hyperion/flame_forest/ARM/wraith_fur.c
+                     Comment= cleaned up code and added color to dtype specials
+Jun 11 22:31 2004 [1;32m**[2;37;0m Action=  gave kinshin /realms/salam/OBJ/neruumsh.c
+                     Comment= won an item contest in my newly opened area
+Jun 11 22:35 2004 [1;32m**[2;37;0m Action=  OH...opened up my area
+                     Comment= 
+Jun 22 20:52 2004 [1;32m**[2;37;0m Action=  dested Preston's (a player char of mine) kid and replaced /players/mythos/awep/forest/ken.c
+                     Comment= it was messing up kid and keeping him from going into daycare...which showed him as in already
+Jun 23 20:06 2004 [1;32m**[2;37;0m Action=  capped the experience returned from realm/salam/NPC/king.c 
+                     Comment= approved by Verte 2004.06-23
+Jun 24 17:03 2004 [1;32m**[2;37;0m Action=  correct calculate_worth() problem with my mob, hopefully for the last time
+                     Comment= finally figured out what I was doing wrong - so I repaired it
+Jul  4 07:11 2004 [1;32m**[2;37;0m Action=  added /players/forbin/realms/misc/livestrongd.c to the green (cloned from my castle)
+                     Comment= dispenss a special limited time armor, approved by Vertebraker
+Jul  4 07:13 2004 [1;32m**[2;37;0m Action=  com will be in game from Jul 4 through Jul 25 (the dates of the Tour de France)
+                     Comment= None
+Jul  5 00:58 2004 [1;32m**[2;37;0m Action=  re-opened Mal's ruins
+                     Comment= forbin/realms/ruins
+Jul  5 15:52 2004 [1;32m**[2;37;0m Action=  Made a bunch of changes to realms/ruins stuff (ALL COSMETIC)
+                     Comment= found a better way to make it look like mobs are wearing/wielding
+                              it's called ACTUALLY wielding/wearing stuff =)
+Jul 11 19:08 2004 [1;32m**[2;37;0m Action=  placed an invis object to block using 'tree' exit in Felde's area
+                     Comment= Jar's area is closed and this means of entrance wasn't blocked
+                              it's all a little old level 55 can do to help
+Jul 14 06:17 2004 [1;32m**[2;37;0m Action=  trans z (a playerchar of mine to the green)
+                     Comment= was in a bugged room in the fallen lands with no exits
+Jul 14 19:56 2004 [1;32m**[2;37;0m Action=  moved/healed Z (a player char of mine)
+                     Comment= mud crashed - badness ensued with fallen/low hps/et. al.
+                              approved by Fred
+Jul 16 01:48 2004 [1;32m**[2;37;0m Action=  moved in updated heals (changed to generic_heal & improved apperance) & one new heal (museeuw.c)
+                     Comment= /players/forbin/heals/*.* - approved by fred
+Jul 20 21:59 2004 [1;32m**[2;37;0m Action=  added heals/mongie.c and museeuw.c to my heal shack
+                     Comment= approved by fred
+Jul 25 08:26 2004 [1;32m**[2;37;0m Action=  uploaded new copies of realms/ruins/ shadowangel, shadowdemon, newscloak, dark_shroud, shadow_weaken
+                     Comment= approved changes by Fred 2004.07.24
+Jul 25 21:19 2004 [1;32m**[2;37;0m Action=  commented out realms/misc/livestrongd.c (dispenser at the green)
+                     Comment= dispenser will stop loading at the AM reboot
+Jul 27 20:01 2004 [1;32m**[2;37;0m Action=  added /realms/chalkboard.c (just a pretty bulletin board) to /realms/entrance.c
+                     Comment= approved by Fred

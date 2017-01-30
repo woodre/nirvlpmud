@@ -1,0 +1,32 @@
+This npc is for Forbin's prison.
+
+A level 25 npc w/ 4 special attacksand 1 heal function:
+
+spec1() Deals a total of 6 numbers which are chosen at random
+             0, 3, 5, 8, 12, 14 hit_player damage all dealt at one time.
+
+spec2() Deals a random of 1 to 6 hits.  Each hit has a random
+             possibility of 2, 3, 5, 8, 10, 12 hit_player.  All damage
+             from each hit is totaled, and delt damage as one single
+             hit_player.
+
+spec3() A single attack, hit_player(50+random(25)) damage
+             delt to all living in the room, except the npc.
+
+spec4() A single attack, hit_player(25+random(36))
+
+The npc has an invis item which handles the heal function:
+mon_heal.c (same directory)
+     At !random(3) the item will call a function on the monster
+     which will trigger a heal_self with this calculation:
+     if(dmg >= 25){
+     this_object()->heal_self(dmg+random(dmg));
+     dmg is total damage received in that round of combat
+
+Upon death, the npc will clone a special corpse object, body.c
+(same dir) which has a search function.  Unless searched, there is
+no treasure for the npc.  The corpse can still be "dested" w/ guild,
+items. [ie: vampire drain, knight decorpse]  Upon search, the corpse
+will yield 1-6 1k barter items, 1 brain, 1 heart, 1 bicept, 2 feet.
+Each of the body parts is a stat increasing item. (In same dir under
+body part name.) The search can only happen 1 time.

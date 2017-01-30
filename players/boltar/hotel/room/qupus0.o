@@ -1,0 +1,21 @@
+no_clean 0
+name "A red lace teddy"
+alias "teddy"
+short_desc "A red lace teddy"
+long_desc "A red lace teddy of high quality, it seems to be magic."
+value 2100
+weight 1
+type "underwear"
+protect "physical"
+special "do_special"
+size 5
+save_flag 0
+worn 0
+ac 3
+res 0
+silently 0
+worn_by 0
+next 0
+info 0
+set_ac_flag 7
+params ({"physical",3,0,"do_special",})

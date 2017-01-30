@@ -1,0 +1,371 @@
+guild_tell(str){
+  object ob, obj;
+  int i;
+
+  if(!str){
+    write("Tell guild members what?\n");
+    return 1;
+    }
+
+  if(str=="history") {
+    write("/obj/user/chistory"->query_history("MAGES"));
+    return 1;
+  }
+  if(guild->query_muffled() == 1){
+    write("You are muffled.\n");
+    return 1;
+    }
+
+  ob = users();
+  for(i=0; i<sizeof(ob); i++){
+    obj = present("mageobj", ob[i]);
+    if(obj && obj->query_muffled() == 0)
+    tell_object(ob[i], CYN+"["+HIC+ME+NORM+CYN+"]: "+NORM+str+"\n");
+  }
+  "/obj/user/chistory"->add_history("MAGES", CYN+"["+HIC+ME+NORM+CYN+"]: "+NORM+str+"\n");
+  return 1;
+}
+
+guild_emote(str){
+  object ob, obj;
+  string em, arg, file;
+  int i;
+
+  if(!str){
+    write("Guild emote what?\n");
+    return 1;
+    }
+
+  if(guild->query_muffled() == 1){
+    write("You are muffled.\n");
+    return 1;
+    }
+
+  ob = users();
+  if(sscanf(str, "%s %s", em, arg) != 2) {
+    em = str;
+  }
+    em = implode(explode(em, "."), "");
+  if(file_size(file="/bin/soul/_"+em+".c") > 0) {
+    return (int)file->guildcast("mage", arg);
+  }
+  for(i=0; i<sizeof(ob); i++){
+    obj = present("mageobj", ob[i]);
+    if(obj && obj->query_muffled() == 0)
+    tell_object(ob[i], CYN+"~"+HIC+ME+" "+str+NORM+"\n");
+  }
+  "/obj/user/chistory"->add_history("MAGES", CYN+"~"+HIC+ME+" "+str+NORM+"\n");
+  return 1;
+}
+
+council_tell(str){
+  object ob, obj;
+  int i;
+
+  if(!is_gc(tp)){
+    write("What?\n");
+    return 1;
+    }
+
+  if(str=="history")
+  {
+    write("/obj/user/chistory"->query_history("MAGES COUNCIL"));
+  }
+  if(!str){
+    write("Commander tell what?\n");
+    return 1;
+    }
+
+  if(guild->query_muffled() == 1){
+    write("You are muffled.\n");
+    return 1;
+    }
+
+  ob = users();
+  for(i=0; i<sizeof(ob); i++){
+    obj = present("mageobj", ob[i]);
+    if(obj && obj->query_muffled() == 0 && is_gc(ob[i]))
+      tell_object(ob[i], HIC+"<"+ME+"<: "+NORM+str+"\n");
+  }
+  "/obj/user/chistory"->add_history("MAGES COUNCIL", HIC+"<"+ME+"<: "+NORM+str+"\n");
+  return 1;
+}
+
+council_emote(str){
+  object ob, obj;
+  int i;
+
+  if(!is_gc(tp)){
+    write("What?\n");
+    return 1;
+    }
+
+  if(!str){
+    write("Commander emote what?\n");
+    return 1;
+    }
+
+  if(guild->query_muffled() == 1){
+    write("You are muffled.\n");
+    return 1;
+    }
+
+  ob = users();
+  for(i=0; i<sizeof(ob); i++){
+    obj = present("mageobj", ob[i]);
+    if(obj && obj->query_muffled() == 0 && is_gc(ob[i]))
+      tell_object(ob[i], HIR+"<"+HIC+ME+" "+str+NORM+"\n");
+  }
+  "/obj/user/chistory"->add_history("MAGES COUNCIL", HIR+"<"+HIC+ME+" "+str+NORM+"\n");
+  return 1;
+}
+
+  
+muffles(str){
+  if(!str && guild->query_muffled() == 0){
+    write("You will no longer hear the guild channel.\n");
+    guild->set_muffled(1);
+    return 1;
+    }
+  
+  if(!str && guild->query_muffled() == 1){
+    write("You will now hear the guild channel.\n");
+    guild->set_muffled(0);
+    return 1;
+    }
+
+  if(str == "off"){
+    write("You will no longer hear the guild channel.\n");
+    guild->set_muffled(1);
+    return 1;
+    }
+
+  if(str == "on"){
+    write("You will now hear the guild channel.\n");
+    guild->set_muffled(0);
+    return 1;
+    }
+}
+ 
+mud_who(){
+  object ob, obj;
+  string str, who, gname;
+  int i, count;
+
+write("\n"+
+"                  -- The Denizens of Nirvana: -- \n"+
+"Name:         Gen:  Lvl:  Guild:    Location: \n"+
+"------------------------------------------------------------------------\
+------\n");
+ob = users();
+for(i=0; i<sizeof(ob); i++)
+{
+  if(!environment(ob[i]))
+  {
+	write("   Logging In ... \n");
+  }
+  else if(ob[i]->query_invis() < tp->query_level())
+  {
+    who = capitalize(ob[i]->query_name());
+    count = strlen(who);
+    count = 14 - count;
+    if(ob[i]->query_pl_k() == 1)
+      write(HIR+"*"+NORM);
+    else
+      write(" ");
+    if(ob[i]->query_idle() > 120)
+      write(CYN+"~"+NORM);
+    else
+      write(" ");
+    write(who);
+    while(count > 0){
+      write(" ");
+      count--;
+    }
+    str = ob[i]->query_gender()[0..0];
+    str=capitalize(str);
+    count = strlen(str);
+    count = 4 - count;
+    if(str=="M")str=HIB+"M"+NORM;
+    if(str=="F")str=HIM+"F"+NORM;
+    write(str);
+    while(count > 0){
+      write(" ");
+      count--;
+    }
+    if(ob[i]->query_level() > 19)
+      write(colour_pad(GRN+"wiz"+NORM,6));
+    else if(ob[i]->query_level() >= 10000)
+      write(colour_pad(HIG+"GOD"+NORM,6));
+    else
+      write(pad(" "+ob[i]->query_total_level(), 6));
+    gname = ob[i]->query_guild_name();
+    if(!gname) gname = "none";
+    count = strlen(delete_colour(gname));
+    count = 10 - count;
+    if(gname == "mage")
+      gname= CYN+"MAGE"+NORM;
+     gname = colour_pad(capitalize(gname), 9);
+     write(gname+" ");
+    write(environment(ob[i])->short()+"\n");
+  }
+  }
+write(
+"------------------------------------------------------------------------\
+------\n"+
+" ["+sizeof(ob)+"] players.     * = player killer     ~ = idle\n"+
+"------------------------------------------------------------------------\
+------\n");
+  return 1;
+}
+
+
+
+guild_who(){
+  object ob, obj;
+  string str, name;
+  int mages, i, count;
+
+mages = 0;
+DONATOR->get_names();
+DONATOR->sort_names();
+write("\n"+
+"------------------------------------------------------------------------\
+------\n"+
+"  Name:      Lvl:  G:   Rank:                Location:\n"+
+"------------------------------------------------------------------------\
+------\n");
+ob = users();
+for(i=0; i<sizeof(ob); i++){
+  obj = present("mageobj", ob[i]);
+  if(obj && ob[i]->query_invis() < tp->query_level()){
+  if(ob[i]->query_pl_k()==1) write(HIR+"*"+NORM);
+  else write(" ");
+  if(obj->query_muffled()==1) write(HIC+"%"+NORM);
+  else write(" ");
+  name = ob[i]->query_real_name();
+  if(name == DONATOR->query_first()){
+    name = totalcap(name);
+    write(align_str(name, 12));
+  } else
+    write(align_str(capitalize(name), 12));
+  if(ob[i]->query_level() > 99) write(HIC+ob[i]->query_level()+NORM+"  ");
+  else if(ob[i]->query_level() < 10) write(ob[i]->query_level()+"    ");
+  else write(ob[i]->query_level()+"   ");
+  if(ob[i]->query_gender() =="male") write(" M   ");
+  else if(ob[i]->query_gender() =="female") write(" F   ");
+  else write(" C  ");
+  print_title(ob[i]->query_guild_rank());
+  write(environment(ob[i])->short()+"\n");
+  mages++;
+  }
+  }
+write(
+"-------------------------------------------------------------------------\
+------\n");
+write(" ["+mages+"] Mages logged on    * = player killer    % = muffled\n");
+write(
+"-------------------------------------------------------------------------\
+------\n");
+return 1;
+}
+        
+print_title(rank){
+  int x;
+  string msg;
+  if(rank > 60){ x = 70; msg = "Time"; }
+  else if(rank > 50){ x = 60; msg = "Stars"; }
+  else if(rank > 40){ x = 50; msg = "Storms"; }
+  else if(rank > 30){ x = 40; msg = "Dragons"; }
+  else if(rank > 20){ x = 30; msg = "Fire"; }
+  else if(rank > 10){ x = 20; msg = "Air"; }
+  else { x = 10; msg = "Earth"; }
+  x = x - rank;
+  if(rank > 99) msg = HIM+"Wizard";
+  else if(rank < 1) msg = "Apprentice";
+  else if(rank > 71) msg = HIC+"Council Member";
+  else if(rank > 69) msg = msg+HIC+" (master)";
+  else if(x == 0) msg = msg+HIC+" (master)";
+  else if(x == 1) msg = msg+" (1st circle)";
+  else if(x == 2) msg = msg+" (2nd circle)";
+  else if(x == 3) msg = msg+" (3rd circle)";
+  else if(x > 3) msg = msg+" ("+x+"th circle)";
+  if((rank > 69) || (x == 0)) write(align_str(msg, 29));
+  else write(align_str(msg, 22));
+  write(NORM);
+  return 1;
+}
+
+  
+totalcap(str){
+  string name, msg, letter;
+  int i, count;
+
+  msg = "";
+  count = strlen(str);
+  for(i=0; i<count; i++){
+    letter = extract(str, i, i);
+    letter = capitalize(letter);
+    msg = msg + letter;
+  }
+  return msg;
+}
+
+
+tell_enter()
+{
+  object ob, obj;
+  string msg;
+  int i;
+
+  msg = present("mageobj", tp)->query_login_msg();
+  if(!msg)
+	msg = ME + " has entered the realms.";
+
+  ob = users();
+  for(i=0; i<sizeof(ob); i++)
+  {
+	obj = present("mageobj", ob[i]);
+	if(obj && obj->query_muffled() == 0)
+		 if(tp->query_invis() < ob[i]->query_level())
+			tell_object(ob[i], CYN+"> "+msg+" <\n"+NORM);
+  }
+  return 1;
+}
+
+
+tell_leave()
+{
+  object ob, obj;
+  string msg;
+  int i;
+
+  msg = present("mageobj", tp)->query_logout_msg();
+  if(!msg)
+	msg = ME + " has left the realms.";
+
+  ob = users();
+  for(i=0; i<sizeof(ob); i++)
+  {
+	obj = present("mageobj", ob[i]);
+	if(obj && obj->query_muffled() == 0)
+		if(tp->query_invis() < ob[i]->query_level())
+			tell_object(ob[i], CYN+"> "+msg+" <\n"+NORM);
+  }
+  return 1;
+}
+
+
+tell_members(str){
+  object ob, obj;
+  int i;
+  ob = users();
+  for(i=0; i<sizeof(ob); i++){
+    obj = present("mageobj", ob[i]);
+    if((obj) && (obj->query_muffled()==0))
+      tell_object(ob[i], str+"\n");
+  }
+  return 1;
+}
+
+

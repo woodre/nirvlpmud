@@ -1,0 +1,8 @@
+11/21/09 19:52: Enigma      ((19    /Shardak)      23(1/2)
+12/ 9/09 20:05: Kanji       ((18    /Cyberninja)   20(1/1)
+12/29/09 00:00: Quagmire    ((19+25 /Neo symbiote) 24(1/1)
+12/29/09 00:12: Quagmire    ((19+24 /Neo symbiote) 24(1/1)
+01/23/10 13:44: Severance   ((19+8  /Cyberninja)   22(1/1)
+02/ 9/10 16:15: Fastkill    ((19+10 /Bloodfist)    21(2/1)
+02/ 9/10 22:06: Samru       ((19+17 /Shardak)      25(1/2)
+11/16/14 19:06: Peanut      ((19+11 /Cyberninja)   23(1/1)

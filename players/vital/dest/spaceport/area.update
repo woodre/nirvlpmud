@@ -1,0 +1,27 @@
+Additions to the spaceport:
+ROOMS - ~/spaceport/rooms/
+    under1.c
+    under2.c
+    under3.c
+    under4.c
+    under5.c
+    under6.c
+    under7.c
+    between.c
+    sewer1.c
+    sewer2.c
+    sewer3.c
+    sewer4a.c
+    sewer4b.c
+    sewer5.c
+    backalley.c
+    shaft1.c
+    shaft2.c
+    dryroom.c
+
+NPCS - ~/spaceport/npc/
+    controller.c
+    nanobot.c
+
+WEAPON - ~/spaceport/obj/weapon/
+    super_pda.c

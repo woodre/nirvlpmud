@@ -1,0 +1,75 @@
+CONCEPT
+	Strings. A kind of tutorial by Bal.
+
+DESCRIPTION
+	Hmm.. strings.. what are they?
+	------------------------------
+	Warning:
+	I wrote this because you can save resources by handling strings with
+	care, but it probably not be immense. Text is a little tech at times..
+	A string is a fixed number of characters (letters, numbers, whatever).
+	They work in a way similar to arrays, but they are of a different type.
+
+	Allocation of strings
+	---------------------
+	The first " sign in a lpc file will actually commence the allocation of
+	a string. "geezer" will for example make a string of length 6.
+
+	The lpc driver remembers how many variables point to the string, and
+	when no variables no longer point to it, the string is deallocated.
+	This happens when you call another function with a string,
+	function( str); for example. The whole string is not passed to the
+	function, but only a reference to the string is passed to the function.
+
+	Adding strings together
+	-----------------------
+	When you want to add to a string, for example:
+
+	  str= str1 + str2;
+
+	A lot of things will happen.
+	- A new string the length of the combined lengths of str1 and str2 will
+		be allocated.
+	- The contents and str1 and str2 are copied to the new string.
+	- str will be made to point to the new string.
+
+	More efficient long descriptions
+	--------------------------------
+	So, why am I writing this? One day I thought about the long() function
+	in one of my rooms. It looked somewhat like:
+
+	  long() {
+	    write(
+	  "one long string\n" +
+	  "another one\n" +
+	  "one more\n" +
+	  "you get the picture?\n");
+	  }
+
+	Hmm.. the game driver is not smart enough to make all the additions
+	in one go.
+	First of all, each of the 4 strings are allocated. Then 2 of them are
+	combined, just like explained earlier, and the 2 strings used for
+	combining are freed.
+	Then you have 3 strings left. 2 of them are combined again, and one
+	more time to form one single string. After the write has been performed
+	the string is freed.
+	A lot of road work to make one little stupid description for a room..
+
+	When you are dealing with non-changing strings like this, a more
+	efficient way to declare the complete text could be done in this way:
+
+	  long() {
+	    write( "\
+	  one long string\n\
+	  another one\n\
+	  one more\n\
+	  you get the picture?\n");
+	  }
+
+	The \ sign tell the game driver (the part called the precompiler) to
+	ignore the rest of the line, new line and everything included.
+	In the above example, you get the wanted string without any of the
+	additions and strain they put on the driver. Cool, non?
+
+	-= Fini =-

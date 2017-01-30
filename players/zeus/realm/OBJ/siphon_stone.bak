@@ -1,0 +1,54 @@
+inherit "/obj/treasure.c";
+#include "/players/zeus/closed/all.h"
+#define SHADOW_PENALTY 25
+object victim;
+int zeus_juice, boobah;
+
+reset(arg){
+  if(arg) return;
+
+  zeus_juice = 0;
+  set_short(HIW+"Siphon Stone"+NORM);
+  set_long(
+"This small pale stone is very smooth, as though it has been out in\n"+
+"the weather for many centuries.  It is small and flat and has\n"+
+"an intricate design carved into its surface.  Staring at the\n"+
+"design you become aware of the fact that light distorts around\n"+
+"the stone, causing shadows to constantly appear and disappear.\n"+
+"This magical stone has an insatiable hunger for energy.\n");
+  set_weight(1);
+  set_value(275 + zeus_juice);
+  call_out("zeusex", 34);
+}
+
+id(str){ return str == "stone" || str == "siphon stone"
+  || str == "zeus_siphon_stone"; }
+
+feed_me_zeus_juice(){ if(zeus_juice < 300) zeus_juice++; }
+
+zeusex(){
+  if(environment())
+    victim = environment();
+  else
+    return;
+  if(victim && environment(victim))
+  {
+    if(environment(victim)->is_player())
+    victim = environment(victim);
+  }
+  if(victim->is_player() && victim->query_guild_name() == "fallen"
+    && !victim->query_attack())
+  {
+    if(!random(3))
+      tell_object(victim, "The "+short_desc+" feeds on your strength.\n");
+    boobah = (SHADOW_PENALTY + (zeus_juice / 10)
+      + ((victim->query_extra_level() + 10) / 10));
+    if(victim->query_spell_point() > boobah)
+      victim->add_sp(-boobah);
+    return (call_out("zeusex", 34+random(29)));
+  }
+  else
+    return (call_out("zeusex", 34));
+}
+
+

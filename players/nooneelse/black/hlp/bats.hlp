@@ -1,0 +1,13 @@
+abat            This is a sentry bat.  It will tell you when any     30  12
+                other visible player enters the room it is in. It
+                will also tell you when invisible players smaller
+                than you enter the room.
+
+mbat <msg>      This is message bat.  It will greet anyone who
+                enters its room with a customized message. The
+                messages are logged so expect repercussions if
+                you use this inappropriately.
+
+                You can only have one bat in the game at a time
+                and the way to get rid of either is to just
+                'dismiss bat' from anywhere.

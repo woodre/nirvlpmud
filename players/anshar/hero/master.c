@@ -1,0 +1,5 @@
+#include "/players/anshar/hero/lib/shelp.h"
+#include "/players/anshar/hero/lib/shome.h"
+#include "/players/anshar/hero/lib/stitle.h"
+#include "/players/anshar/hero/lib/schat.h"
+#include "/players/anshar/hero/lib/sc.h"

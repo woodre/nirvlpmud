@@ -1,0 +1,56 @@
+/* dig through the ditches and burn all the witches. */
+
+static
+enflame_it(str)
+{
+    int wc;
+    status wield_flag;
+    object a;
+
+    if(!str) 
+    {
+      write("What do you wish to enflame?\n"); 
+      return 1;
+    }
+    if(!(a = present(str, this_player())))
+    {
+      write("You don't have that.\n");
+      return 1;
+    }
+    if(!a->is_weapon() || !a->weapon_class())
+    {
+      write("That is not a weapon.\n");
+      return 1;
+    }
+    if((wc = (int)a->weapon_class()) == 20)
+    {
+      write("\
+    Flames erupt from the sigil over "+str+"!\n\
+    Magic rips "+str+" apart!\n"+str+" is destroyed!\n");
+      destruct(a);
+      return 1;
+    }
+
+    if(wc < 20)
+      a->set_class(wc + 1);
+
+    write(HIR+"Flames"+NORM+" ignite along "+str+".\n");
+
+    if((object)this_player()->query_weapon() == a)
+    {
+      wield_flag = 1;
+      this_player()->stop_wielding();
+    }
+
+    if(!query_attribute("enflamed", a))
+    {
+      a->set_short((string)a->short() + " " + HIW + "<" + HIR + 
+        "enflamed" + HIW + ">" + NORM);
+      add_attribute("enflamed", 1, a);
+    }
+
+    if(wield_flag)
+      a->wield(str);
+
+    return 1;
+}

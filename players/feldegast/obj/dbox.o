@@ -1,0 +1,12 @@
+no_clean 0
+short_desc "Donation Box"
+long_desc "This is a battered wooden box hung on the wall.  Players whohave excess money can put coins in the box.  Conversely,players who are down on their luck can get coins from thebox if they need them.Commands: donate #, withdraw #."
+info 0
+save_flag 0
+value 0
+local_weight 100
+name "box"
+alias_name 0
+read_msg 0
+shop_dest_flag 0
+coins 4550

@@ -1,0 +1,49 @@
+Autoload file created by Angel 8-20-09
+
+OBJECT
+        All objects can use this.
+
+SYNOPSIS
+        string query_auto_load()
+
+DESCRIPTION
+        This line is used for objects that you want to load automatically
+        after re-boots, or at login. There are certain rules for the object in
+        question to follow:
+        1) It can't have a weight
+        2) It can't be dropped
+        3) It has to be loaded BEFORE the player logs in (Or the player
+            won't get a copy)
+        4) query_auto_load must return a string in the format:
+                        filename:arg
+            Where 'filename' is the name of the file to autoload, and 'arg' is a
+            string that will be sent to 'init_arg()' ('arg' can be = 0)
+        5) This should not be used for weapons, or armors.
+     
+
+        The basic idea behind query_auto_load is for players to to recieve a curse,
+        poision that must be cured, memberships ie. guild obj, pin of completed work ect...
+        
+
+EXAMPLE
+        string query_auto_load() { return "/players/angel/belt:"; }
+   
+        
+        This should autoload the object 'belt' when the player with it logs on.
+        
+        
+        The autoload must be added into your castle, which looks like:
+        
+        
+        reset(arg) {
+          if (arg)
+            return;
+              move_object(this_object(), DEST);
+  
+       call_other("/players/angel/belt.c","XXX");
+       }
+       
+APPROVAL
+
+      The autoload item must be approved by a 100+ wizard
+      The approval wizards name must be noted in the items header and dated.

@@ -1,0 +1,88 @@
+  inherit room coded by vertebraker@nirvana
+============================================
+   version 1.0 3/28/00
+/players/vertebraker/closed/std/room.c
+============================================
+
+1. Idea
+2. Additions
+3. Fixes
+============================================
+
+1. Idea -
+  The idea arose to create this new inherit
+room to define commonly used functions in
+room-creation, and the idea to create a more
+versatile room-maker tool.  It is much easier
+for not only advanced coders to manipulate,
+it is also good for new coders who wish to 
+add more to their environment.  All five 
+senses are represented to the player.  In
+addition, there is a generic search cmd.
+There is a basic system of properties rather
+than having a wizard look all over for a specific
+way to set pk or such. you just add_property("PK");
+in the reset function and you got a pk room.
+no more messing with hard code.
+
+2. Additions -
+  This is the breadth of the project.  I added on
+smells, listens, touches, tastes, as well as searches.
+Now, the good thing about the way I did it was that
+it has backwards-ass compatibility - old rooms dont need
+to have smells and such defined. the file itself is a
+mutated version of /room/room.  all one needs to do to
+add a sense is:
+
+SMELL  = add_smell("id","Text to player");
+LISTEN = add_listen("id","Text to player");
+TOUCH  = add_touch("id","Text to player");
+TASTE  = add_taste("id","Text to player");
+SEARCH = add_search("id","Text to player","/players/blah"*);
+* = optional.
+
+  Wiz functions are helped too.
+add_property() and remove_property() are the best additions
+in this category.
+
+add_property("FLAG");    -> and you get that property!
+remove_property("FLAG"); -> and you remove that property!
+
+flags:
+PK   = player killing.
+SPAR = sparring arena.
+NM   = no magic.
+NT   = no teleport.
+NF   = no fight zone.
+
+to reduce load of coding and avoid messing with arrays, items
+and exits have been used.  again dest_dir is still active though.
+
+add_item("id","Description");
+add_exit("/players/blah","string");
+
+cloning objs:
+you dont need to mess with move_object(clone_object blah;
+anymore. simply add_object("path"); and you shall receive.
+
+room msgs:  room messages in tell_rooms are handled like this:
+
+set_chance(int); [chance out of 100 your msgs will be called every hb]
+add_msg(msg); [ possible room msg ]
+
+finally. set_short and set_long have been implemented, along 
+with query_long and query_short() functions.  i think you can
+figure out what these do.
+
+3.  Fixes:
+
+(3-28) fixed exits bug
+:(2-6) fixed taste bug
+:(1-31) fixed bug preventing the room from getting more than one exit
+:(1-30) you can now set generic room msgs
+     ~e.g. add_smell("main","Mmm. You smell bacon.\n");
+     -The player gets 'Mmm. You smell bacon.' when they type 'smell' with no args.
+:(1-28) cmds fixed so you can smell, taste > 1 item.
+:(1-27) pk area bug fixed in exit() function
+:(1-27) remove_call_out in exit() implemented per maledicta's idea
+        to save memory

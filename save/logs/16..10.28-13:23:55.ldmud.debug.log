@@ -1,0 +1,99 @@
+2016.10.11 11:44:01 LDMud 3.3.720 (Build 3010) (stable)
+2016.10.11 11:44:01 TLS: (OpenSSL) Keyfile 'key.pem', Certfile 'cert.pem'
+2016.10.11 11:44:01 TLS: Error setting x509 keyfile:
+2016.10.11 11:44:01 TLS: SSL error:02001002:system library:fopen:No such file or directory.
+2016.10.11 11:44:01 TLS: SSL error:20074002:BIO routines:FILE_CTRL:system lib.
+2016.10.11 11:44:01 TLS: SSL error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system lib.
+2016.10.11 11:44:01 mySQL 5.5.52
+2016.10.11 11:44:01 Attempting to start erq '/home/petebre/mymud/lp312/mudbin/erq'.
+2016.10.11 11:44:01 Hostname 'loafy' address '174.137.154.70'
+2016.10.11 11:44:01 UDP recv-socket requested for port: 3507
+2016.10.11 11:44:03 LDMud ready for users.
+2016.10.12 03:50:47 Missing 'return <value>' statement.
+2016.10.12 03:50:47 program: obj/go_player.c, object: obj/go_player#150 line 132
+2016.10.13 22:37:28 Index for [] out of bounds: 95, vector size: 95
+2016.10.13 22:37:28 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.13 22:37:28 Error in call out.
+2016.10.13 22:37:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.13 22:37:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.13 22:37:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.13 22:37:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.13 22:37:28 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.13 22:37:30 Index for [] out of bounds: 95, vector size: 95
+2016.10.13 22:37:30 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#1683') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.13 22:37:30 Error in call out.
+2016.10.13 22:37:30 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.13 22:37:30 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:14 Index for [] out of bounds: 200, vector size: 200
+2016.10.24 09:44:14 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.24 09:44:15 Error in call out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:15 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 Index for [] out of bounds: 200, vector size: 200
+2016.10.24 09:44:16 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#5834') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.24 09:44:16 Error in call out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:16 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:18 Index for [] out of bounds: 200, vector size: 200
+2016.10.24 09:44:18 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#5838') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.10.24 09:44:19 Error in call out.
+2016.10.24 09:44:19 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:19 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:19 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:19 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:19 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.24 09:44:19 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.10.28 13:14:03 (value)Indexing on illegal type 'number'.
+2016.10.28 13:14:03 program: players/vertebraker/guilds/samurai/gob.c, object: players/vertebraker/guilds/samurai/gob#7465 line 454
+' check_password' in '        obj/player.c' ('     obj/player#7464') line 1760
+'move_player_to_start' in '        obj/player.c' ('     obj/player#7464') line 1959
+'    guild_login' in 'players/vertebraker/guilds/samurai/gob.c' ('players/vertebraker/guilds/samurai/gob#7465') line 454
+2016.10.28 13:14:03 Error in input_to().
+2016.10.28 13:14:05 Undefined function: set_call_out
+2016.10.28 13:14:05 program: players/darkfire/obj/dfroom.c, object: players/darkfire/obj/dfroom line 322
+'       cmd_hook' in '        obj/player.c' ('     obj/player#7464') line 3401
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('     obj/player#7464') line 33
+'       cmd_home' in '     bin/wiz/_home.c' ('       bin/wiz/_home') line 14
+'          reset' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/obj/dfroom') line 48
+'room_chat_callout' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/obj/dfroom') line 290
+'   set_call_out' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/obj/dfroom') line 322
+2016.10.28 13:23:55 Undefined function: save_wiz_file
+2016.10.28 13:23:55 program: obj/master.c, object: obj/master line 2796
+'notify_shutdown' in '        obj/master.c' ('          obj/master') line 1654
+'  save_wiz_file' in '        obj/master.c' ('          obj/master') line 2796
+2016.10.28 13:23:55 Error in master_ob->notify_shutdown()

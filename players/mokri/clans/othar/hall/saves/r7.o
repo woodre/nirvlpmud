@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/othar/hall/r6","west",})
+short_desc "A hallway[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A [1mdragon-head[2;37;0m katana","/players/illarion/high/obj/dkatana_new","543",1,1,"A [1mdragon-head[2;37;0m katana (Blessed) [1;33m[blazing][0m","/players/illarion/high/obj/dkatana_new","449",1,1,"[1;36mPrismatic [30m[1mStronghold[0m","/players/jaraxle/3rd/alt/items/defense_orb",0,0,0,"A [1;37mcrystal[0m ring with a [1m[1mblack[0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"[0m[33mGold Dragon Leggings[0m","/players/tallos/7tigers/objects/dragon_legs",0,0,0,"[31m~ [0m[34mEle[0m[32mment[0m[1mal C[0m[32mlo[0m[34mak[0m[31m ~[0m","/players/snow/closed/test/cloak",0,0,0,"Shamanic [34mboxer shorts[0m","/players/vertebraker/swamp/OBJ/denim_shorts",0,0,0,"[1;31mA Flowing Scarf[0m","/players/angel/area/school/obj/flow_scarf_01",0,0,0,"[1;31mPhoenix Mask[0m","/players/jaraxle/closed/phoenix/mask",0,0,0,"Hockey Skates","/players/jenny/wings/items/skates",0,0,0,})

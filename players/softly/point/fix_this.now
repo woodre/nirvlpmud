@@ -1,0 +1,33 @@
+ashawl.c - need a '.' at the end of the long()
+Aralie.c - Change/remove the story, it reads 'daniel tells you:'
+           And remove the set_wc_bonus in reset()
+Aruj.c - As per the rules, all mobs above level 19 must have a 
+         spell attack. Please add one here, even if its smashing 
+         a player with a fist, etc. 
+Bart.c - Same as Aruj.c, needs spell attack.
+BlackBeard.c - needs a special attack. Remove wc_bonus in reset() no
+               reason for it.
+fsabre.c - You have your weapon_hit messages in reverse, they need to go
+           from highest message to worse. 
+bonny.c - long(): firey = fiery, also needs a spell attack. No reason
+          for wc_bonus, remove this in reset().
+din.c - Remove the wc_bonus from reset()
+
+erica.c - Long(): 'She black eyes contain a fire.'
+
+bwand.c - I would rather see this as a type, 'club', can that
+          work?
+
+Kheir.c - ditch the wc_bonus.  He seems to share a desc with a
+          couple other mobs, is there anything you can add to
+          his desc to make him stand out more?
+
+kidd.c - need a '.' at the end of the long()
+
+NOTE:
+Be sure to go through all the mobs and add a spell_attack and messages
+if they are over level 17. Also, remove the set_wc_bonus from all mobs.
+You have a high concentration of ac2 items, misc, ring, amulet, and boots
+and that is too much for a single area to have. Usually an area will
+have a single ac2 item so that ppl will search around for it and then
+have to go elsewhere to get the next piece.

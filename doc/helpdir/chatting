@@ -1,0 +1,16 @@
+                         [help chatting]
+-----------------------=========+=========-----------------------
+
+  Players may create private channels for holding conversations.
+The name of the channel must be five characters or less long.
+
+The following commands may be used to manage these channels:
+
+  createchat <channel>          - Create a channel named <channel>.
+  leave_chat <channel>          - Leave <channel>.
+  addmem <channel> <player>     - Add <player> to <channel>.
+  listchat                      - Lists all channels that you are on.
+  cwho <channel>                - List the members of <channel>.
+  c<channel>                    - Chat on <channel>.
+  c<channel> :                  - Emote on <channel>
+

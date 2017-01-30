@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "piece of paper[0m"
+long_desc "A piece of paper printed from an office computer. It lists the rules of Fight Club.1. You don't talk about Fight Club.2. You don't talk about Fight Club.3. When someone says stop, or goes limp, even if he's just faking it, the fight is over.4. Only two guys to a fight.5. One fight at a time.6. They fight without shirts or shoes.7. The fights go on as long as they have to.8. If this is your first night at fight club, you have to fight.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "paper"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A piece of paper printed from an office computer. It lists the rules of Fight Club.1. You don't talk about Fight Club.2. You don't talk about Fight Club.3. When someone says stop, or goes limp, even if he's just faking it, the fight is over.4. Only two guys to a fight.5. One fight at a time.6. They fight without shirts or shoes.7. The fights go on as long as they have to.8. If this is your first night at fight club, you have to fight.[0mType 'clan_help' for commands."
+clan_short "piece of paper[0m"
+damage_type "poison"
+hall_path "/room/lanceroad3"
+object_name "paper"
+owner "nietzsche"
+spell_alias "set_clan_spell"
+spell_mess_me "With a sudden burst of %hi red%E N E R G Y%normal%, you punch %att% in the %hi white%nose%normal% causing them to %red% b l e e d%normal% all over the room."
+spell_mess_room "%hi yellow%SMASHES%normal% his opponent with a %hi white%flurry%normal% of blows to the face, %red%blood%normal% spattering everywhere."
+spell_mess_them "**"
+abilities ({})
+chan_history ({"[Wed Jul 11 09:53:06 2007] Nietzsche: hehe","[Sun Jun 26 16:43:28 2011] Xypher has joined the clan!","[Sun Jun 26 16:49:18 2011] Xypher: bbl","[Wed Jun 29 21:28:33 2011] Hare has joined the clan!",})
+leaders ({})
+join_type 2
+private_coffer 40938
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1309121250

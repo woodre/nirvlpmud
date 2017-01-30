@@ -1,0 +1,49 @@
+#define TP this_player ()
+#define ENV enviroment 
+#define CAP capitalize
+#define TO this_object()
+#define ENVTP enviroment(this_player())
+ 
+id(str){return str=="gem";}
+short(){ return "Predator's control gem";}
+long(){ write("If you have this gem, then you have destroyed the Predator.\n"+
+"This gem allowed the predator to transport himself around Angst's realm\n"+
+"Since you are now a master hunter, you may use the gem.  And by looking at\n"+
+"the gem, you get the idea that you should FASTEN it to yourself somehow.\n");
+return 1;}
+init(){
+add_action("fasten","fasten");
+}
+fasten(){
+/* ADDED BY MIZAN DOES NOT CHECK FOR REALM and TELEPORT */
+  if(environment(this_player())->realm() == "NT") {
+    write("Something in this rooms prevents you from using this thing.\n");
+    destruct(this_object());
+    return 1;
+  }
+/* MUST check for attack because it is a free teleport.
+  teleport must cost minimum 50 sp to remove this line */
+if(this_player()->query_attack()) {
+  write("You are fighting something.\n");
+  destruct(this_object());
+  return 1;
+}
+
+if(this_player()->query_sp() > 0) this_player()->add_spell_point(-40);
+/* added in chance for failure and destruct - Mythos <9-16-98> */
+if(random(100) < 35) {
+    write("The gem quivers nd disappears.\n");
+  destruct(this_object());
+return 1; }
+write("You appear before Angst, He bows-for you are now a hunter.\n");
+move_object(this_player(), "players/heroin/hunting_grounds/preds/safety.c");
+command("look",this_player());
+
+destruct(this_object());
+return 1;
+}
+get() {return 1;}
+ 
+
+/* DO not append after this point: */
+query_s7_clearance() { return "190595"; }

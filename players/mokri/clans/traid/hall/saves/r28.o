@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/traid/hall/r13","west","/players/mokri/clans/traid/hall/r29","down","/players/mokri/clans/traid/hall/r41","northeast","/players/mokri/clans/traid/hall/r57","northwest","/players/mokri/clans/traid/hall/r80","up","/players/mokri/clans/traid/hall/r82","north","/players/mokri/clans/traid/hall/r121","east","/players/mokri/clans/traid/hall/r130","south",})
+short_desc "A Dark Hallway[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"Dark Knife","/players/mythos/closed/guild/task/8/knife5",0,69,31,"[33mScroll of a Thousand [36mPoxes [31m([1;31mVirulent[2;37;0m[31m)[2;37;0m <1>","/players/khrell/heals/skaven/plaguescroll","1",0,0,"[1;33mA Policeman Badge[0m","/players/fred/SP/Obj/badge",0,0,0,"[1;34mS[0m[34mw[1;34mi[0m[34mr[1;34ml[0m[34mi[1;34mn[0m[34mg [1;34mW[0m[34mi[1;34mn[0m[34md[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_wind",0,0,0,"Reaper of Nightmares","/players/mythos/closed/guild/forest/wep/scythe",0,0,0,"A pile of ashes","/players/jaraxle/closed/phoenix/ashes",0,0,0,"[1;30mDemon Guard[0m [[1;33mSun Forged[0m]","/players/jareel/armor/DWARFFORGE/demon/chest","1",0,0,"[35mA mystical potion of full healing[2;37;0m","/players/wocket/turtleville/OBJ/heal_potion",0,0,0,"[1;37mMisty Cloak[0m","/players/jaraxle/3rd/pyramid/items/myst_cloak",0,0,0,"A finely honed longsword","/players/snow/WEAPONS/hon_sword",0,0,0,})

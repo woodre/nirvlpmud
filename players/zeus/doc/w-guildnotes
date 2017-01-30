@@ -1,0 +1,73 @@
+
+no offensive magic
+
+the moves queue is a set of combat moves that the player executes, one
+after the other while in combat.  all the player needs to do it execute
+the pattern, and it will go until it runs out or fighting stops.  the
+player can learn up to 3 patterns, based on glevel.
+
+all do the same amount of damage, which is based upon level, glevel,
+and maybe some attributes.  maybe you learn one for every glevel,
+and you start out by learning 3, 2 O 1 D.  not sure.
+
+moves queue:
+  offensive:
+   * slash
+   * strike
+   * cleave
+   * stab
+   * charge
+   * hack
+
+  defensive:     - ac val increases quality
+   * block
+   * spin
+   * duck
+
+defensive moves don't just increase ac temporarily, because that would
+make them virtually worthless compared to offensive, so instead they
+raise a temp ac val that stays high for a few rounds then goes back
+down to the original ac.
+
+
+
+defend <player> - would shadow target player, diverting X damage to player.
+  this would prevent the player from using their own defensive
+  or offensive moves.
+
+protect <player> - if player gets attacked, you automatically take the lead.
+  up to 4 players at a time
+
+haste    - increased wc and ac       [limited time]
+berzerk  - increased wc, negative ac [limited time]
+flee     - retreat from combat
+fatal    - basic finisher with weapon
+examine  - stats on a monster, player, item
+
+
+weapon proficiences
+  train with a specific weapon
+  can train with [4] weps, based on glevel
+  when you wield that wep, automatically get bonus.
+  can "dual hit" with wep
+
+
+
+guild hall
+guild defenses
+
+no teleportation
+no mini guilds cause we hate them.
+no heal spells
+no detoxing spells
+
+every time you do an offensive move, if current wep is "selected" wep,
+it increments a counter in the player.
+< 1000 == Average
+< 2000 == Good
+< 3000 == Very good
+< 4000 == Great
+< 5000 == Excellent
+< 6000 == Superb
+> 6000 == Master
+

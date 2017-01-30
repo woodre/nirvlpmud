@@ -1,0 +1,60 @@
+/*
+ * spell : Teleport   (conjuration)
+ * level : 7
+ * effect: Transports player to target or target to player
+ * cost  : 80 sp
+ * spec  : 
+ * files : ~/mages/obj/teleport_obj.c
+ */
+
+mage_teleport(str){
+
+  object ob, obj;
+  string who, what;
+  int spell_fail;
+
+  if(!KNOW("tlp")) {
+	write("What?\n");
+	return 1;
+  }
+
+  if(tp->query_attack()) {
+	write("You can't concentrate enough.\n");
+	return 1;
+  }
+
+  if(!str) {
+	write("Type 'mhelp tlp' for help.\n");
+	return 1;
+  }
+
+  if(sscanf(str, "%s %s", what, who) == 2){
+	obj = find_player(who);
+	what = "goto";
+  } else {
+	obj = find_player(str);
+	who = str;
+	what = "bring";
+  }
+
+  if(!obj){
+	write(capitalize(who)+" is not on the game.\n");
+	return 1;
+  }
+
+  write("You cast a teleportation spell ... asking "+capitalize(who)+".\n");
+  spell_fail = 0;
+  
+  if(spell_fail2(7, "conj", "int")) {
+	spell_fail = 1;
+  }
+
+  ob = clone_object("players/pavlik/guild/mages/obj/teleport_obj");
+  move_object(ob, obj);
+  ob->set_what(what);
+  ob->set_owner(rlname);
+  ob->set_spell_fail(spell_fail);
+  ob->do_tlp();
+  return 1;
+
+}

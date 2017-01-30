@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/awep/claw","/players/pain/NEW/weap/soulcrusher","/players/hippo/weapons/glue","/obj/weapon","/players/emerson/armor/jacket","/players/wren/Area/starbug/items/reddress","/players/mythos/awep/daikyu","/obj/level_list","/players/pain/NEW/weap/mace2","/players/softly/nhall/obj/decant3","/players/wren/Area/starbug/items/gauntlet","/players/wren/Area/starbug/items/cottagecheese","/players/snow/cam/stuff/sword","/players/ultramagnus/wiz_cloak","/players/ultramagnus/cap","/players/wren/Area/starbug/items/cowboyhat","/players/emerson/weap/icepick","/players/pain/NEW/arm/gloves","/obj/weapon","/players/ultramagnus/darkarmor","/obj/armor","/players/saber/armor/lpants","/obj/armor","/players/angel/area/stargate/obj/staff","/players/scathe/armor/rgarb",})
+shorts ({"claws","a mace named [1m[31mSoulCrusher[0m","a strong, 1 second glue","a knarled staff","A Pizza Hut Jacket","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","Daikyu","A list of the top players","A huge iron mace","Decanter of Healing [[1m2[2;37;0m]","Time gauntlet","a small tub of cottage cheese.","[34m[1mBlessed Longsword[0m[0m","An Old Grey Cloak","An Elven Cap","a tiny cowboy hat","A Sharp Ice Pick","Leather work gloves","Spear","Gold","A [1mwhite[0m helmet","Black leather pants","Robot Head","[1;36mSTAFF WEAPON[0m","Monk's garb",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

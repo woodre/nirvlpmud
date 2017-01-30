@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/arrina/treas/onyx","/players/maledicta/cont/weapons/rweapon","/players/wren/Area/starbug/items/straw","/players/mythos/awep/arrow","/players/saber/armor/dshades","/obj/armor","/obj/weapon","/obj/weapon","/players/wren/Area/starbug/items/cowboyhat","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/saber/armor/halter","/players/mythos/aarmor/mempo","/players/mythos/aarmor/nodowa","/obj/weapon","/players/snow/closed/q/orb","/players/puppy/s/eq/brush","/obj/weapon","/players/pain/NEW/weap/mstar","/players/wren/Area/starbug/items/lunchbox","/players/arrina/armor/sveil","/obj/armor","/players/wren/Area/starbug/items/cottagecheese","/players/mythos/awep/kama","/players/wren/Area/starbug/items/gauntlet",})
+shorts ({"A piece of carved onyx","a [37mSilver[2;37;0m Longsword","a long plastic straw","arrow","[1mDark Shades[2;37;0m","A shoddy [1mwhite[0m cloak","Small knife","Longsword","a tiny cowboy hat","A [1mwhite[0m helmet","A Priest's Robes","A black halter top","Mempo","Nodowa","An evil-looking lightsabre","Orb of the Ancients","A paint brush","Blaster","Morningstar","a lunch box","[1;37mShadowVeil[2;37;0m","A small [1mwhite[0m shield","a small tub of cottage cheese.","kama","Time gauntlet",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

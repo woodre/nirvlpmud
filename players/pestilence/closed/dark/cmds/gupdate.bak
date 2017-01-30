@@ -1,0 +1,12 @@
+#include "/players/pestilence/ansi.h"
+
+main(object ob) {
+    if (this_player()->query_attack()){
+        write("You can't update while fighting.\n");
+        return 1;
+    }
+  move_object(clone_object("/players/pestilence/closed/dark/dark.c"),this_player());
+  write("<"+
+HIK+"Dark Order"+NORM+"> Guild Status Updated.\n");
+  destruct(this_object());
+return 1; }

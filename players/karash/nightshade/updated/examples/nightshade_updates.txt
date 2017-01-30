@@ -1,0 +1,36 @@
+Purpose:
+------------
+1. Update Nightshade's area by boosting some of the main objects
+
+
+
+ARMOR
+  * 
+  
+WEAP
+  * 
+  
+MONS
+  * cyclo.c
+    - Increased level from 20 to 22
+	- Increased HP from 650 to 750
+	- Increased WC from 30 to 38
+	- Increased AC from 15 to 20
+	- Added set_heal(15,1) (steroid heals itself)
+	- Added add_spell (40,"40-60",physical)
+	
+  * captain.c
+	- Various typos
+	- Changed object variables to something more meaningful for the object being referenced
+	- Change gold to add_money function
+	
+  
+  * basilisk.c
+    - Increased level from 20 to 25
+	- Increased HP from 500 to 800+random(400)
+	- Increased WC from 30 to 44
+	- Increased AC from 17 to 30 (high AC due to tough skin of mob)
+	- Added set_heal(2,1)
+	- Add petrifying gaze spell (to freeze players)
+	- Add 2 spells (bite attack & gore attack)
+	

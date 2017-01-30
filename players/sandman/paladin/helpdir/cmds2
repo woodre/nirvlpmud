@@ -1,0 +1,22 @@
+[============================================================================]
+
+COMMANDS:                  DESCRIPTION:
+---------                  ------------
+judge <target>             Shows alignment of the monster or player
+login                      Set your login destination to the church or guild 
+loginmsg <msg>             Set your guild login message
+logoutmsg <msg>            Set your guild logout message
+manual                     Shows you the Paladin Manual     
+mark <monster>             You'll be notified if someone attacks your monster
+msgs                       Review your login/logout messages
+muffles                    Turns muffles on or off to listen to guild talk
+news                       Shows guild news
+rank                       Bring up a list of guild stats
+repair <weapon>            Fix a broken weapon
+salute <paladin>           Paladin greeting   
+newmedal                   Reset your medallion in case of trouble
+wh                         Nirvana who list
+wimpyhp <hp>               Will wimpy out when you reach set hit points
+wimpydir <direction>       Set direction to flee
+
+[============================================================================]   

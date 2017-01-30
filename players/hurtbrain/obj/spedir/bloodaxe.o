@@ -1,0 +1,7 @@
+k 5
+backp ({"w,w,nw,n,w,w,n","w,w,w,s,w","w,s,s,s,w,w,u,u,e,e,s,s","e,e,e,s,s,s,s,u,w,u,u,u,s,d,d,d,s,s,s,s,e,e,s,s,s","e,e,s,s,s,w,w,w,w,w,n",0,0,0,0,0,})
+bpatt ({"e,e,se,s,e,e,s","e,e,e,n,e","e,n,n,n,e,e,d,d,w,w,n,n","w,w,w,n,n,n,n,d,e,d,d,d,n,u,u,u,n,n,n,n,w,w,n,n,n","w,w,n,n,n,e,e,e,e,e,s",0,0,0,0,0,})
+patt ({"s,e,e,s,se,e,e","e,n,e,e,e","n,n,w,w,d,d,e,e,n,n,n,e","n,n,n,w,w,n,n,n,n,u,u,u,n,d,d,d,e,d,n,n,n,n,w,w,w","s,e,e,e,e,e,n,n,n,w,w",0,0,0,0,0,})
+ggg "n"
+comment ({0,0,0,0,0,0,0,0,0,0,})
+obj 0

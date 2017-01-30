@@ -1,0 +1,208 @@
+
+mage_check()
+{
+/*
+  if(present("mageobj_NEW", this_player()))
+  {
+	write("You feel a shift in the world around you.\n");
+	move_object(this_player(), "players/pavlik/guild/mages/room/guild_room5");
+	return 1;
+  }
+*/
+  return 1;
+}
+
+/*
+  object obj;
+
+  if(this_player()->query_npc() == 0){
+
+    if(this_player()->query_mage_pet() == 1){
+      return 1;
+    }
+
+    if(this_player()->query_guild_name() != "mage"){
+      if(this_player()->query_level() > 20) {
+        write("Okay, your a wiz so you can stay.\n");
+        write("Doesn't mean I have to be happy about it though.\n");
+        return 1;
+      }
+      write(
+      "A huge hand spring from the floor and wraps around your body.\n"+
+      "With a mighty pull the magical hand pulls you down into the\n"+
+      "floor!  When you can see again, you discover you are being held\n"+
+      "about 500 feet above the ground!  The hand lets you go and you\n"+
+      "tumble back to the earth.\n"+
+      "THUD!\n");
+      say("A huge hand springs from the floor and grabs "+
+      capitalize(this_player()->query_real_name())+"!\n"+
+      "The hand yanks its surprised victim into the ground!\n"+
+      capitalize(this_player()->query_real_name())+" is gone.\n");
+      move_object(this_player(), "players/pavlik/guild/mages/rooms/tower");
+      return 1;
+    }
+    if(this_player()->query_guild_name() != "mage"){
+      this_player()->set_guild_name("mage");
+    }
+    if(!present("mageobj", this_player())){
+      obj = clone_object("players/pavlik/guild/mages/mageobj2");
+      move_object(obj, this_player());
+      command("renew", this_player());
+    }
+  }
+}
+*/
+
+guild_move(str){
+  object obj;
+  string who;
+
+  if(!str){
+    list_em();
+    return 1;
+    }
+
+  obj = this_player();
+  who = capitalize(obj->query_name());
+
+  if(str == "top"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/guild_room5");
+  }
+  if(str == "join"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/join_room");
+  }
+  if(str == "party"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/party_room");
+  }
+  if(str == "bar"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/mage_bar");
+  }
+  if(str == "vault"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/vault_room");
+  }
+  if(str == "library"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/library");
+  }
+  if(str == "train"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/train_room");
+  }
+  if(str == "shop"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/mage_shop");
+  }
+  if(str == "spell" || str == "advance"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/ante_room");
+  }
+  if(str == "lobby"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/mage_lobby");
+  }
+  if(str == "lockers"){
+    move_object(this_player(), "/players/catwoman/tl");
+  }
+  if(str == "hotel"){
+    move_object(obj, "/players/boltar/hotel/hotel");
+  }
+  if(str == "daycare"){
+    move_object(obj, "players/boltar/sprooms/daycare");
+  }
+  if(str == "church"){
+    move_object(obj, "/room/church");
+  }
+  if(str == "post"){
+    move_object(obj, "/room/post");
+  }
+  if(str == "portal"){
+    move_object(obj, "players/saber/ryllian/portal");
+  }
+  if(str == "council"){
+    move_object(obj, "players/pavlik/guild/mages/rooms/council_room");
+  }
+  if(str == "who"){
+    local_mages();
+    return 1;
+    }
+  if(find_living(str) && find_living(str)->query_invis() < 1){
+    goto_mage(str);
+    return 1;
+    }
+  if(present(obj, this_object())){
+    write("Guild Move: Destination Unreachable.\n");
+    return 1;
+    }
+  write(
+  "You concentrate briefly and the walls around you glow with\n"+
+  "magical energy.  You magically teleported across space.\n");
+  if(str == "council"){
+    write("\n"+
+    "You feel different as your body is transported beyond the normal "+
+    "universe.\n\n");
+  }
+  command("look", obj);
+  tell_room(this_object(),
+  who+" concentrates briefly and disappears.\n");
+  say(who+" suddenly appears.\n");
+  return 1;
+}
+
+local_mages(){
+  object ob;
+  int i;
+  string where;
+
+  write("\n");
+  write("---------------------------------------------------\n");
+  ob = users();
+  for(i=0; i<sizeof(ob); i++){
+    if(ob[i]->query_invis() < 20){
+    if( (environment(ob[i])) &&
+        (environment(ob[i])->query_mguild() != 0) ){
+      write("- "+ob[i]->query_name()+"\t\t\t["+
+      environment(ob[i])->query_mguild()+"]\n");
+    }
+    }
+  }
+  write("---------------------------------------------------\n");
+  return 1;
+}
+
+goto_mage(str){
+  object obj;
+  string where, jack;
+
+  obj = find_living(str);
+  jack = capitalize(this_player()->query_name());
+  
+  if(!obj){
+    return 0;
+    }
+
+  if(environment(obj)->query_mguild() == 0){
+    write("You cannot guild move to this person.\n"+
+    capitalize(str)+" is beyond the walls of the Tower.\n");
+    return 1;
+    }
+
+  where = environment(obj)->query_mguild();
+
+  if(where == "War Room" || where == "Council Room"){
+    write("Sorry, you cannot guild move to this person.\n");
+    return 1;
+    }
+
+  write("You concentrate briefly and teleport across space.\n");
+  say(jack+" concentrates briefly and disappears.\n");
+  move_object(this_player(), environment(obj));
+  command("look", this_player());
+  say(jack+" suddenly appears.\n");
+  return 1;
+}
+
+list_em(){
+  write("Places to go:\n"+
+  "outside the tower: church, hotel, daycare, lockers, post, portal\n"+
+  "inside the tower: join, party, bar, shop, vault, library, lobby\n"+
+  "                  top, train, spell, advance, council\n"+
+  "also: <player> (note: must be in the guild tower)\n"+
+  "      who (gm who lists all players in the tower)\n"+
+  "\n");
+  return 1;
+}

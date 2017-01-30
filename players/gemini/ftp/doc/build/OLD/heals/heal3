@@ -1,0 +1,39 @@
+
+Multi-use intox heals.
+Added Wocket/Snow guidelines, -Bp 24-May-99
+
+Multi-use intox heals are to follow this chart rather than the chart 
+for single use heals in heal1. -Bp
+
+--------------------------------------------------------------------------
+This is an expansion to Wocket's original idea of fair healing / tox ratios
+for multi-use heals.  The problem was that, though healing amount remained
+constant, total heal tox increased with higher-use, lower healing heals.
+For example, a 5-use, 30 heal, 10 tox would tox a total of 50 while healing
+150 whereas a 3-use, 50 heal, 10 tox would tox a total of 30 while healing
+150. This proposes a total tox / total heal ratio for cost to replace the
+current per-use tox cost as detailed below.
+
+TotalIntox/TotalHeal 		Cost per heal pt.
+	.40+    			 6
+	.35   				 8
+	.31      			 9
+	.28    			 	10
+	.26     			11
+	.24     			12
+	.22     			13
+	.20     			14
+	.18     			15
+	.16     			16
+	.14     			18
+	.12     			20
+	.08     			25
+	.04-    			30
+
+With this table, a 5-use, 30 heal, 10 tox would cost 50/150 = .3 = 10 coins
+per heal point for a total of 1500 coins. A 3-use, 50 heal, 10 tox would cost
+30/150 = .2 = 14 coins per heal point for a total of 2100 coins.
+
+Note: I did add 2 cost categories at the top and 2 at the bottom to
+accommodate the wider range of intox provided by this method.
+Note2: Wizzes should round to the _higher_ price on the scale.

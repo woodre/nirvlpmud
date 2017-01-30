@@ -1,0 +1,8 @@
+string query_info()
+
+Optional function.  All objects CAN return some special info about themselves.
+This function does NOT exist for players, but does exist for monsters, 
+treasure, armor, and weapons.
+Will return a string suitable for writing. (ie.. include \n's, and \t's etc)
+
+See also lfun/set_info.

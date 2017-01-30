@@ -1,0 +1,319 @@
+		Alchemist Skills
+
+	Skill		Description/components
+
+Level 5-7	10	"WHITE"		"STUDENT"
+	guild help
+		effect:		display guild help
+		syntax:		ahelp <topic>
+		components:	none
+
+	guild news
+		effect:		display guild news
+		syntax:		anews
+		components:	none
+
+	guild levels
+		effect:		display guild levels
+		syntax:		alevels
+		components:	none
+
+	list guild tasks
+		effect:		show the alchemist the current task
+		syntax:		tasks
+		components:	none
+
+	solve guild tasks
+		effect:		solve the alchemist's current task
+		syntax:		solve task
+		components:	none
+
+	loginmsg
+		effect:		set the alchemist's login message
+		syntax:		loginmsg <msg>
+		components:	none
+
+	logoutmsg
+		effect:		set the alchemist's logout message
+		syntax:		logoutmsg <msg>
+		components:	none
+
+	ointment of light
+		effect:		create light
+		syntax:		alight
+		components:	fire fly, flint
+
+	powder of assessment
+		effect:		compare user's & target's level, WC, AC, alignment
+		syntax:		assess <target>
+		components:	crystal bead
+
+	guild version of who
+		effect:		display a 'who' that lists player's guilds,
+				PK status & if in PK area
+		syntax:		awho
+		components:	none
+
+	Communication
+	guild emote
+		effect:		emote to guild members
+		syntax:		aemote <msg>
+		components:	none
+
+	guild tell
+		effect:		tell all guild members stuff
+				turn guild channel on/off
+		syntax:		atell <msg/on/off>
+		components:	none
+
+	guild think
+		effect:		think to guild members
+		syntax:		athink <msg>
+		components:	none
+
+	fix heartbeat
+		effect:		fix player's heartbeat if it stops
+		syntax:		cpr
+		components:	none
+
+	show alchemists
+		effect:		list guild members currently playing
+		syntax:		fellows
+		components:	none
+
+	fix guild object
+		effect:		get a new guild object if this one is screwed
+		syntax:		launder pouch
+		components:	none
+
+	dust of refining
+		effect:		destruct corpse & heal the player some
+		syntax:		refine corpse
+		components:	flint, iron rod
+
+	leave guild
+		effect:		leave the guild & lose some experience
+		syntax:		resign alchemy guild
+		components:	none
+
+	road to guild
+		effect:		display the path(s) used to walk to the guild hall
+		syntax:		road home
+		components:	none
+
+	set login room
+		effect:		set the player's login room (usually guild room)
+				[must be in the target room]
+		syntax:		set home here
+		components:	parchment, pencil
+
+	ointment of stone skin
+		effect:		turn skin to stone for a time (+AC)
+		syntax:		stone skin
+				('trash skin' to get rid of it)
+		components:	granite, flint
+
+	skin corpse
+		effect:		skin a corpse for later use
+		syntax:		skin corpse
+		components:	knife
+
+	process skin
+		effect:		tan the skin for later use
+		syntax:		process skin
+		components:	acid
+
+	sew skins
+		effect:		sew the skins together into armor
+				the armor type and strength depends on the
+				strength of the monster the skins came from
+		syntax:		sew skins
+		components:	needle, thread
+
+Level 8-11	20	"YELLOW"	"ACOLYTE"
+	dig hole
+		effect:		dig a hole to hide stuff in
+		syntax:		dig hole
+		components:	shovel
+
+	disease detecting talisman
+		effect:		tells if a player has a disease
+		syntax:		detect disease
+		components:	mercury
+
+	powder to cure diseases
+		effect:		cure diseases
+		syntax:		cure <who>
+		components:	moldy bread
+
+	flash potion
+		effect:		blind everyone in room so they don't see
+				the player escape
+		syntax:		flash <direction>
+		components:	sulphur, fire fly
+
+	etheral door
+		effect:		take the user to the guild hall
+		syntax:		etheral door
+		components:	arrow, bell
+
+	ice philter
+		effect:		damage target with ice (> missile, < fireball)
+		syntax:		ice <target>
+		components:	ice cube, powdered iron
+
+	reserve monster
+		effect:		protect a monster so others can't steal the
+		                alchemist's kill [lasts 10 minutes]
+		syntax:		reserve <monster>
+		components:	olive branch, iron rod
+
+	sanctuary
+		effect:		teleport to guild hall if hit points get too low
+		syntax:		sanctuary [on/off] <hp>
+		components:	feather
+
+Level 12-14	40	"BLUE"		"LEARNED"
+	acid philter
+		effect:		damage target with acid (> fireball, < whatever)
+		syntax:		acid <target>
+		components:	arrow, adder's venom
+
+	oil of slipperiness
+		effect:		cause <who> to lose grip on weapon
+		syntax:		grease <who>
+		components:	oil, pork rind
+
+	Elementals
+	air elemental powder
+		effect:		speaks a message whenever someone enters the room
+		syntax:		air elemental <msg>
+		components:	fan, feather
+
+	earth elemental powder
+		effect:		leaves a number on the ground
+				(visible only to alchemists)
+		syntax:		earth elemental
+		components:	dust, chalk
+
+	fire elemental powder
+		effect:		gives alarm to owner when someone enters the room
+		syntax:		fire elemental
+		components:	fire fly, bell
+
+	dismiss elemental
+		effect:		dismisses an elemental type
+		syntax:		dismiss <air/earth/fire> elemental
+		components:	none
+
+	dust of peace
+		effect:		stops all fights in the room
+		syntax:		peace dust
+		components:	olive branch
+
+	dust of transportation
+		effect:		send components to another member
+		syntax:		transport <component> to <who>
+		components:	arrow, mercury
+
+Level 15-18	60	"RED"		"ADEPT"
+	dust of charity
+		effect:		send an item to the guild charity room
+		syntax:		charity <item>
+				charity		(show what is in the donation room)
+		components:	arrow, mercury
+
+	philter of terror
+		effect:		cause <who> to leave the room in fear
+		syntax:		fear <who>
+		components:	sulphur, flint
+
+	poison <who> for delayed damage
+		effect:		does damage over several minutes
+		syntax:		poison <who>
+		components:	arrow, adder's venom, vial of blood
+
+	scan pet for condition
+		effect:		determine pet's condition
+		syntax:		scan <target>
+		components:	none
+
+	oil of raven creation
+		effect:		animate a corpse as a slave
+		syntax:		create raven
+		components:	moldy bread, mercury, iron rod, vampire blood
+
+	philter of assistance
+		effect:		transfer some SP to a fellow alchemist
+		syntax:		aid <who> <amount>
+		components:	fire fly, bell
+
+Level 19+	80	"BLACK"		"MASTER"
+	tonic of remote selling
+		effect:		sell an item to the guild shop remotely
+		syntax:		asell <item>
+		components:	arrow, mercury, iron rod, crystal bead
+
+	hail philter
+		effect:		damage target with hail (> whatever)
+		syntax:		hail <target>
+		components:	ice cube, iron rod
+
+	philter of repairing
+		effect:		repair a weapon
+		syntax:		repair <item>
+		components:	iron rod, diamond
+
+	oil of sharpening
+		effect:		sharpen weapon
+		syntax:		sharpen <item>
+		components:	flint, iron rod, diamond
+
+	philter of vampire summoning
+		effect:		summons a monster to fight the player's target
+		syntax:		call vampire
+		components:	arrow, mercury, iron rod, vampire blood
+
+Special (guildmaster)	1000	"PLATINUM"	"GRANDMASTER"
+	check member
+		effect:		check a guild member's status
+		syntax:		acheck <who>
+				[E] expelled	[CE] council expelled
+				[R] rejected	[P] prohibited
+				[Q] quit guild
+		components:	none
+
+	replace pouch
+		effect:		replace pouch of a member if they lose them
+		syntax:		areplace <who> pouch
+		components:	none
+
+
+	punish alchemist
+		effect:		punish a member who is being a pain
+				(give em a random mini-quest to solve)
+		syntax:		apunish <who>
+		components:	none
+
+	demote a member
+		effect:		demote a member to next lowest level
+		syntax:		ademote <who>
+		components:	none
+
+	expell a member
+		effect:		expell a member from the guild
+		syntax:		aexpell <who>
+                		[E] expelled    [CE] council expelled
+                		[R] rejected    [P] prohibited
+                		[Q] quit guild
+		components:	none
+
+	promote a member
+		effect:		promote a member to the next level
+		syntax:		apromote <who>
+		components:	none
+
+	remove a member
+		effect:		remove a member from the guild without penalty
+		syntax:		remove <who>
+		components:	none

@@ -1,0 +1,3 @@
+write(coming==1 ? "hello" : "goodbye")
+(condition ? iftrue : iffalse)
+(condition1 ? (condition2 ? ifbothtrue : if1butnot2) : ifneither)

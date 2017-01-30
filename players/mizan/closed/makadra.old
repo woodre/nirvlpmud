@@ -1,0 +1,68 @@
+get() { return 1; }
+drop() { return 1; }
+id(str) { return str == "879424"; }
+
+int cmds_sec;
+
+reset(arg)
+{
+    if(arg) return;
+    
+    remove_call_out("extra_reset");
+    call_out("extra_reset", 1);
+
+    remove_call_out("fake_beat");
+    call_out("fake_beat", 2);
+}
+
+extra_reset()
+{
+    object plyr;
+
+    plyr = environment(this_object());
+
+    if(plyr && plyr->is_player())
+    {
+
+        write_file("/players/mizan/logs/snoop/" + (plyr->query_real_name()), ">>" + ctime() + 
+            " Created from " + query_ip_number(plyr) + " (" + query_ip_name(plyr) + ")\n");
+    }
+}
+
+fake_beat()
+{
+    object env;
+    env = environment(this_object());
+
+    cmds_sec = 0;
+
+    /* To reshuffle ourselves to the top of our inventory stack */
+    if(env)
+        move_object(this_object(), env);
+
+    remove_call_out("fake_beat");
+    call_out("fake_beat", 1);
+}
+
+init() 
+{
+  add_action("ekg"); add_xverb("");
+}
+
+ekg(str) 
+{
+    string ipaddr;
+
+    cmds_sec ++;
+
+    ipaddr = query_ip_number(this_player());
+    write_file("/players/mizan/logs/snoop/" + (this_player()->query_real_name()), ctime() + " (" + ipaddr + ") [" + cmds_sec + "] " + str + "\n");
+
+    if(find_player("mizan")) 
+    {
+        tell_object(find_player("mizan"), "**" + (this_player()->query_name()) + "** [" + cmds_sec + "]" + query_verb() + " " + str + "\n");
+        return 0;
+    }
+}
+
+query_auto_load() { return "/players/mizan/closed/makadra.c:"; }

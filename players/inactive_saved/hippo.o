@@ -1,0 +1,102 @@
+channel_names ({"announce","gossip","equip","shout","risque","junk","msg","babble","wiz",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 58250
+luck 20
+lucky 421
+name "hippo"
+gender "male"
+msgin "says: "Hi", as he enters the room."
+msgout "says: "See you another time", as he leaves the room."
+is_npc 0
+brief 0
+level 20
+armor_class 0
+hit_point 552
+max_hp 552
+experience 2943102
+mmsgout "climbs up his chair again and his servants bring him to another place. You suppose there is another one in danger, he has to help."
+mmsgin "is carried to you by is servants. You can see they have been running to get him here as soon a possible."
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 0
+name_of_weapon 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir 0
+local_weight 32
+hunted 0
+hunter 0
+hunting_time -36
+cap_name "Hippo"
+spell_points 559
+max_spell 559
+spell_name "sonic blast"
+spell_cost 0
+spell_dam 0
+age 1110454
+is_invis 0
+frog 0
+whimpy 0
+auto_load "obj/quicktyper:11;ch cat /log/hippo;.X.Z;rch rm /log/hippo;.X.Z;l look at;.X.Z;udpate update;.X.Z;staf clone /players/hippo/misc/staff.c;.X.Z;cdq cd /players/hippo/quest_2;.X.Z;cdm cd /players/hippo/misc;.X.Z;rmlog rm /log/hippo;.X.Z;afk gossip afk for a moment...;.X.Z;bak gossip bak;.X.Z;c put card;.X.Z;^!/players/mythos/prac/chatter.c:^!"
+current_room "players/hippo/rooms/toilet"
+alignment 0
+follow 0
+follow_num 0
+handshake_data 0
+handshake 0
+quest_point 195
+quests "orc_slayer#rod_quest#disk_quest#blind_boy#ring#orb_of_evil#grail#super#cyclops_mace#protoculture#medallion#chisel#vale#trekkie#keivjam#staff#melko#brain_quest"
+pregnancy 0
+wkrm 0
+hostname "hp2.wfw.wtb.tue.nl"
+ok_edit "none#"
+mailaddr "rene.vandonkelaar@bw.rulimburg.nl"
+saved_where 0
+title " [1;35m- it's him and he's back! [2;37;0m"
+pretitle "Yajj!! It's"
+password "kZlyi2bmjUvi6"
+race "human"
+al_title "hi, btw"
+intoxicated 0
+fight_area "players/snow/dark/rooms/r7"
+mon 0
+phys_at ({1,7,11,399,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "131.155.54.69"
+msghome "climbs up his chair again and his servants take him back to his home. you should visit him once, it's a nice place to be."
+description "will answer all your questions if..  he knows the answer  he is allowed to answer  you ask him politely"
+guild_name "paladin"
+lastime "Jul 23 09:01 1999 to Jul 23 09:14 1999"
+player_killing 0
+invs_count 13
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd "/doc/"
+dead 0
+guild_rank 50
+guild_exp 2500000
+guild_file 0
+home "/players/hippo/workroom"
+ex_lv 7
+qc 1
+strength 20
+intelligence 20
+stamina 20
+will_power 20
+magic_aptitude 20
+piety 20
+stealth 20
+stuffed 0
+soaked 0
+no_give 0
+aprv 0
+other_copy 0

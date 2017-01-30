@@ -1,0 +1,48 @@
+Neo Advancement
+
+----------------------------------------------------------------------
+
+I know you wanted to increase the cost of advancement in the neos, and
+here is the idea I originally had when I was going to rewrite them.
+
+The original neo guild had three skills: creation, control, and combat, 
+and each skill could range from 0 to 6.  I propose making the guild have
+these three skills range from 0-8.  This would give us a little more
+freedom to add some nice features to the guild.
+
+Players could convert normal mud experience to guild experience at a
+1:1 ratio.  They could then use this guild experience to raise a given
+skill by a pt.  The cost for each point (1 through 8) would increase
+incrementally.  
+
+In order for the player to increase a given skill, they'd have to use
+powers tied to this skill.  This would be very similar to the old
+warrior guild - in order to advance, you'd first have to work up to
+a proficency with the powers associated with the skill you want to
+raise.
+
+Players would be limited to 21 total points, so they would have to 
+choose which three slots they leave free.  The player could max the 
+guild in a balanced fashion: 7/7/7, they could skew towards two skills 
+at the cost of the other: 8/8/5, or could be somewhere in between: 8/7/6.
+Because each increased point costs more than the last, players would max 
+the guild at different experience costs, based on their choices.  Below 
+is an outline of costs as I see them:
+
+1st skill point in given skill:    300,000
+2nd skill point in given skill:    400,000
+3rd skill point in given skill:    500,000
+4th skill point in given skill:    600,000
+5th skill point in given skill:    700,000
+6th skill point in given skill:    800,000
+7th skill point in given skill:    900,000
+8th skill point in given skill:  1,000,000
+
+If player maxes guild at 7/7/7, total cost is 8,700,000 exp.
+If player maxes guild at 8/7/6, total cost is 8,900,000 exp.
+If player maxes guild at 8/8/5, total cost is 9,250,000 exp.
+
+----------------------------------------------------------------------
+
+On the other hand, we could just let them get all 24 skill pts and 
+ear the entire list of guild powers.

@@ -1,0 +1,341 @@
+#define TPG this_player()->query_gender()
+#include "/players/eurale/defs.h"
+inherit "room/room";
+
+reset(arg) {
+  if(arg) return;
+set_light(1);
+
+short_desc = "Nirvana Titles Room";
+long_desc =
+  "A large circle on the floor marks the spot where Nirvana players\n"+
+  "can get their appropriate Nirvana title.  Curved, stone walls\n"+
+  "surround you with arched doors leading out of the room to the south\n"+
+  "and west.  A small sign is attached to the rear wall.\n";
+
+items = ({
+  "sign","A polished brass sign with fire red letters you can read",
+  "circle","A red circle in smooth tile",
+  "walls","Stones set in mortar, making a round room",
+  "doors","Large, wide doors providing entry/exit from the room",
+});
+
+dest_dir = ({
+  "players/eurale/RMS/warp","south",
+  "players/eurale/RMS/barter","west",
+});
+
+}
+
+realm() { return "NT"; }
+
+init() {
+  ::init();
+  add_action("Fix_titles","fix_title");
+  add_action("read","read");
+}
+
+Fix_titles() {
+write(
+  "You whisper the words to change your title and a light blue mist\n"+
+  "seeps up from the floor inside the circle, enveloping you.  There\n"+
+  "is a strange but pleasant sensation... and then the mist clears.\n\n");
+say(capitalize(TPN)+" is enveloped in a light blue mist...\n"+
+    "And then as quickly as it appeared, it disappears.\n");
+
+if(TP->query_extra_level() == 21) {
+  TP->set_title("the near apprentice wizard");
+  return 1; }
+
+if(TP->query_extra_level() == 20) {
+  TP->set_title("the grand master elder of the mortals");
+  return 1; }
+
+if(TP->query_extra_level() == 19) {
+  TP->set_title("elder of the mortals");
+  return 1; }
+
+if(TP->query_extra_level() == 18) {
+if(TPG == "male") {
+  TP->set_title("the elder sorcerer");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the elder sorceress");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 17) {
+if(TPG == "male") {
+  TP->set_title("the master of the seasons");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the mistress of the seasons");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 16) {
+if(TPG == "male") {
+  TP->set_title("the master of the south wind");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the mistress of the south wind");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 15) {
+if(TPG == "male") {
+  TP->set_title("the master of the night sky");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the mistress of the night sky");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 14) {
+  TP->set_title("the elder of the southland");
+  return 1; }
+
+if(TP->query_extra_level() == 13) {
+if(TPG == "male") {
+  TP->set_title("the elder magician");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the elder magicienne");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 12) {
+  TP->set_title("the elder conjurer");
+    return 1; }
+
+if(TP->query_extra_level() == 11) {
+  TP->set_title("the legendary warrior");
+    return 1; }
+
+if(TP->query_extra_level() == 10) {
+  TP->set_title("the master warrior");
+  return 1; }
+
+if(TP->query_extra_level() == 9) {
+  TP->set_title("the legend of the east wind");
+  return 1; }
+
+if(TP->query_extra_level() == 8) {
+if(TPG == "male") {
+  TP->set_title("the cave master");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the cave mistress");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 7) {
+  TP->set_title("the elder warrior");
+  return 1; }
+
+if(TP->query_extra_level() == 6) {
+if(TPG == "male") {
+  TP->set_title("the master of magic");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the mistress of magic");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 5) {
+  TP->set_title("the elder fighter");
+  return 1; }
+
+if(TP->query_extra_level() == 4) {
+  TP->set_title("the grand master ranger");
+  return 1; }
+
+if(TP->query_extra_level() == 3) {
+if(TPG == "male") {
+  TP->set_title("the master of the nerf ball");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the mistress of the nerf ball");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 2) {
+if(TPG == "male") {
+  TP->set_title("the master of silly putty");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the mistress of silly putty");
+  return 1; }
+}
+
+if(TP->query_extra_level() == 1) {
+if(TPG == "male") {
+  TP->set_title("the master of the yo-yo secret");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the mistress of the yo-yo secret");
+  return 1; }
+}
+
+if(TP->query_level() == 19) {
+if(TPG == "male") {
+  TP->set_title("the apprentice Wizard");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the apprentice Wizard");
+  return 1; }
+}
+
+if(TP->query_level() == 18) {
+if(TPG == "male") {
+  TP->set_title("the grand master sorcerer");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the grand master sorceress");
+  return 1; }
+}
+
+if(TP->query_level() == 17) {
+if(TPG == "male") {
+  TP->set_title("the master sorcerer");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the master sorceress");
+  return 1; }
+}
+
+if(TP->query_level() == 16) {
+if(TPG == "male") {
+  TP->set_title("the apprentice sorcerer");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the apprentice sorceress");
+  return 1; }
+}
+
+if(TP->query_level() == 15) {
+if(TPG == "male") {
+  TP->set_title("the warlock");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the witch");
+  return 1; }
+}
+
+if(TP->query_level() == 14) {
+if(TPG == "male") {
+  TP->set_title("the enchanter");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the enchantress");
+  return 1; }
+}
+
+if(TP->query_level() == 13) {
+if(TPG == "male") {
+  TP->set_title("the magician");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the magicienne");
+  return 1; }
+}
+
+if(TP->query_level() == 12) {
+if(TPG == "male") {
+  TP->set_title("the apprentice magician");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the apprentice magicienne");
+  return 1; }
+}
+
+if(TP->query_level() == 11) {
+if(TPG == "male") {
+  TP->set_title("the conjurer");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the conjuress");
+  return 1; }
+}
+
+if(TP->query_level() == 10) {
+if(TPG == "male") {
+  TP->set_title("the champion");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the deadly amazon");
+  return 1; }
+}
+
+if(TP->query_level() == 9) {
+if(TPG == "male") {
+  TP->set_title("the warrior");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the amazon");
+  return 1; }
+}
+
+if(TP->query_level() == 8) {
+if(TPG == "male") {
+  TP->set_title("the great adventurer");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the great adventuress");
+  return 1; }
+}
+
+if(TP->query_level() == 7) {
+if(TPG == "male") {
+  TP->set_title("the experienced adventurer");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the experienced adventuress");
+  return 1; }
+}
+
+if(TP->query_level() == 6) {
+if(TPG == "male") {
+  TP->set_title("the small adventurer");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the small adventuress");
+  return 1; }
+}
+
+if(TP->query_level() == 5) {
+if(TPG == "male") {
+  TP->set_title("the experienced fighter");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the charming siren");
+  return 1; }
+}
+
+if(TP->query_level() == 4) {
+if(TPG == "male") {
+  TP->set_title("the small fighter");
+  return 1; }
+if(TPG == "female") {
+  TP->set_title("the siren");
+  return 1; }
+}
+
+write("A voice whispers, 'you are too small to worry about your title,\n"+
+   "go out and EXP and you will be bigger in a short while.'\n");
+
+}
+
+read(str) {
+if(!str) { write("A voice whispers, 'Read what?'\n"); return 1; }
+if(str == "sign") { write(
+BOLD+"Nirvana Titles Room"+NORM+"\n\n"+
+"There are times when a player finds themself stuck with a title\n"+
+"that they either don't deserve or don't want.  Maybe they have just\n"+
+"left a guild or retreated from a tough fight.  This magical room\n"+
+"allows any player to change their title to the appropriate Nirvana\n"+
+"title just by typing:  "+HIR+"fix_title"+NORM+".\n\n"+
+"There is no cost to the player and the titles will not be custom in\n"+
+"any way.\n");
+return 1; }
+}

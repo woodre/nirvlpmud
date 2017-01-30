@@ -1,0 +1,26 @@
+no_clean 0
+wielded 0
+wielded_by 0
+name_of_weapon "longsword"
+cap_name "Longsword"
+broke 0
+silentwield 0
+eff_wc 0
+misses 0
+hits 0
+alt_name "trollsmasher"
+alias_name "sword"
+short_desc "Longsword"
+long_desc "A very sharp, finely crafted 3-foot blade.The Rune of Fire graces its hilt, as does a picture of a troll."
+read_msg 0
+save_flag 0
+class_of_weapon 12
+value 2500
+local_weight 6
+hit_func 0
+hit_func_fn "/players/quantos/desert/troll_hut"
+wield_func 0
+wield_func_fn 0
+info 0
+type 0
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})

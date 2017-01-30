@@ -1,0 +1,22 @@
+
+******* Virtual Display Screen *******
+
+The files in this directory relate to an object which tracks
+experience and creats a high score list based on the reboot cycle.
+Comments/suggestions for improvements are always welcome.
+
+The object for viewing the scores and updating the all-time scores is:
+   /players/cosmo/hslist/vds.c
+
+This object inherits many functions from:
+   /players/cosmo/hslist/vdsfuns.c
+
+The object that is called by add_exp() to collect the exp data is:
+   /players/cosmo/hslist/exp_store.c
+
+The alltime data is stored in:
+   /players/cosmo/hslist/alltime.o
+
+An object for testing purposes that generates random data and sends it 
+to exp_store.c (just like add_exp() does) is:
+   /players/cosmo/hslist/vdstest.c

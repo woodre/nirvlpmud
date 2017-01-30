@@ -1,0 +1,21 @@
+tap - listening device in room. notifies of entrances and exits to that room.
+send - send objects to rat
+portal - set 'return point'. when spell is activated, opens portal.
+heat weapon - force player to unwield primary weapon.
+
+
+Add the following ONLY if player is in 'attack' mode (gives fewer AC bonuses),
+and if they purchase new 'neural interface' chip enhancement for a cost of 100k
+credits (1 credit = 1 coin), which allows the 'intelligence' of the player to be 
+inked to their 'spells'.
+
+p1 - damage spell. add random(intelligence / 15)
+p2 - damage spell. add random(intelligence / 10)
+p3 - damage spell. must be PK to use. add random(intelligence / 5)
+flux - damage spell. add random(intelligence / 5).
+	**note, 'flux' spell cost increases as damage increases
+
+
+With 'neural interface' chip, can also purchase 1 additional weapon link, which
+adds to weapon strength. cost of 25k credits.
+

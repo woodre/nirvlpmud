@@ -1,0 +1,19 @@
+#include "/players/grimm/header"
+inherit "room/room";
+object demon, stake;
+reset(arg) {
+   monster();
+  if (arg) return;
+short_desc="Demon's Lair";
+long_desc="You have entered the lair of the Demon Lord.  All is quiet, and\n"+
+          "the fealing of death is near!\n";
+dest_dir=({"players/grimm/caverns/cavern5_2","up"});
+set_light(0);
+}
+monster() {
+   if(!present("demon")) {
+      demon = clone_object("players/grimm/monster/demonlord");
+      move_object(demon,this_object());
+         move_object(clone_object(DIR2(stake)),demon);
+   }
+}

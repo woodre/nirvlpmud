@@ -1,0 +1,95 @@
+/* approved by Mythos <8-21-97> */
+#include "/players/wocket/closed/ansi.h"
+inherit "obj/treasure";
+
+reset(arg){
+    set_id("aglowingorb");
+    set_alias("orb");
+    set_short("An orb"+HIY+" (@)"+NORM);
+    set_long("A glowing orb of swirling light.  This mystic energy source will teleport\nyou to a various list of 'places'.  You need only 'go' to them.\n");
+    set_no_clean(1);
+    set_weight(0);
+}
+
+drop(){ return 1; }
+get(){ return 0; }
+query_auto_load(){ return "/players/wocket/closed/orb.c:"; }
+
+init(){
+    add_action("places","places");
+    add_action("goport","go");
+}
+
+places(){
+write(HIY+"\nA list of the places that the orb will take you:\n\n");
+write(HIB+"\t\tchurch\n"+NORM);
+write(HIB+"\t\tangel\n"+NORM);
+write(HIB+"\t\twarp\n"+NORM);
+write(HIB+"\t\tportal\n"+NORM);
+write(HIB+"\t\tchamber\n"+NORM);
+write(HIB+"\t\tvortex\n"+NORM);
+write(HIB+"\t\trift\n"+NORM);
+write("\n\n");
+write(HIY+"[----- - -  -    -      -         -              -                   -   \n"+NORM);
+return 1;
+}
+
+
+goport(string str){
+if(!str || (str != "warp" && str != "angel" && str != "portal" && str != "chamber" && str != "vortex" && str != "church" && str != "rift") ){
+    notify_fail("Usage: go <place>\n");
+    return 0;
+}
+if(this_player()->query_hp() < 11 || this_player()->query_spell_point() < 60){
+    notify_fail("You dont have enought energy to teleport.\n");
+    return 0;
+}
+    if(environment(this_player())->realm() == "NT"){
+    notify_fail("The warping of space prevents you.\n");
+    return 0;
+}
+    if(environment(this_player())->realm() == "NM"){
+    notify_fail("There is not enought energy in the surrounding area to teleport.\n");
+    return 0;
+}
+    if(random(100)+1 < 17){
+    write("You touch the orb.\n");
+    write("Energy rips through your soul, stealing essence.\n");
+    write(HIY+"You see a bright light but your surroundings do not change.\n"+NORM);
+    say(HIY+"A bright light flashes but nothing changes.\n"+NORM);
+    this_player()->add_hit_point(-random(10));
+    this_player()->add_spell_point(-60);
+    return 1;
+    }
+    write("You touch the orb.\n");
+    write("Energy rips through your soul, stealing essence.\n");
+    say("A mist of light envelopes "+this_player()->query_name()+".\n");
+    this_player()->add_hit_point(-random(10));
+    this_player()->add_spell_point(-60);
+
+if(str == "rift"){
+    move_object(this_player(),"/players/saber/ryllian/rift.c");
+}
+if(str == "portal"){
+    move_object(this_player(),"/players/saber/ryllian/portal.c");
+}
+if(str == "chamber"){
+    move_object(this_player(),"/players/mythos/enterance.c");
+}
+if(str == "warp"){
+    move_object(this_player(),"/players/eurale/closed/warp.c");
+}
+if(str == "church"){
+    move_object(this_player(),"/room/church.c");
+}
+if(str == "vortex"){
+    move_object(this_player(),"/players/snow/gate.c");
+}
+if(str == "angel"){
+    move_object(this_player(),"/room/south/sforst45.c");
+}
+
+    command("glance",this_player());
+    say("A mist of light unfolds and "+this_player()->query_name()+" steps out.\n");
+    return 1;
+}

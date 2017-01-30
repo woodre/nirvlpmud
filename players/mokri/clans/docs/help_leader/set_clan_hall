@@ -1,0 +1,8 @@
+Syntax: set_clan_hall
+
+Sets the entrance for the clan hall to the room
+you are currently in.
+
+You cannot set/change it while people are inside
+the hall, nor can it be set in 'no teleport' rooms,
+or while a creature is in a room.

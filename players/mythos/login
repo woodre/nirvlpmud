@@ -1,0 +1,17 @@
+clone /players/mythos/closed/play/blade.c
+knife
+clone /players/mythos/closed/play/finger.c
+ccall /players/mythos/closed/play/exec.c
+ccall /players/mythos/closed/play/deall.c
+ccall /players/mythos/closed/play/aller.c
+ccall /players/mythos/healerguild/guildob.c
+exe dest blood,blood
+cd /players/mythos
+des
+exec this_player()->set_noidlequit(); return 1;
+exec object ob; int h; ob = users(); write("\n\n"); for(h=0;h<sizeof(ob);h++) { if(ob[h]->query_level() > 19) { if(ob[h]->query_invis()) write("*"); write(ob[h]->query_real_name()+"  "); } }write("\ndone\n");  return 1;
+reboot
+zcheck
+---
+mmb
+checkall

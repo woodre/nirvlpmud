@@ -1,0 +1,83 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+
+/* New command to show a more detailed Score */
+RangerPower(string str, rtype){
+   string karate;
+   string type;
+   int power;
+   write("\n");
+   write(TP->short()+"\n");
+
+   if(PO->QuerySkillLevel("combat") > 99){ karate = REVERSE+WHITE+BLACK+"Black"+OFF+RED+"  (8th Degree)"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 98){ karate = REVERSE+WHITE+BLACK+"Black"+OFF+BOLD+GREEN+"  (7th Degree)"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 97){ karate = REVERSE+WHITE+BLACK+"Black"+OFF+BOLD+BLUE+"  (6th Degree)"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 96){ karate = REVERSE+WHITE+BLACK+"Black"+OFF+GREEN+"  (5th Degree)"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 95){ karate = REVERSE+WHITE+BLACK+"Black"+OFF+BLUE+"  (4th Degree)"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 93){ karate = REVERSE+WHITE+BLACK+"Black"+OFF+MAGENTA+"  (3rd Degree)"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 91){ karate = REVERSE+WHITE+BLACK+"Black"+OFF+YELLOW+"  (2nd Degree)"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 89){ karate = REVERSE+WHITE+BLACK+"Black"+OFF+WHITE+"  (1st Degree)"+OFF; }   
+   else if(PO->QuerySkillLevel("combat") > 79){ karate = REVERSE+WHITE+BLACK+"Black"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 69){ karate = BROWN+"Brown"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 59){ karate = MAGENTA+"Purple"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 49){ karate = BOLD+BLUE+"Blue"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 39){ karate = GREEN+"Green"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 29){ karate = BOLD+RED+"Red"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 19){ karate = RED+"Orange"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 9){ karate = YELLOW+"Yellow"+OFF; }
+   else if(PO->QuerySkillLevel("combat") > 0){ karate = WHITE+"White"+OFF; }
+/* 
+   else{ karate = "none"; }
+   if(PO->QuerySkillLevel("morph") > 99){ type = "Wild Force"; }
+   else if(PO->QuerySkillLevel("morph") > 89){ type = "Time Force"; }
+   else if(PO->QuerySkillLevel("morph") > 79){ type = "Galaxy"; }
+   else if(PO->QuerySkillLevel("morph") > 69){ type = "Space"; }
+   else if(PO->QuerySkillLevel("morph") > 59){ type = "Rescue"; }
+   else if(PO->QuerySkillLevel("morph") > 49){ type = "Turbo"; }
+   else if(PO->QuerySkillLevel("morph") > 39){ type = "Zeo"; }
+   else if(PO->QuerySkillLevel("morph") > 29){ type = "Ninja"; }
+   else if(PO->QuerySkillLevel("morph") > 19){ type = "Thunder"; }
+   else if(PO->QuerySkillLevel("morph") > 9){ type = "Dino"; }
+   else{ type = "Initiate"; }
+
+*/
+
+   type = PO->QRangerType();
+   
+   write("Ranger Type: "+type+"\t\tKarate Belt: "+karate+"\n");
+   write("Level: "+TP->LEVEL+"\n");
+   if(TP->query_extra_level() > 0)
+      write("Extra Level: "+TP->query_extra_level()+"\n");
+   write("Hit Points: "+TP->query_hp()+"/"+TP->query_mhp()+"\t\t"+
+      "Spell Points: "+TP->query_sp()+"/"+TP->query_msp()+"\n");
+   write("Coins: "+TP->query_money()+"\t\t\t"+
+      "Experience: "+BOLD+GREEN+TP->EXP+OFF+"\n");
+   write("Intox: "+TP->query_intoxination()*100/(TP->LEVEL+3)+"%\t");
+   write("Stuffed: "+(TP->query_stuffed())*100/(TP->LEVEL*8)+"%\t");
+   write("Soaked: "+(TP->query_soaked())*100/(TP->LEVEL*8)+"%\t");
+   write("Infused: "+(TP->query_infuse())*100/(TP->LEVEL*8)+"%");
+   write("\n");
+   write("Unused Skill Points: "+PO->QSkillPoints()+"  ");
+   write("Build Points: "+PO->QBuildPoints()+"  ");
+   write("Next Skill Point: "+PO->QNextSkillCost()+"\n");
+   MASTER->CheckPower(rtype);
+   
+
+   
+   if(TP->query_fight_area())
+      write(BOLD+RED+"You are in a PK area."+OFF+"\n");
+   if(PO->QSpam())
+      write("Your Weapon messages are turned OFF.\n");
+   if(PO->QAutoGen())
+      write("Auto Generate set to "+PO->QAutoGenAmount()+" PP, when over "+PO->QAutoGenLimit()+" Spell Points.\n");
+   if(PO->QRangerTactic())
+      write("Current Ranger Team Tactic: "+capitalize(PO->QRangerTactic())+"\n");
+   if("/players/beck/Rangers/Commands/Pweapon.c"->QSkill(TPRNAME))
+      write("You have Power Weapon enabled.\n");
+   if("/players/beck/Rangers/Commands/Marmor.c"->QSkill(TPRNAME))
+      write("You have Metallic Armor enabled.\n");
+   TP->show_age();
+   return 1;
+}
+

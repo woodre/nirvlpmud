@@ -1,0 +1,26 @@
+**************
+
+
+                     Cp
+
+Syntax:    cp <file path> <new path>
+
+Desc:
+           This command copies file to another location without 
+           changing the original. Useful for making second copies
+           of a file for altering and testing alternate versions of
+           an object. File name can also be changed.
+
+Warning:   Remember to observe proper etiquette and credit sources 
+           when borrowing code from other wizards. 
+
+Example:   cp /players/bob/turkey.c /players/bob/food/turkey2.c
+                  results
+           file turkey is copied into .../food/turkey2.c and given
+           a different file name.
+
+Related:   mv, rm, ed, cp_dir
+
+
+**************
+

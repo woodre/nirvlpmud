@@ -1,0 +1,17 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  D T I T L E
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Usage:   dtitle (title)
+
+The available colors are BLU RED GRN CYN YEL MAG BLK WHT
+BOLD HIB HIR HIG HIC HIY HIM HIW NORM.
+You must use common sense and not make a title that is
+inappropriate, obscene, vulgar, or personally offensive.
+And always use NORM at the end to prevent bleed.
+
+example: dtitle -->HIRPestilence is my HIWGodNORM
+yournamehere -->[1;31mPestilence is my [1;37mGod[2;37;0m
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,53 @@
+Vertebraker [3.26.01]
+
+I wrote up the new customizable monitor code.. /obj/monitor.c
+for those interested.  Anyway there's some new code that
+enterprising wizards can use to their advantage, regarding
+combat monitors and guilds.
+
+The print_monitor() function on the player object
+checks for the existance of an object named 'guild_monitor' in the 
+player's inventory before it 
+
+If this object is found, you can do two different things
+with it.  Both require you to define a function 'print_monitor()'
+within the object, and you can put whatever you'd like in it.
+
+        Sorta like...
+
+void
+print_monitor()
+{
+    tell_object(environment(), "Guild Points: " + guild_points + "\n");
+}
+
+        or somewhat.
+
+Option #1 - Adding to the MUD's combat monitor.
+   This option will call the function print_monitor() within
+the guild_monitor object after the MUD combat monitor
+[customized or not] has been displayed.  All you have
+to do is define the print_monitor() function and add
+in whatever code you need to.
+
+Option #2 - Overriding the MUD's combat monitor.
+   This option will call the function print_monitor() within
+the guild_monitor object by itself, and will override
+the MUD combat monitor.  Define the print_monitor()
+function as you would in Option #1, and then add a
+function 'guild_monitor_only()' that returns 1 in the
+guild_monitor object.
+
+-------------------
+Names of funcs on the player object:
+print_monitor() : prints the combat monitor to the player
+m_decode() : decodes all the customized monitor babble
+cmd_setmon(arg) : cmd to set the customizable monitor
+                  or view the current string
+cmd_monitor(arg) : mon cmd .. on/off/default/ansi :)
+
+to see if a player has a custom monitor string or to set it, use..
+
+query_monitor_string() [returns the monitor string]
+set_monitor_string(x) [sets the monitor string to x]
+-------------------

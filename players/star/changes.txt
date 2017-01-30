@@ -1,0 +1,22 @@
+All of your items have one problem in them, and I'd be shocked if any of
+them actually load..  laff.  The lines at the beginning say reset(agr) and
+if(agr) instead of arg.
+
+One more thing about the items is what they're worth.  If by some chance a
+monster popped with the maximum of seven french fries, and the fries sold
+for the maximum amount of cash, the monster would end up yielding the player
+over 10k in coins.  Monsters of level 18 are supposed to have around 3500
+coins according to /doc/build/monster/monster.guide.
+
+Now on to the item specific corrections.
+In cheeseburger.c, "disgusting-looking"..  hyphenated word.
+In crackpipe.c, I've never heard anyone say "once-was"..  maybe it's a regional
+     thing.  Grammatically it ought to be "This once clear glass tube"
+     Also, "yellowish-white"..  hypen again
+frenchfries.c in the long desc..  put a comma after the word old
+furclumps.c ought to have "caked" in the long desc, not "cake"
+
+For the mobs, check over the file I mentioned above.  If they popped with the
+max on those random stats they'd have too high of a wc, ac, and hps..  wouldn't
+hurt to lower the random just a little I think.
+

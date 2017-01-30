@@ -1,0 +1,41 @@
+10-9-96
+Altering Monster Stats in combat
+ 
+Weapon class 
+
+Weapon class should never be lowered below three quarters the orginal weapon
+class ( org_wc * 3 / 4 ) or by seven ( org_wc - 7 ) which ever results
+in the HIGHER weapon class.  It is up to the wizard if the limit is 
+to be reached in one step or in many, however in any case this limit
+must be used as the absolute low. There may be less of an effect than the
+limits allow but NEVER more. 
+When the player leaves, or switches to another monster there MUST be 
+a correction that resets the monster BACK to its ORIGINAL stats. If 
+the monster lives it will recover.
+This may also be done on a timed basis as well so long as the duration
+AFTER the player has moved his focus away is SMALL.
+ 
+Armor Class
+
+Same rules as for weapon class apply. Limits are org_ac * 2 / 3  or 
+org_ac - 4 whichever results in the HIGHER armor class. 
+Once agian monsters MUST be restored to ORIGINAL values.
+
+max_hp
+
+A Monster's max hit points is NOT to be altered. If there is compelling 
+need approval from boltar might be possible for an exceptially clever
+way of doing this while restoring the monster's previous state and limiting
+the advantage given to players.
+
+healing rate
+ 
+The monster's healing rate may only be altered for SHORT periods of time.
+Ideally it SHOULD NOT BE altered at all. Agian the healing rate MUST
+be restored to its orginal state once the player changes focus or a 
+prescribed time limit. ( A small one )
+ 
+special consideration
+ 
+Boltar will approve all things not in compliance with the above. Without
+such approval the code may be made to fit the above by any 100+ wizard.

@@ -1,0 +1,53 @@
+/*
+ * spell : Pacify   (illusion)
+ * level : 5
+ * effect: This spell stops all fighting in the room
+ * cost  : 75 sp
+ * spec  : no spell fail
+ */
+
+/* changes added by mizan which make spell fail if there is an existing command buffer
+ * of combat spells...
+ */
+
+pacify(){
+  object ob;
+  int i;
+  int cmds;
+
+  if(!KNOW("pacify")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(guild->query_next_prot() > time()) {
+    write("You cannot cast this spell yet.\n");
+    return 1;
+  }
+
+  if(guild->query_cmd_count())
+  {
+    write("DEBUG: Command count is " + guild->query_cmd_count() + "\n");
+  }
+
+  write("You cast a "+HIY+"Pacify"+NORM+" spell ...\n");
+  say(ME+" speaks a word of magic.\n");
+
+  tell_room(env,
+  "Soothing images float into your mind, calming you.\n"+
+  "Your need for bloodlust temporarily subsides.\n");
+  write("Your spell quiet the room.\n");
+
+  ob = all_inventory(env);
+  for(i=0; i<sizeof(ob); i++) {
+      ob[i]->attack_object();
+      ob[i]->attack_object();
+      ob[i]->stop_fight();
+      ob[i]->stop_fight();
+      ob[i]->stop_hunter();
+  }
+
+  tp->add_spell_point(-75);
+  guild->set_next_protection(time() + 60);
+  return 1;
+}

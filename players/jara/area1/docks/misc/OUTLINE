@@ -1,0 +1,40 @@
+
+MONSTERS:
+
+1. Deckhand- Level 16
+2. Sailor- Level 14
+3. Fisherman- Level 14
+4. Barmaid- Level 14
+5. Worker- Level 13
+6. Cat- Level 4
+
+MONSTER LOCATION:
+
+1. The deckhand is located in /players/jara/area1/docks/room/boat1.c
+   He wields /players/jara/area1/docks/wep/dagger.c
+   WC- 22 AC- 13 HP- 300 Total Coins- 1500 (with dagger)
+2. The drunken sailor is located in /players/jara/area1/docks/room/walk0.c
+   WC- 18 AC- 11 HP- 220 Total Coins- 700
+3. The old fisherman is located in /players/jara/area1/docks/room/dock2.c
+   Inventory- /players/jara/area1/docks/obj/pole.c
+   WC- 18 AC- 11 HP- 220 Total Coins- 750 (with pole)
+4. The barmaid is located in /players/jara/area1/docks/room/wharf1.c
+   Inventory- /players/jara/area1/docks/obj/clip.c
+   WC- 18 AC- 11 HP- 220 Total Coins- 750 (with clip)
+5. The warehouse worker loads in /players/jara/area1/docks/room/wrhs2.c
+   The worker also wanders in wrhs1.c wrhs2.c wrhs3.c wrhs4.c
+   WC- 17 AC- 10 HP- 195 Total Coins- 600
+6. The cat loads in /players/jara/area1/docks/room/path1.c
+   The cat also wanders in path2.c walk0.c walk1.c walk2.c walk3.c walk4.c dock1.c
+   dock2.c dock3.c dock4.c
+   Inventory- /players/jara/area1/docks/obj/collar.c
+   WC- 8 AC- 4 HP- 60 Total Coins- 150 (with collar)
+
+THEME:
+
+In progress ;)
+
+MAP:
+
+A map is located in /players/jara/area1/docks/misc/MAP
+

@@ -1,0 +1,159 @@
+#0:0
+nrpoints 9576
+totalpoints 9576
+np_xlevel 100
+nbday "071607"
+rlbday 0
+penalty_left 0
+np_age 132
+guild_name "none"
+guild_file "/players/guilds/Rangers/RangerCommunicator.c"
+guild_rank 10
+guild_exp 8713739
+guild 0
+guilds 0
+guild_level 0
+guild_info 0
+time_to_heal 0
+hcnum 1
+crime 0
+money 80000
+luck2 0
+lucky 178
+name "fred"
+gender "male"
+msgin "streaks into the room on a [36mwinged [1;30mdrakyr[0m"
+msgout "streaks out of the room on a [36mwinged [1;30mdrakyr[0m"
+is_npc 0
+brief 0
+level 5001
+armor_class 0
+hit_point 40346
+max_hp 40346
+experience 7117308
+mmsgout "goes to play in traffic...."
+mmsgin "falls down, goes BOOM!"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 7
+hunted 0
+hunter 0
+hunting_time -140
+cap_name "Fred"
+vis_name "Fred"
+spell_points 39749
+max_spell 40466
+spell_name "sonic"
+disallow_give 0
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 736277
+is_invis 0
+frog 0
+whimpy 0
+auto_load "/players/mokri/clans/object.c:^!/players/earwax/closed/TRACKER/loader:0^!/players/angel/masons/mgob.c:^!players/pain/NEW/items/star.c:^!"
+current_room "players/fred/workroom.c"
+alignment 0
+Armors ([])
+Weapons ([])
+WeaponBonuses 0
+pob_dd 0
+channel_names ({"msg","shout","equip","babble","wiz","announce","cwiz","newbie","pk","risque","gossip","admin","jukebox","junk","Masons",})
+BankBalance 11000000
+strength 20
+intelligence 30
+stamina 20
+will_power 33
+magic_aptitude 30
+piety 30
+stealth 20
+charisma 20
+dexterity 30
+luck 20
+atrbr ({5,5,19,19,20,19,27,19,32,18,})
+bonuses ([])
+stats ({0,0,0,0,0,0,0,0,0,0,})
+stat_maxes ({0,0,0,0,0,0,0,0,0,0,})
+flag_tester 0
+handshake_data 193
+handshake 82276945
+quest_point 285
+quests "orc_slayer#toy_store#M*A*S*H#melko#t_rexs#temple_quest#ring#*sabbath*#cyclops_mace#jungle_village#medallion#disk_quest#keivjam#sinja_quest#rod_quest#key_quest#lost_rood#phantasm_puzzle#super#hooks_hand#chisel#springfield#trekkie#staff#Ursa#protoculture#TEST"
+pregnancy 0
+pregtoo "-*unknown*-"
+monitor_string 0
+align_bar 0
+saved_aliases ({"debug","tail /debug.log","des","absorb","dlog","tail /log/DEATHS","b","clone /players/fred/closed/ftell1.c","YOU","74213414","FLICK","1899999","NEW","76591978","ldmud","tail /ldmud.log","aaa","exec TP->hit_player(20);","ta","take all","7","shand toy /obj/heal","rpower","exec \"/players/guilds/Rangers/CommandCenter/CommandCenter.c\"->APower(2000);","lpmud","tail /lpmud.log","fixes","more /players/fred/closed/venom/logs/fixes","ME","74213393","ll","tail /log/log","f","insert 5000","aa","exec present(\"dervish_tattoo\", TP)->save_me();","bbugs","more /players/fred/closed/bloodfist/log/bugs","home","goto ~/workroom.c","SON","74888906","Ubuntu","www.openoffice.org","a","heal deathseeker","wiki","http://nirvanabeanos.com/secret/wiki/tiki-view_blog_post.php?postId=4","ff","exec TP->add_age(-10000);","bb","exec present(\"ferret\", ENV(TP))->heal_self(10000);","z","mi","monkey","exec object a; a = clone_object(\"/players/fred/closed/pet/monkey.c\"); a->set_owner(this_player()); move_object(a, environment(this_player()));","LITTLE","rt LITTLE, LITTLe, LITTle, LITtle, LIttle, Little, little......","NORAH","123465979","fff","instance /players/maledicta/closed/snitch.c","iii","iceblast","pp","peace","cc","clone /players/shinshi/closed/rogue/gob2.c","eo","squeeze tube","ss","stat ferret","v","vigor","cl","c_chat","Ubuntu2","https://help.ubuntu.com.community/Microsoft_Office","gg","hold gem",})
+saved_nicknames ({"ni","nietzsche","jerk","nyteshade","fat","dratsabtaf","miny","minyatur","ja","jaucribaix","vert","vertebraker","krow","skarekrow","rump","rumplemintz",})
+testchar_var 0
+security_level 90
+nirvana_points 0
+clan 0
+sig 0
+wkrm 0
+hostname "173-22-2-219.client.mchsi.com"
+ok_edit "none#"
+mailaddr "wrwelvaert@gmail.com"
+saved_where 0
+title ""
+pretitle "I am not the real"
+password "mIxNRc0tegZf2"
+spouse 0
+race "Night Elf Mohawk"
+al_title "Do not Trust..."
+PKGhostCounter 0
+intoxicated 0
+infuse 0
+stuffed 0
+soaked 0
+headache 0
+max_headache 8
+fight_area 0
+mon 1
+phys_at ({1,1,3,-992,0,0,})
+no_spell 0
+called_from_ip "173.22.2.219"
+msghome "wibbles about"
+description "is odder than a $5 bill!!!! \n"
+clan_name "stapler"
+clan_master 0
+clan_file 0
+lastime "Apr 10 19:16 2016"
+player_killing 1
+invs_count 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd "/players/desiree/"
+errormsgs 0
+home "/players/fred/workroom.c"
+ex_lv 100
+qc 1
+no_give 0
+aprv "eurale,feldegast,mythos"
+hint 0
+AnsiPref ({"tell",0,"gossip",0,"risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"wiz",0,"cwiz",0,"page",0,"pk",0,"title",0,"pretitle",0,"admin",0,"ls .c",0,"ls .h",0,"ls directory",0,"ls otherFiles",0,"roomtitle",0,"lpc",0,})
+old_last "Apr 10 19:13 2016"
+wiz_soul_light 2
+present_log 0
+present_castle 0
+friends 0
+top_boot_xp 0
+top_kill ({101386,"Ogre mage","Spoons 'R Me",1437340889,})
+prestige_level 100
+prestige_xp 0
+prestige_qp 0
+prestige_skill_points 0
+prestige_skills ({0,0,0,0,0,0,0,0,0,})
+other_copy 0

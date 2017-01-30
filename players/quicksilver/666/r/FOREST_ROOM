@@ -1,0 +1,13 @@
+/* This is the skeleton for all of the forest rooms.  They are set up and cloned by
+   forest_daemon.c */
+
+#include "/players/quicksilver/666/include/std.h"
+
+inherit ROOM;
+
+reset(arg) {
+   ::reset(arg);
+   if(arg) return;
+   set_light(1);
+   set_short("a dark forest");
+}

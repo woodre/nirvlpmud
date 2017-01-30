@@ -1,0 +1,73 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   write("Rwear allows you to wear certain pieces of standard armor in addition\n"+
+         "to your normal Power Ranger suit.\n"+
+         "Requires 500 Power Points per use.\n"+
+         "Allowed types:\n\n"+
+         "Misc, Amulet, Scarf, Orb, Ring\n"+
+         "");
+   return 1;
+}
+
+RangerPower(str,string type){
+   object armor;
+   string *allowed;
+
+   allowed = ({"scarf"});
+
+   if(PO->QuerySkillLevel("armor") >= 6)
+      allowed += ({"underwear"});
+
+   if(PO->QuerySkillLevel("armor") >= 8)
+      allowed += ({"orb"});
+
+   if(PO->QuerySkillLevel("armor") >= 10)
+      allowed += ({"misc"});
+
+   if(PO->QuerySkillLevel("armor") >= 15)
+      allowed += ({"amulet"});
+
+   if(PO->QuerySkillLevel("armor") >= 20)
+      allowed += ({"ring"});
+
+   if(!str){ 
+      write("What do you want to wear?\n");
+      return 1;
+   }
+   if(!present(str,TP)){
+      write("You don't have "+str+" in your possesion.\n");
+      return 1;
+   }
+   if(!PO->QMorphed()){
+      write("You must be morphed to use Rwear.\n");
+      return 1;
+   }
+   if(MASTER->QPowerPoints(type) < 500){
+      write("There is not enough power to also wear armor.\n");
+      return 1;
+   }
+   armor = present(str,TP);
+
+/*
+   if(armor->query_type() != "ring" && armor->query_type() != "shield" && armor->query_type() != "misc"){
+*/
+   if(member_array(armor->query_type(), allowed) < 0){ 
+
+     write("You can not wear that type of armor.\n");
+      return 1;
+   }
+   
+   PO->NotArmor(0);
+   armor->wear(str);
+   if(armor->query_worn()){
+      MASTER->APowerPoints(-500,type);
+      if(armor->short())
+         tell_room(ENV(TP),"The "+armor->short()+" melds in with "+TPNAME+"'s Power Suit.\n");
+   }
+   PO->NotArmor(1);
+   return 1;
+}

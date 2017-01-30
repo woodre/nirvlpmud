@@ -1,0 +1,27 @@
+[VIBE] (GUILD VIBE, GUILD TELL)
+
+  Communicates a message to everyone in who is logged on in the guild.
+
+
+Usage:  vibe <msg>
+
+        vibe :<msg>
+
+        vibe [list, muffle]
+
+
+Parameters:
+
+ <msg>     Echoes the message <msg> to everyone in the guild.
+
+ :<msg>     Echoes the emotion <msg> to everyone in the guild.
+
+ list      Lists all the people currently on the guild channel.
+
+ muffle    Toggles the channel on/off. (toggle muffle) is the same thing.
+
+ history   Displays a recent list of discussion on the guild channel.
+ 
+
+>> This command is the same as 'guild vibe' and 'guild tell'.
+

@@ -1,0 +1,40 @@
+
+                           [help armors]
+-----------------------=========+=========-----------------------
+                            
+Usage: armors
+       armors <x>
+
+Use 'armors' to view which armors you are wearing, and in which slots.
+'armors <x>' will show you if you are wearing an armor in slot <x>.
+
+There are 18 normal armor slots:
+  Type       Examples
+  ---------------------------------------------------------------
+  Armor      Fullplate, Chainmail, Robes, etc.
+  Shield     Tower Shield, Small Shield, Wrist Shield, etc.
+  Helmet     Crown, Helm, Headband, Circlet, etc.      
+  Boots      Boots, Shoes, Sandals, etc.
+  Amulet     Amulet, Broach, Scarab, etc.
+  Misc       Aura, Blessing, Other Strange Item, etc.
+  Chest      Vest, Chestguard, Sash, etc. 
+  Necklace   Pentacle, Crucifix, Necklace, etc.
+  Cloak      Cloak, Cape, etc.
+  Bracelet   Bracelet, Bracers, Wrist Guard, etc.
+  Pants      Pants, Jeans, Pantaloons, Shorts, etc.
+  Belt       Belt, Girdle, etc. 
+  Gloves     Gloves, Gauntlets, etc.
+  Earring1   Earring, Ear Clip, etc.
+  Earring2   "
+  Ring1      Ring
+  Ring2      "
+  Underwear  Teddy, Underwear, G-string, etc.
+  
+ In addition to these armors you can wear other "none" sloted items
+which will also display on your 'armors' list. These items are rare
+and usually don't give any armor bonus, but do sometimes provide
+special powers and abilities. 
+
+You may never wear more then 1 of the same type of armor. So you
+could not wear 2 Rings of Pain, for example. You would have to find
+another ring of a different name. The same goes for earrings.

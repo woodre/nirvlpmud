@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;37mstraight jacket[0m (worn)[0m"
+long_desc "A [1;37mstraight jacket[0m for the mentally insane.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "straightjacket"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A [1;37mstraight jacket[0m for the mentally insane.[0mType 'clan_help' for commands."
+clan_short "[1;37mstraight jacket[0m (worn)[0m"
+damage_type "water"
+hall_path "/players/quantos/desert/desert1"
+object_name "straightjacket"
+owner "disturbed"
+spell_alias "torment"
+spell_mess_me "%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head.%newline%%TPN% %hi green%hacked%normal% %AKN% on the knee.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head.%newline%%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head."
+spell_mess_room "%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head.%newline%%TPN% %hi green%hacked%normal% %AKN% on the knee.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head.%newline%%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head."
+spell_mess_them "%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head.%newline%%TPN% %hi green%hacked%normal% %AKN% on the knee.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head.%newline%%TPN% %hi green%slashed%normal% %AKN% in the groin.%newline%%TPN% %hi green%chopped%normal% %AKN% over the head."
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 8243
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 50
+last_spell_time 1407627774

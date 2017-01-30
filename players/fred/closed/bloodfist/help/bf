@@ -1,0 +1,19 @@
+
+Bloodfist Help:  Channel
+
+  The bloodfist channel allows bloodfist members to easily talk with
+one another when they are in different locations.  Communication is
+an important element in coordinating attacks and defending the base.
+  Among other things, players from outside the guild can be invited
+to talk on the channel.  Any player in the guild can invite someone,
+and any player can remove a guest from the channel.
+
+Usage:  bf <msg>              Talk on the channel
+        bf :<msg>             Emote on the channel
+        bf list               See who is on the channel
+        bf history            See recent messages
+        bf muffle             Toggle muffling of the channel
+        bf mon                Display your monitor
+        bf invite <player>    Invite a guest to join the channel
+        bf kick <player>      Remove a guest from the channel
+

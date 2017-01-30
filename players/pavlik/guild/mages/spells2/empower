@@ -1,0 +1,65 @@
+/*
+ * spell : Empower   (evocation)
+ * level : 3
+ * effect: Transfers SPs to another player
+ * cost  : 5/4 sp transferred
+ * spec  : no spell fail for this spell.
+ * files : none
+ */
+
+empower(str){
+  object obj;
+  string who;
+  int much;
+
+  if(!KNOW("empower")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(!str){
+    write("Empower who?\n");
+    return 1;
+  }
+
+  if(sscanf(str, "%s %d", who, much) != 2){
+    write("Try 'empower <plyr> <amt>'.\n");
+    return 1;
+  }
+
+  obj = find_player(who);
+  if(!obj) obj = find_living(who);
+
+  if(!obj){
+    write(capitalize(who)+" is not on the game.\n");
+    return 1;
+  }
+
+  if((obj->is_player()) && (obj->query_level() > 19)){
+    write("Wizard's don't need your help.\n");
+    return 1;
+  }
+
+  if(much < 1){
+    write("You must empower a positive number!\n");
+    return 1;
+  }
+
+  if(tp->query_sp() < 0){
+    write("You do not have enough magic to empower anyone.\n");
+    return 1;
+  }
+
+  write("You cast an "+HIC+"Empower"+NORM+" spell ... \n");
+  tell_room(env,
+  ME+" casts a spell and a the air crackles with energy.\n");
+  write(
+  "You rejuvenate "+capitalize(who)+" with your own magic.\n"+
+  "You empower "+capitalize(who)+" with "+much+" spell points.\n");
+  tell_object(obj,
+  "You feel rejuvenated as new magic runs through your veins!\n"+
+  ME+" empowered you with "+much+" spell points.\n");
+  obj->add_spell_point(much);
+  tp->add_spell_point(-(much+much/8));
+  return 1;
+}

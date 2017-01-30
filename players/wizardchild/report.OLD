@@ -1,0 +1,28 @@
+[Wed Jun  7]-> /players/dersharp/castle.c should be removed, half is illegal
+[Wed Jun  7]-> the other half isn't finished
+[Wed Jun  7]-> paladin medal/bastions rings: restore is a conflicting command
+[Wed Jun  7]-> players/trix/castle/primonst/ring: ac2 type ring armor
+[Wed Jun  7]-> /players/saber/weapons/demonwhip.c: hit_player call
+[Wed Jun  7]-> /players/trix/castle/dismonst/machine/coffee.c: intox -10, cost 180
+[Wed Jun  7]-> players/trix/castle/dismonst/guy.c: carrying 6k of stuffs, should only be carrying 3
+[Wed Jun  7]-> /players/scathe/dt.c: weapon with hit_player
+[Wed Jun  7]-> /players/catt/ARMOURY/snow.c: dumb object with HB
+[Wed Jun  7]-> players/catt/ARMOURY/storm_mace.c: 60% chance of doing major damage
+[Wed Jun  7]->   set back of 1:1 damage is insane
+[Wed Jun  7]-> players/dragnar/weapons/sword: weapon w/ hb, INVISIBILITY???
+[Wed Jun  7]->   works with players/dragnar/weapons/swordinvis.c
+[Wed Jun  7]-> players/dragnar/weapons/death: 1:1 attack, HB
+[Wed Jun  7]-> check that last 1:1 attack, it's 1hp1sp:1dmg
+[Wed Jun  7]-> players/dragnar/weapons/launcher.c: 1hp1sp:2dmg attack
+[Wed Jun  7]-> players/dragnar/weapons/saw.c: 80% chance of doing 10 dmg? wc20, no save
+[Thu Jun  8]-> players/rich/forward.c: synthehol (intox 0, heal 1, cost 15)
+[Thu Jun  8]-> players/rich/forward.c: ale (intox 10, heal 14, cost 100)
+[Thu Jun  8]-> players/rich/forward.c: brandy (intox 12, heal 27, cost 300)
+[Thu Jun  8]->   room/orc_dump,room/forest2: why is haji's shit here?
+[Sun Jun 11]-> players/nooneelse/obj/bubbles.c: pretty fucking annoying item
+[Sun Jun 11]->   nothing like getting dumb messages at invis 50..use msg instead
+[Sun Jun 18]-> players/rumplemintz/magic/identify_scroll.c: tells ac/wc/weight/value of items
+[Sun Jun 18]-> players/rumplemintz/room/kor/magicshop: sells 5k full heal
+[Fri Jun 23]-> room/init_file: players/deathmonger/ASSASSIN/license.c needs removal
+[Fri Jun 23]->  ** Rumplemintz fixed the stuff i found on jun 28 **
+[Mon Jul 24]-> players/deathmonger/ASSASSIN/MINES/ crap with hb instead of init

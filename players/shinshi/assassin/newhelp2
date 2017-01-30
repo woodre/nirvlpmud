@@ -1,0 +1,21 @@
+                   -]===-  Assassin Guild Help  -===[-
+-------------------========] Help List Two [========-----------------------
+Command:         Cost:   Description:
+UTILITY COMMANDS:
+adjust_myself    0       Reset your license.
+contract a b     0       Contract with a to assassinate b.
+
+INFORMATIONAL COMMANDS:
+ac <msg>         0       Guild tell.
+earplugs         0       Toggles guild tell.
+awho             0       Guild who.
+wh               0       Alternative who list.
+pkers            0       Who list of player killers.
+id               0       Identify weapon type, if any.
+news             0       Guild news.
+rank             0       Your guild level and stats.
+weapon           0       Your weapon proficiencies.
+finger <who>     0       Finger info on who.
+spy <who>        40      Look at the room description where who is.
+preview <dir>    XX      Check out the room in direction dir.
+

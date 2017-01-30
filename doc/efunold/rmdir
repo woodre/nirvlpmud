@@ -1,0 +1,6 @@
+void rmdir(directory)
+string directory;
+
+Removes the directory given as an argument.
+
+See also mkdir(), rm(), ls(), cat().

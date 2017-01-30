@@ -1,0 +1,82 @@
+                                [Monk Profession]
+                                      By
+                                   Maledicta
+                                   11.05.01
+
+
+
+[OVERVIEW]
+The Monk Profession is an add-on to the Warriors.  This means that new
+skills and abilities, as well as drawbacks, are acquired by choosing
+this field.  
+A Monk is a disciplined fighter that specializes in hand to hand combat
+and the use of the mind as a weapon. 
+
+[DRAWBACKS]
+As with all profession add-ons, the Monk's special powers run on an
+endurance level.  The endurance level will drop in combat as special
+powers are used.  When this reaches a low level, the monk becomes
+less effective, and sometimes cannot perform their skills.
+
+Monks are also restricted by the weight of the armor that they wear.
+The maximum weight for each piece of armor is 1.  Since most armor
+has a weight of 2 or higher, this can affect their performance. Also,
+a few of their more common powers are decreased in ability the higher
+the total weight of the monk is.
+
+[SKILLS]
+Each skill has a max level of 5, except disciplines, which require
+only 1 point to have.  A Monk will have 15 points to spend; 16 total
+but they must spend 1 point in order to choose from monk skills.
+
+Hand-to-Hand  -  The wc of this is based on the current endurance
+                 of the Monk.  At 90% or higher, the monk will have
+                 an effective base wc of 16 + random(hand to hand skill*2)
+                 Effective wc is 13 + random(h2h skill * 2) if endurance
+                 is at 20% or higher.  5 + random(h2h skill) otherwise.
+                 At 40% endurance or higher, additional attack moves will
+                 go off, offering a bonus of between 1 - 15 to wc.
+
+Touch         -  Works in combination with the H2H skill.  Touch will
+                 lower either AC or WC of the opponent.  It can be
+                 toggled on or off, and uses 3 endurance per strike.
+                 There is a random 0 - 25 vs. Attackers level + 1/3 of
+                 attackers level chance of going off and reducing by
+                 1.
+
+Advanced Dodge - Gives a second chance of dodging.  Works same as original
+                 Dodge.
+ 
+Advanced Blunt - Adds to original blunt skill, giving higher chance for the
+                 larger wc bonus.
+
+Advanced Polearm - Same as blunt.
+
+Discipline of Time - Allows for a bonus of 1 endurance pt per round during 
+                     meditation.
+Discipline of Blood - Allows the monk to use xpunch and xkick even when they do
+                      not have enough sps to cast.  Instead, it drains it from
+                      hps.  Must have at least 1 sps though.
+Discipline of Mind - 15% chance of faster sp regen each round, giving 1 point.
+
+xpunch -  Skill lvl        1        2        3           4         5
+          Damage         r(16)+8  r(18)+9  r(20)+10   r(22)+11  r(24)+12   
+          Cost             16        18        20         22       24
+          Bonus damage = ac + weight of worn ring.  (max weight of 1!)
+
+xkick  -  Same as Punch, just different visually.
+
+Meditation -  if(random(10) < meditation skill lvl(max 5))  + 1 endurance and +1 
+              heal self.  If meditation = 5th level, will randomly receive the
+              short() location of players in the game, even if invis.  Drawback:
+              requires 3 rounds to come out of meditation, and cannot do ANYTHING
+              while meditating.  If attacked, meditation will end in 3 rounds.
+
+[ADVANCEMENT]
+Monks advance the same as Warriors, by converting over xp.  Each level costs
+500k xp, with 16 additional levels for the add-ons.  Raising skills is done
+by visiting the guild hall and going to the Book of Monks.  Each time a level
+is earned, 1 skill point is given that they can spend on skills.
+
+
+

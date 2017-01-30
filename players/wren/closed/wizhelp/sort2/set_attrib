@@ -1,0 +1,20 @@
+**************
+
+                     Set_attrib
+
+Syntax:    set_attrib <name> <stat> <#>
+
+Desc:
+           This command allows you to set the stats on test 
+           character.
+
+Warning:   
+
+Example:   set_attrib mike ste 20
+                  results
+           Mikes stealth is now set to 20
+
+Related:   set_level, set_extra
+
+
+****************

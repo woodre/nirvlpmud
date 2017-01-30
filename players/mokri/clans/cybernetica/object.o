@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[34m~[0m[31mCybernetic [0m[1;31mUpgrades[0m[34m~[0m[0m"
+long_desc "[34m<[31mCybernetic[0m[1;31m Upgrades[0m[34m>[0mOnly the most current [31mCyberninjas[0m have these upgrades.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "upgrades"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[34m<[31mCybernetic[0m[1;31m Upgrades[0m[34m>[0mOnly the most current [31mCyberninjas[0m have these upgrades.[0mType 'clan_help' for commands."
+clan_short "[34m~[0m[31mCybernetic [0m[1;31mUpgrades[0m[34m~[0m[0m"
+damage_type "laser"
+hall_path "/room/clinic"
+object_name "upgrades"
+owner "achilles"
+spell_alias "tt"
+spell_mess_me "%red%<SMASHES> %normal%%AKN%"
+spell_mess_room "%red%<SMASHES> %normal%%blue%%AKN%. %normal%%AKN% ears and eyes %hi cyan%BEGIN%normal% to%red% BLEED."
+spell_mess_them "%red%<SMASHES> %normal%%blue%you. Your ears and eyes %hi cyan%BEGIN%normal% to%red% BLEED."
+abilities ({})
+chan_history ({"[Thu May 12 04:46:28 2011] Achilles: need me to train you first? i should be back in 20 minutes.","[Thu May 12 04:46:40 2011] Demonic: im good for right now","[Thu May 12 04:46:42 2011] Achilles: k","[Thu May 12 04:46:44 2011] Demonic: what state you in","[Thu May 12 04:46:46 2011] Achilles: alaska","[Thu May 12 04:46:50 2011] Achilles: 1 am here.","[Thu May 12 04:47:00 2011] Demonic: im in call","[Thu May 12 04:47:20 2011] Achilles: thats cool.","[Thu May 12 04:47:24 2011] Achilles: brb","[Thu May 12 04:47:28 2011] Demonic: kk","[Thu May 12 05:05:32 2011] Demonic: you back","[Thu May 12 20:58:53 2011] Achilles: sounds good.","[Thu May 12 21:26:07 2011] Demonic: hurch","[Thu May 12 21:26:25 2011] Demonic: what the heck","[Tue Feb 12 22:40:35 2013] Achilles: yo yo","[Tue Feb 12 22:40:49 2013] Achilles: forgot about this channel","[Sat Mar  2 04:46:44 2013] Thork: just keep going im reading up","[Wed Mar  6 19:05:40 2013] Achilles: sup","[Sun Mar 10 22:14:24 2013] Picar has joined the clan!","[Tue Nov 12 21:21:00 2013] Achilles: sup",})
+leaders ({"thork","demonic",})
+join_type 0
+private_coffer 2810000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1441299572

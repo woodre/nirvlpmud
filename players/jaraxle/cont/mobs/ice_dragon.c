@@ -1,0 +1,78 @@
+#include "/players/jaraxle/ansi.h"
+
+inherit "obj/monster.c";
+
+
+
+int bdelay;
+
+
+
+reset(arg)  {
+
+
+
+  ::reset(arg);
+
+  if(arg) return;
+
+set_name("dragon");
+
+set_alt_name("ice dragon");
+
+set_race("dragon");
+
+set_short(HIC+"Ice Dragon"+NORM);
+
+set_long(
+
+"This is a huge ice dragon. Once a dragon, now you see only\n"+
+
+"the animated sculpture of a once great beast. The King of the\n"+
+
+"Blue Dragons, to destroy disobedience, turns those who would\n"+
+
+"betray him into ice servants such as this. This creatures\n"+
+
+"long neck ends in a huge skull filled with long sharp teeth.\n"+
+
+"Its wings are no longer capable of flight and spread out with\n"+
+
+"a long icy reach. This creature exudes the coldness of death\n"+
+
+"from its large form.\n");
+
+set_level(20);
+
+set_hp(400);
+
+set_al(0);
+
+set_wc(80);
+
+set_ac(10);
+
+set_heart_beat(1);
+
+set_chance(20);
+
+set_spell_dam(35);
+
+set_spell_mess1(
+
+"The Ice Dragon lashes out at its opponent...\n\n"+
+
+"           "+BOLD+"FROZEN DEATH"+NORM+"\n\n"+
+
+"            flows over the victim of the soul slave.\n");
+
+set_spell_mess2(
+
+"The Ice Dragon touches you, "+BOLD+"FREEZING"+NORM+" the blood in your veins!\n");
+
+}
+
+
+
+
+

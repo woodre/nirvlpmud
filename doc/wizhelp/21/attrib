@@ -1,0 +1,22 @@
+**************
+
+
+                     Attrib
+
+Syntax:    attrib <player>
+
+Desc:
+           This command returns a player's attributes the same as if 
+           you were seeing their sc2. Pretty straight foreward.           
+
+Warning:   Don't use this to gauge pk opponents and don't reveal this
+           information to players.
+
+Example:   attrib bob
+                  results
+           see all of his attribute values as laid out in sc2.
+
+Related:   stat
+
+
+**************

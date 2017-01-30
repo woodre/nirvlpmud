@@ -1,0 +1,1 @@
+robe_of_healing(str) { if(robe_of_healing_var[0] > lev) return 0; call_other(POWER,"robe_of_healing",lev,pow,str); return 1; }

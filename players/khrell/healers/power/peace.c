@@ -1,0 +1,1 @@
+peace(str) { if(peace_var[0] > lev) return 0; call_other(POWER,"peace",lev,pow,str); return 1; }

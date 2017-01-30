@@ -1,0 +1,8 @@
+inherit "obj/monster";
+
+reset(arg)
+{
+object gold, weapon;
+  ::reset(arg);
+  if(arg) return;
+}

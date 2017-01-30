@@ -1,0 +1,20 @@
+peace()
+{
+ object att, *ob;
+ int    h, s;
+ s = sizeof(ob = all_inventory(environment(this_player())));
+ 
+ while(h < s)
+ {
+  if(att = (object)ob[h]->query_attack())
+  {
+   ob[h]->stop_fight();
+   att->stop_fight();
+  }
+  h ++;
+ }
+
+ tell_room(environment(this_player()), 
+  capitalize((string)this_player()->query_name())+" has called a stop to all fighting!\n");
+ return 1;
+}

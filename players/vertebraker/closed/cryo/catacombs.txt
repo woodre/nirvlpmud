@@ -1,0 +1,157 @@
+       the catacombs
+ -----------------------
+
+The catacombs is an elaborate system of tunnels created sometime ago by unknown
+forces. They were recently discovered by a mining team.
+Dwelling within are pretty nasty creatures, and other adventurers
+like you who are searching for the secrets and treasures to be found within.
+
+Normal Creatures [all defend same kind, all loot bodies]
+  Goggoths [small, medium, large]
+   - L18, low ac, high dmg
+   - Treasure: Goggoth bodies can be traded to Hunters throughout
+     Catacombs.
+  Draconian Scouts
+   - L16, backstab, lower ac, normal dmg, extra hp
+   - Treasure: standard leather armor, scabbards, black shortswords,
+     cash
+  Minotaurs
+   - L21+, horn atk, charge, bash, hunts you, high ac, wc, hps
+   - Treasure: nose ring, head of minotaur.
+   - Armor: none
+   - Weapons: glaives, tridents, halberds, axes
+   - Rare weapon: ebony greataxe
+   - cash
+  Bandits
+   - L19, backstab, lower ac, extra dmg
+   - Can steal stuff/money from you without you noticing
+     [course, you can get it back]
+   - Treasure: leather armor, scabbard, rapiers, cash
+  Gypsy Travellers
+   - L20, backstab, lower hp, lower ac, lower wc
+   - sunbolt spell, heal own wounds, darkshroud spell,
+     mirror spell to reflect dmg
+   - Treasure: robes, earrings, staves, cash
+   - buy spirit treasure
+  Floating spirits
+   - L18, high ac, low hp, low wc
+   - Small magical treasure chest
+  Spectral wraiths
+   - L22, high ac, high hp, high wc
+   - Treasure: silver pendants, obsidian bracelets,
+     moonstone necklace, cash, spectral swords
+  Quicklings
+   - L16, multi atks, low ac, low hp, high wc, backstab,
+     run away
+   - Treasure: silk robes, silk hats, silk leggings,
+               silk gloves, cash, punchknives of speed
+  Spinals
+   - L20, 1-2 atks per round, low ac, low hp, high wc
+   - Reanimate other spinals in the area
+   - Treasure: pile of bones, greatsword, falchion, bastard
+     sword, small magical treasure chest
+  Adventurers
+   - L20, normal ac, wc, hp, uses heals automatically
+   - Casts sonic
+   - Treasure: full set of eq plus 6 heals
+  Hunters
+   - L22, higher wc, backstab, throws net, knocks down opponent
+   - same treasure as hunter, except backstab weapon
+  Tentacled Abomination
+   - 6 tentacles, each hits til you cut them off.
+   - higher hp, higher wc [temporarily]
+   - can hold you with 4+ tentacles to stop you from running
+   - Treasure: Small magical treasure chest
+
+Rare Creatures:
+  Dark Nagas
+   - L25, higher wc, hp, ac
+   - casts darkbolt, darkflame, darkshroud, darktrap
+   - Treasure: Eats cash, so lots left behind +
+     you can dip your weapon in the poison of the Naga's blood
+  Firedrakes
+   - L24
+   - breathes flame
+   - flies away from atkers so you can't hit
+   - flies away when dmg'd
+   - Can destroy weapon/armor with fire
+   - Treasure: Magical treasure chest
+  Hellhounds
+   - L24
+   - breathe flames
+   - can destroy weapon/armor with fire
+   - 1-2 atks per round
+   - Treasure: Hellhound furs
+     [can be made by gypsy into nice, light armor protective against fire
+      and indestructible by firedrake/hellhound fire]
+
+Very Rare Creatures:
+  Feathered Serpents
+   - L28
+   - tail, claws, teeth
+   - beheads when kills
+   - flies away from atkers
+   - flies away when dmg'd
+   - hunts, even outside catacombs or if player quits out
+   - Treasure: major treasure chest
+     Feathered tail [if held, can block all dmg for 2 minutes]
+  Metal Slime
+    - L1, extremely high ac, 5 hp
+    - 90% chance of running when dmg'd
+    - If dies, lots of experience for what it's worth
+    - Joke mob, no treasure [aka DW4]
+  Rainbow Dragons
+    - See feathered serpent, cept L30
+    - Breathes fire
+    - Destroys weps/armor
+    - Commands all creatures in room
+    - buko bucks
+
+Kraken
+  - L26
+  - lightning attacks, 8 tentacles
+  - shoots ink to blind ppl
+Mad Wizard
+  - L24, low hps, wc, ac
+  - mad spells
+
+1==E
+p==passage
+M==Mad Wizard
+K==Kraken
+
+
+                      M
+                      /
+                 13-14             67-p-68
+                 /  p               |     \
+        1-2-3-4-5   p              36     69
+        /\|\  |     p             /  \     \
+       6 7-8  9-10-11-12   30-p-31-62-63-64-65-66
+       |   p     |          |    |      61
+  17-p-15  p    21    28-p-29   32-34    |
+       | \ p   /      |          \  \   60
+       16-18-19-20-22-23         33-35   |
+        \    p   p     \          p     59
+        24-27-39-40-41-42         p      |
+        |              |          56-57-58-59-POOL
+        25             43         /
+        | \            | p46-54-55
+        26-38          44
+            p          |
+            X          45-47-48-p-51-p-52-p-53
+                           |
+                          49
+                           |
+                          50
+
+
+
+POOL
+        59-70-71-72
+           /       \
+          73..swim..79
+          |    K     |
+          74..swim..78
+           \        /
+            75-76-77

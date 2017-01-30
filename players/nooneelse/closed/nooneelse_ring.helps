@@ -1,0 +1,31 @@
+/* -------------- fake aliases in quicktyper & wiz commands --------------- */
+who,whos,whow,l,sc,g,gc,ex,ec,log,elog,dlog,powerup,rfakesetm
+
+ralias <who>
+echo <msg>               echoall <msg>                echoto <who> <msg>
+force <who> <what>       rat <who> <command>          rdemote <who> <level>
+rfixme                   rpat <who>                   rprison <who>
+rpromote <who> <level>   rquiet <who>                 zap <who> <damage>
+/* ------------------------------------------------------------------------ */
+/* ------------------ doodad commands (direcroty stuff) ------------------- */
+set <dir>                sls                          scd
+scd <subdir>             dlog                         pwd
+write <log/note> <str>
+/* ------------------------------------------------------------------------ */
+ralign <al_string>       rblock <direction>           rbug
+rcheck or rc             rclean <object>              rclone <object>
+rdrop <object>           rfollow <player>
+rfrog <player>           rgender <who> to <0/1/2>
+rget <object> [from <where>]                          rgnat
+rgoin <object>           rgoto <object>               rguild [<guild name>]
+rheal <who> <how much>   rid <obj_name>               rinvis <player>
+rlog                     rlook [<object>]             rmail/rpost
+rmbug                    rmin <player> <msg>          rmmin <player> <msg>
+rmmout <player> <msg>    rmoney <amount>              rmout <player> <msg>
+rmove <what> <where>     robjects <player>            roff - ron
+rpalign <person> <title> rpeek <room>                 rplayer <player>
+rptitle <person> <title> rreset <object>              rreturn
+rrmlog                   rsnoop <who>                 rstop
+rsummon <object>         rtitle <title>               rtrace/rfind <string>
+rvis <player>            rweight <amount>             rwho
+rxp <who> <how much>

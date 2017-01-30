@@ -1,0 +1,26 @@
+Name		Intox	Stuff	Soak	Hp	Sp	Charges	Value	Price
+--------------------------------------------------------------------------------
+juice				14	35	35	5	1400	
+biscuits		14		35	35	5	1400	
+soco		14			35	35	5	1400	
+ 									(70/175) = .4 ->  8*175=1400
+
+zinfandel	10			50	50	3	2400	
+									(30/150) = .2 -> 16*150=2400
+pecan pie		13		50	50	3	1950	
+									(39/150) = .26 -> 13*150=1950
+
+nectar				10	50	50	3	2400	
+									(30/150) = .2 -> 16*150=2400
+berries(1)	2	7	7	50	50	3	1800	
+									(48/150) = .32 -> 11*150=1650
+vita(2)				15	75		3	1800	
+majin(2)			15		75	3	1800	
+									(45/150) => .28 -> 12*150=1800
+rum(3)		3/5/10			10/20/40 	16-8-4	2250
+									(40/160) => .24 -> 14*160=2240
+fullheal				500	500	1	10000	
+1. Berries are more expensive due to their ease of use.
+2. As vita and majin only heal hps or sps, they effectively only heal 50 heal points.
+3. Rum can be drunk with variable charges used.  Minimum tox for drinking the whole thing is 40.
+If it is drunk a charge at a time, the max tox is 48.

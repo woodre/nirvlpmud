@@ -1,0 +1,227 @@
+#include "/players/daranath/closed/ansi.h"
+#define tp this_player()->query_name()
+
+id(str) {
+  return str == "pouch" || str == "component pouch";
+}
+
+reset(arg) { 
+  if(arg) return;
+}
+
+short() {return "Component pouch"; }
+long() {
+write("Darkened leather stained with many unknown substances makes\n"+
+      "up the component pouch that is used primarily to store\n"+
+      "spell components. A very useful tool for a mage.\n"+
+      ""+HIY+"<"+NORM+"plist"+HIY+">"+NORM+" for a list of commands.\n"); 
+}
+get() { return 1; }
+query_weight() { return 1; }
+query_value() { return 0; }
+
+init() {
+add_action("commands","plist");
+add_action("pouch_help","phelp");
+add_action("contents","contents");
+add_action("add_comp","store");
+add_action("sub_comp","remove");
+}
+
+commands() {
+write("The component pouch has the following abilities:\n");
+write("\n< contents > gives you a list of the components you have\n");
+write("< store > adds a component to the pouch\n");
+write("< remove > takes a component from the pouch\n");
+write("< plist > this listing\n");
+write("< phelp > gives you further information on each command\n\n");
+write("The darkness comes from deep within the corpse\n\n");
+return 1;
+}
+
+pouch_help(str) {
+  if(!str) {
+write("Which pouch command do you want help with?\n");
+return 1; }
+  if(str == "contents") {
+write("< contents > shows you how many of each and every component that\n"+
+      "you have left in your inventory within the pouch. Very\n"+
+      "useful for keeping track of your spells.\n");
+return 1; }
+  if(str == "store") {
+write("< store > takes a material component and adds it to your\n"+
+     "component pouch. This allows you to keep your inventory free\n"+
+      "of the various components. A spell component must be within\n"+
+      "the component pouch to be used for a spell.\n");
+return 1; }
+  if(str == "remove") {
+write("< remove > takes a component from your component pouch and\n"+
+      "puts it back within your inventory. The component cannot be\n"+
+      "used for a spell until it is placed back within the pouch.\n");
+return 1; }
+  if(str == "plist") {
+write("< plist > shows you the various commands you can do with the\n"+
+      "component pouch.\n");
+return 1; }
+  else {
+write("There is no help for that command.\n");
+return 1; }
+}
+
+contents() {
+  if(present("necro_ob",this_player())) {
+object ob;
+ob = present("necro_ob",this_player());
+write("\nYour component pouch currently contains:\n"+
+      "---------------------------------------------\n"+
+      "Parts Blood: "+ob->query_blood()+"\n"+
+      "Parts Skin : "+ob->query_skin()+"\n"+
+      "Parts Eye  : "+ob->query_eye()+"\n"+
+      "Parts Spine: "+ob->query_spine()+"\n"+
+      "Parts Heart: "+ob->query_heart()+"\n"+
+      "Parts Soul : "+ob->query_soul()+"\n"+
+      "---------------------------------------------\n"+
+      "The darkness comes from deep within the corpse.\n\n");
+say(tp +" searches through the component pouch for a moment.\n");
+this_player()->add_spell_points(-2);
+return 1; }
+  else {
+write("You have no necromantic spell components at all.\n");
+destruct(this_object()); return 1; }
+}
+
+add_comp(str) {
+  if(!str) {write("Which component would you like to store within the pouch?\n");
+return 1; }
+  if(present("necro_ob",this_player())) {
+object ob;
+ob = present("necro_ob",this_player());
+  if(str == "blood") {
+  if(present("necro_blood",this_player())) {
+write("You store the blood within your component pouch.\n");
+ob->add_blood(1);
+ob->save_me();
+destruct(present("blood",this_player())); return 1; }
+write("You have no harvested blood available for storage.\n");
+return 1; }
+  if(str == "skin") {
+  if(present("necro_skin",this_player())) {
+write("You store the skin within your component pouch.\n");
+ob->add_skin(1);
+ob->save_me();
+destruct(present("necro_skin",this_player())); return 1; }
+write("You have no harvested skin available for storage.\n");
+return 1; }
+  if(str == "eye") {
+  if(present("necro_eye",this_player())) {
+write("You store the eye within your component pouch.\n");
+ob->add_eye(1);
+ob->save_me();
+destruct(present("necro_eye",this_player())); return 1; }
+write("You have no harvested eyes available for storage.\n");
+return 1; }
+  if(str == "spine") {
+  if(!present("necro_spine",this_player())); {
+write("You have no harvested spine available for storage.\n");
+return 1; }
+write("You store the spine within your component pouch.\n");
+ob->add_spine(1);
+ob->save_me();
+destruct(present("necro_spine",tp)); return 1; }
+  if(str == "heart") {
+  if(present("necro_heart",this_player())); {
+write("You store the heart within your component pouch.\n");
+ob->add_heart(1);
+ob->save_me();
+destruct(present("necro_heart",this_player())); return 1; }
+write("You have no harvested heart available for storage.\n");
+return 1; }
+  if(str == "soul") {
+  if(present("necro_soul",this_player())); {
+write("You store the soul within your component pouch.\n");
+ob->add_soul(1);
+ob->save_me();
+destruct(present("necro_soul",this_player())); return 1; }
+write("You have no harvested soul available for storage.\n");
+return 1; }
+  else {
+write("That is not a valid component, so why store it?\n");
+return 1; }
+write("You cannot add a component to the pouch.\n");
+destruct(this_object());
+return 1; }
+}
+
+sub_comp(str) {
+  if(!str) {write("Which component would you like to remove from the pouch?\n");
+return 1; }
+  if(present("necro_ob",this_player())); {
+object ob;
+ob = present("necro_ob",this_player());
+  if(str == "blood") {
+if((ob->query_blood()) > 0) {
+write("You remove some blood from the component pouch.\n");
+say(tp +" removes some harvested blood from the component pouch.\n");
+ob->add_blood(-1);
+ob->save_me();
+move_object(clone_object("/players/daranath/guild/obj/misc/blood.c"),this_player());
+return 1; }
+write("You have no harvested blood stored within the component pouch.\n");
+return 1; }
+  if(str == "skin") {
+if((ob->query_skin()) > 0) {
+write("You remove some skin from the component pouch.\n");
+say(tp +" removes some harvested skin from the component pouch.\n");
+ob->add_skin(-1);
+ob->save_me();
+move_object(clone_object("/players/daranath/guild/obj/misc/skin.c"),this_player());
+return 1; }
+write("You have no harvested skin stored within the component pouch.\n");
+return 1; }
+  if(str == "eye") {
+if((ob->query_eye()) > 0) {
+write("You remove an eye from the component pouch.\n");
+say(tp +" removes a harvested eye from the component pouch.\n");
+ob->add_eye(-1);
+ob->save_me();
+move_object(clone_object("/players/daranath/guild/obj/misc/eye.c"),this_player());
+return 1; }
+write("You have no harvested eye stored within the component pouch.\n");
+return 1; }
+  if(str == "spine") {
+if((ob->query_spine()) > 0) {
+write("You remove a spine from the component pouch.\n");
+say(tp +" removes a harvested spine from the component pouch.\n");
+ob->add_spine(-1);
+ob->save_me();
+move_object(clone_object("/players/daranath/guild/obj/misc/spine.c"),this_player());
+return 1; }
+write("You have no harvested spine stored within the component pouch.\n");
+return 1; }
+  if(str == "heart") {
+if((ob->query_heart()) > 0) {
+write("You remove a heart from the component pouch.\n");
+say(tp +" removes a harvested heart from the component pouch.\n");
+ob->add_heart(-1);
+ob->save_me();
+move_object(clone_object("/players/daranath/guild/obj/misc/heart.c"),this_player());
+return 1; }
+write("You have no harvested heart stored within the component pouch.\n");
+return 1; }
+  if(str == "soul") {
+if((ob->query_soul()) > 0) {
+write("You remove a captured soul from the component pouch.\n");
+say(tp +" removes a crystalline soul from the component pouch.\n");
+ob->add_soul(-1);
+ob->save_me();
+move_object(clone_object("/players/daranath/guild/obj/misc/soul.c"),this_player());
+return 1; }
+write("You have no harvested souls stored within the component pouch.\n");
+return 1; }
+  else {
+write("There is none of that item within the component pouch.\n");
+return 1; }
+write("You cannot remove any components from the pouch.\n");
+destruct(this_object()); return 1; }
+}
+

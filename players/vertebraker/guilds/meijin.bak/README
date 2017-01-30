@@ -1,0 +1,222 @@
+LAST UPDATED:		 6/15/98
+GUILD NAME:		"meijin"
+OBJECT:			/players/pavlik/guild/gob.c
+DAEMON OBJECT:		/players/pavlik/guild/master.c
+COMBAT MODS:		/players/pavlik/guild/combat.h
+UNIQUE ID STRING:	"pavlik_guild_obj"
+
+
+---------------
+DIRECTORY MAP:
+---------------
+~/guild		 :  top level directory.
+   ^---	log/	 : guild logs.
+   ^---	notes/	 : wiz notes and docs.
+   ^---	npc/	 : guild npcs.
+   ^---	obj/	 : guild objects.
+   ^---	players/ : player save files.
+	  ^----	banned	: players banned from the guild.
+          ^---- room    : player's guild room save file.
+   ^---	powers/  : guild skills and abilities.
+   ^---	room/	 : guild rooms.
+
+
+-------------
+DESCRIPTION:
+-------------
+The Meijin are perfectionists.  Once a Meijin reaches guild
+rank 20, he must select a sigle type of weapon (ie: sword,
+dagger, mace, etc.)  The player then seeks to master that
+particular type of weapon.  He will only be able to wield
+weapons of that type.  All guild stats and skills are based
+on weapon combat.  Meijin have very limited magical abilities.
+
+Meijin have Endurance Points, rather than spell points.
+Combat and Skills cost the Player endurance points, which
+can only be recovered by resting (non-combat).
+
+
+-------------
+GUILD RANKS:
+-------------
+The Meijin has limitless guild ranks.  The cost for ranks
+rises exponentially.  By design the Player should achieve
+maximum skills/stats around guild rank 127.
+
+Rank cost is determined by an (obtuse) equation.  To see how
+much guild ranks cost, please clone a guild object (~/guild/gob.c)
+and type 'xlevelcost <#>' where # is a guild rank.  You can
+view a range of ranks by typing 'xlevelcost <#1> <#2>'.
+
+-------------
+GUILD STATS:
+-------------
+Meijin have specific guild stats that affect how well there combat and
+skill abilities work.  Guild stats can be increased by training, using
+the practice sessions that are gained when the player advanced in rank.
+Guild Stats and skills are raised 3 + random(8) points reach time they
+are practiced.
+All skills and stats start at 0 and max at 100.
+
+
+-----------
+PRACTICES:
+-----------
+Guild Members use practice sessions to raise guild stats and skills.
+Practice sessions are given when the player advanced in guild rank.
+Practice sessions are awarded in the following manner:
+	Ranks 1-10:	1 practice session per advance
+	Ranks 11+ :	1 + random(4) sessions per advance
+
+Extensive play-testing has yielded the following information:
+   Average # of Practices gained per level:        2.4
+   (%) Increase of skill/stat per practice:        8.2
+   Practices needed to Max skill or stat:          12.2    (100 / 8.2)
+   Practices needed to Max ALL skills and stats:   305     (22 * 12.2)
+   Number of levels required to do so:             127     (305 / 2.4)
+   Guild Experience Cost for Rank 127:		   14,776,266
+
+
+-----------
+ENDURANCE:
+-----------
+--- The endurance system has been changed and this documentation
+--- has yet to be updated.  refer to gob.c and combat.h for endurance
+--- information.
+
+
+------------
+ADVANTAGES:
+------------
+   (1) DAMAGE BONUS:
+	Meijin get a bonus to weapon-inflicted damage.  The
+	damage bonus is calculated by using the players 
+	weapon_type skill and strength and agility stats.
+
+   (2) CRITICAL HITS:
+	Critical hits multiple the damage bonus.  Critical hits also
+	drain the Players endurance.  Critical hits are not possible
+	against other players (PK).
+
+   (3) OFFWIELDING:
+	When the Meijin reaches guild rank 40 he can gain the ability
+	to offwield weapons (wield 2 weapons at the same time).  Many
+	guild skills and abilities are not avaliable when the Player
+	is offwielding.  Damage Bonuses and Critical Hits (see above)
+	are not possible when Offwielding.
+
+   (4) PARRYING
+	Parrying is a very high level skill that allows the Meijin to
+	use his second weapon to "block" opponents attacks.  Parry uses
+	the old Paladin code to increase the players AC.
+
+   (5) INCREASED STAMINA:
+	Meijin have a max Stamina of 24.
+
+---------------
+DISADVANTAGES:
+---------------
+   (1) CAN ONLY WIELD ONE WEAPON TYPE:
+	Once the Meijin reaches guild rank 25 he must select one type
+	of weapon to wield.  His goal is to perfect or master that
+	type of weapon.  If and when the Player maxes the weapon stat (100%)
+	he may select a second weapon type.
+
+   (2) LIMITED ARMOR:
+	The Meijin can armor wear armor types: Armor, Helmet and Boot.
+
+   (3) LIMITED MONEY:
+	The Meijin can only carry 50,000 coins at one time.
+
+  *(4) LOSE EXPIERENCE FOR LEAVING A FIGHT:
+	-This is still under construction-, but the basic concept is that the
+	player would lose guild XP for leaving a fight while the opponent
+	still lives.  See file 'shadow.c' for more on this.
+
+   (5) NO AUTOMATIC WIMPY:
+	Meijin cannot automatically wimpy from a fight.  This is quite a
+	disadvantage to the player, especially in *lag*.
+
+   (6) LIMITED SPELL ABILITY:
+	Meijin's cannot use the sonic spell.  Sonic is obviously the most
+	powerful mud-based spell and not having it avaliable makes a big
+	difference, specially in PK combat.
+
+   (7) REDUCED MAGIC APTITUDE:
+	Meijin have a max Magic Aptitude of 14.  This more than offsets the
+	+4 Stamina points listed above as an advantage.  This is not such a
+	big disadvantage since the player has little need for spell points,
+	however I believe it will make a difference.
+
+
+--------------------------
+GUILD SKILLS / ABILITIES:
+--------------------------
+This is a list of all guild skills and abilities.  This is just
+a summary of each skills functions.  For more detailed information
+see the skills action file in: /players/pavlik/guild/powers/<skill>.c
+Cost is listed in Endurance Points unless otherwise specified.
+
+For spell COST calculations we are presuming that 7 endurance points are
+the equivilant of 1 spell point.
+
+RANK:	SKILL:		COST:		EFFECT:
+===============================================================================
+10	judge		70		Determine alignment of target.
+10	kick~		(Str/5+Kick/4)*7	Spell_Object(Str/10 + random(Kick/4)).
+10	consider	245		Size-up a target.
+10	dark vision	2/hb		Allows player to see in the dark.
+10	refresh~	# sp		Converts SPs to Endurance Points.
+10	meditate^	20 sp		Allows player to recover endurance faster
+--	---------	---------	--------------------------------------
+20	corpse bag	250		turn a corpse into a bag.
+20	far sight	175		Scan contents of surrounding rooms.
+20	appraise	140		Value a weapon or armor.
+20	focus~		125+special	sures a critical hit for 1 round.
+22	critical~	special		listed above (advantages).
+--	---------	---------	--------------------------------------
+30	bind~		50+(bind/4)*7	Basic Heal.  Amt = 10 + random(Bind/5).
+30	finish~		(3*Dmg/2)*7	Finish off a target (max dmg = 50).
+30	pysche~		320		Boosts players guild stats for short time.
+30      xally		none		Make non-guild players "Allies"
+--	---------	---------	--------------------------------------
+40	repair		250+500c	Repair a broken weapon.
+40	storm~		special		Area attack ability.
+40	offwield~	special		listed above.
+50	guild pet	650+1800c	guild pet.
+--	---------	---------	--------------------------------------
+50	enhance~	800		Increase weapons class by 1.
+50	strike~		(Pro/4+Strike/3)*7	Spell_Object(Pro/8 + random(Strike/3)).
+--	---------	---------	--------------------------------------
+60	parry~		special		special, please read file.
+60	cripple~	560		reduce targets AC and WC.
+60      rage~           380+special	allows multiple attacks for a few rounds.
+===============================================================================
+~ denotes skills that have to be trained.
+^ beta commands not avaliable to players
+
+--------------------------------------------------
+MISC STUFF THAT DOESN'T SEEM TO FIT ANYWHERE ELSE
+--------------------------------------------------
+At guild rank 30 guild members get a "private room" within the guild hall.
+This room has the ability to store 1 saveable item.  The room file is:
+/players/pavlik/guild/room/personal_room.c
+
+The guild has a "guild vault" that they can place items and money in.  The
+money total saves through reboots, but the items do not.  Players can access
+the vault remotely after attaining the proper guild rank (see powers/xvault.c)
+
+The guild pet is a special case.  The stats on the guild pet ~can~ exceed
+those specified in /doc/build/RULES/pets if the player invests enough
+experience in having the pet trained.  Again the experience cost to train
+to pet is rather obtuse, please refer to: ~/guild/npc/kitaeru.c for the
+functions used to determine the cost.  When the pet is trained to maximum
+amounts it will have the following stats:
+max hp: 200  (50 + stamina*3) [stamina max=50]
+max wc: 17   ( 2 + attack/4)  [attack max=60]
+max ac: 12   ( 0 + defense/4) [defense max=60]
+
+The pertinent guild pet files are:
+/players/pavlik/guild/obj/guild_pet.c
+/players/pavlik/guild/pet-daemon.c
+/players/pavlik/guild/npc/kitaeru.c

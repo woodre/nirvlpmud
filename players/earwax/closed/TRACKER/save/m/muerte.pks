@@ -1,0 +1,8 @@
+06/15/06 14:55: Ice         ((19+4  /Cyberninja)   22(1/1)
+08/11/06 21:29: Archangel   ((19+20 /Bloodfist)    21(2/1)
+09/26/06 17:28: Jubei       ((19+68 /Bloodfist)    25(2/1)
+09/26/06 20:55: Doodle      ((19+22 /Cyberninja)   31(2/1)
+09/26/06 20:56: Thork       ((17    /Cyberninja)   19(1/1)
+09/26/06 21:59: Doodle      ((19+20 /Cyberninja)   34(2/1)
+03/ 3/07 00:47: Achilles    ((19+25 /Cyberninja)   25(2/1)
+03/ 3/07 00:51: Achilles    ((19+23 /Cyberninja)   25(2/1)

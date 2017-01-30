@@ -1,0 +1,13 @@
+
+
+                           [help tell]
+-----------------------=========+=========-----------------------                                  
+
+Usage: tell <who> <message>
+
+  This command will send a specific message to the player that is
+named. You do not have to be in the same room for this to work.
+This command will use spellpoints. You can block incoming tells
+by using tellblock. Tellhistory will give you a list of the last
+few tells you received.
+

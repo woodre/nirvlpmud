@@ -1,0 +1,12 @@
+#include "/players/mythos/closed/ansi.h"
+#define tp       this_player()
+#define tpn      tp->query_real_name()
+#define ep       environment(this_object())
+#define tl       tp->query_level()
+#define tx       tp->query_extra_level()
+#define tsp      tp->query_sp()
+#define thp      tp->query_hp()
+#define tmhp     tp->query_mhp()
+#define tmsp     tp->query_msp()
+#define TPN      capitalize(tpn)
+#define tpe      environment(tp)

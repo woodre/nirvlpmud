@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/emerson/armor/mits","/players/mythos/awep/claw","/players/wren/Area/starbug/items/bazookoid","/players/mythos/aarmor/kabuto","/players/saber/armor/mini","/players/emerson/heal/lpizza","/players/mythos/aarmor/sune-ate","/players/snow/heals/kw_meat","/obj/treasure","/players/wren/Area/starbug/items/sequinjacket","/obj/armor","/players/maledicta/cont/armor/rboots","/obj/armor","/players/puppy/s/eq/parchment","/players/saber/weapons/hrev","/players/maledicta/cont/armor/rhelmet","/players/scathe/armor/suit","/players/snow/WEAPONS/souleater","/players/wren/Area/starbug/items/levis","/players/ultramagnus/darkarmor","/obj/level_list","/players/wren/Area/starbug/items/dreds","/players/wren/Area/starbug/items/ogunit","/obj/treasure","/obj/weapon",})
+shorts ({"Oven Mits","claws","Bazookoid [1;30mmkII[2;37;0m","Kabuto","A skin tight leather mini skirt","large pizza","Sune-ate","A hunk of whale meat","A list of who is naughty and nice","Cat's red sequin jacket","A suit of [1mwhite[0m platemail","leather shoes","Fawnskin Cloak","Parchment","A Colt .68 Heavy Revolver","great helm","Black Suit","[1mSoulEater[0m","stretched out Levi jeans.","Dark Rider Chainmail","A list of the top players","Lister's crusty deerstalker with dreds.","a case containing an OG unit.","Arctic Seal pelt","A gardening hoe",})
+found ({0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

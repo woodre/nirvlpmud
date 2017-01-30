@@ -1,0 +1,58 @@
+#include "/players/llew/closed/ansi.h"
+inherit "obj/treasure";
+object petals, petals2, pet3, pet4;
+int i ;
+
+reset(arg)  {
+   if(arg) return;
+   set_id("rosefall");
+   set_short("A rose spell \"rosefall\"");
+   set_long("The rosefall will call forth a shower of roses upon the person\n"+
+      "of your affection.  To use type \"shower (who).\n");
+   set_weight(0);
+   set_value(1000);
+}
+
+init()  {
+  ::init();
+  add_action("shower","shower");
+}
+
+shower(str)  {
+   object showeree;
+   string who;
+   if(this_player()->query_sp() < 20) {
+      write("You don't have enough spell points.\n");
+      return 1;
+   }
+   if(str != "")  {
+      who = lower_case(str);
+      showeree = find_living(who);
+      if(showeree && showeree->query_invis() > 19) showeree = 0;
+      if (showeree && present(showeree, environment(this_player()))) {
+         if(present(who, environment(this_player())))  {
+         petals = clone_object("/players/llew/junk/petals.c");
+         petals2 = clone_object("/players/llew/junk/petals2.c");
+         pet3 = clone_object("/players/llew/junk/petals2.c");
+         pet4 = clone_object("/players/llew/junk/petals2.c");
+         petals->set_caller(this_player()->query_real_name());
+         transfer(petals, showeree);
+         transfer(petals2, environment(environment(this_object())));
+         transfer(pet3, environment(environment(this_object())));
+         transfer(pet4, environment(environment(this_object())));
+         say( (this_player()->query_name()) + " sings an enchanting song filled with love.\n"+
+         this_player()->query_name()+" looks toward "+showeree->query_name()+" with a smile as red "+RED+"rose "+NORM+"petals\n"+
+         "descend from the sky.\n");
+         write("You call forth with love in your voice to summon the rosefall.\n"+
+         "Gently the "+RED+"red"+NORM+" rose petal descend to land on "+capitalize(str)+".\n");
+         tell_object(showeree, "The petals land to rest on your head and shoulders.\n"+
+         "You can't help but to smile radiantly at the thought of "+this_player()->query_name()+"'s love...\n");
+         this_player()->add_spell_point(-20);
+         return 1;
+         }
+      write("No "+str+" here!\n");
+      return 1;
+      }
+   return 0;
+   }
+}

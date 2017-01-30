@@ -1,0 +1,27 @@
+ add_action("cmd_nhelp",    "nhelp");    /* help files. e.g. nimh <topic> */
+ add_action("cmd_renimh",   "nupdate"); /* update gob */
+ add_action("cmd_save",     "save");    /* save normal + gstat */
+ add_action("cmd_nrestore", "nrestore");/* restore gstat */
+ add_action("cmd_nbackup",  "nbackup"); /* backup gstat */
+ add_action("cmd_rats",     "rats");    /* list all rats, when logged on last */
+ add_action("cmd_nwho",     "nwho");    /* list rats logged on, loc, etc. */
+ add_action("cmd_score",    "score");   /* dsp. kill/pk etc info */
+ add_action("cmd_score",    "sc");
+ add_action("cmd_council",  "council"); /* dsp. current heads of council */
+ add_action("cmd_rosebush", "rosebush");/* go home to the rosebush */
+ add_action("cmd_rosebush", "bush");
+ add_action("cmd_spells",   "spells");  /* dsp. spellbook & profics. */ 
+ add_action("cmd_skills",   "skills");  /* dsp. all skill profics. */
+
+ add_action("cmd_squeak", "squeak");
+ add_action("cmd_scamper","scamper");
+ add_action("cmd_chew",   "chew");
+ add_action("cmd_glow",   "glow");
+ add_action("cmd_clean",  "clean");
+ add_action("cmd_yawn",   "yawn");
+ add_action("cmd_smile",  "smile");
+ add_action("cmd_grin",   "grin");
+ add_action("cmd_laugh",  "laugh");
+ add_action("cmd_frown",  "frown");
+ add_action("cmd_bow",    "bow");
+

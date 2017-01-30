@@ -1,0 +1,22 @@
+-----------------------NECROMANCERS---------------------
+
+Base Guild Abilities
+Command           Usage
+-------------------------------------------------------------
+nc <msg>          chat on guild line
+nce <msg>         emote on guild line
+nwho              Necromancer world who listing              
+necros            Necromancer guild who listing
+nscore            Necromancer score
+nsc               Necromancer score
+nlogin <place>    toggles login between church and guild hall
+nsave             saves guild status
+nenter <msg>      sets enter message for guild to see
+nleave <msg>      sets leave message for guild to see
+ntitle            give yourself a nice, shiny Necromantic Title
+nupdate           updates guild object (skull)
+
+nhelp             brief spell listing
+nhelp2            lists component costs for all spells
+leave_guild       say goodbye to the Necromancers
+-------------------------------------------------------------

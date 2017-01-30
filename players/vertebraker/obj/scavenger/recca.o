@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/treasure","/players/scathe/armor/egarb","/players/wren/Area/starbug/items/guitar","/obj/armor","/obj/armor","/players/wren/Area/starbug/items/fish","/players/snow/cam/stuff/plate","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/puppy/s/eq/cape","/players/mythos/awep/claw","/players/wren/Area/starbug/items/currie","/players/hawkeye/weapons/weapon","/players/mythos/aarmor/nodowa","/players/wren/Area/starbug/items/levis","/players/scathe/armor/hood","/players/wren/Area/starbug/items/cowboyhat","/players/wren/Area/starbug/items/cottagecheese","/obj/weapon","/players/saber/armor/slboots","/players/pain/closed/wands/orb","/obj/armor","/players/wren/Area/starbug/items/arrogance","/players/angel/area/stargate/obj/staff","/obj/armor","/players/jamila/beach/mobs/shell",})
+shorts ({"A rattlesnake's rattle","Elder's garb","Lister's guitar","A shoddy [1mwhite[0m cloak","Boots","A box of trout ala crem","[34m[1mBlessed Plate Armor[0m[0m","A Prince's Robes","A flowing cape","claws","A tin of chicken currie","Hawkeye's Scalpel","Nodowa","stretched out Levi jeans.","Hood","a tiny cowboy hat","a small tub of cottage cheese.","Whip","Stiletto heeled leather boots","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","Steel Helmet","Rimmers arrogance.","[1;36mSTAFF WEAPON[0m","An [1mwhite[0m metal ring","A Large Shell",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

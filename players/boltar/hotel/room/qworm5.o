@@ -1,0 +1,31 @@
+no_clean 0
+wielded 0
+wielded_by 0
+name_of_weapon "shortsword"
+cap_name "Shortsword"
+broke 0
+silentwield 0
+eff_wc 0
+misses 0
+hits 0
+alt_name 0
+alias_name "sword"
+short_desc "A shortsword"
+long_desc "It is a professional looking short sword, used by warriors and guards."
+read_msg 0
+save_flag 0
+class_of_weapon 15
+value 700
+buy_value 0
+local_weight 3
+hit_func 0
+hit_func_fn 0
+wield_func 0
+wield_func_fn 0
+info 0
+type 0
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+multipleIds ({})
+params ({"physical",15,"hit",})
+offwielded 0
+offwield_desc 0

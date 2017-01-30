@@ -1,0 +1,43 @@
+#include <ansi.h>
+
+inherit "/room/room";
+
+void reset(status arg)
+{
+  if(arg) return;
+
+  set_light(1);
+  set_short(GRN+"The Tower of Vertebraker"+NORM);
+
+  set_long("\
+\
+You stand at the peak of the Tower of Vertebraker.\n\
+The tower has peaked in a small office. Clutter is all around. Numerous\n\
+chemicals, torn notebooks, and a stack of papers are on an oak desk in\n\
+the middle of the room. A bookshelf containing numerous items stands\n\
+in the corner. Posters decorate the stone walls.\n\n\
+A magical "+GRN+"green portal"+NORM+" glows on the western wall.\n");
+
+  items=({
+"office",long_desc,
+"peak",long_desc,
+"tower",long_desc,
+"clutter",long_desc,
+"chemicals","Insecticide for bug-zapping",
+"notebooks","Rifling through the pages, you spy some old code for the Jedi guild",
+"papers","Numerous half-baked ideas culminate their form in these pages",
+"oak desk","A desk cluttered with papers",
+"desk","A desk cluttered with papers",
+"bookshelf","DVDs like Oldboy and the Godfather Pt. 2.\n\
+CDs like Led Zeppelin's \"Presence\" album, and Big Pun's \"Capital Punishment\".\n\
+Books like Bukowski's \"Women\" and \"Ham on Rye\".\n\
+What an eclectic collection.",
+"posters","Jimi Hendrix, John Belushi chugging liquor, and Halloween 2... hmm",
+"walls","Spattered with posters",
+"portal","A glowing portal",
+"green portal","A glowing portal" });
+
+  dest_dir=({
+"/room/adv_inner","wizhall"
+});
+}

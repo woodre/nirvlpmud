@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/pain/NEW/arm/boots","/players/hippo/weapons/glue","/players/mythos/marmor/shirt","/players/scathe/armor/mgarb","/players/mythos/awep/naginata","/obj/weapon","/obj/level_list","/players/snow/shadows/stuff/plate","/players/boltar/things/emoter","/players/pain/NEW/arm/helm","/players/saber/stuff/power","/players/emerson/heal/pepsi","/players/pain/NEW/weap/sword","/players/ultramagnus/apple","/players/wren/Area/starbug/items/guitar","/players/blue/weapons/obsidian_sword","/players/snow/closed/q/orb","/players/wren/Area/starbug/items/veil","/players/snow/cam/stuff/plate","/players/hippo/armour/boots","/players/emerson/obj/straw","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/mythos/aarmor/nodowa","/players/snow/WEAPONS/souleater",})
+shorts ({"Heavy work boots","a strong, 1 second glue","Shirt","Black Monk Robes","Naginata","A horse whip","A list of the top players","[1mBlack Platemail[0m","An emoter","A horned helm","A power system","can of Diet Pepsi","Sword","A Red Apple","Lister's guitar","An Obsidian Sword","Orb of the Ancients","a big wedding veil","[34m[1mBlessed Plate Armor[0m[0m","anti-blood boots","A Straw","Spear","A nobleman's shortsword","Nodowa","[1mSoulEater[0m",})
+found ({0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

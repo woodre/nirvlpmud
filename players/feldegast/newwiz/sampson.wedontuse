@@ -1,0 +1,11 @@
+#include <ansi.h>
+inherit "/players/wocket/std/wiztell.c";
+
+reset(arg){
+  if(arg) return;
+  owner = "sampson";
+  cap_owner = "Sampson";
+  color = GRN;
+  extra_look = "Sampson has huge, bulging muscles";
+}
+

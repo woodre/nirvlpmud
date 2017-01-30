@@ -1,0 +1,146 @@
+Healing Regulations: (last updated 4/1/96)
+added failure and spells (4/3/97 -Bp)
+Added note to see heal3 (25-May-99 -Bp)
+Various fixes. portable and fixed healing changes (2-Jun-99 -Bp)
+Added attitional detox restrictions (31-Dec-03 -Bp)
+
+The following must be followed for all healing items. NO exceptions!
+
+ A heal point will be defined as 1 to heal_self, ie 1 sp & 1hp.
+ hit point only or spell point only heals will be done as follows:
+ 1 hp or sp healed = 2/3 of a normal heal point. 
+ A random point is equal to 2/3 of a normal heal point.
+
+Intoxicating Items:
+
+     Intox Strength                   Cost/pt Healed
+          14 +                              10
+          13                                11
+          12                                12
+          11                                13
+          10                                14
+           9                                15
+           8                                16
+           7                                18
+           6 -                              20
+-If heal = 1 and Intox Strength is 3 or greater then cost may be 10.
+-If heal > 50 then cost must be 10,000. NO EXCEPTIONS!
+ otherwise follow the chart above.
+
+Non-Intox Items:
+
+-ALL non-intox items will cost 60 coins / pt. healed
+-Any item that heals more than 50 must cost 10,000.
+
+Sobering Items:
+
+-All sobering items will cost 20 for the first -1 or -2 strength.
+ each following -1 will cost 30 more coins.
+
+-Anything that sobers more than -15 will cost 10,000.
+
+-Portable detox (sobering) items cause an imbalance in the game 
+ by making regular heals into non-intox heals. These are to be avoided
+ and should cost twice as much. All must have a drawback of costing 
+ hit points. When a player consumes a portable sobering item he should
+ loose hit points at the rate of one and a third hit points per each 
+ point of strength. heal_self(strength + strength/3) where strength
+ is a *NEGATIVE* number. This needs to be preceeded by a hp point check.
+ If the player has fewer hitpoints than the cost, he should not be allowed
+ to consume the sobering item. 
+
+Food Items:
+
+-All food items will follow the Intox Items rules if they have stuffing 
+ strength accounted for.
+-If the item does not cause stuffing, then they are treated as non-intox item.
+-Any item healing more than 75 must cost 10,000
+
+Remote Ordering of Healing Items:
+
+-There will be no healing items sold by remote ordering items.
+ this means that the player can not order healing while on compaign
+
+Portable healing:
+
+-  Anything in a container must have included the value
+   of the empty container when sold. 
+-  Portable heals should have a container cost of 10 coins
+   per charge or 30% of the healing points that is not recoverable.
+-  All healing objects with charges must not save in
+   hotels,lockers,houses,etc. Unless that item is coded such
+   that its charge state is saved.
+-  The cost of a item with charges will cost players based on following:
+   cost=#ofcharges*(cost_per_charge)
+
+   NOTE: Intox multi-charge heals are to follow the table in heal3.
+         If an existing heal following the traditional table is of equal or
+         higher cost than table heal3, then modification is not required.
+         Soak and Stuff healing to be similar
+
+-  The items will have a minimum weight, weight=#charges/3
+-  ALL items must have a weight of at least one, and the carry of the 
+   player MUST be checked at purchase.
+-  Any multiple charge healing item will heal NO MORE than 175 TOTAL. the
+   total being the sum of the all HEALING for ALL charges. random points 
+   will be counted as 2/3 of a point.  so something with 4 charges 
+   of 3+random(6) healing will have a total healing of 4*3 + 4*6*(2/3) = 28
+   anything more and its a full 10K heal.
+
+Fixed Point of Sale Healing
+
+- Fixed location, consumed on site healing may be discounted.
+  The total value of the heal may be discounted 15 coins from
+  calculated table sale price or 1/2 the value whichever is less.
+- Volume discounts may also be used if one wishes to code them.
+  20 coins (or 1/2 the value, whichever is less) from the table 
+  price of each for 6 or more heals. Also buy 10 get one free if 
+  the player does not leave the room.(bought at one sitting)
+
+Sobering items
+   cost=#ofcharges*(cost_per_charge) until the total 
+   sobering reaches 30, at which it must be above 10000.
+   sobering items will have a weight equal to the number of charges.
+
+Healing Over Time
+  Healing over time will cost the same as it would if it were done all at once
+  with a small discount of 1 coin for every point healed.
+
+Spell points for healing....
+  This practice is just plain stupid. it is not allowed. you may change sp 
+  to hp or hp to sp with some random loss. 
+
+All items using stuffing or intoxication must check that the player has reached
+not yet reached its max, see drink_alcohol() in player.c
+ 
+Heal Spells
+ 
+Guild healing spells should cost as above plus a suitible number of 
+spell points.
+ 
+Heal Failure
+
+The heal failing for damage to the player can be used for a cost reduction.
+That cost reduction is based on the failure rate. The formula for this
+as is follows:
+       cost savings % = failure rate % - (failure rate %)/5
+example:
+       cost savings % = 25% - 25%/5 = 20%
+ 
+High damage done can make the ratio one to one. 1% failure per 1% savings.
+High damage is where the amount of hit points that the heal would restore
+is equal to or less than the damage done upon failure. If it is a heal
+spell the spell points must still be spent, any other heal must be used
+up, either the whole heal or charge as the case may be.
+Minimum damage must be as follows: 
+money cost * savings rate = saved 
+saved * heal/money = points
+points * 2 * 1.5 = minimum damage    NOTE: *2 is for sp & hp
+for examaple:
+1200 coin cost * 10% savings = 120 coins saved.
+120 * 1pt/60coins = 2
+2 * 2 * 1.5 = 6
+so for this the minimum damage is 6.
+
+savings rate is not to exceed 25%. 
+

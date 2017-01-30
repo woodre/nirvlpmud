@@ -1,0 +1,33 @@
+#0:0
+no_clean 0
+short_desc "[1;30m([1;34m*[1;30m)[1;34mSphere[1;30m([1;34m*[1;30m)[0m[0m"
+long_desc "a generic clan object.\n[0m\nType 'clan_help' for commands.\n"
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "sphere"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.\n[0m\nType 'clan_help' for commands.\n"
+clan_short "[1;30m([1;34m*[1;30m)[1;34mSphere[1;30m([1;34m*[1;30m)[0m[0m"
+damage_type "magical"
+hall_path "/room/church"
+object_name "sphere"
+owner "sin"
+spell_alias "tri"
+spell_mess_me "blah"
+spell_mess_room "blah"
+spell_mess_them "blah"
+abilities ({})
+chan_history ({"[Thu Jun 12 08:50:11 2014] Sin: and smackin myself in the head with a stick from my inexperience x2 hurt","[Thu Jun 12 08:51:47 2014] Sin: next time I see mokri gonna suggest a couple changes...and ask him to manually move a couple rooms","[Thu Jun 12 08:54:35 2014] Bizkit: sorry phone","[Thu Jun 12 08:54:49 2014] Bizkit: yeah I used to have kids, but they must have gotten deleted","[Thu Jun 12 08:57:37 2014] Bizkit: wanna kill the man at work?","[Thu Jun 12 08:58:09 2014] Sin: when im done with meds","[Thu Jun 12 08:58:17 2014] Bizkit: k","[Thu Jun 12 08:58:47 2014] Sin: k all done","[Thu Jun 12 09:02:47 2014] Bizkit: what happened to your kid?","[Thu Jun 12 09:03:33 2014] Bizkit: and u want me to store this stick?","[Thu Jun 12 09:04:27 2014] Sin: bah damn castle","[Thu Jun 12 09:05:31 2014] Bizkit: castle attacks kids or something?","[Thu Jun 12 09:05:41 2014] Sin: steps on kids or pets","[Thu Jun 12 09:05:47 2014] Sin: random chance tho","[Thu Jun 12 09:05:53 2014] Bizkit: ah didn't know that","[Thu Jun 12 09:06:07 2014] Sin: yeah stepped on a pet of mine a while ago","[Thu Jun 12 09:08:27 2014] Bizkit: cant' carry","[Thu Jun 12 09:10:05 2014] Sin: afk for a bit","[Fri Jun 20 21:55:46 2014] Amalee has joined the clan!","[Fri Jun 20 22:02:12 2014] Sin has promoted Amalee to a clan leader!",})
+leaders ({"amalee",})
+join_type 2
+private_coffer 1000
+public_coffer 0
+spell_delay 1
+spell_id 1
+spell_cost 50
+last_spell_time 1408750543

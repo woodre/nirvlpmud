@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/aarmor/sode","/players/hawkeye/weapons/weapon","/players/mythos/awep/katana","/players/emerson/weap/spatula","/players/wren/Area/starbug/items/lunchbox","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/jamila/beach/mobs/claw","/players/puppy/s/eq/block","/players/scathe/armor/egarb","/players/hippo/armour/helmet","/players/saber/stuff/mbag","/players/mythos/awep/backbite","/players/arrina/armor/bonering","/players/snow/WEAPONS/ice_star","/players/hawkeye/items/record","/players/emerson/weap/bigfoot","/players/softly/nhall/obj/decant3","/players/ultramagnus/bdiamond","/players/pain/NEW/weap/mace2","/players/mythos/aarmor/do","/players/wren/Area/starbug/items/dreds","/players/hawkeye/items/stone","/obj/treasure","/players/forbin/realms/keats/OBJ/nazal_owr","/obj/armor",})
+shorts ({"Sode","Hawkeye's Scalpel","Katana","Spatula","a lunch box","A Princess' Tiara","A Lobster Claw","A building block","Elder's garb","nutshell helmet","A bag of holding","[31mBackbiter[0m","A Carved Bone Ring","Ice Shuriken","A Mozart Record","A BIG foot","Decanter of Healing [[1m3[2;37;0m]","A Blue Diamond","A huge iron mace","Do-Maru","Lister's crusty deerstalker with dreds.","A Stone","Beach Bear pelt","[1;37mOp[0m[37mal [1;37mWiz[0m[37mard [1;37mRo[0m[37mbes[0m","Ring of Death",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

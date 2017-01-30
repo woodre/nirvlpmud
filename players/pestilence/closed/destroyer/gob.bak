@@ -1,0 +1,198 @@
+#define ETO environment(this_object())
+#define SAVE "players/pestilence/closed/destroyer/members/"
+#define tpn      ENV()->query_real_name()
+#define COMBAT present("destroyer_ob",this_player())->query_combat()
+#include "/players/pestilence/define.h"
+/* guild Id */
+#include "/players/pestilence/closed/destroyer/gobdir/id.h"
+#include "/players/pestilence/closed/destroyer/gobdir/hb.h"
+#include "/players/pestilence/closed/destroyer/gobdir/init.h"
+#include "/players/pestilence/closed/destroyer/gobdir/action.h"
+#include "/players/pestilence/closed/destroyer/gobdir/misc.h"
+#include "/players/pestilence/closed/destroyer/gobdir/weapon.h"
+#include "/players/pestilence/closed/destroyer/gobdir/gupdate.h"
+#include "/players/pestilence/closed/destroyer/powers/dhelp.h"
+#include "/players/pestilence/closed/destroyer/powers/guildwho.h"
+#include "/players/pestilence/closed/destroyer/powers/punch.h"
+#include "/players/pestilence/closed/destroyer/powers/weaken.h"
+#include "/players/pestilence/closed/destroyer/powers/death.h"
+#include "/players/pestilence/closed/destroyer/powers/guildquit.h"
+#include "/players/pestilence/closed/destroyer/powers/frenzy.h"
+#include "/players/pestilence/closed/destroyer/powers/rage.h"
+#include "/players/pestilence/closed/destroyer/powers/blindside.h"
+#include "/players/pestilence/closed/destroyer/gobdir/bugreport.h"
+#include "/players/pestilence/closed/destroyer/powers/disable.h"
+#include "/players/pestilence/closed/destroyer/powers/hulk.h"
+#include "/players/pestilence/closed/destroyer/powers/rush.h"
+#include "/players/pestilence/closed/destroyer/powers/decorpse.h"
+
+
+
+
+reset(arg) {
+  if (arg) return 0;
+call_out("test_str",3);
+call_out("test_stats",3);
+call_out("raise_str",3);
+call_out("raise_sta",3);
+call_out("f_you",5);
+call_out("f_youwiz",5);
+set_heart_beat(1);
+}
+
+query_auto_load() {
+    return "/players/pestilence/closed/destroyer/gob.c:";
+}
+
+drop() {return 1;}
+
+
+
+
+
+/* Magic stat of 20 Drawback */
+test_stats() {
+if(ETO) {
+  if(living(ETO)) {
+if(environment(TO)->query_level() < 21) {
+  if(USER->query_attrib("mag") > 15) {
+ tell_object(environment(TO),HIR+"\nYour physical strength prevents you from having a magic higher than 15.\n"+NORM);
+    USER->set_attrib("mag",15); 
+    USER->save();
+    call_out("test_stats",3);
+    return 1;
+ }
+  else{
+call_out("test_stats",3);
+ }
+}
+}
+}
+}
+
+test_str() {
+if(ETO) {
+  if(living(ETO)) {
+if(environment(TO)->query_level() < 21) {
+  if(USER->query_attrib("int") > 10) {
+ tell_object(environment(TO),HIR+"\nDo to your physical strength you lack the means of having intelligence above 10.\n"+NORM);
+    USER->set_attrib("int",10); 
+    USER->save();
+    call_out("test_str",3);
+    return 1;
+ }
+  else{
+call_out("test_str",3);
+ }
+}
+}
+}
+}
+
+f_you(){
+if(ETO) {
+  if(living(ETO)) {
+  if(USER->query_real_name() == "grit") {
+    USER->set_guild_name(0);
+      USER->add_guild_exp(-USER->query_guild_exp());
+    USER->set_guild_rank(0);
+    USER->set_title(HIR+"is annoying and a loser. "+HIW+"("+HIK+"Annoyer of the Order"+HIW+")"+NORM+"");
+    USER->set_home("/room/church");
+    tell_object(environment(this_object()),
+      ""+HIK+"You have annoyed this guild long enough.  You are no longer a  part of this guild."+NORM+".\n");
+ move_object(USER, "/room/church.c");  
+      destruct(this_object());
+return 1; }
+else
+return 1;
+}
+}
+}
+
+
+raise_str()
+{
+    int guildrank, recommended_strength, strength;
+
+    if(!ETO || !living(ETO)) return 0; 
+
+    /* init our shit */
+    guildrank = USER->query_guild_rank();
+    strength = USER->query_attrib("str");
+
+    /* if they don't have enough strength, we bail out. */
+    if(strength < 30)
+        return 0;
+
+    /* now we do our checking */
+    recommended_strength =  guildrank / 2;
+    
+    /* if we are too weak, we get our bonus */
+    if(strength < recommended_strength) 
+    {
+        tell_object(environment(TO), HIR+"\nYour dna has upgraded your strength.\n"+NORM);
+
+        USER->set_attrib("str", recommended_strength);
+        USER->save();
+        return 1; 
+    }
+
+
+}
+
+raise_sta()
+{
+    int grank, recommended_stamina, stamina;
+
+    if(!ETO || !living(ETO)) return 0; 
+
+    /* init our shit */
+    grank = USER->query_guild_rank();
+    stamina = USER->query_attrib("sta");
+
+    /* if they don't have enough stamina, we bail out. */
+    if(stamina < 30) 
+        return 0;
+
+    /* now we do our checking */
+    recommended_stamina =  grank / 2;
+    
+    /* if we are too weak, we get our bonus */
+    if(stamina < recommended_stamina) 
+    {
+        tell_object(environment(TO), HIR+"\nYour dna has upgraded your stamina.\n"+NORM);
+
+        USER->set_attrib("sta", recommended_stamina);
+        USER->save();
+        return 1; 
+    }
+
+
+}
+
+f_youwiz()
+{
+    int manager, wizlevel;
+
+    if(!ETO || !living(ETO)) return 0; 
+ 
+    /* init our shit */
+    manager = USER->query_real_name();
+    wizlevel = USER->query_level();
+    /* if they don't have enough strength, we bail out. */
+    if(wizlevel < 20)
+        return 0;
+
+    /* now we do our checking */
+    
+    /* if we are too weak, we get our bonus */
+    if(manager == "puppy" || manager == "pestilence" || manager == "linus")
+         return 0;
+    if(wizlevel > 20 && wizlevel < 100)
+    {
+        tell_object(environment(TO), HIR+"\nYou don't have permisson for this guild object.\n"+NORM);
+        destruct(this_object());
+        return 1; 
+    }
+
+}

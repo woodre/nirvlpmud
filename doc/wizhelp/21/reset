@@ -1,0 +1,20 @@
+**************
+
+
+                     Reset
+
+Syntax:    reset <object>
+
+Desc:
+           Triggers a reset in the object specified
+
+Warning:   Don't reset rooms or monsters for players.
+
+Example:   reset monkey
+                  results
+           call reset() in object monkey
+
+Related:   
+
+
+**************

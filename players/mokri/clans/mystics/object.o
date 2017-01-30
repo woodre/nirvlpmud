@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[31mVortex [37m<Swirling>[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "vortex"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[31mVortex [37m<Swirling>[0m"
+damage_type "water"
+hall_path "/room/temple/1"
+object_name "vortex"
+owner "chupacabra"
+spell_alias "cornbread"
+spell_mess_me "%TPN%  yells at %AKN% 'DATS MY %hi yellow%CORNBREAD%normal%!!!!'"
+spell_mess_room "%TPN%  yells at %AKN%,  'DATS MY %hi yellow%CORNBREAD%normal%!!!!  "
+spell_mess_them "%TPN%  yells at you,  'DATS MY %hi yellow%CORNBREAD%normal%!!!!  A pigeon drops PoLyROx in your eye!"
+abilities ({})
+chan_history ({"[Sat Aug  4 01:38:13 2007] Simple: but i always wanted to try one","[Sat Aug  4 01:38:45 2007] Simple: i'm not liking symbiotes","[Sat Aug  4 01:38:55 2007] Simple: or bloodfist for that matter","[Sat Aug  4 01:39:01 2007] Jen: yeah, I agree.","[Sat Aug  4 01:39:09 2007] Jen:  I really didnt like symbs..","[Sat Aug  4 01:39:21 2007] Simple: pk is dead. the only good thing about cybers is the armor","[Sat Aug  4 01:39:25 2007] Simple: and wep","[Sat Aug  4 01:39:33 2007] Jen: nod.","[Sat Aug  4 01:39:43 2007] Simple: can go explore and quit out ...which is what i whould have been doing","[Sat Aug  4 01:39:55 2007] Jen: heh","[Sat Aug  4 01:39:59 2007] Jen: yeah thats cool.","[Sat Aug  4 01:40:09 2007] Jen: Magaera has her pk set though.","[Sat Aug  4 01:40:37 2007] Simple: doesnt matter. nobody else plays","[Sat Aug  4 01:40:45 2007] Jen: nod.","[Sat Aug  4 01:42:01 2007] Simple: i think i'm liking oging out without the pet and kids too","[Sat Aug  4 01:42:09 2007] Simple: less to worry about","[Sat Aug  4 01:42:27 2007] Jen: heh","[Sat Aug  4 01:42:39 2007] Jen: yeah, cuz if you lose them theres not getting them back ever :)","[Sat Aug  4 01:43:13 2007] Simple: i mean all the extra typing and commands for just a little benefit","[Sat Aug  4 01:43:25 2007] Jen: nod.",})
+leaders ({"jen",})
+join_type 0
+private_coffer 860567
+public_coffer 0
+spell_delay 1
+spell_id 1
+spell_cost 25
+last_spell_time 1186707160

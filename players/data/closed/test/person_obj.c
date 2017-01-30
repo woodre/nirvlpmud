@@ -1,0 +1,28 @@
+inherit "obj/treasure";
+
+reset(arg) {
+
+  if(arg) return;
+  set_id("tester");
+    set_alias("tester");
+    set_weight(0);
+    set_value(0);
+
+set_short("tester");
+        set_long(
+        "A stick that is used to bonk people on the head. It is once said that \n"+
+        "you get bonked on the head with this, your soul is forever gone, and \n"+
+        "you will do whatever this pimp says for you to do. If you want freedom \n"+
+        "then you better get to work. \n");
+        
+    }
+
+init(){
+   add_action("revive_kids", "fd");
+   
+}
+
+revive_kids(){
+
+return 1;
+}

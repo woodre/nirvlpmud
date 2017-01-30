@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/prospero/hall/r1","down",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[34mTsunami[0m","/players/snow/WEAPONS/tsunami",0,212,183,"A heal spell","/players/morgar/spells/full_heal",0,0,0,"Shamanic [34mboxer shorts[0m","/players/vertebraker/swamp/OBJ/denim_shorts",0,0,0,"[1;31mA Flowing Scarf[0m","/players/angel/area/school/obj/flow_scarf_01",0,0,0,"Bracers of Speed","/players/maledicta/cont/rdragon/sbracers","-1-",0,0,"Hockey Skates","/players/jenny/wings/items/tedskates",0,0,0,"[1;33mAnkh of Light[0m","/players/forbin/realms/ruins/OBJ/anhk","1420945795",0,0,"[34mS[1m[30mtorm [0m[34mC[1m[30mloak[0m","/players/pavlik/armor/storm_cloak",0,0,0,"[0mElixir of [1;34mPower [0m[[1;33mLOW TOX[0m][0m [31m[ [36m3[0m[31m ][0m","/players/jareel/heals/YELMALIAN/ltmana","3",0,0,"[0mElixir of [1;34mPower [0m[[1;33mLOW TOX[0m][0m [31m[ [36m6[0m[31m ][0m","/players/jareel/heals/YELMALIAN/ltmana","6",0,0,})

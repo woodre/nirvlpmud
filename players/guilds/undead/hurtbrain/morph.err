@@ -1,0 +1,61 @@
+inherit "obj/monster";
+
+object here;
+string com_str;
+
+reset(arg){
+   ::reset(arg);
+   if(arg) return;
+	set_race("undead");
+	set_hp(10000);
+        set_long("This is a morph of an undead.\n") ;
+	set_ac(10000);
+	set_al(0);
+	set_wc(0);
+	set_level(1);
+	enable_commands();
+	here=this_object();
+	call_out("fol",1);
+        set_heart_beat(1);
+}
+
+query_npc()  {
+	return 0;
+	}
+
+query_pl_k()  {
+	return 0;
+	}
+
+attack_object(obj)  {
+	return 1;
+	}
+
+attacked_by(obj)  {
+	return 1;
+	}
+
+set_com(str)  { com_str=str; return 1; }
+
+fol()  {
+	object who;
+	if(!present(here->query_info(),here))
+		{
+		who=find_living(here->query_info());
+                if(!who)  {
+                        move_object(first_inventory(here),environment(here));
+                        destruct(here);
+                        return 1;
+                        }
+		move_object(here,environment(who));
+		move_object(who,here);
+		}
+	call_out("fol",1);
+	return 1;
+	}
+
+set_say(str)  {
+	if(str)  say(here->query_name()+str+"\n");
+	return 1;
+	}
+

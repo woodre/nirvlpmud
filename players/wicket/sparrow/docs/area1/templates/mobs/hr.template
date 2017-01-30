@@ -1,0 +1,23 @@
+<HR>
+
+Short Desc: Jim Buggs (HR)
+Long Desc: An older man in his mid-fifties, Jim is hald way bold.
+         He has salt and pepper colored hair and has not aged very
+         well. He carries himself in a very cocky manner and can
+         be very ignorant and plain out rude. He is wear a red polo
+         shirt and a pair of khaki pants. A leather belt holds up
+         the tan khaki pants. Black leather dress shoes show off
+         the last of the features of Jim.
+Name: jim
+Alt Name: buggs
+Race: Human
+Gender: Male
+Level: 6
+Wc: 10
+Ac: 5
+Hp: 90
+Gold: 250
+Spell: deathglare
+        add_spell("deathglare","#MN# $HK$glares$N$ at you. You $HY$piss$N$ your pants in $HR$fear$N$ and $HK$faint$N$.\n",
+                     "#MN# $HK$glares$N$ at #TN#. #TN# $HY$pisses$N$ #TP# pants in $HR$fear$N$ and $HK$faints$N$.\n",
+                     20(2d10),"other|mental");

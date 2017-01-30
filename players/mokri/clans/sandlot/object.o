@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[37mHome plate [0m-[37m Rubber Base[0m ([33mdusty[0m)[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "plate"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[37mHome plate [0m-[37m Rubber Base[0m ([33mdusty[0m)[0m"
+damage_type 0
+hall_path "/players/guilds/dervish/hall/desert6"
+object_name "plate"
+owner "squall"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Sat Jan 29 22:32:22 2011] Squall: fine","[Sat Jan 29 22:32:30 2011] Silverpaw: check now","[Sat Jan 29 22:32:36 2011] Silverpaw: a lil more clore","[Sat Jan 29 22:32:40 2011] Silverpaw: color","[Sat Jan 29 22:32:44 2011] Silverpaw: that ok?","[Sat Jan 29 22:33:46 2011] Squall: works","[Sat Jan 29 22:36:04 2011] Silverpaw: i hate spell delays","[Sat Jan 29 22:36:06 2011] Silverpaw: lol","[Mon Aug 15 22:19:18 2011] Silverpaw: heh","[Mon Aug 15 22:19:52 2011] Silverpaw: left though respectfully","[Mon Aug 15 22:19:56 2011] Silverpaw: when he wizzed","[Mon Aug 15 22:25:40 2011] Silverpaw: nope","[Mon Aug 15 22:26:00 2011] Silverpaw: where ya want me to meet ya","[Mon Aug 15 22:26:02 2011] Silverpaw: lol","[Mon Aug 15 22:27:00 2011] Silverpaw: heh","[Mon Aug 15 22:27:28 2011] Silverpaw: his wockets slip him some str potions","[Mon Aug 15 22:27:30 2011] Silverpaw: lol","[Mon Aug 15 22:27:36 2011] Silverpaw: will mix up the 2 when he goes to use em","[Mon Aug 15 22:27:38 2011] Silverpaw: lol","[Mon Aug 15 22:27:52 2011] Silverpaw: heh",})
+leaders ({"silverpaw",})
+join_type 0
+private_coffer 286870
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

@@ -1,0 +1,13 @@
+man <arg>
+
+Searches through /doc directory for files and subdirs.  Man without
+an arguement lists all subdirectories in doc, and using an arguement
+displays any directories of that name, lists all files of that name,
+and displays the contents of those files.
+
+Examples:
+man
+man heal
+man efun
+
+See also: cat, ls

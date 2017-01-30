@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/bat","/players/maledicta/cont/weapons/rweap00000000000000000000000000000000000000","/players/hippo/weapons/glue","/players/emerson/weap/pcutter","/players/morgar/say","/players/wren/Area/starbug/items/dreds","/players/mythos/awep/arrow","/players/arrina/heals/ale","/obj/treasure","/players/snow/WEAPONS/glass_sword","/players/scathe/armor/egarb","/obj/weapon","/players/mythos/aarmor/sune-ate","/players/maledicta/cont/weapons/rweapon","/obj/weapon","/obj/weapon","/players/saber/stuff/brief","/players/snow/WEAPONS/glowknife","/players/hippo/heals/nucleus","/players/wren/Area/starbug/items/hair","/players/arrina/treas/horseshoe","/players/ultramagnus/darkweapon","/obj/armor","/players/hawkeye/items/bourbon","/players/angel/area/stargate/obj/staff",})
+shorts ({"a [1;30mballbat[2;37;0m","a [1;33mGold[2;37;0m Quarter staff","a strong, 1 second glue","Pizza Cutter","say with echo and quotes","Lister's crusty deerstalker with dreds.","arrow","[1mbottle of dark ale[0m","Arctic Seal pelt","Glass Sword","Elder's garb","Steel Longsword","Sune-ate","a Scimitar","An evil-looking lightsabre","Hand axe","A black briefcase","A glowing knife","[35mnucleus of a cell[0m","Perfect Hair","A Silver Horseshoe","Dark Rider Broadsword","A shoddy [1mwhite[0m cloak","bottle of bourbon","[1;36mSTAFF WEAPON[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

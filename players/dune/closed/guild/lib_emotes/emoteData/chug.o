@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "chug"
+myMsgU "What?"
+myMsgD "Sharp blades emerge from your body as you give %TRG% a $HR$BLOODY$-$ hug."
+roomMsgU 0
+roomMsgD "Sharp blades emerge from %SRC%'s body as he gives %TRG% a $HR$BLOODY$-$ hug."
+tellMsg "Sharp blades emerge from %SRC%'s body as he gives you a $HR$BLOODY$-$ hug."
+farMsg "(AFAR) Sharp blades emerge from %SRC%'s body as he gives you a $HR$BLOODY$-$ hug."
+owner "bishop"

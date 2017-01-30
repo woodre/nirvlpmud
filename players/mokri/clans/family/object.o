@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;31mBaddin's Blood[0m"
+long_desc "[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "%hi red Baddin's Blood %hi red %hi green ( %hi green %hi red Bleeds %hi red %hi green )"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[0mType 'clan_help' for commands."
+clan_short "[1;31mBaddin's Blood[0m"
+damage_type "magical"
+hall_path "/players/eurale/VAMPIRES/RMS/vgent"
+object_name "%hi red Baddin's Blood %hi red %hi green ( %hi green %hi red Bleeds %hi red %hi green )"
+owner "lamont"
+spell_alias "rip"
+spell_mess_me "Muttering arcane words,you swiftly cast %hi red%Throat Ripper%normal% on %AKN%"
+spell_mess_room "muttering few arcane words,you seiftly cast %hi red%Throat Ripper%normal% on %AKN%"
+spell_mess_them "muttering arcane words,you swiftly cast %hi red%Throat Ripper%normal% on %AKN%"
+abilities ({})
+chan_history ({"[Mon Sep 13 17:59:33 2010] Baddin: Zenobia what is your stat str,?","[Mon Sep 13 17:59:51 2010] Zenobia: 14","[Mon Sep 13 18:00:19 2010] Baddin: not bad  youll get there","[Mon Sep 13 18:00:45 2010] Zenobia: It was 11 when I joined..  so I'm gettin there..  but slowly..  heh","[Mon Sep 13 18:01:03 2010] Baddin: patience is rewarding Sister","[Mon Sep 13 18:01:13 2010] Zenobia: Prolly woulda been faster, but I've gotten a little stubborn about doing things myself now and again..  grin","[Mon Sep 13 18:01:37 2010] Baddin: even more rewarding,girl.","[Mon Sep 13 18:02:01 2010] Baddin: bbut everyone needs little help now and then","[Mon Sep 13 18:02:03 2010] Zenobia: That, and I don't want you all to think I'm weak","[Mon Sep 13 18:02:47 2010] Zenobia: there is something I could use.  Garald says my cloak is heavy, and does nothing..  I was looking in the shop but there wasn't anything there","[Mon Sep 13 18:03:05 2010] Zenobia: afk a few..","[Mon Sep 13 18:03:19 2010] Baddin: i ll get one for you fitting of my sister  gimme few","[Mon Sep 13 18:20:55 2010] Baddin: i have you a cloak to try on Zenobia","[Mon Sep 13 18:36:13 2010] Baddin: that cloak work lil better,Sister?","[Mon Sep 13 18:36:21 2010] Zenobia: It does, thank you","[Mon Sep 13 18:36:40 2010] Baddin: good. an your welcome dear one.","[Mon Sep 13 19:08:52 2010] Baddin: Two locker rooms have been added to Ozzy's","[Mon Sep 13 19:09:06 2010] Ozzy: thnx baddin","[Mon Sep 13 19:09:08 2010] Zenobia: thank you Baddin","[Mon Sep 13 19:09:32 2010] Baddin: no problem.",})
+leaders ({"sharel","ozzy",})
+join_type 2
+private_coffer 12064
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 30
+last_spell_time 1386478650

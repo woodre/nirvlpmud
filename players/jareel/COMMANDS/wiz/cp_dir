@@ -1,0 +1,19 @@
+*******************************************************************
+
+Name:     Copy Directory
+
+Desc:     This command copies the entire contents of a directory
+          to another directory.
+
+Level:    files you have acces too.
+
+Warning: 
+
+Syntax:   cp_dir /players/jenny/wings /players/bob/wings 
+
+Example:  cp_dir /players/jenny/wings /players/bob/wings 
+Result:   all contents of 'Jenny's' Dir are put in Bob's Dir.
+
+Related:  cp
+
+*******************************************************************

@@ -1,0 +1,70 @@
+/*
+ * spell : Detoxification   (evocation)
+ * level : 4
+ * effect: Sobers the player: 2 + Evoc/8
+ * cost  : 50 sp
+ * spec  : can only be cast once every 3 minutes
+ * files : none
+ */
+
+detoxification(str) {
+
+  object obj;
+  int amt;
+
+  if(!KNOW("detox")) {
+	write("What?\n");
+	return 1;
+  }
+
+  if(!str)
+	obj = tp;
+  else
+	obj = present(str, env);
+
+  if(guild->query_next_heal() > time()) {
+	write("You can't cast this type of spell right now.\n");
+	return 1;
+  }
+
+  if(!obj){
+	write("That person is not here.\n");
+	return 1;
+  }
+
+  if( (obj != tp) && !present(obj, env) ){
+	write("That person is not here.\n");
+	return 1;
+  }
+
+  if(tp->query_sp() < 0) {
+	write("You are too tired to cast this spell.\n");
+	return 1;
+  }
+
+  tell_room(env, ME+" casts a spell.\n");
+
+  if(spell_fail2(4,"evoc","pow")){
+	tell_object(obj,
+	  "The spell has been "+HIR+"miscast!"+NORM+"\n"+
+	  "Your head feels "+HIM+"fuzzy"+NORM+" and "+HIG+"wave of nausea"+NORM+" sweeps over you.\n");
+	obj->drink_alcohol(5);
+	obj->eat_food(10);
+	obj->drink_soft(10);
+	tp->add_spell_point(-30);
+	return 1;
+  }
+
+  tell_object(obj,
+  "The spell clears your mind and body of harmful toxins.\n"+
+  "You feel much more alert now.\n");
+  tell_room(env, IT+" appears more alert.\n");
+  obj->drink_alcohol(-(2 + guild->query_total_evoc()/8));
+  obj->eat_food(-(2 + guild->query_total_evoc()/8));
+  obj->drink_soft(-(2 + guild->query_total_evoc()/8));
+  tp->add_spell_point(-50);
+  guild->set_next_heal(time() + 180);
+
+  return 1;
+}
+

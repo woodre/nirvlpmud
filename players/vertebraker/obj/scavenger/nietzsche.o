@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/aarmor/hara-ate","/players/snow/shadows/stuff/axe","/players/saber/stuff/brief","/obj/weapon","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/pain/NEW/weap/mace","/players/ultramagnus/darkarmor","/players/wren/Area/starbug/items/groinal","/players/ultramagnus/staff","/players/pain/NEW/weap/mace2","/obj/armor","/players/snow/WEAPONS/tsunami","/obj/treasure","/players/hawkeye/items/good","/players/mythos/awep/kama","/players/wren/Area/starbug/items/currie","/players/wren/Area/starbug/items/fish","/players/snow/shadows/stuff/nightshade","/players/puppy/s/eq/hammer","/players/saber/armor/slboots","/players/arrina/heals/ade","/players/scathe/weap/lbow","/obj/treasure","/players/wren/Area/starbug/items/bazookoid",})
+shorts ({"Hara-ate","A dusky axe","A black briefcase","A Deadly Bullwhip","Studded collar","Peasant Rags","A large iron mace","Gold","Kryten's groinal attachment","An Old Long Staff","A huge iron mace","A pair of [1mwhite[0m boots","[34mTsunami[0m","Zuzu's petals","A potion","kama","A tin of chicken currie","A box of trout ala crem","[1mNightShade[0m, the Broadsword of Death","A hammer","Stiletto heeled leather boots","bottle of refreshing [33mlemonade[0m","Longbow of Force","Beach Bear pelt","Bazookoid [1;30mmkII[2;37;0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

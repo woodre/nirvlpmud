@@ -1,0 +1,16 @@
+>> ORDER: HOLD POSITION
+
+Usage:
+order <indexnum> hold <roomfile> <duration>
+
+Example:
+'order 3 hold room/church 10'
+
+Description:
+This order simply tells the monster to stay in a single place. 
+
+They will conduct themselves in a casual manner with emotes. 
+They will respond appropriately if attacked and have a measure
+of patience in this situation.
+
+

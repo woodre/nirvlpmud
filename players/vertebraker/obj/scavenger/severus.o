@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/emerson/heal/lpizza","/players/wren/Area/starbug/items/arrogance","/players/wren/Area/starbug/items/bat","/obj/weapon","/obj/weapon","/players/mythos/aarmor/do","/players/mythos/mwep/voice","/players/haji/quest/diary","/players/snow/chaos/objects/crabmeat","/players/wren/Area/starbug/items/dreds","/players/saber/stuff/power","/players/pain/NEW/arm/helm","/players/mythos/aarmor/sode","/players/snow/WEAPONS/hon_sword","/players/wren/Area/starbug/items/hair","/players/mythos/awep/ring","/players/hippo/weapons/glue","/players/saber/armor/mshades","/obj/weapon","/players/wren/Area/starbug/items/veil","/players/pain/NEW/weap/mace","/players/hippo/heals/grain","/players/wren/Area/starbug/items/indianheaddress","/players/scathe/armor/igarb","/players/softly/newbie/obj/cheese",})
+shorts ({"large pizza","Rimmers arrogance.","a [1;30mballbat[2;37;0m","An evil-looking lightsabre","Bow","Do-Maru","Voice","A diary","A slab of giant crabmeat","Lister's crusty deerstalker with dreds.","A power system","A horned helm","Sode","A finely honed longsword","Perfect Hair","Silver Ring","a strong, 1 second glue","Mirrorshades","Fear","a big wedding veil","A large iron mace","[33mcrumbs of grain[0m","a tiny indian headdress","Initiate's garb","[1;33mCheese[2;37;0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

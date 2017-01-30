@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/wither/hall/r1","down","/players/mokri/clans/wither/hall/r3","up",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[34mS[1m[30mtorm [0m[34mC[1m[30mloak[0m","/players/pavlik/armor/storm_cloak",0,0,0,"[34mTsunami[0m","/players/snow/WEAPONS/tsunami",0,61,53,"A large gator tooth","/players/vertebraker/swamp/OBJ/gator_tooth",0,0,0,"A large gator tooth","/players/vertebraker/swamp/OBJ/gator_tooth",0,0,0,"A large gator tooth","/players/vertebraker/swamp/OBJ/gator_tooth",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,16723,54620,"[35mA mystical potion of full healing[2;37;0m","/players/wocket/turtleville/OBJ/heal_potion",0,0,0,"[35mA mystical potion of full healing[2;37;0m","/players/wocket/turtleville/OBJ/heal_potion",0,0,0,"[35mA mystical potion of full healing[2;37;0m","/players/wocket/turtleville/OBJ/heal_potion",0,0,0,"Thermos of [33mSoup[0;0m *3*","/players/dragnar/WalkingDead/heals/soup","3",0,0,})

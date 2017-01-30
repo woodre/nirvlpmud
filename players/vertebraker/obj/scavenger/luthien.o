@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/lunchbox","/players/wren/Area/starbug/items/cottagecheese","/players/maledicta/cont/rdragon/sbracers","/players/jamila/beach/mobs/shell","/obj/weapon","/players/haji/quest/diary","/players/wren/Area/starbug/items/sparehead","/players/wren/Area/starbug/items/comb","/players/mythos/aarmor/do","/players/wren/Area/starbug/items/fish","/players/scathe/armor/mgarb","/players/scathe/armor/bowboot","/players/hippo/weapons/molar_sharf","/players/mythos/awep/kama","/players/scathe/armor/damulet","/obj/armor","/obj/weapon","/players/wren/Area/starbug/items/veil","/obj/level_list","/obj/treasure","/obj/weapon","/players/wren/Area/starbug/items/arrogance","/obj/armor","/obj/weapon","/players/ultramagnus/rsack",})
+shorts ({"a lunch box","a small tub of cottage cheese.","Bracers of Speed","A Large Shell","A huge spiked club","A diary","Kryten's sparehead 3.","the cat's hair pick","Do-Maru","A box of trout ala crem","Black Monk Robes","Hard Boots","A molar sharf","kama","A Dragon Amulet","A suit of [1mwhite[0m chainmail","An evil-looking lightsabre","a big wedding veil","A list of the top players","A golden staff","a sword","Rimmers arrogance.","button","Pillow","A red sack",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

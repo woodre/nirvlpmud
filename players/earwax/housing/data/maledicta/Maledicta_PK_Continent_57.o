@@ -1,0 +1,18 @@
+FileName "players/earwax/housing/data/maledicta/Maledicta_PK_Continent_57"
+Short "Palace"
+LongDesc ""
+ShortDesc ""
+Ids ({"EARWAXIAN_HOUSING_OBJECT_ID_GOES_HERE",})
+WrapPref 0
+Upgrades ({"color-code converter","pk room property",})
+Owner "sephiroth"
+Owners ({"sephiroth",})
+Privs ({3,})
+ClanName 0
+Entrance "/players/earwax/housing/data/maledicta/room/Maledicta_PK_Continent_57_0.c"
+LotSize -2
+HouseSize 10
+Cost 0
+LastRoom 0
+IsClanhall 0
+MaxRooms 999

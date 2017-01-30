@@ -1,0 +1,20 @@
+mapping Armors;
+
+void
+reset(int arg)
+{
+    string type;
+    if(arg) return;
+    Armors = ([ ]);
+    switch(random(8))
+    {
+      type = "helmet";
+      case 0: 
+        Armors[type] = 
+  ({ "bandanna", "A crusty old bandanna", 
+     "A crusty ol' bandanna that you can wear.\n" });
+        break;
+ /* continue on this path */
+    }
+}
+

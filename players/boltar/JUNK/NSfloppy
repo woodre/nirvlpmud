@@ -1,0 +1,29 @@
+>The floppy u just made is bad!
+>
+>This how to solve your problem (in fact I did help a pal on this issue 2
+>days ago):
+>
+>First of all, there's nothing wrong with image files at Apple... u need
+>to download the files using a ftp client (make sure to download it as
+>binary not text!) and NOT using Netscape/Internet Explorer , that's
+>speaking from experience.
+>
+>[presume u are making disk via DOS]
+>
+>Next, u need a fully formatted DOS disk.
+>
+>Rename the downloaded image file as NS33.IMG (rawrite is a DOS app, only
+>see files and directories in 8.3 format) and place it in
+>c:\
+>
+>Download rawrite.exe to c:\
+>
+>Launch rawrite, the source should be at c:\NS33.IMG, and proceed as
+>instructed on screen.
+>
+>That should be it. Use the floppy to boot, at ROM Monitor type (in bold)
+>
+>NeXT> bfd -s
+>
+>The NeXT should now boot.\
+

@@ -1,0 +1,17 @@
+void	set_type(string t);
+string	query_type();
+int	prevent_wield(object who);
+int	prevent_unwield(int silently);
+void	ev_wield(object who, string *limbs);
+void	ev_unwield();
+mixed	hit(object attacker);
+void	re_break();
+void	weapon_breaks();
+int	fix_weapon();
+int	query_wear();
+void	wear_and_tear(int amt);
+void	count_misses();
+void	count_hit_made(int dam);
+int	query_eff_wc();
+status	query_wielded();
+object	query_wielded_by();

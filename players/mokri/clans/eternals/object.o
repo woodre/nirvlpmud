@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;36mI[1;32mN [1;35mF[1;31m I[1;34mN[1;37m I[1;30mT[0m [33mY [1;33m G A U N T L E T [0m     (worn)    [1;32m[POWER] [0m[0m"
+long_desc "A [33mGauntlet[1;33m glowing[0m with eerie [1;35m powers[0m.It has [31meight slots[0m which socket the [1;36mI[1;32mn[1;35mf[1;31mi[1;34mn[1;37mi[1;30mt[0m [33my [36mGems [0m.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "infinity"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A [33mGauntlet[1;33m glowing[0m with eerie [1;35m powers[0m.It has [31meight slots[0m which socket the [1;36mI[1;32mn[1;35mf[1;31mi[1;34mn[1;37mi[1;30mt[0m [33my [36mGems [0m.[0mType 'clan_help' for commands."
+clan_short "[1;36mI[1;32mN [1;35mF[1;31m I[1;34mN[1;37m I[1;30mT[0m [33mY [1;33m G A U N T L E T [0m     (worn)    [1;32m[POWER] [0m[0m"
+damage_type 0
+hall_path "/room/eastroad5"
+object_name "infinity"
+owner "thanos"
+spell_alias "gg"
+spell_mess_me "Your %hi cyan%I%hi green%n%hi magenta%f%hi red%i%hi blue%n%hi white%i%hi black%t%yellow%y %hi yellow% Gauntlet%normal% starts %hi magenta%vibrating%normal% and you are %hi green%healed%normal%."
+spell_mess_room "%TPN% %hi cyan%I%hi green%n%hi magenta%f%hi red%i%hi blue%n%hi white%i%hi black%t%yellow%y %hi yellow% Gauntlet%normal% starts %hi magenta%vibrating%normal% and %CTP_PRO% is %hi green%healed%normal%."
+spell_mess_them "%TPN% %hi cyan%I%hi green%n%hi magenta%f%hi red%i%hi blue%n%hi white%i%hi black%t%yellow%y %hi yellow% Gauntlet%normal% starts %hi magenta%vibrating%normal% and %CTP_PRO% is %hi green%healed%normal%."
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 0
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 80
+last_spell_time 1316807602

@@ -1,0 +1,52 @@
+Weapon enchantments have been added to weapon.c, meaning they can
+be used on almost any weapon.
+
+Here's how they work:
+
+weapon_ob->add_enchantment(name,short_desc,long_desc,dam,dtype,
+                           seconds,hits,function,ob);
+
+returns: 1 for success
+         0 for failure
+         -1 for already exists
+                          
+                           
+name: a unique name for the enchantment.  you have to remove an
+      enchantment of a given name before you can add another of
+      that name. example:  templar_weapon_enchant
+
+short_desc: if not 0, added to the weapon's short()
+
+long_desc: if not 0, added to the weapon's long()
+
+dam: the amount of damage to add.  it's added to any other damage
+     the weapon does, and then auto-randomized
+
+dtype: the dtype of the enchantment.  1 per enchantment
+
+seconds: how long the enchantment should last.  if 0, the enchantment
+         is not terminated based on time.
+
+hits: how many hits the enchantment should last.  If 0, the enchantment
+      is not terminated based on hits.
+
+function: the function to call for extra stuff.  it's passed the target
+          for the attack and the weapon that's enchanted  the return of
+          the function is added to the amount
+
+ob: the object where the function is.  If 0, the weapon itself is
+    queried
+
+Other functions:
+    
+remove_enchantment(name) to remove an enchantment
+1 for success, 0 for failure
+
+query_echantment(name) returns 0 if there isn't one, or the stats
+of the enchant if there is.
+
+query_enchantments() returns an array of all the names of the weapon's
+enchantments.
+
+NOTE: enchanted weapons DO NOT SAVE.  Make sure there is some way to
+remove an enchantment unless you want the weapon made unsavable.

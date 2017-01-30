@@ -1,0 +1,6 @@
+messages "mizan**Subj: Broken Xetra claws?Cc: (To: vital) vertebraker,mizan,fakir,llewDate: Jul 23 09:59Sin(Data) kept getting these errors after he repaired a broken weapon...It seemed to cause monsters to lose their heartbeats as well, making themeasy targets. A snippet from the debug log..Bad argument 1 to call_other()Current object was players/llew/closed/crystal/xetra_claws#3140, line 43"heart_beat" in "obj/player.c" ("obj/player#3099") line 1390"attack" in "obj/living.c" ("obj/player#3099") line 1394"hit" in "obj/weapon.c" ("players/llew/closed/crystal/xetra_claws#3140") line 173"weapon_hit" in "players/llew/closed/crystal/xetra_claws.c" ("players/llew/closed/crystal/xetra_claws#3140") line 194Heart beat in obj/player#3099 turned off.Bad argument 1 to call_other()Current object was players/llew/closed/crystal/xetra_claws#3140, line 44"heart_beat" in "obj/player.c" ("obj/player#3099") line 1390"attack" in "obj/living.c" ("obj/player#3099") line 1394"hit" in "obj/weapon.c" ("players/llew/closed/crystal/xetra_claws#3140") line 173"weapon_hit" in "players/llew/closed/crystal/xetra_claws.c" ("players/llew/closed/crystal/xetra_claws#3140") line 201Heart beat in obj/player#3099 turned off.thanks :)-miz**"
+new_mail 0
+line_length 0
+level 50
+channel_block 0
+is_reading 1

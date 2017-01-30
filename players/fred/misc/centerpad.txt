@@ -1,0 +1,1 @@
+pad(pad(str, -(length + sizeof(str)) /2), length)

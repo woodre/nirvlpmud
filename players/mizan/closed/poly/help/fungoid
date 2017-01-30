@@ -1,0 +1,19 @@
+[FUNGOID] Level [3] 250 charges (+sta, --int, --mag, +str, --ste, -luck)
+
+  The fungoid is a strange, solitary creature gifted with the ability
+  to see in the dark unassisted, and cast a variety of hurtful offensive
+  spells. Fungoids heal faster in the dark, and generally do not like
+  daylight that much.
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+gribble <monst>      (12 sp) A strange offensive spell... 
+
+
+puff <monst>         (15 sp) Blast your foe with a puff of fungal goop.
+
+spog <monst>         (18 sp) A painful jet of caustic juice.
+
+spore <sp>           (2-60 sp) Soak the room of attackable monsters in a
+                     cloud of toxic spores!
+

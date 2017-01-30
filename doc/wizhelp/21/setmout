@@ -1,0 +1,21 @@
+**************
+
+                     Setmout
+
+Syntax:    setmout <msg>
+
+Desc:
+           This command sets your exit message for standard movement
+           ie walking. Default is "leaves" and a direction.
+
+Warning:   Keep clean and brief
+
+Example:   setmout exits stage 
+                  results
+           Players see "Bob exits stage west" for leaving to the west
+
+Related:   setmmin, setmmout, setmin, setmhome, review
+
+
+**************
+

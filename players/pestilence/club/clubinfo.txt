@@ -1,0 +1,200 @@
+                       Pesty's Strip Club
+______________________________________________________________________________
+
+                              I.  Theme
+                             II.  Monsters
+                            III.  Objects
+                             IV.  Rooms
+                              V.  Map
+______________________________________________________________________________ 
+
+I.  THEME -
+
+     This area is based on a strip club.  The area is lewd with
+various opportunities to release some pent up perverted tension.
+The rooms are all pk, no teleport, with add action of no quit,
+except for the bar, you can quit there.
+______________________________________________________________________________ 
+
+
+II.  MONSTERS - /players/pestilence/club/mob
+
+                                 chart      [ ! means random ]
+                                            
+
+
+
+
+   2 bambi.c     5 desire.c      2 jason.c      2 joe.c        5 sandy.c 
+   2 bill.c      3 destinee.c    2 jeff.c       5 kirsten.c    2 shelly.c 
+   5 busty.c     5 fire.c        5 jessica.c    4 kitty.c  
+   4 cheryl.c    2 harley.c      2 jim.c        5 magic.c 
+
+
+
++-----------------+--------+------------+--------+------+----------------+
+|     Name        |   HP   |   Level    |   WC   |  AC  |  Items         |
++-----------------+--------+------------+--------+-----------------------+
+|   Bambi         | 450    |    19      |  28    |  16  |                |
+|   bambi.c       |        |            |        |      |                |
++-----------------+--------+------------+--------+------+----------------+
+|   Bill          |        |            |        |      | none he's      |
+|   bill.c        | 500    |    20      |  50    |  30  | barkeeper      |
++-----------------+--------+------------+--------+------+----------------+
+|   Busty         |550!200 |    18      | 32!6   | 18!4 | 6 money.c      |
+|   busty.c       |        |            |        |      |                |
++-----------------+--------+------------+--------+------+----------------+ 
+|   Cheryl        |550!200 |    18      | 32!6   | 18!4 | 6 money.c      | 
+|   cheryl.c      |        |            |        |      |                |
++-----------------+--------+------------+--------+------+----------------+
+|   Desire        |530!200 |    18      | 30!6   | 16!4 | 5 money.c      |
+|   desire.c      |        |            |        |      |                |
++-----------------+--------+------------+--------+------+----------------+ 
+|   Destinee      |450     |    19      |  28    | 16   | gstring.c      |
+|   destinee.c    |        |            |        |      | 6 money.c      |
++-----------------+--------+------------+--------+------+----------------+ 
+|   Fire          |550!200 |    18      | 32!6   | 18!4 | 6 money.c      |
+|   fire.c        |        |            |        |      |                |
++-----------------+--------+------------+--------+------+----------------+ 
+|   Harley        |700     |    18      |  32    | 14   | bbottle.c      |
+|   harley.c      |        |            |        |      | 2000!1000      |
++-----------------+--------+------------+--------+------+----------------+ 
+|   Jason         |500     |    18      |  30    | 17   | 3000!2000      |
+|   jason.c       |        |            |        |      |                |
++-----------------+--------+------------+--------+------+----------------+
+|   Jeff          |400!200 |    18      | 33!6   | 12!4 | 3000!2000      |
+|   jeff.c        |        |            |        |      |                |
++------------------------------------------------------------------------+
+|   Jim           |500     |    20      | 30     | 17   | 2000!3000      |
+|   jim.c         |        |            |        |      |                |
++------------------------------------------------------------------------+
+|   Joe           |450     |    19      | 28     | 16   | 2000!2000      |
+|   joe.c         |        |            |        |      |                |
++------------------------------------------------------------------------+
+|   Kirsten       |530!200 |    18      | 30!6   | 16!4 | 6 money.c      |
+|   kirsten.c     |        |            |        |      |                |
++------------------------------------------------------------------------+
+|   Kitty         |550!200 |    18      | 32!6   | 18!4 | 6 money.c      |
+|   kitty.c       |        |            |        |      |                |
++------------------------------------------------------------------------+
+|   Magic         |530!200 |    18      | 30!6   | 16!4 | 6 money.c      |
+|   magic.c       |        |            |        |      |                |
++------------------------------------------------------------------------+
+|   Sandy         |530!200 |    18      | 30!6   | 16!4 | 6 money.c      |
+|   sandy.c       |        |            |        |      |                |
++------------------------------------------------------------------------+
+|   Shelly        |400!200 |    18      | 30!6   | 16!4 | 2000!2000      |
+|   shelly.c      |        |            |        |      | bstring.c      |
++------------------------------------------------------------------------+
+
+     The majority of the mobs here are strippers and they carry funny money.
+______________________________________________________________________________
+
+III.  OBJECTS - /players/pestilence/club/obj/
+
+   2 heineken.c    2 money.c 
+   2 bud.c         2 labatts.c     
+
+WEAPONS - /players/pestilence/amity/wep
+
+   2 bbottle.c 
+
+ARMOR - /players/pestilence/amity/arm
+
+      1 bstring.c    2 gstring.c 
+
+Details
+
+2 heineken.c
+ bottle of beer one use intox 17 cost 500
+
+2 money.c
+ funny money from the strippers can exchange for coins at bill 
+ 750 coins each, also can use to tip strippers
+ 
+2 bud.c
+ same as heineken.c
+      
+2 labatts.c     
+ same as heineken.c
+
+2 bbottle.c  
+ weapon, exotic type wc 17 with a 1/3 chance of return 7
+  
+1 bstring.c
+ misc armor ac 1, with a 5/50 chance of do special add random 5 sp
+ and - random 5 hp
+    
+2 gstring.c 
+ same as bstring.c but in red
+
+
+
+______________________________________________________________________________
+
+
+
+
+
+IV.  ROOMS - /players/pestilence/club/room
+    These are the rooms that make up the strip club
+
+   2 backstage.c    4 lap1.c    1 log          2 stage.c 
+   3 bar.c          4 lap2.c    2 parking.c     
+   2 inside.c       4 lap3.c    2 pervert.c 
+      mensroom.c      ladiesroom.c
+  
+
+2 backstage.c 
+  backstage has shelly and bodyguard jeff.  A door to the north is there for
+  future expansion
+   
+4 lap1.c
+  a lap dance room to the west of pervert.c you can buy 3 dances there
+    
+1 log
+  a log of all who enter the strip club to monitor the over 18 rule
+          
+2 stage.c 
+  stage where bambi and destinee are dancing
+
+3 bar.c
+  bar where bill is the bartender, sell beer and can exchange funny money for coins
+          
+4 lap2.c
+  lap dance room to east of pervert.c you can buy 3 dances there
+    
+2 parking.c
+  the entrance to the club, where jim is there after 20 secons joe will show up and
+  block exits
+    
+2 inside.c
+  the first room inside the club, it's empty right now
+       
+4 lap3.c
+  a lap dance ne of pervert.c you can buy 3 dances there
+    
+2 pervert.c
+  the room where the customers watch the dancers, Harley and Jason are there
+ 
+
+  
+
+
+______________________________________________________________________________
+								
+V.  MAP -                                                             
+								N
+                                                              W-|-E         
+                                                                S
+
+
+                           backstage.c
+                               | 
+                            stage.c  lap3.c
+                               |      /
+                     lap.c -pervert.c - lap2.c
+                               |
+                    bar.c  -inside.c- parking.c(start)
+                               |
+                        mens room    ladies room

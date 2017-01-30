@@ -1,0 +1,22 @@
+no_clean 1
+wielded 0
+wielded_by 0
+name_of_weapon "demonslayer"
+cap_name "Demonslayer"
+broke 0
+eff_wc 18
+misses 60
+hits 41
+alt_name "bane"
+alias_name "blade"
+short_desc "Demon's Bane"
+long_desc "The blade is of deepest BLUE. It shines with an odd light.The blade is simple except for some runes written on it in blood red."
+read_msg "Demon's Bane   - The HUNTER"
+save_flag 0
+class_of_weapon 18
+value 5000
+local_weight 2
+wield_func 0
+info 0
+type 0
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})

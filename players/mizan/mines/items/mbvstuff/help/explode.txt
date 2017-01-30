@@ -1,0 +1,19 @@
+>> ORDER: EXPLODE SELF AT OBJECT
+
+Usage:
+order <indexnum> explode <creaturename>
+
+Example:
+'order 3 explode mizan'
+
+Description:
+Essentially the monster turns into a suicide bomb. It will follow a player
+displaying in emotes its malicious intent, and after a period of about random(8)
+seconds the monster will attack the player, and detonate doing some damage to it.
+
+Total damage inflicted is random(playerlevel) * 6.
+
+To those who don't have a sense of humor about this: Grow the fuck up.
+I find your mindless killing and violence towards monsters on this mud offensive
+to my heritage :)
+

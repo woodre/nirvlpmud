@@ -1,0 +1,3 @@
+b
+exec this_player()->set_guild_name("none");
+clone /obj/mail_reader.c

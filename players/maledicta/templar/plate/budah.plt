@@ -1,0 +1,4 @@
+[1;33mBudah [2;37;0m[1m: [2;37;0m[1;33mThis is a test.[2;37;0m (fakir)
+[1;33mBudah [2;37;0m[1m: [2;37;0m[1;33mI would like to dedicate this plate to Budah, who was not only one of the first allies, but has convinced and nominated many to join our Alliance.  To you I salute ![2;37;0m (daredevil)
+[1;33mBudah [2;37;0m[1m: [2;37;0m[1;33mI would like to dedicate this plate to Budah, who was not only one of the first members of the Alliance, but has also convince and nominated many to join our glorious ranks.  To you I salute ![2;37;0m (daredevil)
+[1;33mBudah [2;37;0m[1m: [2;37;0m[1;33mI would like to dedicate this plate to Budah, who was not only one of the first members of the Alliance, but has also convince and nominated many to join our glorious ranks.  To you I salute ![2;37;0m (daredevil)

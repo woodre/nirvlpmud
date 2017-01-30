@@ -1,0 +1,5 @@
+10/ 6/09 09:39: Chode       ((11    /Shardak)      13(1/1)
+10/ 8/09 08:17: Teepo       ((19+38 /Mage)         30(1/2)
+10/20/09 12:05: Youngblood  ((19    /Shardak)      21(1/1)
+10/21/09 12:07: Youngblood  ((19+2  /Shardak)      22(1/1)
+01/17/10 09:07: Severance   ((19+5  /Cyberninja)   22(1/1)

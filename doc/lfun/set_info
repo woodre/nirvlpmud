@@ -1,0 +1,8 @@
+void set_info(string)
+
+Optional function.  All objects CAN return some special info about themselves.
+This function does NOT exist for players, but does exist for monsters, 
+treasure, armor, and weapons.
+Set's the info string on those objects to whatever the wizard desires.
+
+See also lfun/query_info.

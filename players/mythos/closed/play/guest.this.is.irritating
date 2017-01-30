@@ -1,0 +1,43 @@
+#define mup tell_object(find_player("mythos"),
+string targ;
+
+id(str) {return str == "guest"; }
+drop() {return 1;}
+reset(arg) {
+  if(arg) return;
+  targ = allocate(3);
+  targ[0] = "guest";
+   call_out("hb",3);
+}
+query_prevent_shadow() { return 1; }
+
+hb() {
+object h;
+int m;
+if(!environment(this_object())) { destruct(this_object()); return 1; }
+  for(m=0;m<sizeof(targ);m++) {
+    if(targ[m]) {
+     if(h=find_player(targ[m])) {
+    if(environment(h)) {
+   if(present("qt",h)) {
+   if(!present("mqt",h)) {
+	      destruct(present("qt",h));
+	      move_object(clone_object("/players/mythos/prac/qt.c"),h);
+	    }
+} else {
+	      move_object(clone_object("/players/mythos/prac/qt.c"),h);
+}
+    if(h->query_money() > 0) h->add_money(-h->query_money());
+   if(creator(environment(h))) {
+    h->move_player("back to church#room/church.c");
+   tell_object(h,"--> Guest has been restricted!\n");
+   tell_object(h,"--> You may only explore the normal village regions!\n");
+   tell_object(h,"--> You have been moved back to the church!\n");
+     }
+   }
+   }
+   }
+    }
+  call_out("hb",3);
+return 1;
+}

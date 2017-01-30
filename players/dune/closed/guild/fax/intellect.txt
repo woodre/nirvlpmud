@@ -1,0 +1,41 @@
+C Y B E R N I N J A S
+
+Fax File: intellect
+Usage: fax <topic>
+
+
+     Intellects are in charge of expanding the guild's
+influence on Nirvana, documenting guild history, and 
+thinking of various innovations - whether they be
+in the form of guild code modifications or role-playing
+approaches. Their domain is player and political issues.
+It is not necessary for Intellects to be PK.
+
+     Intellects serve as knowledgeable advisors, and are
+are capable of writing new guild lore in the Guild Archives
+room.
+
+___________________Intellect Abilities_________________
+dnet <message>
+     Send a message through CyberDaemon. This will reach
+     all ninjas whether they are muffled or not.
+onet <message>
+     Guild officer channel tell. Use this command exactly
+     like 'net', your message goes to only guild officers.
+onem <message>
+     Guild officer channel emote. See also 'onet'.
+recruit <player>
+     Allows you to recruit a player into the guild.
+     See 'cyber recruit' for more info.
+recruits
+     Allows you to see who you are currently counseling
+     as well as your remaining recruit slots.
+uncounsel <player>
+     Allows you to uncounsel a player you have recruited.
+     If you use this command to uncounsel a player who
+     is already a member of the guild, then you will lose
+     honor but your recruit slot will be freed up, so try to
+     recruit players who might be successful in the guild.
+     If you uncounsel a player who is not a member of the
+     guild, there is no honor penalty.
+_______________________________________________________

@@ -1,0 +1,19 @@
+
+Bloodfist Help:  Guard
+
+Guild level:  4
+Honor Req:    0
+Base Cost:    0
+
+  Guard target player or monster from being attacked.  If they get
+attacked then you will automatically take the lead from them so their
+opponent is fighting you.  If you are guarding a player, it must be
+approved by the other player, and can be ended at any time by the
+other player with the command 'stop guarding'.  If you are guarding
+someone, type 'guard' to see who, or 'guard stop' to end it.
+
+Usage:  guard
+        guard <who>
+        guard stop
+        stop guarding
+

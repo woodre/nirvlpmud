@@ -1,0 +1,18 @@
+FileName "players/earwax/housing/data/dragnar/Dragnar_Walking_Dead_105"
+Short "Palace"
+LongDesc ""
+ShortDesc ""
+Ids ({"EARWAXIAN_HOUSING_OBJECT_ID_GOES_HERE",})
+WrapPref 0
+Upgrades ({"color-code converter",})
+Owner "deathseeker"
+Owners ({"deathseeker",})
+Privs ({3,})
+ClanName 0
+Entrance "/players/earwax/housing/data/dragnar/room/Dragnar_Walking_Dead_105_0.c"
+LotSize 999
+HouseSize 10
+Cost 0
+LastRoom 0
+IsClanhall 0
+MaxRooms 999

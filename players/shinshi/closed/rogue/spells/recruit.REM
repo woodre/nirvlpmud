@@ -1,0 +1,82 @@
+#include "../defs.h"
+int firstwep;
+
+status main(string str, object PO, object User)
+{
+	object ob, recruiter;
+	int currentexp;
+	
+	if(!str){
+		write("Whom would you like to recruit?\n");
+		return 1;
+	}
+	
+	if(User->query_extra_level() < 30){
+		write("You cannot use that ability yet.\n");
+		return 1;
+	}
+	
+	ob = find_player(str);
+	
+	if(!ob){
+		write("That person is not online.\n");
+		return 1;
+	}
+	
+	if(ob->query_level() < 15){
+		write(ob->query_name()+" is not the proper level.\n");
+		return 1;
+	}
+	
+	if(ob->query_guild_exp() || ob->query_guild_rank()){
+		write(ob->query_name()+" is already in a guild.\n");
+		return 1;
+	}
+	
+	if(ob && !present(ob, environment(User))){
+		write(ob->query_name()+" is not present!\n");
+		return 1;
+	}
+	
+	if(restore_object("players/shinshi/closed/rogue/members/"+ob->query_real_name()))
+	{
+		write("That player must speak to Shinshi to rejoin.\n");
+		tell_object(ob, "You must speak to Shinshi to rejoin.\n");
+		return 1;
+	}
+	
+	recruiter = clone_object(OBJPATH+"recruiter.c");
+
+	tell_object(User, "You offer to let "+ob->query_name()+" learn the Way of the Rogues.\n");
+	tell_object(ob, "\n");
+	tell_object(ob, "If you wish to join the rogues, you will be\n");
+	tell_object(ob, "reset to level 15 experience and you must set PK immediately.\n");
+	tell_object(ob, "Once you join, it is highly recommended that\n");
+	tell_object(ob, "you read through the help files. If you still\n");
+	tell_object(ob, "wish to become a Rogue, you may type 'join' now.\n");
+	tell_object(ob, "\n");
+	move_object(recruiter, ob);
+	recruiter->start_it();
+	write_file("/players/shinshi/closed/rogue/logs/OFFERED", ctime()[4..15] + "  " +User->query_name()+ " has offered " +ob->query_name()+ " to join the guild.\n");
+	return 1;
+}
+
+
+/*
+	
+	if(ob && present(ob, environment(User)) && ob->query_extra_level() >= 5){
+		gid = clone_object("/players/shinshi/closed/rogue/gob2.c");
+		move_object(gid, ob);
+		currentexp = (int)ob->query_exp();
+		ob->add_exp(-currentexp);
+		ob->add_exp(620026);
+		ob->set_level(15);
+		ob->set_extra_level(0);
+		ob->set_guild_name("Rogue");
+		command("rsave", ob);
+		write("You introduce "+ob->query_name()+" the Way of the Rogues.\n");
+		tell_object(ob, "You have been shown the way of the Rogue. Begin with 'rhelp'.\n");
+		write_file("/players/shinshi/closed/rogue/logs/JOIN", ctime()[4..15] + "  " +User->query_name()+ " has recruited " +ob->query_name()+ " to the guild.\n");
+		return 1;
+	}
+*/

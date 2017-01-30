@@ -1,0 +1,105 @@
+#include "/players/snow/dervish/def.h"
+#define ENVTP ENV(TP)
+#define CAP capitalize
+#define QN query_name()
+
+dervish_fatal()
+{
+	object meat, myob, ob;
+	int hp, cost1, cost2, rng, minHP;    /*cost1 is spell points, cost2 is sand points*/
+	
+	myob = present(GID, this_player());
+	meat = this_player()->query_attack();
+	
+	if(this_player()->query_level() < 11)
+	{
+		write("You are unable to use this ability yet.\n");
+		return 1;
+	}
+	
+	 if(this_player()->query_no_spell() || this_player()->checkNM())
+	 {
+	 	write("You are unable to work the sands at this time.\n");
+	 	return 1;
+	 }
+	 
+	 if(this_player()->query_ghost())
+	 {
+	 	write("You cannot do that while you are dead!\n");
+	 	return 1;
+	 }
+	 
+	 if(!meat)
+	 {
+	 	write("You must be in combat to do that!\n");
+	 	return 1;
+	 }
+	 
+	 ob = this_player()->query_attack();
+
+	 
+	 if(!ob->is_npc())
+	 {
+	 	write("You cannot finish that!\n");
+	 	return 1;
+	 }
+	 
+	 if(!present(ob, environment(this_player())))
+	 {
+	 	write(ob->query_name()+" is not present.\n");
+	 	return 1;
+	 }
+	 
+	 rng = random(99);
+	 hp = ob->query_hp();
+	 minHP = 375;
+	 cost1 = 35;
+	 cost2 = 70;
+	 
+	if(hp < minHP)
+		{
+			if(this_player()->query_spell_point() < cost1)
+			{
+				if(rng > 49)
+				{
+					write("You deliver "+ob->query_name()+" to a very sandy grave.\n");
+					present(GID, this_player())->add_sand_points(-cost2);
+					ob->heal_self(-hp);
+					return 1;
+				}
+				else
+				{
+					write("You fail!\n");
+					present(GID, this_player())->add_sand_points(-cost2);
+					return 1;
+				}
+			return 1;
+			}
+			
+			else
+			{
+				if(rng > 49)
+				{
+					write("You deliver "+ob->query_name()+" to a very sandy grave.\n");
+					this_player()->add_spell_point(-cost1);
+					ob->heal_self(-hp);
+					return 1;
+				}
+				
+				else
+				{
+					write("You fail!\n");
+					this_player()->add_spell_point(-cost1);
+					return 1;
+				}
+				return 1;
+			}
+			return 1;
+		}
+	else
+	{
+		write("You failed!\n");
+		return 1;
+	}
+return 1;
+}

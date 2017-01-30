@@ -1,0 +1,30 @@
+05-MAR-2015 - Gnar
+
+The inspiration for the layout of these rooms comes from 
+Maledicta's cont area. I always loved what he did there both
+as a player and a wizard.
+
+These rooms are generated using the ss_make_area command from
+my wiztool. This function reads the map in this directory and
+creates all of the room files. The long is set using a daemon
+object that also reads the map.
+
+The map daemon reads the map file, converts it to 2d array, and
+uses the name of the room to identify the room in the map. The
+rooms are named from the ss_make_area command based on row and
+column locations. The map daemon converts the room the user is 
+in to an X. The daemon then adds colors to the map based on the 
+map key.
+
+Please don't mess with these rooms unless you understand how
+they work. The rooms can be regenerated but some rooms are modifed
+after they are created that have special items in them.
+
+Required Files in this dir for the mapDM to work properly:
+  o map.txt   - Non color version of the map
+  o map_key.o - List of keys and their colors
+
+Required Files for the ss_make_area command to work:
+  o rstart    - Template for the room files
+  o map.txt   - Non color version of the map
+  o map_key.o - List of keys and their colors

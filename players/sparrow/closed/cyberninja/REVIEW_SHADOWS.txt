@@ -1,0 +1,52 @@
+This is a description of the new hide in shadows ability that I hope will
+be able to go into the game.
+HIDING IN SHADOWS
+A Ninja may only hide in shadows when there are no other living objects in
+his environment, besides other ninjas. He cannot hide in shadows when
+hunting or hunted. If these requirements are met, and he is at least guild
+rank 8, a Ninja can hide. There is no failure chance.
+EFFECT OF SHADOWS
+The effect of hiding in shadows is basically an improved invisibility and
+stealth. The ninja is present in the room, but players can't see him with a
+quick glance. He also can enter a room quietly, as further explained
+below. The ninja can be attacked by monsters or players while hiding
+in shadows, as he is physically present in the room object.
+The ninja can be spotted on locational who lists in his current location, so
+it is only useful in the room.
+MOVEMENT
+Ninjas may move while they are hiding in shadows. However, there is a chance
+that the ninja will step out of the shadows with the movement. Thus, he will
+no longer be hiding in shadows and everyone will see him do the
+movement. This chance is based on the ninja's stealth stat, his guild rank,
+and the time he takes to move. Basically, there is a random(30) chance
+compared to stealth (normal max 20) plus guild rank (max of 10). Each
+time the ninja moves, his chances are reduced by 8 (about 25%). For
+every heartbeat the ninja does not move, the chances are improved by 1. Thus,
+a maxed ninja with max stealth can move 1 space every 8 heartbeats to avoid
+failure. If, however, he moves multiple spaces, his chances are very slim to
+stay within the shadows. The chart below illustrates this concept:
+Movements  Failure chance
+1          0%
+2          27%
+3          53%
+4          80%
+5          100%
+These are movements within 1 heartbeat, based on ninja with maximum normal
+stats and guild rank.
+LOSING SHADOWS
+The Ninja can stop hiding in shadows in several ways. He can choose to come
+out of hiding, he can fail in movement as outlined above, he automatically
+loses his hiding when in combat, and he can be spotted.
+If anyone looks at a ninja while the ninja is in shadows, the ninja comes out
+of hiding. As the ninja can be seen on the locational who lists, this poses
+a distinct liability for hiding in shadows. All another player has to do is
+go to the room with the ninja and look at him.
+SUMMARY
+The hide in shadows ability is better than regular invisibility while in a room.
+It allows movement with stealth (if the ninja is careful and patient), and can
+give the ninja an element of surprise. However, the ninja is easily spotted on
+the locational who lists and can be brought out of the shadows at any time by
+anyone in the same room. Ninjas cannot escape from combat with the ability, nor
+do they gain any benefits in combat with it (possible backstab ability in
+future however). What it mostly does is give Ninjas a stealth element that is
+highly thematic and potentially fun, though hard to keep going.

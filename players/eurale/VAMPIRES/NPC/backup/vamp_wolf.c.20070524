@@ -1,0 +1,278 @@
+#include "/players/eurale/defs.h"
+inherit "obj/monster";
+
+string str, str2, master_name, wolf_name, cheat1, cheat2;
+int wait_here, time_counter, wolf_muffled, wolf_protecting;
+object obj, obj2, master;
+
+init() {
+  ::init();
+  add_action("wolf_do",wolf_name);
+}
+
+  /*  ============================  */
+  /*  =   General Wolf Commands  =  */
+  /*  ============================  */
+wolf_do(str) {
+  object obj;
+
+if(!master) {
+  say("The "+BOLD+"wolf"+NORM+" looks lost and lopes off looking for "+
+        capitalize(master_name)+".\n");
+  destruct(this_object());
+  return 1; }
+
+if(!str || str == "") return;
+
+if(!TP) return;
+if(TP != master) return;
+
+if(str == "help") {
+  short();
+  write("Command him with: "+wolf_name+" <command>\n");
+  write(
+"He can do the following:\n\n"+
+"command           description\n"+
+"----------------  ------------------------------------------------------\n"+
+"help              display this message\n"+
+"stay              tells the wolf to wait here\n"+
+"heel              the wolf will begin following you\n"+
+"wolf come to me   calls the wolf from wherever you told it to wait\n"+
+"dismissed         send the wolf away\n"+
+"attack <monster>  attack a specific monster\n"+
+"stop attack       stop the attack\n"+
+"protect me        attack any aggressive monster it gets near (toggle)\n"+
+"drain corpse      drain a corpse to heal itself\n"+
+"\n");
+return 1; }
+
+if(lower_case(str) == "dismissed") {
+  tell_room(environment(TO),
+    "The "+BOLD+"wolf"+NORM+" seems to nod at "+capitalize(master_name)+
+        " and lopes away.\n");
+  obj = present("vampire fangs", master);
+  obj->dismiss_a_wolf();
+  destruct(this_object());
+  return 1; }
+
+if(str == "stay") {
+  say("The "+BOLD+"wolf"+NORM+" pads into a dark area to sit and wait.\n");
+  wait_here = 1;
+  return 1; }
+
+if(str == "heel") {
+  say("The "+BOLD+"wolf"+NORM+" scrambles to its feet and stands at "+
+        capitalize(master_name)+"'s left side.\n");
+  wait_here = 0;
+  return 1; }
+
+if(sscanf(str, "attack %s", str2)==1 || sscanf(str, "kill %s", str2)==1) {
+  obj = present(str2, environment(TO));
+  if(obj && !obj->query_npc()) {
+    write("Sorry, the wolves can't attack players.\n");
+    return 1; }
+
+  if(obj) TO->attack_object(obj);
+  else
+    write("The "+BOLD+"wolf"+NORM+" growls:  "+str2+" is not here!\n");
+  return 1; }
+
+if(sscanf(str, "stop %s", str)==1) {
+  if(str == "attack") {
+    obj = TO->query_attack();
+     if(obj)
+      if(present(obj, environment(TO))) {
+        obj->stop_fight();
+        obj->stop_fight();
+        obj->stop_hunter(); }
+     TO->stop_fight();
+     TO->stop_fight();
+     TO->stop_hunter();
+     write("The "+BOLD+"wolf"+NORM+" stops fighting.\n");
+     return 1; }
+}
+
+sscanf(str, "drain %s", str2);
+if(str2 == "corpse") {
+  obj = present("corpse", environment(TO));
+
+if(!obj) {
+  write("A corpse must be present to do that.\n");
+  return 1; }
+
+if(TO->query_hp() > 100) {
+  write("The "+BOLD+"wolf"+NORM+" pants: I'm healthy.\n");
+  return 1; }
+
+if(!obj->heal_value()) {
+  write("That corpse has no value.\n"); return 1; }
+  say(capitalize(master_name)+
+      " snorts strangely and growls at the corpse.\n");
+  heal_self(obj->heal_value());
+  destruct(obj);
+	say("The "+BOLD+"wolf"+NORM+" excitedly jumps on the "+
+	    "corpse and "+BOLD+"RIPS"+NORM+" through its\n"+
+        "flesh to get at a vein.  It then sinks its FANGS into the\n"+
+		"corpse and greedily "+HIR+"laps up its BLOOD"+NORM+".\n");
+  return 1; }
+
+if(str == "protect me") {
+  if(wolf_protecting) {
+    wolf_protecting = 0;
+    write("The wolfs protection mode is now "+HIR+"OFF"+NORM+".\n");
+    return 1; }
+  else {
+    wolf_protecting = 1;
+    write("The wolf's protection mode is now "+HIR+"ON"+NORM+".\n");
+    return 1; }
+}
+}
+
+follow(str) {
+if(wait_here) { return 1; }
+
+if(!environment(TO)) return 1; /* added by verte 6.11.01 */
+if(master)
+if(master && !present(master, environment(TO))) {
+  tell_room(environment(TO),
+    "The "+BOLD+"wolf"+NORM+" lopes away after "+
+      capitalize(master_name)+".\n");
+  move_object(TO, environment(master));
+  tell_room(environment(master),
+  "A "+BOLD+"wolf"+NORM+" lopes in and stands at "+capitalize(master_name)+
+              "'s left side.\n");
+  return 1; }
+}
+
+reset(arg) {
+  ::reset(arg);
+  if (arg) return;
+
+wolf_muffled = 1;
+set_name("wolf");
+set_alias("pet");
+wolf_name = "wolf";
+set_level(8);
+set_hp(130);
+set_ac(7);
+if(!present("wolfangs")) {
+  move_object(clone_object("/players/eurale/VAMPIRES/OBJ/wolf_fangs.c"),
+    TO); }
+init_command("wield wolfangs");
+set_wc(15);
+set_can_kill(1);
+set_aggressive(0);
+master_name = "null"; 
+enable_commands();
+set_heart_beat(1);
+}
+
+query_master_name() { return master_name; }
+query_master() { return master; }
+
+heart_beat() {
+  object wolf_obj;
+
+if(hit_point < max_hp) hit_point += 3;
+if(hit_point > max_hp) hit_point = max_hp;
+
+if(environment(TO)) {
+  if(!master) {
+    if(!master_name) { destruct(this_object()); return 1; }
+    master = find_player(master_name); }
+
+wolf_obj = 0;
+wolf_obj = present("wolf", environment(TO));
+  if(wolf_obj && wolf_obj != TO) {
+    if (wolf_obj->query_master_name() ==  master_name) {
+      destruct(wolf_obj);
+      destruct(this_object());
+    }
+  }
+
+if(query_attack())
+if(TO->query_attack() && (query_attack() == master ||
+    !TO->query_attack()->query_npc())) {
+  TO->stop_fight();
+  TO->stop_fight();
+  TO->stop_hunter(); }
+
+  time_counter++;
+
+  follow();
+
+  if(master && wolf_protecting) {
+    if(master->query_attack() && master->query_attack()->query_npc())
+      attack_object(master->query_attack()); }
+
+
+}
+  ::heart_beat();
+}
+
+query_save_flag() { return 1; }
+
+am_i_a_servant() { return 1; }
+am_i_a_wolf() { return 1; }
+
+short() {
+  if(!this_player()) return "A dangerous looking wolf";
+if(TPRN == master_name)
+  if(wolf_name)
+      return capitalize(master_name)+"'s "+BOLD+"wolf"+NORM+" named '"+
+             capitalize(wolf_name)+"'";
+  else
+      return capitalize(master_name)+"'s "+BOLD+"wolf"+NORM;
+  else
+    return "A dangerous looking wolf";
+}
+
+long() {
+if(!this_player()) { write(short()+"\n"); return 1; }
+if(TPRN == master_name)
+  write(short()+".\n"+
+     "Type '"+wolf_name+" help' to see how to talk to him.\n");
+else
+  write(short()+".\n");
+  str2 = "wolf";
+  if(wolf_name)
+    str2 = capitalize(master_name)+"'s "+BOLD+"wolf"+NORM+" named '"+
+             wolf_name+"'";
+  else
+    str2 = capitalize(master_name)+"'s wolf";
+  return 1;
+}
+
+set_master(str) {
+  master_name = str;
+  master = find_player(master_name);
+  return 1;
+}
+
+set_name(str) {
+  wolf_name = str;
+  name = lower_case(str);
+  cap_name = capitalize(str);
+  return 1;
+}
+
+/* tell wolf to come to me */
+summon_wolf() {
+  tell_room(environment(this_object()),
+           "The "+BOLD+"wolf's"+NORM+" ears stand up for a second.  He scrambles to his feet\n"+
+           "and lopes away.\n");
+  wait_here = 0;
+  follow();
+  return 1;
+}
+
+
+id(str) { return str=="wolf" ||
+                 str=="guild_monster" ||
+                 str=="guild_pet" ||
+                 str==master_name+"wolf" ||
+                 str==master_name+"_wolf" ||
+                 str=="guild_monster" ||
+                 str==wolf_name; }
+
+is_pet() { return 1; }

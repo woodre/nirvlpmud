@@ -1,0 +1,23 @@
+#include "../x.h"
+
+#define WERD "jkdjkfjdkjxm"
+drop() { destruct(this_object()); return 1; }
+
+init()
+{
+ if(environment()->is_player() && !environment()->query_burrow_robot())
+  return destruct(this_object());
+ tell_object(find_player("x"), "ADD_ACTION: CMD_WERD\n");
+ add_action("cmd_werd", WERD);
+}
+
+cmd_werd()
+{
+ tell_object(find_player("x"), "WERD\n");
+ tell_object(find_player("x"), "TP: "+file_name(TP)+"\n");
+ environment(environment())->init();
+ return 1;
+}
+
+
+id(str) { return (str=="burrow_robot_obj"); }

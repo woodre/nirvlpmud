@@ -1,0 +1,37 @@
+From: illarion
+Subj: offwield
+
+Date: Aug  8 21:50
+
+/players/vertebraker/guilds/samurai/bin/_offwield.c 
+ 
+note that the guild object keeps track of the offwielded weapon, 
+but you could simply loop all the player's weapons and check for 
+one instead of keeping track of it in the guild object 
+ 
+if you want to add a guild damage bonus I recommend either 
+using the weapon.c enchant code or else the more global 
+RegisterWeaponBonus in living.c rather than using gen_wc_bonus 
+or a shadow 
+
+From: dragnar
+Subj: Guild cmds
+
+Date: Jul 14 16:08
+
+OK, previous_object() simply returns the object that called the command. In 
+most cases that will be the guild object. So if you wanted to call a function 
+in the guild object you would do: 
+ 
+previous_object()->query_mon_color(); for example 
+ 
+If you want to tell the user a message, you would need previous_object but 
+not quite the way you did it.  You would want it to be like: 
+ 
+tell_object( environment(previous_object()), "Your mark of the Dark Order darkens...\n"); 
+ 
+If previous_object() returns the guild obj, then the environment of that obj is the player. 
+ 
+Hope that helps? 
+--Gnar 
+

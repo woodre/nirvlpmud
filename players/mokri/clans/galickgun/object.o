@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "Galick Gun[0m"
+long_desc "Galick Gun is Vegeta's original signature energy blast.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "gun"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "Galick Gun is Vegeta's original signature energy blast.[0mType 'clan_help' for commands."
+clan_short "Galick Gun[0m"
+damage_type 0
+hall_path "/players/trix/castle/primo/entrance1"
+object_name "gun"
+owner "vegeta"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 658114
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

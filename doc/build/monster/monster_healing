@@ -1,0 +1,22 @@
+
+       monster healing 
+                       --added 10-31-91 Boltar
+
+set monster healing with the following
+
+         call_other(monsterob, "set_heal", healrate, healinv);
+
+     healrate is the number of hit pts healed per call.
+     healinv is the aprox. number of seconds between calls
+
+example: call_other(thing, "set_heal", 2,25);
+
+   monster thing will heal 2 hp about every 25 seconds.
+   for comparison, at present players heal 1 hp + bonuses for intox, etc
+    about every 15 seconds.
+
+if you dont want your monster to heal use a healrate of 0 and a 
+  healinv thats faily high, (say 100) so that the autoheal isnt called
+too much to add 0 to the hit_point
+
+default is healrate of 1 healinv of 40

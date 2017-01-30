@@ -1,0 +1,25 @@
+
+/* this is the name of the spell used in heartbeat function anyspellname(){ */
+   demon(){
+      
+      string ATT_NAME;
+      
+      /* If the Npc is fighting, take the name of the person they are fighting
+      and make it ATT_NAME */
+      
+      if(attacker_ob && present(attacker_ob)) { ATT_NAME = attacker_ob->query_name();
+         
+         /* Give the room this message, but do not tell it to the person woh
+         is being attacked. */
+         
+         tell_room(environment(), BLK+BOLD+" A HOWLING BLACK DEMON appears and attacks "+ATT_NAME+" and then disappears...\n"+NORM, ({ attacker_ob }));
+         
+         /* Give the person being hit, this message.  Noone else can see it */
+            
+         tell_object(attacker_ob, BLK+BOLD+" A HOWLING BLACK DEMON appears and attacks you and then disappears...\n"+NORM);
+         
+         /* Hit the player with this amount of damage */
+         
+         attacker_ob->hit_player(16+random(16));
+         }
+   }

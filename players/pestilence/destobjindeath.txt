@@ -1,0 +1,9 @@
+monster_died() {
+  if(blade2) destruct(blade2);
+  if(blade3) destruct(blade3);
+  tell_room(environment(this_object()),
+  "\n"+HIK+"Deathmaster Snikch"+NORM+" gurgles and coughs up dark "+RED+"blood"+NORM+" staggers then collaspes dead!\n");
+    return 0; 
+}
+
+found in /players/khrell/monster/skaven/snikch.c

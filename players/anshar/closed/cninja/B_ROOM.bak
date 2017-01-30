@@ -1,0 +1,27 @@
+
+inherit "room/room";
+
+reset(arg) {
+  if (arg) return 0;
+
+  set_light(1);
+  short_desc=("Battle Room");
+  long_desc="    A large room whose slick metal walls are scored and singed\n"+
+            "excessively. Some residual energy is charging the air from the\n"+
+            "many forces that have been displayed here. To either side some\n"+
+            "sort of panel of unknown function stands closed. The only exit\n"+
+            "is a lift upwards. Standing in the center of the room is a form\n"+
+            "of somewhat odd proportions\n";
+  items=({
+    "walls",  "A flat slick metal is scarred and pitted from some amazing power",
+    "lift",   "The exit to the rest of the guild hall",
+  });
+  dest_dir=({
+    "/players/snow/closed/cyber/rooms/hallway1.c", "up",
+  });
+if(!present("automaton"))
+{
+move_object(clone_object("/players/anshar/closed/cninja/auto"),this_object());
+}
+
+}

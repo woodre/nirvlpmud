@@ -1,0 +1,15 @@
+#include <ansi.h> /* 2007-10-29 converted to std ansi.h -vital */
+
+id(str) { return str == "sign" || str == "notice" || 
+          str == "message"; }
+
+short() { return HIY+"A SIGN with an important MESSAGE"+NORM; }
+
+long() { write("The heals in the machine have changed!\n"+
+               "They only contain half the charges as before.\n"+
+               "They conform now to the new heal rules.\n"+
+               "Don't complain, won't help. At least I warned you.\n"); 
+        }
+        
+get() { return 0; }  /* This makes it so that people can not pick it up*/
+

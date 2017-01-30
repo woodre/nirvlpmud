@@ -1,0 +1,13 @@
+inherit "room/room";
+#include <esc.h>
+reset(arg) {
+	if(arg) return;
+set_light(1);
+long_desc=
+items=
+({
+});
+dest_dir=
+({
+});
+}

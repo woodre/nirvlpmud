@@ -1,0 +1,28 @@
+This is a brief description of the items cloned off the npc.
+
+brain.c :  a trasure item, when 'consumed' will add 1+random(3)
+              to a players mag stat for 200hb. (about 10mins)
+
+heart.c : a trasure item, when 'consumed' will add 1+random(3)
+              to a players sta stat for 200hb. (about 10mins)
+
+lfoot.c : a trasure item, when 'consumed' will add 1+random(2)
+              to a players ste stat for 200hb. (about 10mins)
+
+rfoot.c : a trasure item, when 'consumed' will add 1+random(2)
+              to a players ste stat for 200hb. (about 10mins)
+
+lhand.c : a trasure item, when 'consumed' will add 1
+              to a players str stat for 100hb. (about 5mins)
+
+Each stat stays on the player through reboot, crash, quit, ect
+for the duration of the time period.
+You can only consume the item 1 time per type, until the
+duration wears off. (1 brain, 1 heart / not 1 heart, 1 heart)
+[this will reduce players from holding onto multiple items to use
+at once]
+
+tenticle.c: a trasure item that can be traded in Forbin's area
+                  value1 = (1000+random(300));
+                  value2 = (850+random(650));
+(dependant on the trader they use)

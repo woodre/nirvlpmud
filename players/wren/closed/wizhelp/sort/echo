@@ -1,0 +1,28 @@
+**************
+
+                     Echo
+
+Syntax:    echo <msg>
+
+Desc:
+	   This ability is primarily for entertainment. Function like
+	   an emote but doesn't attach the name of the user allowing 
+ 	   thematic messages or special effects. It displays to 
+           current environment of user. Available at lvl 40.
+
+Warnings:  Tempting to use to harass players. Can be amusing
+	   to have player appear to be doing any action that
+           comes to mind. Not good for happy players and goes
+           against rules of minimum wiz/player interaction to 
+           use overmuch.
+
+Example:   echo A gust of wind swirls through the room.
+                  displays
+	   "A gust of wind swirls through the room."
+                  to anyone in the same room.
+           
+Related:
+	   echoto,echoall,echochan
+
+
+************

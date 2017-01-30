@@ -1,0 +1,42 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+QRangerInfo(){ return 1; }
+RangerInfo(str){
+   if(str){ return 1; }
+ 
+   write(""+
+   "Retrain allows you to remove a skill point from one of your\n"+
+   "current skills so you may use it somewhere else.\n"+
+   "Retrain cost 80000 coins per skill point.\n"+
+
+   
+   "");
+   return 1;
+}
+
+
+
+RangerPower(str){
+   if(!str){
+      write("What skill do you want to Re-Train?\n");
+      return 1;
+   }
+   if(this_player()->query_money() < 80000) {
+        write("You don't have enough gold coins!\n");
+        return 1;
+   }
+   if(PO->ReTrainRanger(str)){
+      this_player()->add_money(-80000);
+      write("Re-Training Succeeded.  You may now use your Skill Point how you wish.\n");
+      return 1;
+   }
+   else {
+      write("Re-Training Failed for some reason.\n");
+      return 1;
+   }
+   return 0;
+
+}
+
+

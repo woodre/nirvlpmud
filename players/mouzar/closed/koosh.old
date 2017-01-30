@@ -1,0 +1,57 @@
+#include "/obj/ansi.h"
+#define cap_name capitalize(this_player()->query_name())
+id(str) {return str == "koosh" || str == "kooshball";  }
+short() {return HIR+"Kooshball"+NORM;}
+long() {write("This is a koosh ball. It is made of thousands\n"+
+              "of little rubbery tenticles.  Feels kinda wierd huh?\n"+
+              "Try to juggle it!  Type 'koosh <player>' to toss it to\n"+
+              "someone.\n"); return 1; }
+get() {return 1;}
+init() {
+ add_action("juggle_ball"); add_verb("juggle");
+ add_action("toss_koosh"); add_verb("koosh");
+}
+juggle_ball(str) {
+   if ((!str) || !id(str)) {
+       return 0;
+       }
+   write("You skillfuly juggle the kooshball!\n");
+     say(cap_name+" deftly juggles a koosh like a pro!(only one???)\n");
+     return 1;
+         }
+toss_koosh(str) {
+        object who;
+        object it;
+        if (!str) {
+          write("You must specify someone to koosh!\n");
+          return 1;
+        }
+        it = lower_case(str);
+        who = find_living(it);
+     if(!who || !living(who) || who == this_player() || who->is_invis() > 0) {
+           write("Who you want to Koosh?!?!?!\n");
+           return 1;
+        }
+       if(who->in_edit()) {
+          write("Try again later when this Wiz isn't editing.\n");
+          return 1;
+       }
+       if(who->query_level()<20 || who->query_real_name() == "mouzar" ||
+       who->query_real_name() == "brittany" || who->query_real_name() == "mizan" ||
+       who->query_real_name() == "nikki" || who->query_real_name() == "arrina" ||
+       who->query_real_name() == "wocket" || who->query_real_name() == "quicksilver" ||
+       who->query_real_name() == "puppy") {
+          tell_object(who, cap_name + " tosses a koosh at you!!\n");
+          say(cap_name +" tosses a koosh at "+capitalize(who->query_name())+"\n");
+          if(this_player()->query_real_name() == "mouzar")
+            tell_object(who,"You have been kooshed by the Master!\n");
+          write("You koosh " + capitalize(str) +"!\n");
+          move_object(this_object(), who);
+          say(capitalize(who->query_name()) +" has just been kooshed!\n");
+          return 1;
+        } else {
+          write("You toss the koosh but it comes right and smacks you\n"+
+                "in the face!  YOU CAN'T KOOSH WIZARDS!! Grumpy ones anyway."+
+                "*grin*\n");
+        return 1;}
+}

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/jamila/beach/mobs/claw","/players/wren/Area/starbug/items/arrogance","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/mythos/aarmor/shell","/players/pathfinder/detroit/weapons/machete","/obj/weapon","/players/snow/shadows/stuff/crown","/players/mythos/aarmor/do","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/arrina/treas/horseshoe","/players/sado/shop/oreo","/players/wren/Area/starbug/items/gauntlet","/players/arrina/armor/torque","/players/ultramagnus/darkweapon","/players/pain/closed/weapons/widow","/players/scathe/armor/bowarmor","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/wren/Area/starbug/items/sequinjacket","/obj/weapon","/obj/weapon","/players/saber/armor/hardsuit1","/obj/armor","/players/saber/armor/lboots","/obj/bag","/players/wren/Area/starbug/items/mirror",})
+shorts ({"A Lobster Claw","Rimmers arrogance.","A Prince's Robes","Tortoise Shell","A deadly looking machete","Decorated Broadsword","[1mShadowCrown[0m","Do-Maru","A Priest's Robes","A Silver Horseshoe","A box of oreo cookies","Time gauntlet","Silver Torque","Dark Rider Broadsword","the Widowmaker, the sword of the Berserker","Light Leather Armor","A nobleman's shortsword","Cat's red sequin jacket","a sword","Golden hoof","A light blue Hardsuit","A large leaf","Leather boots","bag","a slim pocket mirror",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

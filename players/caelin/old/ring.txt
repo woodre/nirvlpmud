@@ -1,0 +1,368 @@
+/*  approved by Mythos - 8-12-1999 */
+#include "/players/wocket/closed/ansi.h"
+inherit "/obj/armor.c";
+#define tp this_player()
+#define tpn this_player()->query_name()
+
+object love;
+int ringshort;
+string entermsg;
+string exitmsg;
+string spouse;
+string *history;
+string CHOICES;
+id(str){ return str == "ring" || str == "sigil" || str == "wedding ring"; }
+
+reset(arg){
+
+   if(arg) return;
+  ::reset();
+   set_type("ring");
+More: (lines 1-20) [? for help]
+   set_name("wedding ring");
+   set_ac(0);    
+   entermsg = "Your love is here.";
+   exitmsg = "Your love leaves you.";
+   spouse = "noone";
+   ringshort = 1;
+   CHOICES = ({ 
+         "A wedding ring", 
+         "A "+RED+"roseate"+OFF+" wedding ring",
+         HIC+">"+HIY+"() "+OFF+"A wedding ring",
+         "A "+HIY+"gold"+OFF+" wedding band",
+         "A "+BOLD+BLK+"spiked"+OFF+" wedding band of "+HIR+"chaos"+OFF,
+        "A "+BOLD+"silver"+OFF+" celtic woven band",
+        "A "+BOLD+BLK+"solid"+OFF+" ring of "+BOLD+BLK+"hematite"+OFF,
+    });
+   history = ({});
+}
+
+short(){
+   string temp;
+More: (lines 21-40) [? for help]
+  temp = CHOICES[ringshort]+" ("+capitalize(spouse)+")";
+   if(worn)
+      return temp + " (worn)";
+   return temp;
+}
+
+long(){ 
+  if(ringshort==5){
+  write("An entricately woven celtic ring shimmers in the light.  The silver strands flow\n"+
+    "into each other forming an unending knot.  A smile forms upon your face as the\n"+
+   "criss-crossing bands glance off sparkles of light from the sun.  You proudly\n"+
+  "adorn your symbol of unwavering love for "+capitalize(spouse)+".\n"+
+   "                              <"+BOLD+"ring_help"+OFF+"> for cmds\n"+OFF);
+}
+else{
+   write("This gold ring glimmers in the light, giving off a roseate glow.\n"+
+      "Color flickers off it, bringing a smile to your face, knowing\n"+
+      "this is a symbol of "+HIR+capitalize(spouse)+OFF+"'s unwavering love for you.\n"+
+      "                               <ring_help> for cmds\n"+NORM);
+}
+More: (lines 41-60) [? for help]
+}
+
+get(){return 0;}
+drop(){return 1;}
+clean_up(){ return 1; }
+query_auto_load(){ return "/players/wocket/wedding/ring.c:"+exitmsg+"#"+entermsg+"#"+spouse+"#"+ringshort; }
+
+init_arg(str){
+   string exit,enter,so;
+   int i;
+   sscanf(str,"%s#%s#%s#%d",exit,enter,so,i);
+   entermsg = enter;
+   exitmsg = exit;
+   spouse = so;
+   ringshort = i;
+}
+
+init(){ 
+   ::init();
+   if(!environment()) return;
+More: (lines 61-80) [? for help]Stardream fetches something from another dimension.
+
+   if(this_player()->is_player()){
+      love = find_player(spouse);   
+      add_action("chantalk","ring");
+      add_action("set_entermsg","set_entermsg");
+      add_action("set_exitmsg","set_exitmsg");    
+      add_action("ring_help","ring_help");
+      add_action("restore_ring","restore");
+      add_action("throw_ring","throw");
+      add_action("set_ring","set_ring");
+      command("wear ring",this_player());
+      if(love){
+         if(present("wedding ring",love) && (present("wedding ring",love)->query_spouse() != tp->query_real_name())){
+            write("You love has married another.\n");
+            write("You must move on.\n");
+            command("throw ring",this_player());
+            return 0;
+         }
+         else {
+            write(HIR+"@"+OFF+GRN+"}-,-`---  "+NORM+capitalize(spouse)+" is here.\n");
+            tell_object(love,HIR+"@"+OFF+GRN+"}-,-`---  "+NORM+entermsg+"\n");
+More: (lines 81-100) [? for help]
+         }
+      }
+      else{
+         write(BOLD+"@"+NORM+GRN+"}-,-`---  "+NORM+capitalize(spouse)+" is not here.\n");
+      }
+   }
+}
+
+ring_help(){
+   write(HIR+"Ring Help:\n"+OFF+
+      "\tring                       channel\n"+
+      "\tring :                     chan emote\n"+
+      "\tring @                     chan echo\n"+
+      "\tring history               chan history\n"+
+      "\tset_entermsg               set entermsg\n"+
+      "\tset_exitmsg                set exitmsg\n"+
+      "\tset_ring                   sets your ring short\n"+
+      "\trestore ring               restores your spouse's ring.\n"+
+      "\tthrow ring                 divorces you\n"+NORM);
+   return 1;
+More: (lines 101-120) [? for help]
+}
+
+
+
+chantalk(string str){
+   int i;
+   string msg;
+   string finalmsg;
+   string bring;
+   object otherring;
+   love = find_player(spouse);
+   bring = RED+"@"+GRN+"},- "+NORM;
+   
+   if(!str){
+      notify_fail("What would you like to say to your love?\n");
+      return 0;
+   }
+   
+   if(str == "history"){
+      view_history();
+More: (lines 121-140) [? for help]
+      return 1;
+   }
+   if(str == "help"){
+      ring_help();
+      return 1;
+   }
+   if(love){
+      otherring = present("wedding ring",love);
+      i = strlen(str)-1;   
+      
+      msg = "says";   
+      if(str[i] == '?'){
+         msg = "asks";
+      }
+      if(str[i] == '!'){
+         msg = "exclaims";
+      }
+      finalmsg = bring+BOLD+tpn+OFF+" "+msg+", \""+str+"\"\n";
+      if(str[0] == ':'){
+         str = str[1..i];
+More: (lines 141-160) [? for help]
+         finalmsg = bring+BOLD+tpn+OFF+" "+str+"\n";
+      } 
+      if(str[0] == '@'){
+         str = str[1..i];
+         finalmsg = bring+str+"\n";
+      }
+      tell_object(love,finalmsg);
+      write(finalmsg);
+      add_history(finalmsg);
+      if(otherring) otherring->add_history(finalmsg);
+      return 1;
+   }
+   notify_fail("You love is not here right now.\n");
+   return 0;
+}
+
+add_history(str){
+   str = color_strip(str);
+   history += str;
+   if(sizeof(history) > 21){
+More: (lines 161-180) [? for help]
+      history -= history[0];
+   }
+}
+
+
+view_history(str){
+   int i,a;
+   write(HIR+"Ring History:\n"+OFF);
+   for(i=0,a=sizeof(history);i<a;i++){
+      write(HIR+"\t "+OFF);
+      write(history[i]);
+   }
+   return 1;
+}
+
+color_strip(str){
+   string newstr;
+   newstr = implode(explode(str,RED),"");
+   newstr = implode(explode(newstr,GRN),"");
+   newstr = implode(explode(newstr,BOLD),"");
+More: (lines 181-200) [? for help]
+   return newstr;
+}
+
+restore_ring(str){
+   object r;
+   if(!str){
+      notify_fail("What would you like to restore?\n");
+      return 0;
+   }
+   if(!find_player(spouse)){
+      notify_fail("Your spouse is not on to restore your vows to.\n");
+      return 0;
+   }
+   love = find_player(spouse);
+   if(present("wedding ring",love)){
+      if(present("wedding ring",love) && (present("wedding ring",love)->query_spouse() != tp->query_real_name())){
+         write("You love has married another.\n");
+         write("You must move on.\n");
+         write("You throw your ring high into the air never to be seen again.\n");
+         say(this_player()->query_name()+" throws "+this_player()->query_possessive()+" wedding ring into the air.\n");
+More: (lines 201-220) [? for help]
+         destruct(this_object());
+         return 1;
+      }
+      write("You spouse already has their ring.\n");
+      return 1;
+   }
+   r = clone_object("/players/wocket/wedding/ring.c");
+   r->set_spouse(this_player()->query_real_name());
+   move_object(r,love);
+   write("You have renewed your vows.\n");
+   write("Restoring spouse's ring...\n");
+   tell_object(love,"Your loved one has renewed the vows.\nRestoring ring...\n");
+   return 1;
+}
+
+throw_ring(str){
+   object so;
+   if(str != "ring"){
+      notify_fail("What would you like to throw?\n");
+      return 0;
+More: (lines 221-240) [? for help]
+   }
+   so = find_player(spouse);
+   write("You throw your wedding ring high into the air, never\nto be seen again.\n");
+   say(this_player()->query_name()+" throws "+this_player()->query_possessive()+" wedding ring high into the air, never\nto be seen again.\n");
+   if(so && present("wedding ring",so) && (present("wedding ring",so)->query_spouse() == this_player()->query_real_name())){
+      tell_object(so,"You see your spouse throw "+this_player()->query_possessive()+" wedding ring ");
+      if(environment(tp) != environment(so)) tell_object(so,"off in the distance ");
+      tell_object(so,"\nso you take off yours and stomp it into the ground, never\nto be seen again.\n");
+      so->remote_say(so->query_name()+" stomps "+so->query_possessive()+" wedding ring into the ground.\n");
+      destruct(present("wedding ring",so));
+   }
+   destruct(this_object());
+   return 1;
+}
+
+set_spouse(str){ spouse = str; }
+query_spouse(str){ return spouse; }
+set_ringshort(int i){ ringshort = i; }
+
+set_entermsg(str){ 
+More: (lines 241-260) [? for help]
+   if(!str){
+      write(HIR+"Current enter msg is: "+OFF+entermsg+"\n");
+      write("Usage: set_entermsg <msg>\n");
+      return 1;
+   }
+   entermsg = str; 
+   write(HIR+"Current enter msg is: "+OFF+entermsg+"\n");
+   write(HIR+"Enter msg saved...\n"+NORM);
+   return 1;
+}
+
+set_exitmsg(str){ 
+   if(!str){
+      write(HIR+"Current exit msg is: "+OFF+exitmsg+"\n");
+      write("Usage: set_exitmsg <msg>\n");
+      return 1;
+   }
+   exitmsg = str;
+   write(HIR+"Current exit msg is: "+OFF+exitmsg+"\n");
+   write(HIR+"Exit msg saved...\n"+NORM);
+More: (lines 261-280) [? for help]
+   return 1;
+}
+
+set_ring(str){
+   int i,a;
+   int choice;
+   love = find_player(spouse);
+   if(!love || (environment(love) != environment(this_player()))){
+      notify_fail("Your spouse needs to be present to switch your rings.\n");
+      return 0;
+   }
+   if(!present("wedding ring",love)){
+      notify_fail("Your love does not have a ring to switch.\n");
+      return 0;
+   }
+   if(present("wedding ring",love)->query_spouse() != this_player()->query_real_name()){
+      write("Your love is no longer married to you.\n"+
+         "You must move on.\n");
+      command("throw ring",this_player());
+      return 1;
+More: (lines 281-300) [? for help]
+   } 
+   if(!str){
+      write("Your choices are:\n\n");
+      for(i=0,a=sizeof(CHOICES);i<a;i++){
+         write("  ["+(i+1)+"] "+CHOICES[i]+"\n");
+      }  
+      write("\n");
+      return 1;
+   }
+   sscanf(str,"%d",choice);
+   if(!choice || (choice < 1) || (choice > sizeof(CHOICES)) ){
+      write("That is not a valid choice.\n");
+      set_ring();
+      return 1;
+   }
+   ringshort = choice - 1;
+   present("wedding ring",love)->set_ringshort(ringshort);
+   write(HIR+"\nYou and your spouse exchange rings.\n");
+   write("You wedding ring short is now:\n"+OFF+this_object()->short()+"\n\n");
+   tell_object(love,HIR+"\nYou and your spouse exchange rings.\n");
+More: (lines 301-320) [? for help]
+   tell_object(love,"Your wedding ring short is now:\n"+OFF+present("wedding ring",love)->short()+"\n\n");
+   return 1;
+}
+
+
+
+remove_object(prev){
+   tell_object(love,BOLD+"@"+OFF+GRN+"}-,-`---  "+OFF+exitmsg+"\n");
+}
+ringquit(){
+   tell_object(love,"(ring) "+exitmsg+"\n");
+   return 0;
+}
+
+do_special(owner){
+   int bonus;
+   if(random(20) == 1){
+      tell_object(owner,HIR+"Your love and devotion for your spouse protects you in battle.\n"+OFF);
+      bonus = 1;
+   }
+More: (lines 321-340) [? for help]
+   else bonus = 0;
+   return bonus;
+}
+More: (lines 341-360) [? for help]
+EOF
+->> Stonecold arrives.
+Stonecold leaves west.
+Stardream says, "brb" 
+Beano fades into view.
+Beano quibbles.

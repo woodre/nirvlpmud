@@ -1,0 +1,205 @@
+/*
+ * this is just a database of the different mage spells
+ */
+
+query_spell_list() {
+
+  string *spells;
+
+  spells = ({
+  "Faerie Fire",	"ffire", 	"conjuration",		"1",
+  "Werelite",		"werelite",	"conjuration",		"1",
+  "Chromatic Orb",	"orb",		"enchantment",		"1",
+  "Know Alignment",	"knowal",	"enchantment",		"1",
+  "Magic Missile",	"mssle",	"evocation",		"1",
+  "Wizard Mark",	"mark",		"evocation",		"1",
+  "Emote",		"emote",	"illusion",		"1",
+  "Chill Touch",	"ctouch",	"necromancy",		"1",
+  "Sacrifice",		"sac",		"necromancy",		"1",
+  "Unseen Servant",	"userv",	"conjuration",		"2",
+  "Wizard's Eye",	"wizeye",	"conjuration",		"2",
+  "Flame Sphere",	"flame",	"enchantment",		"2",
+  "Make Bag",		"mbag",		"enchantment",		"2",
+  "Color Spray",	"spray",	"evocation",		"2",
+  "Shield",		"eshield",	"evocation",		"2",
+  "Blind",		"blind",	"illusion",		"2",
+  "Cure Wounds",	"cure",		"necromancy",		"2",
+  "Acid Arrow",		"acid",		"conjuration",		"3",
+  "Khirstel",		"khirstel",	"conjuration",		"3",
+  "Alarm",		"alarm",	"enchantment",		"3",
+  "Empower",		"empower",	"evocation",		"3",
+  "Confuse",		"confuse",	"illusion",		"3",
+  "Soulcrush",		"crush",	"necromancy",		"3",
+  "Query",		"query",	"necromancy",		"3",
+  "Sigil",		"sigil",	"conjuration",		"4",
+  "Stone Dragon",	"dragon",	"conjuration",		"4",
+  "Create Food",	"food",		"enchantment",		"4",
+  "Detoxification",	"detox",	"evocation",		"4",
+  "Reveal",		"reveal",	"evocation",		"4",
+  "Shadow Dagger",	"sdagger",	"illusion",		"4",
+  "Lifesteal",		"steal",	"necromancy",		"4",
+  "Fireball",		"fball",	"conjuration",		"5",
+  "Strangle",		"strangle",	"enchantment",		"5",
+  "Bind",		"bind",		"enchantment",		"5",
+  "Absorbtion",		"absorb",	"evocation",		"5",
+  "Pacify",		"pacify",	"illusion",		"5",
+  "Animate Dead",	"andead",	"necromancy",		"5",
+  "Rift",		"rift",		"conjuration",		"6",
+  "Stone Skin",		"stoneskin",	"enchantment",		"6",
+  "Blister",		"blister",	"evocation",		"6",
+  "Resurrect",		"resurrect",	"necromancy",		"6",
+  "Teleport",		"tlp",		"conjuration",		"7",
+  "Enchant Weapon",	"enchant",	"enchantment",		"7",
+  "Vorpal Heal",	"vheal",	"evocation",		"7",
+  "Mirror Image",	"mimage",	"illusion",		"7",
+  "Curse",		"curse",	"necromancy",		"7",
+  });
+
+  return spells;
+}
+
+query_mage_commands() {
+
+  string *commands;
+
+  commands = ({
+  "msc",	"0",    /* basic commands */
+  "mhelp",	"0",
+  "spells",	"0",
+  "commands",	"0",
+  "gt/ge",	"0",
+  "gc",		"0",
+  "gw/mw",	"0",
+  "renew",	"0",
+  "fixme",	"0",
+  "calcxp",	"0",
+  "gtitle",	"0",
+  "afk",	"0",
+  "dlead",	"0",
+  "tow",	"0",
+  "front",	"0",
+  "mequip",	"0",
+  "lcmds",	"0",
+  "devote",	"1",
+  "affluence",	"1",
+  "study",      "4",
+  "wizhat",	"6",
+  "teach",	"11",    /* begin rank 2 */
+  "rescue",	"12",
+  "mtitle",	"15",
+  "gdiv",	"18",
+  "rdeposit",	"22",    /* begin rank 3 */
+  "meditate",	"26",
+  "magestaff",  "34",
+  "sponsor",    "69",    /* begin rank 5 */
+  });
+
+  return commands;
+}
+
+
+spell_list2(str) {
+  int i, num;
+  string *spells;
+  string match;
+
+  spells = query_spell_list();
+  print_header();
+
+  match = str;
+  num = 0;
+
+  /* just want to see a certain school of spells */
+  if(str == "conj"){ match = "conjuration";  num=2; }
+  else if(str == "ench"){ match = "enchantment";  num=2; }
+  else if(str == "evoc"){ match = "evocation";  num=2; }
+  else if(str == "illu"){ match = "illusion";  num=2; }
+  else if(str == "necr"){ match = "necromancy";  num=2; }
+
+  if(str == "conjuration" || str == "enchantment" || str == "evocation"
+     || str == "illusion" || str == "necromancy") {
+     match = str;
+     num = 2;
+  }
+
+  /* just a certain level */
+  if(match == "1" || match == "2" || match == "3" || match == "4" ||
+     match == "5" || match == "6" || match == "7"){  num = 3; }
+
+  /* now walk through the database */     
+  for(i=0; i<sizeof(spells)-3; i+=4) {
+    if((i > 1) && (match) && (spells[i+3] != spells[i-1]) && (num != 3)) write(
+      "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    if((spells[i+num] == match) || (match == "all")) {
+      if(KNOW(spells[i+1])) write(HIC);
+      write(" "+spells[i+3]+"\t");
+      write(bufstr(spells[i], 18)+"\t");
+      write(bufstr("["+spells[i+1]+"]", 10)+"\t");
+      write(spells[i+2]+"\n");
+      if(KNOW(spells[i+1])) write(NORM);
+    }
+    else if((!match) && (KNOW(spells[i+1]))) {
+      write(" "+spells[i+3]+"\t");
+      write(bufstr(spells[i], 18)+"\t");
+      write(bufstr("["+spells[i+1]+"]", 10)+"\t");
+      write(spells[i+2]+"\n");
+    } 
+  }
+  return 1;
+}
+
+
+bufstr(str, field) {
+  int i, x;
+  string buff;
+
+  buff = str;
+  x = 20 - strlen(buff);
+  for(i=0; i<x; i++){ buff = buff + " "; }
+  return buff;
+}
+
+print_header() {
+  write(
+  "Lvl:\tSpell Name:\t\tCommand:\tSchool:\n"+
+  "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+}
+
+
+mage_commands(str) {
+  string *coms;
+  int i, lvl;
+  int count;
+
+  coms = query_mage_commands();
+  count = 0;
+
+  if(str == "basic") write("\n"+
+  " Skill:			Skill:			Skill:\n"+
+  "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  else write("\n"+
+  " Skill:			Rank:\n"+
+  "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+ 
+  for(i=0; i<sizeof(coms); i+=2) {
+    if(coms[i+1] == "0" && str == "basic") {
+      write(" "+bufstr(coms[i], 8)+"\t");
+      count++;
+      if(count == 3) {
+        write("\n");
+        count = 0;
+      }
+    }
+    else if(coms[i+1] != "0" && str != "basic") {
+      sscanf(coms[i+1], "%d", lvl);
+      if(lvl <= tp->query_guild_rank())  {
+        write(" "+bufstr(coms[i], 10)+"\t");
+        write("  "+coms[i+1]+"\n");
+      }
+    }
+  }
+
+  write("\n");  
+  return 1;
+}
+

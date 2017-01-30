@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mistress/other/disk","/players/wren/Area/starbug/items/cowboyhat","/players/hippo/armour/boots","/players/pain/NEW/weap/mstar","/players/saber/stuff/trink","/players/wren/Area/starbug/items/hair","/players/ultramagnus/darkarmor","/players/mythos/aarmor/do","/players/ultramagnus/breastplate","/players/ultramagnus/apple","/players/wren/Area/starbug/items/bouquet","/players/scathe/armor/hood","/players/haji/quest/shrub","/players/angel/area/stargate/obj/P90","/players/wren/Area/starbug/items/thermos","/players/mythos/awep/dstaff","/players/puppy/s/eq/hammer","/players/scathe/weap/lbow","/players/puppy/s/eq/scepter","/players/emerson/obj/instructions","/players/blue/weapons/obsidian_sword","/obj/weapon","/players/hippo/armour/helmet","/players/wren/Area/starbug/items/comb","/players/maledicta/cont/rdragon/dragonscale",})
+shorts ({"A fragile disk","a tiny cowboy hat","anti-blood boots","Morningstar","A strange metal trinket","Perfect Hair","Gold","Do-Maru","A Black Breastplate with Red Decore","A Red Apple","a colorful bouquet of 'flowers'","Hood","A shrubbery","Machine gun","a thermos","Dream Staff","A hammer","Longbow of Force","A scepter ","A piece of paper","An Obsidian Sword","Rabbit foot","nutshell helmet","the cat's hair pick","[31ma dragonscale[2;37;0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

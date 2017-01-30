@@ -1,0 +1,32 @@
+Imp's Garden Heals [verte]
+--------------------
+
+mushroom [stuff]
+1 use 32 heal 13 tox
+13 / 32 = .4
+.4 = 8 per pt [heal3]
+8 * 32 = 256 gold pieces
+
+basket of mushrooms [stuff]
+5 use 32 heal 13 tox
+65 / 160 = .4
+.4 = 8 per pt [heal3]
+8 * 160 = 1280 gold pieces
+
+toadstool [stuff + intox]
+1 use 32 heal 10 tox
+10 / 32 = .31
+.31 = 11 per pt [heal3]
+11 * 32 = 352 gold pieces
+
+basket of toadstools [stuff + intox]
+5 use 32 heal 10 tox
+50 / 160 = .31
+.31 = 11 per pt [heal3]
+11 * 160 = 1760 gold pieces
+
+elixir of life [soak]
+5 use 35 heal 10 tox
+50 / 175 = .28
+.28 = 12 per pt [heal3]
+12 * 175 = 2100 gold pieces

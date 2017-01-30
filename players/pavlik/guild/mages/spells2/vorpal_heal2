@@ -1,0 +1,82 @@
+/*
+ * spell : Vorpal Heal   (evocation)
+ * level : 7
+ * effect: This spell heals the player up to 200 hit points immediately.
+ *         The amount healed + 10% is then deducted from the player using
+ *         heal_self on a call_out basis.  The heal_self continues to deduct
+ *         hit points and spell points until the amount (+10%) is reimbursed.
+ *         The call_out heals -3 points every 6 ticks each time the spell is
+ *         cast.  Casting the spell multiple times will increase the total
+ *         amount borrowed and the rate at which the heal_self deducts points.
+ * cost  : 40 sp + special
+ * spec  : read above.
+ * files :
+ */
+
+vorpal_heal2(str){
+  int amt, rate;
+
+  if(!KNOW("vheal2")) {
+    write("What?\n");
+    return 1;
+  }
+
+  /* Arguement specifies that only a status report be given */
+  if(str) {
+    amt = guild->query_vheal_amount();
+    rate = guild->query_vheal_rate();
+    if(!amt) {
+      write("You have no Vorpal healing spells in effect.\n");
+      return 1;
+    }
+    write("You have "+amt+" vorpal hit points.\n");
+    write("Your recovery rate is -"+rate+".\n");
+    return 1;
+  }
+
+  if(guild->query_next_heal() > time()) {
+    write("You can't cast this type of spell right now.\n");
+    return 1;
+  }
+
+  /* can't exceed 500 borrowed points */
+  if(guild->query_vheal_amount() > 500) {
+    write("You cannot cast this spell again right now.\n");
+    return 1;
+  }
+
+  /* this keeps a player from casting the spell TOO often */
+  if(guild->query_vheal_rate() >= 15) {
+    write("You cannot cast this spell again right now.\n");
+    return 1;
+  }
+
+  write("You cast a "+HIC+"Vorpal Heal"+NORM+" spell ...\n");
+  write("You put your hands together and bow your head in concentration.\n");
+  write("The air around you shimmers with the power of unseen magic.\n");
+  say(ME+" puts "+PO+" hands together and bows "+PO+" head in concentration.\n");
+  say("The air around you ripples with the power of unseen magic.\n");
+
+  if(spell_fail2(7, "necr", "pow")){
+    write("You "+HIR+"miscast"+NORM+" the spell!\n");
+    tell_room(env, "The air stops shimmering.\n");
+    write("You slump to the ground, exhausted.\n");
+    say(ME+" slumps to the ground, exhausted.\n");
+    tp->add_spell_point(-(tp->query_sp()/2));
+    return 1;
+  }
+
+  amt = tp->query_mhp() - tp->query_hp();
+  if(amt > 200) amt = 200;
+
+  say(ME+" flickers and seems to disappear for a moment.\n");
+  write("Your body turns translucent and seems to flicker in and out of reality\n");
+  write("The strange sensation stops and you feel remarkably better!\n");
+  write("You recover "+HIC+amt+" HPs"+NORM+" from the spell.\n");
+
+  tp->add_hit_point(amt);
+  tp->add_spell_point(-40);
+  guild->add_vheal_amount(amt + amt/10);
+  guild->add_vheal_rate(3);
+  return 1;
+}

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/weapon","/players/wren/Area/starbug/items/indianheaddress","/obj/weapon","/players/mythos/closed/guild/forest/misc/prop","/players/mythos/awep/claw","/players/scathe/armor/mgarb","/players/hippo/heals/grain","/players/arrina/armor/torque","/players/scathe/armor/igarb","/players/ultramagnus/wiz_cloak","/players/saber/stuff/mic","/players/snow/WEAPONS/glowknife","/players/snow/shadows/stuff/sgem","/players/pain/NEW/weap/mace2","/players/mythos/marmor/shirt","/players/wren/Area/starbug/items/groinal","/players/wren/Area/starbug/items/ogunit","/players/saber/armor/mini","/players/boltar/things/emoter","/players/saber/weapons/lgun","/obj/armor","/players/puppy/s/eq/crown","/players/mythos/awep/katana","/players/mythos/aarmor/shell","/obj/weapon",})
+shorts ({"Blaster","a tiny indian headdress","Longsword","Essence of Vraith- vine sap","claws","Black Monk Robes","[33mcrumbs of grain[0m","Silver Torque","Initiate's garb","An Old Grey Cloak","A microphone","A glowing knife","A dusky gem","A huge iron mace","Shirt","Kryten's groinal attachment","a case containing an OG unit.","A skin tight leather mini skirt","An emoter","A lazer gun","A shoddy [1mwhite[0m cloak","A golden crown","Katana","Tortoise Shell","Razor collar",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

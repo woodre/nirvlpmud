@@ -1,0 +1,14 @@
+guild_exp 306675
+beats 31718
+percent 50
+endurance 25
+max_endurance 25
+special_title 0
+weave 0
+endurance_monitor 1
+posendcol "[37m"
+negendcol "[1;31m"
+norm "[0;0m"
+old_exp 6169
+custom_monitor "$HR$HP: #hps#/#mhp#  $HB$SP:  #sps#/#msp#  $G$I: #intox# F: #stu#  S: #soa#  T: #inf# #ret#$HY$EXP: #nexp# Coins: #coins#  $R$WEP: #wep# SD: #sd# ENEMY: #ahp#"
+Skills ({"focus","beckon shadows","wither corpse","drain",})

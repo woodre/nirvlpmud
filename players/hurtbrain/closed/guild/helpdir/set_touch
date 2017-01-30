@@ -1,0 +1,8 @@
+Spell Name: set_touch
+Guild Lvl : 2nd
+Spell Cost: --
+Syntax    : set_touch <amount>
+Descript. : Allows you to customize the power of the attack spell Touch.
+            The maximum value of <amount> is your guild level * 5.
+	    Example: set_touch 15
+See Also  : Touch

@@ -1,0 +1,19 @@
+**************
+
+
+                     Player_Convert
+
+Syntax:    player_convert [name]
+
+Desc:
+           Removes entry of player 'name' from the database and updates with
+           current information
+
+Example:   group_convert mokri
+                  results
+           updates Mokri's entry in the 'players' database
+
+Related:   group_convert
+
+
+**************

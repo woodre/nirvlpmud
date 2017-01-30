@@ -1,0 +1,81 @@
+2005.08.20 13:24  ~zeus/museum/, museum/NPC, museum/OBJ [modified mob stats and eq stats in preparation of reopening museum]
+2005.08.20 13:24  log of above changes are in the header of each file ;)
+2005.08.22 21:48  comp'd Southstar gem of battle rites [mud crashed]
+2005.08.23 17:50  put back in Zeus' museum with updates [approved by Zeus]
+2005.08.23 18:29  ~forbin/ruins/OBJ/newscloak.c [type cloak from type misc]
+2005.08.23 18:30  ~forbin/realms/flame_forest/OBJ/juju.c [type necklace from amulet]
+2005.08.23 18:31  ~feldegast/equip/tsymbol.c [type chest from amulet]
+2005.08.23 18:33  make that type misc from amulet (see above)
+2005.08.28 18:19  made changes to museum mobs (again) [okay by Verte]
+2005.08.29 18:03  ~zeus/museum/OBJ/bug_ring.c [lowered rate of bugs, was based off old 20 attribute system]
+2005.08.29 22:10  placed Ventoux into mage beta [per Vertebraker]
+2005.09.03 16:10  fixed some mage guild typos
+2005.09.05 13:56  ~beren/Rooms/Olgyo/oroom16.c [fixed the reset() to work...properly this time]
+2005.09.05 13:58  ~beren/Rooms/Olgyo/oroom14.c [fixed the reset() to work...properly this time]
+2005.09.05 17:10  changed Krillgeta's race from "stupid saiyan" to "super saiyan" [says a wizard has been changing it]
+2005.09.05 19:43  helped Krillgeta with a bug dropping eq [Dervish shadow is screwy me thinks!]
+2005.09.07 17:41  ~/zeus/museum/OBJ/gun.c [fixed so charges store]
+2005.09.07 21:35  ~dusan/newbie/mexam.c [fixed some dumbass, motherfucking, misleading, and downright wrong questions/answers]
+2005.09.10 05:39  dested some Templar security guards cause they were in the plains...dumb guards
+2005.09.10 09:19  ~vertebraker/guilds/mages/spells2/stone_skin [made it so you cannot have multiple stone skin]
+2005.11.19 17:14  ~/feldegast/wep/starfire.c [cleaned up an attack message to show different for player and others]
+2005.11.20 06:42  ~feldegast/equip/tsymbol.c changed from amulet to symbol,nothing in descrip alludes to it being amulet
+2005.11.20 15:04  make that previous report from amulet to misc type
+2005.11.23 16:20  ~feldegast/equip/wgauntlets.c [changed type from ring to gloves]
+2005.11.24 10:21  ~fred/closed/bloodfist/power/bash.c [fixed a slight color bleed issue]
+2005.11.24 10:26  ~fred/closed/bloodfist/power/attack.c [fixed same issue as with above]
+2005.12.06 19:49  ~zeus/circle/obj/hb.h
+2005.12.06 19:49  ABOVE FILE: [fixed a color bleed issue on line 135 /* siphon */]
+2005.12.09 06:08  handed z ~/saber/weapons/lightning [didn't save over boot as itemtest listed it would]
+2005.12.09 20:38  ~zeus/circle/power/rage.h [put in an updated version of the spell, confered with Fred regarding it before changing]
+2006.02.26 13:21  fixed typo in ~realms/ruins/NPC/shadowmane.c
+2006.02.26 13:24  fixed typo in ~eurale/VAMPIRES/RMS/souvenir_shop.c
+2006.02.27 20:43  ~realms/ruins/NPC/guardian.c made evil...was supposed to 0
+2006.02.27 20:44  ~realms/ruins/OBJ/anhk.c [made misc, we need more misc armors]
+2006.02.28 18:19  ~jaraxle/3rd/alt/mobs/bugs.c changed ac from 100000 to 1 ac of 100000 on a 10 hp mob is LUDICRIS!  HOLLA!!
+2006.03.13 20:57  ~realms/ruins/OBJ/anhk.c [totally nerfed it...TOTALLY]
+2006.04.15 20:18  ~feldegast/equip/scarab.c changed from amulet to misc [there is no fitting reason from the description for it to be an amulet, and we need more miscellaneous pieces]
+2006.04.16 17:16  ~saber/weapons/stormstaff.c updated with dtypes,new 0 by Earwax
+2006.04.16 17:32  ~heroin/hunting_grounds/jack.c [fixed reported 0 spell message, made wear/wield items, added id syntaxes]
+2006.04.16 18:20  ~coldwind/desert/weapons/sword.c [added multiple ids, removed bug log entry]
+2006.04.16 18:25  ~dreamspeakr/mesa/mv16.c [added present check on mob cloning in room reset, remove bug log entry]
+2006.04.16 18:31  removed a bunch of bug log entries [obvious they were tied to a driver/lib/room obj bug that was fixed or fixed itself on reboot]
+2006.04.16 20:28  ~jaraxle/3rd/warrior/rooms/pyr_path4.c [fixed typo in search_me() function]
+2006.04.16 20:35  ~jaraxle/closed/phoenix/mons/lord.c [fixed typo in one of the add_special() attacks and in the long()]
+2006.04.16 20:39  ~khrell/weapons/skaven/fellblade.c [fixed typo, remove typo report]
+2006.04.16 20:39  [removed typo report on the other above items as well]
+2006.04.16 20:42  ~haji/town/forest4.c [added line breaks in short, removed typo log entry]
+2006.04.17 15:52  ~eurale/Keep/k54.c [fixed grammatical error, removed typo log entry]
+2006.04.23 08:49  killed ribbit (my pc), patched str and exp back [removed pk to test non-pk hypermode - symb beta]
+2006.04.28 18:46  jailed symbio / amiro for character sharing - says Fred approved.  I'll verify with fred
+2006.04.30 07:39  ~trix/castle/town/inhall4.c [fixed reported grammar in short(), removed typo log entry]
+2006.04.30 07:43  ~emerson/heal/pepsi.c [fixed typos in short(), and long(), removed typo log entry]
+2006.04.30 07:45  ~zeus/museum/lounge.c [fixed typo in long(), removed typo log entry]
+2006.04.30 07:50  ~mistress/path/beach [fixed typo in long(), removed typo log entry]
+2006.04.30 07:52  ~khrell/area/skaven/skavenlordharem.c [fixed typo in long(), removed typo log entry]
+2006.04.30 09:50  manually set Guillotine's symbiote name [it was still unnamed, obviously he forgot to set it]
+2006.05.02 06:57  added 'mp' and 'mon' cmds
+                   so play can view MP outside of score, and so that MP, Hypermode, Burnoff, Regen is listed when mon goes off
+2006.05.02 06:57  bah...above comment is for neo gob, used wrong log cmd
+2006.05.06 12:42  restored 628798 to Squint
+                   death to a guild spell at green, which shouldn't be castable there
+2006.05.06 17:26  ~wocket/necro/spells/summon.c
+                   prevented summon from working in main village (with a little help from my friends)
+2006.05.07 17:50  ~fred/forest/Obj/splooge.c
+                   fixed a typo of mouth: changed from moth to mouth
+2006.05.15 19:14  ~pestilence/amity/obj/pepsi.c
+                   approved heal, 50/50, 14 soak, 1800 coins
+2006.05.17 22:31  ~jareel/armor/chaos/crimson_cape.c
+                   added a tell_object(USER and blocked tell_room(environment(USER), from displaying to USER
+2006.05.20 15:11  ~jareel/armor/chaos/crimson_cape.c
+                   fixed my fix ;) I left the USER->query_name() in there instead of putting You
+2006.05.26 21:31  ~zeus/realm/OBJ/evil_aura.c
+                   fixed a stupid extra look
+2006.05.29 14:36  watched ugh bot while killing brutes in Snow's area, Fakir watched the same.
+2006.06.02 23:50  reimbursed Z 33000 coins for a bank withdraw screwup
+2006.06.17 23:06  ~jaraxle/3rd/alt/mobs/armageddon.c
+                   fixed a typo
+2006.06.30 09:12  put my livestrong dispenser back into the game until Tour de France is over.  It'll load at the morning reboot
+2006.07.04 08:25  ~realms/misc/livestrong.c [changed to type wristlet - clashed with new armor types - approved via Earwax]
+2006.07.04 08:26  ~realms/misc/livestrongd.c [updated to acknowledge changes to livestrong.c]
+2006.07.04 08:26  forbin

@@ -1,0 +1,22 @@
+**************
+
+
+                     Localcmd
+
+Syntax:    localcmd
+
+Desc:
+           This command lists all available commands on a wizard and 
+           in the immediate environment. This includes all add_action
+           on autoloads, guild objects, and player object.
+
+Warning:   Don't let the big list daunt you.
+
+Example:   localcmd
+                  results
+           All commands are displayed
+
+Related:   
+
+
+**************

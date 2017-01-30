@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/amisc/egg","/players/saber/stuff/mbag","/players/haji/quest/diary","/players/wren/Area/starbug/items/dreds","/players/mythos/awep/dstaff","/players/pain/closed/weapons/widow","/players/saber/weapons/hrev","/players/wren/Area/starbug/items/hair","/players/sado/shop/chocolate","/players/ultramagnus/darkweapon","/players/saber/armor/lpants","/players/sado/shop/oreo","/obj/armor","/players/mythos/aarmor/nodowa","/players/mythos/awep/claw","/players/wren/Area/starbug/items/bouquet","/players/saber/armor/lboots","/players/hippo/weapons/glue","/players/wren/Area/starbug/items/fish","/players/snow/heals/kw_meat","/players/wren/Area/starbug/items/cowboyhat","/players/mythos/closed/guild/forest/misc/pelt","/players/mythos/aarmor/mempo","/players/wren/Area/starbug/items/indianheaddress","/players/saber/stuff/mic",})
+shorts ({"A strange looking egg","A bag of holding","A diary","Lister's crusty deerstalker with dreds.","Dream Staff","the Widowmaker, the sword of the Berserker","A Colt .68 Heavy Revolver","Perfect Hair","A box of delicious Belgian chocolates","Dark Rider Longsword","Black leather pants","A box of oreo cookies","A large leaf","Nodowa","claws","a colorful bouquet of 'flowers'","Leather boots","a strong, 1 second glue","A box of trout ala crem","A hunk of whale meat","a tiny cowboy hat","A beautiful white pelt","Mempo","a tiny indian headdress","A microphone",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

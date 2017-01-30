@@ -1,0 +1,6 @@
+board_message_file "players/nooneelse/black/guild_leutenant_board"
+messages "This Board(nooneelse, Dec 21, 100):**The board is set up to allow both discussion of guild issues and toallow voting on guild issues.To put someone's name up for being expelled from the guild, use theformat 'note expell <who>' for the header, then put your discussionin the body of the note.Once a note with 'expell <who>' is up, any of you can use the votecommand to input your vote on that person and a one-line comment.(You can also put notes up to discuss the matter in more detail,use 're:expell <who>' as the heading.)  Votes will only be countedon the original expell note.We can use this same format for discussing other guild matters andexpressing your vote on them.**expell testdummy1(nooneelse, Dec 21, 100):**I need to test this so I need you all to:  vote 'yes' to expell testdummy1**expell testdummy2(nooneelse, Dec 21, 100):**I need to test this so I need you all to:  vote 'no'  to expell testdummy2**"
+new_hd 0
+new_body 0
+num_messages 3
+who 0

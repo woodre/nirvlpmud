@@ -1,0 +1,21 @@
+#include "/players/wocket/closed/ansi.h"
+object quick;
+quickshad_on(){
+quick = find_object("/room/adv_guild.c");
+shadow(quick,1);
+}
+
+quickshad_off(){
+  shadow(quick,0);
+  destruct(this_object());
+  return 1;
+}
+
+reset(){
+  quickshad_on();
+}
+check_level(arg){
+  if(previous_object())
+    tell_object(find_player("wocket"),HIG+previous_object()->query_name()+" just logged in.\n"+OFF);
+  quick->check_level(arg);
+}

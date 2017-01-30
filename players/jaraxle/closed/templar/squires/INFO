@@ -1,0 +1,75 @@
+
+Templar Squires!
+
+  Templar squires will replace the free "pet" squires
+offered to all Templar (for like 3sp) that really have
+no function what so ever.
+
+
+  Templar Squires are available to any Templar.  They 
+work as follows:
+  There are 5 squires available per reboot.  Only 5 
+squires total can be used at one time.  If a squire
+dies during a reboot it will lose all stats for the
+entire reboot.  A new squire will not be available 
+until the game reboots.  When the game reboots the new
+squire will start out with new stats.  (The old Squire
+therefor has a "real" death.)
+  
+  Each time someone hires a squire it will cost 10k
+in coins.
+ 
+  Each squire can wield a weapon and wear armor.  They
+can also hold up to 50k in coins from the Templar.  
+ 
+ The squire begins with a base hp of 50.  An exp value
+of 0.  Each round of combat (not against another Templar)
+the squire gains a random amount of expierence.  The
+Squire will gain levels (up to 10).  Each level gained
+will give the Squire more HP.  Up to level 5 the Squire
+does not receive "side attacks" from monsters.  After 
+level 5, they are considered "is_pet()" and will receive
+side attacks. The squires retain their expierence (but
+not items coins) when they are "dismissed" back to the
+Squire hall.  Next time the Squire is used, it will have
+the EXP and HP from the previous campain.
+ 
+ When a Squire reaches level 10 they gain expierence
+up to a "hidden" level 11.  Once the Squire reaches that
+level upon dismissal the squire will "leave" the Templar
+Squire and will be replaced by a new level 1 squire upon
+the next reboot.
+ 
+ Squires CANNOT initiate combat.  They will not attack 
+a player (PK or non PK) but at anytime can be attacked
+by a player.  All items and coins on the squire drop to
+the ground upon death.
+  
+ A squire will regain hp at a rate of random(3) each
+round outside of combat.
+
+
+
+feast_hall.c
+back_hall.c  
+              =  These rooms control the cost and manipulate the
+              =  ability of the Templar to control the Squire
+              =  (For some reason with the catch_tell the 
+              =   Squire ignores commands until it follows
+              =   the player somewhere (hence the back_hall.c)
+
+squire_daemon.o
+              =   Handles the Names and EXP of each Squire.
+
+squire_daemon.c
+              =   Handles grabbing of the squires names, setting
+              =   alias', shorts, and making sure only one
+             =   Squire per spot per reboot is available.
+
+squire.c
+              =   The carne of the Squire.  All commands and 
+              =   abilities are in this file. [Woot!] 
+INFO
+              =   The file you are reading now! [Cool!]
+
+

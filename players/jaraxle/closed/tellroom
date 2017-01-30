@@ -1,0 +1,3 @@
+in room1--= tell_us() { tell_room(this_object(), "You hear a creaking door from behind the wall somewhere.\n"); }
+
+in room 1--= "players/jay/fuck/bullshit/roomb"->tell_us();

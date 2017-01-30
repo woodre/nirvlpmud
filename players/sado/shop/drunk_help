@@ -1,0 +1,15 @@
+The drunken device was created to add some semblence of atmosphere to this
+god-forsaken mud.  What it does is to slur your speech on a variety of channels
+if you are intoxicated.  It autoloads, so once you have obtained one from the
+dispenser, you will not need another one.
+The device automatically patches the commands say, tell, and all of the standard
+channels, such as gossip, shout, etc.  However, it does not patch guild channels
+but it does have a method whereby you can easily add this patch yourself.  Theway to add your own guild patch is as follows:
+I have included a command in the drunken device which ought to be able to patch
+any other mud command, allowing you to slur the arguments to any other command
+that has been written.  This command is ddo.  Use it like this:
+If you have a guild command {gt}, then to automatically slur your speech on the
+guild channel, type "alias dgt ddo '{gt}'"
+do not type the "", but you need to type the ''.  Replace {gt} with your guild
+talk command.  From now on, typing "dgt <msg>" will send the slurred version of
+<msg> over the guild channel.

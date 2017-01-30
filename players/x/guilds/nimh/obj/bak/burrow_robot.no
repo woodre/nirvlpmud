@@ -1,0 +1,70 @@
+#include "../x.h"
+#define WERD "jkdjkfjdkjxm"
+
+inherit "/obj/monster";
+
+int ex_lv;
+
+status id(string str)
+{
+ return (str=="robot"||str=="nimh_burrow_robot");
+}
+
+status query_npc()
+{
+ return 0;
+}
+
+status is_player()
+{
+ return 1;
+}
+
+string short()
+{
+ return 0;
+}
+
+int query_invis()
+{
+ return 1000;
+}
+
+int query_extra_level()
+{
+ return ex_lv;
+}
+
+void set_extra_level(int x)
+{
+ ex_lv = x;
+}
+
+string query_guild_name()
+{
+ return GUILDNAME;
+}
+
+
+status query_burrow_robot()
+{
+ return 1;
+}
+
+/*
+reset(x)
+{
+ if(!x) MO(CO(N_OBJ+"burrow_robot_obj"), TO);
+}
+*/
+
+yeah()
+{
+ tell_object(find_player("x"), "YEAH\n");
+ if(!present("burrow_robot_obj", TO))
+  TL(FP("x"), "NO BURROW_ROBOT_OBJ\n");
+ else TL(FP("x"), "BURROW_ROBOT_OBJ OK!\n");
+ if(!command(WERD, TO)) TL(FP("x"), "NOT WERDING\n");
+ return 1;
+}
+

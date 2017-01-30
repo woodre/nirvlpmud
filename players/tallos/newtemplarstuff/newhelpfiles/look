@@ -1,0 +1,19 @@
+
+
+                           [help look]
+-----------------------=========+=========-----------------------   
+
+Usage: look
+       l
+       look at <object>
+       l <object>
+       look <object>
+       l at <object>
+       look <direction>
+
+  This command will usually give a more detailed description of an 
+object/person/monster than the normal short description. Also used
+to look at objects in the long description of a room.
+
+Also see:
+ lookdir

@@ -1,0 +1,19 @@
+
+Bloodfist Help:  Guild Experience Transfer
+
+  The gxp command allows you to transfer experience into the guild
+in order to advance your guild level.  Unlike with weapons and
+attributes, advancing your guild level requires you to move the
+experience in on your own.  Thus if you don't want to advance your
+guild level you don't have to.
+  Typing 'gxp' alone will show you how much free experience you have
+and how much guild experience you need before you can advance to the
+next guild level.
+  Typing gxp with a number following it will attempt to move that much
+experience into the guild.  You can still move experience into the
+guild even if you don't need more experience to advance to the next
+guild level.
+
+Usage: gxp
+       gxp <amount>
+

@@ -1,0 +1,129 @@
+Approval Notes
+for Anshar's Ambrosiatic Hall
+by Feldegast 3/31/01
+
+General notes
+-------------
+  You did a good job on this area...Most of these notes are
+minor, or balance issues.
+
+  Monster size
+The size of the monsters in this area is a little screwy, and I
+think your area suffers for it.  Keep in mind that your other
+area is a newbie area...It would be quite easy for a newbie to
+wander into this area and get instablicked by Azelane first thing.
+You should have your monsters slowly build up in size.  For example,
+start with the guardians, then the armour golems, and only then
+introduce the heavy hitters.  At the very very least, you need
+a warning sign to indicate the level of difficulty so at least
+you can tell the players, "Hey, I warned you!"
+
+  Monster level
+In case you missed the announcement, a new level guide was
+issued.  It's in /doc/build/RULES/monster.guide.  You might
+want to review it so you can judge what level to assign your
+monsters, and how much loot(if any).
+
+  Formatting
+The standard line length for descriptions should be just under
+70 characters.  Your line lengths seemed to vary from room to
+room.
+
+Rooms:
+-----
+
+hall1.c -
+  Typo in "deathbane"...aquiring should be acquiring.
+  You have a typo "b ends" in one of the pick says.
+  You might want to think about either adding more verbs to the
+    'pick' action, or providing a hint.  Pick might not be the
+    first verb that players will think of, and not many players
+    will sit around trying to think up verbs, because few wizards
+    make plants that players can pick.
+  You might want to think about adding more nouns for the enter
+    command.  Gates was about the third or fourth noun I tried,
+    after 'building', 'fortress' and 'gate'.
+
+hall2.c -
+  Why is there a map in here if I can't look at it?
+
+hall3/4.c -
+  For some reason your descriptions have gotten less and less wide.
+    It wasn't so bad in the first room, I was willing to let you
+    get away with it in the previous room, but this one definitely
+    needs to be redone.  Remember, lines should be just under 70
+    characters long.
+  The mention of "those full suits of armor" in the descriptions is
+    a little awkward, because the player might not be as preoccupied
+    with the suits of armor as you are.
+  Typo in the "north" command...
+    Moving north, you hear a scraping behind YOU just as four forms barrel into you.
+
+hall5/6.c -
+  In the "movement" item description, that sentence should be broken
+    up into two.
+  This is a stylistic note, but you probably shouldn't mention flashes
+    of movement to the north if you're referring to the monsters in
+    the next room, because the player could kill them and come back here.
+
+hall7/8.c -
+  You forgot to capitalize the first word of the last sentence in the
+    long description.
+
+hall9.c -
+  You might want to elaborate upon why the player can't go north here.
+
+hall10.c -
+  You forgot a period at the end of the long description.
+
+hall11.c -
+  I don't suppose I could squeeze another line out of you for this room's
+    description?
+
+Monsters
+--------
+
+azelane.c -
+  I like what you're trying to do with the root, but this seems like an odd
+    way to implement it.
+  Why is her race 'goddess'?  She's tough, but not THAT tough.
+  Why do you have such a tough monster guarding the entrance to your area?
+    You should have a smaller mob out front to warn away the lower level
+    players, and then slowly make the mobs bigger as you get further along.
+
+armour.c -
+  Perhaps you should add some color to their attack emotes?
+
+defender.c -
+  You start out with a god...Then you fight a bunch of level 19 monsters...
+    and now the player has to fight some level 10 cannon fodder?  Wouldn't
+    it be better to have these defenders at the gates, the armour at the
+    guard posts, and azelane near the end of the level?
+
+tanu.c -
+  You forgot a period at the end of the steal ring emote.
+  In Tanu's spell attack, you are referring to "The" dagger, but there is
+    no other reference to it.  Perhaps it should be "Tanu's" dagger?
+
+coran.c -
+  You might want to also add a check to see if the player's weapon is droppable.
+
+terran.c -
+  Typo: foot -> feet.
+  I notice you have some anti-dmage code in here.  First of all, are you aware
+    that the dmages have closed?  There isn't anything else in the game now that
+    has such a drastic effect, so this code seems a little overblown.
+  Also, if you're going to have special code like this, you should have an
+    emote that describes why something is happening so that the player has
+    some indication that combat conditions have changed.
+
+
+Items
+-----
+
+halberd.c -
+  Type should be set to polearm.  Since the monsters are only level 10, wc16 might
+    be more accurate for these.
+
+deathmaster.c -
+  Rops off?

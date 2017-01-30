@@ -1,0 +1,17 @@
+
+This is a healing thermos. Congrats on your purchase of it!
+It can be a very useful tool when used properly.
+Commands:
+  the X : where X is the amount of units that you want to heal.
+	  Each unit heals one hitpoint and one spellpoint.
+
+  the	: shows how many charges are remaining in the thermos.
+
+  ts	: automatic heal (Using Spellpoints as a marker)
+
+  th	: automatic heal (Using Hitpoints as a marker)
+
+ Automatic heals work like this: Assuming you use hitpoints as a marker,
+the thermos does the following: heal=(max hp - current hp). If you had more
+spellpoints at the time, you should have chosen spellpoint autoheal as
+not to waste any jug units. This proves to be very helpful in quick combat.

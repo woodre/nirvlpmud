@@ -1,0 +1,107 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   write(""+
+   "---------------   Morph   ---------------\n"+
+   " Power Cost: 10 / skill level \n"+
+
+   "\n"+
+   " Allows a Ranger to morph and thus use\n"+
+   "  additional abilities.\n"+
+   " This skill has a maximum of "+QMax()+"\n\n"+
+   " Initiate: 0-9\n"+
+   " Dino:     10-19\n"+
+   " Thunder:  20-29\n"+
+   " Ninja:    30-39\n"+
+   " Zeo:      40-49\n"+
+   " Turbo:    50-59\n"+
+   " Rescue:   60-69\n"+
+   " Space:    70-79\n"+
+   " Galaxy:   80-89\n"+
+   "\nMorphing directly affects your combat abilities.\n"+
+   "Adding points will increase both offensive and defensive capability.\n"+
+   "");
+   return 1;
+}
+
+QMax(){ return 200; }
+
+RangerPower(str, string type){
+   int cost;
+   int i;
+   string title;
+   string name;
+   string msg;
+
+   if(PO->QMorphed()){
+      write("You are already morphed.\n");
+      return 1;
+   }
+
+   if(!PO->QMorphed()){
+      cost = 10*PO->QuerySkillLevel("morph");
+      msg = "";
+
+      if(PO->QuerySkillLevel("morph") > 9){ msg = TPNAME+" yells: "+PO->DINO+"!\n";}
+      if(PO->QuerySkillLevel("morph") > 29){ msg = TPNAME+" yells: "+PO->COLOR+" Ranger Power!\n";  }
+      if(PO->QuerySkillLevel("morph") > 39){ msg = TPNAME+" yells: Zeo Ranger "+PO->NUMBER+", "+PO->COLOR+"!\n";  }
+      if(PO->QuerySkillLevel("morph") > 49){ msg = "Shift into Turbo!\n";  }
+      if(PO->QuerySkillLevel("morph") > 69){ msg = TPNAME+" yells: Let's Rocket!\n";  }
+      if(PO->QuerySkillLevel("morph") > 99){ msg = TPNAME+" yells: Wild Access!\n";  }
+
+      if(MASTER->QPowerPoints(type) < cost){
+         write("There is not enough power for you to morph.\n");
+         return 1;
+      }
+
+      MASTER->APowerPoints(-cost, type);
+
+      if(PO->QuerySkillLevel("morph") > 9){
+         "obj/user/one_chan.c"->chan_msg(""+
+            "The sky lights up a bright "+PO->COLOR+".\n"+
+            "A bolt of lightning flashes down and strikes at "+
+            environment(TP)->short()+".\n"+
+            "When the smoke clears, the "+PO->QRangerAnsi()+PO->COLOR+OFF+" Ranger appears.\n"+
+            "","junk");
+      }
+
+      tell_room(ENVTP, TPNAME+" yells: It's Morphin' Time!\n"+msg);
+
+      title = "";
+
+      if(COMM->QuerySkillLevel("leadership") >= 20){
+         title += "Power Ranger Team Leader: ";
+      }
+
+      if(PO->QuerySkillLevel("morph") > 9){
+         if(type == "Dark Ranger")
+            TP->set_title(title+"The Dark "+PO->QRangerAnsi()+PO->COLOR+OFF+" Ranger");
+         else
+            PO->SPlayerShort(title+"The "+PO->QRangerAnsi()+PO->COLOR+OFF+" Ranger");
+      }
+
+
+      title = BS;
+      for(i=0; i<strlen(TPNAME); i++){
+         title += BS;
+      }
+
+      if(TP->is_player()){
+         present("soul",TP)->setmin(title+"The "+PO->QRangerAnsi()+PO->COLOR+OFF+" Ranger arrives");
+         present("soul",TP)->setmout(title+"The "+PO->QRangerAnsi()+PO->COLOR+OFF+" Ranger leaves");
+         TP->add_player_id("the "+lower_case(PO->COLOR)+" ranger");
+         TP->add_player_id(lower_case(PO->COLOR)+" ranger");
+         TP->add_player_id("ranger");
+      }
+
+      
+      PO->SMorphed();
+      PO->AID("player_short_object");
+      return 1;
+   }
+
+   return 0;
+}

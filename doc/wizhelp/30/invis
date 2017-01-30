@@ -1,0 +1,31 @@
+**************
+
+                     Invis
+
+Syntax:    invis <#>
+
+Desc:
+           This is the improved wizard invisiblity power. It doesn't
+           wear off like the player version by movement and improves
+           with your advancing levels. At lvl 30 player tells still 
+           get through and you are not yet masked as "Someone". You 
+           can intentionally set your invis lower to allow players 
+           above that level to see you. It can't be set higher than
+           your current level and not giving a number will result in
+           max level by default.
+
+Warning:   Without your wiz_tell you won't be able to talk while 
+           invis. Until you get closer to lvl 40 you'll be fairly 
+           noticable to players when moving. In your workroom a bit
+           less so.
+
+Example:   invis 15
+                  results 
+           Bob is basically invisible to players under 15. They'll 
+           still see movement messages and be able to look at him
+           if they know the name or have seen him talking. 
+
+Related:   vis, invisible
+
+
+**************

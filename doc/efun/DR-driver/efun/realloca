@@ -1,0 +1,22 @@
+SYNOPSIS
+	mixed *reallocate( mixed *arr, int count)
+
+DESCRIPTION
+	Make a new array from an old one.
+	Allocates an new array of the size 'count'. Then copies as
+	much as possible of the old array 'arr' into the new.
+	If 'count > sizeof( arr)' then all of 'arr' will be copied
+	into the new array. Remaining indexes set to 0.
+	Otherwise the first 'count' indexes of 'arr' are copied into
+	the new array.
+	Probably not the most used function.
+
+EXAMPLE
+	string *old_array, *new_array;
+	
+	old_array= ({ "one", "two", "three" });
+	new_array= reallocate( old_array, 4);
+	new_array[ 3]= "four";
+
+SEE ALSO
+	cp(E)

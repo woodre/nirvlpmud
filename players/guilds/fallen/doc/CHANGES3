@@ -1,0 +1,76 @@
+/* beta changes */
+- fixed STUPID ANNOYING problem in hb.h - 20% xp moved to guild upon joining.
+- fixed call_out error in ghall.c - also involved the_save() and load_spells()
+- removed login to dark rooms
+- Added a 'beats' variable like Snow's dervish have.
+- Added a bonus if random(ac) == 0 in wep hit, +1 sp  [if foc && pos end]
+  Armor hampers them, so without armor they are more focused in combat.
+- Made it so descend works vs players in pk areas.
+  this is what i intended, just forgot i had a pl_k check
+- Added bonus sp to wither.h  < 1mil = 4, < 2m = 3, < 4m = 2, <6m = 1, else 0.
+  Did this to help them out [more] once they get 100k gxp.  + more msgs.
+- Added a check for players in pk areas in who2_new.h
+- Redid 'seek power' failure msgs to be more thematic.
+- Removed hp cost when focus runs out if gxp < 1mil.
+- Added small endurance bonus if low gxp on drain.h
+- Meditate:  small hp heal based on duration, can last 1 sec longer.
+  Might change this to be based on corpse level later on.
+- focus.h, if gxp < 800k, wc = 3+r(7+r(6)) each hb,
+  else wc = 3+r(8+(gxp/800k)) - also raised max possible
+  wc in a hb from 3+r(16) to 4+r(18) [average of under 14]
+  Based cost on gxp, now ranges from 14 to 15-29 [higher than original]
+  also put in if already focused, 1:3 if gxp < 500k end +3 bonus
+- added the vanish spell in at 3.6 mil gxp with NT and NM checks.
+- Set minimum endurance to 25 [ravyn is far too low at 16]
+- Added sps drain when in dark rooms [-1 per hb].
+- Added a 'low endurance' msg when it goes negative.
+- Added 2 new sets of message_hit msgs in weapon_hit if focused.
+- Added a few more msgs to 'one' in wep_hit, lowered return by 2 [8 to 6] and
+  made it more likely to happen [20% to 25%].
+- Added safety checks to init.h
+- Added a min value check [< 100 coins] in drain.h for safety
+- Added a full sp/endurance heal if User drains a shadow wep [10k cost to make]
+- Added a up to 4 command speedster, with checks for acceptable dirs.  Free
+  ability, closest thing i can get to 'shadow movement' which is what a few
+  players have suggested.  they get it at the beginning [ability not spell].
+- Put in mud_spells2.h with mythos approval.
+- Changed most spell costs [see spell_list], weave still top at 5mil.
+- Added a "death check" in who2_new.h (shows name in HIW, queries real
+  name rather than name so "some mist" doesn't show up)
+- Added a energy_check death log, and changed trigger from < 15 sps, to
+  < 15-random(16) [more likely msg will mean death.]
+- Added more messages to mud_spells.h
+- Modified the endurance formula.  it was lvl + ste + (gxp / 195k)
+  now, if gxp < 1 mil, it's   10 + (lvl / 2) + ste + (gxp / 100k)
+  else it's the same.  range of 25-38 initially, then 25-90.
+- Added a log in g-old.c for buying components.
+- Capped focus at 24 (18 inititally) and duration at 15 (prev 20).  Made it
+  take longer to gain max possible duration.  Added 1:4 chance in mud_spells
+  to gain 1,1 foc,dur.  Added 1:5 chance in shadowblast to gain
+  r(3), r(2) foc,dur.  Obviously no bonus if not focused or neg endurance.
+- Added fdraw emote in emotes.h
+- Added slow hp regen for empower spell, raised comp cost 1000 coins
+  because of added usefullness.  1000 to 2000
+- Added extra_look()s to weaken.c and empower_spell.c
+- Added "endurance monitor" in place of msg when endurance goes negative.
+  Displays endurance as a bar "|||" showing percent.  10 bars == full.
+- Added a variable so the endurance monitor can be toggled on or off.
+- Moved hp cost of focus to spell casting from hb, and spread cost out.
+- in end check, made it so not focused, less likely to drain endurance.
+- made spell_failure work off of gxp rather than level 
+  [goes away entirely at 8mil rather than 5mil now]
+- changed how mana regen works, see file.
+- upped base wc if focused from 4 to 7.
+- added a new spell check to daemon.c - tells them a msg if they can learn.
+- added scoff and wait emotes.
+- added some msgs to empower_spell.c
+- in spell_failure.h if attacker_ob->is_player(), no chance of spell failure.
+- coded a monitor 'mon' that shows endurance in 10% chunks
+- recoded mud invis to be thematic.  same cost, added spell failure.
+- in focus, if gxp < 2mil and AO == User, wc += 4;
+- lowered based foc wc from 7 to 4+random(2) because of above bonus.
+- switched gxp costs of meditate and empower
+- added NM checks for spells
+- added a 7th symbol relating to casting.
+- added spell failure to mud_spells.h + a few checks.
+

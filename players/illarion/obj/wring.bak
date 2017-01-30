@@ -1,0 +1,60 @@
+#define MASTER "/players/illarion/obj/ringmaster"
+
+string spouse;
+int worn,type;
+string short_desc,long_desc,inmess,outmess;
+
+string short() { return short_desc?short_desc:"A golden ring"; }
+void long() { write(long_desc?long_desc:"A ring of pure, invincible gold.\n"); }
+int id(string str) {
+  return str == "ring" || str == "illarion_wedding_ring" ||
+         str== "wedding ring";
+}
+query_spouse() { return spouse; }
+
+set_spouse(str) { spouse=str; }
+set_long(str) { long_desc=str; }
+set_short(str) { short_desc=str; }
+query_inmess() { return inmess; }
+query_outmess() { return outmess; }
+set_inmess(str) { inmess=str; }
+set_outmess(str) { outmess=str; }
+query_type() { return type; }
+set_type(num) { type=num; }
+
+drop() { return 1;}
+get() { return 1; }
+
+init() {
+  add_action("cmd_ring","ring");
+  add_action("cmd_ring","rte");
+  add_action("cmd_ring","rta");
+  add_action("cmd_ring","rt");
+  add_action("cmd_ring","rinmess");
+  add_action("cmd_ring","routmess");
+  add_action("cmd_ring","rtype");
+}
+cmd_ring(string str) {
+  return call_other(MASTER,"cmd_ring",str,spouse);
+}
+query_auto_load() {
+  MASTER->shutdown(spouse,outmess);
+  return "/players/illarion/obj/wring:"+spouse+"@@@"+type+"@@@"+inmess+"@@@"+outmess;
+}
+init_arg(string str) {
+  string *stuff;
+  if(!str) {
+    destruct(this_object());
+    return;
+  }
+  stuff=explode(str,"@@@");
+  if(!stuff) {
+    destruct(this_object());
+    return 0;
+  }
+  spouse=stuff[0];
+  type=stuff[1];
+  inmess=stuff[2];
+  outmess=stuff[3];
+  MASTER->startup(spouse,type,inmess);
+}

@@ -1,0 +1,8 @@
+simulcrum [level 14]: creates a illusionary monster which takes the
+                      place of target in combat.
+                      target is removed from combat.
+                      
+                      syntax: simulcrum <target>
+                              illusion <target>
+                              
+                      cost:  sp:60  hp:100  xp:500

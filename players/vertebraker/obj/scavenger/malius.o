@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/puppy/s/eq/ruler","/players/puppy/s/eq/collar","/players/scathe/armor/damulet","/obj/weapon","/players/puppy/s/eq/block","/players/mythos/mwep/voice","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/puppy/s/eq/parchment","/players/pain/NEW/arm/boots","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/wren/Area/starbug/items/indianheaddress","/players/wren/Area/starbug/items/levis","/players/snow/WEAPONS/glowknife","/players/mythos/awep/claw","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/snow/WEAPONS/greydeath","/obj/armor","/players/scathe/armor/suit","/obj/armor","/players/hippo/heals/dna_repair","/players/wren/Area/starbug/items/bazookoid","/obj/armor","/obj/armor","/players/hippo/heals/blood","/players/pain/closed/wands/orb",})
+shorts ({"A wooden ruler","A leather collar","A Dragon Amulet","Baby rattle","A building block","Voice","A Prince's Robes","Parchment","Heavy work boots","A Princess' Tiara","a tiny indian headdress","stretched out Levi jeans.","A glowing knife","claws","A Priest's Robes","Grey[36mdeath[0m","A Jedi Cloak","Black Suit","Steel Shield","[32mdna repair string[0m","Bazookoid [1;30mmkII[2;37;0m","A small [1mwhite[0m shield","A magical [1mwhite[0m amulet","[1;31mdrops of blood[0m","An Onyx Orb [[31m0[0m] ([34mreadied[0m)",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

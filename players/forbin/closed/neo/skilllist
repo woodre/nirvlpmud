@@ -1,0 +1,14 @@
+COMBAT                        CONTROL                       CREATION
+1 Wep [C]                     1 Cleanse [C]                 1 Shape <armor> [C]
+2 Darts [C]                   2 Heal                        2 --- Open for future ---
+3 Fatal                       3 --- Open for future ---     3 Alarm
+4 --- Open for future ---     4 Absorb <item> [C]           4  Camoflage
+5 KO                          5 Regen [C]                   5  --- Open for future ---
+6 --- Open for future ---     6 Burnoff [C]                 6 Create Item
+7 Ambush                      7 --- Open for future ---     7 Create Sphere
+8 Hypermode [C]               8 Fuse <armor>                8 Dominate
+
+COMBAT/CONTROL                CONTROL/ CREATION             COMBAT/CREATION
+5/5 Suffocate [C]             Gtitle                        Block
+7/7 Frenzy                    Devour
+                              Feed

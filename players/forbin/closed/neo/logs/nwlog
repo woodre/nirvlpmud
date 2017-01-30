@@ -1,0 +1,40 @@
+
+ 05.11 -Started new logging practice.  Coded new log cmd of 'nlog', with the 
+        intention of using it to log any changes, codes, etc.  Maybe that way 
+        I'll know what's going on and what I still need to do.
+ 05.11 -Gob is up and running stable.  For the most part, all the variables, 
+        settings, and queries that are needed are in there, unless something 
+        unforseen pops up later.
+ 05.11 -Trying to keep included objects/code to a minimum, but it was just 
+        easier to work with weapon.h, armor.h and tentacles.h as seperate 
+        files.
+ 05.11 -Updated 'score' cmd to use the new query_soak/stuff/intox instead of 
+        manually calculating the player's max via hard code.
+ 05.11 -'absorb' cmd is working properly and help is already written in.  
+        Pretty much finished unless there is tweaking later.  Absorbing 
+        corpses give MP based on corpse level and neos control, while 
+        absorbing items gives MP based on item weight (weight value is capped) 
+        and control.
+ 05.11 -'assign' functions correctly and has help included.  Basically it 
+        just allows neos to set tentacles into attack/defend/burnoff/regen 
+        modes.
+ 05.11 -'burnoff' functions correctly.  Help is included and works as well.
+ 05.11 -'cleanse' functions properly.  Help included and works as well.
+ 05.11 -'hypermode' cmd and help works correctly.
+ 05.11 -lbug, lbugs, ltypo, ltypos, lidea, lideas all work correctly.  
+        Basically all that stuff is based directly off the muds 
+        bugs/typos/ideas commands and will allow me to track, fix, and remove 
+        items from each list.  Lot easier than a log that I have to erase what 
+        I work on by hand.
+ 05.11 -'save' functions correctly.
+05.12 -'flee' cmd and associated help works correctly.
+05.12 -Corrected the way the gob shows short() when the player has shaped 
+        armors.  Bascially all I did was take out an extra "\n" at the end of 
+        the last armor piece.  The original method was returning an period on 
+        the line AFTER the armor shorts.
+ 05.16 -weapon.h, clawattack.h, kickattack.h, and slamattack.h work as 
+        desired.  The numbers probably need to be tweaked as the damage looks 
+        ludicris, especially with hypermode active.
+ 05.16 -tentacles.h now works properly with both attack_tentacles and 
+        defense_tentacles fixed
+ 05.17 -lowered dam by 1/4

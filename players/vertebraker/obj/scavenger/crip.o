@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/WEAPONS/glass_sword","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/hippo/weapons/glue","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/mythos/marmor/shirt","/players/angel/area/stargate/obj/P90_no_ammo","/players/arrina/armor/torque","/players/mythos/awep/ring","/players/pain/closed/wands/orb","/players/wren/Area/starbug/items/cowboyhat","/players/saber/stuff/mic","/players/wren/Area/starbug/items/bat","/players/puppy/s/eq/collar","/players/hippo/armour/shield","/players/boltar/things/emoter","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/jamila/beach/mobs/skin","/players/mythos/mwep/voice","/obj/armor","/players/puppy/s/eq/crown","/players/wren/Area/starbug/items/reddress","/obj/weapon","/players/mythos/amisc/egg","/players/maledicta/cont/weapons/rweapon",})
+shorts ({"Glass Sword","Shark`s tooth","A nobleman's shortsword","a strong, 1 second glue","A Priest's Robes","Shirt","[36mP90 machine gun[0m","Silver Torque","Silver Ring","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","a tiny cowboy hat","A microphone","a [1;30mballbat[2;37;0m","A leather collar","lap of meat","An emoter","A Prince's Robes","A Lizard Skin","Voice","A suit of [1mwhite[0m chainmail","A golden crown","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","A rolling pin","A strange looking egg","a Scimitar",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

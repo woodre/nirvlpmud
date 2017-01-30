@@ -1,0 +1,25 @@
+Commands:
+file <action>               writes log to /log/WR/softly_workreport
+rules                       lists wizard rules & guidelines
+I <name>                    inventory of name
+IR <name>                   inv of room that name is in
+hand <name> <path>          hands name object of path
+place <name> <path>         moves name to path
+church <name>               moves name to church (noname=self)
+trans <name>                moves name to you
+peace                       forces all combat to stop
+money                       gives you 80k coins
+heal <name>                 heal someone (noname=self)
+set_level <name> <#>        sets the level of name
+set_extra_level <name> <#>  sets the extra level of name
+set_home <name> <path>      sets the home of name to path
+add_xp <name> <#>           adds # xp to name
+set_stat <name> <what> <#>  sets the stat what of name to #
+idest <name> <object>       dests object from name's inv
+renew			    updates wiztool
+tape			    obvious :)
+exec			    executes a command string
+fin                               alt finger
+man  <concept>                       searches /doc for the concept
+bag                          clones a test mob
+wizes                     returns list of wizes logged on

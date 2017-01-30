@@ -1,0 +1,59 @@
+I. check for any existing shuttles
+II. array of existing shuttle names
+III. mapping of existing shuttle name:destination
+IV. mapping of shuttle name:time variables
+V. to clone a shuttle
+    A. check name is unique
+    B. add name to II
+    C. check destination is valid
+    D. add destination to III
+    E. add time to IV
+    F. start time
+    G. describe external landing
+    H. move shuttle to landing pad
+VI. timer
+    A. increment time variables by -1
+    B. if any member of time variable mapping = 1
+        1. begin move sequence
+        2. if any member of time variable mapping < 1, remove from IV
+VII. long_desc()
+    A. if time variable exists && > 1
+        1. if this_player is inside shuttle, long_desc("inside_time")
+        2. if this_player is outside shuttle, long_desc("outside_time")
+    B. if time variable !exist || < 1
+        1. if this_player is inside shuttle, long_desc("inside_no_time")
+        2. if this_player is outside shuttle, long_desc("outside_no_time")
+VIII. move sequence
+    A. remove leave command
+    B. remove enter command
+    C. actual movement
+        1. take-off
+            a. describe door shutting
+            b. describe door locking
+            c. clone attendant
+            a. move shuttle object to space.c
+                i. describe external lift off (same as VIII.A.2)
+                ii. describe internal effects of take off
+        2. mid-flight
+            a. flight delay
+            b. message 1, 2, 3, etc
+            c. attendant offer drinks?
+        3. landing
+            a. move shuttle to name:destination.object.c
+                i. describe external landing (same as V.G)
+                ii. describe internal effects of landing
+            b. describe door unlock
+            c. describe door open
+    D. add enter command
+    E. add leave command
+    F. if destination is not N.U.T.S.
+        1. destination = N.U.T.S.
+        2. else destination is random
+        2. add destination to III
+    G. add time to IV
+IX. Purchase Ticket
+    A. clone ticket
+    B. set ticket destination
+    C. move ticket to the player
+    D. shuttle must check to see if ticket:destination = shuttle:destination
+    

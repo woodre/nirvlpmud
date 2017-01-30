@@ -1,0 +1,907 @@
+[Apr  1 2011 23:38] Illarion: A: updated wlog so that wlog <wizname> tails that wizard's log
+[Apr  2 2011 00:36] Sparrow: A: Illarion
+[Apr  2 2011 00:36] Sparrow: A: is
+[Apr  2 2011 00:36] Sparrow: A: cool
+[Apr  2 2011 00:48] Sparrow: A: See
+[Apr  2 2011 00:48] Sparrow: A: what
+[Apr  2 2011 00:48] Sparrow: A: I
+[Apr  2 2011 00:48] Sparrow: A: mean
+[Apr  2 2011 00:48] Sparrow: A: !
+[Apr  2 2011 00:48] Sparrow: A: He
+[Apr  2 2011 00:48] Sparrow: A: ROX!
+[Apr  7 2011 10:17] Rumplemintz: A: fixed typos in room/vill_road2 in item descs
+[Apr  7 2011 10:19] Rumplemintz: A: room/vill_road3 fixed typos in item descs
+[Apr  7 2011 10:20] Rumplemintz: A: /room/northroad1.c Fixed typos in long()
+[Apr  7 2011 10:21] Rumplemintz: A: /room/northroad2 fixed typo in long()
+[Apr  7 2011 10:23] Rumplemintz: A: room/eastroad1 Fixed typos in item descs
+[Apr  7 2011 10:25] Rumplemintz: A: room/eastroad2 Fixed typos in long and item descs
+[Apr  7 2011 10:27] Rumplemintz: A: room/eastroad3 fixed typos in long and item descs
+[Apr  7 2011 10:44] Rumplemintz: A: room/eastroad4 fixed typos in long and item descs
+[Apr  7 2011 10:45] Rumplemintz: A: room/eastroad5 fixed typos in long and item descs
+[Apr  8 2011 11:21] Rumplemintz: A: /room/temple/path fixed typos in long and item desc
+[Apr  8 2011 11:45] Rumplemintz: A: /room/temple/pal fixed typos in long
+[Apr  8 2011 11:47] Rumplemintz: A: /room/temple/1 fixed typos in long and item descs
+[Apr  8 2011 13:21] Rumplemintz: A: /players/mythos/amisc/forest/horn3.c changed so that a weapon can only be upgraded once (no more multiple horn uses on one weapon)
+[Apr  8 2011 14:34] Rumplemintz: A: /players/mythos/forest/amisc/horn3 Made it change long and short of the weapon
+[Apr 27 2011 12:41] Rumplemintz: A: /players/zeus/museum/NPC/tiny_golem.c fixed typos in chat
+[Apr 27 2011 12:44] Rumplemintz: A: /players/khrell/area/skaven/skavenlordharem.c - Changed 'larders' to 'breeders' in long()
+[Apr 27 2011 12:45] Rumplemintz: A: /players/mythos/aroom/forest/clear.c - Typo in item desc for 'somethine' urg -> urge
+[Apr 27 2011 12:49] Rumplemintz: A: /players/illarion/high/room/dojomain.c - Typo in cmd_gaze() - saitisfied -> satisfied
+[May 27 2011 11:33] Rumplemintz: A: /players/mythos/closed/guild/task/8/knife4.c took worms out of init()
+[May 27 2011 11:35] Rumplemintz: A: /players/mythos/closed/guild/forest/mon/worm.c Added check for player_killing
+[Jun  2 2011 09:57] Fred: A: ~eurale/Keep/OBJ/disir_slime.c -- Changed the if present madamrue check to return 0;.  If slimes were at the top of inventory couldn't barter things elsewhere.
+[Jun  2 2011 16:50] Fred: A: Promo'd Talen back to lvl 21 wiz status.
+[Jun  5 2011 17:07] Angel: A: sensitive mind notices in Nelapsi's coffin I handed him the gear that was in the .o file and edited it out of the .o file
+[Jun  8 2011 11:18] Rumplemintz: A: updated /bin/play/_wait.c to check for present()
+[Jun  8 2011 11:25] Rumplemintz: A: /obj/user/reports/report_tool.c - Changed to announce bug fixes
+[Jun  8 2011 13:39] Rumplemintz: A: /players/angel/area/walmart/room/hardlines.c - Typo
+[Jun 10 2011 09:46] Fred: A: ~wocket/turtleville/PETS/neopet.c -- changed them so if they die you can bring them back before a boot.
+[Jun 16 2011 01:47] Vertebraker: A: Promoted mode and Equilibrium to council member
+[Jun 16 2011 01:47] Vertebraker: A: Forgot to log -> Fixed Shardak obituary/PK notice to update to 2010s
+[Jun 16 2011 22:05] Illarion: A: Changed Oz's luck from 57 to 1
+[Jun 18 2011 02:59] Vertebraker: A: rm'd inkeyes' pfile - cauuuuuuuuseeeee he wanted me to. to restart char attribs. :~)
+[Jun 21 2011 11:54] Rumplemintz: A: Added environment check to emit_channel simul_efun to stop bug of users listening at logon prompt
+[Jun 21 2011 15:05] Rumplemintz: A: remove Kyrian from symbiotes - logs showed he had left twice already, did clear guild_file
+[Jun 22 2011 10:56] Rumplemintz: A: /sys/driver_hook.h Added new hooks
+[Jun 22 2011 10:56] Rumplemintz: A: /secure/master.c Added in changes for LD 3.3.720
+[Jun 22 2011 11:06] Rumplemintz: A: /obj/simul_efun_ldmud.c Modified for LD 3.3.720
+[Jun 22 2011 11:11] Rumplemintz: A: /obj/simul_efun/same_array added compatibility for LD 3.3.720
+[Jun 22 2011 11:13] Rumplemintz: A: /obj/simul_efun/resolv_path Added compatibility for LD 3.3.720
+[Jun 22 2011 11:17] Rumplemintz: A: /obj/simul_efun/mysql.h Changed to LD 3.3.720 compatibility
+[Jun 22 2011 11:20] Rumplemintz: A: /obj/simul_efun/m_efuns_ldmud.c Adapted for LD 3.3.720
+[Jun 22 2011 11:22] Rumplemintz: A: /obj/simul_efun/basename.c Adapted for LD 3.3.720
+[Jun 22 2011 11:34] Rumplemintz: A: /obj/simul_efun/DR-to-amylaar.c Compatible to LD 3.3.720
+[Jun 22 2011 11:40] Rumplemintz: A: /room/church updated for LD 3.3.720 compatibility
+[Jun 22 2011 11:46] Rumplemintz: A: /room/post.c Changed for LD 3.3.720 compatibility
+[Jun 22 2011 11:50] Rumplemintz: A: /room/test.c LDMud 3.3.720 compatibility
+[Jun 22 2011 11:59] Rumplemintz: A: /obj/player.c changed for LD 3.3.720 compatibility
+[Jun 22 2011 12:10] Rumplemintz: A: /room/adv_guild LD 3.3.720 compatibility
+[Jun 22 2011 12:12] Rumplemintz: A: /room/pub2 LD compatibility
+[Jun 22 2011 12:15] Rumplemintz: A: /room/pub3 LD compatibility
+[Jun 22 2011 14:31] Rumplemintz: A: updated 100 rooms in /room/south to get ready for LD 3.3.720
+[Jun 22 2011 15:43] Rumplemintz: A: all rooms in /room/* should now be updated to work with LD driver
+[Jun 23 2011 11:43] Rumplemintz: A: /obj/weapon.c cleaned up a bit type cast
+[Jun 23 2011 11:45] Rumplemintz: A: /obj/tunnel.c changed add_verb
+[Jun 23 2011 11:55] Rumplemintz: A: /obj/treasure.c Cleaned up a bit and type cast
+[Jun 23 2011 12:02] Rumplemintz: A: /obj/torch.c Cleaned up a bit, type cast, and removed add_verb
+[Jun 23 2011 12:18] Rumplemintz: A: /obj/stone - cleaned up, fixed, type cast, not sure if it's even used
+[Jun 23 2011 12:25] Rumplemintz: A: /obj/stethoscope.c type cast, removed add_verb
+[Jun 23 2011 12:34] Rumplemintz: A: /obj/soul_com.c type cast, removed add_xverb, cleaned up
+[Jun 23 2011 12:39] Rumplemintz: A: /obj/shout_curse.c type cast and removed add_verb
+[Jun 23 2011 12:41] Rumplemintz: A: /obj/shadow_master.c type cast, changed member_array to member
+[Jun 23 2011 12:43] Rumplemintz: A: /obj/say.c removed add_verb - type cast
+[Jun 23 2011 12:48] Rumplemintz: A: /obj/safe.c type cast and removed add_verb
+[Jun 23 2011 12:54] Rumplemintz: A: /obj/rope.c type cast and removed add_verb
+[Jun 23 2011 12:55] Rumplemintz: A: /room/init_file took out quicktyper
+[Jun 23 2011 14:01] Rumplemintz: A: /obj/newspaper.c type cast - removed add_verb
+[Jun 23 2011 14:58] Rumplemintz: A: /obj/money.c type cast and removed add_verb
+[Jun 23 2011 15:01] Rumplemintz: A: /obj/level_list type cast and removed add_verb
+[Jun 23 2011 15:11] Rumplemintz: A: /obj/drink.c type cast and removed add_verb
+[Jun 23 2011 15:20] Rumplemintz: A: /obj/discon.c type cast and removed add_verb
+[Jun 23 2011 15:32] Rumplemintz: A: /obj/corpse.c type cast and removed add_verb
+[Jun 23 2011 15:40] Rumplemintz: A: /obj/container.c type cast and removed add_verb
+[Jun 23 2011 15:43] Rumplemintz: A: /obj/chest.c type cast and removed add_verb
+[Jun 23 2011 16:11] Rumplemintz: A: /obj/bull_board.c type cast and removed add_verb
+[Jun 23 2011 16:15] Rumplemintz: A: /obj/book.c type cast and removed add_verb
+[Jun 23 2011 16:22] Rumplemintz: A: /obj/beer.c type cast and removed add_verb
+[Jun 23 2011 16:26] Rumplemintz: A: /obj/autoshut.c removed add_verb
+[Jun 23 2011 17:01] Rumplemintz: A: /obj/armor.c type cast and removed add_verb
+[Jun 25 2011 01:46] Vertebraker: A: comp'd grit a death cause i killed him by proxy
+[Jun 29 2011 10:42] Rumplemintz: A: /obj - armor.c, autoshut.c bandit.c beer.c dice.c heal.c kid_soul.c newtreasure.c partylist.c quicktyper.c say.c shout_curse.c soul.c soulchat.c soul_com.c stethoscope.c stone.c torch.c town_note.c tunnel.c - Removed add_verb
+[Jun 29 2011 12:29] Rumplemintz: A: /room/init_file cleaned up and moved packed/guests/inactive to different files
+[Jun 29 2011 14:10] Rumplemintz: A: morgar/castle.c removed add_verb
+[Jun 29 2011 14:11] Rumplemintz: A: morgar/f1.c removed add_verb
+[Jun 29 2011 14:12] Rumplemintz: A: morgar/f2.c removed add_verb
+[Jun 29 2011 14:12] Rumplemintz: A: aislinn/castle.c removed add_verb
+[Jun 29 2011 14:13] Rumplemintz: A: quantos/castle.c removed add_verb
+[Jun 29 2011 14:14] Rumplemintz: A: earwax/castle.c removed add_xverb
+[Jun 29 2011 14:14] Rumplemintz: A: hagbard/castle.c removed add_verb
+[Jun 29 2011 14:15] Rumplemintz: A: boltar/castle.c removed add_verb
+[Jun 29 2011 14:16] Rumplemintz: A: boltar/santaland/trail removed add_verb
+[Jun 29 2011 14:22] Rumplemintz: A: B/things/thi6 removed add_verb
+[Jun 29 2011 14:36] Rumplemintz: A: /room/pub3 changed 'function' variable to 'Func' - 'string function' bombs on LD
+[Jun 29 2011 14:38] Rumplemintz: A: morgar/spells/full_heal removed add_verb
+[Jun 29 2011 14:38] Rumplemintz: A: B/things/clock_tower removed add_verb
+[Jun 29 2011 14:39] Rumplemintz: A: haji/castle.c removed add_verb
+[Jun 29 2011 14:40] Rumplemintz: A: haji/castle2 removed add_verb
+[Jun 29 2011 14:41] Rumplemintz: A: rich/castle.c removed add_verb
+[Jun 29 2011 14:41] Rumplemintz: A: astaroth/castle removed add_verb
+[Jun 29 2011 14:42] Rumplemintz: A: sandman/castle removed add_verb
+[Jun 29 2011 14:42] Rumplemintz: A: airwoman/castle removed add_verb
+[Jun 29 2011 14:43] Rumplemintz: A: mistress/castle removed add_verb
+[Jun 29 2011 14:43] Rumplemintz: A: ultramagnus/castle removed add_verb
+[Jun 29 2011 14:45] Rumplemintz: A: blackadder/castle removed add_verb
+[Jun 29 2011 14:46] Rumplemintz: A: saber/castle removed add_verb
+[Jun 29 2011 14:46] Rumplemintz: A: deathmonger/castle removed add_verb
+[Jun 29 2011 14:46] Rumplemintz: A: morgoth/castle removed add_verb
+[Jun 29 2011 14:47] Rumplemintz: A: catt/castle removed add_verb
+[Jun 29 2011 14:47] Rumplemintz: A: catt/portal removed add_verb
+[Jun 29 2011 14:48] Rumplemintz: A: lew/castle removed add_verb
+[Jun 29 2011 14:48] Rumplemintz: A: catwoman/castle removed add_verb
+[Jun 29 2011 14:49] Rumplemintz: A: catwoman/road2 removed add_verb
+[Jun 29 2011 14:49] Rumplemintz: A: emerson/castle removed add_verb
+[Jun 29 2011 14:50] Rumplemintz: A: scathe/castle removed add_verb
+[Jun 29 2011 14:53] Rumplemintz: A: doctor/castle removed add_verb
+[Jun 29 2011 14:54] Rumplemintz: A: persephone/castle removed add_verb
+[Jun 29 2011 14:54] Rumplemintz: A: nightshade/castle removed add_verb
+[Jun 29 2011 14:55] Rumplemintz: A: hawkeye/castle removed add_verb
+[Jun 29 2011 14:56] Rumplemintz: A: trix/castle removed add_verb
+[Jun 29 2011 14:56] Rumplemintz: A: dersharp/castle removed add_verb
+[Jun 29 2011 14:57] Rumplemintz: A: bagera/castle removed add_verb
+[Jun 29 2011 14:57] Rumplemintz: A: hurtbrain/castle removed add_verb
+[Jun 29 2011 14:58] Rumplemintz: A: paulasx/castle removed add_verb
+[Jun 29 2011 14:58] Rumplemintz: A: mouzar/castle removed add_verb
+[Jun 29 2011 15:00] Rumplemintz: A: sado/shop/drunk removed add_xverb
+[Jun 29 2011 15:01] Rumplemintz: A: zone/castle removed add_verb
+[Jun 29 2011 15:01] Rumplemintz: A: dragnar/castle removed add_verb
+[Jun 29 2011 15:01] Rumplemintz: A: hippo/castle removed add_verb
+[Jun 29 2011 15:02] Rumplemintz: A: pain/castle removed add_verb
+[Jun 29 2011 15:03] Rumplemintz: A: pain/closed/items/ct removed add_xverb
+[Jun 29 2011 15:04] Rumplemintz: A: pain/closed/items/nlace removed add_xverb
+[Jun 29 2011 15:05] Rumplemintz: A: unsane/castle removed add_verb and add_xverb
+[Jun 29 2011 15:07] Rumplemintz: A: beren/castle removed add_verb
+[Jun 29 2011 15:08] Rumplemintz: A: heroin/castle removed add_verb
+[Jun 29 2011 15:08] Rumplemintz: A: pathfinder/castle removed add_verb
+[Jun 29 2011 15:09] Rumplemintz: A: pathfinder/trashcan removed add_verb
+[Jun 29 2011 15:12] Rumplemintz: A: wizardchild/engage/engagering removed add_xverb
+[Jun 29 2011 15:13] Rumplemintz: A: dune/castle removed add_verb
+[Jun 29 2011 15:15] Rumplemintz: A: dune/voting/polls changed allocate_mapping to m_allocate
+[Jun 29 2011 15:15] Rumplemintz: A: snow/bull_board removed add_verb
+[Jun 29 2011 15:19] Rumplemintz: A: mythos/closed/play/xtell removed add_xverb
+[Jun 29 2011 15:20] Rumplemintz: A: mythos/closed/play/itell removed add_xverb
+[Jun 29 2011 15:32] Rumplemintz: A: cosmo/hslist/svds_new removed add_verb
+[Jun 29 2011 15:44] Rumplemintz: A: /obj/shut.c added check for LD to use secure/master instead of obj/master
+[Jun 30 2011 11:09] Rumplemintz: A: snow/dervish/gob/init.h removed add_xverb
+[Jun 30 2011 11:11] Rumplemintz: A: mythos/closed/play/garble removed add_xverb
+[Jun 30 2011 11:12] Rumplemintz: A: mythos/amisc/tochau removed add_verb
+[Jun 30 2011 11:13] Rumplemintz: A: mythos/amisc/tsolin removed add_verb
+[Jun 30 2011 11:14] Rumplemintz: A: mythos/closed/marry/omring removed add_xverb
+[Jun 30 2011 11:15] Rumplemintz: A: mythos/closed/play/moo/moo3 removed add_verb
+[Jun 30 2011 11:16] Rumplemintz: A: mythos/closed/play/moo/MOOO removed add_verb
+[Jun 30 2011 11:17] Rumplemintz: A: mythos/healerguild/guildob removed add_xverb
+[Jun 30 2011 11:18] Rumplemintz: A: traff/castle removed add_verb
+[Jun 30 2011 11:19] Rumplemintz: A: gowron/castle removed add_verb
+[Jun 30 2011 11:19] Rumplemintz: A: gemini/castle removed add_verb
+[Jun 30 2011 11:20] Rumplemintz: A: cosmo/castle removed add_verb
+[Jun 30 2011 11:21] Rumplemintz: A: cosmo/workroom removed add_verb
+[Jun 30 2011 11:24] Rumplemintz: A: eurale/castle removed add_verb
+[Jun 30 2011 11:25] Rumplemintz: A: eurale/closed/shut_up removed add_xverb
+[Jun 30 2011 11:25] Rumplemintz: A: daranath/castle removed add_verb
+[Jun 30 2011 11:27] Rumplemintz: A: daranath/druid/guildob commented out redifined variables
+[Jun 30 2011 11:27] Rumplemintz: A: anshar/castle removed add_verb
+[Jun 30 2011 11:49] Rumplemintz: A: wocket/necro/guildob removed add_xverb
+[Jun 30 2011 11:55] Rumplemintz: A: guild/necro/guildob removed add_xverb
+[Jun 30 2011 11:58] Rumplemintz: A: feldegast/castle removed add_verb
+[Jun 30 2011 11:58] Rumplemintz: A: snakespear/castle removed add_verb
+[Jun 30 2011 11:59] Rumplemintz: A: dreamspeakr/castle removed add_verb
+[Jun 30 2011 12:00] Rumplemintz: A: francesco/castle removed add_verb
+[Jun 30 2011 12:00] Rumplemintz: A: languilen/castle removed add_verb
+[Jun 30 2011 12:02] Rumplemintz: A: /players/francesco/quest/items/finaldegree added enrironment check
+[Jun 30 2011 12:03] Rumplemintz: A: maledicta/castle removed add_verb
+[Jun 30 2011 12:04] Rumplemintz: A: maledicta/closed/emoter/emoter removed add_xverb
+[Jun 30 2011 12:05] Rumplemintz: A: vertebraker/closed/shardak/mark removed add_xverb
+[Jun 30 2011 12:08] Rumplemintz: A: obj/simul_efun/compatible added allocate_mapping conversion to m_allocate
+[Jun 30 2011 12:26] Rumplemintz: A: saber/closed/quest/larn/pool removed add_verb
+[Jun 30 2011 12:28] Rumplemintz: A: fakir/castle removed add_verb
+[Jun 30 2011 12:28] Rumplemintz: A: brittany/castle removed add_verb
+[Jun 30 2011 12:29] Rumplemintz: A: jenny/castle removed add_verb
+[Jun 30 2011 12:30] Rumplemintz: A: jara/castle removed add_verb
+[Jun 30 2011 12:31] Rumplemintz: A: vital/castle removed add_verb
+[Jun 30 2011 12:34] Rumplemintz: A: guilds/Rangers/Communicator/RangerArmor, RangerWeapon - add missing return values
+[Jun 30 2011 12:34] Rumplemintz: A: guilds/Rangers/RangerCommunicator added missing retrun values
+[Jun 30 2011 12:35] Rumplemintz: A: catacomb/castle removed add_verb
+[Jun 30 2011 12:35] Rumplemintz: A: jaraxle/castle removed add_verb
+[Jun 30 2011 12:36] Rumplemintz: A: dusan/castle removed add_verb
+[Jun 30 2011 12:36] Rumplemintz: A: coldwind/castle removed add_verb
+[Jun 30 2011 12:43] Rumplemintz: A: pestilence/closed/destroyer/gob/action.h rewrote add_cmds() function for LD
+[Jun 30 2011 12:44] Rumplemintz: A: puppy/castle removed add_verb
+[Jun 30 2011 12:46] Rumplemintz: A: wocket/std/wiztell removed add_xverb
+[Jun 30 2011 12:47] Rumplemintz: A: tristian/closed/shank removed add_verb
+[Jun 30 2011 12:47] Rumplemintz: A: martha/castle removed add_verb
+[Jun 30 2011 12:48] Rumplemintz: A: khrell/castle removed add_verb
+[Jun 30 2011 12:48] Rumplemintz: A: jamila/castle removed add_verb
+[Jun 30 2011 12:48] Rumplemintz: A: star/castle removed add_verb
+[Jun 30 2011 12:49] Rumplemintz: A: lacar/castle removed add_verb
+[Jun 30 2011 12:49] Rumplemintz: A: sparrow/castle removed add_verb
+[Jun 30 2011 12:50] Rumplemintz: A: sparrow/areas/bwo/include/mob_funcs added missing return values
+[Jun 30 2011 12:50] Rumplemintz: A: sparrow/areas/bwo/include/gear_funcs added missing return value
+[Jun 30 2011 12:51] Rumplemintz: A: chip/castle removed add_verb
+[Jun 30 2011 12:52] Rumplemintz: A: cloud/castle removed add_verb
+[Jun 30 2011 12:52] Rumplemintz: A: shinshi/castle removed add_verb
+[Jun 30 2011 12:53] Rumplemintz: A: mizan/etheriel/items/spuckballs-extinf removed add_verb
+[Jun 30 2011 13:01] Rumplemintz: A: fred/mages/homedir/init.h removed add_xverb
+[Jun 30 2011 13:01] Rumplemintz: A: B/things/corpse removed add_verb
+[Jun 30 2011 13:04] Rumplemintz: A: quicksilver/666/include/room_ext removed add_xverb
+[Jun 30 2011 13:09] Rumplemintz: A: fred/closed/venom/venom removed add_xverb
+[Jun 30 2011 13:16] Rumplemintz: A: chip/venom2/obj/id_init.h removed add_xverb and fixed flags in add_action calls
+[Jun 30 2011 13:20] Rumplemintz: A: balowski/std/base fixed missing return value
+[Jun 30 2011 13:21] Rumplemintz: A: dune/closed/guild/boards/cboard fixed missing return value
+[Jun 30 2011 13:22] Rumplemintz: A: earwax/lib/waxfuns fixed missing return values
+[Jun 30 2011 13:23] Rumplemintz: A: sparrow/areas/bwo/obj/bwo_acc fixed missing return value
+[Jun 30 2011 13:23] Rumplemintz: A: vertebraker/closed/std/monster fixed missing return value
+[Jun 30 2011 13:24] Rumplemintz: A: zeus/circle/obj/settings.h fixed missing return value
+[Jun 30 2011 14:16] Fred: A: ~/fred/closed/bloodfist/NPC/elder.c -- added a set_guild_file(0; to the leave command A guild file was sadded to clone the object at login but nothing to clear it when they left the guild
+[Jul 05 2011 10:49] Rumplemintz: A: B/motel/front_desk removed add_verb
+[Jul 05 2011 10:49] Rumplemintz: A: B/hotel/front_desk removed add_verb
+[Jul 05 2011 10:51] Rumplemintz: A: B/casino/hall1e1.c removed add_verb
+[Jul 05 2011 12:30] Rumplemintz: A: aislinn/* Verified/fixed for LD
+[Jul 05 2011 12:30] Rumplemintz: A: angmar/* Verified/fixed for LD
+[Jul 05 2011 12:30] Rumplemintz: A: kantele/* Verified/fixed for LD
+[Jul 05 2011 13:04] Rumplemintz: A: morgar/* Verified/fixed for LD
+[Jul  6 2011 08:41] Fred: A: /room/init_file -- added room/vill_green to the load list.  Since it wasn't loading before castle's it was causing an error with Llew's area.  Looks like it's working properly now.
+[Jul 15 2011 16:37] Rumplemintz: A: /obj/money.c added a check for variable before switch()
+[Aug 12 2011 16:10] Rumplemintz: A: updated /obj/player/dr/read_write.c to allow for ELDER+ editing of /kernel, /global, /basic, and /complex dirs
+[Aug 20 2011 18:24] Illarion: A: jailed demonic for a day for bitching about what he considers wizard misconduct on gossip
+[Aug 20 2011 18:39] Illarion: A: jailed ravennight for 1 day.  See note about demonic.
+[Aug 22 2011 15:55] Fred: A: /players/chip/venom2/obj/weapon.h -- addjusted some of the numbers to adjust power levels.
+[Aug 24 2011 12:29] Fred: A: /players/vertebraker/guilds/samuraigob.c -- multiple changes, see comments if you care.
+[Aug 24 2011 19:53] Fred: A: /players/boltar/casino/floor/casinofloor1.c -- added an array so players could only buy chips once during a boot.
+[Aug 24 2011 19:54] Fred: A: /players/plasma/casino/slot.c -- changed it to add_money() to the player instead of upping the chip count.  This was being highly abused where players could just sit there and score millions of coins.  With the purchase of chips limited to once and payout direct they can still win but it'll limit things.
+[Aug 28 2011 19:50] Mo: A: Registered Test Character: Motown
+[Sep  2 2011 11:15] Rumplemintz: A: /players/dune/closed/enterload.c - changed to send tells to Dune - not console on castle load
+[Sep  2 2011 11:17] Rumplemintz: A: /players/boltar/lv1/eat_maker - changed to send message to B instead of console
+[Sep 17 2011 01:25] Sparrow: A: removed darkfyre from neo's and reimbursed xps
+[Sep 20 2011 15:00] Rumplemintz: A: /players/dreamspeakr/WEDDING/hera.c updated
+[Sep 21 2011 10:44] Rumplemintz: A: ~/mythos/closed/play/updates.c removed write to stdout
+[Sep 21 2011 10:47] Rumplemintz: A: ~/mizan/etheriel/heals/dirtbag - removed add_verb
+[Sep 21 2011 10:48] Rumplemintz: A: ~/mizan/etheriel/items/ringpop removed add_verb
+[Oct  1 2011 12:54] Angel: A: after mud crash joab lost bag w/ heal and no coins were given/ I gave him a bag w/ heals
+[Dec 29 2011 14:02] Rumplemintz: A: /players/pestilence/closed/dark/obj/action.h fixed add_action
+[Dec 29 2011 14:05] Rumplemintz: A: /players/guilds/Rangers/Room/RangerRoom.c changed file_name to object_name
+[Jan  7 2012 16:00] Angel: A: I removed ally's from the Knight's who were either Banished or no longer had a player in the system
+[Jan 24 2012 13:05] Fred: A: updated ~/llew/Other/misc/deathlog.c to show 2012 deaths.
+[Feb 21 2012 11:38] Fred: A: replaced /players/daranath/qualtor/newstuff/heals/generic_heal.c with the updated generic_heal.c in /obj
+[Feb 21 2012 11:39] Fred: A: ~pavlik/guild/mages/room/blood_bank.c -0- added a if str doesn't equal choices to return 0 so you can still give items in the room.
+[Feb 21 2012 22:15] Fred: A: promoted Jack back to lvl 21.  He was a wiz roughly 8 years ago and then asked to be demoted as he didn't have the time.  He wanted to give it another go.
+[Feb 22 2012 12:37] Fred: A: restored two pieces of gear to Bilbill from a crash yesterday.
+[Jul 09 2012 10:18] Rumplemintz: A: /players/mizan/etheriel/heals/pickles.c changed add_action
+[Jul 09 2012 10:29] Rumplemintz: A: /players/dreamspeakr/WEDDING/garden.c fixed add_action
+[Jul  9 2012 14:10] Rumplemintz: A: /players/dreamspeakr/WEDDING/motel.c fixed add_action
+[Jul 10 2012 14:01] Rumplemintz: A: restored Dragnar to wizard status, set him to level 60.
+[Jul 11 2012 14:05] Rumplemintz: A: room/room.c changed file_name to object_name for LD
+[Jul 11 2012 14:10] Rumplemintz: A: /obj/objtracker.c changed - took out channel broadcast for ldmud, not sure if we even care on LP anymore either, but left it in
+[Jul 11 2012 14:16] Rumplemintz: A: /obj/armor.c changed 'keys' to 'm_indices' if on LD
+[Jul 11 2012 14:24] Rumplemintz: A: /obj/weapon.c changed 'keys' to 'm_indices' for LDMUD
+[Jul 11 2012 14:32] Rumplemintz: A: /obj/weapon.c changed file_name to object_name for LD
+[Jul 11 2012 14:56] Rumplemintz: A: /obj/living.c replace file_name with object_name for LD
+[Jul 11 2012 15:07] Rumplemintz: A: /obj/monster.c replace filter_array with filter() for LD
+[Jul 11 2012 15:11] Rumplemintz: A: ~/cosmo/hslist/vds.c replaced keys with m_indices for LD
+[Jul 11 2012 15:17] Rumplemintz: A: ~/cosmo/hslist/bunch_of_files - replace file_name with object_name, keys with m_indices for LD
+[Jul 11 2012 15:32] Rumplemintz: A: ~/deathmonger/castle.c got rid of silly earwax stuff
+[Sep  6 2012 15:49] Sparrow: A: cloned /players/fred/stuff/excalibur.c to Kyrain, was lost in room
+[Feb  5 2013 15:40] Rumplemintz: A: removed Castiel from Healers guild - applied XP penalty to do so
+[Feb 12 2013 09:13] Fred: A: updated /players/llew/misc/deathlog.c to update the obit notice for 2013.
+[Feb 12 2013 09:14] Fred: A: updated /players/cosmo/hslist/svds_new.c - to allow for 2013 experience records.
+[Feb 12 2013 12:12] Rumplemintz: A: /players/mizan/etheriel/heals/portable_cow removed add_verb
+[Feb 12 2013 12:13] Rumplemintz: A: /players/mizan/etheriel/heals/bandages removed add_verb
+[Feb 12 2013 12:14] Rumplemintz: A: /players/mizan/etheriel/heals/benzine removed add_verb
+[Feb 12 2013 12:16] Rumplemintz: A: /players/mizan/etherial/heals/bunupill removed add_verb
+[Feb 12 2013 13:54] Rumplemintz: A: /players/mizan/etheriel/heals/bunupuradah-pill.c removed add_verb
+[Feb 12 2013 13:55] Rumplemintz: A: /players/mizan/etheriel/heals/cappio.c removed add_verb
+[Feb 12 2013 13:56] Rumplemintz: A: ~/mizan/etheriel/heals/carbo-blast.c removed add_verb
+[Feb 15 2013 10:43] Rumplemintz: A: ~bastion/closed/ring and ringz - add check for LDMUD for filter()
+[Feb 17 2013 13:56] Fred: A: compd severance exp for a pk bug death.
+[Feb 17 2013 14:14] Rumplemintz: A: /players/pain/NEW/items/star added in_editor check to broadcasting
+[Mar 12 2013 14:00] Wicket: A: Registered Test Character: Silverleaf
+[Mar 12 2013 14:02] Fred: A: Per a request I put Wicket back as a wiz.  He was demoted by request as well and decided he wanted to try it out again.
+[Mar 12 2013 15:42] Fred: A: gave Dragnar edit access to the Mage.
+[Mar 13 2013 23:04] Dragnar: A: Registered Test Character: Dragtest
+[Mar 14 2013 21:41] Fred: A: stopped the random_move on /players/angel/areas/nox/npc/opher.c anteaus.c and nafrayu.c
+[Mar 15 2013 16:15] Wicket: A: Registered Test Character: Thorin
+[Mar 19 2013 21:14] Fred: A: set Riddick's special guild title for maxing the Fallen.
+[Mar 24 2013 20:28] Fred: A: update /players/pavlik/guild/mages/help/dragon2 -- to show updated command added by Mizan of xferxp
+[Mar 31 2013 11:37] Fred: A: /update the guild_hall path in /players/mokri/clans/stoned/object.o  It was set in the K-Mart but that is no longer in game.
+[Mar 31 2013 11:38] Fred: A: patched Ranger colors to 3 or 4 rangers.  The color options were empty so they couldn't do it when they joied.
+[Mar 31 2013 11:38] Fred: A: patched several animal, weapon, dinos for Rangers too.  Couldn't do those since color was out on initial join.
+[Mar 31 2013 11:39] Fred: A: added colors so won't be an issue in the future when Rangers join.
+[Apr  4 2013 06:24] Wicket: A: Registered Test Character: Violentj
+[Apr 10 2013 20:35] Wicket: A: Registered Test Character: Lilwicket
+[Apr 16 2013 15:09] Fred: A: approved change to /players/mosobp/areas/BATTLE/OBJ/eura.c for mage guild bonus
+[Apr 16 2013 15:09] Fred: A: approved /players/zeus/museum/OBJ/light_dagger.c for mage guild bonus
+[Apr 16 2013 15:09] Fred: A: approved /players/jaraxle/3rd/pyramid/items/myst_cloak.c for mage guild bonus
+[Apr 30 2013 16:31] Fred: A: Promoted Dragnar to lvl 100.
+[Jul 30 2013 12:24] Rumplemintz: A: player.c changed long()
+[Aug  6 2013 11:29] Rumplemintz: A: fixed ~/aislinn/2tennis
+[Aug  6 2013 11:31] Rumplemintz: A: ~/catwoman/a.c fixed
+[Sep 18 2013 15:28] Rumplemintz: A: Approved Dragnars updates to wastelands
+[Sep 18 2013 17:41] Rumplemintz: A: gave Blazko elemental cloak - name is in log
+[Oct  1 2013 11:04] Rumplemintz: A: added query_items to room/room to return items array
+[Oct  4 2013 15:09] Rumplemintz: A: updated titles room in vamp guild
+[Oct  7 2013 11:22] Rumplemintz: A: vampob - fixed a typo in vampire_strength_bonus()
+[Oct  9 2013 17:07] Rumplemintz: A: player.c made it cat new MANAGEMENT file on login
+[Oct  9 2013 17:08] Rumplemintz: A: NEWS / WIZNEWS - removed upper portion into new MANAGEMENT file
+[Oct 11 2013 10:33] Rumplemintz: A: player.c removed esc define and changed usage to use ansi.h
+[Oct 14 2013 13:06] Rumplemintz: A: /obj/user/xls.c changed str[1..-1] notation to str[1..<1] notation for compatibility with LD driver
+[Oct 14 2013 15:46] Rumplemintz: A: ~/eurale/VAMPIRES/OBJ/dboard - fixed add_action
+[Oct 14 2013 16:01] Rumplemintz: A: ~/zeus/desert/OBJ/desert_daemon fixed destruct() call for LD
+[Oct 14 2013 16:01] Rumplemintz: A: ~/forbin/realms/misc/OBJ/saddlebag fixed missing return value
+[Oct 14 2013 16:02] Rumplemintz: A: ~/vertebraker/misc/cj/cj_face fixed missing return value
+[Oct 15 2013 16:15] Rumplemintz: A: /daemons/logins.c fixed string notation for LD
+[Oct 15 2013 16:23] Rumplemintz: A: _mk.c fixed str notation for LD
+[Oct 15 2013 16:25] Rumplemintz: A: /bin/play/_description.c fixed string notation for LD
+[Oct 15 2013 16:26] Rumplemintz: A: /bin/play/_emotes.c fixed string notation for LD
+[Oct 15 2013 16:28] Rumplemintz: A: mk.c fixed string notation for LD
+[Oct 15 2013 16:32] Rumplemintz: A: /bin/wiz/_update_items fixed string notation for ld
+[Oct 15 2013 16:36] Rumplemintz: A: /bin/wiz/_combat.c fixed string notation for LD
+[Oct 15 2013 16:39] Rumplemintz: A: /obj/daemons/commands fixed string notation for LD
+[Oct 15 2013 16:50] Rumplemintz: A: /obj/player.c fixed string notation for LD
+[Oct 15 2013 16:58] Rumplemintz: A: /obj/user/text_edit.c fixed string notation for LD
+[Oct 15 2013 17:01] Rumplemintz: A: /obj/armor.c fixed various things for LD
+[Oct 15 2013 17:06] Rumplemintz: A: /obj/player/dr/read_write.c fixed string notation for LD
+[Oct 15 2013 17:07] Rumplemintz: A: /obj/time_check2.c fixed string notation for LD
+[Oct 15 2013 17:08] Rumplemintz: A: /obj/weapon.c fixed string notation in long for LD
+[Oct 15 2013 17:10] Rumplemintz: A: ~/mizan/mines/core/room.c fixed string notation for LD
+[Oct 15 2013 17:15] Rumplemintz: A: ~/mizan/temp/armor.c and weapon.c fixed string notation
+[Oct 15 2013 17:16] Rumplemintz: A: ~/zeus/stuff/strlen.c fixed string notation for LD
+[Oct 15 2013 17:24] Rumplemintz: A: ~/angel/masons/bin/seal.c fixed string notation
+[Oct 15 2013 17:29] Rumplemintz: A: ~/balowski/std/editor.c fixed string notation for LD
+[Oct 15 2013 17:32] Rumplemintz: A: ~/guilds/bards/martin.c fixed string notation for LD
+[Oct 15 2013 17:34] Rumplemintz: A: ~/illarion/obj/xcp.c fixed string notation for LD
+[Oct 15 2013 17:36] Rumplemintz: A: bloodfist wep_daemon fixed string notation for LD
+[Oct 15 2013 17:37] Rumplemintz: A: blooodfist gob fixed string notation for LD
+[Oct 15 2013 17:40] Rumplemintz: A: ~/snow/dervish/sp_checker.c
+[Oct 15 2013 17:45] Rumplemintz: A: /room/room.c fixed string notation for LD
+[Oct 15 2013 18:11] Rumplemintz: A: people command - added ctime()
+[Oct 16 2013 15:48] Rumplemintz: A: ~/miza/etheriel/beasties/sarawak fixed add_action
+[Oct 16 2013 15:48] Rumplemintz: A: ~/quantos/desert/oasis fixed add_action
+[Oct 16 2013 16:42] Rumplemintz: A: /players/llew/Other/misc/obituary and deathlog - fixed so that we never have to update the year again
+[Oct 29 2013 17:35] Rumplemintz: A: dopple badge - fixed Tonic spell to actually charge *2 sps
+[Oct 30 2013 10:01] Rumplemintz: A: dopple badge - fixed 'gget' command for no str
+[Oct 30 2013 10:04] Rumplemintz: A: created uptime command for wizards
+[Oct 31 2013 17:57] Rumplemintz: A: dopple badge - fixed an add_xverb and a casting
+[Nov  4 2013 11:17] Rumplemintz: A: added decay to mystic faction (dopple) enchant armor spell
+[Nov  4 2013 11:36] Rumplemintz: A: dopple board include file - added year to headers
+[Nov  4 2013 11:41] Rumplemintz: A: added year to wiz bulleting board
+[Nov  4 2013 12:37] Rumplemintz: A: cleaned up the announcement board
+[Nov  5 2013 12:25] Rumplemintz: A: master.c - added a timestamp to error logging
+[Nov  5 2013 12:44] Rumplemintz: A: changed ~/catwoman/armor/bcape from type shield to cloak
+[Nov  5 2013 12:46] Rumplemintz: A: ~/catwmon/armor/mask changed type from helmet to misc
+[Nov 11 2013 16:49] Rumplemintz: A: dopple 'coat' command updated
+[Nov 25 2013 18:06] Rumplemintz: A: /players/catt/NPC/TEM_master_hunter.c added a return value to tunnel() function to suppress 'What?'
+[Dec  3 2013 14:19] Rumplemintz: A: deleted the /log dir by accident (should put some checks on 'rm') - restored from last night backup
+[Dec  5 2013 12:52] Rumplemintz: A: forgot to change owner:group on said /log dir above - did that now
+[Dec  5 2013 15:25] Rumplemintz: A: /players/mizan/opl/items/tripod_card changed some commands because of interferance with regular player commands (3s does 3 south, etc...)
+[Dec 11 2013 11:40] Rumplemintz: A: /players/catt/castle - changed the way the path/portal loads
+[Dec 12 2013 12:52] Rumplemintz: A: added callouts command for wizzies
+[Dec 12 2013 13:42] Rumplemintz: A: Dopple sleep command ported to daemon
+[Dec 13 2013 13:02] Rumplemintz: A: added lpc channel for lpc code talking
+[Dec 15 2013 19:30] Fred: A: patched Moriarty's cyber guild file so he didn't have negative exp.
+[Dec 15 2013 19:31] Fred: A: promoted Ozzy to guild exp 671 in the Vamps.  Should make him the new guild commander.
+[Dec 17 2013 17:38] Rumplemintz: A: restored Darkfyre xp to 27000000 (19+37) - bugs in doppleganger swap command
+[Dec 17 2013 17:58] Rumplemintz: A: fixed bugs in Doppleganger swap command to allow for extra levels and maximum swappage
+[Dec 18 2013 09:52] Fred: A: added code to /obj/monito.c for rogue guild combo points.  old monitor is at /obj/monitor.bak if needed.
+[Dec 18 2013 18:28] Shinshi: A: Added 2333939 xp back to Demonic - Bugged death; was AFK; and died in Rat where no one could reach him except other ninjas
+[Dec 23 2013 12:34] Rumplemintz: A: Fixed melko (trix) quest
+[Dec 23 2013 12:34] Rumplemintz: A: /players/trix/castle/quest/monst/ring.c - auto wear/wield was causing ring not to be available for quest - changed ring.c to check for npc or player
+[Dec 24 2013 12:00] Rumplemintz: A: ~/grimm/guild.c recoded guild entrance
+[Jan  1 2014 22:35] Shinshi: A: Added 2977150 back to Brynna - Cyclonian randomly switched targets to attack her when no one left. Have removed Cyclonian until investigation is over.
+[Jan  6 2014 12:25] Fred: A: /players/cosmo/hslist/svds_new.c -- updated for 2014 year.
+[Jan  6 2014 14:13] Dragnar: A: Updated /players/snow/dervish/objects/mound.c to give a small heal to players on the mound list when they are present in the guild hall
+[Jan  6 2014 17:19] Dragnar: A: Fixed invalid reference in /players/dragnar/WasteLands/rooms/libstorage.c
+[Jan  6 2014 17:25] Dragnar: A: Updated /players/dragnar/WasteLands/rooms/bridge2.c, it was not checking to see if the mob was already present before cloning
+[Jan  7 2014 16:13] Rumplemintz: A: /players/cosmo/hslist/svds_new.c -- UPDATED SO NO FURTHER UPDATES REQUIRED - EVER - STOP IT - REALLY - :)
+[Jan  8 2014 13:03] Rumplemintz: A: /obj/monitor - cleaned up ansi
+[Jan  9 2014 01:02] Dragnar: A: Gave Gogeta back /players/vertebraker/prizes/gogeta
+[Jan  9 2014 09:42] Dragnar: A: My player character is Beta testing Walking Dead area which Rumplemintz approved.
+[Jan  9 2014 16:19] Dragnar: A: Returned heals to titan after a crash.
+[Jan  9 2014 17:11] Dragnar: A: Titan is going to beta the Walking Dead area.
+[Jan 10 2014 09:01] Shinshi: A: Messed up on adding a wlog entry
+[Jan 10 2014 18:46] Shinshi: A: Added 287628 xp to Kanji after Worm killed him while Kanji is helping in the Rogue guild beta
+[Jan 11 2014 21:01] Shinshi: A: Backstab wasn't getting rid of the "didshadowstep" object. It's fixed so it does now.
+[Jan 11 2014 21:20] Fred: A: on svds_new.c added BASE+ to line 113 and one other line using Ssave_bject();
+[Jan 12 2014 01:18] Dragnar: A: Increased Jasters guild level so the Samurai would have active emperor.
+[Jan 13 2014 16:46] Rumplemintz: A: ~/pain/items/NEW/star_daemon - added code to see new guilds
+[Jan 14 2014 08:40] Fred: A: Fixed /players/guilds/Rangers/Commands/Recruit.c so people could banishpotential allys/guild members from joining.
+[Jan 16 2014 11:04] Fred: A: updated /players/eurale/Lab/l19.c so you could drop items in the room.
+[Jan 16 2014 11:04] Fred: A: updated /players/eurale/Lab/NPC/yugoloth.c -- so you could drop items in the room.
+[Jan 18 2014 21:41] Dragnar: A: gogeta beta testing Walking Dead area.
+[Jan 21 2014 13:19] Rumplemintz: A: added 103317 xp to Grey (20664 going to xp, rest to guildxp) 5 times to make up for loss - not sure where it went.
+[Jan 22 2014 21:05] Fred: A: Promoted Shinshi to lvl 60 for continued work and opening his Rogue guild.
+[Jan 23 2014 16:13] Rumplemintz: A: player.c added Crime back in
+[Jan 23 2014 16:16] Rumplemintz: A: living.c crime
+[Jan 23 2014 22:20] Fred: A: Allowed Darkfyre to get put back into the Neos.  He used to be in the guild and left and was reimbursed his exp.  Put him back but dropped him 5.5 mil as a penalty.
+[Jan 23 2014 22:21] Fred: A: put him in at glvl 6 as a start point, not with his old guild file.
+[Jan 24 2014 16:35] Rumplemintz: A: ~/boltar/things/cop.c - Made them tougher
+[Jan 24 2014 16:35] Rumplemintz: A: ~/maledicta/town/rooms/t9 - Added whiteblade the hunter back in
+[Jan 24 2014 16:36] Rumplemintz: A: /room/police.c Recoded
+[Jan 24 2014 22:40] Dragnar: A: Vizjerei beta testing Walking Dead area.
+[Jan 26 2014 15:36] Illarion: A: jailed demonic for 3 days as a cooling off period
+[Jan 28 2014 22:01] Dragnar: A: xiao beta testing WalkingDead area.
+[Jan 29 2014 17:52] Rumplemintz: A: /players/jaraxle/3rd/volcano - Changed just about every file in this directory to put it back into the game
+[Jan 30 2014 13:10] Rumplemintz: A: /players/vertebraker/closed/shardak/room/othrone.c - removed reference to caelin's universal.h file
+[Jan 30 2014 13:19] Rumplemintz: A: promoted Gemini to 30 for open area
+[Jan 30 2014 20:41] Illarion: A: added /players/guilds/healers/members/left - when someone quits the guild their file is backed up htere, and the missing dir was causing an error when someone quit
+[Feb  5 2014 01:43] Dragnar: A: googleplex, thomas, lebronjames did beta test for WalkingDead area.
+[Feb  6 2014 01:56] Dragnar: A: Updated WasteLands/armor/suit.c, the reset was getting called and causing issues.
+[Feb  8 2014 20:50] Dragnar: A: Opened WalkingDead area, approved by Star and Rumplemintz.
+[Feb  9 2014 09:41] Dragnar: A: Fixed /players/snow/dervish/lib/doasis.h that someone had screwed up.
+[Feb  9 2014 14:57] Wicket: A: Registered Test Character: Yoshi
+[Feb 10 2014 08:38] Fred: A: updated /bin/std_daemon.c for Elementalist
+[Feb 10 2014 16:41] Rumplemintz: A: /obj/player.c - /obj/play/new_communicate.h - Changed to evaluate query_name() instead of using variable that was already set
+[Feb 13 2014 17:18] Dragnar: A: Added log_file to /players/cosmo/hslist/svds_new.c in the update_alltime funciton. Yearly list is not working and I believe it is because it is not properly restoring the yearly .o file.
+[Feb 16 2014 11:32] Wicket: A: Registered Test Character: Mudtroll
+[Feb 16 2014 17:03] Shinshi: A: Registered Test Character: Thrall
+[Feb 17 2014 17:17] Dragnar: A: Updated /players/dragnar/WalkingDead/mons/walker.c -> Nerfed exp a bit at lower levels.
+[Feb 17 2014 23:49] Dragnar: A: Updated /players/jareel/armor/chaos/woods2/orlanth_earring to do a find_call_out before doing call_out.
+[Feb 18 2014 21:21] Illarion: A: promoted shinshi to 100 for his work on converting the dervish and helping wicket with his guild
+[Feb 19 2014 00:53] Dragnar: A: Updated /players/dragnar/daemons/shop.c -> Fixed bug identified by Timespliter when selling bags.
+[Feb 19 2014 15:48] Dragnar: A: Updated/fixed /players/guilds/dervish/objects/mound.c
+[Feb 20 2014 20:09] Dragnar: A: Updated /players/snow/dervish/hall/hall.c to reset player set_home and move them to new /players/guilds/dervish/hall/hall.c
+[Feb 20 2014 20:31] Shinshi: A: Split the say function in /players/tallos/7tigers/objects/mspellstaff.c - The final line of the say was being cut off
+[Feb 20 2014 20:32] Shinshi: A: Updated /players/snow/nexus.c to direct Dervish to the new /players/guilds/dervish/hall/hall.c
+[Feb 20 2014 23:15] Illarion: A: Registered Test Character: Raziel
+[Feb 24 2014 13:13] Dragnar: A: Registered Test Character: Dragtst
+[Feb 25 2014 18:11] Rumplemintz: A: Changed ~/gemini/workroom to remove wizard commands (similar to wiz tool)
+[Feb 26 2014 10:21] Rumplemintz: A: promoted Dragnar to 1000 for work on new channel daemon
+[Feb 26 2014 14:11] Dragnar: A: Updated dervish to use the new channel daemon for guild chats.
+[Feb 26 2014 22:57] Illarion: A: killed symbio and restored his exp, because.
+[Feb 27 2014 07:33] Dragnar: A: /room/post was not loading causing a login error in player.c so updated post.c to fix the error.
+[Feb 27 2014 10:47] Rumplemintz: A: updated /doc/admin/mail for new admins/seniors
+[Mar  2 2014 09:14] Dragnar: A: Fixed bug with feelings that had a newline in /bin/channel_daemon.
+[Mar  4 2014 09:23] Dragnar: A: updated /players/shinshi/fun/hourglass.c because it would not load. Restored hourglass to asunder.
+[Mar  4 2014 14:41] Dragnar: A: Gave back kiros the elemental test obj, clearly logged that he completed it multiple times.
+[Mar 10 2014 12:00] Fred: A: upped ghouls hp value.
+[Mar 10 2014 12:00] Fred: A: blakc circle mage ghouls.
+[Mar 13 2014 14:48] Dragnar: A: Updated /room/shop to use new /obj/daemons/shop_daemon. Added few simple functions in player.c to make lists work properly.
+[Mar 14 2014 19:02] Dragnar: A: Updated /players/saber/stuff/corpse2 and /players/guilds/dervish/lib/scatter.c so dervish are not able to buy corpses to use for sand points.
+[Mar 16 2014 16:56] Dragnar: A: Restored Raidon's xp from a dc death.
+[Mar 19 2014 10:16] Dragnar: A: Modified dervish so they no longer lose sand points while a sandstorm is present in the room.
+[Mar 21 2014 18:01] Dragnar: A: Cleaned up /players/earwax/housing/land_data.o, removed Shinshi objects that shouldn't be there.
+[Mar 24 2014 17:09] Rumplemintz: A: /obj/player.c Made it so the player count on the welcome screen counts invis PK'ers
+[Mar 25 2014 14:23] Rumplemintz: A: ~/wren/castle.c changed to use <ansi.h>
+[Mar 26 2014 11:37] Rumplemintz: A: gave 10k coins to Kai for bug troubleshooting in dopps
+[Mar 26 2014 12:08] Rumplemintz: A: Replaced all instances of 'check_file' with 'file_size' in ALL files - created backup of files changed with .check_file extension
+[Mar 26 2014 12:27] Rumplemintz: A: /obj/player.c changed caller() calls to previous_object() calls
+[Mar 26 2014 12:44] Rumplemintz: A: and.... changed them back
+[Mar 26 2014 12:45] Rumplemintz: A: the caller() changes
+[Mar 28 2014 12:42] Rumplemintz: A: /daemons/nrpoints replaced file_name with object_name
+[Mar 28 2014 14:10] Dragnar: A: Updated /players/dragnar/WalkingDead/armor/swat_vest -> Removed multiple armor types and just made it chest. Multiple armor types were not working correctly.
+[Apr  3 2014 23:13] Dragnar: A: updated /players/earwax/house_daemon.c to add query_land_owner function.
+[Apr  4 2014 00:33] Dragnar: A: Refunded deathseeker 2mil xp after being killed by Oakley 2x.
+[Apr  8 2014 13:03] Dragnar: A: Added clear_withdrawable_amount to /players/earwax/bank/bankd.c for Prestige.
+[Apr 11 2014 12:51] Rumplemintz: A: Changed Mizan's python script that generates the opl area to remove set_light(1); - was causing light to increment by 1 for every object loaded, which would eventually hit the max for set_light and send it negative
+[Apr 11 2014 15:58] Rumplemintz: A: added a Driver's manual for the M113 in opl area
+[Apr 13 2014 11:06] Dragnar: A: Updated shop daemon to give random coins when item is > 1000 based on charisma stat.
+[Apr 13 2014 23:52] Dragnar: A: Implemented most of prestige. Updated living.c for prestige exp bonus.
+[Apr 14 2014 12:57] Dragnar: A: Updated /obj/player/follow/follow.c -> added call to remove call out in clear_follow() function.
+[Apr 15 2014 22:06] Dragnar: A: Update player.c and living.c to finish putting in prestige bonuses. Just search for comments with PRESTIGE in it.
+[Apr 21 2014 15:58] Rumplemintz: A: ~/catt/castle.c added a call to set_no_clean(1); to room/vill_track to make it so the castle isn't dested
+[Apr 21 2014 16:16] Rumplemintz: A: ~/catt/portal added is_castle function
+[Apr 21 2014 16:16] Rumplemintz: A: ~/catt/castle removed set_no_clean call
+[Apr 24 2014 17:51] Dragnar: A: Updated /bin/play/_who.c for prestige.
+[Apr 25 2014 16:24] Dragnar: A: Updated /bin/play/_score.c for prestige. Added _psc.c for people to use in place of guild scores.
+[Apr 28 2014 11:29] Dragnar: A: Updated /room/exlv_guild to not add test characters to the tablet.
+[Apr 29 2014 20:34] Shinshi: A: Restored Panda's bloodfist guild object - Disappeared randomly.
+[May  5 2014 16:52] Dragnar: A: Updated shoutout and shoutin functions in player.c for prestige, updated show_stats in living.c.
+[May 12 2014 11:26] Rumplemintz: A: Promoted Dragnar to 5000
+[May 13 2014 12:45] Dragnar: A: Gave double xp to Jellek using Fred's double_xp_object.
+[May 14 2014 17:59] Dragnar: A: updated /bin/play/_finger.c to include prestige stats.
+[May 15 2014 16:11] Rumplemintz: A: Updated angmar's treasury to fix quest
+[May 15 2014 18:21] Rumplemintz: A: made Xypher a newbie helper
+[May 15 2014 18:23] Dragnar: A: updated Wastelands quest to be worth 9 physical since the mobs had heavy upgrades. Used Despoina as a marker which is an 8.
+[May 19 2014 10:14] Dragnar: A: Added mage bonus for /players/coldwind/desert/weapons/ball.c
+[May 20 2014 18:13] Dragnar: A: Updated /players/llew/closed/crystal/xetra_claws to have set_type exotic.
+[May 20 2014 21:35] Dragnar: A: update xtitle to include check for prestige level.
+[May 21 2014 12:19] Dragnar: A: Updated /obj/prego.c - changed the define of cap_name to CAP_NAME since it was causing kid.c to not load (cap_name is inherited from living.c).
+[May 21 2014 17:26] Rumplemintz: A: Demoted Mokri from lvl 100 to level 60
+[May 23 2014 16:11] Dragnar: A: added 400k to dreadbane/marsellus for not getting exp while killing Gordie and mobs in wings area. Suspect mage bug.
+[May 25 2014 00:01] Dragnar: A: Added #define DOUBLEXPDAY 1 in living.c, will remove Monday AM.
+[May 25 2014 16:38] Dragnar: A: Restored eq to dreadbane after crash.
+[May 26 2014 07:51] Dragnar: A: Removed double XP from living.c
+[May 27 2014 12:57] Dragnar: A: updated /obj/partymaster.c to not adjust for leader exp when the leader is a Mage mirror image. If the leader is a mage using mimage they will miss out on the lead bonus exp, all exp will be shared evenly. Previously the party was missing exp.
+[May 29 2014 11:16] Dragnar: A: Removed Tristan from knights and moved his guild stats to Alaric. Has been bugging me for a year for a name change.
+[May 29 2014 16:15] Dragnar: A: added is_castle flag to angmar's castle.
+[May 29 2014 16:47] Dragnar: A: Added is_castle flag to padrone/blackadder/kantele/aislinn/zone castles.
+[May 29 2014 21:39] Dragnar: A: Updated hall_path for Humble and Sandlot clans, they were pointing to the old dervish directory.
+[Jun  5 2014 12:33] Dragnar: A: Approved new drone clan hall for Mokri.
+[Jun  5 2014 12:41] Mokri: A: Enabled drone room/item for purchase by clans after approval by Dragnar and Star
+[Jun  9 2014 09:06] Dragnar: A: Added WalkingDead/heals/shake to WalkingDead shop. stuff/soak 10, heal(50,50) cost 1200 coins.
+[Jun 11 2014 09:20] Dragnar: A: Fixed Sin's palace, Entrance was broken but rooms objects were there. Modified /players/earwax/housing/data/mythos/Mythos_Ancient_38.o manually to fix Entrance.
+[Jun 11 2014 09:20] Dragnar: A: Restored 200k gold to Sin for lost properties on his Palace.
+[Jun 12 2014 16:41] Fred: A: made Jabroni Judge Advocate of the Knights guild.
+[Jun 13 2014 10:57] Rumplemintz: A: changed xlevel guild to not log advancement of test chars
+[Jun 13 2014 11:05] Rumplemintz: A: promote Jareel to lvl 30
+[Jun 13 2014 11:06] Rumplemintz: A: promote jareel to 40 (has castle online)
+[Jun 13 2014 15:05] Dragnar: A: Added /players/dragnar/WalkingDead/heals/mons/meth.c to the WalkingDead area.
+[Jun 16 2014 13:56] Dragnar: A: Promoted Pestilence to level 40, existing wiz with open area.
+[Jun 16 2014 15:46] Dragnar: A: Updated /zeus/circle/rooms/path to remove exit to /players/zeus/workroom *boggle*
+[Jun 18 2014 22:31] Jareel: A: restored timeless gem and major gold gem to maul after crash drag said I could.
+[Jun 19 2014 09:35] Mizan: A: Fixed OPL ~/opl/core/monster.c to not break under certain conditions in heart_beat()
+[Jun 19 2014 09:43] Mizan: A: Doubled heal rate of (200/hb) of ~/opl/environs/poop-volcano.c and fixed heart_beat() breaking in combat
+[Jun 19 2014 11:00] Rumplemintz: A: /room/temple/pal.c - recoded
+[Jun 19 2014 12:16] Rumplemintz: A: verified all books active now that paladin book fixed (warriors guild)
+[Jun 19 2014 12:37] Jareel: A: fixed /players/jareel/armor/chaos/woods2/orlanth_shield.c Cosmetically as Sin pointed out the desc was the desc of the wrong gear.
+[Jun 19 2014 17:32] Jareel: A: Made a Test Char Named Whiterat to test out spam do not want him marked as a test character as I just want to see the spam as a player would see it for game play purposes.
+[Jun 23 2014 09:56] Dragnar: A: Removed Angulus from mage guild per his request.
+[Jun 23 2014 14:49] Rumplemintz: A: updated ~/grimm/newbie/entrance - wandering mobs/castles bugging on the way the exit functions were coded - so I redid it
+[Jun 23 2014 15:57] Mizan: A: Fixed ~/etheriel/items/blockbuster.c to not spam debug.log if someone hands it lit to a wiz
+[Jun 23 2014 15:58] Dragnar: A: Restored Mauls gear after crash, just happened to have a screenshot of his inventory
+[Jun 23 2014 22:09] Mizan: A: fixed some heartbeat-breaking bugs in ~/opl/environs/poop-volcano.c
+[Jun 24 2014 15:34] Jareel: A: Added wc_bonus to Gnarlin Drag Approved...as He has extra attack at WC 100
+[Jun 24 2014 15:52] Jareel: A: Switched Gnarlins axe from Random 5 to random 2 think I switched it when I was coding my swords and it messed up the special...This only affects my area.
+[Jun 24 2014 21:49] Mizan: A: fixed heart beat break error in ~/core/vehicle.c
+[Jun 25 2014 14:33] Mokri: A: in /players/trix/castle/primo, updated laisle10.c, laisle11c., nave5.c, raisle15.c, raisle16.c (altarboy rooms) in an effort to get the rooms to reset properly. approved by Dragnar
+[Jun 26 2014 12:30] Dragnar: A: updated /players/fred/closed/bloodfist/obj/player_shadow and /players/pavlik/guild/mages/objects/fake_party to add top_kill call.
+[Jun 26 2014 15:24] Dragnar: A: updated reset in /players/boltar/casino/floor/casinofloor2 to clone machine during reset.
+[Jun 26 2014 15:35] Rumplemintz: A: /players/grimm/newbie/room/entrance.c fixed typo that i created
+[Jun 27 2014 10:57] Dragnar: A: Updated /players/guilds/healers/obj/shade.c to allow for double_xp.
+[Jul  1 2014 17:04] Jareel: A: healed Mosh cause he was losing sps like crazy to see what the issue was was at -1.3 mil
+[Jul  2 2014 21:24] Jareel: A: Jaraxle tree needed to be reloaded
+[Jul  3 2014 08:52] Jareel: A: Fixed Gnarlins set_ac_bonus after talking to illarion last night about set_param_physical
+[Jul  4 2014 11:05] Wicket: A: A: area in blue dragoncaves did not reset properly so cloned king
+[Jul  4 2014 22:15] Jareel: A: restored two gems to maul after crash a Level2 gold gem and a timeless gem.
+[Jul  6 2014 22:26] Dragnar: A: Churched players stuck in OPL.
+[Jul  7 2014 17:51] Dragnar: A: Updated player.c and /obj/user/channel.c to use /bin/channel_daemon.c
+[Jul  7 2014 20:07] Dragnar: A: update /obj/user/one_chan.c to use channel_daemon
+[Jul  8 2014 13:18] Dragnar: A: Updated /obj/simu_efun/emit_channel.c to use /bin/channel_daemon.
+[Jul 10 2014 09:07] Dragnar: A: Updated /bin/channel_daemon to better handle when called by non-players.
+[Jul 10 2014 10:35] Pestilence: A: Registered Test Character: Pestyjr
+[Jul 11 2014 15:43] Dragnar: A: Updated many of pavliks and angels areas to work in LD.
+[Jul 11 2014 16:45] Mokri: A: accidently patched 1 exp to Oregon. Patched -1 exp after to correct the mistake
+[Jul 12 2014 13:50] Wicket: A: Xerxes had issues which caused a death in the etest his eq was replaced and was healed..... need to look into more of what happened......
+[Jul 13 2014 10:09] Dragnar: A: update /obj/prego.c -> was causing kid.c to not load on LD.
+[Jul 14 2014 17:23] Rumplemintz: A: promoted Mokri to lvl 1000 for working on LD under supervision from Gnar
+[Jul 15 2014 14:46] Dragnar: A: Promoted Pestilence to level 60 for doing a project to update Eurale's quest mobs.
+[Jul 15 2014 22:42] Jareel: A: returning bag to autumns alt that didn't drop in her box
+[Jul 15 2014 22:45] Dragnar: A: reset Marlboro's mage stats so he could repick mage spells.
+[Jul 16 2014 12:18] Dragnar: A: Updated /bin/play/_bug.c, /bin/wiz/_bugs.c, /obj/user/reports/reporter.c, and /obj/user/reports/report_tool.c to work with LD. LD will have a different save file.
+[Jul 18 2014 14:09] Dragnar: A: updated /players/dune/closed/guild/daemons/actions. for LD.
+[Jul 21 2014 11:33] Mokri: A: moved owner of clan 'baldknobbers' from coglin to timespliter due to coglin's passing
+[Jul 21 2014 17:21] Mokri: A: moved owner of clan 'century' from brenar to quagmire due to brenar's passing
+[Jul 21 2014 21:48] Jareel: A: fixed cacodemons res from set_param to set_res and added ac bonus...also fixed his magic resist it was set wrong...he should be a whole lot harder to kill now.
+[Jul 21 2014 23:16] Dragnar: A: Retrieved gear for players in OPL. BCM mob was killed with the players on it, which dested the players and they had to re-log.
+[Jul 22 2014 17:03] Dragnar: A: Recoded /room/exlv_guild in order to fix major LD bugs.
+[Jul 23 2014 13:36] Dragnar: A: Promoted pestilence to 100 to help with LD changes.
+[Jul 23 2014 19:56] Jareel: A: Got Ssilles bag from the void as it didn't drop in a box.
+[Jul 24 2014 12:23] Dragnar: A: Added /room/clean to /players/boltar/casino/floor/casinofloor2.c to hopefully stop Slots from getting cleaned from the room.
+[Jul 24 2014 15:50] Mokri: A: updated bard farsinging (gossip) to work with udpated channel daemon
+[Jul 25 2014 14:46] Mokri: A: Retrieved Kika's bag from void after disconnect did not push it to the box
+[Jul 28 2014 10:34] Karash: A: Registered Test Character: Krashtest
+[Jul 28 2014 10:51] Mokri: A: edited krashtest's .o file to set his level to 19 after karash accidently patched the level to 20
+[Jul 28 2014 16:15] Rumplemintz: A: ~/snow/ITEMS/notice.c added Date stamp to message headers
+[Jul 29 2014 14:45] Mokri: A: moved clan ownership from Mythago to Monoxide due to Mythago's passing
+[Jul 31 2014 20:01] Illarion: A: reimbursed 9 million xp timespliter lost due to a bug
+[Aug  4 2014 16:47] Mokri: A: refactored 'set_clan_hall' command for clans to properly remove spell points, and to notify player if they are attempting to set the entrace room to its current value
+[Aug  6 2014 12:28] Dragnar: A: Updated /players/boltars to fix add_action for LD. Lots of files here so just making a note in case I broke something.
+[Aug  7 2014 15:13] Shinshi: A: Re-wizzed Sami with Dragnar and Mokri as his other two approvals.
+[Aug  7 2014 15:41] Dragnar: A: Changed the way calulate_worth handles hp_bonus in /obj/living.c
+[Aug  8 2014 15:41] Mokri: A: modified humbles .o file due to death giving him the wrong xlevel (only had exp for 50 and was at 51). this ws due to his request so he could purchase stats he needed properly
+[Aug  9 2014 10:30] Pestilence: A: updated Eurale's quest mobs,and items to new specified levels, info can be found ~/Eurale
+[Aug  9 2014 13:04] Pestilence: A: made wolves in eurale/Maze/NPC to clone pelt2 from Maze/OBJ after noticing pelt was same as from wolves in /Cave/NPC
+[Aug  9 2014 17:23] Pestilence: A: disturbed told me special did 0 damage for disir_shaman, checked it fixed it,
+[Aug  9 2014 18:46] Dragnar: A: updated /players/catwoman for obsolete add_verb functions, many files updated
+[Aug 10 2014 21:32] Dragnar: A: Updated /room/exlv_guild to fix correct_extra_level which was always setting exlv 1 higher than it should.
+[Aug 12 2014 10:03] Rumplemintz: A: Rewarded demonic a heal spell for finding bug
+[Aug 13 2014 14:31] Mokri: A: reset exp for Shaggy and Jihad, due to error reported by Sami where they both ended up with over a BILLION exp for free somehow. After conversations with shaggy and sami, set shaggy's exp to 10 million, and jihad's to 350k
+[Aug 13 2014 16:01] Mokri: A: added /players/mokri/obj/gameDispenser to /players/mokri/stuff/paintball/shack, which sells /players/mokri/obj/bship
+[Aug 14 2014 22:21] Dragnar: A: Returned some gear to Timespliter, mage rooms clean which needs to be fixed.
+[Aug 15 2014 14:19] Dragnar: A: Implemented new auto setting for monitor command. Need to update help files after doing some more testing.
+[Aug 17 2014 09:51] Jareel: A: fixed Thematic stuff to area..added 10% light resist to darkdemon and -10 light damage to dark demon with thematic spam for demon consistency will add it to other demons also..will add it to Sembrak on Sembrak Recode.
+[Aug 18 2014 10:23] Dragnar: A: Gave nagasaki back /players/vertebraker/obj/hanzo_sword after losing corpse to Mondar and mob disappeared...
+[Aug 18 2014 17:56] Dragnar: A: updated /obj/partyob and partymaster so if party leader dies party is not disbanded.
+[Aug 19 2014 13:23] Rumplemintz: A: changed Sparrow to lvl 999
+[Aug 21 2014 10:27] Pestilence: A: Per fred ok with changes, can start testing with Dark Order
+[Aug 21 2014 16:31] Pestilence: A: Made Colbey,Chant,Harley testchars for D) so far
+[Aug 21 2014 16:31] Pestilence: A: DO
+[Aug 21 2014 22:25] Dragnar: A: Gave Chant and Timespliter xp back from deaths from Dark Order beta issue.
+[Aug 22 2014 13:37] Pestilence: A: fixed light damage to not hit ghost
+[Aug 22 2014 15:46] Mokri: A: added option for players to clone slot machine in /players/boltar/casino/floor/casinofloor2.c if it is missing. Action is logged to /log/SLOT
+[Aug 22 2014 16:07] Rumplemintz: A: Changed /room/clean to log into /log/CLEAN when a room is actually cleaned
+[Aug 22 2014 16:11] Rumplemintz: A: /players/coldwind/desert/items/carpet.c removed add_verb
+[Aug 22 2014 19:39] Pestilence: A: (admin) Pestilence passed equipment to Harley! = to join dark order, they need to drink blood created by the sponsor,which was me. gave blood to harley to drink
+[Aug 23 2014 09:38] Pestilence: A: Think I forgot to post this last night made Noxius beta tester for DO
+[Aug 23 2014 10:34] Pestilence: A: 5th and final Beta test slot will be Chrono when he logs in
+[Aug 23 2014 17:08] Pestilence: A: made Chrono beta tester, all spots filled, currently at 5
+[Aug 25 2014 11:00] Rumplemintz: A: Fixed big bug in Dopple swap command - Nagasaki credit for helping me find it
+[Aug 25 2014 15:35] Rumplemintz: A: implemented Dark Order pk block
+[Aug 25 2014 22:40] Dragnar: A: Updated living.c to fix errors in debug.log, added check for attacker object before call to do_damage for registered weapons.
+[Aug 26 2014 14:17] Rumplemintz: A: /players/eurale/NPC/drucilla.c Modified code so it would work on LD, and optimized it a bit.
+[Aug 26 2014 14:24] Rumplemintz: A: ~/vertebraker/swamp/forest/f4.c Fixed for LD
+[Aug 26 2014 14:30] Rumplemintz: A: /players/hurtbrain/obj/* Fixed all add_verb instances
+[Aug 27 2014 11:22] Rumplemintz: A: ~/airwoman fixed nonloading stuff
+[Aug 27 2014 11:32] Rumplemintz: A: /players/maledicat/cave4/rooms/randomcave - tries to load workroom2 - which has a guild board from B's area - which had add_verbs in it
+[Aug 27 2014 12:05] Dragnar: A: Gave chant back heals after we had to restart.
+[Aug 28 2014 07:34] Pestilence: A: added a shop with with existing shop code, just with 0 light, in DO guild hall
+[Aug 29 2014 11:48] Mokri: A: Added item /players/mokri/obj/farseerBot to list of items sold from item dispenser in paintball shack after approval from Dragnar
+[Aug 29 2014 11:48] Mokri: A: Updated Armory in Hall of Apprentices to give out a free Farseer Bot
+[Sep  2 2014 22:04] Dragnar: A: copied /players/nightshade to /players/karash as he has expressed interest in updating this very old area. Removed closed and tool directories.
+[Sep  3 2014 14:59] Rumplemintz: A: Demoted mokri to lvl 21 for Log file manipulation
+[Sep  3 2014 15:27] Rumplemintz: A: Set Oregon's XP back to Level 5 - not sure how much was illegally gained.
+[Sep  3 2014 15:44] Rumplemintz: A: reimbursed Chant and Colbey for lost bags / heals
+[Sep  3 2014 15:50] Rumplemintz: A: Crashed mud twice with an object intended for LD - careful with loading/cloning objects not meant to be here.
+[Sep  3 2014 20:08] Dragnar: A: promoted Sami to level 30 for actions taken to fix the mud.
+[Sep  3 2014 22:26] Mosobp: A: reset colbey's coins, xp and levels after damage was done.
+[Sep  3 2014 22:42] Dragnar: A: Promoted Mosobp to level 60 for his assistance with issues while no seniors were available tonight.
+[Sep  4 2014 13:42] Dragnar: A: fixed experience, money, Bank Balance, clan_name and auto_load for sin/stardrifter/quagmire/jadin/spartan/colbey
+[Sep  4 2014 15:53] Rumplemintz: A: Banished Mokri
+[Sep  5 2014 11:02] Dragnar: A: Registered Test Character: Gnar
+[Sep  8 2014 16:25] Dragnar: A: Restored Talisman's xp after removing him from symbs guild which he joined accidently.
+[Sep  9 2014 19:22] Shinshi: A: Restored Dameon's armor to him due to Jareel's weapon crashing the MUD
+[Sep 10 2014 14:29] Rumplemintz: A: added id of "npc" to all things that inherit /obj/monster.c
+[Sep 11 2014 06:49] Jareel: A: did Update to Dual axe, Both axes had an Ice special..One was supposed to be fire was an over look in design phase...added fire to one was going to be in both weps to make them at a decent power level but dill look for approval for that change.
+[Sep 11 2014 10:11] Dragnar: A: Updated /boltar/things/antipk.c to work on LD.
+[Sep 11 2014 22:15] Jareel: A: Made weak versions of mobs with soulbound gear to replace Jaster broken gear...Not sure how to fix the Hotel issue.
+[Sep 11 2014 23:12] Jareel: A: 2096671 xp added to Noxious for Room bugging and 8 Rhino Broo loading to room where 2 are supposed to be.
+[Sep 12 2014 12:23] Jareel: A: fixed wc bonus on Rhino Broo...Broo had Extra attack and did not have wc bonus adjusted for spells and wc.  also fixed spell damage types as was set for other|physical.
+[Sep 12 2014 20:50] Shinshi: A: Reimbursed Jaster 2 finely honed swords, orb, and ele ammy due to crash earlier
+[Sep 13 2014 15:46] Pestilence: A: added smith to guild hall of Dark order, based on village with 50 coin discount
+[Sep 14 2014 10:24] Pestilence: A: made DO trainer's spells to match guild spells if someone was to attack him,l board
+[Sep 14 2014 10:24] Pestilence: A: and made him wield some cool weapons that destruct on death
+[Sep 15 2014 09:23] Dragnar: A: Approved Karash's Outpost area.
+[Sep 15 2014 09:49] Pestilence: A: opened DO sunday, per Fred telling me earlier on Thursday or WEdnesday could open when I felt comfortable
+[Sep 15 2014 13:39] Jareel: A: added and inv cmd to the cloak.
+[Sep 15 2014 13:59] Dragnar: A: promoted Karash for opening his first area.
+[Sep 15 2014 20:39] Dragnar: A: promoted Shinshi for assistance doing LD changes.
+[Sep 16 2014 17:07] Pestilence: A: had issue with light damage add_sp and add_hp switched to heal_self works now, maybe someone did lib change with add_hp,sp
+[Sep 16 2014 20:13] Pestilence: A: cast double exp, was basically a test, and no one is actually killing anything lol
+[Sep 17 2014 15:46] Sami: A: Registered Test Character: Simon
+[Sep 18 2014 12:53] Pestilence: A: addded dark order to help guilds
+[Sep 18 2014 15:16] Pestilence: A: dbl xp, felt right
+[Sep 22 2014 17:20] Jareel: A: Changed Dual axe damage from a hit_player dtype to a do_damage dtype with Drags help...was causing some hbt issues..think its fixed.
+[Sep 23 2014 20:40] Dragnar: A: Approved /players/pestilence/amity/obj/cblast to be put in the game. 200 extra coins for -30 alignment costs more than Elixir of Malice.
+[Sep 24 2014 08:43] Rumplemintz: A: /players/emerson/mons/manager.c - Changed Pizza Hut Manager, added Ninja Turtle quest for Wicket
+[Sep 24 2014 08:43] Rumplemintz: A: /players/wicket/ninja_turtles/quest/* added a few files for the Ninja Turtle quest
+[Sep 24 2014 15:08] Jareel: A: Fixed Gauntlets problem. Had used them to test new weapon on Chandra and the test item got uploaded in game...no one reported the mixed up item not sure if anyone really uses this gear so is not a big deal.  Has the random back on it.
+[Sep 24 2014 16:39] Pestilence: A: added cblast to texas hot menu, approval by Sir Dragnar
+[Sep 25 2014 18:06] Dragnar: A: added 25k to dameons bank balance because of reboot.
+[Sep 25 2014 20:51] Dragnar: A: added a post_charge_hook function to /obj/generic_heal that heals can override to do functions after a heal is consumed. Updated /players/pestilence/amity/obj/cblast to use that function to change players alignment when heal is used.
+[Sep 27 2014 17:49] Pestilence: A: jailed darkfyre shared weapon with alt, he asked to be jailed, per shinshi jailed 999 days
+[Sep 27 2014 17:51] Pestilence: A: 17:27:36 Chaotic tells you: jail me as long as you can
+[Sep 27 2014 17:51] Pestilence: A: 17:31:29 Chaotic tells you: cause i asked lol
+[Sep 27 2014 17:51] Pestilence: A: 17:32:55 Chaotic tells you: so i have to do something wrong
+[Sep 27 2014 17:51] Pestilence: A: 17:35:44 Darkfyre tells you: now you have a reason
+[Sep 27 2014 17:51] Pestilence: A: 17:36:48 Darkfyre tells you: wep shareinga nd multi play
+[Sep 27 2014 20:11] Shinshi: A: Ruby lost 1 strength point. I added 1 strength back to him.
+[Sep 28 2014 12:35] Shinshi: A: Berserker pedestal wasn't loaded in a room. I went to the room, cloned it, and went on about my day. Got a new haircut! Bahah!
+[Sep 29 2014 15:12] Dragnar: A: Added Wickets TMNT to the game.
+[Sep 30 2014 11:56] Dragnar: A: Gave Jabroni 80k that he had given to his squire.
+[Sep 30 2014 12:01] Dragnar: A: Just a note, I did tell Jabroni to stop smoking so much weed.
+[Oct  1 2014 22:40] Shinshi: A: Approved Sami's area and promoted to level 40 for implementing an area onto the MUD. Need to work on symb.c and spiderman.c mobs for LD though before we go live
+[Oct  4 2014 14:08] Shinshi: A: Approved Wicket's Splinter mob and placed it in /players/airwoman/sewage/room3.c per his request
+[Oct  5 2014 18:12] Jareel: A: remove a test spam from chandra and fixed a typo from revive.
+[Oct  6 2014 18:55] Pestilence: A: fixed space missing on splinters walking stick
+[Oct  9 2014 14:50] Rumplemintz: A: /obj/player.c added Elementalist into Beta (no PK)
+[Oct  9 2014 14:51] Fred: A: approved Elementalist guild for beta testing
+[Oct  9 2014 16:35] Shinshi: A: Added 1 xp to Yen while testing Elementalists
+[Oct 11 2014 16:28] Dragnar: A: Updated short for /players/dragnar/WasteLands/armor/suit. Gave dreadbane a new suit, logged him in while I was fixing suit and it didn't restore.
+[Oct 12 2014 12:42] Shinshi: A: Gave kobebryant 202100 experience due to dying to a "for fun" mob
+[Oct 12 2014 19:17] Shinshi: A: Removed Artos from the Neos (since there is no way to leave)
+[Oct 13 2014 09:13] Pestilence: A: have to set Bizkits djinn to 0, as wicket can't do it
+[Oct 13 2014 09:16] Pestilence: A: exec present("orb", find_player("bizkit"))->set_has_djinn(0);
+[Oct 13 2014 09:40] Pestilence: A: some reason wdjinn went from hitting second to leading fight, restoring, wdjinn, last time though
+[Oct 13 2014 09:42] Pestilence: A: nvm didn't work anyways
+[Oct 14 2014 13:19] Rumplemintz: A: ~/trix/castle/town/bank3 - was cloning lots of clerks...
+[Oct 14 2014 13:20] Rumplemintz: A: Nevermind ^^^^^^^
+[Oct 14 2014 13:22] Rumplemintz: A: ^^^^^^^^^^ fixed move_object() call
+[Oct 14 2014 13:36] Rumplemintz: A: /open/color.h - changed to just include /sys/ansi.h
+[Oct 14 2014 13:37] Rumplemintz: A: ~/sami/emoter.c - Changed to use ansi.h
+[Oct 14 2014 13:38] Rumplemintz: A: ~/airwoman/closed/evil.c - changed to use ansi.h
+[Oct 14 2014 13:38] Rumplemintz: A: ~/airwoman/titler.c changed to use ansi.h
+[Oct 14 2014 13:39] Rumplemintz: A: ~/wocket/closed/cyber/COLOR.h - changed to use ansi.h
+[Oct 14 2014 13:39] Rumplemintz: A: ~/eurale/closed/JUNK/color.h - changed to just be ansi.h
+[Oct 14 2014 13:40] Rumplemintz: A: ~/pain/color.h - changed to just use ansi.h
+[Oct 14 2014 13:40] Rumplemintz: A: ~/pain/closed/items/color.h - changed to just use ansi.h
+[Oct 14 2014 13:41] Rumplemintz: A: ~/snow/closed/cyber/color.h - changed to juse use ansi.h
+[Oct 14 2014 13:41] Rumplemintz: A: ~/sparrow/closed/cyberninja/COLOR.h - changed to just be ansi.h
+[Oct 14 2014 13:42] Rumplemintz: A: ~/nooneelse/color.h - changed to just be ansi.h
+[Oct 14 2014 13:42] Rumplemintz: A: ugh.. changed a bunch of stuff to use ansi.h instead of individual ansi def files.... ridiculous...
+[Oct 14 2014 14:47] Shinshi: A: I like Tacos
+[Oct 15 2014 08:14] Fred: A: updated /players/pain/NEW/items/star_daemon.c -- hand an ansi of LIGHT_BLU which didn't exist once Rump changed it to the default ansi.
+[Oct 15 2014 15:47] Jareel: A: Think I fix /players/jareel/armor/mondar_gauntlets not sure why it was buggy put in another check.
+[Oct 15 2014 16:00] Jareel: A: added a if( !attacker )return 1; To Chaosaxe1 Not sure it will fix the deathcall bugging
+[Oct 22 2014 15:59] Shinshi: A: Gave Yen 2 shock swords back from crash and enabled him to summon a djinn again
+[Oct 23 2014 15:44] Dragnar: A: Approved tweaks Sami made to Llew's xetras, will implement tonight.
+[Oct 26 2014 09:22] Shinshi: A: Removed 2 of my welts that were saved in Remedy's hotel room
+[Oct 26 2014 22:48] Dragnar: A: Ended double xp weekend in living.c
+[Oct 27 2014 21:02] Dragnar: A: Doubled Feyth's exp gained over the weekend since healers do not get double xp when the flag is added in living.c Added 3.3 mil xp.
+[Oct 30 2014 17:41] Pestilence: A: added ~/amity/obj/fsmoothie.c and lfsmoothie.c to texas hot, approval per Fred
+[Nov  7 2014 17:57] Shinshi: A: Didn't want to make a ranger test character so I used my own ranger (Peter) to do some damage testing
+[Nov  7 2014 19:43] Fred: A: upped the Ranger guild member count from a max of 55 to 65.
+[Nov 11 2014 10:37] Pestilence: A: gave harley guild object, when tried to restore in prestige it said he didn't have a guild
+[Nov 11 2014 12:39] Rumplemintz: A: recoded /bin/soul/healcalc.c to work on LDmud - made some changes for LP as well
+[Nov 14 2014 10:52] Shinshi: A: Nerfed sami's scythe weapon's params from 15 to 3
+[Nov 14 2014 11:10] Shinshi: A: Nerfed sami's whip weapon's params from 15 to 3
+[Nov 20 2014 11:47] Sami: A: test
+[Nov 25 2014 12:18] Dragnar: A: Approved Karash's changes to nightshades area and copied files into nightshades directory.
+[Nov 25 2014 12:23] Dragnar: A: Promoted Karash for doing a significant update to Nightshade's area.
+[Dec 10 2014 21:02] Shinshi: A: Imprisoned Wipeout for screwing with my beta tester Monkey (per Fred)
+[Dec 18 2014 20:23] Shinshi: A: Blocked the kill function in pai mei. It would allow a samurai to level up without the stats of pai mei changing as the 'spar' command should do (Credit to Sami for finding this bug)
+[Dec 22 2014 00:08] Sami: A: closed Sami's area.
+[Dec 23 2014 11:25] Dragnar: A: Re-opened Sami's area, removed post at green.
+[Dec 28 2014 10:40] Fred: A: approved elementalist to open from Beta.
+[Dec 29 2014 17:50] Fred: A: commented out the Elementalist portion of valid attack in player.c since the guild is open.
+[Dec 29 2014 19:21] Shinshi: A: Removed Thor from the Mages at his request. It required a guild wizard to remove him
+[Jan 15 2015 12:26] Rumplemintz: A: fixed doppleganger spice command
+[Jan 15 2015 12:34] Rumplemintz: A: fixed release command in dopplegangers
+[Jan 15 2015 14:33] Dragnar: A: Commented out Boltar's xmas from init file
+[Jan 16 2015 07:30] Dragnar: A: Had to restart the mud at 8:30AM EST, no players logged in.
+[Jan 18 2015 21:42] Shinshi: A: Edited /players/jaraxle/3rd/alt/mobs/para.c - The object had a syntax error preventing it from loading which would cause phantom.c to lose heart beat
+[Jan 20 2015 21:34] Shinshi: A: Reimbursed Jaster jenny's champ rings from error earlier
+[Jan 24 2015 12:10] Rumplemintz: A: fixed typo in _enter_clan_hall command in morki's clans
+[Jan 24 2015 12:18] Rumplemintz: A: ~/boltar/things/cop.c took out environment check that Ill put it, was causing it to clone invisible and not set vars
+[Jan 26 2015 13:41] Dragnar: A: Restored Cleipa's gear from yesterdays backup file.
+[Jan 27 2015 17:14] Shinshi: A: Removed Malt from the Ranger for un-ranger like conduct. OK'd by Fred
+[Jan 30 2015 16:17] Dragnar: A: Mud crashed, restarted.
+[Feb  2 2015 13:26] Rumplemintz: A: ~/guild/dopplegangers wolf command fixed
+[Feb  2 2015 14:00] Rumplemintz: A: fixed a few issues in Pain's area
+[Feb  3 2015 20:42] Dragnar: A: Restored Puppy wiz char.
+[Feb  6 2015 16:03] Dragnar: A: Recoded /bin/play/_itemtest so it is accurate.
+[Feb  6 2015 16:03] Dragnar: A: Updated /bin/play/_inv to show items that will be saved. Required updates to player.c and /obj/user/keep_shadow.c
+[Feb  8 2015 01:48] Vertebraker: A: ~eurale/Maze/OBJ/rood - fixed to accept arguments of any id, rather than just "silver crucifix". "restore crucifix" should work just fine.
+[Feb  8 2015 01:52] Vertebraker: A: ~feldegast/equip/scarab - removed is_heal().  This is not a normal heal.  If chestguard is not flagged as heal, neither should this be.  causes silliness on inventory
+[Feb  8 2015 02:25] Vertebraker: A: ~bastion/isle/wiz/vault2 - added id of "chainmail", rather than "chain".
+[Feb 10 2015 00:33] Vertebraker: A: ~molasar/MAGIC/death_scroll - added auto dest of white tunnel.  This is a "feign" death spell...
+[Feb 10 2015 01:19] Vertebraker: A: ~lew/easthall/basement - eliminated reference to roomstalker in room desc
+[Feb 10 2015 01:21] Vertebraker: A: ~lew/entrance - added a random int check to give a hint about searching the grounds here.  Seriously, who would think of doing that here?
+[Feb 10 2015 01:33] Vertebraker: A: ~lew/elof/vir_wrld13 - added random int check to give player a clue to link out here.
+[Feb 10 2015 01:39] Vertebraker: A: ~lew/castle - Updated hint... No one would know WTF Keivjam is.  That is a terrible hint
+[Feb 10 2015 01:43] Vertebraker: A: ~lew/stuart - added hint to put head on plate... now really.
+[Feb 12 2015 15:33] Dragnar: A: Approved /players/sami/misc/Dtorch to be put in the game.
+[Feb 12 2015 18:23] Sami: A: added Vending Machine with approved Dtorch /players/sami/closed/machine->/players/sami/area/coinarea/r1.c
+[Feb 16 2015 11:38] Sami: A: added a sign to room to inform players of limit of items from vending machine. /players/sami/area/coinarea/r1.c
+[Feb 18 2015 00:15] Dragnar: 
+  A: Added dragon hps to 
+  R: g2# for the setmon command for Mages.
+[Feb 19 2015 10:16] Fred: A: Edited Gogeta's and Loke's pfiles to remove them from Rangers guild for not following the rules.  I will reinstate them in 2 weeks.
+[Feb 20 2015 01:21] Dragnar: A: fixed /players/boltar/hotel/hotel to clear some errors on LD.
+[Feb 22 2015 14:45] Fred: A: reinstated Skan as a Ranger.
+[Feb 22 2015 22:01] Dragnar: A: Updated /bin/channel_daemon.c to fix vamp bug on LD.
+[Feb 23 2015 20:15] Dragnar: A: Had to replace everyone's weapons (including my alt Dreadbane) because of a bug I introduced into /obj/weapon.c
+[Feb 23 2015 20:41] Dragnar: A: Fixed /players/guilds/healers/obj/list.c to ignore *_LD.o files.
+[Feb 25 2015 12:31] Dragnar: A: Fixed various std objects from Balowski's dir in order to fix Shardak on LD (yes still used by the code in vertebraker's directory).
+[Feb 25 2015 16:39] Dragnar: A: updated monster.c to not use a call_out for autoheal_monster. Was causing an issue on LD and got rid of a callout.
+[Feb 25 2015 23:33] Dragnar: A: Updated dreamspeakr/WEDDING/OBJ/ring_master to add ring chat to users tellhistory.
+[Feb 26 2015 00:49] Dragnar: A: Updated mokri/clans/funcs.c and room_funcs.h to use copy_file efun on LD.
+[Feb 26 2015 10:53] Dragnar: A: Updated /players/forbin/realms/ruins/OBJ/newscloak so it would load on LD.
+[Feb 26 2015 14:36] Dragnar: A: Updated polys to load on LD.
+[Feb 26 2015 17:59] Shinshi: A: Handed Cleipa her elemental aura back. Lost it somehow
+[Feb 27 2015 16:48] Dragnar: A: Updated cyberninja _more.c daemon to use /obj/more_ob.c which works on LD.
+[Mar  4 2015 18:40] Dragnar: A: Approved Mosobp to put in /players/mosobp/areas/TOWER/OBJ/wbottle.c
+[Mar  4 2015 18:40] Dragnar: A: Updated Knights guild object so it loads on LD.
+[Mar  4 2015 18:41] Dragnar: A: Updated shardak player shadow object to work on LD.
+[Mar  5 2015 13:12] Dragnar: A: Fixed cyberninja shadows bug.
+[Mar 10 2015 00:09] Dragnar: A: Restored a bunch of gear Isamu lost due to a shutdown I started. I checked his inv before the restart but I missed his 2nd bag. I checked my log to confirm a 2nd bag indeed was there.
+[Mar 12 2015 08:20] Dragnar: A: Updated /players/chip/closed/other/SATAN/satanmob to clean up issues in debug.log
+[Mar 12 2015 08:33] Dragnar: A: update /obj/kid Someone messed with libs in living.h, had to add libs to kids to get them to load.
+[Mar 16 2015 15:39] Dragnar: A: Gave Sami access to enhance Healers.
+[Mar 16 2015 17:55] Sami: A: added color to healers need monitor /players/guilds/healers/guildob.c
+[Mar 25 2015 20:36] Puppy: A: test
+[Mar 31 2015 17:14] Puppy: A: Registered Test Character: Pup
+[Apr  1 2015 10:57] Rumplemintz: A: ~/vertebraker/closed/std/monster.c - took out offwield stuff
+[Apr  1 2015 17:05] Rumplemintz: A: living.c - query_name changes
+[Apr  1 2015 17:05] Rumplemintz: A: player.c new int variable called security_level
+[Apr  2 2015 12:45] Rumplemintz: A: crashed mud by reloading master.c
+[Apr  3 2015 11:36] Rumplemintz: A: added proficiency_hit stuff back into living.c (part of paladin code) because rangers and bards apparently use it
+[Apr  3 2015 15:35] Rumplemintz: A: added 2475347 xp to Skan for death as ranger while living.c was messed by me
+[Apr 14 2015 08:10] Rumplemintz: A: rebooting host to apply patches
+[Apr 28 2015 17:45] Shinshi: A: Removed Pike as Directive due to Cyber Laws
+[Apr 29 2015 10:07] Fred: A: added 100 more morph levels to Rangers.  Currently testing said changes
+[May  3 2015 19:20] Fred: A: dmoted Kyrain from lvl 21 wiz to lvl 19 player per his request.
+[May  4 2015 21:55] Oberon: A: Registered Test Character: Obe
+[May 12 2015 13:57] Fred: A: added 700,000 gold to Gogeta's bank balance.  He was trying to transfer it to Kyrain but accidently transferred it to "player" per the instructions.
+[May 12 2015 14:27] Rumplemintz: A: messed with _finger.c a bit
+[May 12 2015 14:30] Rumplemintz: A: removed Kyrain wiz dir - nothing in it anyway
+[May 13 2015 10:38] Rumplemintz: A: some changes to adv_guild.c
+[May 19 2015 11:12] Fred: A: adjust the return numbers on Wolfpack for rangers some.
+[Jun  5 2015 16:52] Dragnar: A: fixed Krishna's experience, mage calcxp command strikes again.
+[Jun  8 2015 13:25] Dragnar: A: Healed Mosh, he had -10k sps
+[Jun 10 2015 09:16] Dragnar: A: Restored Laramie's gear from a backup.
+[Jun 12 2015 14:33] Dragnar: A: Changed dervish so prestiged players get the same benefit of using an hourglass without needing the hourglass object.
+[Jun 15 2015 16:08] Fred: A: set Hugh's stealth to 30.  He left the Feline Mini-guild and it was still set up as a max 20 stealth.
+[Jun 15 2015 19:43] Fred: A: updated /bin/play/_coinmerge -- the command will now attempt to first max out the player at 80k coins before it creates a pile of coins in their inventory.
+[Jun 16 2015 14:59] Oberon: A: Changed Chett's login home from Shardack guild hall to the Green.
+[Jun 17 2015 15:45] Fred: A: added another channel check to the Rangers guild in the guild_login portion of RangerCommunicator.c
+[Jun 19 2015 10:22] Dragnar: A: Added ability to reset prestige skills in the prestige guild.
+[Jun 26 2015 23:19] Dragnar: A: Added all option to keep/unkeep as in "keep all pie" and "unkeep all bag"
+[Jul  3 2015 12:24] Dragnar: A: Updated /players/boltar/casino/floor/chips for a future project I am working on. Added init() function, remove code from get()
+[Jul  7 2015 14:27] Dragnar: A: updated clan object to have 0 weight.
+[Jul  7 2015 16:38] Dragnar: A: Updated living.c and corpse.c so the exp value of the mob is now saved to the corpse. For future use possibly by necros/dervish etc.
+[Jul  9 2015 11:02] Dragnar: A: dragtst gave jaster a glove while testing a bug with Samurai guild, glove was cloned by sami so it was logged.
+[Jul  9 2015 11:35] Dragnar: A: Fixed bug with /vertebraker/guilds/samurai/obj/paimei.c guild advancement.
+[Jul  9 2015 12:16] Dragnar: A: Added 500k exp to Dorian for issue with guild advance.
+[Jul 13 2015 15:24] Dragnar: A: updated /players/guilds/dervish/lib/scatter to consider exp worth of mobs.
+[Jul 14 2015 10:16] Dragnar: A: updated player.c heart_beat to check for stuffed/soaked/infuse < 0 and reset to 0.
+[Jul 15 2015 11:06] Fred: A: /players/guilds/dervish/objects/verte_sb.c -- changed it to use set_dose.  Before the dose wasn't working cause it was using this_player();
+[Jul 15 2015 11:06] Fred: A: /players/guilds/dervish/lib/sandblast.c -- added the int modifier and the shld->set_doxe code for the spell to work properly.
+[Jul 15 2015 20:06] Fred: A: changed Rangers rwear command to be able to wear a belt if Prestiged.
+[Jul 15 2015 20:06] Fred: A: updated Ranger's armor info for change
+[Jul 15 2015 20:07] Fred: A: patched Gogeta 1755310 for a bugged death to Duncan McLeod
+[Jul 15 2015 22:20] Fred: A: patched gogeta, anesidora, and peyer exp for bugged death.  Party size too large?
+[Jul 19 2015 16:22] Fred: A: updated /players/guilds/Rangers/Commands/Donate.c to consider exp worth of mobs for donating corpses.
+[Jul 23 2015 15:47] Wicket: A: adding orpheus to elementalists with senior wizard permission
+[Jul 24 2015 06:33] Illarion: A: added "Someome" back into query_name in living.c
+[Jul 27 2015 12:08] Dragnar: A: added destruct_inventory to /obj/corpse.c
+[Jul 29 2015 21:03] Illarion: A: clearned braden's guild object, guild level, and reset his home to the green
+[Jul 30 2015 20:08] Fred: A: /players/guilds/healers/power/shield.h -- increased the duration the shield spell will last on players.
+[Jul 30 2015 20:09] Fred: A: /players/guilds/healers/guildob.c -- added a gen_sp_bonus for healers if they have prestiged.
+[Aug  1 2015 10:11] Wicket: A: Removing Desterus clan and refunding 500k due to error so he can remake (was given Senior approval)
+[Aug  1 2015 10:55] Wicket: A: Recruited hawkman for Elementalists with permission from senior
+[Aug  3 2015 20:09] Shinshi: A: approved the new quest reward to wicket's ninja turtles quest
+[Aug 11 2015 05:19] Illarion: A: updated the etest so it can only be done once per reset
+[Aug 11 2015 22:49] Fred: A: Promoted Symbio to Directive in Cyberninja guild.
+[Aug 11 2015 22:50] Fred: A: fixed a cyber mis-vote from yeah to nay. or nay to yeah whichever it was for Curse.
+[Aug 12 2015 21:41] Fred: A: promoted Puppy to lvl 60 to take over Cyber guild
+[Aug 14 2015 17:49] Illarion: A: updated /obj/user/reports/report_tool.c to make it easier to interact with the option you just selected
+[Aug 14 2015 20:44] Illarion: A: /room/post->query_mail(1) now returns 1 if there's mail and 2 if there is new mail.
+[Aug 14 2015 20:45] Illarion: A: updated /bin/play/_score.c to display if the player has unread mail
+[Aug 18 2015 10:51] Rumplemintz: A: tar'd plasma wizdir
+[Aug 18 2015 10:52] Rumplemintz: A: rm'd cmds and room dirs from mokri dir
+[Aug 18 2015 14:06] Rumplemintz: A: promoted wicket to 60 - area, quest, and guild
+[Aug 18 2015 15:41] Illarion: A: changed /players/mizan/opl/beasties/fungus/wookie.c to use heart_beat to get chatty instead of a callout
+[Aug 18 2015 15:41] Illarion: A: changed /players/mizan/opl/core/monster.c to stop calling the random move timeout when there are no players in the room, since it doesn't do anything if there are no players in the room
+[Aug 19 2015 16:44] Illarion: A: updated the turtles in /players/wicket/ninja_turtles/mobs/ so that the prototypes won't have random_move callouts
+[Aug 20 2015 21:30] Illarion: A: fixed ~jaraxle/closed/phoenix/mons/lord.c to work with monster.c
+[Aug 21 2015 22:58] Oberon: A: mixed windows... dropped it all.
+[Aug 29 2015 00:15] Dragnar: A: Gave back Symbio his exp from dying to Rosenthal.
+[Aug 31 2015 09:20] Dragnar: A: Approved Sami's GPO area.
+[Aug 31 2015 13:17] Sami: A: removed /players/sami/area/GPO/obj/pants.c from Mikal in GPO area, was not supposed to have the eq.
+[Aug 31 2015 18:25] Wicket: A: Registered Test Character: Fuzzyone
+[Sep  1 2015 08:24] Fred: A: patched Charm back to lvl +3 due to error.
+[Sep  2 2015 13:37] Dragnar: A: Fixed typo of query__name in /obj/shut.c
+[Sep  3 2015 19:44] Shinshi: A: Changed Herger's clan hall due to his old clan hall room no longer existing? Changed it from /players/jareel/areas/entrance_area/grass_plain_9 to /players/wren/Area/coastline/mountain
+[Sep  5 2015 23:27] Wicket: A: refunded timesplitter 100k coins to a bug needs to be looked into
+[Sep  5 2015 23:32] Sami: A: Wicket refunded 100,000 coins to Timespliter lost to a 'give' bug.  every time he would 'give' coins to a player a sensative mind error would deduct them from wallet, but not put them in other players wallet.
+[Sep  7 2015 01:07] Sami: A: added 550,274 exp to brak, he died Many times over, while idling in same place, never ghosted nothing...bug like a mofo. restored him to level 18. (where he was before the deaths occured)
+[Sep  7 2015 18:30] Fred: A: Disabled Power Rangers Ninja Morph skill until I can test it more.
+[Sep 10 2015 19:04] Wicket: A: refunded orpheus 20,000 coins elementalist armor disappeared for some reason
+[Sep 11 2015 12:37] Dragnar: A: updated necros harvest command to add bonus for corpse exp.
+[Sep 11 2015 16:13] Dragnar: A: updated /players/scathe/generic/room.c to inherit /room/room.c
+[Sep 16 2015 23:24] Dragnar: A: updated players/jareel/armor/mondar_gauntlets special, too many issues to list.
+[Sep 19 2015 19:03] Shinshi: A: Mode completed fallen_quest but the flag wasn't working. Gave him the flag back
+[Sep 20 2015 14:20] Wicket: A: recruited planet to elementalists due to shortage of players
+[Sep 23 2015 14:26] Dragnar: A: Fixed a small bug in player.c when saving gear upon quit. Preivously it was possible to drop gear that should save.
+[Sep 24 2015 17:52] Dragnar: A: added wc bonus for prestiged knights based on alignment.
+[Sep 30 2015 16:42] Sami: A: gave Lebronjames a Crown for reporting a few bugs, it does nothing but emotes, and looks cool. that is all /players/sami/lcrown.c
+[Oct  1 2015 21:38] Fred: A: added set_guild_file(0); to symbioye leave guild command.
+[Oct  3 2015 22:50] Shinshi: A: Smelt's stealth was put back down to 20 when he left the feline mini-guild. I put him back at 30.
+[Oct  5 2015 18:27] Shinshi: A: Added a new daycare room since all the others are full. /players/boltar/sprooms/daycare6.c
+[Oct  6 2015 08:33] Dragnar: A: updated /room/clean so that objects in the room will also not clean themselves (from /obj/clean.c )
+[Oct  6 2015 16:09] Dragnar: A: fixed /players/pestilence/closed/dark/obj/enrage to be wc bonus of 10 for 12 rounds, 120 random dam for 60 sps.
+[Oct 13 2015 16:24] Shinshi: A: Reimbursed Shojiro 240k coins that he lost due to a problem with depositing and quitting that Dragnar fixed
+[Oct 14 2015 09:21] Dragnar: A: Gave back Shojiro /players/jareel/SoulboundObjects/ARMOR/SetOfShadows/ArmorOfDarkness.c that he lost with the issues yesterday
+[Oct 14 2015 14:08] Rumplemintz: A: sefun destruct.c - added logging
+[Oct 17 2015 19:06] Fred: A: updated the read function on /players/sami/area/GPO/obj/dring.c -- it was set up so any 'read' action just read the earring.
+[Oct 30 2015 12:34] Fred: A: changed /players/wicket/guild/spells/lclap.c -- the effects were lasting too long and the CoolDown was never set before so could constant cast it,
+[Oct 30 2015 19:03] Fred: A: updated chsards, fdagger, iceblast, and lhammer in Elementalist guild.  Reduced SP costs.
+[Nov  4 2015 11:59] Dragnar: A: Added bonus to DO spell cooldown for prestige players.
+[Nov 12 2015 09:59] Fred: A: changed /players/guilds/warriors/test_obj5/gen_wc.h -- dexmod was pulling the stealth attribute for the bonus.  Changed to dex as it seems more accurate.  Overall shouldn't affect gameplay as most people max all the attribs.
+[Nov 13 2015 19:13] Fred: A: /players/wicket/guilds/elementalist/spells/lclap.c -- upped the sp cost and slightly increased the stun time of the spell.
+[Nov 30 2015 12:18] Dragnar: A: added 735300 xp to dreadbane, killed game crasher in jaraxle's area and did not get the xp.
+[Nov 30 2015 16:01] Dragnar: A: 25 days to christmas, added Boltar's Santa to the init_file :)
+[Dec  4 2015 07:21] Dragnar: A: updated /players/boltar/xmas so that it only load in the month of December (no need to remove from init file). Also switched location of christmas tree and the santa.
+[Mar  4 2016 14:40] Dragnar: A: Updated double xp object to have extra_look function.
+[Mar 18 2016 21:42] Dragnar: A: Gave Whitehawk a bag of gold after I *cough* crashed the mud.
+[Mar 23 2016 19:54] Fred: A: promoted Desiree to wiz level 21.
+[Mar 31 2016 19:40] Desiree: A: Registered Test Character: Desi
+[Mar 31 2016 19:40] Desiree: A: Registered Test Character: Ree
+[Apr  2 2016 18:40] Fred: A: changed the tail and tail2 commands in /players/saber/closed/new_mini/feilne.c to xtail and xtail2.
+[Apr 12 2016 14:19] Fred: A: changed fuckmeat's name to tr and updated his pfile and guild .o file.
+[Apr 16 2016 23:19] Dragnar: A: fixed /players/scathe/cave/cave2
+[May 27 2016 11:44] Dragnar: A: update /players/cosmo/hslist/svds_new.c to keep track of alltime boot exp. I compiled the list manually and updated alltime.o and updated the svds to update alltime going forward.
+[May 27 2016 11:45] Dragnar: A: In order to test the updated svds, I had to add exp to my character, bane. This has been reset.
+[Jun  1 2016 20:43] Dragnar: A: Added /players/dragnar/tmnt.c to the init file & removed from my castle.c
+[Jun 29 2016 00:53] Dragnar: A: Refunded 120k to darude for bank snafu.
+[Jul 18 2016 10:08] Dragnar: A: Gave darude a bag of unique scrolls from /dragnar/SevenSpires/scrolls and 500k (bank transfer) for winning the triple xp contest.
+[Jul 18 2016 16:47] Oberon: A: Registered Test Character: Obee
+[Jul 22 2016 16:03] Shinshi: A: Added Rugaros to the Rogues since no active Rogues are around
+[Aug  1 2016 15:07] Fred: A: Demoted Cleipa back to player status at his request.
+[Aug  1 2016 15:23] Fred: A: patched Cleipa some experience he lost from a death while a wiz.
+[Aug  2 2016 12:57] Dragnar: A: Implemented update to /bin/wiz/_update.c that Oberon coded. It takes you back to a room after it is updated.
+[Aug  3 2016 20:37] Dragnar: A: Added clear_params and del_param to /obj/armor.c (oberon)
+[Aug  4 2016 14:09] Dragnar: A: player.c and /bin/play/_score2.c updated to prep for login rewards.
+[Aug  9 2016 16:54] Dragnar: A: Updated /players/wicket/ninja_turtles/quest/turtle_mask.c so it no longer saves. Giving it to the pizza hut manager saves the quest status.
+[Aug 10 2016 15:18] Oberon: A: Darude picked up an empty bag of Repeat's by mistake and sold it for 250 gold. He dropped the gold at green.
+[Aug 13 2016 22:40] Skie: A: Registered Test Character: Skietest
+[Aug 25 2016 14:07] Darkfire: A: Registered Test Character: Darktest
+[Aug 25 2016 15:06] Dragnar: A: Changed /room/adv_guild to handle wiz advancement properly. Coded by darkfire, checked/verified/implemented by me.
+[Aug 27 2016 02:09] Vertebraker: A: gave Gogeta 3 pieces of equipment he accidentally donated.
+[Sep  9 2016 10:53] Dragnar: A: Added some armor types to elemental gear in snow/closed/test that Sami put together. Same gear, just new types.
+[Oct  6 2016 08:07] Dragnar: A: Updated player.c to be able to handle multiple prestige guilds. Now prestige players can store multiple guilds.
+[Oct 12 2016 20:01] Shinshi: A: You can now join the Rogues by going to the Dark Figure in my bus and typing join. Will not notify anyone of the change until we determine costs
+[Oct 20 2016 21:24] Dragnar: A: added WalkingDead/mons/walker_pet.c to my TWD area.
+[Oct 26 2016 21:32] Dragnar: A: Promoted Oberon to level 30 for fixing elemental weapons.
+[Jan 10 2017 10:49] Dragnar: A: Added 530,026 exp to Syn. Gave incorrect level requirement for DO.
+[Jan 19 2017 15:27] Dragnar: A: Implemented change to /players/earwax/bank/bankd.c to stop loss of coins when players transfer money. Change done by Oberon, checked and put in by me.
+[Jan 20 2017 13:00] Dragnar: A: I think I fixed /players/vertebraker/guilds/samaurai/paimei.c that was bugging out during a fight so players could not advance. Had to give back exp multiple times to darude while we worked out issues.
+[Jan 21 2017 18:31] Oberon: A: Restored 1,250,000 gold to whitehawk's bank due to prestige guild restore errors.
+[Jan 21 2017 18:31] Oberon: A: Also, fixed whitehawk's guild restore.

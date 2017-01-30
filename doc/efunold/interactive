@@ -1,0 +1,6 @@
+interactive(obj)
+object obj
+
+Interactive returns true if the object is connected to an internet port.
+
+see also query_ip_number().

@@ -1,0 +1,587 @@
+From: x
+ Re:   shards
+Date: Jul  8 15:42
+
+WAX
+
+Feel free to reopen
+
+If you need the source files, let me know.
+They are floating around in the ethermuck already.
+
+From: earwax
+Subj: LPC resources.
+
+Cc: (To: martha) earwax
+Date: Nov 29 10:11
+
+http://mud.bensin.org/tools/lpc/html/lpc.html 
+I'd look at that one first.  Don't worry about the lfuns, just kinda glance through stuff for 
+a general idea.  Lfuns will be mud-specific.  It's just to give you
+kind of an idea of how things work.
+
+http://www.geocities.com/homemud/Textbooks-e.html
+This is a link page that has all sorts of stuff on it.  I
+haven't looked at most of these, so I can't really recommend them, but
+there's a lot of stuff here about LPC.
+
+http://www.sneakers.org/lpmud/www.neosoft.com/genesis/lpc_toc.html
+This, as far as I'm concerned, is the king of them.  It' got a lot of stuff,
+however, that's not relevant here, anything to do with the 'function' 
+class you can ignore, it won't work here.  Lfuns, like I said, are mud-
+specific.  This was written for Genesis MUD (the first LPMud ever), and
+a lot of it doesn't apply to other MUDs.  The important stuff however, 
+is how to actually code, how to actually do things, etc.  This will help
+you a lot, I think.  It's well-written, and I think fairly easy to understand
+once you have exposure to the basics.  Anyways, hope these help some.
+
+From: vital
+Subj: getting started... heh
+
+Cc: (To: humble) vital,earwax,fred
+Date: Jan  1 10:17
+
+Humble, I have a couple of links for you to check out and 
+some files that might help you get started. This is all 
+probably overwhelming and you will probably spend a couple 
+hours just reading to get a feel for what you need or want 
+to do.
+
+http://mud.bensin.org/tools/lpc/html/lpc.html
+This is a pretty good place to get a good idea from.
+
+http://autos.cs.tu-berlin.de/tubmud/driver-0511/node18.html
+This is bit out of date and for a different style of mud,
+but it still has some good points.
+
+http://www.sneakers.org/lpmud/www.neosoft.com/genesis/lpc_toc.html
+This is probably the most in depth look at LPC and coding for
+it in general. Always a good reference, even after you have the
+basics mastered. [ha ha ha]
+
+Also, feel free to browse through and look at all of the documents
+in my /open/vital folder. They are there to help people. There are
+basic examples in /open/vital/obj and /open/vital/npc and also in
+/open/vital/room. There are some documents that I'm working on in
+the /open/vital/doc directory to help people with coding. It's not
+finished, but they are also good points to start with in regards
+to learning code. I would especially encourage you to look at the
+document about style /open/vital/doc/02_style.txt as it has some
+very fundamental things that will affect the way you code for the
+rest of your life [scary huh?].
+
+Sorry this is so long. You probably won't understand it all until
+tomorrow or the next day or... heh
+
+Later bro,
+little v.
+
+From: vertebraker
+Subj: HOSED THE MUD
+
+Date: May 19 04:29
+
+YOUR STOCKS HOSED THE MUD.
+
+command(jackass, "score");
+?????
+
+Who's the jackass?:)
+Fixed it to:
+
+command("score", jackass);
+
+Made m_efuns crap out, I think the driver died
+of dysentery.
+
+From: mode
+Subj: pk
+
+Cc: vertebraker
+Date: Jun 10 18:38
+
+well, this is how i see it. the main obstacle i think to
+pk coming back, is the lack of a player base, but lets forget
+about that for a moment. assume we did have the player base.
+
+what would make me pk ?
+hmm, not gear, i cant use shit for gear.
+hmm, not coins, i leech them.
+hmm, xp, no i can kill a mob worth 300k xp.
+
+the only way i see it coming back is this:
+roll back the xp ammount to what they were years ago..7k cap.
+i kill you, i get 1/4 of your total xp.
+yeah its extreme, and would prolly encourage people not to pk.
+but it would get me to pk.
+
+not too mention, specific guild weaknesses gotta be adressed.
+yeah lifeblood was fixed..but, it still sux to get hit by it as fallen.
+this is just me bitching now. lol.
+thos are my ideas.
+
+From: linus
+Subj: Laptop
+
+Cc: dakeyras,forbin,mosobp,humble,pestilence,fred,mizan,jareel,coldwind,pike,cerberus,subotai,cooper,hoyle,sundin,greymir,symbio,fakir,snakespear,zeus,mode,wocket,jaraxle,vital,ravennight,blade,tony,usagi,psychax,entreri
+Date: Jun 16 14:43
+
+FIX THE FUCKING LAPTOP!!!!!!!
+Nothing is more frustrating than to see all these candy asses get uber high levels just so they can't be seen by the laptop.  This enables them to have a huge advantage if they choose to pk...being able to hunt invis players lower than them, and if they choose not to, gives them free run of any pk areas with little to no risk of being seen there.
+Go back to having to letting it see all levels, and have it run on batteries that cost $$ and run out over time.
+This will at least put most everyone on a more level playing field.  Cash is so easy to come by anymore, it's not like buying batteries will be a pain in the ass.
+This could also prevent people from waiting until they're +75 to finally set pk.
+Other than that, we just need more incentive...some it's just the adrenaline rush/ego stroke that works, but to actually pull people that normally wouldn't pk in, there's gotta be less risk, more reward.
+Maybe less of a death penalty...1/8 xp instead of 1/3?  Also maybe a no loot thing.  This way there's no fear of losing that Gordie stick that you had to suck off a +100 for or whatever.  Most of the pkers give shit back anyway, unless the victim is a whiny little bitch or just a plain asshole, but if there's a definate no loot thing, maybe people will be more likely to try.
+Ok..this would lead to a "Why the fuck should I pk if I don't get anything for it?"
+Good question.  How about a reward system based on pk points.  Both the MK-Scar and PK-trakker assign points for various pks.  Now say I had 250 pk points.  I could go to the uber-bsness-pk shop and lay down those points to buy some kickass pk only weapon and/or armor.  With less to lose being pked, and some nice rewards for the successful pkers, maybe more people will sign on.
+Just some thoughts, and sorry if it's all jumble-fucked to read.
+Linus
+
+From: psychax
+Subj: pk stuff
+
+Cc: (To: linus) earwax,dakeyras,forbin,mosobp,humble,pestilence,fred,mizan,jareel,coldwind,pike,cerberus,subotai,cooper,hoyle,sundin,greymir,symbio,fakir,snakespear,zeus,mode,wocket,jaraxle,vital,ravennight,blade,tony,usagi,psychax,entreri
+Date: Jun 20 00:52
+
+Cut out the pk cheats.  ie disconnecting.  You set pk or go into a pk area and
+you lose connection expect to die for it if you get caught.  Nothing was gayer
+than finally running down a wizard alt and them pussying out by disconnecting.
+
+In the idea of the pk areas....have rooms with random directions.  Think
+maledicta's mystic caves.  But the directions randomize so its harder to run. 
+IE: Room has 4 directions N,S,E,W.  Here's my idea leave the same directions but
+color them.  South is always blue, red is north, etc.  So the exit is 2 south
+from your current position.  East is blue, N green, S red, W yellow.  So type E
+because its blue = a south direction.
+
+Get the idea?
+
+Make it so command stacking your way through an area doesnt work.  Its all fun
+and games to be able to run to pesty's shake shop in one second.  Yet as a pker
+keeping track of pker's coming for you lame that in under 2 seconds someone can
+be in the same room as you.
+
+Pauses.  Takes 2 hb for doors to open.  Takes a hb for the key code to be put
+in, then accepted. Gotta wait 5 seconds for the random herd of cows to stop
+blocking the road.
+
+Eliminate pk gangbangs.  You can only be attacked by 2 at a time unless those 2
+ppl dont = your player levels. ie One 19+100 player vs 5 lvl 19's
+5 vs 1 still a gang bang but you get an idea of what i'm talking about.
+
+PK body guards.  XP them up like a wocket pet.  Useable in pk like a Neo's pet.
+For those of you without the neo pets. (heh)  Pet couldn't be hit unless it was
+during a round it attacked.  Area effect spells not sure on.  Pet couldn't be
+attacked.  BTW Neo's pet wasn't pk.
+
+Psychax
+
+From: psychax
+Subj: pk part 2
+
+Cc: (To: linus) earwax,dakeyras,forbin,mosobp,humble,pestilence,fred,mizan,jareel,coldwind,pike,cerberus,subotai,cooper,hoyle,sundin,greymir,symbio,fakir,snakespear,zeus,mode,wocket,jaraxle,vital,ravennight,blade,tony,usagi,psychax,entreri
+Date: Jun 20 00:54
+
+Use pk points for "buffs". 10 points for added hp regen for an hour.  15 for sp
+regen.  Added Stats for a period of time.
+Add another proc to weapons.  I decide to burn 20k coins and add a Direct
+damage fire proc to my trusty trident of war.  Sadly the proc only lasts for an
+hour but hey its added damage.
+
+Add stuff for non-equipment using guilds something to pk for.  Its all good to
+have the newest and best armors/weps but without a current wizard continuely
+making changes to adjust for the new items that kinda guild just cant compete. 
+
+But thats one of their disadvantages!  Bullshit.  I'll gladly keep dropping xp
+into a guild to add armors (ala rangers)
+
+Less dependence on all the same weapons/armors.  Who doesn't use an elemental
+armor, a gordie stick, skates, bracers of speed, etc.  
+
+I'd like to see armors geared/enchanted vs those specific items.  I got a
+chainmail +3 vs gordie stick +2 vs tsunami +1 vs player spells.
+
+Make the enchantments not last.  Maybe since the item is magic vs a gordie
+stick it will negate all damage from a gordie stick for the round the armor
+"procs".
+
+THE END
+PSY
+
+From: subotai
+Subj: pk
+
+Cc: subotailinus, psychax
+Date: Oct  4 19:43
+
+ One of the biggest problems with pk is location abilities. they are to fool proof. There is no real way to hide;. So lowbies dont pk. People should learn to pk as a lowbie. Not as a lvl 19+. So get rid of the laptop and all other location abilities. If the guild has a location abilities then they better suffer in some way.
+
+Xp bonus of around 20% for pkers. Maybe even have a permanent setting that gives some benefits. Coins is a huge problem for pk. Portable detoxer also. Gang bangs are part of pk. Thats life. Ive gotten a lot of kills when I was outnumbered. The tough guilds should be directed more toward solo pk while the weak guilds toward teaming up./
+
+   Sub
+
+From: vertebraker
+ Re:   ansi.h
+Date: Sep 30 00:11
+
+#include <ansi.h> fucks up sometimes. 
+I don't know why. 
+
+From: earwax
+Subj: noob stuff - random thoughts
+
+Cc: (To: vertebraker) vital,earwax
+Date: Oct  2 09:00
+
+I was walking around looking for a sheep to make bowlegged and i 
+had some thoughts regarding noob helpers and noobs in general 
+none of these are particularly fleshed, but just thought i'd toss 
+them out there for your perusal... 
+ 
+Salvation army box, (poly tug, anything of that nature) - when 
+something is stuck in there, set its value to 0, saveability to 
+non (except that it can be stored back into the tug, whatever) 
+-This way shit doesn't get yanked as sellage 
+ 
+set noob helpers to track xp given to noobs in parties....ie, if 
+upus parties up a noob and supplies them with a mil exp, it says 
+ooh, upus got this noob a mil exp, let's log it!  (because we don't 
+have enough logs)....info might be good later on down the road for 
+something i wanna do, i need more thoughts on it, and thinking is 
+difficult. 
+ 
+noob helper clanhall kinda dohickey, was thinking mebbe make it an 
+addendum to the hall of apprentices or something, or a standalone 
+type deal....a little board in there, a non-resetting room, etc 
+ 
+a way for noobs to do feedback on noob helpers and everything in 
+general, yeah i know they can mail, etc, but if they had a command, 
+or something pop up when they went to gain a level from 8 to 9,  
+say hey, what'd you think of noob helpers, did you receive help, or 
+what could they do different, anything to add, mail verte, earwax, 
+vital, anyone with a pulse, etc 
+ 
+a 'true noob' flag.....ie, if they logon as a true noob, put that 
+flag in there for noob helpers to see, i KNOW that's a bad thing in 
+the eyes of rp, but come on now, what's rp here....and i don't 
+think players would mind so much, cuz hey, noob helpers are really 
+lowbie helpers too, *I* know that this guy i'm dragging is prolly  
+an alt, but fuckit....it'd just be nice to see at a glance, so that 
+if you see someone who's a true noob, or listed as one you can make 
+that extra effort to say hey, anything i can help you with, or any 
+questions feel free to ask me or use the 'newbie line' .... 
+when you see 5 level 1s, you don't really do that individually... 
+but if one of them were to have that flag you would i'd hope 
+ 
+in noob helper hall, could have info on suggested gear, (is what 
+board would be good for) perhaps a 'condensed suggested gear list)  
+or something to be given to noobs....ie, trident of war (on rock 
+in rift/ryllian/saber's area) is a really good weapon for noobs,  
+BECAUSE .... it heals you up real good when you fight)....or the  
+following are unbreakable weapons (which are my favorites to give 
+to noobs, they got enough to learn about without fucking with having 
+to sharpen and coin for sharpens) 
+ 
+
+From: earwax
+Subj: more noob stuff
+
+Cc: (To: vertebraker) vital,earwax
+Date: Oct  2 09:02
+
+lowering of standards for regen items 
+too much emphasis on heals, let's open it up for regens....there is 
+no valid reason in my eyes to keep regens so damn limited....maybe 
+there was 10 years ago, but the mud was a lot different 10 years ago 
+ 
+consolidated noob areas....i'd like to see perhaps 'noob portals'  
+in the entrances/exits to noob areas....instead of doing the 50 dirs 
+to get to/from mash privates or ryllian bandits or trix babies, or 
+mael's castle stuff, noobs could just kinda zip through....HOWEVER 
+i would only like to see that for the lowest level stuff, part of  
+game is starting to learn your way around, it's just extremely  
+frustrating at first....i can remember personally trying to find my 
+way back from the bandits....it SEEMS simple, but it's not as easy  
+just reversing the dirs, you make a wrong turn and you end up in  
+strange places....think I died as a semi-true-noob (years ago of  
+course) when i started playing again....i imagine anyone who's a 
+completely true noob has as well, just finding their way to/from the 
+noob areas 
+OR have a noob-area-emporium....hell, just house it all under one  
+room - it'd require taking some of those areas out of regular wiz  
+areas, but why not....i'm sure many would be willing, plus those 
+wizzes (there are a ton of them) who ONLY coded a noob/lowbie area 
+and then nothing after, well....why not just stick them in one spot 
+and free up that backbone space for something a little more involved 
+and open to other chars 
+ 
+cheat-sheet ... now, there's all sorts of ways to get dirs to noob 
+areas or to things of interest, but nothing consolidated or simple 
+to use/take with....how about a 'cheat sheet' or help file for it 
+simply listing what, and dirs.....ie 'bandits: 5e,3n,w,step rift, 
+2w,enter...blah' and then DIRS TO RETURN from it 
+once again, i remember filtering through the list of dirs for noob 
+areas and getting frustrated.... 
+ 
+noob 'word of recall' yeah....dikus suck for most part, but that is 
+a nice thing on them 
+the noob school for godwars muds is also something that's nice or 
+worth logging onto one just to take a look....maybe it's rom muds in 
+general (diku derivatives essentially) but i'm pretty sure the  
+godwars variety all have noob schools 
+ 
+faq - noob variety, intermediate player variety and bigger player  
+variety 
+ 
+it'd be nice if all that was on the website....how about offering 
+one of the non-coding type wizzes the opportunity to start putting 
+this (and other similar type info) on the website as well....i've  
+seen muds with good websites and it really helps attract people to 
+the muds...medievia's is incredibly thorough if i remember right 
+
+From: earwax
+Subj: more noob stuff
+
+Cc: (To: vertebraker) vital,earwax
+Date: Oct  2 09:05
+
+base gear....why NOT give them base gear....come on, that's shit 
+in hall of apprentices, with the inflation here, why NOT give them 
+something different....this i've heard from some good players 
+as well 
+ 
+noob hostels.....storage is probably one of the most frustrating 
+things as a noob....you sit there and say hey, i got this stuff, it 
+seems really cool but how do i keep it 
+it's frustrating as hell, if you don't know the game, believe me 
+ 
+regarding storage: why not open up more lockers or storage....make 
+it 1k for first 3 items, 5k for next 3 lockers, 10k for each after 
+that, or something... no limit 
+even the casa de nirvy gets real expensive real fast for low levels 
+especially ones who can only logon for a few hours a weekend or  
+whatnot.... 
+ 
+when they die at < lvl 6 stuff stays on them?  
+ 
+< lvl 9 logon and get issued stuffs every logon?  unbreakable noob 
+wpn perhaps?  
+ 
+coins for errands and other things.... 
+on other muds there's noncombat things that noobs can do for cash 
+ie, there's a quest on one particular mud that requires 'stump  
+standers' .... to get into area you need two other people with you, 
+so the practice used to be to hire standers....people who would 
+go to that area to allow you to get in...easy way to make some quick 
+cash....things of that nature would be nice, ... haven't thought it 
+out any further than that 
+ 
+-------------- 
+anyways, i'm sorry this dragged on so far, had a lot more coming 
+to mind as i went through, feel free to forward this beast, or a 
+condensed version, to any/all the noob helpers for their feedback 
+as well, or other wizzes for that matter.... 
+ 
+it's just random shit, some of it's worth some thought at least i 
+think tho....anyways, it's a start :) 
+ 
+-wax 
+
+From: vertebraker
+Subj: deathmonger
+
+Date: Oct  3 22:05
+
+are you actually changing anything in deathmonger's area? 
+i see mass edits, but no workreport changes. just typos 
+or what ? 
+
+From: vital
+ Re:   re: using strict types
+Cc: vital
+Date: Oct  7 05:10
+
+laf, you and the wood. did you declare that wood before initializing it? 
+
+From: vital
+Subj: wax promo
+
+Cc: (To: vertebraker) fred,francesco,boltar,earwax,vital
+Date: Oct  7 05:13
+
+Promo'd 'wax for time served with good behavior. Housing, lib stuff, etc. 
+Just fyi. 
+ 
+--little v. 
+
+From: vital
+Subj: wax again
+
+Cc: (To: vertebraker) vital,francesco,fred,boltar,earwax
+Date: Oct  7 05:32
+
+after we've talked about it, several of us decided that Earwax will be 
+level 100 to help look over some stuff that is just out of date and out 
+of control [areas, code, etc.] 
+ 
+If he screws up we will burn his sheep. Thanks. That is all. 
+--little v. 
+
+From: vital
+Subj: Party Object Typographical Error
+
+Cc: (To: lungbutter) vital,earwax
+Date: Oct  7 06:40
+
+Dear Mr. Lungbutter, 
+ 
+Thank you for you submission of the typographical error found 
+in the Party Object. We [the members of the administration and 
+development staff] are appreciative of your continuing efforts 
+to improve the game. The typographical error has been addressed 
+and should currently be correct. Your notice also gave rise to 
+a closer evaluation of the Party Object and several other similar 
+errors were discovered and corrected. Thank you again for this 
+excellent example of how a player should report the errors that 
+he/she/ep finds in the game. 
+ 
+Sincerely, 
+--little v. 
+
+From: vital
+Subj: Code School 101
+
+Cc: (To: vertebraker) boltar,vital,fred,francesco,earwax
+Date: Oct  7 09:27
+
+Was talking with 'wax about an idea that several of us had talked about 
+previously. The concept of setting up some 'classes' or sessions for 'wax, 
+myself and others to present topical information to interested wizards and 
+record the series to use as later training as well. Somewhat akin to the 
+old Descarte@TMI files, we could cover various topics that we consider 
+'essential' and later ones that are more esoteric but useful for those 
+developers that don't have the benefit of our ability to crash the mud in a 
+quick and efficient fashion. 
+ 
+To that end, please think for a few seconds about what kinds of topics you 
+would like to see covered and pop me a mail back about them. 'wax and I 
+will try to collate some kind of list and come up with a schedule for the 
+classes and what we can cover. If there are subjects that you yourself are 
+interested in presenting [Amortizations, Fred?] then let us know that as 
+well. Fran can teach us Italian too. 
+ 
+--little v. 
+
+From: chett
+Subj: Housing
+
+Date: Oct 11 18:43
+
+What about roomates? 
+would be nice. 
+
+From: laera
+Subj: Housing
+
+Date: Oct 14 08:33
+
+Go right ahead.  I do not mind. 
+
+From: worm
+Subj: hey
+
+Cc: (To: vertebraker) vital,earwax
+Date: Oct 16 13:41
+
+ya know, we have storm, at Glvl 8. never used. 
+this guild was original formed as Shardak Assassins. 
+an old Assassin move, disarm, would fit so well. 
+can ya dump Storm and give us a 'disarm' ability? 
+sure, all they gotta do is rewield it, but i think in 
+the thick of combat, it'd help us so much more than 
+'storm'. lemme know what you guys think. and thanks  
+for your time. 
+-me 
+
+From: fred
+Subj: Than/Vahiti
+
+Cc: (To: vertebraker) vital,forbin,earwax,francesco
+Date: Oct 16 15:46
+
+I jailed them both for multiplaying/cheating.  I didn't say anything 
+just jailed Vahiti and he hasn't logged on since.  Imprisoned Than 
+on an impending imprisonment since he wasn't on anymore.  Basically 
+Vahiti died to mondar lost corpse.  Logged off. Logged Than on.  Killed 
+Mondar with Than.  Cleipa got mondar corpse brought to casino room.  
+Than logged off, logged on Vahiti and got stuff from corpse that  
+Cleipa had in room.  Will also probably jail Cleipa for basically  
+passing equipment helping out.  Just thought I'd let you guys know  
+what was going on since I don't know for sure if I'll be on when 
+ever it is Vahiti logs back in. 
+ 
+Fred 
+
+From: forbin
+ Re:   Than/Vahiti
+Date: Oct 16 23:08
+
+I tend to agree with this.  With the bulk of our players have so many 
+multiple chars, prison really isn't much of a deterrent.  I think the no 
+quit option would be nice, or perhaps an ip block for x minutes or hours. 
+(I've no idea how that would affect people on networks and whatnot) 
+
+From: unforgiving
+Subj: jinro party thingy
+
+Date: Oct 17 00:42
+
+Jinro- Half man/ half beast. 
+->> Jinro died. 
+[ Party [Unforgiving] ] The party has gained 46900 experience. 
+[ Party [Unforgiving] ] You have gained 8285 experience. 
+[ Party [Unforgiving] ] Note: You may not gain more than 1500 exp or your present exp amount. 
+You killed Jinro. 
+->> Missile who? 
+
+From: cooper
+Subj: good deal
+
+Date: Oct 17 03:19
+
+Just keep me informed bro, I appreciate it, do not get on very much now 
+that I am here in the middle east, but hoping to more in the futuer once I 
+get settled down. Btw if u want to get the email updates and pics I send 
+out, toss me a mudmail with your email addy and tell jareel also. Cooper 
+
+From: vertebraker
+ Re:   hey
+Cc: (To: worm) vital,earwax
+Date: Oct 17 17:21
+
+no guild work is going to be done on shardaks 
+for a while. it would sort of be pointless 
+at the moment. the guild will be rewritten at 
+some point. i don't know when. 
+ 
+:~( 
+
+From: vital
+Subj: _armors.c command
+
+Cc: vital
+Date: Oct 21 11:51
+
+A couple of thoughts/comments. On items like the combined rings and others 
+that use multiple slots, should we list the item multiple times? The 
+combined rings look stupid seeing two of them. One each under ring and 
+ring2. Not sure how you would want to tackle that. Check if the object is 
+the same and then just not display that slot? No, that would be confusing 
+too. Ideally we could have something that displays: 
+ 
+Ring 1 & Ring 2 - Combined Rings Chest, Armor & Helmet - Hooded Sweatshirt 
+Pants, Boots & Underwear - Bootie Pajamas 
+ 
+Maybe? --little v. 
+

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/maledicta/cont/weapons/rweap00000000000000000000000000000000000000","/players/scathe/armor/damulet","/players/mythos/awep/tanto","/players/scathe/armor/bowarmor","/players/scathe/armor/hood","/players/pain/NEW/arm/hood","/players/hippo/armour/shield","/obj/weapon","/players/wren/Area/starbug/items/levis","/players/snow/cam/stuff/sword","/players/hippo/armour/endotheel","/obj/weapon","/players/wren/Area/starbug/items/currie","/players/arrina/heals/ade","/obj/weapon","/players/scathe/armor/mgarb","/players/puppy/s/eq/ruler","/players/mythos/awep/zantetsuken","/obj/weapon","/obj/weapon","/players/snow/heals/ice_sphere","/obj/weapon","/players/sado/shop/chocolate","/players/boltar/things/emoter","/players/jamila/beach/mobs/claw",})
+shorts ({"a [1;33mGold[2;37;0m Quarter staff","A Dragon Amulet","Tanto","Light Leather Armor","Hood","A Black Hooded Cloak","lap of meat","Pillow","stretched out Levi jeans.","[34m[1mBlessed Longsword[0m[0m","endotheel","Steel Longsword","A tin of chicken currie","bottle of refreshing [33mlemonade[0m","Blaster","Black Monk Robes","A wooden ruler","[34mZantetsuken[0m","some teeth","Glamering","An [1;36mIce[0m Sphere","Hand axe","A box of delicious Belgian chocolates","An emoter","A Lobster Claw",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,})
+loaded 1

@@ -1,0 +1,69 @@
+#include "/players/pestilence/define.h"
+
+object lcp,player;
+string name;
+int dmg, amt, time;
+
+set_name(str) { name = str;}
+
+set_time(num){
+ time = 200*num;
+ call_out("quit_lich", time); }
+ 
+liched(){ return 1; }
+
+do_shadow(ob) {
+  lcp = ob;
+shadow(ob,1);
+}
+
+id(str) {return str == "Turkey" || str == name || str == "turkey_obj"; }
+
+query_name(){
+  if(lcp->query_ghost())
+    return "some mist";
+  return "Turkey";
+ }
+
+short() { return YEL+"Its the Thanksgiving "+HIW+"Turkey"+NORM+" gobble gobbble ("+RED+"HaPPy Thanksgiving"+NORM+")"+NORM;}
+
+long(){ 
+  if(TP->query_level() < 21 && !present("destroyer_ob", TP)){
+    write(short()+".\n");
+    write("Turkey gives you a harsh glare...\n"+
+          "You want to run away in terror!!!\n");
+    TP->run_away();
+    return 1;
+    }
+/*
+  write(capitalize(name)+", disguised as a Lich.\n");
+*/
+  write(short()+".\n");
+  if(lcp->query_hp() < (lcp->query_mhp()/10)) {
+    write("Satan is in very bad shape.\n"); return; }
+  if(lcp->query_hp() < (lcp->query_mhp()/5)) {
+    write("Satan is in bad shape.\n"); return; }
+  if(lcp->query_hp() < (lcp->query_mhp()/2)) {
+    write("Satan is somewhat hurt.\n"); return; }
+  if(lcp->query_hp() < (lcp->query_mhp() - 20)){
+    write("Satan is slightly hurt.\n"); return;}
+    write("Turkey is in good shape.\n");
+    return 1;
+  }
+
+hit_player(arg){
+ dmg = arg;
+ amt = ((dmg*(98+random(3)))/100);
+ lcp->hit_player(amt);
+ return amt;
+}
+
+quit_lich() {
+/*
+ write(BOLD+BLK+"Your Lich grows weak and you turn back into your original form.\n"+NORM); 
+*/
+ write(BOLD+HIY+"\t\n\nYOU ARE NO LONGER SATAN!!!\n\n"+NORM);
+say(BOLD+BLK+"Satan releases "+TPN+"'s soul and "+TP->query_pronoun()+" returns back into "+TP->query_possessive()+" original form.\n"+NORM);
+ destruct(TO);
+ return 1;
+}

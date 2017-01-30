@@ -1,0 +1,11 @@
+   I worked on the Keivjam quest to change it so the cheat sheets do not
+reflect accurate solutions any longer.  I moved the meal ticket that was
+located in ~/entrance to ~/commons and replaced it with an ID card.  The ID
+card will still get you through ~/res_hall but not through the cafeteria to
+the basement where Roomstalker is.  You'll now need the meal card to get
+throuugh the cafeteria.  I changed the ~/easthall/basement so that only one
+student is there and he must be killed to bring in the correct one with the
+terminal to get into the area with Keivjam.  Lastly, I made access to the
+summoning square ~/elof/vir_wrld13.c only two directions instead of the original
+four.  The quest remains basically the same... I just added some twists.
+		-Eurale   3/29/97

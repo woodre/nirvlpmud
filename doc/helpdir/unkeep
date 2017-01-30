@@ -1,0 +1,14 @@
+
+
+                          [help unkeep]
+-----------------------=========+=========-----------------------                                 
+
+Usage: unkeep <item>
+       unkeep eq
+       unkeep all
+
+  Unkeeping an item removes the keep flag, allowing you to drop,
+sell, or give it away again, assuming it's an item you can normally
+do those things to.  The 'eq' argument will apply the unkeep
+command to anything you're wearing or wielding, and the 'all'
+argument will make sure nothing in your inventory is kept.

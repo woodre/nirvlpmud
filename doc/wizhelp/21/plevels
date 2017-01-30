@@ -1,0 +1,15 @@
+Syntax: plevels <x> [<y>]
+
+Display all players between levels 'x' and 'y', inclusive.
+You may substitute a players name for 'x' or 'y', in which case
+'x' and 'y' will take on the values of that players level.
+
+If no 'y' is given, display all players of level 'x'.
+
+Example:
+  To view all players of level 21, type 'plevels 21'.
+
+  To view all players between levels 19+3 and 19+9, type 'plevels 19+3 19+9'.
+  
+  To view all players between the levels of players 'mokri' and 'boltar', type
+  'plevels mokri boltar'

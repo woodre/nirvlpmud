@@ -1,0 +1,31 @@
+inherit "room/room";
+
+reset(arg)
+{
+  if(!present("filer"))
+  {
+    move_object(clone_object("/players/dune/filer.c"),
+    this_object());
+  }
+
+  if(!arg)
+  {
+    set_light(1);
+    short_desc="Eye of the Sandstorm";
+    long_desc=
+"     Perfect white sand dunes stretch into an endless\n"+
+"romantic horizon before you. Beaches of aqua gently\n"+
+"lap against the surrounding shores, reflecting the\n"+
+"starry skies above you.\n";
+
+    items=({
+      "walkway", "The wide walkway is made of obsidian",
+      "flames","Spires of shooting flame surround you on all sides",
+      "waves","You can see the bending waves of heat"
+    });
+
+    dest_dir=({
+      "/players/dune/hotel/office.c","dunes",
+    });
+  }
+}

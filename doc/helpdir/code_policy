@@ -1,0 +1,86 @@
+Code Policy.
+
+This is a formal document to describe Nirvana's policy regarding wizard
+code followed since the opening. -Bp 
+
+Document History
+1991        	Inacted informally,board postings.
+1991-2002   	Followed, various board and login notices when required.
+20-Sep-2002     Latest login reminder notice. 
+22-Oct-2002     Formalized in current form.
+06-Nov-2002	Latest Update. clairifcation of language. added internal
+
+Original Code: 
+ 
+    Those who decide to pull their original, (coded from a blank sheet) 
+ areas, items, or other works will be respected as much as can
+ practically be done.
+    However, this policy is simply a courtsey and if the need arises,
+ although it never has, code pulled by it's creator not in any of the 
+ following catagories may be restored to repair damage (to other code
+ or game play) done by it's being pulled. This is a last resort. Every
+ effort will be made to keep the code off line. 
+    Once it is on Nirvana, it becomes part of the mud, forever, actively
+ open or not. Pulled wiz code will generally remain inactive, and
+ unused. Archives may be kept and used as reference material, or  be used
+ in a this-is-how-nirvana-was-in.... type feature. These archives are 
+ also kept to restore an area if a wizard should return.  
+    The administration of Nirvana LPMUD retains the ability to use
+ any and all code that is implemented on this mud on Nirvana. 
+
+Modified/Co-authored code:
+
+    Those areas that are adopted, taken over, modified, improved, or
+ otherwise not the original work of a wizard may not be pulled by any
+ single wizard. The contributor who wishes the code to remain online (or
+ left it online) will be respected (generally the original creator).
+ Keeping areas, items, guilds, etc in the game has priority over someone
+ who no longer wants to be associated with Nirvana.
+
+Nirvana mudlib base code:
+ 
+    Nirvana mudlib base code remains with the mud and remains online
+ regardless of the author. This code shall not be transfered to another
+ mud under any circumstances, nor shall it be removed from Nirvana. If
+ removed, it will be restored from backup. If used elsewhere without
+ permission, those using it (and those associated with that mud) will 
+ lose any and all expectations regarding their code as outlined in this
+ document. Nirvana base code not from open sources is considered the 
+ copyright of the head god.
+
+Code referenced by other wizards:
+
+ Code that a wizard has made such that other wizards may use, reference or
+ otherwise include in their areas may not be removed. This code will be
+ restored from backup if it is removed. By giving free use, it shall
+ remain so as pulling it will break the work of those referencing it.  
+
+Repair of damage done by pulling code:
+
+ If it is decided that the best or easiest method of repairing damage
+ done by a wizard who yanks his code, is to restore it, then it may
+ be restored. This is putting the mud first, above the wishes of 
+ a single wizard. This is a damage control effort designed to stablize 
+ and keep the mud playable. Generally only the specific files needed
+ for damage repair will be restored.
+
+Internal Copying
+
+ Wizard code copying is protected by requiring permission of the
+ original author to do so. However, due to the need for a smooth
+ running game, the mud admin may assign or allow another person 
+ to take over the code when the original author is not available.
+ Protection extends only to the creative concept or theme in order
+ to prevent duplication internal to the mud. Methods of implementation
+ should be shared amung wizards.
+
+Starting Your Own Mud
+ 
+ A wizard is not allowed to take code from here, or use it elsewhere,
+ regardless of how he got it unless he personally coded it entirely. 
+    This is a simple fairness policy that *MUST* be followed. 
+ Those who wish to start their own mud, work on another mud, etc  
+ must get stock downloads from anon ftp or some other source and start
+ with that, or maybe someone else's lib. Just not this one. It represents
+ the work of the head god and  countless others and must not be copied
+ to muds other than Nirvana.

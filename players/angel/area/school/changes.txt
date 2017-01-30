@@ -1,0 +1,52 @@
+boots.c -- set_long() 'plan' s/b plain and 'cowbot' s/b cowboy.
+
+boots_02.c -- see boots.c above.
+
+chest_01.c -- set_long() 'a' s/b an.
+
+chest_02.c -- set_long() 'a' s/b capitalized, 'read' s/b red.
+
+earing_01.c -- set_long() 'there' s/b they're
+
+flow_scarf_01.c -- no set_type("misc") should have an ac greater than 2.
+                   set it to 1 or 2 or even 1+random(2) for a little variety.
+
+nike_01.c -- set_alias() s/b shoes or shoe not boots.
+             set_short() s/b Tennis Shoes or something not Cowboy boots.
+
+pack_01.c -- set_long() capitalize 'this' in the second line.
+
+shirt_01.c -- set_long() 'read' s/b red.
+
+underwear_01.c -- set_long() 'The' s/b They, 'al' s/b all.
+
+gym_teacher_01.c -- load_chat() 'pushup!' s/b pushups!
+
+general note with mobs
+  I've seen a couple load_chat(query_name()+" says, \"Something something.\n");
+  That will show up as, Name says, "Something something.
+  If you want the other " at the end so it reads:
+   Name says, "Something something."
+  You need to do a load_chat(query_name()+" says, \"Something something.\"\n");
+
+  Another general note is I see you use
+  object gold;
+  gold = clone_object("/obj/money"); 
+  gold->set_money();
+
+  For convenience on a mob you can just use add_money() instead.
+
+playground_student_01.c -- load_chat() 'you' s/b capitalized, Its s/b It's.
+
+sick_student_01.c -- set_long() uses She and load_chat() says the sick boy.
+
+student_02.c -- load_chat() should either be says and a period or something like
+                Do you want to go to the playground?  
+
+student_04.c -- load_chat() s/b says, not asks.
+
+teacher_04.c -- set_long() 'on' s/b one.
+
+teacher_05.c -- load_chat() what s/b capitalized.
+
+volunteer_01.c -- set_long() 'a' s/b an. 'want' s/b wants.

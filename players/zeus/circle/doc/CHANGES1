@@ -1,0 +1,49 @@
+
+- Changes made on or after 9.29 [since last submitted to Mythos]---------
+
+
+- Redid spacing in: Info, ghall.c, weaken.c, shadowweave.h, dark_prayer.h,
+  shadowblast.h, wither.h, g-old.c, dark_ass.h, hb.h, chan_obj.c, weapon_hit.h,
+  weaken.h, dark_assistance.h, empower.h, focus.h, rage.h, shadowring.h
+- Fixed chan.h so you can't remove someone who isn't in the conversation. :)
+- Added a set_home("/room/church"); in ghall.c when they leave the guild.
+- Added no store and no drop to chan_obj.c & a return after line 64
+- Moved member dir to /closed/circle_member/  [changed defs.h also]
+- Changed meditate_obj.c so they can quit out, or cs.
+- Added check in repulsion so dmg only done once to User, plus redid spacing.
+- Added some code (now lines 55,56) to shadowform.h and redid spacing.
+- Removed /base and /daemons directories, incl a line from defs.h
+- Fixed small problems in g-old.c and scroll.c
+- Fixed drain.h for objs valued < 1000, incl redid spacing
+- Added combat check to channel invite [lines 265-269 in chan.h]
+- Added a check for duration in weapon_hit.h   If no focus, no wep_hit bonuses
+- Added more room msgs to wither.h
+- Removed update_obj.h, line from circle.c, put func into misc_funcs.h
+  Fixed mistake in the_save() in ghall.c and fixed reading the history.
+- Changed /info directory to /doc
+- Redid the 'read writing' msg for guild members in ghall.c
+- Added demon gore, demon tooth, and beast claws barter code to g-old.c
+- Lowered dmg of mud spells to slightly above originals.  see mud_spells.h
+- Raised cost of shadow gems from 5k to 10k.
+- Fixed mistake in path.c, redid spacing, small changes.
+- Fixed mistake in nightmares.h for the sps drain.
+- Added funcs so that exa and examine work in ghall.c
+- Fixed guild_updates so it works for players
+- Changed how the gob blocks mini-guilds.  Made no_mini.h that blocks certain
+  'join' arguments.  Now it is not checked in the heart_beat
+- Fixed tell_room mistakes in descend.h and added PK check
+- Decreased chances of dark_ass specials going off
+- Changed shadowweave.h to not change short, only read and info. [?]
+- Added a tell_room msg when focus ends
+- Added numerous correct checks to chan_obj.c
+- Added level check in id.h so doesn't block wizards.
+- Many changes made to shadowblast.h:
+  new msgs, lowered dmg, greater gxp range.  see SBINFO
+- Took out an extra space between soak and infuse in score_cmd.h
+- Lowered cost of bone powder from 800 to 500 coins.
+- Raised gxp amount for surpassing spell failure from 3mil to 5mil
+- Slightly modified how sp regens in hb.h
+- Fixed / changed a few minor things in weapon_hit.h
+- Made a few minor changes to focus.h so it's now similar to weaken.h
+- In hb.h made focus wear down 2x as fast when not in combat.
+

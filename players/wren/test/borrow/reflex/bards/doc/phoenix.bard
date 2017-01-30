@@ -1,0 +1,27 @@
+Phoenix
+
+The legendary Phoenix is your most powerful ally in
+combat.  The Phoenix will attack with strength and
+skill, attempting to destroy all in its path.  However
+as a result of its aggressive fighting style the 
+Phoenix will get hurt during a fight, and if the Bard
+does not watch out for their companion, the Phoenix
+may get killed.  When you lose a companion in a fight
+you are unable to summon that companion for several
+hours, so be very careful.
+
+Available commands for your Phoenix are:
+
+talk/silence   Toggles on silent or noisy behaviour.
+               Use: talk/silence.
+sic            Will 'sic' your companion on a
+               a creature.
+               Use: sic <creature>
+guard          Protects your companion from attack.
+               Use: guard
+bye            Dismisses your companion.
+               Use: bye
+munch          Allows your companion to chow down on
+               a corpse.
+               Use: munch
+

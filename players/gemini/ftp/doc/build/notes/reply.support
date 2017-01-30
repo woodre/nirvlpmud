@@ -1,0 +1,14 @@
+
+I added a reply cmd to the game, if you wish for your private
+tells and such to set the replyer of whoever you're sending a 
+tell to, add
+
+    ob->Replyer(x);
+
+ where 'ob' is the player you are sending a tell to, and 
+    'x' is your real_name.
+
+If you're confused, check out tell(str) & Replyer(x) in player.c and
+/bin/_reply.c
+
+                                                        verte

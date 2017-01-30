@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/targus/hall/main","west",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A [33mgolden[0m earring","/players/vertebraker/swamp/OBJ/j_earring",0,0,0,"[1;32mScarab of Healing [[42;1m[1;37mglowing[0m[1;32m][0m","/players/feldegast/equip/scarab","1280772656",0,0,"[1;30mPendent of Truth[0m","/players/jareel/armor/humakt/humakt_necklace",0,0,0,"[1;37mNature's [1;32mBlessing[0m","/players/jaraxle/3rd/alt/items/nature_orb",0,0,0,"Bracers of Speed","/players/maledicta/cont/rdragon/sbracers","-0-",0,0,"[1;31mA Flowing Scarf[0m","/players/angel/area/school/obj/flow_scarf_01",0,0,0,"[1;37mChestguard of [1;32mHealth[2;37;0m","/players/maledicta/cont/armor/guard_of_health","0",0,0,"Hockey Skates","/players/jenny/wings/items/skates",0,0,0,"[1;30mGrey onyx-cluster ring[0m","/players/eurale/Chess/OBJ/ring",0,0,0,"[0m[33mGold Dragon Leggings[0m","/players/tallos/7tigers/objects/dragon_legs",0,0,0,})

@@ -1,0 +1,8 @@
+12/13/03 05:34: Darkfyre    ((19+11 /Vampire)      23(1/1)
+12/18/03 23:25: Inuyasha    ((12    /None)         14(1/1)
+12/20/03 03:23: Korwrath    ((8     /Cyberninja)    2(1/1)
+12/31/03 14:55: Inuyasha    ((9     /None)          2(1/1)
+03/12/06 04:39: Tacara      ((13    /Cyberninja)   15(1/1)
+04/23/06 03:52: Thomas      ((19+13 /Dervish)      25(2/1)
+05/23/06 23:41: Artos       ((19+60 /Dark Order)   33(3/1)
+05/24/06 00:33: Kadabra     ((19+17 /Dervish)      20(2/1)

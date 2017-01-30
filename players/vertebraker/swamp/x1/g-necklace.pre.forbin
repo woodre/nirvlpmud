@@ -1,0 +1,225 @@
+#include "/players/vertebraker/ansi.h"
+
+inherit "/players/vertebraker/closed/std/treasure";
+
+int big_teeth, small_teeth;
+static int worn;
+static object worn_by;
+
+void
+reset(int arg)
+{
+    if(arg) return;
+    set_id("gator tooth necklace");
+    set_alias("tooth necklace");
+    add_id("gator necklace");
+    add_id("necklace");
+}
+
+string
+short()
+{
+    return ("gator " + HIW + "tooth" + NORM + 
+      " necklace (has " + (big_teeth + small_teeth) + " teeth)" +
+      (worn ? " (worn around neck)" : ""));
+}
+
+void
+long()
+{
+    write("\
+A hemp necklace, lined with various gator teeth.  There\n\
+are " + big_teeth + " large teeth, and " + small_teeth + " small gator \
+teeth\n\
+within its lining.\n\
+You could string more teeth on it if you wish.\n");
+    if(worn_by && (this_player() == worn_by))
+      write("You are wearing it around your neck.\n");
+}
+
+int
+query_weight()
+{
+    return (1 + (big_teeth / 4) + (small_teeth / 6));
+}
+
+int
+query_value()
+{
+    return((400 * small_teeth) + (2500 * big_teeth));
+}
+
+void
+init()
+{
+    ::init();
+    add_action("cmd_wear", "wear");
+    add_action("cmd_remove", "remove");
+}
+
+status
+neck_check()
+{
+    object ob;
+    ob = first_inventory(this_player());
+    while(ob)
+    {
+      if((status)ob->id("gator tooth necklace") && 
+         (status)ob->query_worn())
+        return 1;
+      ob = next_inventory(ob);
+    }
+    return 0;
+}
+
+status
+cmd_wear(string str)
+{
+    object x;
+
+    if(!str) return 0;
+
+    if(id(str) && (environment() == (x = this_player())))
+    {
+      if(worn)
+      {
+        notify_fail("You are already wearing it.\n");
+        return 0;
+      }
+      if(neck_check())
+      {
+        notify_fail("You are already wearing a gator tooth necklace.\n");
+        return 0;
+      }
+      write("You drape the gator " + HIW + "tooth" + NORM +
+            " necklace around your neck.\n");
+      say((string)x->query_name() + " wears a gator tooth necklace.\n");
+      worn_by = x;
+      worn = 1;
+      return 1;
+    }
+
+    return 0;
+}
+
+
+status
+cmd_remove(string str)
+{
+    object x;
+
+    if(!str) return 0;
+
+    if(id(str) && (environment() == (x = this_player())))
+    {
+      if(!worn)
+      {
+        notify_fail("You aren't wearing it.\n");
+        return 0;
+      }
+      write("You remove the gator " + HIW + "tooth" + NORM +
+            " necklace from around your neck.\n");
+      say((string)x->query_name() + " removes a gator tooth necklace.\n");
+      worn_by = 0;
+      worn = 0;
+      return 1;
+    }
+
+    return 0;
+}
+ 
+status
+drop()
+{
+    object x;
+    if((x = this_player()) && (x == environment()) && worn)
+      cmd_remove("gator tooth necklace");
+    else
+    {
+      worn = 0;
+      worn_by = 0;
+    }
+    return 0;
+}
+
+status
+is_armor()
+{
+    string vrb;
+    if((vrb = query_verb()) && (vrb == "ready" ||
+        vrb == "#" || vrb == "armors"))
+      return 1;
+    else return 0;
+}
+
+status
+generic_object()
+{ 
+    return 1;
+}
+
+string
+locker_arg()
+{
+    return "X" + big_teeth +"CHINGY" + small_teeth + "X";
+}
+
+void
+locker_init(string arg) 
+{
+    string bunny, foofoo;
+
+/*
+    if(sscanf(arg, "%sabracadabra, b!", bunny,foofoo) < 2)
+*/
+      if(sscanf(arg, "X%sCHINGY%sX",bunny,foofoo) < 2)
+        sscanf(arg, "%sCHINGY%s",bunny,foofoo);
+    if(!bunny) bunny = "0";
+    if(!foofoo) foofoo = "0";
+    sscanf(bunny,"%d",big_teeth);
+    sscanf(foofoo,"%d",small_teeth);
+}
+
+status
+restore_thing(string str)
+{
+    restore_object(str);
+    return 1;
+}
+
+status
+save_thing(string str)
+{
+    save_object(str);
+    return 1;
+}
+
+void
+add_tooth(int type)
+{
+    if(type == 1)
+      small_teeth ++;
+    else
+      big_teeth ++;
+}
+
+void
+set_teeth(int small, int big)
+{
+    big_teeth = big;
+    small_teeth = small;
+}
+
+status
+query_worn()
+{
+    return worn;
+}
+
+string
+query_type()
+{
+    return "necklace";
+}
+
+query_save_flag() { return 0; }

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/closed/guild/forest/misc/key_myrax","/players/wren/Area/starbug/items/laundry","/players/snow/heals/ice_sphere","/players/ultramagnus/rdiamond","/obj/torch","/players/arrina/heals/honeyc","/players/hippo/armour/helmet","/players/sado/shop/chocolate","/players/wren/Area/starbug/items/veil","/obj/armor","/players/saber/armor/lboots","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/obj/armor","eerstalker with dreds.###/players/wren/Area/starbug/items/dreds","/players/snow/heals/kw_meat","/players/ultramagnus/darkweapon","/players/maledicta/cont/armor/rgloves","/players/scathe/armor/bowboot","/players/saber/weapons/hrev","/players/boltar/things/xmaslights","/players/emerson/heal/pepsi","/players/wren/Area/starbug/items/hair","/players/snow/WEAPONS/glowknife","/players/mythos/aarmor/sune-ate",})
+shorts ({"Ebon Key","Lister's dirty laundry","An [1;36mIce[0m Sphere","A Red Diamond","torch","[33mgooey honeycomb[0m","nutshell helmet","A box of delicious Belgian chocolates","a big wedding veil","A pair of [1mwhite[0m boots","Leather boots","Steel Helmet","A Prince's Robes","A small [1mwhite[0m shield","A polar bear hide","A hunk of whale meat","Dark Rider Spear","a pair of steel gauntlets.","Hard Boots","A Colt .68 Heavy Revolver","Christmas lights","can of Diet Pepsi","Perfect Hair","A glowing knife","Sune-ate",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

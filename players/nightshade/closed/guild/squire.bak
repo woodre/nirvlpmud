@@ -1,0 +1,190 @@
+heart_beat() {
+object ob;
+  ob = environment(this_object());
+  heart_check = 0;
+  if(ob->query_attack() && !heart_check) {
+    if(ob->query_hp() < evade_hp) {
+        tell_object(ob, "You attempt to EVADE " +evade_dir+"!!!\n");
+      command(evade_dir, ob);
+    }
+    if(!no_mon) {
+      my_hp = old_hp - ob->query_hp();
+      tell_object(ob,
+        "You have been hit for : "+my_hp+" hps.\n");
+    }
+  }
+  old_hp = ob->query_hp();
+}
+heart() {
+  set_heart_beat(0);
+  set_heart_beat(1);
+  write("Done.\n");
+  return 1;
+}
+
+send_esquire() {
+  if(!esquire) {
+    write("You do not have one out.\n");
+    return 1;
+  }
+  write("You call to your esquire and relieve him of his duty.\n");
+  destruct(esquire);
+  return 1;
+}
+call_esquire() {
+  if(esquire) {
+    write("You already have an esquire.\n");
+    return 1;
+  }
+  if(SP < 20) {
+    write("You do not possess enough magical energy to call for an esquire.\n");
+    return 1;
+  }
+  if(Glevel < 5) {
+    write("You are not worthy enough to ask Matry.\n");
+    return 1;
+  }
+  if(environment(Me)->query_property("NT")) {
+    write("The room will not allow you to call for an esquire.\n");
+    return 1;
+  }
+  write("You call for an esquire.\n");
+  say("An esquire arrives.\n");
+  esquire = clone_object("players/nightshade/guild/obj/esquire");
+  esquire->set_short(Name+"'s Esquire");
+  esquire->set_name(NAME+"'s esquire");
+  esquire->set_max_weight((Glevel * 2) + (Honor * 2));
+  move_object(esquire, environment(Me));
+  Gain(EXP20);
+  Ssp(20);
+  return 1;
+}
+
+evading(str) {
+int amt;
+string direct;
+  if(!str) {
+    write("Evade <hp> [amt], Evade <dir> <direction>, Evade <check>\n"
+        +" Evade <test>\n");
+    return 1;
+  }
+  if(str == "check") {
+    write("Evading hp set at: "+evade_hp+"\n");
+    write("Evade direction set at: "+evade_dir+"\n");
+    return 1;
+  }
+  if(str == "test") {
+    write("You test out your evading technic.\n");
+    command(evade_dir, Me);
+    return 1;
+  }
+  if(sscanf(str, "hp %d", amt)) {
+    if(!amt) {
+      write("Evade hp [amount]\n");
+      return 1;
+    }
+    if(amt < 1) {
+      write("You can't evade at negative hit points.\n");
+      return 1;
+    }
+    write("You set your evading hit points at "+amt+"\n");
+    set_evade_hp(amt);
+    return 1;
+  }
+  if(sscanf(str, "dir %s", direct)) {
+    if(!direct) {
+      write("Evade dir <direction>\n");
+      return 1;
+    }
+    write("You set you evade direction at: "+direct+"\n");
+    set_evade_dir(direct);
+    return 1;
+  }
+}
+watch_call() {
+object enemy;
+  if(Glevel < 5) {
+    write("You are just a squire, you can not call for knights.\n");
+    return 1;
+  }
+  if(watch_point > (Glevel * 2)) {
+    write("You must wait until next reset to call for help.\n");
+    return 1;
+  }
+  if(Strayed) {
+    write("You have strayed from your path!!!\n");
+    return 1;
+  }
+  if(Glevel < 10) {
+    if(SP < 40) {
+      write("You do not have enough magical energy to call for a squire.\n");
+      return 1;
+    }
+    if(squire) {
+      write("You already have a squire. Send the first one away.\n");
+      return 1;
+    }
+    if(!Me->query_attack()) {
+      write("You are not fighting anyone.\n");
+      return 1;
+    }
+    write("You summon a squire to help you with your battle.\n");
+    say(Name+ " call for a squire to help "+Obj+ " fight.\n");
+    squire = clone_object("players/nightshade/guild/obj/squire");
+    squire->set_name(NAME+"'s squire");
+    squire->set_level(Glevel);
+    squire->set_hp(20);
+    squire->set_wc((Glevel + 1) + (Honor));
+    squire->set_ac(0);
+    squire->set_short(Name+ "'s squire");
+    squire->set_who(Name);
+    move_object(squire, environment(Me));
+    enemy = Me->query_attack();
+    squire->attack_object(enemy);
+    move_object(Me, environment(squire));
+    enemy->attack_object(Me);
+    watch_point++;
+    Ssp(40);
+    if(Path == "None")
+    Gain(EXP40);
+    else
+    Gain(EXP40A);
+    new_shield();
+    return 1;
+  }
+  if(SP < 40) {
+    write("You do not have enough magical energy to call for a knight.\n");
+    return 1;
+  }
+  if(knight) {
+    write("You already have a knight.\n");
+    return 1;
+  }
+  if(!Me->query_attack()) {
+    write("You are not fighting at the moment.\n");
+    return 1;
+  }
+  write("You call for a knight to help you with your battle.\n");
+  say(Name+" calls for a knight to help "+Obj+" fight.\n");
+    knight = clone_object("players/nightshade/guild/obj/knight");
+    knight->set_name(NAME+"'s knight");
+    knight->set_level(Glevel + 1);
+    knight->set_hp(50);
+    knight->set_wc((Glevel + 1) + Honor);
+    knight->set_ac(0);
+    knight->set_short(Name+ "'s knight");
+    knight->set_who(Name);
+    move_object(knight, environment(Me));
+    enemy = Me->query_attack();
+    knight->attack_object(enemy);
+    move_object(Me, environment(knight));
+    enemy->attack_object(Me);
+    watch_point ++;
+    Ssp(40);
+    if(Path == "None")
+    Gain((Glevel * 3) + (Honor * 10));
+    else
+    Gain((Glevel * 3) + (Honor * 20));
+    new_shield();
+    return 1;
+}

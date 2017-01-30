@@ -1,0 +1,27 @@
+**************
+
+                     Trans
+
+Syntax:    trans <player>
+
+Desc:
+           This is a summon command to move a player to your present
+           location. Be it green or workroom. This is used to bring 
+           characters to rooms that are otherwise inexcessible. It 
+           should not be used to deposit characters in dangerous 
+           locations or to rescue them from rooms they should get 
+           themselves out of.
+
+Warning:   Don't kidnap people that aren't expecting it. Careful not
+           to pull people out of combat or other situations that are
+           not to be interfered with.
+
+Example:   trans mike
+                  results
+           Bob moves Mike to his current location
+
+
+Related:   place
+
+
+**************

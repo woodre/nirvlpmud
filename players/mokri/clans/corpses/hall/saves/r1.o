@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/corpses/hall/main","up","/players/mokri/clans/corpses/hall/r2","east","/players/mokri/clans/corpses/hall/r3","down","/players/mokri/clans/corpses/hall/r6","west","/players/mokri/clans/corpses/hall/r7","north","/players/mokri/clans/corpses/hall/r10","south","/players/mokri/clans/corpses/hall/r14","northeast","/players/mokri/clans/corpses/hall/r15","northwest",})
+short_desc "A Decaying Stomach.[0m"
+long_desc "You have entered what seems to be the stomach of the decaying corpse. You notice various coves to hold things in. Could this be a locker room?[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[31m~ [0m[34mEle[0m[32mment[0m[1mal Sh[0m[32mie[0m[34mld[0m[31m ~[0m","/players/snow/closed/test/shield",0,0,0,"[1;34mAmulet [0m[34mof the coming [1;34mStorm[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_amulet",0,0,0,"[1;34mEarring [0m[34mof the raging [1;34mStorm[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_earring",0,0,0,"[1;34mBracers [0m[34mof the rushing [1;34mStorm[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_bracelet",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,19224,51670,"[1m[34mShield of Tears[0m","/players/fakir/ways/ARM/tshield",0,0,0,"[1;30mDemon Platemail [0m[[1;33mSun Forged[0m][0m","/players/jareel/armor/DWARFFORGE/demon/armor",0,0,0,})

@@ -1,0 +1,50 @@
+May  7 21:53 : huh
+
+May  7 21:56 : test for Vital
+
+May  7 22:02 vertebraker : bliggidy blah
+May  7 22:02 vertebraker : made guildfix work better
+May  7 22:03 vital : Added damage for the ally command for stupid people
+May  7 22:04 vertebraker : added more syntax to ~/closed/shardak/room/garden.c
+May  7 22:29 vertebraker : test
+May  7 22:29 vertebraker : huh
+May  7 22:30 vertebraker : huh
+May  7 22:30 vertebraker : heh
+May  7 22:30 vertebraker : sweet :)
+May  7 22:31 vertebraker : worked this to announce when we fix somethin :)
+May  7 22:37 vital : works nice.
+May  9 00:20 vital : room/advance.c added ansi.h
+May 10 23:54 vital : updated the spelling and syntax in room/advance.c
+May 11 00:01 vital : futz the titles, added some damage for idiots in the advance room
+May 11 04:59 vertebraker : added shardak_death(x) func to macros.h
+May 11 05:00 vertebraker : totally expanded DOTHIS - this is the bare minimum.
+May 11 05:01 vertebraker : incorporated shardak_death(x) into room/advance.c ~ use this wherever add_hit_point dmg is dealt
+May 17 16:42 vertebraker : updated advance.c to include 50-100 rank title as HighLord Magus etc.
+May 17 16:42 vertebraker : room/advance that is
+May 17 17:53 vertebraker : created a std emote object, std/emote.c  [see closed/shardak/cmds/grin.c] for an example
+May 18 04:56 vertebraker : wrote a std tome object std/tome.c [50% untested]
+May 19 01:22 vertebraker : perfected std/tome.c object [until it breaks; of course]
+May 19 02:10 vertebraker : wrote Hierarchy tome
+May 19 02:10 vertebraker : tomes are to be placed in ~/closed/shardak/tomes/ [Some are already setup]
+May 19 05:42 vertebraker : added in a new spell, cmds/channel.c [uses obj/channeling.c]
+May 19 05:42 vertebraker : ([ NEEDS NEW COST AND A RANK ])
+May 19 07:37 vertebraker : wrote a new cmd, cmds/course.c - special anti-wimpy device of sorts :)
+May 19 07:37 vertebraker : ([ NEEDS NEW COST AND A RANK ])
+May 19 08:20 vertebraker : added a new spell, cmds/brimstone.c - room spell
+May 19 08:20 vertebraker : ([ NEEDS NEW BLAH BLAHJ Gpoig;jg ])
+May 19 09:02 vertebraker : made shop teleport, made syntax better for giving cmd
+May 19 09:02 vertebraker : fixed the shop teleport task
+May 19 09:03 vertebraker : [also tested corpse task, works fine]
+May 19 09:05 vertebraker : made it so holy avenger task works okay // uses beck's holy avenger, not morgar's any longer
+May 19 09:20 vertebraker : made it so light could only be used when the flames task was solved
+May 19 09:20 vertebraker : coded a dupe eternal torch [lit from the bloodflame]
+May 19 09:20 vertebraker : made brimstone have to have flames task
+May 19 09:30 vertebraker : fixed ~/swamp/OBJ/flame.c [made it so it lights the eternal torches and whatnot]
+May 19 09:36 vertebraker : updated gpt/gpe/gt/ge to use history with timestamp
+May 19 09:39 vertebraker : made ignite require the flames task
+May 19 09:45 vertebraker : fixed it so flames task works :)
+May 19 09:46 vertebraker : fixed ~/closed/shardak/room/shopkeep to point at Pyromancer for next task
+May 20 22:19 vertebraker : fixed gt to work with : for emotes too
+May 20 22:20 vertebraker : fixed gpt too
+May 21 03:08 vertebraker : fixed ally mark
+May 21 03:35 vertebraker : converted room/shopkeep.c to monster.c ; changed merchant to Demon merchant [capitalization]

@@ -1,0 +1,37 @@
+
+>> LEVEL COST
+
+Guild level [2] costs  50000 free experience.
+Guild level [3] costs  300000 free experience.
+Guild level [4] costs 750000 free experience.
+Guild level [5] costs 2000000 free experience.
+Guild level [6] costs 4000000 free experience.
+
+You must find Spuck to 'advance' or to 'raise' an attribute.
+Syntax is similar to the adventurer's guild, e.g. 'raise stamina',
+but abbreviations are used instead: 'raise sta'
+
+
+ste = stealth       How agile you are in combat, able to dodge hits.
+str = strength      Your strength. You can carry more things.
+sta = stamina       Your constitution. The more you have the better.
+int = intelligence  Affects your ability to cast spells, and do damage.
+wil = will power    Determines the success ratio of guild spells. (like int)
+luc = luck          Go figure. Used in many applications.
+pie = piety         Used in the guild on occasion like luck and COMBAT!!
+mag = magic aptitude  Your magic constitution. The more you have, the better
+
+dex = dexterity     Not in use by the guild at this time, may be later update
+cha = charisma
+
+
+Attributes are slightly more expensive than what the player help file
+'help attribs' otherwise states.
+
+
+Attributes cost 3000 EXP per point when raising them between 1 and 12.
+Attributes cost 4500 EXP per point when raising them between 13 and 16.
+Attributes cost 6000 EXP per point when raising them between 17 and 20.
+
+Attributes approximate those of 'help attribs' for raising between 20 and 30.
+

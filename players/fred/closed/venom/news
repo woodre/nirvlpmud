@@ -1,0 +1,38 @@
+                       -=[ Symbiotes ]=-
+
+Changes:
+
+-- The 'mon' command now lists your current MP if you're changed.
+-- There is now a 'fixit' command to report any bugs typos etc.
+-- Extra look has been updated to either Name has or You have in 
+   your description.
+-- I added a channel to report changes to those that are online 
+   atm.  It will list as your Symb name tells you: msg.
+-- Added % carry to the score and the i command.
+-- Fixed the store_coins command in the ghall.
+-- Fixed the extra look so it shows if your arm has taken a shape.
+-- Upped 'regen' so it's a little more effective.
+-- Tweaked your offense skills so you should hit a little harder 
+   on average.  It's a work in progress.
+-- Changed link <shape> some.  Your first shape change will cost 
+   50 MP.  Any other changes during that login will only cost 20 MP.
+-- Fixed link harden it wasn't counting down properly making it so 
+   you couldn't harden, unharden, and reharden again.
+-- changed the 'fatal' command to add a little spice to your normally
+   dreary mudlife.  Thank Forbin.
+-- changed 'hypermode'.  You no longer 'have' to have PK set to use 
+   hypermode, but there are extra bonuses if you do have PK set.
+   Think of it as the difference between P2 and P3 for cybers.
+-- Thanks to Madness's ever watchful ways it was realized that the
+   combat messages (i.e., You hit, massacred, etc.) didn't coincide
+   with the actual dmg dealt.  They were basically completely
+   random so your Destroyed could have been like dmg 3 heh.  I've
+   fixed them now.  You won't notice as many D E S T R O Y E D msgs
+   now (in fact if you get on of those without Hypermode that's like
+   an act of god and you should consider buying lottery tickets.
+   But now the messages will actually mean something.  Only the msgs
+   have changed don't worry you're still doing the same amount of dmg.
+
+ Any questions, concerns, suggestions, mudmail me.
+      Thanks,
+          Fred

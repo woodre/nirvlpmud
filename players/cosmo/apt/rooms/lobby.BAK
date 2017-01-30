@@ -1,0 +1,75 @@
+/* Apartment room */
+#define tp this_player()->query_name()
+#define mp this_player()->move_player
+#include "/players/cosmo/closed/ansi.h" 
+inherit "room/room";
+
+reset(arg) {
+  if(arg) return;
+  set_light(1);
+  short_desc="Apartment Lobby";
+  no_castle_flag = 0;
+  long_desc="\n"+
+"You step timidly into the apartment building.  Glancing around at\n"+
+"your surroundings, you realize that you stand in the front lobby of\n"+
+"the apartment building.  There is an elevator on the wall to your\n"+
+"left and a reception desk in front of you.  A small note is tacked\n"+
+"to the front of the desk.  Behind the desk is a large mahogany door.\n"+
+"A large beeping and flashing screen occupies most of the right-hand\n"+
+"wall.  Behind you is the door leading back out, and you notice that\n"+
+"that wall is covered with colorful graffiti.\n",
+
+  items=
+  ({
+    "button","A small white button that calls the elevator",
+    "elevator","It appears to be a standard elevator with a call button",
+    "note","To gain a better appreciation of this area,\n"+
+           "watch the television show "+BOLD+"Seinfeld"+NORM,
+    "door","The back door is closed",
+    "desk","Just a standard hotel desk.  Nothing special",
+  });
+
+  dest_dir= ({ "room/plane1", "out", });
+
+ if(!present("wall", this_object())){
+   move_object(clone_object("players/cosmo/dc/dc_board.c"), this_object());
+ }
+ if(!present("screen", this_object())){
+   move_object(clone_object("players/cosmo/hslist/svds.c"), this_object());
+ }
+
+}
+
+init() {
+  ::init() ;
+  add_action("a_push","push");
+  add_action("a_push","press");
+  add_action("a_open","open");
+}
+
+a_push(arg) {
+  if(!arg) { write("Push what?\n"); return 1; }
+  if(arg == "button" || arg == "call button") {
+    say(capitalize(tp)+" pushes the button.\n");
+    write("You push the elevator button, the doors slide open, and you\n"+
+      "quickly step inside as the doors slam shut behind you.\n");
+    mp("into the elevator#/players/cosmo/apt/rooms/elevator");
+    return 1;
+  }
+  else { write("You push the "+arg+" and nothing happens.\n");
+    return 1;
+  }
+}
+
+a_open(arg) {
+  if(!arg) { write("Open what?\n"); return 1; }
+  if(arg == "door" || arg == "back door") {
+    say(capitalize(tp)+" quietly slides out the back door of the lobby.\n");
+    write("You push open the back door and step out into the daylight.\n");
+    mp("out the back door#/players/cosmo/apt/rooms/rstreet");
+    return 1;
+  }
+  else { write("You try to open the "+arg+" but fail.\n");
+    return 1;
+  }
+}

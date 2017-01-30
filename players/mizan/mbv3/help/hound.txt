@@ -1,0 +1,21 @@
+>> ORDER: HOUND AND SHADOW ATTACK ON PLAYER
+
+Usage:
+order <indexnum> hound <creature> <duration>
+
+Example:
+'order 3 hound mizan 10'
+
+Description:
+This is a variation of the 'hitfade' order. Although not implied
+this order is an attack capability. Therefore be careful if you
+don't know what it does :)
+
+Unlike the standard hit and fade, the monster waits until the target
+in question has engaged in combat with another creature before making
+its fade. Although very effective when the player is surprised, 
+most players will figure out the modus operandi of this attack and 
+prepare counter strikes against it.
+
+This attack is utilized by the less fearless monsters in the guild.
+

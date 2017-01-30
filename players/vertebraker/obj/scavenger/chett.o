@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/angel/area/stargate/obj/P90","/players/hippo/heals/dna_repair","/players/wren/Area/starbug/items/veil","/players/hippo/heals/bubbles","/obj/armor","/players/pain/NEW/weap/soulcrusher","/obj/weapon","/players/mythos/aarmor/kote","/players/snow/ITEMS/ice_shard","/players/mythos/awep/katana","/players/ultramagnus/apple","/players/wren/Area/starbug/items/sequinjacket","/players/jamila/beach/mobs/skin","/obj/treasure","/players/wren/Area/starbug/items/leaflets","/players/mythos/awep/zantetsuken","/players/snow/shadows/stuff/cloak","/obj/armor","/players/angel/area/stargate/obj/bullets","/players/sado/shop/chocolate","/obj/discon","/players/mythos/awep/daikyu","/players/snow/shadows/stuff/nightshade","/players/mythos/awep/quiver","/players/snow/armor/arch_robes",})
+shorts ({"Machine gun","[32mdna repair string[0m","a big wedding veil","[1;36mbubbles of 7up[0m","Metal gloves","a mace named [1m[31mSoulCrusher[0m","Axe","Kote","An ice shard","Katana","A Red Apple","Cat's red sequin jacket","A Lizard Skin","Arctic Seal pelt","a stack of leaflets","[34mZantetsuken[0m","A dusky cloak","a hat","A clip of bullets [50]","A box of delicious Belgian chocolates","A magical storage box","Daikyu","[1mNightShade[0m, the Broadsword of Death","A quiver","Robes of the Archwizard",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

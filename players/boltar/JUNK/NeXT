@@ -1,0 +1,26 @@
+Yossi wrote:
+> 
+> Hi there,  I am looking for info on the way to copy the all boot drive (a 250
+> meg scsi) that my Next turbo box is running on now to a bigger 1 gig scsi.
+> what should i do to get all the info and boot setup going?
+> 
+> I dont have the OS media CDs so i can no reinstall on the new drive...
+
+Theres a disk tool that seemed to do it all when I put my new drive in.
+Disk tool lives under /NextAdmin and strangly has a picture of an open
+disk drive as its icon. :)
+Tons quicker than a cdrom.
+
+-- 
+Regards,
+
+
+This works for me:
+
+(cd /; gnutar lcvf - /) | (cd /Disk; gnutar xvpf - --exclude /Disk)
+
+where /Disk is your mounted 1GB drive.
+
+-- 
+C.A. Leong       < mailto:cleong@zerospin.com >
+ZeroSpin Inc.    < http://zerospin.com/ >

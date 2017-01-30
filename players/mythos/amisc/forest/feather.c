@@ -1,0 +1,198 @@
+/*******************************
+*  check /players/mythos/amon/forest/hinotori.c
+*   approved by saber
+*******************************/
+
+#include "/players/mythos/closed/ansi.h"
+#define tp this_player()->query_name()
+#define tg this_player()->query_gender()
+
+inherit "obj/treasure";
+int healnum, sub, ran;
+reset(arg) {
+  if(arg) return;
+  healnum=3 + random(3);
+  set_id("feather");
+  set_short("A feather of great beauty");
+  set_long("One of the feathers from the head of the Hinotori-\n"+
+           "The Firebird.  It is a feather of exquisite beauty and\n"+
+           "elegance- a prize for any clothing.  Legend has spoken of\n"+
+           "hidden powers within it.  Take it to a priest to learn more\n"+
+           "'ask priest about feather', otherwise, 'wear' it or 'drop' it...\n");
+  set_weight(1);
+  set_value(10000);
+}
+
+init() {
+  ::init();
+  if(!environment()) return;
+  if( living(environment(this_object())) && environment(this_object())->query_level() < 10) {
+  tell_object(environment(this_object()),"You are not of high enough level to have this!\n");
+  move_object(this_object(),environment(environment(this_object())));
+  return 1;}
+/* Taken out until it can be made fool proof... Maledicta 4/01
+  add_action("wwear","wear");
+  add_action("ddrop","drop");
+*/
+  add_action("htouch","htouch");
+  add_action("flame","flame");
+  add_action("concen","concentration");
+  add_action("prayer","prayer");
+  add_action("protect","protect");
+  add_action("peace","peace");
+}
+
+wwear(str) {
+  if(str=="feather") {
+  this_player()->set_title("the Martyr");
+  write("You wear the feather.\n");
+  this_player()->clear_crime();
+  this_object()->set_short("A feather of great beauty <worn>");
+  if(call_other(this_player(),"query_attrib","mag") <21){
+  this_player()->raise_magic_aptitude(1);}
+  return 1;}
+  }
+
+ddrop(str) {
+  if(str=="feather") {
+  write("You drop the feather....It disappears...\n");
+  this_player()->raise_magic_aptitude(-1);
+  destruct(this_object()); return 1;}}
+  
+htouch(str) {
+  if(!str) {write("Who do you wish to help?\n"); return 1;}
+  if(str== (this_player()->query_name())) {
+      write("This a power for the unselfish...\n"); return 1;}
+   if(present(str,environment(this_player()))) {
+     write("You touch the feather to "+capitalize(str)+".\n"+
+         "The feather slowly begins to glow.....\n\n"+
+         YEL+"\t\tFLASH\n\n"+NORM+"The feather brightens into a hot"+
+         " searing light!\nThen it is over... You feel a bit tired.\n"+
+         "And "+ capitalize(str)+" has been healed.\n");
+     say(tp+" touches the feather to "+capitalize(str)+".\n"+
+         "The feather slowly begins to glow.....\n\n"+
+         YEL+"\t\tFLASH\n\n"+NORM+"The feather brightens into a hot"+
+         " searing light!\nThen it is over... "+
+         "And "+ capitalize(str)+" has been healed.\n");
+     tell_object(find_living(str),"\nYou feel a surge of energy!\n");
+     find_living(str)->heal_self(350);
+     ran=random(4);
+     if(ran==0) {
+     sub=call_other(this_player(),"query_attrib","str");
+     this_player()->set_attrib("str",sub-1);}
+     if(ran==1) {
+     sub=call_other(this_player(),"query_attrib","sta");
+     this_player()->set_attrib("sta",sub-1);}
+     if(ran==2) {
+     sub=call_other(this_player(),"query_attrib","luc");
+     this_player()->set_attrib("luc",sub-1);}
+     if(ran==3) {
+     sub=call_other(this_player(),"query_attrib","mag");
+     this_player()->set_attrib("mag",sub-1);}
+     this_player()->add_alignment(1000);
+      if(this_player()->query_alignment() > 2000) {
+      call_other(this_player(),"add_alignment",2000-(this_player()->query_alignment()));}
+     healnum=healnum-1-random(2);
+     if(healnum<1) { 
+       write("The feather bursts into flame and disappears!\n");
+       destruct(this_object());}
+     return 1;}
+       else {  write("That person is not here.\n"); return 1;}
+   return 1;} 
+
+protect(str) {
+object attacker, attacker2;
+  if(!str) {write("Who do you wish to protect?\n"); return 1;}
+  if(str== (this_player()->query_name())) {
+      write("This a power for the unselfish...\n"); return 1;}
+   if(present(str,environment(this_player()))) {
+        attacker=(find_living(str)->query_attack());
+        if(attacker) {
+        write("You rush in to protect "+capitalize(str)+".\n");
+       say(capitalize(tp)+" rushes in to protect "+capitalize(str)+".\n");
+        attacker->attack_object(this_player());
+        healnum=healnum-1;
+     if(healnum<1) { 
+       write("The feather bursts into flame and disappears!\n");
+       destruct(this_object()); return 1;}
+        return 1;}
+        else {write("That person is not under attack.\n"); return 1;}
+        return 1;}
+        else {write("That person is not here.\n"); return 1;}
+        return 1;}
+
+peace() {
+object ob;
+ob=first_inventory(environment(this_player()));
+  while(ob) {
+  if(living(ob)) {
+    if(ob->query_attack()) { (ob->query_attack())->stop_fight();
+    ob->stop_fight(); }
+}
+  ob=next_inventory(ob);
+}
+write("You ask for peace and it is granted.\n");
+say(capitalize(tp)+" asks for peace and the gods grant it.\n");
+this_player()->heal_self(-10-random(10));
+healnum=healnum-1;
+     if(healnum<1) { 
+       write("The feather bursts into flame and disappears!\n");
+       destruct(this_object()); return 1;}
+return 1;}
+
+flame(){
+  write("You wave the feather and the feather seems to burn with crimson "+
+        "fire.\n");   
+  say(capitalize(tp)+" waves the feather and the feather seem to "+
+      "burn with crimson fire.\n");   
+  set_light(1);
+return 1;}
+
+prayer(str) {
+if(!str) {write("Who do you wish to resurrect?\n"); return 1;}
+  if(str== (this_player()->query_name())) {
+      write("This a power for the unselfish...\n"); return 1;}
+   if(present(str,environment(this_player()))) {
+     if(find_living(str)->query_ghost()){
+   write("You lightly caress the body of "+capitalize(str)+".\n"+
+      "You whisper words of power and feel the gods infuse you with energy.\n"+
+         "Suddenly the body glows and you see life begin again!\n");
+   say(capitalize(tp)+" lightly caress the body of "+capitalize(str)+".\n"+
+         "Suddenly the body glows and you see life begin again!\n");
+   call_other(find_living(str), "remove_ghost", 0);
+   this_player()->lower_attrib();
+healnum=healnum-1;
+     if(healnum<1) { 
+       write("The feather bursts into flame and disappears!\n");
+       destruct(this_object());  return 1;}
+   else {write("That ghost is not here.\n"); return 1;}
+   return 1;}
+return 1;}
+return 1;}
+
+concen(){
+	write("You concentrate...\n");
+	say(capitalize(tp)+" concentrates...\n");
+    healnum=healnum-1;
+	call_out("time",10);
+return 1;
+}
+
+time() {
+int lev;
+lev=(this_player()->query_level());
+  if(healnum<1) { write("The feather bursts into flame and disappears!\n");
+       destruct(this_object());
+     return 1;}
+    write("Suddenly, you feel the feather grow hot!\n\n");
+    write("You feel something descend upon you and you are protected!\n");
+    say(CYN+"Suddenly around "+capitalize(tp)+" an aura appears!\n"+NORM);
+    move_object(clone_object("/players/mythos/amisc/forest/proctec.c"),this_player());
+    this_player()->set_level(lev-1);
+    healnum=healnum-1;
+     if(healnum<1) { 
+       write("The feather bursts into flame and disappears!\n");
+       destruct(this_object()); return 1;}
+return 1;}
+
+query_save_flag()  { return 1; } 

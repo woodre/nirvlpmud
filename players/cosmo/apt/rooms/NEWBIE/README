@@ -1,0 +1,37 @@
+NEWBIE RAT AREA - created by Cosmo
+----------------------------------
+This area is meant to be an extension of Seinfeld's apartment
+area.  There are two entrances to the rat area:
+	~/apt/rooms/elevator.c
+	~/apt/rooms/hole.c
+
+NOTE: The new versions of these files are currently stored as
+      elevator_NEW.c and hole_NEW.c.  They will be renamed after
+      the area has been approved.
+
+This is meant to be a newbie area so only players less than
+level 6 may enter.  Within the rat area there are 30 rooms, 
+numbered sequentially from h1.c to h30.c.  All rooms are
+contained in:
+	~/apt/rooms/NEWBIE/
+
+Each room randomly generates rats from the init() function,
+with a maximum of 3 rats per room and 30 rats in the whole
+area, per reset.  The rats are all called from:
+	~/apt/mon/rats.c
+
+Each time a rat is generated there is a 60% chance of it being
+a small (level 3-6) rat, a 30% chance of it being a medium 
+(level 7-10) rat, and a 10% chance of it being a large
+(level 11-13) rat. The medium rats have a 50% chance of being
+aggressive and the large rats have an 80% chance of being
+aggressive.  Each rat carries a piece of cheese which may
+be either sold or eaten as a food heal.  The value of the
+cheese varies with the level of the rat.
+
+A map of the rooms in this area may be found in:
+	~/apt/rooms/NEWBIE/MAP.txt
+
+Initial completion on 10/5/98.
+Monster approval by Snow on 10/6/98.
+Room approval by Eurale on 10/8/98.

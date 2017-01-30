@@ -1,0 +1,16 @@
+no_clean 0
+name_of_weapon "shovel"
+broke 0
+misses 217
+hits 720
+alt_name "trixshovel"
+alias_name "big shovel"
+short_desc "A big metal shovel"
+long_desc "A huge shovel made of metal, useful to dig."
+read_msg 0
+class_of_weapon 18
+value 1000
+local_weight 2
+info 0
+deny_save 0
+weapon_type "sword"

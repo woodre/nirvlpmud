@@ -1,0 +1,19 @@
+embrace shadows
+
+embrace <NPC> - cost:  0 hp, 100 sp, 6 (+9) endurance
+entrap NPC in a mental prison of shadows
+NPC takes 20-30% dmg dealt to player (> 20-30) in dmg to self (type mental).
+add_hit_point(dmg) for same amount to player
+
+MO to NPC, if dmg > 55-85 interrupt casting, -50hp, -20sp, -4end embrace = 0; 
+-3end per hb during casting
+if embrace >= EMBRACE_VAL(4), embraced. - can't cast other spells while casting
+if you run while casting, will interrupt it.
+if attacker_ob->query_guild_name == fallen, lose 1 end every time takes dmg
+if endurance < 0, 1:5 npc breaks free of prison (40 round limit avg)
+otherwise, 20 round limit
+
+requires focus and weaken to be cast.
+
+/players/zeus/circle/OBJ/embrace.c
+~/circle/power/embrace.h

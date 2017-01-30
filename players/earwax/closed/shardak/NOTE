@@ -1,0 +1,3 @@
+don't include alldefs.h or ansi.h in a file that inherits verte's 
+std_efuns files, he redefines HIK and NORM in them it appears.
+NORM works ok.  Instead of HIK use BOLD+BLK

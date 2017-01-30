@@ -1,0 +1,12 @@
+Syntax: clan_short [description]
+
+Sets the short description of the clan object
+to 'description' (what it displays as in your
+inventory, etc).
+
+Example:
+  'clan_short A big red ball' would set the short
+  description to 'A big red ball'.
+  
+See also: colors
+

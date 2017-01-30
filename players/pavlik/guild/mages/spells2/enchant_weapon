@@ -1,0 +1,91 @@
+/*
+ * spell : Enchant Weapon   (enchantment)
+ * level : 7
+ * effect: Raises the weapon class of a weapon by 1 point
+ * cost  : 160 sp
+ * spec  :
+ * files : ~/mages/obj/enchant_weapon.c
+ *
+ * updated: 11/25/2005 - pavlik
+ *	changed bonus from: power/10 to: power/20 + random(enchantment/10)
+ *      removed "endenchant" since it no longer applies
+ */
+
+enchant_weapon(str) {
+
+  object ob, obj;
+  int amt;
+
+  if(!KNOW("enchant")) {
+	write("What?\n");
+	return 1;
+  }
+
+  if(!str) {
+	write("Enchant what?\n");
+	return 1;
+  }
+
+  obj = present(str, tp);
+  if(!obj) obj = present(str, environment(tp));
+
+  if(!obj) {
+	write("You do not have a "+str+" to enchant.\n");
+	return 1;
+  }
+
+  if(!obj->weapon_class()){
+	write(obj->query_short()+" is not a weapon.\n");
+	return 1;
+  }
+
+  if(obj->query_wielded() || tp->query_weapon() == obj) {
+	write("You must unwield the weapon first.\n");
+	return 1;
+  }
+
+  if(obj->query_enchantment("mage enchantment")) {
+	write("This object has already been enchanted.\n");
+	return 1;
+  }
+
+  if(tp->query_sp() < 100) {
+	write("You are too tired to cast this spell.\n");
+	return 1;
+  }
+
+  write("You cast an "+HIM+"Enchant Weapon"+NORM+" spell ...\n");
+
+  if(spell_fail2(5,"ench", "pow")){
+	write("You "+HIR+"miscast"+NORM+" the spell!\n");
+	write(obj->query_short()+" is weakened by your botched magic.\n");
+	say(ME+" "+HIR+"miscasts"+NORM+" a spell.\n");
+	obj->set_class(obj->weapon_class() - (1+random(4)));
+	tp->add_spell_point(-50);
+	return 1;
+  }
+
+  write("You call upon your deep "+MAG+"knowledge of the arcane"+NORM+" to infuse a weapon with "+HIY+"magical power"+NORM+".\n");
+  say(ME+" calls upon "+MAG+"the arcane"+NORM+" to infuse a weapon with "+HIY+"magical power"+NORM+".\n");
+
+  amt = present("mageobj", tp)->query_total_pow() / 20;
+  amt = amt + random(present("mageobj", tp)->query_total_ench()) / 10;
+
+  if(tp->query_level() > 20)
+	write("Enchantment Total: "+amt+"\n");
+
+  obj->add_enchantment("mage enchantment",
+	HIC+"["+HIR+"*"+HIC+"]"+NORM,
+	HIC+"This weapon has been enchanted by a Mage.\n"+NORM,
+	amt,
+	"magical",
+	1000000,
+	1000000,
+	0,
+	0);
+
+  tp->add_spell_point(-160);
+  return 1;
+}
+
+

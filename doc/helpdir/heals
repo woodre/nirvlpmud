@@ -1,0 +1,63 @@
+
+
+                           [help heals]
+-----------------------=========+=========------------------------   
+
+   To heal during combat or otherwise, quickly, you must find a
+'heals' vender. Heals tox your food, soak, and intox when you use
+them. On your monitor you will see F% S% I%. This is the amount of
+of that type of heal you can take. This % will go up as you use
+more heals.
+
+It will reach a point when you can't use any more healing because
+your % will be close or over 100%. The only way to use more heals
+is to allow yourself to 'detox'. The detox rate for each type of
+heal, Food, Soak, Intox, is based on character level. As well as
+the amount that each heal will 'tox' you. As you go up in level
+your detox rate will go from very high to very low, and your tox
+rate will go from very high to very low. So the amount you tox at
+level 5 is much higher then that of level 10 for example. And
+the amount that you detox at level 5 is much higher then that of
+level 10. 
+
+This amount of tox vs detox is balanced so that higher level players
+can use  more heals to fight higher level monsters. While lower
+level characters cannot use as many heals at one time as higher level
+characters, they detox faster.
+
+There are many types of heals. Some tox one type of tox only, others
+split their tox rate over several toxes as you use them. While some
+tox your intox rate which makes you drunk, speeding up your healing
+rate, but sometimes making you hit poorly in combat. It is up to you
+as a players to find and use the heals that work best for you.
+
+As a newbie you can buy heals in the newbie hall. You will find
+heals that tox all toxes and heal 10hps and sps, 20 hps and sps and
+30 hps and sps, at a time. You will see that the price for these
+heals goes up as the amount of healing per charge goes up. The price
+will also go up based on how much each charge of a heal toxes you.
+You will find that as you become higher level and fight harder
+monsters, the types of heals will become more expensive.
+
+To use a heal simple look at it. Each heal will tell you how to use
+it, if you simply read the description. After you use it, you can
+find out how much it heals you. Some heals only heal Hps, or sps,
+while most others heal both. The amount also is different for each
+heal, but most normal heals heal 50hps, and 50 sps.
+
+It is a good idea to set up an alias for the type of heals you will
+be using so you don't have to type out a long command each time you
+want to heal.
+
+For example if you had a heal which required you to type 'use heal'
+each time you had to use it, you could set up an alias for it by
+typing 'alias o use heal'. Then whenever you typed the letter 'o', you
+would use that heal, as if you had typed 'use heal'. This is very
+important when you are healing in combat when sometimes you need to heal
+more then once per round.
+
+Also see:
+ alias, monitor, newbie
+
+
+

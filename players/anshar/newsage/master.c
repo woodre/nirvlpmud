@@ -1,0 +1,5 @@
+#include "/players/anshar/newsage/lib/shelp.h"
+#include "/players/anshar/newsage/lib/shome.h"
+#include "/players/anshar/newsage/lib/stitle.h"
+#include "/players/anshar/newsage/lib/schat.h"
+#include "/players/anshar/newsage/lib/sc.h"

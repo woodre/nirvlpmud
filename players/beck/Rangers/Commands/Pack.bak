@@ -1,0 +1,104 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+mapping Items;
+
+
+RangerPower(string item_name, string type){
+   object item;
+
+   if(!item_name){
+      write("You must specify an item.\n");
+      return 1;
+   }
+
+   if(!PO->QMorphed()){
+      write("You can only access your pack when you are morphed.\n");
+      return 1;
+   }
+
+   if(!present(item_name,ENV(PO))){
+      write("You do not have "+item_name+" in your inventory.\n");
+      return 1;
+   }
+   
+   item = present(item_name,ENV(PO));
+   
+   if( !(item->get()) || item->drop() > 0 || item->query_weight() > 10 || living(item) ){
+      write("You can't use that item with the pack.\n");
+      return 1;
+   }
+
+   if(MASTER->QPowerPoints(type) < item->query_weight()){
+      write("There is not enough power to store that item.\n");
+      return 1;
+   }
+
+   move_object(item,TO);
+   MASTER->APowerPoints(-(item->query_weight()),type);
+   write("You teleport "+item_name+" to your Power Pack.\n");
+   TO->AddItem(TPRNAME,item);
+   return 1;
+   
+   
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   write("Your pack is a virtual storage area.\n"+
+         "You may use it to store items you do not wish to carry.\n"+
+         "Each transaction will cost some Power Points.  The heavier\n"+
+         "the item, the more power it will consume.\n"+
+         "You must be morphed to use the pack.\n"+
+         "The items remain in the pack even if you log off the mud.\n"+
+         "Items will NOT carry over a reboot cycle.\n"+
+         "Commands:\n\n"+
+         "pack <item>             moves specified item to the pack\n"+
+         "ri pack                 see pack contents.\n"+
+         "");
+   return 1;
+
+}
+
+void AddItem(string player_name, object item){
+   object *items;
+
+   if(Items == 0){ Items = ([ ]); }
+
+   if(!(items = Items[player_name])){
+
+      Items[player_name] = ({ item });
+   }
+   else
+      Items[player_name] += ({ item });
+
+}
+
+void RemoveItem(string player_name, object item){
+   object *items;
+
+   if(Items == 0){ Items = ([ ]); }
+
+   if(!(items = Items[player_name])){
+
+   }
+   else
+      Items[player_name] -= ({ item });
+
+}
+
+ListItem(string player_name){ 
+
+   object *items;
+
+   if(Items == 0){ Items = ([ ]); }
+
+   if(!(items = Items[player_name])){
+      return 0;
+   }
+
+   else 
+      return Items[player_name];
+
+}

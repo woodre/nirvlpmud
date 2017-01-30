@@ -1,0 +1,48 @@
+no_clean 0
+short_desc "[1;30mJedi Robes[0m"
+long_desc "Robes of a Jedi Knight.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "robes"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({"no_spell","guild_death_object","generic_wc_bonus","gob","GI","dark_sight_object","jedi_object",})
+clan_long "Robes of a Jedi Knight.[0mType 'clan_help' for commands."
+clan_short "[1;30mJedi Robes[0m"
+damage_type 0
+hall_path "/players/dragnar/workroom"
+object_name "robes"
+owner "dragnar"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Wed Nov 11 21:03:42 2015] Dragtest: hi",})
+leaders ({})
+join_type 2
+private_coffer 540000
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0
+skills ({"saber",10,"telekinesis",10,"physical",10,"telepathy",10,})
+tasks 0
+secondary_masters 0
+my_master 0
+mon_color "auto"
+wep_color "HIB"
+cp 100
+mcp 100
+skill_points 0
+council 0
+darkside 1
+mon_on 1
+goodness_pool -72
+wep_life 98907
+saber_type 1
+offwep 0

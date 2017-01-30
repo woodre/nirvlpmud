@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[31mDisruption Laser[0m"
+long_desc "This massive [31mDisruption Laser[37m is fused to you shoulder armor.  It utilizes the latest in nanotechnology, allowing it produce massive amounts destructive energy.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "laser"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This massive [31mDisruption Laser[37m is fused to you shoulder armor.  It utilizes the latest in nanotechnology, allowing it produce massive amounts destructive energy.[0mType 'clan_help' for commands."
+clan_short "[31mDisruption Laser[0m"
+damage_type "laser"
+hall_path "/players/snow/gate"
+object_name "laser"
+owner "pike"
+spell_alias "grandpower"
+spell_mess_me "%hi red% >XXXXXXXX=D=I=S=R=U=P=T=I=O=N===L=A=S=E=R=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX>>>>>>"
+spell_mess_room "%hi red% >XXXXXXXX=D=I=S=R=U=P=T=I=O=N===L=A=S=E=R=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX>>>>>>"
+spell_mess_them "%hi red% >XXXXXXXX=D=I=S=R=U=P=T=I=O=N===L=A=S=E=R=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX>>>>>>"
+abilities ({})
+chan_history ({"[Wed Jul 16 17:43:09 2008] Achilles: to use clan spell. type 'grandpower'","[Wed Jul 16 17:43:17 2008] Doodle: I sooo hate the chat cmd","[Wed Jul 16 17:43:21 2008] Achilles: it does some extra damage","[Wed Jul 16 17:43:39 2008] Achilles: yeah... alot to type.","[Wed Jul 16 17:43:43 2008] Achilles: i setup a alias.","[Wed Jul 16 17:43:45 2008] Achilles: as cc","[Wed Jul 16 17:43:55 2008] Achilles: i always have problems converting coins into credits.","[Wed Jul 16 17:44:07 2008] Achilles: critter?","[Wed Jul 16 17:44:15 2008] Achilles: pet storage? or something?","[Mon Aug  4 05:16:57 2008] Achilles: i have only 7k","[Tue Mar 17 12:53:15 2009] Achilles: hmm","[Thu Apr  2 19:46:22 2009] Achilles: its go time","[Thu Apr  2 19:46:28 2009] Achilles: its go time","[Thu Apr  2 19:46:30 2009] Achilles: shit","[Mon Apr 20 19:53:05 2009] Achilles: yo","[Thu Jun 25 03:42:56 2009] Wulfe has joined the clan!","[Sat Jul 11 16:30:32 2009] Achilles: que pasa?","[Thu Feb 28 18:50:54 2013] Doodle: yo","[Wed Jan 29 18:00:41 2014] Chett: hmm","[Fri Feb  7 00:13:17 2014] Lich: hmm",})
+leaders ({"tenchu",})
+join_type 2
+private_coffer 40000
+public_coffer 0
+spell_delay 1
+spell_id 1
+spell_cost 50
+last_spell_time 1446716846

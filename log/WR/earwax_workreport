@@ -1,0 +1,228 @@
+[Mar 18 2006 10:09] A: moved workreport to workreport.old cuz it was getting big
+[Mar 19 2006 10:12] A: typo fix: Abu to Apu: ~gowron/room/obj/abu.c rep'd by fenris
+[Mar 20 2006 00:22] A: reimbursed riddick a bunch o shit:  known issue w/bf arena and dying
+[Mar 20 2006 00:36] A: edited ~fred/closed/bloodfist/r/meeting.c and arena.c:  to set them noclean, if issues persist will ensure that erilon and atheos will not clean as well....there have been issues with them disappearing: supposedly recent, but less recent than my lib change to cleaning.  Therefore logically they don't have shit to do with my lib change, but I'm trying this none-the-less (baby steps:)
+[Mar 20 2006 08:46] A: also added set_no_clean() to erilon (NPC/elder.c) and atheos (NPC/beastmaster.c)
+[Mar 20 2006 09:00] A: added check to glar_life() in ~snow/MONSTERS/archwizard.c so master object won't callout
+[Mar 20 2006 09:16] A: ~mythos/amisc/forest/dark.c changed to not callout unless it's on a player - as it should be
+[Mar 20 2006 09:31] A: ~mythos/closed/fake_beater.c will only callout when in use now
+[Mar 20 2006 09:33] A: ~mizan/etheriel/beasties/spuck.c masterob won't callout anymore
+[Mar 20 2006 09:38] A: ~mythos/amisc/tsolin.c only calls out when it's in use
+[Mar 20 2006 09:39] A: same for tochau.c in that last path
+[Mar 20 2006 09:57] A: ~pathfinder/garbageman.c masterob should no longer callout
+[Mar 20 2006 10:05] A: ~mizan/etheriel/items/uranium-238.c should only callout when in actual use now
+[Mar 20 2006 10:07] A: same for ~mythos/closed/play/garble.c
+[Mar 20 2006 22:26] A: made some changes to ~sparrow/areas/bwo/include/bwo_template.c to debug it at his request
+[Mar 20 2006 22:27] A: er, include/mob_funcs.c rather
+[Mar 21 2006 05:49] A: made changes to ~snow/shadows/stuff/plate.c to only callout if a player is its inventory
+[Mar 21 2006 05:56] A: did same with ~saber/armor/dragonhelm.c
+[Mar 21 2006 05:56] A: also cleaned up the indentation in that file
+[Mar 21 2006 06:32] A: ~mythos/closed/guild/forest/misc/xb will no longer callout until activated by a player, nor will master object
+[Mar 21 2006 06:37] A: same with ~mythos/closed/guild/curse.c
+[Mar 21 2006 06:42] A: commented out load of ~eurale/closed/garble.c in ~eurale/castle.c ... no need
+[Mar 21 2006 11:50] A: twice had to dest and give artos new armor:  ~snow/shadows/stuff/plate.c - i bugged it up
+[Mar 22 2006 04:42] A: fixed callouts for ~snow/shadows/stuff/ring.c
+[Mar 22 2006 11:57] A: /players/zeus/closed/circle_member/0.o mv'd to 0.o.bog .... was showing up in max fallen list
+[Mar 22 2006 11:58] A: ~zeus/circle/rooms/seek.h minor bug fix, made it get_dir() *.o only
+[Mar 22 2006 12:20] A: ~pain/NEW/mon/korean.c fixed it so it doesn't dest itself on reset()
+[Mar 22 2006 12:25] A: ~hawkeye/room/off1.c did it so only one sapper per reset()
+[Mar 24 2006 06:36] A: changed ~pain/NEW/mon/bunny.c, pal.c, orc_r.c, merchant.c to use /obj/monster.c wandering
+[Mar 24 2006 06:40] A: also edited pal.c to not have masterob callout
+[Mar 24 2006 07:09] A: made changes to use GI id() setup for guild objects in fallen:  changes to ~zeus/circle/circle.c, ~zeus/circle/obj/id.h and init.h
+[Mar 24 2006 08:02] A: did some work on masons miniguild - implemented ~angel/masons/masonsd.c for tracking membership info, performing routine functions
+[Mar 24 2006 10:02] A: Did more work on masons mini-guild, setup a room, some items, etc, mailed angel on process for finishing all that.
+[Mar 25 2006 01:26] A: grabbed darc's shit:  bug in bf arena getting shit back
+[Mar 27 2006 03:49] A: /players/khrell/monster/goblins/gobmob.c - fixed a couple typos
+[Mar 27 2006 07:36] A: buncha work on masons mini-guild
+[Mar 27 2006 08:23] A: /players/pestilence/club2/room/lap1.c fixed typo reported by shakara/sparkle
+[Mar 27 2006 08:24] A: ~pestilence/closed/dark/mob/demon.c fixed a couple typos
+[Mar 27 2006 08:32] A: ~zeus/desert/NPC/hunter.c switched wander from callout to using standard wander code
+[Mar 27 2006 11:36] A: /players/snow/MONSTERS/archwizard.c if he's full health and everything he don't callout
+[Mar 27 2006 11:37] A: commented out above change - gonna put his code into heart_beat() but not today
+[Mar 28 2006 12:19] A: transed flexj out of void - boggle he somehow ended up in the void with perfect timing after i moved fred's bugged-up inventory there, so he was stuck...talk about shitty timing heh
+[Mar 29 2006 02:43] A: sent out mail regarding armor change proposal to basically every wiz
+[Mar 29 2006 16:49] A: gave salina the noob helper gob - she wanted to be one, she's suited for it
+[Mar 30 2006 00:18] A: moved ::reset(arg) to beginning of files, and if (arg) return; after code that should be checked on resets in:  ~softly/point/rooms/lh14.c, lh15.c, lh16.c as there's a shitton of blackbeards cloning
+[Mar 30 2006 00:53] A: ~mythos/closed/guild/forest/misc/xb.c added remove_call_out() to prevent multiple callouts
+[Mar 30 2006 20:21] A: fixed typo in ~wocket/turtleville/NPC/wizard.c
+[Mar 30 2006 20:22] A: ~players/rich/trans_room.c fixed typo, repped by cato
+[Mar 30 2006 20:35] A: fixed typo ~jaraxle/3rd/alt/rooms/forest/fforest.c
+[Mar 30 2006 20:37] A: fixed MANY typos in ~jaraxle/3rd/alt/rooms/forest/fforestD.c
+[Apr  1 2006 07:08] A: /players/angel/area/school/obj/flow_scarf_01.c fixed typo
+[Apr  1 2006 07:46] A: ~khrell/armors/skaven/warpamulet.c changed dtype protected against from 'magic' to 'magical'
+[Apr  1 2006 08:53] A: ~snow/heals/ice_sphere.c added is_heal() { return 1; }
+[Apr  1 2006 08:58] A: also added 'melting' to short to indicate if one is melting
+[Apr  1 2006 09:00] A: switched out 6 of mosh's spheres to the updated ones
+[Apr  1 2006 09:11] A: fixed typo in extra look in pk tracker
+[Apr  1 2006 09:21] A: fix to ~saber/armor/dragonhelm.c - was hosing aliases, switched salina's helm out
+[Apr  1 2006 19:26] A: Registered Test Character: Star
+[Apr  3 2006 22:32] A: promo'd star to 50 for good behavior, area expansion, working on area preapprovals
+[Apr  3 2006 22:48] A: cp'd jaz's old ranger file over from beck's dir to the current ranger dir, reinstated him in rangers (as he'd apparently been removed for inactivity), after he let me know he had an exp reimbursement apparently, i set his exp to 1 point short of his next level to resolve it, and give him a reward for doing so, as that was something he didn't have to point out
+[Apr  4 2006 08:52] A: ~rich/disp_crew1.c fixed typo repped by cato
+[Apr  4 2006 23:41] A: forgot to log it before, but approved star's hotel area expansion
+[Apr  5 2006 01:00] A: handed artos a couple bottles of painkillers, he burned them when i was figuring out why they wouldn't work on him - he had 'pop' aliased to 'pill' - used snoop, valias to figure this out
+[Apr  6 2006 15:01] A: Registered Test Character: Vertebraker
+[Apr  6 2006 15:01] A: Registered Test Character: Fred
+[Apr  7 2006 04:26] A: recoded the idb special to be xlevel-dependant and not use attack()
+[Apr  8 2006 02:18] A: added exp to muerte - he died as a do cuz o 'tunnel of light' after he died first time
+[Apr  9 2006 02:52] A: per bolts permission, promo'd khrell to 40 so he can assist with training less-experienced wizards
+[Apr 10 2006 01:08] A: promo'd jenny to 100 per convo with verte - he's gonna be active part of pk projects
+[Apr 10 2006 01:08] A: promo'd pain to 100 .... re-re-re-re-re promotion - he's doing work on the pk project, actually pretty much the core code for the over-area
+[Apr 13 2006 19:17] A: cp'd the old save file for ranger command center into current dir, to fix some issues
+[Apr 14 2006 15:34] A: fixed bug in ~zeus/museum/OBJ/gstaff.c rep'd by gaara
+[Apr 14 2006 15:35] A: also switched gaara's out, not worried about charges or nothing since previous was bugged anyways
+[Apr 19 2006 08:49] A: fixed typo in ~khrell/armors/skaven/acowl.c
+[Apr 26 2006 14:54] A: patched ice add_exp(64150) to compensate for a masons miniguild bug
+[Apr 27 2006 06:50] A: cloned ~zeus/museum/OBJ/kblades, gem, ~khrell/armors/skaven/warparmor to bleh as he lost them in crash
+[May  1 2006 01:38] A: commented out call to load x's workroom in ~verte/castle.c -> boggle, for some reason that workroom.c missing
+[May  2 2006 05:54] A: removed oz from knights for longtime unknightly behavior and basically a ton of issues that i'm really sick of dealing with and have warned him on time and time again
+[May  2 2006 07:13] A: removed jara as guild wiz for templar due to inactivity
+[May  2 2006 07:57] A: removed larisa from gc position in templar same reason
+[May  3 2006 00:01] A: edit'd sundin's ranger file to set him to max ranger - as he was before a weird bug
+[May  3 2006 10:12] A: forgot to log this last night, but tweaked idb damage upwards
+[May  6 2006 10:19] A: blah forgot to log, reimb'd mosh yesterday for losing his shit due to weird bug that i keep hearing about
+[May  6 2006 10:20] A: reimb'd krillgeta for same bug...just his 'prize' from verte's dir tho
+[May  6 2006 11:19] A: reimb gogeta some stuffs too, same reason
+[May  7 2006 00:43] A: various forces on kinshin to fix a bug real quick
+[May 12 2006 05:06] A: misc patches to tenchu, delirious luck stat, to fix something i dicked up, will also have to do this to artos, hadus, thomas, legion
+[May 12 2006 05:07] A: handed tenchu 2 syringes, 1 to replace the one he lost logging off to correct a bug, and a 2nd for the inconvenience as he was partying, i dicked him up, and i felt i should be a nice guy and stuffs, plus he's got 3 sheep he's going to let me borrow
+[May 12 2006 09:00] A: reimb'd tenchu for an obvious bug, somehow he got his aliases zapped in combat
+[May 16 2006 17:05] A: ~verte/prizes/autoloader.c added krillgeta's as well as cloning it to him
+[May 17 2006 16:05] A: made ~players/snow/MONSTERS/snow_demon.c take 2x from fire, no dam from cold - thematic change
+[May 17 2006 16:10] A: dis same to ice_demon and ice_ogre and iceoct.c
+[May 18 2006 23:38] A: fixed bug in ~fred/closed/venom/power/rip_out_symbiote.c that was preventing peoples from leaving guild
+[May 18 2006 23:58] A: ~wocket/necro/spells/summon.c - used to be able to summon stench at green, can't anymore, why is this?  commented that out
+[May 23 2006 03:15] A: added xp to ugh to recomp buggy death
+[May 23 2006 14:30] A: patched marlboro xp lost due to buggy ass death
+[May 23 2006 22:59] A: res'd and reimb'd oz 3 mil xp for dying - shardak was changed, and no notice given, now they know :)
+[May 24 2006 14:50] A: added ability to set an item's description to refer to another item by using @itemtolookat    as the description, to verte's room inherit (~v/closed/std/room.c)
+[May 24 2006 14:51] A: ghetto-patched repeat 4396 xp - glitch in healer shadow disallows add_exp() which is the fun that is called when one tries to advance early by paying coins
+[May 24 2006 15:06] A: made it so healer shadow allows the advance hall to add xp to healers
+[May 24 2006 16:31] A: changed hit_player() to do_damage() in ~v/closed/shardak/obj/exShadow.c
+[May 25 2006 16:30] A: did a ghetto fix to /room/verte/bounty_office.c cuz it wasn't updating properly but was taking coins off peoples, it still needs work but there's somethign there for corrections at least
+[May 26 2006 15:03] A: fixed an error in prowl() fun in ~verte/closed/shardak/room/shardak.c
+[May 26 2006 16:03] A: tweaked healer xp formula for healing a little, close to 30% increase if i got my math right, i'm not very awake right now
+[May 26 2006 17:17] A: ~jaraxle/3rd/alt/rooms/church.c made it so gamecrasher 1/6 resets, not reboots, as i believe this was the coder intent and it's what makes sense.
+[May 28 2006 01:27] A: reimb'd with minor improvement gear to xavier
+[May 29 2006 10:11] A: fixed an error in ~verte/exp/vid.c
+[May 29 2006 18:08] A: added a withdrawable bankbalance to artos for 800k and ever for 100k as they got screwed with the automatic adjustment to 80k personal coins after the crash
+[May 30 2006 01:04] A: reimb'd sprea misc gear lost in crash
+[May 30 2006 01:04] A: adding exp to some players for xp race
+[Jun  1 2006 17:49] A: mythos/healerguild/guildob made it so healing -amounts turns the amount positive
+[Jun  1 2006 18:00] A: previous bug reported by phlegm
+[Jun  2 2006 17:07] A: switched 9827 xp from guild to player for ice
+[Jun  8 2006 15:58] A: reimb'd vahiti 3 mil for buggy death
+[Jun  9 2006 02:22] A: ran double-xp from 5am thurs 6/08/06 - 05 am fri 6/09/06
+[Jun 12 2006 00:34] A: pulled a pair of deathboots from vinni cuz he's a nofight zone, player gave them to him on accident, figured fuggit, why not be nice
+[Jun 12 2006 01:34] A: patched sticks coins to 73k as he had the d/c bug
+[Jun 15 2006 00:05] A: xp contest today at maul's request (go figure)
+[Jun 15 2006 00:06] A: added xp to a number of players for contest participation
+[Jun 16 2006 07:22] A: ~me/obj/dispenser.c made ninja gob force a save after purchasing adrenaline
+[Jun 16 2006 16:00] A: that bug was reported by ice
+[Jun 16 2006 17:31] A: fixed a bug in bank that cost players coins if they withdrew more than their max coinage could support - ~me/bank/bankd.c
+[Jun 19 2006 00:59] A: restored 2688361 xp to saynt for an apparent buggy death
+[Jun 20 2006 02:30] A: manually set ever to glevel 7 in bloodfists as there was bugging going on with his test - he did the mob 5 times literally, twice with me snooping
+[Jun 20 2006 03:08] A: made changes to shardak guild due to discussion by bolts, fakir, me....instead of shardak dying dealing damage to all online shards, it now opens all the 'safe rooms'....purely pending verte's return
+[Jun 20 2006 14:24] A: reimb'd ice a syringe he lost in a crash
+[Jun 20 2006 14:26] A: made it so syringe/adrenaline each are 60k value - to reimb them in case of crashes
+[Jun 20 2006 14:30] A: approved by fred
+[Jun 20 2006 14:51] A: reimb'd talen a chaingun and 30k....had them off him so he wouldn't d/c and the mud crashed, i figured under circumstances it was a reasonable request
+[Jun 23 2006 02:57] A: added 1.5 mil to muerte for bug death, he was 2 rooms away and left 2 combat rounds before, i logged my scrollback and he his, i've seen some fucked up shit before but this was worse heh
+[Jun 23 2006 03:01] A: that shoulda been 2.5 mil not 1.5
+[Jun 25 2006 10:48] A: ~khrell/weapons/skaven/poison3.c added check for if poison kills the victim, hopefully to fix the misc hosings i've been seeing with it
+[Jun 25 2006 10:52] A: /players/angel/area/school/obj/flow_scarf_01.c added check for attacker, it hoses on stuff like poison where damage is dealt but no attacker
+[Jun 28 2006 04:24] A: gave coins to sami as he was combat-testing a mob of mine
+[Jul  1 2006 04:03] A: tweaked idb - it's now 1.5 avg dam/round less than honed, but has a max of 94 v 59, so i figure it's pretty much balanced, esp dual-wielding it is perhaps 1/5mil chance to pull double that damage
+[Jul  1 2006 04:04] A: approved by fred, although the tweaking is still part of original effort to balance idb
+[Jul  4 2006 02:09] A: changed max weight in ~saber/stuff/mbag from 100k to 250, will lower further later, it's bullshit
+[Jul  4 2006 04:08] A: added /obj/objtracker.c to replace mizan's object tracking, added code to various lib inherits and ~forbin/realms/misc/OBJ/saddlebag.c
+[Jul  4 2006 04:17] A: removed mizan's object and data logging from ~mizan/castle.c, renamed the various objtracker files in his closed dir so as to prevent them completely from being in use - as /obj/objtracker.c has replaced their functions
+[Jul  4 2006 04:43] A: made it so all the noises() callouts in ~pain/NEW/flet/*.c no longer spawn multiple callouts and cease when a player is not in the room.  someone needs to go through and add code to the init() funs in each file to make the callouts resume when a player enters, however
+[Jul  4 2006 05:07] A: see liblog entry, but made it so that in files inheriting ~verte/closed/std/monster.c the wander code will be called 3 times, and unless a player is present at some point during those 3 times, it'll stop wandering.  I'm sick of seeing 100+ mobs still wandering 2 hours before reboot.  It's using too many resources.  A player entering a room with a wandering mob will trigger it to start wandering again, however, til the limit is reached without a player being present.
+[Jul  6 2006 16:13] A: made changes to mondar, see that file - made his exp auto-calculate so it's more in line
+[Jul 10 2006 15:13] A: added another check for attacker_ob() in ~jareel/monsters/chaos/caves/mondar.c
+[Jul 13 2006 22:23] A: set betrayer's coins to 80k, he's been abusing a bug with the d/c reimbursement
+[Jul 14 2006 06:38] A: ~mizan/etheriel/beasties/sarawak.c - made it so ingestion only callsout if a player is present
+[Jul 16 2006 21:40] A: set betrayer's bank bal and coins to 0 - he's been using a bug, still is somehow, to get 300k reimbursements when he shouldn't be getting reimbursed
+[Jul 16 2006 21:41] A: jailing him as well
+[Jul 17 2006 03:02] A: made ~pavlik/armor/storm_cloak remove its callouts
+[Jul 17 2006 23:35] A: promo'd brittany from 20 to 21 - was auto-dewizzed for inactivity, repromo'd to 21 (she had been 30 via eurale and has code in the game) with bolt's go-ahead
+[Jul 19 2006 03:13] A: added an environment() check, and remove_call_out() to ~wocket/necro/guildob.c to prevent some bugging
+[Jul 19 2006 18:13] A: added check for ob in all the elemental weapons: snow/closed/test
+[Jul 21 2006 05:34] A: ~khrell/area/skaven/skavenpestilenfoyer.c fixed typo in dest_dir that was causing wandering mobs to bug, made that exit unusable
+[Jul 22 2006 02:03] A: Fixed wlog to show wiz name in central log, this is a test
+[Aug  1 2006 14:28] A: fixed implants to id to dark_sight_object if they have eyes....dunno how he was doing the friggin dark vision before, but it wasn't correct
+[Aug  1 2006 19:10] A: handed flap ~forbin/realms/salam/OBJ/neruumsh.c as he lost his
+[Aug  2 2006 21:58] A: Testing something out.
+[Aug  2 2006 22:00] A: Test part deu
+[Aug  3 2006 22:59] A: pestilence
+[Aug  4 2006 03:08] A: wocket
+[Aug  6 2006 03:38] A: unset saze pk flag cuz he had it set to spar flag
+[Aug 10 2006 18:06] A: made a change to twho to show max players this boot, and since today
+[Aug 11 2006 15:55] A: have jareel working on documenting the /bin/wiz commands as well as relevant lfuns....veeshan and jamila should be working on the /bin/play commands, i'll add more people to those projects as it's something i want as many people working on as possible
+[Aug 13 2006 07:45] A: lowered bag of holding capacity from 250 to 225
+[Aug 16 2006 03:28] A: promo'd star for past work, esp with preapprovals and walking lacar through things
+[Aug 17 2006 20:31] A: closed off eternal bar fight, moved the gem to being revealed if they do a search in room outside of bar fight, so quest still doable
+[Aug 17 2006 20:31] A: did this because of the completely ridiculous number of callouts and crap going on with that room, if someone wants to recode it properly they can have at it, i'm closing it otherwise, and it's too abusable, besides
+[Aug 19 2006 00:16] A: jareel
+[Aug 31 2006 17:37] A: added code to ~boltar/casino/front_desk.c to dest < level 5, < 1 hour old if they try to register a hotel room, also added logging, and jailed a buncha ice's chars for that shit
+[Oct  5 2006 15:01] A: changed artos's race name to 'crybaby' because he is
+[Oct 06 2006 06:49] A: promoted sparrow to 100, he's more than earned it, and most current 100s and above have done nothing but earned demotions.  Any problems with this decision come to me with it, but unless you're bigger, your reasons need to be strong or you will be level 1.
+[Nov 16 2006 03:18] A: fixed a file security bug, see liblog
+[Nov 16 2006 19:44] A: fixed find_player() bug that allowed multiple logons, more info in simul_efun.c and liblog
+[Nov 22 2006 01:22] A: promo'd mizan to 100...need him to have full read/write access to wizard dirs, AND have the level to appropriately discipline....he's going to be a wizard-affairs wizard, and player-affairs wizard.
+[Nov 28 2006 15:26] A: fixed a bug in ~boltar/casino/front_desk.c that i had in there to address an abuse problem, fixed it
+[Dec 14 2006 00:37] A: promo'd rumplemintz to 60, for work he's been doing on the ld project and for getting shit in the game of his own as well
+[Dec 14 2006 03:44] A: changed /bin/play/_bug.c to use /log/LDBUG on the ldmud port
+[Dec 14 2006 12:21] A: changed /players/guilds/bards/johnithin.c ... level req from 6 to 7 cuz it's dicked up
+[Dec 16 2006 03:09] A: ninja ghall ... rooms and boards dir: made compat with ld, closed arena off on ld side
+[Dec 16 2006 03:27] A: did the rest of ninja conversion while i was at it
+[Dec 21 2006 21:37] A: rangers should be fine on ld for most part now
+[Dec 21 2006 21:53] A: forgot to log yesterday but made a few changes to the necro gob and start room to facilitate the changing of dirs to /players/guilds/necro
+[Dec 21 2006 23:29] A: unsitebanned artos/budah, banished several more of his chars (artos, budah, bacchus, hadus, his ninja) ... he fucks up, it's permanent siteban
+[Jun 10 2007 21:58] A: handed worm 2 elemental items to shut him up cuz i can't stand his whining, and he most likely did have them lost due to a bug
+[Jun 19 2007 14:39] A: fixed a bug in ~zeus/circle/obj/init.h that was causing players with the old fallen gob to not be able to login properly
+[Jul  3 2007 17:15] A: made a fix to ~guilds/Rangers/Commands/Rwho.c to fix bad formatting after knytemayre reported
+[Jul  4 2007 04:16] A: added a line to ~wocket/std/wiztell.c so it wouldn't self-destruct when star popped out a kid
+[Jul  7 2007 01:15] A: i logged garland/zidane earlier about eq passing as well
+[Jul  9 2007 15:01] A: added 2 lines to ~mokri/clans/object.c to fix a bug where the clan object was desting when mudkids were picked up
+[Jul 12 2007 04:11] A: various lib mods, see liblog for today's date
+[Jul 13 2007 04:22] A: used gogeta and upus as playtesters for my new dispenser toy: ~/obj/products/grenade.c (which uses ~obj/products/support/smoke.c incidentally), not in game yet, will go in pending approval by someone other than me hehe
+[Jul 17 2007 00:49] A: changed all the files in ~vertebraker/guilds/samurai/armor/ to nerf their physical resistances from 5 or 3, to 1.... it was exceedingly illegal defense, also set the ac on shikoro (necklace) from 2 to 0, as necklaces aren't armor. overall i changed it from 69% resistance to 21%, which is still too high imho.
+[Jul 17 2007 01:00] A: changed the return value in armor special in samurai gob (~verte/guilds/samurai/gob.c) from 1+r(dex /3) to 1+r(dex / 5), averaging 5 ac every single hit is rediculous
+[Jul 17 2007 03:40] A: added 'report' command, see liblog for details
+[Jul 17 2007 05:41] A: fixed issues with report
+[Jul 18 2007 00:30] A: put smokescreen grenade - masks room long and short, in game, approved by mizan, after i added 1/15 chance of doing 25-50 damage to all players in room over level 8
+[Jul 18 2007 03:28] A: changed samurai obj/fireblade.c from 3+r8 to 1+r4 damage every 4 rounds
+[Jul 18 2007 03:30] A: changed samurai /bin/_iaijitsu.c damage type from magical to physical as thematically befits the spell
+[Jul 18 2007 03:43] A: samurai gob, changed it from having (in case of max gl, no shame), gen_wc_bonus() returning average of 15, to 7.5, this i probably will have to tweak but they get other gen_wc_bonus() additions, and it's just getting silly when you see the big picture
+[Jul 19 2007 01:39] A: Registered Test Character: Ew
+[Jul 19 2007 15:31] A: performed various nerfs to samurai, removed basically all generic_wc_bonus() until i implement appropriate checks this evening, and changed the core resistance to physical damage from 20% to 10% for their defensive mode.  I will evaluate this stuff a bit more and implement things the way they should be later on.
+[Jul 20 2007 01:14] A: completed revamping of sams...they now get mild penalties to defense in offense mode, and vice versa, and do lower damage in general, with lower defense in general, will watch the numbers but they should be much more in line now
+[Jul 20 2007 03:02] A: changed how gstick (~jenny/wings/items/gstick.c) does damage, it no longer has attack() calls, but it does more damage than it had after all the nerfings...it's now more commensurate with where it should be, without the issues and drama it had before
+[Jul 20 2007 10:53] A: slightly beefed derv offense, they will now dictate the guild balance, as they have 0 defense, they have the maximum standard offense from here on out.  they will gain slight wc bonuses based on xlevel primarily with random chance for a smaller bonus from guild stats
+[Jul 23 2007 03:20] A: edited 'help bards' to just show star as gwiz, since that's how it is
+[Jul 25 2007 09:16] A: dewizzed veeshan :( this was the decision by mizan and myself, it will be permanent pending him talking to mizan and convincing him that he'll behave, has an area, productive code all ready to go into the game, apology to volkar, and other conditions.  Dewizzing required resetting his xp, attrib, xlevel, autoloads, guild file and home
+[Jul 25 2007 11:48] A: made it so casa de nirvana bills are paid off via bank balance before checking their current coins, idea reported via vertebraker, i say give the man 100 points and a liquidpork sammich
+[Aug  6 2007 00:42] A: handed oz combined rings, i'm not entirely positive i should do any reimb, but i see lots o bugs in forbidden with this shit, it's only one item, and one of hardest to get so fuggit, i reimbursed....especially with the whole log full o bugs all in reference to this
+[Aug  6 2007 22:07] A: changed cost of ~verte/guilds/samurai/bin/_bladestorm.c to 240 (from 80) just to get it in and stop valen's pitful whining
+[Aug  7 2007 23:05] A: created dhalek, alternate wiz level 100, in case of my ip changing, and am unable to logon this char, and also as an alternate coder and tester
+[Aug  8 2007 00:24] A: made a change to mages to eliminate hit/run tactics, modified gob and /room/room.c
+[Aug  8 2007 23:45] A: temporarily nerfed mage command limit to 1, from 3, until the issues in the guild get fixed, note to self: fix those issues heh
+[Aug  9 2007 01:25] A: fixed (hopefully) bug in gordie stick and switched defective with new one on ever
+[Aug 10 2007 10:25] A: fixed a couple bugs i caused in samurai code, minor things, in kiai and focus
+[Aug 10 2007 11:34] A: slight nerf to sam again, made their defensive return value -10 instead of -5 (if in attack mode) and lowered their attack mode offensive return by up to 2, and defensive mode offensive return to -10 from -5
+[Aug 10 2007 11:40] A: and added defensive mode (chudan) penalty to iaijitsu
+[Aug 14 2007 05:53] A: banished pestilence abuse
+[Aug 17 2007 14:04] A: made a couple stabs at fixing hb issues with llew's demons ~llew/closed/crystal/demon
+[Aug 26 2007 23:22] A: fixed a goofy error in star.c in bard code where color codes were causing sscanf() issues ... catch_tell() might not parse them, or does something silly with them now, have to remember this for future stuffs
+[Aug 27 2007 17:11] A: hopefully fixed a hb bug in ~forbin/realms/keats/NPC/wizard.c reported by hercules
+[Oct 23 2007 21:50] A: dested sam object off fury, fixed part in ~verte/samurai/bin/_leave_guild.c that had doofed that up
+[Oct 24 2007 15:52] A: moved old adv_inner.c to adv_inner.ldbak, redid description and stuck a board in there as a communication tool for ldmud stuff
+[Oct 24 2007 15:54] A: belay that last one til i do it up with mysql
+[Oct 26 2007 03:30] A: commented out autoloading of several of dark mage guild files in ~mythos/castle.c
+[Oct 26 2007 03:36] A: should have logged this earlier, but pitched a hissy fit to verte essentially, to get actual movement on the ldmud project....this was very necessary if this crap is going to get done....
+[Oct 26 2007 03:46] A: changed ansi include in ~fred/closed/bloodfist/daemon/channel.c from fred's ansi to the general ansi
+[Oct 26 2007 03:48] A: attempted a fix on ~jaraxle/3rd/pyramid/items/myst_cloak.c
+[Oct 26 2007 04:15] A: ~fred/closed/bloodfist/daemon/wep_daemon.c fixed a bug
+[Nov 10 2007 04:45] A: as the old workreport was getting quite large, and i still haven't changed log_file() to automatically move large logs into .old i did it manually to 10NOV07

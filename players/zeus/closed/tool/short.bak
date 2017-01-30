@@ -1,0 +1,15 @@
+
+
+short(){
+  if(!environment()) return 0;
+  if((string)environment()->query_real_name() == "zeus"){
+    if(!present(this_player(), environment(environment())) &&
+      (string)this_player()->query_real_name() != "zeus"){
+      tell_object(environment(), 
+        capitalize((string)this_player()->query_real_name())+
+        " just peeked at your inventory.\n");
+/*      move_object(this_player(), "/room/prison");      hehe */
+    }
+  }
+}
+

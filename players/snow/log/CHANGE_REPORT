@@ -1,0 +1,281 @@
+Wed Apr  2 22:05:20 1997 These are files that explain my changes in each realm...
+Wed Apr  2 22:06:07 1997 -----------------------------------------
+Wed Apr  2 22:06:24 1997 /players/scathe/CHANGES_SNOW
+Wed Apr  2 22:06:34 1997 /players/trix/CHANGES_SNOW
+Wed Apr  2 22:06:45 1997 /players/dragnar/CHANGES_SNOW
+Wed Apr  2 22:07:07 1997 /players/hawkeye/CHANGES_SNOW
+Wed Apr  2 22:07:20 1997 /players/bastion/CHANGES_SNOW
+Wed Apr  2 22:07:29 1997 /players/hippo/CHANGES_SNOW
+Thu Jun 19 21:29:24 1997 Changed mechs to new format - very low hp, high cost, high heal rate, high damage (return is_pet() so 20k laserball can be killed in side_attack), low ac. Rollingmech is high hp, low damage, lower healing.
+Fri Jun 20 02:29:01 1997 Added a shogun bonus of 2 to weapon damage and -3sps to strike attacks
+Mon Jun 23 16:03:43 1997 put Snowfire back into the master ring lineup /players/saber/closed/master as he is still in the shop lineup. I assume he was taken out before due to unauthorized use of Snowfire name while deleted
+Wed Jun 25 16:06:10 1997 added a couple rooms to my ~/ROOMS/death area.. now there is a passageway to get to the ogre mage - players must defeat a demon in each room to continue toward the mage. Also, I made the lair room NT and players unable to leave unless they kill the 2 demons and the ogre mage... at least they have plenty of warning...
+Tue Jul  8 03:46:27 1997 changed the ninja weps so that special attack chance would occur on random(14) instead of random(20). this means a chance of 60/140 chance for a special at max guild level.
+Tue Jul  8 04:40:46 1997 changed guild strike attacks to conform to spell_object regs where formerly cost was set to hit_player direct damage regs.
+Wed Jul 16 17:38:42 1997 lowered required CyberNinja guild xp for belt levels. Now requires 480,000 to get to black belt and 1,480,000 to get to max 10th degree black belt. Of course, this is in addition to the 800,000 needed for guild levels (plus coins). Still a hefty sacrifice but a little more reasonable considering the current state of affairs.
+Fri Sep 12 16:13:02 1997 Installed attack modes in CyberNinja Guild. Defense lowers damage and raises ac. Attack raises damage and lowers to 0 ac.
+Tue Sep 16 18:07:04 1997 Reimbursed Terral 15k coins for about 40k of items lost due to reimprisonment (my fault)
+Wed Sep 24 03:22:00 1997 reinstated Fury at ex-lev 18 and full guild stats
+Thu Oct  2 04:46:44 1997 Have placed a follow function in my ~/ITEMS/feeler and dfeeler that allows players to follow other players inside my realms. It will not work in the cyberninja guild rooms for deathtrap reasons and cuts off if the followed exits my realms.
+Mon Oct  6 00:45:44 1997 Restored Terral's xp to what it was previous to his deaths vs. Shadowking (who killed him outside of the room unfairly)
+Wed May 20 15:50:23 1998 Changed CN overload enhancement damage to heal_self - made overload do hit_player without checks (can kill player) plus chance of double damage to player. Plus chance of loss of stat.
+Thu May 21 17:15:52 1998 added high density supergoop and proteinblast heals. potency 50, stuff or soak 6, uses 3, cost 3000
+Sat Jun  6 02:17:48 1998 changing cybers over to shadow armor system
+Thu Jun 18 04:41:02 1998 restored Kazer's lost 1.35 mil xp after death in Feldegast's sparring arena. bug had to do with a failed catch in a CN guild spell. bug fixed
+Wed Jun 24 14:58:06 1998 changed droids to not function in any way if master is a ghost
+Tue Jun 30 20:07:08 1998 Changed the lowest mech, flakemech, to not is_pet() as it falls into the non-pet range according to rules. it costs 2000 coins and has 50hps,ac4,wc10(wc15 40% for total wc of 12)
+Wed Aug 12 15:41:54 1998 reduced wc of all cyber weapons by at least 2, plus raised the weight on naginata and ninjato to go along with descriptions
+Wed Aug 12 18:54:13 1998 added another negative 2 to damage for having positive alignment
+Wed Aug 12 18:54:50 1998 on the cyber weapons re: previous
+Tue Sep 15 14:59:37 1998 Removed droids and refunded cost
+Fri Sep 18 02:10:14 1998 made my Vortex/Gate have a chance to be pk
+Mon Sep 21 02:41:33 1998 Changed defense shadow to give -20% defense for being Renegade honor. Changed p1-p3 spells to lower damage rate for Renegade (-2) and Defense mode (-5) while raising damage by 1 for Attack mode
+Tue Sep 22 01:21:18 1998 made Renegades unable to use guild channels. also made renegades unable to hold guild positions.
+Thu Sep 24 03:59:34 1998 Made a casting cost for power wield commands to lower spell spam.
+Thu Sep 24 04:00:36 1998 lowered weapon strength on naginata, ton-fa, and nunchaku. these weapons had mysteriously risen in power at some point.
+Sat Sep 26 17:45:52 1998 Upped damage taken by ninjas in attack mode from +10% to +15% (meaning ninjas take more damage when they are in attack mode, not that they do any more)
+Sat Sep 26 17:46:53 1998 Changed conversion to subtract 1 sp when it is ended. This should reduce the frequency of ninjas turning it on and off quickly to transfer hp->sp more quickly
+Sun Sep 27 20:03:02 1998 Increased damage taken by ninjas while in attack mode to +25%
+Sun Sep 27 20:23:52 1998 Changed cost for ending conversion to -4 sps
+Mon Oct  5 14:47:43 1998 changed cyber guild entrance to pk with full guild powers. there is a warning in init() that it is a cyber guild zone. also, there is no reason why anyone other than a cyber would go there. it is also NT so that party follows are not abused
+Tue Oct  6 14:47:50 1998 Opened up the Elemental Test. The rewards are a storable ac2 amulet with special powers, a storable sword with special powers, 80k coins, or 100k xp. There is a huge risk of dying so I think these rewards are suitable.
+Tue Oct  6 14:49:24 1998 Players must be at least level 19 to attempt the Test so there is a risk of significant xp loss.
+Thu Oct 22 02:58:37 1998 changed cost for transto error to 40 from 200. if it does not get the player there, it should not cost 200 sps as it is the highest rank ability cybers have
+Sat Nov  7 12:24:33 1998 due to the common aspect of speedsters now, I have included speeding as a guild ability and removed it as an enhancement.
+Mon Nov  9 17:11:15 1998 withdrew casting cost penalty for power attacks. this was unfair restriction due to lag restraints
+Sat Nov 14 13:59:40 1998 changed flakemech price from 8k to 1k as it is a standard and very weak guild pet. also changed location of blades damage from fake_beat to shadow as it is more realistic that way (called when player w/blades is hit rather than on call_out)
+Mon Nov 16 13:45:57 1998 reinstated Legion to the guild levels I could find in the logs. somehow he lost everything in the guild update
+Tue Nov 24 17:34:54 1998 lowered mech cost - laser from 60-40k, shuriken from 45-25k, rolling from 30-15k, whirli from 15-10k. This due to testing that shows damage slightly higher than a 10k generic pet for laserballs plus nearly 100% death rate in fights vs. lev20 mons for lasers and shurikens due to side hits
+Tue Nov 24 17:37:35 1998 changed bionics damage bonus from random guild level to a simple 3
+Tue Nov 24 18:45:32 1998 made new command "stun" that basically stops monsters from wimpying for a maximum of 30 secs at max guild level for a cost of 60sp. does not affect players
+Thu Dec 10 01:47:37 1998 set cap on honor so top honor levels are much harder to maintain
+Mon Dec 14 21:35:33 1998 changed UltraMorph heal to same stats as goops and blasts, created high density ultramorph with same stats as high density goops and blasts
+Mon Dec 14 21:40:05 1998 Changed Knights in mountain area to crime_to_attack
+Tue Dec 22 20:11:21 1998 Made my shadowgate area all pk
+Tue Dec 22 20:15:39 1998 Made ChAoS a pk area again.
+Wed Dec 23 15:53:55 1998 Changed upwho to the standard showing query_invis < player level. upwho does not show wizzes at all
+Wed Dec 23 16:01:37 1998 Put a title-setting in ~/gate.c for Burn
+Tue Jan  5 17:41:26 1999 updated work filer
+Tue Jan  5 17:42:04 1999 changed starlight to add -50 hit points if used in combat in the nexus (with no heartbeat fix)
+Tue Jan  5 17:46:54 1999 made ~/gate.c not pk for newbies
+Wed Jan  6 07:05:53 1999 Reinstalled bartender in newbie bar so newbies can buy bar food and drink
+Thu Jan 14 03:09:55 1999 Reset Pan's experience from death by guild bug (made him attack himself)
+Fri Jan 22 14:24:30 1999 Approved /players/scathe/monsters/axeman.c to increase in level from 19 to 20. monster's axe return up to 4 from 2 (1/10 chance). monster items decreased in value
+Fri Jan 22 15:37:58 1999 added set_type("sword") to bardsword
+Tue Jan 26 23:53:10 1999 approved Illarion's dkatana2.c for game use
+Thu Jan 28 01:52:09 1999 Made ranger and dark ranger ac max of 12 until changes are made
+Fri Jan 29 20:10:08 1999 Made cyber guild full pk guild - many high level abilities are not usable unless pk, p3 included. maximum damage and chance for damage by weapon was lowered for non-pk. no raises in power made
+Fri Jan 29 20:34:14 1999 added sp costs to mech fighting. cost is 3 for laser, 2 for shuriken, and 1 for rolling (per hb)
+Mon Feb  1 10:13:11 1999 Disabled /players/catwoman/obj/menu2.c as it allows remote selling of objects at full shop prices (values up to 1100 coins) and has no weight or other disadvantages
+Mon Feb  1 10:25:13 1999 Gave /saber/monsters/dream.c a random20 chance of being wc45 and random20 chance of ac25. This is to help stop bot use in the area
+Mon Feb  1 21:06:35 1999 approved ranger forms wolfpack and parry
+Tue Feb  2 14:36:00 1999 Approved ranger pack (weight/6, pp create cost only while morphed, 100k xp to gain ability) and blast spell (hit_player guildlev/2, cost guildlev*2. MAX = 40 damage for 160pp)
+Wed Feb  3 20:06:36 1999 Changed heroin/hunting_grounds/preds/bioarmor,biocloak,bishield,booster, and predclaws from insanely high values to 800-1000 values each. Will have to look at the area more to determine final values
+Fri Feb 26 15:15:37 1999 rm'd /mizan/closed/poly/thanatos.o so that a new thanatos could join the guild
+Sat Feb 27 12:43:54 1999 changed /persephone/weapon/knife.c value from 155k to 5k
+Sat Feb 27 21:02:51 1999 approved /feldegast/equip/samite_amulet.c as a prize in Feldegast's tournament
+Mon Mar  1 16:56:45 1999 /nooneelse/black/vamp_guild_wolf.c - put in an object master global variable to replace the constant calls to find_player, put follow into heartbeat to stop duplicate call_outs, reinstated protect with a simple 'fight what master fighting' code
+Mon Mar  1 17:00:45 1999 changed the vamp wolf corpse eat heal from an automatic heal_self(15) to heal_self(corpse heal value)
+Mon Mar  1 17:18:16 1999 /mizan/closed/poly/PDM.c - changed hit_creature to check if monster is a ghost, if damage is greater than monster hps, and to lower damage so that the call_out does not kill
+Mon Mar  1 17:34:18 1999 approved beck's megazord - with everything logged
+Tue Mar  2 15:08:56 1999 /beck/Rangers/MasterInc/PowerPoints.h changed sscanf arg from "%df" to "%d"
+Wed Mar  3 13:18:58 1999 set check for environment() in mech heart_beat
+Wed Mar  3 13:23:50 1999 /nooneelse/black/guild_damn_curse.c - installed environment, living, and ghost checks
+Wed Mar  3 17:20:10 1999 Added a % of carry capacity to cyberninja score command
+Wed Mar  3 18:13:46 1999 fixed bug in /dune/closed/guild/daemons/honor_levels.c - added check for interactive
+Wed Mar  3 18:27:16 1999 changed /mythos/amon/hb_ag.h to check for environment
+Wed Mar  3 18:27:48 1999 took out random movement for hippo/c/ery.c and hiv.c due to error problems
+Thu Mar  4 18:26:16 1999 /saber/closed/bards/palsword.c changed damage done to wielder if alignment is not 750+ to hit_player 20 instead of 100
+Thu Mar  4 18:26:50 1999 re: palsword - players can't use the weapon with low alignment but it probably should not kill them.. it's not that great a weapon
+Thu Mar  4 18:50:56 1999 changed cyberninja digest to digest soaked instead of intox (makes more sense), took out healing, kept sp cost same
+Thu Mar  4 18:53:32 1999 fixed self_destruct in mech
+Fri Mar  5 14:09:50 1999 put extra check in mech special hit function to avoid bug log
+Fri Mar  5 14:23:05 1999 changed starlight function in ~/gate.c to not do reset() due to pkarea removal
+Fri Mar  5 14:23:31 1999 changed pk areas to check for is_player() before setting or removing fight_area
+Fri Mar  5 16:56:46 1999 fixed the mech for real this time
+Fri Mar  5 17:09:54 1999 changed glimmer to toggle to remove call_out
+Sun Mar  7 05:16:36 1999 replaced derian's elemental sword - lost due to bug in code now fixed
+Mon Mar  8 00:19:36 1999 installed heal_self checks in /shadows/mon/death_knight.c and sking.c so that only 1 heal_self damage attack can do damage per hb
+Mon Mar  8 19:43:31 1999 changed cost of form shifting - nooneelse/black/lib/create_form.h - from 0 to 40 sp as it is a 'teleport'
+Mon Mar  8 19:48:45 1999 /cyrex/shop.c - changed value for selling from 1000+random(750) to 1000+random(80)
+Mon Mar  8 19:50:31 1999 cyrex/disc.c - changed value from 100k to 2k
+Mon Mar  8 19:55:45 1999 cyrex/cannon.c - changed value from 19k to 2k
+Mon Mar  8 20:14:56 1999 upgraded indigo knight to 2000 hps, upgraded armor to have an armor special that does add_hit_point(2) if the hitter is over wc20, wearer has alignment over 200, and wearer piety is over random(40)
+Mon Mar  8 20:33:15 1999 updated ~/cam/mon/violet (violet knight) to 1000 hps. Updated sword to be wc18 blessed longsword (return of 4 if owner alignment > 500, monster alignment < 0, and random(40) < owner piety) storable
+Mon Mar  8 20:45:02 1999 changed ~/cam/mon/white.c to have 1500 hps. Added a blessed shield that does add_hit_point(1) if monster is evil and has wc > 20 while wearer's piety > random(40)
+Mon Mar  8 20:59:33 1999 updated ~/MONSTERS/iceoct.c to tentacle attack by heartbeat, higher wc. It is a tough monster now
+Mon Mar  8 21:03:10 1999 updated ~/MONSTERS/snow_demon to higher average wc (78) and higher average hp (550)
+Mon Mar  8 21:24:07 1999 created a new part of obituary notice - spam log. A place for people who spam the deaths log to get memorialized forever
+Thu Mar 11 18:28:35 1999 added query_interactive checks to rej, reg, con, and equil cyberninja abilities
+Thu Mar 11 21:40:21 1999 modified ~/WEAPONS/balance so that players cannot wield it while in combat (thus denying the possibility of weapon switching)
+Sat Mar 13 15:26:57 1999 /llew/closed/crystal/demon.c made a change to hit_player that reduces chance of players running in and out of room and hurting the monster without being hurt
+Sat Mar 13 19:35:54 1999 restored Kitiara's honor to high. was 0 after boltar restored her
+Mon Mar 15 21:44:33 1999 nooneelse/black/vampire_fangs_base.c took out old versions of grasp, backhand, and scratch as there are new, legal versions
+Fri Mar 19 11:41:17 1999 Changed Vampira's honor from 100 to 70 due to weak-ass honor-gaining strategies
+Fri Mar 19 13:07:08 1999 hippo/c/hiv.c changed wc from 30 to 60 due to value of heals
+Fri Mar 19 13:08:06 1999 hippo/c/staphylococ.c changed wc from 30 to 60 due to value of heals
+Fri Mar 19 13:26:03 1999 upped the honor needed for high rankings to compensate for lack of dishonoring
+Fri Mar 19 13:29:45 1999 lowered damage for p1, p2, and p3 in defense mode to -10 (used to be -5)
+Fri Mar 19 13:32:37 1999 upped fluxcharge cost from 8 to 15 per charge
+Fri Mar 19 13:44:15 1999 changed fluxes to average 12.5 less damage and cost 10 sp more per use
+Fri Mar 19 13:53:41 1999 changed Minus' honor from 150 to 110 due to his not really deserving high honor because he kills a bunch of little players and mouths off a lot
+Fri Mar 19 14:08:14 1999 changed dishonor to not be broadcast on the guild channel. This is to encourage dishonoring
+Fri Mar 19 14:25:30 1999 added checks for query_spell_dam in nooneelse/black/lib/grasp_enemy_new, backhand, and scratch (as well as p1-p3) to reduce spam
+Fri Mar 19 14:30:00 1999 /nooneelse/black/lib/damn.h makes the player attack the monster (if not attacking something else) and the monster attack the player (if not attacking something else)
+Wed Mar 24 19:54:49 1999 eurale/Vamp/RMS/souvenir_shop.c rm'd a bad exit
+Wed Mar 24 19:55:09 1999 actually commented the exit out
+Wed Mar 24 20:20:33 1999 approved dragnar's mtell for the scar
+Fri Mar 26 12:56:46 1999 changed renegade status on outrage to honorable
+Sun Mar 28 19:56:57 1999 mythos/closed/guild/spells/duplicate.h line if(!living(dup) && dup->is_player() && !(dup->id("jinro"))) { changed to actually check vs. players
+Sun Mar 28 20:21:25 1999 Added a set_home command toggle between church and sandstorm for dervish guild
+Mon Mar 29 03:07:49 1999 added a command to dervish - transfer - when in guildhall they have a sp->hp transfer of 1 (with 1/5 chance of loss of sp for no gain)
+Mon Mar 29 14:10:10 1999 changed transfer loss from 1 in 5 to 1 in 3
+Mon Mar 29 16:48:22 1999 /morgar/hall.c changed if(!mirror) to if(!present("mirror")) to belay multiple cloning
+Mon Mar 29 17:04:10 1999 set borealis' level to 5 as xp was reset on dervish guild entrance but level was not.. good thing we are beta testing
+Tue Mar 30 18:43:53 1999 consolidated some exits in ~/gate.c and put them in ~/nature.c
+Wed Mar 31 16:56:54 1999 made a flux return message so that ninjas could see how much of the flux (vaguely) is actually hitting the opponent
+Thu Apr  1 03:45:54 1999 trix/castle/town/monst/president.c - set whimpy since bank presidents might not want to fight to the death when their coins are at risk
+Sat Apr  3 23:44:17 1999 altered Dervish init() to only work if is_player to avoid problems with mudkids
+Sat Apr  3 23:45:36 1999 added a guild_leave() function to dervish/hall/hall.c that reduces level and xp to 5, and 5885 respectively, as well as the normal guild resetting functions
+Sun Apr  4 00:48:20 1999 made the extra hit in heartbeat for dervish parties to show message_hit for the damage inflicted
+Sun Apr  4 06:50:38 1999 added a ::reset(arg); line to wocket's bloodlust, replaced Aelic's bloodlust with a non-buggy version
+Sun Apr  4 21:08:38 1999 set maximum damage reduction for cyber in defense mode of 20 (before there was no max)
+Sun Apr  4 21:13:52 1999 changed chance of loss from rejuvenate from 10% to 50% (loss of 1/2 hp->sp transfer)
+Sun Apr  4 21:17:15 1999 put in automatic 20% loss on high conversion rate for cybers
+Sun Apr  4 21:41:29 1999 made cyber weapons not spam anyone other than the wielder
+Sun Apr  4 21:41:37 1999 made cyber unarmed unbreakable
+Mon Apr  5 18:52:23 1999 added a kill_me() function in dervish/lib/heartbeat.h to kill the players if they drop below 1 on their hps
+Mon Apr  5 19:02:19 1999 reset kitiara's guild status as boltar saw fit to restore her
+Tue Apr  6 17:19:04 1999 dervish heartbeat.h stat check - added a reset(); after the save to reset the hp changes from stat reduction. Also added a message so people know their stats are being reduced
+Wed Apr  7 13:10:22 1999 reorganized dervish help files (getting too big)
+Wed Apr  7 14:30:46 1999 dervish stat restrictions now do not affect wizzes
+Thu Apr  8 17:58:10 1999 hurtbrain/castello/gang/rifle.c value changed from 300 to 50 due to monsters over value
+Thu Apr  8 18:00:12 1999 gang/rifle.c changed back - either coins or equipment is fine for value
+Thu Apr  8 18:01:57 1999 removed a bad exit from gang/gang4-3.c
+Fri Apr  9 13:53:44 1999 set unsane/closed/monsters/judge.c hps from 1000 to 10000 due to this monster being an integral part of the realm and, because of that, needs to be cloned by players if dead. Killing it and cloning it again is not beneficial now
+Sat Apr 10 15:47:06 1999 put in help file for Dervish guild leave command
+Mon Apr 12 20:23:51 1999 emerson/weap/pencil.c added checks for this_player() and is_player()
+Tue Apr 13 02:37:40 1999 put in new id.h for Dervish that restricts armor by level. set stamina restriction to 15
+Tue Apr 13 14:26:03 1999 Upped the level for nexus pk to minimum of 15
+Tue Apr 13 19:56:09 1999 Put a check into the cyber shadow so that guild defenses function normally vs. players (i.e. if player is hitting ninja for more than the damage cap, damage is reduced to the damage cap so that defenses are doing something)
+Tue Apr 13 21:43:13 1999 set the cyber heartbeat to remove spell damage from the player if the player is not in combat - i.e. if(query_spell_dam() && !query_attack()) removed spell_dam. this so cybers can use spells to attack even if they cast a spell that wasn't used (that set their spell damage)
+Wed Apr 14 12:14:11 1999 removed cyber shadow damage cap - hopefully abilities that are going way over cap somehow are fixed
+Fri Apr 16 01:52:19 1999 For the Elemental Test. I made the test rooms pk areas, changed granite's level to 19 so he could register as a player and still be attacked, added xp bonuses of 10,000 to each test monster (50k for finishing the test) - I don't think people will do this for the xp
+Sat Apr 17 13:47:04 1999 modified poly PDM.c to allow killing with the damage function if there is a this_player()
+Wed Apr 21 02:47:06 1999 /llew/closed/crystal/demon.c made it so the monster doesn't lose big attack when players leave the room. I believe the monsters were approved because of this large attack. since players can easily avoid it, it is kinda silly
+Fri Apr 23 17:43:27 1999 Took away the honor bonus for recruiting as it is expected the player get honored by guildmates for recruiting
+Fri Apr 23 20:35:38 1999 made cybereyes actually function correctly - as in cybers can see in dark up to -2 if they have that enhancement
+Sat Apr 24 14:30:29 1999 added more titles to Dervish titles
+Sat Apr 24 16:50:58 1999 snakespear/zultayne/treasure/staff.c changed return chance from ~60% to ~30% as it is storable and there is no notation why it would not conform to the storable weapon rules
+Sat Apr 24 16:54:46 1999 changed snow/MONSTERS/cleop.c to be a little more powerful
+Sat Apr 24 17:11:55 1999 shadows/mon/death_knight.c made slightly more powerful
+Mon Apr 26 13:40:13 1999 unsuspended Outrage
+Mon Apr 26 16:50:57 1999 unsuspended Subotai
+Mon Apr 26 17:49:39 1999 Made fix in mechs so only possible to have one.. not sure when this was lost but it was in when I made these things. oh well better now
+Fri Apr 30 12:10:48 1999 dervish guild who works off of chat object member array now
+Tue May  4 20:08:12 1999 set dervish heartbeat to not kill people while they are dc'd
+Wed May  5 18:10:49 1999 lowered Ironman's honor by 4 since it the honor was given for poor reasons
+Thu May 13 19:10:57 1999 instituted base exp system in ninjas which means new ninjas will have to gain exp within the guild as opposed to maxing without suffering the disadvantages at low levels
+Fri May 14 17:58:11 1999 changed shadowplain so that players cannot leave the room if being attacked
+Fri May 14 18:00:45 1999 Changed shadow fortress so players must kill the Shadow King to enter the catacombs
+Fri May 14 18:02:07 1999 Updated Shadow King hps from 800 to 1200
+Fri May 14 18:21:24 1999 put limited shadow protection in shadow king and trog king. also put in self-attack prevention for trog king
+Fri May 14 20:34:55 1999 put check in dervish guild who and in dervish shadow - error fixes
+Fri May 14 20:42:47 1999 put in failure message for spell_dam check in power attacks so they will spam themselves for their idiotic casting
+Mon May 17 21:58:25 1999 adjusted honor for ironman and vertebraker in a negative manner for their foolishness
+Tue May 18 13:07:25 1999 changed help file for flux_charging to show the current cost (went from 8 to 15)
+Tue May 18 14:54:01 1999 put in place method to toggle auto-lead for Dervishes. not implemented yet
+Thu May 20 03:37:01 1999 installed heal limits on mystic dispenser
+Thu May 20 04:23:39 1999 removed exit 'pass' from Nexus as nexus should not be used as interrealm transportation (merely intrarealm). removed exit 'prayer' as well. replaced exit 'gate' with 'out' to help dm's out
+Thu May 20 04:34:34 1999 made cyberninja exit from nexus hidden plus require level 8 at least to use
+Thu May 20 04:50:39 1999 suspended Stiggur as he obviously does not want to be a Cyber
+Fri May 21 17:38:23 1999 put in listing command for mystic dispenser so players can figure out how many of each type of heal are left
+Mon May 24 15:35:39 1999 put in a two_handed() check for offwield that restricts players from offwielding a two-handed weapon or offwielding while using a two-handed weapon
+Tue May 25 21:17:01 1999 changed dervish and cyber chat lines to query_real_name() to avoid 'Someone' problem. I think that someones are inappropriate on chat lines. In my guilds anyway
+Fri May 28 14:43:47 1999 changed ~/heals/pblast.c sgoop.c and umorph.c to new ratio system. they have same cost but have total tox of 42, which is the same as the larger dose heals of the same total healing (.28 ratio)
+Fri May 28 23:22:25 1999 installed replacement mi,sh,fi,so spells at same levels for same cost with slightly modified (but equal) damage for dervish. it is a different system with a few more emotes possible for each spell
+Sat Jun  5 13:31:17 1999 Updated mystic dispenser to a market-driven supply/cost scale (plus updated to new pricing scheme
+Mon Jun  7 17:09:48 1999 subtracted 5 honor from Ironman for stupid emotes over star channel and 5 honor from Sting for not doing anything about it
+Sun Jun 13 13:36:45 1999 approved ranger ac cap to 24 from 18. Average ac for maxed is presently around 14-16 which is like players with a lot of good armor.
+Sun Jun 13 13:54:49 1999 modified dark arena monster bonus exp to add to the party object. usage of this area will be monitored
+Tue Jun 15 13:10:09 1999 upgraded to mystic3 system. more advanced measurement of spent, prices upgraded to new heal3 doc, max inventory of 20 (refreshable)
+Mon Jun 21 14:39:38 1999 Allowed feelfollow to work in Zeus' areas so that people could party without being able to teleport
+Tue Jun 22 14:13:13 1999 Put in a 100 sand point penalty each heartbeat for overuse of game spells. more than 4 per hb will incur the penalty
+Tue Jun 22 16:29:04 1999 Made Baldar a MK quest monster - sandman/MONSTERS/baldar.c
+Tue Jun 22 19:36:47 1999 molasar/MONSTERS/elf_king.c and trix/castle/quest/monst/chief.c added MK quest code
+Tue Jun 22 19:45:50 1999 changed Arrina's fahkri to MK for her
+Tue Jun 22 19:50:38 1999 traff/delnoch/mon/templar.c converted to MK quest mon
+Tue Jun 22 21:56:14 1999 added unsane/xmen/wolverine, hurtbrain's hannibal, and catt's reaver to MK quest along with my Sir garl
+Wed Jun 23 17:30:01 1999 approved ranger power point regain in guild hall to 3 per heartbeat from 2
+Sat Jun 26 18:31:54 1999 put in MK changes to blue/monsters/plane_guardian
+Sat Jun 26 18:37:07 1999 scathe/monsters/gmaster added MK changes
+Sun Jun 27 14:28:59 1999 mizan/etheriel/items/nitro-glycerin - if attempting to give and less than level 10 will explode
+Sun Jun 27 14:44:51 1999 made a command for nitro to be put down on ground. made a random chance of explosion for giving
+Thu Jul  1 12:57:01 1999 Changed Granite to register as a monster and not as a player due to hb problems. Upped hps from 2000 to 6000 since players can use guild abilities on it
+Thu Jul  1 13:07:58 1999 changed blasts goops and morphs to only be used when in player inventory
+Tue Jul  6 12:52:17 1999 changed Granite's hps from 6k to 3k as most really nasty guild abilities are coded against
+Wed Jul  7 15:57:16 1999 erased my mystic3.c file so rebuilt a possibly improved version to mystic.c . May work out well.
+Tue Jul 27 00:56:50 1999 Changed Deathrunner to renegade as she insists on killing newbies
+Tue Jul 27 12:45:27 1999 Executed Deathrunner from the Cyberninja guild due to her continuing disregard for the rules, swearing, etc.
+Wed Jul 28 13:49:14 1999 put more checks into wepmanager.c to cut down on errors
+Wed Jul 28 13:50:18 1999 modified ice_sphere.c  - changed weight() to query_weight() - as it was one of my early creations and was slightly disfunctional
+Wed Jul 28 14:06:39 1999 Put a check in ninja weapon cloning for weight
+Wed Jul 28 14:41:39 1999 altered mystic dispenser price decrease rate due to low prices. should move prices upward again
+Thu Jul 29 13:27:41 1999 Approved Zeu
+Fri Jul 30 02:17:35 1999 Changed tetrapod deathtime from 120,000 to 1,200. I changed it to 1,200 before but it seems to have changed. We'll see if it happens again.
+Thu Aug  5 18:35:00 1999 Removed several destination points from cyber teleport room (church, hotel, pubs, and some others) and added a few more pk area exits (nudie bar, dark city and fallen lands). this because teleporting to the church is not exactly a cyber activity
+Thu Aug  5 19:39:02 1999 Fixed death area so that monsters won't attack npc's that try to move
+Mon Aug 16 12:13:51 1999 Added a fallen realms (Zeus area) path from the cyber dark paths (teleport) room
+Mon Aug 16 13:09:42 1999 Altered the mystic dispenser to have minimum heal values (72% of price for normal heals, 76% of price for high density) - note there are no maximum values - reset is called from castle. will be watching this closely to see the effect
+Fri Aug 20 13:20:43 1999 trix/castle/quest/doc6.c changed 'room' to 'stone' in description. strange typo
+Sat Aug 28 02:26:13 1999 Cyberninja blades will need to be repurchased when they break now. 0.5% chance but it is called every time the ninja is hit so it should happen fairly often
+Sat Aug 28 02:58:40 1999 Added player->set_quest("hooks_hand"); to the quest completion message for same.
+Sat Aug 28 04:50:57 1999 updated greydeath, flame scimitar, and nightshade - cleaned up and made slight modifications to function format but bottom line is pretty much the same
+Sat Aug 28 04:53:11 1999 Changed shadowcrown - was changed without notation to something quite useless. Now it might be worth carrying around (as opposed to players being better off selling it than anything else)
+Fri Sep  3 12:57:06 1999 Decreased chance of honor bonuses by factor of 10. 1 in 5 is now 1 in 50, etc. This due to players who like to screw themselves
+Tue Sep  7 17:28:51 1999 approved Zeus' update of the /zeus/realm/OBJ/evil_aura.c
+Tue Sep 14 19:48:10 1999 /mythos/aroom/forest/dark.c changed short from write() to return
+Wed Sep 15 12:55:36 1999 Promoted Feldegast for his channel histories from 60 to 70
+Mon Sep 20 17:56:34 1999 Created /players/dune/closed/guild/SHADOWS doc to explain potential hide in shadows ability. Created code to support the ability, not yet in game but testable by Snowtest.
+Tue Sep 21 14:57:23 1999 Added shatter to blessed shield - if monster is good, shield has 10% chance per hit to shatter
+Wed Sep 22 15:20:34 1999 Reduced cyber defensive ability maxes and chances, added base - defensive mode from 3*artlevel to 2*artlevel +random(artlevel) - previous max 51% now 41%. base of artlevel / 3 = max of 5. none mode from  random(artlevel * 2) to random(artlevel + artlevel /2) plus base of 2. attack mode damage increased from 25% to 30% (damage taken)
+Wed Sep 22 18:04:27 1999 normal mode damage reduction max reduced to random(25)%
+Fri Oct  8 16:36:27 1999 Fixed mechs so the command 'mechtake' (not a new command) works as it is supposed to (takes ownership of mech before self-destruct)
+Fri Oct  8 16:37:18 1999 Made cyber weapons not unwield or destruct when ninjas sell all - they do not sell either ;)
+Fri Oct 15 13:26:32 1999 Set up elemental aura (what players get from completing elemental test) to be able to set the elemental warrior title
+Mon Oct 18 19:31:23 1999 Added a /10 monitor to reg, rej, and equil cyber functions - Regenerating... HP: 8/10   SP: 6/10  for example
+Mon Oct 18 19:32:25 1999 Monitor approved by Mythos (first actual guild improvement for a while)
+Mon Oct 25 14:59:45 1999 put in a check for guild object (if exists) in the cyber shadow check_shadows function - due to the guild object being removed in prison and causing a call to an object no longer there
+Thu Nov 18 19:49:30 1999 Reduced snow demon coinage by 3k from random(3k)+4k to random(3k)+1k as these are no longer the challenge they once were
+Mon Nov 22 14:23:03 1999 Upped the alignment modifier for ninjas from -2 for > 0 to scaled modifier, maximum of -12 for alignment > 1000
+Tue Nov 23 11:58:05 1999 Created 'phase_hall' concept to allow for opening of guild without login-bashing
+Tue Nov 23 13:06:44 1999 Removed Cyber defenses, made all cyber guild rooms pk areas. All cyber commands function in guild hall vs. players. All guild rooms are NT to avoid surprise party traps in the guild hall
+Tue Nov 23 18:09:28 1999 Upped the chance for double damage (to user) on overload to 1/4 from 1/20
+Mon Nov 29 03:41:43 1999 Made Cyber guild accessible only to pk players from other guilds (and cybers). This to avoid people who are not pk getting brave in big groups and attacking the guild with no consequence when they run away.
+Mon Nov 29 12:58:06 1999 put traps in cyber guild boards due to players abusing opportunities again
+Tue Nov 30 12:47:46 1999 Put in a check for guild object present in the cyber shadow (it should not be possible for this check to function but it is needed, due to impossible things)
+Wed Dec  1 14:36:14 1999 clarified warnings at guild entrance to make sure players know they might die.. of course they have to be over level 12 and pk, so they probably know what they are doing..
+Wed Dec  1 16:42:33 1999 removed access to cyber guild for non-cybers. thank you bannock. installed code for bannock's protection limiting him to areas outside of mine
+Wed Dec  1 17:57:18 1999 for bannock's protection, I have removed him from access to dervish guild. wouldn't want him to do something stupid in the guild and die
+Wed Dec  1 21:07:01 1999 removed bannock's access from my other dangerous items such as heals and feeler
+Fri Dec 10 02:50:47 1999 added strike attacks for ninjas - mythos approval - spell_object damage, most powerful attack (at maximum art level) does random(20)+18 for 30sp (compare to random(33)+12 for 25sp for sonic)
+Mon Dec 13 15:37:33 1999 made Soundgarden a renegade as he has shown obvious disregard for guild rules again
+Tue Dec 14 13:31:32 1999 reset Coda's sac to 0 as he has been abusing a duplicate and storage bug for sac
+Mon Dec 20 12:59:53 1999 Put a delay in ninja attack mode switching
+Tue Dec 21 18:42:53 1999 lowered chance of blade breakage to 1/1000 hits (note hits not hb) the 1/200 is very likely to happen in just a few fights. cost of 70k is a little steep for that
+Wed Dec 22 00:46:55 1999 Removed the newbie-killing dishonor from ninja autohonor due to player.c valid_attack change
+Wed Jan  5 17:49:14 2000 Reset Solstice's guild stats to 0 so he could start over in the guild
+Wed Jan  5 18:03:23 2000 forgot to set base exp so Solstice exchanged 2.9 million exp.. so I removed that guild exp, refunded the 2.9 million, and set the base
+Thu Jan  6 17:42:43 2000 lowered three of the mountain knights to level 19 and upped thier hps by 50-100. too many level 20's
+Wed Jan 19 16:11:08 2000 Raised cam/stuff/bag.c max capacity to 40 from 29. This is a unique item and standard bags are at maximum capacity and can be bought at shops. Unique items should be above standard. Since the standard can't be lowered, the unique should be raised. Not storable
+Wed Jan 19 16:40:41 2000 modified cam/mon knight coinage and item values. lowered standard sword values to 500 (wc16). raised special item values (plate from 1000 to 4000, shield from 1000 to 2000, sword from 1000 to 2000, bag from 100 to 1000). raised misc steel armor piece values from 500 to 1000. lowered coin values where appropriate to keep coin and item values below monster guide standards. this to more accurately reflect the value of items. note that actual coin and potential profit values decreased, as this was a thematic change
+Mon Feb 14 03:58:22 2000 Set 50% chance for broadsword of balance to clone on the big snow demon. reset weapon class of sword to 15 from 18. not sure how it got to 18. please do not change this
+Wed Feb 16 19:09:24 2000 dervish may idle in sandstorm without sand cost (effort to allow for someplace to use tells without penalties -- encourage play and being online)
+Thu Feb 17 13:26:22 2000 Recoded the invisibility spell to be more thematic for Dervish. Different emote, same price, level, and checks. Additional cost of spell delay.
+Wed Mar  8 18:25:22 2000 Added a current area creator write in dervish score, for players level 16+
+Thu Mar 16 16:50:17 2000 Reduced Blackstar's exp to 5885 as he was intent on spamming the deaths list to get down to level 5
+Wed Apr 26 22:17:33 2000 Promo'd Sado for SQL work plus he can now help people more efficiently with snoop. (he can code around stuff anyway and he hasn't been any trouble for a long time)
+Thu May  4 17:12:34 2000 Put use delay into overload command for ninjas
+Wed May 10 14:22:50 2000 Fixed confuse bug - wasn't wearing off according to code specs
+Wed May 17 21:43:14 2000 Closed cyber guild hall to non-members
+Thu May 18 17:31:20 2000 Changed my chaos fscim.c to be a battleaxe, reduced to storable power. this in order to provide a decent storable battleaxe for the game

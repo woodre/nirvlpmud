@@ -1,0 +1,69 @@
+I have been saving some small things that I would like to
+suggest/tell/ask you. This is probably gonna be a huge letter..
+
+
+* 1. A suggestion: small lag saver.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+living.c, hit_player() (around line 264) says:
+
+   pro_object = present("pro_object", this_object());
+   if(pro_object && paladin_shield && pro_object->query_combat_method() == 2) {
+     ac_tmp += call_other(paladin_shield, "shield_bonus", pro_object);
+   }
+
+could with benefit be changed to check for the shield first:
+
+   if (paladin_shield && (pro_object = present("pro_object", this_object()))
+   &&  pro_object->query_combat_method() == 2) {
+     ac_tmp += call_other(paladin_shield, "shield_bonus", pro_object);
+   }
+
+That would save a lot of calls to present(), and you probably know that
+this is one of my hobby-horses.
+
+
+* 2. room/church: Possible security hole.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+I was browsing through the 3.1.2-DR source the other day. And I saw
+something strange in the check_file_name() function. It looks like
+room/church is asked for r/w permissions, if there is no this_player().
+
+So far, I have checked it for real. I could be very wrong here, but
+I would add a couple of functions to /room/church. Like
+
+nomask string valid_read(string path) { }
+nomask string valid_write(string path) { }
+
+Later it might be an idea to allow the objects of wizard A to read
+and write in wizard A's directory.
+
+
+* 3. A request: Lag saver, Scar of Mortal Kombat.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+My idea is to have the player object somehow register player killings,
+rather than having the Scar polling for something that might look like
+a kill every 2 seconds.
+
+living.c, hit_player() (around line 326) says:
+  if (!npc) {
+     ...
+     call_other(this_object(), "rm_pk", 0);
+  }
+
+A possible solution would be:
+
+  if (!npc) {
+     object scar;
+     ...
+     call_other(this_object(), "rm_pk", 0);
+     if (objectp(attacker)) { 
+        if (scar = present("bloodscar", attacker))
+           catch(scar->ev_pkill(this_object()));
+        if (scar = present("bloodscar", this_object()))
+           catch(scar->ev_death(attacker));
+     }
+  }
+
+That is the best solution I could come up with right now. *sigh*
+
+Bal/Ras

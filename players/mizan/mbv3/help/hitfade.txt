@@ -1,0 +1,18 @@
+>> ORDER: HITFADE ATTACK OBJECT
+
+Usage:
+order <indexnum> hitfade <creature> <duration>
+
+Example:
+'order 3 hitfade mizan 10'
+
+Description:
+A Hit-and-Fade attack is an order of magnitude more annoying than the
+standard 'follow and kill' method employed by the 'huntobj' command. This
+fighting technique lets the monster pound on the player for a few rounds,
+and then randomly teleport out where the monster can heal or just chill. 
+
+This cycle is then repeated causing considerable battle stress on less
+brave players. This is the preferred attack style of monsters that have
+higher cruelty attributes.
+

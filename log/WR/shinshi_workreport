@@ -1,0 +1,58 @@
+[Apr 13 2009 13:49] A: Registered Test Character: Shintest
+[Apr 14 2009 12:33] A: reimbursed Iridel 6 heals that he lost when I crashed the MUD as Fred had me test something
+[Apr 17 2009 11:20] A: Registered Test Character: Maik
+[Apr 22 2009 10:11] A: ATTEMPTED to reimburse xp to Maximus due to Harry getting his hands on a wiz's mega weapon and killing them but did not show the experience when he typed 'freexp' so star dealt with it (above this)
+[Aug  2 2009 04:36] A: reimbursed Lazar shock sword and an element of air after a crash
+[Aug  2 2009 04:39] A: reimbursed equilibrium a cloak of the night sky and a chestguard of health after a crash
+[Aug  2 2009 04:40] A: reimbursed thomas his der englesense and a bag due to the same crash as above
+[Aug 16 2009 09:11] A: Sharkrla's gear disappeared from a room in Mythos' ancient area so I got it and got it back to Sharkrla
+[Aug 20 2009 21:42] A: restored med kits, full heals, and some ice spheres that i KNEW Fervens had when he died to satan and the room dested everything
+[Aug 26 2009 08:21] A: Registered Test Character: Yesman
+[Oct  5 2009 10:23] A: Restored shock sword to Brenar due to a weird magical box problem which is being investigated
+[Oct 20 2009 11:45] A: grabbed quagmire's stuff from void and returned it to him due to his magical box disappearing
+[Jan  9 2010 22:48] A: used fix_guild on severance to allow him to join the cybers. wasn't in a guild. not sure what happened
+[Jan 14 2010 07:43] A: Cloned the neo guild obj to krylos after checking the log. he DID win the battle against the symbiote but did not receive the gobj.
+[Feb  8 2010 00:01] A: Dested a bugged party object from Newkil and granted him back his Neruumsh that he lost during the problem
+[Jun 29 2010 13:39] A: added doasis (calm), dsharpen (weapon sharpening ability), and didea (a way to express the guildies ideas to me) to the dervish guild with fred's approval
+[Jun 29 2010 13:40] A: Created a mob in the dervish hallway with fred's approval. a non-dervish kills it, coins drops, a dervish kills it, an hourglass drops which speeds up spell delay. star approved of it shortly before her vacation
+[Jul  8 2010 00:54] A: boosted p1, p2, and p3 to do slightly more damage
+[Jul 11 2010 13:43] A: Fixed Netdeaths for Cyberninjas to actually work once again.
+[Dec 18 2013 18:28] A: Added 2333939 xp back to Demonic - Bugged death; was AFK; and died in Rat where no one could reach him except other ninjas
+[Jan  1 2014 22:35] A: Added 2977150 back to Brynna - Cyclonian randomly switched targets to attack her when no one left. Have removed Cyclonian until investigation is over.
+[Jan 10 2014 18:46] A: Added 287628 xp to Kanji after Worm killed him while Kanji is helping in the Rogue guild beta
+[Jan 11 2014 21:01] A: Backstab wasn't getting rid of the "didshadowstep" object. It's fixed so it does now.
+[Feb 16 2014 17:03] A: Registered Test Character: Thrall
+[Feb 20 2014 20:31] A: Split the say function in /players/tallos/7tigers/objects/mspellstaff.c - The final line of the say was being cut off
+[Feb 20 2014 20:32] A: Updated /players/snow/nexus.c to direct Dervish to the new /players/guilds/dervish/hall/hall.c
+[Apr 29 2014 20:34] A: Restored Panda's bloodfist guild object - Disappeared randomly.
+[Aug  7 2014 15:13] A: Re-wizzed Sami with Dragnar and Mokri as his other two approvals.
+[Sep  9 2014 19:22] A: Restored Dameon's armor to him due to Jareel's weapon crashing the MUD
+[Sep 12 2014 20:50] A: Reimbursed Jaster 2 finely honed swords, orb, and ele ammy due to crash earlier
+[Sep 27 2014 20:11] A: Ruby lost 1 strength point. I added 1 strength back to him.
+[Sep 28 2014 12:35] A: Berserker pedestal wasn't loaded in a room. I went to the room, cloned it, and went on about my day. Got a new haircut! Bahah!
+[Oct  1 2014 22:40] A: Approved Sami's area and promoted to level 40 for implementing an area onto the MUD. Need to work on symb.c and spiderman.c mobs for LD though before we go live
+[Oct  4 2014 14:08] A: Approved Wicket's Splinter mob and placed it in /players/airwoman/sewage/room3.c per his request
+[Oct  9 2014 16:35] A: Added 1 xp to Yen while testing Elementalists
+[Oct 12 2014 12:42] A: Gave kobebryant 202100 experience due to dying to a "for fun" mob
+[Oct 12 2014 19:17] A: Removed Artos from the Neos (since there is no way to leave)
+[Oct 22 2014 15:59] A: Gave Yen 2 shock swords back from crash and enabled him to summon a djinn again
+[Oct 26 2014 09:22] A: Removed 2 of my welts that were saved in Remedy's hotel room
+[Nov  7 2014 17:57] A: Didn't want to make a ranger test character so I used my own ranger (Peter) to do some damage testing
+[Nov 14 2014 10:52] A: Nerfed sami's scythe weapon's params from 15 to 3
+[Nov 14 2014 11:10] A: Nerfed sami's whip weapon's params from 15 to 3
+[Dec 10 2014 21:02] A: Imprisoned Wipeout for screwing with my beta tester Monkey (per Fred)
+[Dec 18 2014 20:23] A: Blocked the kill function in pai mei. It would allow a samurai to level up without the stats of pai mei changing as the 'spar' command should do (Credit to Sami for finding this bug)
+[Dec 29 2014 19:21] A: Removed Thor from the Mages at his request. It required a guild wizard to remove him
+[Jan 18 2015 21:42] A: Edited /players/jaraxle/3rd/alt/mobs/para.c - The object had a syntax error preventing it from loading which would cause phantom.c to lose heart beat
+[Jan 20 2015 21:34] A: Reimbursed Jaster jenny's champ rings from error earlier
+[Jan 27 2015 17:14] A: Removed Malt from the Ranger for un-ranger like conduct. OK'd by Fred
+[Feb 26 2015 17:59] A: Handed Cleipa her elemental aura back. Lost it somehow
+[Apr 28 2015 17:45] A: Removed Pike as Directive due to Cyber Laws
+[Aug  3 2015 20:09] A: approved the new quest reward to wicket's ninja turtles quest
+[Sep  3 2015 19:44] A: Changed Herger's clan hall due to his old clan hall room no longer existing? Changed it from /players/jareel/areas/entrance_area/grass_plain_9 to /players/wren/Area/coastline/mountain
+[Sep 19 2015 19:03] A: Mode completed fallen_quest but the flag wasn't working. Gave him the flag back
+[Oct  3 2015 22:50] A: Smelt's stealth was put back down to 20 when he left the feline mini-guild. I put him back at 30.
+[Oct  5 2015 18:27] A: Added a new daycare room since all the others are full. /players/boltar/sprooms/daycare6.c
+[Oct 13 2015 16:24] A: Reimbursed Shojiro 240k coins that he lost due to a problem with depositing and quitting that Dragnar fixed
+[Jul 22 2016 16:03] A: Added Rugaros to the Rogues since no active Rogues are around
+[Oct 12 2016 20:01] A: You can now join the Rogues by going to the Dark Figure in my bus and typing join. Will not notify anyone of the change until we determine costs

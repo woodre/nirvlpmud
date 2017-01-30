@@ -1,0 +1,16 @@
+#define TP              this_player()
+#define Tn              (string)this_player()->query_name()
+#define TN              (string)this_player()->query_cap_name()
+#define NAME            query_cap_name()
+#define nAME            query_name()
+#define POSS            query_possessive()
+#define OBJ             query_objective()
+#define SUBJ            query_subjective()
+#define TPENV           environment(this_player())
+#define HIS             (string)this_player()->query_possessive()
+#define HIM             (string)this_player()->query_objective()
+#define HIMSELF         reflexive(this_player())
+#define HE              (string)this_player()->query_subjective()
+#define ENV             environment
+#define FP              find_player
+#define TO              this_object()

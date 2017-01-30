@@ -1,0 +1,307 @@
+#include "/players/wocket/closed/ansi.h"
+
+#define tprn this_player()->query_real_name()
+
+string arg;
+object spell;
+string type;
+string sect;
+
+int pagenumber;
+int castingtime;
+int spcost;
+int hpcost;
+int muffle;
+
+object mage;
+object mageautoload;
+object target;
+object guildroom;
+
+id(str){ return (str == "spellbook" || str == "mageguildob" || str == "notarmor"); }
+get(){ return 0; }
+drop(){ return 1; }
+weight(){ return 0; }
+value(){ return 0; }
+
+short(){ 
+string SPC;
+SPC = get_typecolor(sect); 
+return SPC+"A leather bound spellbook"+NORM; }
+long(){ 
+  object page;
+  page = first_inventory(this_object());
+  write("This is a finely, leather bound book.  Age has obviously taken\n"+
+        "its toll upon the outher covering, with cracks running through\n"+
+        "out.  Silk ribbons furrow from its edges, marking well keep\n"+
+        "secrets and spells.  Light whisps around it giving the most\n"+
+        "gentle of auras.  It becons to be 'read'.\n");
+  write("    The book contains:\n");
+  write("Index\n");
+  while(page){
+    if(page)
+    write(page->short()+"\n");
+    page = next_inventory(page);
+  }
+}
+       
+init(){
+  mage = this_player();
+  mageautoload = present("mageautoload",this_player());
+  add_action("cmd_hook");add_xverb("");
+  add_action("rippage","rip");
+  add_action("sewpage","sew");
+  add_action("cast","cast");
+  add_action("read","read");
+  add_action("refocus","refocus");
+  "/players/wocket/mages/daemons/channelD.c"->resetchannel();
+  set_title();
+}
+
+cmd_hook(str){
+  string temp;
+  string arg1,arg2;
+  if(sscanf(str,"%s %s",arg1,arg2) != 2){
+  arg1 = str; 
+  }
+  temp = "/players/wocket/mages/cmds/"+arg1+".c";
+  if(file_size(temp) > 0){
+  if(temp->cmd(arg2))
+  return 1;
+  }
+  return 0;
+}
+
+reset(){
+  set_heart_beat(1);
+}
+
+refocus(){
+ write("You wipe your mind of all and refocus your energies.\n");
+ clear_spell();
+ "/players/wocket/mages/daemons/channelD.c"->resetchannel();
+ set_heart_beat(1); 
+ return 1;
+}
+
+heart_beat(){
+int failrate;
+  castingtime--;
+  
+  if(castingtime > -1){
+    say("Casting...\n");
+    if(mage->query_weapon()){
+      say("Your weapon breaks your concentraction and you lose your spell.\n");
+      clear_spell();
+    }
+  }
+  if(castingtime == 0 && spell){
+    failrate = 25 - ((mage->query_attrib("wil")+mage->query_attrib("int"))/2);
+    if(random(100) < failrate){
+      say("Something goes wrong.\nYour spell fizzles.\n");
+      clear_spell();
+    }
+    else{
+    say(".\n");
+    spell->cast_spell(mage,arg);
+    say(".\n");
+    clear_spell();
+    }
+  }
+  mage->add_spell_point(1);
+}
+
+cast(str){
+  object page;
+  string spellname,tar;
+  string SPC;
+  if(!str || str == ""){
+    notify_fail("What would you like to cast?\n");
+    return 0;
+  }
+  if(castingtime > 0){
+    notify_fail("You are already casting a spell.\n");
+    return 0;
+  }
+  if(sscanf(str,"%s at %s",spellname,tar) != 2)
+    spellname = str;
+  if(spellname == "spell"){
+    notify_fail("Which spell would you like to cast?\n");
+    return 0;
+   } 
+  page = present(spellname,this_object());         
+  if(page){
+  spell = page;
+  arg = tar;
+  set_spell(page);  
+  if(mage->test_dark()){
+    notify_fail("You can not see your spell book.\n");
+    clear_spell();
+    return 0;
+  }
+  if(mage->query_sp() < spcost){
+    notify_fail("You lack the mana to cast "+spellname+".\n");
+    clear_spell();
+    return 0;
+  }
+  if(mage->query_hp()< hpcost){
+    notify_fail("You lack the health to cast "+spellname+".\n");
+    clear_spell();
+    return 0;
+  }
+  if(mage->query_weapon()){
+    notify_fail("You can not cast a spell while wielding a weapon.\n");
+    clear_spell();
+    return 0;
+  }
+  mage->add_hit_point(-hpcost);
+  mage->add_spell_point(-spcost);
+  SPC= get_typecolor(type);
+  write("You intone some ancient words.\n");
+  say(mage->query_name()+" intones some ancient words.\n");
+  write(SPC+"["+NORM+"You begin to cast "+spellname+SPC+"]"+NORM+".\n");
+  return 1;
+  }
+  notify_fail("You do not know how to cast "+spellname+".\n");
+  clear_spell();
+  return 0;
+}
+
+set_spell(page){
+  spcost = page->query_spcost();
+  hpcost = page->query_hpcost();
+  castingtime = page->query_time();
+  type = page->query_type();
+}  
+
+clear_spell(){
+  spcost = 0;
+  hpcost = 0;
+  spell = 0;
+  target = 0;
+  type = 0;
+  castingtime = -1;
+}
+
+get_target(arg){
+  if(!arg && mage->query_attack())
+    return mage->query_attack();
+  if(arg && present(arg,environment(mage)))
+    return present(arg,environment(mage));
+  if(arg && present(arg,mage))
+    return present(arg,mage);
+  return 0;
+}
+
+target_ok(target){
+  if(target->is_player() && !target->query_interactive()) return 0;
+  if(target == mage->query_attack()) return 1;
+  if(target->is_npc()) return 1;
+  if(environment(target)->MAGE_PK()) return 1;
+  if(target->query_fight_area() && mage->query_fight_area()) return 1;
+  if(target->query_pl_k() && mage->query_pl_k()) return 1;
+  return 0;
+}
+
+rippage(str){
+  string str2;
+  object page;
+  if(!str){
+  notify_fail("What would you like to rip?\n");
+  return 0;
+  }
+  page = present(str,this_object());
+  if(page){
+  move_object(page,this_player());
+  write("You rip "+str+" from the book.\n");
+  str2 = page->query_spellname();
+  str2 = implode(explode(str2," "),"_");
+  mageautoload->remove_page(str2);
+  pagenumber -= page->query_pages();
+  return 1;
+  }
+  else
+  write("You couldn't find "+str+" in the book.\n");
+  return 1;
+}
+
+sewpage(str){
+  string str2;
+  object page;
+  if(!str){
+  notify_fail("What would you like to sew?\n");
+  return 0;
+  }
+  page = present(str,this_player());
+  if(page && page->query_magic_spell()){
+  if(pagenumber + page->query_pages() > 50){
+    write("You book can not carry that many pages.\n");
+    return 1;
+    }
+  move_object(present(str,this_player()),this_object());
+  write("You sew "+str+" into the book.\n");
+  str2 = page->query_spellname();
+  str2 = implode(explode(str2," "),"_");
+  mageautoload->add_page(str2);
+  pagenumber += page->query_pages();
+  return 1;
+  }
+  else
+  write("You can't sew "+str+" into the book.\n");
+  return 1;
+}
+
+set_pagenumber(i){ pagenumber = i; }
+
+read(str){
+  object page;
+  if(!str){
+  notify_fail("What would you like to read?\n");
+  return 0;
+  }
+  str = implode(explode(str," "),"_");
+  if(file_size("/players/wocket/mages/docs/"+str) > 0){
+  cat("/players/wocket/mages/docs/"+str);
+  return 1;
+  }
+  page = present(str,this_object());
+  if(page)
+    page->long();
+  else
+  write("You couldn't find that to read.\n");
+  return 1;
+}
+
+set_title(){
+string title;
+ switch(sect){
+  case "summon":   title = HIB+"the Warlock"+NORM; break;
+  case "enchant":  title = HIY+"the Enchanter"+NORM; break;
+  case "necro":    title = HIM+"the Necromancer"+NORM; break;
+  case "sorcery":  title = HIR+"the Sorceror"+NORM; break;
+  case "illusion": title = HIC+"the Illusionist"+NORM; break;
+  case "general":  title = CYN+"the Mage"+NORM;break;
+  default:         title = "the Magician"+NORM; break; 
+ }
+ mage->set_title(title);
+}
+
+get_typecolor(str){
+string color;
+switch(str){
+case "summon":  color = HIB; break;
+case "enchant": color = HIY; break;
+case "necro":   color = HIM; break;
+case "sorcery": color = HIR; break;
+case "illusion":color = HIC; break;
+case "general": color = CYN; break;
+default: color = ""; break;
+}
+return color;
+}
+set_muffle(i){ muffle = i; }
+query_muffled(){ return muffle; }
+query_sect(){ return sect; }
+set_sect(str){ sect = str; }
+set_guildroom(obj){ guildroom = obj; }
+query_guildroom(){ return guildroom; }

@@ -1,0 +1,34 @@
+########################################################
+
+Wizards:
+   If you are looking at my code this is how it is organized:
+      1) AREAS - dir contains all area room directories and
+                 the master include file "base_defines" which
+                 has all the macros in it for increased 
+                 portability and simplified coding.(nothing fancy)
+      2) ARM - dir contains all armours - typically non magical
+               although I plan on fixing this at some point.
+      3) WPN - dir contains all weapons.
+      4) MISC - dir contains miscellaneous items.
+      5) MAGICAL - dir contains magical items, weapons, armours.
+      6) NPC - dir contains monsters and npc's.
+      7) GUILD - dir contains all guild dirs and files.
+      8) things - dir contains mixed files. Most of which are
+                  not in the game. Kind of a work area of stuff.
+                  Wizared toys, etc.
+
+   I would appreciate it if you would not modify my code without
+   good reason. Adding ansi options and things of this nature
+   without talking to me first is rude, please don't do it. If the
+   change is to conform with current mud balance then please
+   document the change in the code with:
+      a) Date Modified
+      b) Who Modified
+      c) Why Modified
+   I would also appreciate a mud mail, if it is only one file that
+   has been changed, or a txt file placed in my home dir titled, 
+   "QUALITY_CONTROL.txt" that lists the files that have been 
+   changed or modified.
+
+##############################################################
+

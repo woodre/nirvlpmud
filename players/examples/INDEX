@@ -1,0 +1,66 @@
+-------------------------------------------------------------------------------
+           INDEX of Nirvana's LPC example area /players/examples
+-------------------------------------------------------------------------------
+
+./:
+---
+
+INDEX                 : this file
+README                : a description what this area is about
+castle.c              : the castle of the example area
+
+./class:
+--------
+npc.c                 : an inheritable NPC
+room.c                : an inheritable room (it's just /complex/room)
+
+./doc:
+------
+contents              : a file listing the features of this area
+map                   : a map of this area
+sins                  : a file with famous LPC sins
+structure             : some comments on the directory structure
+todo                  : a file containing things to do
+
+./etc:
+------
+null.c                : an empty storage file used for temporarily moving
+                        objects into it
+
+./lib: 
+------
+
+./log:
+------
+
+./npc:
+------
+beerie.c              : an intelligent NPC (emphasis to set_feeling_reactions()
+                        and set_feeling_preventions())
+butzie.c              : an intelligent NPC (emphasis to set_chat_reactions())
+
+./obj:
+------
+bu.c                  : an object with emphasis to parser usage
+butz.c                : ditto
+disguise.c            : an object showing how filters work
+
+./room:
+-------
+bench_hut.c           : a room with a bench to sit on and under
+chest_hut.c           : no special features yet (apart from a chest)
+externy.c             : an example showing the usage of the extern data mech
+faky.c                : emphasis to fake items
+own_tdep.c            : timedependent room with selfdefined time phases
+parsy.c               : parser and fake item action examples
+replacy.c             : a demonstration of when to use replace_program()
+roomy.c               : a room to fill with features in the future
+start.c               : a normal room with emphasis to set_exits()
+tdep4.c               : a timedependent room with four time phases
+
+./sys:
+------
+examples.h            : a general header file which is included by all files
+
+./work:
+-------

@@ -1,0 +1,33 @@
+inherit "obj/monster";
+object gold, disc, cloak, hood;
+int items;
+reset(arg) {
+::reset(arg);
+if(arg) return;
+set_name("Maximillian Sterling");
+set_alias("maximillian");
+set_alt_name("max");
+set_short("Maximillian Sterling");
+set_long("A hot shot technician combined withe the sharp skills of combat.\n");
+set_level(19);
+set_hp(2000);
+set_al(2000);
+set_ac(25);
+set_wc(35);
+set_aggressive(0);
+set_chat_chance(10);
+load_chat("Maximillian says: I am inventing some new stuff..Don't disturb me!\n");
+load_chat("Maximillian says: Ahhh....My work is almost complete!\n");
+set_a_chat_chance(10);
+load_a_chat("Maximillian screams: Now you've ruined my work! You're going to pay!!\n");
+load_a_chat("Maxmillian screams: You little twirp shit!!\n");
+gold=clone_object("obj/money");
+gold->set_money(random(200)+1050);
+move_object(gold, this_object());
+disc=clone_object("players/cyrex/disc");
+move_object(disc, this_object());
+cloak=clone_object("players/cyrex/cloak");
+move_object(cloak, this_object());
+hood=clone_object("players/cyrex/hood");
+move_object(hood, this_object());
+}

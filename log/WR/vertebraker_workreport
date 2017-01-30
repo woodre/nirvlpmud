@@ -1,0 +1,174 @@
+May  1 12:04[31m :: [0m~francesco/castle - !present check to student id from id
+May  1 12:51[31m :: [0mpromised krillgeta a set of unbreakable iron death blades for newbie recruit
+May  1 14:35[31m :: [0m/obj/user/cmd_hook - had to tweak to allow heals+
+May  1 14:35[31m :: [0mopps :~( liblog instead
+May  5 20:22[31m :: [0m~angel/masons/mgob & ~/closed/shardak/allymark - don't allow masons to be allies
+May  5 21:43[31m :: [0m~wocket/turtleville/OBJ/mstaff: removed static from function spell_blast
+Jul 24 13:39[31m :: [0mkilled whitehawk through his own trigger. botting missionaries so i created a super missionary. he lost
+Jul 27 18:12[31m :: [0mpromoted pestilence to 100 for like the 1000th time.
+Nov 19 15:35[31m :: [0mApproved ~sparrow/areas/bwo/obj/test_armor and ../npc/bwo_template
+[Dec 15 2006 11:17] A: Registered Test Character: Vlad
+[Dec 15 2006 11:17] A: Registered Test Character: Dracula
+Jan 13 16:41[31m :: [0m~snakespear/zultayne/rooms/bchoice - points to village green
+Jan 15 14:28[31m :: [0mapproved mokri's paintball
+[Mar 18 2007 14:02] A: Registered Test Character: Merlyn
+Mar 31 13:52[31m :: [0m~/closed/shardak/cmds/burn - "rank" amount of extra damage if PK
+Mar 31 14:47[31m :: [0m~softly/nhall/rooms/n1 - added notification to newbie when wounds are fully healed
+Mar 31 14:50[31m :: [0m~mythos/locker_ob - removed exp cost
+Mar 31 14:51[31m :: [0m~mythos/locker - updated cost of ZERO exp
+Apr  1 10:57[31m :: [0m~mythos/enterance and newbie - took out exits, too confusing for a poor newbie. links only to the apprentice hall
+Apr  2 09:25[31m :: [0mwarned deagan/knytemayre for passing gear
+Apr 10 21:36[31m :: [0mrecomp'd one back to his original symbiote stats
+Apr 13 22:08[31m :: [0mcreated rowe/fred's prize (~/prizes/rowe) for solving the scavenger hunt
+Apr 13 22:11[31m :: [0mpatched Flak [wipeout testchar] back to 1mil xp .. was hogging top players list
+Apr 14 00:06[31m :: [0m~cosmo/hslist/svds_new - added display for 2003-2007 years
+Apr 16 12:38[31m :: [0mpromoted tallos to 40 for read acs
+Apr 20 22:01[31m :: [0mupdated mizan's polys to boost xp cost
+Apr 21 17:49[31m :: [0mwizzed Mo
+Apr 22 12:06[31m :: [0m~fakir/ways/WEP/dagger - added what check
+Apr 23 17:33[31m :: [0mpatched back trpsprngr
+Apr 23 19:03[31m :: [0mapproved mokri's disarm and landmine cmds for cybers
+Apr 27 00:00[31m :: [0mmoved warriors to /players/guilds/warriors/
+Apr 29 00:10[31m :: [0mgave mantis a hanzo sword as a test blade
+Apr 30 21:16[31m :: [0m~fred/mages/lib/bede - disabled
+[Apr 30 2007 23:00] A: Registered Test Character: Ludlum
+May  1 20:31[31m :: [0mapproved mokri's replicator
+May  4 01:19[31m :: [0mapproved mokri's mapper thing yesterday
+May  7 17:05[31m :: [0m~saber/food/magshop - raised bags to 1500 coins
+May  8 01:04[31m :: [0mrecomp'd claw as a purged player file
+May  8 18:03[31m :: [0mcomp'd demonic 1 mil xp for a buggy death
+May 11 13:24[31m :: [0mhad to modify ~guilds/Rangers/Commands/Recruit to change the savepath
+May 14 15:26[31m :: [0mrecomp'd sartan for a death
+May 14 15:29[31m :: [0mwarned usagi/suda for passing eq
+May 14 17:19[31m :: [0m~francesco/univ/items/id - fixed a bug in the short()
+May 14 21:57[31m :: [0mpromoted tallos to help with mage guild
+May 15 17:46[31m :: [0m~zeus/museum/NPC/mutant - fixed bug in opponent_heal_function()
+[May 15 2007 23:42] A: Registered Test Character: Hamster
+May 16 13:10[31m :: [0mclosed DO/DO guild ent
+May 18 15:26[31m :: [0mmade shardak darkness work wherever.
+May 18 15:26[31m :: [0mmade spinals usable in pk
+May 21 02:53[31m :: [0m~mythos/awep/zantetsuken2 - added set_broke()
+May 21 20:14[31m :: [0mchanged warrior books to be rank 40 instead of 41 -as- they should be
+May 23 13:18[31m :: [0mboosted shardak needed xp by 2x
+May 24 17:32[31m :: [0mmodified ani to get rid of the instablick
+May 24 17:34[31m :: [0mrescued cris from his own death [newbie]
+May 25 21:53[31m :: [0mcomp'd my player felwrath for a crash
+May 29 02:07[31m :: [2;37;0madded some spell dtypes to ~boltar/templar/templar, deleted the loss of damage [boggle]
+May 29 20:13[31m :: [2;37;0mRemoved Whiteblade from the game.
+May 29 21:10[31m :: [2;37;0mRestored Treebeard & Sparrowhawk
+May 30 00:36[31m :: [2;37;0mrestored my char Mjirn
+May 31 13:29[31m :: [2;37;0m~boltar/casino/room - updated to have "exa" verb
+Jun  1 03:53[31m :: [2;37;0m~snow/WEAPONS/hon_sword - changed from heal_self() to magical damage
+Jun  1 14:44[31m :: [2;37;0mcomp'd claude for a buggy death to pai mei
+Jun  4 01:23[31m :: [0mtook samurai stun out of the game in PK.
+Jun  4 02:50[31m :: [0mnerfed the fuck out of backbiter
+Jun  4 02:50[31m :: [0mnerfed the fuck out of samurai ad nauseum
+Jun 10 22:20[31m :: [0mrecomp'd jacob for a samurai guild bug.
+Jul 27 20:46[31m :: [0medited archangel's pfile in mages to fix his not saving during reboot
+Aug  7 15:46[31m :: [0mchanged mokri's bank to automatically put public coffer balances in private coffers; disabled public coffer command
+Aug 12 20:04[31m :: [0mfixed samurai focus/kiai to only go off once
+Aug 20 07:39[31m :: [0moh restored katya's pfile a couple days ago
+Sep  5 14:23[31m :: [0msomeone needs to fix icingdeath's experience :)
+Sep 10 15:59[31m :: [0mcomp'd 4 mil artos xp for a buggy warrior glitch reported to wax and mizan
+Sep 11 14:48[31m :: [0m~mythos/closed/play/finger - only works for 40+
+Sep 25 19:46[31m :: [0mdoubled the time of samurai disarm to rewield
+Sep 28 03:13[31m :: [0m~snow/closed/q/wyrmslayer - uses set_type("sword") now
+Oct 26 14:31[31m :: [0m~pathfinder/garbageman - switched from call_out to heart_beat:)
+Nov  3 14:26[31m :: [0mdragnar/daemons/color - changed CYA to CYN
+Nov  3 14:27[31m :: [0m[channel] above , not color
+Jan 25 12:16[31m :: [0m~mizan/closed/poly/PDM - added strap check to "spew all" for wumpus
+Jan 27 23:26[31m :: [0m~cloud/Fayawyn/obj/dring - changed this_player()->query_level() in do_special() to use "owner"
+Jan 29 04:18[31m :: [0mUpdated Polymorph guild spells to use damage types
+Jan 29 19:45[31m :: [0medited something in jareel's area to stop reducing light by 8 every reset.
+Jan 30 02:18[31m :: [0madded a rank 0 title to samurai - janitor
+[Feb 13 2011 17:06] A: undid kadaj's pk flag... i am a nice admin :P
+[Feb 14 2011 00:51] A: ~heroin/hunting_grounds/GameMaster - examined for the report that he wasn't worth enough. replied to Humble that the xp value for a monster based on his HP is not as exponential as one would think.
+[Feb 14 2011 00:55] A: ~mokri/clans/cmds/generic_heal - added a TP check so they can cast heal spells on themselves while invis
+[Feb 14 2011 01:00] A: ~saber/armor/aura - added a query_attack() check before the player's attack_object() has been called
+[Feb 14 2011 01:04] A: ~eurale/Keep/OBJ/dragon_ring - added a worn check to not allow players to fuck up their armor while invoking the ring
+[Feb 15 2011 16:15] A: Checked out a bug reported about Bloodfist guards continuing to fight after you flee - this is not a bug, it was coded for that exact purpose
+[Feb 15 2011 16:21] A: passed on a bug to boltar about Humble not being able to restore his mudkids.
+[Feb 15 2011 16:25] A: updated ~eurale/Keep/NPC/demon_pet - changed "sit" to "demon_stay"
+[Feb 15 2011 16:27] A: ~eurale/Keep/NPC/demon_pet - changed "sit" to "demon_stay", was blocking "sit" commands usable by players like "sit chair"
+[Feb 15 2011 16:27] A: opened an investigation into the cause of sensitive mind messages after Brenar kills an NPC. Contacted for more info
+[Feb 15 2011 16:29] A: ~jareel/weapons/orlanth/fiona_sword - added an id of "shock"
+[Feb 15 2011 16:31] A: ~mosobp/areas/TEMPLE/rooms/ship_fran - adjusted so it checks if a TP is "living" rather than a player, so when it blows up, it doesn't destruct any mudkids/pets
+[Feb 15 2011 16:33] A: ~heroin/hunting_grounds/gordqrtrsu - added if(arg) return check to prevent room from showing "no obvious exits". not sure if this will fix it, but worth a shot. If this isn't just a random odd bug, the whole area may need this fix or something else.
+[Feb 15 2011 17:15] A: ~coldwind/desert/weapons/sword - added attacker checks before hit_player is called so player doesn't bug out
+[Feb 15 2011 17:17] A: could not duplicate reported bug that joining felines caused loss of 5k coins and no mini guild
+[Feb 15 2011 18:41] A: ~cosmo/hslist/svds_new - Fixed so the VDS will show alltime scores for 2011
+[Feb 15 2011 18:42] A: ~cosmo/hslist/vds_new - Replaced with an inherit to svds_ , this got confusing
+[Feb 15 2011 20:47] A: ~lew/castle - added a warning in castle entrance as some mobs in this area suck attribs
+[Feb 15 2011 22:20] A: ~guilds/necro/guildob - changed set_pretitle on guild ob reset to 0 instead of "|"
+[Feb 16 2011 13:00] A: ~bagera/castle - Reopened
+[Feb 16 2011 13:04] A: ~trix/castle/disco/wc - added "list" action, the function was in place but no action for it. *boggle*
+[Feb 16 2011 13:14] A: ~tristian/castle - added an id of "sign"
+[Feb 16 2011 13:16] A: ~pavlik/guild/mages/room/library - removed newline at end of portal item desc
+[Feb 16 2011 13:20] A: ~llew/Toys/armor/redshirt - added id of shirt
+[Feb 16 2011 13:30] A: ~guilds/bards/martin - Updated to check for "is_armor" instead of "armor_class" when identifying something
+[Feb 16 2011 13:50] A: ~trix/castle/quest/monst/case - changed id(str){str="case" to str=="case" -- was causing the case to have any id imaginable.
+[Feb 16 2011 13:53] A: ~lew/card2 - updated to print "id card" not "meal card"
+[Feb 16 2011 13:55] A: ~catacomb/Cavern/items/FireArmor - added id of "suit"
+[Feb 16 2011 13:57] A: ~zeus/realm/taus/cave8 - changed present() check on clone of ooze to "ooze" instead of "primordial ooze", as the ooze did not have that id.
+[Feb 16 2011 14:00] A: ~maledicta/cont/armor/guard_of_health - changed return; to return 1; to avoid "Rub what? What?"
+[Feb 16 2011 14:03] A: ~jaraxle/closed/heals/* - added query_charges() function so displayable with heals+
+[Feb 16 2011 14:05] A: ~boltar/sprooms/weaponsmith - added "read sign" as an option
+[Feb 16 2011 14:07] A: ~/misc/cj/cj_face - cut damage in half, used way too much
+[Feb 16 2011 14:56] A: ~/guilds/samurai/bin/_disarm - checks for attacker before attempting rewield
+[Feb 16 2011 14:57] A: ~boltar/things/antipk - this_object() check - boggle
+[Feb 16 2011 15:00] A: ~jenny/workoom - commented out her/his vds display due to bugs
+[Feb 16 2011 15:01] A: ~jaraxle/3rd/alt/mobs/phantom2 - env check in spec3()
+[Feb 16 2011 15:05] A: ~fred/mages/mon/drakyr - points to /room/void when desting
+[Feb 16 2011 15:06] A: ~fred/mages/mon/ghoul - returns destruct(TO) in decay if no owner
+[Feb 16 2011 15:11] A: ~jaraxle/cont/mobs/bdragon* - updated with alt_attacker_ob checks on tail strike in case AAO is dead, that way it doesn't kill HB
+[Feb 16 2011 17:05] A: ~/ed/ed/room/portal - adjusted so the exit points to the village green
+[Feb 16 2011 19:44] A: ~/swamp/x1/g-necklace - fixed to change to armor. this should address some of the bugs.
+[Feb 16 2011 20:48] A: ~/swamp/OBJ/denim_shorts - moved to ac 1, not sure who the fuck made them ac 2.
+[Feb 17 2011 00:03] A: ~cosmo/apt/armor/babyblue - changed to type chest
+[Feb 17 2011 00:03] A: ~cosmo/apt/armor/goldenboy - changed to type chest
+[Feb 17 2011 10:00] A: Made a guild .nfo file for Samurai in /open/info/guilds
+[Feb 17 2011 10:01] A: Updated mages.nfo
+[Feb 17 2011 10:05] A: ~sandman/NEWBIE/newbie_bag - boosted MAX_WEIGTH to 40
+[Feb 17 2011 10:07] A: ~/guilds/samurai/obj/fireblade - changed from 1/4 to 1/6 chance of going off.
+[Feb 17 2011 11:06] A: ~zeus/museum/NPC/tiny_golem - environment() check in attack_function()
+[Feb 17 2011 11:08] A: ~nooneelse/graveyard/g_path_crypte - door2 check in reset
+[Feb 17 2011 11:10] A: ~jareel/monsters/town/kassea - K_heal2 - TO check
+[Feb 17 2011 12:54] A: Reopend Daranath's area
+[Feb 17 2011 13:04] 
+  A: ~saber/closed/esc.h - 
+  R: endif
+[Feb 17 2011 19:45] A: ~khrell/armors/skaven/warparmor
+[Feb 17 2011 19:45] A: oops
+[Feb 17 2011 20:41] A: With Sparrow, debugged ~cosmo/hslist/vds_new so it updates properly [finally]
+[Feb 17 2011 20:44] A: ~heroin/hunting_grounds/predator - changed paths to ~heroin/hunting_grounds/preds/ for cloning of objects
+[Feb 17 2011 21:34] A: ~chip/venom2/neo_venom
+[Feb 17 2011 21:34] A: oops (above) - added an id of GI
+[Feb 17 2011 21:49] A: w/ Fred, updated all guild objects to have an id of "GI"
+[Feb 18 2011 13:20] A: ~feldegast/obj/poison2 - environment() check before wearing off
+[Feb 18 2011 16:46] A: Edited Casa de Nirvana / Hotel room code so as to allow query_save_flag() { return 2; }
+[Feb 19 2011 01:36] A: Updated all guilds to get rid of autoloads, switched to guild files instead
+[Feb 19 2011 01:51] A: ~pavlik/guild/mages/rooms/*.c - moved all files to attic/ ..
+[Feb 19 2011 01:51] A: ~pavlik/guild/mages/room/*.c - edited all files to point to the correct subdir, "room/" not "rooms/", was causing basically a duplicate tower complete with duplciate mobs
+[Feb 20 2011 21:31] A: ~guilds/samurai/gob - increased damage taken
+[Feb 21 2011 14:19] A: ~valen/area/catacombs/belt - changed "armors" object pointing to the belt clone to "armor". was fucking up wear
+[Feb 21 2011 21:03] A: ~snow/dervish/lib/sandblast.h & objects/verte_sb.c - recoded so not to use set_ac() and not effect xp rate
+[Feb 21 2011 21:03] A: ~dusan/area1/armors/bring - changed id from ring to gauntlets
+[Feb 21 2011 21:06] A: Added 1mil xp to Jeanyus for warrior guild advance bug caused by double loading objects
+[Feb 21 2011 21:36] A: ~sparrow/areas/bwo/obj/bwo_acc - added (worn) flag to short()
+[Mar  1 2011 02:32] A: ~catt/castle - opened
+[Mar  3 2011 12:26] A: ~catt/MAGICAL/flamestrike - changed find_living() in the spell cast to present() check
+[Mar  4 2011 00:08] A: ~angel/area/walmart/npc - added id of "manakin" cause all these rooms were cloning based on that id
+[Jun 16 2011 01:47] A: Promoted mode and Equilibrium to council member
+[Jun 16 2011 01:47] A: Forgot to log -> Fixed Shardak obituary/PK notice to update to 2010s
+[Jun 18 2011 02:59] A: rm'd inkeyes' pfile - cauuuuuuuuseeeee he wanted me to. to restart char attribs. :~)
+[Jun 25 2011 01:46] A: comp'd grit a death cause i killed him by proxy
+[Feb  8 2015 01:48] A: ~eurale/Maze/OBJ/rood - fixed to accept arguments of any id, rather than just "silver crucifix". "restore crucifix" should work just fine.
+[Feb  8 2015 01:52] A: ~feldegast/equip/scarab - removed is_heal().  This is not a normal heal.  If chestguard is not flagged as heal, neither should this be.  causes silliness on inventory
+[Feb  8 2015 02:25] A: ~bastion/isle/wiz/vault2 - added id of "chainmail", rather than "chain".
+[Feb 10 2015 00:33] A: ~molasar/MAGIC/death_scroll - added auto dest of white tunnel.  This is a "feign" death spell...
+[Feb 10 2015 01:19] A: ~lew/easthall/basement - eliminated reference to roomstalker in room desc
+[Feb 10 2015 01:21] A: ~lew/entrance - added a random int check to give a hint about searching the grounds here.  Seriously, who would think of doing that here?
+[Feb 10 2015 01:33] A: ~lew/elof/vir_wrld13 - added random int check to give player a clue to link out here.
+[Feb 10 2015 01:39] A: ~lew/castle - Updated hint... No one would know WTF Keivjam is.  That is a terrible hint
+[Feb 10 2015 01:43] A: ~lew/stuart - added hint to put head on plate... now really.
+[Aug 27 2016 02:09] A: gave Gogeta 3 pieces of equipment he accidentally donated.

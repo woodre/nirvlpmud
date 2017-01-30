@@ -1,0 +1,70 @@
+/*
+ * Shardak guild - (tm) Dragnar/John
+ * Grotto is (c) Balowski/Rasmus, March 12th 1995.
+ * The main guild room. From here you can go many places
+ * log
+ * 950318 - something
+ * 950421 - ROOM
+ * 2000 - fixed board, 'in' exit. Used with Vertebrakers Permission
+ */
+#pragma strict_types
+#include "/players/balowski/lib.h"
+#include "/players/vertebraker/closed/shardak/def.h"
+#include "/players/pestilence/ansi.h"
+#define VBOARD "/players/pestilence/closed/misc/board2"
+
+inherit ROOM;
+
+void
+create()
+{
+    ::create();
+    if(!present("portal")) move_object(clone_object("/players/pestilence/closed/dark/OBJ/portal.c"), this_object());
+    if(!present("notice")) move_object(clone_object("/players/feldegast/obj/pkobit"), this_object());
+    set_short(""+HIK+"Main Entrance"+NORM+"");
+    set_long("\
+    This is a large entrance way to for the Dark Order Guild Hall.\n\
+The room has been carved into the rocks of a very deep cave.  To\n\
+the south there is a tunnel that leads out of the cave.  The direction\n\
+to the north leads deeper into the cave.\n\
+    There are two obvious exits: north and out\n");
+
+    set_items( ([
+({ "rocks", "large rocks" }) : "\
+Large rocks that surround everything.\n",
+({ "cave", "dark cave" }) : "\
+A large cave leading into the ground.\n",
+    ]));
+    set_exits(([
+        "north" :          ("/players/pestilence/closed/dark/room/hall2.c"),
+        "out" :        ("/players/pestilence/club/room/sewer6.c"),
+        "church" :        ("/room/church.c"),
+        "hotel" :        ("/players/boltar/hotel/hotel.c"),
+        "portal" :        ("/players/saber/ryllian/portal.c"),
+        ]));
+    set_light(-2);
+    set_property("fight area", 1);
+    set_property("no teleport", 1);
+}
+
+status
+allow_read(object who)
+{
+    if (who && (string) who->query_guild_name() == "dark order") return 1;
+}
+
+
+void 
+reset(int arg)
+{
+    object          board;
+
+    ::reset(arg);
+    if (!present("bulletin board")) {
+        board = clone_object(VBOARD);
+        board->set_name("servants");
+        board->set_size(50);
+        board->set_short("A board placed in the middle of the cave.");
+        move_object(board, this_object());
+    }
+}

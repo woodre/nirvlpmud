@@ -1,0 +1,369 @@
+#define ME capitalize(this_player()->query_name())
+#define IT capitalize(ATTK->query_name())
+inherit "/players/pavlik/closed/guild/styles/weapon.c";
+
+object robe, ATTK;
+int kout, broken, mess, rage;
+reset(arg) {
+::reset();
+if(arg) return;
+ set_name("ki");
+ set_alias("kai");
+ set_short("ki");
+ set_long("ki.\n");
+ set_class(16);
+ set_save_flag(0);
+ set_weight(0);
+ set_value(0);
+ set_hit_func(this_object());
+ kout = 0;
+ broken = 0;
+ rage = 0;
+}
+
+drop() { return 1; }
+short() { return; }
+long() { return; }
+get() {return 1;}
+query_ac_factor() { return 1; }
+
+init() {
+add_action("ac","ac");
+  add_action("view_commands","cmds");
+ ::init();
+ add_action("noway","wield");
+ add_action("rage","rage");
+ add_action("relax","relax");
+ add_action("roar","roar");
+}
+ac() {
+this_player()->set_ac(5);
+return 1;}
+noway() {
+ write("You cannot wield any weapons.\n");
+return 1;  }
+
+weapon_hit(attacker) {
+ robe = present("mrobe", this_player());
+ if(!robe) destruct(this_object());
+ ATTK = attacker;
+ mess = 0;
+if(attacker->query_hp() < 10){   /* pick a cool killer msg */
+death_blow();
+return 15;
+      }
+if(attacker->query_npc() != 1){   /* if player, no extra attks */
+pick_message();
+return 7;
+      }
+check_extras();     /* else check chance for extra attks */
+if(mess == 0)
+ pick_message();
+return 3;
+}
+
+/* --- (pick an attack message <each round unless extra attack>) -- */
+pick_message() {
+string wt, sy;
+int z;
+z = random(5)+1;
+if(z == 1){
+wt = "You smash your enemy in the face with a backfist!";
+sy = ME+" smashes "+IT+" in the face with a backfist!";  }
+if(z == 2){
+wt = "You slam "+IT+" in the face with a crosskick!";
+sy = ME+" slams "+IT+" in the face with a crosskick!";  }
+if(z == 3){
+wt = "You mame your enemy with a sidekick to the knee!";
+sy = ME+" mames his enemy with a sidekick to the knee!";  }
+if(z == 4){
+wt = "You butcher your opponent with powerful jabs!";
+sy = ME+" butchers his enemy with powerful jabs!";  }
+if(z == 5){
+wt = "You crack "+IT+" in the face with a circle kick!";
+sy = ME+" cracks "+IT+" in the face with a circle kick!";  }
+if(z == 6){
+wt = "You strike your enemy in the chest with an aerial reverse!";
+sy = ME+" strikes "+IT+" in the chest with an aerial reverse!";  }
+write("> "+wt+"\n");  say("> "+sy+"\n");
+}
+
+/* --- (check for extra/special attacks <each round>) ------- */
+check_extras() {
+ int bc, chance, what, rank, strength, stamina;
+ rank = this_player()->query_guild_rank();
+ strength = call_other(this_player(),"query_attrib","str");
+ stamina = call_other(this_player(),"query_attrib","sta");
+ bc = rank + strength + stamina + rage;
+
+chance = random(130);
+if(bc > chance) {
+what = random(100) + stamina + rage;
+mess = 1;
+if(what > 30 && what < 61)  power_shot();  else
+if(what > 60 && what < 91)  mult_attacks(); else
+if(what > 90 && what < 106)  break_bone();  else
+if(what > 105)  knock_out();
+     }
+if(rage > 0)  this_player()->add_spell_point(-3);
+if(this_player()->query_spell_point() < 10)  rage = 0;
+}
+
+/* --------- (MULTILPLE ATTACKS) ------------- */
+mult_attacks() {
+ int many, attks, dmge, q;
+ string wt, sy;
+many = random(5);
+if(rage > 0)  many = many + 2;
+attks = 0;
+while(attks < many) {
+ q = random(7)+1;
+if(q == 1){
+wt = "You axe kick "+IT+" in the chest!";
+sy = ME+" axe kick's "+IT+" in the chest!";  }
+if(q == 2){
+wt = "You spin and circlekick "+IT+" in the face!";
+sy = ME+" spins and circle kicks "+IT+" in the face!";  }
+if(q == 3){
+wt = "You sidekick "+IT+" in the knee!";
+sy = ME+" sidekicks "+IT+" in the knee!";  }
+if(q == 4){
+wt = "You jab "+IT+" in the face!";
+sy = ME+" jabs "+IT+" in the face!";  }
+if(q == 5){
+wt = "You turn and backkick "+IT+" in the midrift!";
+sy = ME+" turns and backkicks "+IT+" in the midrift!";  }
+if(q == 6){
+wt = "You leap up and axe kick "+IT+" in the throat!";
+sy = ME+" leaps up and axe kicks "+IT+" in the throat!";  }
+if(q == 7){
+wt = "You palm strike "+IT+" in the chest!";
+sy = ME+" palm strikes"+IT+" in the chest!";  }
+if(q == 8){
+wt = "You spring forward and snap kick "+IT+"!";
+sy = ME+" springs forward and snap kicks "+IT+"!";  }
+write("> "+wt+"\n");  say("> "+sy+"\n");
+dmge = random(call_other(this_player(),"query_attrib","str")/2);
+if(dmge > ATTK->query_hp())  dmge = 0;
+ATTK->hit_player(dmge);
+this_player()->add_spell_point(dmge/2);
+attks++;
+              }
+}
+/* ----- (CHANCE FOR A KNOCKOUT) -------------- */
+knock_out() {
+  object ko;
+if(kout == 4) {
+ if(present("ko", ATTK)) {
+   kout = 0;
+   return 1;
+   }
+write("> You spin and crescent kick "+IT+" right in the head!!!\n"+
+       "> "+IT+"'s eyes roll back into its head and your enemy crashes\n"+
+       "> to the ground -- unconscious!\n");
+ say("> "+ME+" spins and hits "+IT+" right in the head with "+
+     "a crescent kick!!!\n"+
+     "> "+IT+"'s eyes roll back into its head.\n"+
+     "> "+ME+"'s enemy crashes to the ground -- unconscious!\n");
+ ko = clone_object("players/pavlik/closed/guild/styles/kout");
+ ko->set_owner(this_player()->query_real_name());
+ move_object(ko, ATTK);
+ kout = 0;
+     } else {
+write("> You snap kick "+IT+" in the head.\n"+
+      "> Your kick lands with a solid 'Crunch'!\n");
+say("> "+ME+" snap kicks "+IT+" in the head.\n"+
+    "> "+ME+"'s kick lands with a solid 'Crunch'!\n");
+  kout++;
+    }
+}
+/* ---- (CHANCE TO BREAK A BONE) -------- */
+break_bone() {
+ int old_class, old_ac;
+  if(broken == 3) {
+write("> You smash "+IT+" with a spinning blade kick!\n"+
+      "> CrraacckK!\n"+
+      "> You hear the satisfying sound of splintering bones.\n"+
+      "> "+IT+" wails in Pain!\n");
+say("> "+ME+" smashes "+IT+" with a spinning blade kick!\n"+
+    "> CrraacckK!\n"+
+    "> You hear the sickening sounds of splintering bones.\n"+
+    "> "+IT+" wails in Pain!\n");
+ old_class = ATTK->query_wc();
+/*
+ ATTK->set_wc(old_class - 1);
+  see comment in judo.c -Bp
+*/
+ old_ac = ATTK->query_ac();
+/*
+ ATTK->set_ac(old_ac - 1);
+*/
+  broken = 0;
+    } else {
+write("> You blade kick your enemy in the ribs!\n");
+say("> "+ME+" blade kicks "+IT+" in the ribs!\n");
+    broken++; }
+}
+/* ---- ( POWERSHOT ) ------------- */
+power_shot() {
+  int what, strength;
+strength = call_other(this_player(),"query_attrib","str");
+ what = random(7);
+if(what < 2) {
+write("> You axe kick your enemy in the throat!\n"+
+      "> "+IT+" gurgles and spits up a pool of blood.\n");
+say("> "+ME+" axe kicks his enemy in the throat!\n"+
+    "> "+IT+" gurgles and spits up a pool of blood.\n");  }
+if(what == 3) {
+write("> You smash "+IT+" in the face with an elbow!\n"+
+      "> "+IT+"'s blood splatters all over your robes.\n");
+say("> "+ME+" elbows "+IT+" in the face!\n"+
+   "> "+IT+"'s blood splatters all over you.\n");
+   }
+if(what == 4) {
+write("> You knock the wind from your oppenent!\n"+
+  "> "+IT+" doubles over at your feet, gasping for breath.\n");
+say("> "+ME+" knocks the wind out of his oppenent!\n"+
+  "> "+IT+" falls to the ground gasping for breath.\n");
+   }
+if(what == 5) {
+write("> "+IT+" staggers under the brute for of your attacks!\n");
+say("> "+IT+" staggers under the brute force of "+ME+"'s attacks!\n");
+   }
+if(what > 5) {
+write("> You knock your emeny to the ground with a flying kick!\n"+
+  "> "+IT+" staggers unsteadily back to its feet.\n");
+say("> "+ME+" knocks his enemy to the ground with a flying kick!\n"+
+  "> "+IT+" staggers unsteadily back to its feet.\n");
+   }
+if(rage > 0)  strength = strength + 3;
+if(ATTK->query_hp() < strength)  strength = 0;
+ATTK->hit_player(strength);
+this_player()->add_spell_point(strength / 2);
+}
+
+/* -- DEATH BLOW (pick cool death msg) -- */
+death_blow() {
+int gary;
+gary = random(3)+1;
+if(gary == 1){
+write("> You slam "+IT+" in the chest with an aerial reverse!\n"+
+ "> "+IT+" staggers backwards and you step in and uppercut to the face.\n"+
+ "> The awesome blow breaks "+IT+"'s neck!\n");
+say("> "+ME+" slams "+IT+" in the chest with an aerial reverse!\n"+
+ "> "+ME+" steps in and uppercuts "+IT+"!\n"+
+ "> The powerful blow breaks "+IT+"'s neck!\n");
+   }
+if(gary == 2){
+write("> You backfist your oppenent in the face!\n"+
+ "> You whirl and circle kick, knocking "+IT+" to the ground!\n"+
+ "> You spit on "+IT+"'s lifeless corpse.\n");
+say("> "+ME+" backfists his oppenent in the face!\n"+
+ "> "+ME+" whirls and circles kicks, knocking "+IT+" to the ground!\n"+
+ "> "+ME+" spits on "+IT+"'s lifeless corpse.\n");
+   }
+if(gary == 3){
+write("> You spearhand your oppenent in the chest!\n"+
+ "> The powerful punch pierces "+IT+"'s heart, killing "+
+ IT+" instantly!\n");
+say("> "+ME+" spearhands his enemy in the chest!\n"+
+ "> The awesome blow pierces "+IT+"'s heart, killing "+
+ IT+" instantly!\n");
+    }
+if(gary == 4){
+write("> Your roundhouse kick nearly rips "+IT+"'s head off!\n");
+say("> "+ME+"'s roundhouse kick nearly rips "+IT+"'s head off!\n");
+    }
+ATTK->hit_player(ATTK->query_hp());
+return 10;
+}
+
+/* --- RAGE --- */
+rage() {
+if(!this_player()->query_attack()) {
+ write("You must be in battle before you can Rage.\n");
+ return 1;
+   }
+if(this_player()->query_spell_point() < 10) {
+ write("You are much to tired to Rage.\n");
+ return 1;
+   }
+if(rage > 0) {
+ write("You are already fighting like a crazed Beast!\n"+
+       "You couldn't possibly be further enraged.\n");
+ return 1;
+   }
+write("You fly into a fury of blood thirsty rage!\n");
+say(ME+" goes into a blood thirsty rage!\n");
+rage = this_player()->query_guild_rank() * 2;
+if(rage > 20)  rage = 20;
+this_player()->add_spell_point(-10);
+return 1;
+}
+
+/* -- RELAX (un-raging...) -- */
+relax() {
+if(rage < 1) {
+ write("You take a deep breath and relax.\n");
+ rage = 0;
+ return 1;
+   }
+write("You take several deep breaths and relax.\n"+
+   "You feel the blood thirsty rage drain out of your body.\n");
+command("smile", this_player());
+return 1;
+}
+
+/* --- ROAR (just neat shit...) --- */
+roar(str) {
+object ob, obj;
+int mine, his;
+if(!str) {
+write("You raise your bloody fists above your head and roar a\n"+
+   "mighty challenge against the World!\n");
+say(ME+" raises his bloody fists into the air and roars a\n"+
+   "mighty challenge against the World!\n");
+return 1;
+  } else {
+obj = present(str, environment(this_player()));
+if(!obj) { 
+ write(capitalize(str)+" is not here.\n");
+ return 1;  }
+if(!living(obj)) {
+ write(capitalize(str)+" looks unimpressed...\n");
+ return 1;  }
+if(obj->query_npc() == 1) {
+if(obj->query_level() > 19)  his = 500;  else
+his = obj->query_level();
+mine = this_player()->query_level() + 5;
+   } else {
+his = call_other(obj, "query_stat", "str");
+mine = call_other(this_player(), "query_stat", "str") + 5;
+                   }
+write("You raise your bloody fists in the air and roar a challenge in "+
+ capitalize(str)+"'s face!\n");
+say(ME+" raises his bloody fists and roars a challenge in "+
+ capitalize(str)+"'s face!\n");
+if(random(mine) > random(his)) {
+tell_room(environment(this_player()),
+capitalize(str)+" turns deathly white and flees like the coward he is.\n");
+ obj->run_away();
+   } else {
+tell_room(environment(this_player()),
+capitalize(str)+" looks unimpressed.\n");
+           }
+this_player()->add_spell_point(-10);
+    }
+return 1;
+}
+
+view_commands() {
+write(
+"Kickboxer commands: \n"+
+" Rage    -- fight like a crazed beast (takes more SP's when fighting)\n"+
+" Relax   -- stop fighting in Rage\n"+
+" Roar    -- Shout a battle cry\n"+
+" Roar <target> -- Shout a frightning battle cry at <target>\n"+
+"\n");
+return 1;
+}

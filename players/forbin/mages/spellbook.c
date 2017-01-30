@@ -1,0 +1,11 @@
+#include "/players/forbin/mages/def.h"
+
+#include "/players/forbin/mages/inherits/variables.h"
+#include "/players/forbin/mages/inherits/settings.h"
+#include "/players/forbin/mages/inherits/cmd_hook.h"
+#include "/players/forbin/mages/inherits/gobfuncs.h"
+#include "/players/forbin/mages/inherits/init.h"
+#include "/players/forbin/mages/inherits/hb.h"
+#include "/players/forbin/mages/inherits/reset.h"
+#include "/players/forbin/mages/inherits/generic_bonuses.h"
+#include "/players/forbin/mages/inherits/id.h"

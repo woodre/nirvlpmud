@@ -1,0 +1,20 @@
+ -=[ Learning New Spells ]=-
+
+As you advance through the guild you will earn the chance to learn new
+spells.  These chances or 'new spell slots' are required by the masters
+of the tower to learn new spells.  
+
+To see what spells a Master can teach and how many slots they require
+you must locate the Master within the Tower and then examine what the
+Master is holding.  The cost to learn the spell is equal to that spells
+level of casting.
+
+To have the Master teach you the spell do: say teach <spellname>
+<spellname> is the spells command word (often displayed in []'s)
+
+If you try to raise spells before the corresponding attrib/stat
+is raised to 99, the spell learning will FAIL and you lose the spell learning
+point!
+
+See Also: train, teach
+

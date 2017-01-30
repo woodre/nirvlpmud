@@ -1,0 +1,626 @@
+Nightshade Realm
+Updated by Karash (October 2014)
+
+Nightshade's Realm has always been a favorite of mine over the years, yet it does not get 
+many visitors anymore, so my goal was to upgrade some of the main NPCs in the realm to
+entice players to visit the realm more.
+
+This realm has mobs that follow a Dungeon & Dragons: Forgotten Realms theme, so I selected
+11 mobs and researched their abilities within that theme and included many of those 
+D&D abilities when upgrading them (as Nightshade intended based on his descriptions).
+
+NOTE: All updated objects will have the original NIGHTSHADE object located in the same
+folder with a .bak extension.
+
+All modified and new objects are located in the "/players/karash/nightshade/updated"
+directory, with subfolders that will match where they need to go within the nightshade
+directory (armor; weap; misc; mons; room).
+
+NOTE: Some of these modified objects still point to some objects in the original 
+Nightshade directory which will be good when moved there, but there a lot of paths
+within these objects that will need to be corrected once they are moved after testing.
+
+
+Here is a list of ALL objects that I modified or created by object type (which is also
+the name of the folder where the object is located):
+(Descriptions of each object are further down.)
+
+-----------
+OBJECT LIST
+-----------
+
+ROOM
+----
+c27.c (updated)
+c28.c (updated)
+capt_room.c (updated)
+guild_row4 (updated)
+shadows_room_new.c (created)
+
+ARMOR
+-----
+earcuffs_new.c (created)
+shield_magresist_new.c (created)
+shield_natresist_new.c (created)
+
+WEAP
+----
+axe_new.c (created)
+hammer.c (updated)
+holy_mace_new.c (created)
+invis_sword.c (updated)
+poison_dagger_new.c (created)
+
+MISC
+----
+black_opal.c (updated)
+courage_obj_new.c (created)
+courage_wand_new.c (created)
+frenzy_obj_new.c (created)
+frenzy_wand_new.c (created)
+holy_symbol_new.c (created)
+mirror_new.c (created)
+moonstone.c (updated)
+nomelee_obj_new.c (created)
+onyx.c (updated)
+paralyze_obj_new.c (created)
+parry_obj_new.c (created)
+poison_obj_new.c (created)
+stun_obj_new.c (created)
+topaz.c (updated)
+
+MONS
+----
+basilisk.c (updated)
+captain.c (updated)
+captain2_new.c (created)
+cyclo.c (updated)
+hook_horror.c (updated)
+imp_master.c (updated)
+kargile.c (updated)
+ltng_elemental_new.c (created)
+master_cleric.c (updated)
+master_fighter.c (updated)
+master_mage.c (updated)
+master_thief.c (updated)
+red_dragon.c (updated)
+
+
+----------------
+OBJECT SUMMARIES (U)-Updated (C)-Created
+----------------
+ROOM:
+1) c27.c (U) 
+		- This is the room where Hephaestus the Dragon resides.  
+		- Corrected some spelling errors.
+2) c28.c (U) 
+		- This is the Treasure Room which awards players after they kill the Dragon.
+        - Upgraded loot since the Dragon was upgraded.
+		- Increased the value of the 4 original gems, Added a wand, Added large pile of coins.
+		- Made room No Teleport to prevent players teleporting into treasure room without
+		  killing Dragon.
+3) capt_room.c (U)
+		- This is the room where Cassana the Mage resides.
+		- Corrected some spelling errors.
+4) guild_row4.c (U)
+		- This is the room where the 4 Guildmasters reside.
+		- Modified the reset() function to clone guildmasters in a random order when
+		  they reset.  Since these NPCs always fight in pairs, different combinations will
+		  fight the player depending who the player attacks first, so I wanted to randomize
+		  the order they clone in case players have a tendency to attack the first NPC in
+		  the room.
+		- Added an item to the room for "chest" where all loot for the Masters, not counting
+		  what they use in combat, will be found.
+		- Added loot for the treasure chest consisting of: Magic Resistance Shield, 
+		  Wand of Courage, and lots of coins.
+5) shadows_room_new.c (C)
+		- This is a room object used to temporarily hold the Master Thief object when he
+		  hides in the shadows.  When Master Thief is initially attacked, he will duck into
+		  the shadows (this object) for a brief moment before leaping out and backstabbing
+		  the attacker.
+
+ARMOR:
+1) earcuffs_new.c (C)
+		- A loot item dropped from Cassana the Mage.
+		- An item for the earring armor slot, which gives 1 AC and ++ bonus to Illusion spells
+		  for players in the Mage guild.
+2) shield_magresist_new.c (C)
+		- A loot item found in the treasure chest in the Guildmasters room.
+		- This shield gives 2 AC plus 15% resist to magical attacks: magic, dark & light,
+		  good & evil, and mental.
+3) shield_natresist_new.c (C)
+		- A loot item dropped off Master Fighter in the Guildmasters room.
+		- This shield gives 2 AC plus 15% resist to natural attacks: fire, ice, wind, earth,
+		  water, poison, electric, and sonic.
+
+WEAP:
+1) axe_new.c (C)
+		- A loot item dropped from Imp Master.
+		- Imp Master's attack mentioned an axe, so I created one to drop.  
+		- 10 WC with an additional 5 WC poison damage to go with the theme of imps using poison.
+2) hammer.c (U)
+		- The legendary Aegis-fang dropped by Wulfgar, the barbarian.
+		- Since Wulfgar was upgraded, it seemed logical to upgrade his legendary hammer. So,
+		  after research of the hammer used in Forgotten Realms, I gave this hammer a throwing
+		  ability that can do heavy damage when a player uses it.
+		- A player must have STR20 to wield this.  A player must use this weapon in combat to
+		  make it "Attuned" in order for it to do extra damage.  When fighting, a player can
+		  "swing hammer" to prepare a throw and after swinging for 2 rounds, the player can
+		  "throw hammer" at his target.  
+		- When thrown, if hammer is not attuned, it will only do normal damage. 
+		- When thrown, if hammer is attuned, it will do 100 dmg, unless target is at 0/10, then
+		  hammer will do 500 dmg (which follows the theme of the Aegis-fang as a finishing
+		  weapon).
+3) holy_mace_new.c (C)
+		- A loot item dropped from Master Cleric in the Guildmasters room since the original
+		  mob did not have any items on it.
+		- This is a mace weapon to follow the theme of the cleric which does half physical
+  		  damage and half holy (good) damage.
+4) invis_sword.c (U)
+		- An invisible object on the original Master Mage used to simulate mage spells.
+		- Corrected some spelling errors.
+		- Also, on the Master Mage object, added code to destruct this object when Mage died.
+5) poison_dagger_new.c (C)
+		- A loot item dropped from Master Thief in the Guildmasters room since the original
+		  mob did not have any items on it.
+		- To follow the theme of the Thief, this is a dagger that does physical and poison
+		  damage.  The Thief clones 2 of these to dual wield.
+
+MISC:
+1) black_opal.c (U)
+2) moonstone.c (U)
+3) onyx.c (U)
+4) topaz.c (U)
+		- The Black Opal, Moonstone, Onyx, and Topaz were gems located in the original treasure
+		  room after killing the Dragon.  Since the treasure was upgraded after upgrading the
+		  Dragon, I increased the value of these gems and added color to their names.
+5) courage_obj_new.c (C)
+6) courage_wand_new.c (C)
+		- The Wand of Courage is found in the treasure chest in the Guildmasters room.
+		- This wand is usable by players to cast on a mob to prevent fleeing, but it has a
+		  drawback that it also heals the target when cast.
+		- If the target is less than 80% health, a player may "encourage target" which will
+		  heal the target 20% or 1000HP, whichever is less, giving the target the courage to
+		  continue fighting (without fleeing).
+		- This wand cannot be cast on players, has 10 charges, and it cannot be stored.
+		- The courage_obj_new.c is the object placed on the target to prevent it from fleeing
+		  while the spell is in effect.
+7) frenzy_obj_new.c (C)
+8) frenzy_wand_new.c (C)
+		- The Wand of Frenzy is found in the treasure room after killing the Dragon.
+		- This wand is usable by players to cast on a mob to prevent fleeing, but it has a
+		  drawback that it boosts the damage of the target for the duration of the spell.
+		- A player may "enrage target" which will add damage each round equal to 40% of the 
+		  target's base WC, thus giving the target the rage to continue fighting (without fleeing).
+		- This wand cannot be cast on players, has 10 charges, and it cannot be stored.
+		- The frenzy_obj_new.c is the object placed on the target to prevent it from fleeing
+		  and boosting damage output while the spell is in effect.
+9) holy_symbol_new.c (C)
+		- A loot item dropped from Master Cleric to follow the theme of the cleric.
+10) mirror_new.c (C)
+		- A loot item dropped from Master Mage to follow the theme of the mage illusionist.
+		- This item duplicates the platinum mirror used by the mage guild to cast mirror 
+		  image.  Since the mage mirror is configured when cloned, I just created an object
+		  to clone a mirror that matches the configuration of the mage component.
+11) nomelee_obj_new.c (C)
+		- An object placed on a player when Hephaestus the Dragon takes flight, which 
+		  prevents weapon attacks by the player, thus giving the perception that they 
+		  cannot reach a flying mob with melee attacks.
+12) paralyze_obj_new.c (C)
+		- An object placed on a player when the Basilisk uses a gaze attack and paralyzes
+		  the player, thus freezing the player from performing any actions and stopping
+		  weapon attacks.
+13) parry_obj_new.c (C)
+		- An object placed on a player when fighting the Master Fighter and he performs a
+		  Parry.  Basically, this object will prevent a weapon attack giving the perception
+		  that the Master Fighter parried the attack.
+14) poison_obj_new.c (C)
+		- An object placed on a player when fighting the Master Thief and he performs a
+		  Backstab to poison the player.  This object will hurt the player for a few rounds
+		  to give the perception that the player is Poisoned.
+15) stun_obj_new.c (C)
+		- An object placed on a player when fighting Wulfgar and he stuns the player
+		  when throwing his hammer.  This object will prevent all actions and weapon attacks
+		  giving the perception that the player is Stunned.
+
+MONS:
+1) Cyclopentanoperhydrophenanthrene
+   Obj: cyclo.c
+   Lvl: 22
+   HP:  750
+   WC:  38
+   AC:  20
+   
+   HP Bonus: none
+   WC Bonus: none
+   AC Bonus: none
+   
+   Estimated Exp: ~56,500
+   
+   Loot Value: 7000
+		- Coins = 5500+R3000
+   
+   Abilities: Basic mob with a spell (40% chance; 40-60dmg)
+   
+   Location from Entrance: enter portal, 10s, swim fountain, 3n
+
+2) Basilisk
+   Obj: basilisk.c
+   Lvl: 25
+   HP:  800+R400
+   WC:  44
+   AC:  30
+   
+   HP Bonus: none
+   WC Bonus: none
+   AC Bonus: none
+   
+   Estimated Exp: ~92,600
+   
+   Loot Value: 11,000
+		- Coins = 9500+R3500
+   
+   Abilities: Bite Attack (40%, 30-50dmg); Gore Attack (40%, 50-75dmg);
+		Gaze Attack (20%, 30-50 earth dmg, paralyzes target for a few rounds)
+   
+   Location from Entrance: enter portal, 2s, 5w, enter wall, n, w, 4s, e, n, e
+   
+   
+3) Hook Horror
+   Obj: hook_horror.c
+   Lvl: 22
+   HP:  800+R200
+   WC:  40
+   AC:  25
+   
+   HP Bonus: none
+   WC Bonus: none
+   AC Bonus: none
+   
+   Estimated Exp: ~73,000
+   
+   Loot Value: 7000
+		- Hook Plate Armor = 4000
+		- Coins = 2000+R2000
+   
+   Abilities: Left Hook (40%, 25-50dmg); Right Hook (40%, 25-50dmg);
+		Bite Attack (20%, 100-200dmg)
+   
+   Location from Entrance: enter portal, 10s, 4w, 2s
+   
+   
+4) Imp Master
+   Obj: imp_master.c
+   Lvl: 22
+   HP:  1500
+   WC:  20 (mob also has 20 poison WC)
+   AC:  20 (mob also has 20 resistance to physical dmg)
+   
+   HP Bonus: none
+   WC Bonus: 20 (20 poison WC on weapon param)
+   AC Bonus: 20 (20 physical dmg resist)
+   
+   Estimated Exp: ~118,000
+   
+   Loot Value: 7000
+		- Axe = 2000
+		- Coins = 4000+R2000
+   
+   Abilities:  Immune to Poison damage; 20% Resist to Fire damage;
+   
+   Location from Entrance: enter portal, 2s, 4e
+   
+   
+5) Master Cleric
+   Obj: master_cleric.c
+   Lvl: 25
+   HP:  1000+R250
+   WC:  44
+   AC:  23
+   
+   HP Bonus: Added if the Cleric heals himself
+   WC Bonus: 48 (see mob object for calculation)
+   AC Bonus: none
+   
+   Estimated Exp: ~115,000
+   
+   Loot Value: 11,000
+		- Mace = 2500
+		- Holy Symbol = 2500
+		- Remaining loot value available in Treasure Chest for all Guildmasters
+   
+   Abilities: 
+ *          This is one of four guildmasters, including a Cleric, Fighter, Mage and Thief.
+ *          They are all located in the same room and coded to fight in pairs, meaning
+ *          when one is attacked, there is a progression that dictates one of the 
+ *          other Masters will join the fight to help (depending on which Master is
+ *          attacked and who is remaining in the room).  Two Masters will always fight
+ *          at the same time, unless players directly attack more than two.
+ *
+ *          The Cleric has the ability to cast spells on players consisting of Physical
+ *          and Good (Holy) damage, plus a mace that does both damage types.
+ *          If the Cleric is fighting, the Cleric will heal all Masters in combat three
+ *          times (including himself), which will increase the hp_bonus of the target
+ *          each time a heal is cast.
+ *
+ *          The only loot on the Guildmasters will be what they use to fight.  All other
+ *          loot for the combined Masters will be found in a chest in the room, so 
+ *          players must kill all Masters to get the combined loot. 
+   
+   Location from Entrance: enter portal, 10s, 2w, 4n
+   
+   
+6) Master Fighter
+   Obj: master_fighter.c
+   Lvl: 25
+   HP:  1200+R500
+   WC:  52
+   AC:  26
+   
+   HP Bonus: Added if the Cleric heals the Fighter
+   WC Bonus: 40 (see mob object for calculation)
+   AC Bonus: none
+   
+   Estimated Exp: ~128,000
+   
+   Loot Value: 11,000
+		- Sword = 500
+		- Shield of Resist = 2500
+		- Remaining loot value available in Treasure Chest for all Guildmasters		
+   
+   Abilities:
+ *          This is one of four guildmasters, including a Cleric, Fighter, Mage and Thief.
+ *          They are all located in the same room and coded to fight in pairs, meaning
+ *          when one is attacked, there is a progression that dictates one of the 
+ *          other Masters will join the fight to help (depending on which Master is
+ *          attacked and who is remaining in the room).  Two Masters will always fight
+ *          at the same time, unless players directly attack more than two.
+ *
+ *          The Fighter has a few more HPS and carries a Resistance Shield that has some
+ *          resistance to all natural damage types.  The Fighter also has the ability to
+ *          Parry Attacks (prevent damage), Cleave (hit all attackers) and make Critical
+ *          Hits for heavy damage.  Also, if the Fighter is in combat, he will taunt
+ *          every attacker in the room to draw their attack, which may allow other 
+ *          Masters to perform their special abilities if they are fighting and not 
+ *          being directly attacked (such as the Thief's Backstab).
+ *
+ *          The only loot on the Guildmasters will be what they use to fight.  All other
+ *          loot for the combined Masters will be found in a chest in the room, so 
+ *          players must kill all Masters to get the combined loot.  
+   
+   Location from Entrance: enter portal, 10s, 2w, 4n
+   
+   
+7) Master Thief
+   Obj: master_thief.c
+   Lvl: 25
+   HP:  900+R300
+   WC:  52
+   AC:  24
+   
+   HP Bonus: 250(Evasion) + Bonus is Increased if the Cleric heals the Thief
+   WC Bonus: 90 (see mob object for calculation)
+   AC Bonus: none
+   
+   Estimated Exp: ~129,000
+   
+   Loot Value: 11,000
+		- Dagger 1 = 500
+		- Dagger 2 = 500
+		- Remaining loot value available in Treasure Chest for all Guildmasters	
+   
+   Abilities:
+ *          This is one of four guildmasters, including a Cleric, Fighter, Mage and Thief.
+ *          They are all located in the same room and coded to fight in pairs, meaning
+ *          when one is attacked, there is a progression that dictates one of the 
+ *          other Masters will join the fight to help (depending on which Master is
+ *          attacked and who is remaining in the room).  Two Masters will always fight
+ *          at the same time, unless players directly attack more than two.
+ *
+ *           The Thief has a little less HPS, but can do more damage, especially if no
+ *          attackers are directly attacking him.  If he is initially attacked, he will
+ *          duck into the shadows and emerge with a Backstab on the attacker, doing heavy
+ *          damage and poisoning his target for damage over time.  
+ *           If thief is fighting, he will continue to Backstab and Poison if no attacker
+ *          is directly attacking him (meaning if an attacker focuses on him, he cannot
+ *          duck into the shadows to perform his backstab).
+ *           Also, if Thief is fighting and his direct target is not focused on him, he will
+ *          perform extra damage to his target as a Sneak Attack (the Fighter's taunt
+ *          helps the Thief greatly).
+ *           Lastly, the Thief has Evasion, which gives him a 50% chance to take 50% less
+ *          damage of any type each round for each attack.  
+ *           Thief carries dual daggers that can do some poison damage.
+ *
+ *          The only loot on the Guildmasters will be what they use to fight.  All other
+ *          loot for the combined Masters will be found in a chest in the room, so 
+ *          players must kill all Masters to get the combined loot. 
+   
+   Location from Entrance: enter portal, 10s, 2w, 4n
+   
+   
+8) Master Mage
+   Obj: master_mage.c
+   Lvl: 25
+   HP:  900+R300
+   WC:  44
+   AC:  23
+   
+   HP Bonus: Added if Cleric heals Mage
+   WC Bonus: 40 (see mob object for calculation)
+   AC Bonus: none
+   
+   Estimated Exp: ~70,000
+   
+   Loot Value: 11,000
+		- Spellbook = 1000
+		- Remaining loot value available in Treasure Chest for all Guildmasters		
+   
+   Abilities:
+ *          This is one of four guildmasters, including a Cleric, Fighter, Mage and Thief.
+ *          They are all located in the same room and coded to fight in pairs, meaning
+ *          when one is attacked, there is a progression that dictates one of the 
+ *          other Masters will join the fight to help (depending on which Master is
+ *          attacked and who is remaining in the room).  Two Masters will always fight
+ *          at the same time, unless players directly attack more than two.
+ *
+ *           The Mage has a little less HPs than the other Masters.  The Mage's
+ *          role is to stand in the back and blast attackers with lightning (electric
+ *          damage).  When the Mage enters combat, he will conjure a lightning elemental
+ *          to assist in the fight, which also causes electric damage and will taunt
+ *          attackers off the Mage and Thief if the Fighter is not present and fighting.
+ *
+ *          The only loot on the Guildmasters will be what they use to fight.  All other
+ *          loot for the combined Masters will be found in a chest in the room, so 
+ *          players must kill all Masters to get the combined loot.
+   
+   Location from Entrance: enter portal, 10s, 2w, 4n
+   
+   
+9) Lightning Elemental
+   Obj: ltng_elemental.c
+   Lvl: 22
+   HP:  700
+   WC:  0 (no physical WC - electric WC added below)
+   AC:  20
+   
+   HP Bonus: none
+   WC Bonus: 40 (electrical damage)
+   AC Bonus: none
+   
+   Estimated Exp: ~45,000
+   
+   Loot Value: 7000
+		- Remaining loot value available in Treasure Chest for all Guildmasters			
+   
+   Abilities:
+ *          A conjured mob from the Master Mage used to fight for the mage and
+ *          will taunt all attackers if the Fighter is not present and fighting.
+ *
+ *          The only loot on the Guildmasters will be what they use to fight.  All other
+ *          loot for the combined Masters will be found in a chest in the room, so 
+ *          players must kill all Masters to get the combined loot. 
+   
+   Location from Entrance: enter portal, 10s, 2w, 4n
+
+____________________________________________________________________________
+TREASURE CHEST LOOT IN GUILDMASTERS ROOM:
+	51,000 = Total Loot Value for 4 Guildmasters and Elemental
+	 7,750 = Total Value of Loot Dropped by Guildmasters
+	43,250 = Available Loot Value Remaining
+	
+	 2,500 = Wand of Courage
+	 2,500 = Magic Resist Shield
+	30,000 + R15,000 = Coins
+_____________________________________________________________________________
+   
+   
+10) Wulfgar
+   Obj: kargile.c
+   Lvl: 25
+   HP:  1200+R300
+   WC:  45
+   AC:  30
+   
+   HP Bonus: none
+   WC Bonus: 16
+   AC Bonus:  5
+   
+   Estimated Exp: ~200,000
+   
+   Loot Value: 11,000
+		- Aegis-fang (hammer) = 10,000
+		- Coins = 1000+R1000
+   
+   Abilities:
+ *          Wulfgar can hit hard with his hammer attack, he can also swipe the room and
+ *          hit all attackers, and he will throw his hammer at a random attacker 
+ *          to do heavy damage and stun that attacker for a few rounds, not 
+ *          allowing that attacker to attack or perform any actions while stunned.
+   
+   Location from Entrance: enter portal, 2s, 5w, enter wall, n, w, 6s, 4w
+   
+   
+11) Cassana Praxis, Captain of the Watch
+   Obj: captain.c ; captain2_new.c
+   Lvl: 25
+   HP:  1200
+   WC:  44
+   AC:  23
+   
+   HP Bonus: none
+   WC Bonus: 156 (see mob object for calculation, but this bonus represents all images attacking together)
+   AC Bonus: none
+   
+   Estimated Exp: ~196,000
+   
+   Loot Value: 11,000
+		- Mirror = 5000
+		- Earcuffs = 1300
+		- Cleaver = 10,000
+		- Armor = 1000
+		- Cloak = 500
+		- Shield = 500
+		- Coins = 2000
+		NOTE: The Cleaver was part of the original loot on this mob and is overvalued compared
+		      to it's damage output, but instead of modifying the object, I left it as it is
+			  since players cannot sell it for much more than 1000gp anyway.
+		
+   Abilities:
+ *		    When the object called captain.c is attacked, it will destruct and 
+ *          create 3 clones of the object called captain2_new.c where one of the clones
+ *			will randomly be set as the real captain and the other 2 will be set as mirror
+ *			images. All 3 captains will attack the attacker, but only the real captain will
+ *          reward experience for the kill.  Therefore, all bonuses from the 2
+ *          images are set in the cloned object for the real captain.
+ *
+ *          As a level 25 mob, this mob will  have a spell attack and the 2 special
+ *          advantages will be 1) since all 3 images attack, it is very similar to
+ *          multicast with 3 spells and 2) there is a 2:3 chance the attacker will kill
+ *          an image and will have to fight again to get exp from the real captain.
+ *          NOTE: The second (and possibly third) fight is not included in the exp
+ *		    rewards - it is dependent on the luck of selecting the correct captain.
+ *
+ *          Basically, this is like an elaborate Mirror Image spell where the player will
+ *          have to choose which image is real.
+ 
+   Location from Entrance: enter portal, 10s, e, n
+   
+   
+12) Hephaestus, the Red Dragon
+   Obj: red_dragon.c
+   Lvl: 28
+   HP:  1800+R500
+   WC:  58
+   AC:  26
+   
+   HP Bonus: none
+   WC Bonus: 15 (see mob object for calculation)
+   AC Bonus: 22 (see mob object for calculation)
+   
+   Estimated Exp: ~360,000
+   
+   Loot Value: 23,000
+		- Onyx = 1500
+		- Topaz = 1500
+		- Moonstone = 1500
+		- Black Opal = 1500
+		- Wand of Frenzy = 2500
+		- Coins = 12,000 + R5000
+   
+   Abilities:
+ *          An upgrade to the original Nightshade mob named red_dragon.  This upgrade
+ *          increases mob stats and adds additional spells, including melee attacks
+ *          and breath attacks.  The Dragon will also take flight during combat and attack
+ *          from the air causing heavy damage to the entire room when attacking from air
+ *          (by spraying the entire room with fire).
+ *         
+ *          The dragon is also immune to all fire damage, 50% vulnerable to ice damage,
+ *          and has 20% resistance to magic.
+ *
+ *          NOTE: The loot for this mob is located in the treasure room north of the 
+ *                dragon room (room c28.c).
+   
+   Location from Entrance: enter portal, 10s, 4w, 2s, w, s, w, 3up, 2n
+   
+   
+

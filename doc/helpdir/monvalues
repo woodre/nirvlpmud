@@ -1,0 +1,35 @@
+
+                         [help monvalues]
+-----------------------=========+=========----------------------
+
+These monitor variables correspond to character values,  i.e. 
+#hps# returns the number of current hit points.  They are used
+for customizing your combat monitor.  For more information, 
+type 'help setmon'. 
+
+
+                       Symbols = Values
+ [=========================================================]
+
+
+   #hps#   = Hit Points        #mhp# = Maximum Hit Points
+   #sps#   = Spell Points      #msp# = Maximum Spell Points
+   #intox# = Intox [Alcohol]   #soa# = Soak [Drink]
+   #stu#   = Stuff [Food]      #inf# = Infusion [Transfer]
+   #coins# = Gold Coins        #exp# = Experience Points
+   #nexp#  = Experience        #wep# = Weapon condition
+             required for
+             Next Level
+
+   #ahp#   = Attacker's hit points [displayed as: AHP: x/10]
+   #al#    = Alignment ["neutral", etc.]
+   #alb#   = Alignment Bar [# represent your alignment]
+   #time#  = Current Mudtime [i.e. 12:34]
+   #ret#   = Carriage Return [new line]
+
+Attributes are represented by putting # around each side of the
+first three letters of the attrib; i.e. for magical aptitude,
+one would just use #mag#.
+
+For examples of these being used, type 'help monexamples'.
+

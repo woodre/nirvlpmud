@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/currie","/players/wren/Area/starbug/items/straw","/players/snow/shadows/stuff/sgem","/obj/weapon","/players/emerson/heal/lpizza","/players/sado/shop/oreo","/players/wren/Area/starbug/items/cottagecheese","/obj/bag","/players/hawkeye/armor/converse","/players/mythos/closed/guild/forest/misc/pelt","/players/snow/cam/stuff/plate","/players/snow/WEAPONS/balance","/obj/armor","/players/saber/stuff/mic","/players/hippo/heals/nucleus","/players/sado/shop/rose","/obj/armor","/obj/treasure","/obj/weapon","/players/arrina/treas/onyx","/players/scathe/armor/bowboot","/players/scathe/armor/suit","/players/pain/NEW/weap/mace2","/obj/torch","/players/scathe/armor/egarb",})
+shorts ({"A tin of chicken currie","a long plastic straw","A dusky gem","Rabbit foot","large pizza","A box of oreo cookies","a small tub of cottage cheese.","bag","[31mConverse All-Stars[0m","A beautiful white pelt","[34m[1mBlessed Plate Armor[0m[0m","The Broadsword of Balance","A suit of [1mwhite[0m chainmail","A microphone","[35mnucleus of a cell[0m","A beautiful red rose blossom","A [1mwhite[0m helmet","Arctic Wolf pelt","Shark`s tooth","A piece of carved onyx","Hard Boots","Black Suit","A huge iron mace","sunflower","Elder's garb",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,16 @@
+Heals in this directory are found as treasure, not sold in a shop.
+
+1. Heals have weight since they inherit from /obj/generic_heal
+2. Removed heals from guard mobs.
+3. Modified walker corpses to have random chance of getting heal
+   instead of a walker obj. I substitute tier 2 items for advil,
+   tier 3 for vicodin, and tier 4 for percocet.
+   Tier 2 avg 2500 coins
+   Tier 3 avg 5000 coins
+   Tier 4 avg 10000 coins
+   Chance of getting heal is !random(6)
+   Only bigger walkers will have the higher tiers of items
+4. Reduced the random charges
+5. Modified aj.c to only get 1 heal and only has 1/3 chance of getting 1
+6. Oakley only gets 1 heal, but left gear the same since his value can be
+   as high as $30k

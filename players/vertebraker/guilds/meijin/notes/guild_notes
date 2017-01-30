@@ -1,0 +1,74 @@
+---------------------------------------------------------------------------
+#	stat:				descrip:
+---------------------------------------------------------------------------
+1	dexterity			[affects double-wielding ability]
+2	agility				[affects weapon bonus]
+3	endurance			[duration of spells/skills]
+4	prowess			[affects chance of critical hit]
+5	strength			[affects weapon bonus]
+6	constitution			[affects how fast endurance points regenerate]
+7	weapon				[weapon proficiency in chosen weapon-type]
+
+---------------------------------------------------------------------------
+#	skill:			rank:	descrip:
+---------------------------------------------------------------------------
+1	double-wield		30	[wield two weapons]
+2	critical		10	[critical hits]
+3	rage			50	[increase attacks]
+4	disarm			60	[disarm]
+5	dismember		60	[reduce WC of opponent by 1]
+6	know alignment		0	[know alignment]
+7	make bag		0	[create bag from corpse]
+8	dancing weapon		50	[weapon fights by itself]
+10	enhance weapon		40	[increase WC of weapon]
+11	wizards eye		10	[view contents of surrounding rooms]
+12	sword shield		50	[block opponents attacks]
+13	bind			20	[simple heal]
+14	corpse			0	[do something w/ corpses]
+15	blade storm		30	[area attack]
+16	sneak			20	[leave room silently]
+17	mortal strike		20	[finishing move]
+18	consider		0	[stat living target]
+19	appraise		40	[stat weapon]
+20	forge			60	[create a weapon, requires # coins]
+21	mend			30	[fix a broken weapon]
+22	guild pet		40	[get a pet much like the Mage's dragon]
+
+---------------------------------------------------------------------------
+theme:
+---------------------------------------------------------------------------
+Weapon Master.  The player picks 1 weapon-type to specialize in.  The
+player can wield only that type of weapon.  At lower guild ranks the
+player will be able to wield all weapon types, but once he hits a certain
+rank he must wield only his chosen weapon-type.
+
+If the player maxes their weapon stat then they can choose to add
+another weapon.  If they do so then their prowess stat will be reduced
+by 50%.
+
+There are an infinite number of guild ranks.  The cost for each guild
+rank will be determined by a formulae not yet developed.  The player will
+recieve chances to train guild stats and skills with each advancement.
+
+The guild object is a glowing tatoo locate on the body (player chooses
+where the tatoo is located when he/she joins the guild).
+
+---------------------------------------------------------------------------
+advantages:
+---------------------------------------------------------------------------
+Get damage bonus much like the Templars do
+Can wield two weapons (no damage bonus when double wielding)
+Critical Hits (multiplies damage bonus)
+Increased Stamina (max 24)
+
+---------------------------------------------------------------------------
+disadvantages:
+---------------------------------------------------------------------------
+Can only use one type of weapon
+Only permitted armor types: armor, helmet, boot
+No automatic Wimpy
+Reduced Magic Aptitude (max 14)
+Max coins allowed to carry is 40k
+Limited spell ability (no sonic)
+Cannot cast spells (mi, fi, etc) when double wielding
+

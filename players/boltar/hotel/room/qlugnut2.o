@@ -1,0 +1,25 @@
+no_clean 0
+name "pendant"
+alias "silver pendant"
+short_desc "A silver pendant"
+long_desc "A silver pendant."
+buy_value 0
+value 3000
+weight 1
+type "amulet"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 2
+res 0
+silently 0
+worn_by 0
+next 0
+info "Pendant of protection +2"
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+params ({"physical",2,0,"do_special",})

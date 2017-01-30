@@ -1,0 +1,13 @@
+
+
+                           [help wield]
+-----------------------=========+=========-----------------------                             
+
+Usage: wield <weapon>
+
+  This command will ready a weapon in your inventory for use in
+ fighting. This command will wield the first weapon of the type
+ chosen that appears in your inventory.  You must use 'unwield'
+ if you are already wielding a weapon of the same type you wish
+ to wield.  Example: wield sword
+             

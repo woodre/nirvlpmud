@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "ckneel"
+myMsgU "You kneel down on one knee and lower your head in reverence."
+myMsgD "You kneel down in front of %TRG% and lower your head in reverence."
+roomMsgU "%SRC% kneels down on one knee and lowers %SRCPOS% head in reverence."
+roomMsgD "%SRC% kneels down in front of %TRG% and lowers %SRCPOS% head in reverence."
+tellMsg "%SRC% kneels down in front of you and lowers %SRCPOS% head in reverence."
+farMsg "%SRC% kneels before you from afar, and lowers %SRCPOS% head in reverence."
+owner "dune"

@@ -1,0 +1,34 @@
+C Y B E R N I N J A S
+
+Operation File: engineering
+Usage: cyber <topic>
+
+
+     Ninjas are knowledged in neural processors to such 
+an extent as to be able to upgrade the chips of other 
+ninjas. The services that all ninjas provide to each
+other are crucial to the guild... without learning how
+to upgrade another's chip, no ninja would be able to 
+advance in guild level.
+
+     To upgrade a ninja's processor, one needs to obtain
+a chip die set from the CyberNinja Fabrication Facility
+(see 'cyber map' to get there, and when there you can
+type 'register' to obtain a list of commands). Then, 
+the ninja must 'engineer' the die set to create the 
+actual neural processor that is to be installed. 
+Finally, the ninja will perform the actual installation, 
+which is accomplished with the following commands:
+
+___________________Engineer Abilities__________________
+upgrade <member> <processor>
+     The 'upgrade' command allows you to upgrade the
+     quality of a ninja's chip. You must be of higher
+     quality level than who you are upgrading...
+     unless you are of highest quality chip.
+
+upgrades <member>
+     Shows you a list of upgrade options that the 
+     specified member may choose from.
+_______________________________________________________
+

@@ -1,0 +1,29 @@
+no_clean 0
+name "golden crown"
+alias "crown"
+short_desc "A golden crown"
+long_desc "This is a goldne crown. It is probably very expensive,and has possibly once belonged to a great king.As a helmet, however, it would be worse than nothing."
+worn_tag_short_flag 0
+buy_value 0
+value 5000
+weight 3
+type "helmet"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac -1
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"helmet",})
+params ({"physical",-1,0,"do_special",})
+enchantments 0

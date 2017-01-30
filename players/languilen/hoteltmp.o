@@ -1,0 +1,12 @@
+no_clean 0
+short_desc "A sleek black panther"
+long_desc "An amazingly adorable stuffed toy panther that seems to emenatewarmth and makes you feel good inside.It would make a great gift or you could keep it all to yourself."
+info 0
+save_flag 0
+value 50
+local_weight 1
+name "panther"
+alias_name "toy"
+read_msg 0
+shop_dest_flag 1
+multipleIds ({})

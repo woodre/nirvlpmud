@@ -1,0 +1,48 @@
+               **Documentation for realm()**
+
+Long ago, wizards created devices that could transport players anywhere
+with move_object(). This made certain wizards sad when they wanted to make
+rooms that players could not leave or enter via "teleportation".
+
+In order to correct the problem some bright wizard decided that there
+should be a function to call in objects (e.g. rooms) that would return
+whether it was ok to telport the player to/from that object. That is
+realm(). It can be used to indicate areas where certain types of actions
+are appropriate as well, like an area where technology works by returning
+"tech", etc.
+
+If you want to prevent players from teleporting in or out of a room,
+simply add the following line to the object file (i.e. your room, etc.):
+
+     realm() { return "NT"; }
+
+(If other wizards have been nice, their objects will check that function
+before moving players anywhere.)
+
+If you wish to make something that will transport players, you MUST
+add a call to the environment-object of the player AND the destination-
+object. This call is to realm() of course, and should be included in
+the function that does the moving (In your object). For example:
+
+     move_me(who) {
+          object dest, here;
+          string here_realm, dest_realm;
+          dest=environment(find_player(who));
+          here=environment(this_player());
+
+          here_realm=here->realm();  /* Neither of these should return "NT" */
+          dest_realm=dest->realm();  /* Otherwise notify the player he fails */
+
+     /* Now use an if to compare the values returned from both rooms... */
+
+          if(here_realm==dest_realm && here_realm!="NT") {
+               write("You fail.\n");
+               return 1;
+          }
+          move_object(this_player(), dest);
+          write("Ok.\n");
+          return 1;
+}
+
+This simple function will move this_player() to the player "who", only
+if niether the destination-object nor environment-object is "NT".

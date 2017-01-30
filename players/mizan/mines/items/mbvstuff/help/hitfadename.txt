@@ -1,0 +1,16 @@
+>> ORDER: HITFADE ATTACK OBJECT BY NAME
+
+Usage:
+order <indexnum> hitfadename <creature> <duration>
+
+Example:
+'order 3 hitfadename mizan 10'
+
+Description:
+Similar to the 'hitfade' order, this operates on a more aggravating
+level in that the player name is tracked, not the player object.
+
+When a player quits out, and re-logs in they will still be subject 
+to the attack of the monster. Truly evil stuff, and the preferred 
+form of attack for the more cruel of the monsters.
+

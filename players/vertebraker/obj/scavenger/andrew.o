@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/weapon","/players/mythos/aarmor/sune-ate","/players/pain/NEW/arm/tunic","/players/hippo/weapons/glue","/players/wren/Area/starbug/items/gauntlet","/players/wren/Area/starbug/items/hair","/players/snow/WEAPONS/glowknife","/players/saber/armor/lpants","/players/saber/stuff/trink","/players/wren/Area/starbug/items/sparehead","/players/puppy/s/eq/brush","/obj/armor","/players/hippo/heals/nucleus","/players/ultramagnus/darkweapon","/players/pain/NEW/weap/sword","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/mythos/awep/zantetsuken","/players/saber/stuff/brief","/players/pain/closed/wands/orb","/players/hippo/weapons/molar_sharf","/players/scathe/armor/mgarb","/players/arrina/heals/ale","/players/puppy/s/eq/apron","/players/wren/Area/starbug/items/veil","/players/sado/shop/chocolate",})
+shorts ({"A glowing lightsabre","Sune-ate","A handsome blue tunic","a strong, 1 second glue","Time gauntlet","Perfect Hair","A glowing knife","Black leather pants","A strange metal trinket","Kryten's sparehead 3.","A paint brush","Boots","[35mnucleus of a cell[0m","Dark Rider Longsword","Sword","Peasant Rags","[34mZantetsuken[0m","A black briefcase","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","A molar sharf","Black Monk Robes","[1mbottle of dark ale[0m","An apron","a big wedding veil","A box of delicious Belgian chocolates",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

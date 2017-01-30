@@ -1,0 +1,17 @@
+         "I <name>                    inventory of name\n"+
+         "IR <name>                   inv of room that name is in\n"+
+         "hand <name> <path>          hands name object of path\n"+
+         "place <name> <path>         moves name to path\n"+
+         "church <name>               moves name to church\n"+
+         "                            note:no name meansyourself\n"+
+         "trans <name>                moves name to you\n"+
+         "peace                       forces all combat to stop\n"+
+         "money                       gives you 80k coins\n"+
+         "heal <name>                 heal someone in the room\n"+
+         "                            note: no name is yourself\n"+
+         "set_level <name> <#>        sets the level of name\n"+
+         "set_extra_level <name> <#>  sets the extra level of name\n"+
+         "set_home <name> <path>      sets the home of name to path\n"+
+         "add_xp <name> <#>           adds # xp to name\n"+
+         "set_stat <name> <what> <#>  sets the stat what of name to #\n"+
+         "idest <name> <object>       dests object from name's inv\n");

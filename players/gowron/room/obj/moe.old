@@ -1,0 +1,127 @@
+inherit "obj/monster";
+
+int b,p6,p12,fm;
+
+void reset(int arg) {
+	::reset(arg);
+	if (arg) {
+	  b += 5;
+	 p6 += 5;
+	p12 += 5;
+	 fm += 5;
+	  return;
+        }
+	b = 30;
+	p6 = 20;
+	p12 = 15;
+	fm = 10;
+	set_name("Moe");
+	set_alias("moe");
+	set_short("Moe, the Bartender");
+	set_long(format("This is Moe, the Bartender.  "+
+		        "Barney drank all the beverages, "+
+		        "and it will take a few days for the "+
+		        "tavern to restock, sorry.\n", 75));
+	set_level(50);
+	set_wc(30);
+	set_ac(15);
+	set_hp(10000);
+	set_al(1000);
+	set_chat_chance(10);
+	load_chat("Moe says: I have good heals!\n");
+}
+
+list_items() {
+	write("Moe says: Here's what I got...\n");
+	write(pad("   Can of Duff", 20)+pad("600 coins",15));
+		write(b+" are left in stock.\n");
+	write(pad("   6 Pack of Duff", 20)+pad("3200 coins",15));
+		write(p6+" are left in stock.\n");
+	write(pad("   12 Pack of Duff",20)+pad("6000 coins",15));
+	        write(p12+" are left in stock.\n");
+	write(pad("   Flaming Moe", 20)+pad("10000 coins", 15));
+		write(fm+" are left in stock.\n");
+	return 1;
+}
+
+purchase(str) {
+	object ob;
+	int i;
+	if (!str) 
+	   return 0;
+	i = this_player()->query_money();
+	if (str == "duff") {
+	   if (i<600) {
+	      say("You don't have enough money!\n");
+	      return 1;
+	   }
+           if (b == 0) {
+              say("Moe says: Sorry, I don't have any beer left.\n");
+              return 1;
+	   }
+	   ob = clone_object("players/gowron/room/heal/duff.c");
+	   move_object(ob, this_player());
+	   this_player()->add_money(-600);
+	   write("You buy a can of duff.\n");
+	   say(this_player()->query_name()+" buys a can of duff.\n");
+	   b--;
+	}
+	else if (str == "6 pack") {
+	   if (i<3200) {
+	      say("You don't have enough money!\n");
+	      return 0;
+	   }
+	   if (p6 == 0) {
+	      say("Moe says: Sorry, I don't have any 6 packs left.\n");
+	      return 1;
+           }
+	   ob = clone_object("players/gowron/room/heal/6pack.c");
+	   move_object(ob, this_player());
+	   this_player()->add_money(-3200);
+	   write("You buy a 6 pack.\n");
+	   say(this_player()->query_name()+" buys a 6 pack.\n");
+	   p6--;
+	}
+	else if (str == "12 pack") {
+	   if (i<6000) {
+	      say("You don't have enough money!\n");
+	      return 0;
+	   }
+           if (p12 == 0) {
+	      say("Moe says: Sorry, I don't have any 12 packs left.\n");
+	      return 1;
+	   }
+	   ob = clone_object("players/gowron/room/heal/12pack.c");
+	   move_object(ob, this_player());
+	   say(this_player()->query_name()+" buys a 12 pack.\n");
+	   write("You buy a 12 pack.\n");
+	   this_player()->add_money(-6000);
+	   p12--;
+	}
+	else if (str == "flaming moe") {
+	   if (i<10000) {
+	      say("You don't have enough money!\n");
+	      return 0;
+	   }
+           if (fm == 0) {
+	      say("Moe says: Sorry, I don't have any flaming moes left.\n");
+	      return 1;
+	   }
+	   ob = clone_object("players/gowron/room/heal/flaming_moe.c");
+	   move_object(ob, this_player());
+	   write("You buy a flaming Moe.\n");
+	   say(this_player()->query_name()+" buys a flaming moe.\n");	   
+	   this_player()->add_money(-10000);
+	   fm--;
+	}
+	else write(str+" is not on the menu.\n");
+	return 1;
+}
+
+init() {
+	/* temporarily pulled */
+	/*
+	add_action("purchase", "buy");
+	add_action("list_items", "list");
+	*/
+}

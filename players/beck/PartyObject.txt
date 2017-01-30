@@ -1,0 +1,40 @@
+The Party Object---created by Beck  (Russ Warren)  June 1998
+
+I have recoded a party object which has several improvements and other changes over the origional.
+
+The object is "/players/beck/PartyObject.c"
+The master is "/players/beck/PartyMaster.c"
+
+New or changed features:
+	The part object now works with a daemon (PartyMaster).
+    	All members of every party are loaded into a mapping called Parties within the Master.
+	The mapping is keyed by the Party leaders name and has an array of all members.
+
+	the talk channel uses this daemon, to avoid going through users()
+
+	minimum amount of shares for each member is now [ player level - 4 ]
+ 	maximum amount of shares is still [ player level ]
+		what  this does is  make the exp distribution related to who is doing the work.
+		no longer will a level 19 be able to have the same shares as a level 4
+		this promotes partying of players of similar levels and slows down newbie progression
+
+	Kids can be added to a party
+	Kids cannot pick up the party  object or become party  leaders.
+
+	A  player sees how many exp the party gets and how  many they get individually after  each kill
+
+	A  party member no longer needs to  be in the same room as the leader to get experience.
+                   	They do however need to be in the room with the monster at the time it dies.  
+		There is no remote exp gained.
+	A member does need to be in the same room as another party member to get a share of their  exp.
+
+	There is now a mud wide party who list.
+	Any player in a party can see all parties and members on nirvana by typing 'party who'
+	Any wizard who want access, can add this line in a function 
+		   "/players/beck/PartyMaster.c"->PartyWho();
+
+		This list only shows each party and its members...no additional stats are given.
+
+	Maximum number of members in a party is 6 including, kids  (same as before)
+
+	All other features and commands are the same.  except  'party status'  is now just 'party'.

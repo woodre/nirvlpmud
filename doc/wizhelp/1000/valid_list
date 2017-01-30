@@ -1,0 +1,23 @@
+**************
+
+
+                     Valid_List
+
+Syntax:    valid_list [add/remove] [path]
+
+Desc:
+           With no argument, gives a list of entries in the 'valid_list' table.
+           Files listed are able to access mysql.
+           
+           With argument of 'add' or 'remove' and 'path', adds or removes an entry
+           'path' to/from the valid_list table.
+           
+Example:   valid_list add bin/wiz/_blah
+                  results
+           Adds file 'bin/wiz/_blah' to the 'valid_list' table. This file
+           is now able to access mysql.
+
+Related:   
+
+
+**************

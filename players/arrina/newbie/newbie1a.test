@@ -1,0 +1,31 @@
+ inherit "room/room";
+  reset(arg){
+  if(!present("notice")) {
+ move_object(clone_object("/players/arrina/treas/notice.c"),this_object());
+if(!present("well")) {
+ move_object(clone_object("/players/arrina/treas/well.c"),this_object());
+                 }
+    if(!arg){
+  set_light(1);
+   short_desc="Rundown Courtyard";
+   long_desc=
+  "You find yourself in a courtyard.  It is rundown and gloomy, \n"+
+  "and gives you great feelings of unease.  Destruction abounds\n"+
+  "here, and the smell of death is in the air.  The one thing here\n"+
+  "which still looks interesting is the wishing well.  If you are\n"+
+  "not really strong, it would be good to stay inside once you go\n"+
+  "north into the castle, but if you are brave and strong, find\n"+
+  "the stable area from there. To leave the Crystal, go south.\n";
+      dest_dir=({
+    "/players/arrina/newbie/newbie1.c","north",
+    "/room/plane3","south",
+ });
+   }   }
+  init()  {
+  ::init();
+   add_action("search_room","search");
+         }
+  search_room() {
+   write("You search through the room but find nothing of value.\n");
+ say (this_player()->query_name() +" searches the room but finds nothing.\n");
+   return 1;         }

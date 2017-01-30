@@ -1,0 +1,42 @@
+SPARROW
+Modified _exhibition to take into account charisma and luck
+
+modified _convert to take into account charisma, piety
+and luck. weighted each one accordingly
+
+Created _darkness cmd that clones darkness object to
+player with light level equal to rank*-1 darkness object
+costs 2sp per round. If this causes light level of the
+room to dip below 1 then the cost is 1sp. See below
+Oh, _darkness is a toggle so if there is already darkness
+on the player it is removed.
+
+Added check in BWO.c heart_beat to check light level
+of room. Light level less than 1 heals 1 sp per hb.
+Heals more hps based on the light level of the room.
+
+created channel (bt / be)
+modified extra_look to use write() rather than return
+ - this was because return adds a period
+basic "assert" command
+mock "btitle" command
+put back in wield changes to ritualized weapon special
+added it so players can't wield weapons with a specialized msg.
+added in ac cap of 10
+
+
+added alignment-based wc mod
+added light-based wc mod
+added "bsave" - this points to the std guild object i created's
+ save functionality, which also fires when quit or save is done.
+added "bupdate", a guild object updating cmd
+
+added dodge ability to guild object armor special. this will need
+  tweaking. the numbers are horribly off.
+  at max attribs, and 0 weight, it gives a 100% chance of 90%
+  blocking damage. heh. obviously not what we are intending.
+
+added rank-based wc mod
+started writing multiple attacks... what are chances based on ?
+
+where are you ?

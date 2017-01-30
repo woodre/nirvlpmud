@@ -1,0 +1,150 @@
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m edited workroom.c to my liking
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m helped by Verte with 'farcast' function 
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created test char = fortestbin
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m for testing purposed (and just because i can)
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created Kratauc [/players/forbin/wep/kratauc.c]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m weapon for Black Lands area
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created Spine Armor [/players/forbin/arm/spinearmor.c]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m armor for Black Lands area
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created second test char = fortest
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m realized what a bitch it is to type fortestbin
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created Spine Weapon [/players/forbin/wep/spinearmor.c]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m weapon for Black Lands area
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created skeleton for first area: Black Lands [/players/forbin/areas/1black_lands/rooms/*]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m see black_land.info in /players/forbin/areas for more information
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created Yellow Spine [/players/forbin/areas/1black_lands/mobs/yspine.c]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m mob for Black Lands area
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created Green Spine [/players/forbin/areas/1black_lands/mobs/gspine.c]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m mob for Black Lands area
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created Juvenile Spine [/players/forbin/areas/1black_lands/mobs/jspine.c]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m mob for Black Lands area
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created Juvenile Spine Barb [/players/forbin/items/jspine_heal.c]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m special heal that falls off of mob when killed
+unknown      2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created Green Spine Barb [/players/forbin/items/gspine_heal.c]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m special heal that falls off of mob when killed
+Dec  8 21:27 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m reorganized file structure
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m to make /players/forbin more effecient (and so it MAKES SENSE!)
+Dec  9 14:33 2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m logged in one of my chars (preston), gave him 5000 coins, joined a mini guild to test "no portal" in area.
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m left mini guild after test was complete - my test char was not old enough to do this with.
+Dec 27 19:35 2001 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m scrapped ideas in favor of a comic based area,thought it would work better and give more creative freedom
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m None
+Jan  2 17:59 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m clone /players/wocket/junk/quill (Poet's feather) to Bishop
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Fakir ok'ed it
+Jan  4 18:03 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m completed /players/forbin/stargate/MOB/soldier.c as a variable mob for my stargate area
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m self explainatory
+Jan  7 22:59 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m Modified and completed a customized wiztell and fortell (for players) from Jaraxle's wiztell (with his gracious permission)
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Got tired of the other teller and wanted players to be able to communicate with me while I am invisible
+Jan  7 23:01 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m created and guilded a new test character Fortest2
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m needed a guilded character to test my area(s)
+Jan  7 23:04 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m make that ftest
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m cause fortest2 has an invalid char - duh!
+Jan 15 17:18 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m cloned /players/maledicta/venom2/neo_venom to luckycurse
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m lost gobj
+Jan 16 22:33 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m updated headers in most of my files so that they are all now uniform, did some work on mobs, and got all rooms (not yet fully described - but a start)
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m so i can get an area in game :)
+Feb 21 21:51 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m Submitted my area for consideration and approval to Fakir (cc: Vertebraker)
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m It was finished *crossed fingers*
+Mar 21 22:34 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m Got Level 30
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Finished my first area.
+Mar 25 20:44 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m changed alignment to 0 (neutral) of /gov_complex/NPC/marine_enlisted, marine_officer, airman_enlisted, airman_officer, gateguard, jailguard1, and jailguard2
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m they need to be neutral
+Mar 30 12:57 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m repaired gc_1d03.c
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m fixed an incorrect sign, and added ability to enter door as well and just go east
+Apr 10 20:51 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m oh - handed Evolution cyber implants [players/dune/closed/guild/implants]
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m his did not autoload
+Apr 21 08:06 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m WOOT! 2nd area open!!!!!
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m forgot to log this Friday - Thanks V!
+Apr 21 19:47 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m V added the complex to the Chamber of Realms
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m hoping to make it more accessible
+Apr 21 19:53 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m added 1 /players/forbin/hyperion/flame_forest/NPC/creep.c to /players/forbin/gov_complex/RMS/gc_2d06.c
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m approved by Vertebraker - to add another mob in the empty cells.
+May 15 22:56 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m crashed the mud this afternoon :)
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m bigbuard.c went all screwy
+May 18 00:11 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m added Daranath (/p/d/qualtor/newstuff/mon/golem_ash.c) & Jaraxle (/p/j/closed/forbin/mon.c) to my jail cells.
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m the V approved 'em.
+
+May 23 17:03 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m updated my /closed/std/verte_room.c inherit to auto clone my /closed/fLink.c bug submitter in all my rooms if a player doesn't already have one in inventory
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Mal approved it this morning - working fine :)
+May 24 23:58 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m submitted 3rd area (flame forest) to be approved
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Mal arranged for Daranath to handle the approval
+May 27 20:08 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m set Catalina's title to "the Sizard"
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m she requested that I "cristen her the Siznard"...little joke on star
+May 27 22:52 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m opened Flame Forest area (p/f/hyperion/flame_forest/*.*)
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Maledicta ok'd it may2002.27  WOOT!
+May 28 06:35 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m changed MOCO(ROOT+"OBJ/wraith_pet.c")); [it was MOCO(ROOT+"OBJ/wraith_fur.c")):] to MOCO(ROOT+"ARM/wraith_fur.c")) in thermal_wraithA.c
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m was trying to clone an object that wasn't there...wrong path
+May 30 21:34 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m submitted /players/forbin/closed/ARM/shardak_shield.c to V for shardak guild
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m None
+Jun  4 23:10 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m dropped octo.c at the green and cloned a few to players...not worth anything...just a trinket
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m None
+Jun 13 17:17 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m changed weight of fur from 3 to 1 on p/f/hyperion/flame_forest/ARM/wraith_fur.c
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m it's fur...shouldn't weight the same as chainmail or plate armor
+Jun 13 18:03 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m dested and cloned a new splooge for smack - he had a splooge at *-15* charges
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m some errors in debug.log - i copied so Mal could take a look at it
+Jun 13 21:52 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m offered a special prize to the first person to bring me a wraith fur and large shriek oval before 11PM
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Don't think it will happen.
+Jun 13 22:18 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m gave Smack /p/f/hyperion/pool/ARM/bonemail.c
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Prize for game tonight
+Jun 22 16:04 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m added a say after each write in my barterable items
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m so that the room shows you bartering items.  Oversight on my part
+Jun 22 16:08 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m taped recon's mouth shut - requested by Flex
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m recon was being rude after flex asked him to be respectful on gossip
+Jun 26 19:37 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m added hyperion/flame_forest/NPC/aurtos.c to flame forest area (ffinout_keats.c)
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m Mal approved weapon, Zeus approved Mob
+Jun 28 18:44 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m logged on forbin while roubaix was on
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m correct a problem with neruumsh.c - was loading wrong copy
+Jun 28 19:31 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m took out aurtos.c from ffinout_keats.c
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m until i can get neruumsh.c working correctly :(
+Jun 30 06:34 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m changed o_mask.c from -2 AC to 0AC
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m it should be a detriment - that was stupid on my part originally
+Jul  5 22:46 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m added /hyperion/keats/RMS/store1.c, /hyperion/keats/NPC/rouen.c, and hyperion/keats/HEALS/*.* to game
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m approved by Maledicta/Darnath - ready for play
+Jul  6 07:00 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m logged Forbin on with Ribbit - Francesco and Cobain were on
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m to repair a room with faulty exits.
+Jul 10 20:07 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m scratched my head a lot
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m have you actually SEEN V's Jedi Code
+Jul 14 17:00 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m gave spawn shardak mark.c
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m his gob didn't load
+Jul 14 17:01 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m trans'd gunn from location unknown?? to church
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m was stuck somewhere
+Aug 26 16:38 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m gave Ravennight a temp heal that healed 360000 sps
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m he died in cyber guild hall, raised with sps at -360000+, only way to fix - just helping Dar
+Aug 26 21:09 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m set guests sps to - 400 million
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m he was using gossip this evening
+Aug 28 18:06 2002 [1;34m:::[2;37;0m [1;37maction[2;37;0m [1;34m:::[[2;37;0m set Sirabi's guild name to none
+                      [1;37mcomment[2;37;0m [1;31m::[[2;37;0m it was Mage...and they've been closed quite a while
+>Sep  5 17:02 2002<  -allowed Beck to add some ranger code onto /hyperion/flame_forest/NPC/aurtos
+                     -no comment
+>Sep  5 17:03 2002<  -allowed Beck to add some ranger code onto /hyperion/flame_forest/NPC/aurtos
+                     -so rangers can learn a skill to go into my forest
+>Sep  6 16:37 2002<  -patched Berlinetta up (set xlvl back to 14, gave correct exp from death log, and reset blood)
+                     -cloned a mob, shields were on and it went to green - killed Berl instantly
+>Sep  6 23:07 2002<  -added a slightly tweaked version of Maledicta's Ruins area to hyperion (players/forbin/hyperion/ruins)
+                     -Mal gave his blessing and Daranath approved the changes based in changes-sep2002.06 file in ruins dir
+>Sep  8 08:43 2002<  -added an add_action of bi_on to Mythos /mmsic/biometer.c
+                     -so that cyberninjas may also use the biometer
+>Sep  8 08:57 2002<  -umm...removed what i just put into /mythos/mmisc/biometer.c
+                     -no comment
+>Sep 11 16:39 2002<  -changed some rooms to set_light(-1) in ~/hyperion/ruins/RMS
+                     -your inside some ruins...shouldn't it be dark
+>Sep 11 16:39 2002<  -the above change
+                     -approved by Daranath 9.11.2002
+>Sep 28 22:09 2002<  -added a !present("a_orb", ob) higher in my storm object
+                     -/hyperion/flame_forest/STORMDAEMON/stormob.c - cause it got me killed :(
+>Oct  2 19:50 2002<  -promo'd Laera to 60 - she's gonna help Dune and myself with approvals
+                     -V made me do it!
+>Oct  4 16:48 2002<  -added an id of guard to /players/saber/monsters/banditguard.c
+                     -was stupid not to have one ;)
+Sun Jul 13 22:48:43 2003 ::: action ::[ test
+                             comment :[ None
+Sun Jul 13 22:49:03 2003 ::: action ::[ test
+                             comment :[ one two three
+Sun Jul 13 22:49:19 2003 ::: action ::[ testtwo
+                             comment :[ testtwo comment
+                                        just another test
+Thu Jul 31 20:12:01 2003 ::: action ::[ restored Misty Cloak, Conflag Amulet, Knuckle Blades, Bracers of Speed, Elven Rapier, 2 Nodachi, Work Boots, Patchwork Cloak, and Crown of Laurels to Preston
+                             comment :[ Casa de Nirvana bugged out and he lost all of that and his room
+Mon Aug  4 19:33:44 2003 ::: action ::[ handed Orb /players/beck/MortalKombat/QuestKey
+                             comment :[ his stopped loading
+Sun Aug 10 07:08:26 2003 ::: action ::[ FUCK FUCK FUCK FUCK...i crashed the mud
+                             comment :[ need to get preston (L) and humble (XL) teddies

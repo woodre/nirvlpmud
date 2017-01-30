@@ -1,0 +1,29 @@
+/* R.I.P. ME! */
+
+init_arg()
+{
+ object x;
+ int    comp;
+ if((x = this_player()))
+ {
+  tell_object(x, "\n\
+The Shardak guild has been once again indefinitely\n\
+closed due to the retirement of Vertebraker.\n\n\
+Sorry for the inconvenience.\n\n");
+  x->set_guild_name(0);
+  x->set_home("/room/church.c");
+  x->add_exp((int)(comp=(int)this_player()->query_guild_exp()));
+  x->set_guild_exp(0);
+  x->set_guild_rank(0);
+  log_file("SHARDAK_COMPENSATION",
+   (string)x->query_real_name()+" comp'd: "+comp+"\n");
+  command("save", x);
+  destruct(this_object());
+ }
+}
+
+drop()
+{
+ return 1;
+}
+

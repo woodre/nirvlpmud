@@ -1,0 +1,22 @@
+**************
+
+                     Hands
+
+Syntax:    hands <#>
+
+Desc:
+           This gives you a weapon class on bare hands for testing 
+           monsters. It is limited by your level and improves as your
+           level does. Typing a number over your limit will set it at
+           the limit.
+
+Warning:   Only for hitting monsters
+
+Example:   hands 20
+                  results 
+           Bobs hands now have a WC of 20
+
+Related:   
+
+
+**************

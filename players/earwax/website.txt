@@ -1,0 +1,88 @@
+Website features:
+
+General/no login:
+  login
+  who / devs list
+  finger
+  help
+  channel history? 
+
+Logged in - Player additional options
+  Check mail
+  score
+  Play via web client (the existing javascript one, or a custom one?)
+
+Logged in - Wizard additional options
+  read logs (/ldmud.log, /ldmud.log.old, /chunk.debug.log, 
+    /chunk.debug.log.older, /updown.log, a   browser for everything 
+    in /log)
+  wizhelp
+  explore/browse files 
+  edit (and update, autoupdate, etc)
+  ip, statall commands?
+  wiz history?
+
+Browser:
+  display pwd
+  show files in pwd
+  ls options?
+  click to change dirs 
+  click to edit a file (or double-click?)
+  edit file
+    save to game
+    exit file editor without saving
+    update, show error logs if necessary
+    perhaps a checkbox for autoupdate on saving
+  need a means of cp, rm, mv
+  need a means of creating new file
+  multiple selection means
+
+Database Stuffs
+
+Help System
+  subject
+  full filename? probably not necessary if using mysql
+  type (combat, environmental, command, information, personal, etc)
+  description
+  syntax
+  arguments
+  examples
+  see also
+  level required
+  writer of the help file
+  date help file written
+  *modification date of help file
+  *modifier's name
+  *description of modification? prolly not necessary, just an 'updated' remark
+  coder's name (unknown or nirvana if unknown)
+  date coded
+  *code modified date
+  *code modified by
+  *code modification remarks
+  History 
+
+Bug/Typo/Idea reports
+  which one (bug, typo, idea)
+  type (misc, equipment, combat, etc)
+  filename of item or room
+  reporter's name
+  abusability points (rating of how abusable it is, vs how how easy to use, etc)
+    (for awarding 'bug' type points, for future nirvy points)
+  code points (for whichever wiz 'fixes' it, base also on time it's in the system
+  text - description of the issue
+  wizard who fixes it
+  date submitted
+  date fixed
+  date checked
+  checker's name
+  fixer's notes
+  checker's notes
+
+Help system
+  Browsable help system on the website
+  on both, can search categories, coder names, yadda yadda
+  have some means of having it displayed in a nice way, so they can click on categories, 
+  click to display an individual file, etc
+
+
+**

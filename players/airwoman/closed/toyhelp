@@ -1,0 +1,29 @@
+I                        Inventory of anyone
+trace [obj]              Find all location of an object
+show [obj] [arg]         Write out the function 'command (ob, arg)'
+patch [obj] [func] [arg] Fix a value in an object
+Get [ob1] from [ob2]     Get an object from another (silently)
+Give [ob1] to [ob2]      Give (silent)
+take                     Pick up any object
+goin                     Enter an object
+Goto                     Goto room/object silently
+Home                     Go home silently
+Trans                    Transport any player/monster to you silently
+sendpl [who] [where]     Move an object somewhere
+force [who] [cmd]        Force someone to exexute a command
+fcs   [who] [cmd]        Force someone to execute a command silently
+fq    [who]              Force someone to quit
+echo                     Echo a string without your name
+echopl [who] [str]       Echo a string to a player
+echoall                  Echo to all players
+Heal                     Heal a target silently
+Zap                      Kill a target instantly
+harm [target] [int]      Harm a target a certain value of points
+peek                     Show the hp and sp of a monster/player
+Clone                    Clone from ANY directory
+clean [obj]              Destruct all objects without a soul
+tell                     Tell a player something no matter what conditions
+Un/Snoop                 Listen to what a player is doin/saying
+users                    List ALL users
+wizards                  List ALL wizards currently logged on
+un/stupid [plyr]         Paralyze a player

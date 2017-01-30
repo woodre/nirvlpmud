@@ -1,0 +1,16 @@
+no_clean 0
+name_of_weapon "longbow of might"
+broke 0
+misses 0
+hits 0
+alt_name "bow"
+alias_name "bow"
+short_desc "Longbow of Force"
+long_desc "A mighty bow that summons energy to fire force bolts.You might get winded by using this powerful weapon"
+read_msg 0
+class_of_weapon 18
+value 5000
+local_weight 2
+info 0
+deny_save 0
+weapon_type "sword"

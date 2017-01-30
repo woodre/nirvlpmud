@@ -1,0 +1,22 @@
+
+==============================================================================
+---- Rank 3 Spells -----------------------------------------------------------
+ Send <plyr> <obj> -- Send an Object to another Player                   20
+ Magbag          -- Create a Bag to keep stuff in                        20
+ Escape          -- Escape to the Guild Room                             40
+ Cl              -- (Chain Lightning) Strike all Monsters in room        35
+ Trip <target>   -- Two Player spell to Trip a Monster                   50ea.
+ Mheal <plyr> <amt> -- Heal a Player                                     amt
+ Locker Commands -- Use the Guild Locker [see mhelp locker]               --
+ Speed           -- Get a Monk Speedster (if you dont already have one)  0
+ Status <target> -- View the status of a Monster                        20
+---- Rank 4 Spells -----------------------------------------------------------
+ Balance         -- Balance your Hit Points and Spell Points
+ Tithe <object>  -- Sell an object to the Guild Store                    15
+ Peace           -- Stop all fighting in the Room                        30
+ Transfer <plyr> <sp> -- Give Spell Points to another Player             amt
+ Call Pet        -- Summon a Pet [see mhelp pet for more commands]        45
+ Gold Corpse     -- Turn a Corpse into Gold Coins                        10
+ New_Title <string> -- Change your title to <string>                     10
+  Free speech    -- at rank 4, all tells are free                       
+==============================================================================

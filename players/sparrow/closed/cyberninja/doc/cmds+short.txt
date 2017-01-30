@@ -1,0 +1,25 @@
+ Ability            Energy     Description
+
+p1.................... 15 ...combat spell
+pscan........................evaluates opponent strength
+lead.........................take lead in a fight
+retreat......................take self out of a fight
+battlewho....................show who is fighting what
+iscan........................gives info on items
+xfer.........................matter transfer to Netropolis
+upwho........................higher-lev who. Red means killable
+p2.................... 20 ...better combat spell
+mask <alignment>.............changes alignment description
+ncon.........................shows the condition of other ninjas
+plant_mine........... 150 ...plant landmine in room
+heat_wep.............. 25 ...forces opponent to unwield weapon
+p3.................... 25 ...best combat spell
+shadows............... 40 ...hide in shadows and move silently.
+                             Does not work in combat.
+transto <ninja>...... 200 ...trans to <ninja>
+members......................view guild membership statistics
+oscan <ninja>................view the guild info of another ninja
+                             The ninja does not need to be logged on!
+stun.................. 60 ...stops most monsters from moving
+
+*abilities become available in general order they appear

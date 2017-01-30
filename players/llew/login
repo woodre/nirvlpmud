@@ -1,0 +1,8 @@
+cd /players/llew
+clone /obj/wiz_tool
+hand llew /players/mythos/closed/play/finger
+clone /players/llew/closed/oak_staff
+exe move_object("/players/llew/closed/oak_staff",find_player("llew"));
+dest staff 2
+wield staff
+lswho

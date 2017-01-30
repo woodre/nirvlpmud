@@ -1,0 +1,27 @@
+**************
+
+                     Force
+
+Syntax:    force <player> <action>
+
+Desc:
+           This command is useful for quickly getting a player to do
+           what you need them to do. Be it save or register or drop 
+           something you told them they weren't supposed to have. 
+           Force allows you to use any command that the player can 
+           use as though you were that player.
+
+Warning:   Players don't take kinda to you taking away their illusion
+           of control so running too many commands for them will draw
+           complaints.
+
+Example:   force mike sc
+                  results 
+           Mike is told he is forced to 'sc' and then sees his score
+
+
+Related:   snoop
+
+
+**************
+

@@ -1,0 +1,6 @@
+07/04/06 Earwax: knocked out the multiple-spawning of callouts in 
+the noise fun in these files, added a def to ~pain/color.h to help
+facilitate this, made these stop recursing if there is no player in
+room, this shit is ridiculous.  Someone (prolly me) can eventually
+go back through this shit and add code to init() to call the messages
+but until that happens we can do without the resource use.

@@ -1,0 +1,17 @@
+
+Bloodfist Help:  Retrieve a thrown weapon
+
+Guild level:  3
+Honor Req:    0
+Base Cost:    0
+
+  After a weapon is thrown, the only way to get it back is to retrieve it.
+This prevents other players from being able to take the weapon while it
+is on the ground.  When a weapon is thrown in combat there is a delay on
+the amount of time it takes to be able to retrieve the weapon.  Retrieved
+weapons can either be moved into your inventory or automatically sheathed
+on your back (bfhelp toggle).
+
+Usage:  bfretrieve <what|all>
+        rall
+

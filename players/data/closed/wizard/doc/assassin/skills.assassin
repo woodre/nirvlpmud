@@ -1,0 +1,27 @@
+The Assassin has available the following skills
+for combat and assistance:
+
+[Skill Name/  
+ Max level ]  [Description]
+xstrike [5]     The advanced version of strike. To use type: xstrike
+xthrow  [5]     The advanced version of throw.  To use type: xthrow
+                Requires Ammunition.
+study   [5]     Allows you to study an opponent and find their
+                weakness, thereby allowing you to harm them more
+                effectively. Usage: study <opponent>
+offhand [5]     The advanced version of offhand parry. Automatic.
+hide    [3]     Hide is the assassins invisibility. You cannot hide
+                while fighting.  The cost changes as you raise this
+                ability.  1st rank: Runs out quickly while moving.
+                2nd rank: Won't run out, but uses up X Power. 3rd 
+                rank:  No cost, lasts until you attack.
+move silent [1] Move without being seen. Works automatically when 
+                hidden.
+backstab [5]    A powerful first strike versus opponents. You must
+                be hidden and wielding a small type wep.
+riposte [5]     Allows you to return some of the damage that is dealt
+                to you with your offhand weapon.
+stealth [5]     Allows you to raise your stealth by 2 pts per skill
+                point spent.
+blindfight [3]  By raising this skill to 3, you develop the ability
+                to see in the dark.

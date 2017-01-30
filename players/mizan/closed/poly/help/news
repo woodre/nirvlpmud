@@ -1,0 +1,17 @@
+[NEWS]
+
+  Instead of a stationary bulletin board, the guild uses a very simple,
+  mobile, and passive news system. You can use the news functions
+  anywhere on the mud, anytime. The commands are listed as such:
+
+
+Nh             See headers/topics in current newsgroup.
+Np <topic>     Post a message in the current newsgroup.
+Nr <x>         Read message number <x> in current newsgroup.
+Nd <x>         Delete message number <x> in current newsgroup.
+Ng <x>         Goto news group number <x> (Nh for numbers of groups).
+Nl             List all available newsgroups.
+Nn             Go to next newsgroup.
+
+  You can also use 'toggle news' to toggle a posting completion message.
+

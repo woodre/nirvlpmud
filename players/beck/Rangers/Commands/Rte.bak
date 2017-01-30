@@ -1,0 +1,54 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+
+
+/*  The Power Ranger Talk Channel   */
+
+
+RangerTalk(string verb, string channel, string msg){
+   object *rangers;
+   int i;
+   string format;
+   if(!msg){ 
+      write("It is better to say something.\n");
+      return 1;
+   }
+   format = BOLD+WHITE+"["+OFF+GREEN+channel+OFF+BOLD+WHITE+"] "+
+   OFF+TPNAME;
+   if(verb == "rt"){ format += " says:"; }
+   format += " "+msg+"\n";
+   for(i=0; i<sizeof(rangers); i++){
+      if(rangers[i]){
+         if(COMMR){
+            if(!present("ranger_object",rangers[i])->QMuffles()){
+               tell_object(rangers[i],format);
+            }
+         }
+       }
+   }
+   return 1;
+}
+
+RangerPower(string msg, string channel){
+   object *rangers;
+   int i;
+   string format, em, arg, file;
+   if(!msg){ 
+      write("It is better to say something.\n");
+      return 1;
+   }
+   format = BOLD+BLUE+"["+OFF+GREEN+channel+OFF+BOLD+BLUE+"] "+
+OFF+"";
+    if(sscanf(msg, "%s %s", em, arg) != 2) {
+      em = msg;
+    }
+    em = implode(explode(em, "."), "");
+    if(file_size(file="/bin/soul/_"+em+".c") > 0) {
+      return (int)file->guildcast("rangers", arg);
+    }
+   format += TP->query_name();
+   format += " "+msg+"\n";
+   CHANNEL->ChannelMessage(channel, format);
+   return 1;
+}

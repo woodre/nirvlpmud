@@ -1,0 +1,35 @@
+2016.08.29 14:27:57 [erq] Amylaar ERQ Apr  7 2011: Path 'erq', debuglevel 0
+2016.08.29 14:27:57 obj/player.c line 4818: Warning: Missing 'return <value>' statement before end of line.
+2016.08.29 14:27:58 inherit/container.c line 403: Warning: Missing 'return <value>' statement.
+2016.08.29 14:30:04 Failed to load file: 'players/darkfire/castle/shattered/market/~/castle/shattered/market/market_base'.
+2016.08.29 14:30:17 Failed to load file: 'players/darkfire/castle/shattered/market/~/castle/shattered/market/market_base'.
+2016.08.29 18:12:41 obj/user/xls.c line 96: Warning: Missing arguments to simul_efun ls.
+2016.08.29 18:12:44 players/darkfire/castle/shattered/monsters/drafk.c line 9: Too few arguments to move_object.
+2016.08.29 18:12:44 players/darkfire/castle/shattered/monsters/drafk.c line 10: Too few arguments to move_object.
+2016.08.29 18:12:44 Error in loading object: 'players/darkfire/castle/shattered/monsters/drafk'.
+2016.08.29 20:10:24 players/boltar/things/cop.c line 65: Warning: Missing 'return <value>' statement.
+2016.08.29 20:29:29 players/darkfire/castle/shattered/monsters/drafk.c line 9: Too few arguments to move_object.
+2016.08.29 20:29:29 players/darkfire/castle/shattered/monsters/drafk.c line 10: Too few arguments to move_object.
+2016.08.29 20:29:29 Error in loading object: 'players/darkfire/castle/shattered/monsters/drafk'.
+2016.08.29 22:41:41 players/jareel/armor/DWARFFORGE/demon/misc.c line 7: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 22:41:41 players/jareel/armor/DWARFFORGE/demon/misc.c line 8: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageCloak.c line 3: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageCloak.c line 4: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageChest.c line 3: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageChest.c line 4: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMagePants.c line 4: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMagePants.c line 5: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageUnderware.c line 4: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageUnderware.c line 5: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageMisc.c line 4: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageMisc.c line 5: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageNecklace.c line 4: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageNecklace.c line 5: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 22:43:06 players/jaraxle/3rd/alt/items/mana_orb.c line 46: Warning: Missing 'return <value>' statement.
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageRing3.c line 4: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageRing3.c line 5: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageBracer.c line 4: Warning: #define ATT already defined (from players/jareel/define.h line 28).
+2016.08.29 22:43:06 players/jareel/armor/cratermaker/solaris/ArchMageBracer.c line 5: Warning: #define USER already defined (from players/jareel/define.h line 29).
+2016.08.29 23:01:02 [erq] read: EOF
+2016.08.29 23:01:02 [erq] Read 0, should be 9!
+2016.08.29 23:01:02 [erq] Giving up.

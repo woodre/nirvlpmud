@@ -1,0 +1,33 @@
+		-=[ Record ]=-
+
+Usage: record <who> <crime-type> <details of situation>
+Cost:  0
+Piety: 0
+
+   Use this command to record a criminal and place
+them on the crime list.  This is not to be used for
+for personal vendetta's, only REAL crimes. And be sure
+that the crime you set them for is the crime they
+deserve.
+
+*crime-type must be an integer:  Penalty Time:
+1  Pet/Kid Killer                   30 days
+2  Thief                            60 days
+3  Attacking Ally/Knight            90 days
+4  Muderering Ally/Knight          120 days
+5  Repeat Offender                 180 days
+6  Sworn Enemy                     364 days
+7  Aiding a Criminal                30 days
+NOTE:
+Pet killers and thieves are anyone that does this on
+the mud, no matter who it is too.
+All other offenses are recorded only if they attack
+a Knight, ally, or newbie. We do not get involved in
+personal issues of anyone not involved in the above.
+
+Examples: 
+record badplayer 1 Badplayer killed my squire
+record badplayer 2 Badplayer stole the coins from my kill.
+record badplayer 3 Badplayer attacked me when I was in Fallen Lands.
+record badplayer 4 Badplayer killed newbie for no reason.
+

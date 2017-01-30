@@ -1,0 +1,30 @@
+CHANGES THIS CENTURY
+
+- fixed something in hb.h relating to focus.
+- fixed some problems when i changed the id of shadow weps.
+- fixed ac lowering on low ac npcs with weaken.c
+- fixed a mistake in repulsion.h and colsolidated the code a bit.
+- fixed a 2nd mistake in repulsion.h caused when an npc dies.
+- removed no_mini.h
+- coded a daemon [daemon.c] in /daemon dir, which autosaves every 15 min and does a mini guild check every 5 minutes.  Also changed the mini check in ghall.c
+- recoded energy_check.h so it is more efficient [called from hb]
+* after 2.21 *
+- switched hp costs from hit_player() to add_hit_point()
+- added invis check for players in who2_new.h
+- limited XP percent to 20-80% from 0-100%
+- added chance of teleport to go to wrong location.
+- added max level req of 17 to ghall.c
+- scroll has weight 1 (from 0).
+- spell_failure uses add_hit_point instead of hit_player
+- added localized item in drain.h
+- added check to weaken.c
+- endurance boost in descend.h changed to 8-gxp/1mil [8-0]
+- changed set_percent to Low [20], Meduim [50], or High [80]
+- switched ghall.c and path.c to non-PK
+- moved set_title into part of the MASTER daemon and added the abililty to
+  have 1 custom title per player.  
+- added 6 symbols that provide more info on the guild.
+- made sp drain less frequent, but slightly more [from env_check()]
+- path4.c givess access to path.c for beta({}) members only
+- tuning misc_funcs, especially wiz-only ones.
+- added set_percent of 20 upon joining.

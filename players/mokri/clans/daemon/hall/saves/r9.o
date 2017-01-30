@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/daemon/hall/r3","south",})
+short_desc "Clan Hall - Locker Room Unit #8[0m"
+long_desc "STORAGE Unit #8[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[0m[33mGold Dragon Leggings[0m","/players/tallos/7tigers/objects/dragon_legs",0,0,0,"[1;33mAmulet [0mof [1;33mLightning[0m","/players/jaraxle/cont/bdragon/amulet",0,0,0,"[1;30mBlackdeath[0m, Broadsword of [1;30mTruth[0m","/players/jareel/weapons/chaos/woods2/humakt_sword",0,0,0,"Iron [1;30mDeath[0m Blade","/players/jareel/weapons/mondar_death_sword",0,8,2,"Iron [1;30mDeath[0m Blade","/players/jareel/weapons/mondar_death_sword",0,0,0,"Iron [1;30mDeath[0m Blade","/players/jareel/weapons/mondar_death_sword",0,0,0,"Iron [1;30mDeath[0m Blade","/players/jareel/weapons/mondar_death_sword",0,0,0,"[1;37mChestguard of [1;32mHealth[2;37;0m","/players/maledicta/cont/armor/guard_of_health","1",0,0,"[33mCloak of the Desert[0;0m","/players/zeus/desert/OBJ/cloak",0,0,0,"[1;30mThe Glove of [0m[36mM[1;36mo[0m[36mlo[1;36mc[0m[36mh[0m","/players/forbin/realms/flame_forest/OBJ/gmoloch",0,0,0,})

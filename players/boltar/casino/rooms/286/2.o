@@ -1,0 +1,29 @@
+no_clean 0
+name "boots"
+alias "boots"
+short_desc "A pair of [1mwhite[0m boots"
+long_desc "A [1mwhite[0m piece of armor from Bigelow."
+worn_tag_short_flag 0
+buy_value 0
+value 250
+weight 1
+type "boots"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 1
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"boots",})
+params ({"physical",1,0,"do_special",})
+enchantments 0

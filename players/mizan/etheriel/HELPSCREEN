@@ -1,0 +1,34 @@
+>>--------------------- Welcome to Etheriel ----------------------<<
+
+    There are some functions added in to this area that make it very
+different from anywhere else on the mud...
+
+'bleat' is a special channel available only to those who are currently
+  in the Plane of Etheriel. It behaves very much like 'gossip' and
+  'shout' channels, etc.
+
+>> bleat <msg>	Tell something to everyone who is currently in the area.
+>> bleat :<msg>	Emotes over the channel.
+>> bleat list	Displays who is currently in the castle.
+
+>> jumpto <plyr>   [30 sps]
+	Teleports you to <plyr> player, provided he/she/it is
+        is currently in the realm.
+
+>> wormhole <dest> [20 sps]
+	Allows you to build a tunnel to <dest> destination.
+        Experiment with it to figure out what is going on...
+
+>> push <object> <destination> [variable sps]
+        Pushes an object (any kind of object, as long as you can move it)
+        to destination <roomname>. Kind of a strange command, useless but fun.
+
+>> thinkto <plyr/monster> [8 sps]
+        Determines the whereabouts of a living thing. Helpful if you get lost.
+
+>> stir [20 sps]
+        Stir up and reset the area you are currently in.
+
+>> help jello	This screen.
+
+Any questions, comments, etc. please mail Mizan.

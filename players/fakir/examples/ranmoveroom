@@ -1,0 +1,17 @@
+IN EACH ROOM
+#define MASTER master file name
+#define ROOM whatever room number
+
+If you want to have directions like north south east west in the room, put them in reset as normal, with some default room path
+After reset, do:
+init() {
+  ::init;
+  add_action("walk","north");
+  add_action("walk","south"); etc etc etc }
+
+walk() {
+  string str;
+  str = MASTER->pick_dir(ROOM);
+  write("Whatever message\n");
+  this_player()->move_player("message#"+str);
+  return 1; }

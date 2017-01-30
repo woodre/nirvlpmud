@@ -1,0 +1,91 @@
+
+random_move()
+{
+    int n;
+    n = random(4);
+    if (n == 0)
+	command("west");
+    else if (n == 1)
+	command("east");
+    else if (n == 2)
+	command("south");
+    else if (n == 3)
+	command("north");
+}
+
+set_name(n) {
+set_level(l) {
+/* Optional */
+set_alias(a) { alias = a; }
+/* Optional */
+set_race(r) { race = r; }
+/* optional */
+set_hp(hp) { max_hp = hp; hit_point = hp; }
+/* optional */
+set_ep(ep) { experience = ep; }
+/* optional */
+set_al(al) {
+/* optional */
+set_short(sh) { 
+/* optional */
+set_long(lo) { long_desc = lo; }
+/* optional */
+set_wc(wc) { weapon_class = wc; }
+/* optional */
+set_ac(ac) { armor_class = ac; }
+/* optional */
+set_move_at_reset() { move_at_reset = 1; }
+/* optional
+ * 0: Peaceful.
+ * 1: Attack on sight.
+ */
+set_aggressive(a) {
+    aggressive = a;
+}
+/* optional
+ * 0: Can't attack other monsters.
+ * 1: Can attack other monsters.
+ */
+set_can_kill(a) {
+    can_kill = a;
+}
+/*
+ * Now some functions for setting up spells !
+ */
+/*
+ * The percent chance of casting a spell.
+ */
+set_chance(c) {
+    spell_chance = c;
+}
+/* Message to the victim. */
+set_spell_mess1(m) {
+    spell_mess1 = m;
+}
+set_spell_mess2(m) {
+    spell_mess2 = m;
+}
+set_spell_dam(d) {
+    spell_dam = d;
+}
+
+/* Set the frog curse. */
+set_frog() {
+    frog = 1;
+}
+
+/* Set the whimpy mode */
+set_whimpy() {
+    whimpy = 1;
+set_chat_chance(c) {
+load_chat(str) {
+set_a_chat_chance(c) {
+load_a_chat(str) {
+set_function(func) { 
+    talk_func = func; 
+set_heal(hr, hi){
+    heal_rate = hr;
+     heal_intv = hi;
+    }
+set_alt_name(n) { alt_name = n; }
+set_gender(str) { gender = str;}

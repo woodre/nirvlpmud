@@ -1,0 +1,591 @@
+#define COUNCIL_LOG "/players/pavlik/guild/mages/log/council"
+
+/* who are the real council members */
+is_gc(ob) {
+  string name;
+  if(!ob) ob = this_player();
+  name = ob->query_real_name();
+  if(
+    name == "vertebraker" ||
+    name == "pavlik"
+  )
+  {
+            return 1;
+  }
+  else return 0;
+}
+
+/* give updated guild object */
+gc_fix(str){
+ object obj;
+
+ if(!str) {
+   write("Use: mfix <player>\n");
+   return 1;
+ }
+
+ obj = find_player(str);
+
+ if(!obj) {
+   write(capitalize(str)+" is not logged in.\n");
+   return 1;
+ }
+
+ while(present("mageobj", obj))
+  destruct(present("mageobj", obj));
+
+ move_object(clone_object("players/pavlik/guild/mages/mageobj2"), obj);
+ command("renew", obj);
+ write("You fix "+str+"'s mage soul.\n");
+ tell_object(obj, ME+" has repaired your mage soul.\n");
+ return 1;
+}
+
+/* view a Mages guild stats */
+gc_stat(str){
+ object ob, obj;
+
+ if(!str) {
+   write("Use: mstat <player>\n");
+   return 1;
+ }
+
+ obj = find_player(str);
+ if(!obj) {
+   write(capitalize(str)+" is not logged in.\n");
+   return 1;
+ }
+
+ ob = present("mageobj", obj);
+ if(!ob){
+  if(obj->query_guild_name() == "mage"){
+    write(capitalize(str)+" needs a mage soul.\n");
+    return 1;
+  }
+  write(capitalize(str)+" isn't a member of the guild.\n"); 
+  return 1;
+ }
+
+  write(obj->short()+"\n");
+  write("Level: "+obj->query_level()+"\n");
+  write("Exp: "+obj->query_exp()+"\n");
+  write("Hp: "+obj->query_hp()+"/"+obj->query_mhp()+"    ");
+  write("Sp: "+obj->query_sp()+"/"+obj->query_msp()+"\n");
+  write("Guild Rank: "+obj->query_guild_rank()+"\n");
+  write("Guild Exp: "+obj->query_guild_exp()+"\n");
+  write("Guild Div: "+ob->query_divd()+"% xp to guild.\n");
+  write("Donation: "+ob->query_donation()+"\n");
+
+  write("Conjuration: "+ob->query_conjuration());
+  write(" [+"+ob->query_conj_bonus()+"]\t");
+  write("Int: "+ob->query_intelligence());
+  write(" [+"+ob->query_int_bonus()+"]\n");
+
+  write("Enchantment: "+ob->query_enchantment());
+  write(" [+"+ob->query_ench_bonus()+"]\t");
+  write("Wis: "+ob->query_wisdom());
+  write(" [+"+ob->query_wis_bonus()+"]\n");
+
+  write("Evocation  : "+ob->query_evocation());
+  write(" [+"+ob->query_evoc_bonus()+"]\t");
+  write("Wil: "+ob->query_will_power());
+  write(" [+"+ob->query_wil_bonus()+"]\n");
+
+  write("Illusion   : "+ob->query_illusion());
+  write(" [+"+ob->query_illu_bonus()+"]\t");
+  write("Pow: "+ob->query_power());
+  write(" [+"+ob->query_pow_bonus()+"]\n");
+
+  write("Necromancy : "+ob->query_necromancy());
+  write(" [+"+ob->query_necr_bonus()+"]\n");
+
+  write("Training Sessions: "+ob->query_training_sessions()+"\n");
+  write("New Spells: "+ob->query_new_spells()+"\n");
+  return 1;
+}
+
+/* View a Mages spell list */
+gc_spell_list(str){
+ object obj;
+ string cur, list;
+ int i, len, count;
+
+ if(!str) {
+   write("Use: mspells <player>\n");
+   return 1;
+ }
+
+ obj = find_player(str);
+ if(!obj){
+ write(str+" is not on the game.\n"); return 1; }
+
+ if(!present("mageobj", obj)){
+ write(str+" does not have a mage soul.\n"); return 1; }
+
+ write("--- "+capitalize(str)+"'s Spell List: ---\n");
+ list = present("mageobj", obj)->query_spells();
+ count = 0;
+ while(sscanf(list, "%s#%s", cur, list)==2){
+  if(count == 3){
+   write(cur+"\n");
+   count = 0;
+  } else {
+   len = 16 - strlen(cur);
+   write(cur);
+   for(i=0; i<len; i++) write(" ");
+   count++;
+  }
+ }
+ write(list+"\n");
+ return 1;
+}
+
+/* add guild_exp to a player */
+gc_exp(str){
+  object obj;
+  string who;
+  int much;
+
+  if(!str) {
+    write("Use: mxp <player> <amt>\n");
+    return 1;
+  }
+
+  if(sscanf(str, "%s %d", who, much) != 2){
+    write("Use mxp <player> <amt>.\n");
+    return 1;
+    }
+
+  obj = find_player(who);
+
+  if(!obj){
+    write("That person isn't on the game.\n");
+    return 1;
+    }
+
+  if(!present("mageobj", obj)){
+    write(capitalize(who)+" isn't in the guild.\n");
+    return 1;
+    }
+
+  write("You give "+capitalize(who)+" "+much+" mage xp.\n");
+  write("Logging Mxp ... ok.\n");
+  tell_object(obj,
+  "You are given "+much+" mage xp.\n");
+  obj->add_guild_exp(much);
+
+  write_file(COUNCIL_LOG,
+  ME+"\t MEXP\t "+much+"\t "+capitalize(who)+"  "+ctime()+"\n");
+
+  return 1;
+}
+
+/* set guild rank of player */
+gc_promote(str){
+  object obj;
+  string who;
+  int much;
+
+  if(!str) {
+    write("Use: mrank <player> <rank>\n"+
+    "Note: this promotes TO the rank specified.\n");
+    return 1;
+  }
+
+  if(sscanf(str, "%s %d", who, much) != 2){
+    write("Use mrank <player> <rank>.\n");
+    return 1;
+    }
+
+  obj = find_player(who);
+
+  if(!obj){
+    write("That person is not on the game.\n");
+    return 1;
+    }
+
+  if(!present("mageobj", obj)){
+    write(capitalize(who)+" is not in the guild.\n");
+    return 1;
+    }
+
+  write("You promote "+capitalize(who)+" to mage rank "+much+".\n");
+  write("Logging mpromote ... ok.\n");
+  tell_object(obj,
+  "You have been promoted to rank "+much+" in the guild.\n");
+
+  if(much == 0) {
+    write("Deleting "+capitalize(who)+"'s spell list.\n");
+    tell_object(obj, "All spells have been deleted.\n");
+    present("mageobj", obj)->set_new_spell_list("ACK");
+  }
+  obj->add_guild_rank(-obj->query_guild_rank());
+  obj->add_guild_rank(much);
+
+  write_file(COUNCIL_LOG,
+  ME+"\t MRANK\t "+much+"\t "+capitalize(who)+"  "+ctime()+"\n");
+  return 1;
+}
+
+/* add donation points to a player */
+gc_donation(str){
+  object obj;
+  string who;
+  int much;
+
+  if(!str) {
+    write("Use: mdonation <player> <amount>\n");
+    return 1;
+  }
+
+  if(sscanf(str, "%s %d", who, much) != 2){
+    write("Use mdonation <player> <amt>.\n");
+    return 1;
+    }
+
+  obj = find_player(who);
+
+  if(!obj){
+    write("That person is not on the game.\n");
+    return 1;
+  }
+
+  if(!present("mageobj", obj)){
+    write(capitalize(who)+" is not in the guild.\n");
+    return 1;
+  }
+
+  if(present("mageobj", obj)->query_donation() + much >= 50000 &&
+  much > 10) {
+    much = 49999 - present("mageobj", obj)->query_donation();
+  }
+
+  write("You give "+much+" donation points to "+capitalize(who)+".\n");
+  write("Logging mdonation ... ok.\n");
+  tell_object(obj,
+  "You have been given "+much+" mage donation points.\n");
+   present("mageobj", obj)->add_donation(much);
+
+  write_file(COUNCIL_LOG,
+  ME+"\t MDON\t "+much+"\t "+capitalize(who)+"  "+ctime()+"\n");
+  return 1;
+}
+
+/* add to any guild stat */
+gc_school(str){
+  object ob, obj;
+  string who, school;
+  int much;
+
+  if(!str) { 
+    write("Use: mschool <player> <stat> <amount>\n"+
+    "possible args for stat are:\n"+
+    " allstats, allattribs, or any valid guild stat.\n");
+    return 1;
+  }
+
+  if(sscanf(str, "%s %s %d", who, school, much) != 3){
+    write("Use mschool <player> <stat> <amount>.\n");
+    return 1;
+  }
+
+  if(school == "conj") school = "conjuration";
+  if(school == "ench") school = "enchantment";
+  if(school == "evoc") school = "evocation";
+  if(school == "illu") school = "illusion";
+  if(school == "necr") school = "necromancy";
+  if(school == "int") school = "intelligence";
+  if(school == "wis") school = "wisdom";
+  if(school == "wil") school = "will_power";
+  if(school == "pow") school = "power";
+
+  obj = find_player(who);
+
+  if(!obj) {
+    write(capitalize(who)+" is not logged in.\n");
+    return 1;
+  }
+
+  if(!present("mageobj", obj)) {
+    write(capitalize(who)+" does not have a mage soul.\n");
+    return 1;
+  }
+
+  ob = present("mageobj", obj);
+
+  if(school == "allstats") {
+    ob->raise_conjuration(much);
+    ob->raise_enchantment(much);
+    ob->raise_evocation(much);
+    ob->raise_illusion(much);
+    ob->raise_necromancy(much);
+    write("You give "+much+" points to all of "+capitalize(who)+
+    "'s school stats.\n");
+    return 1;
+  }
+  else if(school == "allattribs") {
+    ob->raise_intelligence(much);
+    ob->raise_wisdom(much);
+    ob->raise_will_power(much);
+    ob->raise_power(much);
+    write("You give "+much+" points to all of "+capitalize(who)+
+    "'s attrib stats.\n");
+    return 1;
+  }
+  else {
+    call_other(ob, "raise_"+school, much);
+    write("You raise "+capitalize(who)+"'s "+school+" stat by "+much+".\n");
+    write("Logging mschool ... ok.\n");
+
+    write_file(COUNCIL_LOG,
+    ME+"\t MSCH\t "+much+" "+school+"\t "+capitalize(who)+"  "+ctime()+"\n");
+    return 1;
+  }
+}
+
+/* this checks the stat of a player who is not on-line */
+gc_check(str){
+  object obj;
+
+  if(!str) {
+    write("Use: mcheck <player>\n");
+    return 1;
+  }
+
+  obj = clone_object("players/pavlik/guild/mages/obj/GC");
+  move_object(obj, tp);
+  obj->mage_check(str);
+  destruct(obj);
+  return 1;
+}
+
+/* give a new spell to a player */
+gc_teach(str){
+  object ob, obj;
+  string who, spell;
+
+  if(!str) {
+    write("Use: mteach <player> <spell>\n");
+    return 1;
+  }
+
+  if(sscanf(str, "%s %s", who, spell) != 2){
+    write("Use: mteach <player> <spell>\n");
+    return 1;
+  }
+
+  obj = find_player(who);
+
+  if(!obj) {
+    write(capitalize(who)+" is not logged in.\n");
+    return 1;
+  }
+
+  if(!present("mageobj", obj)) {
+    write(capitalize(who)+" does not have a mage soul.\n");
+    return 1;
+  }
+
+  ob = present("mageobj", obj);
+  ob->learn_spell(spell);
+
+  write("You give "+capitalize(who)+" the spell '"+spell+"'.\n");  
+  write("Logging Mteach .... Ok.\n");
+  tell_object(obj, "You are given another spell.\n");
+
+  write_file(COUNCIL_LOG,
+  ME+"\t MTEACH\t "+spell+"\t "+capitalize(who)+"  "+ctime()+"\n");
+  return 1;
+}
+
+/* remove a spell from a player */
+gc_forget_spell(str){
+ string who, spell;
+ string old_list, new_list, cur;
+ object obj;
+ int match;
+
+  if(!str) {
+    write("Use: mforget <player> <spell>\n");
+    return 1;
+  }
+
+  if(!sscanf(str, "%s %s", who, spell)==2){
+    write("Use: mforget <player> <spell>\n");
+    return 1;
+  }
+
+  obj = find_player(who);
+  if(!obj) {
+    write(capitalize(who)+" is not logged in.\n");
+    return 1;
+  }
+
+  if(!present("mageobj", obj)) {
+    write(capitalize(who)+" does not have a mage soul.\n");
+    return 1;
+  }
+
+  write("Removing the spell '"+spell+"' from "+who+"'s spell list.\n");
+  old_list = present("mageobj", obj)->query_spells();
+  new_list = "";
+  match = 0;
+  while(sscanf(old_list, "%s#%s", cur, old_list)==2){
+    if(cur == spell){
+      write(spell+" is removed.\n");
+      match = 1;
+    } else {
+     new_list = new_list + cur + "#";
+    }
+  }
+  if(old_list == spell){
+    write(spell+" is removed.\n");
+    match = 1;
+  } else {
+    new_list = new_list + old_list;
+  }
+  if(match == 0){
+    write(spell+" was not found in "+who+"'s spell list.\n");
+    return 1;
+  }
+  present("mageobj", obj)->set_new_spell_list(new_list);
+  return 1;
+}
+
+/* add to any guild stat bonus */
+gc_stat_bonus(str) {
+  object ob, obj;
+  string who, school;
+  int much;
+
+  if(!str) {
+    write("Use: mbonus <player> <stat> <amount>\n");
+    return 1;
+  }
+
+  if(sscanf(str, "%s %s %d", who, school, much) != 3){
+    write("Use mbonus <player> <stat> <amount>.\n");
+    return 1;
+  }
+
+  obj = find_player(who);
+
+  if(!obj) {
+    write(capitalize(who)+" is not logged in.\n");
+    return 1;
+  }
+
+  if(!present("mageobj", obj)) {
+    write(capitalize(who)+" does not have a mage soul.\n");
+    return 1;
+  }
+
+  ob = present("mageobj", obj);
+ 
+  if(school == "conjuration") school = "conj";
+  if(school == "enchantment") school = "ench";
+  if(school == "evocation") school = "evoc";
+  if(school == "illusion") school = "illu";
+  if(school == "necromancy") school = "necr";
+  if(school == "intelligence") school = "int";
+  if(school == "wisdom") school = "wis";
+  if(school == "will power") school = "wil";
+  if(school == "power") school = "pow";
+
+  call_other(ob, "add_"+school+"_bonus", much);
+  write("You add "+much+" points to "+capitalize(who)+"'s "+school+" bonus.\n");
+
+  write_file(COUNCIL_LOG,
+  ME+"\t MBON\t "+much+" "+school+"\t "+capitalize(who)+"  "+ctime()+"\n");
+  return 1;
+}
+ 
+gc_new_spells(str) {
+  string who;
+  int much;
+  object obj;
+
+  if(!str) {
+    write("Use: mnewspells <player> <amount>\n");
+    return 1;
+  }
+  
+  if(!sscanf(str, "%s %d", who, much) == 2) {
+    write("Use: mnewspells <player> <amount>\n");
+    return 1;
+  }
+
+  obj = find_player(who);
+  if(!obj) {
+    write(capitalize(who)+" is not logged in.\n");
+    return 1;
+  }
+
+  write("You give "+capitalize(who)+" "+much+" new spell chances.\n");
+  tell_object(obj, ME+" gives you "+much+" new spell chances.\n");
+  present("mageobj", obj)->add_new_spells(much);
+
+  write_file(COUNCIL_LOG,
+  ME+"\t NEWSP\t "+much+"\t "+capitalize(who)+"  "+ctime()+"\n");
+  return 1;
+}
+
+gc_training_sessions(str) {
+  string who;
+  int much;
+  object obj;
+
+  if(!str) {
+    write("Use: msessions <player> <amount>\n");
+    return 1;
+  }
+  
+  if(!sscanf(str, "%s %d", who, much) == 2) {
+    write("Use: msessions <player> <amount>\n");
+    return 1;
+  }
+
+  obj = find_player(who);
+  if(!obj) {
+    write(capitalize(who)+" is not logged in.\n");
+    return 1;
+  }
+
+  write("You give "+capitalize(who)+" "+much+" training sessions.\n");
+  tell_object(obj, ME+" gives you "+much+" training sessions.\n");
+  present("mageobj", obj)->add_training_sessions(much);
+
+  write_file(COUNCIL_LOG,
+  ME+"\t TRNSH\t "+much+"\t "+capitalize(who)+"  "+ctime()+"\n");
+  return 1;
+}
+
+gc_reset(str) {
+  object obj;
+
+  if(!str) {
+    write("Use: mreset <player>\n");
+    return 1;
+  }
+
+  obj = find_player(str);
+
+  if(!obj) {
+    write(capitalize(str)+" could not be found.\n");
+    return 1;
+  }
+
+  if(!present("mageobj", obj)) {
+    write(capitalize(str)+" does not have a mage soul.\n");
+    return 1;
+  }
+
+  write("Reseting "+capitalize(str)+"'s guild stats ... ok.\n");
+  present("mageobj", obj)->reset_stats();
+  present("mageobj", obj)->set_new_spell_list("ACK");
+  obj->add_guild_rank(-obj->query_guild_rank());
+  obj->add_training_sessions(-obj->query_training_sessions());
+  obj->add_new_spells(-obj->query_new_spells());
+  return 1;
+}
+

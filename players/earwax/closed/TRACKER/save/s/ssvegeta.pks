@@ -1,0 +1,7 @@
+01/15/04 22:29: Demonic     ((19+2  /Cyberninja)   22(1/1)
+01/26/04 16:18: Fury        ((19+2  /Cyberninja)   24(1/2)
+03/13/04 14:28: Tenchu      ((18    /Cyberninja)   22(1/2)
+04/ 1/04 17:02: Fury        ((19+3  /Cyberninja)   23(1/1)
+04/15/04 21:15: Gohan       ((17    /Necromancer)  19(1/1)
+04/15/04 21:32: Gohan       ((16    /Necromancer)  18(1/1)
+05/22/04 16:33: Tenchu      ((19+7  /Cyberninja)   19(2/1)

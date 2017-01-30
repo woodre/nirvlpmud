@@ -1,0 +1,71 @@
+2016.08.29 14:27:57 LDMud 3.3.720 (Build 3010) (stable)
+2016.08.29 14:27:57 TLS: (OpenSSL) Keyfile 'key.pem', Certfile 'cert.pem'
+2016.08.29 14:27:57 TLS: Error setting x509 keyfile:
+2016.08.29 14:27:57 TLS: SSL error:02001002:system library:fopen:No such file or directory.
+2016.08.29 14:27:57 TLS: SSL error:20074002:BIO routines:FILE_CTRL:system lib.
+2016.08.29 14:27:57 TLS: SSL error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system lib.
+2016.08.29 14:27:57 mySQL 5.5.50
+2016.08.29 14:27:57 Attempting to start erq '/home/petebre/mymud/lp312/mudbin/erq'.
+2016.08.29 14:27:57 Hostname 'loafy' address '174.137.154.70'
+2016.08.29 14:27:57 UDP recv-socket requested for port: 3507
+2016.08.29 14:28:00 LDMud ready for users.
+2016.08.29 14:29:27 Too long evaluation. Execution aborted.
+2016.08.29 14:29:27 program: players/darkfire/obj/dfroom.c, object: players/darkfire/workroom/workroom line 190
+'      room_chat' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/workroom') line 200
+'room_chat_callout' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/workroom') line 190
+2016.08.29 14:29:27 Error in call out.
+2016.08.29 14:29:47 Too long evaluation. Execution aborted.
+2016.08.29 14:29:47 program: players/darkfire/obj/dfroom.c, object: players/darkfire/workroom/menagerie line 190
+'      room_chat' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/menagerie') line 200
+'room_chat_callout' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/menagerie') line 190
+2016.08.29 14:29:47 Error in call out.
+2016.08.29 14:29:53 Too long evaluation. Execution aborted.
+2016.08.29 14:29:53 program: players/darkfire/obj/dfroom.c, object: players/darkfire/workroom/workroom line 190
+'      room_chat' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/workroom') line 200
+'room_chat_callout' in 'players/darkfire/obj/dfroom.c' ('players/darkfire/workroom/workroom') line 190
+2016.08.29 14:29:53 Error in call out.
+2016.08.29 14:30:04 Missing 'return <value>' statement.
+2016.08.29 14:30:04 program: players/vertebraker/misc/mage/mage.c, object: players/vertebraker/misc/mage/mage#245 line 559
+2016.08.29 14:30:04 Caught error: Failed to load file: 'players/darkfire/castle/shattered/market/~/castle/shattered/market/market_base'.
+'       cmd_hook' in '        obj/player.c' ('      obj/player#376') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('      obj/player#376') line 33
+'       cmd_goto' in '     bin/wiz/_goto.c' ('       bin/wiz/_goto') line 29
+'          CATCH' in                        ('       bin/wiz/_goto')
+2016.08.29 14:30:04 ... execution continues.
+2016.08.29 14:30:17 Caught error: Failed to load file: 'players/darkfire/castle/shattered/market/~/castle/shattered/market/market_base'.
+'       cmd_hook' in '        obj/player.c' ('      obj/player#376') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('      obj/player#376') line 33
+'       cmd_goto' in '     bin/wiz/_goto.c' ('       bin/wiz/_goto') line 29
+'          CATCH' in                        ('       bin/wiz/_goto')
+2016.08.29 14:30:17 ... execution continues.
+2016.08.29 14:35:55 Bad arg 1 to call_other(): got 'number', expected 'string/array/object'.
+2016.08.29 14:35:55 program: obj/player.c, object: obj/player line 2528
+'     heart_beat' in '        obj/player.c' ('          obj/player') line 1585
+'       autosave' in '        obj/player.c' ('          obj/player') line 1260
+'        save_me' in '        obj/player.c' ('          obj/player') line 2502
+'  illegal_patch' in '        obj/player.c' ('          obj/player') line 2528
+2016.08.29 14:35:55 Heart beat in obj/player turned off.
+2016.08.29 14:35:55 Error in heartbeat.
+2016.08.29 18:12:44 Caught error: Error in loading object: 'players/darkfire/castle/shattered/monsters/drafk'.
+'       cmd_hook' in '        obj/player.c' ('      obj/player#376') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('      obj/player#376') line 33
+'      cmd_clone' in '    bin/wiz/_clone.c' ('      bin/wiz/_clone') line 55
+'          CATCH' in                        ('      bin/wiz/_clone')
+2016.08.29 18:12:44 ... execution continues.
+2016.08.29 19:25:26 Error (113) upon reading socket 7 (ip 0x94146a4 'obj/player#376'), closing connection: No route to host
+2016.08.29 20:10:24 Missing 'return <value>' statement.
+2016.08.29 20:10:24 program: obj/go_player.c, object: obj/go_player#153 line 132
+move_file(): destination 'players/darkfire/castle/shattered/rooms/market' is a directory.
+2016.08.29 20:29:29 Caught error: Error in loading object: 'players/darkfire/castle/shattered/monsters/drafk'.
+'       cmd_hook' in '        obj/player.c' ('      obj/player#376') line 3385
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('      obj/player#376') line 33
+'      cmd_clone' in '    bin/wiz/_clone.c' ('      bin/wiz/_clone') line 55
+'          CATCH' in                        ('      bin/wiz/_clone')
+2016.08.29 20:29:29 ... execution continues.
+2016.08.29 22:41:41 Missing 'return <value>' statement.
+2016.08.29 22:41:41 program: obj/generic_heal.c, object: players/jareel/heals/YELMALIAN/lthpts#819 line 170
+2016.08.29 23:01:02 Undefined function: save_wiz_file
+2016.08.29 23:01:02 program: obj/master.c, object: obj/master line 2793
+'notify_shutdown' in '        obj/master.c' ('          obj/master') line 1654
+'  save_wiz_file' in '        obj/master.c' ('          obj/master') line 2793
+2016.08.29 23:01:02 Error in master_ob->notify_shutdown()

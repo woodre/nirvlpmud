@@ -1,0 +1,50 @@
+/*  Modified October 2001 to conform to /doc/build/RULES/monster.guide */
+
+#define TP this_player()
+#include "/players/eurale/closed/ansi.h"
+inherit "obj/monster.c";
+
+reset(arg)  {
+  ::reset(arg);
+  if(arg) return;
+
+set_name("dragon");
+set_alias("white dragon");
+set_race("creature");
+set_short(HIW+"White Dragon"+NORM);
+set_long(
+	"The White Dragon is the most evil of all the dragons.  Because\n"+
+	"they defied the call of the gods, they were stripped of all\n"+
+	"outward signs of intelligence and can therefore neither cast\n"+
+	"spells nor speak.  This only served to increase their rage and\n"+
+	"savageness when fighting...\n");
+
+set_level(21);
+set_hp(750 + random(100));
+set_al(-100);
+set_wc(51);
+set_ac(19);
+set_heal(10,3);
+set_aggressive(1);
+  set_dead_ob(this_object());
+
+set_chat_chance(15);
+  load_chat("The dragon tenses....\n");
+  load_chat("You're overcome with an uneasy feeling...\n");
+  load_chat("Your heart begins to beat much faster...\n");
+set_a_chat_chance(25);
+  load_a_chat("\nThe Dragon slashes you with it's claws...\n\n");
+  load_a_chat("\nYou feel the tearing of your flesh...\n\n");
+  load_a_chat("\nThe mighty beast tramples you with it's feet...\n\n");
+  load_a_chat("\nYou see massive amounts of blood on the ground...\n\n");
+
+}
+
+monster_died() {
+  move_object(clone_object("players/eurale/Keep/OBJ/white_scale.c"),
+    environment(this_object()));
+  move_object(clone_object("players/eurale/Keep/QST/whitedragon.c"),
+		this_player());
+  write_file("/players/eurale/Keep/LOGS/dragons",
+  ctime(time())+"     Whitedragon      "+query_attack()->query_real_name()+"\n");
+return 0; }

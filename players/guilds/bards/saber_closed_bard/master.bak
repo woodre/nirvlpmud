@@ -1,0 +1,70 @@
+/*
+ *  The master object for version 3.0 of the Bards of Ryllian
+ *  By Saber / Geoffrey Z.
+ *  Started 12/12/95
+ *
+ */
+
+
+#include "/players/saber/closed/bard/extra.h"
+#include "/players/saber/closed/esc.h"
+#include "/players/saber/closed/ansi.h"
+
+/* Utility */
+
+#include "pwr/bard_update.h"    /* Update the Bard Object           */
+#include "pwr/register.h"       /* Fix player		                */
+#include "pwr/score_new.h"      /* New version of the score command */
+
+#include "pwr/check_age.h"      /* Function to check age            */
+
+/* Spells and Abilities */
+
+#include "pwr/balance.h"        /* Tell if monster is good or evil  */
+#include "pwr/bandage.h"        /* Minor bardic healing spell       */
+#include "pwr/bard_emote.h"	    /* The Bard chat channel            */
+#include "pwr/bard_image.h"     /* Emote at distance                */
+#include "pwr/bard_instr.h"     /* Change instrument                */
+#include "pwr/bard_kin.h"       /* Shows who is in the bards        */
+#include "pwr/bard_talk.h"	    /* The Bard chat channel            */
+#include "pwr/bard_title.h"     /* Change title                     */
+#include "pwr/bard_who.h"       /* A new who                        */
+#include "pwr/bless.h"          /* Minor delayed healing            */
+#include "pwr/calm.h"           /* False Speak - silence            */
+#include "pwr/cant.h"           /* Bardic sign language             */
+#include "pwr/celebrate.h"      /* Thank your mentor                */
+#include "pwr/charm.h"          /* A spell to stop combat           */
+#include "pwr/compare.h"        /* Which weap or armor is better    */
+#include "pwr/corpse_healing.h" /* Bardic corpse healing            */
+#include "pwr/distort.h"        /* False Speak - Combat illusions   */
+#include "pwr/emote.h"          /* Lets the Bard emote              */
+/*
+#include "pwr/farsong.h"  */      /* New gossip                       */
+
+#include "pwr/flight.h"         /* Illusions                        */
+#include "pwr/fly.h"            /* Speedster                        */
+#include "pwr/grace.h"          /* Join the guild                   */
+#include "pwr/harm.h"           /* False Speak - Attack Spells      */
+#include "pwr/heal.h"           /* True speak - Healing             */
+#include "pwr/history.h"        /* Tells info on a player           */
+#include "pwr/know.h"           /* True Speak - item info           */
+#include "pwr/light.h"          /* True Speak - light               */
+#include "pwr/lore.h"           /* Help Files                       */
+#include "pwr/marry.h"          /* Marrage                          */
+#include "pwr/mask.h"           /* False Speak - A shadow side      */
+#include "pwr/name.h"           /* True Speak - naming              */
+#include "pwr/new_say.h"        /* New type of talking              */
+#include "pwr/obscure.h"        /* False Speak - combat             */
+#include "pwr/pet_list.h"       /* List of Bardic Pets              */
+#include "pwr/rename.h"         /* False Speak - Item mod           */
+#include "pwr/replace_inst.h"   /* Replaces instrument              */
+#include "pwr/seek.h"           /* True Speak - detects             */
+#include "pwr/sight.h"          /* True Speak - looking             */
+#include "pwr/storm.h"          /* True Speak - weather stuff       */
+#include "pwr/sponsor.h"        /* Join the guild                   */
+#include "pwr/storm_song.h"     /* Conjures a weapon                */
+#include "pwr/strength.h"       /* Brief monster assessment         */
+#include "pwr/succor.h"         /* Takes one to the guild hall      */
+#include "pwr/t_healing.h"      /* Choose type of corpse healing    */
+#include "pwr/time.h"           /* What time is it?                 */
+#include "pwr/weapon.h"         /* Low level attack spells          */

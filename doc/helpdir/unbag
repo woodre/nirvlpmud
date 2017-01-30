@@ -1,0 +1,12 @@
+
+
+                          [help unbag]
+-----------------------=========+=========-----------------------                                 
+
+Usage: unbag <item>
+       unbag <item> from <bagname>
+
+  The unbag command is a specialized version of the get command.
+It will attempt to take the item you specify out of the first bag
+in your inventory.  You can also specify which bag you want to
+remove an item from, just like using the get command normally.

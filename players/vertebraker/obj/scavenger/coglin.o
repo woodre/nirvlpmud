@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/hood","/players/saber/stuff/trink","/players/mythos/awep/wakizashi","/players/hippo/weapons/molar_sharf","/players/puppy/s/eq/hammer","/players/arrina/treas/onyx","/obj/weapon","/players/snow/cam/stuff/plate","/players/hippo/heals/blood","/obj/weapon","/players/morgar/say","/obj/weapon","/players/saber/armor/halter","/players/mythos/awep/quiver","/players/scathe/armor/mgarb","/players/snow/WEAPONS/tsunami","/players/scathe/weap/baxe","/players/wren/Area/starbug/items/hair","/players/puppy/s/eq/crown","/players/wren/Area/starbug/items/bouquet","/obj/level_list","/obj/torch","/players/pain/NEW/weap/mstar","/players/ultramagnus/bsack","/players/hippo/heals/grain",})
+shorts ({"Hood","A strange metal trinket","Wakizashi","A molar sharf","A hammer","A piece of carved onyx","Steel Longsword","[34m[1mBlessed Plate Armor[0m[0m","[1;31mdrops of blood[0m","spirit blade","say with echo and quotes","Decorated Broadsword","A black halter top","A quiver","Black Monk Robes","[34mTsunami[0m","A Huge Double Bladed Axe","Perfect Hair","A golden crown","a colorful bouquet of 'flowers'","A list of the top players","torch","Morningstar","A blue sack","[33mcrumbs of grain[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

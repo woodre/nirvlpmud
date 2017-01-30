@@ -1,0 +1,389 @@
+#define CTELL write("You scribe the "+rancol2(str)+" spell into your spellbook.\n");
+learn_spell(){
+  int rank;
+rank = this_player()->query_guild_rank();
+if(rank == 1){ teach_new_spells(); return 1; }
+
+/* learn 1st level spell at these ranks */
+if(rank == 2 || rank == 4  || rank == 6 || rank == 7 || rank == 9)
+  teach_spell("first");
+
+/* learn 2nd level spell */
+if(rank == 12 || rank == 13 || rank == 15 || rank == 18 || rank == 19)
+  teach_spell("second");
+
+/* learn 3rd level spell */
+if(rank == 22 || rank == 23 || rank == 24 || rank == 28 || rank == 29)
+  teach_spell("third");
+
+/* learn 4th level spell */
+if(rank == 32 || rank == 34 || rank == 35 || rank == 37 || rank == 39)
+  teach_spell("fourth");
+
+/* learn 5th level spell */
+if(rank == 42 || rank == 44 || rank == 46 || rank == 48 || rank == 50)
+  teach_spell("fifth");
+
+/* learn 6th level spell */
+if(rank == 52 || rank == 53 || rank == 55 || rank == 57 || rank == 59)
+  teach_spell("sixth");
+
+/* learn 7th level spell at these ranks */
+if(rank == 62 || rank == 63 || rank == 66 || rank == 67 || rank == 69)
+  teach_spell("seventh");
+
+/* Aquire these guild skills at certain ranks */
+if(rank == 12) teach_skill("study monster");
+if(rank == 19) teach_skill("mtitle");
+if(rank == 24) teach_skill("remote deposit");
+if(rank == 34){ teach_skill("wizard hat"); teach_skill("guild divisor"); }
+if(rank == 41) teach_skill("sponsor");
+if(rank == 44) teach_skill("summon mystic dragon");
+
+  return 1;
+}
+
+
+teach_skill(str){
+  write("Calador says:\n"+
+  "  'You have earned a "+HIM+"new Mage Ability"+NORM+".'\n"+
+  "  'I will now teach you: "+HIC+str+NORM+".'\n");
+  write("You have learned a new mage skill.\n");
+  return 1;
+}
+
+teach_new_spells(){
+  int x, y;
+
+  write("Calador says:\n"+
+  "  'Welcome young Mage.  If you want to learn you will have to'\n"+
+  "  'listen very carefully.  Magic is no toy!'\n"+
+  "  'I will now teach you your first spells...'\n");
+
+  /* learn one of the basic attack spells */
+  x = random(3);
+  if(x == 0){
+    write("Calador teaches you the spell "+HIC+"chromatic orb"+NORM+".\n");
+    command("lspell chromatic_orb", tp);
+  }
+  else if(x == 1){
+    write("Calador teaches you the spell "+HIY+"magic missile"+NORM+".\n");
+    command("lspell magic_missile", tp);
+  }
+  else if(x == 2){
+    write("Calador teaches you the spell "+HIB+"chill touch"+NORM+".\n");
+    command("lspell chill_touch", tp);
+  }
+  x = random(3);
+
+  /* next learn a few random spells */
+  if(x == 0){
+    write("Calador teaches you the spell "+HIC+"emote"+NORM+".\n");
+    command("lspell emote", tp);
+    write("Calador teaches you the spell "+MAG+"know alignment"+NORM+".\n");
+    command("lspell know_alignment", tp);
+  }
+  else if(x == 1){
+    write("Calador teaches you the spell "+HIG+"wizard mark"+NORM+".\n");
+    command("lspell wizard_mark", tp);
+    write("Calador teaches you the spell "+HIY+"light"+NORM+".\n");
+    command("lspell light", tp);
+  }
+  else if(x == 2){
+    write("Calador teaches you the spell "+MAG+"know alignment"+NORM+".\n");
+    command("lspell know_alignment", tp);
+    write("Calador teaches you the spell "+HIG+"wizard mark"+NORM+".\n");
+    command("lspell wizard_mark", tp);
+  }
+
+  /* lastly we always learn the corpse spell */
+  write("Calador teaches you the spell "+HIC+"capture the soul"+NORM+".\n");
+  command("lspell dust_corpse", tp);
+
+  return 1;
+}
+
+teach_spell(str){
+  write("\nCalador says:\n"+
+  "  'You are ready for a "+HIC+"new "+str+" level "+NORM+" spell.'\n"+
+  "  'Which spell would you like to learn?'\n");
+  write(CYN+"type '"+HIC+"!mhelp [spell]"+NORM+CYN+"' for a brief "+
+  "description of the spell.\n"+NORM);
+  write(CYN+"type '"+HIC+"l"+NORM+CYN+"' to list spells.\n"+NORM);
+  write(HIC+"-=> "+NORM);
+
+  input_to("learn_"+str);
+  return 1;
+}
+
+withdraw_spell(str){
+  int lvl;
+  if(!str){
+    write("Which level spell would you like to learn?\n");
+    write("(1-7, 0 to abort)\n");
+    write("}> ");
+    input_to("withdraw_spell");
+    return 1;
+  }
+  sscanf(str, "%d", lvl);
+  if(lvl > 7){
+    write("Choose a Level between 1 and 7.\n");
+    write("0 to abort.\n");
+    write("}> ");
+    input_to("withdraw_spell");
+    return 1;
+    }
+  if(lvl < 1){
+    write("You decide not to withdraw a spell.\n");
+    return 1;
+    }
+  if(tp->query_guild_rank() < (lvl*10)-9){
+    write("You are not ready for this spell level.  Select again.\n");
+    write("}> ");
+    input_to("withdraw_spell");
+    return 1;
+    }
+  if(lvl * 10000 > guild->query_donation()){
+    write("You do not have enough donation points for this.\n");
+    return 1;
+    }
+  write("Which spell would you like to learn? ('l' to list)\n");
+  write(CYN+"-=> "+NORM);
+  if(lvl == 1) input_to("learn_first"); 
+  else if(lvl == 2) input_to("learn_second");
+  else if(lvl == 3) input_to("learn_third");
+  else if(lvl == 4) input_to("learn_fourth");
+  else if(lvl == 5) input_to("learn_fifth");
+  else if(lvl == 6) input_to("learn_sixth");
+  else if(lvl == 7) input_to("learn_seventh");
+  guild->add_donation(-(lvl * 10000));
+  return 1;
+}
+
+learn_first(str){
+  if(str == "l"){
+    write(HIC+"\n"+
+  "  LEVEL 1 SPELLS:\n"+
+  "    chromatic orb [orb]   magic missile [mssle]  chill touch [touch]\n"+
+  "    emote [emote]         light [light]          capture the soul [dust]\n"+
+  "    dazzle [dazzle]       wizard mark [mark]     know alignment [knowal]\n"+
+    "\n"+NORM);
+    write(CYN+"-=> "+NORM);
+    input_to("learn_first");
+  } else if(str == "chromatic orb" || str == "orb"){
+      CTELL guild->learn_spell("chromatic_orb");
+  } else if(str == "magic missile" || str == "mssle"){
+      CTELL guild->learn_spell("magic_missile");
+  } else if(str == "chill touch" || str == "touch"){
+      CTELL guild->learn_spell("chill_touch");
+  } else if(str == "emote"){
+      CTELL guild->learn_spell("emote");
+  } else if(str == "light"){
+      CTELL guild->learn_spell("light");
+  } else if(str == "capture the soul" || str == "dust"){
+      CTELL guild->learn_spell("dust_corpse");
+  } else if(str == "wizard mark" || str == "mark"){
+      CTELL guild->learn_spell("wizard_mark");
+  } else if(str == "know alignment" || str == "knowal"){
+      CTELL guild->learn_spell("know_alignment");
+  } else if(str == "dazzle"){
+      CTELL guild->learn_spell("dazzle");
+  } else {
+      write(HIR+"Invalid.\n"+NORM+CYN+"-=> "+NORM);
+      input_to("learn_first");
+  }
+  return 1;
+}
+
+learn_second(str){
+  if(str == "l"){
+    write(HIC+"\n"+
+  "LEVEL 2 SPELLS:\n"+
+  "  flame sphere [flame]   color spray [spray]   blind [blind]\n"+
+  "  guild rescue [rescue]  cure wounds [cure]    darkness [darkness]\n"+
+  "  shield [shield]        wither [wither]       alarm [alarm]\n"+
+    "\n"+NORM);
+    write(CYN+"-=> "+NORM);
+    input_to("learn_second");
+  } else if(str == "flame sphere" || str == "flame"){
+     CTELL guild->learn_spell("flame_sphere");
+  } else if(str == "color spray" || str == "spray"){
+     CTELL guild->learn_spell("color_spray"); 
+  } else if(str == "blind"){
+     CTELL guild->learn_spell("blind");
+  } else if(str == "guild rescue" || str == "rescue"){
+     CTELL guild->learn_spell("guild_rescue");
+  } else if(str == "cure wounds" || str == "cure"){
+     CTELL guild->learn_spell("cure_wounds"); 
+  } else if(str == "darkness"){
+     CTELL guild->learn_spell("darkness");
+  } else if(str == "shield"){
+     CTELL guild->learn_spell("shield");
+  } else if(str == "alarm"){
+     CTELL guild->learn_spell("alarm");
+  } else if(str == "wither"){
+     CTELL guild->learn_spell("wither");
+  } else {
+     write(HIR+"Invalid.\n"+NORM+CYN+"-=> "+NORM);
+     input_to("learn_second");
+  }
+  return 1;
+}
+
+learn_third(str){
+  if(str == "l"){
+    write(HIC+"\n"+
+  "LEVEL 3 SPELLS:\n"+
+  "    acid arrow [acid]   fire whip [whip]     slow [slow]\n"+
+  "    empower [empower]   khirstel [khirstel]  invisibility [invis]\n"+
+  "    query [query]       sigil [sigil]        iatricy [iatricy]\n"+
+  "    distortion [distort] \n"+
+  "\n");
+    write(CYN+"-=> "+NORM);
+    input_to("learn_third");
+  } else if(str == "acid arrow" || str == "acid"){
+     CTELL guild->learn_spell("acid_arrow");
+  } else if(str == "fire whip" || str == "whip"){
+     CTELL guild->learn_spell("fire_whip");
+  } else if(str == "slow"){
+    CTELL guild->learn_spell("slow");
+  } else if(str == "empower"){
+     CTELL guild->learn_spell("empower");
+  } else if(str == "khirstel"){
+     CTELL guild->learn_spell("khirstel");
+  } else if(str == "invisibility" || str == "invis"){
+     CTELL guild->learn_spell("invisibility");
+  } else if(str == "query"){
+     CTELL guild->learn_spell("query");
+  } else if(str == "sigil"){
+    CTELL guild->learn_spell("sigil");
+  } else if(str == "iatricy"){
+    CTELL guild->learn_spell("iatricy");
+  } else if(str == "distort"){
+    CTELL guild->learn_spell("distortion");
+  } else {
+    write(HIR+"Invalid.\n"+NORM+CYN+"-=> "+NORM);
+     input_to("learn_third");
+  }
+  return 1;
+}	
+
+learn_fourth(str){
+  if(str == "l"){
+    write(HIC+"\n"+
+  "LEVEL 4 SPELLS:\n"+
+  "    asphyxiation [phyx]  lightning bolt [lbolt]    cat claw [claw]\n"+
+  "    create food [food]   unseen servant [servant]  catalyst [catalyst]\n"+
+  "    divine [divine]      reveal [reveal]\n"+
+    "\n"+NORM);
+    write(CYN+"-=> "+NORM);
+    input_to("learn_fourth");
+  } else if(str == "asphyxiation" || str == "phyx"){
+    CTELL guild->learn_spell("asphyxiation"); 
+  } else if(str == "lightning bolt" || str == "lbolt"){
+    CTELL guild->learn_spell("lightning_bolt");
+  } else if(str == "cat claw" || str == "claw"){
+    CTELL guild->learn_spell("cat_claw");
+  } else if(str == "create food" || str == "food"){
+    CTELL guild->learn_spell("create_food");
+  } else if(str == "unseen servant" || str == "servant"){
+    CTELL guild->learn_spell("unseen_servant");
+  } else if(str == "catalyst"){
+    CTELL guild->learn_spell("catalyst");
+  } else if(str == "divine"){
+    CTELL guild->learn_spell("divine");
+  } else if(str == "reveal"){
+    CTELL guild->learn_spell("reveal");
+  } else {
+      write(HIR+"Invalid.\n"+NORM+CYN+"-=> "+NORM);
+      input_to("learn_fourth");
+  }
+  return 1;
+}
+
+learn_fifth(str){
+  if(str == "l"){
+    write(HIC+"\n"+
+  "LEVEL 5 SPELLS:\n"+
+  "  fireball [fball]        cyclone [cyclone]     animate dead [andead]\n"+
+  "  stone skin [stoneskin]  pacify [pacify]       telekenesis [tk]\n"+
+  "  bind [bind]\n"+
+    "\n"+NORM);
+    write(CYN+"-=> "+NORM);
+    input_to("learn_fifth");
+  } else if(str == "fireball" || str == "fball"){
+    CTELL guild->learn_spell("fire_ball");
+  } else if(str == "cyclone"){
+    CTELL guild->learn_spell("cyclone");
+  } else if(str == "animate dead" || str == "andead"){
+    CTELL guild->learn_spell("animate_dead");
+  } else if(str == "stone skin" || str == "stoneskin"){
+    CTELL guild->learn_spell("stone_skin");
+  } else if(str == "pacify"){
+    CTELL guild->learn_spell("pacify");
+  } else if(str == "telekenesis" || str == "tk"){
+    CTELL guild->learn_spell("telekenesis");
+  } else if(str == "bind"){
+    CTELL guild->learn_spell("bind");
+  } else {
+    write(HIR+"Invalid.\n"+NORM+CYN+"-=> "+NORM);
+    input_to("learn_fifth");
+  }
+  return 1;
+}
+
+learn_sixth(str){
+  if(str == "l"){
+    write(HIC+"\n"+
+    "LEVEL 6 SPELLS:\n"+
+    "  Pummel [pummel]           Mirror Image [mimage]\n"+
+    "  Enchant Weapon [enchant]  Enchant Armor [enchanta]\n"+
+    "  Blister [blister]\n"+
+    "\n"+NORM);
+    write(CYN+"-=> "+NORM);
+    input_to("learn_sixth");
+  } else if(str == "pummel"){
+    CTELL guild->learn_spell("pummel");
+  } else if(str == "blister"){
+    CTELL guild->learn_spell("blister");
+  } else if(str == "mirror image" || str == "mimage"){
+    CTELL guild->learn_spell("mirror_image");
+  } else if(str == "enchant"){
+    CTELL guild->learn_spell("enchant_weapon");
+  } else if(str == "enchanta"){
+    CTELL guild->learn_spell("enchant_armor");
+  } else {
+    write(HIR+"Invalid.\n"+NORM+CYN+"-=> "+NORM);
+    input_to("learn_sixth");
+  }
+  return 1;
+}
+
+learn_seventh(str){
+  if(str == "l"){
+   write(HIC+"\n"+
+    "LEVEL 7 SPELLS:\n"+
+    "  Meteor Storm [mstorm]     Vorpal Twin [twin]  \n"+
+    "  Teleport [tlp]            Ensorce [ensorce]  \n"+
+    "  Restoration [restor]      Shrapnel [shrapnel]\n"+
+    "\n"+NORM);
+    write(CYN+"-=> "+NORM);
+    input_to("learn_seventh");
+  } else if(str == "mstorm"){
+    CTELL guild->learn_spell("meteor_storm");
+  } else if(str == "twin"){
+    CTELL guild->learn_spell("vorpal_twin");
+  } else if(str == "ensorce"){
+    CTELL guild->learn_spell("ensorce");
+  } else if(str == "restor"){
+    CTELL guild->learn_spell("restoration");
+  } else if(str == "shrapnel"){
+    CTELL guild->learn_spell("shrapnel");
+  } else if(str == "tlp"){
+    CTELL guild->learn_spell("teleport");
+  } else {
+    write(HIR+"Invalid.\n"+NORM+CYN+"-=> "+NORM);
+    input_to("learn_seventh");
+  }
+  return 1;
+}

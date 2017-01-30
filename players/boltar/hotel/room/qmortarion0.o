@@ -1,0 +1,12 @@
+no_clean 0
+short_desc "A bit of Onyx Powder"
+long_desc "Two teaspoons of Onyx Powder."
+info 0
+save_flag 0
+value 500
+local_weight 0
+name "onyx powder"
+alias_name "powder"
+read_msg 0
+shop_dest_flag 1
+multipleIds ({})

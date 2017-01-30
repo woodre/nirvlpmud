@@ -1,0 +1,14 @@
+guild_exp 589971
+beats 109157
+percent 80
+endurance 37
+max_endurance 37
+special_title 0
+weave 0
+endurance_monitor 1
+posendcol "[1;32m"
+negendcol "[1;31m"
+norm "[2;37;0m"
+old_exp 109326
+custom_monitor "$HR$<< HP: #hps#$N$$R$/#mhp#$N$ $HR$SP: #sps#$N$$R$/#msp#$N$ $HM$I:#intox# S:#soa# F:#stu# I:#inf#$N$ $HC$#ahp#$N$ $HR$>>$N$#ret#My coins are at $HY$#coins#$N$ My XP is $HG$#exp#$N$"
+Skills ({"focus","beckon shadows","wither corpse","drain","teleport",})

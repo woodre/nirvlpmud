@@ -1,0 +1,81 @@
+ ./build lnx
+
+IMPORTANT NOTICE
+
+Beginning with version 2.6.0, the WU-FTPD Development Group is moving the
+build process to use GNU Autoconf.  Until this move is completed, both
+build systems will remain supported.  You are encouraged to use the new
+"configure" command to select options, then "make" to compile the daemon.
+For details on this, read the README.AUTOCONF file.
+If problems occur, please report them to the development group via email to
+wuftpd-members@wu-ftpd.org  We are soliciting feedback on the new
+configuration process, and your help is greatly appreciated.
+
+If you choose to continue to use the original build process, bear in mind
+it will be phased out over the next few releases: when we are reasonably
+sure the new configuration system works for most target platforms.
+
+Sleeping for five seconds, sorry for the interruption.
+make args are :
+make opts are :
+
+Copying Makefiles.
+
+Linking src/config.h
+
+Making support library.
+make: `libsupport.a' is up to date.
+
+Making ftpd.
+gcc -O3 -fomit-frame-pointer -fno-strength-reduce -pipe -I.. -I../support  -L../support -s  -DUSE_PAM   -c -o access.o access.c
+In file included from extensions.h:119,
+                 from access.c:64:
+/usr/include/linux/quota.h:4:2: warning: #warning Including kernel-private quota.h instead of <sys/quota.h>
+access.c: In function `parsetime':
+access.c:105: warning: assignment makes pointer from integer without a cast
+access.c:106: error: dereferencing pointer to incomplete type
+access.c:133: error: dereferencing pointer to incomplete type
+access.c:133: error: dereferencing pointer to incomplete type
+make: *** [access.o] Error 1
+
+Making ftpcount.
+make: `ftpcount' is up to date.
+
+Making ftpshut.
+gcc -O3 -fomit-frame-pointer -fno-strength-reduce -pipe -I.. -I../support  -L../support -s  -DUSE_PAM   -c -o ftpshut.o ftpshut.c
+ftpshut.c: In function `shutdown_msgfile':
+ftpshut.c:110: error: dereferencing pointer to incomplete type
+ftpshut.c:111: error: dereferencing pointer to incomplete type
+ftpshut.c:112: error: dereferencing pointer to incomplete type
+ftpshut.c:113: error: dereferencing pointer to incomplete type
+ftpshut.c:114: error: dereferencing pointer to incomplete type
+ftpshut.c: In function `main':
+ftpshut.c:285: warning: assignment makes pointer from integer without a cast
+ftpshut.c:290: warning: assignment makes pointer from integer without a cast
+ftpshut.c:294: warning: assignment makes pointer from integer without a cast
+ftpshut.c:295: error: dereferencing pointer to incomplete type
+ftpshut.c:296: error: dereferencing pointer to incomplete type
+ftpshut.c:298: error: dereferencing pointer to incomplete type
+ftpshut.c:298: error: dereferencing pointer to incomplete type
+make: *** [ftpshut.o] Error 1
+
+Making ftprestart.
+make: `ftprestart' is up to date.
+
+Making ckconfig.
+make: `ckconfig' is up to date.
+
+Making privatepw.
+make: `privatepw' is up to date.
+
+Executables are in bin directory:
+size: 'bin/ftpd': No such file
+   text    data     bss     dec     hex filename
+   6579     536      12    7127    1bd7 bin/ftpcount
+size: 'bin/ftpshut': No such file
+   6673     460   12320   19453    4bfd bin/ftprestart
+   6579     536      12    7127    1bd7 bin/ftpwho
+   5825     416    8224   14465    3881 bin/ckconfig
+   7757     556     352    8665    21d9 bin/privatepw
+Done
+

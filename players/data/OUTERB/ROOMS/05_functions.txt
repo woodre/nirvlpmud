@@ -1,0 +1,80 @@
+Functions - Moving the world around us
+
+A function is a set of instructions you can reference by a name.
+There are two basic categories of functions that you will deal with.
+On the one hand are functions that you write to accomplish an end
+and on the other hand there are functions that are part of code
+elsewhere that you will interact with. Both types are used in most
+common objects.
+
+Some functions are already defined by the gamedriver, they are
+called external functions, or efuns. [They are external functions
+because they are outside the actual mud code.] Functions defined
+inside LPC code are called local functions, or lfuns. To confuse
+matters further there is a set of functions that count as efuns, but
+are written in LPC. These functions are called simulated efuns or
+sfuns.
+
+An example of an efun is the write() function. The write() function
+allows you to display text. Without this efun, there would not be a
+way to create that ability within the LPC code itself. The efuns
+also do not care if the environment that they are in is a room or
+any other object.
+
+e.g.
+write("This text will appear on the screen.");
+
+Functions that are defined as part of the specific environment in
+which they are used comprise the lfuns, or local functions. For
+example, add_exit() only makes sense in a room type object and
+wear() would only make sense in a apparel type environment.
+
+e.g. In a piece of armor there might be:
+wear(string str) {
+   /* snipped code */
+
+The last set of confusing functions sfuns or sefuns or simulated
+efuns, are for all intents and purposes treated like efuns in your
+code. The only difference is the fact that they indeed coded from
+LPC and not included in the actual game driver. Additionally, some
+critical efuns that affect security issues may also have sfuns
+infront of them to filter out any misbehavior on the part of
+malicious coders.
+
+e.g.
+creator() /* returns the coder who coded the object */
+
+At the most basic level, a correct function could be:
+
+void do_nothing() { }
+
+which accepts no input, performs no instruction nor returns no output.
+
+There are two basic ways to order functions within your code. The 
+first involves putting in declarations for your functions as you 
+would do with global variables. For a function that would take a 
+string as an input and and return an integer as a result, the 
+declaration would look something like this:
+
+int my_function(string str);
+
+breaking that down:
+    int           - this is the 'type' of the function, 
+                    i.e. what it will return when called
+    
+    my_function() - this is the name of the function to
+                    use this function later, this is what
+                    will be used to 'call' this function
+
+    string str    - this is the input that the function
+                    takes to work on. A string that will
+                    be referred to within the function as
+                    str. e.g. my_function("blue"); has blue
+                    as the str and any reference to str is
+                    equal to "blue"
+
+
+At this point you should be able to at least look at code and pick
+out different parts of the code [even if you don't understand them or
+know what they do]. There are a few things left that don't yet have 
+any explanations, but are coming soon.

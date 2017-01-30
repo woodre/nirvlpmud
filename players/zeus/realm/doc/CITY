@@ -1,0 +1,84 @@
+04 / 29 / 99       Zeus        The Fallen Lands
+- - - ---------- - - - ---------- - - - ---------- --- - - -
+Updated 5.24.00
+
+Okay, my first area is in realm/city/ and is called The Fallen Lands.  The
+area itself is actually more than just what is in there, but I broke it
+into a few pieces so they could be coded and opened seperately.
+The city part of The Fallen Lands is an abandoned city / forest,
+27 rooms, with 15 monsters, not counting random demons.
+
+
+Things you will want to look at:
+
+* closed/fl_demon.h is the RDG file (random demon generator) (tm)
+* realm/NPC/demon1.c is the demon the RDG uses.
+realm/city/
+* path6.c has a 'free money' function, purely for atmosphere.
+* path4.c has a money function that can be called once the NPC is killed.
+* path1.c also has that same money function as above.
+* path5.c and path9.c connect via a secret exit.
+* path23.c and path18.c connect via a secret exit.
+* path19.c has a [more] secret exit to path24.c
+
+Notes:
+
+* All my obj's are fairly conventional.
+* This is a non-pk area.
+* Each room has a 50% chance for being non-teleport when it loads.
+
+Theme:
+
+The basic theme is of a forest that has grown up around a city.  All that is
+left are the creatures of the forest, including a species called gurthers,
+who have a small "gathering" to the north.  A curse has been placed over the
+land, and so demons come to protect it, and it is somewhat non-teleport.
+
+
+
+
+ent.c             tyborlek.c, portal1.c
+path1.c          3 snake1.c, 'search' for money
+path4.c          wolf1.c, 'search' for money
+path5.c          hidden exit
+path6.c          free money
+path7.c          hunter1.c
+path9.c          creature1.c, hidden exit
+path13.c        lion1.c
+path14.c        bear1.c, water
+path17.c        troll1.c
+path19.c        secret exit
+path22.c        gorilla1.c
+path23.c        secret exit
+shrine.c        murdok.c
+
+- - - ---------- - - - ---------- - - - ---------- --- - - -
+
+  NPC stats for the NPCs found in /players/zeus/realm/city/
+       r = random
+
+                 Lvl        AC      WC       HP     special chnc/amnt
+
+tyborlek.c       19       17+r3   30+r3    500+r200     10/30+r100
+snake1.c         16       4+r4    20+r5    200          5/25
+wolf1.c          17+r4    17      36       455+r25      15/25
+creature1.c      20       16      38       500          15/60
+lion1.c          18+r3    17      35       475+r25      15/25
+bear1.c          20       15+r4   33       575          15/15
+troll1.c         19       17      30       550          30/40
+gorilla1.c       20       20      30       800          15/30
+hunter1.c        19       16      30+r3    500          40/20
+murdok.c         20       18      38       600+r190
+
+demon1.c         9-11     7-9    23+r4     7-9*19       15/25
+
+- - - ---------- - - - ---------- - - - ---------- ---
+
+Ideas for future expansion:
+
+
+*  There will be mountains to the south, which will be the home of the human
+resistance, tentatively called the Enclave, they are strong
+fighters who believe they are fighting for the survival of mankind (as they
+know it).
+

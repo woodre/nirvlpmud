@@ -1,0 +1,129 @@
+======================================================================
+     NEW CASTLE & AREAS
+======================================================================
+  This is a totally new area, replacing all my current, closed areas.
+The pertinent files are located in: 
+    ~realms 
+    ~realms/flame_forest
+    ~realms/salam
+    ~realms/keats
+    ~heals (these were all approved before)
+  I have broken down the outline into seperate areas below.
+======================================================================
+     ~realms
+======================================================================
+  Important files to look at in ~realms are:
+    castle.c
+    entrance.c
+    shack.c
+    davvrus.c
+
+castle.c
+  I have changed the way my castle looks and where it leads.
+entrance.c
+  This is the main entrance to my area.  My castle dumps the player
+  here and from here you can either go to the shack or teleport
+  using crystals.c to the rest of my area.
+crystals.c
+  This costs players 40+random(20) sps to use, and it the main way to 
+  get into my area.  It also allows teleporting to other places - 
+  though only to the Village Green, Eurale's Warp, and Mythos' Pass 
+  currently.  There is no teleporting error now, since it is a 
+  stationary point and the act of teleporting is equivalent to exits 
+  in a room.  If you want me to add error in, I can do that.
+shack.c
+  My main heal shop.  Supply is limited and restocking will occur.
+davvrus.c
+  This NPC controls most functions in shack.c (he must be present in
+  order to buy things).  Level 20, 900r300 hps, wc 20, ac 19, with a
+  set_heal(1,1).  Has no coins except for tips the players give.  If
+  tips become greater than 10,000 coins, he will store 3000r3000 of
+  them.
+
+======================================================================
+     ~realms/flame_forest
+======================================================================
+  Important files to look at in ~realms/flame_forest are:
+    ff01_07.c
+    ff02_02.c
+    ff06_02.c
+    ~realms/keats/NPC/pg_gateguard.c
+
+  Most flame_forest rooms are random, with 1/2 or 1/3 chance of mob
+cloning.  There are two static mobs, with all others being a random
+mob.  Therefore, there is a total of 2-47 mobs in the area at a time.  
+
+ff01_07.c
+  Entrance to the Caves of the Salamite area.  Entrance is hidden and
+  players must search for it.
+ff02_02.c
+  Entrance to Flame Forest area.  Another ~realms/crystals.c is 
+  located here.
+ff06_02.c
+  Entrance to a future area.  Currently blocked off, this room has
+  two static guards that will team up on players.
+~realms/keats/NPC/pg_gateguard.c
+  There are two of this NPC.  Will attack player together if either
+  one is attacked.
+
+  There are no items of note in this area; all treasure is barterable
+or sellable for value only.
+
+  ===============================================================
+  ===== NPC BREAKDOWN ===========================================
+  ===============================================================
+                    # LVL  HP       WC    AC   Min/Max   Avg Value
+  forestmob.c ^1 (numbers/type are random)
+    smoldersnake    r  5    75      10     4   100/250      175 
+    ash lizard      r 10   150      15     8   300/500      400
+    ash crawler     r 13   190      15    10     0/0          0
+    drake           r 15   250      20    12   750/1250    1000
+    blinding light  r 17   300      26    40  1500/2500    2000
+    shrieker        r 18   450r100  32r8  16  2750/3196    3333
+    creep           r 19   525      28r6  18  3000/4500    3750
+    thermal wraith  r 21   550r100  35r5  20  4800/6450    5625
+    
+  pg_gateguard.c ^2 2 20   650      30    20  3850/4249    4050
+
+       ^1 files located in ~realms/flame_forest/NPC
+       ^2 files located in ~realms/keats/NPC
+
+======================================================================
+     ~realms/salam
+======================================================================
+  Important files to look at in ~realms/salam are:
+    coal_crown.c
+    neruumsh.c
+    salamite_scales.c
+    king.c
+  
+neruumsh.c
+  This is a special weapon that king.c carries.  Take a look at the
+  file header for more detailed information.  It was approved before,
+  I just wanted to move it to my new area.
+coal_crown.c
+  Just a basic ac 2, type helmet armor that king.c carries.
+salamite_scales.c
+  Barterable item for thematic coin value.  Didn't want the critters
+  dropping coins.
+
+  There are 7-14 mobs in this area.  They are all pretty basic, 
+except for king.c.  He carries a special weapon and has some 
+additonal attacks and spells to make up for it. 
+
+  ===============================================================
+  ===== NPC BREAKDOWN ===========================================
+  ===============================================================
+                 #  LVL  HP       WC    AC   Min/Max   Avg Value
+
+  jester.c ^3    1  14   222      18    11   150/150      150
+  lookout.c ^3   r  19   450      28    16  3125/4875    4000
+  warrior.c ^3   r  19   500      30    17  3125/4875    4000
+  guardsman.c ^3 r  20   500      33    16  4125/5875    5000
+  brute.c ^3     1  20   700      35    19  3125/4875    4000
+  king.c ^3*     1  25   1100r200 46    22  4125/5875    5000
+
+       ^3 files located in ~realms/salam/NPC
+       * see code for more information on special attacks, etc.
+====================================================================== 
+    

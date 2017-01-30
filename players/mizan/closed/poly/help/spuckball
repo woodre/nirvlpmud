@@ -1,0 +1,18 @@
+[SPUCKBALL] Level [1] 60 charges (+sta, --int, -mag, +str, -ste, +luck)
+
+  The Spuckball is an odd creature, completely flexible and made of a
+  strange squishy material simply called 'Spuck-stuff'. The Spuckball
+  can absorb a variety of items and spit them back out at will.
+
+  
+>>-------------------------------ABILITIES-------------------------------<<
+
+gobble <item>   Gobble up an item that is lying around in the room.
+                You dont really eat it or anything, it just winds up
+                inside you.
+
+spew <item>     Spit back out something that you gobbled earlier.
+
+squit <monster> (10 sps) An offensive spell, uses your mass in a most
+                efficient manner, to push your enemies around.
+

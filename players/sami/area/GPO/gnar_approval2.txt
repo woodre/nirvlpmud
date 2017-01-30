@@ -1,0 +1,50 @@
+NPC
+-----------------------
+bvampboss.c
+  - Changed coins to 4k, OK as is.
+bvamp.c
+  - Lowered coins to 7k, 7k + mace = 8k
+  - Has a big spell, needs a special advantage for level 23.
+healmob.c
+  - Removed spell, just doesn't make sense.
+  - OK.
+lvampboss.c
+  - Added a few hps and made him level 29 for value reasons. If you want you can drop his level and
+    lower his value just let me know if you do. OK as is.
+lvampire.c
+  - OK
+mikal.c
+  - Changed bonus from hp 50 to ac 25. OK as is.
+mvampboss.c
+  - Changed value from 6123 to 3123. 3k + 3k grace + pants + cube.
+  - Changed bonus from hp 50 to ac 25. OK as is.
+mvampire.c
+  - OK
+
+OBJ
+----------------------
+aura.c
+  - Empty file, remove?
+borb.c
+  - Not used, remove?
+dring.c
+  - OK
+dust.c
+  - Future use?
+grace.c
+  - Made non-vamp special randomized. OK as is.
+necklace.c
+  - Adjusted sps heal slightly, OK as is.
+pants.c
+  - Adjusted firing of special slightly. OK as is.
+vmace.c
+  - OK
+vsword.c
+  - OK
+
+ROOMS
+----------------------
+medlab4, medlab5, medlab6.c
+  - I fixed newline messed up at the end of the room long.
+All
+  - Copied jareels define.h to GPO and changed rooms to use this file.

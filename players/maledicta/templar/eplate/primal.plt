@@ -1,0 +1,1 @@
+[1;33mPrimal [2;37;0m[1m: [2;37;0m[1;33mWhat a courageous warrior! I got the honor of fighting with him and was VERY impressed, he is willing to put all he has on the line for the sake of the cause. How lucky I am to know someone like him.[2;37;0m (borith)

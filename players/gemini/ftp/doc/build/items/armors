@@ -1,0 +1,32 @@
+Armor:
+
+Armor is the player's best friend in the game. Therefore it behoves us to make 
+it scarce (good armor that is). Here are some basic armor rules that should be
+followed.
+
+1. Armor must be one of the following types: armor, helmet, shield, ring, 
+   amulet, boot, and misc. No other types will be allowed.
+
+2. The maximum AC for type 'armor' is 5.  No AC5 armor is to store, however.
+
+3. Good armor is not to be purchased.  For purchased armor:  type 'armor'
+   should not exceed AC3 and all other types must not exceed AC1.  The cost
+   should be:  type 'armor' - 500 coins per AC level, all other types - 250
+   coins each min.  A player could then purchase a full set of armor with a
+   total AC of 9 for a minimum of 3000 coins.
+
+4. Any AC2 armor other than type 'armor' is to be rare.  It should come from
+   a very difficult monster and be earned.  In even rarer cases, the AC2 armor
+   could be saveable.  In this case, the AC2 armor should be approved by two
+   senior wizards and their name and approval date noted in the item.  We are
+   not trying to make it easy for any player to store a complete set of the
+   best armor so use good judgement.  The exception to this might be an armor
+   that 'transforms' and becomes higher AC than its original.  In this case,
+   the item's change should be irreverseable so that the item will only store
+   if it has NOT been transformed.
+
+5. It is possible and even recommended that high AC armors have drawbacks to
+   go along with their increased AC.  A constant hps/sps drain, loss of coins,
+   heavy weight are just a few examples.
+
+6.  No armor other than type 'armor' may exceed AC2.

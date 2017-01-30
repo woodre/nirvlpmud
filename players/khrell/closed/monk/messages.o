@@ -1,0 +1,91 @@
+#define MY capitalize(this_player()->query_real_name())
+#define HIM capitalize(this_player()->query_attack()->query_name())
+#define STR call_other(this_player(), "query_attrib", "str");
+#define PIE call_other(this_player(), "query_attrib", "pie");
+
+/* -- special attack -- */
+/* Monk special attacks are designed to allow the Monk Guild Member
+   an extra attack every couple of rounds.  The special_attack function
+   is called out every 5 ticks.  If a check against the Monks Piety ,
+   Strength and Rank are sucessful, the Monks gets an extra attack.
+   Extra Attacks do the monks guild rank (1-10) Random damage.
+*/
+
+special_attack(){
+
+  object ob, obj;
+  int chance, dmg;
+
+  if(!this_player()->query_attack())
+    return 1;
+
+  if(this_player()->query_attack()->query_npc() != 1)
+    return 1;
+
+  chance = this_player()->query_guild_rank() * 2;
+  if(  chance > 30) chance = 15;
+  chance = chance + STR + PIE;
+
+  if(chance > random(100))
+    return 1;
+
+  pick_message();
+  obj = this_player()->query_attack();
+dmg = random(10);
+  if(dmg > obj->query_hp()) dmg = obj->query_hp();
+  obj->hit_player(dmg);
+  return 1;
+}
+
+
+/* -- pick a special attack message -- */
+pick_message(){
+ string wt, sy;
+ int z;
+z = random(13)+1;
+if(z == 1){
+wt = "You smash your enemy in the face with a backfist!";
+sy = MY+" smashes "+HIM+" in the face with a backfist!";  }
+if(z == 2){
+wt = "You slam "+HIM+" in the face with a crosskick!";
+sy = MY+" slams "+HIM+" in the face with a crosskick!";  }
+if(z == 3){
+wt = "You mame your enemy with a sidekick to the knee!";
+sy = MY+" mames his enemy with a sidekick to the knee!";  }
+if(z == 4){
+wt = "You butcher your opponent with powerful jabs!";
+sy = MY+" butchers his enemy with powerful jabs!";  }
+if(z == 5){
+wt = "You crack "+HIM+" in the face with a circle kick!";
+sy = MY+" cracks "+HIM+" in the face with a circle kick!";  }
+if(z == 6){
+wt = "You strike your enemy in the chest with an aerial reverse!";
+sy = MY+" strikes "+HIM+" in the chest with an aerial reverse!";  }
+if(z == 7){
+wt = "You axe kick "+HIM+" in the chest!";
+sy = MY+" axe kick's "+HIM+" in the chest!";  }
+if(z == 8){
+wt = "You spin and circlekick "+HIM+" in the face!";
+sy = MY+" spins and circle kicks "+HIM+" in the face!";  }
+if(z == 9){
+wt = "You sidekick "+HIM+" in the knee!";
+sy = MY+" sidekicks "+HIM+" in the knee!";  }
+if(z == 10){
+wt = "You jab "+HIM+" in the face!";
+sy = MY+" jabs "+HIM+" in the face!";  }
+if(z == 11){
+wt = "You turn and backkick "+HIM+" in the midrift!";
+sy = MY+" turns and backkicks "+HIM+" in the midrift!";  }
+if(z == 12){
+wt = "You leap up and axe kick "+HIM+" in the throat!";
+sy = MY+" leaps up and axe kicks "+HIM+" in the throat!";  }
+if(z == 13){
+wt = "You palm strike "+HIM+" in the chest!";
+sy = MY+" palm strikes"+HIM+" in the chest!";  }
+if(z == 14){
+wt = "You spring forward and snap kick "+HIM+"!";
+sy = MY+" springs forward and snap kicks "+HIM+"!";  }
+write("> "+wt+"\n");  say(sy+"\n");
+return 1;
+}
+

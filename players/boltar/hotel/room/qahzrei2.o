@@ -1,0 +1,29 @@
+no_clean 0
+name "helmet"
+alias 0
+short_desc "A horned steel helmet"
+long_desc "A horned steel helmet."
+worn_tag_short_flag 0
+buy_value 0
+value 300
+weight 2
+type "helmet"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 2
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"helmet",})
+params ({"physical",2,0,"do_special",})
+enchantments 0

@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/avatars/hall/r2","up","/players/mokri/clans/avatars/hall/r4","down",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;33m[30mAura [1;37mof [30mDeath[2;37;0m","/players/saber/armor/aura","0",0,0,"[1;33m[30mAura [1;37mof [30mDeath[2;37;0m","/players/saber/armor/aura","0",0,0,"[1;33m[30mAura [1;37mof [30mDeath[2;37;0m","/players/saber/armor/aura","0",0,0,"[1;33m[30mAura [1;37mof [30mDeath[2;37;0m","/players/saber/armor/aura","0",0,0,"[1;32mLouisville Slugger[2;37;0m","/players/cosmo/apt/weap/bat",0,0,0,"[1;33m[30mAura [1;37mof [30mDeath[2;37;0m","/players/saber/armor/aura","0",0,0,"[1;33m[30mAura [1;37mof [30mDeath[2;37;0m","/players/saber/armor/aura","0",0,0,"[1;33m[30mAura [1;37mof [30mDeath[2;37;0m","/players/saber/armor/aura","0",0,0,"[1;33m[30mAura [1;37mof [30mDeath[2;37;0m","/players/saber/armor/aura","0",0,0,"[2;37;0mHOLY [1;34mLongsword[2;37;0m +3","/players/tallos/7tigers/objects/holylongsword",0,0,0,})

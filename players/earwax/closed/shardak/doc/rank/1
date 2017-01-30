@@ -1,0 +1,74 @@
+Rank 1
+
+   Creator [Untouched]:
+     Determine the creator of a certain object.
+     (Meaning the wiz responsible.)
+
+   Darken [Rewritten]:
+     Update the guild object.
+
+   Environ [New cmd]:
+     Spell that determines certain characteristics
+     about the room the player is in.  [I.e
+     non-teleport, non follow, etc].  Costs
+     10 spell points.
+
+   Fatality [Rewritten]:
+     Deathblow.  Requires 13 spell points.
+
+   Gt/Ge/Gf/Gpt/Gpe/Gpf/Gts [Rewritten]:
+     Guild channel / Alliance channel cmds.
+     'Gts' silences Alliance channel.
+
+   Gsave [Rewritten]:
+     Save guild statistics.
+
+   Guildbug [Untouched]:
+     Report a guild bug.
+
+   Gw [Rewritten]:
+     Guild who listing.
+
+   Help [Rewritten, obviously]:
+     Help files.
+
+   I/Inventory [Rewritten]:
+     Enhanced inventory; Shows 'tagged' items.
+
+   Locate [Untouched]:
+     Locate a player; Less spammy version of who2.
+
+   Obit/Obituary: [Completely Rewritten]
+     Prints recent deaths into a nice, neat little bundle.
+
+   Others [Untouched]:
+     Show all players on and some information on each.
+     Similar to an 'advanced' who2.
+
+   Remove / Wear [Untouched]:
+     Some cmds to work with Balowski's existing lib.
+
+   Restore [Untouched]:
+     Restore guild statistics.
+
+    Sacrifice [New Cmd]:
+     When a sacrifice is required, this command
+     is used to give up blood, gold, or a soul to Shardak.
+     Variable "costs" depending upon type of sacrifice
+     required.
+
+   Sc/Score [Rewritten]:
+     Extended score cmd.
+
+   Servants [Untouched]:
+     List all Servants of Shardak, online and offline.
+
+   Summon Shardak [Untouched]:
+      Summons Shardak to the side of the player when
+      he is engaged in combat within the guild hall.
+      (Meaning when the guild hall has been invaded)
+
+   Tag / Untag [Untouched]:
+      Tag an item in your inventory so it won't
+      be sold at the guild shop if you 'sell all'.
+

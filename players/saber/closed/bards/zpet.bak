@@ -1,0 +1,89 @@
+summon_pet(str)  {
+object ob, ob2, ob3;
+string animal_type, OB;
+string name, xname, petname;
+#define BBB move_object(ob,environment(this_player()))
+#define ENVV environment(this_player())
+
+  if(!str)  {
+    write("Animal <type>    <see animal_list>\n");
+    return 1;
+        }
+
+  if(sscanf(str, "%s %s", name, xname) !=2)  {
+    write("Animal <type> <name>\n");
+    return 1;
+        }
+
+  if(name == "raven")  {
+  if(spell(-149,2,40) ==-1) return 0;
+    ob = clone_object("/players/saber/closed/bards/pet/raven.c");
+        }
+  else if(name == "hawk")  {
+   if(spell(-149,4,50) ==-1) return 0;
+   ob = clone_object("/players/saber/closed/bards/pet/hawk.c");
+        }
+  else if(name == "drake")  {
+   if(spell(-149,6,40) ==-1) return 0;
+   ob = clone_object("/players/saber/closed/bards/pet/drake.c");
+        }
+  else if(name == "phoenix")  {
+   if(spell(-149,8,40) ==-1) return 0;
+   ob = clone_object("/players/saber/closed/bards/pet/phoenix.c");
+        }
+  else if(name == "test")  {
+   if(spell(-149,6,40) == -1) return 0;
+   ob = clone_object("/players/saber/closed/bards/pet/test.c");
+        }
+  else { write("That is not a bardic animal.\n");
+   return 1;
+        }
+
+  petname = this_object()->query_pet_name();
+  if(petname != 0)  {
+  if(present(petname,environment(TP)))  {
+   ob2 = present(petname,environment(TP));
+  call_other(ob2, "bye");
+        }
+        }
+
+  BBB;
+  call_other(ob,"set_master",this_player()->query_real_name());
+  call_other(ob,"set_alt_name",xname);
+  call_other(TO, "set_pet_name", xname);
+  tell_room(environment(TP), "\n\n");
+  write("You play a tune of summoning upon your "+TO->query_instrument()+".\n");
+  say(tp+" plays a tune upon "+TP->query_possessive()+" "+TO->query_instrument()+".\n");
+
+ if(name == "raven")  {
+  tell_room(ENVV, "A raven flies in and circles "+tp+".\n");
+        }
+  if(name == "hawk")  {
+   tell_room(ENVV, "An hawk flies in and circles "+tp+".\n");
+        }
+  if(name == "drake")  {
+   tell_room(ENVV, "A shadow crosses over you as a small drake descends from the sky\n"+
+       "and circles "+tp+" three times before landing upon "+TP->query_possessive()+" shoulder.\n");
+        }
+  if(name == "phoenix")  {
+   if(present("corpse",environment(TP)))  {
+   ob = present("corpse",environment(TP));
+   if(ob->short() == "corpse of Phoenix")  {
+   destruct(ob);
+   tell_room(ENVV, "The corpse of the Phoenix is engulfed in an explsion of crimson fire.\n\n"+
+       "A Phoenix rises from the ashes of its corpse.\n\n");
+        }
+        }
+   tell_room(ENVV, "A column of crimson fire descends from the sky.\n\n"+
+       "A phoenix rises from the ashes of the fire and flies over to "+tp+".\n");
+        }
+  if(name == "test")  {
+   tell_room(ENVV, "A test pet flies in and bows to "+tp+".\n");
+        }
+
+  call_other(TP,"add_spell_point",-40);
+  return 1;
+        }
+
+set_pet_name(str)  { pet_name = str; }
+query_pet_name()   { return pet_name;}

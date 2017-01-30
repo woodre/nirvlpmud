@@ -1,0 +1,8 @@
+restore_thing(str){
+      restore_object(str);
+      return 1;
+   }
+save_thing(str){
+      save_object(str);
+      return 1;
+   }

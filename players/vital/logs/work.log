@@ -1,0 +1,233 @@
+Thu Dec 28 22:33:08 2000 [1;34m-->[2;37;0m test write
+Thu Dec 28 22:34:58 2000 [1;34m-->[2;37;0m gave player pino /players/beck/Rangers/HonorRangerCommunicator.c to be an ally
+Sun Dec 31 03:03:33 2000 [1;34m-->[2;37;0m test write of filer.c to workreport
+Mon Jan  1 23:27:11 2001 [1;34m-->[2;37;0m Created testchar Vitestal
+Mon Jan  1 23:27:35 2001 [1;34m-->[2;37;0m Set Vitestal's home to /players/vital/workroom.c
+Sun Jan 14 15:04:43 2001 [1;34m-->[2;37;0m  Update ~/spaceport/rooms/econcourse.c describe 'people'
+Sun Jan 14 15:07:27 2001 [1;34m-->[2;37;0m updated ~/spaceport/rooms/econcourse.c : added +NORM+ and removed an extra 'the' from the desc of door.
+Sat Feb  3 23:18:11 2001 [1;34m-->[2;37;0m Updated ~/spaceport/rooms/mdmshop.c; the search function was screwed up.
+Fri Feb  9 01:12:51 2001 [1;34m-->[2;37;0m moved ~/std to ~/closed/std and updated the files that inherit things inside it.
+Fri Feb  9 01:13:29 2001 [1;34m-->[2;37;0m updated ~/spaceport/obj/bag.c so that you can actually put something into it and also get something out of it.
+Wed Feb 14 01:57:25 2001 [1;34m-->[2;37;0m Happy Valentine's Day
+Thu Mar  1 00:27:10 2001 [1;34m-->[2;37;0m Action: updated message_hit in ~/spaceport/obj/weapon/pda.c Reason: The previous messages lacked a space necessary after the attacker's name
+Fri Mar  2 17:19:44 2001 [1;34m-->[2;37;0m Action: put ~/spaceport/obj/weapon/info_pda.c into the game  Reason: Help players gain more information and discover creators.
+Fri Mar  9 23:59:03 2001 [1;34m-->[2;37;0m Mal approved the info_pda.c (see above note)
+Mon Mar 12 23:03:42 2001 [1;34m-->[2;37;0m Action: Opened up sewers and underground Reason: Mal approved and I'm happy with them.
+Tue Mar 20 16:17:19 2001 [1;34m-->[2;37;0m Action: Test of Tool Reason: Need to Know
+Wed Mar 21 23:54:53 2001 [1;34m-->[2;37;0m work on sensitivity#need to lessen it up to allow for joviality
+Thu Mar 22 00:39:07 2001 [1;34m-->[2;37;0m Action: Caused lag Reason: cloned about 10000 monsters in about 1000!/25!*5!
+Thu Mar 22 16:51:00 2001 [1;34m-->[2;37;0m Action: Dested Reflex Reason: Whim
+Mon Apr  2 18:28:14 2001 [1;34m-->[2;37;0m Action: Crap Reason: Missed April Fool's Day
+Wed Apr  4 00:11:50 2001 [1;34m-->[2;37;0m heh, that was cool. deep_inventory() doesn't have/or make checks for recursion
+Tue May  1 23:29:20 2001 [1;34m-->[2;37;0m Today is my Grandma's birthday. She's 85.
+Sun May  6 00:07:43 2001 [1;34m-->[2;37;0m Action: gave 1000 coins to Little Reason: bought something from him.
+Wed May  9 16:19:22 2001 [1;34m-->[2;37;0m Action: set tiffany's guild_rank and guild_name to null values Reason: She's been removed from the rangers sometime ago it seems, but not reset.
+Sun May 13 19:20:07 2001 [1;34m-->[2;37;0m Action: Color Pretitle for Little Reason: Found bug in code in area
+Sat Jun  2 13:38:20 2001 [1;34m-->[2;37;0m WHAT: got limited approval to beta ~/dest/weapon/lance.c WHY: my testing shows it to be approximately WC17, and I'd like some playertesting to confirm that it works in real world
+Mon Jul 16 02:13:06 2001 [1;34m-->[2;37;0m reset cerberus's grank and gxp. he had grank 5 and gxp 1376345, didn't show up on the who, or register. Had died and seemed to cause problems. Will look into and follow up with verte.
+Mon Jul 16 02:13:40 2001 [1;34m-->[2;37;0m Also, decided that the whole cerberus mess was a hazard of being a beta. call it a sacrifice for the greater good.
+Mon Jul 16 02:28:38 2001 [1;34m-->[2;37;0m added 1468006 xps to cerberus from the log of when he joined and before the bug. this is after zeroing his guild stats.
+Wed Jul 25 23:17:05 2001 [1;34m-->[2;37;0m Action: Sold ~/dest/weapon/darkblast.c to Matrix for 1750 coins. Reason: Wanted a real world test of the weapon. It is WC16 and has a small chance of making the room dark for 12 seconds.
+Thu Aug 23 02:51:40 2001 [1;34m-->[2;37;0m Action: gave worm 1k coins. Reason: his magic box didn't show up when he idled out.
+Sun Aug 26 14:25:25 2001 [1;34m-->[2;37;0m Action: healed gravedigger. Reason: only one able to tell how old they were.
+Sun Aug 26 23:15:57 2001 [1;34m-->[2;37;0m Action: deguilded mode Reason: itchy trigger finger and needed to find where the bug was
+Thu Aug 30 00:08:25 2001 [1;34m-->[2;37;0m Action: destruct(find_player("zexxil")); Reason: if(!this_player()->want_sex())
+Tue Sep  4 00:52:36 2001 [1;34m-->[2;37;0m Action: added a function to allow PRangers and only PRangers add people to the PRanger guild line. Reason: They should be able to help their guild grow.
+Thu Sep  6 13:34:48 2001 [1;34m-->[2;37;0m Action: Restored 100k xps to cooper Reason: Something in the mudwide bug last night jerked his gob around and in the restoration he came up short.
+Sun Sep  9 21:24:29 2001 [1;34m-->[2;37;0m Action: bought darque a pet. Reason: his was screwy and I'm lazy
+Fri Sep 14 02:18:59 2001 [1;34m-->[2;37;0m Action: pga to Dust Reason: won contest to celebrate completion of the pga
+Mon Sep 17 15:33:24 2001 [1;34m-->[2;37;0m Action: Dested Handy Reason: Asking for favors.
+Wed Sep 26 15:02:14 2001 [1;34m-->[2;37;0m Action: Copied little mobs to /players/brittany/xanth/NPC Reason: Help
+Thu Sep 27 00:07:58 2001 [1;34m-->[2;37;0m Action: Added 50k xp to Tarken, Cooper, Little Reason: for monopolizing their time for nearly 3 hours in a discussion about guild issues
+Fri Sep 28 23:53:58 2001 [1;34m-->[2;37;0m Action: rm'd vmail.c from my tool dir at the request of Feldegast who seems to think its wrong and that I'm inapproriately spying on the affairs of others and invading their privacy without their consent. Reason: heh, that assumes Feld has reason...no, the logical use of such a tool at my level is beyond his current cognitive abilities to conceptualize.
+Thu Oct  4 21:12:00 2001 [1;34m-->[2;37;0m Action: 10K to Gravedigger Reason: First to kill a poly in the Death to Polymorphs Lottery!
+Mon Dec 10 20:00:37 2001 [1;34m-->[2;37;0m Action: Nuked several of Kezana's login failures Reason: who needs half a dozen copies of Login?
+Tue Dec 11 19:16:25 2001 [1;34m-->[2;37;0m healed wulfgar's sps. they were -500 or so
+Thu Dec 13 17:38:16 2001 [1;34m-->[2;37;0m Healed Mizan, he was nearly dead and almost out of spell points. I was afraid if we just let him go he might flatline on us and we can't afford a Mud without Mizan
+Fri Dec 14 11:55:20 2001 [1;34m-->[2;37;0m updated /players/brittany/xanth/NPC/smalk.c; a couple of lines were joined during ftp and cp. doh.
+Thu Dec 27 01:09:37 2001 [1;34m-->[2;37;0m added pin emote to the shardak repitoire of limited emotions
+Sat Dec 29 00:12:43 2001 [1;34m-->[2;37;0m added um...a couple other emotes to the shardaks....so the multitude of people playing the guild can get more from it.
+Wed Feb  6 14:43:38 2002 [1;34m-->[2;37;0m changed the stupid giggle emote for the shardaks
+Wed Feb 13 19:48:54 2002 [1;34m-->[2;37;0m remade Borealis, why was a 19+8 char deleted?
+Wed Mar  6 12:43:05 2002 [1;34m-->[2;37;0m restored Black, lvl 5, glvl 5 polymorph, full stats
+Sun Mar  2 13:49:38 2003 [1;34m-->[2;37;0m aingeal
+Mon Mar 10 13:42:00 2003 [1;34m-->[2;37;0m katya
+Fri Mar 14 07:39:51 2003 [1;34m-->[2;37;0m test
+Fri Mar 14 07:41:35 2003 [1;34m-->[2;37;0m corrected a mistake whereby all line-endings were corrupted in an upload and had to be manually rechecked.
+Mon Mar 17 18:43:05 2003 [1;34m-->[2;37;0m recomp'd Spawn for guild exp which wasn't handled by the gob.
+Sun Sep  7 17:09:10 2003 [1;34m-->[2;37;0m Tarken and Mosh completed the Ranger quest. 1 skill point reward.
+Sun Sep  7 17:23:45 2003 [1;34m-->[2;37;0m Kezef and Whitewolf completed Ranger Quest #1 and were awarded 1 skill point
+Sun Sep  7 17:41:11 2003 [1;34m-->[2;37;0m Keli killed Ranger NPC, logged off, logged in ranger char, checked ranger who, logged off, logged in Keli and went after remaining Ranger NPC
+Mon Sep  8 14:39:22 2003 [1;34m-->[2;37;0m jaryn
+Thu Sep 11 03:23:07 2003 [1;34m-->[2;37;0m rm'd ~leatherneck/closed/testobj.old a dated copy of the old monk guild object
+Thu Sep 11 03:29:25 2003 [1;34m-->[2;37;0m remove 3 empty notes from newbie board at ~softly/nhall/rooms/n1.c
+Thu Sep 11 05:06:49 2003 [1;34m-->[2;37;0m earwax
+Thu Sep 11 05:42:24 2003 [1;34m-->[2;37;0m added check for negative spell_delay in dervish guild. mailed Fred.
+Thu Sep 11 17:32:43 2003 [1;34m-->[2;37;0m added Armadillo, Camel and Elephant to the list of Ranger animals
+Fri Sep 12 16:18:44 2003 [1;34m-->[2;37;0m offered some help on guild channels to Data
+Fri Sep 12 16:42:26 2003 [1;34m-->[2;37;0m for worked on dervish trials
+Sun Sep 14 16:10:40 2003 [1;34m-->[2;37;0m money to hugh for finding a bug in a weapon that wiped out
+Sun Sep 14 16:12:33 2003 [1;34m-->[2;37;0m hmmm...I didn't give Hugh 80k...need to look into that too.
+Mon Sep 15 14:40:06 2003 [1;34m-->[2;37;0m too out buggy code on ~spaceport/obj/weapon/super_pda.c that failed to return info. Kudos to Hugh for finding and pointing it out
+Thu Sep 18 14:24:12 2003 [1;34m-->[2;37;0m 500k to white. fixing the problem.
+Sun Sep 21 14:24:21 2003 [1;34m-->[2;37;0m added race of demon missionary to demon
+Sun Sep 21 14:24:41 2003 [1;34m-->[2;37;0m changed long of demon missionary to save memory
+Sun Sep 21 14:24:49 2003 [1;34m-->[2;37;0m ~catt/NPC/missionary
+Sun Sep 21 15:03:44 2003 [1;34m-->[2;37;0m adjusted a couple of mobs in ~catt/NPC to reflect monster.guide
+Mon Sep 22 04:29:52 2003 [1;34m-->[2;37;0m katya
+Tue Sep 23 07:14:15 2003 [1;34m-->[2;37;0m verte
+Wed Sep 24 12:04:41 2003 [1;34m-->[2;37;0m adjusted the long in Fran's work room. Suprise!
+Sat Sep 27 07:07:14 2003 [1;34m-->[2;37;0m mizan
+Sat Sep 27 11:40:26 2003 [1;34m-->[2;37;0m gave hottentot the equip he had on when his vamp room ate what he dropped
+Sat Sep 27 12:18:15 2003 [1;34m-->[2;37;0m comp'd poggio 80k for book bank disappearance. warned. mailed verte
+Sat Sep 27 13:48:39 2003 [1;34m-->[2;37;0m ~saber/tower/tower1.c enterance != correct spelling
+Sat Sep 27 15:28:18 2003 [1;34m-->[2;37;0m nuked binladen
+Sat Sep 27 15:28:24 2003 [1;34m-->[2;37;0m nuked binladen 2x
+Sat Sep 27 15:28:32 2003 [1;34m-->[2;37;0m nuked binladed 3x
+Sat Sep 27 15:28:46 2003 [1;34m-->[2;37;0m binladen chose a better username
+Sat Sep 27 15:29:22 2003 [1;34m-->[2;37;0m Binladen         2s  172.174.133.54   ACAE8536.ipt.aol.com
+Sun Sep 28 16:12:34 2003 [1;34m-->[2;37;0m dested flippant player for disregarding a direct request to stop spamming
+Sun Sep 28 16:12:36 2003 [1;34m-->[2;37;0m twice
+Sun Sep 28 16:12:46 2003 [1;34m-->[2;37;0m flippant player = boo
+Sun Sep 28 16:24:39 2003 [1;34m-->[2;37;0m I've been officially promoted to prick
+Sun Sep 28 16:56:10 2003 [1;34m-->[2;37;0m promo'd puppy to lvl 40. Keep up the good work on the cyber maintenance and bug control issues
+Mon Sep 29 17:55:08 2003 [1;34m-->[2;37;0m updated to vampsword to reflect vampire guild object
+Wed Oct  1 06:55:49 2003 [1;34m-->[2;37;0m katya
+Wed Oct  1 06:55:57 2003 [1;34m-->[2;37;0m blah
+Wed Oct  1 06:56:05 2003 [1;34m-->[2;37;0m mizan
+Wed Oct  1 14:56:24 2003 [1;34m-->[2;37;0m mizan
+Fri Oct  3 15:37:40 2003 [1;34m-->[2;37;0m llew
+Fri Oct  3 15:37:46 2003 [1;34m-->[2;37;0m lew
+Fri Oct  3 17:32:32 2003 [1;34m-->[2;37;0m ~closed/bleher.c added to set_title and give message to fastkill/silentkill for multiplaying. both were logging on, off, on and passing eq back and forth and to other parties w/ the same person at the control. I'm choosing to warn first and shoot second.
+Fri Oct  3 18:05:53 2003 [1;34m-->[2;37;0m catt
+Mon Oct  6 15:50:25 2003 [1;34m-->[2;37;0m set sparrowhawk's lvl to 9, was lvl 10, should have been able to join PowerRangers @ 10, but couldn't
+Mon Oct  6 15:57:36 2003 [1;34m-->[2;37;0m recomputed SH's xp after screwing it up. He suicided as I reset his level. Not pretty.
+Tue Oct 28 12:20:26 2003 [1;34m-->[2;37;0m updated /players/gowron/castle.c and rooms/enterance.c to correctly spell entrance and also changed the file name to entrance.c and not enterance.c [bleh, blah, bleha]
+Wed Nov  5 15:42:19 2003 [1;34m-->[2;37;0m fixed data's teller. my eyes were starting to hurt
+Wed Nov  5 15:42:23 2003 [1;34m-->[2;37;0m x
+Sat Nov 29 09:24:24 2003 [1;34m-->[2;37;0m repaired /players/beck/Rangers/Save/CommandCenter.o by changing the state of the 'dead' variable. Integrity of the save file was maintained. Operating with the information that a wizard might have been the destruction of it.
+Tue Dec  2 11:42:06 2003 [1;34m-->[2;37;0m beta-testing color area
+Mon Dec  8 15:23:53 2003 [1;34m-->[2;37;0m mizan
+Mon Dec  8 15:23:57 2003 [1;34m-->[2;37;0m heh
+Mon Dec  8 15:34:44 2003 [1;34m-->[2;37;0m earwa
+Thu Dec 11 13:31:15 2003 [1;34m-->[2;37;0m wrong command...heh
+Sat Dec 13 14:48:28 2003 [1;34m-->[2;37;0m moneyed hottentot for spending 40 heals and 10 maalox to kill a test mob for me
+Sat Dec 13 15:02:39 2003 [1;34m-->[2;37;0m added some color to the old vampire sword
+Thu Dec 25 11:01:46 2003 [1;34m-->[2;37;0m comp'd Hottentot for a death by DC and vampire object kept hitting him for damage in light
+Tue Dec 30 07:37:06 2003 [1;34m-->[2;37;0m changed restore_value() function ~eurale/VAMPIRES/OBJ/coffin_shelf.c to only restore coins if there is an argument and that argument is "value from shelf"
+Sun Jan  4 12:25:16 2004 [1;34m-->[2;37;0m Kudo's to Earwax for spurring me on to greatness. Er, working on wizard docs for newbie coders.
+Sun Jan 11 15:25:59 2004 [1;34m-->[0m approved katya's first area, ~katya/area/esquire for inclusion in the game and promoted her to lvl 30 for doing some good work.
+Sun Jan 11 15:26:47 2004 [1;34m-->[0m approved Katya's heal shop ~katya/area/esquire/r/concession.c for addition to her theater area and promo'd to lvl 31 as a joke
+Wed Jan 14 16:54:55 2004 [1;34m-->[0m snooped Billy, he's an idiot, can't read
+Fri Jan 23 12:50:56 2004 [1;34m-->[0m snooping Miz at his request
+Sun Jan 25 06:01:00 2004 [1;34m-->[0m Approved Hogath after talking with him about his plans to be a wizard. I have also agreed to be his sponsor when the gets two additional approvals. In the same vein, I am also approving Khrell and agreeing to be his sponsor upon his completion of the last couple of quests that he needs.
+Mon Jan 26 12:12:25 2004 [1;34m-->[0m edited /players/mythos/enterance.c [sic] to temporarily disable the entrance to keats per Forbin's request while he 'renovates', 'rejuvinates' and 'revives' the area.
+Tue Jan 27 13:32:29 2004 [1;34m-->[0m notified Viper that events outside the realm of Nirvana do not necessitate action on the parts of wizards. This also includes the actions and interactions of players on other muds. [Is this rocket science?]
+Wed Jan 28 06:08:46 2004 [1;34m-->[0m slight recode of ~dest/spaceport/npc/*.c monsters after an abortive FTP session seems to have corrupted those files. A couple of lines were missing out of the middle of each. Initially restored from backup, but upon further inspection, just decided to upgrade the whole lot.
+Sat Jan 31 14:30:39 2004 [1;34m-->[0m Fixed backdoor exit in /players/maledicta/town/rooms/t9.c as it pointed to a file that had been moved. Everything is copacetic now.
+Fri Feb 13 15:20:23 2004 [1;34m-->[0m mizan
+Tue Feb 17 14:16:51 2004 [1;34m-->[0m hogath
+Tue Feb 17 14:16:55 2004 [1;34m-->[0m khrell
+Mon Feb 23 14:28:43 2004 [1;34m-->[0m humble
+Mon Feb 23 14:29:27 2004 [1;34m-->[0m hogath
+Tue Apr 13 14:56:46 2004 [1;34m-->[0m Changed Fenris' ranger color for a bit. "Special Sauce". This is by no menas permanent, but is due to late nights and a craving for a Big Mac. Will finish working on him later.
+Tue Apr 13 14:57:42 2004 [1;34m-->[0m Added my name to the Ranger Viewing Globe. I'll pull it out too, but I just got tired of calling the functions in the object that were already defined.
+Tue Apr 13 14:57:54 2004 [1;34m-->[0m Working on the ranger roster bug
+Thu May  6 16:16:11 2004 [1;34m-->[0m began meta guild, try # 234950108091435902477584237408
+Thu May  6 16:16:31 2004 [1;34m-->[0m ok, it's really only 4th or 5th attempt
+Thu May  6 16:16:39 2004 [1;34m-->[0m Color daemon is working
+Thu May  6 16:16:49 2004 [1;34m-->[0m Manual daemon is um... well it loads.
+Thu May  6 17:00:47 2004 [1;34m-->[0m tallos
+Tue May 18 14:38:14 2004 [1;34m-->[0m approved returning Hepcat's name to the fallen_lands daemon
+Wed Jun  9 18:34:21 2004 [1;34m-->[0m Promo martha to lvl 30 for work on tutorial docs
+Sat Jun 12 11:59:08 2004 [1;34m-->[0m changed line 68: array *spellhits; to string *spellhits; array isn't a datatype.
+Sat Jun 12 11:59:32 2004 [1;34m-->[0m /players/jenny/wings/mobs/closed/delvecchio.c [see previous comment]
+Sun Jun 13 13:28:38 2004 [1;34m-->[0m edited mythos bottomless bag. it was bugging allowing ppl to sell it infinitely.
+Sun Jun 13 13:28:50 2004 [1;34m-->[0m /players/mythos/prac/bag.c
+Sun Jun 13 13:29:26 2004 [1;34m-->[0m vertebraker missed this when he added the keep code
+Tue Jun 29 15:13:52 2004 [1;34m-->[0m Released kharg/houndog from prison for multiplaying after talking with him and explained the facts of mudlife.
+Tue Jun 29 15:14:26 2004 [1;34m-->[0m Released dice for time served for cursing on gossip. If 1 month was too early, I apologize. I'll hunt him down.
+[Dec 31 2004 09:34] A: gave prizes for new year. 7k coins to Alexa
+Wed Aug 10 16:45:57 2005 [1;34m-->[0m boosted effects of Wolfpack tactics in the Rangers
+Thu Aug 11 10:08:21 2005 [1;34m-->[0m fixed borked zords - now they can be called again if they die
+[Aug 19 2005 13:14] A: Registered Test Character: Rive
+Tue Aug 23 08:45:52 2005 [1;34m-->[0m copied rangers over to ~
+Tue Aug 23 08:46:06 2005 [1;34m-->[0m working to iron out problems from this switch over
+Tue Aug 23 08:46:46 2005 [1;34m-->[0m editted pfiles to update location of new guild object
+[Aug 29 2005 14:28] A: Registered Test Character: Leatherneck
+Thu Sep 15 06:48:31 2005 [1;34m-->[0m added verte's next ip to the player.c 68.54.*.*
+Thu Sep 15 06:49:11 2005 [1;34m-->[0m added Honor Ranger Communicator to /pfiles/l/laci.o [missed tell when she was actually logged in]
+Thu Sep 15 06:50:19 2005 [1;34m-->[0m added 3-4 new Metallic Armor types for the Rangers [slight change in benefit, lowered the low end, and raised the high end by a point or two]
+Thu Sep 15 06:51:07 2005 [1;34m-->[0m added pk morph "Ninja" for the Rangers. Slightly harder hitting w/o Zord, armors, lamp, pack - can see in the dark and moves silently
+Thu Sep 15 10:15:35 2005 [1;34m-->[0m fixed a couple of typos in /players/boltar/hotel/hotel.c
+Thu Sep 15 10:23:34 2005 [1;34m-->[0m fixed typo in babality emote
+Thu Sep 15 10:23:52 2005 [1;34m-->[0m fixed typow in Tunnel of Light [missing space].
+Thu Sep 15 14:47:15 2005 [1;34m-->[0m fixed bug in ~dest/spaceport/obj/weapon/super_pda.c hex char ffffffca was somehow inserted. all so added type other|electrical to the Zap attack special
+Sat Sep 17 23:04:34 2005 [1;34m-->[0m cp'd fred's updated armor.c and weapon.c to /obj
+Sun Sep 18 13:40:55 2005 [1;34m-->[0m re-added if(gob) gob->guild_login(); to /obj/player.c
+Sun Sep 18 13:49:17 2005 [1;34m-->[0m added lines 92, 2126, 3462, 3463 to /obj/player.c
+Sun Sep 18 13:51:34 2005 [1;34m-->[0m loaded and updated /obj/player.c
+Sun Sep 18 14:09:23 2005 [1;34m-->[0m updated player.c with version from 2 weeks - contained modifications made previous to correct issues
+Sun Sep 18 14:09:43 2005 [1;34m-->[0m original player.c in /players/vital/temp/player.2005.09.18
+Wed Sep 21 11:09:15 2005 [1;34m-->[0m fixed bug with setmin/setmout in the ranger Morph and Ninja commands
+Wed Sep 21 15:21:10 2005 [1;34m-->[0m backed up and replaced /players/rich/kling1.c
+Wed Sep 21 15:21:40 2005 [1;34m-->[0m created /players/rich/area/[room/npc/obj] and began moving files there as they are updated
+Wed Sep 21 15:43:54 2005 [1;34m-->[0m Lacar will be helping with help files in her capacity as newbie helper.
+Fri Sep 23 05:40:26 2005 [1;34m-->[0m recomped Odysseus 500k for a dc death
+Fri Sep 23 05:40:34 2005 [1;34m-->[0m in a non pk room w/o mobs
+Fri Sep 23 17:06:28 2005 [1;34m-->[0m added reset(), set_name(), set_alias(), and set_alt_name() to /obj/newtreasure
+Sun Sep 25 16:24:16 2005 [1;34m-->[0m lowered power point cost to wear armors
+Sun Sep 25 16:24:30 2005 [1;34m-->[0m rangers pay power based on type of armor to wear it now
+Wed Sep 28 08:13:17 2005 [1;34m-->[0m added set_read() to /players/softly/newbie/obj/advsign.c [same info]
+Wed Sep 28 08:40:30 2005 [1;34m-->[0m added "eat" action to /players/zone/obj/mushrooms
+Wed Sep 28 08:56:56 2005 [1;34m-->[0m fixed typo in /room/south/sshore25.c
+Wed Sep 28 09:00:08 2005 [1;34m-->[0m fixed it's/its typo in /players/eurale/Park/NPC/tri.c
+Wed Sep 28 09:11:07 2005 [1;34m-->[0m fixed multitude of typos in /players/jaraxle/3rd/volcano/weaps/krakin.c
+Sat Oct  1 14:30:52 2005 [1;34m-->[0m changed query_name() in /obj/partymaster to capitalize(this_player()->query_real_name())
+Sun Oct  2 13:08:30 2005 [1;34m-->[0m added numerical_month() efun to the expand_month.c efun file
+Wed Oct  5 16:09:48 2005 [1;34m-->[0m moved newsd from /obj/news to /obj/daemons
+Wed Oct  5 16:44:33 2005 [1;34m-->[0m recomp'd Oz /players/snow/WEAPONS/hon_sword.c
+Wed Oct  5 17:56:53 2005 [1;34m-->[0m added /obj/channel.h and /obj/daemon/channeld.c
+Fri Oct  7 06:41:35 2005 [1;34m-->[0m fixed several typos in the /obj/partymaster.c object on the recommendation/submission of Lungbutter and mailed him a nice thank you suitable for framing and what not.
+Fri Oct  7 07:45:17 2005 [1;34m-->[0m added Grimm's ansi codes to the /obj/ansi.h, should be able to just replace all other ansi.h's with a file that #include "/obj/ansi.h"
+Fri Oct  7 11:03:53 2005 [1;34m-->[0m Ranger Monsters need to #include before inheriting, also switched to use add_money() instead of clone gold to them.
+Fri Oct  7 14:42:09 2005 [1;34m-->[0m fixed buggies in /obj/daemons/channeld.c will begin test implementation by converting star to use it.
+Sat Oct  8 17:18:48 2005 [1;34m-->[0m removed 'developers' from the count at the bottom of the who listing
+Wed Oct 12 17:04:05 2005 [1;34m-->[0m modified all PR guild code to use #pragma strict_types
+Fri Oct 14 15:18:18 2005 [1;34m-->[0m snooped autumn in testing HonorRangerCommunicator.c in its new home at /players/guilds/Rangers/
+Fri Oct 14 15:24:52 2005 [1;34m-->[0m added bloodpts to diabla. tried to find source of drain.
+Sun Oct 16 03:18:56 2005 [1;34m-->[0m snooped star to help debug /players/star/workroom.c as a training exercise
+Tue Oct 18 16:04:15 2005 [1;34m-->[0m edited /bin/std.c - changed location of power ranger guild.
+Fri Oct 21 10:27:55 2005 [1;34m-->[0m cleaned up backup files from /obj. They have all been dated and relocated to /obj/bak
+Fri Oct 21 15:49:00 2005 [1;34m-->[0m I owe  players/jaraxle/3rd/alt/items/nature_orb to Oz
+Mon Oct 24 15:43:56 2005 [1;34m-->[0m updated several spaceport files
+[Oct 27 2005 12:40] 
+  A: Promo'd Catt to lvl 21
+  R: He's Baaaaaack
+Thu Oct 27 15:38:59 2005 [1;34m-->[0m switched set_channel_name to set_channel_names because it was supposed to be that way
+Thu Oct 27 17:30:52 2005 [1;34m-->[0m updated channeld to reflect changes to player.c
+Fri Oct 28 15:32:09 2005 [1;34m-->[0m added deposit ability to Alpha for coins to help other rangers since Rangers cannot drop them in the Command Center.
+[Oct 29 2005 09:08] A: Registered Test Character: Vitestal
+[Nov 18 2005 21:53] 
+  A: modded down Joab's ranger save file
+  R: had been reset in the updates and was getting illegal skill points
+Wed Nov 23 17:33:16 2005 [1;34m-->[0m changed Joab's color to Tangerine#he asked, and it was good.
+Thu Dec  1 16:26:03 2005 [1;34m-->[0m recomped white 4517 for fakir's cashbox not working
+[Dec  8 2005 12:23] 
+  A: edited ~forbin/realms/ruins/NPC/angelbase.c
+  R: fix it's/its typo
+[Dec  8 2005 12:27] 
+  A: edited ~forbin/realms/ruins/OBJ/ice_hammer.c
+  R: fix it's/its typo
+Sat Jun  9 18:20:57 2007 [1;34m-->[0m vampire bat doesn't transfer coins. doh.
+Sat Jun  9 18:22:13 2007 [1;34m-->[0m comp'ed Hottentot for coins lost to 'transfer'
+Thu Jun 14 09:42:27 2007 [1;34m-->[0m tried to replicate a light bug with random equipment from Hottentot
+Thu Jun 14 09:42:37 2007 [1;34m-->[0m Gave him back some equipment
+Sat Jun 16 15:55:48 2007 [1;34m-->[0m promo'd Katya - lvl 50, she finished an area. what difference does it make.
+Mon Jun 18 04:15:50 2007 [1;34m-->[0m mod'd /players/jareel/heals/stone to use <ansi.h> instead of ~ansi.h which is irrelevant. bleh
+Thu Jun 21 16:57:58 2007 [1;34m-->[0m changed /players/eurale/VAMPIRES/OBJ/t_shirt.c to type chest
+Mon Oct 22 15:38:57 2007 [1;34m-->[0m Birthday#1 free skill point for Rangers & 1 stat for allies
+Wed Oct 24 08:59:08 2007 [1;34m-->[0m modded the /players/guilds/Rangers/CommandCenter/CommandCenter.o to not refence beck's files
+Sat Oct 27 15:02:47 2007 [1;34m-->[0m restored white from backup
+Mon Oct 29 08:55:56 2007 [1;34m-->[0m fixed all the /players/a* files to #include <ansi.h>
+Sun Nov 11 05:42:38 2007 [1;34m-->[0m removed redundant #include's of <ansi.h> from the bard guild object that was causing it to barf occasionally.

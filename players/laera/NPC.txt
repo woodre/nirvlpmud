@@ -1,0 +1,94 @@
+NPCs
+
+	OVERALL
+         Heh, well.. you have basically no treasure value
+        for the T-rex which is what kinda concerns me..
+        at an average level of 26, a player should expect
+        to pull in around 14000 coins.  You are giving them
+        1500 coins. *shrug*  But whatever.. it's your stuff :)
+	 You're forgetting set_gender("creature");
+	 for creatures :)  will give proper possessives, etc.
+       The other creats look good, just in t-rex is
+       where you got a little funky.
+
+	* t-rex.c:
+        A. heart_beat() coded spells:
+         1. Room Attack:
+            a. You do the hit_player() [deals dmg] before
+               they see the msg.  These should probably be
+               flipped, so they see they get hit, then they take
+               damage..
+            b. You currently call tell_room() when it has
+               found a target.  Perhaps you should leave a tell_room()
+               in that the target was hit and a tell_object() so they
+               specifically are notified when they are hit, and move
+               the tell_room() have now, before it found a target.
+               
+               tell_room(environment(), 
+                 inv[x]->query_name() + " is hit by the tail!\n", ({ inv[x] }));
+               tell_object(inv[x],
+                 "You are hit by the tail!\n");
+
+            c. After it has acquired a target and delivered the dmg once,
+               you have it returning 1 .. which means the tail will
+               not hit everyone, it only hits one person.  I think you
+               should rethink this strategy, or just change the msg
+               so it is only hitting one person, not "the whole area".
+          2. Switch atk/extra dmg
+            a. Here you do the same thing as you did in the room
+               atk, you are dealing the dmg prior to the enemy
+               getting the msg that they have been hit.
+            b. The tell_room() here would tell everyone in the room,
+               including inv[target] that inv[target]->query_name()
+               has been hit.  Maybe you should expand the messages...
+               Currently it would look like this to you, and the room:
+
+    "T-Rexaur picks up Laera and shakes hard trying to rip off her head."
+
+               If you added a 3rd argument to tell_room, ({ inv[target] }),
+               and wrote a tell_object() to inv[target], it would
+               look better like this:
+    ROOM:
+    "T-Rexaur picks up Laera and shakes hard trying to rip off her head."
+    YOU:
+    "T-Rexaur picks you up and shakes hard trying to rip off your head."
+
+               *shrug* only style.. but.. :)
+
+        B. Stats:
+         Monster stats are FAR too low for the level, which
+         averages out to level 26.
+        -Your avg stats:
+          HP 567  AC 17  WC 32
+        -Req's per mguide:
+          HP 1200 AC 24  WC 46
+
+        C. Bonuses:
+         You should add xp bonuses for the special
+         spells you have added to this creature.  For
+         more information, consult /open/NEWEXPGUIDE.
+         In the meantime, here is what you should
+         set the wc bonus to:
+         set_wc_bonus(21);
+         This is based on the formula:
+       [Roomspellbonus is double for being a room spell that
+        hits more than one person]
+
+        roomspellbonus  = ((80 avg dmg * (1 / 10 chance)) * 2)
+        otherspellbonus = (45 avg dmg * (1 / 10 chance))
+
+         wc_bonus = (roomspellbonus + otherspellbonus)
+         wc_bonus = 21
+
+              
+coding notes
+--------------------------------------------------------------
+- environment() is the same as environment(this_object())
+
+- instead of declaring your local variables like this:
+       int time; int blah; int do;
+  you can just do:
+       int time, blah, do;
+
+- tell_room(ob, msg) has a 3rd argument of an array of objects
+  in the environment 'ob' that will not receive the msg.

@@ -1,0 +1,25 @@
+
+
+Bloodfist Help:  Gem Help File
+
+To access information about a gem simply type:
+
+    gemhelp <gemname>
+
+
+Every gem should work with it's short description
+as the <gemname>.
+
+    gemhelp gem of speed
+
+
+To simplify it though you can also use almost any
+descriptive words in the gem name.  Basically you
+can drop off words like 'gem', 'of', etc.
+
+major gem of performance
+    gemhelp major performance
+
+gem of provoked aggression
+    gemhelp provoked aggression
+

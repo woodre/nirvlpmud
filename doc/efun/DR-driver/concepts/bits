@@ -1,0 +1,13 @@
+CONCEPT
+	Bits, why I hate them
+
+DESCRIPTION
+	There are 3 efuns for handling bits:
+
+		string set_bit( string, int)
+		string clear_bit( string, int)
+		int test_bit( string, int)
+
+	But clear_bit is not working like it should. I am guessing, but it
+	seems that clear_bit takes two arguments of type string, and handles
+	the second string like a number. Bleah..

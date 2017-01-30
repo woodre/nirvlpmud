@@ -1,0 +1,109 @@
+channel_names ({"msg","shout","babble","equip","announce","wiz","risque","gossip","junk",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 55635
+luck 99
+lucky 349
+name "ulath"
+gender "male"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 0
+level 20
+armor_class 0
+hit_point 862
+max_hp 862
+experience 8703482
+mmsgout "descends into Hell"
+mmsgin "appears in a cloud of fire and brimstone"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 22
+hunted 0
+hunter 0
+hunting_time -97
+cap_name "Ulath"
+spell_points 820
+max_spell 820
+spell_name "Power Wield"
+spell_cost 0
+spell_dam 0
+age 1463122
+is_invis 0
+frog 0
+whimpy 0
+auto_load "/players/saber/closed/new_mini/blade.c:^!/players/wizardchild/toys/hickey.c:^!/players/snow/closed/test/aura.c:^!/players/saber/closed/new_mini/succubus.c:^!/players/dreamspeakr/WEDDING/OBJ/wedding_ring:^!/players/saber/closed/new_mini/kender.c:^!/players/saber/closed/new_mini/gypsy.c:^!/players/saber/closed/new_mini/gothic.c:^!players/pain/NEW/items/star.c:^!/players/dragnar/closed/scar:1^!/players/wocket/junk/quill.c:says^!/players/sado/antifos/button.c:^!obj/quicktyper:7;morph hand ulath /players/mizan/closed/poly/gob;.X.Z;wiztool clone /obj/wiz_tool;.X.Z;wizfin hand ulath /players/mythos/closed/play/finger;.X.Z;wi wield;.X.Z;lo look at;.X.Z;implants hand ulath /players/dune/closed/guild/implants;.X.Z;pc put card;.X.Z;^!"
+current_room "/players/ulath/afterlife/hell_gate.c"
+alignment 0
+Armors 0
+Weapons 0
+handshake_data 0
+handshake 0
+quest_point 257
+quests "grail#ring#M*A*S*H#super#blind_boy#orc_slayer#trekkie#disk_quest#cyclops_mace#temple_quest#bishops_ring#rod_quest#medallion#keivjam#melko#springfield#brain_quest#protoculture#hooks_hand#phantasm_puzzle#key_quest#chisel#*sabbath*#waste_lands"
+pregnancy 0
+pregtoo 0
+monitor_string 0
+wkrm 0
+hostname "panther.telcomplus.net"
+ok_edit "none#"
+mailaddr "bacon@cnw.com"
+saved_where 0
+title "the Afterlife"
+pretitle "Visualize World Domination by"
+password "lBJN21GIcncMM"
+race "human"
+al_title " [1m<SHADOW> [0m"
+PKGhostCounter 0
+intoxicated 0
+fight_area 0
+mon 2
+phys_at ({1,6,2,173,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "206.129.10.113"
+msghome "returns to the administration of your Afterlife"
+description "looks in a mirror and screams, 'Oh my God! I'm hideous!'"
+guild_name "cyberninja"
+lastime "May 13 19:25 2002 to May 13 19:25 2002"
+player_killing 1
+invs_count 0
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd "/players/ulath/afterlife/"
+dead 0
+guild_rank 12
+guild_exp 424086
+guild_file "/players/mizan/closed/poly/gob.c"
+home "/players/ulath/workroom.c"
+ex_lv -42
+qc 1
+strength 100
+intelligence 100
+stamina 100
+will_power 99
+magic_aptitude 100
+piety 100
+stealth 99
+stuffed 0
+soaked 0
+no_give 0
+aprv "mythos,wizardchild,arrina"
+hint 0
+cmd_dirs ({"/bin/play/","/bin/","/bin/wiz/",})
+AnsiPref ({"tell",0,"gossip",0,"risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"wiz",0,"cwiz",0,})
+old_last "May 13 19:25 2002 to May 13 19:25 2002"
+other_copy 0

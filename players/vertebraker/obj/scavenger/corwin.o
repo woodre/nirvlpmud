@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mizan/etheriel/heals/carbo-blast","/obj/armor","/players/emerson/weap/pencil","/obj/armor","/players/wren/Area/starbug/items/bouquet","/obj/weapon","/obj/weapon","/players/pain/NEW/weap/mace","/players/wren/Area/starbug/items/reddress","/players/wren/Area/starbug/items/mirror","/obj/armor","/players/jamila/beach/mobs/shell","/players/wren/Area/starbug/items/comb","/players/scathe/armor/bowboot","/players/hawkeye/items/bourbon","/players/jamila/beach/mobs/skin","/players/angel/area/stargate/obj/bullets","/players/saber/armor/halter","/players/ultramagnus/breastplate","/obj/weapon","/players/wren/Area/starbug/items/jacket","/obj/armor","/players/sado/shop/oreo","/players/puppy/s/eq/cape","/players/mythos/awep/backbite",})
+shorts ({"A bottle of Carbo Blast","A [1mwhite[0m helmet","A Sharp Pencil","Steel Helmet","a colorful bouquet of 'flowers'","Steel Longsword","A Deadly Bullwhip","A large iron mace","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","a slim pocket mirror","A shoddy [1mwhite[0m cloak","A Large Shell","the cat's hair pick","Hard Boots","bottle of bourbon","A Lizard Skin","A clip of bullets [50]","A black halter top","A Black Breastplate with Red Decore","some teeth","Lister's leather jacket","A cartoon character's shoes","A box of oreo cookies","A flowing cape","[31mBackbiter[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

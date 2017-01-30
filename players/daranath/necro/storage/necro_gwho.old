@@ -1,0 +1,31 @@
+/* version 1.0 of the necro guild score */
+
+necro_gwho() {
+
+int a, glevel;
+object ob, ob2;
+object members;
+
+ob = (present("necro_ob",this_player()));
+
+write("\n");
+write("-------------------------------------------------------------------\n");
+write(" -> Name        Level      Necro        Location\n");
+write("-------------------------------------------------------------------\n");
+
+  members = call_other("players/daranath/guild/chatter","query_guild_chat");
+  for(a=0;a<sizeof(members);a++) {
+   ob2 = members[a];
+  if(!ob2->query_invis()) {
+write(pad(ob2->query_name(),15));
+write(pad(ob2->query_level(),8));
+   glevel = ob2->query_guild_rank();
+
+write(NORM+NORM);
+write("\n");
+
+   }
+}
+write("----------------------------------------------------------------\n");
+return 1; 
+}

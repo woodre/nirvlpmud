@@ -1,0 +1,26 @@
+The Knight has available the following skills
+for combat and assistance:
+
+[Skill Name/  
+ Max level ]  [Description]
+xstrike [5]   The advanced version of strike. To use type: xstrike
+              
+xbash   [5]   The advanced version of bash.  To use type: xbash
+
+study   [5]   Allows you to study an opponent and find their
+              weakness, thereby allowing you to harm them more
+              effectively. Usage: study <opponent>
+
+defend  [1]   Assist a friend by leading the fight. 
+              Usage: defend <who>
+
+block   [5]   Allows you to raise block up to level 10, making it
+              more effective.
+
+stamina [5]   Allows you to raise your stamina up to another 5 
+              points.
+
+bcommmand [5] Battle Command allows your friends to attack more 
+              effectively for a short time. alias: bcomm
+              [Note: This will only work on those people currently in
+              your party.]

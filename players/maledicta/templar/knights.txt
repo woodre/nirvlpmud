@@ -1,0 +1,125 @@
+possible new drawbacks:
+
+Cannot wear armor unless it is worth so much(coins).
+  if(armor == "helmet" && avalue < 250) return 0;
+  if(armor == "shield" && avalue < 500) return 0;
+  if(armor == "misc" && avalue < 200) return 0;
+  if(armor == "ring" && avalue < 150) return 0;
+  if(armor == "amulet" && avalue < 200) return 0;
+  if(armor == "boots" && avalue < 150) return 0;
+  if(armor == "armor" && avalue < 1200) return 0;
+
+Spells require weapons, armor, or something else.
+New Code of honor.
+Squire phase with no power (lasts one week minimum)
+NO game spells.
+Wimpy reduces effect of spells/skills. 
+
+/*******************************************************/
+/*************** The new stuff *************************/
+/*******************************************************/
+This is a complete listing of all skills/spells, which are
+divided between the two castes. See below.
+
+                    -=[ Knights Templar ]=-
+
+                    
+ Guild Rank_______Piety___________Skill/Spell______________________
+     10            20            charge(ch) 
+     9             19            stamina [25]  calm                    
+     8             18            cure          finalblow(fb)          
+     7             17            stamina [24]
+                                 squire
+     6             15            intimidate    stamina [23]
+                                 willpower
+     5             14            quick(qc)
+     4             13            heal          stamina [22]
+     3             12            bash(bh)      stamina [21]        
+     2             11            lead          punch
+     1[Squire]     10            gstat         home
+                                 templar       castle
+                                 consider      cwho
+                                 alignment
+                                 
+ /******** Spell explanations of common powers ****************/                                
+ alignment = shows alignment of target.
+ consider = gives information on target.  
+ cwho = Gives a who list of everyone that is on & is a criminal/evil/crime list.
+ templar = templar who.
+ home = toggles login from church to castle.
+ gstat = gives info on templar stats.
+ intimidate = fear spell with a new look. Must be higher by at least 3 levels 
+ punch = low level attack spell. damage = random(11) [if wearing a ring +random(6)]
+         [if wimpy -random(6)]
+ bash = requires shield worn. Damage = random(21) [if wimpy - random(6)]
+ quick = requires a weapon wielded. Damage = random(26)+5 [if wimpy - random(6)]
+ charge = damage = random(26)+10   if wimpy does not work.
+ /*************************************************************/
+ /********* Spell explanations of Priest caste powers **********/
+ heal = 5:6 ratio based on guild rank. (30 points of healing = 36 sps)
+ willpower = detoxer based on guild rank. Delay = 60   
+ squire = This is the new command that will bring members into the guild.
+ bless = raises a wep by +1 wc. Nearly the same as it is now.
+ cure = removes poison.
+ calm = room calm spell.
+ /**********************************************************/
+ /********* Spell explanations for warrior caste powers ****/
+ lead = Added for the warrior caste.
+ stamina = increased stamina for the warrior caste only.
+ finalblow = A finisher move.
+ /**********************************************************/
+   
+ /******* Skills(weapons) **********************************/
+  Each player will be allowed a total of 20 points to put into
+  their skills (maximum of 15 in any one) at usual experience
+  cost. For instance:  10 sword and 10 shield. 15 sword and 
+  5 shield, 12 sword and 8 polearm, 15 shield and 5 axe etc etc.
+
+  Shield-
+   if random(shield skill) + 1 > 5, then there is up to a 20%
+   chance that it will register as higher. (rating up to the
+   shield skill amount, max of 15).
+
+  Weapon-
+   random(weapon skill) + 1, if wimpy - random(4), if no wimpy
+   bonus random(4).  At best there is a 6% chance of getting
+   a critical hit: +random(weapon skill) to the total bonus.
+   cannot get a critical if wimpy is on. 
+  /*********************************************************/
+
+ /******** COMPLETE listings by Caste **********************/                                         
+                    -=[ Warrior Caste ]=-
+                    
+ Guild Rank_______Piety___________Skill/Spell______________________
+     10            20            charge(ch) 
+     9             19            stamina[25]          
+     8             18            finalblow(fb)          
+     7             17            stamina [24]
+     6             15            intimidate    stamina [23]
+     5             14            quick(qc)
+     4             13            stamina [22]
+     3             12            bash(bh)      stamina [21]        
+     2             11            lead          punch
+     1[Squire]     10            gstat         home
+                                 templar       consider
+                                 wanted        alignment 
+                                 
+
+                    -=[ Priest Order ]=-
+                    
+ Guild Rank_______Piety___________Skill/Spell______________________
+     10            20            charge(ch) 
+     9             19            calm                   
+     8             18            cure          
+     7             17            squire        bless
+     6             15            intimidate    
+                                 willpower
+     5             14            quick(qc)
+     4             13            heal          
+     3             12            bash(bh)              
+     2             11            punch
+     1[Squire]     10            gstat         home
+                                 templar       castle
+                                 consider      alignment  
+
+                                                                                     

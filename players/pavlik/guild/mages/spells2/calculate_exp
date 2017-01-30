@@ -1,0 +1,64 @@
+calculate_exp(){
+  object gld;
+  int mexp, value, divd;
+  int amount;
+
+  if(!en) return;
+
+  gld = present("mageobj", en);
+
+  tell_object(en,
+  "MageSoul: calculating experience ... ");
+
+  /* get the last known XP amt */
+  mexp = gld->query_my_exp();
+  if(mexp < 100)
+    mexp = en->query_exp();
+
+ /* See if we've earned any new XP and divide it up */
+ /* DIVD is the % of XP that goes to the Guild */
+  if(en->query_exp() > mexp) {
+    value = en->query_exp() - mexp;
+    if(value < 1) value = 1;
+
+    /* how much of this goes to the guild? */
+    divd = gld->query_divd();
+    if(divd < 1) divd = 1;
+    if(divd > 100) divd = 100;
+
+    amount = value * divd / 100;
+
+    en->add_guild_exp( value * divd / 100 );
+    en->add_exp(-( value * divd / 100 ));
+
+    if(amount < 1) tell_object(en, "no guild xp added.");
+    else tell_object(en, amount+" guild xp added.");
+
+    /* add on any bonuses for being top donator... */
+    if(en->query_real_name() == DONATOR->query_first()) {
+      en->add_guild_exp(amount/10);
+      tell_object(en, " [+10%]");
+    }
+    else if(en->query_real_name() == DONATOR->query_second()) {
+      en->add_guild_exp(amount/20);
+      tell_object(en, " [+5%]");
+    }
+    tell_object(en, "\n");
+
+  }
+  else {
+  tell_object(en, "done.\n");
+  }
+
+/*
+  if(!random(13)) {
+    amount = random(25);
+    tell_object(en, amount+" guild donation points added.\n");
+    gld->add_donation(amount);
+  }
+*/
+
+  gld->set_my_exp(en->query_exp());
+
+  return 1;
+}

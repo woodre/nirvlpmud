@@ -1,0 +1,183 @@
+/* Commands for the Skills Mapping */
+
+void AddSkill (string skill_name, int skill_level, int skill_verb, string skill_wiz){
+   if(Skills == 0){ 
+      Skills = ([ ]);
+   }
+
+   Skills[skill_name] = ({ skill_level , skill_verb , skill_wiz });
+
+}
+
+QSkill(string skill_name){
+   string *skills;
+
+   if(Skills == 0){ 
+      Skills = ([ ]); 
+   }
+   
+   skills = keys(Skills);
+
+   if(member_array(skill_name, skills) != -1 )
+      return 1;
+   else
+      return 0;
+}
+   
+
+QuerySkillLevel (string skill_name){
+   string *skills;
+   
+   if(Skills == 0){ 
+      Skills = ([ ]); 
+   }
+
+   if(!(skills = Skills[skill_name])){
+      return 0;
+   }
+   skills = Skills[skill_name];
+
+   return skills[0];
+}
+
+QuerySkillVerb (string skill_name){
+   string *skills;
+   
+   if(Skills == 0){ 
+      Skills = ([ ]); 
+   }
+
+   if(!(skills = Skills[skill_name])){
+      return 0;
+   }
+   skills = Skills[skill_name];
+
+   return skills[1];
+}
+
+QuerySkillWiz (string skill_name){
+   string *skills;
+   
+   if(Skills == 0){ 
+      Skills = ([ ]); 
+   }
+
+   if(!(skills = Skills[skill_name])){
+      return 0;
+   }
+   skills = Skills[skill_name];
+
+   return skills[2];
+}  
+
+
+
+void RestoreSkillsSaved(){
+   int i;
+   
+   GeneralSkills = ({});
+   OffSkills = ({});
+   DefSkills = ({});
+
+   if(!SkillsSaved){
+      SkillsSaved = ({});
+   }
+
+   Skills = ([ ]);
+
+   if(!QNextSkillCost())
+      NextSkillCost = 100;
+
+   for (i=0;i<sizeof(SkillsSaved); i++){
+      
+      AddSkill(SkillsSaved[i], SkillsSaved[i+1], SkillsSaved[i+2], SkillsSaved[i+3]);
+
+         if (SkillsSaved[i+2] == 1)
+            add_action("RangerPower",SkillsSaved[i]);
+         
+         else if (SkillsSaved[i+2] == 2)
+            GeneralSkills += ({ SkillsSaved[i] }); 
+
+         else if (SkillsSaved[i+2] == 3)
+            OffSkills += ({ SkillsSaved[i] });
+
+         else if (SkillsSaved[i+2] == 4)
+            DefSkills += ({ SkillsSaved[i] });
+
+         else if (SkillsSaved[i+2] == 5){
+            OffSkills += ({ SkillsSaved[i] });
+            DefSkills += ({ SkillsSaved[i] });
+         }
+
+      i=i+3;
+   }
+}
+
+
+
+void SaveSkillsSaved(){
+   int i;
+   string *skills;
+
+   if(Skills ==0){
+      Skills = ([ ]);
+   }
+   
+   skills = keys(Skills);
+
+   SkillsSaved = ({ });
+
+   for(i=0; i<sizeof(skills); i++){
+      SkillsSaved += ({ skills[i] });
+      SkillsSaved += Skills[skills[i]];
+   }
+}
+
+
+ShowSkills(){
+
+   string *skills;
+   int i;
+   string verb;
+
+   skills = keys(Skills);
+   write("SKILLS\n");
+   write(justify("Name:",10));
+  
+   write(justify("Level:",10));
+  
+   write(justify("Usable:",8));
+   write(justify("Max:",5));
+   write(justify("Help:",6));
+   write("\n");
+   write("________________________________________________\n");
+   for(i=0; i<sizeof(skills); i++){
+      write(justify(capitalize(skills[i]),10));
+      
+      write(justify(QuerySkillLevel(skills[i]),10));
+      
+      write(justify(QuerySkillVerb(skills[i]) == 1 ? "Yes" : "No" , 8));
+      verb = "/players/"+QuerySkillWiz(skills[i])+"/Rangers/Commands/"+capitalize(skills[i])+".c";
+      write(justify(verb->QMax(), 5));
+      write(justify(verb->QRangerInfo() == 1 ? "Yes" : "No" , 6));
+      write("\n");
+   }
+   for(i=0; i<sizeof(SKILLS); i++){
+      write(justify(capitalize(SKILLS[i]),10));
+      
+      write(justify("1",10));
+      
+      write(justify("Yes",8));
+
+      verb = "/players/beck/Rangers/Commands/"+capitalize(SKILLS[i])+".c";
+      write(justify(verb->QMax(), 5));
+      write(justify(verb->QRangerInfo() == 1 ? "Yes" : "No" , 6));
+      write("\n");
+   }
+   write("\n");
+   write("Unused Skill Points: "+QSkillPoints()+"\n");
+   write("Build Points: "+QBuildPoints()+"\n");
+   write("Next Skill Point: "+QNextSkillCost()+"\n");
+   return 1;
+ 
+}

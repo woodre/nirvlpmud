@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/obj/armor","/players/scathe/armor/mgarb","/players/hawkeye/items/bible","/obj/weapon","/players/saber/weapons/hrev","/players/eurale/Glade/OBJ/elven_boots","/players/softly/nhall/obj/green2","/players/wren/Area/starbug/items/leaflets","/players/pain/closed/wands/orb","/players/emerson/weap/icepick","/players/puppy/s/eq/block","/players/mythos/aarmor/sode","/players/wren/Area/starbug/items/charisma","/obj/armor","/players/wren/Area/starbug/items/bouquet","/players/saber/armor/hardsuit1","/players/jamila/beach/mobs/claw","/players/puppy/s/eq/apron","/players/mistress/other/disk","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/obj/weapon","/players/emerson/obj/pin","/obj/armor","/players/wren/Area/starbug/items/lightbee",})
+shorts ({"Steel Helmet","A large leaf","Black Monk Robes","A Bible(autographed by Jesus)","Pillow","A Colt .68 Heavy Revolver","[1mElven boots[2;37;0m","Healing Balm [32m(green)[2;37;0m [2]","a stack of leaflets","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","A Sharp Ice Pick","A building block","Sode","a charismatic aura","Steel Boots","a colorful bouquet of 'flowers'","A light blue Hardsuit","A Lobster Claw","An apron","A fragile disk","A Prince's Robes","A rolling pin","A pinball machine","Ring of Death","a strange object called a 'light bee'",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

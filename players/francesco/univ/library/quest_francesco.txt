@@ -1,0 +1,105 @@
+                T H E   U N I V E R S I T Y   Q U E S T 
+
+
+The theme of the quest is the graduation in Mechanical Engineering.
+Thus, the player needs to study all the subjects of the curriculum.
+Then he goes into the University library and wanders around the various 
+shelves over there.  The descriptions are written in both english and 
+italian, corresponding to each other.  A voice makes a simple question,
+i.e. "What is the english translation of ....?".  The player has to type
+"answer ....".  If it is correct, then a bookworm of the library is 
+cloned and the player must kill it.  When the bookworm dies, a book is 
+cloned which is corresponding to the subject of that room,  i.e. 
+chemistry -> chemistry, applied mechanics -> applied mechanics and so on.
+The player can now grab the book and then move back and enter a new shelf, 
+with a new subject .... and so on until he has done all the subjects and 
+got the corresponding credits.  Now he can go back to the librarian and 
+put the books on her desk. She will then give him a diploma and then 
+later the dean will give him the final degree.  The quest is solved.
+
+ 
+Solution
+
+ 1  goto Marian in the library of the University.
+ 2  show id          (moves to front_library)
+ 3  go forward       (moves to back_library)
+ 4  wander <subject) (moves to the selected shelf)
+ 5  answer <answer>  (if the answer is correct, it clones the bookworm)
+ 6  kill bookworm    (clones an invisible monster to grab a book)
+ 7  grab book        (clones the book to player's inventory)
+ 8  go back          (moves to back_library)
+ 9  <repeat step 4 through 8 for getting the 21 books needed>
+10  back             (moves back to front_library)
+11  head back        (moves back to the librarian)
+12  put book on desk (destructs one book and increments the counter)
+13  <repeat step 12 for the 21 books>
+14  apply for degree (clones a certificate to player's inventory)
+15  w,n,n,nw         (moves to the dean for the final graduation ceremony)
+16  graduate         (clones a diploma to player's inventory and
+                      adds the quest points)
+
+
+Comments and features
+
+The rooms are NT and no exits.
+
+The quest can be entered only once per reboot and when the player exits
+the quest he cannot re-enter.  Thus, he has to carry all the heals 
+needed to solve it.
+
+There will be 21 rooms, corresponding to the general subjects of a
+bachelor degree in mechanical engineering.
+
+Each room will have about 5 different questions to be made, randomized. 
+The player must answer only to the one proposed.
+
+The bookworms are cloned of a level close to the level of the player so
+that the quest could be solved at any level.  Their wc is decreased 
+and their ac is increased, making them weaker and more difficult to 
+be hit.  The wc decrease is less than the ac increase, according to 
+the monster.guide file.
+
+Each book has a value corresponding to the level of the bookworm killed 
+and can be cashed at the librarian by typing "return book".  Of course
+in this case the player will get the coins but not the credits.
+If he decides go for the quest, then he has to put all the books on
+the desk and apply for the degree. All books will be destructed.
+A complimentary prize will be rewarded.  
+
+
+Cheat sheets
+
+It would be possible to share all the 120 randomized answers to the 
+questions, yet the player will still need to kill all the bookworms 
+to get the books.
+
+
+Files
+
+/players/francesco/univ/library/rooms/dimec13test.c  (starting room)
+/players/francesco/univ/library/rooms/front_library.c
+/players/francesco/univ/library/rooms/back_library.c
+/players/francesco/univ/library/rooms/xxxxxx.c
+/players/francesco/univ/library/items/book.c
+/players/francesco/univ/library/items/desk.c
+/players/francesco/univ/library/items/degree.c
+/players/francesco/univ/library/mob/voice_xxxxxx.c
+/players/francesco/univ/library/mob/monster_lib.c
+/players/francesco/univ/library/mob/grabber.c
+/players/francesco/univ/library/mob/exit_to.c
+
+
+Final comment
+
+The area can be used for plain exp/coins purposes. Should this quest
+not be accepted, it will just be my second area, upon approval.
+
+
+thank you
+
+fran
+
+
+revised 03.30.00
+revised 04.18.00
+revised 04.29.00

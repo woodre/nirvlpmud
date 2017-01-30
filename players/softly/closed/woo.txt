@@ -1,0 +1,604 @@
+Feldegast asks, "Wocket, how would you have changed it?"
+Someone says: i have trusted him before and he has not failed me before
+
+Someone says: major changes i know he would talk to me directly about
+
+say Wocket didn't share the info...and when you aren't here, we do as we have to
+o.
+You say: Wocket didn't share the info...and when you aren't here, we
+do as we have too.
+
+->> Wocket says, "i haven't looked at the code.. but it does seem like a cleaner
+ way to handle it" 
+Wocket says, "so ya.. i probably would have.. but ya.. i probably would talked i
+t out with mythos as well" 
+Someone says: the healers are the only thing i care at all about
+
+Feldegast asks, "So why did you leave them so bug-ridden and imbalanced before y
+ou left?"
+Someone says: so i leave it in the hands of one i trust
+
+Someone says: now lets put it simply
+
+Someone says: i dont trust you feldegast
+
+smirk
+You smirk.
+->> Someone says:  i actually used to
+
+Feldegast says, "You should...I won't screw healers over."
+say Mythos, your opinion always sucked. You were always out of touch.
+You say: Mythos, your opinion always sucked. You were always out of
+touch.
+
+->> say so don't come back and throw up on us for changes we HAD to make
+You say: so don't come back and throw up on us for changes we HAD to
+make
+
+->> Someone falls down laughing.
+Feldegast says, "I will only act to improve the mud."
+Someone says: very rarely is there a change one HAS to make
+
+say I trust feld, and so does boltar
+You say: I trust feld, and so does boltar
+
+->> Someone says: dont over dramatize it mal
+
+Feldegast tells you,"No, he doesn't. :P"
+Feldegast tells you,"Nice bluff, anyway."
+say yeah, HAD too...cause you were never able to balance your own code
+You say: yeah, HAD too...cause you were never able to balance your
+own code
+
+->> Someone falls down laughing.
+say dont laff
+You say: dont laff
+
+->> Someone says: why not
+
+say its true
+You say: its true
+
+->> Feldegast asks, "Mythos, do you realize healers could raise stats infinitely
+?"
+say its why you left
+You say: its why you left
+
+->> Someone says: its silly mal
+
+Feldegast says, "You had no check for max stats in there."
+Feldegast says, "Healers could cast fortify repeatedly on healers."
+Someone says: *shrugs* so why not have wocket deal with it?
+
+Feldegast says, "Players even..."
+snicker
+You snicker.
+->> Feldegast says, "Because we didn't know you wanted him to deal with it."
+Feldegast says, "He wasn't a senior when you left, and he didn't have access to 
+your directory."
+Someone says: he did
+
+cd /players
+pwd: players/
+->> more wocket.o
+channel_names ({"announce","wiz","gossip","risque","junk","equip","msg","shout",
+"babble",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 79600
+luck 8
+lucky 250
+name "wocket"
+gender "female"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 0
+level 100
+armor_class 0
+hit_point 874
+max_hp 874
+experience 353367122
+mmsgout "disappears in a puff of smoke"
+mmsgin "appears in a puff of smoke"
+More: (line 21) 
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 5
+hunted 0
+hunter 0
+hunting_time -77
+cap_name "Wocket"
+spell_points 882
+max_spell 882
+spell_name "NAME"
+spell_cost 0
+spell_dam 0
+age 6449574
+is_invis 0
+More: (line 41) 
+frog 0
+whimpy 0
+auto_load "obj/quicktyper:2;wiztool clone /obj/wiz_tool.c;.X.Z;monlist more /doc
+/build/RULES/monster.guide;.X.Z;^!/players/wocket/necro/guildob.c:^!/players/woc
+ket/mages/mageautoload.c:^!/players/wocket/wedding/ring.c:Your love leaves you.#
+Your love is here.#jareel#1^!/players/boltar/templar/items/bracer.c:^!players/pa
+in/NEW/items/star.c:^!/players/wocket/junk/quill.c:says^!/players/wizardchild/to
+ys/hickey.c:^!/players/snow/dervish/gob.c:^!players/boltar/sprooms/clinic/boobs:
+non-existant 28 0^!/players/saber/closed/new_mini/succubus.c:^!/players/saber/cl
+osed/old_bard/instrument.c:^!"
+current_room "players/wocket/euka/eftccc.c"
+alignment 0
+Weapons 0
+follow 0
+follow_num 0
+handshake_data 460
+handshake 49907961
+quest_point 303
+quests "orc_slayer#key_quest#ring#super#grail#M*A*S*H#blind_boy#rod_quest#disk_q
+uest#melko#temple_quest#cyclops_mace#trekkie#keivjam#staff#chisel#medallion#bish
+ops_ring#protoculture#springfield#hooks_hand#phantasm_puzzle#waste_lands#lost_ro
+od#toy_store#t_rexs#sinja_quest#jungle_village"
+pregnancy 0
+pregtoo "wocket"
+wkrm 0
+hostname "hnet-atm1.harbornet.com"
+ok_edit "dune#daranath#feldegast#"
+mailaddr "wocket@wa.freei.net"
+saved_where 0
+title ", the Wizard Killer"
+More: (line 61) Wocket asks, "i did?" 
+
+pretitle 0
+password "2z9clO1GHhT3E"
+race "wocket"
+al_title "neutral"
+intoxicated 0
+fight_area 0
+mon 0
+phys_at ({1,4,7,455,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "199.2.132.18"
+msghome "goes home"
+description "testing
+
+"
+guild_name "sorcerer"
+lastime "Feb  8 22:18 2001 to Feb  8 22:58 2001"
+player_killing 0
+invs_count 13
+infuse 0
+invs_flag 0
+More: (line 81) 
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd "/players/mythos/healerguild/power/"
+dead 0
+guild_rank 9
+guild_exp 0
+guild_file "players/dune/closed/guild/implants.c"
+home "/players/wocket/necro/room/necro2.c"
+ex_lv 16
+qc 1
+strength 20
+intelligence 8
+stamina 8
+will_power 8
+magic_aptitude 7
+piety 8
+stealth 8999
+stuffed 0
+soaked 0
+More: (line 101) Feldegast says, "You don't."
+Someone says: yups u did..:>
+
+
+no_give 0
+aprv "eurale,pain,wizardchild,wocket"
+other_copy 0
+More: (line 121) 
+EOF
+->> Someone grins evilly.
+Shadowcat ( player 19 ) has left the game.
+Feldegast says, "Wocket had access to Dune, Daranath, and Feldegast's directorie
+s."
+say its not in the ok_ed
+You say: its not in the ok_ed
+
+->> nod
+You nod solemnly.
+->> Feldegast says, "Those're the only flags in his file."
+Someone shrugs helplessly.
+Someone says: regardless
+
+Someone says: this is how it is
+
+smirk
+You smirk.
+->> Someone says: wocket is to have the only sanctioned permission to the
+files/dir
+
+Someone says: if there is a problem it will be discussed between he and i
+
+Poppy ( player 19 ) has entered the game.
+Someone says: should he not have time or be too busy.. that is something
+we will deal with
+
+say Hmmm...
+You say: Hmmm...
+
+->> Tick ( player 16 ) has left the game.
+say Well, Mythos has spoken...*snicker*
+You say: Well, Mythos has spoken...*snicker*
+
+->> Someone says: then again
+
+Someone says: i suppose i could always just come back and reinstate some
+stuff
+
+snicker
+You snicker.
+->> Someone says: but lets put it this way
+
+Feldegast says, "Or we could just talk to Boltar about having you removed."
+nod
+You nod solemnly.
+->> say sounds like an option feld
+You say: sounds like an option feld
+
+->> Feldegast says, "You're making a lot of bad decisions."
+Someone says: it is for everyone's benefit that we simply leave it so that
+wocket has the permission and noone else
+
+Feldegast says, "We made a lot of needed changes to healers that you've complete
+ly wasted."
+Someone says: u truly believe that removing me is going to happen?
+
+Feldegast says, "It is within the realm of possibility."
+Someone says: actually dont exaggerate feldegast
+
+say we are running this place and its problems.
+You say: we are running this place and its problems.
+
+->> Someone says: there were 3 files.. sorry 4 files modified in the pwoer dir
+
+Feldegast says, "Conditions here have improved significantly since you've left."
+Someone falls down laughing.
+say You aren't here Mythos...your code will be changed as needed to be legal.
+You say: You aren't here Mythos...your code will be changed as needed
+to be legal.
+
+->> say If you don't like it, come back and make a stink
+You say: If you don't like it, come back and make a stink
+
+->> Someone says: never actually thought power went to people's heads... but i
+guess i was wrong
+
+say you should know
+You say: you should know
+
+->> Someone says: actually mal
+
+say you are here thinking your name is going to scare us into line?
+You say: you are here thinking your name is going to scare us into
+line?
+
+->> say don't blow at me...I won't have it
+You say: don't blow at me...I won't have it
+
+->> Feldegast whispers to you, "Perhaps you should be less confrontational...You
+'re being even more tactless than me, which is saying a lot."
+Someone says: u never did understand me.. thats why when u would actually
+tell me things to be nice.. i never believed them
+
+tell feldegast I am not liking him.
+You tell Feldegast: I am not liking him.
+->> snicker
+You snicker.
+->> Someone says: no my name wont scare u
+
+Someone says: i have no intentions of scraing anyone who thinks they are
+big
+
+Someone says: i am simply doing what i need to do to defned what is mine
+
+say well, you should have made it more clear when you left then.
+Feldegast says, "I'm sure many other wizards have felt the same way."
+You say: well, you should have made it more clear when you left then.
+
+->> Someone says: so is everything understood?
+
+Feldegast says, "Balowski, maybe.  Pavlik, perhaps."
+Someone says: wocket has my permission
+
+Feldegast shrugs helplessly.
+Someone says: others do not
+
+Feldegast says, "I trust Wocket."
+Feldegast says, "I just don't think he has the time."
+say and it takes time to manage a guild.
+You say: and it takes time to manage a guild.
+
+->> Someone says: true pavlik im sure wishes for the times he pulled idictic
+things
+
+Feldegast coughs noisily.
+Feldegast asks, "Translation?"
+Wocket says, "pav like it when he could give out free weps to ppl :)" 
+say i was about to open the dictionary
+You say: i was about to open the dictionary
+
+->> Someone says: good so things are understood
+
+tell feldegast you were right:)
+You tell Feldegast: you were right:)
+->> l
+  This is a perfectly circular room in the topmost chamber of the
+wizard Feldegast's tower.  A swirling portal of blue light is in the
+west wall.  A magnificent pool of crystal clear water is in a marble
+basin in the center of the room.  Rows and rows of books fill the
+bookshelves on the east wall.  A strong oak door leads south.
+    There is one obvious exit: south
+Braxana the TestWizChar (MYTHOS)(49).
+Wocket , the Wizard Killer (neutral).
+The Count of Monte Feldo: Feldegast the Wizard (Minty Fresh!) 0.
+->> Feldegast tells you,"About which thing in particular?"
+tell feldegast i don't know...i am remaining silent so as not to accidently agre
+e with something
+You tell Feldegast: i don't know...i am remaining silent so as not to accidently
+ agree with something
+->> l
+  This is a perfectly circular room in the topmost chamber of the
+wizard Feldegast's tower.  A swirling portal of blue light is in the
+west wall.  A magnificent pool of crystal clear water is in a marble
+basin in the center of the room.  Rows and rows of books fill the
+bookshelves on the east wall.  A strong oak door leads south.
+    There is one obvious exit: south
+Braxana the TestWizChar (MYTHOS)(49).
+Wocket , the Wizard Killer (neutral).
+The Count of Monte Feldo: Feldegast the Wizard (Minty Fresh!) 0.
+->> Feldegast asks, "Question...Are you going to throw another fit the next time
+ something in your area needs to be fixed?"
+tell feldegast good question
+You tell Feldegast: good question
+->> Someone says: its the healers that are mine
+
+Someone says: keep out of that and the closed dirs and you wont be seeing
+me
+
+say well...i agree then
+You say: well...i agree then
+
+->> say throw in a corn dog and i am sound as a pound
+You say: throw in a corn dog and i am sound as a pound
+
+->> Feldegast says, "I am considering."
+tell feldegast "...won't be seeing me"
+You tell Feldegast: "...won't be seeing me"
+->> Boltar wizs: well cleaning up is a good thing for everyone... but I found
+some IIT stuff to nuke that should give sufficent space
+wiz woo...how much space we have and are occupying?
+Maledicta wizs: woo...how much space we have and are occupying?
+->> Feldegast wizs: There's about a mb of core in /
+Feldegast wizs: Another core in /pfiles/f too.
+Boltar wizs: gone...
+Boltar wizs: gone too
+l
+  This is a perfectly circular room in the topmost chamber of the
+wizard Feldegast's tower.  A swirling portal of blue light is in the
+west wall.  A magnificent pool of crystal clear water is in a marble
+basin in the center of the room.  Rows and rows of books fill the
+bookshelves on the east wall.  A strong oak door leads south.
+    There is one obvious exit: south
+Braxana the TestWizChar (MYTHOS)(49).
+Wocket , the Wizard Killer (neutral).
+The Count of Monte Feldo: Feldegast the Wizard (Minty Fresh!) 0.
+->> Feldegast shrugs helplessly.
+Boltar wizs: thnks
+Feldegast says, "I will talk to Wocket about any changes first."
+Boltar wizs: I havent checked the mud size... this quick cleaning will get
+the account about 40MB below quota
+Someone says: he has final say in regards to those changes...
+
+Boltar wizs: I also rm'd the mizan SQL stuff after downloading it
+Feldegast says, "Wocket and I usually agree on things."
+wiz cool
+Maledicta wizs: cool
+->> Someone says: *shrugs* dont care if you towo agree on things
+
+Someone says: he has final say.. he is my only sanctioned person
+
+say its too bad you got angry Mythos...this territorial crap is lame.
+You say: its too bad you got angry Mythos...this territorial crap is
+lame.
+
+->> Feldegast nods solemnly at you.
+Someone says: yes it is lame
+
+Someone says: why do u do it?
+
+say everyone works for the best of the mud...we all do
+You say: everyone works for the best of the mud...we all do
+
+->> Someone says: ahh
+
+Feldegast says, "I bet he doesn't even think his stuff was buggy."
+Someone says: a socialist rallier..:>
+
+Feldegast sighs deeply.
+say no...Mythos, you never got ppl.
+You say: no...Mythos, you never got ppl.
+
+->> Someone says: actually feldegast i know it is buggy
+
+say hehe
+You say: hehe
+
+->> Feldegast asks, "So why did you undo all of the fixes?"
+Someone says: because u didnt just fix a bug
+
+Feldegast says, "Yes, I improved the whole guild."
+say Amen.
+You say: Amen.
+
+->> Someone shrugs helplessly.
+Someone says: dont care what u think..
+
+Feldegast says, "I even made some spells worth casting."
+say We know...
+You say: We know...
+
+->> say trust us, we know
+You say: trust us, we know
+
+->> Someone says: good mal
+
+Someone says:  then shut up for a sec.. since u have agreed to the terms..
+its between me and feldegast now
+
+snicker
+You snicker.
+->> Feldegast says, "You should try to listen to others every once and a while."
+who
+Name:         HP:         Money:      Experience:    Level:    Fighting:
+poppy         318/318     16861       6369059        19+14     Not fighting.
+christine     20/66       1544        2600           3         Not fighting.
+braxana       778/778     80000       48555          99        Not fighting.
+cearwyn       106/146     9556        6086           5         Not fighting.
+hadies        156/242     32725       329144         13        Not fighting.
+wocket        874/874     79600       353367122      100+16    Not fighting.
+boltar        800810/800810           3106969        100000+20 Not fighting.
+vital         420/420     0           360            30+21     Not fighting.
+feldegast     978/978     45605       16675586       100+20    Not fighting.
+hudson        256/302     32613       7353319        19+6      Not fighting.
+kid           284/322     55017       7227219        19+16     Not fighting.
+fakir         602/602     39640       5200392        50+16     Not fighting.
+maledicta     1038/1038   70000       299            100+50    Not fighting.
+->> Feldegast says, "Not necessarily Mal...But others. ;)"
+tell braxana You said you won't be back if we stay out of your code...remember t
+hat.
+You tell Braxana: You said you won't be back if we stay out of your code...remem
+ber that.
+->> Hudson ( player 19 ) has left the game.
+say i am outta here...need to talk to fakir
+You say: i am outta here...need to talk to fakir
+
+->> wave
+
+Feldegast says, "So Sed tells me."
+Someone says: do be careful of mal
+
+Someone says: he is a rabblerouser
+
+Someone says: like reflex
+
+say i am sure he will
+You say: i am sure he will
+
+->> You hear Vital: francesco's comment reminded me of a question
+Someone says: but a bit better with the fawning
+
+(Invis) francesco wizs: anyone knows how iu can set the port 3000 in ftp,
+run from within DOS  ?
+nod
+You nod solemnly.
+->> say they all know it
+You say: they all know it
+
+->> Feldegast says, "How rude."
+You hear Vital: is FTP set up allow you to make or remove dirs?
+Boltar wizs: ftp nirvana.mudservices.com 3000
+Someone says: good so long as they know it they can make sure mal doesnt
+become a bonehead..:>
+
+Boltar wizs: at least for most command line ftps
+Feldegast asks, "Didn't anyone teach you to knock?"
+nod
+You nod solemnly.
+->> say door bell was broke
+You say: door bell was broke
+
+->> (Invis) francesco wizs: i am not sure if it accepts the prot number.....
+will try
+(Invis) francesco wizs: prot = port
+Wocket wizs: from dos it should
+Fakir tells you: Mind if I tell feld I did read a log of it....?  So I can talk 
+to him about whats in the log?
+nod fakir
+You nod solemnly at Fakir from afar.
+->> Vital wizs: alternately, there may be an option to set passive, which often
+defaults to 20
+tell fakir go ahead
+You tell Fakir: go ahead
+->> Someone says: the problem with rabblerousers is usually they dont know
+what happens after they start the rabble
+
+Feldegast wizs: 21?
+Vital wizs: right
+Someone says: u'history shows they usually die
+
+Vital wizs: fingers on the wrong end of the keyboard
+Vital wizs: the right pinky finger got jealous
+Someone says: the other person to be careful of
+
+Someone says: is worm..:>
+
+Feldegast snorts loudly and feels better!
+(Invis) francesco wizs: if i add the 3000, it prompts me again, after
+displaying some help lines. if i dont add the 3000, it conects me buyt
+without asking me for the password
+laugh
+You laugh.
+->> say poor worm
+You say: poor worm
+
+->> Someone says: he attempted to hack my webserver awhile back
+
+Feldegast says, "Hrm."
+(Invis) francesco wizs: i must have some firewall in my server?
+Someone says: so the feds have his name on a list..:>
+
+say Worm was set free by boltar not long ago
+You say: Worm was set free by boltar not long ago
+
+->> Someone says: i know
+
+Someone says:  thats why im warning ya
+
+[wizclan] Catacomb says: sup
+(Invis) francesco wizs: even though i am directly connected to the internet
+with my own personal IP number and board?
+tell feldegast cookoo...cookoo...
+You tell Feldegast: cookoo...cookoo...
+->> say kazer hacked us...figured out that catwomans pword was batman...
+You say: kazer hacked us...figured out that catwomans pword was
+batman...
+
+->> Wocket just disconnected.
+Wocket reenters the game.
+Feldegast says, "I'm sure we can take care of worm."
+Someone nods solemnly.
+Someone says: kazer *laughs*
+
+Feldegast says, "Another one of your mistakes."
+Boltar wizs: sounds very strange
+Someone says: yes i did give him an extra chane..:>
+
+Someone nods solemnly at Feldegast.
+Someone says: oks so we are all set
+
+Someone says: i take my leave
+
+Someone disappears.
+0 is disintegrated by Someone.
+Someone left the game.

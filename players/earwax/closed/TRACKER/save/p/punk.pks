@@ -1,0 +1,7 @@
+07/28/09 08:46: Mako        ((19    /Shardak)      20(2/1)
+07/31/09 09:53: Fleshhunter ((13    /Mage)         14(2/2)
+09/ 4/09 10:28: Genesis     ((19+17 /Shardak)      19(3/1)
+01/ 2/14 18:02: Shojiro     ((19+58 /Vampire)      24(2/1)
+01/ 7/14 21:23: Moriarty    ((19+4  /Cyberninja)   20(3/1)
+01/ 7/14 21:24: Moriarty    ((19+2  /Cyberninja)   21(2/1)
+09/20/15 13:01: Marek       ((19+10 /Knights Templar) 28(3/1)

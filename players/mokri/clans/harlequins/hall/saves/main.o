@@ -1,0 +1,32 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/harlequins/hall/r1","north","/players/mokri/clans/harlequins/hall/r2","northwest","/players/mokri/clans/harlequins/hall/r3","northeast","/players/mokri/clans/harlequins/hall/r4","down","/players/mokri/clans/harlequins/hall/r5","south","/players/mokri/clans/harlequins/hall/r6","up","/players/mokri/clans/harlequins/hall/r8","west","/players/mokri/clans/harlequins/hall/r14","east","/players/mokri/clans/harlequins/hall/r20","southwest","/players/mokri/clans/harlequins/hall/r21","southeast",})
+short_desc "[1;30mThe Black Library[0m[0m"
+long_desc "This is the legendary Black Library of the Eldar.  Here the Eldarhave cataloged countless tomes of arcane lore as well as artifactsand miscellanea that is best left unspoken.  A shroud of darknessenvelopes the room, obscuring the boundaries, making itimpossible to determine its size.  The soft light from several lanternspierce the darkness revealing large wooden tables, one for eachlantern, scattered about the room among countless columns ofdusty shelves each extending beyond the boundaries of theavailable light in both height and width.[0mType 'exit' to leave."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level -1

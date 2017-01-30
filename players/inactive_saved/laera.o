@@ -1,0 +1,121 @@
+channel_names ({"shout","msg","wiz","gossip","cwiz",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 80000
+luck 20
+lucky 330
+name "laera"
+gender "female"
+msgin "walks up to you"
+msgout "passes you by in the street"
+is_npc 0
+brief 0
+level 20
+armor_class 0
+hit_point 636
+max_hp 636
+experience 10388172
+mmsgout "waves goodbye"
+mmsgin "sneaks in when you're not looking"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -526
+cap_name "Laera"
+spell_points 645
+max_spell 645
+spell_name "fae blast"
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 5142336
+is_invis 0
+frog 0
+whimpy 0
+auto_load "/players/saber/closed/new_mini/canine.c:^!players/pain/NEW/items/star.c:^!"
+current_room "room/adv_inner2"
+alignment 0
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Armors 0
+Weapons 0
+WeaponBonuses 0
+handshake_data 0
+handshake 0
+quest_point 297
+quests "keep_dragons#key_quest#hooks_hand#phantasm_puzzle#lost_rood#toy_store#jungle_village#despoina#M*A*S*H#orc_slayer#ring#disk_quest#super#cyclops_mace#keivjam#medallion#t_rexs#springfield#rod_quest#temple_quest#trekkie#protoculture#brain_quest#melko#chisel#*sabbath*#staff"
+pregnancy 0
+pregtoo "massa"
+monitor_string 0
+saved_aliases ({"xs","xsmile","fintool","clone /players/laera/fintool.c","report","hand laera /players/laera/filer.c","col","hand laera /players/daranath/qualtor/newstuff/junk/collar.c","h","heal laeratest","weapon","hand laera /players/laera/balamb/forests/obj/bone.c","cor","hand laera /players/daranath/qualtor/newstuff/junk/black_corset.c","dil","hand laera /players/daranath/qualtor/newstuff/obj/pur_dildo.c","pt","star","wiztool","clone /obj/wiz_tool.c","cl","clone","wiztell","clone /players/laera/closed/wiztell.c","cc","c!$&#(",})
+saved_nicknames ({})
+clan 0
+wkrm 0
+hostname "cpe-24-59-162-109.twcny.res.rr.com"
+ok_edit "vertebraker/closed/shardak#"
+mailaddr "narilka@altavista.net"
+saved_where 0
+title "got beat up by the ocean"
+pretitle 0
+password "kat8m/nV0Xzbc"
+race "human"
+al_title "Bruised and Abraised"
+PKGhostCounter 0
+intoxicated 0
+fight_area 0
+mon 1
+phys_at ({1,5,8,110,0,0,})
+headache 0
+max_headache 3
+no_spell 0
+called_from_ip "24.59.162.109"
+msghome "retires to her kitchen"
+description "appears as if from nowhere. She wears a shimmering blue robe beneath a flowing dove grey suede cloak. Her sapphire eyes seem to sparkle with cold life from beneath thick dark lashes. Long black curls tumble down her back and frame a soft, ivory face."
+guild_name 0
+lastime "Oct 14 08:29 2005 to Oct 14 09:14 2005"
+player_killing 1
+invs_count 13
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd "/players/laera/"
+dead 0
+guild_rank 50
+guild_exp 0
+guild_file 0
+home "/players/laera/workroom.c"
+ex_lv 9
+qc 1
+strength 20
+intelligence 20
+stamina 20
+will_power 19
+magic_aptitude 20
+piety 19
+stealth 20
+charisma 5
+dexterity 5
+atrbr ({5,5,20,20,20,19,20,20,20,19,})
+stuffed 0
+soaked 0
+no_give 0
+aprv "pain,arrina,eurale"
+hint 0
+AnsiPref ({"tell",0,"gossip"," [1;34m","risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"wiz"," [1;31m","cwiz"," [31m","page",0,"pk",0,"title",0,"pretitle",0,"ls .c",0,"ls .h",0,"ls directory",0,"ls otherFiles",0,})
+old_last "Dec 27 10:23 2004 to Dec 27 10:23 2004"
+BankBalance 0
+other_copy 0

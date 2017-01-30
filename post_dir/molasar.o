@@ -1,0 +1,5 @@
+messages "mizan** Re:   FTP accessDate: Feb  2 09:52Welcome back! The FTP access should be setup- what it involves is copying an invis file (~/.acl) into people's home directories that lets the FTP server allow access to the directory. Be aware that the FTP server run by the MUD is a bit flaky, it doesn't play well with many ftp clients. It can be accessed with your username and password on port 3000. **"
+new_mail 0
+line_length 0
+level 0
+channel_block 1

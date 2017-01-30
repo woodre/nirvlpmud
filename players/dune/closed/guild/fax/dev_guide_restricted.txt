@@ -1,0 +1,73 @@
+C Y B E R N I N J A S
+
+Admin File: dev_guide
+
+
+     The CyberNinja guild runs off of a fully daemonized
+code structure. This means all code that glues together the
+guild is centralized and generalized. Centralization means that
+all daemons are stored in a central directory. Generalization
+means that the components of the guild are independent from the
+guild engine. This makes development of each guild component
+trivial, because component code does not have to worry about
+the more complex guild engine code.
+
+     Guild directory structure is as follows:
+COMMAND LIBRARIES
+Command libraries store all guild commands. Each command has
+its own ".c" file associated with it. And, each command file
+is automatically located and loaded by the guild engine (more
+specifically, the action daemon). So, to add a new command,
+determine which library to add the command (depending upon which
+seems a best fit) and then add the file to that directory.
+  lib_genCmds/     general guild commands
+  lib_advCmds/     advanced guild level commands
+  lib_admCmds/     administrative guild commands
+  lib_emotes/      guild emotes
+  lib_tools/       enhancement commands
+
+GUILD OBJECTS
+These directories store miscellaneous guild components which
+don't quite fit into another classification. But they are
+central aspects nonetheless.
+  snow/weapons/    guild weapons
+  snow/mechs/      guild mechs
+  objects/         various guild objects
+  boards/          guild bulletin boards
+  implants.c       guild object
+  DEFS.h           guild paths and global variables
+  COLOR.h          ascii color file
+
+GUILD DOCUMENTS
+Guild documents store all the help/log files of the guild.
+Help/log files are simply text files, whose contents are 
+displayed by various guild commands. Two special directories,
+the 'fax' and 'docs' directories, have special formats for
+help files which determine how the files are displayed: 
+----files that end in 'menu.txt' or 'short.txt' are fully displayed
+----all other files are displayed one page at a time
+  logs/            stores guild logs
+  docs/            general guild help files
+  fax/             guild officer and guild wiz help files
+  admin/           guild administrator help files
+  enhancements/    enhancement help files
+
+GUILD ENGINE
+The guild engine is composed of the guild daemons (which are
+a bunch of grouped utility functions) and include files.
+There is a special format in order to use guild daemons and
+include files (which allow access to guild settings/procedures):
+----when using the include files (guild settings), 
+    include the central DEFS.h file and then
+    include the definition that corresponds to the include
+    file that you wish to include.
+----when using guild daemons, use a 'call_other' that
+    specifies the name of the function within in the guild
+    daemon to use.
+  daemons/         guild engine code (guild daemons)
+  includes/        guild settings
+
+GUILD ROOMS
+All guild rooms are placed in the rooms directory. Guild
+rooms can access the guild daemons and settings freely.
+  rooms/           guild rooms

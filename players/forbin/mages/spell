@@ -1,0 +1,15 @@
+spell list
+spell list <all/school/levels>
+spell delays
+spell delay
+spell delay <spell>
+
+
+spell list                  shows all spells
+spell list <all>            shows all spells
+spell list <abju>           shows abjuration spells
+spell list <one/level one>  shows level one spells
+
+spell delay                 shows all delays in list format
+spell delays                shows all delays in list format
+spell delay <spell>         shows delay for certain spell

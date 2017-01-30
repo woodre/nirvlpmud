@@ -1,0 +1,1 @@
+cove() { if(cove_var[0] > lev) return 0; call_other(POWER,"cove",lev,pow); return 1; }

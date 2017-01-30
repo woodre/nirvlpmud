@@ -1,0 +1,34 @@
+#0:0
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/baldknobbers/hall/r1","up","/players/mokri/clans/baldknobbers/hall/r90","east","/players/mokri/clans/baldknobbers/hall/r91","west",})
+short_desc "Angie's place[0m"
+long_desc "[1;31m Esox's home from home.\n[1m there is a sign on the door reading[1;34mdo[1;32mNOT[1;36m disturb\n[0m\n"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;30mIron Bastard Sword[0m","/players/jareel/weapons/humakti_iron_offwield_sword",0,113,0,"[1;30mDemon Bracers[0;0m [[1;33mSun Forged[0;0m]","/players/jareel/armor/DWARFFORGE/demon/bracelet",0,0,0,"[1;31mA Flowing Scarf[0;0m","/players/angel/area/school/obj/flow_scarf_01",0,0,0,"A black belt [31m<Demon Cursed>[0;0m","/players/valen/area/catacombs/armors/d_belt",0,0,0,"[1;30mThe Glove of [0;0m[36mM[1;36mo[0;0m[36mlo[1;36mc[0;0m[36mh[0;0m","/players/forbin/realms/flame_forest/OBJ/gmoloch",0,0,0,"Hockey Skates","/players/jenny/wings/items/skates",0,0,0,"[0;0m[33mGold Dragon Leggings[0;0m","/players/tallos/7tigers/objects/dragon_legs",0,0,0,"Shamanic [34mboxer shorts[0m","/players/vertebraker/swamp/OBJ/denim_shorts",0,0,0,"[32mWarpstone[1;30m Armor[0;0m","/players/khrell/armors/skaven/warparmor",0,0,0,})

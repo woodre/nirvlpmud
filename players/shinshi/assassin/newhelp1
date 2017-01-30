@@ -1,0 +1,19 @@
+                  -]===-  Assassin Guild Help  -===[-
+-------------------========] Help List One [========-----------------------
+Command:         Cost:   Description:
+COMBAT POWERS:
+harm             50      Powerful attack. Simple but useful.
+backstab         0       Powerful first attack.
+
+COMBAT UTILITIES:
+o                0       Toggle health monitor.
+wimpydir <dir>   0       Set wimpy direction to dir.
+wimpyhp <amt>    0       Set hit points at which you wimpy to amt.
+fear <who>       XX      Frighten player out of room.
+cann             0       Cannibalize corpse for healing.
+consider <who>   15      Consider who's suitability for killing.
+stalk <who>      XX      Follow who around silently.
+sneak <who>      75      Teleport silently to who.
+hitlist          0       Display hitlist.
+escape           XX      Teleport to guild hall.
+

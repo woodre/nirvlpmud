@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/lightbee","/players/hippo/heals/grain","/players/wren/Area/starbug/items/indianheaddress","/players/hippo/heals/bubbles","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/wren/Area/starbug/items/dreds","/players/hawkeye/armor/fishing","/players/ultramagnus/berries","/players/wren/Area/starbug/items/bat","/players/wren/Area/starbug/items/cottagecheese","/players/wren/Area/starbug/items/bouquet","/players/snow/cam/stuff/shield","/players/mythos/aarmor/shell","/obj/armor","/players/maledicta/cont/armor/rhelmet","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/sado/shop/oreo","/obj/bag","/obj/discon","/players/snow/WEAPONS/souleater","/obj/armor","/players/ultramagnus/rdiamond","/players/wren/Area/starbug/items/bazookoid","/players/pain/NEW/arm/boots","/obj/weapon",})
+shorts ({"a strange object called a 'light bee'","[33mcrumbs of grain[0m","a tiny indian headdress","[1;36mbubbles of 7up[0m","A Prince's Robes","Lister's crusty deerstalker with dreds.","A Fishing Hat","A Bunch Of Blue Berries","a [1;30mballbat[2;37;0m","a small tub of cottage cheese.","a colorful bouquet of 'flowers'","[34m[1mBlessed Shield[0m[0m","Tortoise Shell","A [1mwhite[0m helmet","great helm","A nobleman's shortsword","A box of oreo cookies","bag","A magical storage box","[1mSoulEater[0m","A small [1mwhite[0m shield","A Red Diamond","Bazookoid [1;30mmkII[2;37;0m","Heavy work boots","Blaster",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

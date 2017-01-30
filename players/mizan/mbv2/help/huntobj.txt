@@ -1,0 +1,15 @@
+>> ORDER: HUNT ATTACK OBJECT
+
+Usage:
+order <indexnum> hunt <creature> <duration>
+
+Example:
+'order 3 hunt mizan 10'
+
+Description:
+This is a very straightforward command. The monster is sent in 
+to hunt a creature and fight it to the death. Pretty much a no-brainer :)
+
+Be aware that like all teleport capabilities of the smart monsters, 
+this checks against realm() being NT, as well as rooms having a
+query_no_fight() property.

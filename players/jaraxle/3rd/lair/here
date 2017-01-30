@@ -1,0 +1,13 @@
+the object will need this function
+
+somefunction() {
+write("Liono tells you:  HELP!!!!!!!!!!!!!\n");
+return 1; }
+
+
+
+liono needs this function
+
+blah() {
+call_other("/players/jaraxle/someobject.c","somefuction");
+return 1; }

@@ -1,0 +1,14 @@
+no_clean 0
+short_desc "A leather-bound book"
+long_desc "This is a leather-bound book with blank loose-bound pages whichyou can read and write upon.  It is a work-in-progress, and comeswith a quill pen and a pot of ink.Commands:  read page #  write page #  title book"
+info 0
+save_flag 0
+value 1000
+local_weight 2
+name "book"
+alias_name "library of nirvana writebook"
+read_msg 0
+shop_dest_flag 1
+title "Musings of a Demented God"
+author "Feldegast"
+page ({0,"Dorkdorkdorkity dorkdork dork dorkdweebizoid","Lame!","",0,0,0,0,0,0,})

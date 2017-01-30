@@ -1,0 +1,927 @@
+From: khrell
+Subj: Elven Boots
+
+Date: Aug 30 15:48
+
+Eurale coded them 
+/players/eurale/Glade/Obj/elven_boots.c  (I think) 
+
+From: vertebraker
+Subj: heh
+
+Date: Aug 30 20:10
+
+Not sure how you can say guild_login() is in the correct place, 
+hell it processed before cat("/NEWS") 
+ 
+i fixed it 
+
+From: vital
+ Re:   heh
+Cc: (To: vertebraker) vital
+Date: Aug 31 06:08
+
+heh, yah, but then I said that because I didn't think 
+coming before cat("/NEWS") was a problem. :) 
+ 
+thanks. 
+vital 
+
+From: than
+Subj: sponsor
+
+Date: Aug 31 21:04
+
+    Hi, 
+ 
+ 
+ 
+I wish to be a wizard. I want to learn and bring new things to the mud such 
+as new areas for newbies-on up to a guild in the near feature that will 
+catch the interest of other players. I wish to sacrifice my players to be 
+able to code. Please respond to me when you can, Thanks. 
+ 
+      Than 
+*8 
+
+From: vital
+ Re:   sponsor
+Cc: (To: than) vertebraker,francesco,fred,forbin,vital
+Date: Sep  1 03:53
+
+Hey Thak, 
+ 
+I've thought about it, and I really can't approve you at this point in 
+the course of the MUD. I don't think it would be a good fit and it would 
+only lead to frustration both on your part and the administrations. 
+ 
+We thank you for your devotion to Nirvana and encourage you to keep 
+playing and helping improve the game from within. We will keep your 
+application on file and the need arises, we will be in contact with you 
+about any possibilities. 
+ 
+Thank you, 
+Vital 
+ 
+p.s. Please consider this the decision of the game's administration 
+and binding until such time as you are contacted concerning it again. 
+
+From: khrell
+ Re:   mining pickaxe
+Date: Sep  1 22:21
+
+Heh I already fixed that earlier today. 
+ 
+Too slow joe! 
+
+From: hercules
+Subj: Armor
+
+Cc: vertebraker
+Date: Sep  2 21:15
+
+Hi V 
+dont know if u r aware of it, but i guess since the armors types were changed, we can no longer use armors such as bracers of speed  
+which was ring and now braclet, 
+and cloak which was misc and now cloak 
+check it out... 
+Yours, 
+the green test ranger 
+ 
+
+From: tristian
+Subj: monster code
+
+Cc: tristian
+Date: Sep  2 22:05
+
+Vital, thanks for the help in the monster code...but how do i implement it? 
+i have no clue..i asked verte for help and he says it looks unfinished..so 
+i am again clueless.. think you can help me? Thanks Tristian `f f 
+
+From: hercules
+Subj: another bug ?
+
+Date: Sep  2 22:17
+
+i've just been asked to advance my machine skill, which is kinda strange 
+considering it's maxed...  
+shouldnt happen ... ? 
+yours. 
+the green test ranger 
+
+From: hercules
+Subj: another one
+
+Date: Sep  2 22:20
+
+i've just been told when i enter or leave a room 
+it says my name and the zord in one line, w/o new line, 
+like "The Green Ranger A Bull Lightspeed-zord arrives." 
+yours, 
+the green test ranger 
+
+From: vital
+ Re:   Armor
+Cc: (To: hercules) vital
+Date: Sep  3 00:53
+
+Yeah, I realize that the new armor types have changed. And I 
+also am the one who added the new types to the restricted list. 
+ 
+I've upped the amount of damage and defense that ranger have 
+and I'm evaluating the decision of which armors to allow. 
+ 
+Vital 
+
+From: vital
+ Re:   monster code
+Cc: (To: tristian) vital
+Date: Sep  3 00:56
+
+T, 
+We'll have to catch up online when we have time. There are a 
+couple of different ways to implement it in a way that is 
+pleasing and effective for your needs. 
+Vital 
+
+From: vital
+ Re:   another bug ?
+Cc: (To: hercules) vital
+Date: Sep  3 00:58
+
+Did you go ahead and try to train? Let me know what happens then. 
+I meant to just give you the skill points and let you train it. 
+Let me know if you can train it. 
+Vital 
+
+From: vital
+ Re:   another one
+Cc: (To: hercules) vital
+Date: Sep  3 00:59
+
+I saw that one two. I'm trying to track down where that is coming 
+from. It looks like the return is being eaten from the end. 
+Vital 
+
+From: hercules
+Subj: Re:bugs... ?
+
+Date: Sep  3 05:16
+
+Hi V. 
+ok,  
+1.i've tried for about 20 mins to get zack to train me, 
+didnt work,so i guess u changed something ? i mean 
+he didnt ask me, not didnt train... 
+anyhow... 
+about the armors... WTF ? :( limited armor use ? :( 
+atleast while u think about those updates, 
+let us use the armors as it's been so far... 
+as it is the change we fight is changed, 
+so lowering our defense lvls too ? 
+yours, 
+the green test ranger 
+;) 
+
+From: vertebraker
+Subj: herc
+
+Date: Sep  3 05:19
+
+05:17:21 Hercules tells you: OMG! vital lowered our armor use ability :( 
+05:17:47 Hercules tells you: eh,10x 05:18:34 Hercules tells you: i think 
+after all the millions we requie to put in the guild,the least we should b 
+able to do is protect ourself :|  
+
+From: hercules
+Subj: RE:Zack
+
+Date: Sep  3 05:28
+
+mmm, 
+i finally got the machine skill question 
+but when i said "yes" it said "what?" 
+so i guess it just somekind of error , maybe cause kimberly and zack are  
+next to each other and i pass quick through kim and stop at zack ? 
+oh, one question was "Kimberly asks : would u like to advance ur machine skill? " 
+hope it helps, 
+the green test ranger 
+
+From: vertebraker
+Subj: serious doc
+
+Date: Sep  3 05:43
+
+we need to come up as a group with a serious doc 
+on why the dam cap needs to be removed. 
+ 
+ 
+it's currently 30+level+xlvl/4 
+ 
+which amounts to 49 on a level 19, 
+  74 on a 19+100 
+ 
+there are too many other ways for peeps to do damage these days 
+without invoking this_player() for this to count. 
+i.e. armors that do dmg, call_outs with dmg, etc. 
+
+From: vital
+ Re:   Re:bugs... ?
+Cc: (To: hercules) vital
+Date: Sep  3 09:27
+
+yah, ok, if you're going to send a mail, at least let the content 
+be comprehensible. What do I do with a statement like" 
+"as it is the change we fight is changed" ?!?!? 
+ 
+armors had no effect on your defense levels, before or after. 
+Vital 
+
+From: vital
+ Re:   herc
+Cc: (To: vertebraker) vital
+Date: Sep  3 09:29
+
+he's a ninny. sent me a series of mails. several of which were not 
+even comprehensible. so they can't still use the same set of armors 
+they could before you changed them to allow other types... tough. 
+ 
+the gob tosses out the extra ac anyway. The only ones that actually 
+benefit them are the ones that healed or did an extra hit. 
+ 
+bah. 
+vital 
+
+From: vital
+ Re:   RE:Zack
+Cc: (To: hercules) vital,vertebraker
+Date: Sep  3 09:31
+
+yah, Zack and Kimberly are having a secret love affair. as are 
+jason and trini. they generally can be found behind the Command 
+center when they are off duty. Give them some space as you'd 
+want when you're feeling up your sweet significant other. 
+vital 
+
+From: vertebraker
+ Re:   RE:Zack
+Cc: hercules,vertebraker
+Date: Sep  3 09:33
+
+Isn't that interracial mixing? Pink + Black 
+
+From: lanith
+Subj: staff
+
+Cc: (To: vertebraker) vital
+Date: Sep  3 17:08
+
+I'd like the magus great oak staff to store plz, the one that drops in 
+turtleville, wockets area plz :) and I think it might need dtype updated 
+for its spell attacks and regular hits and all that. 
+
+From: xorn
+Subj: ranger guild
+
+Date: Sep  3 20:16
+
+Why did you remove my standing in the ranger guild? 
+Just because I can only spend about 1 day a month accessing Nirvana? 
+I want my skills and stats back. 
+h 
+
+From: vertebraker
+ Re:   staff
+Cc: (To: lanith) vital
+Date: Sep  3 20:52
+
+just "bug" any items you want to save. 
+mail boxes get too full and there's no reason 
+to send this to me or vital as fred and forbin and 
+other wizards make changes as well. 
+
+From: xorn
+Subj: rangers
+
+Date: Sep  3 21:17
+
+I apologize for my last letter if it sounded severe. 
+I logged on and nothing was working - in fact, 
+I didn't even log on at the Command Center but at the 
+Church.  I had been in the guild before when it was revamped 
+and lost my status as a Ranger (I was the Moss Ranger then). 
+But I just logged on and found myself at the Command Center, 
+my 'who2' and 'mwho' commands tell me I'm still listed as a Ranger 
+and I seem to still have my coin. 
+I have also been in other guilds that just disappeared (Mages; Bards; Undead) 
+and panicked thinking this was similar to them. 
+
+From: vertebraker
+Subj: tallos
+
+Cc: (To: boltar) vital,forbin,zeus,fakir
+Date: Sep  3 23:20
+
+I demoted Tallos back down to a player for continuing 
+to break wiz_rules such as accepting the choices of the administration, 
+being combative with us as seniors and higher level wizards 
+when he was told to stop. He has been a wiz for over 2 years 
+now and has contributed absolutely nothing .. and should 
+have been dewizzed with the others last year except I 
+gave him a reprieve, which he has taken advantage of. 
+He has continued to talk shit about other wizards on 
+his wizard char and as his player chars and we have all 
+had enough. I receive constant complaints about him 
+every day and today he took to insulting Khrell on 
+public channels and title setting.. this is not 
+acceptable wizard behavior as we all know, he has 
+had 2 years to make his decision on whether to be 
+a wizard or not so now I have been forced to make 
+it for him. 
+
+From: boltar
+ Re:   wiz
+Cc: (To: tallos) vital,forbin,zeus,fakir,vertebraker
+Date: Sep  4 00:51
+
+ 
+ 
+ Um, I don't know much about this situation. However if you've 
+been using your player characters as loophole to cause trouble by 
+bad mouthing other wizards and such, believe me, there is no such  
+loophole.  
+ 
+I said before, if someone has a problem with another wizard  
+to bring it to me rather than drawing in players and going about it  
+that way. It's simply the wrong way to go about things. All it does is 
+turn players off. It serves no useful purpose.  
+ 
+As far as your area, I do not know the status of that. If it is indeed ready 
+for approval, there may be an error in that part of it.  
+ 
+
+From: vertebraker
+Subj: race ideas
+
+Date: Sep  4 05:32
+
+any thoughts on an extended race system? 
+we briefly discussed it. 
+think about it :) 
+ 
+i would want at least 25 races 
+
+From: vital
+Subj: for history
+
+Cc: vital
+Date: Sep  4 15:58
+
+Hey I admit I called a another wizard a jackass, I don't think thats a 
+reason to dewiz someone, and as a 2nd, who for the actions of a 2nd? Isn't 
+that against multi? I mean, I didn't go out of my way to harass anyone? I 
+didn't even start anything. Why should my wizard be punished for the 
+actions of my player? The actions that are well within the game rules, and 
+his character to do? I don't violate multi? Why should a senior wizard be 
+able to punish me for the actions of someone who 'technically' is not that 
+character? I just would like a ruling on this. Please.... 
+ 
+
+From: vital
+Subj: poor me...
+
+Date: Sep  4 16:21
+
+You tell lacar hell I haven't slept because of it, and I had to work 9 
+hours today, I'm ready to fall over, but I'm here, talking 
+to people. Getting the word out. I'm not going to abandon my 
+position. I'm going to fight every day to get what I lost 
+back. And no one can take the deturmination I have away from 
+me. I love this mud too much to give up on this or the 
+knights. 
+
+From: hercules
+Subj: Ah?
+
+Date: Sep  4 17:19
+
+Completely lost u with that last mail... 
+have no idea what u r saying... 
+:) 
+
+From: cooper
+Subj: Cooper
+
+Cc: rick
+Date: Sep  4 18:50
+
+Not sure if you know, but I am in a mob stations preparing to leave for 
+iraq When I get out of the field I pop on, but not sure if I will get a 
+chance when I get in country. So please do not delete me, while I am gone. 
+And please mudmail me what changes there are, or mail them to 
+fasc.cooper@us.army.mil My army email would be best cause I know I will be 
+able to check that and really want to be filled in on what is happening 
+thanks Cooper the Mossy one! 
+
+From: rick
+Subj: guild object
+
+Date: Sep  4 21:26
+
+when i do guild_object it tells me mine is corrupt and to contact a senior, so here ya go 
+contact is made. 
+ 
+
+From: vertebraker
+Subj: Beck
+
+Date: Sep  5 14:51
+
+Beck has taken to asking Bolts for you to put the Guild 
+back in his directory... May want to advise moving it to guilds/ 
+
+From: boltar
+ Re:   Rangers
+Cc: (To: beck) vital
+Date: Sep  5 20:20
+
+ 
+ Vital, you should not have moved the ranger guild. put it back 
+ 
+
+From: rick
+Subj: heads up
+
+Date: Sep  5 21:44
+
+I've entered a bug thingamabobbier, but i thought i would mail you 
+as well.  I recently converted some xp over and got a sensitive mind 
+error, as well as a butt load of skill points.  I'm not complaining 
+but i figured you might want to know about that so you can fix/repair 
+it. 
+ 
+ 
+Thanks for any time spent on the guild. 
+ 
+ 
+Rick 
+
+From: vertebraker
+Subj: rangers
+
+Cc: (To: boltar) vital
+Date: Sep  6 02:53
+
+Just my two cents... I thought it would be a good idea for 
+Vital to move the Ranger directory to his on the basis that 
+it would either eventually be copied back to Beck's directory 
+or to /players/guilds/ 
+ 
+The Rangers are a derelict guild, whatever Beck claims... 
+The only reason Vital copied the Rangers is for FTP purposes. 
+Certain illegalities and old code/balance issues neded 
+to be investigated and there was really nobody else that 
+was or is capable of handling the job. If no one is around 
+to maintain these guilds, I would imagine we are supposed 
+to intervene and do the work ourselves.. because Beck 
+logs in every few months and checks his mail does not 
+mean he has done or plans to do any work. 
+ 
+The Rangers are a problem akin to the cybers... and simple 
+edits won't fix their powers or poorly devised system 
+of advancement.. We attempted to contact Beck for at least 
+the last 4 years to look into certain issues and matters 
+which required attention and he never did. This guild 
+has caused intense player frustration as well and the idea 
+wasn't to claim ownership or seek its destruction or anything 
+else that Beck would claim. Again, if the FTP was open 
+to ftp'ing to other people's directories, I would be all 
+for relocating the directory back to Beck's directory, 
+however until they are more "stable" I would advise 
+leaving them in Vital's directory... he has done a great 
+job with working on them so far and it is unlikely Beck 
+has complained for anything other than bitterness, not 
+the state of the mud or the state of the guild. He has 
+attempted to maintain a stranglehold on the guild and 
+its problems for a while at the deprecation of the players 
+involved in it. This would be perfectly ok, except that 
+he has not been active for five years and has no idea 
+what is going on with the mud these days. In my eyes, 
+all guilds are Nirvana guilds and I would expect my 
+code to be legalized and changed as it stays on here, 
+and I could care less if someone copied my code to their 
+directory as I consider it always property of Nirvana 
+and if I am not around to maintain it, then it is the 
+"duty" of the administrative staff.  Again, sorry 
+this came to your attention ... I agree with whatever 
+decision you make and I respect it, but the director 
+modification was made only to facilitate FTP and we 
+have had every intent of copying it either back to 
+Beck's directory or into /players/guilds/ when it 
+was a little more worked up and some of the issues 
+were resolved. 
+
+From: vital
+ Re:   Rangers
+Cc: (To: boltar) beck,vertebraker,vital
+Date: Sep  6 02:54
+
+The Rangers' guild was moved to /players/vital to facilitate changes 
+and updates being made to the code from FTP. From the beginning the 
+intent was not to steal code or take credit for it, and you can ask 
+Vertebraker about that. I have mentioned on several occassions that 
+the code would not become a permanent feature in /players/vital dir. 
+ 
+After the changes have been stabilized and more of the code finalized 
+it will be transfered to /players/guilds/Rangers where it can be 
+maintained and supported by the developer community for the benefit 
+of the guild, the players and the mud as a whole. 
+ 
+All of the original references to Beck's creative genius and impetus 
+as well as his intellectual property have been retained within the 
+source code and will not be removed. 
+ 
+Vital 
+06/09/2005 10:48 AM 
+... 
+p.s. If Beck is unable or unavailable to maintain the code then 
+under the provisions of /doc/build/code_policy it has fallen to the admin 
+to care for and protect Nirvana. 
+p.p.s. If Beck desires for the code to be removed and the guild shut down, then 
+that too is also his prerogative and will be honored. 
+
+From: vertebraker
+Subj: gem
+
+Date: Sep  6 21:15
+
+as gem has coded now, he can have the tools in his workroom.c 
+
+From: vertebraker
+Subj: attribs
+
+Cc: forbin,fred,fakir
+Date: Sep  7 01:03
+
+you guys want to come up with ideas on what attribs should 
+do in the mud?  imagine a world where they vary greatly 
+by race and other such things. 
+ 
+i.e. strength should make you hit "harder" with a wep 
+   as an example. 
+. 
+
+From: beck
+ Re:   Rangers
+Cc: boltar,beck,vertebraker,vital
+Date: Sep  7 01:48
+
+My grievence does not stem from the fact that someone wishes to update the 
+Rangers to be balanced with the mud, but from the way it is being done. #1 
+My permission was never sought.  I have not one message asking my 
+permission to even work on the Rangers, much less move it entirely. #2 The 
+code should have been copied to be worked on and tested fully in a test 
+environment.  The working guild should have remained in my directory. Right 
+now I am not able to make any changes myself, because my directories are 
+virtually empty, and I have no idea what code has been changed and all the 
+locations it has been affected. #3 Some changes are being done without any 
+understanding of the spirit or intent of myself.  For instance the Ranger 
+list, while nice and compact, now excludes my will to maintain the names of 
+the players that helped create the guild over the last 10 years it has been 
+running. It also excludes such important players as my own character. 
+ 
+My wishes are that the code be moved back into MY directory within 2 weeks. 
+All further development is to be halted except for bugs that still need to 
+be fixed to maintain function. I would like a documented list of all 
+changes being made (a summary will do), at which time I will approve or 
+disapprove them. Once the guild is running again from my directory, all 
+proposal for additional changes may be passed by me. The guild is set up to 
+be fairly self maintaining, but is also designed that additional code may 
+run from other wizards personal directories, without any changes to 
+existing code. All I ask is that this additional code get my approval 
+before entering the game.   I am willing to work with wizards to improve 
+the Rangers, so that it may last another 10 years, but it needs to be done 
+respectfully. Because of the hands off approach, if I receive no mail, and 
+changes are made transparent to my knowledge, I am assuming everything is 
+running as planned.  In fact I would never have known of this current 
+change had I not noticed bugs when checking the status of some normal 
+functions. I do log in time to time to check the status of the guild, or 
+can be reached at anytime at tearitupsports@sbcglobal.net I am also willing 
+and have time to make needed changes myself if necessary. Regards, Beck 
+
+From: boltar
+ Re:   Rangers
+Cc: (To: beck) vital,beck,vertebraker,vital
+Date: Sep  7 01:57
+
+ 
+ 
+ Well, I think everyone knows my policy of trying to meet the wishes  
+of the original coders. I don't see any reason not to back beck on  
+everything he said.  
+ 
+I did not know that no notice had been sent. That is a major slip up. 
+ 
+With a contact real email, then there shouldn't be a problem with  
+guild development.  
+ 
+While vital intended to move it to /guilds and I do not fault him given  
+the complaints from players in the guild that they had no wizard, I don't  
+see a big reason to put it there if beck is going to take any level of  
+an active role.  
+ 
+I think we can all agree that respecting Beck's wishes is best for everyone 
+involed and how everyone would like it for their own stuff. 
+ 
+But I do understand why vital did things as he did. To me, it all  
+appeared to me to be a ghost ship of code. This is something that can  
+be fixed and hopefully not generate any lasting bad feelings.  
+ 
+
+From: beck
+ Re:   Rangers
+Cc: (To: boltar) vital,beck,vertebraker,vital
+Date: Sep  7 02:03
+
+I will allow the code being moved to a /guild directory as long as I may 
+still directly code it and be able to ftp to there. I also will allow it 
+with the understanding that all changes be run by me first until the day I 
+give the word that "its all yours". I do not wish for bad blood from this 
+as it benefits no-one, but the lack of communication and the manner in 
+which this was done, really raised my blood pressure. I do wish to work 
+with you guys to make an enjoyable guild for the mud. Beck 
+
+From: vertebraker
+Subj: mail pt. 1
+
+Cc: (To: beck) vital,boltar,vertebraker
+Date: Sep  7 02:31
+
+ > #1 My permission was never sought.  I have not one message asking my  > 
+permission to even work on the Rangers, much less move it entirely. 
+ 
+This permission had been asked for repeatedly in the past to no avail. In 
+your responses below you are clarifying the exact reasons why we didn't 
+even bother contacting you this time. 
+ 
+> #2 The code should have been copied to be worked on and tested fully > in 
+a test environment.  The working guild should have remained in > my 
+directory. 
+ 
+This is your opinion. Extensive beta testing [Nirvana definition: having 
+players test it] and processing their feedback is far more effective and 
+generates more bug, typo, and idea reports than simulating with a test 
+character in some convoluted laboratory experiment, this would be 
+ESPECIALLY beneficial for you, since you have been completely out of touch 
+with the mud for 5+ years. 
+ 
+> Right now I am not able to make any changes myself, because my > 
+directories are virtually empty, and I have no idea what code > has been 
+changed and all the locations it has been affected. 
+ 
+Why would we expect you to make changes yourself when you have been unable 
+or unwilling to do so for the past five years? The guild is near death, and 
+except for a few lone stragglers, it isn't even considered a viable option 
+by 99% of Nirvana. It has been like that for quite some time. It was a 
+poorly conceived, poorly planned, poorly coded and poorly executed guild. 
+Your ambition far exceeded your talent. Someone has to maintain its 
+monstrosity. This guild has more holes than swiss cheese and the 
+advancement system and lack of player rewards other than adding lame WC and 
+AC bonuses are staggering. What can you say for a guild that cannot use 
+equipment in a mud where EVERYTHING is equipment-based? It means it needs 
+to be VERY creative and VERY original. This mud in its current form is 
+hardly that. Vital's changes are a recode very much in the spirit of the 
+original. Your guild never really was a Niastic departure from the Nirvana 
+experience that mostly failed.   > My wishes are that the code be moved 
+back into MY directory within 2 weeks.  > All further development is to be 
+halted except for bugs that still need to  > be fixed to maintain function. 
+[cont.] 
+ 
+[cont.] 
+
+From: vertebraker
+Subj: mail pt. 2
+
+Cc: (To: beck) boltar,vital,vertebraker
+Date: Sep  7 02:31
+
+Why do you assume that the guild would even be fixed in 2 weeks? This is 
+actually insulting coming from you. Should we have put a time limit on when 
+the exp changes, dam types, or Armor/Weapon code that you failed to 
+properly implement in the mudlib would have been ok to use? Because you did 
+the same thing with the Rangers that you did with any of your previous 
+work, you brainstormed up a bunch of half-baked crap, dumped it in, then 
+pulled a disappearing act leaving everyone else to deal with the fallout of 
+your poor thinking. You are in no position to make demands on when the heap 
+of garbage you coded can be working properly and up to the lowest standard 
+of tolerable gameplay. YOU ARE THE ONE WHO ABANDONED IT. 
+ 
+> I would like a documented list of all changes being made > (a summary 
+will do), at which time I will approve or  > disapprove them. 
+ 
+Would you care to actually get back in touch with the game before knowing 
+what would be right for the guild or the mud in general? Because you know 
+extremely little about gameplay or how the mud even operates these days. I 
+am also VERY against your remaining even a senior status and being able to 
+make judgment calls for Nirvana based on your past history of dereliction, 
+at least until you prove yourself to be anything more than a standoffish 
+ghost wizard. You have been essentially inactive for 5+ years. Why others 
+like Feldegast, Snow, or Mythos were stripped for being away and you were 
+maintained is nothing less than a glitch. 
+ 
+> The guild is set up to be fairly self maintaining, but is als > designed 
+that additional code may run from other wizards personal > directories, 
+without any changes to existing code. 
+ 
+*laugh* Fairly self-maintaining? Do you think we are sadists? Why would we 
+be in this situation and having this stupid conversation if your code was 
+self-maintaining? IT IS ENTIRELY OUT OF DATE AND IRRESPONSIBLE. And nice 
+bluff about additional code being able to be run from wizard's personal 
+directories.... This might be fine for Cosmo's donate command, but hardly 
+works when the guild itself needs a complete overhaul. 
+ 
+> All I ask is that this additional code get my approval  > before entering 
+the game. 
+ 
+We tried this before, remember? Vital tried several times, we all tried to 
+get you to allow other input on the guild. And that isn't good enough for 
+your ego to know your code is largely crap. So you denied it. repeatedly. 
+You claimed to fix the problems or errors in question, but a month later 
+you vanish again and similar or other problems arise and re-arise until 
+players quit the guild in frustration. The reason you do not receive mails 
+is largely because of your complete non-presence on Nirvana. What is the 
+point of mailing a ghost? If I work on Dune's guild, should I send him 
+futile mudmails as well? Or should I just accept his lies and poor 
+administrative ethic and pretend like he will fix the major problems in his 
+guild. Yeah, I guess we should keep being this stupid, we've done it for 10 
+years. 
+
+From: vertebraker
+Subj: mail pt. 3
+
+Cc: (To: beck) boltar,vital,vertebraker
+Date: Sep  7 02:32
+
+> I am willing to work with wizards to improve the Rangers, 
+> so that it may last another 10 years, but it needs to be done  
+> respectfully. 
+ 
+Ignoring the original creator's contributions is not something 
+that Vital or anyone else EVER intended to do. It was also NEVER 
+looked at as VITAL's guild now. Nirvana guilds are NIRVANA 
+guilds. Plain and simple. If there is no guild wizard, or a guild 
+wizard who pretends to be a guild wizard but really is just 
+a player file and the occasional connection [such as yourself], 
+it is up to us to maintain or rework any concepts or problems 
+arising with said guild. 
+ 
+> In fact I would never have known of this current  
+> change had I not noticed bugs when checking the status of some normal  
+> functions. 
+ 
+Gee dood, you might have wanted to check the announcement board... 
+            [do you even know where that is?] 
+or communicate with other wizards... It's kinda hard to know 
+anything if you only login once every few months to check your 
+empty mailbox cause people are fed up with your inactivity. 
+ 
+>I am also willing and have time to make needed changes myself 
+>if necessary. 
+ 
+Heard this one before, it was funnier when it was 1999. 
+ 
+p.s. I will of course abide by Boltar's decisions but don't try 
+     the strong arming or the victim crap... it was your own 
+     dereliction of your responsibilities as a coder, as a 
+     guild wizard, and as an administrator that have caused 
+     any situation like this to arise. You have no right to 
+     make demands because you don't have the time or inclination 
+     to properly maintain or develop your own work. 
+
+From: vertebraker
+Subj: sparkle
+
+Cc: zeus,forbin,fred
+Date: Sep  7 02:52
+
+sparkle is going to start indexing areas for /open/info 
+ 
+i asked martha to do it, i think she is a tad busy irl 
+
+From: hercules
+Subj: HELP!!!
+
+Date: Sep  7 05:30
+
+when u get in here, plz return the guild objects. 
+I lost all the guild objs and obviously can do nothing... 
+thats frustrating 
+I assume u're updating them or something but atlest keep copy of the normal while u do that 
+10X 
+the green test ranger 
+
+From: vital
+Subj: Coding and Development
+
+Cc: (To: lexi) vertebraker,fred,forbin,francesco,vital,boltar
+Date: Sep  7 18:20
+
+Lexi, 
+As you no doubt have noticed, you levels have been reduced 
+to where you were when you were first approved for a position 
+on the Nirvana development team. This was an administrative 
+decision and not one reflecting any cheating or poor behavior 
+on your part. 
+ 
+Your files are intact and backed up. If you desire to actually 
+contribute to the development and improvement of Nirvana, you 
+will need to seek out and discuss this with the senior wizards 
+who will evaluate your readiness and willingness to contribute 
+to the game. 
+ 
+Some people just enjoy being a player more and actually feel more 
+comfortable doing that, rather than being a developer. 
+Thanks, 
+Vital 
+
+From: punk
+Subj: lost guild obj
+
+Date: Sep  8 22:47
+
+so I got my guild obj purged apparently....can I at least get comped for 
+the millions and millions I put into the obj? 
+
+From: sparkle
+Subj: Punk
+
+Date: Sep  8 22:55
+
+So Punk logged on tonight and said he doesnt have his ranger object any 
+longer. He asked if it could be reinstated or he could be reimbursed for 
+the exp he put in. I told him to mail you cause Ididnt think there was 
+anything I would know to answer that question. Just wanted to let you know. 
+=) 
+
+From: vital
+ Re:   lost guild obj
+Cc: (To: punk) vital
+Date: Sep  9 07:45
+
+Punk, 
+ 
+You should have your guild object and should still have all of your 
+Power Ranger skills as they were when you last logged on. You were 
+not one of the ones included in the purge of guild members. 
+Vital 
+
+From: vital
+ Re:   Punk
+Cc: (To: sparkle) vital
+Date: Sep  9 07:46
+
+I think I straightened him out. Thanks for having actually mailing 
+me for help. I'm not sure why players are so adverse to mailing 
+someone responsible for help. Thanks again. 
+Vital 
+
+From: vertebraker
+Subj: mosobp
+
+Cc: (To: forbin) fakir,vital,fred
+Date: Sep  9 10:14
+
+mosobp was abusing the chaingun bug .. 
+that allowed unlimited charges 
+ 
+i warned him again in pretty strict 
+terms .. if he does it again i'm 
+likely going to boot him 
+ 
+what was worse was he was telling 
+others about the chaingun bug .. 
+and not even a bug report to me 
+or anyone else. 
+
+From: forbin
+Subj: Templar Guards
+
+Cc: (To: vertebraker) vital,fred,zeus,feldegast,fakir,jara
+Date: Sep 10 09:07
+
+I don't quite know who has fucked with what lately, but the Templar 
+Security guards are roaming all over the fucking mud.  It's getting to 
+the point of being plain ridiculous.  If you changed something with them 
+please change it back.  If not, see if you can figure out what's doing it 
+cause I sure as hell can't. 
+ 
+F 
+
+From: vital
+ Re:   Templar Guards
+Cc: (To: forbin) vertebraker,vital,fred,zeus,feldegast,fakir,jara
+Date: Sep 11 01:00
+
+weren't me!  :) 
+

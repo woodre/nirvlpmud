@@ -1,0 +1,21 @@
+**************
+
+
+                     Hand
+
+Syntax:    hand <player> <path>
+
+Desc:
+           This command is used to clone an object directly to a 
+           players inventory. Useful for giving tells and the like.
+
+Warning:   Don't hand players thing they aren't supposed to have.
+
+Example:   hand mike /players/bob/wiz/teller.c
+                  results 
+           in teller being cloned to Mike.
+
+Related:   clone, idest
+
+
+**************

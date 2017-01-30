@@ -1,0 +1,12 @@
+SERVANT
+
+The servants in the shadow guild work a little differently then in most guilds.
+First, you make an object called a pearl with the command 'pearl'.  This pearl
+stays in your inventory as a weightless object, until you type 'change', where
+upon it changes into your servant.  You can change the servant back again with
+the same command.   This is in case you want your servant to not get attacked,
+or to stop attacking someone else.
+   The pearl will keep track of your servants hit points, and will be with your
+inventory until the servant dies, even if you quit, or it reboots.
+
+see 'info servants2' for a list of commands for your servant.

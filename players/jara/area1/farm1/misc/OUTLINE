@@ -1,0 +1,36 @@
+
+MONSTERS:
+
+1. Rabbit- Level 3
+2. Chicken- 3 @ Level 3
+3. Rooster- Level 4
+4. Cat- Level 4
+5. Dog- Level 4
+6. Farmer- Level 7
+7. Wife- Level 6
+8. Son- Level 6
+
+MONSTER LOCATION:
+
+1. The rabbit is located in /players/jara/area1/farm1/room/field1.c
+   to field4.c  It will wander randomly between these four rooms.
+2. The chickens are located in /players/jara/area1/farm1/room/hutch.c
+   There are a total of 3 chickens.
+3. The rooster is located in /players/jara/area1/farm1/room/hutch.c
+4. The cat is located in /players/jara/area1/farm1/room/path1.c to
+   path8.c  It will wander randomly between these 8 rooms.
+5. The dog is located in /players/jara/area1/farm1/room/barn2.c
+6. The farmer is located in /players/jara/area1/farm1/room/house3.c
+7. The wife is located in /players/jara/area1/farm1/room/house2.c
+8. The son is located in /players/jara/area1/farm1/room/house4.c
+
+THEME:
+
+The small farm is just outside the city, to the southwest. It is a newbie
+area with a farm family, a field of corn and some other farm-related rooms/
+items/objects. 
+
+MAP:
+
+A map is located in /players/jara/area1/farm1/misc/MAP
+

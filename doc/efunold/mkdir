@@ -1,0 +1,6 @@
+void mkdir(directory)
+string directory;
+
+Creates the directory given as an argument.
+
+See also rm(), rmdir(), ls(), cat().

@@ -1,0 +1,35 @@
+#include "std.h"
+#include "/players/hippo/bs.h"
+id(str) {return str == "nucleus"; }
+long() {
+   write("This is the nucleus of a cell.... it keeps cells alive."+BS+
+      "What would it do to you??"+BS);
+}
+short() {
+   return "A nucleus of a cell";
+}
+query_value()
+{
+   return 400;
+}
+init() {
+   add_action("eat","eat");
+}
+eat(arg){
+   if(arg!="nucleus") {
+   notify_fail("You don't have that, dombo."+BS);
+		return 0;
+		}
+   this_player()->heal_self(20);
+this_player()->add_intoxication(6);
+   say(this_player()->query_name()+" eats a nucleus"+BS);
+   write("You eat a nucleus"+BS);
+	        destruct(this_object());
+	return 1;
+        }
+get() {
+    return 1;
+}
+query_weight() {
+   return 1;
+}

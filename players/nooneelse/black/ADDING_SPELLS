@@ -1,0 +1,12 @@
+to add spells/abilities to the vamp guild, you must change the following files:
+
+<new_command>.h            - add file to black/lib
+<new_command>.hlp          - add file to black/hlp
+guild_help.h               - add the new command to the help command
+fangs.hlp                  - add the command to the help file
+spell_levels.hlp           - add the command to the help file
+spell_category.hlp         - add the command to the help file
+vampire_fangs.c            - add the new command to the fangs
+vampire_fangs_base.c       - add the new command to the fangs base
+
+update both the vampire_fangs and vampire_fangs_base and get new fangs.

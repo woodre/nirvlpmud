@@ -1,0 +1,84 @@
+/*
+ * spell : Fireball   (conjuration)
+ * level : 5
+ * effect: Hits all monsters in the room : hit_player: random(20)
+ * cost  : 20 sp per target hit
+ * spec  : 
+ * files : none
+ */
+
+fireball(){
+  object ob, obj;
+  int failed;
+  int todmg,fbdmg;
+  failed = 0;
+
+  if(!KNOW("fball")){
+    write("What?\n");
+    return 1;
+  }
+
+  if(tp->query_spell_point() < 50) {
+    write("You do not have enough spell points for a FireBall.\n");
+    return 1;
+  }
+
+  write("You cast a "+HIR+"FIREBALL"+NORM+" spell ...\n");
+  say(ME+" casts a spell ... \n");
+
+  if(spell_fail2(5, "conj", "int")){
+    write("    .... something goes wrong ....      \n");
+    failed = 1;
+  }
+
+  tell_room(env,
+  HIR+" ~~~ BOOM!!! ~~~"+NORM+"\n"+
+  "An immense ball of flaming chaos explodes over the room!!!\n");
+
+  ob = first_inventory(env);
+  while(ob){
+    object cur;
+    cur = ob;
+    ob = next_inventory(ob);
+
+    if(living(cur)){
+      if((cur->query_npc() == 0) || (cur->is_pet() == 1)){
+        if(cur == tp && failed == 1){
+          say("Even "+ME+" is caught in the explosion!\n");
+          write("You are scorched by the fireball!\n");
+        } else if(cur == tp && failed == 0){
+          tell_room(env, "The fireball leaves "+ME+" untouched.\n");
+        } else {
+         tell_room(env,
+         capitalize(cur->query_name())+" is burned by the blast!\n");
+         tell_object(cur, "You are scorched by "+ME+"'s fireball!\n");
+        }
+        if(cur->is_pet() || cur == tp) {
+          fbdmg=random(20);
+          /* don't cost our own sps to hit ourself */
+          if(cur != tp) todmg += 10;
+          /* if spell fails hit myself/pets x2 */
+          if(failed == 1) cur->hit_player(4*fbdmg,"other|fire"); 
+          else cur->hit_player(fbdmg,"other|fire");
+        }
+      } else {
+        tell_room(env,
+        capitalize(cur->query_name())+" is burned by the blast!\n");
+        fbdmg=random(40);
+        cur->hit_player(fbdmg,"other|fire");
+        if(!cur->query_attack()) cur->attack_object(tp);
+      }
+    } else {
+      if(cur->get()){
+      tell_room(env,
+      cur->short()+" is incinerated by the blast!\n");
+      destruct(cur);
+      }
+    }
+  }
+  tell_room(env,
+  "The room is left in devastation.\n"+
+  ME+" smiles wickedly.\n");
+  tp->add_spell_point(-todmg);
+  return 1;
+}

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[31mCoeur [1;37md' [1;30mObscurite'[0m"
+long_desc "A tattered and broken heart that no longer beats.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "heart"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A tattered and broken heart that no longer beats.[0mType 'clan_help' for commands."
+clan_short "[31mCoeur [1;37md' [1;30mObscurite'[0m"
+damage_type 0
+hall_path "/room/eastroad5"
+object_name "heart"
+owner "riley"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Mon Oct 12 21:41:55 2009] Colbey: sup","[Mon Oct 12 21:41:59 2009] Silverpaw: nadda","[Mon Oct 12 21:42:21 2009] Colbey: any idea where the book for knights is at?","[Mon Oct 12 21:42:29 2009] Silverpaw: hmmm","[Mon Oct 12 21:42:35 2009] Silverpaw: i would have to look","[Mon Oct 12 21:43:01 2009] Colbey: me too lol i will do it later i guess","[Mon Oct 12 21:43:21 2009] Silverpaw: heh","[Mon Oct 12 21:43:31 2009] Silverpaw: i think monk is in rift","[Mon Oct 12 21:43:35 2009] Colbey: nod","[Mon Oct 12 21:43:53 2009] Colbey: monk in rift berserker not sure where it is now paladin is w from lockers and assassin in wastes","[Mon Oct 12 21:44:03 2009] Silverpaw: i kno where zerker is","[Mon Oct 12 21:44:11 2009] Silverpaw: same area you get the silver ring","[Mon Oct 12 21:45:15 2009] Colbey: ill look on it later","[Mon Oct 12 21:45:30 2009] Silverpaw: hmm","[Mon Oct 12 21:45:46 2009] Silverpaw: lol","[Sat Jan 29 18:16:17 2011] Nolee: why not","[Sat Jan 29 18:16:53 2011] Nolee: not why can't y9ou send tells","[Sat Jan 29 18:17:49 2011] Nolee: ahhh ok","[Sat Jan 29 18:18:55 2011] Nolee: the change the vamps and it sucks  i have never had so much trouble killing  pirece","[Sat Jan 29 18:19:23 2011] Nolee: i use to kill him all the time before",})
+leaders ({"nolee","colbey","teepo","khalid",})
+join_type 1
+private_coffer 3017
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

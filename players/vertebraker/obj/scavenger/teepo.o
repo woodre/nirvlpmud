@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/shadows/stuff/crown","/players/paulasx/weapons/godsword","/players/wren/Area/starbug/items/bat","/players/hippo/heals/grain","/obj/treasure","/players/wren/Area/starbug/items/thermos","/obj/weapon","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/snow/WEAPONS/hon_sword","/players/wren/Area/starbug/items/veil","/players/wren/Area/starbug/items/lightbee","/players/saber/armor/mini","/players/wren/Area/starbug/items/flibble","/players/hippo/armour/shield","/players/arrina/armor/torque","/players/wren/Area/starbug/items/mirror","/players/snow/WEAPONS/souleater","/players/softly/nhall/obj/decant3","/players/snow/WEAPONS/glass_sword","/players/arrina/treas/onyx","/players/snow/chaos/objects/crabmeat","/players/saber/stuff/mbag","/players/wren/Area/starbug/items/sequinjacket","/players/mosobp/areas/TEMPLE/OBJ/rags",})
+shorts ({"[1mShadowCrown[0m","Godsword","a [1;30mballbat[2;37;0m","[33mcrumbs of grain[0m","some foul smelling trash","a thermos","Baby rattle","a hat","A nobleman's shortsword","A finely honed longsword","a big wedding veil","a strange object called a 'light bee'","A skin tight leather mini skirt","a [1;30mpe[37mngu[1;30min[2;37;0m handpuppet","lap of meat","Silver Torque","a slim pocket mirror","[1mSoulEater[0m","Decanter of Healing [[1m3[2;37;0m]","Glass Sword","A piece of carved onyx","A slab of giant crabmeat","A bag of holding","Cat's red sequin jacket","Peasant Rags",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

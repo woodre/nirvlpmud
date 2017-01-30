@@ -1,0 +1,32 @@
+Wed Nov  7 20:06:47 2001 Sponsored Ireland.
+Sat Nov 10 15:53:50 2001 Gave Krazed a golden earring that was in the temporary storage facility for pet sending.  Apparently, if the receiver refuses the object being sent, the object is not returned.
+Wed Nov 14 17:48:10 2001 Dested a garbler off of Kramm.  He's had it long enough.
+Thu Nov 15 23:55:20 2001 Changed all the poison objects I could find to check for is_dieing instead of query_ghost, because the death sequence was changed by the damage type modifications, causing the ghost flag to not be set when the poison object would be dropped.
+Mon Nov 19 22:06:40 2001 Removed a \n from the short of the deep space room in Morgoth's castle.
+Fri Dec 21 22:05:28 2001 Changed a check in the warrior pummel command from target->is_living() to living(target).  This was allowing players to use pummel on players, which I don't believe was the coder's intention.
+Fri Dec 21 22:47:13 2001 Held a little contest tonight.  First player to kill a level 19+ player was awarded the StarFire Sword (~/wep/starfire.c) a unique weapon.  Bone won, after dueling Pepino to the death.
+Sun Dec 23 20:57:12 2001 Changed CST to EST on the dervish score command.  We are no longer on CST.
+Mon Dec 24 21:19:32 2001 Restored Bone's guild object.
+Mon Dec 24 21:21:40 2001 Made substantial changes to the weapon smith in Catwoman's area.  Previously, it would destruct any object that the player was trying to sharpen that wasn't a weapon (including Bone's guild object).  Occasionally, it would put a blessing on the weapon, but usually it would destroy it.  That's not a whole lot of fun, so I changed it so that it would destroy a weapon 1 in 8 times, bless it 1 in 10 times, and the rest of the time just reduce wear.
+Mon Dec 24 21:21:54 2001 Cost was also changed from 40 sp to 800 coins.
+Mon Dec 31 13:50:47 2001 Added the id jeweler to the gem merchant in Ryllian.
+Mon Dec 31 13:50:55 2001 At Jaraxle's request.
+Tue Jan  1 01:20:40 2002 Added another check for COUNT to the larn healing pool, so that players don't take soak intox if there isn't any water left.
+Tue Jan  1 12:14:36 2002 Changed Boltar's Sandra the seductress' red lace teddy from type underwear to type armor. (/players/boltar/lv2/hookerroom.c)
+Tue Jan  1 21:32:32 2002 Demoted Scathe to level 21.
+Fri Jan 18 22:33:16 2002 Performed a cull of locker files of players who have been deleted.
+Mon Jan 21 13:40:23 2002 Restored Rykus' ranger object by going through logs and finding what abilities he had.  Apparently he's had this problem for quite some time.
+Sat Jan 26 23:50:00 2002 Advised Sleepwalker to clear slot #2 in his lockers, and gave him a deathmace, the item with the bad path.
+Thu Feb 14 20:09:04 2002 Changed wride to write in the star daemon.
+Fri Feb 15 19:04:17 2002 Fixed a problem with the church ladies in Softly's Algiers area double-loading.
+Wed Mar 20 00:30:33 2002 Suddenly, for no particular reason, and of my own free will, decided that Vital should come up with a few ideas to make Power Rangers a viable guild again, and have a senior implement them.
+Sun Mar 24 00:35:10 2002 Repaired a changed file name in Roosterx's storage locker.  Daranath changed the path of his Crusader blade from qualtor/newstuff/obj to qualtor/newstuff/weps.
+Sun Mar 24 13:34:39 2002 Updated /room/room.c.  The exlv_guild.c was not loading properly due to an inheritance problem, and this seemed to fix it.
+Sun Mar 24 21:13:26 2002 Subotai asked me about letting directives clean cyberninja boards.  I don't him I'd think about it.
+Sun Mar 31 01:43:00 2002 Changed the eigth exit in the marble shrine from Snakespear's area to Jaraxle's area at his request.
+Tue Jun 18 22:30:58 2002 Gave everybody a free bottle of wine to make up for somebody crashing Nirvana AGAIN.
+Sun Jul  7 18:07:52 2002 Approved a board for Pestilence's hall of images that shows people who've killed the queen ant.
+Sat Aug 10 23:34:30 2002 Awarded two bottles of cabernet savignon to Lurker for winning a contest.
+Thu Aug 22 20:19:09 2002 Zapped Tartis to unset her pk(because Templar Knights are in beta at the moment).
+Thu Jan  1 03:48:42 2004 Copied back my old castle.c... Forgot why I removed it in the first place.
+Wed Aug 31 20:55:28 2005 Fixed /players/blue/monsters/burn.c scald.c and scorch.c.  Their xp was being calculated as zero.  Gave Miette 1215xp to make up for her lost xp.

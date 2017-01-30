@@ -1,0 +1,12 @@
+Vital wizs: ok shadow(object ob, int flag)
+Vital wizs: if flag is 0...will return shadowing object
+Zeus wizs: cool
+Vital wizs: and shadow() will fail if there is another shadow
+Vital wizs: in this lib
+Vital wizs: alternatively...
+Vital wizs: use shadow(ob, 0) to get the shadow if it exists...
+Vital wizs: and then have it call unshadow()
+Vital wizs: woo, even easier...
+Vital wizs: just have the weapon call unshadow()
+
+->> Vital wizs: it will remove all shadowing

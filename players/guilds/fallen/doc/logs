@@ -1,0 +1,13 @@
+fallen logs
+
+  name                   file                   reason
+energy death        ~/obj/energy_check.h   - when sps get too low
+component purchase  ~/realm/NPC/g-old.c    - needed to cast spells
+component stocking  ~/OBJ/pouch.c          - so wizards don't abuse it
+ctool               ~/closed/ctool.c       - misc stuff i do
+exp                 ~/rooms/seek.h         - guild xp 
+exp_19              ~/rooms/seek.h         - guild xp for level 19 players
+advance             ~/rooms/advance.h      - learning new spells
+joining             ~/rooms/join.h         - joining the guild
+leaving             ~/rooms/leave.h        - leaving the guild
+restore gob         ~/rooms/seek.h         - guild name but no obj

@@ -1,0 +1,13 @@
+
+I coded something new for the Fallen, a bit of trickery should they choose
+to use it.  If they weave a weapon and buy another shadow gem they can
+'weave illusion' and it will create a copy of the weaved weapon.  The copy
+is shadowed by ~/circle/OBJ/illusion_shadow.c which prevents players from
+wielding it, shows that it is an illusion in the short() for Fallen, among
+other things.  the spell costs 50 sp, 20 end, with a 1:6 chance that the
+shadow gem will be used up (6000 coin cost).  All the new spell code is
+added to ~/circle/power/shadowweave.h.  Please let me know if i can put it
+in.
+
+~zeus
+

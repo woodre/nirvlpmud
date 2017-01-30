@@ -1,0 +1,25 @@
+telepathy <msg>      Tell all vampires <msg> (or te <msg>)            0   1
+                     ('te on' turns it on; 'te off' turns it off)
+                     ('te buzz' buzzes Nooneelse, Nancy & Magus -
+                                if theirs are off
+                      'te buzz nooneelse' buzzes Nooneelse - if
+                                his is off
+                      'te buzz nancy' buzzes Nancy - if hers is off
+                      'te buzz magus' buzzes Magus - if his is off)
+.telepathy <who> <msg>
+                     Tell <who> vampire <msg> (or .te <who> <msg>)    0   ?
+                     (this is for those who've solved the 1st 5 tasks)
+telepathyfeel <msg>  Emote to all vampires <msg> (or tf <msg>)        0   1
+.telepathyfeel <who> <msg>
+                     Emote to <who> vampire <msg> (or .tf <who> <msg>)0   ?
+                     (this is for those who've solved the 1st 5 tasks)
+telepathythink <msg> Extension of emote to all vampires <msg>         0   1
+                     (or tt <msg>) Just a variant on telepathy.
+                     This:
+                            tt this is getting silly
+                     will look like:
+                            Nooneelse . o O (this is getting silly)
+.telepathythink <who> <msg>
+                     Emote to <who> vampire <msg> (or .tt <who> <msg>)0   ?
+                     This will look like tt but to a specific player.
+                     (this is for those who've solved the 1st 5 tasks)

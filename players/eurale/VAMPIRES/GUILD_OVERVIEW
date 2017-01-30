@@ -1,0 +1,56 @@
+The vampire guild is the oldest on Nirvana.  They have always been creatures
+of the night, preying on anything living.  They derive their strength from the
+blood of their victims.
+
+	Advantages:
+	  Speed and Strength - these undead creatures had extraordinary speed
+                               and strength, able to kill quickly and then get
+                               away before being found out.
+          Mental ability - they had the ability to control animals as well as
+                           people.  Their strong mental abilities would allow
+                           them to cast powerful spells.
+          Shapechangers - they could change at will into a bat or wolf to 
+                          gain the abilities of those creatures.
+	  Coffin Healing - vampires heal more quickly in their coffins.
+                           I would think that would hold true here as well.
+
+	Disadvantages:
+	  Light - light is the cause of great pain and injury.
+          Need for Blood - all their powers were derived from the blood of
+                           victims.  No blood, no powers.
+          Death to Join - a person must die to become one of these night
+                          creatures.  Biting is still an excellent recruiting
+                          process but it should kill the victim.
+          Limited help - with light damage, it will limit both gear and who
+                         one might party with due to sustained damage.
+
+  There vampire guild has an adequate guild pet that if taken care of properly
+can be of general assistance during fights.  All old and new abilities/spells
+operate off a dual system of spell points and blood points.  A lack of either
+of these will cut short any vampire's abilities.  Every activity uses bloodpts
+to use so a simple formula was used to accumulate them.  Guild advancement has
+been completely altered from the old 'tasks system' which was rife with cheat-
+ing and replaces with a 'trials' system.  These trials are much like mini MK
+battles to see if the vampire has learned to use his/her new spells/skills
+since the last trial.  They will all be done in the basement of the guild hall
+and it is a 'one winner' situation once started.  The trials rooms are:
+~/eurale/Vamp/RMS/foyer and trial_room.  I also added a ~/Vamp/RMS/nosferatu
+lounge for those players who attain max vampire skill level.
+
+  There are 5 'attack' spells located under ~/eurale/VAMPIRES/lib/attack_ that
+conform to the guild rules for damage.  There have been some changes in some
+of the other spells to bring them into line as far as theme.  All spells are
+located in ~/eurale/VAMPIRES/lib.  After much discussion about the vampire
+theme, I elected to code a 'defensive' addition rather than an offensive one.
+Although adequate power to kill and advance was upped a bit, the ability to
+get away lent itself much more to the vampire ability to shapechange and fly
+and thus the spell 'levitate'.   The old 'damn' spell which dealt direct
+damage and didn't even require fighting has been replaced with a new one that
+conforms to the game rules.  Although testing may reveal that some minor
+adjustments still need to be made, I think we're on the right track.
+  Another additional drawback was added on 6/3.  It involved the vampire ability
+to hit a second time.  I tied it not only into the attribs and level of the
+player, but also directly into the guild level of the vampire.  This will make
+quite a difference in the damage of the hit as they progress through the guild
+levels.  At the same time, I tied their increased strength into their guild
+level as well as I think it fits nicely with the theme.

@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "geyegouge"
+myMsgU "$R$*~* $HK$You slice open %TRG%'s eye with your kusari-gama!"
+myMsgD 0
+roomMsgU "$R$*~* $HK$%SRC% slices open %TRG%'s eye with %SRCPOS% kusari-gama!"
+roomMsgD 0
+tellMsg 0
+farMsg 0
+owner "pike"

@@ -1,0 +1,24 @@
+/*
+Changed ac from 4 to 3 because ac4 is justified by neither theme nor
+balance.  The bishop already has an ac2 ring and a wc18 weapon.
+-Feldegast 9-18-00
+
+Added color to short - Eurale 9.29.02
+*/
+inherit "obj/armor";
+#include "/open/ansi.h"
+
+reset(arg){
+   ::reset(arg);
+    set_short(HIY+"B"+NORM+"ishop "+HIY+"H"+NORM+"abit");
+   set_long("This is a long and white habit, embroidered with gold and silver wires.  It\n"+
+     "looks precious and quite protective.\n");
+   set_ac(3);
+   set_params("magical",2,0,0);
+   set_params("other|evil",0,15,0);
+   set_weight(2);
+   set_value(1000);
+   set_alias("armor");
+   set_name("habit");
+   set_type("armor");
+}

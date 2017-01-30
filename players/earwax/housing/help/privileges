@@ -1,0 +1,13 @@
+This command allows the owner of a building, or a character given 
+level 3 privileges, to set the privileges of another character.  In 
+short, the command allows another character access to a group of 
+commands, based on the list in [1;37mhinfo commands[2;37;0m[2;37;0m.  Basically, the 
+privilege levels are as follows: 
+
+      0: Allow player to only access the help system.
+      1: Allow player to see room settings and properties.
+      2: Allow player to edit room settings and properties, invite others 
+         into building. 
+      3: Allow player to set privilege levels of other players.
+
+[1;30mSee also: set_privs, commands[2;37;0m[2;37;0m

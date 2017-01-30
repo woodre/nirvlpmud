@@ -1,0 +1,108 @@
+/* *************************************************************************
+ * man
+ * 
+ * - Earwax 09/15/03
+ *
+ * Wizard help files.  This goes through the /doc dirs to find the indicated
+ * file, or you can do 'man' with no arguement to get a list of the dirs.
+ * You can then 'man <dir>' to get a list of the files in those dirs.
+ * Just something helpful for looking up efuns and build info.
+ *
+ * Syntax:
+ * man        - get all the dirs in /man and display them
+ * man <dir>  - Display the contents of a directory
+ * man <file> - search for all instances of file and display them.
+ *
+ * *************************************************************************
+*/
+
+/* Global Variables */
+string *Dirs, *Files;
+
+/* *************************************************************************
+ * map_dirs
+ *
+ * figure out all the directories in /doc - recursive
+*/
+
+void
+map_dirs(string dir, string current)
+{
+  string *t;
+  string ack, ugh;
+  int i;
+
+  i = sizeof(t = get_dir(dir));
+  while(i--)
+{
+  t[i] = dir+t[i];
+  if (sscanf(t[i],"%s//%s", ack, ugh) == 2) t[i] = ack + "/" + ugh;
+/*
+    if (file_size(t[i]) == -2)
+*/
+    if (t[i] != current && file_size(t[i]) < -1)
+    {
+      if (t[i] != "." && t[i] != "..")
+      {
+        Dirs += ({ t[i] });
+        Files += ({ t[i] });
+        map_dirs(t[i]+"/", t[i]);
+      }
+    }
+  }
+}
+
+/* *************************************************************************
+ * main
+ *
+*/
+
+status
+main(string arg)
+{
+  int i, t;
+
+  Dirs = ({ "/doc" }); Files = ({ "doc" });
+  map_dirs("/doc/","doc");
+
+  if (!arg)
+  {
+    write("Just use the final pathname to view a directory.\n");
+    write("For example, for '/doc/efun' just use 'man efun' to view.\n\n");
+    write("Directories:\n");
+    i = sizeof(Dirs);  while(i--) write(Dirs[i]+"\n");
+    write("\n");
+    return 1;
+  }
+
+  t = member_array(arg,Files);
+
+  if (t > -1) /* Assume it's a dir they are looking for */
+  {
+    write("Contents of "+Dirs[t]+":\n");
+    ls(Dirs[t]);
+    return 1;
+  }
+
+  /* Otherwise, it's a file or doesn't exist.  Either way, search for it. */
+  Files = ({ });
+  i = sizeof(Dirs);
+
+  while(i--)
+    if (file_size(Dirs[i]+"/"+arg) > -1)
+      Files += ({ Dirs[i]+"/"+arg });
+
+  i = sizeof(Files);
+
+  if (!i)
+  {
+    write("File/Directory not found: "+arg+"\n");
+    return 1;
+  }
+
+  write("Matches found for '"+arg+"': "+i+"\n\n");
+  while (i--) "/bin/wiz/_more"->cmd_more(Files[i]);
+  return 1;
+}
+
+        

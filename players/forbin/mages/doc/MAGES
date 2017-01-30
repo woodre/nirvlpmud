@@ -1,0 +1,145 @@
+|-|-|-|-|-|-|-|-|-|-|-|-|-|-| Mage Guild |-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+
+Guild Advancement ----------------------------------------------------
+
+The guild is broken down into 7 guild levels, with the player starting
+at guild level 1.  So players will be required to advance through 6
+levels of increasing experience costs.  But unlike most other guilds, 
+the guild levels do not determine most abilities.  All mage abilites 
+except for basic guild functions are based on the level of four guild 
+attributes: Power, Wisdom, Intelligence, and Will Power, and the eight 
+schools of magic: Abjuration, Conjuration, Divination, Enchantment, 
+Evocation, Illusion, Necromancy, and Transmutation.  
+
+  Advancement in the Mages Guild follows a four path method.  
+  
+[2] Guild Attributes:
+As the player fights, attribute experience is gained at the rate of
+10%.  Once the player has enough experience to advance their 
+attributes, they gain 'free' attribute points that can be 'spent' at
+certain guild NPCs to raise guild attributes.  Players gain a total of
+350 attribute points.  This makes it impossible to max all four stats,
+and requires players to pick and choose.
+
+[3] Magic Schools:
+Again, as the player fights, school experience is gained, however,
+school experience is gained at the rate of 15%.  Once the player has
+enough expereience to advance their schools, they gain 'free' school
+points that can be 'spent' at certain guild NPCs to raise given school
+levels.  Players gain a total of 675 school points.  This again makes
+it impossible to max all schools, and requires players to pick and 
+choose.
+
+[4] Spell Train Points:
+Spell train points are gained directly from casting spells.  Players 
+receive a point value each time a spell is cast.  The value is dependant 
+on whether the spell cast is failed, miscast, or succeeds, and sometimes 
+there is a damage or effect modifier - all of which is again modified 
+by the target mob's level.  Once a player reaches enough points for a
+new spell train point, it is automatically rewarded.  The player may 
+then visit a guild NPC to attempt learning a new spell.  This is done to 
+simulate practicing the spells gained.  The number of spell trains are
+unlimited over a mage's lifetime, as learning a new spell can be 
+difficult, especially with low attributes.  A limited number of 'spell 
+slots' limit the number of spells a player can learn.
+
+[5] Learning New Spells:
+Learning spells takes two things:  free exp and training points.  Each 
+spell level requires the same number of free training points; i.e. to
+learn Magic Missile, a level 1 spell, would take 1 training point, while
+learning Sunburst, a level 5 spell, would take 5 training points.  The
+higher a spell is in level,  the more free experience is needed.  The
+player will then find one of the guild NPCs that train spells, and
+will be able to learn a spell.  Players are only shown a list of 
+spells that they can learn based on their attribute/school levels.
+When starting the guild, a player is given 4 free level 1 spells of 
+their choice, with no training pt or free exp required.
+
+Advantages -----------------------------------------------------------
+
+[1] Increased Spell Damage:
+Instead of a max damage equal to an average of 28 (as max legal sonic 
+does), mages can have a max damage equal to average 60.
+
+[2] Improved Spell Damage Costs:
+Mages are able to cast spells at 2/3 the rate of the normal spell 
+damage cost chart.
+
+[3] Increased Magical Ability:
+Mages may have a maximum mag stat of 100.  This will give mages a
+total possible increase of 140 sps at maxed stat.  (This increase in
+magic is controlled by the guild attribute of Magic.
+
+[4] Increased SP regeneration:
+Mages heal sps at the rate of 1 + POWER/25 each autoheal.  POWER is 
+a guild stat that ranges from 1-100, so the max a mage can heal sps 
+each autoheal is 5 sps.
+
+[5] Shortened Spell Delays
+Mages can shorten the time needed to cast a spell by "preparing" it 
+in advance.  This basically fills a preperation slot with a spell 
+for instant casting.  Mages have a limited number of these slots 
+based on guild attributes and the act of preparing a spell takes 3 
+times as long as casting - the benefit being instant casting while
+the player is in combat.  Spell failure can still occur at casting.
+
+Disadvantages --------------------------------------------------------
+
+[1]  Low AC:
+Mages are prevented from using all 'armor', 'helmet', and 'shield' 
+armors and all extra worn items that may have AC.  While there are 
+certainly many good AC 2 'boots', 'rings', 'amulet', and 'misc' 
+pieces on the mud, players will have to work harder just to achieve 
+an AC of 8.  They are stuck with this max of 8 until they learn the 
+stoneskin spell (which gives an AC of 10, while preventing the 
+wearing of any additional armors) or enchant armor (which for a high
+cost, can embue an object with +1 AC (this will allow for Mages a 
+MAX AC of 12 (4 AC 2 piece with +1 AC enchantment each).  Keep in 
+mind is is much less than the maximum an unguilded player can achieve
+(5 AC 'armor', 6 2 AC pieces, and a 3 AC red lace teddy equals 20 AC).  
+
+[2]  No Weapons/Extremely Low WC:
+No spells can be cast while a mage wields a weapon, however, should a
+mage wish to fight without magic, they are restricted with a WC cap 
+of 5 (unless the weapon is enchanted, which gives +1, making the cap
+6 WC).  The actual effective WC is also lowered by weight, with 
+heavier weapons having lower WC.  This will allow Mages to choose 
+their weapons and still have returns and extra effects, but still 
+have a much lessened effect in battle.  Let's face it - Mages are 
+magic wielders, not warriors.
+
+[3]  Chance of Spell Failure/Spell Miscast:
+Even when maxed, Mages will ALWAYS have a chance of spell failure and
+spell miscasting.  Spell failure is when the spell refuses to work
+(i.e. nothing happens), while spell miscast is deterimental effects
+when the spell is cast incorrectly.  These error will be school level, 
+guild attribute level, and practice based.  EVERY SPELL (except for 
+general guild abilites HAS A FAILURE RATE!
+
+[4]  Spell delays:
+Many spells have a casting time, which requires several rounds for the
+spell to take effect.  Players cannot cast any other spells while they
+are currently casting unless first using the 'stop casting' command,
+which takes 1/3 the sps of the previous spell.  Severe damage taken
+during this casting time, as many other actions could disrupt the 
+spell, causing spell failure.
+
+[5]  Lower Stamina:  
+Mages have a maximum sta stat of 15 points.
+       
+[6]  Lower Strength:
+Mages have a maximum str stat of 15 points.
+
+[7]  Clarity:
+       Clarity is a GUILD level and POWER level dependant
+       pool of 'energy' that a player uses to cast spells.
+       ALL SPELLS (except for general guild abilities) 
+       drain this pool at different rates.  When the pool 
+       is drained, the Mage must restock it before casting
+       any more spells.  Clarity can only be increased by 
+       one of two methods: 
+         [1]  It recharges it at a standard rate outside of
+              combat - ONLY while in the Mage's Tower.
+         [2]  A GUILD level 50 ability, Trance, may be used
+              to recharge it OUTSIDE OF COMBAT, if not 
+              within the tower.

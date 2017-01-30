@@ -1,0 +1,6 @@
+Aug 27 16:25 (by vital) :
+	updated guilddir/helpdir/heirarchy.1 to reflect the fact that Kotcha will not be a Berzerker
+
+Aug 30 22:44 (by vital) :
+	changed the query_auto_load() in [guilddir]/obj/allymark.c to have the entire path and a couple other small things to see if I can isolate the intermittent behavior problem
+

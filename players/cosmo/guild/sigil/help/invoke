@@ -1,0 +1,11 @@
+Invoke is the generic name of the main Sigil attack spell. The actual
+command corresponds to the major sigil that you have chosen.
+
+Major sigil       Usage
+-----------       -----
+Fire              fire or fi
+Ice               ice or ic
+Electricity       electricity or el
+
+The power of the sigil can be adjusted by using set_power. Greater
+power will cost more spell points.

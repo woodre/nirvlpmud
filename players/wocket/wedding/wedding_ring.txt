@@ -1,0 +1,113 @@
+#include "/players/wocket/closed/ansi.h"
+#define tp this_player()
+#define tpn this_player()->query_name()
+
+object love;
+string entermsg;
+string exitmsg;
+string spouce;
+
+id(str){ return str == "ring" || str == "sigil"; }
+
+reset(arg){
+    entermsg = "Your love is here.\n";
+    exitmsg = "Your love leaves you.\n";
+    spouce = "noone";
+}
+
+short(){ return RED+"A dark sigil "+NORM+"("+RED+spouce+NORM+")"; }
+long(){ write(RED+"A dark sigil.  It whisperingly glows an intense red, marking\n"+
+                  "you as one with "+capitalize(spouce)+" for eternity.  The binding\n"+
+                  "is intertwined so deep with your soul only a god may break it.\n"+
+                  "                               <ring_help> for cmds\n"+NORM);
+      }
+
+init(){ 
+
+if(restore_object("players/wocket/wedding/"+this_player()->query_real_name())){
+restore_object("players/wocket/wedding/"+this_player()->query_real_name());
+}
+else{
+save_object("players/wocket/wedding/"+this_player()->query_real_name());
+}
+
+
+love = find_player(spouce);   
+  if(love){
+      write(capitalize(spouce)+BOLD+" IS "+NORM+"here... \n");
+      tell_object(love,RED+"@"+GRN+"}-,-`---  "+NORM+entermsg+"\n");
+    }
+  else{
+       write(capitalize(spouce)+" is not here...\n");   
+    }
+    add_action("chantalk","ring");
+    add_action("set_entermsg","set_entermsg");
+    add_action("set_exitmsg","set_exitmsg");    
+    add_action("ring_help","ring_help");
+}
+
+ring_help(){
+    write(RED+"Ring Help:\n"+
+              "\tring                       channel\n"+
+              "\tring :                     chan emote\n"+
+              "\tring @                     chan echo\n"+
+              "\tset_entermsg               set entermsg\n"+
+              "\tset_exitmsg                set exitmsg\n"+NORM);
+return 1;
+}
+
+chantalk(string str){
+int i;
+string msg;
+string bring;
+love = find_player(spouce);
+bring = "("+HIR+"ring"+NORM+") ";
+ if(love){
+ i = strlen(str)-1;   
+   if(str[0] == ':'){
+    str = str[1..i];
+    tell_object(love,bring+tpn+" "+str+"\n");
+    write(bring+tpn+" "+str+"\n");
+    return 1;
+   } 
+   if(str[0] == '@'){
+    str = str[1..i];
+    tell_object(love,bring+str+"\n");
+    write(bring+str+"\n");
+    return 1;
+   }
+msg = "says";   
+
+   if(str[i] == '?'){
+    msg = "asks";
+   }
+   if(str[i] == '!'){
+    msg = "exclaims";
+   }
+    tell_object(love,bring+this_player()->query_name()+" lovingly says: "+str+"\n");
+    write(bring+this_player()->query_name()+" lovingly "+msg+": "+str+".\n");
+    return 1;
+}
+  notify_fail("You love is not here right now.\n");
+  return 0;
+}
+
+ringquit(){
+    tell_object(love,"(ring) "+exitmsg+"\n");
+    return 0;
+}
+
+set_spouce(str){ spouce = str; }
+set_entermsg(str){ entermsg = str; 
+                   save_object("players/wocket/wedding/"+this_player()->query_real_name());
+                   write(RED+"Enter msg saved...\n"+NORM);
+                   return 1;
+                  }
+set_exitmsg(str){ exitmsg = str;
+                   save_object("players/wocket/wedding/"+this_player()->query_real_name());
+                   write(RED+"Exit msg saved...\n"+NORM);
+                   return 1;
+                 }
+query_spouce(str){ return spouce; }
+
+           

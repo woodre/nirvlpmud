@@ -1,0 +1,29 @@
+/*
+ *  The 2nd master object for version 3.0 of the Bards of Ryllian
+ *  By Saber / Geoffrey Z.
+ *  Started 12/12/95
+ *
+ */
+
+
+#include "/players/saber/closed/bard/extra.h"
+#include "/players/saber/closed/esc.h"
+#include "/players/saber/closed/ansi.h"
+
+
+/* Emotions */
+
+#include "emo/juggle.h"      /* Bardic Emotions                  */
+#include "emo/juggle2.h"     /* Bardic Emotions                  */
+#include "emo/scarf.h"       /* Bardic Emotions                  */
+#include "emo/blueli.h"      /* Bardic Emotions                  */
+#include "emo/disappear.h"   /* Bardic Emotions                  */
+#include "emo/sing1.h"       /* Bardic Emotions                  */
+#include "emo/sing2.h"       /* Bardic Emotions                  */
+#include "emo/holo.h"        /* Bardic Emotions                  */
+#include "emo/strings.h"     /* Bardic Emotions                  */
+#include "emo/clearth.h"     /* Bardic Emotions                  */
+#include "emo/tune.h"        /* Bardic Emotions                  */
+#include "emo/sparkle.h"     /* Bardic Emotions                  */
+#include "emo/bows.h"        /* Bardic Emotions                  */
+#include "emo/handkiss.h"    /* Bardic Emotions                  */

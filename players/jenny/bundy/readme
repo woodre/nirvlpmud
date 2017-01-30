@@ -1,0 +1,20 @@
+I created this file to aid whoever is checking this area.
+
+This area was has a theme based on the T.V. sitcom Married with Children.  Everything in this area has a MWC theme, with a few minor exceptions.  Mall walkers were never in the show, but I added them to the mall area have a few more low level things to kill.  Survey Ladies were also never a part of the show, but I added them for a few nuisance monsters.  Bundyland heal shop doesn't exist in the show, but I created it to have a place to sell heals which have a MWC theme.  Now on to the more technical stuff.
+
+I'm sure the code for this area is very simple compared to that of many of the wizards here, but here are some things I thought might be of interest to whoever checks the area;
+
+1.      This is a pk area.
+2.      Most of it is no_teleport.  Every room I intended to be indoors is no teleport, the rest you can teleport from.  All monsters are in no_teleport areas.
+3.      Basically, this is a high/mid level but also good stuff for low levels to kill.  see chart
+4.      The survey ladies in the mall block exits for levels 13-19.  This makes higher levels kill them if they want to move, and can have some interesting pk implications, but allows lover levels to freely explore and kill smaller things within the mall.
+5.      Fat lady in the shoe store blocks exit for levels 13-19.  This encourages people to kill her before fighting al.
+6.      Buck, the family dog, clones after killing kelly.  He blocks the exit.  Mostly a small nuisance monster, but could have some interesting pk implications.
+7.      2 free items that can be found, both magazines.  One in the room ubd.c and the other in the room hb1.c.  Value of 500 coins for the item.
+8.      Monsters use an inherit from my directory, instead of from /obj/monster.  It is the same, except spell damage is not automatically randomized.
+9.      A lot of the exits in the area are non-obvious, to encourage reading the descriptions.  Also, search, smell, and listen are enabled in each room.  
+10.     Some low intox heals can be found on griff,ike, peg, and jim jupiter.
+11.     Object on Al which gives you a colored title (if you are male).  
+12.     Armor bhat.c has negative ac.  In the decript, it says this hat makes you look like a dork, should be enough warning I think.
+14.     m2c.c sells heals.  Randomized prices.
+15.     1e.c is the first room of the area. 

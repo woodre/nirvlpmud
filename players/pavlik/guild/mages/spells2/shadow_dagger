@@ -1,0 +1,57 @@
+/*
+ * spell : Shadow Dagger   (illusion)
+ * level : 4
+ * effect: spell_object: 10 + random(Illu/2)
+ * cost  : 10 + (Illu/4)
+ * spec  : 
+ * files : 
+ */
+
+shadow_dagger(str) {
+
+  object ob, obj;
+  int failed, dmg;
+  int y;
+
+  if(!KNOW("sdagger")) {
+	write("What?\n");
+	return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  write("You cast a "+HIB+"Shadow Dagger"+NORM+" spell ...\n");
+
+  if(spell_fail2(4,"illu", "wil")){
+	failed = 1;
+  }
+
+  write(
+    "You masterfully "+MAG+"weave the illusion"+NORM+" of a silver-bladed dagger.\n"+
+    "The shadow dagger speeds through the air and buries itself in "+IT+"'s chest!\n");
+  say(
+    ME+" creates a scintilating dagger of silver magic!\n"+
+    "The shining blade speeds through the air and buries itself into "+IT+"!\n");
+
+  if(failed == 1) {
+	write(IT+" sees through the illusion and is unharmed.\n");
+	say(IT+" sees through "+ME+"'s weak spell.\n");
+	say("The harmless illusion disappears.\n");
+	tp->add_spell_point(-25);
+	return 1;
+  }
+
+  write(IT+" gasps in pain and clutches at the illusionary dagger.\n");
+  say(IT+" gasps in pain as its blood gushes from the wound.\n");
+
+  dmg = 10 + random(guild->query_total_illu()/2);
+  tp->add_spell_point(-(10 + guild->query_illusion()/4));
+
+  PAV->tell_damage(dmg,obj);
+  tp->set_spell_dam(dmg * 5 / 2);
+  tp->set_spell_dtype("other|dark");
+
+  return 1;
+}
+

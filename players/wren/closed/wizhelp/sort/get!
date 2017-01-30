@@ -1,0 +1,21 @@
+**************
+
+
+                     Get!
+
+Syntax:    get! <obj>
+
+Desc:
+           This command ignores the weight of an object and the get()
+           flag allowing a wizard to pick up most things.            
+
+Warning:   Becareful what you pick up.
+
+Example:   get! board
+                  results
+           Bob picks up a message board
+
+Related:   drop!, give!, put!
+
+**************
+

@@ -1,0 +1,367 @@
+May 20 23:32[31m :: [0mrm'd blood.o - Kazer loses his chars.
+May 21 01:21[31m :: [0mreplaced stardream/mjirn's eq for earwax's triple crash
+May 21 06:14[31m :: [0m~mizan/closed/RandomRoom - added another index check to stop the frequent debug log errors
+May 21 06:14[31m :: [0m~mizan/mbv2/monsterDM - added a catch() and room = find_object() to stop errors....
+May 21 06:37[31m :: [0mhealed swlabr: was testing out anti-healing code with Nu_Undead!
+May 21 22:23[31m :: [0mdested bastion's autoloading wiztool from stardream. What the fuck?
+May 21 23:28[31m :: [0munapproved Jamila for wizardhood. I changed my mind.
+May 22 04:33[31m :: [0mUpdated ~eurale/RMS/barter for Dasani - Sedjak somehow disappeared and was not killed. Fbog?
+May 22 08:23[31m :: [0m/obj/player - took out if(hit_point > max_hp) checks in autoheal to allow negative healing with my hp_regen_object, sp_regen_object code
+May 23 04:36[31m :: [0mimprisoned stardream for login triggers
+May 23 20:13[31m :: [0m~pain/NEW/items/star_daemon - added shadow to s_who
+May 24 02:26[31m :: [0m~jaraxle/3rd/alt/rooms/forest/fforest - move_me(), added this_player() check
+May 24 04:17[31m :: [0mRm'd Usagi's inactive file.. he's gunna try again, been like 4 years.
+May 24 06:09[31m :: [0m~mizan/mbv2/tacticalDM - line 1201: added if(ob[i])
+May 24 06:41[31m :: [0mSetup Balyn as a Bfist test char.
+May 24 07:52[31m :: [0m~pain/closed/weapons/widow - added a fix for wield() and the custom short() querying environment()
+May 24 08:31[31m :: [0m~snow/WEAPONS/hon_sword - made savable.
+May 24 08:39[31m :: [0m~snow/shadows/stuff/plate - made savable
+May 24 09:58[31m :: [0m~mythos/awep/forest/nodachi - this_player() check in weapon_hit()
+May 24 09:58[31m :: [0m~fred/mages/obj/freeze - if(frozen) check in stop_shad()
+May 24 22:00[31m :: [0mreset rek's pk, he was a shard.. only fair since he's been gone for a year
+May 24 22:06[31m :: [0m~jaraxle/rek_eyes - query_invis() check for wizards
+May 25 09:29[31m :: [0m~jaraxle/closed/monster - changed to inherit my monster.
+May 25 09:40[31m :: [0m~hippo/NPC/thrombo - took hb_ag.h, seems to be causing problems.
+May 25 09:43[31m :: [0m~pestilence/amity/wep/leg - !attacker check in weapon_hit()
+May 25 09:44[31m :: [0m~wizkid/darkwood/rooms/path2 - added me check in loose_sta()
+May 25 09:48[31m :: [0m~guilds/bards/bardrooms/object - changed BLVL check in cmd_bard_title() to GOB->query_bard_level()
+May 25 09:50[31m :: [0m~pain/NEW/weap/p_weap*.c -made inherit /obj/weapon, too many chgs over the years
+May 25 09:53[31m :: [0m~snow/shadows/stuff/ring - made savable
+May 25 09:53[31m :: [0m~snow/shadows/stuff/crown - made save
+May 25 09:56[31m :: [0m~snow/WEAPONS/tsunami - made sure it saves
+May 25 14:35[31m :: [0m~jaraxle/3rd/pyramid/items/myst_cloak - Had to repair Earwax's repair of Jar's misty cloak
+May 25 15:41[31m :: [0mreplaced rek's necklace, shield of tears, hockey skates
+May 25 21:15[31m :: [0m~zeus/circle/OBJ/chan_obj - if(present("circle_object check in speak_cmd()
+May 25 21:18[31m :: [0m~eurale/Keep/NPC/sea_dragon - changed this_player() to attacker_ob in monster_died()
+May 25 21:19[31m :: [0m~coldwind/desert/weapons/ball - added !attacker, !environment() checks in weapon_hit()
+May 25 23:28[31m :: [0mApproved Fred's change to Jenny's hockey stick
+May 25 23:44[31m :: [0m~guilds/bards/pet/faerie - added a better check for poison.
+May 26 04:53[31m :: [0m~eurale/Hippo/NPC/thrombo - added ::Reset(Arg);
+May 26 05:16[31m :: [0mEARWAX DIDN'T SCREW UP JAR'S ITEM: IT'S THE LIB...     *accepts $10k bribe begrudgingly from Earwax for saying that.  Er.... *
+May 26 19:13[31m :: [0mwarned blade/crip for fucking with his bro's chars
+May 26 22:24[31m :: [0m~dusan/area1/armors/ring - changed heal_self() to add_hp()
+May 26 22:25[31m :: [0m~mal/path/rooms/r8 - commented out berserker book
+May 26 23:15[31m :: [0m~mizan/mbv2/monsterplus - ob[i] check on line 756
+May 26 23:43[31m :: [0m~guilds/bards/obj/sphere - added if(ob) check before living() and does dmg, also !this_player()->query_attack() before attack_object
+May 27 00:29[31m :: [0m~softly/algiers/obj/srobe - Upped AC. No sense in ShadowVeil being the only AC 5/Wt 1 storable armor.
+May 27 00:51[31m :: [0m~snow/beach/tundra2 - added found = 0 in reset() so it may be found more than once a boot.
+May 27 05:32[31m :: [0mScrewed with Mal's high templar ambassador.. Bards couldn't autojoin alliance like they were supposed to.
+May 29 02:11[31m :: [0m~felde/wep/winter_light - made true nonbreakable for really good guys
+May 29 02:11[31m :: [0m~fakir/ways/WEP/lance.c - changed TP to env() checks in weapon_hit()
+May 29 02:19[31m :: [0m~softly/point/obj/ering - rm'd save flag
+May 30 06:58[31m :: [0m~mizan/closed/sql/objectlogger - ob[i] check
+May 30 07:21[31m :: [0m~saber/stuff/mbag - increased max weight to 100k. Screw Bottomless bag.
+May 30 07:25[31m :: [0m~fred/forest/Mon/psquirrel.c - attacked check in monster_died()
+May 31 11:46[31m :: [0m~mizan/etheriel/items/vmail - changed type from ring to armor
+May 31 12:27[31m :: [0mmizan's dayblade .. had to repair weapon_hit()
+May 31 13:05[31m :: [0m~jaraxle/closed/tyr - wimped it due to multiple specials. one or two is more than sufficient.
+Jun  1 04:58[31m :: [0m~morgar/amulet - changed from random(6) charges to 1+random(5) [thanks usagi]
+Jun  1 05:09[31m :: [0m~pesty/closed/dark/room/hall2 - changed exit from blah to dhall
+Jun  1 05:12[31m :: [0m~cosmo/Rangers/Commands/Donate - added if(!ob) check, things that call drop() and destruct was screwing with things
+Jun  1 05:14[31m :: [0m~felde/equip/tsymbol - put !this_player() check in do_special()
+Jun  1 05:15[31m :: [0m~jar/3rd/pyramid/mon/defender - this_object() check in heart_beat(), was executing after the critter had vanished
+Jun  1 05:17[31m :: [0m~wizardchild/darkwood/rooms/forest1 - !me check in fall_down()
+Jun  1 05:20[31m :: [0m~snow/closed/test/elem_whip - !ob check
+Jun  1 05:21[31m :: [0m~dragnar/rooms/forest4 - commented out assassin book
+Jun  1 05:22[31m :: [0m~snow/MONSTERS/snow_demon - this_object() check in hb
+Jun  1 05:28[31m :: [0mAdded a couple of my rooms to /open/TELE_ERR
+Jun  2 04:53[31m :: [0m~jar/templar/doc/elite_aura - added ATT check after the hit_player() stuff went off
+Jun  2 05:00[31m :: [0m~mythos/awep/forest/air - changed tp checks to environment(), changed dmg types to other|wind
+Jun  2 05:01[31m :: [0m~fred/mages/mon/ghoul - owner, root() checks in hb
+Jun  2 05:21[31m :: [0mreplaced ~mizan/w/k1 with ~mizan/etheriel/subrealms/watchlar/k1 in TELE_ERR
+Jun  2 07:12[31m :: [0mPromo'd martha to L25 for emote work
+Jun  2 19:53[31m :: [0mpromo'd coldwind to L40... long overdue
+Jun  2 20:24[31m :: [0mAllowed Data to skirt the 3 mo. rule as long as ALL of his chars stay inactive, ok'd by Bolts
+Jun  3 06:18[31m :: [0m~mizan/etheriel/items/tpole - lowered weight from 60(?) to 12, repaired weapon_hit()
+Jun  3 06:20[31m :: [0m~jaraxle/templar/mobs/templar_mess - pointed the write_file() to ~jar/log/ instead of ~jar/closed/log which is an invalid dir
+Jun  3 06:22[31m :: [0m~dune/closed/guild/daemons/_more - !str check in more_file()
+Jun  3 06:34[31m :: [0m~mizan/mbv2/monsterDM - a couple checks and a declared name string
+Jun  3 06:41[31m :: [0m~jar/3rd/pyramid/mon/mumra - this_object() check in hb
+Jun  3 06:45[31m :: [0m~pesty/closed/dark/obj/fatal.h - added if(!target) check before the hit_player() and after the heal incase its already dested
+Jun  3 17:51[31m :: [0m~mizan/etheriel/tornado - changed ob2->is_player to oc2->is_player()
+Jun  3 18:31[31m :: [0m~jenny/wings/items/gstick - decreased chance of attack() to 16, tweaked the heal_self() code to hit_player().  This wep is overused.
+Jun  5 09:51[31m :: [0m~mythos/awep/naginata - set_type polearm
+Jun  5 09:52[31m :: [0m~heroin/hunting_grounds/preds/predclaws - set_type exotic
+Jun  5 10:19[31m :: [0mactually slapped a BUNCH of set_type()'s in various files.
+Jun  5 14:52[31m :: [0mWarned Daniel for spamming Viper.
+Jun  6 10:38[31m :: [0m~jareel/monsters/town/hendrik.c - this_object() chekc in hb
+Jun  6 10:40[31m :: [0m~forbin/realms/entrance - this_player() check in short()
+Jun  6 11:20[31m :: [0m~dune/closed/guild/lib_tools/overload - meat check, took out a hit_player() after it had already killed the critter
+Jun  6 11:21[31m :: [0m~snow/ITEMS/feeler - !str check in give_feeler()
+Jun  6 11:22[31m :: [0m~boltar/templar/templar - !str checks in raise skill/rank
+Jun  6 11:23[31m :: [0m~llew/closed/crystal/demon - !this_object() check in hb
+Jun  6 11:23[31m :: [0m~morgar/towertop - commented out mal's knight book
+Jun 10 21:36[31m :: [0mauthorized mizan to use any and all necessary force to southstar/ssvegeta/tony.. etc
+Jun 10 21:38[31m :: [0mfixed the bards leaving guild again. [this time it had no set_home()]
+Jun 10 22:57[31m :: [0m~jareel/areas/orlanthi_temple/initiate_quarters - modified paths for cloning
+Jun 11 14:42[31m :: [0m~mal/cont/rdragon/sbracers - cut special chance by 1/2
+Jun 11 15:16[31m :: [0m~jenny/wings/items/gstick - ensured there will be no more multiple hits than 1 even with offwielded hockey sticks.
+Jun 11 15:56[31m :: [0m~mythos/amon/forest/monster1 - query_name() check [bog]
+Jun 11 18:02[31m :: [0mchanged type of coldwind's ball of intellect, there isn't a Magical type.
+Jun 11 19:25[31m :: [0mapproved forbin's area
+Jun 11 19:38[31m :: [0m~sandman/NEWBIE/newbie_dispenser - this_player() check in short()
+Jun 11 19:43[31m :: [0m~jar/cave/mobs/special - added present() check in atk
+Jun 11 19:44[31m :: [0mcomp'd brock for a bogus jar-related bug [see xen-xion]
+Jun 11 19:44[31m :: [0mcomp'd usagi for a bug related to keep and offwield.
+Jun 11 20:01[31m :: [0mtweaked the offwield cmds to actually posit drop code properly
+Jun 11 20:49[31m :: [0m~mythos/prac/bag - added keep code so it doesn't sel all
+Jun 11 20:49[31m :: [0mi mean, sell the bag when it sels all
+Jun 11 21:09[31m :: [0m~mythos/enterance - changed forbin's old area exit to point to the new
+Jun 12 02:03[31m :: [0mremoved a culler tool from snow's dervish directory.. someone fucked this up bad.
+Jun 15 07:15[31m :: [0m~jar/cave/mobs/midlevel - Set_short = set_short
+Jun 15 07:15[31m :: [0m~eurale/Keep/NPC/sentry2 - changed a tell_object(environment() to a tell_object(attacker_ob
+Jun 15 07:17[31m :: [0m~jenny/wings/mobs/closed/pronovost - this_object() check.. hmmmmm...
+Jun 15 18:38[31m :: [0mStrike one for Viral [thanks Khrell]
+Jun 15 20:31[31m :: [0mMade Drucilla worth 0 xp, no coins. Player abuse.
+Jun 15 22:09[31m :: [0mComp'd Usagi/Tyr for turning in the Drucilla exploit after they discovered a free coin bug
+Jun 16 00:26[31m :: [0m~jar/3rd/pyramid/mon/mumra - this_player() check in monster_died()
+Jun 17 18:35[31m :: [0m~snow/dervish/objects/sandstorm - root() check for call_out()
+Jun 17 18:36[31m :: [0m~jenny/wings/items/gstick - !attacker check in weapon_hit()
+Jun 17 18:37[31m :: [0m~guilds/bards/bardrooms/object - !GOB check in cmd_bard_title()
+Jun 17 18:38[31m :: [0m~feldegast/realm/JalHab/sandstorm - remove_call_out() and this_player()/is_player() checks before starting wind()
+Jun 17 19:41[31m :: [0mApproved Illarion's Bard addition [battlesong]
+Jun 17 20:06[31m :: [0m~guilds/bards/spells/01_home - added multiple /room/church syntaxes
+Jun 17 21:56[31m :: [0m~jar/3rd/alt/rooms/room & room2 - had to fix these to inherit.  STOP MAKING SHITTY STD STUFF THAT ISNT BACKWARDS COMPAY
+Jun 17 21:56[31m :: [0mCOMPAY = COMPAT .  :)
+Jun 17 23:22[31m :: [0mHad to fix Jar's mobs. Wandering was fucked.  This code is garbage.. considering closing the entire 3rd/alt/ area indefinitely.
+Jun 18 20:42[31m :: [0mcomp'd kilo for 100k lost in a crash.
+Jun 18 20:43[31m :: [0mand btw I had to heal Kezef like a billion times in order to figure out a bug related to Beck's mobs losing hb and being free kills a few days ago.
+Jun 18 22:33[31m :: [0mFixed Forbin's buggy castle
+Jun 18 23:08[31m :: [0m~zeus/dealer/dealer - changed how he keeps money
+Jun 19 02:33[31m :: [0mComp'd Usagi and Jaz for gear they lost in a mudservices time-sync
+Jun 19 02:34[31m :: [0m~mizan/closed/sql/datalogger - !ob[i] check
+Jun 19 02:38[31m :: [0m~earwax/closed/TRACKER/bin/tdeaths - !Death_list check
+Jun 19 02:51[31m :: [0m~jar/3rd/alt/items/eagle_armor - tweaked this piece of shit.
+Jun 19 02:52[31m :: [0m~jar/3rd/alt/items/earth - only does other|earth, no heal_self on npcs.  no need.
+Jun 19 02:53[31m :: [0m~jar/3rd/alt/items/fire - made it do other|fire only
+Jun 19 02:53[31m :: [0m[fire = flame]
+Jun 19 03:09[31m :: [0mall heal_self() specials on mobs gone in jar's orbs.  wimped nature's blessing, was totally bs.
+Jun 19 03:09[31m :: [0malso made orbs ONLY do hit_player() w. valid dtypes
+Jun 19 03:26[31m :: [0m~jar/closed/weapon/powers - Too many weps call TOO many of these things. Cut their special chance in half for each one.
+Jun 19 05:06[31m :: [0mpromo'd ill again for continuing work...
+Jun 19 05:08[31m :: [0m~jar/cont/bdragon/amulet - cut dmg by half.
+Jun 19 14:18[31m :: [0m~jar/3rd/alt/items/fire - root() check before starting hb
+Jun 20 00:05[31m :: [0m~jar/3rd/alt/items/poison - ENV() check b4 tell_room
+Jun 20 00:57[31m :: [0m~jenny/wings/items/tedskates - nuked these some.  too much player reliance.
+Jun 20 02:18[31m :: [0mcomp'd kezef/softwind with xp due to accidental update of unsane's area.
+Jun 20 20:52[31m :: [0m~saber/closed/quest/items/starglow - environment() check
+Jun 20 20:55[31m :: [0m~jar/3rd/alt/items/lightning - environment() check
+Jun 21 20:51[31m :: [0m~jenny/wings/items/gstick - 27% chance instead of 15 or 33.
+Jun 21 21:08[31m :: [0mreleased sephiroth from prison, been 4 months.
+Jun 22 18:07[31m :: [0m~forbin/realms/shack - changed a tell_room(environment() to tell_room(this_object()
+Jun 23 00:33[31m :: [0m~emerson/closed/patron environment()/TO check ..
+Jun 23 18:54[31m :: [0m~catwoman/tshop - ob check in sell code.
+Jun 23 20:05[31m :: [0mapproved forbin's mob xp capping.
+Jun 24 18:55[31m :: [0m~mizan/closed/FishnuggetDM - added a "temp" variable
+Jun 24 18:57[31m :: [0m~scathe/store - made south point to scathe's dir, not sweetness'
+Jun 24 18:59[31m :: [0m~mizan/etheriel/items/shit - my_wedged_object checks in on_explode()
+Jun 24 19:02[31m :: [0m~mizan/etheriel/items/shit-consumption-residue  - moved destruct(this_object()); after the rest of the code evaluates
+Jun 24 19:02[31m :: [0m~mizan/etheriel/items/uranium-238-sickness  - moved destruct(this_object()); after the rest of the code evaluates
+Jun 24 19:06[31m :: [0m~catacomb/barbtribe/snake - changed tell_object(attacked to tell_room(environment() in monster_died()
+Jun 24 19:09[31m :: [0mfixed shit-consumption-residue and uranium-238-sickness to only start callouts in cloned objs...
+Jun 29 23:28[31m :: [0m~jareel/armor/orlanthi_wind_lord_shield - environment() check in swirl() due to call_other() bugs
+Jun 30 22:04[31m :: [0m~mizan/closed/spuckweapons/spuckcannon - this_player() & attacker() checks in weapon_hit()
+Jun 30 23:16[31m :: [0m~pesty/amity/mob/armyant - this_object() check in hb()
+Jun 30 23:18[31m :: [0m~pesty/amity/room/madison2 - pointed east exit from /players/pestilence/amity/room/blahblahb to /room/void so plyrs can still look east.
+Jul  1 00:26[31m :: [0m~snow/dervish/objects/conshad - victim checks before unshadowing.. which isn't the right way anyway.
+Jul  1 01:07[31m :: [0m~pain/NEW/mon/korean - moved ::reset() after if(arg) check due to living problems
+Jul  1 18:12[31m :: [0m~beck/DarkRangers/Npc/Goldar - changed TO->query_attack() check to attacker_ob in hb; caused problems when doing a bad call_other() on this_object().  such a freaky bug
+Jul  2 18:42[31m :: [0m~forbin/realms/salam/NPC/warrior : this_player() / attacker_ob checks in monster_died()
+Jul  2 18:47[31m :: [0m~mizan/closed/sql/objectlogger - sizeof() check
+Jul  3 02:18[31m :: [0mMailed Jareel/Quicksilver/Aingeal cos they don't log their xp compensations for players.
+Jul  3 15:33[31m :: [0m~saber/ryllian/portal - reactivated felde's exit
+Jul  3 15:44[31m :: [0m~wocket/graveyard/crypt 4 - added a short description.
+Jul  3 15:45[31m :: [0m~mythos/prac/bag - moved drop() check after get() check so it doesn't do a bad call_other() if an item dests on drop
+Jul  3 15:46[31m :: [0m~llew/closed/crystal/energy - this_object() check before tell_room() fires
+Jul  4 04:56[31m :: [0m~snow/WEAPONS - made several weapons storable.
+Jul  4 05:07[31m :: [0m~jenny/wings/items/gstick - added attacker check, errored out if puck had already dested a mob
+Jul  4 05:34[31m :: [0mApproved ~forbin/realms/misc/livestrong & related dispenser for green usage provided it is cloned from Forbin's castle and removed manually when race is over, or coded so that it only clones within a certain date range.
+[Jul  4 2004 06:06] A: Registered Test Character: Guineapig
+Jul  4 06:57[31m :: [0mmoved some workreports to .old's so we can still grep them.
+Jul  4 07:37[31m :: [0m~snow/gate - took out < 14 pk code, added notification that its pk, colorchange in short
+Jul  4 07:37[31m :: [0mfixed my gator teeth, young teeth had tied as big ones.
+Jul  4 08:19[31m :: [0m~jenny/wings/items/gstick - changed my mind about wimping special.
+Jul  4 09:34[31m :: [0m~wocket/necro/spells/grasp - fixed the sp-swiping if attacker's sp runs close to 0
+Jul  4 11:23[31m :: [0m~softly/winter/cameo - made savable
+Jul  4 12:14[31m :: [0m~coldwind/desert/mobs/witch - attacker_ob check, fixed !random(20) to attack() special
+Jul  4 17:09[31m :: [0m~llew/closed/crystal/xetra_claws - storable
+[Jul  4 2004 18:27] A: Registered Test Character: X
+[Jul  4 2004 18:27] A: Registered Test Character: Guineapig
+[Jul  4 2004 18:27] A: Registered Test Character: Verte
+[Jul  4 2004 18:27] A: Registered Test Character: V
+Jul  4 23:40[31m :: [0m~mal/ruins/weapons/glove - made savable
+Jul  5 00:02[31m :: [0m~coldwind/desert/weapons/sword - changed heal_self() to hit_player(x, "magical")
+Jul  5 00:24[31m :: [0m~players/zeus/realm/OBJ/fallen_blade - made storable.
+Jul  5 00:56[31m :: [0mpromoted forbin to L55 for good behavior.
+Jul  5 00:57[31m :: [0mApproved Forbin's reopening of Ruins area
+Jul  5 02:06[31m :: [0mApproved Data's little hack thingamabob for his friends as long as it doesn't autoload.
+Jul  5 18:04[31m :: [0m~llew/closed/crystal/demon2 - attacker_ob checks in stop_fight
+Jul  5 19:11[31m :: [0m~catwoman/armor/cloak - changed type from "shield" to "misc"
+Jul  5 19:11[31m :: [0m~catwoman/armor/shield - changed short from shield to rusty shield
+Sep  2 22:54[31m :: [0mreopened jaraxle's castle
+Sep  4 02:56[31m :: [0mmade usagi a wep for reporting bugs a while ago.  read my workreport if you don't know which ones, or ask me
+Sep  4 18:19[31m :: [0mpromoted pestilence & forbin to 80
+Sep  4 20:15[31m :: [0mpromoted forbin to 100
+Sep  4 20:16[31m :: [0mpromoted Pestilence to 100
+Sep  4 20:18[31m :: [0mdemoted morgoth to L40 on his own inclination
+Sep  6 01:53[31m :: [0mnuked some billy & fastkill chars.  /open/mizan/sep_05_2004.txt
+Sep  7 22:26[31m :: [0mReplaced some of Entreri's items after a crash because he bitched and moaned.  and moaned and moaned and moaned and moaned and eventually said please
+Sep  7 22:27[31m :: [0mpromoted fred to 200, fakir to 300
+Sep  7 22:27[31m :: [0mpromoted fred to 300
+Sep  9 21:16[31m :: [0mApproved Puppy's canine muzzle
+Sep  9 21:17[31m :: [0mapproved all of puppy's canine stuff
+Sep 14 20:01[31m :: [0mon Forbin's gratuitous insistence, I edited the obituary log so properly registered test characters are not shown
+Sep 17 17:40[31m :: [0mcheered on Mizan.
+Sep 17 19:13[31m :: [0mApproved Pestilence's idea for wizard demotion
+Sep 17 21:40[31m :: [0mPromoted Puppy to L50
+Sep 17 21:41[31m :: [0mPromoted Forbin to L101
+Sep 18 16:23[31m :: [0mFixed a bug in /bin/play/_sell.c reported by Seymour
+Sep 18 19:55[31m :: [0mApproved Forbin's plans to conquer the mud.
+Sep 30 14:30[31m :: [0mpatched xp back to sparkle for her pre-wiz status after getting dewizzed
+Nov  1 15:30[31m :: [0mApproved Illarion's bard spell - devil snare
+Nov  9 17:09[31m :: [0mApproved Illarion's changes to Duncan MacLeod
+May  4 14:08[31m :: [0mopened Shardaks for beta
+May  4 14:08[31m :: [0m[yesterday]
+May  4 14:08[31m :: [0mpromoted fred to 700 [yesterday]
+May 19 03:50[31m :: [0mApproved Tristian's area
+May 20 19:56[31m :: [0mpromoted Tristian to 30
+May 21 20:00[31m :: [0mRestored hoyle's xp pre-crash
+May 27 16:15[31m :: [0m~cyrex/disc - made storable
+May 27 16:16[31m :: [0m~zeus/desert/OBJ/veil - made special work
+May 27 16:18[31m :: [0m~cyrex/cannon - made save
+May 27 16:19[31m :: [0m~cyrex/medal - boosted ac to 2, weight to 1
+May 27 16:20[31m :: [0m~cyrex/boots - weight to 1
+Jun 12 02:13[31m :: [0mapproved Zeus' fallen spell
+Jun 14 20:25[31m :: [0mApproved Forbin's fallen spell for Zeus
+Aug  7 21:24[31m :: [0mupdated jar's amulet of lightning to new spell_dtype rules
+Aug 10 21:33[31m :: [0mapproved Forbin's blood honor tweak
+Aug 11 16:21[31m :: [0mchanged zeus's fallen spells to use spell dtypes
+Aug 11 20:47[31m :: [0m~beck/Rangers/RangerZord - ENVOB check in ZordRage01
+Aug 11 20:55[31m :: [0m~forbin/realms/ruins/NPC/angel - changed attacked to attacker_ob in hb
+Aug 15 20:04[31m :: [0m~guilds/bards/obj/regen - fixed typo
+Aug 15 20:32[31m :: [0madded a spell of "digestion" to higher level bards
+Aug 16 21:45[31m :: [0mfixed mizan's PDM to use new query_max_soak vals
+Aug 16 21:45[31m :: [0mfixed mythos's need monitor to use new query_max_soak intox etc vals
+Aug 16 22:44[31m :: [0mreplaced a file in my closed dir i booted by cleaning which made horses crap out
+Aug 16 22:45[31m :: [0mfixed a bug in shardak slayer sword
+Aug 16 22:47[31m :: [0m~pain/NEW/weap/carbine - added ::reset(arg)
+Aug 16 23:08[31m :: [0mdested cleipa's templar bracer as he should have been banned
+Aug 17 04:59[31m :: [0mfixed a bug with shardak allying
+Aug 17 05:01[31m :: [0m~snow/closed/test/wave - added !attacker_ob check in suck_sp() ..
+Aug 17 16:43[31m :: [0m~forbin/closed/bfeq - changed this_player() hooks to environment(), added living(environment()) checks
+Aug 17 17:28[31m :: [0m~bastion/obj/flamesword - made storable
+Aug 17 19:08[31m :: [0m~beck/Rangers/RangerZord - changed attacker_ob in ZordRage() to object a, this could be a conflict. changed attacker_ob-> reference later to a-> ; added !a check
+Aug 17 19:19[31m :: [0mpatched tartis' cha to 30 for buggy death [see jareel log]
+Aug 17 22:10[31m :: [0m~fred/closed/bloodfist/daemon - added an extra space in the bfm emote processing
+Aug 17 23:57[31m :: [0mrecomp'd tartis's eq from aforementioned bug
+Aug 18 02:11[31m :: [0mtinkered with eurale's vamps .. added extra_look(), took out the ol' "2 descs on examine" bug, [vampob] .. put extra_look addition into the vampire_bite obj
+Aug 18 02:32[31m :: [0mmade pain's star clonable... duh
+Aug 18 02:32[31m :: [0malso took out restrict so npc's can use the star... hehehhehehe
+Aug 18 03:05[31m :: [0mchanged and added a bunch of files to implement guilded channel mud emotes
+Aug 18 05:31[31m :: [0mupdated wocket's necros and dryant graveyard and llew's xetras [3 up from ent] to make sure they don't spawn a billion
+Aug 18 05:31[31m :: [0mer wocket's necros = wocket's nonges
+Aug 18 05:31[31m :: [0m~jara/castle - added id of "ruins"
+Aug 18 07:45[31m :: [0mrecomp'd fil for a vreeland death in wocket's area. shouldn't atk necros .. so i changed it
+Aug 18 09:11[31m :: [0mtweaked softly's church sign to show "for new players"
+Aug 18 23:53[31m :: [0mchanged bard pets to nearly 2x the hp, and made their attacks/heals double. the guild has no strength besides this and buffs
+Aug 18 23:54[31m :: [0malso changed bard pets to devastatingly attack when a player is stupid enough to attack them
+Aug 19 00:06[31m :: [0mmade bards able to defend themselves in pk
+Aug 19 00:14[31m :: [0madded in my newbie helpers
+Aug 19 01:39[31m :: [0mforgot to record i added an extra hit to shardaks that's based on guild rank. this replaces this slayer spell
+Aug 19 05:57[31m :: [0mchanged minimum level of pain's star to 8
+Aug 20 02:48[31m :: [0mdeleted a fuck of a lot of logs and shit from old wiz dirs. 10mb worth
+Aug 21 13:34[31m :: [0mboosted backbite to wc 18, restored specs
+Aug 21 15:29[31m :: [0mcomp'd peeps for a crash
+Aug 22 17:30[31m :: [0m~/closed/shardak/obj/exShadow - added a few checks
+Aug 22 17:42[31m :: [0mfixed a bug in my horse related to no saddle bag
+Aug 22 17:57[31m :: [0mwarned thomas and shinshi about harrassing each other
+Aug 22 23:40[31m :: [0mcomp again and again today for crash *Sigh*
+Aug 23 00:24[31m :: [0m~zone/workroom - fixed bug in reset()
+Aug 23 18:04[31m :: [0mmade shardak darkness block exits no matter what
+Aug 23 18:04[31m :: [0m[only usable in ghall]
+Aug 23 18:45[31m :: [0mupdated a bunch of jenny's items to use proper id()
+Aug 24 18:25[31m :: [0mgave 300k xp to shinshi for winning the contest
+Aug 25 02:13[31m :: [0mfixed a bug in mizan's LiquidRoomDM related to thinkto
+Aug 25 02:14[31m :: [0m~room/mine/tunnel3 - fixed a couple typos and obscure syntax
+Aug 25 02:17[31m :: [0m~room/forest2 - fixed the troll and /obj/monster_lars to inherit /obj/monster
+Aug 25 17:32[31m :: [0madded id on jaraxle's nature's blessing of "blessing.. duh
+Aug 25 23:26[31m :: [0madjusted dervish gob to really block helmets
+Aug 25 23:26[31m :: [0mapproved jareel putting mondar back into the bar
+Aug 27 03:58[31m :: [0mpurged a bunch of old /player/*.o files on inactive wizards so they can't ftp... i'm sure they haven't been, but make them login if they are going to ftp
+Aug 27 08:11[31m :: [0mlowered poly dam cap from 55 to 35... ridiculous
+Aug 27 22:15[31m :: [0mAPPROVED KHRELL'S AREA IT IS HY00J IT MAY HAVE BUGS I DO NOT CARE
+Aug 27 22:15[31m :: [0mbtw poly dam cap is 40
+Aug 28 09:32[31m :: [0mfixed a bug in felde's shop, heh
+Aug 28 20:52[31m :: [0mput in trist's new master chamber for shardak
+Aug 28 22:31[31m :: [0mgave varune [a true newbie] some cash to start out with
+Aug 29 02:17[31m :: [0mdervish sta from 20 or whatever to 14 + total_level/10
+Aug 29 03:16[31m :: [0mboosted cyber wc + guildrank / 3
+Aug 29 04:23[31m :: [0mgave a newbie 10k in coins
+Aug 29 05:19[31m :: [0mfixed bugs in jareel's mondar eq for saving
+Aug 29 07:17[31m :: [0mmade mal's sbracers only go off once a round, heh
+Aug 29 07:23[31m :: [0mfixed jareel's mondar again, it crashed the mud, heh
+Aug 30 20:37[31m :: [0mpromo'd gem to level 30 pending his area being relatively typo-free and it being put in game
+Aug 30 21:10[31m :: [0mput gem's castle in the game
+Aug 30 21:20[31m :: [0mpromo'd tristian by senior decision to 40 for continuing work
+Sep  1 03:02[31m :: [0mmizan PDM tweak - adjust carry formula for calc'ing weight
+Sep  1 03:03[31m :: [0mmizan gob tweak - removed inventory command
+Sep  1 03:03[31m :: [0mmizan castle tweak - added present() checks for spawning to linna
+Sep  1 03:04[31m :: [0mhogath's feathered shirt -> type chest
+Sep  1 07:47[31m :: [0mapproved mosobp's area
+Sep  2 21:37[31m :: [0mreduced mob exp from vulpine lord .. jaraxle/closed/phoenix/mobs/something
+Sep  2 22:14[31m :: [0mjailed vahiti for a week for attacking a beta tester
+Sep  2 22:29[31m :: [0madded if(arg) return in jareel's wind priestess robes, caused spammy call outs
+Sep  2 22:45[31m :: [0mrewarded krillgeta for turning in vahiti for trying to kill a beta tester, rewarded hadus for reporting an exploitable bug
+Sep  4 07:15[31m :: [0mberen's area - added a bunch of if(arg) return's to the rooms
+Sep  4 22:39[31m :: [0mfixed nightshade's elven chain - repaired id
+Sep  5 20:17[31m :: [0m~mythos/closed/play/updates - made it so it doesn't clean corpses
+Sep  6 21:40[31m :: [0mjailed glaxgor/krill for passing eq .. he was unrepentant and did this in the past
+Sep 15 14:35[31m :: [0mrestored combined rings to bleh
+Sep 15 17:13[31m :: [0mdeactivated plasma's wiztool
+Sep 28 00:39[31m :: [0mmade gordie sticks not worry about whether there is another one again
+Sep 28 01:20[31m :: [0mInstead of restoring Picar's pfile, I patched up Serax's file
+Sep 28 23:43[31m :: [0mokay'd & encouraged earwax fixing up deathmonger's area
+Sep 29 03:44[31m :: [0mfixed the double clone in the templar obj .. required an id of GI that was missing for some reason
+Sep 29 15:57[31m :: [0mfixed a bug in my channel daemon
+Sep 29 15:57[31m :: [0m[shards]
+Sep 29 16:18[31m :: [0mmade dervish ac just 0 instead of neg resistance
+Sep 30 00:11[31m :: [0mokay'd earwax moving around some files in deathmonger's
+[Oct  4 2005 17:01] A: raised price of hurtbrain's potion of strength to 5k
+Oct  6 17:33[31m :: [0mdropped hurtbrain potion back to 2.5k
+Oct  6 17:33[31m :: [0mi didn't log that.
+Oct 13 13:50[31m :: [0madded count hits/misses to jar/mal's std wep
+Oct 18 03:11[31m :: [0m~mythos/amon/forest/monster 1- 90% chance of blocking exit when trying to run
+Oct 22 01:40[31m :: [0mrecompd' achilles and kyllur since their pets kids were killed and they can't take revenge [against a mage]
+Oct 22 02:17[31m :: [0msuspended thork from cybers per symbio
+Nov  1 02:01[31m :: [0mdemonchild - restored his guild stats from budman when the guild closed
+Nov 17 23:31[31m :: [0munguilded unknown [mage beta]
+Nov 18 23:39[31m :: [0mgave betrayer a prize for guessing the ron mexico contest
+Dec  9 16:18[31m :: [0mcomp'd achilles mudkids 450k / 470k cuz they lost a level for no reason
+[Mar 14 2006 17:28] A: Registered Test Character: Exe
+[Mar 14 2006 17:29] A: Registered Test Character: Fred
+Mar 14 18:48[31m :: [0mfreed Rumba from prison
+Mar 14 19:02[31m :: [0m~nightshade/misc/bag - lock check
+Mar 14 19:03[31m :: [0mgave 10k to artos for reporting an abusable bug
+Mar 14 19:14[31m :: [0mdid some reshuffling of administrative ranks.
+Mar 14 19:42[31m :: [0m~hurtbrain/obj/pigeon - lock check
+Mar 16 08:36[31m :: [0mi sign off on earwax's armor changes
+Mar 16 22:51[31m :: [0mbanished Psyco [shared char]; removed ranger savefile
+[Mar 21 2006 07:07] A: commented out my nosave/ring/misc loggers from loading
+Mar 23 14:23[31m :: [0m~bastion/closed/ring - fixed multilogin msg in init() with a loaded check
+Mar 23 15:50[31m :: [0mearwax twho cmd got rid of testchars
+Mar 24 20:11[31m :: [0mfixed my wandering mobs in ~/swamp/NPC after pav/wax's change broke them
+Apr  6 12:49[31m :: [0mwizzed antipode at earwax's behest
+Apr  8 00:21[31m :: [0m~saber/armor/overload - made save
+Apr  8 00:22[31m :: [0malso added if(Arg) check in reset
+Apr  8 00:22[31m :: [0m~saber/stuff/mbag - ::reset() to ::reset(arg)
+Apr  8 00:24[31m :: [0m~eurale/Keep/k17 - moved orb and fire variables above if(arg) in reset so that the room may reset
+Apr  8 00:29[31m :: [0m~pain/NEW/mon/korean2 - made inherit korean .. old version that still has bugs with spell messes
+Apr  8 00:45[31m :: [0m~saber/closed/orc2 - made wield weapons, attack if crusher is being hit and they're not in combat
+Apr  8 00:45[31m :: [0moops.. not cloesd, monster
+Apr  8 00:45[31m :: [0m~saber/monster/crusher - made use equipment
+Apr 11 04:30[31m :: [0msomeone or something removed my castle.c, workroom.c, so i'm now finishing the job.
+Apr 14 22:08[31m :: [0m~unsane/xmen/staff - !str check in push
+[Apr 29 2006 19:05] 
+  A: promoted forbin to 1000
+  R: work
+Apr 30 22:13[31m :: [0mbanished amiro, giveaway char

@@ -1,0 +1,120 @@
+channel_names ({"msg","equip","babble","junk","shout","cwiz","newbie","announce","wiz","gossip","admin","risque",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 80000
+luck 99
+lucky 377
+name "vital"
+gender "male"
+msgin "is called in"
+msgout "will you just go"
+is_npc 0
+brief 0
+level 100
+armor_class 0
+hit_point 1298
+max_hp 1298
+experience 4010388
+mmsgout "watches his lifeforce fade away into nothing"
+mmsgin "appears suddenly, being very alive and vital"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -48
+cap_name "Vital"
+spell_points 1399
+max_spell 1399
+spell_name "sonic"
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 5296237
+is_invis 0
+frog 0
+whimpy 0
+auto_load "/players/sado/antifos/button.c:^!/players/beck/Rangers/HonorRangerCommunicator:^!players/pain/NEW/items/star.c:^!"
+current_room "players/beck/Rangers/CommandCenter/CommandCenter"
+alignment 0
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Armors 0
+Weapons 0
+WeaponBonuses 0
+handshake_data 363
+handshake 0
+quest_point 0
+quests "[34mVital[2;37;0m"
+pregnancy 0
+pregtoo 0
+monitor_string "::: $R$HP #hps#/#mhp# $N$$HB$SP #sps#/#msp# $N$I #intox#% F #stu#% S #soa#% T #inf#% #ahp# #ret#Experience: $M$#exp#$N$"
+saved_aliases ({"spin",":spins 'round and 'round almost falling off the mud...","t","ppl",})
+saved_nicknames ({"spa","sparrowhawk","tb","treebeard","LINE","*****************************************************************","wax","earwax","vheal","/players/snow/dark/stuff/vheal.c","miz","mizan","v","vertebraker",})
+wkrm 0
+hostname "217.164.45.111"
+ok_edit "vertebraker#"
+mailaddr "vital_nirvana@yahoo.com"
+saved_where 0
+title "is Vertebraker's personal assistant"
+pretitle "No longer unemployed,"
+password "K4l.7qyN3tuYY"
+race "creeping darkness on the surface of the sun"
+al_title "slave"
+PKGhostCounter 0
+intoxicated 0
+fight_area 0
+mon 1
+phys_at ({1,7,11,554,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "217.164.45.111"
+msghome "goes, "Heh.""
+description "says, "El Desdichado" Je suis le tenebreux, le veuf, l'inconsole,/Le prince d'Aquitaine a la tour abolie:/Ma seule etoile est mort, et mon luth constelle/Porte le soleil noir de la Melancolie.Dans la nuit du tombeau, toi qui m'as console,/Rends-moi le Pausilippe et la mer d'Italie,/La fleur qui plaisait tant a mon coeur desole,/Et la treille ou le pampre a la rose s'allie.Suis-je Amour ou Phebus? . . . Lusignan ou Biron?/Mon front est rouge encore u baiser de la reine;/ J'ai reve dans la"
+guild_name "rangers"
+lastime "Aug 18 08:42 2005"
+player_killing 0
+invs_count 0
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd "/players/vital/"
+dead 0
+guild_rank 100
+guild_exp "All"
+guild_file 0
+home "/players/vital/workroom/workroom.c"
+ex_lv 101
+qc 0
+strength 99
+intelligence 99
+stamina 99
+will_power 99
+magic_aptitude 99
+piety 99
+stealth 99
+charisma 99
+dexterity 99
+atrbr ({8,8,99,99,99,99,99,99,99,99,})
+stuffed 0
+soaked 0
+no_give 0
+aprv "feldegast,arrina,boltar,vital"
+hint 0
+AnsiPref ({"tell",0,"gossip",0,"risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"wiz","[1;32m","cwiz",0,"page",0,"pk",0,"title",0,"pretitle",0,"roomtitle",0,"admin","[1;31m","ls .c","[31m","ls .h","[32m","ls directory","[36m","ls otherFiles",0,})
+old_last "Aug 17 07:48 2005"
+BankBalance 6040000
+other_copy 0

@@ -1,0 +1,34 @@
+*******************************************************************
+
+Name:    att (Attack Who) 
+
+Desc:    Will show the players on and what the players are in battle    
+         with.  Shows name and path of opponent.
+
+Level:   55   
+
+Warning: Don't use this information for your pk characters.
+
+Syntax:  att or atm 
+
+Example: att  
+Result:  
+
+Name                    Attacking
+......................................
+Salina          nothing 
+Unknown         nothing 
+Boltar          nothing 
+Tristian                nothing 
+Fred            nothing 
+Hercules                nothing 
+Laramie         nothing 
+Jareel          Guardian        OBJ(players/jareel/monsters/legends/legend_guardian#2598)
+Earwax          nothing 
+Diesel          nothing 
+Veeshan         nothing 
+
+
+Related: stat, statall
+
+*******************************************************************

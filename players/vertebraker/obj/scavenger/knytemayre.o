@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/wrench","/players/mythos/awep/dstaff","/players/mythos/awep/tanto","/players/pain/NEW/arm/bplate","/players/sado/shop/rose","/players/wren/Area/starbug/items/indianheaddress","/players/wren/Area/starbug/items/arrogance","/obj/weapon","/players/jamila/beach/mobs/claw","/players/boltar/things/gwand","/players/arrina/armor/sveil","/players/wren/Area/starbug/items/guitar","/players/pain/NEW/weap/soulcrusher","/obj/armor","/players/wren/Area/starbug/items/mirror","/players/wren/Area/starbug/items/flibble","/players/pain/closed/wands/orb","/players/maledicta/cont/weapons/rweapon","/players/ultramagnus/wiz_cloak","/players/mythos/mwep/voice","/players/angel/area/stargate/obj/bullets","/players/ultramagnus/rsack","/obj/weapon","/players/jamila/beach/mobs/skin","/players/saber/stuff/mic",})
+shorts ({"small pipe wrench","Dream Staff","Tanto","A battered Breastplate","A beautiful red rose blossom","a tiny indian headdress","Rimmers arrogance.","A Deadly Bullwhip","A Lobster Claw","A dark green wand","[1;37mShadowVeil[2;37;0m","Lister's guitar","a mace named [1m[31mSoulCrusher[0m","A Jedi Cloak","a slim pocket mirror","a [1;30mpe[37mngu[1;30min[2;37;0m handpuppet","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","a Shortsword","An Old Grey Cloak","Voice","A clip of bullets [50]","A red sack","a sword","A Lizard Skin","A microphone",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/aarmor/kabuto","/players/hawkeye/armor/converse","/players/puppy/s/eq/ruler","/players/puppy/s/eq/quill","/players/mythos/aarmor/do","/players/mythos/mwep/voice","/players/wren/Area/starbug/items/arrogance","/obj/treasure","/obj/treasure","/players/snow/cam/stuff/sword","/players/mythos/aarmor/shell","/players/arrina/armor/bonering","/players/wren/Area/starbug/items/sparehead","/players/mythos/awep/ring","/players/snow/shadows/stuff/axe","/players/pain/closed/wands/orb","/players/ultramagnus/berries","/players/maledicta/cont/armor/guard_of_health","/obj/armor","/players/wren/Area/starbug/items/mirror","/obj/torch","/obj/weapon","/players/hawkeye/items/bible","/players/snow/shadows/stuff/plate","/players/mosobp/areas/TEMPLE/OBJ/nsword",})
+shorts ({"Kabuto","[31mConverse All-Stars[0m","A wooden ruler","A quill","Do-Maru","Voice","Rimmers arrogance.","Beach Bear pelt","Ruby","[34m[1mBlessed Longsword[0m[0m","Tortoise Shell","A Carved Bone Ring","Kryten's sparehead 3.","Silver Ring","A dusky axe","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","A Bunch Of Blue Berries","[1;37mChestguard of [1;32mHealth[2;37;0m","Robot Head","a slim pocket mirror","sunflower","some teeth","A Bible(autographed by Jesus)","[1mBlack Platemail[0m","A nobleman's shortsword",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

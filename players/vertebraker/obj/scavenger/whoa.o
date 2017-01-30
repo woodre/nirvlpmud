@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/ultramagnus/breastplate","/obj/level_list","/players/hippo/heals/grain","/players/ultramagnus/darkweapon","/players/wren/Area/starbug/items/indianheaddress","/players/emerson/weap/spatula","/players/hippo/weapons/molar_sharf","/players/wren/Area/starbug/items/bat","/players/snow/WEAPONS/balance","/players/arrina/heals/honeyc","/players/hippo/armour/endotheel","/players/puppy/s/eq/nathat","/players/wren/Area/starbug/items/guitar","/players/snow/heals/kw_meat","/players/saber/armor/hardsuit1","/players/mythos/closed/guild/forest/misc/pelt","/players/scathe/weap/baxe","/players/ultramagnus/staff","/players/snow/WEAPONS/tsunami","/obj/weapon","/players/saber/armor/slboots","/obj/weapon","/players/hippo/heals/nucleus","/players/hippo/armour/boots","/players/wren/Area/starbug/items/straw",})
+shorts ({"A Black Breastplate with Red Decore","A list of the top players","[33mcrumbs of grain[0m","Dark Rider Spear","a tiny indian headdress","Spatula","A molar sharf","a [1;30mballbat[2;37;0m","The Broadsword of Balance","[33mgooey honeycomb[0m","endotheel","A straw hat","Lister's guitar","A hunk of whale meat","A light blue Hardsuit","A beautiful white pelt","A Huge Double Bladed Axe","An Old Long Staff","[34mTsunami[0m","Steel Longsword","Stiletto heeled leather boots","Baby pin","[35mnucleus of a cell[0m","anti-blood boots","a long plastic straw",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

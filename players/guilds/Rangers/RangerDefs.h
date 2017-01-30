@@ -1,0 +1,136 @@
+/* Guild Directories */
+#ifdef RANGERS
+#undef RANGERS
+#endif
+#define RANGERS "/players/guilds/Rangers/"
+#ifdef RANGERDIR
+#undef RANGERDIR
+#endif
+#define RANGERDIR "/players/guilds/Rangers/Save/"
+#ifdef SAVEDIR
+#undef SAVEDIR
+#endif
+#define SAVEDIR "players/guilds/Rangers/Save/"
+#ifdef LOGDIR
+#undef LOGDIR
+#endif
+#define LOGDIR "/players/guilds/Rangers/Log"
+
+/*  Power Ranger Definitions            */
+#ifdef GUILDNAME
+#undef GUILDNAME
+#endif
+#define GUILDNAME "rangers"
+#ifdef AUTOLOAD
+#undef AUTOLOAD
+#endif
+#define AUTOLOAD "/players/guilds/Rangers/RangerCommunicator:" /* Depricated */
+
+/* Guild Objects */
+#ifdef GUILDOBJ
+#undef GUILDOBJ
+#endif
+#define GUILDOBJ "/players/guilds/Rangers/RangerCommunicator.c"
+#ifdef MASTER
+#undef MASTER
+#endif
+#define MASTER "/players/guilds/Rangers/Master/RangerMaster.c"
+#ifdef GLOBE
+#undef GLOBE
+#endif
+#define GLOBE "/players/guilds/Rangers/ViewingGlobe"
+#ifdef CHANNEL
+#undef CHANNEL
+#endif
+#define CHANNEL "/obj/daemons/channeld.c"
+
+/* Guild Commanders */
+#ifdef LEADERS
+#undef LEADERS
+#endif
+#define LEADERS ({ "cooper","vital","sundin","alexa", })
+
+/* Banished Members */
+#define BANISHED ({ "yorick","guest","soundgarden","rundar","lebonan","usagi","dirk","outrage", })
+
+/* Skills that everyone has */
+#ifdef SKILLS
+#undef SKILLS
+#endif
+#define SKILLS ({"rsc","ri","ranger","skills","ansi","generate", "rpt"})
+
+/* Ranger Types */
+#ifdef TYPES
+#undef TYPES
+#endif
+#define TYPES ({"Dino","Thunder","Ninja","Zeo","Turbo","Rescue","Space","Galaxy","Time Force","Wild Force","Ninja Storm","Dino Thunder","S.P.D.","Mystic Force","Operation Overdrive","Jungle Fury","RPM","Samurai","Megaforce","Super Megaforce","Dino Charge",})
+
+/* Ranger Object Quick Functions */
+#if 0 /* Changing to not interfere with standard ANSI - Rump */
+#ifdef ANSI
+#undef ANSI
+#endif
+#define ANSI QRangerAnsi()
+#else
+#ifdef R_ANSI
+#undef R_ANSI
+#endif
+#define R_ANSI QRangerAnsi()
+#endif
+#ifdef COLOR
+#undef COLOR
+#endif
+#define COLOR QRangerColor()
+#ifdef DINO
+#undef DINO
+#endif
+#define DINO QRangerDino()
+#ifdef ANIMAL
+#undef ANIMAL
+#endif
+#define ANIMAL QRangerAnimal()
+#ifdef WEAPON
+#undef WEAPON
+#endif
+#define WEAPON QRangerWeapon()
+#ifdef NUMBER
+#undef NUMBER
+#endif
+#define NUMBER QRangerNumber()
+#ifdef KARATE
+#undef KARATE
+#endif
+#define KARATE QKarateLevel()
+#ifdef SKILL
+#undef SKILL
+#endif
+#define SKILL QSkillExp()
+#ifdef MARTIAL
+#undef MARTIAL
+#endif
+#define MARTIAL QMartialExp()
+#ifdef COMBAT
+#undef COMBAT
+#endif
+#define COMBAT QCombatExp()
+#ifdef COMM
+#undef COMM
+#endif
+#define COMM present("RangerCommunicator", this_player())
+#ifdef COMME
+#undef COMME
+#endif
+#define COMME present("RangerCommunicator", environment(this_object()))
+#ifdef COMMR
+#undef COMMR
+#endif
+#define COMMR present("ranger_object", rangers[i])
+#ifdef MAXGUILD
+#undef MAXGUILD
+#endif
+#define MAXGUILD 65
+
+#define SP query_sp()
+#define HP query_hp()
+
+#define (array) (mixed *)

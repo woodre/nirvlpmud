@@ -1,0 +1,22 @@
+#define THIS_FILE "/players/blue/closed/shadow/shadow.c"
+#define NAME this_player()->query_name()
+#define PATH "/players/blue/closed/shadow/"
+#define TEOWN(x) tell_object(environment(this_object()), x);
+#define CAP(x) capitalize(x)
+#define CN capitalize(TP->query_name())
+#define TO this_object()
+#define TP this_player()
+#define CARRY query_carry()
+#define STRENGTH this_player()->query_attrib("str") 
+#define ENVTP environment(this_player())
+#define ENVTO environment(this_object())
+#define LEVEL ENVTO->query_level()
+#define THISFACTION "Dopple-Shadow"
+#define HP ENVTO->query_hp()
+#define SP ENVTO->query_spell_point()
+#define MHP ENVTO->query_mhp()
+#define MSHP query_max_shp()
+#define MSP ENVTO->query_msp()
+#define ENVENVTO environment(ENVTO)
+#define ENV(x) environment(x)
+#define POS query_possesive()

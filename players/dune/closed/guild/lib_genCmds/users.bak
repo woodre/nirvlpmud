@@ -1,0 +1,126 @@
+#include "../DEFS.h"
+#include DEFS_ALEVELS
+#include DEFS_OFFICES
+#include DEFS_COLORPAD
+
+
+status main(string str)
+{
+  int b, artlev, deg, honor;
+  string brand, type, art, role, sphere;
+  object * iter;
+  object ob;
+  status hidePlayer;
+
+  write("\n");
+  write(LINE);
+
+  write(BOLD+YELLOW+"  "+
+        pad("Ninja",       12)+
+        pad("Sensei",      12)+
+        pad("Honor",       10)+
+        pad("Chip",        12)+
+        pad("Belt",         9)+
+        pad("Guild Rank",  22)+
+        OFF+"\n");
+  write(LINE);
+
+  iter = users();
+  for (b=0;b<sizeof(iter);b+=1)
+  {
+    ob = iter[b];
+
+    if (TP->query_level() > ob->query_level())
+    {
+      hidePlayer = 0;
+    }
+    else if (TP->query_level() < 20 && ob->query_level() < 20 &&
+             ((TP->query_level() + TP->query_extra_level()) > 
+              (ob->query_level() + ob->query_extra_level())))
+    {
+      hidePlayer = 0;
+    }
+    else if (!ob->query_invis())
+    {
+      hidePlayer = 0;
+    }
+    else
+    {
+      hidePlayer = 1;
+    }
+    
+    if (!hidePlayer && present(GUILD_ID, iter[b]))
+    {
+      /* do not show muffled guild wizzes at all */
+      if (IPOB->guild_wiz() && IPOB->muffled()) continue;
+
+      if ((string)IPOB->query_brand())
+        brand  = capitalize((string)IPOB->query_brand());
+
+      artlev = (int)IPOB->query_art_level();
+      deg    = artlev - BLACK_BELT;
+      if (deg < 0 ) deg = 0;
+      role   = (string)call_other(OFFICED, "findRole", ob);
+
+      if (IPOB->muffled() > 0) write("X");
+      else write(" ");
+
+      if (call_other(OFFICED, "checkStone", ob, "diamond sapphire pearl ruby emerald onyx"))
+        write("*");
+      else
+        write(" ");
+
+      write(BOLD);
+
+      if (ob->query_pl_k()) write(RED);
+
+      write(pad(capitalize((string)ob->query_name()), 12));
+
+      write(OFF);
+
+      if (IPOB->query_counselor())
+      {
+        write(pad(capitalize((string)IPOB->query_counselor()), 12));
+      }
+      else
+      {
+        write("            ");
+      }
+
+      honor = (int)IPOB->query_honor();
+      if (!IPOB->query_nohonor())
+      {
+        write(pad((string)call_other(HLEVELD, "honorTitle", honor), 10));
+      }
+      else
+      {
+        write(pad("Renegade", 10));
+      }
+
+      sphere = (string)IPOB->query_sphere();
+      if(IPOB->guild_wiz() || sphere)
+      {
+        write(color_pad("    "+RED+
+          (string)call_other(OFFICED, "findSphere", ob, sphere)+OFF, 33));
+      }
+      else
+      {
+        write(pad(brand, 12));
+        if (deg > 0)
+          write(pad((string)call_other(ALEVELD, "findBeltColor", artlev)+" "+deg,9));
+        else
+          write(pad((string)call_other(ALEVELD, "findBeltColor", artlev),9));
+        if (!role) 
+          type = (string)call_other(GLEVELD, "guild_title", (int)IPOB->guild_lev() + artlev);
+        else
+          type = capitalize(role);
+        write(pad(type, 12));
+      }
+      write("\n");
+    }
+  }
+
+  write(LINE);
+  write("Note:  * = Sensei    X = Muffled\n\n");
+  return 1;
+}

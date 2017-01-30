@@ -1,0 +1,9 @@
+FOLLOW
+
+usage: 'follow <player>'
+
+Lets you follow another player around.  The player must be another shadow, and
+must be in the same room when you cast the spell.  Your servant will still
+follow you, and people can follow in a chain to party.
+
+To stop following, type 'unfollow'.

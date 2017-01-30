@@ -1,0 +1,21 @@
+*************
+
+                     Setmmout
+
+Syntax:    setmmout <msg>
+
+Desc:
+           This command is to set your outbound teleport message from
+           an environment. Default is "disappears in a puff of smoke".
+
+Warning:   Keep appropriate and know that it displays when invis
+
+Example:   setmmout breaks a leg and tumbles off the stage
+                  results 
+           Players see "Bob breaks a leg and tumbles off the stage"
+           When Bob teleports out of the room 
+
+Related:   setmmin, setmin, setmout, setmhome, review
+
+
+**************

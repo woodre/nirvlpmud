@@ -1,0 +1,11 @@
+no_clean 0
+short_desc "A Darkstone"
+long_desc "There is something shining deep within the stone.You may wish to 'peer' into it."
+info 0
+save_flag 0
+value 10
+local_weight 1
+name "darkstone"
+alias_name "gem"
+read_msg 0
+shop_dest_flag 1

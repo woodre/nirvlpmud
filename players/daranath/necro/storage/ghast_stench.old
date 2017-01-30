@@ -1,0 +1,34 @@
+ghast_stench() {
+int i,dam;
+object ob, att;
+
+dam = random(25) + 10;
+ob = present("necro_ob",this_player());
+if(tp->query_sp() < 30) {
+write("You do not have the spell points available for this spell.\n");
+return 1; }
+if((ob->query_blood() < 5) || (ob->query_skin() < 3) || (ob->query_spine() < 1)){
+write("You do not have the spell components available for the spell.\n");
+return 1; }
+att = all_inventory(environment(tp));
+for(i=0;i<sizeof(att);i++) {
+  if(living{att[i])) if(att[i]->query_npc()) {
+    if(this_player()->query_sp() > 30) {
+    att[i]->hit_player(random(20)+7);
+    att[i]->attack_object(tp);
+  }
+  write("You have run out of spell points to continue the stench attack.\n");
+  return 1; 
+}
+
+
+  tp->add_spell_point(-30 * i);
+  ob->add_val(1);
+  ob->add_blood(-5);
+  ob->add_skin(-3);
+  ob->add_spine(-1);
+  ob->save_me();
+write("Your hand grows numb with the icy chill of the afterlife.\n"+
+      "You reach out and grasp "+str+".\n");
+say(tp->query_name() +" reaches out and touches "+att->query_name()+".\n");
+return 1; }

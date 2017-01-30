@@ -1,0 +1,76 @@
+players/pavlik/guild/mages/gob.c line 833: Variable query_dragon_hps not declared !
+players/pavlik/guild/mages/objects/energy_shield.c line 85: Missing 'return <value>' statement
+players/pavlik/guild/mages/objects/energy_shield.c line 85: Missing 'return <value>' statement
+Tue Mar  3 23:15:06 2015: players/pavlik/guild/mages/inherit/dragon.c line 257:Too many arguments to remove_action
+Tue Mar  3 23:16:46 2015: players/pavlik/guild/mages/inherit/dragon.c line 257:Too many arguments to remove_action
+Tue Mar  3 23:18:30 2015: players/pavlik/guild/mages/inherit/dragon.c line 257:syntax error
+Tue Mar  3 23:18:30 2015: players/pavlik/guild/mages/inherit/dragon.c line 263:Illegal LHS
+Tue Mar  3 23:18:30 2015: players/pavlik/guild/mages/inherit/dragon.c line 264:Illegal LHS
+Tue Mar  3 23:18:30 2015: players/pavlik/guild/mages/inherit/dragon.c line 265:Illegal LHS
+Tue Mar  3 23:18:30 2015: players/pavlik/guild/mages/inherit/dragon.c line 266:Illegal LHS
+Tue Mar  3 23:18:30 2015: players/pavlik/guild/mages/inherit/dragon.c line 272:Illegal LHS
+Tue Mar  3 23:20:06 2015: players/pavlik/guild/mages/inherit/dragon.c line 257:syntax error
+Tue Mar  3 23:20:06 2015: players/pavlik/guild/mages/inherit/dragon.c line 263:Illegal LHS
+Tue Mar  3 23:20:06 2015: players/pavlik/guild/mages/inherit/dragon.c line 264:Illegal LHS
+Tue Mar  3 23:20:06 2015: players/pavlik/guild/mages/inherit/dragon.c line 265:Illegal LHS
+Tue Mar  3 23:20:06 2015: players/pavlik/guild/mages/inherit/dragon.c line 266:Illegal LHS
+Tue Mar  3 23:20:06 2015: players/pavlik/guild/mages/inherit/dragon.c line 272:Illegal LHS
+Thu Jul 23 12:25:35 2015: players/pavlik/guild/mages/commands/sdam.c line 39:Too few arguments to pad
+Thu Jul 23 12:25:35 2015: players/pavlik/guild/mages/commands/sdam.c line 39:syntax error
+Thu Jul 23 12:26:35 2015: players/pavlik/guild/mages/commands/sdam.c line 44:syntax error
+Thu Jul 23 12:26:41 2015: players/pavlik/guild/mages/commands/sdam.c line 44:syntax error
+Thu Jul 23 14:44:04 2015: players/pavlik/guild/mages/macs line 7:Redefinition of #define DONATOR
+Thu Jul 23 14:44:04 2015: players/pavlik/guild/mages/macs line 8:Redefinition of #define ADVANCE
+Thu Jul 23 14:45:20 2015: players/pavlik/guild/mages/macs line 7:Redefinition of #define DONATOR
+Thu Jul 23 14:45:20 2015: players/pavlik/guild/mages/macs line 8:Redefinition of #define ADVANCE
+Thu Jul 23 15:01:04 2015: players/pavlik/guild/mages/commands/sdam.c line 62:syntax error
+Thu Jul 23 15:01:28 2015: players/pavlik/guild/mages/commands/sdam.c line 62:syntax error
+Thu Jul 23 15:05:06 2015: players/pavlik/guild/mages/commands/sdam.c line 22:syntax error
+Thu Jul 23 15:05:06 2015: players/pavlik/guild/mages/commands/sdam.c line 33:Illegal LHS
+Thu Jul 23 15:05:06 2015: players/pavlik/guild/mages/commands/sdam.c line 33:syntax error
+Thu Jul 23 15:05:06 2015: players/pavlik/guild/mages/commands/sdam.c line 34:Illegal LHS
+Thu Jul 23 15:05:06 2015: players/pavlik/guild/mages/commands/sdam.c line 35:Illegal LHS
+Thu Jul 23 15:05:06 2015: players/pavlik/guild/mages/commands/sdam.c line 35:syntax error
+Thu Jul 23 15:18:29 2015: players/pavlik/guild/mages/commands/sdam.c line 20:syntax error
+Thu Jul 23 15:18:29 2015: players/pavlik/guild/mages/commands/sdam.c line 20:Illegal LHS
+Thu Jul 23 15:18:29 2015: players/pavlik/guild/mages/commands/sdam.c line 21:syntax error
+Thu Jul 23 15:18:29 2015: players/pavlik/guild/mages/commands/sdam.c line 21:Illegal LHS
+Thu Jul 23 15:18:29 2015: players/pavlik/guild/mages/commands/sdam.c line 37:syntax error
+Thu Jul 23 15:18:29 2015: players/pavlik/guild/mages/commands/sdam.c line 37:Illegal LHS
+Thu Jul 23 15:21:46 2015: players/pavlik/guild/mages/commands/sdam.c line 20:syntax error
+Thu Jul 23 15:21:46 2015: players/pavlik/guild/mages/commands/sdam.c line 20:Illegal LHS
+Thu Jul 23 15:21:46 2015: players/pavlik/guild/mages/commands/sdam.c line 39:syntax error
+Thu Jul 23 15:21:46 2015: players/pavlik/guild/mages/commands/sdam.c line 39:Illegal LHS
+Thu Jul 23 15:21:46 2015: players/pavlik/guild/mages/commands/sdam.c line 42:syntax error
+Thu Jul 23 15:21:46 2015: players/pavlik/guild/mages/commands/sdam.c line 42:syntax error
+Thu Jul 23 15:29:53 2015: players/pavlik/guild/mages/commands/sdam.c line 20:syntax error
+Thu Jul 23 15:29:53 2015: players/pavlik/guild/mages/commands/sdam.c line 20:Illegal LHS
+Thu Jul 23 15:29:53 2015: players/pavlik/guild/mages/commands/sdam.c line 39:syntax error
+Thu Jul 23 15:29:53 2015: players/pavlik/guild/mages/commands/sdam.c line 39:Illegal LHS
+Thu Jul 23 15:29:53 2015: players/pavlik/guild/mages/commands/sdam.c line 42:syntax error
+Thu Jul 23 15:29:53 2015: players/pavlik/guild/mages/commands/sdam.c line 42:syntax error
+Thu Jul 23 15:30:47 2015: players/pavlik/guild/mages/commands/sdam.c line 35:syntax error
+Thu Jul 23 15:30:47 2015: players/pavlik/guild/mages/commands/sdam.c line 35:Illegal LHS
+Thu Jul 23 15:30:47 2015: players/pavlik/guild/mages/commands/sdam.c line 38:syntax error
+Thu Jul 23 15:30:47 2015: players/pavlik/guild/mages/commands/sdam.c line 38:syntax error
+Thu Jul 23 15:30:47 2015: players/pavlik/guild/mages/commands/sdam.c line 38:Illegal LHS
+Thu Jul 23 15:30:47 2015: players/pavlik/guild/mages/commands/sdam.c line 44:Variable dtypes not declared !
+Thu Jul 23 15:31:45 2015: players/pavlik/guild/mages/commands/sdam.c line 35:syntax error
+Thu Jul 23 15:31:45 2015: players/pavlik/guild/mages/commands/sdam.c line 35:Illegal LHS
+Thu Jul 23 15:31:45 2015: players/pavlik/guild/mages/commands/sdam.c line 38:syntax error
+Thu Jul 23 15:31:45 2015: players/pavlik/guild/mages/commands/sdam.c line 38:syntax error
+Thu Jul 23 15:31:45 2015: players/pavlik/guild/mages/commands/sdam.c line 38:Illegal LHS
+Thu Jul 23 15:31:45 2015: players/pavlik/guild/mages/commands/sdam.c line 44:syntax error
+Thu Jul 23 16:10:24 2015: players/pavlik/guild/mages/gob.c line 795:syntax error
+Thu Jul 23 16:10:24 2015: players/pavlik/guild/mages/gob.c line 807:Illegal LHS
+Thu Jul 23 16:10:24 2015: players/pavlik/guild/mages/gob.c line 807:syntax error
+Thu Jul 23 16:10:24 2015: players/pavlik/guild/mages/gob.c line 810:Illegal LHS
+Thu Jul 23 16:10:24 2015: players/pavlik/guild/mages/gob.c line 813:Illegal LHS
+Thu Jul 23 16:10:24 2015: players/pavlik/guild/mages/gob.c line 813:syntax error
+Thu Jul 23 16:36:38 2015: players/pavlik/guild/mages/gob.c line 796:Bad assignment. Rhs: "unknown "
+Thu Jul 23 16:37:56 2015: players/pavlik/guild/mages/gob.c line 798:Bad assignment. Rhs: "unknown "
+Thu Jul 23 16:38:40 2015: players/pavlik/guild/mages/gob.c line 798:Bad assignment. Rhs: "unknown "
+Thu Jul 23 16:39:14 2015: players/pavlik/guild/mages/gob.c line 798:Bad assignment. Rhs: "unknown "
+Thu Jul 23 16:39:30 2015: players/pavlik/guild/mages/gob.c line 798:Bad assignment. Rhs: "unknown "
+Thu Jul 23 19:51:22 2015: players/pavlik/guild/mages/objects/augury.c line 105:syntax error
+Thu Oct  1 16:19:28 2015: players/pavlik/guild/mages/room/dragon_room.c line 231:syntax error

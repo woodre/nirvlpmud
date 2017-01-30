@@ -1,0 +1,45 @@
+#include "/players/eurale/closed/ansi.h"
+inherit "obj/monster.c";
+
+reset(arg)  {
+  ::reset(arg);
+  if(arg) return;
+
+set_name("mummy");
+set_race("creature");
+set_short("Mummy");
+set_long(
+	"  This was once the ancient Egyptian, Im-ho-tep.  He was caught\n"+
+	"stealing a sacred scroll to bring his beloved princess back to\n"+
+	"life and buried alive for it.  A modern day archeologist accident-\n"+
+	"ally reads an inscription that brings him back to life.  Boris\n"+
+	"Karloff played this part in the 1932 thriller, The Mummy, and\n"+
+	"it brought him stardom and linked his name to movie horror for\n"+
+	"the rest of his career.\n");
+
+set_level(20);
+  set_hp(500);
+  set_al(0);
+  set_wc(30);
+  set_ac(17);
+  set_aggressive(0);
+  set_dead_ob(this_object());
+
+set_chance(15);
+set_spell_dam(25);
+
+set_spell_mess1(
+  "\n\nThe mummy swats his attacker with a "+BOLD+"ROTTING, PUTRID HAND"+
+	NORM+"\n\n");
+set_spell_mess2(
+  "\n\nThe mummy swats you with a "+BOLD+"ROTTING, PUTRID HAND!"+
+	NORM+"\n\n");
+
+}
+
+monster_died() {
+  tell_room(environment(this_object()),
+  "\n\nThe bandages unravel and fall to the floor in a pile....\n\n");
+  move_object(clone_object("players/eurale/Fiend/OBJ/bandages"),
+    environment(this_object()));
+return 0; }

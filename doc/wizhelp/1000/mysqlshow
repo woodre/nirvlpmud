@@ -1,0 +1,20 @@
+**************
+
+
+                     Mysqlshow
+
+Syntax:    mysqlshow [table]
+
+Desc:
+           With no argument, gives a list of tables in the database.
+           
+           With argument of 'table', shows definitions for that table.
+           
+Example:   mysqlshow players
+                  results
+           Shows definitions for table 'players'
+
+Related:   
+
+
+**************

@@ -1,0 +1,36 @@
+Upon completion of character creation, player is given
+options that will determine their newbie experience.
+Options:
+1. I am familiar with Nirvana.
+2. I have mudded before, but am new to Nirvana.
+3. I have never mudded before.
+
+If they choose #1, we drop them off at the church and let
+them have at it. No change from how it currently works.
+
+If they choose option 3, they are dropped into a room with
+a 'trainer' mob of sorts (have to make it clone new rooms or
+something, so people arent interrupted in their room by another
+new person). The mob brings them through some MUD basics (communication,
+get, inventory, look, etc.). The player can cut the tutorial off
+at any time and move on to the 'Nirvana specific' step.
+
+If option 2 is chosen, or upon completion of step 1 if they chose option
+3, they are brought to the 'nirvana specific' room. This room works
+as above, except it teaches about things specific to nirvana (guilds
+(giving a rundown of them all), PK, kids, good areas, money, advancement,
+stats, storage, etc.).
+
+Perhaps during all of this, we can let them go through using their 'stat
+points' in a more formal way (You have x points. where would you like
+to spend them?) instead of having them have to go to the advancement hall
+and do it.
+
+During the tutorial, they are walked through a fight, and getting armor/weapon
+off of the corpse. They get to keep this gear when they are done. Maybe even
+throw a few coins in there and have them 'buy' a heal in the tutorial. They
+get to keep that, too.
+
+Once all of that is done, explain that were dropping them at the newbie hall,
+and let them off there. add a command there so they can redo the tutorials
+at any time, and set their logon room to there.

@@ -1,0 +1,19 @@
+#0:0
+FileName "players/earwax/housing/data/molasar/Molasar_Forest_55"
+Short "House"
+LongDesc ""
+ShortDesc ""
+Ids ({"EARWAXIAN_HOUSING_OBJECT_ID_GOES_HERE",})
+WrapPref 70
+Upgrades ({})
+Owner "larisa"
+Owners ({"larisa",})
+Privs ({3,})
+ClanName 0
+Entrance "/players/earwax/housing/data/molasar/room/Molasar_Forest_55_0.c"
+LotSize 6
+HouseSize 6
+Cost 0
+LastRoom 0
+IsClanhall 0
+MaxRooms 6

@@ -1,0 +1,35 @@
+/*  Zapata  */
+
+#include "defs.h"
+inherit "obj/monster";
+reset(arg) {
+
+object hat, gold;
+::reset(arg);
+if(arg) return;
+set_name("zapata");
+set_race("human");
+set_short("Zapata");
+set_long(
+	"  This handsome Mexican bandito is dressed in black.  His drooping \n"+
+	"moustache and jet black hair give him the look of evil.  He has \n"+
+	"a beautiful Mexican sombrero that is colorful and shades his eyes \n"+
+	"and face from the hot western sun. \n");
+set_level(20);
+set_hp(500);
+set_al(-300);
+set_wc(30);
+set_aggressive(1);
+
+move_object(clone_object("players/eurale/Maze/OBJ/sombrero"),TO);
+init_command("wear sombrero");
+set_ac(18);
+
+set_chat_chance(5);
+  load_chat("The bandito looks you over very carefully. \n");
+  load_chat("Zapata mumbles:  You should not be here, senor. \n");
+
+gold = clone_object("obj/money");
+gold->set_money(random(100)+950);
+move_object(gold,this_object());
+}

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/awep/ring","/players/hippo/heals/dna_repair","/players/arrina/heals/ade","/obj/armor","/players/arrina/heals/honeyc","/players/wren/Area/starbug/items/levis","/players/mythos/amisc/egg","/obj/weapon","/players/scathe/armor/suit","/players/snow/cam/stuff/shield","/players/snow/chaos/objects/crabmeat","/obj/armor","/players/puppy/s/eq/quill","/players/arrina/armor/bedsheet","/players/wren/Area/starbug/items/bazookoid","/players/wren/Area/starbug/items/bouquet","/obj/level_list","/players/morgar/say","/players/wren/Area/starbug/items/laundry","/players/angel/area/stargate/obj/P90","/obj/armor","/players/wren/Area/starbug/items/mirror","/players/snow/closed/q/orb","/players/snow/WEAPONS/glowknife","/players/scathe/weap/baxe",})
+shorts ({"Silver Ring","[32mdna repair string[0m","bottle of refreshing [33mlemonade[0m","An [1mwhite[0m metal ring","[33mgooey honeycomb[0m","stretched out Levi jeans.","A strange looking egg","A glowing lightsabre","Black Suit","[34m[1mBlessed Shield[0m[0m","A slab of giant crabmeat","A Jedi Cloak","A quill","A Linen Bedsheet","Bazookoid [1;30mmkII[2;37;0m","a colorful bouquet of 'flowers'","A list of the top players","say with echo and quotes","Lister's dirty laundry","Machine gun","Ring of Death","a slim pocket mirror","Orb of the Ancients","A glowing knife","A Huge Double Bladed Axe",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

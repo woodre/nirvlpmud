@@ -1,0 +1,34 @@
+from adv_inner posts, 10-6-95 -Bp
+
+do to a number of bugs with sparing rooms
+I have made a changes to the basic game
+code which makes sparing simple.
+first, the player must type: kill_players spar
+this will set the player's pk flag to 2 if he has no pk set, to 3 if
+he has pk set. your sparing room must not allow players with a pk
+flag value of less than 2 to spar. this corrects player's using 
+sparing to clear pk status. also, the winner will still have full
+pk status, I still have to work this out. the call to check the 
+pk status is query_pl_k()
+second, the sparing rooms must have the following:
+query_spar_area(){return 1;}
+this tells living the player died sparing and not to remove exp or
+attribs.  players WILL REGENERATE by the church.
+you can add your own call to remove_ghost() but no alterations to 
+experience are required. that is all taken care of by the new code.
+ 
+Conform to this NOW! do not delay.  all 100 + level wizards have the
+power to close all sparing areas not conforming to the new 
+standard in one week. if energic they can make
+the area conform.
+-Bp
+ 
+I have made a way to remove pk for the winner.
+just use this_player->rm_spar();
+it will do the rest.
+Addition, Aug-27-98 
+
+Players now cannot set sparing pk except in a sparing area. Sparing
+areas MUST not allow players to leave without clearing their spar 
+status.
+

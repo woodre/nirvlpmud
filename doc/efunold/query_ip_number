@@ -1,0 +1,7 @@
+query_ip_number()
+
+Returns the internet address of the object that is calling it.
+
+See also interactive().
+
+(These two could be combined, but why bother?)

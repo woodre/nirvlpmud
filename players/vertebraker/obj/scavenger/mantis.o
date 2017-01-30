@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/wren/Area/starbug/items/cowboyhat","/players/jamila/beach/mobs/skin","/players/arrina/weapons/revenant","/players/angel/area/stargate/obj/staff","/players/mythos/awep/quiver","/obj/treasure","/players/sado/shop/chocolate","/players/emerson/weap/spatula","/players/wren/Area/starbug/items/jacket","/players/snow/heals/ice_sphere","/players/hippo/weapons/glue","/players/saber/weapons/hrev","/players/wren/Area/starbug/items/straw","/obj/treasure","/players/softly/nhall/obj/green2","/players/mythos/awep/ring","/players/scathe/armor/igarb","/players/mistress/other/disk","/players/maledicta/cont/armor/rboots","/players/hawkeye/items/record","/obj/weapon","/players/pain/closed/weapons/widow","/players/emerson/armor/toupee","/obj/armor","/obj/weapon",})
+shorts ({"a tiny cowboy hat","A Lizard Skin","Revenant Blade","[1;36mSTAFF WEAPON[0m","A quiver","some foul smelling trash","A box of delicious Belgian chocolates","Spatula","Lister's leather jacket","An [1;36mIce[0m Sphere","a strong, 1 second glue","A Colt .68 Heavy Revolver","a long plastic straw","A piece of corundum","Dark Rider Chainmaigreen)[2;37;0m [3]","Silver Ring","Initiate's garb","A fragile disk","leather shoes","A Mozart Record","Shark`s tooth","the Widowmaker, the sword of the Berserker","A Bad Toupee","a hat","Axe",})
+found ({0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

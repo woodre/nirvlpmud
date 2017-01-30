@@ -1,0 +1,31 @@
+POWERS
+ <power>              :<level>  <short descript>
+ 
+**  For level 5 abilities type hhelp 5
+
+* fortify             :   6     adds to another healer's healing ability
+* mystic_transfer     :   7     transfers a power to another healer
+* cure                :   8     cures target of all ailments
+* defend              :   9     increases target's ac
+* shield              :  10     shields target from attacker
+* reduce              :  11     reduces target's intox, soak, stuff
+* resurrect           :  12     raises target from the dead
+  add_mass_heal       :  13     adds name to mass heal member list
+  clear_from_mass     :  13     clears name from mass heal member list
+* mass_heal           :  13     heals all members in mass heal list
+  show_mass           :  13     shows who is in mass heal member list
+* simulcrum/illusion  :  14     creates an illusion of target
+* potion              :  15     creates a potion of healing
+* reinstate           :  16     raise's target attribute
+* regenerate          :  17     increases target's heal rate
+* cove                :  18     a healing cove increasing heal rate of all
+* full_heal           :  19     fully heals target
+* haven               :  20     creates a haven where fighting can not exist
+* salve               :  22     creates a salve of healing
+* grant               :  25     grant a power to target 
+* healing_spring      :  30     creates a healing spring in room
+* minor_blessing      :  35     blesses target and protects target from damage
+* robe_of_healing     :  39     gives a robe of healing on target
+* holy_blessing       :  40     blesses target so that target will not get hurt
+  
+  * help file exists

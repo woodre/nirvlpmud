@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/saber/stuff/mic","/players/mythos/awep/katana","/players/puppy/s/eq/apron","/obj/armor","/players/pain/NEW/arm/bplate","/players/wren/Area/starbug/items/reddress","/obj/weapon","/players/emerson/weap/pcutter","/obj/torch","/players/emerson/armor/mits","/players/angel/area/stargate/obj/bullets","/players/hippo/armour/boots","/players/ultramagnus/cap","/players/snow/WEAPONS/balance","/obj/weapon","/players/forbin/heals/dhuez","/players/hippo/heals/blood","/players/scathe/armor/suit","/players/hippo/armour/endotheel","/obj/torch","/players/haji/quest/shrub","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/mosobp/areas/TEMPLE/OBJ/robes","/obj/armor","/players/emerson/obj/straw",})
+shorts ({"A microphone","Katana","An apron","stone platemail","A battered Breastplate","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","Golden hoof","Pizza Cutter","light spell","Oven Mits","A clip of bullets [50]","anti-blood boots","An Elven Cap","The Broadsword of Balance","Hand axe","d[0m[32m'[0mHuez [0m[32mleaves[0m","[1;31mdrops of blood[0m","Black Suit","endotheel","sunflower","A shrubbery","A Princess' Tiara","A Priest's Robes","Boots","A Straw",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

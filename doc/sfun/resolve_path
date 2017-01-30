@@ -1,0 +1,6 @@
+string resolve_path(string arg)
+
+Normalizes the path for arg (puts it in a standard format).
+Resolves present working directory, ~wizardname, and .. use.
+Filenames will be returned in the format "/path/filename" and
+paths will be returned in the format "/path/path2/".

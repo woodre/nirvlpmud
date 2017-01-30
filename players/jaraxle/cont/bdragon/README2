@@ -1,0 +1,122 @@
+
+\*\ ITEMS ~/cont/bdragon/~
+
+amulet.c [armor]
+	- ac     = 0
+	- value  = 100+R300
+	- weight = 1
+	- params = +2ac electricity & 30% resistance
+	- special attribs:
+		- Storable
+		- At any level can cast spell_object
+		  damage 5+R36 @ cost of 20sp.
+		- do_special @ R6 of 1+R2 ac boost
+		- do_param_special @ R8 of 15% 
+		  resistance boost and +4ac boost.
+
+
+dagger.c [weapon]
+	- wc     = 12
+	- value  = 150000
+	- weight = 1
+	- special attribs:
+		- Item used to unlock treasure room
+		  in Blue Dragon Caves.
+
+
+potion.c [item]
+	- value = 17000
+	- weight = 1
+	- special attribs:
+		- Full heal, full detox, 1 use.
+		  [ item given in treasure room not
+		    found elsewhere ]
+
+
+sword.c [weapon]
+	- wc     = 18
+	- value  = 6500
+	- weight = 2
+	- special attribs:
+		- Non breakable
+		- Storable
+		- weapon_hit based on wil [R50], pie [R50]
+                   and alignment. 2 NPC attacks can occur.
+		  *if alignment is below 0 player takes
+		   1+R11 damage.
+		  *if player alignment is above 0 and NPC
+		   alignment is below 0 and R50 wil attrib
+		   attacker->hit_player(13)
+		  *if R50 pie attacker->hit_player(13)
+
+\*\ NPC ~/cont/mobs/~
+
+bdragon1.c
+	- level = 20
+	- hp    = 650
+	- wc    = 35
+	- ac    = 15
+	- exp   = 7500 (aprox)
+	- items:
+		- ~/cont/rdragon/blue_dragonscale.c
+	- specials:
+		- %70 per round hit_player 20 "other|electric"
+		- %50 per round hit_player 40+R10 "other|electric"
+		- %20 per round chance to switch attacker
+		  & hit_player(15)
+
+bdragon2.c
+	- level = 3
+	- hp    = 45
+	- wc    = 8
+	- ac    = 2
+	- exp   = 15 (aprox)
+	- items:
+		- none
+	- specials:
+		- none
+
+bdragon3.c
+	- level = 30
+	- hp    = 3000+R501
+	- wc    = 60
+	- ac    = 30
+	- exp   = 118000 (aprox)
+	- items:
+		- ~/cont/bdragon/dagger.c
+	- specials:
+		- if hp go below 1000 20% chance every
+		  round npc will raise wc 1+R2 & ac 1+R5
+		- if hp below 100 hit_player 25 "other|electric" every
+		  round
+		- %60 per round hit_player random(70) + 20, "other|electric"
+		- %70 per round hit_player 30, "other|electric"
+
+bdragon4.c
+	- level = 23
+	- hp    = 850
+	- wc    = 45
+	- ac    = 20
+	- exp   = 35000 (aprox)
+	- items:
+		- ~/cont/rdragon/blue_dragonscale.c
+	- specials:
+		- see file :)
+
+
+ice_dragon.c
+	- level = 20
+	- hp    = 300
+	- wc    = 80
+	- ac    = 8
+	- exp   = 4500 (aprox)
+	- items:
+		- ~~/cont/rdragon/bdragon/sword.c
+		  [ only after killing npc, freeing
+		    "prisoner in caves", and finding
+		    hidden location in other area ]
+	- specials:
+		- spell_dam 15 chance 20
+
+
+

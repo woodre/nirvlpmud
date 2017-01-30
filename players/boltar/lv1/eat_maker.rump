@@ -1,0 +1,49 @@
+init() {
+#ifndef __LDMUD__ /* Rumplemintz */
+    add_action("make_em"); add_verb("make");
+#else
+  add_action("make_em", "make");
+#endif
+}
+make_em() {
+   object log,thing;
+   int i;
+     call_other("room/slope", "short",0);
+      call_other("room/yard","short",0);
+      call_other("room/forest2","short",0);
+     call_other("room/plane9", "short",0);
+     call_other("room/fortress", "short",0);
+     call_other("room/well", "short",0);
+     call_other("room/alley", "short",0);
+     call_other("room/plane3", "short",0);
+while( i < 2) {
+  thing = clone_object("players/boltar/lv1/eat.c");
+  log = clone_object("players/boltar/closed/guild/log.c");
+    if(i==1) move_object(log, "room/yard");
+    if(i==2) move_object(log, "room/forest2");
+    if(i != 1 && i !=2) destruct(log);
+   if (i == 1)
+   move_object(thing, "room/slope");
+   if (i == 2)
+   move_object(thing, "room/plane3");
+   if (i == 3)
+   move_object(thing, "room/alley");
+   if (i == 4)
+   move_object(thing, "room/well");
+   if (i == 5)
+   move_object(thing, "room/fortress");
+   if (i == 6)
+   move_object(thing, "room/plane9");
+   i+=1;
+  }
+  if (find_player("boltar"))
+    tell_object(find_player("boltar"), "All creatures have been made.\n");
+  return 1;
+}
+short(){return "A creature maker";}
+get(){return 1;
+    }
+reset(arg) {
+   make_em();
+ return 1;
+}

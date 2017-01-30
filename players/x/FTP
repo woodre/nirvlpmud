@@ -1,0 +1,39 @@
+Crimsoneditor & FTP
+a brief obscure tutorial by X 06
+
+Configuring crimson editor FTP
+
+File
+Ftp Settings
+Click an -Empty- slot
+Description: Nirvana (obviously)
+FTP server: nirvana.mudservices.com
+User name: yourname
+Password: your pass on the mud
+Click save password
+Subdirectory: /players/yourname
+Click Advanced...
+Server type: Generic FTP server
+Unclick default port if checked
+Port number: 3000
+Click ok, then click ok again to get out of FTP settings
+
+
+
+Using crimson editor FTP
+
+File, FTP control your FTP functions
+If you configured your FTP properly you should always start
+in your root directory [/players/yourname]
+
+1.
+To open a file from the mud, Alt-F, F, O
+ (or click File, FTP, Open Remote...) or the hotkey
+Alt-C or Click "Connect". this connects to the mudFTP server
+Browse and select the file!
+2.
+To send a file to the mud, Alt-F, F, A
+ (or click File, FTP, Save As Remote...) or the hotkey
+Alt-C or Click "Connect". this connects to the mudFTP server
+Browse and choose the filename!
+

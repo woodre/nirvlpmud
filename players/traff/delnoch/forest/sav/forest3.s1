@@ -1,0 +1,101 @@
+/*
+  For comments, see /players/traff/delnoch/forest/forest2.c
+  or /players/traff/delnoch/forest/forest.txt
+*/
+#include "/players/traff/closed/ansi.h"
+#define FR "/players/traff/delnoch/forest/"
+inherit "room/room";
+string fr;
+object monster;
+int m,r,trail;
+
+reset(arg){
+  if(!fr) {
+    fr = allocate(10);
+    fr[0]=FR+"forest2.c";
+    fr[1]=FR+"forest3.c";
+    fr[2]=FR+"forest4.c";
+    fr[3]=FR+"forest5.c";
+    fr[4]=FR+"forest6.c";
+    fr[5]=FR+"forest7.c";
+    fr[6]=FR+"forest8.c";
+    fr[7]=FR+"forest9.c";
+    fr[8]=FR+"forest10.c";
+    fr[9]=FR+"forest11.c";
+  }
+
+  if(!arg){
+  set_light(1);
+  long_desc=(GRN+
+"You have wandered into the Skoda forest.  This forest covers\n"+
+"hundreds of square miles of the lower part of the Skoda mountains\n"+
+"You are surounded by trees that all look pretty much alike.\n"+
+"It would be easy to get lost here.\n"+NORM);
+
+items=({
+"ground","The ground is cover with pine needles",
+"trees","Mostly conifers, they are tall and green",
+"mountains","The mountains rise steadily to the north.  You see snow capped peaks",
+ });
+
+  dest_dir=({
+"/players/traff/delnoch/work/forest1.c","north",
+"/players/traff/delnoch/work/forest1.c","south",
+"/players/traff/delnoch/work/forest1.c","east",
+"/players/traff/delnoch/work/forest1.c","west",
+      });
+  }   }
+
+short() { return HIG+"Skoda Forest"+NORM;}
+
+init()  {
+ ::init();
+  add_action("roam","north");
+  add_action("roam","south");
+  add_action("roam","east");
+  add_action("roam","west");
+  add_action("flee","flee");
+  add_action("trail","trail");
+  add_action("search","search");
+}
+
+roam()  {
+
+  r = random(10);
+  call_other(this_player(),"move_player","through the trees#"+fr[r]);
+  trail = 0;
+m += 1;
+if (m < 11) {
+  monster = "/players/traff/delnoch/mon/make_fc0.c"->make_monster();
+  move_object(monster,this_object());
+return 1;}
+  return 1;
+         }
+
+flee() {
+  if(this_player()->query_level()<6) {
+    call_other(this_player(),"move_player","running wildly#"+FR+"forest1.c");
+  trail = 0;
+    return 1; }
+  write("You can't do that!\n");
+  return 1; }
+
+trail() {
+  if(!trail) {
+    write("What?\n");
+    return 1; }
+  trail = 0 ;
+  write("You move off, up the trail.\n");
+  call_other(this_player(),"move_player","up a trail#"+FR+"forest5.c");
+  return 1; }
+
+search(str)  {
+
+  if(!str)  {
+    write("Search what?\n");
+    return 1;  }
+   
+  trail = 1;
+  write("You search the "+str+" and find a trail.\n");
+  write("Perhaps the 'trail' leads somewhere.\n");
+  return 1;  }

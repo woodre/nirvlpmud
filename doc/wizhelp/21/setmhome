@@ -1,0 +1,21 @@
+**************
+
+                     Setmhome
+
+Syntax:    setmhome <msg>
+
+Desc:
+           This command sets message for use with the 'home' command.
+           Default is "goes home"
+
+Warning:   Keep clean and brief
+
+Example:   setmhome flees backstage
+                  results
+           Players see "Bob flees backstage" when Bob goes home to
+           his workroom.
+
+Related:   setmmin, setmmout, setmin, setmout, review
+
+
+**************

@@ -1,0 +1,13 @@
+>> ORDER: LOITER NEAR SPOT
+
+Usage:
+order <index> loiter <string roomfile> <duration>
+
+Example:
+order 3 loiter room/church 10
+
+This order instructs the monster to wander near the general vicinity
+of the room filename specified to it. The monster generally does not
+wander more than five hops or so away from its loiter position, and 
+will teleport back to it automatically in a normal, periodic fashion.
+

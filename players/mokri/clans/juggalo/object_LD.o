@@ -1,0 +1,33 @@
+#0:0
+no_clean 0
+short_desc "A [1;31m Hatchet Man[1;33m Necklace [1;37m([1;34mworn around neck[1;37m)[0m"
+long_desc "A Hatchetman Necklace.\n[0m\nType 'clan_help' for commands.\n"
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "necklace"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A Hatchetman Necklace.\n[0m\nType 'clan_help' for commands.\n"
+clan_short "A [1;31m Hatchet Man[1;33m Necklace [1;37m([1;34mworn around neck[1;37m)[0m"
+damage_type 0
+hall_path "/room/eastroad1"
+object_name "necklace"
+owner "sami"
+spell_alias "gell"
+spell_mess_me "You apply a %hi green%Errie%hi white%G%hi red%el%normal%to his dammaged limbs."
+spell_mess_room "%TPN% administers a %hi green%Errie%hi white%G%hi red%el%normal%to his dammaged limbs."
+spell_mess_them "%TPN% administer a %hi green%Errie%hi white%G%hi red%el%normal%to your dammaged limbs."
+abilities ({})
+chan_history ({"[Sat Aug 16 17:43:40 2014] Thecableguy: gonna make a miserable trip to denver","[Sat Aug 16 17:43:54 2014] Sami: man u move around too much lol","[Sat Aug 16 17:44:38 2014] Thecableguy: i have to bounce place to place i have no income till i get my SSI","[Sat Aug 16 17:45:09 2014] Sami: dam","[Sat Aug 16 18:04:03 2014] Thecableguy: what you up to","[Sat Aug 16 18:04:07 2014] Sami: testing a few things...","[Sat Aug 16 18:04:23 2014] Thecableguy: bleh","[Sat Aug 16 18:04:29 2014] Sami: y?","[Sat Aug 16 18:04:43 2014] Thecableguy: i am waiting on this damned bus ticket and KBL keeps passing out on me","[Sat Aug 16 18:05:07 2014] Thecableguy: lol","[Sat Aug 16 18:06:05 2014] Thecableguy: can you tell i am bored?","[Sat Aug 16 18:07:11 2014] Sami nog","[Sat Aug 16 18:07:21 2014] Thecableguy: fucking hungry too","[Sat Aug 16 18:07:56 2014] Thecableguy: can smell the food people are nuking here at the bus station stomach turning cartwheels","[Thu Aug 28 18:24:17 2014] Thecableguy: yo ninja","[Thu Aug 28 18:24:23 2014] Sami: lo","[Sat Sep 13 19:28:49 2014] Thecableguy: whoop whoop","[Sat Sep 13 20:30:50 2014] Thecableguy: whoop whoop","[Sat Sep 13 20:33:27 2014] Thecableguy: fucking wifi","[Sat Sep 13 20:41:33 2014] Sami: night bro",})
+leaders ({"chance","recca","thecableguy","brynna","shojiro",})
+join_type 1
+private_coffer 9867617
+public_coffer 0
+spell_delay 4
+spell_id 2
+spell_cost 60
+last_spell_time 1412990129

@@ -1,0 +1,36 @@
+[SPIRAL] Level [6] 1400 charges (-sta, +int, ++mag, --str, -ste, ++luck)
+         (Female only morph form)
+         
+  To assume the form of Spiral is to gain an overwhemling psychological
+  edge on your would-be opponents, as well as one heck of a physical
+  advantage. The sight alone of a hellbent enchantress wielding
+  several weapons at once and casting fireballs may be too much to for
+  most mortal men to bear! For all of Spiral's brute magical power and
+  dizzying attacks, her main drawback is lack of physical strength,
+  and the necessity to connect numerous hits before building up
+  momentum in combat.
+  
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+strap <weapon>   Wield a weapon offhand. You can strap up to five weapons,
+strap all        plus wielding one primary. To cast fireballs you must have
+                 at least one limb free.
+
+unstrap <weapon> Remove a weapon wielded offhand.
+
+multihit         (120 sp) Attack everything in the room at once. This works
+                 best if there are as many targets as as you have limbs,
+                 or fewer. Players will not be attacked.
+
+switch  <plyr>   (20 sps) Switch places with a player that is fighting
+                 something.   
+
+swords           (variable sps) Dancing swords... convert all of the weapons
+                 you are strapping into lethal missiles! (They all fly
+                 out and assault whatever you are currently attacking).
+                 WARNING: Be sure to use this ability when your spellpoints
+                 are near maximum to get an optimal effect.
+xpower           (max sp) Use all of your spell points to direct a fierce
+                 attack on whatever you are fighting. Note: This ability
+                 requires ALL of your spell points to work.

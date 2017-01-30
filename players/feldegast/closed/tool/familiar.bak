@@ -1,0 +1,102 @@
+#include "/players/feldegast/defines.h"
+inherit "obj/treasure";
+
+object raven;
+
+reset() {
+  set_id("familiar_ob");
+  set_value(0);
+}
+init() {
+  if(TP->query_level()<20) destruct(this_object());
+  add_action("fquit","fquit");
+  add_action("fgoto","fgoto");
+  add_action("finvis","finvis");
+  add_action("fsnoop","fsnoop");
+  add_action("folly","folly");
+  add_action("ffile","ffile");
+  add_action("fmuffle","fmuffle");
+  add_action("fsay","fsay");
+  add_action("femote","femote");
+  add_action("fcom","fcom");
+  if(!raven) {
+    raven=clone_object("/players/feldegast/closed/tool/raven");
+    move_object(raven,environment(TP));
+  }
+}
+fgoto(str) {
+  object target;
+  target=find_living(str);
+  if(target) {
+    move_object(raven,environment(target));
+    write("You send your familiar to watch "+capitalize(str)+"'s room.\n");
+    return 1;
+  }
+  write("Usage: fgoto <living>\n");
+  return 1;
+}
+finvis() {
+  if(!raven) {
+    write("Something has happened to your familiar.\n");
+    return 1;
+  }
+  raven->go_invis();
+  write("You cast a spell of invisibility on your familiar.\n");
+  return 1;
+}
+fquit() {
+  write("You dismiss your familiar.\n");
+  if(raven) destruct(raven);
+  destruct(this_object());
+  return 1;
+}
+fsay(str) {
+  object room;
+  room=environment(raven);
+  if(!room) {
+    write("No environment for raven.\n");
+    return 1;
+  }
+  tell_room(room,"Raven squawks: "+str+"\n");
+  return 1;
+}
+femote(str) {
+  object room;
+  room=environment(raven);
+  if(!room) {
+    write("Raven has no environment!\n");
+    return 1;
+  }
+  tell_room(room,"Raven "+str+"\n");
+  return 1;
+}
+fsnoop() {
+  raven->set_snooping();
+  write("You toggle the raven's snooping ability(Nosy!).\n");
+  return 1;
+}
+folly(str) {
+  object target;
+  target=find_living(str);
+  if(!target) {
+    write("That living does not exist.\n");
+    return 1;
+  }
+  raven->set_follow(target);
+  write("You send your familiar to follow "+target->query_name()+".\n");
+  return 1;
+}
+ffile(str) {
+  raven->set_file(str);
+  write("You set the raven's log file to "+str+".\n");
+  return 1;
+}
+fmuffle() {
+  raven->set_muffle();
+  return 1;
+}
+fcom(str) {
+  write("You command your familiar to '"+str+"'.\n");
+  command(str,raven);
+  return 1;
+}

@@ -1,0 +1,401 @@
+/*
+  command_extender.c - an item to add extensions to useful commands for players
+*/
+
+/*
+ *    Unfortunately this tool allows players to add invis wizes to their 'group'
+ *  this object needs to be fixed so that wizes are not to be added at all- invis or not
+ * Thank you
+ *                               -Mythos (11/5/95)
+ */
+inherit "obj/treasure";
+
+int i, sorted_flag, exp_stored;
+string item_str, group_str;
+
+reset(arg) {
+  if (arg) return;
+
+  set_short("A command extender");
+  set_long(
+    ".....................................................................\n"+
+    ": A device to extend some useful commands.  It does the following:  :\n"+
+    ":             ('rid extender' to get rid of it)                     :\n"+
+    ":                                                                   :\n"+
+    ": Inventory settings:  'i s' sort by category 'i ns' don't sort     :\n"+
+    ":           commands:  'i [not] worn' [not] wielded/worn            :\n"+
+    ":                      'i misc' misc (non weapon/armor)             :\n"+
+    ":                      'i <id>' 'i weapons' 'i ring' to inventory   :\n"+
+    ":                               types of items                      :\n"+
+    ":                                                                   :\n"+
+    ": Experience: 'exp level' show exp to next level                    :\n"+
+    ":             'exp store' save current exp                          :\n"+
+    ":             'exp replace' compare current exp with stored exp &   :\n"+
+    ":                           store the current exp                   :\n"+
+    ":             'exp compare' compare current exp with stored exp     :\n"+
+    ":             'exp check' display current stored exp                :\n"+
+    ":                                                                   :\n"+
+    ": Communication: 'gr add <who>' add <who> to your group             :\n"+
+    ":                'gr remove <who>' remove <who>                     :\n"+
+    ":                'gr list' list members of your group               :\n"+
+    ":                'gr speak' speak to all members of your group      :\n"+
+    "....................................................................."+
+    "\n\n");
+  set_weight(0);
+  set_value(0);
+  item_str=allocate(30);
+  group_str=allocate(10);
+  for (i=0; i<30; i++) item_str[i]=" ";
+  for (i=0; i<10; i++) group_str[i]=" ";
+}
+
+id(str) { return str=="extender" || str=="command extender"; }
+
+init() {
+  if (!living(environment(this_object())) ||
+      !present("vampire fangs", environment(this_object())))
+    call_out("trash_this", 10);
+
+  add_action("do_inventory",   "i");
+  add_action("do_experience",  "exp");
+  add_action("do_communicate", "gr");
+  add_action("rid_extender",   "rid");
+}
+
+trash_this() { destruct(this_object()); }
+
+do_inventory(str) {
+  string item_short, tmp;
+  int j, l, weapons_flag, armor_flag, worn_flag, misc_flag, item_flag;
+  int not_worn_flag;
+  object item_obj;
+
+  if (!present("vampire fangs", this_player())) {
+    write("\nThis item is for vampires only!\n");
+    destruct(this_object());
+    return 1;
+  }
+
+  if (str=="ns") {
+    sorted_flag=0;
+    write("Inventory command set to normal instead of sorted.\n");
+    return 1;
+  }
+
+  if (str=="s") {
+    sorted_flag=1;
+    write("Inventory command set to sort by category "+
+          "(armor, weapon, misc)\n");
+    return 1;
+  }
+
+  for (i=0; i<30; i++) item_str[i]=" ";
+  i=0;
+  weapons_flag=0;
+  armor_flag=0;
+  worn_flag=0;
+  not_worn_flag=0;
+  misc_flag=0;
+  item_flag=0;
+
+  if (str) {
+    if (str=="weapons" || str=="weapon") weapons_flag=1;
+    else
+    if (str=="armor" || str=="armour") armor_flag=1;
+    else
+    if (str=="worn") worn_flag=1;
+    else
+    if (str=="not worn") not_worn_flag=1;
+    else
+    if (str=="misc") misc_flag=1;
+    else
+    item_flag=1;
+  }
+
+  item_obj=first_inventory(this_player());
+  while (item_obj) {
+    if (item_obj->short()) {
+      item_short=item_obj->short();
+      if (weapons_flag && item_obj->weapon_class()!=0) {
+        i++;
+        item_str[i]=item_short;
+        item_obj=next_inventory(item_obj);
+        continue;
+      }
+      else
+      if (armor_flag && check_if_armor(item_obj)) {
+        i++;
+        item_str[i]=item_short;
+        item_obj=next_inventory(item_obj);
+        continue;
+      }
+      else
+      if (item_flag && item_obj->id(str)) {
+        i++;
+        item_str[i]=item_short;
+        item_obj=next_inventory(item_obj);
+        continue;
+      }
+      else
+      if (worn_flag &&
+          (item_obj->query_worn() ||
+           sscanf(item_short, "%s (wielded)", tmp)==1)) {
+        i++;
+        if (sorted_flag) {
+          if (check_if_armor(item_obj)) item_str[i]="#1"+item_short;
+          else
+          if (item_obj->weapon_class()!=0) item_str[i]="#2"+item_short;
+        }
+        else
+          item_str[i]=item_short;
+        item_obj=next_inventory(item_obj);
+        continue;
+      }
+      else
+      if (not_worn_flag &&
+          (!item_obj->query_worn() &&
+           sscanf(item_short, "%s (wielded)", tmp)!=1)) {
+        i++;
+        if (sorted_flag) {
+          if (check_if_armor(item_obj)) item_str[i]="#1"+item_short;
+          else
+          if (item_obj->weapon_class()!=0) item_str[i]="#2"+item_short;
+          else
+          item_str[i]="#3"+item_short;
+        }
+        else
+          item_str[i]=item_short;
+        item_obj=next_inventory(item_obj);
+        continue;
+      }
+      else
+      if (misc_flag &&
+          (!check_if_armor(item_obj) && item_obj->weapon_class()==0)) {
+        i++;
+        item_str[i]=item_short;
+        item_obj=next_inventory(item_obj);
+        continue;
+      }
+      else
+      if (!weapons_flag && !armor_flag && !worn_flag && !not_worn_flag &&
+          !misc_flag && !item_flag) {
+        i++;
+        if (sorted_flag) {
+          if (check_if_armor(item_obj)) item_str[i]="#1"+item_short;
+          else
+          if (item_obj->weapon_class()!=0) item_str[i]="#2"+item_short;
+          else
+          item_str[i]="#3"+item_short;
+        }
+        else
+          item_str[i]=item_short;
+      }
+    }
+    item_obj=next_inventory(item_obj);
+  }
+
+  /* now sort by category */
+  if (sorted_flag) {
+    for (l=0; l < 30; l++) {
+      for (i=l; i < 30; i++) {
+        if (item_str[l] < item_str[i]) {
+          tmp=item_str[l];
+          item_str[l]=item_str[i];
+          item_str[i]=tmp;
+        }
+      }
+    }
+  }
+  else
+    for (i=0; i<30; i++) item_str[i]="#1"+item_str[i];
+
+  /* now display the items */
+  if (sorted_flag)
+    write("\nSorted inventory of ");
+  else
+    write("\nUnsorted inventory of ");
+  if (weapons_flag) write("Weapons only:\n");
+  if (armor_flag) write("Armor only:\n");
+  if (worn_flag) write("Armor/weapons worn/wielded only:\n");
+  if (not_worn_flag) write("Items NOT worn/wielded only:\n");
+  if (misc_flag) write("Misc items (not armor/weapon) only:\n");
+  if (item_flag) write("'"+str+"' only:\n");
+  if (!weapons_flag && !armor_flag && !worn_flag && !not_worn_flag &&
+      !misc_flag && !item_flag) write("all items:\n");
+  write("\n");
+  for (j=0; j < 30; j++) {
+    if (item_str[j]!=" ") {
+      tmp=0;
+      sscanf(item_str[j], "#1%s", tmp);
+      if (!tmp) sscanf(item_str[j], "#2%s", tmp);
+      if (!tmp) sscanf(item_str[j], "#3%s", tmp);
+      if (tmp!=0 && item_str[j]!="#1 ") write(tmp+"\n");
+    }
+  }
+  if (present("vampire fangs", this_player()))
+    present("vampire fangs", this_player())->show_guild_stuff();
+  return 1;
+}
+
+check_if_armor(arg) {
+  if (arg->query_type()=="armor" ||
+      arg->query_type()=="helmet" ||
+      arg->query_type()=="boots" ||
+      arg->query_type()=="ring" ||
+      arg->query_type()=="amulet" ||
+      arg->query_type()=="shield" ||
+      arg->query_type()=="misc") return 1;
+  return 0;
+}
+
+do_experience(str) {
+  int j, k, l, m, n;
+
+  if (!present("vampire fangs", this_player())) {
+    write("\nThis item is for vampires only!\n");
+    destruct(this_object());
+    return 1;
+  }
+
+  if (str=="level") {
+    i=this_player()->query_level();
+    if (i<20) {
+      j=this_player()->query_exp();
+      k=i + 1;
+      l="/room/adv_guild"->get_next_exp(i-1);
+      m="/room/adv_guild"->get_next_exp(k-1);
+      n=m - j;
+      write("\nYou are level "+i+" and have "+j+" ep.\n"+
+            "To reach level "+k+" (which requires "+m+" ep),\n"+
+            "you need "+n+" more ep.\n\n");
+    }
+    i=this_player()->query_extra_level();
+    j=this_player()->query_exp();
+    k=i + 1;
+    if (!i)
+      m="/room/exlv_guild"->get_next_exp(i);
+    else
+      m="/room/exlv_guild"->get_next_exp(k);
+    n=m - j;
+    write("\nYour extra level is "+i+" and you have "+j+" ep.\n"+
+          "To reach extra level "+k+" (which requires "+m+" ep),\n"+
+          "you need "+n+" more ep.\n\n");
+    return 1;
+  }
+  if (str=="store") {
+    exp_stored=this_player()->query_exp();
+    write("Current experience points stored.\n"+
+          "Current exp points = "+i+"\n");
+    return 1;
+  }
+  if (str=="replace" || str=="compare") {
+    i=this_player()->query_exp();
+    j=this_player()->query_exp() - exp_stored;
+    write("Current exp points = "+i+"\n"+
+          "Stored exp         = "+exp_stored+"\n"+
+          "Difference         = "+j+"\n\n");
+    if (str=="replace") {
+      exp_stored=i;
+      write("Current experience points are now stored.\n\n");
+    }
+    return 1;
+  }
+
+  if (str=="check") {
+    i=this_player()->query_exp();
+    write("Stored exp         = "+exp_stored+"\n\n");
+    return 1;
+  }
+  return 0;
+}
+
+do_communicate(str) {
+  object who_obj;
+  int j;
+  string who_str, who_str2, msg;
+
+  if (!present("vampire fangs", this_player())) {
+
+    write("\nThis item is for vampires only!\n");
+    destruct(this_object());
+    return 1;
+  }
+
+  if (!str) return 0;
+
+  if (sscanf(str, "add %s", who_str)==1) {
+    who_str=lower_case(who_str);
+    for (i=0; i<10; i++) if (group_str[i]==" ") break;
+    if (group_str[i]!=" ")
+      write("You are already at the maximum of 10 members in your group.\n");
+    group_str[i]=who_str;
+    write(capitalize(who_str)+" has been added to your group.\n");
+    if (!find_player(who_str))
+      write("\nNote:  I cannot find "+capitalize(who_str)+" in the mud!\n\n");
+    return 1;
+  }
+
+  if (sscanf(str, "remove %s", who_str)==1) {
+    who_str=lower_case(who_str);
+    for (i=0; i<10; i++) {
+      if (group_str[i]==who_str) {
+        group_str[i]=" ";
+        break;
+      }
+    }
+    write(capitalize(who_str)+" has been removed from your group.\n");
+    return 1;
+  }
+
+  if (str=="list") {
+    write("Members of your communications group:\n");
+    for (i=0; i<10; i++) {
+      if (group_str[i]!=" ") {
+        write("   "+capitalize(group_str[i]));
+        if (find_player(group_str[i]))
+          write("\n");
+        else
+          write("(*)\n");
+      }
+    }
+    write("\n(*) = Can't be found on the mud.\n\n");
+    return 1;
+  }
+
+  if (sscanf(str, "speak %s", msg)==1) {
+    who_str=" ";
+    who_str2=" ";
+    for (i=0; i<10; i++) {
+      if (group_str[i]!=" ") {
+        who_obj=find_player(group_str[i]);
+        if (who_obj) {
+          tell_object(who_obj,
+            "["+this_player()->query_name()+" group msg ] "+msg+"\n");
+          who_str=who_str+" "+capitalize(group_str[i]);
+        }
+        else
+          who_str2=who_str+" "+capitalize(group_str[i]);
+      }
+    }
+    write("Sent group msg\n"+
+          "["+msg+"]\n"+
+          "to ");
+    if (who_str==" ")
+      write("yourself\n");
+    else
+      write(who_str+"\n");
+    if (who_str2==" ")
+      write("\n");
+    else
+      write("\nCouldn't find "+who_str2+" to send the group msg to!\n");
+    return 1;
+  }
+  return 0;
+}
+
+rid_extender(str) {
+  if (str!="extender") return 0;
+  write("\nDestructing your command extender.\n");
+  destruct(this_object());
+  return 1;
+}

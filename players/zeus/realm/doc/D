@@ -1,0 +1,52 @@
+
+      The Demon Plane
+
+ - A rather large area, featuring 3 main types of demons.
+    * demon_planar.c  7 count
+    * demon_medium.c  8-12 count
+    * demon_small.c    [1:8 chance in each room]
+    * demon_spirit.c  3 count       all in ~/realm/NPC dir
+
+ - Objects:  [in /realm/OBJ]
+    * talisman.c
+    * talisman_piece.c
+    * demon_tooth.c
+    * demon_gore.c
+    * demon_heart.c  [in /heals dir]
+
+ - The area characteristics:
+    * It is all PK and NT
+    * Most NPCs block movement
+    * All NPCs have high WCs compared to the 'standards'
+    * The planar/medium/spirit demons are only created once per reboot.
+    * This area connect to the Fallen Lands in Auseth's Tower.
+    * You must kill Auseth just to enter the area.
+
+ - The quest:
+  Find the talisman and save the Fallen Lands.
+  Talk to Tyborlek for more info.
+
+ - The map:
+
+                    p1              p2
+                    |               |
+                    1               2
+                    |               |
+                    3 - 4 - 5 - 6 - 7
+                            |       |
+    p3 -8 - 9               10      11
+            |               |       |
+            12      13- 14- 15- 16- 17 - p4
+            |       |           |
+            18- 19- ent 20  21- 22
+            |       |   |   |
+            23      24- 25  26
+            |       |       |
+    p5- 27- 28  29- 30      31
+                |           |
+                32          p7
+                |
+                p6
+
+
+Note:  you must enter through vortex.c for most of the monsters to be made.

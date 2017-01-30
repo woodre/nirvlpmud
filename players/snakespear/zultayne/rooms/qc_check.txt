@@ -1,0 +1,60 @@
+   I have gone through your area as you requested.  Generally, I
+find it to be a very good first effort with considerable thought
+having gone into the project.  I like the use of senses and the
+different 'variations' to exits.  I did find some things you
+fix before this area is put into play however.  Most are fairly
+small but a couple will take some work on your part and you'll
+have to go back through the rooms individually to take care of
+them.
+
+   Let's start with the biggest problem I found first.  It has to
+do with your 'search_room()' function.  The idea is terrific but
+in every case you have only 1 emote when, in fact, there might be
+many.  I'll give you an example of how to fix it...
+
+	search_room(str) {
+	  if(str == "desk") {
+	    write("You search the desk and find a tiny key.\n");
+	    return 1; }
+	  else {
+	    write("You search the "+str+" but find nothing.\n");
+	    return 1; }
+	}
+
+The 'desk' is the item that gives them something they'll need.
+When they type something other than 'desk' they still get an
+emote and it has to do with the item they search.  If you want
+to see what is happening your way, go to your room8.c and 
+'search rugs' and then 'search walls' and you'll get the exact
+same emote.  This same problem holds true for each of the functions
+of smell and listen too.
+
+Next item:  You've done a nice job of taking care of item descs.
+However, when you mention something else in the item desc, you
+then need to do a desc for that new item.  Example: room6.c - I
+look at the desk and see writing utencils.  But when I try to look
+at the utensils, it says there aren't any.  Same thing in room8.c
+with the banners and robes, etc.  So go through and look at every-
+thing that you  mention and make sure they have descs for them.
+
+<DONE>Room3.c - the desc says a hall leading 'west'.  Is that what you
+really mean? -- meant east.. fixed!
+
+<DONE>portal.c - when I read the tablet, typo (heared -> heard)-- FIXED!
+
+<DONE>room8.c - I had a hard time understanding the plaque when I read it.
+	You might want to see about some wording changes to make it
+	more understandable.
+
+<DONE>bchoice.c - Okay, how would a player ever know that the command to
+	get out of this room is 'escape'.  I'm probably just not
+	smart enough or I missed it.  If I didn't miss it, you need
+	to put some kind of hint in.<= There is a hint when they look
+                                       at the description =>
+
+As I said, I think you're done a very nice job for your first try.
+Understand that everyone had to go back and fix stuff so you are
+not being singled out... besides, you asked me to look at it.
+When you get the changes done, let me know and I'll revisit it if
+you'd like.  I'll write to Snow and have  him check out the monsters
+for legality too....			-Eurale

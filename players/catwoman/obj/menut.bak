@@ -1,0 +1,74 @@
+
+inherit "obj/treasure";
+
+id(str) { return str == "shop"; }
+query_auto_load(){
+return("players/catwoman/obj/menut:");
+}
+reset(arg)
+{
+  name = "shop";
+}
+
+short() { return "A portable shop(w/ menu)"; }
+
+long()
+{
+ 
+  write("This is a portable shop.(and revenge shop menu) \n"+
+        "<listshop>, <sellshop>, <buyshop>, <read shop> and <order!> are the commands.\n");
+
+}
+
+init()
+{
+/*
+	if(!present("thief guild",environment(this_object()))) {
+	write("you are not a thief!!\n");
+	destruct(this_object());
+	return 1;
+	}
+*/
+  add_action("list1", "listshop");
+  add_action("buy1", "buyshop");
+  add_action("sell1", "sellshop");
+  add_action("read1", "read");
+add_action("order", "order!");
+}
+
+read1(str)
+{
+if (id(str)) {
+	call_other("/players/catwoman/ts.c", "list", 0);
+	return(1);
+	}
+}
+order(str)
+{
+	call_other("/players/catwoman/ts.c", "buy", str);
+	return(1);
+}
+
+list1(str)
+{
+
+    call_other("/players/catwoman/tshop.c", "list", 0);
+    return(1);
+
+}
+
+
+buy1(str)
+{
+  call_other("/players/catwoman/tshop.c", "buy", str);
+  return(1);
+}
+sell1(str)
+{
+call_other("/players/catwoman/tshop.c", "sell", str);
+return(1);
+}
+drop() {
+return 1;
+}
+

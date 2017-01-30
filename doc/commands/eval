@@ -1,0 +1,10 @@
+07/19/06 Earwax:
+
+Syntax:    eval <command>
+Level:     100
+Function:  Display evaluation cost for a command.
+
+Description:
+Typing 'eval ls' will return the approximate number of LPC machine
+code instructions executed for the 'ls' command.  Bigger numbers 
+of course mean higher evaluation cost, which is a bad thing.

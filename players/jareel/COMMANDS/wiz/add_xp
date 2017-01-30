@@ -1,0 +1,22 @@
+*******************************************************************
+
+Name:    add_xp (Add expierience)   
+
+Desc:    This command adds experience points to a player. Useful
+         for advancing test characters or for the occasional 
+         reimbursing of players from glitches.
+   
+
+Level:   21   
+
+Warning: This is logged.  Any use of this power has to have some
+         reason logged unless it is for a wiz or a test char. 
+
+Syntax:  add_xp <player> <#>
+
+Example: add_xp bob 1000  
+Result:  You have added 1000 xp to Bob.
+
+Related: set_attrib, set_extra, set_level 
+
+*******************************************************************

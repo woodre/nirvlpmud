@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A tiny white feather[0m"
+long_desc "This feather represents membership in the Troubadour clan.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "feather"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This feather represents membership in the Troubadour clan.[0mType 'clan_help' for commands."
+clan_short "A tiny white feather[0m"
+damage_type "sonic"
+hall_path "/players/saber/ryllian/ryll3"
+object_name "feather"
+owner "fitz"
+spell_alias "clan_sing"
+spell_mess_me "%newline%You draw on the power of the Troubadours and %hi white%SING%normal% at %AKN%.%newline%"
+spell_mess_room "%newline%%TPN% draws on the power of the Troubadours and %hi white%SINGS%normal% at %AKN%.%newline%"
+spell_mess_them "%newline%%TPN% draws on the power of the Troubadours and %hi white%SINGS%normal% at you!%newline%"
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 490000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 50
+last_spell_time 1310094429

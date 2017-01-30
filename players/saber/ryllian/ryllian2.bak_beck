@@ -1,0 +1,48 @@
+#define tp this_player()->query_name()
+inherit "room/room";
+int t;
+reset(int arg){
+if(!present("guard"))  {
+move_object(clone_object("/players/saber/closed/new_mini/mini_shop.c"),this_object());
+        }
+ if(!arg){
+  set_light(1);
+  short_desc="Entrance to Ryllian";
+long_desc=
+ "You stand at the entrance to the city of Ryllian, capital of the\n"+
+ "Dukedom of Daradayle.  Glancing about, you see that the city streets\n"+
+ "are illuminated by chaotically flickering torches that dance to the\n"+
+ "tune of the the cold sea breezes winding from the ocean to the south.\n"+
+ "The streets to the south lead into the heart of Ryllian, where the\n"+
+ "sounds of an active city night life can be heard.  To the west looms\n"+
+ "the imposing architecture of the arena.  To the east is an inviting\n"+
+ "looking two story structure from which the comforting sound of voices\n"+
+ "can be heard spilling forth into the night.\n"+
+ "A sign by the door to the east reads [Orin's Inn]\n";
+
+items=({
+ "sign","The sign reads [Orin's Inn]",
+ "torch","A magical torch of eternal fire\n"+
+      "It is flickering in the sea breeze",
+ "street","The streets are made from dark stone",
+ "arena","An imposing looking structure of colossal proportions",
+ "structure","A two story building, most likely an Inn",
+       "to the City of Ryllian",
+ });
+
+  dest_dir=({
+ "/players/saber/ryllian/ryllian1.c","north",
+ "/players/reflex/guilds/bards/orin/orin1.c","east",
+ "/players/saber/ryllian/ryll3.c","south",
+ "/players/saber/ryllian/arena.c","west",
+           });
+  }   }
+init(){
+ ::init();
+  add_action("search","search");
+}
+
+search() {
+ write("You find nothing\n");
+say (tp +" searches the area\n");
+ return 1;  }

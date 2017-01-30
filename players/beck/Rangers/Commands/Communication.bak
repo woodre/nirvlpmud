@@ -1,0 +1,44 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+RangerInit(){
+   if(PO->QuerySkillLevel("communication") > 0){
+      PO->AHiddenSkill("rt","beck");
+      PO->AHiddenSkill("rte","beck");
+      PO->AHiddenSkill("rth","beck");
+   }
+   if(PO->QuerySkillLevel("communication") > 1){
+      PO->AHiddenSkill("rwho","beck");
+   }
+}
+
+RangerPower(str,Align){
+   
+}
+
+QMax(){
+   return 15;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(str){
+   write("Comm is a combination of all your important communications skills.\n"+
+         "They will be a combo of audio and video skills.\n"+
+         "Some skills are very advanced.  While not necessary, they will make\n"+
+         "your life a lot easier.\n\n"+
+         "Comm Skills are:\n\n"+
+         "Rt                         1\n"+
+         "Rte                        1\n"+
+         "Rwho                       2\n"+
+         "Rwho (with location)       3  (required for P2P teleport)\n"+
+         "Communications Tower      10 \n"+
+         "Remote Camera             12\n"+
+         "Remote Locator            13\n"+
+         "Spy Satellite             15\n"+
+
+         "");
+   return 1;
+
+}
+

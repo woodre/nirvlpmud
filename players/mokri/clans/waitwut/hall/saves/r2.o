@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/waitwut/hall/r1","south","/players/mokri/clans/waitwut/hall/r3","north",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"Iron [1;30mShield[0m of Death[0m[0m","/players/jareel/armor/mondar_shield",0,0,0,"[33mCloak of the Desert[0;0m","/players/zeus/desert/OBJ/cloak",0,0,0,"[2;37;0m[35mHeldurabhoricka's Robe[2;37;0m","/players/zeus/museum/OBJ/mage_robe","2472",0,0,"[31m~ [0m[34mEle[0m[32mmen[0m[1mtal S[0m[32mwo[0m[34mrd[0m[31m ~[0m","/players/snow/closed/test/elem_sword",0,9,8,"A [31mruby[2;37;0m amulet","/players/zeus/realm/OBJ/ruby_amulet",0,0,0,"Orb of [36mWind[0m","/players/jaraxle/3rd/alt/items/wind",0,0,0,"[1m[30mNight[0;0mVision goggles","/players/vertebraker/misc/mal/ng","6502",0,0,"[1;31mA Flowing Scarf[0;0m","/players/angel/area/school/obj/flow_scarf_01",0,0,0,"[1;30mThe Hourglass of Time[0;0m","/players/guilds/dervish/objects/hourglass","2",0,0,"A [33mgolden[0m earring","/players/vertebraker/swamp/OBJ/j_earring",0,0,0,})

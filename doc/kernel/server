@@ -1,0 +1,600 @@
+INTERNAL DOCUMENTATION OF THE SECURITY SERVER
+
+Dear Reader ...
+
+        This file describes the internal structure of the security
+        server.  It is not necessary to read this stuff if you do not
+        want to meddle with the inner magic of this entity.
+
+        This file is meant to help you if you are about to change
+        something in this mentioned file.
+
+Concepts
+
+        Privileges:
+          Most privileges can have sub-privileges which can be defined
+          (created) and undefined (deleted) by owners of the privilege
+          they are derived from.  Privileges derived from other
+          privileges contain a colon as a separator.  A privilege with
+          a trailing colon also is a derived privilege.
+          Example:
+          The privilege "foo:" is derived from the privilege "foo".
+          The privilege "foo:test" is also derived from "foo".  To
+          define the privilege "foo:test" the privilege "foo" is
+          needed.
+
+        Protection levels: 
+          A protection level is a privilege which is needed to do
+          something.
+          Any directory can have an explicit protection level (but see
+          the entry about Limits below).  Not all directories will have
+          an explicit one.  But for each directory an implicit protection
+          level is computable.  The protection level of a directory
+          without explicit protection level is the protection level of
+          its parent directory.
+          More accurately, each directory even has two protection levels,
+          one for reading and one for writing.  Everything concerning
+          protection levels and directories exists twice: once for
+          reading and once for writing.
+
+        Compatibility:
+          Since there were many old areas which did not know anything
+          about the new security system, a compatibility mode has been
+          introduced for them.  Every area (wizard or domain) can be
+          marked as 'compatible'.  If an object which does not inherit
+          ACCESS then causes a privilege check, a version which
+          functions like the old 2.4.5-mudlib security is used instead
+          of the new one.
+          In the old version, not the complete caller stack below the
+          checking object is checked but only the object itself.  This
+          version is like an implicit unguarded(1, ...) around all calls.
+
+        Defaults:
+          The default protection level for reading is privilege 0
+          (allowed for all), the default protection level for writing
+          is privilege 1 (allowed for admin only).  The root directory
+          sticks permanently to these defaults (readable for all and
+          writable only for admin); this cannot be changed.
+          It also is a rule that from the root directory to the
+          deepest directory in a path the protection level for reading
+          must only rise (or stay equal) and for writing must fall (or
+          stay equal):  /a/b/ will always have a higher (or equal)
+          protection level than /a/b/c/ for writing; for reading /a/b/
+          will have a lower (or equal) protection level than /a/b/c/.
+
+        Quota:
+          For each area (wizards and domains) a quota is held by the
+          security system.  This quota is not used.  The unit of the
+          quota is not documented either.
+
+        Limits:
+          Because of memory-saving reasons, a limit for the maximal
+          depth of the directory structure exists.  Directories with
+          more than 6 directories above them cannot get an explicit
+          protection level.  (Of course they will have an implicit
+          one.)
+
+Data structure
+
+        The security server has several object-global variables, all
+        private:
+          private mapping privileges;
+            description: This is a mapping of all privilege roots
+                         each pointing to a mapping.  Each inner
+                         mapping is a lists of branches below this
+                         root pointing to an array of privileges which
+                         are linked to it.  Example:
+                         ([ "foo":
+                               ([ "": ({}),  // "foo" is not linked
+                                             // to any other privilege
+                                  ":": ({}),  // "foo:" is neither
+                                              // linked to anything
+                                  ":test": ({ "bar","boltar" }) ]),
+                                            // "foo:test" is linked
+                                            // to "bar" and "boltar"
+                            "bar":
+                               ([ "": ({}),
+                                  ":": ({}) ]) ]);
+
+          private mapping read_access;
+          private mapping write_access;
+            description: These are mappings of width 2.  A directory
+                         name points to its protection level and a
+                         mapping of the same structure for all
+                         subdirectories of this directory or 0 (or the
+                         empty mapping) if no subdirectory has an
+                         explicit protection level.
+                         The mapping contains (of course) only the
+                         directories in the root directory which in
+                         turn then point to their subdirectories and
+                         so on.
+                         If a directory's subdirectory has an explicit
+                         protection level but the directory itself has
+                         none, -1 is given as its protection level.
+                         Example:
+                         ([ "log": 0; 0,  // /log/ has protection
+                                          // level 0 and no subdirs
+                                          // with an explicit
+                                          // protection level 
+                            "players": -1;  // no explicit protection
+                                            // level for /players/
+                                       ([ "foo": "foo:"; ([]) ])
+                                            // /players/foo/ has
+                                            // protection level
+                                            // "foo:" and the subdirs
+                                            // have no explicit
+                                            // protection level
+                         ])
+
+          private mapping quota;
+            description: This is a mapping of all domains and wizards
+                         (domains are capitalized) pointing to the
+                         quota size for them.
+                         The quota isn't used, thobar.  Nor is it
+                         documented what the quota's unit is ;-)
+
+          private mapping wizards;
+            description: This is a mapping of all wizards pointing to
+                         their state.  The state is either 1 for normal
+                         wizards or 2 for admin members.
+
+          private mapping domains;
+            description: This is a mapping of all domains each
+                         pointing to a mapping of its members and
+                         lords pointing to their state.  The state is
+                         either 1 for normal members or 2 for lords.
+                         Example:
+                         ([ "Banking":
+                               ([ "foo": 2,  // foo is lord of Banking
+                                  "bar": 1 ]),  // bar is member of Banking
+                            "Skills":
+                               ([ "vertebraker": 2,
+                                  "rumplemintz": 2,
+                                  "fred": 1,
+                                  "bar": 1 ]) ])
+
+          private mapping domainlists;
+            description: This is a mapping of all wizards who are in
+                         at least one domain each pointing to a
+                         mapping of all domains the wizard is
+                         in.  Example:
+                         ([ "foo": ([ "banking","betting" ]) ])
+                            // foo is in Banking and Betting
+
+          private mapping compatible;
+            description: This is a mapping of all wizards and all
+                         domains (domains are capitalized) which run
+                         in compatible mode (2.4.5) because they know
+                         nothing about the new system.
+
+          private static string *access_history;
+            description: This is an array of strings.  Each four
+                         strings in a row form one entry.  Each entry
+                         describes one failed privilege check (a call
+                         of check_privilege(), for instance caused by
+                         write_file()).  The entries contain the active
+                         user, the caller of the check, the object
+                         which was the reason for the failure and the
+                         privilege checked for.
+
+Functions
+
+          private void save_data();
+            saves the internal data structure.  The current
+            implementation also creates a backup of the save file.
+
+          private void syslog(string text);
+            appends the given string to the kernel log file (which is
+            /kernel/LOG in the current implementation).  The current
+            time, the name of this_interactive() (or "<Server>" if
+            there is no interactive) and a newline are added
+            automatically.
+
+          void reset(int arg);
+            does the necessary checks for cloning and so on.  If
+            everything is proper, the data structure is restored from
+            disk or initialized if nothing could be loaded.
+
+          status query_prevent_shadow();
+            returns 1 for security reasons of course.
+
+          private mixed *walk_path(string file,int write);
+            receives a path (as string containing slashes) to a file
+            in a directory (not a path to a directory!) and a flag if
+            writing or reading is attempted.  The return value is an
+            array containing three values:
+            - an array of protection levels of the elements of the
+              path, including the root directory
+            - an array of the elements (directory/file names) of this
+              path, excluding the root directory
+            - the index of the last valid element in the first element
+              (the array of protection levels); all further elements
+              in this array are 0 because no further element of the
+              path had an explicitly given protection level
+
+            The first element is the important one, it contains the
+            protection levels of all directories named in the given
+            path.  A -1 means that no explicit protection level is
+            given to that directory (normally the protection level of
+            the parent directory is used then recursively).
+            Example:
+
+            return walk_path("/open/bla",1);  // file /open/bla for
+                                              // writing
+            /* returns
+             * ({ ({ 1,0 }),({ "open" }),1 }).
+             */
+
+            return walk_path("/players/foo/bla",1);
+            /* returns
+             * ({ ({ 1,-1,"foo:" }),({ "players","foo" }),2 }).
+             * The -1 means that for the directory /players/ no
+             * protection level is given explicitly.  It implicitly
+             * defaults to its parent's protection level (1).
+             */
+
+            return walk_path("/players/foo/bla/bla/bla",1);
+            /* returns
+             * ({ ({ 1,-1,"foo:",0,0 }),
+             *    ({ "players","foo","bla","bla" }),
+             *    2 }).
+             * The third element (the 2) means, that below
+             * /players/foo/ no part of the path has an explicit
+             * protection level.
+             */
+
+            return walk_path("/obj/tools/robe",1);
+            /* returns
+             * ({ ({ 1,-1,0 }),({ "obj","tools" }),1 }).
+             * Directory /obj/ does not have an explicit protection
+             * level.
+             */
+
+            return walk_path("/save/players/a/foo.o",0);
+            // file /save/players/a/foo.o for reading
+            /* returns
+             * ({ ({ 0,-1,1,0 }),({ "save","players","a" }),2 })
+             * /save/ has no explicit protection level, /save/players/
+             * has explicit protection level 1 (all for reading).
+             */
+
+        nomask mixed query_protection(mixed file,int write);
+          receives a path to a file (not to a directory!) and a flag
+          whether writing or reading is attempted.  It returns the
+          protection level of the directory it is in.
+          Example:
+          return query_protection("/players/foo/bla",1);
+          /* returns "foo:".
+           */
+
+        nomask string set_protection(string file,int write,
+                                     mixed prot);
+          receives a path to a directory (not to a file in this
+          directory!), a flag whether writing or reading is attempted,
+          and a protection level.  The directory's protection level
+          will be set to the given one by this.
+          If -1 is given as new protection level, the directory's
+          current protection level will be removed without
+          replacement.  The directory will then have no explicit
+          protection level.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The path contains more than 6 directories.  (See Limits
+            above.)
+            ==> "illegal or unusable parameter"
+          - The given protection level is higher (for writing) or
+            lower (for reading) than the parent's protection level.
+            ==> "hazardous setting of privileges"
+          - The current call is not privileged to set the protection
+            level of this directory.
+            ==> "insufficient privilege"
+          - The privilege given as protection level is not valid.
+            ==> "invalid privilege identifier"
+          - The directory which's protection level shall be changed is
+            the root directory.
+            ==> "trying to change root directory's privilege"
+          - The protection level of the given directory already is on
+            the given privilege.  (This is no real error, thobar.)
+            ==> "directory already has this effective protection
+                 level"
+          - The new protection level was -1 and the directory did not
+            have an explicit protection level yet.
+            ==> "directory not linked to a privilege level"
+
+        nomask string set_quota(string name,int amount);
+          receives the name of an area (domain (capitalized) or
+          wizard) and a new quota for this area.  The call must have
+          privilege 1 to set the quota of an area.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The given area does not exist.
+            ==> "referring to non-existing wizard"
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+
+        private int valid_domain_name(string name);
+          receives a (lower_cased) name and returns whether this name
+          would be allowed as a domain name or not.  Currently, domain
+          names must consist only of letters, dashes and underscores.
+
+        nomask varargs string create_domain(string domain);
+          creates a domain with the given name.  After this call the
+          new domain is known to the security system.  No directory for
+          it has been made by this call, thobar.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - The given name is not valid as a domain name.
+            ==> "invalid domain name"
+          - A domain with the given name already exists.
+            ==> "domain already exists"
+
+        nomask string delete_domain(string domain);
+          deletes an existing domain from the data structures of the
+          security system.  Neither directory nor any file has been
+          deleted by this call.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - The given name is not a name of an existing domain.
+            ==> "accessing non-existing domain"
+
+        nomask string add_domain_member(string domain,string member,
+                                        int lord);
+          adds the given wizard as a member to the given domain.  If
+          the flag 'lord' is true then the wizard is marked as a lord
+          of the domain.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - The given domain does not exist.
+            ==> "accessing non-existing domain"
+          - The given wizard does not exist.
+            ==> "referring to non-existing wizard"
+
+        nomask string remove_domain_member(string domain,
+                                           string member);
+          removes a member from a domain.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - The given domain does not exist.
+            ==> "accessing non-existing domain"
+          - The given wizard is not a member of the given domain.
+            ==> "referring to non-existing wizard"
+
+        nomask string create_wizard(string wizard);
+          creates a new wizard with the given name.  After this call
+          the new wizard is known to the security system.  No directory
+          for the wizard has been made by this call, thobar.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - The given name is not a valid character name.
+            ==> "invalid character name"
+          - The given name is already recorded as a wizard.
+            ==> "this character is already recorded as a wizard"
+
+        nomask string delete_wizard(string wizard);
+          deletes an existing wizard from the data structures of the
+          security system.  Neither directory nor any file has been
+          deleted by this call.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - The given name is not a name of an existing wizard.
+            ==> "referring to non-existing wizard"
+
+        nomask string create_admin(string wizard);
+          promotes an existing wizard to an admin member.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - The given name is not a name of an existing wizard.
+            ==> "referring to non-existing wizard"
+
+        nomask string delete_admin(string wizard);
+          demotes an existing admin member to a normal wizard.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - The given name is not a name of an existing wizard.
+            ==> "referring to non-existing wizard"
+
+        private string get_priv_owner(string priv);
+          receives a privilege and returns the name of the wizard or
+          domain from which's privilege the given privilege is
+          derived.  It depends on the fact that derived privileges
+          always add a colon to the original privilege and maybe
+          something more.  Thus, also the system privileges (which
+          start with an @) are handled properly, the return value for
+          such a privilege is itself.
+          If the resulting privilege does not exist, 0 is returned.
+          Example:
+          For "foo:bla" or "foo:" or "foo" this function will
+          return "foo".
+          For "@magic" this function will return "@magic".
+          For "doesntexist:bla" or "doesntexist:" or "doesntexist"
+          this function will return 0.
+
+        nomask string define_privilege(string priv);
+          defines the given privilege as a new one.  If the privilege
+          is a derived one, then the current call must have the
+          privilege this one is derived from (to define "foo:bla" the
+          privilege "foo" is necessary).
+          Otherwise, the first character of the privilege must be a
+          "@" and the privilege must not contain a colon, and the
+          current call must have privilege 1 (admin).
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to define this
+            privilege.
+            ==> "insufficient privilege"
+          - The given privilege identifier is not valid.
+            ==> "invalid privilege identifier"
+          - The given privilege already exists.
+            ==> "attempt to redefine privilege"
+
+        nomask string undefine_privilege(string priv);
+          removes an existing privilege and all privileges derived
+          from it (if there are any).
+          For system privileges (which start with an @) the necessary
+          privilege for this action is 1, for other derived privileges
+          of an area (wizard or domain) the privilege of this area is
+          needed.  To remove the privilege of an area completely (which
+          does make not much sense) the necessary privilege is 1,
+          too.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to remove this
+            privilege.
+            ==> "insufficient privilege"
+          - The given privilege identifier is not valid.
+            ==> "invalid privilege identifier"
+
+        nomask mapping query_privilege_list(string priv);
+          gets a privilege and returns a mapping of all privileges
+          which are derived from the given one (including the
+          privilege itself).  The values of the mapping are arrays of
+          privileges for which it is opened.
+          Example:
+          return query_privilege_list("foo");
+          /* returns ([ "foo:test": ({ "bar","boltar" }),
+           *            "foo:": ({}),
+           *            "foo": ({}) ]).
+           */
+
+        private void assign_deep_copy(string key,mixed priv,
+                                      mapping sub);
+          This is just a helper for deep_copy().
+
+        private mapping deep_copy(mapping m);
+          This function is used to copy a mapping of width 2 which's
+          second values can be mappings of the same type again.  The
+          whole mapping is copied, not just one layer.
+
+        nomask mapping query_access_tree(string path,int write);
+          gets a path to a directory (not to a file in this
+          directory!) and a flag whether writing or reading is
+          attempted.  The return value will be a mapping (width 2)
+          which's only key will be the last element of the given
+          path.  The first value will be the protection level of this
+          directory and the second value will be a mapping of all
+          subdirectories and their protection levels.
+          If the given directory is the root directory, (a copy of)
+          either read_access or write_access is returned.
+
+        nomask string add_compatible(mixed *priv);
+          gets an array of areas (wizards and domains) which are
+          marked as old compatible areas by this call.  Only admin
+          members may mark areas as compatible.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to do admin stuff.
+            ==> "insufficient privilege"
+          - One of the given areas does not exist.
+            ==> "invalid privilege identifier"
+
+        nomask string remove_compatible(mixed *priv);
+          gets an array of areas (wizards and domains) which are
+          already marked as old compatible areas.  The call will remove
+          this mark.
+
+        nomask string extend_access(string priv,string add);
+          opens privilege 'priv' for privilege 'add'.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to open this privilege
+            for another privilege.
+            ==> "insufficient privilege"
+          - One of the given privileges does not exist.
+            ==> "invalid privilege identifier"
+          Example:
+          extend_access("foo:test","bar");
+          /* opens the privilege "foo:test" for the privilege "bar"
+           */
+
+        nomask string restrict_access(string priv,string remove);
+          closes a privilege 'priv' for the privilege 'remove' for
+          which it had been opened before.
+          Normally, 0 is returned.  If an error occurred, a string
+          describing the problem is returned.  Errors can be one of
+          those:
+          - The current call is not privileged to close this privilege
+            for another privilege.
+            ==> "insufficient privilege"
+          - One of the given privileges does not exist or 'priv' ihas
+            not been opened for 'remove' yet.
+            ==> "invalid privilege identifier"
+
+        nomask int query_is_wizard(string name);
+          returns for the given name whether a wizard of that name
+          exists or not.  If the wizard is an admin member, the return
+          value will be 2.
+
+        nomask int query_is_admin(string name);
+          returns for the given name whether an admin member with that
+          name exists.
+
+        nomask string *query_admins();
+          returns an array of all admin members.
+
+        nomask int query_is_domain(string name);
+          returns for the (lower_cased) name whether there is a domain
+          with this name or not.
+
+        nomask string *query_domain_members(string domain);
+          returns an array of all members of the given domain or 0 if
+          there is no such domain.
+
+        nomask string *query_domain_lords(string domain);
+          returns an array of all lords of the given domain or 0 if
+          there is no such domain.
+
+        nomask varargs string *query_domains(string wizard);
+          returns an array to all (lower_cased) domains the given
+          wizard is in or 0 if there is no such wizard.
+
+        nomask int valid_privilege(mixed p);
+          returns whether the given privilege name is a valid name for
+          a privilege or not.
+
+        nomask int higher_privilege(mixed a,mixed b);
+          returns whether privilege 'a' is higher than privilege
+          'b'.  If privilege 'b' is opened for 'a' or if 'b' is derived
+          from 'a' then 1 is returned.
+          If the two privileges do not have an order (e.g. "foo" and
+          "bar" for which you cannot say that one is higher than the
+          other) then 0 is returned.
+
+        nomask mixed reduced_privilege(mixed priv,mixed max);
+          If privilege 'max' is higher than privilege 'priv'
+          (according to higher_privilege()) then 'priv' is returned,
+          'max' otherwise.
+
+nomask mixed call_unguarded(closure code,mixed args,mixed *handle);
+private nomask int access_failure(int depth,object where,mixed priv);
+nomask string *query_access_history();
+nomask varargs int check_privilege(mixed prot,int ignore);

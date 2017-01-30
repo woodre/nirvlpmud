@@ -1,0 +1,16 @@
+#include <ansi.h>
+#include "defs.h"
+
+status main(string str, int glevel) {
+   object target;
+   
+   me = this_player()->query_real_name();
+
+     if(restore_object("players/angel/masons/BANISHED/"+me)) {
+       write("You have been banished from the Guild.\n");
+       write("If you wish to re-enter you must petition a Guildmaster.\n");
+       destruct(this_object());
+       return 1;
+     }
+     return 1;
+}

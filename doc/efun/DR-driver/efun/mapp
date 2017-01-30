@@ -1,0 +1,9 @@
+SYNOPSIS
+	int mapp(mixed arg)
+
+DESCRIPTION
+	Return 1 if the argument is a mapping, or 0 if it is not.
+
+SEE ALSO
+	intp(E), stringp(E), objectp(E), pointerp(E),
+	allocate_mapping(E), keys(E), deletem(E), sizeof(E)

@@ -1,0 +1,41 @@
+
+ 
+Ok I've written this stuff a few times, and reading it back each time
+didn't like it or thought it could be mis-read. So here I go again.
+
+1) Stark, please read the code policy more carefully. It is what has
+been practiced here forever, no surprises. As it states, the wishes
+of the wizard will be followed as well as can be. However there are
+reasons for the good of  the game, the good of all, that just ripping 
+code out willy-nilly simply cannot be. Just as I can't remove my designs
+from my former employer, just as I cannot rip out pieces of play 
+ground I helped build as volunteer, one could say a wizard cannot just
+yank code once it's here. To expect me to purge it from all archives
+is just nuts. Once here, we get, nirvana lpmud get to use the code. At 
+least I have ethics about it and try to meet the wishes of the wizards
+who wrote it.
+ 
+Reflex is using my code, code I said couldn't be used for that purpose.
+Not only is he breaking my wishes. I didn't even put the code on his 
+mud for use in the first place!  Or should I just think the elof resource
+minimization code got in there by random chance, amung countless
+other things? 
+
+My other note explains how I feel regarding starting a mud, etc and
+I will keep the repeat deleted.
+ 
+Attribs, well well... Illarion suggested an expanision of our attrib 
+system. I made my thoughts known and the result is what we put in. 
+However, I am interested to know how it could end up 'just like reflex's
+mud' Because the base source lp2.4.* has very little with regards to
+attribs in it. Mostly declares the var's and some other simple set 
+up. I wrote the implementation for nirvana. If Reflex and company started
+from base sources there is no way their system would be like the 
+one we have. No way at all. The expansion was minor, a 50% increase
+in range, 2 more attribs, and a level raising system to prevent 
+people from using the full 30 right off.  There's no way something 
+independently developed could match the nirvana system, or our tweak
+cause it to match someone else's unless of course that some else's 
+used the same parent code, the code I wrote in the early 90s for 
+nirvana. If they wrote it from lars stock, then well it shouldn't
+bare any resemblance to nirvana.

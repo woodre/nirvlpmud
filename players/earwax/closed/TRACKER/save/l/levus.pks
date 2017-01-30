@@ -1,0 +1,5 @@
+08/ 1/04 23:19: Thomas      ((19+11 /Dervish)      20(2/1)
+04/24/05 17:02: Valerie     ((19+4  /Cyberninja)   22(2/1)
+04/24/05 18:43: Vahiti      ((19+3  /Dervish)      21(2/1)
+06/12/05 00:04: Vahiti      ((19+18 /Dervish)      19(3/1)
+06/12/05 15:42: Morpheus    ((19+9  /Shardak)      20(2/1)

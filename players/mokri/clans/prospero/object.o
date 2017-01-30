@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1;30mGrimoire[0m of [1;37mHoeth[0m (held)[0m"
+long_desc "A well-worn tome that has been studied by mages and healers throughout the ages,and has helped some of the greatest understand the inner workings of the realm ofmagic.  It glows softly with an inner light.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "grimoire"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A well-worn tome that has been studied by mages and healers throughout the ages,and has helped some of the greatest understand the inner workings of the realm ofmagic.  It glows softly with an inner light.[0mType 'clan_help' for commands."
+clan_short "A [1;30mGrimoire[0m of [1;37mHoeth[0m (held)[0m"
+damage_type "mental"
+hall_path "/players/mistress/path/cove"
+object_name "grimoire"
+owner "mortarion"
+spell_alias "psyblast"
+spell_mess_me "You concentrate your %hi cyan%mental%normal% energies and unleash a savage %hi white%bolt%normal% at%AKN%!"
+spell_mess_room "%TPN% stares at %AKN%, and unleashes a %hi white%psychic blast%normal% directly into %AKP_POS% mind!"
+spell_mess_them "%TPN% stares at you, and unleashes a %hi white%psychic blast%normal% directly into your mind!"
+abilities ({})
+chan_history ({"[Thu Apr 10 00:02:27 2014] Feyth: .","[Thu Apr 10 00:02:33 2014] Feyth: .","[Thu Apr 10 00:02:33 2014] Feyth: .","[Thu Apr 10 00:02:33 2014] Feyth: .","[Thu Apr 10 00:02:33 2014] Feyth: .","[Thu Apr 10 00:02:33 2014] Feyth: .","[Thu Apr 10 00:02:33 2014] Feyth: .","[Thu Apr 10 00:02:33 2014] Feyth: .","[Thu Apr 10 00:02:33 2014] Feyth: .","[Thu Apr 10 00:03:03 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:03 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:03 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:03 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:03 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:05 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:05 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:07 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:07 2014] Reptile: asdckljasbgljbhav","[Thu Apr 10 00:03:11 2014] Feyth laughs.","[Thu Apr 10 00:03:15 2014] Reptile: rofl",})
+leaders ({"feyth","blysse",})
+join_type 0
+private_coffer 170000
+public_coffer 0
+spell_delay 5
+spell_id 1
+spell_cost 30
+last_spell_time 1420928219

@@ -1,0 +1,57 @@
+Aralie.c - "Change/remove the story, it reads 'daniel tells you:' "DONE
+           "And remove the set_wc_bonus in reset()" DONE
+           ALSO added a line feed after her tell_object<attacker>
+           ALSO changed her alignment from 600 to 0 -- I decided she 
+                was stupid and well meaning instead of tragic and wonderful
+
+ashawl.c - "need a '.' at the end of the long()" DONE
+
+bkboots.c - Reset to AC1 and made them savable
+
+bwand.c - "I would rather see this as a type, 'club', can that work?"
+          Overtaken by events ... thanks again Mal
+
+erica.c - "Long(): 'She black eyes contain a fire.'" DONE
+          ALSO Changed AC to 17, removed cloak, slightly cleaned up the
+               visual stuff that went with the attacks to be consistent
+               with the wand she wields.  
+          WOULD LIKE to add "magical" to her damage but I'm not sure how -
+                is it do_damage (([damage}),({"other|magical"})) where 
+                damage is an absolute number?  Can it be 30+random(20) ??
+                Does this replace set_spell_damage ?
+fsabre.c - "You have your weapon_hit messages in reverse, they need to go
+           from highest message to worse." DONE
+Aruj.c - As per the rules, all mobs above level 19 must have a 
+         spell attack. Please add one here, even if its smashing 
+         a player with a fist, etc. DONE
+Bart.c - Same as Aruj.c, needs spell attack. DONE
+BlackBeard.c - needs a special attack. Remove wc_bonus in reset() no
+               reason for it. DONE
+bonny.c - long(): firey = fiery, DONE
+          also needs a spell attack. No reason
+          for wc_bonus, remove this in reset().DONE
+din.c - Remove the wc_bonus from reset()
+        NOT USED ... see kheir.c below
+Kheir.c - ditch the wc_bonus.DONE
+          He seems to share a desc with a
+          couple other mobs, is there anything you can add to
+          his desc to make him stand out more?
+          ACTION - Kheir and Din are the same mob ... only Kheir is used.
+          Kheir and Aruj look the same because they are twin
+          brothers ... they appear in the same room at the same
+          time.  I got rid of din.c (an old version of Kheir)
+kidd.c - need a '.' at the end of the long() DONE
+         ALSO added spell damage
+morgan.c - REMOVED wc_bonus, added spell attack
+read.c - REMOVED wc_bonus, added spell attack
+
+
+NOTE:
+Be sure to go through all the mobs and add a spell_attack and messages
+if they are over level 17. DONE .. SEE ABOVE 
+Also, remove the set_wc_bonus from all mobs.  You have a high concentration 
+of ac2 items, misc, ring, amulet, and boots
+and that is too much for a single area to have. Usually an area will
+have a single ac2 item so that ppl will search around for it and then
+have to go elsewhere to get the next piece.
+ACTION ... Removed cloak on erica.  Reset boots to ac1 ... ring remains AC2

@@ -1,0 +1,30 @@
+     Once you have coded in a quest that players must solve to become a member
+of our wiz core, you must do the following things:
+
+First, have a senior wizard go through the quest to make sure that it actually
+works and does the things it's supposed to.  In most cases, I will be the one
+to evaluate the quest and send what I believe to be it's difficulty ratings
+both mental and physical along to Boltar.  When they have been added to
+/obj/quest_pts.c it means your quest is ready to be put into the game.
+
+Second, be sure that at the point that the player actually solves the quest
+he/she actually gets credit for it by including the line:
+	this_player()->set_quest("quest_name");
+
+Lastly, you will need to add some lines of code to your castle in the reset(arg)
+function.  These lines are:
+	if(!present("quest_name",find_object("room/quest_room.c"))) {
+	qob = clone_object("obj/quest_obj");
+	call_other(qob,"set_name","quest_name");
+	call_other(qob,"set_hint","Hint in advance.\n");
+	move_object(qob,"room/quest_room");
+
+It is your responsibility, the coder, to maintain your quest and to keep it
+updated if need be.  Nothing is worse than an old quest that has not seen any
+changes since the day it was coded.  If, in the senior wiz's opinion, your
+quest has gotten stale and easily solved by the players, you will be asked to
+either make changes in it, one of the seniors will make changes in it, or it
+will be removed and replaced.
+
+Congratuations on having contributed a piece toward deciding our new wizards.
+			-Eurale

@@ -1,0 +1,4 @@
+exec "/players/mokri/stuff/paintball/shack"->add_player("mokri","once");
+exec "/players/mokri/stuff/paintball/shack"->get_game_on(1);
+exec "/players/mokri/stuff/paintball/shack"->set_starttime(time());
+exec "/players/mokri/stuff/paintball/shack"->startme();

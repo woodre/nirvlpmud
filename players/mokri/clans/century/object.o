@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;32mCla[0m[1;30mws of[0m[1;32m Des[0m[1;30mpair <[0m[1;32mDark Matter[0m[1;30m> [0m[1;30m([1;32mMerged[1;30m)[0m[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "claws"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;32mCla[0m[1;30mws of[0m[1;32m Des[0m[1;30mpair <[0m[1;32mDark Matter[0m[1;30m> [0m[1;30m([1;32mMerged[1;30m)[0m[0m"
+damage_type 0
+hall_path "/players/arrina/newbie/newbie1a"
+object_name "claws"
+owner "quagmire"
+spell_alias "mender"
+spell_mess_me "You cast as mending web."
+spell_mess_room "%TPN% cast a mending webb that engulfs %AKN%"
+spell_mess_them "Webbing engulfs you mending your wounds."
+abilities ({})
+chan_history ({"[Thu Aug  7 20:43:52 2014] Arthas: ill need to stock up the coffer once I am able to coin decently","[Thu Aug  7 20:44:10 2014] Quagmire: my ba","[Thu Aug  7 20:44:18 2014] Quagmire: my bad, yea its just me in here","[Thu Aug  7 20:44:18 2014] Quagmire: so heh","[Thu Aug  7 20:44:26 2014] Arthas: huh?","[Thu Aug  7 20:44:28 2014] Quagmire: the clan","[Thu Aug  7 20:44:34 2014] Arthas: how is it your bad? its your clan","[Thu Aug  7 20:44:36 2014] Quagmire: im only one in it, well other than u now.","[Thu Aug  7 20:44:47 2014] Quagmire: so i didnt really keep it stocked.","[Thu Aug  7 20:45:15 2014] Arthas: wow 23 rooms","[Thu Aug  7 20:45:58 2014] Quagmire: hehe","[Thu Aug  7 20:46:02 2014] Quagmire: to the east is a portal room","[Thu Aug  7 20:46:08 2014] Quagmire: most of the rooms are locker rooms btw...","[Thu Aug  7 20:46:12 2014] Quagmire: well 90%","[Thu Aug  7 20:46:18 2014] Quagmire: so plenty o storage.","[Thu Aug  7 20:56:44 2014] Quagmire: well aight bro, have fun wait actualy","[Thu Aug  7 20:57:08 2014] Quagmire has promoted Arthas to a clan leader!","[Thu Aug  7 20:57:16 2014] Arthas: heh ty","[Thu Aug  7 20:57:24 2014] Quagmire: now u can customise some stuff lol","[Thu Aug  7 20:57:26 2014] Quagmire bows out",})
+leaders ({"arthas",})
+join_type 2
+private_coffer 13000
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 30
+last_spell_time 1409967685

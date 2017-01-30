@@ -1,0 +1,30 @@
+/players/scathe/cave
+  monk2.c - changed # of /monsters/initiate.c from 5 to 3
+  monk3.c - ""
+  monk9.c - ""
+  monk10.c - ""
+  monk11.c - ""
+  monk4.c - changed # of monk.c from 4 to 2
+  monk5.c - ""
+  monk12.c - ""
+  monk13.c - ""
+  monk14.c - "" from 3 to 1
+  monk6.c - changed # of mmaster.c from 3 to 1  (level 20)
+  monk15.c - ""
+  monk16.c - "" from 3 to 2
+  monk17.c - changed # of elder.c from 2 to 1
+  monk18.c - "" from 2 to 0 (how many elders can there be?)
+ 
+  caved2.c - changed # of /drak.c from 6 to 4
+  caved3.c - "" from 5 to 3
+  caved4.c - changed # of /drak2.c from 5 to 3
+  caved7.c - changed # of /drak3.c from 4 to 3
+ 
+  
+ 
+/players/scathe/monsters
+  mmaster.c - changed aggressive chance from 1/3 to 1/2
+  elder.c - changed wc from 30 to 25 (older),
+            hp from 500 to 600 (still tough as nails)
+            and spell_dam from 20+ran(10) to 20+ran(15)
+  drak7.c - changed lev20 to 21. hp 500 to 600 (very tough monster)

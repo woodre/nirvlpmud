@@ -1,0 +1,92 @@
+#include "/players/quicksilver/666/include/std.h"
+inherit "obj/monster";
+
+/* This provides for an intelligent method of random monster movement. */
+
+int move_chance, moveable;
+string restrict_domain,valid_moves;
+
+set_moveable(i) { moveable=i; }
+set_move_chance(i) { move_chance=i; }
+set_domain(str) { restrict_domain=str; }
+
+query_moveable() { return moveable; }
+query_move_chance() { return move_chance; }
+query_domain() { return restrict_domain; }
+query_valid_moves() { return valid_moves; }
+
+reset(arg) {
+   ::reset(arg);
+   if(!moveable) { return 1; }
+   if(!arg) {
+      call_out("move_me",5);
+      return 1;
+   } else {
+      remove_call_out("move_me");
+      call_out("move_me",5);
+      return 1;
+   }
+
+}
+
+init() { ::init(); }
+
+create_valid_movement_list() {
+   
+   return 1;
+}
+
+move_me() {
+   int i, tmp;
+   string dirs,tmpstr;
+   object roomob;
+
+   tell_object(find_player("quicksilver"), "entering move_me\n");
+   if(ENVTO) {
+      tell_object(find_player("quicksilver"), "found environment: "+file_name(ENVTO)+"\n");
+      dirs=ENVTO->query_dest_dir();
+      if(dirs) tell_object(find_player("quicksilver"), "found exits\n");
+      valid_moves=0;
+      if(restrict_domain) {
+         tell_object(find_player("quicksilver"), "creating valid_moves [restricted]\n");
+         for(i=1; i<sizeof(dirs); i+=2) {
+            /* roomob=find_object(dirs[i]); */
+            if(objectp(dirs[i-1])) tmpstr=file_name(dirs[i-1]);
+            else tmpstr=dirs[i-1];
+            tell_object(find_player("quicksilver"), "creating valid_moves [restricted]\n");
+            if(sscanf(tmpstr,restrict_domain+"%s",tmpstr))
+               if(valid_moves)
+                  valid_moves+=({dirs[i]});
+               else
+                  valid_moves=({dirs[i]});
+         }
+      } else { 
+         tell_object(find_player("quicksilver"), "creating valid_moves\n");
+         for(i=1; i<sizeof(dirs); i+=2) {
+            /* roomob=find_object(dirs[i]);
+            if(roomob->query_dest_dir()) */
+               if(valid_moves)
+                  valid_moves+=({dirs[i]});
+               else
+                  valid_moves=({dirs[i]});
+         }
+      }   
+      if(!valid_moves) {
+         tell_object(find_player("quicksilver"), "empty valid_moves, exiting\n");
+         moveable=0;
+         remove_call_out("move_me");
+         return 1;
+      }
+      tell_object(find_player("quicksilver"), "printing moves\n");
+      for(i=0; i<sizeof(valid_moves); i++) tell_object(find_player("quicksilver"), "valid_moves["+i+"] = "+valid_moves[i]+"\n");
+      if(random(100)<move_chance) {
+         tmp=member_array(valid_moves[random(sizeof(valid_moves))], dirs)-1;
+         say(capitalize(name)+" "+msgout+" "+dirs[(tmp+1)]+".\n");
+         move_object(this_object(), dirs[tmp]); 
+         say(capitalize(name)+" "+msgin+".\n");
+      }
+   } else remove_call_out("move_me");
+   tell_object(find_player("quicksilver"), "end\n");
+   call_out("move_me",5);
+   return 1;
+}

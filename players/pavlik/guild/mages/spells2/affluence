@@ -1,0 +1,43 @@
+/*
+ * This simple spell tells the player the creator of an object.
+ */
+
+affluence(str) {
+  object obj;
+  string name, who;
+  string junk, junk2;
+
+  if(!tp->query_guild_rank()) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(!str) obj = env;
+  else obj = present(str, tp);
+  if(!obj) obj = present(str, env);
+
+  if(!str) tell_room(env,
+  ME+" studies his surroundings very carefully.\n");
+  else tell_room(env,
+  ME+" studies a "+str+" very carefully.\n");
+
+  if(!obj) {
+    write("There is no "+capitalize(str)+" here.\n");
+    return 1;
+  }
+
+  name = object_name(obj);
+  if(tp->query_level() > 19) write("Filename: "+name+"\n");
+
+  sscanf(name, "players/%s/%s", who, junk);
+
+  if(!who) {
+    write("You are unable to determine any information.\n");
+    return 1;
+  }
+
+  if(!str) write("This room was created by "+capitalize(who)+".\n");
+  else write(obj->short()+" was created by "+capitalize(who)+".\n");
+  return 1;
+}
+

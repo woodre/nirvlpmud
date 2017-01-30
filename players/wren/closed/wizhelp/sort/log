@@ -1,0 +1,25 @@
+**************
+
+
+                     Log
+
+Syntax:    log <>
+
+Desc:
+           This command displays a particular log file. Without an
+           arguement it returns a wizards default log. Error messages
+           from objects malfunctioning and failed clone attempts are 
+           kept here temporarily.
+
+Warning:   None, displays errors.
+
+Example:   log bob
+                  results 
+           read bob's log and displays errors returned by objects in
+           his directory.
+
+
+Related:   rlog
+
+
+**************

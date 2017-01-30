@@ -1,0 +1,25 @@
+                          Chronomancer's Guild
+Command            Description                                Cost    GLvl
+---------------------------------------------------------------------------
+new .............. Gets you a new copy of the band.            0 sp    10
+ht ............... Tell the others something.                  0 sp    10
+he ............... Emote to other guild members.               0 sp    10
+hw ............... See which guild members are online.         0 sp    10
+hts .............. Puts on your Chrono-muffles.                0 sp    10
+burn <target> .... Burn your <target> with magic!             lvl*5 sp 10
+untonic <X>....... It's the opposite of tonic.  It moves      X*2 hp   10
+                   HP's over to SP's.
+golem ............ Whip up a Golem.                           150 sp   11
+see <direction> .. Lets you look into an adjacent room         15 sp   11
+quake ............ Causes an earthquake in your room.          50 sp   12
+break <taget> .... Throw some water on a taget, freeze it, and
+                   break the ice.                              6*lvl   13
+form <type> ...... You form different objects.  Type can               
+                   be any of the following:
+                   sword  wc 10                                55 sp   12
+                   axe    wc 13                                75 sp   13
+                   plate  ac 4                                100 sp   14
+lightning <target>
+                   Cast a lightning bolt at your taget         50 sp   14
+poison <target> .. This poisons your target.  It lasts for a
+                   while and is very lethal.                  10*lvl   15

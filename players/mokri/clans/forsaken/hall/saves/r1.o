@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/forsaken/hall/main","north","/players/mokri/clans/forsaken/hall/r4","east","/players/mokri/clans/forsaken/hall/r5","west","/players/mokri/clans/forsaken/hall/r6","south",})
+short_desc "[1;30mHall of the [1;31mForsaken [1;30mArmory[0m[0m"
+long_desc "[1;30mHall of the [1;31mForsaken [1;30mArmory[0m[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A [1;37mcrystal[0;0m ring with a [1m[1mblack[0;0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"[1;33mAmulet [0mof [1;33mLightning[0m","/players/jaraxle/cont/bdragon/amulet",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,0,0,"[1;37mMisty Cloak[0m","/players/jaraxle/3rd/pyramid/items/myst_cloak",0,0,0,"[35mBreath[1;37m of[0;0m[35m Souls[0;0m","/players/jaraxle/3rd/alt/items/mana_orb",0,0,0,"[1m[30mBlack Ninja Suit[0;0m (invis)","/players/dragnar/WasteLands/armor/suit",0,0,0,"[1;37mPlatinum Ring[0m of [1;30m[[1;37mIllusion[0m[1;30m][0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageRing9",0,0,0,"[1;37mPlatinum Cloak[0m of [1;30m[[1;37mIllusion[0m[1;30m][0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageCloak",0,0,0,"[1;37mPlatinum Chest[0m of [1;30m[[1;37mIllusion[0m[1;30m][0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageChest",0,0,0,"[1;33mShock, [1;34mlightning sword[0m of Orlanth Thunderous","/players/jareel/weapons/orlanth/fiona_sword",0,968,733,})

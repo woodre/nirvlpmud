@@ -1,0 +1,154 @@
+a
+
+Path: 
+                      nntp.cig.mot.com!newshost.mot.com!newsgate.mot.com!news.xnet.com!iad-peer.news.verio.net!nuq-peer.news.verio.net!logbridge.uoregon.edu!news.cc.ukans.edu!srvr1.engin.umich.edu!news.tc.cornell.edu!newsstand.cit.cornell.edu!usenet
+                From: 
+                      "NT(eX)" <sk68@cornell.edu>
+          Newsgroups: 
+                      comp.sys.next.sysadmin, comp.sys.next.hardware
+              Subject: 
+                      Re: Woohoo it worked!
+                Date: 
+                      29 Jun 1999 20:59:01 GMT
+         Organization: 
+                      Cornell University
+                Lines: 
+                      121
+               Sender: 
+                      sk68@cornell.edu (Verified)
+         Message-ID: 
+                      <01bec272$9eddf840$06ac2ac0@dana6nt>
+          References: 
+                      <7la554$c0b@dfw-ixnews16.ix.netcom.com> <e7cfcc1949.trill@netbook.demon.co.uk> <7lb99g$dg@dfw-ixnews16.ix.netcom.com>
+ NNTP-Posting-Host: 
+                      l0060.dialup.cornell.edu
+       X-Newsreader: 
+                      Microsoft Internet News 4.70.1161
+                 Xref: 
+                      nntp.cig.mot.com comp.sys.next.sysadmin:1542 comp.sys.next.hardware:1896
+
+
+
+
+This is straight out of N&SA book, so I claim mistakes (which will occur)
+only to my bad touch typing skills :)  I paid special attention to the
+correctness of the commands, though.
+
+First check if everything is "good" in the ROM monitor setup:
+
+pg.218 ....
+
+You can access the ROM monitor in several way:
+
+- When the system is first turned on, hold down the Command bar and press
+the ~ key (without pressing Shift ) IMMEDIATELY after the "Testing System"
+message is replaced by the "Loading from disk" message. (On keyboards with
+two Command keys, hold down the right Command key and press the ~ key.) The
+ROM monitor window is displayed containing the prompt "NeXT>".
+
+Note: If you're a little slow and the Restart/Power-Off panel appears
+instead, press the Power key and try again.  (Personal remark: given the
+fact the on/off transitions are not good to our black soldiers, I would
+just say no and continue to boot process, because, read on...)
+
+- When the system is running, you can access the ROM monitor through the
+NMI mini-monitor (described later).  Access the NMI mini-monitor by
+pressing the ~ key (without pressing Shift) while holding down the Command
+bar (hold down both Command keys on keyboards that have two).  When you see
+the "nmi>" prompt, type hald at the prompt.  The halt command attempts to
+shut the system down gracefully, saving all files to disk. It should then
+display the prompt "NeXT>".
+
+Now inspect system startup parameters by typing p (in lowercase) at the
+"NeXT>" prompt.  All parameters are stored in nonvolatile RAM and will
+survice if the power is turned off.  (Personal remark: since you took the
+battery out, these parameters could have changed--probably why the OD boot
+has switched to Ethernet boot)
+
+When you type p, the ROM monitor begins an interactive session that prompts
+you for a value for each parameter.  If you respond by pressing Return, the
+parameters remains at the current value.
+
+(Personal remark:  Hardware password, I assume by your post, is not a
+problem any longer.)
+
+Example:
+
+p
+boot command: od? sd                   (Make the SCSI drive the default boot
+device.)
+DRAM tests: yes?                       (Empty means you press Return)
+perform power-on system test: yes?
+        sound out tests: no? yes        (Enable boot sound tests)
+        SCSI tests: no?
+        loop until keypress: no?
+        verbose test mode: no?
+boot extended diagnostics: no?
+serial port A is alternate console: no?
+allow any ROM command even if password protected: no?
+allows boot from any device even if password protected: no?
+allow optical drive #0 eject even if password protected: no?
+enable parity checking if parity memory is present: no?
+
+After this, the system kicks you back to the "NeXT>" prompt.  Type c to
+continue execution, r to reboot, or h to halt system.
+
+(Personal remark, the loop until keypress, extended diagnostics and serial
+port A as alternate console are best left at no, since they are for more
+sophisticated troubleshooting.  I usually say yes to "verbose test mode"
+the first time after I change something because it gives you on-screen
+display of all boot processes, which might be helpful.)
+
+Just for finals, startup parameters in my NeXTstation reads:
+
+NeXT>p
+boot command: sd()sdmach                (Just works for me...:)
+DRAM tests: yes
+perform power-on test: yes
+        sound out tests: yes
+        SCSI tests: yes
+        loop until keypress: no
+        verbose test mode: yes
+seral port A is alternate console: no
+allow any ROM command even if password protected: yes
+allow boot from any device even if password protected: yes
+allow optical drive #0 eject even if password protected: yes
+enable parity checking if parity memory is present: yes
+NeXT>
+
+The password protection features depend on your situation.  I live alone
+and my computer is all mine :), so I don't need them.  YMMV.
+
+If these settings don't work (they should, though), read on, just for
+reference...
+
+
+#How to set boot device#
+
+pg.223 ....
+
+You can press any key to stop booting from the Ethernet.  To stop booting
+from any other device, hold down the Command bar and press the ~ key
+(without pressing Shift).  On keyboards with two Command keys, hold down
+the right one and press the ~ key.
+
+Here are some example boot commands:
+
+b                       Boot from the default boot device.
+bsd                     Boot from the SCSI disk.
+ben                     Boot from the Ethernet.
+bod test                        Boot test from the optical disk.
+bfd -s                  Boot in single-use mode from the internal floppy disk.
+ben mach -as            Boot mach in single-user mode from the network, and
+prompt
+for the root device.
+bsd(1,0,0)              Boot from the second SCSI disk
+bod - rootdev=sd0       Boot, taking the kernel from the optical disk, then use
+sd0                     as the source for the root device.  The "-" is required if
+the             
+kernel name is not given.
+
+So, in your case, try bsd, or bsd(1,0,0).
+
+I hope this helped.
+

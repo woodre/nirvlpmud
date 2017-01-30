@@ -1,0 +1,6 @@
+Vertebraker [8.25.2003]
+
+If you don't want your areas to allow any kind of
+PK fighting, put a function:
+
+query_no_pk() { return 1; }

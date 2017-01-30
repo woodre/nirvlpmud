@@ -1,0 +1,20 @@
+The CyberNinja guild ac works according to Martial Art Level.
+The function is: ac = random(artlevel/2) + 1
+The maximum artlevel = 16.
+This ac function is called on a call_out of 5 during combat
+so it is continually shifting.
+I am considering an enhancement for the guild which will add 1
+to guild ac.
+Without the enhancement, player ac would be randomly 1-8.
+With the enhancement, ac would be 2-9.
+CyberNinja guild ac makes armor of any sort useless. Therefore,
+their average ac of 5.5 with maxed guild level and enhancement
+is more of a drawback for any serious fighting than a bonus.
+Considering that maximum artlevel costs at least 2 million xp
+and below that ac is lower according to the formula, this is
+a rather severe drawback and guild ac is something that
+no player interested in max combat effectiveness would choose
+to have.  -Snow
+
+See /players/snow/closed/cyber/AC_STATS for an Artlevel breakdown.
+

@@ -1,0 +1,46 @@
+From: sparrow
+ Re:   Stuff i have been working on which may be useful to others
+Cc: (To: mizan) vertebraker,boltar,vertebraker,illarion,fred,rumplemintz,mizan,star,sparrow,angel
+Date: Feb 23 01:33
+
+Thanks Miz, 
+I've been looking it over and I dig it. Just a note of something  
+that I've been wanting to do: Encounters. I've talked to Miz and 
+Verte about it and I think it is very promising. Right now it 
+is still in the planning stages but with Verte on board it should 
+be moving forward rather soon. 
+Here is the quick and dirty: 
+Instead of cloning a monster, the room will load an encounter 
+based on the level of the party leader. An encounter master 
+daemon will be cloned to run the encounter, moving the party 
+to a 5x5 room arena. The master will then build a list of 
+npc's and distribute them throughout the arena. The daemon 
+will keep track of the locations of the npcs as well as the 
+players. The room long descriptions will actually request 
+locations of the npc/player parties and display a map showing 
+the location of each npc/party member. Npc's will be tagged 
+with different roles such as Tank, Caster, Support and Ranged. 
+A seperate daemon will take care of AI for the different  
+roles. Tanks will charge into battle, supports will buff 
+and heal npcs, casters will cast spells (duh) and ranged 
+will rain down projectiles as long as they are not engaged 
+by the player party members. Also, players with ranged 
+type weapons will be able to enter the same 'RANGED MODE' 
+which will allow them to target a npc on the map and 
+deal damage (albeit minimal) each round as long as they 
+are not engaged directly. Experience will be handed out 
+once the encounter is completed (no exp if the party 
+flees) and treasure will be generated as well. 
+I know this is very ambitious but I definately know 
+it is within our ability. 
+Ideally I think we should build it in a way that any 
+wiz can use it, and customize it to his/her tastes with 
+some sort of config file. 
+ 
+Like I said this is just in the planning stages but I  
+would like to get as much input on it as possible. 
+I think this would help with the issue of players grinding 
+in the same areas, for the same gear, and I've never seen 
+this type of system on any other mud. 
+Sparrow, the Scatter-brained Idea Machine 
+

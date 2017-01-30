@@ -1,0 +1,28 @@
+*******************************************************************
+
+Name:    attrib (Attributes)   
+
+Desc:    Will allow you to see a players attributes as they see
+         them.    
+
+Level:   21   
+
+Warning: Do not reveal this information to players
+
+Syntax:  attrib <player>
+
+Example: attrib laramie  
+Result:  
+        You look at Laramie's attributes through his eyes...
+
+Your attributes are:
+Charisma:       26      Dexterity:      19
+Intelligence:   21      Luck:           15
+Magic Aptitude: 22      Piety:          20
+Stamina:        26      Stealth:        20
+Strength:       29      Will Power:     15
+
+
+Related: stat
+
+*******************************************************************

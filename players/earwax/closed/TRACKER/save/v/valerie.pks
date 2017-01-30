@@ -1,0 +1,7 @@
+08/17/04 22:03: Vizjerei    ((19    /Black circle) 16(4/1)
+08/18/04 00:42: Mantis      ((19+67 /Necromancer)  25(2/1)
+08/18/04 00:48: Mantis      ((19+65 /Necromancer)  24(3/1)
+08/18/04 21:43: Rage        (len bigger than field 21(1/1)
+08/24/04 00:13: Usagi       ((19+41 /Dark Order)   26(2/1)
+10/16/04 20:55: Sticks      ((19+17 /Vampire)      23(1/1)
+04/24/05 00:25: Sticks      ((19+16 /Vampire)      24(1/1)

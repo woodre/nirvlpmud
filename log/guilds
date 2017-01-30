@@ -1,0 +1,430 @@
+players/guilds/dopplegangers/obj/dopp_pet.c line 195: function not defined by inheritance as specified
+players/guilds/dopplegangers/obj/bed.c line 94: Inconsistent declaration of 'start_healing': Return type mismatch (int vs void)
+players/guilds/dopplegangers/obj/bed.c line 19: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bed.c line 94: Inconsistent declaration of 'start_healing': Return type mismatch (int vs void)
+players/guilds/dopplegangers/obj/bed.c line 19: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bed.c line 94: Inconsistent declaration of 'start_healing': Return type mismatch (int vs void)
+players/guilds/dopplegangers/obj/bed.c line 19: casting a value to its own type: int
+players/guilds/dopplegangers/obj/bed.c line 19: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bed.c line 94: Inconsistent declaration of 'start_healing': Return type mismatch (int vs void)
+players/guilds/fallen/circle.c line 311: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bed.c line 19: casting a value to its own type: int
+players/guilds/dopplegangers/obj/bed.c line 19: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bed.c line 94: Inconsistent declaration of 'start_healing': Return type mismatch (int vs void)
+players/guilds/fallen/OBJ/chan_obj.c line 7: Illegal to redefine inherited variable 'name'
+players/guilds/fallen/OBJ/chan_obj.c line 7: Illegal to redefine inherited variable 'name'
+players/guilds/dopplegangers/obj/bed.c line 26: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bed.c line 102: Inconsistent declaration of 'start_healing': Return type mismatch (int vs void)
+players/guilds/dopplegangers/obj/bed.c line 26: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bed.c line 102: Inconsistent declaration of 'start_healing': Return type mismatch (int vs void)
+players/guilds/dopplegangers/obj/bed.c line 26: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bed.c line 102: Inconsistent declaration of 'start_healing': Return type mismatch (int vs void)
+players/guilds/dopplegangers/obj/bed.c line 108: casting a value to its own type: int
+players/guilds/dopplegangers/obj/bag.c line 4: Missing 'return <value>' statement
+players/guilds/dopplegangers/obj/bag.c line 31: Missing 'return <value>' statement
+players/guilds/fallen/circle.c line 311: Missing 'return <value>' statement
+players/guilds/bards/bard_lib/std/base.c line 86: Missing 'return <value>' statement
+players/guilds/bards/bard_lib/std/random/atmos.c line 15: Missing 'return <value>' statement
+players/guilds/bards/bard_lib/std/random/atmos.c line 96: Undefined function 'copy_mapping'
+players/guilds/bards/bard_lib/std/random/atmos.c line 97: Function copy_mapping undefined
+players/guilds/bards/bard_lib/std/random/atmos.c line 97: Wrong number of arguments to copy_mapping: expected 0, got 1
+players/guilds/bards/bard_lib/std/random/atmos.c line 97: Bad assignment (mixed vs unknown)
+players/guilds/bards/bard_lib/std/random/atmos.c line 98: Function copy_mapping undefined
+players/guilds/bards/bard_lib/std/random/atmos.c line 98: Wrong number of arguments to copy_mapping: expected 0, got 1
+Mon Mar 16 17:29:22 2015: players/guilds/healers/gob.c line 248:syntax error
+Mon Mar 16 17:29:22 2015: players/guilds/healers/gob.c line 249:Illegal LHS
+Mon Mar 16 17:40:20 2015: players/guilds/healers/gob.c line 242:syntax error
+Mon Mar 16 17:40:20 2015: players/guilds/healers/gob.c line 243:syntax error
+Mon Mar 16 17:40:20 2015: players/guilds/healers/gob.c line 244:Illegal LHS
+Wed Apr 29 07:35:12 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:Bad argument 1 type to efun environment()
+Wed Apr 29 07:48:37 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:== always false because of different types: "unknown "
+Wed Apr 29 07:48:37 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:                               compared to: "string "
+Wed Apr 29 08:50:13 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:Variable this_object not declared !
+Wed Apr 29 08:50:13 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:Too few arguments to tell_object
+Wed Apr 29 08:50:13 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:syntax error
+Wed Apr 29 08:50:49 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:Variable this_object not declared !
+Wed Apr 29 08:55:15 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:== always false because of different types: "unknown "
+Wed Apr 29 08:55:15 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 159:                               compared to: "string "
+Wed Apr 29 09:20:25 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 171:syntax error
+Wed Apr 29 09:20:25 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 179:Illegal LHS
+Wed Apr 29 09:20:25 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 180:Illegal LHS
+Wed Apr 29 09:20:25 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 180:syntax error
+Wed Apr 29 09:20:25 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 181:Illegal LHS
+Wed Apr 29 09:20:25 2015: players/guilds/Rangers/Communicator/RangerWeapon.c line 181:syntax error
+Wed Apr 29 09:40:10 2015: players/guilds/Rangers/Commands/Zord.c line 177:Variable retype not declared !
+Mon Jul 13 12:48:21 2015: players/guilds/dervish/lib/scatter.c line 14:syntax error
+Mon Jul 13 12:48:21 2015: players/guilds/dervish/lib/scatter.c line 16:Illegal LHS
+Mon Jul 13 12:48:21 2015: players/guilds/dervish/lib/scatter.c line 21:Illegal LHS
+Mon Jul 13 12:48:21 2015: players/guilds/dervish/lib/scatter.c line 21:syntax error
+Wed Jul 15 10:25:59 2015: players/guilds/dervish/lib/sandblast.c line 72:syntax error
+Wed Jul 15 10:25:59 2015: players/guilds/dervish/lib/sandblast.c line 72:Illegal LHS
+Wed Jul 15 10:26:31 2015: players/guilds/dervish/lib/sandblast.c line 72:Bad assignment. Rhs: "unknown "
+Wed Jul 15 10:28:41 2015: players/guilds/dervish/lib/sandblast.c line 72:Bad argument number 1 to '/': "unknown "
+Wed Jul 15 10:28:41 2015: players/guilds/dervish/lib/sandblast.c line 72:Casts are only legal for type mixed, or when unknown: "int "
+Wed Jul 15 10:46:12 2015: players/guilds/dervish/lib/sandblast.c line 11:Bad argument number 1 to '/': "unknown "
+Wed Jul 15 10:46:12 2015: players/guilds/dervish/lib/sandblast.c line 74:syntax error
+Wed Jul 15 10:46:12 2015: players/guilds/dervish/lib/sandblast.c line 75:Illegal LHS
+Wed Jul 15 10:47:24 2015: players/guilds/dervish/lib/sandblast.c line 11:Bad argument number 1 to '/': "unknown "
+Wed Jul 15 10:49:04 2015: players/guilds/dervish/lib/sandblast.c line 11:Bad argument number 1 to '/': "unknown "
+Wed Jul 15 10:50:46 2015: players/guilds/dervish/lib/sandblast.c line 11:Bad argument number 1 to '/': "unknown "
+Wed Jul 15 10:50:46 2015: players/guilds/dervish/lib/sandblast.c line 11:Casts are only legal for type mixed, or when unknown: "int "
+Wed Jul 15 10:51:20 2015: players/guilds/dervish/lib/sandblast.c line 11:Bad argument number 1 to '/': "unknown "
+Wed Jul 15 10:51:20 2015: players/guilds/dervish/lib/sandblast.c line 11:Casts are only legal for type mixed, or when unknown: "int "
+Wed Jul 15 19:22:22 2015: players/guilds/Rangers/Commands/Rwear.c line 15:Newline in string
+Wed Jul 15 19:22:22 2015: players/guilds/Rangers/Commands/Rwear.c line 15:syntax error
+Wed Jul 15 19:23:02 2015: players/guilds/Rangers/Commands/Rwear.c line 47:syntax error
+Wed Jul 15 19:23:02 2015: players/guilds/Rangers/Commands/Rwear.c line 48:Illegal LHS
+Wed Jul 15 19:23:02 2015: players/guilds/Rangers/Commands/Rwear.c line 48:syntax error
+Wed Jul 15 19:23:02 2015: players/guilds/Rangers/Commands/Rwear.c line 76:Illegal LHS
+Wed Jul 15 19:23:02 2015: players/guilds/Rangers/Commands/Rwear.c line 76:syntax error
+Wed Jul 15 19:26:29 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:26:29 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:26:29 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:29 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:29 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:29 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:26:53 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:05 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:28:05 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:05 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:05 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:05 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:05 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:28:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:17 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:25 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:35 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:28:35 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:28:35 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:35 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:35 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:28:35 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+Wed Jul 15 19:29:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:syntax error
+Wed Jul 15 19:29:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 2e) '.'
+Wed Jul 15 19:29:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:29:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:29:17 2015: players/guilds/Rangers/Commands/Armor.c line 45:Illegal character (hex 5c) '\'
+Wed Jul 15 19:29:17 2015: players/guilds/Rangers/Commands/Armor.c line 46:Illegal character (hex 2e) '.'
+players/guilds/dervish/objects/sandstorm.c line 41: Variable HIR not declared !
+players/guilds/dervish/objects/sandstorm.c line 41: Variable NORM not declared !
+Thu Jul 16 09:58:45 2015: players/guilds/dervish/lib/sandstorm.c line 46:syntax error
+Thu Jul 16 09:59:31 2015: players/guilds/dervish/lib/sandstorm.c line 46:syntax error
+Thu Jul 16 10:00:53 2015: players/guilds/dervish/lib/sandstorm.c line 46:syntax error
+Thu Jul 16 10:01:05 2015: players/guilds/dervish/lib/sandstorm.c line 46:syntax error
+Thu Jul 16 10:07:08 2015: players/guilds/dervish/objects/sandstorm.c line 43:Illegal character (hex 2e) '.'
+Thu Jul 16 10:07:08 2015: players/guilds/dervish/objects/sandstorm.c line 43:syntax error
+Thu Jul 16 10:07:08 2015: players/guilds/dervish/objects/sandstorm.c line 52:Illegal LHS
+Thu Jul 16 10:07:08 2015: players/guilds/dervish/objects/sandstorm.c line 53:Illegal LHS
+Thu Jul 16 10:07:08 2015: players/guilds/dervish/objects/sandstorm.c line 54:Illegal LHS
+Thu Jul 16 10:07:08 2015: players/guilds/dervish/objects/sandstorm.c line 55:Illegal LHS
+Thu Jul 16 13:33:04 2015: players/guilds/dervish/gob2.c line 172:syntax error
+Thu Jul 16 13:33:04 2015: players/guilds/dervish/gob2.c line 203:syntax error
+Thu Jul 16 13:36:02 2015: players/guilds/dervish/gob2.c line 172:syntax error
+Thu Jul 16 13:36:02 2015: players/guilds/dervish/gob2.c line 203:syntax error
+Thu Jul 16 14:23:41 2015: players/guilds/dervish/gob2.c line 179:syntax error
+Thu Jul 16 14:23:41 2015: players/guilds/dervish/gob2.c line 209:Illegal LHS
+Thu Jul 16 14:23:41 2015: players/guilds/dervish/gob2.c line 218:Illegal LHS
+Thu Jul 16 14:23:41 2015: players/guilds/dervish/gob2.c line 218:syntax error
+Thu Jul 16 14:23:41 2015: players/guilds/dervish/gob2.c line 220:Illegal LHS
+Thu Jul 16 14:23:41 2015: players/guilds/dervish/gob2.c line 220:syntax error
+Thu Jul 16 14:24:19 2015: players/guilds/dervish/gob2.c line 186:syntax error
+Thu Jul 16 14:24:19 2015: players/guilds/dervish/gob2.c line 209:Illegal LHS
+Thu Jul 16 14:24:19 2015: players/guilds/dervish/gob2.c line 218:Illegal LHS
+Thu Jul 16 14:24:19 2015: players/guilds/dervish/gob2.c line 218:syntax error
+Thu Jul 16 14:24:19 2015: players/guilds/dervish/gob2.c line 220:Illegal LHS
+Thu Jul 16 14:24:19 2015: players/guilds/dervish/gob2.c line 220:syntax error
+players/guilds/dervish/lib/offwield.c line 4: #define TP already defined (from players/guilds/dervish/defs.h line 2)
+Wed Aug 12 08:18:58 2015: players/guilds/Jedi/gob.c line 5:Cannot #include lib/variables.h
+
+Wed Aug 12 08:18:58 2015: players/guilds/Jedi/gob.c line 6:Cannot #include lib/sets.h
+
+Wed Aug 12 08:18:58 2015: players/guilds/Jedi/gob.c line 7:Cannot #include lib/reflect.h
+
+Wed Aug 12 08:18:58 2015: players/guilds/Jedi/gob.c line 8:Cannot #include lib/dodge.h
+
+Wed Aug 12 08:18:58 2015: players/guilds/Jedi/gob.c line 9:Cannot #include lib/darkside.h
+
+Wed Aug 12 08:18:58 2015: players/guilds/Jedi/gob.c line 24:Variable offwep not declared !
+Wed Aug 12 13:10:14 2015: players/guilds/Jedi/bin/mon.c line 2:Cannot #include defs.h
+
+Wed Aug 12 13:10:14 2015: players/guilds/Jedi/bin/mon.c line 10:Variable cp not declared !
+Wed Aug 12 13:10:14 2015: players/guilds/Jedi/bin/mon.c line 10:Variable mcp not declared !
+Wed Aug 12 13:10:14 2015: players/guilds/Jedi/bin/mon.c line 11:Variable USER not declared !
+Wed Aug 12 13:10:14 2015: players/guilds/Jedi/bin/mon.c line 12:Variable USER not declared !
+Wed Aug 12 13:10:14 2015: players/guilds/Jedi/bin/mon.c line 13:Variable USER not declared !
+Wed Aug 12 13:10:44 2015: players/guilds/Jedi/bin/mon.c line 2:Cannot #include defs.h
+
+Wed Aug 12 13:10:44 2015: players/guilds/Jedi/bin/mon.c line 10:Variable cp not declared !
+Wed Aug 12 13:10:44 2015: players/guilds/Jedi/bin/mon.c line 10:Variable mcp not declared !
+Wed Aug 12 13:10:44 2015: players/guilds/Jedi/bin/mon.c line 11:Variable USER not declared !
+Wed Aug 12 13:10:44 2015: players/guilds/Jedi/bin/mon.c line 12:Variable USER not declared !
+Wed Aug 12 13:10:44 2015: players/guilds/Jedi/bin/mon.c line 13:Variable USER not declared !
+Wed Aug 12 13:13:32 2015: players/guilds/Jedi/bin/mon.c line 2:Cannot #include defs.h
+
+Wed Aug 12 13:13:32 2015: players/guilds/Jedi/bin/mon.c line 10:Variable cp not declared !
+Wed Aug 12 13:13:32 2015: players/guilds/Jedi/bin/mon.c line 10:Variable mcp not declared !
+Wed Aug 12 13:13:32 2015: players/guilds/Jedi/bin/mon.c line 11:Variable USER not declared !
+Wed Aug 12 13:13:32 2015: players/guilds/Jedi/bin/mon.c line 12:Variable USER not declared !
+Wed Aug 12 13:13:32 2015: players/guilds/Jedi/bin/mon.c line 13:Variable USER not declared !
+Wed Aug 12 13:16:14 2015: players/guilds/Jedi/bin/monitor.c line 1:Cannot #include defs.h
+
+Wed Aug 12 13:16:14 2015: players/guilds/Jedi/bin/monitor.c line 28:Variable USER not declared !
+Wed Aug 12 13:16:14 2015: players/guilds/Jedi/bin/monitor.c line 31:Variable USER not declared !
+Wed Aug 12 13:26:14 2015: players/guilds/Jedi/bin/summon.c line 9:Variable OBJDIR not declared !
+Wed Aug 12 13:34:33 2015: players/guilds/Jedi/bin/summon.c line 11:Variable OBJDIR not declared !
+Wed Aug 12 13:35:15 2015: players/guilds/Jedi/bin/summon.c line 11:Variable OBJDIR not declared !
+Wed Aug 12 13:36:41 2015: players/guilds/Jedi/bin/spells/strike.c line 1:Cannot #include defs.h
+
+Wed Aug 12 13:36:41 2015: players/guilds/Jedi/bin/spells/strike.c line 2:syntax error
+Wed Aug 12 13:37:29 2015: players/guilds/Jedi/bin/spells/strike.c line 4:Cannot #include dir.h
+
+Wed Aug 12 13:37:29 2015: players/guilds/Jedi/bin/spells/strike.c line 39:Variable PO not declared !
+Wed Aug 12 13:37:29 2015: players/guilds/Jedi/bin/spells/strike.c line 51:Variable SKILL not declared !
+Wed Aug 12 13:37:29 2015: players/guilds/Jedi/bin/spells/strike.c line 60:Variable ATTN not declared !
+Wed Aug 12 13:37:29 2015: players/guilds/Jedi/bin/spells/strike.c line 66:Variable ATTN not declared !
+Wed Aug 12 13:56:45 2015: players/guilds/Jedi/bin/spells/strike.c line 4:Cannot #include dir.h
+
+Wed Aug 12 13:56:45 2015: players/guilds/Jedi/bin/spells/strike.c line 26:syntax error
+Wed Aug 12 13:59:25 2015: players/guilds/Jedi/bin/spells/strike.c line 4:Cannot #include dir.h
+
+Wed Aug 12 13:59:25 2015: players/guilds/Jedi/bin/spells/strike.c line 26:syntax error
+Wed Aug 12 14:00:15 2015: players/guilds/Jedi/bin/spells/strike.c line 4:Cannot #include dir.h
+
+Wed Aug 12 14:00:47 2015: players/guilds/Jedi/bin/spells/strike.c line 4:Cannot #include dir.h
+
+Wed Aug 12 14:00:47 2015: players/guilds/Jedi/bin/spells/strike.c line 26:syntax error
+Wed Aug 12 14:09:01 2015: players/guilds/Jedi/daemons/actions.c line 27:Variable SPELLDIR not declared !
+Wed Aug 12 14:09:01 2015: players/guilds/Jedi/daemons/actions.c line 33:Variable SPELLDIR not declared !
+Wed Aug 12 14:43:11 2015: players/guilds/Jedi/bin/kill.c line 1:Cannot #include defs.h
+
+Wed Aug 12 14:43:11 2015: players/guilds/Jedi/bin/kill.c line 7:Variable USER not declared !
+Wed Aug 12 14:43:11 2015: players/guilds/Jedi/bin/kill.c line 11:Variable PO not declared !
+Wed Aug 12 14:43:11 2015: players/guilds/Jedi/bin/kill.c line 11:Variable PO not declared !
+Wed Aug 12 14:43:11 2015: players/guilds/Jedi/bin/kill.c line 16:Variable PO not declared !
+Wed Aug 12 14:43:11 2015: players/guilds/Jedi/bin/kill.c line 16:Variable PO not declared !
+Wed Aug 12 15:09:46 2015: players/guilds/Jedi/bin/spells/feint.c line 1:Cannot #include defs.h
+
+Wed Aug 12 15:09:46 2015: players/guilds/Jedi/bin/spells/feint.c line 2:Cannot #include dir.h
+
+Wed Aug 12 15:09:46 2015: players/guilds/Jedi/bin/spells/feint.c line 5:syntax error
+Wed Aug 12 16:51:02 2015: players/guilds/Jedi/bin/unlatch.c line 22:Variable OBJDIR not declared !
+Wed Aug 12 16:51:42 2015: players/guilds/Jedi/bin/unlatch.c line 4:Redefinition of #define USER
+Wed Aug 12 17:01:13 2015: players/guilds/Jedi/bin/spells/crush.c line 1:Cannot #include defs.h
+
+Wed Aug 12 17:01:13 2015: players/guilds/Jedi/bin/spells/crush.c line 5:syntax error
+Fri Aug 21 21:54:54 2015: players/guilds/Jedi/lib/command.c line 38:Incorrect number of arguments.
+Fri Aug 21 21:54:54 2015: players/guilds/Jedi/lib/command.c line 48:syntax error
+Fri Aug 21 21:54:54 2015: players/guilds/Jedi/lib/command.c line 67:Variable str not declared !
+Fri Aug 21 21:54:54 2015: players/guilds/Jedi/lib/command.c line 67:Illegal LHS
+Fri Aug 21 21:54:54 2015: players/guilds/Jedi/lib/command.c line 67:syntax error
+Fri Aug 21 21:54:54 2015: players/guilds/Jedi/lib/command.c line 79:Illegal LHS
+Fri Aug 21 21:59:44 2015: players/guilds/Jedi/lib/command.c line 48:syntax error
+Fri Aug 21 21:59:44 2015: players/guilds/Jedi/lib/command.c line 67:Variable str not declared !
+Fri Aug 21 21:59:44 2015: players/guilds/Jedi/lib/command.c line 67:Illegal LHS
+Fri Aug 21 21:59:44 2015: players/guilds/Jedi/lib/command.c line 67:syntax error
+Fri Aug 21 21:59:44 2015: players/guilds/Jedi/lib/command.c line 79:Illegal LHS
+Fri Aug 21 21:59:44 2015: players/guilds/Jedi/lib/command.c line 79:syntax error
+Fri Aug 21 22:00:42 2015: players/guilds/Jedi/lib/command.c line 112:Incorrect number of arguments.
+Fri Aug 21 22:00:42 2015: players/guilds/Jedi/lib/command.c line 120:Incorrect number of arguments.
+Fri Aug 21 22:00:42 2015: players/guilds/Jedi/lib/command.c line 124:syntax error
+Fri Aug 21 22:05:11 2015: players/guilds/Jedi/bin/spells/feint.c line 1:Cannot #include defs.h
+
+Fri Aug 21 22:05:11 2015: players/guilds/Jedi/bin/spells/feint.c line 2:Cannot #include dir.h
+
+Fri Aug 21 22:05:11 2015: players/guilds/Jedi/bin/spells/feint.c line 5:syntax error
+Tue Sep  1 22:04:54 2015: players/guilds/Jedi/spells/feint.c line 1:Cannot #include defs.h
+
+Tue Sep  1 22:04:54 2015: players/guilds/Jedi/spells/feint.c line 2:Cannot #include dir.h
+
+Tue Sep  1 22:04:54 2015: players/guilds/Jedi/spells/feint.c line 5:syntax error
+Thu Sep  3 16:38:56 2015: players/guilds/Jedi/gob.c line 147:Undefined function query_skill
+Thu Sep  3 16:40:10 2015: players/guilds/Jedi/gob.c line 147:Undefined function query_skill
+Fri Sep  4 18:07:46 2015: players/guilds/Jedi/defs.h line 30:Redefinition of #define SP
+Fri Sep  4 18:07:46 2015: players/guilds/Jedi/obj/saber.c line 205:syntax error
+Fri Sep  4 18:10:44 2015: players/guilds/Jedi/obj/saber.c line 205:syntax error
+Fri Sep  4 18:12:04 2015: players/guilds/Jedi/obj/saber.c line 170:syntax error
+Fri Sep  4 18:12:04 2015: players/guilds/Jedi/obj/saber.c line 176:Illegal LHS
+Fri Sep  4 18:12:04 2015: players/guilds/Jedi/obj/saber.c line 177:syntax error
+Fri Sep  4 18:12:04 2015: players/guilds/Jedi/obj/saber.c line 178:Illegal LHS
+Fri Sep  4 18:12:04 2015: players/guilds/Jedi/obj/saber.c line 181:Variable temp not declared !
+Fri Sep  4 18:12:04 2015: players/guilds/Jedi/obj/saber.c line 183:Variable temp not declared !
+Fri Sep  4 18:12:34 2015: players/guilds/Jedi/obj/saber.c line 202:syntax error
+Fri Sep  4 18:19:10 2015: players/guilds/Jedi/obj/saber.c line 203:syntax error
+Fri Sep  4 18:20:31 2015: players/guilds/Jedi/obj/saber.c line 202:syntax error
+Fri Sep  4 18:22:01 2015: players/guilds/Jedi/obj/saber.c line 202:syntax error
+Fri Sep  4 18:22:45 2015: players/guilds/Jedi/obj/saber.c line 202:syntax error
+Fri Sep  4 18:24:17 2015: players/guilds/Jedi/gob.c line 372:!= always true because of different types: "object "
+Fri Sep  4 18:24:17 2015: players/guilds/Jedi/gob.c line 372:                               compared to: "unknown "
+Fri Sep  4 18:24:17 2015: players/guilds/Jedi/gob.c line 373:Undefined function ResetCombo
+Fri Sep  4 18:24:17 2015: players/guilds/Jedi/gob.c line 417:Variable MAX not declared !
+Fri Sep  4 18:25:33 2015: players/guilds/Jedi/gob.c line 373:Undefined function ResetCombo
+Fri Sep  4 18:25:33 2015: players/guilds/Jedi/gob.c line 378:Variable Saber not declared !
+Fri Sep  4 18:25:33 2015: players/guilds/Jedi/gob.c line 378:Variable Saber0 not declared !
+Fri Sep  4 18:25:33 2015: players/guilds/Jedi/gob.c line 422:Variable MAX not declared !
+Fri Sep  4 18:27:23 2015: players/guilds/Jedi/gob.c line 374:Undefined function ResetCombo
+Fri Sep  4 18:27:23 2015: players/guilds/Jedi/gob.c line 379:Variable Saber not declared !
+Fri Sep  4 18:27:23 2015: players/guilds/Jedi/gob.c line 379:Variable Saber0 not declared !
+Fri Sep  4 18:28:39 2015: players/guilds/Jedi/gob.c line 387:Variable Saber not declared !
+Fri Sep  4 18:28:39 2015: players/guilds/Jedi/gob.c line 387:Variable Saber0 not declared !
+Fri Sep  4 18:29:19 2015: players/guilds/Jedi/gob.c line 387:Variable SABER0 not declared !
+Fri Sep  4 18:59:35 2015: players/guilds/Jedi/gob.c line 383:Bad assignment. Rhs: "unknown "
+Fri Sep  4 18:59:35 2015: players/guilds/Jedi/gob.c line 387:Casts are only legal for type mixed, or when unknown: "object "
+Fri Sep  4 19:05:34 2015: players/guilds/Jedi/gob.c line 406:Function query_skill undefined
+Fri Sep  4 19:05:34 2015: players/guilds/Jedi/gob.c line 406:Bad assignment. Rhs: "unknown "
+Fri Sep  4 19:05:34 2015: players/guilds/Jedi/gob.c line 416:Variable i not declared !
+Fri Sep  4 19:05:34 2015: players/guilds/Jedi/gob.c line 417:Variable j not declared !
+Fri Sep  4 19:05:34 2015: players/guilds/Jedi/gob.c line 418:Variable j not declared !
+Fri Sep  4 19:05:34 2015: players/guilds/Jedi/gob.c line 418:Variable i not declared !
+Sun Sep  6 09:09:35 2015: players/guilds/Jedi/spells/strike.c line 1:syntax error
+Sun Sep  6 09:09:37 2015: players/guilds/Jedi/spells/strike.c line 1:syntax error
+Sun Sep  6 09:09:45 2015: players/guilds/Jedi/spells/strike.c line 1:syntax error
+Sun Sep  6 09:11:08 2015: players/guilds/Jedi/lib/command.c line 138:Variable gob not declared !
+Sun Sep  6 09:11:08 2015: players/guilds/Jedi/lib/command.c line 138:Bad assignment. Rhs: "unknown "
+Sun Sep  6 09:13:18 2015: players/guilds/Jedi/lib/command.c line 138:Bad assignment. Rhs: "unknown "
+Sun Sep  6 09:14:06 2015: players/guilds/Jedi/spells/strike.c line 1:syntax error
+Sun Sep  6 09:14:34 2015: players/guilds/Jedi/spells/strike.c line 1:syntax error
+Sun Sep  6 09:38:21 2015: players/guilds/Jedi/spells/feint.c line 1:Cannot #include defs.h
+
+Sun Sep  6 09:38:21 2015: players/guilds/Jedi/spells/feint.c line 2:Cannot #include dir.h
+
+Sun Sep  6 09:38:21 2015: players/guilds/Jedi/spells/feint.c line 5:syntax error
+Sun Sep  6 09:47:46 2015: players/guilds/Jedi/force/feint2.c line 68:Variable ATTN not declared !
+Sun Sep  6 09:47:46 2015: players/guilds/Jedi/force/feint2.c line 70:Variable SKILL not declared !
+Sun Sep  6 09:50:16 2015: players/guilds/Jedi/force/feint2.c line 68:syntax error
+Sun Sep  6 09:53:52 2015: players/guilds/Jedi/force/feint2.c line 68:syntax error
+Sun Sep  6 09:54:28 2015: players/guilds/Jedi/force/feint2.c line 68:syntax error
+Wed Sep  9 05:53:39 2015: players/guilds/Jedi/force/slash.c line 63:Variable SpellDam not declared !
+Wed Sep  9 05:53:39 2015: players/guilds/Jedi/force/slash.c line 65:Variable ATTN not declared !
+Wed Sep  9 05:53:39 2015: players/guilds/Jedi/force/slash.c line 71:Variable ATTN not declared !
+Thu Sep 10 12:57:05 2015: players/guilds/necro/cmds/harvestt.c line 90:syntax error
+Thu Sep 10 12:57:05 2015: players/guilds/necro/cmds/harvestt.c line 97:Illegal LHS
+Thu Sep 10 12:57:05 2015: players/guilds/necro/cmds/harvestt.c line 102:break statement outside loop
+Thu Sep 10 12:57:05 2015: players/guilds/necro/cmds/harvestt.c line 103:Case outside switch
+Thu Sep 10 12:57:05 2015: players/guilds/necro/cmds/harvestt.c line 113:break statement outside loop
+Thu Sep 10 12:57:05 2015: players/guilds/necro/cmds/harvestt.c line 114:Case outside switch
+Fri Sep 11 09:24:11 2015: players/guilds/necro/cmds/harvestt.c line 81:Undefined function calc_exp_bonus
+Fri Sep 11 09:24:11 2015: players/guilds/necro/cmds/harvestt.c line 305:Variable exp_worth not declared !
+Fri Sep 11 10:57:14 2015: players/guilds/necro/cmds/harvestt.c line 240:Variable HIBLK not declared !
+Fri Sep 11 10:57:14 2015: players/guilds/necro/cmds/harvestt.c line 240:Variable NORM not declared !
+Fri Sep 11 10:57:14 2015: players/guilds/necro/cmds/harvestt.c line 250:Variable HIW not declared !
+Fri Sep 11 10:57:14 2015: players/guilds/necro/cmds/harvestt.c line 250:Variable NORM not declared !
+Fri Sep 11 10:57:14 2015: players/guilds/necro/cmds/harvestt.c line 260:Variable RED not declared !
+Fri Sep 11 10:57:14 2015: players/guilds/necro/cmds/harvestt.c line 260:Variable NORM not declared !
+Fri Sep 11 10:59:48 2015: players/guilds/necro/cmds/harvestt.c line 295:syntax error
+Fri Sep 11 10:59:48 2015: players/guilds/necro/cmds/harvestt.c line 298:Illegal LHS
+Fri Sep 11 10:59:48 2015: players/guilds/necro/cmds/harvestt.c line 313:syntax error
+Fri Sep 11 10:59:48 2015: players/guilds/necro/cmds/harvestt.c line 338:Variable exp_worth not declared !
+Fri Sep 11 10:59:48 2015: players/guilds/necro/cmds/harvestt.c line 338:Variable exp_per_bonus not declared !
+Fri Sep 11 10:59:48 2015: players/guilds/necro/cmds/harvestt.c line 338:Illegal LHS
+Fri Sep 11 11:23:17 2015: players/guilds/necro/cmds/harvestt.c line 293:syntax error
+Fri Sep 11 11:23:17 2015: players/guilds/necro/cmds/harvestt.c line 296:Illegal LHS
+Fri Sep 11 11:23:17 2015: players/guilds/necro/cmds/harvestt.c line 297:syntax error
+Fri Sep 11 11:23:17 2015: players/guilds/necro/cmds/harvestt.c line 298:Illegal LHS
+Mon Oct 26 15:47:41 2015: players/guilds/Jedi/force/underhand.c line 74:Variable ATTN not declared !
+Thu Oct 29 10:30:42 2015: players/guilds/necro/mon/undead.c line 33:Bad assignment. Rhs: "unknown "
+Thu Oct 29 10:30:42 2015: players/guilds/necro/mon/undead.c line 35:== always false because of different types: "unknown "
+Thu Oct 29 10:30:42 2015: players/guilds/necro/mon/undead.c line 35:                               compared to: "string "
+Thu Oct 29 10:30:42 2015: players/guilds/necro/mon/undead.c line 73:Variable this_player not declared !
+Thu Oct 29 10:31:14 2015: players/guilds/necro/mon/undead.c line 35:== always false because of different types: "unknown "
+Thu Oct 29 10:31:14 2015: players/guilds/necro/mon/undead.c line 35:                               compared to: "string "
+Thu Oct 29 10:31:14 2015: players/guilds/necro/mon/undead.c line 73:Variable this_player not declared !
+Thu Oct 29 10:31:38 2015: players/guilds/necro/mon/undead.c line 73:Variable this_player not declared !
+Thu Oct 29 10:46:35 2015: players/guilds/necro/mon/undead.c line 59:Variable UNDEADCOST not declared !
+Thu Oct 29 13:09:52 2015: players/guilds/necro/mon/undead.c line 65:syntax error
+Thu Oct 29 13:26:33 2015: players/guilds/necro/mon/skel.c line 1:syntax error
+Thu Oct 29 13:27:21 2015: players/guilds/necro/mon/skel.c line 5:Variable BOLD not declared !
+Thu Oct 29 13:27:21 2015: players/guilds/necro/mon/skel.c line 5:Variable OFF not declared !
+Thu Oct 29 14:35:48 2015: players/guilds/necro/mon/undead.c line 264:Redeclaration of function set_exp_worth.
+Thu Oct 29 14:39:43 2015: players/guilds/necro/spells/conjure.c line 16:Variable bonecleaver not declared !
+Thu Oct 29 14:39:43 2015: players/guilds/necro/spells/conjure.c line 33:syntax error
+Thu Oct 29 14:39:43 2015: players/guilds/necro/spells/conjure.c line 33:Illegal character (hex 2e) '.'
+Thu Oct 29 14:39:43 2015: players/guilds/necro/spells/conjure.c line 33:Newline in string
+Thu Oct 29 14:40:05 2015: players/guilds/necro/spells/conjure.c line 16:Variable bonecleaver not declared !
+Thu Oct 29 14:40:05 2015: players/guilds/necro/spells/conjure.c line 33:syntax error
+Thu Oct 29 14:40:05 2015: players/guilds/necro/spells/conjure.c line 33:Illegal character (hex 2e) '.'
+Thu Oct 29 14:40:05 2015: players/guilds/necro/spells/conjure.c line 33:Newline in string
+Thu Oct 29 14:49:29 2015: players/guilds/necro/spells/conjure.c line 33:syntax error
+Thu Oct 29 14:49:29 2015: players/guilds/necro/spells/conjure.c line 33:Illegal character (hex 2e) '.'
+Thu Oct 29 14:49:29 2015: players/guilds/necro/spells/conjure.c line 33:Newline in string
+Thu Oct 29 15:38:17 2015: players/guilds/necro/spells/conjure.c line 20:Variable ob not declared !
+Thu Oct 29 15:38:17 2015: players/guilds/necro/spells/conjure.c line 20:Variable ob not declared !
+Thu Oct 29 15:38:17 2015: players/guilds/necro/spells/conjure.c line 20:syntax error
+Thu Oct 29 15:39:57 2015: players/guilds/necro/spells/conjure.c line 23:syntax error
+Thu Oct 29 15:44:45 2015: players/guilds/necro/spells/conjure.c line 23:syntax error
+Thu Oct 29 15:48:47 2015: players/guilds/necro/spells/conjure.c line 39:Variable ob not declared !
+Thu Oct 29 15:48:47 2015: players/guilds/necro/spells/conjure.c line 40:Variable ob not declared !
+Thu Oct 29 15:48:47 2015: players/guilds/necro/spells/conjure.c line 41:Variable ob not declared !
+Thu Oct 29 15:48:47 2015: players/guilds/necro/spells/conjure.c line 42:Variable ob not declared !
+Thu Oct 29 15:48:47 2015: players/guilds/necro/spells/conjure.c line 43:Variable ob not declared !
+Thu Oct 29 15:48:47 2015: players/guilds/necro/spells/conjure.c line 44:Variable ob not declared !
+Mon Nov  2 16:01:43 2015: players/guilds/necro/mon/skeleton.c line 19:syntax error
+Mon Nov  2 16:08:33 2015: players/guilds/necro/spells/animate.c line 100:Variable zombie not declared !
+Mon Nov  2 16:24:00 2015: players/guilds/necro/spells/animate.c line 83:Variable undead not declared !
+Mon Nov  2 16:24:00 2015: players/guilds/necro/spells/animate.c line 84:Variable undead not declared !
+Mon Nov  2 16:24:00 2015: players/guilds/necro/spells/animate.c line 93:Variable undead not declared !
+Mon Nov  2 16:24:00 2015: players/guilds/necro/spells/animate.c line 94:Variable undead not declared !
+Thu Nov 12 11:36:02 2015: players/guilds/Jedi/daemons/JediLevels.c line 83:Variable HIR not declared !
+Thu Nov 12 11:36:02 2015: players/guilds/Jedi/daemons/JediLevels.c line 87:Variable HIR not declared !
+Thu Nov 12 11:36:02 2015: players/guilds/Jedi/daemons/JediLevels.c line 91:Variable HIR not declared !
+Thu Nov 12 11:36:02 2015: players/guilds/Jedi/daemons/JediLevels.c line 95:Variable HIR not declared !
+Thu Nov 12 11:36:02 2015: players/guilds/Jedi/daemons/JediLevels.c line 99:Variable HIR not declared !
+Thu Nov 12 11:36:02 2015: players/guilds/Jedi/daemons/JediLevels.c line 103:Variable HIR not declared !
+Thu Nov 12 12:59:09 2015: players/guilds/Jedi/obj/saber.c line 294:syntax error
+Thu Nov 12 12:59:09 2015: players/guilds/Jedi/obj/saber.c line 295:Illegal LHS
+Thu Nov 12 16:08:01 2015: players/guilds/Jedi/hall/object.c line 22:Return type not matching: "int "
+Tue Sep 27 22:37:41 2016: players/guilds/bards/bardrooms/lounge.c line 16:syntax error
+Tue Sep 27 22:37:41 2016: players/guilds/bards/bardrooms/lounge.c line 16:Illegal character (hex 2e) '.'
+Tue Sep 27 22:37:41 2016: players/guilds/bards/bardrooms/lounge.c line 16:Illegal character (hex 5c) '\'
+Tue Sep 27 22:37:41 2016: players/guilds/bards/bardrooms/lounge.c line 16:Newline in string
+Tue Sep 27 22:37:43 2016: players/guilds/bards/bardrooms/lounge.c line 16:syntax error
+Tue Sep 27 22:37:43 2016: players/guilds/bards/bardrooms/lounge.c line 16:Illegal character (hex 2e) '.'
+Tue Sep 27 22:37:43 2016: players/guilds/bards/bardrooms/lounge.c line 16:Illegal character (hex 5c) '\'
+Tue Sep 27 22:37:43 2016: players/guilds/bards/bardrooms/lounge.c line 16:Newline in string
+Tue Sep 27 22:38:17 2016: players/guilds/bards/bardrooms/lounge.c line 16:syntax error
+Tue Sep 27 22:38:17 2016: players/guilds/bards/bardrooms/lounge.c line 16:Illegal character (hex 2e) '.'
+Tue Sep 27 22:38:17 2016: players/guilds/bards/bardrooms/lounge.c line 16:Illegal character (hex 5c) '\'
+Tue Sep 27 22:38:17 2016: players/guilds/bards/bardrooms/lounge.c line 16:Newline in string

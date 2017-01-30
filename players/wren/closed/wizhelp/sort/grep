@@ -1,0 +1,24 @@
+**************
+
+
+                     Grep
+
+Syntax:    grep <word> <file>
+
+Desc:
+           This command is used to find instances of a word or string
+           in a file. Useful for tracking names through log files. 
+           Can only use on files you have read access in.
+
+Warning:   Will error if the file is too long or the string to 
+           ambiguous to sort out.
+
+Example:   grep worm /log/PRISON
+                  results 
+           lines containing wrom in the prison log are displayed
+
+Related:   instances
+
+
+**************
+

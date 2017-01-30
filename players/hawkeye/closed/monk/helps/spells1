@@ -1,0 +1,20 @@
+
+==============================================================================
+---- Rank 1 Spells -----------------------------------------------------------
+ Follow <player/off>   -- Follow a Player / turn follow off               15
+ Lead                  -- Take the lead in a battle                       --
+ Burn Corpse           -- Burn a Corpse for Healing                        3
+ Shield                -- Create a shield around You                      40
+ Staff                 -- Create a Monk Staff to use                      30
+ Purse <amt>           -- Put some coins into a Purse (gcoin <x> to rmve) --
+---- Rank 2 Spells -----------------------------------------------------------
+ Mkick <target>        -- Strike your Enemy with a powerful kick         10+rnk
+ Farsight <dir>        -- Look in <direction>                             15
+ Sanc                  -- Meditation to heal you faster                   50
+ Cast Light            -- Create light in a room                           5
+ Chop <target>         -- Punch your Opponent                             20
+ Msay <msg>            -- Talk so that only Monks can understand you      none
+ Locate <player>       -- Selective Nirw for <player>                     none
+ Offer <object>        -- Sacrifice an Object for Guild Experience        25
+ Cure                  -- Rid yourself of the flu                         75
+==============================================================================

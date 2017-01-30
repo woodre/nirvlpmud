@@ -1,0 +1,236 @@
+Nirvana Points
+
+The purpose to the Nirvana Reward Point system is to give players and wizards
+rewards for behaviors that are considered assets to the game.  By this, I don't
+so much mean your standard killing and levelling, I mean things like helping
+newbies, partying, reporting bugs, typos and ideas, creating areas, etc.
+
+The points given can be redeemed for various items or capabilities.  In theory,
+I'd like them to be transferable between characters; it wouldn't be very useful
+to a wizard, for example, to have 20,000 points if they can't use them for 
+their characters.  
+
+What follows is the initial skeleton for the way I'd like to award points, and
+some potential rewards.  All this stuff of course is completely subject to 
+change, most likely it will change a great deal over time, but I have to start
+somewhere, so this is what I have thus far.
+
+-------------------------------------------------------------------------------
+
+Player Points 
+Xlevels: 10 per XLevel
+Newbie Helping: Probably quadruple the rate at which points are gained via 
+  active time on, and through partying.  Not sure what else to do.
+PK: 1 pk point is 1 NRP.
+Donations: The server costs money, hosting cost money in the past, Boltar has
+  put in a pretty substantial cash investment personally, and Mizan is putting
+  in some now, it would be nice to offer some type of thank you to people for
+  donating.  Donations will either go toward reimbursement of costs, or toward
+  future marketing perhaps.  Upgrading the server and paying for internet 
+  service is also a goal of this, although I really don't see anywhere near 
+  enough money being donated for that, but one can always dream.
+Contests: Winning contests will give points.  The points will most likely 
+  depend on the number of entrants, the frequency of the contest, and what is
+  involved in the contest.  In other words, the rather frequent exp contests 
+  will not grant nearly as many points as, say, a quarterly description
+  contest.  We need ideas for contests as well.
+Active playing time: There is a slight reward for being online and playing.
+Partying: Randomly while killing in a party reward points will be given.
+Recruitment: I'm not sure how to work this, but perhaps if someone recruits a
+  player, they receive, say, 10 points per xlevel that player ends up aquiring.
+Submitting intelligent, well-written reviews on the popular mud-listing sites
+  like mudmagic.com and The Mud Connector.  This would be highly subjective, 
+  but should be based off how well-written and accurate the review is, and the
+  picture it paints of the mud.  More convincing is better.  I'd say up to 1000
+  points for these, with most falling in the 250 point range.
+Healing: until the healer guild is revamped, I'd like to give points based upon
+  that as well.  This is not just for healers, but for anyone that casts a heal
+  spell upon a player (non-npc in other words) other than themself.
+  
+The following are the biggest behaviors I'd like to encourage, and as such, 
+  will offer the most points.
+  
+Typos: 25 points per unique typo, perhaps 10 points apiece for bundled ones (as
+  in the case of Eurale's Jurassic Park where I had to address the same exact
+  typo probably 30 times).
+Ideas: 10-100 points, perhaps more for better detailed idea submissions, but
+  my thought is that there should be a reward for submitting ideas, especially
+  detailed, well-thought out ones, and then it should be doubled if/when it's
+  implemented.
+Bugs: These fall into two categories: non-abusable, and abusable.  For the non-
+  abusable bugs (hey, my sword doesn't store, it gives me a sensitive mind
+  message), perhaps 25 points.  For the abusable ones, It would depend on how
+  detailed the report is, how abusable the bug is (how hard is it to use), how
+  widespread it can potentially be (ie, does it only affect female chars in the
+  bard guild, or does it affect everyone in the game, etc), and the magnitude
+  of the bug (how powerful is using it).  These could award anywhere from 25 to
+  1000 points, perhaps for extreme ones, more.
+Play-testing: Alpha and Beta testing should be rewardable.  This is going to be
+  exceedingly subjective of course, but the points should be based off the time
+  invested, how much help the player was, how detailed were their reports.  In
+  other words reporting 'lightning spell is cool, maybe it could be in yellow 
+  though,' and so on wouldn't be worth too much overall, but reports like 'I
+  find that the monitor is very distracting, there are too many lines in it and
+  it's badly organized.  Here's my suggestion for a replacement: blahblah'  And 
+  so on.  This will be exceedingly beneficial for finishing the conversion to
+  the LDMUD driver.
+Reporting missing help files, or things missing from help files, similar things:
+  We are missing a great number of help files.  A lot of other help files are
+  very inadequate.  Players could even write the help files.  The points awarded
+  for this would be based on the value of it.  A player-written help file 
+  submission could be worth as much as 250, perhaps more.  Otherwise, it would
+  range from 25 points for a simple 'hey there's no help blahblah' up to 250.
+
+-------------------------------------------------------------------------------
+    
+Wizard Points:
+
+Wizards will have the potential to gain points far easier than players, and far
+  faster.  This is because they have the greatest impact on the game.  This 
+  gives them a reward for their time spent doing the little things in the game
+  that players and even other wizards really don't notice.  Following are the
+  potential actions that developers can receive points for.  Note that in all
+  cases it will be the approver, not the wizard themself deciding the value to
+  be given to work completed.  In the case of approvers gaining points, it will
+  be at the discretion of a level 1000 or above.
+  
+Area creation:  Up to 1000 points for a well-designed, implemented area.
+Typo correction:  Up to 25 points per.
+Idea implementation:  Value based off the idea's value, and difficulty of the
+  implementation.
+Bug fixes:  Value based off difficulty of the implementation and probably to
+  some extent, how fast it's addressed, and how major the bug is.
+Approvals:
+  Area:  Area approvals can be extremely frustrating, they will give up to 1000
+  Item:  These are simpler, so up to perhaps 25 points.
+  Other approvals:  Guilds need approval, changes need approvals, documentation
+    going in needs approval, everything basically does.  This will very widely.
+Proofreading and documentation:  Probably this should go with something based
+  off the number of files proofread.  I'm thinking 25 points per, but that might
+  be excessive, so perhaps 10-15.
+Running events:  We have no events yet, but we will.
+Actively running, maintaining guilds and other code:  Subjective, this will go 
+  off a level 1000's discretion.
+Other code:  Depends on what it is, it's scope, how good it is for the game, 
+  how difficult the code is.  
+Helping other wizards: Again, highly subjective.
+Involvement in the major mud projects: LDMUD springs to mind immediately.  Work
+  on this project will give probably a 25-50% bonus to all points gained for
+  the work done.
+
+-------------------------------------------------------------------------------
+
+Potential Rewards:
+
+These are very bare-bones ideas.  Not all of these will be implemented, and
+  there will hopefully be additions to this list, but this is what I have come
+  up with so far.
+  
+Permanent stat increase: This isn't applicable until the stat changes go in. 25k
+Resurrection charm: An item that either has charges, or a cooldown period that
+  allows the player to self-resurrect himself or others, with the exp penalty
+  cut in half, or by 30%.  25k
+Experience Storage: Allow the player to store up to one million experience 
+  points for use at any time.  This will allow players to leave a guild and be
+  able to instantly apply that experience to their chars.  A very powerful
+  ability and I'm not sure it will go in, but I think it would be really cool.
+  Initially I'm thinking 50k.
+Money Belt: This has already been coded by Angel and Katya.  This is an
+  autoloading item that is invisible to other players, and can store up to 20k
+  coins.  This will allow them to have that 20k even after a death, and to
+  effectively raise their coin max to 100k.  This ability is far less powerful
+  than it seems on the surface, but I think it's something that players would
+  enjoy a great deal.  It will be one of the cheaper items as well.  10k
+Gain dark sight: A very expensive ability, this will grant the player permanent
+  night vision.  50k.
+Double exp for a day: 25k
+A 'word of recall' ability: With miniguilds in place, this isn't very potent, 
+  and the item would have a cooldown on it.  10k
+'Essence of Nirvana' item: this needs a better name, but the gist of it is that
+  it will be a non-armor item that will grant protective abilities.  Players
+  will be able to purchase (for more points) abilities for it, some potential
+  ideas:
+    Dtype protection (1% at a time, up to 5% per dtype, 10k apiece)
+    Limited duration invisibility with silent movement: 50k
+    Increase regen outside of combat: purchase hp and sp regen separate, 5
+      different tiers of each, 10k apiece
+Personalized item: An existing item in player's possession can be used as a
+  template for a uniquely described item, usable only by the player, and 
+  cannot be lost.  In other words, they can go to a location and receive it 
+  again if they have lost it.  10k.
+Mount: This was one of Vertebraker's suggestions a long time ago, and it's not
+  something I'll do, but it's a potential idea.
+
+-------------------------------------------------------------------------------
+
+Some miscellaneous things:
+
+I'd like to have coin donations grant points, but not sure if that's a good
+idea or not, and if so, how much.  This takes money out of the economy, but it
+isn't a particularly good way of doing it.
+
+For players who break rules repeatedly, there will be a penalty applied to
+their character, where they will not gain points for a predetermined amount.
+Essentially, it will cost them points, but instead of taking them away, it 
+merely prevents the accumulation of them until the penalty has been met.
+
+Donation box at the green: adding items to it can confer points.  Not sure if
+I want this or not, but it's a thought.
+
+Player or wizard created maps of the game: I think Mizan should be consulted on
+the feasbility of this, but it would be nice if we could have maps on the 
+website of various areas.  The backbone, village of course for starters, but
+also maps of areas, with some information in them as well. 
+
+Area reviews and overviews.  Each area in the game should have some kind of
+overview, and it would be nice if we had player reviews as well.  This should
+at least be on the website, I don't feel it's necessary to have on the game.
+
+Guild areas and overviews: same there.
+
+Voting: Not sure if there's a means of proving that one has voted, perhaps a 
+  time-stamp or something, but that would be easily cheatable I would think.
+  
+Potential contests: 
+  area maps, overviews for a given area; first one done wins
+  Poetry: dunno who would judge it but it's a possibility
+  Item/room/mob description contests
+  Exp: i'm currently working on a very nice recode of the exp contest.
+  PK tournaments
+  Coining tournaments
+  Integrate the scavenger hunt as an event.
+  Design an event.
+  On ldmud: map an area, kill the mobs in it, full debugging, etc, pick one
+    area at a time, get it fixed, have a wizard assigned to handling it.
+    Not really sure if it's feasible but having something like that in would
+    be really nice.
+  
+Events: 
+  Invasion of the village
+  Little mini-quest events
+  I'm at a loss for others, but they should be quest-type things that have a
+    scheduled start and end, that all players should be able to be involved in
+    
+-------------------------------------------------------------------------------
+
+This sums up what I've come up with thus far for the Nirvana Reward Point 
+system.  It desperately needs tweaking and fleshing out and input in general,
+but I think it's a good starting point thus far.  All this information needs to
+go into help files and postings for both players and wizards to see, and most 
+of it needs actual code implementation.  I've done some of the core to it 
+already, and have some of the rest of it done, but the items themselves, with
+the exception of the belt, need coding.  
+
+My thoughts for the help files is that it have its own subcategory and following:
+
+Players:
+Nirvana Reward Points: general file explains the purpose and the gist
+What behaviors are rewarded: not sure what to title this, but it would list 
+  the general behaviors rewarded and give a general idea of the points.
+Awards: what awards exist and their costs, and individual files for each.
+Penalty: the penalty policy.
+
+Wizards: 
+What points are awarded for.
+Approval guidelines: guidelines for 100s and 1000s to award points.
+How to award points to someone, apply a penalty, or adjust points, check logs.

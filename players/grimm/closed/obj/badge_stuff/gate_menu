@@ -1,0 +1,11 @@
+
+  These are the commands for the Gate function:
+
+help ..... Shows you this menu ................................. 0 sp
+list ..... Gives you a list of your operational gates .......... 0 sp
+drop ..... Drops a new gate into your current room ............. 35sp
+enter .... Lets you enter a gate which you have dropped ........ 30sp
+remove ... Lets you remove a gate that you have dropped ........ 0 sp
+
+(NOTE: all commands have the GATE prefix on it (i.e. "gate help",
+       "gate list", etc.)

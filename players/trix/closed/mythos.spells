@@ -1,0 +1,439 @@
+Spells:
+    Spells with a * before the name is listed as a special
+    Extra descriptions are placed at the end of this file
+
+spell name: descript <sp cost, sacrifice cost, damage>
+
+Level 1
+    feed:  Allows a last blow to attacker  
+    dfollow: follow spell on npcs  <0,10,0>
+    lead: a reverse follow spell  <0,10,0>
+    sacrifice: use for sacrifice points
+    
+Level 2
+  * chillshield: a shield of cold surrounds caster doing damage to opponent 
+                 <special>
+  * dark_dream: Calls forth a demonling <20,20,0>
+    dismiss: dismisses demonlings  <5+lvl of creature,30,0>
+    
+Level 3
+    mesmerize: a peace spell on all in room or target  
+               <35 (all) 15 (target),30,0>
+    whip: attack spell  <25,20,random(50)>
+    myst: lowers damage done by light in room by 1 <10,200,0>
+    
+Level 4
+    identify: identifies objects  <25,150,0>
+  * terror: either freezes target or forces a run_away   <35,80,0>
+  * demon_pact: pact with a demon for an object  <100,500,0>
+    ownership/remove_ownership:  allows player to cast an ownership
+                on an object- should player lose object or drop 
+                it, object is moved to the storage room so that
+                player may pick it up laters (renders value of 
+                object to 0- thus unsellable)
+                <10,20,0> 
+    
+Level 5
+  * coldshield: a stronger chillshield <special>
+    darkness: lowers damage done by light by 2 <15,150,0>
+    duplicate : user may duplicate a weapon or armor once
+                item ac / wc goes down by 1
+                id of duplicate becomes copy or duplicate
+                <60,1000,0>
+    knowing: information of room,monster or player  <25,100,0>
+    imagery: sends an image to target or creates an image star  
+              <1 (target) 10 (star), 1 (target) 10 (star), 0>
+              
+Level 6
+    flare: attack spell *special side effect- target wc goes up by 1 per use* 
+           <30,50,20+random(60)>
+  * nightmare: summons stronger demonlings  <25,75,0>
+  * distraction: creates a distraction <40,700,0>
+  * night: only usable once- calls for help and brings forth a monster that 
+           helps
+            <20,20,0>
+            
+Level 7
+    freeze: temporarily sets target wc to 0 after time is over target wc 
+            reverts+1 (time is 20 - 40 sec)
+             <75,100,0>
+  * weather: creates a storm/blizzard/or clears weather  <150,1000,0>
+  * empower: creates the dark blade- the cold fire weapon  
+             <3000+random(1000),300*number of times cast,0>
+  * demon_bind: binds a demon to a ring- creating the demon ring
+             <666,300*number of times cast,0>
+  * demon_spell: the second demon pact for a spell <200,1000,0>
+    
+Level 8
+    true_darkess: casts a cloak of darkness on caster- light damage is
+                  set to -1
+                   <40,300,0>
+    grand_circle: needs more than 3 guild members - creates a circle that
+                  repels all entering things <50,200,0>
+  * gate: opens a gate to the nexus- allowing demons to enter and leave 
+          <50,400,0>
+    replicate:  creates a copy of attacking monster which then attacks 
+                the original (id becomes replicant) dests once original
+                dies, dests once hp goes below 50 (replication only
+                once, and replicant can not be replicated) [max level
+                that can be replicated is 19]
+                <150 + 1-20 hp,2000,0>
+          
+Level 9
+  * spirit_meld: needs 5 or more guild members- creates an avatar- monster-
+                 that does caster's bidding <100,1000,0>
+    drain: drains the 1 level of target - healing caster a bit 
+            <45,900,special-> 
+            target -> -1 level,
+            caster -> add_exp(target level *100),
+                      add_hit_point(random(target level / 2) >
+    whither: places a shadow object on the opponent (npc only) 
+             [~/closed/guild/spells/wither.c] that shadows the heal_self
+             any negative heal_self done to monster the damage is 
+             1 - 3 x original amount.
+             <120 + wc of monster is upped (7 - 14) + 2 stats,1200,0>
+                              
+Level 10
+  * shape_change: shape change <100,1000,0> 
+  * flash: a field of coldfire or an attack, see details  <special>
+
+Talent Spells /* When player becomes a member chance of becoming
+                 a talent and gaining the ability to use this
+                 is 1 in 30 for males 1in 20 for females */
+    tidal flare: allows caster to see what the true names of objects in room
+                  <50,100,0>
+
+Task dependant Spells
+ * simulacrum: creates distraction onto a monster <50,500,0>
+ * ward: wards against spirits and demons  <50,3000,0>
+ * cold_area: a more powerful cold_shield with added shattering of
+              random object in room  <special>
+   shatter: shatters an object (changes short of object and renders
+           it valueless- ac and wc 0) <25,50,0>
+   wound: attack spell  <10 hp 20 sp,0,30+random(40)>
+ * imbue: imbues an object with ability of teleport/grenade/strength
+          <75,120,0>
+   chaos: causes all monsters in room to randomly attack  <70,400,0>
+   reverse: for damage done to caster attacker takes same amount <50,500,x>
+   true_banish: banishes demons and spirits- target must be fae*10 or 
+               less hp
+               <70,300,0>
+ * creeping_doom: causes mass damage  <200,1000,special> and special loss
+ * symbol: casts symbol of death/fear/insanity  <special>
+   siphon: takes sp from guild member target <20 hp,50,all spell points>
+ * devil_pact: makes a pact with the devil
+  
+Details:
+  
+ # chillshield/coldshield/cold_area:
+     attacker takes damage per hb of attack:
+         chill-> random(6)
+         cold->  random(fae) [if fae > 11] else random(10)
+         area->  random(8) + shatters objects in room at casting (like shatter)
+     player loses 1 sacrifice point per hb of attack and
+     half the damage in sp
+ 
+ # dark_dream/nightmare:
+     darkdream-> should there be a guild_level 6 or above guild member in
+                 the environment, the creature dests
+     the numbers are dependant on caster's fae
+     demons have a specified aggression- demon attacks either an npc
+     or a guild member otherwise no other aggression exists
+     [tends to attack lower guild members more often]
+     also xp of monsters are set to 0, so players attacking demons gain
+     very little if no xp
+     dark_dream demon->  
+          wc: 4+ random(4-8), ac: random(0-4), hp: 10 + random(10 - 30)
+     nightmare demon->
+          wc: 7 + random(0-10), ac: random(0-10); hp: 100 + random(10 - 30)
+ 
+ # terror: 
+     1 out of 10 does a force run_away() occur
+     should monster be level 19 above then run_away foes not occur
+     other than runaway, target is frozen (by a basic freeze object)
+     and ac of target is lowered by 0 - 10 
+     once freeze is off target gains ac by random 1 - 4 added to
+     original ac
+           
+ # demon_pact/demon_spell/devil_pact:
+     each is a pact between player and guild wiz / maintainer (in this 
+     case Mythos)  the player writes up a contract in which the wiz
+     is to make an object (demon_pact), make a spell (demon_spell),
+     or any other thing (devil_pact) in exchange for some sort of 
+     price.  This price is carefully choosen by the wiz and the details
+     of the pact is concreted.  Note: the wiz is to play as the devil
+     himself...i.e. scam the player.
+     
+ # distraction/simulacrum:
+     places an object (distraction) or covers a monster (simulacrum) with
+     the illusion of the player or (in the case of simulacrum) another
+     player in the game.  I.e. the short of the player is placed in the
+     room on top of the object or monster.
+     
+ # night:
+     NIght stats:  wc: 20, ac: 2, hp: 250, heal(3,13), level: 30,
+                   multiple attacks (2): 20% 5+ random(5) dam,
+                   when hp < 80 or 180 hb pass night leaves
+     One time spell
+     
+ # weather:
+     clear: clears the room of any 'storm' objects
+     storm: duration: fae*2 hb [ though since the storm can grow
+                                 duration may be longer ]
+            randomly hits an npc for random(50) [ random check 
+                   occurs every hb but chance of actual is 1/3 
+                   hit is 1/10 per check ]
+     blizzard: duration fae * 3 [ same as storm ]
+               randomly hit an npc for random(5) [ check is 
+                    is every hb but 1/6 chance]
+               should an outsider (one who was not in the blizzard
+               at time of casting) enter the room, he has chance of
+               getting 'lost' in the blizzard (1/5 chance to
+               get to church if player)
+     
+ # gate:
+     randomly every 100 + random(300) secs a demon appears
+     or disappears into the nexus [in the nexus, a demon may
+     transfer to the environment of any other gate that may exist]
+     gate dests after fae*1000 secs
+     demons that are formed by the gate:
+       are specific aggressive lik th nightmares or dark_dream
+       have no xp value
+       wc: 10 - 19, ac: 0 - 14, hp: 100 - 609, level: 10 - 21,
+       1/7 chance of having 2 - 4 multiple attacks doing: 0 - 9% success
+                                                          0 - 10 damage
+     
+ # spirit_meld:
+      avatar has no xp value and is not aggressive
+      avatar stats: 
+        hp: 250, level 30, wc: 20, ac: 2, heal: 3,9,
+        spell_dam: 50 (50%), multiple: 3 of 30% with 5 - 9 dam
+      must be at least 5 guild members taking part of spell
+      all members of spell lose all sp and all but 10 hp
+     
+ # shape_change:
+     Player may choose any form desired.
+     The long and short is up to player, however should
+     this be abused in any way player is punished
+     also there are 3 special forms:
+     Blood Bird, Winter Wolf, and Dragon
+     For all three player can only wield the aura_of_shape that
+     is supplied
+     Each one allows player to 'teleport' to certain places (NT is
+     checked) such as church, shop, post [basically a goportal]
+     cost is 40sp
+     each has own emotes
+     Blood Bird: hp may not exceed 200
+                 wc = 17, ac = 3
+                 special attack: 90 sp, 90 sac, 50 dam
+                                 can only be cast once per target
+     Winter Wolf: hp may not exceed 220
+                  wc = 15, ac = 6
+                  special: weapon allows for double attack (1/3 chance)
+     Dragon:  wc = 18, ac = 7
+              special: breath-> 120 sp, 900 sac, 100 hp dam, 
+                       target wc + 10
+     
+ # ward:
+     Caster wards the room from entering demons or spirits.
+     if a direction is not specified as to where the demons etc
+     will run to the run_away() is called
+     ward lasts for (depending on caster's fae) from 100 - 3000 secs
+     if demon etc's level is equal to or greater than fae + 5 (max 25)
+     then the demon does not run
+     when ward destructs room is lit by 2
+     
+ # imbue:
+     Three Types of imbuing is possible- strength, grenade, teleeport.
+     Should an 'imbuing' already be done on an object then that object 
+     is dested and player takes random(10) damage 
+     cost is 75 sp, 120 sac
+     
+     Strength: adds 1 wc to original wc or 1 ac to original ac
+               or if object was not armor or weapon the item is
+               given a wc of 10 - 16 (10+random(7)) [orignal item
+               is dested and a clone of /obj/weapon.c is placed 
+               instead]
+     
+     Grenade:  if object is armor ac is lowered by 0 - 3
+               if object is weapon wc is lowered by 1 - 2
+               a grenade object is placed within subject object
+               grenade goes off in 10 sec after being dropped
+               doing random(10) damage to npcs in room and
+               object that was imbued is dested (additional sp 
+               cost of 5)
+               
+    Teleport:  object can be set to teleport anyone who uses the
+               imbued object to a set destination (set by the user)
+               i.e. player 1 types dset (the command to set it)
+               in the church... the church is not NT... then say is
+               in the village green.. he may type activate and be
+               teleported to the church.. (the set location)
+               the object is destructed once teleportation is done
+     
+ # creeping_doom:
+     Damage: if player has a corpse in inventory:
+              dam = [sum of player's stats + fae*10 + random(500)] / 
+                     number of npcs in room
+             if no corpse dam = random(500) / number of npcs in room
+             max damage: 
+               without corpse and one npc in room = 499
+               with corpse and only one npc in room and player stats
+               maxed (max mag is 30 and max ste is 25 rest is 20)
+                = 874
+                
+     Detriments:  sp 200, sac 1000, hp lose half of current hp, 1 stat loss
+                  and player is frozen for 3 hb as all targets of spell
+                  attack player
+     
+ # symbol:
+     Three symbols (all three must be cast when in combat):
+     Death:  target dies, player loses 2 stats, -10000 - random(100000) xp
+             and player dies
+     Insanity: 200 sp, 1000 sac, 1 stat, target attacks itself
+     Fear: 250 sp, 1500 sac, for every hp target loses player gains
+     
+ # flash:
+     Three types.
+     1> Can only be cast in non-combat.
+        200 sp, 3000 sac
+        A field is formed around the player.  Once player is attacked
+        the field goes off, player loses half current hp and attacker
+        loses half current hp.  Can only go off once per attacker (i.e
+        once it goes off for a certain monster, it no longer will work
+        even if player casts a new field- type 1 or 2)
+     2> Can only be cast during non-combat.
+        200 sp, 3500 sac
+        A field is formed around player like type 1.  When player is 
+        attacked, field goes off affecting all npcs in room.
+        Does not effect those that have had type 1 or 2 done already
+        Players loses 5/8 of current hp
+        Targets lose fraction of hp according to number of npcs in room
+        If less than 4 then 1/3 hp loss
+        If more than 3 less than 6 then 1/4 hp loss
+        If more than 5 less than 8 then 1/5 hp loss
+        If more than 7 less than 11 then 1/6 hp loss
+        If greater than 10 then 1/10 loss
+     3> Can only be cast during combat.
+        50 sac
+        Player fires a bolt of cold fire at attacker.
+        The damage is determined by how many hp and sp the player wishes 
+        to use.
+        damage = hp * 5/2 + random(sp*2)
+        Note: in order to use more than 30 sp one must use sp/3 # of hp
+     
+ # empower:
+     First off, player may empower a weapon only once
+     Second, the sp cost is 3000 + random(1000)
+             and per time the spell is cast 300 sac
+             (note: the player casts this over and over
+             each time giving sac and sp until the 3000 + 
+             random(1000) is reached)
+    Third, the weapon must be wc 17 or above else it is destroyed 
+           and player dies
+    The player may then type in rituals (names that are specified 
+    are tough to get- player must go through a task to get a book
+    with the rituals specified)
+    
+    with no rituals the weapon is wc 18 return fae/3 (max 6)
+    
+    with any ritual the return is 0 the wc varies from 16 - 18
+    
+    if any of the 'slaying rituals' is done (i.e. demon slay, 
+    spirit slay, shadow slay, dragon slay) the weapon also has
+    a 1 in 3 chance to do an additional qtf/2 damagee to that 
+    monster type (max 10)
+    
+    if the vampiric ritual is done the wc is 17 and 1 in 3 chance 
+    of doing fae/4 (max 5) to attacker and gaining same amount 
+    
+    if the sharpness ritual is done the weapon saps 3 - 12 sp every 
+    500 + random(1000) secs and 1 in 10 chance of reducing attacker's
+    wc to 13
+    if player's will goes below 7 + random(10) the weapon breaks and is
+    destroyed (doing random(1000) damage to player)
+    
+    if the berserk ritual is done the wc is 17 and 1 in 3 and if
+    player's hp goes below 1/3 of max the wc increases by 1 up till
+    wc 22 [note this checks 1 in 3]
+    
+    if speed ritual is done the wc is 16 and 1 in 3 player makes 
+    2 attacks in round [note: there is an additional 1 in 3 to 
+    detrermine number of attacks so max number is 3 lowest is 1]
+    
+    if wound ritual is done 1 in 3 attacker's healing is set to 0
+    
+    if spellcleaver ritual is done 1 in 3 random(fae/2) (max 10) is
+    done
+    
+    if soul_taker is done once attacker hp is below player's fae (max
+    20) return 30 is done [wanted to make this an immediate kill] 1 in 
+    5 player is healed level * 5 of attacker's level 
+    also, sp is sapped 3 - 12 every 500 + random(1000) secs
+    if player's will goes below 10 + random(10) the weapon breaks and is
+    destroyed (doing random(1000) damage to player)
+    
+ # demon_bind:
+     
+     sp cost to make base ring is 666 sp with 300 sac per tim (again like 
+     empower the player casts over and over till the sp count is fullfilled)
+     also a material component is needed 
+     once the base ring is made, the player must then battle a demon and
+     bring down the demon to fae * 20 hp
+     depending on the level a different ring will be made 
+     does 10 - 20 hp of damage to player when demon is trapped
+     
+     all rings may do a release (which relases the 'trapped' demon into the
+     room)
+     
+     level 12 or less:
+       commands - meld:  like a party object except all members give all xp 
+                         gained to wearer of ring
+       every 20 secs the ring checks if crime of player is set- if so
+       1 - 2 sp is given, if not 1 - 2 sp is taken
+       also if alignment is greater than -2000 then -3 alignment is added
+        
+     level 13 - 18:
+       commands - meld: same as above
+                  chains: target is placed in locked down to the room
+                          until (every hb it is checked) random(22) > fae
+                          5 sp 20 sac
+                  demonic_essence: 25 sp, 10 sac
+                                   during combat if player hp is less than 
+                                   max/4 wc is set to 20
+                                   1 in random fae amount wc is 0 and
+                                   1 - 100 dam is done to player (and the
+                                   essence turns off)
+      if in combat and attacker is a demon player wc + random(3)
+      every 20 secs the ring checks if crime of player is set- if so
+      1 - 6 sp is given, if not 1 - 6 sp is taken
+      also if alignment is greater than -2000 then -random(10) alignment 
+      is added
+      
+     level 19 or over:
+       commands- meld: as above
+                 chains: as above 
+                 stasis: 50 + target level * 2 sp, 300 sac
+                         places target in temporal stasis (level of 
+                         target may not exceed fae nor have more than 
+                         1/3 of max hp left)
+                         target is placed in an object from which there 
+                         is no escape (short of object is short of
+                         target + <in temporary stasis]) this lasts
+                         for 10 * fae/2 secs (max 100)
+                 submission: 45 sp, 200 sac
+                             player can command a demon that is level < 20
+                             and wc < 31 and ac < 16)
+                             if random(60) > player's will demon's wc is
+                             increased to 40, ac to 20 (thereby no longer
+                             will the demon be submissible) and attacks 
+                             player
+                             else target becomes the player's slave for 
+                             will * 75 hb.  
+                             once time is up target everts and wc increases 
+                             to 50 , ac to 20 and creature attack player
+       if in combat and attacker is a demon player wc + random(3)
+       every 20 secs the ring checks if crime of player is set- if so
+       1 - 6 sp is given, if not 1 - 6 sp is taken
+       also if alignment is greater than -2000 then -random(10) alignment 
+       is added               

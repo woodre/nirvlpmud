@@ -1,0 +1,120 @@
+#include "/obj/ansi.h"
+#define tp this_player()
+#define tpn this_player()->query_name()
+
+/*query_auto_load() { return "players/martha/closed/marthatell2.c:";}*/
+
+id(str){ return str == "teller" || str == "tattoo"; }
+
+extra_look(){
+	if(environment() == this_player()) {
+		write("You have a small "+HIW+"Ying"+NORM+" "+HIK+"Yang"+NORM+" symbol tattooed on your shoulder.\n");}
+	else {
+		write(environment()->query_name()+" has a small "+HIW+"Ying"+NORM+" "+HIK+"Yang"+NORM+" symbol tattooed on her shoulder.\n");}
+	}
+
+drop(){
+	return 1;}
+
+init(){
+	add_action("cmd_tell","tell");
+	add_action("cmd_say","say");
+	add_action("cmd_say"); add_xverb("'");
+	add_action("cmd_emote","em");
+	}
+
+cmd_tell(str){
+	object player;
+	object who;
+	object what;
+	int idle,m,s;
+
+if(!str){
+	write("Tell who what?\n");
+	return 1;}
+else 
+  if(sscanf(str,"%s %s",who,what)==2){
+		player = find_player(who);
+	if(!player) {
+		write(capitalize(who)+" is not logged in.\n");
+		return 1;}
+  else 
+		if(!player->query_interactive()){
+			write(capitalize(who)+" is disconnected.\n");
+			return 1;}
+/*		else
+			if(player->query_invis()){
+				write(capitalize(who)+" is invisible right now.\n");
+				return 1;} */
+		else 
+		idle = query_idle(player);
+		m = idle/60;
+		s = idle%60;
+			if(idle > 119) {
+				write(""+HIB+capitalize(who)+" has been idle for "+m+" minutes and "+s+" seconds."+NORM+"\n");}
+	if(this_player()->query_invis()){
+		tell_object(player,""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+"Invis"+HIB+"+"+HIC+">"+HIB+">"+HIC+tpn+" smiles and says \""+HIB+what+HIC+"\""+NORM+"\n");
+		write(""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+"Invis"+HIB+"+"+HIC+">"+HIB+">"+HIC+" You smile and say "+capitalize(who)+" \""+HIB+what+HIC+"\""+NORM+"\n");
+		return 1;}
+		tell_object(player,""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+">"+HIB+">"+HIC+tpn+" smiles and says \""+HIB+what+HIC+"\""+NORM+"\n");
+		write(""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+">"+HIB+">"+HIC+" You smile and say "+capitalize(who)+" \""+HIB+what+HIC+"\""+NORM+"\n");
+		player->add_tellhistory(""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+">"+HIB+">"+HIC+tpn+" smiled and said to you \""+HIB+what+HIC+"\""+NORM+"");
+		return 1; }}
+
+cmd_emote(str){
+	object player;
+	object who;
+	object what;
+	int idle,m,s;
+
+if(!str){
+	write("Tell who what?\n");
+	return 1;}
+else 
+  if(sscanf(str,"%s %s",who,what)==2){
+		player = find_player(who);
+	if(!player) {
+		write(capitalize(who)+" is not logged in.\n");
+		return 1;}
+  else 
+		if(!player->query_interactive()){
+			write(capitalize(who)+" is disconnected.\n");
+			return 1;}
+/*		else
+			if(player->query_invis()){
+				write(capitalize(who)+" is invisble right now.\n");
+				return 1;} */
+		else 
+		idle = query_idle(player);
+		m = idle/60;
+		s = idle%60;
+			if(idle > 119) {
+				write(""+HIB+capitalize(who)+" has been idle for "+m+" minutes and "+s+" seconds."+NORM+"\n");}
+
+	if(this_player()->query_invis()){
+		tell_object(player,""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+"Invis"+HIB+"+"+HIC+">"+HIB+">"+HIC+tpn+" "+HIB+what+NORM+"\n");
+		write(""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+"Invis"+HIB+"+"+HIC+">"+HIB+">"+HIC+" You emote to "+capitalize(who)+HIB+": "+HIC+tpn+" "+what+NORM+"\n");
+		return 1;}
+		write(""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+">"+HIB+">"+HIC+" You emote to "+capitalize(who)+HIB+": "+HIC+tpn+" "+what+NORM+"\n");
+		tell_object(player,""+HIB+"<"+HIC+"<"+HIB+"+"+HIC+">"+HIB+"> "+HIC+tpn+" "+what+NORM+"\n");
+		return 1;}}
+
+cmd_say(string str){
+	
+	string verb;
+	
+	if(!str){
+		write("Say what?\n");
+		return 1;}
+	if(strlen(str) > 0){
+		if(str[strlen(str)-1] == '?')
+			verb = "smiles and asks";
+		else if(str[strlen(str)-1] == '!')
+			verb = "smiles and exclaims";
+		else
+			verb = "whisper";
+	}
+	else verb = "whisper";
+		write(""+HIB+"You "+verb+" \""+HIB+str+HIC+"\""+NORM+"\n");
+		say(HIC+this_player()->query_name()+" "+verb+"s \""+HIB+str+HIC+"\""+NORM+"\n");
+		return 1;}

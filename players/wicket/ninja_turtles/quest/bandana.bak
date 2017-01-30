@@ -1,0 +1,19 @@
+/*
+ * Quest reward Bandana from Ninja Turtle quest
+ * Rumplemintz
+ */
+#pragma strong_types
+
+inherit "obj/armour";
+
+void reset(int arg) {
+  if (arg)
+    return;
+  set_name("bandana");
+  set_short("Martial Arts bandana");
+  set_long("A Martial Arts bandana.\n");
+  set_ac(2);
+  set_type("helmet");
+  set_value(2000);
+  set_weight(1);
+}

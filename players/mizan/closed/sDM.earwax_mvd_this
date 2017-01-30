@@ -1,0 +1,262 @@
+/**
+ * sDM.c
+ * 
+ * This object tracks high value objects in the game and who is carrying them.
+ * That in itself isn't a big issue, but if objects are ferried to other players
+ * from the same IP then data is collected, and can be digested afterwards.
+ *
+ *
+ */
+
+#define SAVEFILE "players/mizan/closed/sDM"
+#define DISTRIBUTOR "/players/mizan/closed/object-distrib.c"
+#define DISTRIBUTOR_ID "object-distrib-tracker"
+
+
+/* a pile of objects we are monitoring */
+string *observed_players;
+
+id(str) { return str == "server" || str == "equipment-tracker"; }
+
+short() { return "A network server named (equipment-tracker)"; }
+
+void long()
+{
+   write("This dingy little server is tracking equipment being moved\n"+
+         "across players. It is a very unglorious, dirty, and boring job.\n"+
+         "To see who is being observed give the command 'dump'.\n"+
+         "To add someone to the observe list, type 'observe <playername>.'\n"+
+         "To remove someone, type 'unobserve <playername>'.\n"+
+         "\n" +
+         "The log file lives in /log/mizan.objtracker,\n"+
+         "and any violations recorded live in /log/mizan.objtracker.violations.\n");
+         
+}
+
+int can_put_and_get() { return 1; }
+
+void reset(int arg)
+{
+   if(arg) return;
+
+   move_object(this_object(), "players/mizan/core/02h/room03");
+
+   this_object()->restore_self();
+
+   remove_call_out("monitor_beat");
+   call_out("monitor_beat", 2);
+
+}
+
+void init()
+{
+   if(this_player() && this_player()->query_level() > 20)
+   {
+      add_action("on_observe","observe");
+      add_action("on_unobserve","unobserve");
+      add_action("on_dump_players","dump");
+   }
+
+}
+
+int plant_distributor(object arg)
+{
+   object tracker;
+   object ob;
+
+   if(!arg) return 0;
+
+   /* we are putting a distributor object on the player. */
+   ob = present(DISTRIBUTOR_ID, arg);
+   
+   if(!ob)
+   {
+      tracker = clone_object(DISTRIBUTOR);
+      move_object(tracker, arg);
+
+/*      say("No object-distrib found, planting copy on " + arg->query_name() + "\n"); */
+   }
+   else
+   {
+/*      say("Object-distrib found already on " + arg->query_name() + "\n"); */
+   }
+
+}
+
+int unplant_distributor(object arg)
+{
+   object tracker;
+
+   if(!arg) return 0;
+
+   tracker = present(DISTRIBUTOR_ID, arg);
+
+   if(tracker) destruct(tracker);
+
+}
+
+void restore_self()
+{
+   if(!restore_object(SAVEFILE)) 
+   {
+      /* initialize player mappings */
+      if(!observed_players) observed_players = ({});
+
+      save_object(SAVEFILE);
+   }
+}
+
+void save_self()
+{
+   save_object(SAVEFILE);
+}
+
+
+int on_dump_players()
+{
+   int i, a;
+   string msg;
+   
+   msg = "Current players being observed:\n\n";
+
+   for(i = 0, a = sizeof(observed_players); i < a; i++)
+   {
+      msg += i  + ")\t" + observed_players[i] + "\n";
+      write(msg);
+      msg = "";
+   }
+
+   say(this_player()->query_name() + " does a player dump from the server.\n");
+   write("\nDone.\n");
+   return 1;
+}
+
+
+int on_observe(string arg)
+{
+   if(!arg)
+   {
+      write("Usage:\n    observe <playername>  to begin tracking object flow for said player.\n");
+      return 1;
+   }
+   
+   if(this_object()->match_player(arg))
+   {
+      write("That person is already being observed.\n");
+      return 1;
+   }
+
+   this_object()->observe_player(arg);
+
+   say(this_player()->query_name() + " has requested from the server equipment logging of player '"  +  arg + "'.\n");
+   write("'" + arg + "' has been added to the observed list.\n");
+   write("Done.\n");
+   this_object()->save_self();
+
+   return 1;
+}
+
+
+int on_unobserve(string arg)
+{
+   object ob;
+
+   if(!arg)
+   {
+      write("Usage:\n    unobserve <playername>  to stop tracking object flow for said player.\n");
+      return 1;
+   }
+   
+   if(!this_object()->match_player(arg))
+   {
+      write("That person was not being observed at all.\n");
+      return 1;
+   }
+
+   this_object()->stop_observe_player(arg);
+
+   say(this_player()->query_name() + " has requested from the server unobservance of player '"  +  arg + "'.\n");
+   write("'" + arg + "' has been removed from the observed list.\n");
+   write("Done.\n");
+   this_object()->save_self();
+   
+   /* clear the distrib object from the player if it is there */
+   ob = find_player(arg);
+
+   if(ob)
+   {
+      write("Removing distributor object from " + arg + "...\n");
+      unplant_distributor(ob);
+   }
+   return 1;
+}
+
+/** \brief This is called when we want to add a player to the list to observe.
+ *
+ */
+void observe_player(string arg)
+{
+    if(!arg) return;
+    observed_players += ({ arg, });
+}
+
+
+/** \brief unsubscribes the player from the list.
+ */
+void stop_observe_player(string arg)
+{
+    if(!arg) return;
+    observed_players -= ({ arg, });
+}
+
+
+/* \brief this matches against the entire object list to see if we have
+ *        a match.
+ */
+int match_player(string arg)
+{
+    int i;
+
+    if(!arg) return 0;
+
+    /* we cycle through to see if we have a match. */
+    for(i = 0; i < sizeof(observed_players); i ++)
+    {
+        /* found it! */
+        if(arg == observed_players[i]) return 1;
+    }
+
+    /* no match, return 0. */
+    return 0;
+}
+
+
+monitor_beat()
+{
+   object ob;
+   object victim;
+   int i;
+   int j;
+
+   ob = users();
+
+   for(i = 0; i < sizeof(ob); i ++)
+   {
+      if(ob[i] && environment(ob[i]))
+         j = match_player(ob[i]->query_real_name());
+      else j = 0;
+      if(j)
+      {
+/*          say("Match to " + ob[i]->query_real_name() + " found!\n"); */
+         
+         plant_distributor(ob[i]);
+      }
+      
+   }
+
+   remove_call_out("monitor_beat");
+   call_out("monitor_beat", 10);
+}
+
+
+/* eof */

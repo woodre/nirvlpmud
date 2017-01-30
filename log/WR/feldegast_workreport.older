@@ -1,0 +1,84 @@
+Mon May 26 18:10:20 1997--Action: Adjusted feldtest's stats Reason: For playtesting purposes.
+Thu May 29 12:20:48 1997--Action: Dested Pike Reason: He asked me to. *boggle*
+Thu Jun 19 19:09:56 1997--Action: Changed Kurtis' title from "the whining whimp of a pussy" to "the small fighter" Reason:  He claims Sado changed it against his will and if I'm not mistaken, obscene titles are not allowed.
+Tue Jul 15 13:32:18 1997--Action: Imprisoned Goof Reason: For repeated swearing over gossip. 'OH SHIT REBOOT' 'blow me' 'why should I fucker'
+Tue Jul 22 00:19:45 1997--Action: Imprisoned Mode and Modeiv Reason: For multiplaying.  They both dc'ed before set_home was called.  I should code a new prison.
+Wed Jul 23 01:02:30 1997--Action: I took Mode out of prison to see if he's settled yet. Reason:   Obviously, he hasn't and I don't plan on releasing him for the next week.  Maybe never.
+Wed Jul 23 14:02:45 1997--Action: Restored Jabberwocky's dwep at Wocket's request. Reason: 
+Wed Jul 23 19:05:24 1997--Action: I dested numeroud bogus characters this afternoon.  They're listed in /log/DESTRUCT Reason: They were piling up in the church.  Expanding the siteban on Pogg would be a good idea
+Wed Jul 23 19:46:26 1997--Action: Dested a hoopak of doom off of Amberlee. Reason: Somehow, it was preventing her from quiting out.  Her mage object was gone before I got there.  I don't see the connection, but she quit out fine after I dested the hoopak.
+Sun Jul 27 01:21:56 1997--Action: Returned Mode to prison after Sado let him out. Reason: He shouldn't be released until Wednesday, 7/30/97.
+Tue Aug  5 02:21:56 1997--Action: Restored JW's dwep at Wocket's request Reason: 
+Fri Aug  8 19:22:51 1997--Action: Dested Tye Reason: He had a pretitle with several ctrl-g's in it so that anybody entering the church would be buzzed.  Also, it was probably Pogg.
+Mon Aug 11 16:45:39 1997--Action: Restored Luthien's autoloads. Reason: He lost them all when he died and got dc'ed.  This seems to happen a lot.
+Mon Sep  1 11:45:39 1997--Action: Tossed Lothar into a temp prison to cool down. Reason: For swearing on gossip after being warned.
+Mon Oct  6 12:08:00 1997--Action: Restored Lizzar's guild object. Reason: His inventory was messed up.
+Tue Oct 14 15:53:21 1997--Action: Helped Wocket set up his test char, Nika. Reason: 
+Fri Oct 17 17:33:49 1997--Action: Changed arena.c to reflect the possibility of a bloodmatch tie in which one person is following the other and one person wimpies while in the recovery room. Reason: Because some people are just jinxes.
+Fri Nov 14 10:32:21 1997--Action: Removed the entrance to my sparring arena in ~/arena/rooms/foyer.c Reason: I've heard too many rumors about bugs involving other sparring arenas.
+Thu Nov 20 14:33:51 1997--Action: Made the marble shrine autoloading around 9am this morning. Reason: Do I really need a reason?
+Mon Nov 24 16:18:47 1997--Action: Opened the jungle_village quest today shortly before afternoon reboot. Reason: With Eurale's permission.
+Tue Nov 25 11:34:30 1997--Action: Included a hint in the storyteller's monologue to ask him about other stuff. Reason: To streamline the quest more.
+Sun Nov 30 15:13:09 1997--Action: Changed /players/feldegast/island/path/vine.c eye.c and skybeast.c to dest their respective "keys" once they're used. Reason: At Eurale's request.
+Wed Dec  3 12:53:46 1997--Action: Combined my castles so that castle.c leads to ~/shrine.c and from there you can go to the coliseum or the jungle island. Reason: Mental note: make a logging tool.
+Fri Dec  5 10:29:29 1997 Added an exit to Wocket's statue in /players/feldegast/shrine.c.
+Tue Dec  9 16:08:34 1997 Updated the description for ~/shrine.c and added a 'reflect' command to give a description of each exit.
+Mon Dec 15 12:01:29 1997 Fixed it so that /players/feldegast/island/npc/snake_armor will save its owner after it's been stored.
+Wed Dec 17 15:27:55 1997 Set up a new testchar named Blacksmyth to test my hypothetical guild.
+Thu Dec 18 10:59:32 1997 Recompensated Set a deathmace after his bugged out and wouldn't store...Gonna try to look into this.  He thinks it's a guild bug.
+Thu Dec 18 11:28:46 1997 The reason the deathmace didn't store was because it's eff_wc was 288(?!?!?) and that prevented it from being stored.
+Thu Dec 18 11:31:09 1997 As effective wc is partially determined by the number of hits, when Set used Eurale'
+Thu Dec 18 11:33:15 1997 ...'s honing stone, this drastically lowered the number of hits, causing the eff_wc variable to rise to 288.  When the lockers asked if it was saveable, it checked the eff_wc, saw it was over 24, then prevented it from being saved.
+Thu Dec 18 11:34:32 1997 So this basicly means that any sharpening tool could cause a weapon not to save.  Strange that I never noticed that before.
+Sun Dec 28 01:26:36 1997 Added a generic shop to the marketplace in my coliseum.
+Sun Dec 28 01:27:40 1997 Spent hours pondering why I'm bothering to improve an area no players ever go to.
+Sun Dec 28 01:28:17 1997 Considered plans to salvage the marketplace for a new city. *ponder*
+Sun Dec 28 01:42:41 1997 Idea: Allow numbers to be used to purchase items in the marketplace.
+Sun Dec 28 03:04:42 1997 Set Mordant's extra levels to 10 from 11 to match his xp.
+Tue Dec 30 02:39:07 1997 Looked into the reason why Dreamspeakr didn't finish the despoina quest properly even tho she killed despoina, had the holy avenger, and claims to've had it wielded.
+Tue Dec 30 03:31:44 1997 When it rains, it pours:
+Tue Dec 30 03:32:38 1997 Dested a party object off of Reaper because it was messing up the 'who' command for everybody and prevented an inventory from being done of him.
+Mon Jan  5 11:23:10 1998 Cloned a replacement guild object for Bloodhound as his wasn't autoloading.
+Tue Jan  6 12:44:47 1998 Added log functions to various points in my quest at Eurale's suggestion.
+Mon Jan 12 12:53:41 1998 Dested Caravelle for excessive spammage...A dozen wooden boys is way too many.
+Mon Jan 12 14:27:55 1998 Redefined the minimum bloodmatch hitpoints from 60 to 80 after receiving a complaint about somebody being killed by green snakes in the arena.  As the damage from green snakes isn't limited, I doubt this is a very good patch.  I'll have to work out some way to check for it in the code.
+Mon Jan 12 14:28:34 1998 Once again, spent several hours pondering why I'm bothering with an area nobody uses.
+Tue Jan 13 14:08:04 1998 Reopened my sparring arena.
+Tue Jan 13 14:09:25 1998 Players are now prevented from entering the sparring arena if they don't have a clean bill of health i.e. no objects with ids "crotchrot","poison", or "toxin".
+Tue Jan 13 14:11:05 1998 As my sparring arena doesn't reset pk, there doesn't seem to be any reason not to reopen it.  If anybody believes there to be any bugs, please speak to me first.
+Thu Jan 15 14:26:50 1998 Set up a check to prevent green snakes from entering my main arena during bloodmatches as they circumvent the usual damage limitations.
+Tue Jan 20 13:45:35 1998 Added a truce command to the arena so players can get out if they both agree to a tie.
+Thu Jan 22 10:18:18 1998 Put some code in so that cninjas and power rangers(who can't wear armor) can get past the skybeast in my quest without having to wear the snakeskin armor.
+Mon Jan 26 12:26:09 1998 Imprisoned Monkeydevil(202-110-126.ipt.aol.com) for multiplaying with Becca(202-110-126.ipt.aol.com).  While they were logged on, Monkeydevil sacrificed her to get guild points.  When I trans'ed him, he dc'ed.
+Wed Jan 28 11:32:44 1998 Made it stick.
+Thu Jan 29 15:24:42 1998 Held a sentencing hearing for Monkeydevil.  He will be released two weeks from Wednesday.
+Mon Feb  9 11:47:35 1998 Modified the vendor near the arena to accept numbers and to sell a full set of armor(total cost + 50 coins for packaging and handling).
+Thu Feb 12 18:18:14 1998 Added exit 'dreams' to my shrine.
+Tue Feb 24 13:43:00 1998 Gave Shinann the replacement shardak mark.
+Tue Mar  3 21:42:44 1998 At the insistence of many other wizzes, I told Monkeydevil/Exodus that his chars weren't going to be released.  Good riddance...
+Fri Mar 13 14:42:06 1998 Changed Alanna's home from the poly guild hall to 0 since she's no longer a polymorph.
+Sun Mar 15 02:15:01 1998 I added a second viewing gallery to the coliseum so that the sparring arena can be viewed.
+Wed Mar 18 21:17:14 1998 FYI Jae and Goblin both at deity.loa.com(199.171.167.13) don't appear to be multiplayers.
+Mon Mar 30 23:04:42 1998 Added an exit from my marble shrine to /room/mount_top2 (Illarion's new castle).
+Thu Apr  2 12:40:18 1998 Made null magic a new parameter in the central arena.
+Thu Apr  2 12:40:41 1998 Basicly, that means that they have the option of not casting spells.
+Thu Apr  2 12:40:59 1998 It probably won't be used, but it was easy to put in, so why not?
+Thu Apr  2 13:39:46 1998 Added a board to the coliseum's lounge.
+Tue Apr  7 22:36:55 1998 I made a minor change to my quest...The items that a player uses on the path are no longer destructed, but only one person is allowed on the path per reset.
+Tue Apr  7 22:54:41 1998 To date, 33 people have solved my jungle village quest.
+Thu Apr 16 21:54:29 1998 Set Conker's login room to null from Linna since he's left poly's.
+Tue Apr 21 13:53:18 1998 Began working on Trix's realm today, fixing typos, correcting bad grammar, adding a couple of spaces to the start of the long descrip...
+Tue Apr 21 13:53:58 1998 Fixing monsters that're loading improperly, etc.
+Tue Apr 21 13:55:17 1998 I commented out a couple of non-existant items in the weaponsellers inventory so that it'd load properly.  I might add some coins to it later so that it's worth killing...
+Wed Apr 22 16:34:01 1998 Paulasx's temple isn't loading properly for no apparent reason...Somebody remind me to nag Boltar or somebody about it if it continues to fail to load.
+Wed Apr 22 17:07:37 1998 I commented out about 7 useless objects that Trix had autoloading.
+Wed Apr 22 17:09:06 1998 Two of them were related to undead(which closed), the flirter is redundant, and the rest were objects for individual players who probably don't exist anymore.
+Thu May  7 01:33:42 1998 I moved Trix's realm from town hall to just east of Bagera's realm for a few reasons.
+Thu May  7 01:34:13 1998 First of all, it seemed too close to the church and cluttered the village.
+Thu May  7 01:35:32 1998 Secondly, because a town hall meeting room is a silly place to put an area as large as a small city.
+Thu May  7 01:38:12 1998 I placed it in /room/forest6 because it was the closest open space that wasn't inside the village.
+Fri Aug 21 21:09:41 1998 Logged on for first time in several months...Am really not pleased with my Dark City not being implemented.
+Fri Aug 21 21:09:58 1998 Mental note: Bitch out Dreamspeakr big-time about this.
+Mon Sep  7 12:12:47 1998 I opened up Dark City from my marble shrine today.
+Thu Sep 17 19:54:27 1998 /players/scathe/armor
+Thu Sep 17 19:55:13 1998 That wasn't even remotely the right command, was it?

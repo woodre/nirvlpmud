@@ -1,0 +1,16 @@
+ -=[ Calculate Experience ]=-
+
+There are two ways to have your experience transfer from general mud
+experience to guild experience.
+
+The first way is to let it transfer automatically.  Each time the automatic
+guild save occurs it transfers a portion of the new experience you've 
+gained based on your 'gdiv' percentage.
+
+The second way is to manually do it.  Whenever you want to transfer the
+experience you've gained (based on your 'gdiv' percentage) you can just
+type 'calcxp'.
+
+
+See Also: experience, gdiv
+

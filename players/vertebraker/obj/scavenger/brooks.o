@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/saber/armor/mini","/players/hippo/heals/nucleus","/players/wren/Area/starbug/items/bat","/players/mosobp/areas/TEMPLE/OBJ/robes","/obj/torch","/players/softly/nhall/obj/green2","/players/mythos/awep/katana","/players/sado/shop/chocolate","/players/wren/Area/starbug/items/leaflets","/players/wren/Area/starbug/items/indianheaddress","/players/sado/shop/oreo","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/snow/shadows/stuff/crown","/obj/armor","/players/softly/nhall/obj/decant3","/players/wren/Area/starbug/items/laundry","/players/mythos/closed/guild/forest/misc/prop","/obj/weapon","/players/puppy/s/eq/brush","/players/snow/closed/q/orb","/players/scathe/armor/suit","/players/snow/WEAPONS/glowknife","/obj/treasure","/obj/weapon","/players/sado/shop/rose",})
+shorts ({"A skin tight leather mini skirt","[35mnucleus of a cell[0m","a [1;30mballbat[2;37;0m","A Priest's Robes","light spell","Healing Balm [32m(green)[2;37;0m [2]","Katana","A box of delicious Belgian chocolates","a stack of leaflets","a tiny indian headdress","A box of oreo cookies","A Princess' Tiara","[1mShadowCrown[0m","A suit of [1mwhite[0m platemail","Decanter of Healing [[1m2[2;37;0m]","Lister's dirty laundry","Essence of Vraith- vine sap","Glamering","A paint brush","Orb of the Ancients","Black Suit","A glowing knife","Beach Bear pelt","Small knife","A beautiful red rose blossom",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

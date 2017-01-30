@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/puppy/s/eq/parchment","/players/scathe/armor/rgarb","/players/mythos/awep/arrow","/players/wren/Area/starbug/items/cottagecheese","/obj/torch","/players/mythos/awep/dstaff","/obj/armor","/obj/treasure","/players/puppy/s/eq/collar","/players/ultramagnus/bdiamond","/players/wren/Area/starbug/items/sequinjacket","/players/wren/Area/starbug/items/cowboyhat","/players/wren/Area/starbug/items/groinal","/obj/armor","/players/mythos/awep/tanto","/players/angel/area/stargate/obj/P90_no_ammo","/players/snow/heals/kw_meat","/players/scathe/armor/suit","/players/saber/armor/slboots","/players/mythos/amisc/egg","/players/scathe/armor/damulet","/players/hippo/heals/grain","/players/wren/Area/starbug/items/reddress","/players/wren/Area/starbug/items/currie","/obj/armor",})
+shorts ({"Parchment","Monk's garb","arrow","a small tub of cottage cheese.","sunflower","Dream Staff","A cartoon character's shoes","An important sign","A leather collar","A Blue Diamond","Cat's red sequin jacket","a tiny cowboy hat","Kryten's groinal attachment","A suit of [1mwhite[0m chainmail","Tanto","[36mP90 machine gun[0m","A hunk of whale meat","Black Suit","Stiletto heeled leather boots","A strange looking egg","A Dragon Amulet","[33mcrumbs of grain[0m","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","A tin of chicken currie","Boots",})
+found ({0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,})
+loaded 0

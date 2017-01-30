@@ -1,0 +1,48 @@
+LPmuds are composed of small and not-so-small pieces of code called
+objects. These objects all have functions inside that are small
+programs that handle specific tasks. [There are different types of
+functions, but more on that later.] These functions manipulate
+information in containers called variables. Every function ends with a
+semicolon. [The variables also have specific types to be covered
+later.]
+
+There are two other parts to a typical object: preprocessor directives
+and comments. Since they are not code, they do not end with a
+semicolon. In reverse order, it's good to comment your code so that
+you and anyone else can figure out what you were thinking when you
+wrote it. The standard comment begins with a `/*' and ends with a `*\'
+and they cannot be nested.
+
+The other, preprocessor directives are just as easy to see. They all
+begin with `#' and tell the mud how to interpret the file. There are
+only a limited number of directives and they will quickly become
+second nature. Some of the more common ones are:
+
+#include
+#define
+#undef
+#ifdef
+#endif
+#pragma
+
+Objects are loaded on an "as-needed" basis. If one object relies on
+another or needs to interact with it, then it ask the game to load
+that object. Interaction between functions within an object and
+between other objects are termed `calls'.
+
+Putting this all together, in a example object you might see something
+like:
+
+----------------------------------------------
+#include <ansi.h>       preprocessor directive
+/* color file */        comment line
+
+int Level;              variable declaration
+
+my_function(int Level); function
+-----------------------------------------
+
+This is a very limited object and won't interact well, but it is an
+object none-the-less. From this point we will branch out and begin 
+to explore each of these topics in more detail. Variables, Functions,
+Preprocessor.

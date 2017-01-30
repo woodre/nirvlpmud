@@ -1,0 +1,186 @@
+[31m==>[0m Goblin Area Walkthrough 2.0
+[31m==>[0m *****************************************************************
+[31m==>[0m Add an item for 'opening'
+[31m==>[0m add smells for urine and fecal matter
+[31m==>[0m add item for tunnel
+[31m==>[0m all in gobrm1.c
+[31m==>[0m *****************************************************************
+[31m==>[0m In gobrm2.c
+[31m==>[0m add a listen for drip, drop, water, dripping
+[31m==>[0m add a smell for air, it can be the same as main
+[31m==>[0m check all your room items - they do not need periods at the ends
+[31m==>[0m this just makes them display two when a player looks at them.
+[31m==>[0m add an item for puddles
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm3.c
+[31m==>[0m add a listen for sounds, you mention something
+[31m==>[0m or some sounds coming from the north...
+[31m==>[0m *****************************************************************
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm4.c
+[31m==>[0m still a typo in the first line...
+[31m==>[0m add a smell for 'goblins'
+[31m==>[0m add a listen for sounds
+[31m==>[0m and squeals
+[31m==>[0m and giggles
+[31m==>[0m as the builder of this area, you are the authority,
+[31m==>[0m so you need to change the last line to reflect your
+[31m==>[0m authority. "...whatever they tend to do." is very
+[31m==>[0m vague. If you want to keep the player in the dark,
+[31m==>[0m then just say "other nasty things" or something
+[31m==>[0m similar.
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm5.c
+[31m==>[0m add an item for 'floor'
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm11.c
+[31m==>[0m item desc for statue is a run on sentence
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm12.c
+[31m==>[0m "dirty soiled carpet" needs an article and a comma between
+[31m==>[0m dirty and soiled.
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm6.c
+[31m==>[0m typo in item desc for timbers
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm7.c
+[31m==>[0m add a desc for 'rope'
+[31m==>[0m add a desc for 'beams
+[31m==>[0m add a desc for timbers
+[31m==>[0m typo in the desc for wood
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm8
+[31m==>[0m still a typo in line 2 of room desc
+[31m==>[0m will the opening always be on the right? what if I
+[31m==>[0m turn around? Maybe just east/west or even side.
+[31m==>[0m the exit can stay the same though
+[31m==>[0m need a listen for gibbering
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm13.c
+[31m==>[0m add smell for scent
+[31m==>[0m add listen for screams
+[31m==>[0m and moans
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm14.c
+[31m==>[0m add desc for tunnel
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm9.c
+[31m==>[0m add a smell for stench and corruption
+[31m==>[0m *****************************************************************
+[31m==>[0m gobrm10.c
+[31m==>[0m add item for material
+[31m==>[0m add description for bodies
+[31m==>[0m typo in the desc for goblins
+[31m==>[0m add desc for materials
+[31m==>[0m add a desc for sculpture
+[31m==>[0m add desc for seat
+[31m==>[0m *****************************************************************
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/armors/gobrobe.c
+[31m==>[0m I think I would make the robe ac 2. If you want to
+[31m==>[0m make it special, you could add some specials for
+[31m==>[0m your target audience [mid levels?]
+[31m==>[0m Or, might make it a 'misc', AC 1 and add some flair if
+[31m==>[0m you like.
+[31m==>[0m Also, the long needs to be changed to match the style of
+[31m==>[0m the rooms. [i.e. "bleh blah bleh...\n\..." instead of
+[31m==>[0m "bleh blah bleh...\n"+"more stuff..."]
+[31m==>[0m *****************************************************************
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/heals/goblins/fungibrew.c
+[31m==>[0m looks good. Need to change the long to match the
+[31m==>[0m style of the rooms \n\ instead of \n"+"
+[31m==>[0m for the mobs that you have to kill, how about changing
+[31m==>[0m the heal to be something like:
+[31m==>[0m set_heal( (35 + random(15)), (-5 - random(6)) )
+[31m==>[0m otherwise, we might just need to make it 40,-10
+[31m==>[0m *****************************************************************
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/weapons/goblins/gobclub.c
+[31m==>[0m style of long desc needs to be updated. I don't want to
+[31m==>[0m see it anymore.
+[31m==>[0m need to able to look at the "runes" and "glyphs" on
+[31m==>[0m the club. Maybe even read them.
+[31m==>[0m You need to do one of a couple things with the club:
+[31m==>[0m   Either back the return off to 3,
+[31m==>[0m   Or lower the chance of it going off to 1:5
+[31m==>[0m   Or make it specific for a specific race/level
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/weapons/goblins/gobstaff.c
+[31m==>[0m long desc.
+[31m==>[0m look at runes, sigils
+[31m==>[0m same for the weapon_hit as for the gobclub.c
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/weapons/slayerofkings.c
+[31m==>[0m long description....
+[31m==>[0m need id for 'runes'
+[31m==>[0m don't use heal_self() as it's a hack. stick to
+[31m==>[0m the function do_damage() instead.
+[31m==>[0m at one point you call it Deathmaster. where did
+[31m==>[0m Deathmaster come from?
+[31m==>[0m Probably need to make it just Demon sword. The
+[31m==>[0m daemon is more related to a computational stand
+[31m==>[0m in.
+[31m==>[0m also, the overall formatting of the file needs
+[31m==>[0m to be fixed.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/monster/goblins/gobboss.c
+[31m==>[0m long desc...
+[31m==>[0m "rolls of far"...? fat?
+[31m==>[0m "order of his followers" needs to be "order
+[31m==>[0m among his followers" or something similar
+[31m==>[0m hps need to be 250
+[31m==>[0m or more, prolly wouldn't hurt to make
+[31m==>[0m them 325 or so
+[31m==>[0m you are using both add_money and then cloning
+[31m==>[0m cash and moving it into his inventory. I'd say
+[31m==>[0m just don't give him any cash at all.
+[31m==>[0m Also, change his alias to boss, he already has
+[31m==>[0m skrub defined.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/monster/goblins/gobminder.c
+[31m==>[0m change the alias to taskmaster
+[31m==>[0m fix the long
+[31m==>[0m same money problems as the boss. I'd just loose the coins.
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/monster/goblins/gobmob.c
+[31m==>[0m fix the long
+[31m==>[0m lose the money
+[31m==>[0m might change the alias to 'night goblin'
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/monster/goblins/gobmob2.c
+[31m==>[0m fix the long
+[31m==>[0m change alias to 'chaos goblin'
+[31m==>[0m lose the $$
+[31m==>[0m LINE
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/monster/goblins/gobmob3.c
+[31m==>[0m fix the long
+[31m==>[0m lose the coins
+[31m==>[0m change the alt_name to guard
+[31m==>[0m change the alias to night goblin
+[31m==>[0m change the alignment to -400 or less
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/monster/goblins/gobshaman.c
+[31m==>[0m fix the long
+[31m==>[0m lose the coins
+[31m==>[0m change the alias to goblin shaman
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/monster/goblins/skargroth.c
+[31m==>[0m fix the long
+[31m==>[0m lose the coins
+[31m==>[0m figure out something else to give him, perhaps he
+[31m==>[0m could drop some scales, a spleen, etc. or add a
+[31m==>[0m search for the nest the checks if the mob is still
+[31m==>[0m alive and if not returns some 'treasure'
+[31m==>[0m change the alias to dragon ogre
+[31m==>[0m drop the alignment to -900
+[31m==>[0m drop the level to 20
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/khrell/monster/goblins/snotling.c
+[31m==>[0m fix the long
+[31m==>[0m lose the coins
+[31m==>[0m up the AC to 6
+[31m==>[0m add a random(30) or so to the hps.
+[31m==>[0m change the align to -50 or so
+[31m==>[0m *****************************************************************

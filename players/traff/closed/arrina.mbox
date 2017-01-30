@@ -1,0 +1,82 @@
+From: ruby
+Subj: oath
+
+Cc: none
+Date: Jan 12 19:22
+
+I would like to make this oath for my possible entrance into the 
+guild with out a name.
+I oath to kill a monster that i have never killed before, and i shall
+oops messed it up a little *blush*
+I oath to kill a monster that i have never killed before everytime i shall
+log on to this game no matter for how long or short, and making it the
+first thing i kill, and upon it's death i will add it's name to my description
+which will be used as a list for all the monsters that i have killed.
+please tell me if you like this oath or it sux or whatever
+thanx :)
+Ruby
+
+From: ruby
+Subj: oath
+
+Cc: none
+Date: Jan 16 14:32
+
+i thought of an addition to the original oath,
+instead of just killing a monster i have never killed before
+i can kill a monster i never killed before in
+alphabetical order i must go through monsters a-z then restart at a-z 
+etc
+killing monsters i have never killed before
+thanx for your time,
+Ruby
+
+From: traff
+ Re:   arena
+Cc: (To: snow) mythos,arrina
+Date: Feb  9 02:02
+
+Ok, not too much of a problem.  Off the top of my head I can see several
+things that can be done.  1. Limit monster overall to a lower number.
+2. Exclude players above level 15.  3. I probably could make the
+monsters more random, but hate to see a level 1 player end up with
+a level 20 monster.  4 This is what I like best, and EASY to change:
+Players Level            # Monsters they can summon:
+16-20                       1
+11-15                       2
+ 6-10                       4
+ 1-5                        6
+
+This would help the lower players the most, which is more what I
+originally had in mind.  Let me know what you think on any of
+these solutions.  Since I have it where it can keep track of players,
+I would kind of like to use it in some fashion.  My second choice
+of the above options would probably be to exclude the 16-20 levels.
+Thanks for the help.  Let me know if you have any other ideas.
+
+From: traff
+Subj: More on arena/monsters
+
+Cc: (To: snow) mythos,arrina
+Date: Feb  9 14:10
+
+Took a look at the monster code this morning, and I think it can be changed
+fairly easily to come in line with what you want.  The monsters are in
+/players/traff/delnoch/mon  and are glad1.c - glad4.c
+They are currently divided equally with glad1.c giving a monster with a level
+of 1-5, working up to glad4.c which gives the 16-20 level monsters.
+I am pretty sure I can change it to something along these lines;
+glad1.c make monsters 1-5 (no change)
+glad2.c make monsters 1-10 (currently 6-10)
+glad3.c make monsters 6-15 (currently 11-15) could also make it 1-15
+glad4.c make monsters 6-20 (currently 16-20) or 1-20
+
+That should cut way down on the High level monster cloning.  I could also
+throw in an aggressive factor on the higher level monsters, or all of them.
+I'm not going to do too much on this until I know which way to go with
+both the arena and the monsters.  Seems like with this method I coule
+leave it a 6/player or something like that.  Let me know,
+and thanks again for all the help.
+
+                        Traff
+

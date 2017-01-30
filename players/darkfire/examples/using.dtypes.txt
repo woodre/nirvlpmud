@@ -1,0 +1,103 @@
+Using dtypes
+
+Nirvana has a wide array of different damage types built in to make things
+more challenging and interesting.  For a list, see /doc/build/dtypes
+
+You can set defensive dtypes on any armor using /obj/armor.c, offensive
+dtypes on any weapon using /obj/weapon.c, and both on any monster that
+uses /obj/monster.c
+
+The first rule in using dtypes is:
+do not use set_params, set_weapon_params, or set_armor_params for the
+physical damage type.  Instead, set the armor and weapon class using
+the following functions:
+weapons:  set_class
+armor:    set_ac
+monsters: set_ac and set_wc
+
+For armor, you can also set a physical resistance.  Physical resistance
+is a percentage of physical damage that is completely ignored.  A monster
+with 100 physical resistance would take no damage from physical attacks.
+Obviously, this should be used very sparingly in armor.
+armor:    set_res
+monsters: set_res
+
+Finally, you can set a special function that allows you to temporarily
+increase or decrease the class of a weapon or the class and res of armor.
+This is optional.
+
+armor:    set_special
+monsters: set_armor_special and set_weapon_special
+weapons:  set_hit_func(object for function)
+
+For armor and monsters, you're setting the name of the function that
+returns the bonus or penalty.  For weapons, you're setting the object where
+the function is (usually this_object()).  The function name for weapons is
+always "weapon_hit"
+
+For weapons, return the amount you want the weapon's physical damage to be
+modified by (positive or negative).  The object being attacked is passed
+to weapon_hit as an argument.
+
+For monsters' weapon_special, return the amount of you want the monster's
+physical damage to be modified by.  The object being attacked is passed as
+an argument.
+
+For the monster armor special or the armor special you return a number
+combining the modification in ac with a modification in resistance.
+NOTE: unlike weapons, the argument passed to armor specials is the object
+wearing the armor.  (for monsters, that means the monster itself is the
+argument.)  MOST of the time, this_player() is the object doing the damage,
+so you can use that, if you're careful.
+
+The formula is: resistance*100 + class
+Another way of looking at this is that the part of the return from 0-99
+is the class modification, and anything 100+ is the resistance modification
+
+You can also return negative resistance and negative class, but you can't
+mix: you can't return a positive class with a negative resistance, or a
+negative resistance with a positive class.
+
+Here are some examples of how this works:
+return 10      gives a 10ac bonus.
+return 1000    gives an additional 10% resistance
+return 2010    gives 20% resistance and a 10ac bonus.
+return -5000   reduces resistance by 50%
+return -5      gives a 5ac penalty
+return -3015   reduces resistance 30% and gives a 15ac penalty
+
+That's it for the physical damage type.  You can also add damage for all
+the other dtypes to weapons and resistance to the other dtypes to armors,
+but the way you do that is a little different.
+
+weapons:  set_params(type,class,function)
+armor:    set_params(type,class,res,function)
+monsters: set_weapon_params(type,class,function)
+          set_armor_params(type,class,res,function)
+
+The type argument is any of the approved damage types EXCEPT physical.
+This means "magical" and "other|subcategory" where subcategory is any
+of the damges listed in /doc/build/dtypes.
+IMPORTANT:  If you set a type that already exists, it overrides whatever
+was there before with the new information.
+
+class is either armor class or weapon class as appropriate.
+
+res is resistance, as described above.  Non-physical damage resistances
+should also be used sparingly, but probably not as sparingly as physical
+damage resistance.
+
+function is the function that will be called inside your weapon, armor,
+or monster to further modify class and resistance.  The return values
+work exactly the same as for physical damage.  The function can also be 0
+if you don't need to use one.
+
+One final thing to be aware of: When a monster wields a weapon, the
+class of that weapon is ignored, but the values returned by any
+special functions that monster has or not.  A wc 30 monster wielding
+a wc 18 weapon with a return of 1-5 will have a physical damage
+potential of 31-35.  If the weapon has no special functions, it
+doesn't contribute to the monster's damage at all.
+
+For some examples of how to build monsters using this information,
+see dtype.examples.txt

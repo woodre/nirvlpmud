@@ -1,0 +1,157 @@
+[Sep  4 2005 21:56] A: Registered Test Character: Quest
+[Sep 25 2005 22:37] A: Registered Test Character: Fuse
+[Oct 11 2005 11:39] A: I added a Wal-Mart store to my area It is currently a heal shop
+[Oct 11 2005 11:44] A: Vital approved Wal-Mart to be added in
+[Oct 21 2005 23:11] A: made changes to /area/school/room/library_01.c / to fix bug in room
+[Nov  1 2005 19:46] A: reloaded all in /walmart  /reformatted code and put in correct value for heals
+[Nov 12 2005 17:41] A: reformatted  walmart/room/walmart_checkout.c
+[Nov 12 2005 18:17] A: reformatted school/room/airport.c
+[Nov 12 2005 18:19] A: reformatted school/room/entrance.c
+[Nov 12 2005 18:21] A: reformatted school/room/grade_01.c
+[Nov 12 2005 18:22] A: reformatted school/room/grade_02.c
+[Nov 12 2005 18:22] A: reformatted school/room/grade_03.c
+[Nov 12 2005 18:23] A: reformatted school/room/grade_04.c
+[Nov 12 2005 18:24] A: reformatted school/room/grade_05.c
+[Nov 12 2005 18:50] A: reformatted school/room/gym_01.c
+[Nov 12 2005 18:52] A: reformatted school/room/library_01.c
+[Nov 12 2005 18:53] A: reformatted school/room/main_office_01.c
+[Nov 12 2005 18:54] A: reformatted school/room/nurse_office_01.c
+[Nov 12 2005 18:55] A: reformatted school/room/principal_office_01.c
+[Nov 12 2005 18:55] A: reformatted school/room/playground_01.c
+[Nov 12 2005 19:01] A: reformatted school/room/school_hall_01.c
+[Nov 12 2005 19:02] A: reformatted school/room/school_hall_02.c
+[Nov 12 2005 19:02] A: reformatted school/room/school_hall_03.c
+[Nov 12 2005 19:03] A: reformatted school/room/school_hall_04.c
+[Nov 12 2005 20:09] A: reformatted school/obj/bbgloves_01.c
+[Nov 12 2005 20:10] A: reformatted school/obj/book_01.c
+[Nov 12 2005 20:10] A: reformatted school/obj/bracelet_01.c
+[Nov 12 2005 20:17] A: reformatted school/obj/chain_01.c
+[Nov 12 2005 20:23] A: reformatted school/obj/charm_01.c
+[Nov 12 2005 20:24] A: reformetted school/obj/chest_01.c
+[Nov 12 2005 20:26] A: reformatted school/obj/earing_01.c
+[Nov 12 2005 20:27] A: reformatted school/obj/gloves_01.c
+[Nov 12 2005 20:40] A: reformatted school/obj/shirt_01.c
+[Nov 12 2005 20:40] A: reformatted school/obj/pants_01.c
+[Nov 12 2005 20:41] A: reformatted school/obj/panties_01.c
+[Nov 12 2005 20:41] A: reformatted school/obj/pack_01.c
+[Nov 12 2005 20:42] A: reformatted school/obj/nike_01.c
+[Nov 12 2005 20:43] A: reformatted school/obj/necklace_01.c
+[Nov 12 2005 20:43] A: reformatted school/obj/mason_ring_01.c
+[Nov 12 2005 20:44] A: reformatted school/obj/jeans_01.c
+[Nov 12 2005 20:45] A: reformatted school/obj/guards_01.c
+[Nov 12 2005 20:58] A: reformatted school/obj/shorts_01.c
+[Nov 12 2005 20:59] A: reformatted school/obj/skirt_01.c
+[Nov 12 2005 21:02] A: reformatted school/obj/sweater_01.c
+[Nov 12 2005 21:03] A: reformatted school/obj/swivel_01.c
+[Nov 12 2005 21:03] A: reformatted school/obj/tanktop_01.c
+[Nov 12 2005 21:04] A: reformatted school/obj/underwear_01.c
+[Dec  5 2005 20:43] A: healed Vahiti cause he went into room with Mondar and after first hit ran out of room and had -25000 sps
+[Dec  5 2005 20:48] A: Vahiti said after use of heal stone it happened agian so I told him to stop using it and report it as a bug
+[Dec  5 2005 21:19] A: added colony way into the game / players/angel/area/colony
+[Dec 13 2005 10:00] A: changed hercules xlevel to +3 / gave him 4600 coins / title was bugged and did not change
+[Dec 13 2005 10:03] A: hercules was +4 / title didn't change with advancement / after re-advancement title was fixed
+[Jan  2 2006 16:22] A: added 'ray' as an alias to /principal_01.c
+[Mar  2 2006 23:13] A: Added walmart/room approved by Fred
+[Mar  3 2006 18:53] A: changed color code on walmart/npc/manakin
+[Mar  5 2006 20:53] A: edited walmart/room/tc hello
+[Mar  5 2006 20:53] A: edited walmart/room/toys.c to correct the Stop
+[Mar 11 2006 09:34] A: Registered Test Character: Bolts
+[Mar 25 2006 11:11] A: added /players/angel/area/school/room/principal_office_02.c approved by Francesco
+[Mar 25 2006 11:11] A: added /players/angel/area/school/obj/flow_scarf_01.c approved by Francesco
+[Mar 25 2006 11:11] A: added /players/angel/area/school/npc/asst_principal_02.c approved by Francesco
+[Mar 25 2006 11:12] A: added updated typo in flow_scarf_01.c
+[Mar 25 2006 11:13] A: traded joab fixed scarf for typo scarf
+[Apr  2 2006 15:31] A: had to reload /open/info/room.c  could not go in room
+[Apr 22 2006 00:55] A: Mason Mini-Guild put in game/ players/angel/masons approved by FRED
+[Sep  8 2006 21:36] A: gave tombsurfer 67000 coins / bug when advanced
+[Sep  8 2006 21:40] A: correction tombsurfer maxed out with 26090 coins and did not want the rest.
+[Nov 18 2006 17:56] A: updated file /school/room/airport.c approved by Fred
+[Nov 21 2006 23:58] A: added headers to all school files/ approved by Fred
+[Nov 22 2006 17:15] A: added header to all rooms in walmart/ approved by Fred
+[Dec 20 2006 16:22] A: made change in mason guild_lodge and mgob to fix an error/ approved by Earwax
+[Jan  2 2007 11:12] A: fixed bug in   school  principal_office_01.c
+[Jan  2 2007 18:40] A: fixed bug  school  principal_office_02.c
+[Feb 16 2007 21:47] A:  reloaded   /players/jaraxle/3rd/alt/rooms/sea.c  / exits wern't working
+[Mar 10 2007 23:17] A: added area/stargate approved by sparrow
+[Mar 11 2007 15:43] A: healed Alora bug in my area
+[Mar 11 2007 19:41] A: fixed the reported bug in stargate / I had a capitol P in the alias causing the issue
+[May 19 2007 15:01] A: changed Masons Titler command to gmtitle / conflicting with mages
+[Jun  8 2007 13:20] A: Replaced Gogeta Phoeniz Mask, Amulet of Lightning, and orb from jar's area/cookie issue
+[Jun  8 2007 13:34] A: replaced Hercules Mask and Amulet/ Jar's cookie issue
+[Jun  8 2007 13:38] A: replaced Joab's Phoenix Mask and 2 Lightning Amulet /cookie issue/ Fred approved.
+[Jun  8 2007 13:42] A: took back one Amulet from Joab / 1 was in locker and had returned
+[Jun  8 2007 15:27] A: added color to gate in stargate with Vertebrakers help
+[Jun 13 2007 02:26] A: healed sephiroth / sps issue didnt fix it / passing issue on
+[Jun 13 2007 02:33] A: had sephiroth beatfix and register/ it stoped the 90k sps loss/ and rehealed
+[Jun 18 2007 19:18] A: trans Bloodangle out of ooze it messed up on algn once agian...
+[Jul 23 2007 11:05] A: gave crip /players/jaraxle/3rd/volcano/weaps/krakin.c for bug in locker / Fred approved
+[Aug  7 2007 15:32] A: joab gave me bracelet to identify due to hotel bug / Boltar fixed the bug
+[Aug 12 2007 14:43] A: added /players/angel/rewards/belt.c and autoload/ approved by Earwax
+[Aug 14 2007 19:56] A: add 2 levels back to Blake / chip put mob on green and it killed him
+[Oct  6 2007 23:57] A: Imprisoned Tara 5 days for cheating the system/ DC'ing and getting 200k in coins repeatedly
+[Dec  8 2007 22:22] A: Tierno got gear from an alt char. said it was accident and put it right back.
+[Dec 20 2007 22:10] A: updated room to have list / walmart/room/walmart_checkout.c
+[Feb 15 2008 22:40] A: fix Tierno one more time/ Fred fixed him 3 times/ keeps dropping level 17 to 16/ see if this works Angel
+[May  7 2008 18:44] A: Beaker could not drop a piece of paper from Emerson's area, so I forced him.
+[May  8 2008 18:59] A: connected new parts of Gas City to the old/ Fred approved.
+[May  8 2008 21:29] A: jaster/beaker/ myself were kicked off the mud but no crash. There boxes were empty I retrieved Items from void.
+[May  8 2008 22:18] A: Chants box was also empty and stuff in void/ I retrieved
+[May 10 2008 11:40] A: healed Mosh he had SP: -21518097/610
+[Jun 14 2008 21:49] A: goddess droped bag in ooze/ replaced it for a 1st time stupidity
+[Jun 19 2008 20:57] A: Goddess had bug complaint / ooze eating droped bags / test and lost no bag / I think she left room
+[Jun 27 2008 09:43] A: fixed two mosobp files/stoped loading/  areas/BATTLE/NPC/saibaman2.c and android.c
+[Jun 27 2008 18:48] A: healed nolee, forgot he was a vamp he was in a no leave room and I steeped in
+[Jul  4 2008 00:40] A: arya picked up amulet after her hubby logged off / he left it / I let her keep it this time
+[Jul  7 2008 20:02] A: transed Joab to void for his 28 gogurt heals/ his armor was still on him but no box or heals/ he was dced by his ISP
+[Jul 11 2008 18:58] A: bug/ gave sparkle 28500 to get +100 back/ did not die but level change to 99 after entering Phantoms/ verfied with DEATH log
+[Aug  1 2008 00:01] A: retrieve bannock's gear from arena recovery room / he left out without picking it up
+[Aug  5 2008 16:26] A: Fred gave approval to add /atlantis
+[Aug  5 2008 23:05] A: Star approved /Nox to be put in system
+[Aug  6 2008 21:31] A: gave Valen 3mil exp for death caused by bug / checked Death log for exp value
+[Aug  6 2008 22:24] A: fixed halling / teyla / ronon
+[Aug 13 2008 19:12] A: replaced worm's dragon scales from smithy's bug
+[Oct 27 2008 17:44] A: reset guest to level 5, guest was leveled up to 10 / guess they nothing else to do...
+[Nov  3 2008 19:58] A: replaced saphira chestguard... it was not storing.
+[Dec 18 2008 00:58] A: darkheart claimed to get dc'ed around 2am and logged right back on and stuff was gone/ i replaced 1 time only
+[Apr 13 2009 00:04] A: warned crip on eq switching with his players, if he does it again I will jail...
+[Jun  6 2009 09:41] A: talked with Armadillo/Mcgregor about eq sharing, dealt w/ issue.  Next time he is to go to jail!
+[Jun  9 2009 20:07] A: made coldwind level 40 his old level, Fred agreed.
+[Jun 21 2009 19:01] A: Warned Sin / Stardrifter on eq sharing next time jail him
+[Jun 21 2009 19:07] A: tested eq sharing with shop, did not use items and sold back to shop. used joab and nelapsi
+[Jul 14 2009 20:07] A: Gargoyle's box was empty when returning from a DC. He told me each item and it was exactly what was in the void, so I returned it to him.
+[Jul 18 2009 20:50] A: nerfed /players/jareel/armor/DWARFFORGE/demon/cloak.c  to mud standards.
+[Jul 18 2009 22:06] A: ed 2 jareel files
+[Jul 20 2009 19:08] A: quoted out Heart beat in all 3 files of area/town/npc/multi / was causing mob to not fight
+[Jul 27 2009 00:41] A: tried to follow Mokri dir on renaming a clan for Joab/didn't work/will try to figure it out or reset clan
+[Jul 27 2009 17:16] A: handed nelapsi ~rewards/belt.c testing autoload
+[Aug  3 2009 16:23] A: Wipeout asked to be dewized/he coded nothing/dewiz granted
+[Aug  4 2009 00:13] A: gave Valen approval for wizship...
+[Aug  4 2009 01:13] A: ed /players/guilds/necro/obj/misc/handbook.c missing / would not work.
+[Aug  6 2009 11:15] A: Valen got his castle / Helped him setup files / gave hime the rundown on basics / promoted him to 21
+[Aug  8 2009 00:17] A: jailed wipeout for 1 day.  He was being unruly and disrespectful through Star and tells. He would not follow any directions when told he needed to stop.  I did not snoop anyone can check the file.  His behavior was unacceptable.  Tired of these types of players running others off.  His info is wrong.  Also though not needed to explain in my mind but Worm made my test player a shard to help fix guild errors, ask him.  No wrong doing on my part.
+[Aug  8 2009 00:18] A: freed wipeout from his 1 day sentence for his untruthful rants.
+[Aug 11 2009 18:17] A: approved Valen's writeup for his first area / he is clear to start coding
+[Aug 22 2009 17:43] A: idest hcl from cypher. there is no way to remove it or a time duration. not fair to players.   players/eurale/Lab/OBJ/acid / needs to be adjusted. will look at it...
+[Aug 22 2009 18:31] A: ok, well I found out that madam rue's dsmo heals the hcl.  Thought that he used one and didn't work.  I read the file and it does cure it.  Whish folks made things more clear in code...
+[Aug 27 2009 22:30] A: I added an access file for Khrell to get to active vamps files since he is guild wiz. some active files are still used in noon's files.  "/players/nooneelse/black%s"
+[Aug 28 2009 00:11] A: ed /players/nooneelse/black/guild_traitor_plaque.o to add a player for Khrell.
+[Sep  7 2009 00:49] A: approve valen's first area in /players/valen/area/catacombs
+[Sep  7 2009 21:35] A: Promoted Valen to 30.  First area complete.
+[Sep 16 2009 01:06] A: Fred
+[Sep 16 2009 01:06] A: is
+[Sep 16 2009 01:06] A: Cool!!!!
+[Oct  7 2009 22:16] A: Highlander lost bag in ooze.... told him no to reimbursement.
+[Nov  9 2009 21:20] A: gave highlander morgar heals he dropped  they disappear Know he knows...
+[Nov 23 2009 21:53] A: after screwing up the Mcleod clan using Mokri's direction I reset a new clan for Joab.
+[Nov 23 2009 22:37] A: imprisoned wipeout for giving players wizzes alts
+[Dec  4 2009 18:36] A: replaced Horus's exp from an unknown death.  1708902 exp from death log.
+[Dec 23 2009 17:53] A: replace Joab with the orb and bracers that did not save in clan lockers
+[Dec 24 2009 14:04] A: giving all player I see log on a Turkey for Christmas
+[Mar 31 2010 22:33] A: comp'ed gogeta his prize ring from Vert after crash
+[Oct 30 2010 17:54] A: Joab died but could not be revived/quit out and back but still dead after praying/ so I killed him again then he was able to revive... odd, I added his second death back.
+[Jan 29 2011 14:06] A: added 2011 to the top score board in players/cosmo/apt/rooms/lobby
+[Mar 17 2011 23:56] A: Darkfyre and Xaltocan issue / Both get 30 days jail if either one messes with the other with any alt
+[Mar 18 2011 00:34] A: The file is /players/angel/darkvexalt.txt
+[Jun  5 2011 17:07] A: sensitive mind notices in Nelapsi's coffin I handed him the gear that was in the .o file and edited it out of the .o file
+[Oct  1 2011 12:54] A: after mud crash joab lost bag w/ heal and no coins were given/ I gave him a bag w/ heals
+[Jan  7 2012 16:00] A: I removed ally's from the Knight's who were either Banished or no longer had a player in the system

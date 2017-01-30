@@ -1,0 +1,38 @@
+/* Changed level from 20 to 16, stats from guide level 20 to slightly weak 16 due to the managers being guarded. Money reduced but still high for 16. -Snow 2/00 */
+inherit "/obj/monster";
+int lvl,wcc;
+
+reset(arg) {
+   ::reset(arg);
+   if (!arg) {
+object ob2, ob3, gold;
+ gold = clone_object("obj/money");
+  gold->set_money(random(1000)+1000); /*Changed from 4k -Snow 2/00 */
+  move_object(gold,this_object());
+  ob2 = clone_object("/players/emerson/weap/pencil.c");
+move_object(ob2,this_object());
+init_command("wield pencil");
+     set_name("manager");
+     set_alias("hutboss");
+set_short("A Pizza Hut Manager");
+     set_race( "human");
+set_long("This is a mean looking Manager, she looks very busy.\n");
+     set_level(16);
+     set_ac(14);
+     set_wc(22);
+     set_hp(300);
+     set_al(-650);
+     set_aggressive(0);
+     set_whimpy();
+     set_chat_chance(20);
+     set_a_chat_chance(20);
+    load_chat("The manager grins evilly at you.\n");
+     load_chat("The manager yells at one of the drivers.\n");
+     load_chat("The manager says: What the hell do you want?!\n");
+     load_chat("The Manager says: Is there a problem with your order?\n");
+     load_a_chat("The manager says: You fool!  You can't be this stupid!\n");
+     load_a_chat("The manager slaps you across the face.\n");
+     load_a_chat("The manager punches you in the stomach.\n");
+     load_a_chat("The manager says: Surrender and I shall let you live...\n");
+   }
+}

@@ -1,0 +1,25 @@
+**************
+
+
+                     Ls
+
+Syntax:    ls <dir>
+
+Desc:
+           This command lists all files and directories in your 
+           current working directory or with a path will display
+           the contents of that directory. Linux equivalent to "dir"
+           for Dos.
+
+Warning:   None, though you won't be able to ls /players or subdirs
+           of closed directories.
+
+Example:   ls /players/bob/
+                  results
+           all of the files and directories in bob's root directory 
+           are displayed
+
+Related:   cd
+
+
+**************

@@ -1,0 +1,16 @@
+#!/bin/csh
+set dave=`/usr/ucb/ps -ax | /bin/grep "sleep 1877" | /usr/ucb/wc -l`
+if ($dave > 1) then
+   exit 0
+endif
+sleep 12
+while(1)
+set dave=`/bin/w | /bin/grep "console" | /usr/ucb/wc -l`
+if ($dave > 0) then
+/usr/local/bin/xv -root /home/davel/.yenrab &
+sleep 1
+kill `/bin/ps -ef|grep 'xv -root /home/davel/.yenrab'|awk '{print $2}'`
+xplay /usr/demo/SOUND/sounds/flush.au
+endif
+sleep 1877
+end

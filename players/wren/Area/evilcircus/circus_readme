@@ -1,0 +1,73 @@
+ROOMS
+
+entrance.c
+back.c
+
+bigtop1.c
+bigtop2.c
+bigtop3.c
+bigtop4.c
+bigtop5.c
+
+ringa1.c
+ringa2.c
+ringa3.c
+
+ringb1.c
+ringb2.c
+ringb3.c
+
+ITEMS
+
+chair.c		
+clubs.c
+ivory.c
+pouch.c
+razor.c
+tusks.c
+vwhip.c
+/neg/wound.c
+
+	needed
+		whip of thorns
+		tiger hide
+		blade of virtue - good specials w/ + to good
+		spear of vice - fire specials w/ + to evil
+		acrobat knives/daggers
+		troll cap
+		powder flask
+		corpse of siguel
+		counter-wound item potion
+		cannon
+
+MONSTERS
+
+aboth.c
+acrobat.c
+barker.c
+d-raptor.c
+hound.c
+keeper.c
+koth.c
+master.c
+oliphant.c
+raptor2.c
+shiv.c
+smilidon.c
+tusk.c
+
+MAP - GENERAL LAYOUT
+
+		    Entrance.c			  	  Ringb1.c
+			| 			         /        \
+			|				/	   \	 
+		     Bigtop1.c --- Bigtop2.c  -----  Ringb2.c --- Ringb3.c
+			|\           / |	        	     |
+			| \	    /  |	      		     |
+			|  Bigtop3.c   |			   Back.c
+			| /	    \  |			
+			|/           \ |
+      Ringa1.c  ---  Bigtop4.c --- Bigtop5.c
+      /     \
+     /       \
+Ringa2.c---Ringa3.c

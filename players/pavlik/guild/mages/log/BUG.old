@@ -1,0 +1,88 @@
+[Dec  4 13:33] Jason: exchange xp in the great library doesnt work
+[Dec  4 14:38] Jason: need to look at missle spell allows multiple cast during one round
+[Dec  4 17:35] Jason: calador has a error in sentence has your two times
+[Feb 23 09:27] Jason: having beast kill a mob forced him and khirstel to attack me in turn after the mob was dead
+[Feb 23 19:18] Crip: casted sdagger at 10 sps and sent me into neg 60 sps is that normal
+[Feb 23 19:24] Crip: when typing newhat if you are wearing your wizard hat it will still say your wearing it when its in your inventory not worn and wont let you wear it again
+[Feb 23 19:25] Crip: the command mssle are we able to use it multiple times in  combat or is it suppose to be once a round
+[Feb 24 10:38] Jason: get a sens mind message when you have khirstel pick up coins lol
+FIXED [Feb 24 11:12] Mortarion: the 'new' khirstel, when summoned, gave me a sensitive mind message and did not appear
+[Feb 24 14:29] Toranaga: 'klook d' should work same as 'klook down' with khirstel, nothing major
+[Feb 24 14:55] Toranaga: from board going 2d,2n gives sensitive mind message - believe this is where the rooms are
+FIXED [Feb 24 14:55] Toranaga: 4d,n gives sensitive mind
+FIXED [Feb 27 21:31] Crip: i cannot use my khirstel command i keep getting mind sensitive message
+FIXED [Mar  8 15:00] Crip: the khirtsel is broken i cant dismiss it use any of its commands for that matter
+[Mar 14 01:12] Elloco: 2d, 2n from "The Mages Announcement Board [8]." returns you to that same board room after giving a sensitive mind message
+[Mar 14 01:22] Elloco: same as before, 4d, w, from main (uppermost) board is a big loop
+[Mar 14 02:10] Toranaga: 'summon' with no arg gives straight return 0, should have a notify_fail()
+[Mar 14 02:24] Toranaga: i named my dragon tora, but moving around, it still uses his old name 'generic'
+[Mar 14 02:25] Toranaga: in room it shows correct short, but his follow messages and whatnot show up as old name
+[Mar 14 02:26] Toranaga: 'l counter' 'no counter here'
+[Mar 14 02:34] Toranaga: 'familiar' mispelled in getting_started help file
+[Mar 14 02:36] Toranaga: no help for experience, but it's listed in main list for mhelp
+[Mar 14 02:43] Toranaga: thinking 'rescue' may be a little cheap
+[Mar 14 02:57] Toranaga: stoneskin says delay is 2 mins, but when i cast it it doesn't show a delay for next
+[Mar 14 03:00] Elloco: in Ansari the Evoker's room, the bowl's description, 3rd line, 'invisible' is misspelled
+[Mar 14 03:10] Toranaga: need support for no arg in query
+[Mar 14 03:23] Toranaga: these aren't bugs, just thoughts:  no meditate HURTS, 3 min delay after absorb and blind HURT, fsc is nice, stoneskin dies awful fast
+[Mar 14 03:26] Toranaga: i agree in that eshield and stoneskin should show in sc, or SOMETHING, mon, maybe
+[Mar 14 03:45] Elloco: "A Mage-Apprentice bumps into and drops a huge pile of books on the ground" should have 'you' stuck in between 'into' and 'and'
+[Mar 15 03:53] Elloco: tried to make Khirstel 'kdrop stick' and it dropped its entire inventory
+[Mar 15 04:03] Elloco: 2d, 2n from uppermost board room still gives sensitive mind message and transports me back to the board room at top
+[Mar 16 01:04] Squint: 0
+[Mar 16 01:05] Squint: When we cast mimage, if the mob dies while we still have an active immage cast, the mob loses its heartbeat and we get no exp for the kill
+[Apr  4 14:42] Crip: there is a typo when you look at someone and see the line in the desc of the player for the eshield
+[Apr 12 14:43] Crip: mimage is causing me to lose exp..... when casting the spell if there is still a mirror image left when casted when mob dies..... no exp is gained
+[Apr 12 21:30] Crip: my mirror disappeared when i used mimage...... no clue what happened thought it wasnt suppose to disappear
+[Apr 15 12:01] Ventoux: when you look at Yshir, you have to type 'exa rose quarts' instead of the correct 'exa rose quartz'
+[Apr 15 12:22] Mortarion: two kills and no exps here pavlik.  used crush and killed mob but no exps.
+[Apr 15 12:47] Mortarion: typo in userv spell on the recieving end it 'whispters' instead of whispers
+[Apr 17 14:50] Crip: getting a mind sensitive error when im trying to look at the items on the mobs that show the spells you can learn
+[Apr 18 22:50] Squint: granite powder does not show up as being in inventory and stoneskin wont work.
+[Apr 21 19:41] Squint: This may not be the correct place to log this, but I like the loss of delays, but buying components for some spells is pretty damn costly, if you ask me. A silver needle will not break the bank...but shadowdagger is not THAT great a spell to cost THAT much to cast...just my opinion.
+[Apr 21 19:49] Squint: Silver needle is 200 coins...sdagger is a spell that 'could' be cast up to five, six, seven times for a given monster...thats up to 1400 coins to kill ONE mob....and a mid range mob at that. Plus...how are we supposed to carry a zillion silver needles around in our bag?  These are things my mind ponders on...as a mage.  So, I buy ten silver needles. I then have ten sdagger spells I can cast. I head out to dryant graveyard or jurasic park...use up my ten needles...and have to head BACK to the guild hall to buy MORE damn needles to cast a spell.  This will not happen.  I either won't use the spell...or I will get fed up as a mage with all the bullshit to cast a fucking spell and go back to playing a NECRO!  I will try and make some suggestions from a 'play' standpoint as to spells...after I have used the current system for a while. Perhaps a combination of delays (in some cases) cost (in some cases) and components (in other cases) would be in order.
+[Apr 21 19:54] Squint: Onyx powder and Granite powder all call 'powder' as given name. Both are needed to be carried in a bag...hard to take out one or the other when both respond to the same 'name' powder.  Example...I have five onyx powders in my bag...and five granite powders. I have to take out all five onyx powders to get to one granite powder. See what I mean? Its cumbersome.
+[Apr 21 20:20] Squint: I don't see a big help from the 'absorb' spell...is it my imagination?
+[Apr 21 22:05] Squint: my dragon is not casting any spells or using any of his magic
+[Apr 21 22:37] Squint: Not sure if this is what you want, but if a mob dies with mimage in effect...ya don't get no exp from the kill.
+[Apr 22 00:09] Squint: dragon summon does not work.
+[Apr 22 00:14] Squint: what happened to 'orb' spell?
+[Apr 22 11:27] Squint: Khirstel command does not work...can't summon a khirstel.
+[Apr 22 11:38] Marlboro: Mage spell andead doesnt last very long at all for the cost, and it should last longer based on the power of the corpse. ie gordie corpse last longer than orc corpse maybe?
+[Apr 22 11:39] Marlboro: i get a sensitive mind error when summoning khirstel and dont get one
+[Apr 24 12:51] Mortarion: typo in mhelp soultrap 'opoonent'.
+[Apr 30 10:49] Squint: you change eshield? Kind of don't last very long now.
+[Apr 30 11:22] Squint: something is wrong when mimage is cast in the room with fahkri (qurd area) images don't work nor go away like they should.
+[Apr 30 12:21] Squint: Ok...mimage appears to be just plain busted.
+[Apr 30 13:45] Squint: What the hell...just tried to cast ffire and blind on rock dragon? says I cant?
+[May  5 16:33] Squint: damnit pav...mimage is buggy as all hell.
+[May 21 10:11] Squint: I have a question about what we do when we max all and still have to give 5% exp. to guild? I currently have over 3mil is useless exp. :)
+[May 29 14:19] Squint: in blind spell...it says 'a shroud of darkness 'deconds' over (mob)
+[May 29 14:20] Squint: mimage is STILL not working and is all f'd up.
+[Aug 14 13:52] Blake: can cast spells into the negatives
+[Aug 14 14:54] Crip: my wizardhat is not being taken away when i log it will be one then i relog it will be 2 and keep going
+[Aug 14 16:28] Blake: if you have too low sps seems u can get down to -36, if you try your spell and it says your too weak, it counts it as your command and won't let you use the spell if you heal that round
+[Aug 14 16:49] Blake: when typing crush while im combat, you get crush what, then i typed crush man while fighting man i burned my hand on my glowing triangle
+[Aug 14 16:53] Blake: crush problem caused from glowing triangle from warp
+[Aug 14 16:55] Blake: not sure if it's suppose to be like this but after i got like glvl 18 all my trains give like 1 before they were 3-4
+[Aug 14 18:33] Blake: if you say teach anything but you can learn it says illegal path /guild/mages/spells/whateveryousay.c
+[Aug 14 19:13] Blake: with chill touch one of the messages is you touch with a dealthly touch, i think it's suppose to be deathly
+[Aug 14 19:26] Blake: with yshir l silver harp works but u have to l at rose quartz, l rose quartz doesn't work
+[Aug 16 18:05] Blake: you can use items that have spells along with all your guild spells in the same round
+[Aug 16 20:06] Blake: reveal wouldn't keep a bf visible
+[Aug 16 21:06] Blake: i have a saddlebag, deposit all from bag, says i don't have a bag
+[Aug 18 19:25] Blake: baginv is f-d up
+[Aug 20 16:49] Blake: how about a msave or something
+[Aug 21 19:55] Blake: cure has a missing space when shown to others
+[Aug 27 21:00] Blake: wierd things happen with augury and a healer healing you
+[Aug 28 20:20] Blake: one crush needed  a /n at the end
+[Mar 17 14:42] Squint: test
+[Mar 17 14:44] Squint: some of the things Pav had left to do...(1)dragon spells (2)personal rooms in the tower (3)finishing touches on some spells (4)sign-up and advance code.
+[Mar 17 14:59] Squint: i am here
+[Mar 17 15:00] Squint: i am here
+[Mar 17 15:02] Squint: The spell 'werelite' should be 'werelight' lite is weight...light is, well, light.
+[Mar 17 15:03] Squint /room/vill_green : test
+[Mar 17 15:12] Squint /players/fakir/inn/room9 : detox spell needs to maybe have a slight delay or maybe a chance of failure...and in this guild I like a chance for failure based upon glevel and level rather than delays...so its more 'magic' aligned. I know there is a failure chance on all spells...not sure how accurate it is. If the code for spell failure is good and sound...it can be used to modify the power of the guild if need be...rather than changing a BUNCH of shit.
+[Mar 17 15:25] Squint /players/emerson/rooms/room21 : I know mimage is broke.
+[Mar 17 15:39] Squint /room/vill_green : dismiss dragon does not work
+[Mar 17 15:40] Squint /room/vill_green : ok..its dragon dismiss...

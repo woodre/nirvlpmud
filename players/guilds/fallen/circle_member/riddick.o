@@ -1,0 +1,14 @@
+guild_exp 8000000
+beats 120456
+percent 0
+endurance 80
+max_endurance 80
+special_title "[0m[31m<> [1m[30mUMBRA [0m[31m<> [1m[30mDOMINUS [0m[31m<> [0m([1m[30mshadow[31mflame[0m)"
+weave 1
+endurance_monitor 1
+posendcol "[1;32m"
+negendcol "[1;31m"
+norm "[0;0m"
+old_exp 5037823
+custom_monitor "$HK$HP$N$=|$HR$#hps#$N$/$HR$#mhp#$N$| $HK$SP$N$=|$HR$#sps#$N$/$HR$#msp#$N$| I:$HG$#intox#%$N$ F:$HG$#stu#%$N$ S:$HG$#soa#%$N$ $HY$#ahp#$N$ -#al#-"
+Skills ({"focus","beckon shadows","wither corpse","drain","teleport","shield","weaken","meditate","web","blast","empower","know","shadowform","descend","shadowcloak","dark assistance","repulsion","vanish","rage","dark prayer","weave","see","vigor","embrace","siphon",})

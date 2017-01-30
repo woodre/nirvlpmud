@@ -1,0 +1,234 @@
+Approval Notes for
+Catacomb's Barbarian Tribe Area
+by Feldegast
+3/16/01
+
+  These are the notes and comments that I wrote down while going 
+over your Barbarian Tribe area.  You had very few typos, and I did
+not see very many major technical errors.
+  The theme was enjoyable, even though it is hard to really get
+into a theme for a first area because they are required to be so
+small.
+  Although some of your descriptions are a little rough, you displayed
+good imagination in many of them and I'm sure you will get better with
+time.
+  Many of the notes that I've written fall into two categories:
+    1. This must be fixed.
+    2. Changing this will make your area better(in my opinion).
+  The first category refers to bugs, typoes, and most references
+that I might've made to hard numbers(and these can be argued about).
+The second category refers to things that in my experience make an
+area neater, more enjoyable to play in, or simply earn the respect
+of your peers.  I don't always specify which notes fall into this
+category, so if you aren't sure, ask.  If you aren't sure why I'm
+making a suggestion, then you should also ask.  If you feel that
+my suggestion conflicts with an effect, mood, or experiment that
+you were attempting, then by all means, give it a shot.  I'm not
+writing these notes to cramp your style or force you to conform,
+but merely to help you make your area better.
+
+General Notes
+=============
+
+Short descriptions:
+  Although 3-4 lines are nice, if you can't come up with that much,
+don't just make the lines shorter.  Just be consistent.  Hopefully,
+in time writing descriptions will become easier.
+
+Monster cloning:
+  Monsters should be cloned from the reset function, which is called
+with an arg of 0 when an object is first created, and an argument of
+1 at regular intervals(resets).  In most of the rooms that I looked,
+you were cloning monsters in the init() function, which is called
+whenever a player enters a room.  In effect, the monster is recloned
+every time the monster is dead and the player re-enters the room.
+  Try this:
+
+    reset(arg) {
+      /* Clone a monster. */
+      if(!present("monster"))
+        move_object(clone_object("monster"), this_object());
+      if(arg) return;
+      /* Do stuff that doesn't need to be redone later, such as
+         setting room descriptions. */
+    }
+
+A brief note upon memory:
+  When you declare a variable such as an object or int, the compiler
+allocates a piece of memory for that variable.  When you create a
+global variable, that piece of memory is allocated for as long as
+the object is around.  However, if you put the variable in a function,
+the space in memory will be deallocated when the function ends.
+When you are cloning an object, such as a hammer, you do this:
+
+  object ob; /* allocates a POINTER to an object */
+  ob = clone_object(filename); /* Creates an object and points ob at it. */
+  move_object(ob, this_object());
+
+If ob is declared globally (outside of a reset function) then the memory
+will not be deallocated and will be wasted, since you don't need that
+variable anymore.  If you make it 'local' to the reset function, then
+it will be deallocated when the function ends.  Although it doesn't
+save enough memory to make it worth going back and fixing, you should
+remember this for your next area.
+  
+Room-by-room notes:
+------------------
+
+cave.c -
+  For future reference, you should try to avoid sentences that use the word
+'you' in room descriptions.  Descriptions should describe the terrain, not
+the actions that the player is taking.  See /open/essays/rooms.txt for more
+information.
+  You should not describe the medicine man in the room description either,
+as he might be killed or otherwise removed.  The item description 'man'
+will block the players from seeing the actual man.
+  The method you have of entering different areas seems a bit counter-
+intuitive.  You say right away that I can 'trace' the glyphs, but the command
+'trace glyphs' gets me 'Trace what?' (you forgot a \n, btw).  I knew that
+you intended for me to 'trace forest' because I looked at the code, but
+this might take a while for the players to figure out.  I suggest that
+you change the error message for 'trace' to 'You may trace: forest, blah, bleh.'
+where blah and bleh will be your future areas.  
+  nahog.c - The description indicates that the medicine man sells stuff,
+    but he doesn't actually sell anything.  Isn't that a little misleading?
+    In spell_mess1, you misspelled SCREAM.
+
+barbentrance.c -
+  You misspelled vegetation in several of the item descriptions.  Also,
+in the description for 'vegetation', you have a grammatical error.
+  There is no cave mentioned in the room description, yet it is listed
+as an 'obvious exit'?  Oh, and you have a grammatical error in the 'cave'
+description.
+
+barbforest1.c -
+  The word 'appears' in the long description should be 'appear'.
+  Although I arrived in this room by going southeast, to return
+from where I came from, I must go 'clearing'.  Although I certainly
+don't object to unusual exits, you should be consistent in their usage.
+If I have to go 'clearing' to get back, perhaps to get here I should go
+'forest'?
+  The code you have for cloning the snake should be in the reset function
+rather than the init function.  Remember, reset is called when the room
+is cloned, and then at regular intervals of about half an hour(?).  The
+init function is called whenever a player enters the room.
+
+barbforest2.c -
+  Good.
+
+barbforest3.c -
+  Regarding the final sentence in this room's description, what if I had
+not typed 'listen' earlier?
+
+barbforest4.c - 
+  Why can I go south to barbforest1, but I can't get back here from there?
+  In several of your item descriptions, you need to replace 'leafs' with
+'leaves'.
+  In the 'mountain' description, ranges should be singular.
+
+barbforest5.c -
+  You need to change the verb 'smell' to 'listen'.
+  Change 'block' to 'blocks' in the mountain and range descriptions.
+
+barbforest6.c -
+  The width of this description is a little on the short side.
+  The 'listen' description could use some work...
+  You describe a nest with some sort of monstrosity in it, but there's
+no monstrosity?  If you're talking about the stirges in the next room,
+then perhaps you should make it clearer that the nest is in the trees
+to the east?
+
+barbforest7.c -
+  This description is a little 'thin' as well.  It's okay to have a room
+with a short description every now and then, just try to be consistent in
+the line length.
+
+  stirge.c -
+    You put a /n into the spell emote instead of a \n.
+    You can't insert the name of the attacker when you are setting spell
+   messages.  As I mentioned earlier, the reset function is called when
+   the monster is first cloned.  In order to change the spell message
+   to use the attacker's name, you need to change the heartbeat function.
+   For example:
+
+heart_beat() {                  /* The heart_beat function is called every few seconds. */
+  if(attacker_ob)               /* Check to see if the monster is fighting anything. */
+    set_spell_mess1(            /* Change the spell message. */
+      "The stirge flies in low at "+ATN+".  The stirge buries its\n"+
+      "beak into "+ATN+"'s neck.\n");
+  ::heart_beat();              /* This calls the monster's normal heartbeat, and possibly a spell. */
+}
+
+barbVilEnt.c -
+  Is there some reason this room's description is indented one space on
+every line?  I have nothing against the idea, it just seems odd that
+you did it for just this room.
+  Again, in the room description you are referring to monsters that may
+later be killed.
+    barb2.c -
+      You forgot the lines:
+        move_object(hammer, this_object());
+        init_command("wield hammer");
+      at the end of the reset function.
+      hammer.c -
+        This weapon would be of club type.
+        You shouldn't describe this weapon as being of good manufacture
+      if it is only wc9.  A newbie sword is wc12, if I'm not mistaken.
+      In fact, maybe you should raise it to wc15. 
+
+barbvil2.c -
+  This is your first mention of the 'Clan of the Snake' concept.  You
+might want to provide a little more exposition here, or maybe provide it
+in the previous room before the player enters the village.
+
+barbvill.c -
+  Good.
+
+  barb3.c -
+    Good description.
+    Don't forget to move his cloak on to him(see barb2.c above).
+
+barbvil3.c -
+  You describe guards who guard the door to the southeast, but
+when I walk southeast I walk right past them.  Are they just
+slacking off or what? :)
+
+chieftent.c -
+  "...BY all the light in here."
+
+  barb1.c -
+    Good.  But...The second sentence of his spell attack has no noun.
+    Rbrkr.c -
+      Considering this weapon's description, perhaps a weight of 3-4 would
+    be more appropriate?  Also, perhaps you should change:
+      if(random (100) > 85 )    
+              to
+      if(random(this_player()->query_attrib("str")) > 17) 
+
+    Then strength will become the prerequisite rather than total randomness.
+
+gnollentrance.c -
+  Garbage and feces ARE everywhere.
+  You might want to describe the tents.
+
+  gnoll2.c -
+    Its alias should probably be 'guard'.
+
+gnollvil1.c -
+  Going west here takes me to the gnollvil3, but I have to go southeast
+to get back?
+  This description isn't terribly inspired...I'm not going to make it a
+requirement, but it might be a good idea to go back and redo it.
+
+gnollvil3.c -
+  shaman.c -
+    Nice use of color, but you might want to put the spell emote on just
+  one line instead of two, or maybe centering it on the screen.
+
+
+Conclusion
+==========
+  When you're done making these corrections, and you've discussed any points
+that you'd like with me, I will mail Boltar and he will add your castle to
+the init_file, you can make an announcement on the board, I can promote you
+to level 30, and a good time will be had by all.

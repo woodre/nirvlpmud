@@ -1,0 +1,15 @@
+void heart_beat()
+{
+  ::heart_beat();
+  if(attacker_ob && present(attacker_ob, environment()))
+  {
+    if(random(4) == 1) /* random 4 goes from 0-3. 25% chance */
+    {
+    	tell_object(attacker_ob,
+         "You are blasted with fire\n");
+        tell_room(environment(),
+          (string)attacker_ob->query_name()+" is blasted with fire\n");
+    	attacker_ob->hit_player(175+random(50), "other|fire");
+    }
+  }
+}

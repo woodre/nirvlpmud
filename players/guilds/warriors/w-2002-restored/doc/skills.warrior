@@ -1,0 +1,32 @@
+
+Skills are the backbone of the Warrior Profession.  They are
+the culmination of hours of combat and the end result of those
+experiences.  You gain skills by converting experience over to
+profession experience and gaining in profession level. Each
+profession level gives one point to profession skill points.
+
+Once you gain a skill point you may spend it by using the
+following commands:
+
+skills              - list current skills.
+raise_skill <skill> - raise a specific skill.
+
+NOTE: There are 40 profession levels, therefore 40 skill
+points to be gained.  This means you will end up with just
+under 1/3 of the total levels possible to gain. Spend
+them wisely.
+
+You may increase any skill to its 1st level with no other
+qualifications.  After 1st skill level you will see this:
+               -[  Weapon Skills ]-
+Blunt Weapon    0/10(0%)        Edged Weapon    0/10(0%)
+
+The 0/10 represents your current level and the maximum level
+that skill can go to.  The (0%) is a representation of the
+amount of usage experience you have. When this % reaches 100
+then you may spend a skill point and raise it another level.
+NOTE: YOU MUST USE A SKILL TO BE ABLE TO CONTINUE RAISING IT!
+
+Good luck Warrior. Kill and Learn.
+
+

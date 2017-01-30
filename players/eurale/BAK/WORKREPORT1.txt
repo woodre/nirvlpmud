@@ -1,0 +1,420 @@
+/*  Work Log from:  3/97 - 4/99  */
+
+Sat Mar 15 10:19:24 1997 Temple of Bishamon Quest (/players/paulasx/temple)  I blocked the east exit of temple_nw and the west exit of temple_ne.  I made passage north from temple_center impossible without killing the dragon.  The north exit from upper19.c used to go to
+Sat Mar 15 10:21:32 1997 Temple of Bishamon 'final_room.c' and temple_altar used to exit north to 'players/paulasx/hell/hell1.c'.  I switched those two so that the quest solution wasn't 3 rooms in a row.  The quest now requires a movement of player after
+Sat Mar 15 10:22:23 1997 Temple of Bishamon killing Damian to get the godsword to another area to give it to Diamyo.
+Sun Mar 16 16:28:01 1997  /players/eurale/Abyss)  Put the abyss into play.  Will add the quest fromt his area after consulting with Beck about his part.
+Mon Mar 17 11:24:02 1997  I added a 'detox heal' to my heal seller /players/eurale/Mon/gabby.c  I looked at both catwomans ooze and the coffee in trix's realm and found their
+Mon Mar 17 11:26:00 1997  drink_alcohol to be -15 and -10 respectively.  The guide calls for 20 coins per -1 detox so I charged 1400 coins for 3 hits of -13 detox.
+Mon Mar 17 12:59:08 1997  Rod of Smiting Quest - Scathe
+Mon Mar 17 13:00:16 1997   I completed the changes in the Rod of Smiting quest today.  Essentially, what I did was 3 things.  First, I took the rod piece off the demon and hid it in the room so the player would have to kill the demon and then search.
+Mon Mar 17 13:01:41 1997   The second part involved 'moving' the location of the Macha room so that the player will need to find him.  The last part involved moving the location of the Lord Drak room.  In each room case I changed exits so the monsters
+Mon Mar 17 13:02:58 1997   blocked.  The player will have a couple of additional fights to get to where he needs to go but the monsters are not that tough so they can handle it.  I left a note in Scathe's dir explaining the changes with the date as well.
+Tue Mar 18 20:04:38 1997  M*A*S*H Quest
+Tue Mar 18 20:05:48 1997    I completed the changes in the M*A*S*H quest today.  I put a note in Hawkeye's dir with the changes listed.
+Wed Mar 19 11:56:15 1997  Decoder Ring Quest  Moved the location of the 'hand' room.  Instead of
+Wed Mar 19 12:14:23 1997  Orc Slayer Quest  I tried to make some minor modifications to this quest but it is in /room/orc_treasure.c and I do not have access to make changes here.  I wrote to Boltar, explained and asked for directions.
+Wed Mar 19 16:31:02 1997  Orc_slayer Quest  Recoded the room /room/orc_treasure so that the orc shaman no longer has the sword.  The players will have to find it once he's dead.  Wrote to Boltar about replacing the room with the recoded one.
+Thu Mar 20 09:37:47 1997  Added my tempstick to the items I sell.  It's a single use tool to tell the players if they are poisoned or have rabies at the moment.  I made the cost an arbitrary 710 coins.  More afflictions will be added as coded and cost will go up.
+Thu Mar 20 09:47:53 1997  Warned Torture about inappropriate wiz behavior on the gossip channel.  He was telling players to 'bite him'.
+Thu Mar 20 09:48:55 1997  Talked to Gowron and he updated his quest so that the maze in
+Thu Mar 20 09:50:29 1997  his springfield quest take different directions.  This was done simply and will provide variation.
+Thu Mar 20 12:57:01 1997   "disk_quest"  (/players/mistress)
+Thu Mar 20 12:58:15 1997      I went through this quest today and changed the location to find the disk and the location of the 'correct' scientist.  I left the 'incorrect' scientist in place to destruct the disk of players using old cheat sheets.
+Sat Mar 22 15:38:23 1997  Wocket(player)  Wocket informed me that he had lost 3 quest points.  It is because of the change in quest value I submitted to Boltar and he changed in theBishamon quest.  Keep in mind when qps total to wiz is discussed
+Sat Mar 22 21:16:56 1997  Repaired a syntax error in /players/catwoman/city/26.c which would not let the room load.
+Sat Mar 22 22:32:05 1997  Superman Quest  (/players/catwoman/)
+Sat Mar 22 22:33:27 1997  Changes:  moved the exit back to the hall to room 17.  Moved the hotel entrance from 17.c to 46.c.  Repaired the syntax errors in /players/catwoman/dock3.c so I can use it later.
+Sat Mar 22 22:49:44 1997  Garbled mode for using 'fuck' on the gossip channel.  He's old enouth and knows better, period
+Sun Mar 23 14:47:36 1997  (MODE)  I ungarbled Mode today with a warning that next time he used 'fuck' on the gossip channel the penalty would be more severe.  He seems to think the wizzes are picking on him...
+Mon Mar 24 21:19:32 1997  Superman Quest  (/players/catwoman)  I completely rewrote this quest.  It requires 5 different steps in order to get the kryptonite and none can be skipped or no credit.  I changed the rating to:  physical 4  mental 7 as well.
+Mon Mar 24 21:20:26 1997  I also installed a LOG in /players/catwoman/closed to keep track of the solvers.  This was a major undertaking but I'm pleased with the outcome.
+Tue Mar 25 09:27:55 1997  /players/catwoman/monster  Went through the monsters and adjusted them.  Not all are within monster guide but they were 'extremely' out of whack before.
+Tue Mar 25 20:07:21 1997  Superman Quest  Ran through the whole thing with my testchar(Euboy) and it works like a charm.  It's actually much harder than it was before.
+Tue Mar 25 20:20:21 1997  Noticed Torture has a 'custom' wiztool already.  I informed him that was a no-no.  I need to check on the level a wiz can code his own.... either 30 or 40 but I'm not sure.  He was not misusing it.. just had it
+Wed Mar 26 13:11:59 1997  Maddog/Wulgar Spam mail   Talked to both parties.  Each pointed fingers at the other.  I believe it was a misunderstanding and will be a single occurance.  Both know that spamming is a 'no-no'.
+Wed Mar 26 16:22:33 1997  Dragon Tool Quest  (catwoman)  Changed the requirements of the 'helper' to get the tool and added a second requirement.  I also switched the rooms around where the man who needs the tool is found.  Same basic quest otherwise.
+Wed Mar 26 19:04:45 1997  Return Mail from Boltar Re:  Wiz tools     Boltar says that level 50 is the level a wiz can code his/her own wiz tool.
+Thu Mar 27 12:12:34 1997  Slashdragon  (WARNING)  Use of profanity on 'gossip' and told him he would get no more warnings as he knew better.
+Thu Mar 27 12:20:41 1997  Lots of strange happenings last night.  Catwoman logged on, Sandman reappeared, 'grasp' in the Vamp guild was altered, statues disappeared.  'Tis an ill wind that blows across Nirvana..... we'll see
+Sat Mar 29 13:36:07 1997  WizTool Level  Mail from Mythos dated 3/28/97.  He checked with Boltar and the minimum for a custom wiz tool is level 40.
+Sat Mar 29 20:37:51 1997  Keivjam Quest (/lew)  I redid the Keivjam quest but left it bascially intact.  I moved a couple of items and added some blocks.  Essentially they'll just have to find the stuff again.
+Sun Mar 30 11:48:50 1997  Airwoman Quest  Wrote to Airwoman and asked her to make her own changes in her quest but told her I would if she didn't want to.  It's actually much easier if the coding wiz changes their own stuff.  Will wait for reply.
+Sun Mar 30 12:08:54 1997  Strange happening this morning.  I left a char unattended and got killed by a roving monster.  Then he got killed by it again while he was dead!  Something is wrong with that...  Wrote Bolts
+Sun Mar 30 19:25:45 1997  Queen Regis Quest (cyrex)  Completed the changed in the Protocultural Orb quest and logged them in /players/cyrex/closed/EURALE_NOTE.  There is enough variation here to make it almost 'back to square one'
+Sun Mar 30 20:22:35 1997  (/players/nightshade/bag.c)  This bag DID NOT check for "NT" of either sender of receiver.  Used to send stuff into "NT" zones.  I modified to check both for "NT".
+Sun Mar 30 20:37:59 1997  (Re: Bloodbank)  Wrote to Pavlik about people abusing the bloodbank.  They donate, cast a 'regeneration' spell, and keep donating before max hps.  They make a fortune without moving.
+Mon Mar 31 10:22:02 1997  A little conflict resolution today.  Reflex took Hitman's scar because of the way he was talking on the channel.  I asked him to restore it and imprison Hitman if he was in fact out of line.  Full cooperation.  Talked to Hitman about lrespecting wiz requests.
+
+   Mon Mar 31 18:43:23 1997     Wrote to Boltar about changing the values of the Rod Quest.  Changed from P7, M3 to P5, M4.  This is also a test of a change to my write_file ob.
+
+   Mon Mar 31 19:19:04 1997     Imprison/release Commands  Wrote to Boltar, Sandman and Mythos about adding the commands and 'what they do' to the 'help_wizard file.  Would make it much easier to refer to.
+
+   Tue Apr  1 09:49:51 1997     Started updating the dinos in my Jurassic Park area so that they fit the theme idea a little better.  I am removing the 'coins' from their corpses and replacing them with 'items' that can be sold instead.
+
+   Tue Apr  1 19:52:16 1997     (players/mizan/etheriel/ROOMS/tempest.c)  Commented out the tiamat because the players were using him to kill monsters for them by having him follow them into aggro rooms.  The monsters attack tiamat and then they fight second.
+
+   Tue Apr  1 21:29:34 1997     Vamp sps  They can cast spells into the negative range, I'll speak with Nooneelse about it.
+
+   Wed Apr  2 12:03:33 1997      Jukebox  I added a second jukebox to Rose's bar in Hawkeye's area.  People find them entertaining and they do no real harm.
+
+   Sat Apr  5 15:22:59 1997     Wasteland Quest (dragnar)  Went through and moved the keys to different locations.  Also moved the notebook with the code.  Snow has removed quite a few monsters as well.  This quest can be done with help and was rated too high.  I wrote to Boltar
+
+   Sat Apr  5 15:24:18 1997     with new values.  (OLD - P9,M8     NEW - P6,M7).  This quest was very mundane with killing way too many identical monsters.  I'm much happier with it now.
+
+   Sat Apr  5 15:41:35 1997     Wrote to those wizzes I see log on regulary and informed them of the quest progress.  It's been a much tougher assignment than I anticipated.
+
+   Mon Apr  7 11:39:54 1997      Holy Grail Quest (haji)  Mailed Boltar about removing it until it's improved.  I'm not willing to work on it.
+
+   Tue Apr  8 10:18:45 1997     Fixed the typo in one of Hawkeye's rooms and removed the 'out of line' notes from the board in Hippo.
+
+   Wed Apr  9 14:28:44 1997     As per Snow's suggestion, I replaced all the coins on 3 of my dinos with a heal that they can sell made from the dino.  More work but I really like the effect better...
+
+   Thu Apr 10 20:37:52 1997     I had to remind Kain about keeping the language on the gossip channel clean.  He said he had never been told of that policy so I informed him that he had been now.  Between he and Torture, the wizzes seem to need an awful lot of reminding.
+
+   Thu Apr 10 20:39:32 1997     (Morgoth Quest  "cyclops_mace")  Finished the changes today.  Wrote to Boltar and requested that he change the values from P4, M5  to P3, M3.  This is a VERY easy quest and can be done with help.
+
+   Sun Apr 13 15:22:44 1997     (players/eurale/Park)  I finished changing all the dinos over from 'coins' to sellable treasures or heals.  This is much better theme orientation and gives the players more options as well...  I'm pleased with the results.
+
+   Sun Apr 13 15:23:57 1997     (/players/nooneelse/black/vampire_bite.c) Changed line 49 from 2 to 3 to reflect the new bite changes.  Wrote to him to tell him about the change as well.
+
+   Sun Apr 13 20:06:56 1997     (/players/catt)  Sent a note to Snow about monsters way out of balance here.  Level 5 monsters with wc3 and paying nearly 1500 coins.  This is a slaughter house for coins... no challenge.
+
+   Wed Apr 16 12:13:46 1997     Changes my exit in Mythos chamber to the warp instead of Drygulch.
+
+   Thu Apr 17 20:42:20 1997     Warned Isis about multiplaying.  She dc's one and logs in another.  I've seen no interaction but I told her to 'quit' one before she logs on another.
+
+   Fri Apr 18 11:18:50 1997     Released Kandy from jail after 5 days for multiplaying.
+
+   Sat Apr 19 16:21:20 1997     Approved Cosmo's area for opening.  Talked to Snow, he approved the monsters.  Sent a note to Boltar asking him to add it to the init file.
+
+   Sat Apr 19 22:16:22 1997     Reimbursed Knife 5k for lost coins on an insta-hit kill by doppie, the room reset before he could run back from church.  His story sounded legit..... oh well.
+
+   Sun Apr 20 20:37:37 1997     Worked for hours on the Trekkie quest.  Almost have it completely changed.
+
+   Mon Apr 21 10:31:31 1997     (/players/rich) Quest: "trekkie"  Finished all the changes on this quest.  It requires almost no killing to complete.  Mailed Boltar with the following changes:  P3 M7
+
+   Mon Apr 21 10:56:55 1997     I added a 'special' to my Death Knight in the keep.  I've watched different players kill him and he needed some 'buffing'.  I also upped his weapon class a couple more.
+
+   Wed Apr 23 09:53:49 1997     Had to dest 3 extra copies of 'Fuzzy' this morning.  He said he quits and logs on and makes another.  In each case he has been using a 'duplicate' weapon.  Will talk to Mythos.
+
+   Wed Apr 23 19:51:44 1997     Changed /players/dragnar/mons/shangTsung.c to use appropriate channels /obj/user/one_chan.c as per Boltar.  I put his death message on the 'msg' channel.
+
+   Sun Apr 27 16:51:29 1997     Finished my ~/Wep/bone_sliver and added the dmage stuff so they couldn't use it or have it used on them.
+
+   Fri May  2 11:03:49 1997     (/players/trix)  "melko"  Finished up the changes in this quest.  I moved most of the items around and changed exits.  Left a note in /players/trix/closed about the changes.
+
+   Fri May  2 19:57:39 1997     Imprisoned Mode again and had a long discussion about why I was the 'only' one who cared if he swears on gossip.  Redundant conversation!
+
+   Fri May  2 21:16:32 1997     Z used his bard 'sin' to spam a room... it was VERY annoying.
+
+   Thu May  8 13:13:24 1997     (players/molasar) "medallion"  Finshed this quest, put a note in Molasars closed dir and mailed Boltar.  The concludes the quest changing unless Boltar wants me to look at old ones.
+
+   Mon May 12 18:09:29 1997     Started working on Fiendsville... Changing coins to treasures on monsters that probably shouldn't have coins
+
+   Tue May 13 09:30:09 1997     Approved Wocket for wizship and after a long discussion, agreed to sponsor him.  He's been an honest and good player, I expect the same from him as a wiz.
+
+   Tue May 13 18:56:33 1997     Changed the value of the x-lax to reflect use in /players/emerson/heal/x-lax.c.  The players could eat 7/10 and still get 1500 back
+
+   Wed May 14 12:47:31 1997     Fixed a exit foul-up in one of Trix's rooms so they exited correctly.
+
+   Wed May 14 21:25:13 1997     Mode has a (/players/sado/nick.c) which is some kind of quicktyper.  Has this been approved by anyone?
+
+   Thu May 15 10:33:39 1997     (2nd mini guild)  Players were joining a second mini guild at 1 day instead of 2 as Saber's scrool said.  I changed the required age from 43200 to 86400 (2 days) and left a note in Saber's dir informing him.
+
+   Thu May 15 10:49:48 1997     Lots of obscene logins from 'FRODO.CCLA.LIB.FL.US'.  I dested him a few times and told him his other chars might meet the same fate as 'suckme, fuckem, fuckyou, lickme' etc.
+
+   Wed May 21 21:22:18 1997     Changed the board in Trix's castle so that senior wizards can remove inappropiate notes from it.  I cleaned it up tonight.
+
+   Thu May 22 18:53:39 1997     Finished changing all the monsters over from coins to 'loot items' in my Fiendsville area.  I like the changes.... and used some interesting items.  Feel free to check them out.
+
+   Thu May 29 09:14:40 1997     Finished the last of the quest stuff.  Redid the /obj/quest_pt.c file.  The total number of quest points now stands at 372 for 32 questa with 284 being required to wiz.
+
+   Fri Jun  6 19:48:08 1997     Torture logged on Playboy and gave his rl wife (rose) 80k coins.  She spent it on a smart link in the cyber guild
+
+   Mon Jun  9 19:04:54 1997     Quicksilver coded an object to 'echoall' to all vamps with no way to turn it off besides turning off guild channel.  I told him to make it a seperate channel and those who wanted it could have it.
+
+   Sat Jun 14 21:06:19 1997     This is getting old.  At 8:30 pm Torture had one of his chars (Starburst) and his wiz logged on.  Starburst is NOT his test char (Playboy).  He isn't learning and I'm going to demote him to player next time I catch him on.
+
+   Sun Jun 15 11:59:45 1997     I've gotten tired of reading foul language from monsters now as well so I changed all of them that I knew of and took out their adjective 'fucking'.
+
+   Sun Jun 15 12:03:25 1997     Torture was logged on with his char, Starburst, again today.  *sigh*
+
+   Thu Jun 19 15:21:15 1997     Snow, Arrina and I talked to Wocket about using 'illegal monsters' that he know about with his player char.  He was warned by me that another indescretion will result in dewizzing.
+
+   Thu Jun 19 15:24:27 1997     Made a filer and put it in Wockets dir.  He was advised to file everything for his own protection.
+
+   Fri Jun 20 22:54:51 1997     I talked to Feldegast about giving players info they shouldn't have.  Warned him of the consequences of doing so.
+
+   Sat Jun 21 11:25:36 1997     Imprisoned worm for foul language on gossip,  No warning, no nothing.  He knows better.  "Because you suck you stupid little fuckhead".
+
+   Wed Jul  2 08:37:35 1997     Approved Wocket's 'talk object' for testing.  (/players/wocket/junk/
+
+   Wed Jul  2 08:38:34 1997     Approved Wocket's 'talk object' for testing. /players/wocket/junk/quill.c   It is to be a clean, no-trash-talk channel.
+
+   Wed Jul  2 21:30:53 1997     Warned Tragedy about inappropriate pretitles and made him change his.
+
+   Thu Jul 10 10:57:42 1997     Had to tell Tragedy to take 'Fuck' out of his title again today.  No more warnings for him.....
+
+   Tue Jul 15 07:00:07 1997     Wrote to Boltar about the Glade hookers and asked Snow to check all the monsters.  Only concern is 40% chance of getting the VD virus.
+
+   Thu Jul 17 15:46:11 1997     Imprisoned Scorpio for vulgar language on gossip, he then logged on a second char named Shockwave and did the same thing.  I also imprisoned him.  SOMEBODY let them out!
+
+   Fri Jul 25 21:33:16 1997     Went through Wocket's new area for the 3rd time to check all his fixes.... looks okay now.  Wrote to Snow to check the monsters.
+
+   Sat Jul 26 16:07:50 1997     Tony was nasty and insulting to Mizan, told him to 'stfu'.  Mizan nuked him and I told him his lost inventory was the price for insubordination.
+
+   Sun Jul 27 19:23:37 1997     Kain was asking players (tony) to go kill other players.  Stupid tony did so to please Kain.  I told kain to stay out of player issues.
+
+   Mon Jul 28 09:35:13 1997     Had a bit of a problem with Aegis this morning and his use of 'fuck' in his pretitles.  Ended up imprisoning him and aegisjr and desting aegiss a number of times.
+
+   Mon Jul 28 16:09:33 1997     Made a VD cure... 7% chance of cure, 2% chance of that the cure will kill you.  Stat losses as well....  for naughty behavior.
+
+   Mon Jul 28 16:40:27 1997     Replaced vertebraker's cyber implants and restored jabberwocky's guild weapon.
+
+   Thu Jul 31 18:25:34 1997     Talked to Gemini about making Ranko a monk.  She says he told her she was going to be a test char in the new monks.. He denied it.
+
+   Sun Aug 10 12:42:04 1997     Removed Haji's quest from his 'castle2.c' object as it was still loading.  That should accomplish the desired effect.
+
+   Mon Aug 11 18:58:15 1997     Fixed a minor problem with the Trekkie quest.  Should be fine now.
+
+   Wed Aug 20 08:15:45 1997     Fixed a typo in dragnar's Mortal Kombat training room
+
+   Wed Aug 20 08:48:03 1997     Fixed a request I found in /log/TYPO about one of my monsters.
+
+   Wed Aug 20 15:08:12 1997     Added a 5% chance that the player can get my STD from blood spattering him/her when they kill the hooker.
+
+   Thu Aug 21 06:19:37 1997     Fixed Winter's stamina which ended up at 22 because of a bug in some armor.
+
+   Mon Aug 25 11:10:54 1997     Created an entrance into my Space area that is gone due to Pain's departure.
+
+   Tue Aug 26 18:58:51 1997     Torture was killed twice without moving, I gave him back is second exp loss due to the bug.
+
+   Thu Aug 28 08:28:38 1997     Found where I think the unlimited full heals are coming from.  I changed the heal to match the level 14 monster is came from.  It was from a heal in /players/morgar/book.
+
+   Thu Aug 28 08:44:45 1997     Repaired a 'multiple monster' problem players 'could' exploit in may fiendsville area.  Should be fine now
+
+   Sun Aug 31 13:32:49 1997     Removed 'Bigelow' exit from chamber of portals until Pain returns and puts his castle back into play.
+
+   Fri Sep  5 10:12:24 1997     Repaired Laera.. left over from crash earlier this week.
+
+   Tue Sep  9 11:34:06 1997     Warned Jilly about inappropriate language on gossip and imprisoned Mortarion as he should know better.
+
+   Wed Sep 10 13:01:28 1997     Reimbursed Mortarion for coins loss due to an error on my part for imprisoning him.  I will pay even closer attention next time.
+
+   Thu Sep 11 13:18:51 1997     Removed blood scar from a level 4 player named Abel.
+
+   Thu Sep 11 14:39:49 1997     Worked on tracking down and fixing bugs that are being abused by players...
+
+   Thu Sep 11 15:20:15 1997     Found the souce of the mega-free heals, I believe.  It's /players/boltar/sprooms/clothier.c - they make duplicates of a single full heal for 100 coins.  Wrote to Bolts about it.
+
+   Thu Oct  9 18:58:37 1997     Checked out Feldegast's new coliseum area and castle and approved it for opening.  It's small but has some good ideas.
+
+   Thu Oct  9 19:06:54 1997     Promoted Feldegast to level 30 for completing his small first area and his castle.
+
+   Tue Nov  4 14:27:29 1997     Talked to Tina and Dreamspeakr about wiz harrassment.  Wrote to Boltar and Mythos about it and the perp.
+
+   Fri Nov 21 06:20:59 1997     Demoted Wocket to level 21 after a long discussion.  There are certainly 2 sides to this story.
+
+   Fri Nov 21 06:21:43 1997     Checked out Feldegast's new quest and wrote to Boltar with the rating and changes I propose when adding this quest.
+
+   Fri Nov 21 14:04:51 1997     Promoted Feldegast to level 50 for his additional area and new quest.
+
+   Tue Nov 25 20:04:56 1997     Revised the newbie book and changed Sandman's dispenser so it dispenses it.
+
+   Fri Nov 28 19:54:10 1997     Added Llew's toy store to the new newbie book.
+
+   Fri Dec  5 09:49:03 1997     Promoted Wocket back to his original level with the understanding that he will have a recording device in his inventory.
+
+   Sat Dec  6 13:22:59 1997     Added destinations to /open/TELE_ERR for random teleport.
+
+   Sun Dec  7 18:52:45 1997     Gave Illarion the newbie wiz lecture at Arrina's request....  I believe he understood.
+
+   Mon Dec 15 20:29:25 1997     Redid the 'help guilds' file and wrote to Boltar about implementing it.
+
+   Tue Dec 16 12:34:46 1997     Talked to Armblessed for the last time about inappropriate titles/pretitles...prison for him from now on.  No more warnings!
+
+   Tue Dec 16 14:09:44 1997     Imprisoned Worm for the ??th time for inappropriate pretitle.  As far as I'm concerned, he's in prison forever....
+
+   Tue Dec 16 14:14:29 1997     After imprisoning Worm, he logged on a second char (Delete) so I logged worm off.
+
+   Sat Dec 20 08:29:58 1997     Fixed a part of Scathe's quest that gave out multiple rod parts.
+
+   Sun Dec 28 17:13:21 1997     Went through wocket's ~/graveyard area and put corretions in his ~/graveyard/RM_CHK.
+
+   Sun Jan  4 12:54:04 1998     Accidentally killed Zeus with light as I was helping on his way to wizzing.  Restored him to whole.  Duh!
+
+   Sun Jan  4 18:30:52 1998     Gave Rosser the replacement shardak mark so he could quit the guild.
+
+   Sun Jan  4 19:01:23 1998     Updated my newbie book and removed the Shardak guild.  A shame...
+
+   Tue Jan  6 06:45:33 1998     Reworded my abyss quest so the cheat sheets don't work.
+
+   Tue Jan  6 06:57:50 1998     Made some old quests 'non credit' but they have been left in for those players who have solved them in the past.
+
+   Sat Jan 10 14:27:21 1998     Finished up with Wocket's /players/wocket/graveyard and approved it for opening.  I was hard on him but he did a nice job.  Also promoted him to level 40 for his efforts.
+
+   Sat Jan 10 14:28:19 1998     Got mail from mythos to zeus about not sharing any info he learns as  wiz with other player chars.
+
+   Sun Jan 11 14:15:06 1998     Released Armblessed from prison, told him his next visit would be at least 2 weeks.  He understood.
+
+   Sun Jan 11 14:27:18 1998     Gave Wocket permission to restore Armblessed's lost Cyber guild exp.
+
+   Fri Jan 16 13:17:32 1998     Fixed an error in the Wasteland quest (dragnar) so that it could be completed successfully.  My error and I apologize for it.
+
+   Fri Jan 23 10:52:02 1998     Passed along the message that Zeus has requested he be deleted. He is no longer interested in wizzing here.
+
+   Fri Jan 23 10:52:39 1998     Sponsored Dreamspeakr into wizhood and after talking to Francesco, approved his application for wizhood as well.
+
+   Fri Jan 23 10:53:30 1998     Went through /players/wocket/std/stand.c and orange.c and they look fine so I'll approve them for game play the next time I see him.
+
+   Sat Jan 24 20:16:20 1998     Repaired a minor flaw in the Morgoth Castle quest pointed out by Dreamspeakr.  Should work just fine now.
+
+   Sat Jan 24 20:56:23 1998     Torture was still using a coded object of his to set his title on login.  I moved the login.c file to login.bak.  Since he is no longer a wiz, he shouldn't enjoy wiz status.
+
+   Thu Jan 29 17:23:54 1998     Made some changes to Saber's gypsy object so the 'curse' spell cannot be cast on players.  Informed Mythos that I put it back into play.  Will check it out again.
+
+   Fri Jan 30 15:33:40 1998     Added a cattle prod to drucilla's inventory..... to replace curse from gypsy ob.
+
+   Fri Jan 30 15:46:45 1998     Re-removed the curse spell from the gypsy object as per Mythos suggestion.
+
+   Sun Feb  1 19:15:54 1998     Approved Dreamspeakr's rose for game play.
+
+   Sun Feb  1 19:16:38 1998     Talked to Nikki about inappropriate party names (obscene) and she said she wasn't aware.  She is now...
+
+   Fri Feb  6 21:20:31 1998     Corrected a typo in hawkeye/monster/sarge.c
+
+   Thu Feb 12 12:37:24 1998     Wrote to Boltar requesting he add Dreamspeakr's castle to the init file.  I will also promote her to level 30 the next time I see her.  A very nice job.
+
+   Thu Mar 12 06:27:51 1998     Repaired dragnar's quest so the player doesn't get trapped in the room at the end.
+
+   Sat Mar 21 10:08:32 1998     Pain removed the Wizard Club again making Snow's Ursa Major quest undoable. I added an exit to the his dark arena from his gate to remedy this and mailed him.
+
+   Thu Apr  2 11:51:47 1998     Worked on some vampire guild problems.
+
+   Thu Apr  2 13:18:29 1998     Fixed the vamp wolf's giving exp to it's master as per Mythos.
+
+   Wed Apr 15 08:50:09 1998      Been working with Mythos on making changes to the vamp guild spells to bring them into line with the game rules.  Changed the attack spells over to the spell object which has been needed for some time.
+
+   Wed Apr 15 08:50:46 1998     Redid the vamp guild 'who' command and the vamp game 'who' command so they looked better cosmetically.
+
+   Wed Apr 15 08:51:26 1998     Checked go_home.h for base_tele.c code and found it to be done.
+
+   Wed Apr 15 19:12:21 1998     Coded 'awaken' so vamps could log in at the vamp guild hall.
+
+   Sat Apr 18 09:07:44 1998     Updated the /doc/helpdir/guilds file and sent mail to Boltar asking him to replace the old one.  Removed Mage and Shardak guilds for the time being.
+
+   Sun Apr 19 19:22:50 1998     Changed my disir poison (~/Keep/poison.c) so that it destructs if the player dies.
+
+   Sun Apr 19 19:23:58 1998     Recoded an old Vamp object (/players/Nooneelse/obj/hamster_cage.c) so that it follows the rules for heals.
+
+   Sun Apr 19 19:24:28 1998     Recoded the old vamp t-shirt so it doesn't spam players into disconnecting.
+
+   Tue Apr 21 20:58:21 1998     Checked Dreamspeakr's chapel out and it looks good.  Boltar replaced Bastion's with Dreamspeakrs and I promoted her to level 40 for her efforts.
+
+   Tue Apr 21 21:45:22 1998     Gave Nightstalkr a couple pieces of eq he lost when he was jailed a couple of coins to replace the heals he lost.  A learning experience for all.
+
+   Wed Apr 22 11:37:52 1998     Fixed Heroins Predator skull with a 'set_type' so it couldn't be worn on top of a full set of armor.
+
+   Wed Apr 22 11:38:38 1998     Reported 3 other possible abuses of items to Mythos and feel comfortable that they have all been 'remedied'.
+
+   Sat Apr 25 11:30:31 1998     REcoded the Vamp Shop using the standard /room/shop obj so it was using the same format and rules as all the other shohps.
+
+   Sun Apr 26 19:28:39 1998     Added a SPS cost to 'startup' from the church for the vamp guild.  They had ample warning.
+
+   Thu Jun 11 19:04:43 1998     Went through Snakespears new area /players/snakespear/zultayne and put my finding for corrections in QC_CHECK /rooms area of it. It's a very good first effort once the corrections are made.  CCed to snow and arrina.
+
+   Fri Jun 12 19:19:13 1998     Approved Pavliks room to let players read about his new guild.  He asured me they could nothing else.
+
+   Wed Jun 17 13:56:53 1998     Went through Snakespears first area and gave him a list of items
+
+   Wed Jun 17 13:57:37 1998     Went through Wocket's turtleville area and left him a list of items that needed addressing.  Sent Snow a note to check out the monsters.
+
+   Wed Jun 17 13:58:26 1998     Snakespear fixed the problems in his area and Snow went through his monsters and approved.  Mailed Arrina that the decision to open the area was now in her hands.
+
+   Mon Jul  6 21:00:35 1998     Unguilded Blackstar.  He had quit but the clay didn't disappear.
+
+   Wed Jul 15 19:41:35 1998     Sponsored Nikki into wizhood after she got her 3 approvals.  Wish her luck.
+
+   Sat Jul 18 09:00:47 1998     Talked to Nikki about using other wizzes objects without asking them. This bothers me.
+
+   Mon Jul 20 20:27:39 1998     Redid the new wiz workroom so that it uses room/room rather than the old std.h.  I also put different examples in it so new wizzes could see how some of things work.  Mailed Bolts about possibly replacing the old one.
+
+   Fri Aug  7 10:40:41 1998     Removed the old 'fly' command from the vampire guild and replaced it with a modified mythos speedster object (with his permission). This will eliminate any movement questions that were inherant in the fly command.
+
+   Sun Aug  9 21:23:03 1998     Took out wockets newest area, full of heartbeat problems.  Fixed an old object of mine so it works again... some changes in player.c
+
+   Wed Aug 12 19:36:26 1998     Added commands to make the vamp object visible and limited virtues/malices to 1 each reset after chatting with Snow.
+
+   Fri Aug 21 19:47:13 1998     Mailed Ulath about changing players titles/pretitles without being asked....from the info, an ongoing problem.
+
+   Mon Aug 24 15:28:59 1998     Cleaned up some vulgar language in some of Nightshades mobs.
+
+   Mon Aug 24 15:30:07 1998     Received mail from Mark (aka. Gemini) about being harrassed by Mizan. I'm not sure what he hopes I'd do as I was never a supporter of him as a wiz.
+
+   Fri Aug 28 11:56:48 1998     Added a couple of lines of code to /players/saber/closed/new_min/spells
+
+   Sat Aug 29 07:35:57 1998     Removed the code from Saber's mini guild objects as ineffective.  An experiment without successful results :).
+
+   Mon Aug 31 18:58:23 1998     Removed Coral's mage object and replaced most of her guild exp which was pretty small, actually.
+
+   Fri Sep  4 12:57:19 1998     Removed the special exit for Julianne to Beren's workroom from /players/Beren/Room/Hall with the command 'honeymoon'
+
+   Fri Sep 11 11:45:56 1998     Have been doing lots of cosmetic changes to the vampire guild.  Mainly adding some color to old spells and deleting obsolete spells.  Added a couple of generic rooms for inducting new vamps and getting bat wings too.
+
+   Sun Sep 13 18:27:06 1998     Unguilded Devin as a mage with : guild level 99, guild exp 20.
+
+   Sun Sep 13 18:41:39 1998     Replace the single 'questionable' title in Snakespears title machine (~/tools/tmachin) with something appropriate.
+
+   Wed Sep 16 06:45:24 1998     Changed my vampire guild bag to conform to the rules in /doc/build/RULES/bags by limiting the weight.
+
+   Thu Sep 24 15:49:25 1998     Approved two items for Feldegast's store.... ~/wep/halberd and ~/equip/backpack.  Also, upped the cost of a bastard sword in Ryllian from 500 to 1500.
+
+   Tue Sep 29 09:15:48 1998     Upped the cost and level for the cure disease command, too low.  Added a couple of 'vamp only' take out items to their cafe, like the old paladins had.
+
+   Fri Oct  2 09:43:43 1998     Changed /players/saber/closed/new_mini/succ.c so that the knife will NOT cut anyone's balls off any more.  It was out of line and being abused.
+
+   Sat Oct  3 14:47:13 1998     Added tell history to both Arrina's and Scathe's tell objects on their requests.
+
+   Thu Oct  8 14:54:14 1998     Rechecked Cosmo's newbie area (~/apt/rooms/NEWBIE) for corrections I requested and approved the area for opening.  Mailed the seniors and cosmo as well as promoted Cosmo to level 40.
+
+   Sun Oct 18 12:14:29 1998     Added 'exit() { TP->clear_fight_are(); }' to Fiendsville so it cleared the players pk flag for guilds that have some kind of designator for same.
+
+   Sat Nov  7 05:29:12 1998     Fixed /players/morgoth/CASTLE/Efield14.c so the south exit works and the babies teeth can be picked up and dropped as per Feldegast.
+
+   Thu Nov 19 18:53:51 1998     Mailed Boltar about the numerous mizan logs in the log dir and Daranath about some of his items in his new area not conforming to doc/build/RULES.
+
+   Fri Nov 27 18:44:16 1998     Continue to update vamp guild items with color... an exhausting process.
+
+   Sat Dec 12 16:45:16 1998     Tweaked my Abyss quest just a touch.  Nothing big.
+
+   Tue Jan  5 20:05:31 1999     Changed the write file over to write to the new location /log/WR/eurale_worklog as per Boltar's instructions.
+
+   Fri Jan 29 08:49:59 1999     Checked Scathes quest once again and approved the minor changes he's made.
+
+   Wed Feb 24 20:38:07 1999     Checked through /debug.log and /lpmud.log for errors in my code, found none.
+
+   Sun Feb 28 17:21:33 1999     Removed code related to Pavlik from some old items.  Also repaired
+
+   Mon Mar  1 19:56:08 1999     Reimburesed Berlinetta 30,000 coins for a new safe because of the error caused when pavlik removed all his code.
+
+   Thu Mar  4 21:02:30 1999     Reimbursed Keeley 30k gold for a new safe due to Pavlik code problems.  My mistake, she was maxed the first time.
+
+   Mon Mar  8 19:26:26 1999     Fixed typos in some of Nooneelse's objects and made the guild hall inaccessable to non-vamps.
+
+   Tue Mar 30 20:11:32 1999     Recoded the old vamp pie room and put it back into play. Made the pies more expensive as well.
+
+   Wed Mar 31 12:41:00 1999     Recoded another of the vamp guild rooms to clean it up and bring it into line with the game rules.
+
+   Wed Mar 31 13:01:01 1999     Replaced Vartanian's blood scar.  Noticed that ability has been removed from those who already have a scar.
+
+   Sun Apr  4 18:59:08 1999     Recode Vamp Guild rooms to make than work correctly.
+
+   Tue Apr  6 21:09:00 1999     Fixed some stuff and in the process screwed up some stuff... jeez, some days it doesn't pay to get out of bed.
+
+   Thu Apr  8 10:10:00 1999     Continued to update vamp stuff.
+
+   Thu Apr  8 11:35:27 1999     Added a new emote to vampires.
+
+   Thu Apr  8 17:22:43 1999     Added Languilen's newbie area to the newbie book.
+

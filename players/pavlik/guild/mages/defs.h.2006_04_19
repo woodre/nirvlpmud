@@ -1,0 +1,90 @@
+#include "/players/pavlik/closed/colors.h"
+
+/* guild object version (INTEGERS ONLY!) */
+#define GOB_VERSION 2
+
+/* ---------------------------------------------------------------------------------
+ * -= SETTINGS =-
+ * This section contains "tunable" settings that can be used to balance the
+ * advantages/drawbacks of the guild to keep them in balance with the rest of
+ * the mud.
+ * ---------------------------------------------------------------------------------
+ */
+
+#define MAXGUILDRANK			71
+#define MAXSPELLLEVEL			7
+#define WIZLEVEL			20
+#define MIN_SP				-30
+#define STAT_MAX			120
+#define MAX_ALTERATION_NUM		4
+
+#define GENERAL_WEAPON_PENALTY		5
+#define NONMAGE_WEAPON_PENALTY		5
+
+#define LEVEL_HP_PENALTY		4
+#define EXTRALEVEL_HP_PENALTY		2
+
+#define LEVEL_SP_BONUS			4
+#define EXTRALEVEL_SP_BONUS		2
+
+#define SP_REGEN_INTERVAL		3
+#define SP_REGEN_BONUS			query_total_guild_stat("power")/25
+
+#define MAGEWEPS ({"staff","wand","rod","dagger","knife"})
+#define SCHOOLS	({"conjuration","enchantment","evocation","illusion","necromancy"})
+#define STATS	({"intelligence","power","wisdom","will power"})
+
+/* ---------------------------------------------------------------------------------
+ * -= PATHS =-
+ * ---------------------------------------------------------------------------------
+ */
+
+#define LOG_DIR		"/players/pavlik/guild/mages/log/"
+#define CMD_DIR		"/players/pavlik/guild/mages/commands/"
+#define SPELL_DIR	"/players/pavlik/guild/mages/spells/"
+#define SAVE_DIR	"players/pavlik/guild/mages/players/"
+#define INHERIT_DIR	"/players/pavlik/guild/mages/inherit/"
+#define OBJ_DIR		"/players/pavlik/guild/mages/objects/"
+#define HELP_DIR	"/players/pavlik/guild/mages/help/"
+#define ROOM_DIR	"/players/pavlik/guild/mages/room/"
+#define NPC_DIR		"/players/pavlik/guild/mages/npc/"
+
+/* rooms */
+#define GUILD_HOME	"/players/pavlik/guild/mages/room/guild_room5"
+
+/* logs */
+#define COMMENTLOG	"/players/pavlik/guild/mages/log/COMMENT"
+#define BUGLOG		"/players/pavlik/guild/mages/log/BUG"
+#define TRAINLOG	"/players/pavlik/guild/mages/log/TRAINING"
+
+/* guild object filenames */
+#define GOB_FILENAME	"/players/pavlik/guild/mages/gob"
+#define BELT_FILENAME	"/players/pavlik/guild/mages/mage_belt"
+
+/* guild daemon objects */
+#define DAEMON		"/players/pavlik/guild/mages/guild-daemon.c"
+#define DONATOR		"/players/pavlik/guild/mages/donation-master.c"
+#define ADVANCE		"/players/pavlik/guild/mages/room/advance_room.c"
+#define GUILD_TELL	"/players/pavlik/guild/mages/commands/gt.c"
+#define COLOR_PARSER	"/obj/user/color_parser.c"
+
+/* aliases */
+#define rlname this_player()->query_real_name()
+#define rname environment(this_object())->query_real_name()
+#define ME capitalize(this_player()->query_real_name())
+#define PO this_player()->query_possessive()
+#define PN this_player()->query_pronoun()
+#define en environment(this_object())
+#define tp this_player()
+#define env environment(this_player())
+#define attk this_player()->query_attack()
+#define IT capitalize(obj->query_name())
+#define Me capitalize(environment(this_object())->query_real_name())
+#define It capitalize(OBJ->query_name())
+#define guild present("mageobj", this_player())
+#define mage this_object()
+#define OWN capitalize(owner->query_name())
+
+#define SPELL_PROMPT HIR+"*"+NORM+HIC+">>>"+NORM
+#define MPROMPT HIR+"*"+NORM+HIC+">>"+NORM+" "
+

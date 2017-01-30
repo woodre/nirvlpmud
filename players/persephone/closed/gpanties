@@ -1,0 +1,12 @@
+inherit "obj/armor";
+reset(arg){
+ if(arg) return;
+  set_name("panties");
+  set_short("Printed Panties");
+  set_long("A pair of beautiful printed panties with kittens and\n" +
+           "Daddy's girls all over them\n");
+  set_value (1000);
+  set_weight(1);
+  set_ac(1);
+  set_type("other");
+}

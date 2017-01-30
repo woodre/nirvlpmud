@@ -1,0 +1,215 @@
+#include "/players/jaraxle/ansi.h"
+
+#define tp this_player()
+
+#define tpn this_player()->query_name()
+
+#define tpp this_player()->query_possessive()
+
+inherit "room/room";
+
+
+
+string *entered;
+
+
+
+reset(arg) {
+
+  if(arg) return;
+
+set_light(1);
+
+
+
+short_desc = "unknown";
+
+long_desc =
+
+"  This is a dark obsidian room. A black fluid filled door stands\n"+
+
+"along the north wall, and a waivering doorway of light stands to\n"+
+
+"the south. A book on a pedestal stands in front of the darker\n"+
+
+"doorway.\n";
+
+
+
+entered = ({ });
+
+
+
+items = ({
+
+  "fluid",
+
+  "A blackish fluid which has no real substance but is illusion",
+
+  "door",
+
+  "A frame of a doorway made from the surrounding obsidian stone",
+
+  "obsidian",
+
+  "A dark polished rock",
+
+  "doorway",
+
+  "A frame of a doorway made from the surrounding obsidian stone",
+
+  "light",
+
+  "A glimmering field of light that waivers continuously",
+
+  "book",
+
+  "A book in perfect condition. It is made of black leather and the\n"+
+
+  "pages are a white paper. It looks as though you could read it",
+
+  "pedestal",
+
+  "A pedestal made of dark wood. It seems very sturdy",
+
+});
+
+
+
+dest_dir = ({
+
+  "/players/jaraxle/castle/rooms/m2.c","south",
+
+});
+
+
+
+}
+
+
+
+  init(){
+
+  ::init();
+
+  add_action("enter_door", "north", 1);
+
+  add_action("read_book", "read");
+
+}
+
+
+
+read_book(string str){
+
+if(!str){ write("read what?\n"); return 1; }
+
+if(str == "book"){
+
+write(
+
+"You read the book....\n\n"+
+
+"   Stranger, I will now tell you of a cave of power, one that\n"+
+
+"   when entered can bring you riches and fame, as well as\n"+
+
+"   possible death and torture. To your south you will find the\n"+
+
+"   easy path, one that leads you back to what you know, to where\n"+
+
+"   you are safe. To the north lies the Mystic Caves, and the\n"+
+
+"   unknown path. Choose carefully, and be prepared.\n");		
+
+  return 1;
+
+  }
+
+return 0;
+
+}
+
+
+
+enter_door(){
+
+write("Sorry, temporarily closed.  Will reopen very soon.\n"+
+
+      "           10-19-99      jaraxle\n");
+
+return 1;
+
+}
+
+/*
+
+int i;
+
+object test;
+
+for(i=0; i < sizeof(entered); i++){
+
+  if(entered[i] == this_player()->query_real_name()){
+
+  write("The caves reject you!\n");
+
+  return 1;
+
+  }
+
+}
+
+   entered += ({ this_player()->query_real_name() });
+
+   
+
+   test = clone_object("/players/jaraxle/cave/rooms/randomcave.c");
+
+   write_file("/players/jaraxle/log/enter_cave",
+
+                ctime(time())+"  "+HIY+tpn+NORM+
+
+                "    [Level  "+tp->query_level()+"+"+tp->query_extra_level()+"]\n");	
+
+   write(
+
+   "You step into the dark portal....\n");
+
+   say(
+
+   this_player()->query_name()+" steps into a dark portal.\n");      
+
+   test->creation();
+
+   test->renew_room(1);
+
+   move_object(this_player(), test);
+
+   write(
+
+   ""+HIR+"While inside the caves remember these things...\n"+
+
+   "If you drop something and leave it the caves will\n"+
+
+   "absorb it and use it for energy.  You will not be\n"+
+
+   "able to get your corpse if you die!\n"+
+
+   "You can type '"+HIW+"map"+HIR+"' at anytime for assistance.\n"+
+
+   "And above all else, be prepared...."+NORM+"\n");
+
+   command("look", this_player());   
+
+   return 1;
+
+ } 
+
+ */
+
+ realm(){ return "NT"; }
+
+ 
+
+ 

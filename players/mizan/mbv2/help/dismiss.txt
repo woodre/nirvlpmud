@@ -1,0 +1,14 @@
+>> ORDER: DISMISS
+
+Usage:
+order <indexnum> dismiss
+
+Example:
+'order 3 dismiss'
+
+Description:
+This tells the monster to go home, basically. Anything the monster is 
+carrying is destroyed, and the monster removes itself from the game. 
+
+The monster is moved into its guild hall before destruct() is called,
+so items won't be littered in the game space.

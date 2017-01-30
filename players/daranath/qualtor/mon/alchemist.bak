@@ -1,0 +1,98 @@
+inherit "/obj/monster";
+
+#include "/players/saber/closed/esc.h"
+#include <ansi.h>
+
+reset(arg) {
+  object gold;
+   ::reset(arg);
+   if (!arg) {
+
+move_object(clone_object("/players/daranath/qualtor/obj/zyagx_coat.c"),this_object());
+move_object(clone_object("/players/daranath/qualtor/obj/zyagx_boots.c"),this_object());
+move_object(clone_object("/players/daranath/qualtor/wep/zyagx_dag.c"),this_object());
+
+     set_name("Zyagx the Mad Alchemist");
+     set_short("A strange looking individual");
+     set_alias("individual");
+     set_alt_name("zyagx");
+     set_race("human");
+     set_gender("male");
+     set_long("The strange looking individual stares at you with a hatred for\n"+
+              "the living. He is wearing a blood stained lab coat that trails\n"+
+              "along the floor and a pair of boots made from rubber, that\n"+
+              "is covered in grime and blood.\n");
+     set_level(20);
+
+     init_command("wear coat");
+     init_command("wield dagger");
+     init_command("wear boots");
+
+     set_ac(17);
+     set_wc(36 + random(4));
+     set_hp(500 + random(100));
+/* NEW CODE -Snow 5/00 */
+set_wc_bonus(16);
+     set_al(-1200);
+     set_aggressive(0);
+     set_dead_ob(this_object());
+     set_chat_chance(20);
+     set_a_chat_chance(15);
+     load_chat("Zyagx looks up at you from his work and grins.\n");
+     load_chat("Zyagx mutters something about a fresh test subject.\n");
+     load_a_chat("Zyagx slashes at you with his white dagger.\n");
+
+     set_spell_mess1("Zyagx throws a bunch of chemicals at his foe!\n");
+     set_spell_mess2("\nZyagx reaches into a pocket of his lab coat and douses you in chemicals!!!\n");
+     set_chance(15);
+     set_spell_dam(65);
+     call_out("use_spell",15);
+
+     gold = clone_object("obj/money");
+     gold->set_money(random(2000)+1000);
+     move_object(gold,this_object());
+   }
+  }
+
+
+monster_died()  {
+object ob;
+  tell_room(environment(this_object()),
+  "\nZyagx cackles insanly as he dies, glad for the release you have given him.\n");
+  tell_room(environment(this_object()),
+  "\nA howl is heard in the far off distance....\n");
+  return 0;
+        }
+
+
+use_spell()  {
+object target, HERE;
+int a;
+
+   if(!environment(this_object())) return 1;
+HERE = first_inventory(environment(this_object()));
+
+if(!environment(this_object())) {return 1; }
+if(this_object()->query_attack())  {
+tell_room(environment(this_object()),
+  "\nZyagx grabs for some chemicals and produces a huge ball of\n\n"+
+  "        "+HIR+"FIRE"+NORM+"      \n\n");
+
+while(HERE)  {
+  if(this_object()->query_attack())  {
+  if(HERE->query_name() != "Zyagx the Mad Alchemist")  {
+  if(living(HERE))  {
+  if(call_other(HERE, "query_attrib", "luc") < random(30))  {
+  tell_room(environment(this_object()),
+  "\n"+HERE->query_name()+" staggers from the fury of the flame.\n");
+   HERE->heal_self(-(random(60)+25));
+        }
+        }
+        }
+        }
+HERE = next_inventory(HERE);
+        }
+        }
+call_out("use_spell",random(45));
+  return 1;
+        }

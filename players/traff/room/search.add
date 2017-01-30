@@ -1,0 +1,10 @@
+  add_action("search","search");
+
+search(str)  {
+
+  if(!str) {
+    write("Search what?\n");
+    return 1; }
+
+  write("You search the "+str+" but find nothing of interest.\n");
+  return 1; }

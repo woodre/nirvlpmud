@@ -1,0 +1,12 @@
+no_clean 0
+short_desc "The shell of a digger"
+long_desc "This shell used to provide protection for a digger, until you decidedto mercilessly kill it.  The shell has seen much wear and tear fromthe sands of the desert, but you can still make out a faint patternof colors.  It is actually a quite beautiful piece of treasure."
+info 0
+save_flag 0
+value 831
+local_weight 1
+name "digger shell"
+alias_name "shell"
+read_msg 0
+shop_dest_flag 1
+multipleIds ({})

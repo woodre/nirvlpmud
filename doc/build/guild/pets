@@ -1,0 +1,49 @@
+
+ 2-11-94 
+ 7-8-97 added the obvious, no pk -Bp
+  2-Apr-98 added more obvious, experience -Bp
+  Appendix by Mythos
+
+
+  Upon noticing that guild pets are out of hand I have decided upon the 
+following.
+
+            1:    A pet will not have more than 130 hp
+                  175 hp if is_pet() returns 1
+            2:    A pet will not have an AC greater than 4
+                   ac 5 if is_pet() returns 1
+            3:    A pet will not have a WC greater than 12
+                  wc of 15 if is_pet() returns 1
+            4:    No more than 1 pet at a time. (No more zoo parades
+                  walking after players)
+            5:  pets must cost a player more than a few spell points
+                these things must have some drawbacks as of now they
+                are like free-bees
+            6:  pets should have a level normal for their experience
+                and should be no more than level 8 or so for a 130hp
+                pet
+            7:  Pets must not be able to attack players. 
+                They may turn on their owners, but cannot be used in pk.
+             8:  All experience earned by the pet, is to be retained
+                 by the pet. No experience is to be passed to a player.
+
+   Now you all are going to say the mudkids are more powerful, but you
+forget that guild pets start strong. A mudkid must be raised to be of
+any value at all. they start with 30 hp AC=0, and WC=hands(3). the 
+player must divert his experience to raise them up, and spend money
+to heal, and equip them. Mudkids are worthless without player investment.
+
+If you wish to make one stronger have me (boltar) aprove it. however it must
+cost a player something more than the standard few coins or spell pts.
+
+Pets must NOT be avialible on the go. You have two choices, one all
+pets sold from a fixed location, or two, Only one pet per person per reboot. 
+Pets should have a significant cost associated with them, if they are to
+be of any real value.
+
+APPENDIX
+
+All pet-types that are made, must have a check for query_ghost()
+so that players may not command them when ghosted.
+[Preferably, the pets will die or disappear when the player
+dies.]

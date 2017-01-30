@@ -1,0 +1,73 @@
+inherit "obj/armor";
+#include "/players/zeus/closed/all.h"
+int go;
+string gz,go,gt;
+
+reset(arg){
+   ::reset(arg);
+
+   go = 0; /* no go */
+   set_name("talisman");
+   set_short(BOLD+BLK+"An ancient talisman"+NORM);
+  set_long(
+"This is an ancient talisman.  There are some strange carvings in its\n"+
+"surface which make no sense to you.  As you hold it in your hands,\n"+
+"you can feel a very strong magical force within it.\n");
+  set_type("amulet");
+  set_ac(1);
+  set_weight(1);
+  set_value(2000);
+}
+
+id(str){ return str == "talisman" || str == "zeus_quest_talisman"; }
+
+grr(){
+  int x;
+  for(x = 0; x < 3; x ++)
+  {
+    if(present("zeus_talisman_piece", environment()))
+    {
+      if(!gz)
+        gz = present("zeus_talisman_piece", environment())->query_creator();
+      else if(!go)
+        go = present("zeus_talisman_piece", environment())->query_creator();
+      else if(!gt)
+        gt = present("zeus_talisman_piece", environment())->query_creator();
+      present("zeus_talisman_piece", environment())->fk();
+    }
+  }
+}
+
+void init(){ ::init(); if(environment()) grr(); }
+
+query_save_flag(){  return 1; }
+set_go(x){ go = x; }
+query_go(){ return go; }
+
+query_gz(){ return gz; }
+query_goo(){ return go; }
+query_gt(){ return gt; }
+
+do_special(owner) {
+  object x;
+  if(!owner || !owner->query_attack()) return 1;
+  if(!owner->is_player()) return 1;
+  if(!go) return 0;
+  if(!random(4))
+  {
+    x = present("circle_object", owner);
+    if(x)
+    {
+      x->add_endurance(1);
+    }
+  }
+  if(owner->query_attrib("ste") > random(60)){
+    owner->add_spell_point(3);
+    if(!random(4))
+    {
+      tell_object(owner, 
+        "Your talisman glows as it replenishes your power.\n");
+    }
+  }
+  return 1; 
+}

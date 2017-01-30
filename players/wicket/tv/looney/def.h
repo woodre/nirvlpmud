@@ -1,0 +1,6 @@
+#define ROOM "/players/wicket/tv/looney/rooms/"
+#define MOB "/players/wicket/tv/looney/mobs/"
+#define ARM "/players/wicket/tv/looney/armor/"
+#define WEP "/players/wicket/tv/looney/weapons/"
+#define HEAL "/players/wicket/tv/looney/heals/"
+#define OBJ "/players/wicket/tv/looney/objects/"

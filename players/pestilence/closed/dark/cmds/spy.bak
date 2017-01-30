@@ -1,0 +1,26 @@
+#include "/players/pestilence/define.h"
+#include "/players/pestilence/ansi.h"
+
+main(string str, object gob, object player)
+{
+        object ob;
+        int bonus;
+        
+/*
+        if(USER->query_ghost()) return 0;
+*/
+/*
+if(USER->query_guild_rank() < 9){ write("You can't use this yet.\n"); return 1; }
+    if(USER->query_sp() < 10){
+        write("You are too weak.\n");
+        return 1;     }
+*/
+        ob = clone_object("/players/pestilence/closed/dark/obj/spy.c");
+      ob->set_owner(USER->query_real_name());
+      move_object(ob, environment(USER));
+      this_player()->add_spell_point(-10);
+        tell_object(USER,
+        "You place your hand on the ground...\n"+
+ "A "+HIK+"dark messenger"+NORM+" arrives from the dark realm to spy on this spot for you.\n");
+        return 1;
+}

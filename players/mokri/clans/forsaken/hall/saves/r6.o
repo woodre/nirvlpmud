@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/forsaken/hall/r1","north","/players/mokri/clans/forsaken/hall/r7","south","/players/mokri/clans/forsaken/hall/r8","west",})
+short_desc "[1;30mHall of the [1;31mForsaken [1;30mMage Armory[0m[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;30mDark Ring[0m of the [1;30m[[1;37mDead[0m[1;30m][0m[1;30m][0m[0m","/players/jareel/armor/cratermaker/solaris/ArchMageRing2",0,0,0,"[1;31mBlood Ring[0m of [1;30m[[1;37mPower[0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageRing",0,0,0,"[1;37mPlatinum Bracer[0m of [1;30m[[1;37mIllusion[0m[1;30m][0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageBracer",0,0,0,"[1;33mAmulet [0mof [1;33mLightning[0m","/players/jaraxle/cont/bdragon/amulet",0,0,0,"[1;30mEnchanted grey sash[0m","/players/eurale/Chess/OBJ/sash",0,0,0,"[33mGolden[0m Necklace of the [31mRed Goddess[0m","/players/jareel/armor/cratermaker/solaris/ArchMageNecklace",0,0,0,"A Full Moon [1;30m[[1;37mGlow Spot[1;30m][0m of the [31mRed Goddess[0m","/players/jareel/armor/cratermaker/solaris/ArchMageMisc",0,0,0,"[1;30mLunar shorts[0m of [1;30m[[1;37mIllusion[0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageUnderware",0,0,0,"[1;30mLunar pants[0m of [1;30m[[1;37mIllusion[0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMagePants",0,0,0,"[1m[30mBlack Ninja Suit[0;0m","/players/dragnar/WasteLands/armor/suit",0,0,0,})

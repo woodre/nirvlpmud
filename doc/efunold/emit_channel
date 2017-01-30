@@ -1,0 +1,6 @@
+int emit_channel(string channel, string message);
+
+Echo "message" to everybody on channel "channel".  The number
+of people who got the message will be returned.
+
+See also help on channels.

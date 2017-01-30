@@ -1,0 +1,22 @@
+Daranath's Second attempt to code a guild...
+
+The Necromancers
+
+Most of the help files are found in the docs directory.
+hist1.txt thru hist4.txt lists Sagan's journey in developing the
+style and powers of the guild. OUTLINE is the basic outline of the 
+guild, for you wiz types that can read this. The basic abilities
+and powers are listed within that doc. Of further note would be
+parts_list.txt and level1.txt thru level10.txt plus avatar.txt
+which list the individual powers of each guild rank. There will
+be 3 avatars at any given time, and no more then 3 will
+ever be allowed. If you decide to use the guildob.c for testing
+as a wiz or a test char, please set the g_level of the 
+testing player/char to g_level 12. This shows an inactive 
+role in the guild itself, while still allowing for all spells
+and abilities to be used.
+
+I welcome all comments and suggestions for the guild... please
+mail me if you do wish to share your opinion.
+
+     -Daranath

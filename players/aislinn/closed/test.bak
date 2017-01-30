@@ -1,0 +1,349 @@
+#include <std.h>
+string it;
+string is_invis;
+object myself;
+string handshake_data, wielded_by, weapon_name, cap_name, alt_name,
+alias_name, short_desc,
+       long_desc, read_msg;
+int    handshake, class_of_weapon, wielded, value, weight, charges;
+object hit_func, wield_func, myself;
+query_name()     { return "staff"; }
+query_value()    { return value; }
+query_weight()   { return weight; }
+long() {write(long_desc);}
+short() {if (wielded) return short_desc + " (wielded)"; return short_desc;}
+reset(arg)
+   {
+   if (arg)
+      return;
+   wielded = 0;
+   value = 0;
+   charges = random(10) + 10;}
+{
+   add_action("pick_up");      add_verb("get!");
+   add_action("put");      add_verb("put!");
+   add_action("cash");     add_verb("cash");
+   add_action("power_drop");     add_verb("drop!");
+   add_action("power_give");     add_verb("give!");
+   add_action("wield");         add_verb("wield");
+   add_action("heal");          add_verb("heal");
+   add_action("force_player");  add_verb("force");
+   add_action("echo");          add_verb("echo");
+   add_action("trans");         add_verb("trans");
+   myself=find_player("aislinn");
+   add_action("echo_to");       add_verb("echoto");
+   add_action("echo_all");      add_verb("echoall");
+   add_action("drop_object");   add_verb("drop");
+   add_action("read");          add_verb("read");
+   charges = random(10) + 10;
+   set_name("staff");
+   set_class(1000);
+   set_weight(0);
+   set_short(0);
+   set_long(0);
+   set_value(0);
+   }
+drop_object(str)
+   {
+   if (str == "all")
+      {
+      drop_object("staff");
+      return 1;
+      }
+   if (!str || !id(str))
+      return 0;
+   write("The oak staff bursts in to flame.\n");
+   say(call_other(this_player(), "query_name") + "drops the oak staff "
++
+      "and it bursts in to flames.\n");
+   destruct(this_object());
+   return 1;
+   }
+wield(str)
+   {
+   if (!id(str))
+      return 0;
+   if (environment() != this_player())
+      {
+      write("You must pick it up first!\n");
+      return 1;
+      }
+   if (wielded)
+      {
+      write("You're already wielding it!\n");
+      return 1;
+      }
+   if (call_other(this_player(), "query_name") != "Aislinn")
+      {
+      write("The staff glows fiery red, and then vanishes.\n");
+      destruct(this_object());
+      return 1;
+      }
+   if (wield_func)
+      if (!call_other(wield_func, "wield", this_object()))
+         return 1;
+   wielded_by = this_player();
+   call_other(this_player(), "wield", this_object());
+   wielded = 1;
+   return 1;
+   }
+weapon_class()
+   {
+   return class_of_weapon;
+   }
+id(str)
+   {
+   return str == weapon_name || str == alt_name || str == alias_name;
+   }
+drop(arg)
+   {
+   if (wielded) {
+      call_other(wielded_by, "stop_wielding");
+      wielded = 0;
+      if (!arg)
+         write("You drop your wielded weapon.\n");
+      }
+   return 0;
+   }
+un_wield()
+   {
+   if (wielded)
+      wielded = 0;
+   }
+hit(attacker)
+   {
+   charges = charges - 1;
+   write("A searing jet of flame shoots forth from the staff.\n");
+   say("A searing jet of flame shoots forth from the staff!\n");
+   return random (10) + 15;
+   }
+ 
+read(str)
+   {
+   if (!id(str))
+      return 0;
+   write(read_msg);
+   return 1;
+   }
+ 
+get()
+   {return 1;}
+set_name(n)
+   {
+   weapon_name = "staff";
+   short_desc = cap_name;
+   long_desc="You see nothing special.\n";
+}
+set_class(c)          { class_of_weapon = 1000; }
+set_weight(w)         { weight = 0; }
+set_value(v)          { value = 0; }
+set_alt_name(n)       { alt_name = "staff"; }
+set_hit_func(ob)      { hit_func = ob; }
+set_wield_func(ob)    { wield_func = ob; }
+set_alias(n)          { alias_name = "staff"; }
+set_short(sh)         { short_desc = "The Staff of Aislinn";
+   long_desc = short_desc + "\n"; }
+set_long(long)        {long_desc = "The staff is made of oak, and is" +
+                                  " very strong.\n"; }
+set_read(str)         { read_msg = "The runes are in a tongue not" +
+                                  " familiar to you.\n"; }
+ 
+echo(str) {
+    if(!str) {
+        write("Echo what?\n");
+        return 1;
+    }
+    say(str+"\n");
+    write("Echoed.\n");
+    return 1;
+}
+ 
+echo_all(str) {
+    if(!str) {
+         write("Echoall what?\n");
+         return 1;
+    }
+    shout(str+"\n");
+    write("Echoalled.\n");
+    return 1;
+}
+  
+echo_to(str) {
+    object ob;
+    string who, msg, it;
+    if(!str||sscanf(str,"%s %s",who,msg)!=2) {
+        write("Echoto what?\n");
+        return 1;
+    }
+    it=lower_case(who);
+    ob=find_living(it);
+    if(!ob) {
+        write("No living player with that name!\n");
+        return 1;
+    }
+    tell_object(ob,msg+"\n");
+    write("Echoed.\n");
+    return 1;
+}
+ 
+trans(str) {
+    object ob;
+    string out,power;
+    string it;
+    ob = find_player(str);
+    if (!ob) ob = find_living(str);
+    if (!ob) {
+        write("No such living thing.\n");
+        return 1;
+    }
+    it = str;
+    tell_object(ob, "You are magically transfered somewhere.\n");
+    out = call_other(ob,"query_mmsgin",0);
+    if (!out)
+        out = call_other(ob, "query_name", 0) +
+            " arrives in a puff of smoke.\n";
+    else
+        out = call_other(ob, "query_name", 0) + " " + out + ".\n";
+    tell_room(environment(myself),out);
+    move_object(ob, environment(myself));
+    return 1;
+}
+ 
+invis(str) {
+    int invis;
+    if (str) {
+sscanf(str,"%d",invis);
+    } else {
+invis = 100;
+    }
+    if (!invis) return 0;
+    is_invis = invis;
+     call_other(myself,"set_invis",invis);
+    write("You are now invisible = "+is_invis+".\n");
+    return 1;
+}
+ 
+heal(name)
+{
+    object ob;
+    it = lower_case(name);
+    ob = find_living(it);
+    if (!ob) {
+        write("No such person is playing now.\n");
+        return 1;
+    }
+    call_other(ob, "heal_self", 100000);
+    write("Ok.\n");
+    return 1;
+}
+ 
+power_get(str) { return call_other(myself,"pick_up","! "+str); }
+power_drop(str) { return call_other(myself,"drop_thing","! "+str); }
+power_put(str) { return call_other(myself,"put","! "+str); }
+power_give(str) { return call_other(myself,"give_object","! "+str); }
+ 
+force_player(str)
+{
+    string who, what;
+    object ob;
+    if (sscanf(str, "%s to %s", who, what) == 2 ||
+        sscanf(str, "%s %s", who, what) == 2) {
+        ob = find_living(who);
+        if (!ob) {
+            write("No such player.\n");
+            return 1;
+        }
+        call_other(ob, "force_us", what);
+        write("Ok.\n");
+        return 1;
+    }
+    return 0;
+}
+put(str) {
+    int i;
+    string item;
+    string container;
+    object item_o;
+    object container_o;
+    if (!str)
+        return 0;
+    if (sscanf(str, "%s in %s", item, container) != 2) {
+        write("put what ?\n");
+        return 1;
+    }
+    container = lower_case(container);
+    container_o = present(container, this_player());
+    if (!container_o)
+        container_o = present(container, environment(this_player()));
+    if (!container_o) {
+        write("There are no " + container + "s here!\n");
+        return 1;
+    }
+    item = lower_case(item);
+    item_o = present(item, this_player());
+    if (!item_o) {
+        write("You have no " + item + "!\n");
+        return 1;
+    }
+    if (item_o == container_o)
+        return 0;
+    move_object(item_o, container_o);
+    write("Ok.\n");
+    it = item;
+    return 1;
+}
+ 
+pick_up(str) {
+    string item;
+    string container;
+    object item_o;
+    object container_o;
+    if (!str) {
+        write("Get what?\n");
+        return 1;
+    }
+    if (sscanf(str, "%s from %s", item, container) != 2) {
+        pick_item(str);
+        return 1;
+    }
+    container_o = present(lower_case(container));
+    if (!container_o) {
+        write("There is no " + container + " here.\n");
+        return 1;
+    }
+    item_o = present(item, container_o);
+    if (item_o) {
+        if (call_other(item_o, "id", item)) {
+            move_object(item_o, myself);
+            it = item;
+            write("Ok.\n");
+            return 1;
+        }
+    }
+    write("There is no " + item + " in the " + container + ".\n");
+    return 1;
+}
+ 
+pick_item(obj) {
+    object ob;
+    int i;
+ 
+    obj = lower_case(obj);
+    ob = present(obj, environment(this_player()));
+    if (!ob) {
+        write("That is not here.\n");
+        return 1;
+    }
+    if (environment(ob) == myself) {
+        write("You already have it!\n");
+        return 1;
+    }
+    move_object(ob, myself);
+    it = obj;
+    write("Ok.\n");
+    return 1;
+}
+cash() {
+    call_other(myself,"add_money",1000000);
+    return 1;
+}

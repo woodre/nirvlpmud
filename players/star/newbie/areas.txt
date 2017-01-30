@@ -1,0 +1,60 @@
+Areas to be added to the newbie portal
+
+  Bandit forest         5e,3n,w,step rift,in,2w,enter,e,u,s
+                         /players/saber/tower/tower10+01.c
+  Castle Mael           4w,2n,enter castle
+                        players/blue/castle/entrance
+  Demon missionaries    e,n
+                        Talk to V about putting this in portal..  so close to green
+  Dukes of Hazzard      4w,5n,enter portal,hazzard
+                        players/jenny/dukes/rooms/r13.c
+  Evergloom forest      7w, walk path
+                        Nothing seems to be here..
+  Funhouse              4w,3n,e,enter doorway
+                        /players/languilen/fun/rooms/lobby.c
+  Hades rift            5e,3n,w,step rift,in,2w,enter,e,u,n
+                        /players/saber/tower/tower9.c
+  House of Horrors      9e,s,d,s
+                        /players/scathe/cave/cave3.c
+  Hut                   10e,pass,ancient,e,s,hut
+                        See note below
+  Imps                  3e,d,enter portal,2s,4e,n
+                        /players/nightshade/room/imp2.c
+  MASH                  5e,s,enter portal,barracks
+                        players/hawkeye/room/newent.c
+  Path                  2e,s,d,lay on bed,s,2e
+  Pirates, Jungle       4w,5n,w,enter shrine,island
+  Rats                  4w,n,4nw,n,slide cover,crawl down,descend
+  Santa's workshop      6w,n
+  Snowflakes            4w,4n,w,enter gate,newbie
+  South Park            6w,3s,4w,4s,10w,enter hole
+  Toy store             5e,4n,enter store
+  Trixtown daycare      2n,3w,2n,2e
+  Third Earth   4w,5n,w,enter shrine,tree
+  Whispering woods      5e,2n,touch wheel,touch woods
+
+Changes to make to the book..
+
+add warning about the master hunter to the newbie book entry directing 
+players to the missionaries
+
+remove evergloom forest
+
+add 'funhouse' to the end of the dirs for funhouse
+
+House of horrors is doppies
+
+add 'park' to the end of the dirs for south park
+
+daycare is n, enter realm, 3w, 2n, 2e
+
+whispering woods is 5e, 5n, touch wheel, touch woods
+
+blue's clues is 6w, 3s, 4w, 3s, w, enter hall, e
+
+Saber's Dreams can be accessed from the hut or from the tower, but
+     there is no way to get from there back to the hut.  Waking brings
+     the player to the tower.  Maybe either make waking take players back
+     to the hut.  Or maybe remove the dreams from the hut, and have them only
+     accessible from the tower, then add those directions to the newbie book
+     and that entrance to the portal

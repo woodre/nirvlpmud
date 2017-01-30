@@ -1,0 +1,24 @@
+                    -- HEALING --
+
+TYPE: Spell (Variable)
+COST TO MAX: 61,161,000 xp
+INT REQ: 1/level
+USAGE: heal <player>
+
+
+Healing allows a player to change personal spell points into hit
+points.  Infuse only applies to casting a healing spell on another
+player.  This is a variable spell so you will always use the high
+level of the spell you have.
+
+  
+       /LEVEL=HEAL HP=COST SP=INFUSE===XP COST===\ 
+       |  1  |   5   | 100   | 20%  |      1,000 |
+       |  2  |   5   |  75   | 15%  |     10,000 |
+       |  3  |   5   |  50   | 10%  |     50,000 |
+       |  4  |   5   |  35   |  7%  |    100,000 |
+       |  5  |  10   |  50   |  4%  |  1,000,000 |
+       |  6  |  10   |  30   |  2%  | 10,000,000 |
+       |  7  |  30   |  30   |  0%  | 50,000,000 |
+       \=========================================/
+

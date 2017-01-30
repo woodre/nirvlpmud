@@ -1,0 +1,40 @@
+#include <ansi.h>
+
+#define PATH    "/players/guilds/necro"
+#define SAVE    "players/guilds/necro/members/"
+#define ADMIN      PATH+"/power_admin"
+#define SPELLS     PATH+"/spells"
+#define CMDS       PATH+"/cmds"
+#define EMOTES     PATH+"/emotes"
+#define DAEMONS    PATH+"/daemons"
+#define DOCS       PATH+"/docs"
+#define LOG        PATH+"/log"
+#define MISC       PATH+"/misc"
+#define MON        PATH+"/mon"
+#define OBJ        PATH+"/obj"
+#define BODYPARTS  OBJ+"/bodyparts"
+
+#define GUILD_ID   "necro_ob"
+#define TOOL_ID   "necro_tool"
+#define GHOULSHIELD "necro_spirit_armor"
+#define OWNER   "Shinshi"
+#define OWNERRN   "shinshi"
+#define ALTSPIRITS ""
+#define ROD        "<"+HIR+"RoD"+OFF+"> "
+#define NECRO      "<"+HIR+"NeCRo"+OFF+"> "
+
+
+#define CHAT_D    "/players/guilds/necro/daemons/channel_d.c"
+#define DEATH_D   "/players/guilds/necro/daemons/deathcall_d.c"
+#define CONVERTMSG_D "/players/guilds/necro/daemons/say_d.c"
+
+/*  Following line needs to get removed - need to fix rooms first - Rumplemintz */
+#define ROOM "/players/wocket/std/tvroom.c"
+
+/*  COSTS for guildob parts/levels/etc... Adjust for leveling tuning  */
+#define BLOODCOST   5
+#define SKINCOST    7
+#define EYECOST    10
+#define SPINECOST  15
+#define HEARTCOST  15
+#define SOULCOST   20

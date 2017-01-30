@@ -1,0 +1,483 @@
+#include "/obj/clean.c"
+/********************************************************************
+ * This is a combination of both obj/weapon and obj/armor
+ * Objects inherting this file are usable as both weapons
+ * and armor.  It includes all the normal features of both
+ * objects, including size and breaking.
+ *******************************************************************/
+string name, alt_name, alias;
+string short_desc, long_desc;
+string info, read_msg;
+string type;
+string *message_hit;
+
+int worn;
+int class_of_weapon, eff_wc;
+int ac, set_ac_flag;
+int weight, size;
+int value;
+int save_flag;
+int broke;
+int silentwield;
+int misses, hits;
+
+object used_by;   /* replaces worn_by & wielded_by */
+object next;
+object hit_func;
+object wield_func;
+
+reset(arg) {
+  if(arg) return;
+  type = "armor";
+  worn = 0;
+  value = 0;
+  message_hit=({
+      "massacre"," to small fragments",
+      "smashed"," with a bone crushing sound",
+      "hit"," very hard",
+      "hit"," hard",
+      "hit","",
+      "grazed","",
+      "tickled"," in the stomach"
+  });
+}
+
+init() {
+    if(read_msg) {
+        add_action("read"); add_verb("read");
+    }
+    add_action("wear"); add_verb("wear");
+    add_action("remove"); add_verb("remove");
+    add_action("remove"); add_verb("unwear");
+}
+
+/*****************************
+ * ARMOR STUFF
+ *****************************/
+
+set_ac(a) {
+  ac = a;
+  set_ac_flag = 7;
+}
+
+armor_class() { return ac; }
+
+set_type(t) {
+  if(ac > 0 || !set_ac_flag) {
+     if(t !="armor" && t !="helmet" && t != "boots" && t != "ring" && t !="amulet" &&
+ t != "shield" && t != "misc")
+        destruct (this_object());
+  }
+  type = t;
+}
+
+query_type(){ return type; }
+
+link(ob) {
+  next = ob;
+}
+
+remove_link(str) {
+  object ob;
+
+  if(str == name) {
+        ob = next;
+        next = 0;
+        return ob;
+  }
+  if(next)
+        next = call_other(next, "remove_link", str);
+  return this_object();
+}
+
+rec_short() {
+  if(next)
+	return name + ", " + call_other(next, "rec_short");
+  return name;
+}
+
+test_type(str) {
+  if(str == type)
+        return this_object();
+  if(next)
+        return call_other(next, "test_type", str);
+  return 0;
+}
+
+tot_ac() {
+  if(next)
+        return ac + call_other(next, "tot_ac");
+  return ac;
+}
+
+/**********************
+ * GENERAL STUFF
+ *********************/
+
+short() {
+  string tmp_short;
+  if(!short_desc)
+	return 0;
+  tmp_short = short_desc;
+  if(this_player()->is_player() && size) {
+      if(size == 1) tmp_short = tmp_short + " (XS)";
+      if(size == 2) tmp_short = tmp_short + " (S)";
+      if(size == 3) tmp_short = tmp_short + " (M)";
+      if(size == 4) tmp_short = tmp_short + " (L)";
+      if(size > 4) tmp_short = tmp_short + " (XL)";
+  }
+  if(call_other(this_player(), "query_level", 0) > 30) {
+       tmp_short = tmp_short + "  < ac " + ac + ", " +type +" >";
+  }
+  if(call_other(this_player(), "query_level", 0) > 30) {
+       tmp_short = tmp_short + "  < wc " + class_of_weapon + ","+eff_wc + " >";
+  }
+  if(worn) {
+       tmp_short = tmp_short + " (worn)";
+  }
+  if(broke) {
+       tmp_short = tmp_short + " [BROKEN]";
+  }
+  return tmp_short;
+}
+
+/*
+ * Removed size from long descrip.  It shows on the
+ * short_desc and that should be good enough.
+ */
+long(str) {
+  int wear;
+  write(long_desc);
+  write("It is ");
+  wear=query_wear();
+  if(wear < 40) write("like new.\n");
+  if(wear > 39 && wear < 100) write("a little worn.\n");
+  if(wear > 99 && wear < 200) write("somewhat worn.\n");
+  if(wear > 199 && wear < 400) write("worn.\n");
+  if(wear > 399) write("well worn.\n");
+  if(this_player()->query_level() > 39) {
+       write("Wear = "+wear+"  Hits = "+hits+"  Misses = "+misses+"\n");
+  }
+}
+
+id(str) {
+    return str == name || str == alias || str == type || str == alt_name;
+}
+
+
+query_worn() { return worn; }
+
+query_value() {
+  if(broke) return 0;
+  return value;
+}
+
+query_name() { return name; }
+set_name(n) { name = n; }
+
+weapon_class() { return class_of_weapon; }
+set_class(c) { class_of_weapon = c; }
+
+set_alt_name(n) { alt_name = n; }
+
+set_hit_func(ob) { hit_func = ob; }
+query_hit_func() { return hit_func; }
+set_wield_func(ob) { wield_func = ob; }
+
+set_read(str) { read_msg = str; }
+set_info(i) { info = i; }
+query_info() { return info; }
+
+stopwield() {
+  if (environment() != this_player()) return 0;
+  call_other(this_player(), "stop_wielding");
+  call_other(this_player(), "stop_wearing", name);
+  used_by = 0;
+  worn = 0;
+  return 1;
+}
+
+wear(str) {
+  object ob;
+  int tmp;
+
+  if(!id(str))
+	return 0;
+  if(environment() != this_player()) {
+	write("You must get it first!\n");
+	return 1;
+  }
+  if(present("notarmor",this_player())) {
+       write("For some reason you are unable to wear armor.\n");
+       return 1;
+  }
+  if(present("notweapon", this_player())) {
+       write("For some reason you are unable to wield weapons.\n");
+       return 1;
+  }
+  if(worn) {
+	write("You already wear it!\n");
+	return 1;
+  }
+  if(!message_hit) {
+	message_hit=({
+	   "massacre"," to small fragments",
+	   "smashed"," with a bone crushing sound",
+	   "hit"," very hard",
+	   "hit"," hard",
+	   "hit","",
+	   "grazed","",
+	   "tickled"," in the stomach"
+	});
+  }
+  if(size) {
+     tmp=find_size(this_player());
+     if(tmp > size) {
+        write("You find that it is too small for you.\n");
+        return 1;
+     }
+     if(tmp < size - 1) {
+	write("It is far to big for you, it simply falls off.\n");
+        return 1;
+     }
+     if(tmp < size) write("It's a little big but you can wear it.\n");
+  }
+  next = 0;
+  ob = call_other(this_player(), "wear", this_object());
+  if(!ob) {
+	if(wield_func) {
+	   if(!call_other(wield_func, "wield", this_object()))
+		return 1;
+	}
+	used_by = this_player();
+	worn = 1;
+	call_other(this_player(), "wield", this_object(), silentwield);
+	return 1;
+  }
+  write("You already have an armor of class " + type + ".\n");
+  write("Worn armor " + call_other(ob,"short") + ".\n");
+  return 1;
+}
+
+/* function un_wield not used in this object */
+
+hit(attacker) {
+  if(hit_func)
+	return call_other(hit_func, "weapon_hit", attacker);
+  return 0;
+}
+
+read(str) {
+  if (!id(str))
+	return 0;
+  write(read_msg);
+  return 1;
+}
+
+get() { return 1; }
+
+drop(silently) {
+  if(worn) {
+	call_other(used_by, "stop_wearing", name);
+	call_other(used_by, "stop_wielding");
+	worn = 0;
+	used_by = 0;
+        used_by = 0;
+	if (!silently)
+	    tell_object(environment(this_object()),"You drop your worn armor.\n");
+  }
+  return 0;
+}
+
+remove(str) {
+    if (!id(str))
+	return 0;
+    if (!worn) {
+	return 0;
+    }
+    call_other(used_by, "stop_wearing",name);
+    call_other(used_by, "stop_wielding");
+    used_by = 0;
+    worn = 0;
+    return 1;
+}
+
+query_weight() { return weight; }
+
+set_id(n) { name = n; }
+
+set_short(s) { short_desc = s; long_desc = s + ".\n"; }
+
+set_value(v) { value = v; }
+
+set_weight(w) { weight = w; }
+
+set_alias(a) { alias = a; }
+
+set_long(l) { long_desc = l; }
+
+set_arm_light(l) { set_light(l); }
+
+take_off() {
+  used_by = this_player();
+  used_by = 0;
+  worn = 0;
+  return 1;
+}
+
+save_thing(str){
+     save_object(str);
+     return 1;
+}
+
+restore_thing(str){
+      restore_object(str);
+      return 1;
+}
+
+set_save_flag(arg) {
+  save_flag = 1;
+  if(arg > 0) save_flag = arg;
+}
+
+set_size(arg) {
+    size = arg;
+}
+
+query_size() { return size; }
+
+find_size(plob) {
+  int hf,pr,hi,we,sizew,sizeh,sizea;
+  string ge;
+  hf=plob->query_phys_at(1);
+  hi=plob->query_phys_at(2);
+  we=plob->query_phys_at(3);
+  ge=plob->query_gender();
+  pr=plob->query_pregnancy();
+  if(ge == "male" || ge == "creature") {
+     if(hf == 7) sizeh = 5;
+     if(!sizeh && hf == 6 && hi > 6) sizeh = 5;
+     if(!sizeh && hf == 6 && hi < 7) sizeh = 4;
+     if(!sizeh && hf == 5 && hi > 6) sizeh = 3;
+     if(!sizeh && hf == 5 && hi > 0) sizeh = 2;
+     if(!sizeh) sizeh = 1;
+
+     if(we > 250) sizew = 5;
+     if(!sizew && we > 190) sizew = 4;
+     if(!sizew && we > 150) sizew = 3;
+     if(!sizew && we > 110) sizew = 2;
+     if(!sizew) sizew = 1;
+  }
+  if(ge == "female") {
+     if(hf > 6) sizeh = 5;
+     if(!sizeh && hf == 5 && hi > 9) sizeh = 4;
+     if(!sizeh && hf == 5 && hi > 2) sizeh = 3;
+     if(!sizeh && hf == 5 && hi < 3) sizeh = 2;
+     if(!sizeh) sizeh = 1;
+
+     if(we > 220) sizew = 5;
+     if(!sizew && we > 160) sizew = 4;
+     if(!sizew && we > 130) sizew = 3;
+     if(!sizew && we > 100) sizew = 2;
+     if(!sizew) sizew = 1;
+  }
+  if(pr) {
+    if(pr > 3000) sizew +=1;
+    if(pr > 8100) sizew +=1;
+    if(pr > 13000) sizew +=1;
+  }
+  sizea = (sizeh + sizew)/2;
+  return sizea;
+}
+
+query_save_flag() {
+  if(ac >1) {
+      if(type=="boots" || type=="ring" || type=="amulet" || type=="misc" )
+        return 1;
+  }
+  if(ac > 4) return 1;
+  if(class_of_weapon > 18) return 1;
+  if(eff_wc > 24) return 1;
+  if(broke) return 1;
+  return save_flag;
+}
+
+weapon_breaks(){
+  if(broke) return 1;
+  tell_object(environment(this_object()), "Your WEAPON BREAKS!!!!\n");
+  set_class(class_of_weapon/3);
+  broke = 1;
+  command("unwear "+name, environment(this_object()));
+  command("wewar "+name, environment(this_object()));
+  return 1;
+}
+
+count_misses() {
+  misses += 1;
+  return 1;
+}
+
+count_hit_made(w) {
+  hits += 1;
+  eff_wc=((hits-1)*eff_wc + w)/hits;
+  return 1;
+}
+
+query_wear() {
+  int wear;
+  wear = 3*misses/2 + 4*hits/9;
+  return wear;
+}
+
+add_wear(arg) {
+   misses += 2*arg/3;
+   hits += 9*arg/4;
+}
+
+fix_weapon() {
+  if(!broke) {
+     return 0;
+  }
+  broke = 0;
+  misses = misses/2;
+  set_class(3*class_of_weapon);
+  hits = hits/3;
+  write("The weapon has been fixed.\n");
+  return 1;
+}
+
+re_break() {
+  broke = 1;
+  set_class(class_of_weapon/3);
+  return 1;
+}
+ 
+query_message_hit(tmp) {
+  string *mess;
+    mess = ({message_hit[1],message_hit[0]});
+  if (tmp < 30) {
+    mess = ({message_hit[3],message_hit[2]});
+  }
+  if (tmp < 20) {
+    mess = ({message_hit[5],message_hit[4]});
+  }
+  if (tmp < 10) {
+    mess = ({message_hit[7],message_hit[6]});
+  }
+  if (tmp < 5) {
+    mess = ({message_hit[9],message_hit[8]});
+  }
+  if (tmp < 3) {
+    mess = ({message_hit[11],message_hit[10]});
+  }
+  if (tmp == 1) {
+    mess = ({message_hit[13],message_hit[12]});
+  }
+  return mess;
+}
+
+set_silentwield(arg) { silentwield = arg; }
+
+query_wielded() { return worn; }
+
+

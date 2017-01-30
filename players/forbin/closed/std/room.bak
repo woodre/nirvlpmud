@@ -1,0 +1,16 @@
+/*
+ *  Created:      Forbin@Nirvana
+ *  Copyright:    Copyright (c) 2004 Forbin
+ *                  All Rights Reserved.
+ *  Function:     Base room inheritable 
+ *  Create Date:  2004.06.07
+ *  Last Edit:    2004.06.07 -Forbin
+ *  Notes:        Inherits /players/vertebraker/closed/std/room"
+ *                  Original Copyright (c) 2000 Vertebraker@Nirvana
+ *  Notable Changes: 
+ *    2004.06.07 - Created so I can add to this in future.           
+ */
+
+#include "/players/forbin/define.h"
+inherit "/players/vertebraker/closed/std/room";
+

@@ -1,0 +1,19 @@
+#0:0
+FileName "players/earwax/housing/data/molasar/Molasar_Forest_52"
+Short "Shack"
+LongDesc ""
+ShortDesc ""
+Ids ({"EARWAXIAN_HOUSING_OBJECT_ID_GOES_HERE",})
+WrapPref 0
+Upgrades ({"color-code converter",})
+Owner "avant"
+Owners ({"avant",})
+Privs ({3,})
+ClanName 0
+Entrance "/players/earwax/housing/data/molasar/room/Molasar_Forest_52_0.c"
+LotSize 2
+HouseSize 1
+Cost 0
+LastRoom 0
+IsClanhall 0
+MaxRooms 1

@@ -1,0 +1,29 @@
+ hit_player           Called when fighting.
+ transfer_all_to:     Transfer all objects to dest.
+ move_player:         Called by the object that moves the monster.
+ query_name:          Gives the name to external objects.
+ query_real_name:     Give the uncapitalized name, even if invisible.
+ attacked_by          Tells us who are attacking us.
+ show_stats           Dump local status.
+ stop_wielding        Called when we drop a weapon.
+ stop_wearing         Called when we drop an armor.
+ query_hp             Query the number of hit points we have
+ query_level          Give our level to external objects.
+ query_value          Always return 0. Can't sell this object.
+ query_npc            Return 1 if npc otherwise 0.
+ get                  Always return 0. Can't take this object.
+ attack               Should be called from heart_beat. Will maintain attack.
+ query_attack
+ drop_all_money       Used when the object dies.
+ wield                Called by weapons.
+ wear                 Called by armor.
+ add_weight           Used when picking up things.
+ heal_self            Enable wizards to heal this object.
+ can_put_and_get      Can look at inventory, but not take things from it.
+ attack_object        Called when starting to attack an object.
+ test_if_any_here     For monsters. Call this one if you suspect no enemy
+                      is here any more. This will be checked, and the
+                      heart beat turned off in that case.
+                      Return 1 if anyone there, 0 if none.
+ force_us             Force us to do a command.
+ set_spell_dtype      Set the damage type for a spell_object <illarion>

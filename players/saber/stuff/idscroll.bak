@@ -1,0 +1,52 @@
+#define tp this_player()->query_name()
+inherit "obj/treasure";
+reset(arg)
+{   if (arg) return;
+   set_id("rock");
+   set_alias("idenfity");
+   set_short("A rock of identify");
+   set_long("A rock that lets you identify an object.\n"+
+   "Type <iden> <object name> to use.\n");
+   set_weight(0);
+   set_value(150);
+}
+init()
+{  add_action("iden_rock", "iden");   }
+
+iden_rock(str)  {
+object ob;
+ if(!environment(this_player()))  {
+ write("You must hold the item to identify it.\n");
+   return 1;
+        }
+ ob = player_inventory(str);
+  if(!ob)  {
+  ob = present(str,environment(this_player()));
+   }
+  if(!ob)  {
+  write("You must have the item to identify it.\n");
+    return 1;    }
+ if(ob)  {
+  write("\n       "+ob->short()+"\n");
+  write("   -|   Value:           "+pad(ob->query_value(),5)+" |\n");
+  write("   -|   Armor:           "+pad(ob->armor_class(),3)+"   |\n");
+  write("   -|   Weapon:          "+pad(ob->weapon_class(),3)+"   |\n");
+  write("   -|   Weight:          "+pad(ob->query_weight(),3)+"   |\n");
+  write("\n");
+  write("The rock fades away.\n");
+  destruct(this_object());
+  return 1;
+  }   }
+
+player_inventory(str)  {
+object ob;
+if(!str)
+  return 0;
+ ob = first_inventory(this_player());
+  while(ob)  {
+  if(call_other(ob, "id", str))
+   return ob;
+  ob = next_inventory(ob);
+   }
+   return 0;
+  }

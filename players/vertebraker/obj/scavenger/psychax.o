@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/awep/tanto","/players/mythos/awep/dstaff","/players/wren/Area/starbug/items/reddress","/players/saber/armor/halter","/obj/treasure","/players/wren/Area/starbug/items/cottagecheese","/obj/treasure","/players/saber/armor/hardsuit1","/players/wren/Area/starbug/items/bazookoid","/players/wren/Area/starbug/items/ogunit","/obj/treasure","/players/wren/Area/starbug/items/arrogance","/obj/armor","/obj/weapon","/players/jamila/beach/mobs/claw","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/wren/Area/starbug/items/indianheaddress","/players/snow/shadows/stuff/axe","/players/wren/Area/starbug/items/currie","/players/hawkeye/items/bourbon","/obj/treasure","/obj/armor","/players/hippo/weapons/glue","/players/maledicta/cont/rdragon/sbracers",})
+shorts ({"Tanto","Dream Staff","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","A black halter top","A golden staff","a small tub of cottage cheese.","A rattlesnake's rattle","A purple Hardsuit <with pink legs!>","Bazookoid [1;30mmkII[2;37;0m","a case containing an OG unit.","Arctic Wolf pelt","Rimmers arrogance.","Robot Head","A glowing lightsabre","A Lobster Claw","Fear","A Princess' Tiara","a tiny indian headdress","A dusky axe","A tin of chicken currie","bottle of bourbon","An important sign","A small [1mwhite[0m shield","a strong, 1 second glue","Bracers of Speed",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

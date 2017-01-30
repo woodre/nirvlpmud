@@ -1,0 +1,23 @@
+[Jan  8 2014 17:32] A: Starting beta on 1/8/14
+[Jan  8 2014 18:31] A: Added Crip as beta tester
+[Jan  8 2014 18:51] A: Added Jupis as beta tester
+[Jan  8 2014 18:51] A: Added Kyrain as beta tester
+[Jan  8 2014 20:22] A: Added spells to reject mi, sh, fi, so, and invis
+[Jan  8 2014 21:30] A: Added Kanji as beta tester
+[Jan  9 2014 20:28] A: Added Blind as beta tester
+[Jan  9 2014 23:00] A: Fred fixed offhand so it actually does damage AND shows the message
+[Jan 10 2014 00:52] A: Added a bulletin board for changes being made in entrance.c
+[Jan 10 2014 18:42] A: No more damage on not having PK set. Instead, it auto sets your PK
+[Jan 10 2014 21:49] A: Rogues can now see in the dark
+[Jan 11 2014 21:01] A: Backstab wasn't getting rid of the "didshadowstep" object. It's fixed so it does now.
+[Jan 12 2014 13:44] A: Added Tenchu as beta tester
+[Jan 18 2014 22:00] A: Changed poisons
+[Jan 18 2014 22:00] A: Made backstab, garrote, and sap autotargetable
+[Jan 18 2014 22:39] A: Added DISSECT. Berries, creating poisons, etc.
+[Jan 18 2014 22:40] A: Sstrike and Evis no longer work without a weapon
+[Jan 19 2014 12:08] A: Made ambush, backstab, etc. easier to level up. Cooldowns are a bitch
+[Jan 19 2014 12:08] A: Stealth no longer costs sps
+[Jan 20 2014 17:17] A: WC Bonus in gob2.c
+[Jan 25 2014 19:13] A: Snooping Crip for "bugs"
+[Jan 25 2014 19:13] A: Vanish didn't remove him from combat.
+[Jan 25 2014 19:19] A: It looks as if when Crip used shadowstep lya;ambush lya it gave him the "you cannot attack again so soon" message.

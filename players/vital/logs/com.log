@@ -1,0 +1,9 @@
+[31m==>[0m /players/angel/area/walmart/room/walmart_checkout.c
+[31m==>[0m Reformat the file according to /open/vital/doc/02_style.c
+[31m==>[0m short_desc, you can replace BOLD + BLU with HIB, accomplishes the same thing.
+[31m==>[0m add ::reset(arg); on the line before if(arg) return;
+[31m==>[0m *****************************************************************
+[31m==>[0m /players/angel/area/walmart/obj/kahlua_01.c
+[31m==>[0m replace BOLD+HIB with just HIB can't really bold a bold
+[31m==>[0m *****************************************************************
+[31m==>[0m for any of the files with BOLD + HIx, you don't need the bold.

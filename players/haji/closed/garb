@@ -1,0 +1,12 @@
+destruct_inventory() {
+    object next_ob,ob;
+
+    ob = first_inventory(this_object());
+    while(ob) {
+	next_ob = next_inventory(ob);
+if (!call_other(ob, "id", "soul") && !call_other(ob,"id","wiz_soul"))
+	destruct(ob);
+	ob = next_ob;
+    }
+}
+

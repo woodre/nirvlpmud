@@ -1,0 +1,42 @@
+
+I want them, mizan wants them, vital wants them :)
+Well, I know for sure that I do :)
+
+new environmental variables in player.c - general purpose
+===============
+mixed *EnvIndex, *EnvValue;
+
+void 
+set_env(mixed arg, mixed value)
+{
+  int i;
+
+  i = member_array(arg, EnvIndex);
+
+  if (i < 0)
+  {
+    EnvIndex += ({ arg });
+    EnvValue += ({ value });
+    return;
+  }
+
+  EnvValue[i] = value;
+}
+
+mixed
+query_env(mixed arg)
+{
+  int i;
+
+  i = member_array(arg, EnvIndex);
+
+  return (i > -1 ? EnvValue[i] : 0);
+}
+
+mixed *query_env_index() { return EnvIndex; }
+mixed *query_env_value() { return EnvValue; }
+
+Those last new not necessary of course.
+
+it needs sizeof(EnvIndex) checks before the member_arrays() for safety
+fear that shit SHOULD be automatic but it's not here

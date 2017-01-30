@@ -1,0 +1,24 @@
+*******************************************************************
+
+Name:    I (Inventory)
+
+Desc:    This ability will show you the entire inventory of a 
+         player.  It will include all visible and invisible
+         objects with the objects path.
+
+Level:   21
+
+Warning: None
+
+Syntax:  I <name>
+
+Example: I guest 
+Result:  This will show you what guest has in his inventory.
+
+Related: IR
+
+*******************************************************************
+
+
+ 
+

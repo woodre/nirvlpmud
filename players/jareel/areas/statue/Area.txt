@@ -1,0 +1,31 @@
+This area has the 'Elite' players in mind -
+A +100 character could purchase a likeness of himself to immortalize him/herself as a monster.  
+The player could help design what the monster would drop and help describe the monster.
+A player gaining over 1000 kill points could also immortalize him/herself this way.
+Kill points will be gauged on Mortal Kombat Scar or a guild pk list, points will be based on levels killed.
+
+Room files are locates in this directory
+
+/players/jareel/statue
+
+-------
+
+Mob Files are in this directory
+     /players/jareel/monsters/legends
+
+Only legend Guardian is done now, since this is an evolving area, future
+aprovals will be needed for the player upgrades
+
+--------
+Weapons are here
+     /players/jareel/weapons/legends
+     guardian_dagger.c
+
+--------
+Random Items are here
+     /players/jareel/general_stuff
+     tablet.c
+     viewscreen.c
+     deplist.c
+     depositor.c
+     

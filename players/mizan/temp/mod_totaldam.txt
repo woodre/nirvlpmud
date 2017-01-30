@@ -1,0 +1,45 @@
+./dune/closed/guild/snow/weapons/ninja_to.c:17:mod_totaldam(num) { prof += num; }
+./dune/closed/guild/snow/weapons/unarmed.c:13:mod_totaldam(num) { prof += num; }
+./dune/closed/guild/snow/weapons/nunchaku.c:16:mod_totaldam(num) { prof += num; }
+./dune/closed/guild/snow/weapons/ton-fa.c:17:mod_totaldam(num) { prof += num; }
+./dune/closed/guild/snow/weapons/kusari_gama.c:16:mod_totaldam(num) { prof += num; }
+./dune/closed/guild/snow/weapons/naginata.c:16:mod_totaldam(num) { prof += num; }
+./sparrow/closed/cyberninja/snow/weapons/ninja_to.c:17:mod_totaldam(num) { prof += num; }
+./sparrow/closed/cyberninja/snow/weapons/unarmed.c:13:mod_totaldam(num) { prof += num; }
+./sparrow/closed/cyberninja/snow/weapons/nunchaku.c:16:mod_totaldam(num) { prof += num; }
+./sparrow/closed/cyberninja/snow/weapons/ton-fa.c:17:mod_totaldam(num) { prof += num; }
+./sparrow/closed/cyberninja/snow/weapons/kusari_gama.c:16:mod_totaldam(num) { prof += num; }
+./sparrow/closed/cyberninja/snow/weapons/naginata.c:16:mod_totaldam(num) { prof += num; }
+./maledicta/closed/ton-fa.c:17:mod_totaldam(num) { prof += num; }
+./snow/closed/cyber/kusarigama.c:13:mod_totaldam(num) { prof += num; }
+./snow/closed/kgamadaem.c:84:    MYWEP->mod_totaldam(RAN(ARTR/4)+4);
+./snow/closed/kgamadaem.c:90:    MYWEP->mod_totaldam(RAN(ARTR/4)+2);
+./snow/closed/kgamadaem.c:96:    MYWEP->mod_totaldam(RAN(ARTR/4)+2);
+./snow/closed/kgamadaem.c:102:    MYWEP->mod_totaldam(RAN(ARTR/4)+1);
+./snow/closed/kgamadaem.c:108:    MYWEP->mod_totaldam(RAN(ARTR/4)+1);
+./snow/closed/kgamadaem.c:114:    MYWEP->mod_totaldam(RAN(ARTR/4)+1);
+./snow/closed/kgamadaem.c:128:    MYWEP->mod_totaldam(RAN(ARTR/5)+4);
+./snow/closed/kgamadaem.c:134:    MYWEP->mod_totaldam(RAN(ARTR/5)+2);
+./snow/closed/kgamadaem.c:140:    MYWEP->mod_totaldam(RAN(ARTR/5)+2);
+./snow/closed/kgamadaem.c:146:    MYWEP->mod_totaldam(RAN(ARTR/5)+1);
+./snow/closed/kgamadaem.c:152:    MYWEP->mod_totaldam(RAN(ARTR/5)+1);
+./snow/closed/kgamadaem.c:158:    MYWEP->mod_totaldam(RAN(ARTR/5)+1);
+./snow/closed/kgamadaem.c:169:    MYWEP->mod_totaldam((ARTR/(RAN(2)+2))+1);
+./snow/closed/kgamadaem.c:287:    MYWEP->mod_totaldam(MEAT->query_hp());
+./snow/closed/kgamadaem.c:305:    MYWEP->mod_totaldam(MEAT->query_hp());
+./snow/closed/kgamadaem.c:331:    MYWEP->mod_totaldam(MEAT->query_hp());
+./snow/closed/kgamadaem.c:349:    MYWEP->mod_totaldam(MEAT->query_hp());
+./snow/closed/kgamadaem.c:369:    MYWEP->mod_totaldam(MEAT->query_hp());
+./snow/closed/kgamadaem.c:384:    MYWEP->mod_totaldam(RAN(GLEV));
+./snow/closed/kgamadaem.c:388:    MYWEP->mod_totaldam(RAN(ARTR/2));
+./snow/closed/kgamadaem.c:390:  if(GOB->item_weplink())  MYWEP->mod_totaldam(GOB->item_weplink());
+./snow/closed/new/ninja_to.c:17:mod_totaldam(num) { prof += num; }
+./snow/closed/new/unarmed.c:13:mod_totaldam(num) { prof += num; }
+./snow/closed/new/nunchaku.c:16:mod_totaldam(num) { prof += num; }
+./snow/closed/new/ton-fa.c:17:mod_totaldam(num) { prof += num; }
+./snow/closed/new/kusari_gama.c:16:mod_totaldam(num) { prof += num; }
+./snow/closed/new/naginata.c:16:mod_totaldam(num) { prof += num; }
+./snow/closed/naginata.c:73:mod_totaldam(num) { totaldam += num; }
+./snow/hands.c:13:mod_totaldam(num) { totaldam += num; }
+./ulath/closed/ninjaweps/ton-fa.c:17:mod_totaldam(num) { prof += num; }
+./ulath/ton-fa.c:17:mod_totaldam(num) { prof += num; }

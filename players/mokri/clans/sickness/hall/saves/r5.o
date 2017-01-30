@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/sickness/hall/r4","up","/players/mokri/clans/sickness/hall/r7","down",})
+short_desc "The [1;30mDark Chambers [0mof [35mMorbid [31mTorture[0m[0m"
+long_desc "[1;30mWicket[0m'[1;30ms [1;36mPersonal [1;33mLockers [0m([1;31mDo Not Touch[0m)[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;30mBlackdeath[0m, Broadsword of [1;30mTruth[0m","/players/jareel/weapons/chaos/woods2/humakt_sword",0,754,408,"[33mRevive, [1;34mHealing Staff of Virtue[0m","/players/jareel/NEW/WEAPON/healerstaff",0,0,0,"[1;30mThe Glove of [0m[36mM[1;36mo[0m[36mlo[1;36mc[0m[36mh[0m","/players/forbin/realms/flame_forest/OBJ/gmoloch",0,0,0,"[31mArch Mage Robes[0m of the [1;31m[[1;30mCrater Makers[0m[31m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageArmor",0,0,0,"[1;31mBlood Amulet[0m of [1;30m[[1;37mPower[0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageAmulet",0,0,0,"[1;31mBlood Bracelet[0m of [1;30m[[1;37mPower[0m[1;30m][0m","/players/jareel/armor/cratermaker/solaris/ArchMageBracelet",0,0,0,"[0mElixir of [1;34mPower[0m [31m[ [36m10[0m[31m ][0m","/players/jareel/heals/YELMALIAN/mana","10",0,0,"[0mElixir of [1;34mPower[0m [31m[ [36m4[0m[31m ][0m","/players/jareel/heals/YELMALIAN/mana","4",0,0,"A Hanzo sword  < wc 19,0 >","/players/vertebraker/obj/hanzo_sword",0,0,0,})

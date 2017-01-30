@@ -1,0 +1,25 @@
+**************
+
+
+                     Instances
+
+Syntax:    instances <path>
+
+Desc:
+           This command returns instances of an object loaded at the 
+           momment.
+
+Warning:   
+
+Example:   instances /obj/bag
+                  results
+           Instances of /obj/bag:
+
+    @184:  players/pathfinder/garbageman
+
+           1 instances found.
+
+Related:   
+
+
+**************

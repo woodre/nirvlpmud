@@ -1,0 +1,67 @@
+#include "/players/feldegast/defines.h"
+#define STRENGTH 12
+#define HEAL 50
+#define COST 12
+#define MAX_CHARGES 2
+
+int charges;
+
+init() {
+  if(!environment()->is_player()) return;
+
+  add_action("eat", "eat");
+}
+reset(arg) {
+  if(arg) return;
+  charges=MAX_CHARGES;
+}
+
+id(str) {
+  return str=="cactus" || str=="plant";
+}
+
+short(){
+   return HIG+"Cactus "+NORM+"*"+charges+"*";
+}
+
+long() {
+  write("This is a chunk of what appears to be cactus.  It's not very tasty,\n"+
+        "but with all of the thorns gone, it's edible.\n"+
+        "There are "+charges+" portions left.\n");
+}
+
+get(){
+  return 1;
+}
+
+eat(str) {
+
+  if (!str || !id(str))
+    return 0;
+
+  if (!TP->eat_food(STRENGTH)) return 1;
+  
+
+  charges--;
+  TP->heal_self(HEAL);
+  write("You eat a slice of cactus and decide you could get to like it.\n"+
+        "There are "+charges+" portions left.\n"
+  );
+  say(TPN+" eats some cactus.\n");
+  command("mon",TP);
+  if (charges==0) {
+    destruct(this_object());
+    TP->add_weight(-1);
+    write("You finish off the cactus.\n");
+  }
+  return 1;
+}
+
+query_value() {
+  return COST*HEAL*charges;
+}
+
+query_weight() {
+   return 1;
+}
+query_save_flag() { return 1; }

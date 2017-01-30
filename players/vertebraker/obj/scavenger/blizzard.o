@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/lunchbox","/players/mythos/aarmor/kabuto","/players/hippo/heals/blood","/players/ultramagnus/wiz_cloak","/obj/weapon","/players/emerson/armor/ntag","/obj/weapon","/players/hippo/weapons/glue","/players/saber/armor/slboots","/players/hippo/armour/helmet","/players/hawkeye/items/stone","/players/mythos/awep/backbite","/players/haji/quest/diary","/players/wren/Area/starbug/items/flibble","/obj/armor","/obj/armor","/obj/weapon","/players/wren/Area/starbug/items/cowboyhat","/players/pain/closed/weapons/widow","/players/jamila/beach/mobs/claw","/obj/armor","/players/pain/NEW/arm/tunic","/players/pain/NEW/weap/mace2","/players/puppy/s/eq/collar","/players/forbin/realms/keats/OBJ/nazal_owr",})
+shorts ({"a lunch box","Kabuto","[1;31mdrops of blood[0m","An Old Grey Cloak","A horse whip","Name Tag","Baby pin","a strong, 1 second glue","Stiletto heeled leather boots","nutshell helmet","A Stone","[31mBackbiter[0m","A diary","a [1;30mpe[37mngu[1;30min[2;37;0m handpuppet","A cartoon character's shoes","Steel Shield","A gardening hoe","a tiny cowboy hat","the Widowmaker, the sword of the Berserker","A Lobster Claw","A [1mwhite[0m helmet","A handsome blue tunic","A huge iron mace","A leather collar","[1;37mOp[0m[37mal [1;37mWiz[0m[37mard [1;37mRo[0m[37mbes[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,36 @@
+/*  black Bart - the dark one  */
+
+#include "defs.h"
+inherit "obj/monster";
+reset(arg) {
+
+object gold;
+::reset(arg);
+if(arg) return;
+set_name("bart");
+set_race("human");
+set_short("Black Bart");
+set_alias("black bart");
+set_long(
+	"  Black Bart, sometimes referred to as Dark Bart, is a heartless \n"+
+	"and ruthless killer.  He shows no compassion or foregiveness to \n"+
+	"anyone.  His trusty old Colt has many notches on the handle to \n"+
+	"remind all that cross his path that it's a deadly road to take. \n"+
+	"Beware this bad hombre!! \n");
+set_level(20);
+set_hp(600);
+set_al(-800);
+set_ac(17);
+set_aggressive(1);
+
+move_object(clone_object("players/eurale/Cave/OBJ/colt"),TO);
+init_command("wield revolver");
+set_wc(35);
+set_chat_chance(6);
+  load_chat("Bart sneers:  It's boot hill for you, pardner! \n");
+  load_chat("Bart laughs hysterically..... \n");
+
+gold = clone_object("obj/money");
+gold->set_money(random(200)+5000);
+move_object(gold,this_object());
+}

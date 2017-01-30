@@ -1,0 +1,28 @@
+<Kame's Tower> by Mosobp
+
+The entire area is located in
+/players/mosobp/areas/TOWER
+
+there are 25 rooms located in
+/players/mosobp/areas/TOWER/rooms
+
+There are 14 mobs located in
+/players/mosobp/areas/TOWER/NPC
+
+Here is a breakdown of each mob and what they carry, etc.
+
+<mobname> (/path/to/mob/<mobfilename.c>)
+level <#>, ac<#>, wc<#>, hp<#>, <amount> coins 
+    Does mob do anything special? [says, attacks, etc]
+    What does the mob carry?
+    
+Chiaotzu (/players/mosobp/areas/TOWER/NPC/chiaotzu.c)
+level 15,AC 10,WC 20,HP 500,2000 coins
+no special attacks nothing special about this mob.
+
+Garlic Jr. (/players/mosobp/areas/TOWER/NPC/garlicjr.c)
+level 25,AC 23,WC 44,HP 1000+random 400,11000+random 3000 coins
+Mob heals quickly and can cast multiple spells a round.
+Mob also carries Dark aura for evil players.
+
+Kame  (/players/mosobp/areas/TOWER/NPC/kame.c

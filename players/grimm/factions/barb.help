@@ -1,0 +1,36 @@
+Command                 Description                                  Cost  GLvl
+-------------------------------------------------------------------------------
+barbarian_help or bh .. This menu .................................. 0 sp .. 10
+barbarian_tell <str> .. Tell the people in your faction a <str> .... 0 sp .. 10
+   or  bt <str> .......                                         ....      ..
+barbarian_emote <str> . Emote a <str> to the people in your ........ 0 sp .. 10
+   or  be <str> .......   faction ..................................      ..
+barbarian_who ......... See who in your faction is currently ....... 0 sp .. 10
+   or  bw .............   online ...................................      ..
+heal <x> .............. Heal yourself <x/20> hit points for ........ 0 sp .. 10
+         ..............   <x> coins ................................      ..
+hack <mnstr> .......... Hack away at a monster for 8 to 14 dmg ..... 10sp .. 10
+-------------------------------------------------------------------------------
+store <x> ............. Swap <x> hit points for <x/2> stored ....... X hp .. 11
+          .............   hit points (100 max) .....................      ..
+retrieve <x> .......... Retrieve <x> of your stored hit points ..... 0 sp .. 11
+tame <mnstr> .......... Tame an aggressive monster ................. 20sp .. 11
+scare <plyr> .......... Scare a player ............................. 15sp .. 11
+-------------------------------------------------------------------------------
+wolf summon ........... Summon a wolf to your side ................ 100sp .. 12
+wolf help ............. Get help on the commands your wolf can do .. 0 sp .. 12
+reforge <weapon> ...... Repair a broken weapon ..................... 40sp .. 12
+firstaid <plyr> ....... Apply first-aid to a player healing 25 pts . 30sp .. 12
+-------------------------------------------------------------------------------
+squeeze <mnstr> ....... Squeeze the life out of a monster .......... 20sp .. 13
+terminate <mnstr> ..... Cast a termination spell on a monster ...... 30sp .. 13
+polish <weapon> ....... Polish a weapon adding on %10 of its value . 15sp .. 13
+-------------------------------------------------------------------------------
+forge <weapon> ........ Create a dagger, mace, sword, or axe ....... ??sp .. 14
+peek <direction> ...... Look into an adjacent room ................. 5 sp .. 14
+aggress <mnstr> ....... Make a monster aggressive .................. 20sp .. 14
+-------------------------------------------------------------------------------
+forgearmor <armor> .... Create a leather, ringmail, chain, or ...... ??sp .. 15
+                   ....   plate suit of armor ......................      ..
+absorb ................ Get your faction scar to absorb damage ..... 50sp .. 15
+quake ................. Cause an earthquake in the room you're in .. 30sp .. 15

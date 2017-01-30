@@ -1,0 +1,221 @@
+powers
+
+dub
+ Dub your weapons or armors names. This infuses them with a natural
+ aura of magical protection that aids in defense or offense depending
+ on the nature of the item. +(1-5) AC/WC.
+ Costs 2000 coins in donation.
+ 50 SP.
+repair
+ Repair weapons or armors on the fly. Requires a blacksmith's toolkit.
+ Only available on melee weapons and armor, helm, and shield.
+ Costs 100 coins in donation.
+attack/parry
+ Essentially a toggle that allows players to go into an attack mode
+ where they swing twice at an enemy. Parry allows players to use their
+ weapons along with their shield to block the enemy.
+ No Cost. Lose combat for that round.
+flourish
+ Flourish the coat of arms. When this is out, you gain 1 AC.
+ This is largely for aesthetics.
+ No Cost.
+strike
+ Wait a few rounds, look for an opportunity to strike. When found,
+ release an extra, critical blow.
+ Costs 50 coins in donation.
+ 25 SP.
+ Dam is instant critical.
+temper
+ Time-based strengthening of weapons or armors. Can make them unbreakable
+ if high enough skill. In addition, can add additional +(2-10) AC/WC.
+ Only available on melee weapons and helm, shield and main armor.
+ Costs 10000 coins in donation.
+ Takes 1-10 minutes, must remain still during this time.
+bash
+ Swing your shield at an enemy, harming and stunning them [preventing
+ them from leaving for 1-5 rounds].
+ Costs 100 coins in donation.
+ 40 SP.
+ Dam is (shield_ac * 10) + add'l bonuses.
+assault
+ Reign a series of blows on your enemies. For each 10 blows received,
+ you may reign one extra blow. Maximum 1-5 blows allowed to store up.
+ Basically based on warrior "rage". Good finishing move.
+ Costs 250 coins in donation.
+ 60 SP.
+disarm
+ Knock a weapon out of an opponent's hands temporarily, disallowing
+ them from wielding it for 1-5 rounds.
+ Costs 150 coins in donation.
+ 50 SP.
+dent
+ Strike hard at an opponent's armor or weapon. No damage, but will
+ inflict wear on a piece of equipment.
+ Costs 150 coins in donation.
+ 50 SP.
+concentrate <targ>
+ Calm all other enemies except the target that you are fighting
+ or the specific target you have named.
+ Costs 75 coins in donation.
+ Costs 25 SP.
+ 
+spells
+
+halo/unhalo
+ Summon a magical light source [light x 3].
+ 
+prayers
+detect alignment
+ Shadows the look() function of the player to show all
+ player and NPC alignments.
+ Lasts for 1-20 minutes.
+ Costs 200 coins in donation.
+ Costs 30 SP.
+divine protection
+ Adds 1-10 AC for oneself.
+ 10-30% resistance against evil.
+ Lasts for 1-20 minutes.
+ Costs 3000 coins in donation.
+ Costs 100 SP.
+regeneration
+ Adds 1-10 HP per 5 rounds.
+ Lasts for 1-20 minutes.
+ Costs 10000 coins in donation.
+ Costs 200 SP.
+holy might
+ Adds 1-10 points of good damage done per round.
+ Lasts for 1-20 minutes.
+ Costs 5000 coins in donation.
+ Costs 150 SP.
+ 
+mount
+
+christen
+ Name the mount.
+mount/dismount
+ Dismount during combat is bad.
+ You lose one round of combat.
+ You also suffer 50+random(2*(60-luck)) damage.
+lead <mount>
+ Lead it behind you.
+Invest xp in mount to raise hp, wc, ac.
+ Min/Max HP: 1000
+ Min/Max WC: 5/25
+ Min/Max AC: 1/15
+Must feed mount every 4 hours.
+ Must do it at the stables, 200 coin cost.
+charge
+ used to begin fights, using your lance.
+ also used in jousting.
+ dismounts someone else.
+flank
+ When deep in combat, utilize skill with a mount
+ to aim a special attack. Flanking gives you an
+ extra weapon hit, while your steed charges into
+ your helpless foe. This is the one time the horse
+ will hit.
+ride
+ Directional speedster (run north,north,west,south,etc)
+ or the shorted versions of the dirs.
+armor
+ This ability lets you pput barding upon your mount,
+ though templars must first force the armor and it is
+ not storable.  Must also have a decient blacksmithy
+ skill to make the armor.
+  
+cmds
+ donate <#>:
+   Donate coins magically. 
+
+General.
+ 10% of all gold is automatically donated.
+ Spells and prayers may be crippled by the GC or if not good.
+ GC can stop a Knight from advancing in the guild.
+ Cannot wield two-handed weapons nor offwield.
+ Get two hits per round [extra hit based on skills].
+  Do not gain this ability until 31-35% [when knighted].
+  To continue to advance, the GC must knight the player.
+ With gxp and skills boosted, levels and XLVLs are required.
+ Goal is for the guild to be maxed when a player hits 19+100.
+ GC can raise or lower the drawbridge or prohibit certain people
+  from entering the castle. Can view logs of who entered the castle
+  and advancement of those in the guild.
+ Knights follow a code they define for themselves, which must
+  be accepted by the GC before being accepted into the guild.
+ 
+% Total Skills learned:
+1-5:   the Knave
+6-10:  the Page
+11-15: the Squire
+16-20: the Apprentice Knight in Training
+21-25: the Young Knight in Training
+26-30: the Nobleman[woman]
+31-35: the Knight
+36-40: the Guardian of Faith
+41-45: the Defender of Nirvana
+46-50: the Paladin
+51-55: the High Templar
+56-60: the Sentinel of Nirvana
+61-65: the Knight Captain
+66-70: the Knight Commander
+71-75: the Crusader General
+76-80: the Knight Lord [lady] Marshall
+81-90: the Duke [duchess] of Nirvana
+86-90: the Lord [lady] Protector of Nirvana 
+91-99: the Archduke [duchess] of Nirvana
+100:   the Legendary King [queen]
+
+skills
+
+ unarmed
+ blunt
+ edged
+ ranged
+ reflex
+ dodge
+ magic
+ faith
+ power
+ blacksmith
+ mounted
+
+mount types
+
+ mule: lowest mount type.  Can't be mounted
+       more or less a portable bag, but it
+       will defend it self if attacked.
+ 
+ warhorse: operates as the old standard templar
+           horse.  except this one can and will
+           fight in combat. (even if ridden)
+ 
+ unicorn: (females only) Magical mount that can
+          increase healing rates of all knights
+          in the same room as it. Also it will
+          fight in combat.  Can teleport to 
+          the guild hall if needed.
+          
+ pagasas: (males only) magical mount that can
+          increase healing rates of all knights
+          in the sam eroom as it.  Will fight in
+          combat to assist master, also can fly
+          to 'remembered' rooms.
+          
+ wyvern: tempermental but fierce beasts that can
+         fly.  Hard to tame and WILL eat any
+         children that remain aroun dit for too
+         long of a time.
+ 
+ griffin: Noble and ideal mount for a templar.
+          Strong and fierce as well as loyal to
+          its master/mistress.  When fully trained
+          a griffin can scoop up a fallen owners 
+          corpse and bring it to its masters side.
+          
+ drake: Greatist of the templar mounts.  Though
+        powerful and strong, this mount requires
+        intense devotion, and had a hearty appetite
+        of food and treasure.  Also requires at least
+        4x the experience to train.  Posessess a 
+        natural AC/WC bonuses, also can breathe a
+        stream of holyfire upon its foe.                    

@@ -1,0 +1,86 @@
+#include "../define.h"
+inherit ARMOUR;
+int x;
+string emotion_str;
+
+reset(arg) {
+   if(arg) return;
+   ::reset();
+   emotion_str = "apathy";
+   set_id("amulet");
+   set_alias("crested amulet");
+   set_weight(1);
+   set_ac(1);
+   set_value(2000+random(500));
+   set_type("amulet");
+   set_short("A crested amulet");
+   set_long(
+      "  This is a small, crested amulet with a small\n"+
+      "moon's face on it.  It has been glazed with a \n"+
+      "golden paint on its surface.\n"); }
+
+long() {
+   write(long_desc+"\n The moon's face reflects a "+BOLD+emotion_str+NORM+" emotion.\n"); }
+
+short() { if(!worn) return short_desc+" ["+BOLD+emotion_str+NORM+"]"; 
+   if(worn) return short_desc+" ["+BOLD+emotion_str+NORM+"] (worn)"; }
+
+do_special(owner) {
+   x += 1;
+   if(emotion_str == "pleased" || emotion_str == "happy" || emotion_str == "smiling") {
+      if(!random(5)) {
+         tell_object(owner,"Your amulet is pleased with your work.\n"+
+            "It showers you with a "+YEL+"golden mist"+NORM+".....\n");
+         tell_room(ENV(owner),owner->QN+" is showered with a "+YEL+"golden mist"+NORM+"....\n",({owner}));
+         TP->heal_self(5+random(2));
+         return; } }
+   if(emotion_str == "snarling" || emotion_str == "grinning") {
+      if(!random(5)) {
+         tell_object(owner,"Your amulet snarls madly!\n"+
+            " You feel an added bonus to your hit!\n");
+         tell_room(ENV(owner),owner->QN+" seems to hit a bit harder this round.\n",({owner}));
+         (owner->query_attack())->hit_player(3+random(2));
+         return; } }
+   if(emotion_str == "defensive") {
+      if(!random(5)) {
+         tell_object(owner,"Your amulet glows protectively.\n");
+         return 1; } }
+   if(emotion_str == "evil") {
+      if(!random(5)) {
+         tell_object(owner,BOLD+BLK+"Your amulet seeps its evil into your soul....\n"+NORM);
+         owner->add_alignment(-100);
+         return; } }
+   if(emotion_str == "saintly") {
+      if(!random(5)) {
+         tell_object(owner,HIW+"Goodness seeps into your soul....\n"+NORM);
+         owner->add_alignment(100);
+         return; } }
+   if(emotion_str == "singing") {
+      if(!random(5)) {
+         tell_object(owner,"Your amulet bursts into song!\n");
+         tell_room(USER,owner->QN+"'s amulet sings in Italian.\n");
+         return; } }
+   if(emotion_str == "cackling" || emotion_str == "angry") {
+      if(!random(5)) {
+         tell_object(owner,"Your amulet cackles gleefully!\n"+
+            RED+"It saps life from your soul!\n"+NORM);
+         owner->hit_player(3+random(2));
+         return; } }
+   if(x > 10) { pick_emotion(); x = 0; }
+}
+
+
+pick_emotion() {
+   switch(random(12)) {
+      case 0: emotion_str = "pleased"; break;
+      case 1: emotion_str = "snarling"; break;
+      case 2: emotion_str = "defensive"; break;
+      case 3: emotion_str = "happy"; break;
+      case 4: emotion_str = "singing"; break;
+      case 5: emotion_str = "angry"; break;
+      case 6: emotion_str = "indifferent"; break;
+      case 7: emotion_str = "smiling"; break;
+      case 8: emotion_str = "evil"; break;
+      case 9: emotion_str = "saintly"; break;
+      case 10: emotion_str = "grinning"; break;
+      case 11: emotion_str = "cackling"; break; } }

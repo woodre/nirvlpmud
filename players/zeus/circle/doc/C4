@@ -1,0 +1,62 @@
+post 4/15/00 changes (open guild)
+
+4.15 - added present checks to endurance_check.h
+4.16 - fixed spell failure on mud_spells && shadowblast, 1:4 and 1:3
+     - fixed error in set_title.h
+     - modified environment_check.h to not spam msg if sps are low.
+     - modified endurance_check.h so players can't 'wimpy 101' to avoid
+       the combat penalties of endurance.
+     - added a "if 0 max sp/hp" check to know.h so it won't error on guest.
+       also added an invis check and some wiz checks to know.h
+     - modified gxp cost of meditate 1mil to 950k
+     - broke ghall.c into 7 files for easier viewing and editing.
+     - added shield spell at 600k gxp - approved by Mythos.
+     - made it so any player level 10+ can join guild. - apd by Mythos.
+     - broke the EXP log into 2 files, one for level 19+ players, so
+       it is easier to watch their progress compared to lower players.
+     - added descs of see, know, and shield in help.h
+4.17 - added focus ac bonus - approved by Mythos.
+     - added ecolor command - allows players to set their own color for
+       the endurance monitor (which only they see).  14 allowable colors.
+4.19 - added 5 msgs randomly called from hb of weaken.c.
+4.20 - added in mud_spells.h, if level < 7 && gxp < 100k, cost = 5.
+       did this so that players like Hadus (level 4, max 90 sps) aren't
+       100% doomed, and should in theory be able to advance still.
+     - made it so a spell doesn't have to have a cost if it fails.
+       implemented this for wither.h and meditate.h.
+     - added 8 new msgs in weapon.h called when weaken && focus && special.
+     - coded a remove all command, simply removes all worn armor.
+5.06 - changed endurance cost of shadowblast to -1 [from -1 to -2]
+     - made weaken last 1 or 2 hbs longer.
+     - endurance now decreases at the same rate during combat throughout
+       the guild.  it used to decrease 33% faster after 1.5 mil gxp.
+5.12 - Raised the point at which mud_spells.h costs 25 from 1 mil to 1.5
+5.13 - Increased end regen in meditate from 4 a hb to 6.
+     - Changed drain to spell_failure type 4 [no damage if fails]
+     - Added to dark ass, if enemy is weakened, -1 heal_self dmg a hb
+     - Changed the min sp cost of focus, if gxp < 200k and level < 14,
+       cost is equal to level, otherwise cost is 14 below 200k gxp.
+5.16 - Changed the shadowblast fatality a little.  Changed hit_player()
+       to add_hit_point, raised sp cost and added a hp cost.  Also added
+       a max hp check of 50.
+     - Added a log to the pouch for the wizstock command.
+5.24 - Added a 'quit out msg' if there are other people on the channel.
+       Also recoded 'sp who' so it is more efficient, uses local variable.
+     - Removed increased sps regen while in dark rooms.
+6.20 - Fixed cost of black liquid, was 1500, should be 400.  Refunded Hepcat.
+6.22 - Added and changed emotes in shadowblast.h
+     - Added increased sp regen if fighting and pos end and pos dur and light
+       and random ac is equal to 0.  I think I accidentally took this out
+       when I switched over from weapon_hit() to the current paladin code.
+     - Lowered cost of shadow gem component from 10000 to 6000 (originally 5k)
+6.29 - Put in the new version of shadowweave that uses the weapon shadow.
+       I commented out the slowed wear part for now, because I have yet to
+       hear back from Mythos.  The other things in the shadow are minimal,
+       and the good pretty much balance out the bad.
+7.12 - Made it so web works on more monsters.  thanks mal
+7.21 - Lowered cost of spider web comp from 500 to 400 coins.
+9.08 - Lowered endurance cost of know from 3 to 1.5.
+12.19 - Removed NT check on Vanish given the super high casting cost and
+        limitations during the duration of the spell.
+12.31 - Modified drain - while potential gain is higher, takes longer to
+        reach max and sp gain is much more random

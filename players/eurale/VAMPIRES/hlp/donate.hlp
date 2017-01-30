@@ -1,0 +1,7 @@
+  Spell Name                      Description                        GL    sps
+----------------- ------------------------------------------------- ----  -----
+  donate <item>    This spell will allow the caster to summon a      12     25
+                   bat and have it transport an item back to the
+                   guild donation room.  The bat will not pick up
+                   the item if the caster is in a 'no teleport'
+                   room, however.

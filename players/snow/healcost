@@ -1,0 +1,31 @@
+This is an expansion to Wocket's original idea of fair healing / tox ratios
+for multi-use heals.  The problem was that, though healing amount remained
+constant, total heal tox increased with higher-use, lower healing heals.
+For example, a 5-use, 30 heal, 10 tox would tox a total of 50 while healing
+150 whereas a 3-use, 50 heal, 10 tox would tox a total of 30 while healing
+150. This proposes a total tox / total heal ratio for cost to replace the
+current per-use tox cost as detailed below.
+
+Intox / Cost
+.40+    08
+.35     10
+.31     11
+.28     12
+.26     13
+.24     14
+.22     15
+.20     16
+.18     17
+.16     18
+.14     20
+.12     22
+.08     30
+.04-    40
+
+With this table, a 5-use, 30 heal, 10 tox would cost 50/150 = .3 = 12 coins
+per heal point for a total of 1800 coins. A 3-use, 50 heal, 10 tox would cost
+30/150 = .2 = 16 coins per heal point for a total of 2400 coins.
+
+Note: I did add 2 cost categories at the top and 2 at the bottom to
+accommodate the wider range of intox provided by this method.
+Note2: Wizzes should round to the _higher_ price on the scale.

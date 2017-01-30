@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/players/puppy/s/eq/collar","/players/wren/Area/starbug/items/lunchbox","/players/ultramagnus/darkweapon","/players/mythos/awep/wakizashi","/players/wren/Area/starbug/items/bouquet","/players/puppy/s/eq/nathat","/players/wren/Area/starbug/items/leaflets","/players/mythos/awep/backbite","/players/ultramagnus/bdiamond","/players/maledicta/cont/armor/guard_of_health","/players/saber/armor/hardsuit1","/players/pain/NEW/weap/sword","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/robes","/obj/weapon","/obj/weapon","/players/mythos/awep/zantetsuken","/players/pain/NEW/weap/mace2","/players/puppy/s/eq/block","/players/saber/stuff/trink","/players/pain/NEW/arm/gloves","/players/hawkeye/items/good","/players/ultramagnus/darkarmor","/players/arrina/heals/ade",})
+shorts ({"Fawnskin Cloak","A leather collar","a lunch box","Dark Rider Broadsword","Wakizashi","a colorful bouquet of 'flowers'","A straw hat","a stack of leaflets","[31mBackbiter[0m","A Blue Diamond","[1;37mChestguard of [1;32mHealth[2;37;0m","A purple Hardsuit <with pink legs!>","Sword","A shoddy [1mwhite[0m cloak","A Priest's Robes","Shark`s tooth","Bow","[34mZantetsuken[0m","A huge iron mace","A building block","A strange metal trinket","Leather work gloves","A potion","Dark Rider Chainmail","bottle of refreshing [33mlemonade[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

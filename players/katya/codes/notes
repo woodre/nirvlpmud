@@ -1,0 +1,9 @@
+
+make organ call 
+environment()->your_exit_function_here();
+
+/players/mizan/mbv2/items/walkie-talkie
+
+more /lpmud.log.old
+
+find_player("katya")->recalc_carry();

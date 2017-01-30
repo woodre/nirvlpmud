@@ -1,0 +1,6 @@
+k 4
+backp ({"s,s,s,e,e,e,e","e,n,n,n,e,e,n,n,n,exe s","w,w,w,w,w,w,s,s,s,exe e",",n,n,u,u,n,n,w,w,w,w,w,w,w,w,w,exe e","",0,0,0,0,0,})
+bpatt ({"n,n,n,w,w,w,w","w,s,s,s,w,w,s,s,s,exe s","e,e,e,e,e,e,n,n,n,exe e",",s,s,d,d,s,s,e,e,e,e,e,e,e,e,e,exe e","",0,0,0,0,0,})
+patt ({"w,w,w,w,n,n,n","exe s,s,s,s,w,w,s,s,s,w","exe e,n,n,n,e,e,e,e,e,e","exe e,e,e,e,e,e,e,e,e,e,s,s,d,d,s,s,","",0,0,0,0,0,})
+ggg "s"
+comment ({0,0,0,0,0,0,0,0,0,0,})

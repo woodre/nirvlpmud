@@ -1,0 +1,26 @@
+                       [Prestige Advancing]
+-----------------------=========+=========-----------------------
+
+    Advancing to prestige has a large impact on the player. The
+  player will be changed in the following ways:
+  ---------------------------------------------------------------
+    * Level will be reset to 1.
+    * Prestige Level will be increased.
+    * A prestige skill point will be added. See help pres_skills
+      for additional information.
+    * All experience will be transferred to prestige experience.
+    * Stats will be reset to 5. Players will have the same free
+       attributes that a new player has.
+    * Any gold will be added to players bank balance.
+    * Withdrawable bank balance will be reset to 0.
+    * Player killing flag will be reset if set.
+    * Quests will be cleared.
+    * Current quest points will be transferred to prestige
+      quest points.
+    * Guild information will be stored and guild object
+      destroyed. Guild can be restored once requirements
+      have been met. See help pres_guilds for additional 
+      information.
+  
+-----------------------=========+=========-----------------------
+  

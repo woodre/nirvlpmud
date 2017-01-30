@@ -1,0 +1,39 @@
+#pragma strict
+
+string titles;
+
+void init()
+{
+   add_action("set_titlestring","set_titlestring");
+}
+
+int set_titlestring()
+{
+   string ttl;
+
+   ttl = get_random_string();
+
+   this_player()->set_title(ttl);
+
+   write("New title set.\n");
+   return 1;
+}
+
+string get_random_string()
+{
+   if(!titles)
+   {
+      titles =
+         ({
+            "the red",
+            "the green",
+            "the blue",
+            "the weakling",
+            "the strong",
+            "the confused",
+            "the all knowing",
+         });
+   }
+
+   return titles[random(sizeof(titles))];
+}

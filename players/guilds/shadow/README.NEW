@@ -1,0 +1,45 @@
+
+Shadow Guild
+
+I have several ideas for my guild.  Lately, many people have been leaving
+and its apparent that I have to make some new things.  I'd like to work on
+these over spring break ( while my friends are in Colorado *grumble* ), so
+if you could give me some kind of tentative approval/comments it would be
+great, because I'm not going to be able to log on over break.
+Here are some of my ideas:
+
+1) Armor
+   The shadow theme doesn't really have anything to do with a weapon class, 
+but some sort of guild armor class makes a lot of sense.  I was thinking
+something separate from their guild level, like a "darkness" attribute that
+I could handle withing my guild objects.  It would be optional; a player could
+turn it off to wear other things, but couldn't wear anything else while it was
+on.  I was looking at about 200,000 xps to start, with exponential growth to
+higher armor classes, to a max of 10 or so.
+
+You can give it a set ac up to 4 nothing above. I went through this with the monks before.
+
+2) Guild hotel
+   I'd like to make a hotel in the guild area for the shadows.  It would be 
+similiar boltars hotel, but I think I want to dest the rooms after the 
+player leaves to avoid having all the rooms in memory.  For this, I was going
+to make it for members 10th level and above, with a fee of 25k, for 6 items.
+   BTW: Currently, there are 12 shadows over 10th level and above.  The max
+level is 12, with GCs at 13.
+
+  SO long as YOU keep it clean file wise. If I have to clean up old save
+files in your directory then I will take it out of the game.
+
+
+3) Pets
+   I think the pets were getting out of hand before, but they should be 
+interesting.  I have a pet program almost done where the pet can move around,
+take things, drop things, look, and give things.  I think that this makes pets
+cool, without blowing the balance.  I set it up to go into any room, except
+those with realm() { return "NT"; }
+    sounds ok.
+
+  Please tell me weather you see any major problems ahead with this stuff.
+I'm leaving for break in a week ( on the Friday night, I think ).
+
+-Blue

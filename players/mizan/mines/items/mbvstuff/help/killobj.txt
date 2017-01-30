@@ -1,0 +1,13 @@
+>> ORDER: KILL BY OBJECT
+
+Usage:
+order <indexnum> killobj <creature> <duration>
+
+Example:
+'order 3 killobj mizan 10'
+
+Description:
+This specifies a specific object that the monster should kill
+when encountered in its travels. Not a very specific way to hunt 
+someone. For that capability refer to the 'huntobj' order.
+

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/saber/armor/mshades","/players/wren/Area/starbug/items/currie","/players/wren/Area/starbug/items/arrogance","/obj/treasure","/players/angel/area/stargate/obj/staff","/obj/weapon","/players/arrina/weapons/punchknife","/players/hippo/armour/helmet","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/hippo/armour/glazour_coat","/obj/armor","/players/arrina/armor/bedsheet","/obj/weapon","/players/puppy/s/eq/apron","/obj/bag","/players/mistress/other/disk","/obj/armor","/obj/treasure","/players/wren/Area/starbug/items/reddress","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/hippo/heals/grain","/players/hawkeye/weapons/weapon","/obj/weapon","/players/wren/Area/starbug/items/comb","/obj/armor",})
+shorts ({"Mirrorshades","A tin of chicken currie","Rimmers arrogance.","A list of who is naughty and nice","[1;36mSTAFF WEAPON[0m","Fear","[1;30mObsidian [1;31mPunchknife[2;37;0m","nutshell helmet","Peasant Rags","glazour coat","Steel Shield","A Linen Bedsheet","Spear","An apron","bag","A fragile disk","A small [1mwhite[0m shield","A rattlesnake's rattle","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","A Prince's Robes","[33mcrumbs of grain[0m","Hawkeye's Scalpel","Bow","the cat's hair pick","A suit of [1mwhite[0m chainmail",})
+found ({1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,})
+loaded 0

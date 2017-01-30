@@ -1,0 +1,64 @@
+t_tell(str) {
+  object ob;
+  string who;
+  string msg;
+
+  if (tp->query_ghost()) {
+    write("You fail.\n");
+    return 1;
+  }
+  if (!str || sscanf(str, "%s %s", who, msg) != 2) {
+    write("Tell what?\n");
+    return 1;
+  }
+
+  ob = find_player(lower_case(who));
+  if (!ob) ob = find_living(lower_case(who));
+
+  if (!ob) {
+    write("No player with that name.\n");
+    return 1;
+  }
+
+  if (interactive(ob)) {
+    if (tp->query_level() < ob->query_level() && ob->query_invis() >= 39) {
+      write("No player with that name.\n");
+      return 1;
+    }
+
+    if (tp->query_level() < 21 && in_editor(ob)) {
+      write("That person is editing. Please try again later.\n");
+      return 1;
+    }
+
+    if (tp->query_level() < 21 && ob->query_tellblock()) {
+      write("That person is blocking all tells. Please try again later.\n");
+      return 1;
+    }
+
+    if(tp->query_tellblock() && ob->query_level() < 21 && tp->query_level() < 21) {
+           write("You cannot use tell when tellblock is on.\n");
+           return 1;
+    }
+
+    if(query_idle(ob) > 120)
+      tell_object(tp, who+" is idle at the moment. You may not get a response right away.\n");
+
+  }
+
+  if(!ob->query_npc() && !interactive(ob))
+    tell_object(tp, who+" is disconnected.\n");
+
+  if(call_other(tp,"query_invis",0) > 0 && tp->query_level() < 199) {
+    write( "Don't be annoying.  Become visible before you talk to someone!\n" );
+    return 1;
+  }
+
+  msg = format(msg, 60);
+
+  ob->Replyer((string)this_player()->query_real_name());
+  ob->add_tellhistory(CYN+"~ "+ME+NORM+" told you: "+msg);
+  write("You tell "+CYN+ capitalize(who) +NORM+": "+msg+"\n");
+  tell_object(ob, CYN+"~ "+ME+NORM+" tells you: "+msg+"\n");
+  return 1;
+}

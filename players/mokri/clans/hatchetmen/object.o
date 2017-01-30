@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1;31mHatchet Man[0m Necklace[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "necklace"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "A [1;31mHatchet Man[0m Necklace[0m"
+damage_type "physical"
+hall_path "/room/vill_track"
+object_name "necklace"
+owner "avant"
+spell_alias "slash"
+spell_mess_me "You %bold%swing%normal% your %bold%Motha Fuckn' %normal%%hi red%hatchet%normal% %hi magenta%smashing%normal% your opponents skull."
+spell_mess_room "%TPN% %bold%swings%normal% his %bold%Motha Fuckn' %normal%%hi red%hatchet %normal%%hi magenta%SMASHING%normal% %akn%'s skull."
+spell_mess_them "%TPN% %bold%swings%normal% his %bold%Motha Fuckn' %normal%%hi red%hatchet %normal%%hi magenta%SMASHING%normal%your skull."
+abilities ({})
+chan_history ({"[Sun Apr  3 19:18:38 2011] Avant: besides etest gear you can have","[Sun Apr  3 19:18:46 2011] Titan: im rather proud of this one cos i actually earned it myself from the museum","[Sun Apr  3 19:18:54 2011] Avant: nice","[Sun Apr  3 19:18:54 2011] Avant: annie?","[Sun Jul 17 13:14:21 2011] Avant: heh","[Tue Oct 30 09:45:04 2012] Primal has joined the clan!","[Tue Oct 30 09:46:10 2012] Avant has promoted Primal to a clan leader!","[Sun Dec  2 16:51:07 2012] Saito has joined the clan!","[Sun Dec  2 16:52:43 2012] Avant has promoted Saito to a clan leader!","[Sun Feb 17 15:12:12 2013] Winchester has joined the clan!","[Fri Mar 29 10:41:47 2013] Avant: heh","[Thu Dec 26 20:07:55 2013] Cleipa: hey","[Sat Jan 18 15:29:59 2014] Psycoholic has joined the clan!","[Sat Jan 18 15:30:17 2014] Avant has promoted Psycoholic to a clan leader!","[Sun Jul 13 17:23:34 2014] Avant has removed Psycoholic as a clan leader!","[Sun Jul 13 17:24:02 2014] Avant has removed Primal as a clan leader!","[Sun Jul 13 17:24:10 2014] Avant has removed Saito as a clan leader!","[Sun Jul 13 17:33:40 2014] Harley has joined the clan!","[Wed Apr  8 20:58:28 2015] Cleipa )","[Mon Nov  2 09:03:30 2015] Avant: 4753",})
+leaders ({"titan",})
+join_type 2
+private_coffer 412054
+public_coffer 0
+spell_delay 0
+spell_id 1
+spell_cost 80
+last_spell_time 1460148905

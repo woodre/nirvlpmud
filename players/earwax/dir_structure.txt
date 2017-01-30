@@ -1,0 +1,35 @@
+/daemons
+  /secure
+/lib
+  /player
+  /living
+  /npc
+  /armor
+  /weapon
+  /obj
+/domain
+  /backbone
+  /guild
+  /race
+/skill
+  /melee
+    /unarmed
+    /weapon
+    /armor
+  /trade
+  /race
+  /magic
+  /std
+  /craft
+  /psionic
+/players
+/dev
+/doc
+/log
+/cmds
+  /skills
+  /dev
+  /player
+/std
+/data
+/include

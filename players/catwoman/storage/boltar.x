@@ -1,0 +1,12 @@
+10
+10
+/players/saber/food/hscroll1#0
+/players/saber/armor/age#0
+/players/cyrex/boots#0
+/players/hurtbrain/castello/dag/crown#0
+/players/daranath/arms/halo#0$0@0
+/obj/money#1000$0@0
+/obj/money#6000$0@0
+/players/arrina/weapons/punchknife#0$0@0
+/players/zeus/museum/OBJ/cloak#--0$0@0
+/players/cyrex/hood#0$0@0

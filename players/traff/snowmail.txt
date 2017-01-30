@@ -1,0 +1,56 @@
+mail snow
+Subject: forest critters
+Give message.  Finish message with '**', or '~q' to cancel
+]In the area I'm working on there are 10 forest critters ranging in
+]level from 8-17.  The critters are quite mobile.  They are cloned
+]1 at a time when a player leaves a room, currently 10 rooms.  After
+]they are cloned the critters are moved with command("north").  Since
+]movement in this area is random, that should provide a fairly even
+]distribution.  Also, if a player encounters multiple critters in a
+]room, when one is killed some or all of the others will leave the 
+]room.  That should further even out the distribution, and ensure that
+]players cannot stand in one room and kill many critters.  Sometimes
+]they might be able to get 2 in one room, I would say it would be very
+]rare that they get 3, unless other players are moving in the area.
+]Also keep in mind that critters are randomly wimpy, adding to the 
+]random movement.  A player chasing a wimpy monster could end up in
+]a room with several "fresh" and aggresive critters.
+]
+]It is the number of critters I wanted to discuss here.  For testing
+]the limiting number has been set pretty high.  I have 'write_file'
+]statements in the rooms and the critters so I can track critters
+]cloned and critters killed.  This will allow for easy adjustment when
+]the area is put into play.  In a test this evening, Fakir ran a
+]test char. through the area.  The test char. was a level 19 Dervish,
+]using 2 wc 18 weaps.  The test lasted about 21 min.  Probably much
+]faster than a player entering the area for the first time would take.
+]A total of 43 critters were cloned and 20 were killed.  I haven't
+]broken down the numbers by critter levels, but a rough glance looked
+]as if they were random, as they should be.  After the test I went 
+]through and dested the remaining critters and found this distribution.
+]1 room had 7 critters
+]3 rooms had 4 critters
+]4 rooms had 1 critter each.
+]Not sure why the one room ended up with so many.  It will take some
+]more testing to see if things even out.  Anyway, my main concern at
+]the moment is the number of critters.  Without a fair amount of them
+]the area won't be as dangerous as I would like.  I realize there must
+]be some limits though, so I hope you can give me some guidance here.  I'm not s
+]just what might be acceptable.  If you want to take a text char.
+]through the area it starts in ~/delnoch/forest/forest2.c
+]Clones and kills are recorden in the file ~/delnoch/forest/CRITTERS
+]I plan to seperate that into 2 files for easier reading.***
+Sorry, you're all out of time for this call.  Please feel free to call
+back again...
+Connection closed.
+NO CARRIER
+NO CARRIER
+
+ACK!  I wasn't up to typing that all in again, so I am sending it to your
+email address.  Sorry it was so long, but I felt a full explanation was
+needed.  As usual there is no rush on this as I have a good bit of work
+left to do.  Critters will NOT carry swords and trinkets when I am done!
+*GRIN*  Thanks.
+
+           Traff
+

@@ -1,0 +1,6 @@
+inherit "/players/blackadder/trumps/gen_trump";
+
+reset(arg) {
+   pict = "blackadder";
+   pict_desc = "A rather dashing looking fellow.\n";
+}

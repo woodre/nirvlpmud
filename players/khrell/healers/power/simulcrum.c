@@ -1,0 +1,1 @@
+simulcrum(str) { if(simulcrum_var[0] > lev) return 0; call_other(POWER,"simulcrum",lev,pow,str); return 1; }

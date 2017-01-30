@@ -1,0 +1,19 @@
+**************
+
+                     Load_dir
+
+Syntax:    load_dir <dir>
+
+Desc:
+           This command is to load an entire directory.
+           Can be used to test to see if an entire directory
+           will load to find bugs in large projects.
+
+Warning:   
+
+Example:   load_dir 
+
+Related:   
+
+
+**************

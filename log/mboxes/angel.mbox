@@ -1,0 +1,464 @@
+From: francesco
+Subj: land
+
+Cc: sparkle
+Date: Nov 30 03:23
+
+i've seen one change you made about the acres: 
+there is now a 'sign you can read': 
+well, strange enough you can read it, but you cant look at it??  LOL 
+so, i'd make it this way: 
+'There is a sign held by a pole planted in the green' 
+look at sign: 'It has some words that can be read' 
+look at words: 'The words can be read' 
+read words: 'bla blah blah' 
+ 
+i'll take a deeper look at the changes later. 
+ 
+fran 
+ 
+PS: sing is a typo, it should be sign    *wink* 
+ 
+
+From: earwax
+Subj: wlogs
+
+Date: Dec  7 00:24
+
+/log/WR/angel_workreport is yours, use 'vlog earwax' to view the 
+tail end of mine, or 'wlog' by itself to view tail end of your own 
+
+From: tombsurfer
+Subj: item needs looking at
+
+Date: Apr 12 22:53
+
+can u check out /players/lacar/area/unicorns/unicornrattle.c? 
+It is not loading at all. One of the items to be found. 
+Also up12 is up if want to go look at it. 
+With thanks and HUGs 
+Tombsurfer aka Lacar 
+
+From: earwax
+Subj: ldmud
+
+Cc: (To: forbin) francesco,fakir,pavlik,stardream,jenny,pain,zeus,wocket,feldegast,vital,jaraxle,eurale,khrell,pestilence,puppy,star,wren,angel,martha,gemini,jamila,catt,tristian,linus,mosobp,jara,humble,aquila,kain,lacar,brittany,jareel,katya,data,catwoman,airwoman,catacomb,veeshan,haji,hair,skie,chip,sampson,chax,y,atipode,lishe
+Date: Oct  6 07:22
+
+I need to see work on this project.  I've been asking for it for months, 
+but I haven't seen anything.  Yesterday, I recommended automatic 
+dewizzing of all wizards not involved, so I'm trying to prevent this 
+because it WILL happen otherwise.  In other words, I'm trying to see 
+work done, so this doesn't happen, although if it doesn't I'm the  
+one to blame and the first to take the blame, because I fully intend 
+to dewiz every single individual that does not get involved. 
+ 
+I have the position, I have the power, and i'm using it, is the bottom 
+line.  If you want to keep your wizard get involved with this. 
+ 
+It's seriously the most important project in the last 15 years. 
+ 
+-david (dhalek@comcast.net) 
+
+From: chip
+Subj: Leave Of Absence
+
+Cc: (To: boltar) earwax,vertebraker,fred,star,veeshan,mizan,vital,angel,wipeout,forbin,lacar,mokri,mosobp,jareel,jaraxle,stardream,rumplemintz,sparrow
+Date: Nov 29 17:42
+
+I just want to let you all know I'm not going to be able to be around for 
+quite some time. I may be able to pop in from time to time but will be few 
+and far between, and for the few times I might be able to show, I will have 
+a maximum of just a few minutes. So I'm saying my temporary goodbyes to you 
+all and want to thank you for giving me the opportunity to become a part of 
+the wonderful crew of developers we have here. Rest assured this is not a 
+permanent leave by any means, but it will be for quite a while. I'm going 
+to miss all you guys, and if I forget anyone in the CCs that you can think 
+of, if you could let them know for me I'd be very grateful. Hope to see you 
+all again sometime soon. Yours. Chipper 
+
+From: rumplemintz
+ Re:   roam
+Date: Feb  5 23:41
+
+Looked at your ar.c file again.  You have 2 if(arg) return;  lines in there 
+and also, in the get_?? functions, your path is missing the 'npc' dir 
+ 
+Change that, and it should work. 
+ 
+Happy Coding! 
+
+From: vertebraker
+Subj: Hey You
+
+Date: Jun  8 02:28
+
+Hey, You! 
+Logoff FTP! 
+It's broken! 
+
+From: vertebraker
+Subj: Hey You
+
+Date: Jun  8 02:28
+
+Hey, You! 
+Logoff FTP! 
+It's broken! 
+
+From: chip
+ Re:   1st area
+Date: Jun  3 10:55
+
+Thank you very much man :)  there is no rush of any sort as now, due to 
+some tough RL circumstances i doubt i'll be able to be around as much, so 
+i'll be back on and make any corrections that need be as i am able, and 
+i'll send mails back out once said corrections have been made. like i said 
+take your time as much as you need to, it's not like i haven't already 
+waited many  many months to get something put in the game hehe. thanks 
+again! 
+Chip 
+
+From: chip
+Subj: Hey
+
+Date: Jun  9 20:01
+
+I'm working on what I can when I can, and I have received all the info 
+you've sent, and have ready through it thoroughly. I'm having some very 
+tough rl problems right now, and at times i don't have all my resources 
+available to me either. i'll get everything done once i've got the chances 
+to do so. I'll keep you updated. 
+Chip 
+
+From: chip
+Subj: Hey
+
+Date: Jun  9 20:01
+
+I'm working on what I can when I can, and I have received all the info 
+you've sent, and have ready through it thoroughly. I'm having some very 
+tough rl problems right now, and at times i don't have all my resources 
+available to me either. i'll get everything done once i've got the chances 
+to do so. I'll keep you updated. 
+Chip 
+
+From: jacob
+ Re:   hookup
+Date: Sep 12 18:22
+
+will do i'll catch u on when i can. and don't worry, i don't need to try to 
+double-up like most, lol. besides, I enjoy doing things for myself :) just 
+hate losing shit when the mud goes apeshit lol. don't care if i die and 
+lose it or something, but illegitimate losses aren't my style :) i'll catch 
+you soon man, thanks! pz 
+J 
+
+From: shackel
+Subj: XP Board 2009
+
+Cc: (To: boltar) fred,mosobp,angel
+Date: Jan 23 02:33
+
+When will the XP board show top scores for 2009? Just curious... I'm trying to talk some people into 
+getting back into playing, so hopefully more will be back around soon, as well as hopefully a few new 
+players. 
+Thanks. 
+Shackel/Chip 
+
+From: x
+Subj: wipeout ?
+
+Date: Aug  8 15:10
+
+ 
+What's the deal with wipeout ? 
+
+From: angel
+Subj: Wipeout
+
+Cc: (To: x) angel
+Date: Aug  8 19:20
+
+Hello, 
+    OK, trying this again. just got kick off for some 
+unknown reason and I was all most done writing a book. 
+So, here it is all over again.  Wipeout is my cousin. 
+He lives 30 min away. He is 19 and a little spoiled 
+Bratt.  about 10 days or so ago wipeout came on and 
+told Khrell and Ill that he wanted to be dewizzed  
+cause he no longer wanted to code.  Later when he  
+and I were both on I ask if that was what he wanted  
+and he stated yes 
+So, I granted HIS wish and dewizzed him.  He had issues 
+with his guild object and the wiz channel. He stated  
+he had some where to go , so I told him I would snoop 
+him and use the force cmd to get it fix and he was 
+fine with that.  I fixed the guild obj and with Rump's 
+help we fix the wiz channel issue.  After that he came 
+back instead of saying thanks he demands I give him 
+ 2 more levels cause he was sure he was 19+23 when he 
+wizzed but the log's showed he was 19+21.  Then he 
+got pissed and started in "So, I am lying. you can look?" 
+"at the log's.  I was 19+23" and a bunch more crap 
+came out him mouth...  I told him I would see if it  
+was possible for mizan to look at saved logs when he 
+wizzed but that I was not adding them without proof. 
+Did I mention he is a whiner and a bratt? oh I did 
+Well mean while his mom (my aunt) I am 35 by the way, 
+and his brothers told me he was caught using weed. 
+I aske him about it here cause he was not answering 
+his cell, he gave me a bunch of crap then too and 
+logged off.  The the day I jailed him I logged on  
+one of my test char that worm made a shard so that 
+I could fix some guild issues.  Wipeout on tells  
+and on star start about how me and other wizzes are spying 
+on him and the shard.  That were abusing our powers. 
+That I am snooping him, which u can check the logs and  
+see it was only the day I dewizzed him. 
+I tried to deal with him with on tells but  
+on star cause he wanted to make it an issue. 
+at some point he told me I was in big trouble 
+and he was gonna put me in my place. I gave him 
+one more chance to stop being and ass and unruly.  
+He did not so I jailed him for 1 day. Lenient if 
+you ask me! 
+Anyhow on star he said he was gonna report me for abuse 
+of powers and I told him to go ahead. 
+    Angel! 
+
+From: angel
+Subj: Wipeout
+
+Cc: (To: x) angel
+Date: Aug  8 19:20
+
+Hello, 
+    OK, trying this again. just got kick off for some 
+unknown reason and I was all most done writing a book. 
+So, here it is all over again.  Wipeout is my cousin. 
+He lives 30 min away. He is 19 and a little spoiled 
+Bratt.  about 10 days or so ago wipeout came on and 
+told Khrell and Ill that he wanted to be dewizzed  
+cause he no longer wanted to code.  Later when he  
+and I were both on I ask if that was what he wanted  
+and he stated yes 
+So, I granted HIS wish and dewizzed him.  He had issues 
+with his guild object and the wiz channel. He stated  
+he had some where to go , so I told him I would snoop 
+him and use the force cmd to get it fix and he was 
+fine with that.  I fixed the guild obj and with Rump's 
+help we fix the wiz channel issue.  After that he came 
+back instead of saying thanks he demands I give him 
+ 2 more levels cause he was sure he was 19+23 when he 
+wizzed but the log's showed he was 19+21.  Then he 
+got pissed and started in "So, I am lying. you can look?" 
+"at the log's.  I was 19+23" and a bunch more crap 
+came out him mouth...  I told him I would see if it  
+was possible for mizan to look at saved logs when he 
+wizzed but that I was not adding them without proof. 
+Did I mention he is a whiner and a bratt? oh I did 
+Well mean while his mom (my aunt) I am 35 by the way, 
+and his brothers told me he was caught using weed. 
+I aske him about it here cause he was not answering 
+his cell, he gave me a bunch of crap then too and 
+logged off.  The the day I jailed him I logged on  
+one of my test char that worm made a shard so that 
+I could fix some guild issues.  Wipeout on tells  
+and on star start about how me and other wizzes are spying 
+on him and the shard.  That were abusing our powers. 
+That I am snooping him, which u can check the logs and  
+see it was only the day I dewizzed him. 
+I tried to deal with him with on tells but  
+on star cause he wanted to make it an issue. 
+at some point he told me I was in big trouble 
+and he was gonna put me in my place. I gave him 
+one more chance to stop being and ass and unruly.  
+He did not so I jailed him for 1 day. Lenient if 
+you ask me! 
+Anyhow on star he said he was gonna report me for abuse 
+of powers and I told him to go ahead. 
+    Angel! 
+
+From: severance
+Subj: gaara
+
+Cc: (To: fred) angel,star,shinshi
+Date: Oct 18 04:29
+
+hey all gaara was killed in bogus kill from warlord kill it had me blick him after warlord died. is there anyway we can get him his 700k xp he had lost from the death back? 
+I would appreciate it  
+thank you. 
+severance 
+
+From: rumplemintz
+ Re:   samurai
+Cc: (To: wicket) boltar,fred,illarion,star,khrell,sparrow,angel,mizan
+Date: Dec 11 12:45
+
+Best bet right now is to mail Jacob and have him mail me to allow 
+it or not.  If he doesn't log on in over a month, then we'll go from 
+there and maybe promote a current shogun to emporer, then you can 
+get added from there. 
+ 
+As far as shards go, the code for them is pretty intense, as it is 
+with many guilds.  It seems we'll have to appoint some senior+ wizzies 
+as custodians of the various guilds, and I (along with Illarion) might 
+have to become the 'guild' wizards to keep things inline and keep them 
+operating as they should. 
+ 
+
+From: mosobp
+Subj: area
+
+Date: Feb  2 17:42
+
+Hey man,  
+How are things going just curious if you have had a chance to look at my area, and if you have anything I need to fix. If you could let me know I'd appreciate it. 
+thanx 
+Moso 
+
+From: sparrow
+ Re:   equipment
+Cc: (To: kadaj) boltar,fred,star,angel,vertebraker,sparrow,illarion,mizan
+Date: Feb 10 18:59
+
+Ummm, that is not a bug. The sarawak is supposed to do that. Is 
+there something that happened that I am missing? I'm not really 
+concerned about it other than the fact that other players may 
+see this and assume it is par for the course. I am glad that you 
+let us know but that is not really how it is supposed to happen. 
+Like I said I'm not upset about it, just make sure you are careful 
+who sees you do that. 
+-S 
+
+From: mosobp
+ Re:   area
+Date: Feb 11 03:12
+
+that was the area if it was approved lol I never knew about it :)  
+might take a quick look at it again and if you think its good ill put it in ;) 
+thank you sir 
+moso 
+
+From: sparrow
+ Re:   item decay
+Cc: (To: vertebraker) fred,boltar,sparrow,mizan,angel,vertebraker,rumplemintz,illarion
+Date: Feb 16 23:25
+
+I agree to some extent. I decided to create a new character 
+recently and I can say that at low levels weapon upkeep is 
+no small matter. If you throw armor into the mix it would be 
+almost unbearable for a true newb. 
+Maybe making the cost of repair or access to a qualified 
+artisan be based on quality of the item. Make it more  
+expensive for high quality gear and not all smiths/armorers 
+are up to the task. This will also help with an issue that 
+I think we have: newbies with legendary gear. If they cant 
+afford the upkeep they will be more likely to use gear that 
+is more appropriate to their level. 
+ 
+Anyways that's my two cents 
+
+From: sparrow
+ Re:   do_special() and armor strikes
+Cc: (To: illarion) vertebraker,boltar,illarion,fred,rumplemintz,mizan,star,angel
+Date: Feb 24 22:47
+
+I am with Illarion 100% on this. Less likely FTMFW! 
+Sorry I'm a bit tired heh! 
+S |> /-\ |2 |2 <> \/\/ 
+p.s. I'm bringin sexy back... 
+
+From: vertebraker
+Subj: Astaroth's area
+
+Cc: star
+Date: Mar  3 01:20
+
+ 
+I need one of you two to tell me if you can take a look at 
+Astaroth's area. I don't need spelling/grammar correction because 
+it falls under the "Old Nirvana" standards. 
+ 
+/players/astaroth/entrance.c is the path. Just check over it 
+and note anything strange. 
+
+From: vertebraker
+Subj: Astaroth's area
+
+Cc: star
+Date: Mar  3 01:20
+
+ 
+I need one of you two to tell me if you can take a look at 
+Astaroth's area. I don't need spelling/grammar correction because 
+it falls under the "Old Nirvana" standards. 
+ 
+/players/astaroth/entrance.c is the path. Just check over it 
+and note anything strange. 
+
+From: sparrow
+Subj: Re: Highlander
+
+Cc: (To: mizan) fred,illarion,vertebraker,boltar,rumplemintz,angel
+Date: Mar 10 23:18
+
+Ok sorry I haven't been around, flighty access. 
+I'll be the first to admit that this was poor judgement 
+on my part. Here's the entire story: 
+ 
+Heinous has been able to glean access on highlander's alt 
+characters, I do not pretend to know how, that is neither 
+here nor there. He had been using this information for the 
+last few months to keep highlander from joining the sam's  
+with any character. This has been going on since before HL 
+became a wiz. I had been warning Heinous that he needed to 
+practice character seperation for the last three or four 
+weeks. In the meantime I had been telling HL to focus on 
+his area and give it time, that I would try to talk some 
+sense into heinous. HL finished his area and put it up for 
+approval. I'm assuming that he has been bored since then 
+because the quest to gain a samurai had begun anew. He asked 
+me if it would be alright if he logged in Kadaj with a new 
+character just so he could chat on public channels to give 
+the impression that it was not him. There was no equip/kills 
+between the two characters. He spoke with Heinous and met 
+the requirements to join the samurai. Afterwards I spoke 
+with Heinous and informed him on what went on. All I wanted 
+to show him was that HL could indeed create a character  
+that met his approval. I appologized to him for the  
+deception and I told him that he could do what he wanted 
+with HL's character, he could remove him from the guild, 
+he could let him fail on his own. 
+ 
+Maybe I was too tired, maybe I need to stay away from  
+players, none-the-less I made a bad decision. A lot 
+of the time I am the only active wiz on, I get flooded 
+with issues like this all of the time. Normally I tell 
+those involved to forward it to Fred. Anyways I'm staying 
+away from players from now on, I have too much work to 
+do and too little time to do it. Vertebraker is only  
+involved because he backed me up after the fact. I try 
+to be a good and fair admin, I go out of my way to make 
+sure things run smoothly - this was not done to undermine 
+the game itself, my intentions were fully disclosed. I 
+understand that it is not my job to decide, or enforce for 
+that matter, what is fair or right. 
+ 
+I accept full responsibility for this fiasco and await 
+punishment. I just ask that I still have access to work 
+on my projects. Ignorance is no excuse and I truly am 
+sorry. I not only undermined my own authority but that 
+of those that trusted me with this responibility. 
+Sparrow 
+
+From: fred
+ Re:   Ranger Globe
+Date: Mar 24 08:31
+
+I cleaned it up some.  I didn't consolidate anything though but plenty of 
+room for the time being. 
+ 
+Fred 
+

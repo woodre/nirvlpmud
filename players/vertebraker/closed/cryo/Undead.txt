@@ -1,0 +1,324 @@
+				[...:The Undead Guild:...]
+                       Guild Summary by Vertebraker
+                             Updated: 5.24.04
+
+  The Undead is a "unique-ability" oriented guild, whose powers cost
+hit points, spell points, and assorted other minutia. Each member is a
+brother in the whole scheme of the "Undead", but there isn't a real
+official guild hierarchy or anything like that [i.e., no guild channel,
+no guild teleports, or any of that nonsense]. The Undead are creatures
+of vast hunger, so they often have PK in mind, because the corpses of
+players taste much better than stupid monsters.
+  The Undead are intended to be very competitive in PK because of the
+myriad disadvantages they must endure being creatures of death and
+decay. They also are fairly strong fighters, although certainly not
+the best in Nirvana. They start off weaker than any other guild
+in Nirvana, but obtain some of the best and most unique powers
+available.
+  An extremely difficult guild to get the hang of, the Undead are
+unconventional in the extremes. Those who join will either love it or
+hate it, and the drawbacks are not kind in the slightest...
+A newbie player unless helped during his infancy faces practically
+nil chance at success.
+
+Requirements for joining:
+  Players must be >= L5 [hopefully larer]. Those who may initiate
+  are both guild wizards and players who have been appointed by
+guild wizards.
+
+Disadvantages:
+ [1] No mini guilds.
+ [2] No non-guild pets. [They do not obtain a pet until rank 3.]
+     *Pets are scared of the undead.
+ [3] Fixed attrib loss. It is impossible to raise one's willpower,
+    piety, intelligence, OR charisma over the rank of 1. This
+    will have longterm repercussions through the myriad amount
+    of items that have been coded that take attribs into effect.
+ [4] Some abilities require both SPs AND HPs to perform.
+     Players can die by using abils that cost HP.
+ [5] Cost to max guild: 15.75 MILLION xp.
+ [6] All abilities have some chance of failure in them.
+     They still swipe HP/SP if they do fail.
+ [7] Hunger. Undead have an insatiable hunger for fresh corpses.
+     If this hunger is not abated, they begin to eat themselves.
+     Undead players will literally chew their arms, legs, (and head)
+     off. This leads to temporary restriction of abilities as well
+     as a massive loss in HP/SP. Players grow less hungry as they
+     advance in ranks as long as they keep killing and eating.
+ [8] Extremely difficult low rank raising.
+      *The first rank, mistform, cannot wield weapons nor wear
+       armor AT ALL. It only has a random(20) spell_object()
+       with which to do damage. This spell_object() is only
+       usable AT rank 1.
+      *The second rank, skeleton, cannot wear armor save a shield.
+       Its only method of attack besides its weapon is detaching
+       its own bodyparts, which may be caught by its targets
+       who may hold onto them indefinitely [or til they are
+       slain]. Detaching ones bodyparts denies the possibility
+       of certain abilities, however...
+      *The undead does not get a reliable attack spell
+       until rank4 [when it has already invested 3.75 mil xp].
+ [9] Equipment rotting.
+      Undeads have a permanent curse on their character where
+      all items that they carry, even in a bag, will rot
+      and eventually destruct. They spread this curse to
+      all objects, even if touched for only a second. This
+      curse NEVER goes away but is abated through periodic
+      guild ranks. Equipment that is worn and wielded
+      is affected nearly DOUBLE due to its close proximity
+      to all those festering sores and wounds :)
+      This also depreciates the value of the item.
+      Also, these items cannot be saved. Which means
+      Undead have NO savable eq.
+      [SAMPLE #s:]
+                 -per worn/wielded eq-
+       Rank      Avg Secs           Minutes
+        1         750                12.5
+        4         3000               50
+        8         6000               100 [1h40m]
+                   -per other item-
+       Rank      Avg Secs           Minutes
+        1         1350               22.5
+        4         5400               90 [1h30m]
+        8         10800              180 [3h]
+ [10] Damage from infusion.
+      Other players may cause MASSIVE damage to Undead
+      through healing or other method of infusion.
+      Those who heal the Undead player will actually
+      do (2*healing_amt + random(amt)) other|good dmg.
+      It is quite conceivable that a vengeful higher level
+      Healer could instablick an Undead.  In addition,
+      the Undead will take considerable constant other|good 
+      damage while its infusion remains above 0.  This
+      is the major weakness of the Undead.  This never
+      depreciates no matter the guild rank.
+ [11] Adding Experience.
+      Undead do NOT gain experience from partying with players
+      other than fellow Undead or Vampires. EVER. Seeking out
+      someone to powerlevel them will be extremely difficult.
+ [12] Random Attrib Loss.
+      Since Undeads are constantly decaying, they face constant
+      loss of their physical attributes (the ones that AREN'T
+      already set at 1...) ...
+      The formula looks like this:
+        - if(!random((luck/5 + rank)*400)) EVERY heartbeat.
+      This is a constant curse which again, never totally goes
+      away but slightly depreciates with time.
+ [13] Constant HP/SP decay.
+      Unlike the living players of Nirvana, Undead constantly
+      decay. They do not heal in the slightest.
+      They lose 4 - rank/2 HP & SP per autoheal() call in
+      player.c, which is currently every 10 beats.
+ [14] Mudkids.
+      The Undead may not reproduce because in realistic terms
+      this would produce some f'd up looking kids.  I don't
+      currently feel like playing with this feature so I'm
+      leaving it out.
+ [15] Alcohol.
+      The Undead can't drink alcohol. Have you ever seen
+      a wasted zombie? Didn't think so. Alkie has no fx.
+      [Note: I haven't seen a zombie eat splooge or drink
+       lemonade either, but I don't feel like having
+       any more friggin' drawbacks... SHEESH]
+ [16] Death on joining, no xp brought in.
+      When joining the guild, the player must be REBORN.
+      Therefore, they must die first. They take a real
+      death, after which any extra xp they may have is sucked
+      away.  NO extra experience may be brought into the guild
+      in any way.
+ [17] Player level advancement. Requires a certain
+      player level to use ranked abilities (denoted below).
+
+The Good Stuff:
+  With all the drawbacks to the Undead, only the real 'core
+players will likely be able to survive. Therefore, it is fitting
+that the guild be powered appropriately and thematically.
+Abilities in the undead are quite unique and unlike any other guild
+on Nirvana and wizards who advised to consider the extreme drawbacks
+of the guild before they pass judgment on any abilities contained
+therein. With that in mind...
+
+Advantages:
+ [1] 100% Resistance in Poison.
+    -This is theoretical entirely. Instead of a guild 'cure'
+     ability which would make no sense, the Undead gob checks for
+     a poison on the player every beat. If present, it's gone.
+     Also, the undead has a 100% resistance to the other|poison
+     dmg type. Hey, they're corpses reborn.
+ [2] Dark sight.
+    -Since the Undead were born from darkness and death,
+     they can see in it. No lights required in this guild.
+ [3] Increased stuff/soak detox.
+    -The Undead's natural metabolism increases because they're
+     inherently rotting.  - (1+random(rank/2)) soak/stuff a beat.
+ [4] Guild hall.
+    -If multiple undead or vampires hook up in the secret crypt
+     within the guild hall, their health regenerates faster.
+     However, the entire guild hall is open and ppl can be PK'd
+     if they aren't at the keyboard.
+ [5] Vampires.
+    -Undead have numerous abilities mainly for the benefit
+     of Vampires. Such as drain_blood, revive, dim, etc.
+     Also many powers ALWAYS work on vampires, or DON'T,
+     depending on the power. They have a rather makeshift
+     unofficial alliance with the Vampire guild.
+
+Abilities [grouped by rank]:
+(If left unnoted, costs are based on /doc/build/RULES/guild_spells)
+ [R1] Mistform:
+    -spray: spell_object() random(player_mag/2)
+    -devour corpse:
+     Heals player from corpse. Cannot eat corpses of Undead origin.
+      -corpse_level*rank/4 heal_self()
+       hunger_pts += (corpse_level*rank/2)
+    -NO weapon, NO armor.
+ [R2] Skeleton [250k free gxp]: [L6]
+    -detach/attach:
+     Remove a bodypart, attach a bodypart, no cost.
+     Can only attach their own.
+    -chuck:
+     Throw a bodypart at an opponent.
+     hit_player() random(player_str)
+    -drain_blood:
+     Drain the blood of a corpse into a pool so vampires
+     may still benefit.
+    -NO armor except SHIELD
+ [R3] Zombie [500k free gxp] [L9]
+    -brainsnack:
+     Fightstarter, can only be used on NPCs, only one possible
+     use per NPC. Munch on opponent's brains.
+     result = Enemy->hit_player((target_lvl*rank)/9),
+     Undead->heal_self(result/2). Automatically starts fight.
+     Uses heal_self() rules for dmg, even tho it doesn't do that much.
+    -zmoan:
+     Checks each living, nonUndead in the room, does the following:
+     1: 50% chance of obj->stop_fight()
+     2: 25% chance of obj->attack_object(Undead)
+     3: 20% chance of obj->run_away()
+     4: 5% chance of obj->hit_player(1+random(rank), "other|vertebraker");
+     Costs: 60-(rank*2) SP + 20-(rank*2) HP.
+     Undeads always calm.
+    -bite:
+     Poisons enemy for rank+random(rank*2)rounds, 25% chance of 
+     rank + random(rank) other|poison dmg each beat.
+     Costs: ((rank * 4 SP - random(rank)) + (rank * 2 - random(rank)) HP).
+ [R4] Ghoul [1 mil free gxp] [L12]
+    -hellhound:
+     Summons a minor hellhound to your side.
+     [requires one of Saber's bloodstones, EZ to get]
+     *175 HP, AC 5, WC 15.
+      10% chance of breathing fire (5+random(10) other|fire dmg).
+     Costs 100-(rank*2) SP to summon.
+    -chill:
+    (cannot chill and weaken at same time)
+     Temp. decrease opp AC by rank * 4/3 for
+     rank + random(rank/2) rounds.
+     Costs rank / 3 * 20 SP, rank / 3 * 10 HP.
+    -weaken:
+     See chill, except affects WC instead by rank*2 for
+     same duration, same cost.
+    -mark:
+     Lowers opponent's resistance to all damage types by
+     rank/3 * 5 %.
+     Costs rank / 3 * 30 SP, rank / 3 * 20 HP.
+ [R5] Shadow [2 mil free gxp] [L15]
+    -stalk:
+     Clones a NPC which follows a certain player and reports
+     by catch_tell() when they 'leave' in a certain dir.
+     Does not work when they do a move_player() with a diff
+     msg, or when they get moved by move_object().  Dests
+     when it's not in the same environment as the object
+     it's tracking.
+     Costs 100-(rank*3) SP.
+    -know:
+     Know a player's HP/SP percentage wise, even if not
+      in same room.
+     4 == random(rank) chance of seeing invis players (I18).
+     Always see vamps and undead even if invis.
+     Costs (150 - (rank * 10)) SP.
+    -sdagger:
+     Finally, a spell_object() !  Same as mudspell fireball.
+    -vision:
+     Know where a player is.
+     4 == random(rank) chance of seeing invis players (I18).
+     Always see vamps and undead even if invis.
+     Costs (200 - (rank * 10)) SP.
+    -Dim:
+     Dim a room by a rank/3 light with a black hole.
+     Can 'dissolve' the black hole as well.
+     Costs (50-(rank*2)) SP.
+ [R6] Wraith [L18] [3 mil free gxp]
+    -sneak <dir>:
+     Sneak a particular direction, for usage with backstab
+     primarily, but the player moves silent regardless.
+     (rank * 2 + dex)% chance of success.
+     Costs (25-(rank*2)) SP.
+    -backstab:
+     First atk only, assumes sneak is successful.
+     Target cannot be backstabbed after one is landed.
+     Lands a target_level*rnk*dex/5 hit_player().
+     Costs (35-(rank*2)) SP.
+    -shadowform:
+     Wrap oneself in a shadow, other players cannot
+     ascertain your whereabouts. (Similar to old undead hide).
+     Costs (100-(rank*3)) SP.
+    -darksmith:
+     Repair or sharpen a particular weapon.
+     Does not reduce corrosion of course.
+     Costs (50-(rank*2)) SP.
+ [R7] Spectre [L19+2] [4 mil free gxp]
+    -darkbolt:
+     Sonic-level spell.
+    -possess:
+     opponent->run_away();
+     Costs (50-(rank*2)) SP, (40-(rank*2)) HP.
+    -creeping_death:
+     Improved version of old zombie bite.
+     "Poisons" enemy for rank+random(rank/2) rounds, 25% chance
+     of rank*2 + random(rank*2) other|dark dmg per beat.
+     Costs: ((rank * 6 SP - random(rank*3/2)) + (rank * 3 - random(rank*3/2)) HP).
+    -manticore: Buffed guild pet. Eats hellhound if present.
+     Summons a minor hellhound to your side]
+     [requires a lions mane from zeus' area, slime of a disir...]
+     *250 HP, AC 8, WC 17.
+      10% chance of poisonous breath (10+random(20) other|poison dmg).
+     Costs 200-(rank*4) SP to summon.
+    -cloak: Wrap yourself in perma invis or another undead/vamp.
+     Costs 250-(rank*10) SP to do.
+     50-rank% chance per beat of sucking an SP.
+     if SP drops below 0, no more invis.
+ [R8] Lich [L19+5] [5 mil free gxp]
+    -revive:
+     Revive another Undead or Vampire from death.
+     They gain back 1/4th of the XP they lost.
+     Min. 250 SP, 250 HP.
+     Costs: MAX SP - 20, MAX HP - 20.
+    -restore <x>:
+     Restore another person's SP at a 2:1 rate.
+     1:1 to another Undead or Vamp.
+     Costs: x SP.
+    -regen <x>:
+     Restore HP of you/another at 2:1 rate,
+     1:1 to another Undead or Vamp.
+     Costs: x SP.
+    -darkstorm:
+     Call up a dark storm. Does random dmg to all
+     non-undeads in the room for rank+random(rank)
+     beats. 25% chance of dmg per beat.
+     Dmg done: rank+random(rank*2) other|dark.
+     Costs: ((rank * 8 SP - random(rank)) + (rank * 8 - random(rank)) HP).
+    -darkshield:
+     Cast a darkshield on a particular person.
+     Lasts for (rank * 4 + random(rank * 8)) beats.
+     rank / 2 AC to other|dark and physical.
+     Costs: ((rank * 6 SP - random(rank)) + (rank * 6 - random(rank)) HP).
+    -spectral_hand:
+     Creates a hand that can carry (rank*111) weight,
+     follows you around, cannot be killed.
+     Costs: (240-(rank*5) SP).  11-rank SP per item grab.
+    -control_undead:
+     Cause EVERY undead in the room [NPC or PC]
+     to attack a certain critter, or your current attacker.
+     Costs: ALL your SP, min of 200.
+
+ 250k + 500k + 1m + 2m + 3m + 4m + 5m = 15.75m !!!!!

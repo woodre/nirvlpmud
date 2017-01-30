@@ -1,0 +1,27 @@
+COMBAT ABILITIES:
+To replace the standard mud spells, Mobsters use the combat abilities
+listed below.  These abilities cost graft instead of sps.  Mobsters
+must reach the necessary guild level to use these abilities (see
+w_levels for details).  Each ability also requires the purchase of an
+additional item.  Because of the additional experience and the cost of
+the extra item, these abilities will do slightly greater damage than
+the normal mud spells.
+
+ABILITY   MUD EQUIVALENT   REQUIRED ITEMS            GUILD LEVEL
+-------   --------------   --------------            -----------
+bash      missile          brass knuckles            Thug
+butt      shock            gun                       Muscle
+molotov   fireball         bottle,gas,rag,lighter    Racketeer
+smash     ---              baseball bat              Goodfella
+spray     sonic            Tommy gun,ammo            Mafioso
+driveby   ---              car,gun,another mobster   Wiseguy
+
+
+DAMAGE COMPARISON
+-----------------
+missile  = random (10)       bash    = 2+random(10)
+shock    = random (20)       butt    = 4+random(20)
+fireball = random (30)       molotov = 8+random(30)
+                             smash   = 8+random(35)
+sonic    = 12+random(33)     spray   = 12+random(38)
+                             driveby = 15+random(40)

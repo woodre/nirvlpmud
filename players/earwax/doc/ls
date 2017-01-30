@@ -1,0 +1,34 @@
+ls (string arg)
+ls clear <pathname>
+
+Wizard command: this allows you to list the contents of a directory.
+It defaults to your present working directory, or you can use 
+ls '..' to ls the contents of the directory one level below your 
+pwd (ie, if you're in /players/pimpadocious/tools and you do 'ls ..'
+it will ls /players/pimpadocious.  This can be nested. 
+Also: ls ~boltar would ls all the files in /players/boltar.
+
+The filesize approximation (k) is the number to the left of the 
+filenames, with a '*' indicating that a particular file is loaded.
+Directories are indicated by the absence of a filesize as well as by
+a '/' at the end of their name.
+
+Color preferences can be set using the 'ansipref' command.  The
+colors that can be customized are directories, .c files, .h files,
+and there's a setting for all other files to show up in.
+
+Because of how ls formats its displays, once you have ls'd in a 
+directory (or anyone has), it retains the format for future use 
+(this clears each reboot).  In order to reset it and have it reformat
+the display for a particular directory, use 'clear' as an arguement
+before or after the path you intend to ls (or just use 'ls clear' if
+you're doing ls in your current directory.
+
+Examples:
+ls ~earwax/area - show the contents of /players/earwax/area
+ls *.c - show all files in your pwd that end in .c
+ls ../room - show directory of subdir named room one level below pwd
+ls clear - clear and redo the formatting for ls in your pwd
+ls clear /players/boltar - clear and redo formatting for ~boltar
+
+See also: ansipref

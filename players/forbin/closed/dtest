@@ -1,0 +1,45 @@
+Here is some more ideas and fleshing out I had for the trial.
+
+** REQUIREMENTS FOR THE TRIAL **
+
+- must be a 19+5 level Dervish.
+- must have piety of 30.
+- must read a scroll or tablet or what have you to receive instructions
+  for the trail and hints.
+- must collect the 10 required items or power.
+- must seek and find the entrance to the Caves of Nar-Tuith.
+- must battle and defeat the sandstorm that blocks the entrance to the
+  cave.
+- must sacrifice the items on an altar within the caves to open the
+  doorway to the caverns.
+- must seek inside the caverns to find the scrolls of Nar-Tuith and 
+  learn how to 'invoke' their power.
+- player then sacrifices himself at the altar.
+
+
+** BENEFITS **
+Players will see the following benefits:
+  - race becomes HIR+"Sandstorm"+NORM (which enables to dual-wield at 
+    any level).
+  - +3 str benefit, allowing player to have a maximum of 21 str after 
+    completing test (this still keeps dervish considerably lower than
+    the majority of the mud).
+Players will not see this benefit:
+  - !random(4) chance that sand pt won't go down in check_sand().
+
+** ITEMS OF POWER **
+
+I'd suggest a list of 30-40 acceptable items, but make two lists, one
+of non-store items and one of storable items, and have it randomly 
+call which items are need for a given player.
+This would perhaps cut down on people telling someone else all the 
+items to get.  Perhaps have it require 6 storable items of power and 
+4 non-store.  This will make the task slightly difficult, as the 
+player will have to get the remaining 4 items, prepare for the test by
+coining and eq'ing, then search the desert for the sandstorm, defeat
+the sandstorm, sacrifice all the 10 items, then enter and search the
+caverns, after which they find the scrolls of Nar-Tuith, they must
+figure out how to use or 'invoke' them.
+
+On the balance front, this task would give the player marginal benefit, 
+while forwarding the Dervish theme.

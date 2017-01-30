@@ -1,0 +1,54 @@
+#define POR "/players/pavlik/ilstkarn/ilstkarn_portal.c"
+#define PATH "players/pavlik/ilstkarn/monsters/"
+
+int monster_num;
+
+set_monster_num(i) { monster_num = i; }
+query_monster_num() { return monster_num; }
+
+/*
+ * this function randomly selects a monster to be created.
+ * ob is the room that the monster is to be placed in.
+ *
+ * I have changed this to iterate through the list rather
+ * than to select completely at random.  Random choosng was
+ * resulting in the same monster showing up too many times in
+ * a row.  There is a good enough mix of creatures that a
+ * sequential order shouldn't be so bad.
+ *
+ */
+
+create_monster(ob) {
+  string *monsters;
+  int i;
+
+  /* is there already a monster present? */
+  if(present("ilstkarn_monster", ob)) {
+    return 1;
+  }
+
+  /*
+   * the array the holds all the monster names.
+   */
+  monsters= ({
+    "quickling",
+    "automaton",
+    "vanguard",
+    "mtn_climber",
+    "wyvern",
+	/* new? */
+    "mtn_giant",
+    "dreadnaught",
+    "cyclops",
+	/* new? */
+    "rock_dragon",
+  });
+
+  move_object(clone_object(PATH+monsters[monster_num]), ob);
+
+  monster_num++;
+  if(monster_num > sizeof(monsters)-1) monster_num = 0;
+
+  return 1;
+}
+

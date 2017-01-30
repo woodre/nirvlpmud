@@ -1,0 +1,45 @@
+scar 0
+other_copy 0
+stats_is_updated 1
+access_list 0
+tot_value 0
+mailaddr 'none"
+quests 0
+called_from_ip '192.41.245.90"
+max_headache 0
+headache 0
+soaked 0
+stuffed 0
+intoxicated 0
+al_title 'neutral"
+password 'OBWhCo/0lqlzI"
+title 'the kool dude with the nice shoes (running shoes)"
+Dex 1
+Con 1
+Int 1
+Str 1
+gender 1
+alignment 0
+flags 0
+dead 0
+auto_load '"
+whimpy 0
+frog 0
+is_invis 0
+age 7321
+spell_points 50
+ghost 0
+mmsgin 'arrives in a puff of smoke"
+mmsgout 'disappears in a puff of smoke"
+experience 0
+max_sp 50
+max_hp 50
+hit_point 50
+level 15000
+brief 0
+is_npc 0
+msgout 'leaves"
+msgin 'arrives"
+name 'haji"
+money 96
+time_to_heal 9

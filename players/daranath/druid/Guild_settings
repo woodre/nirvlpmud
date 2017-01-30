@@ -1,0 +1,44 @@
+query_earth() { return favor_earth; }
+query_fire() { return favor_fire; }
+query_air() { return favor_air; }
+query_water() { return favor_water; }
+query_touch() { return touch; } /* Touch of Nature Ranking */
+query_comp1() { return comp1; }  /* Lesser Mistletoe */
+query_comp2() { return comp2; }  /* Greater Mistletoe */
+query_comp3() { return comp3; }  /* Berries */
+query_comp4() { return comp4; }  /* Blackroot */
+query_comp5() { return comp5; }  /* Unknown */
+query_comp6() { return comp6; }  /* Herbs */
+query_comp7() { return comp7; }  /* Crystal Quartz */
+query_herbskill() { return skill_herb; }
+query_healskill() { return skill_heal; }
+query_empskill() { return skill_emp; }
+query_plantskill() { return skill_plant; }
+query_eleskill() { return skill_ele; }
+query_skillpts() { return skill_pts; }
+query_glvl() { return guild_lvl; }
+query_animal() { return an_comp; }
+query_animal_name() { return animal_name; }
+
+add_firefav(int num) { favor_fire += num; }
+add_waterfav(int num) { favor_water += num; }
+add_earthfav(int num) { favor_earth += num; }
+add_airfav(int num) { favor_air += num; }
+add_touch(int num) { touch += num; }
+add_skillpts(int num) { skill_pts += num; }
+add_herbskill(int num) { skill_herb += num; }
+add_healskill(int num) { skill_heal += num; }
+add_empskill(int num) { skill_emp += num; }
+add_plantskill(int num) { skill_plant += num; }
+add_eleskill(int num) { skill_ele += num; }
+add_comp1(int num) { comp1 += num; }
+add_comp2(int num) { comp2 += num; }
+add_comp3(int num) { comp3 += num; }
+add_comp4(int num) { comp4 += num; }
+add_comp5(int num) { comp5 += num; }
+add_comp6(int num) { comp6 += num; }
+add_comp7(int num) { comp7 += num; }
+
+change_animal(int num) { an_comp = num; }
+change_glvl(int num) { guild_lvl = num; }
+add_glvl(int num) { guild_lvl += num; }

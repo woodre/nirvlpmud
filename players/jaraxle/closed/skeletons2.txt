@@ -1,0 +1,361 @@
+The Horde
+
+_____________________________Rank 1_______________________________
+                           Skeleton
+                               |
+_____________________________Rank 2_______________________________ 
+Skeletal Warrior        Skeletal Acolyte       Skeletal Mage 
+        |                      |                    |
+_____________________________Rank 3_______________________________
+Skeletal Knight         Skeletal Priest        Skeletal High Mage 
+        |                      |                    |
+_____________________________Rank 4_______________________________
+Skeletal Warlord        Skeletal High Priest   Skeletal ArchMage
+
+        
+Special Ranks:
+
+Skeletal Berserker
+Skeletal Monk
+Skeletal MageKiller
+
+Special Ranks(Ruler):
+Skeletal Duke    [4 max]
+Skeletal General [2 max]
+Skeletal Lord    [1 max] 
+
+Warrior Tier
+Title:             Rank#:    Powers:
+Skeleton             1       Claw/Bite
+Drawbacks:  No wear and wield
+            No Speaking(say, whisper)
+            
+
+Skeletal Warrior     2       Attack spell, Block(shield) <who> or -self-
+
+Skeletal Knight      3       Soul Partner, Attack Spell, lead, fatal
+
+Skeletal Warlord     4       Command(Bonus to all present), Attack Spell, 
+                             fatal, presence, know enemy, wound
+
+        
+Priest Tier:
+
+Skeletal Acolyte     2       grant soul, heal, calm 
+
+Skeletal Priest      3       Curse, heal, Reverse  
+
+Skeletal High Priest 4       Mass Regen(auto), Reverse         
+
+
+
+
+
+Common Powers:
+Increased regeneration (based on current soul power)
+Natural AC & WC
+deathlink <rank 2 and higher>
+Immune to poison
+
+Common Drawbacks: 
+No Mini's
+No Pets
+No Game Spells
+Death means finding a corpse of >= value to inhabit
+Soul power(ticks up on own...heals don't effect. Used like sps)
+30k max coins
+Player Government(executions, bad orders, etc)
+funky stat increase
+Forced PK(at rank 2 and higher, if don't reset pk within
+          20 minutes of finding a new corpse, DEATH)
+
+
+
+
+
+Warriors:
+Known as the Sword of Ba'kar, the Warrior Skeletons are the
+main fighting force behind the god's plans.  They wield 
+weapons with skill and defend well against most attacks. 
+They are the soldiers and bodyguards of the entire clan,
+with security falling directly on their bleached bones.
+
+Priests:
+The Priest sect of Ba'kar is known as the god's Shield. It
+is these skeletons that prepare the warriors for combat,
+strengthening them with powerful blessings and sending the
+warriors and magi soul energy to use in their battles.  
+The priests are the most respected of all the ranks for their
+ability to bring success when there is little hope.
+
+Mages:
+If the Priests are the Shield and the Warriors are the 
+Sword, then the Mages are nothing less than the vengeance
+of Ba'Kar.  The mages wield powerful soul energy magic
+that can lay waste to the enemies of the Horde.  Yet,
+even with all of this powerful magic, they require the
+protection and blessings of the other two ranks in order
+to succeed.  Mages are called upon when the heaviest
+firepower is necessary.
+
+
+
+(All stats begin at 10, unless otherwise noted)
+Strength, Stamina, Stealth(stamina maxes at 17)
+Intelligence, Willpower 
+Piety, Luck = Never Raises (8's)
+Magic (Warrior max = 12, Priest max = 20, Mage max = 30)
+
+
+Warrior Powers:
+
+Rank 2 (Warrior):
+1: Wear & Wield, Feign Death(Appear as a pile of bones)
+2: Strike & Fury, +1 sta
+3: Block <who> or -self- 
+4: Bonus in One-Handed, Two-Handed, or Distance Wep, +1 sta
+
+Rank 3 (Knight):
+1: all of warrior skills, Immune to Fear
+2: lead, parry mode, +1 sta 
+3: increased Bonus with wep or choose 1 more.
+4: Soul Shadow, +1 sta, finish
+
+Rank 4 (WarMaster):
+1: all of Knight Skills (- Soul Shadow, Lead, block)
+2: Study Enemy - Bonus Damage vs. that Enemy.  (5-10 rounds), +1 sta
+3: BattleCry(Bonus WC) - Skeletons wimpy must be off to work. 1x
+   every 5 rounds., +1 sta
+4: Presence(Bonus WC & Bonus to Strike), Ambush <who>, +1 sta
+
+Immune to Fear: Shadow wimpy and check if hps are low enough.
+
+Feign Death: 3 power + 1 every 20 rounds feigning.
+             
+Fury:  If hps are below 2/10, WC increases by r(willpower)
+       This will add up, and if it happens enough, become
+       a berserker instead of a Knight.
+
+Strike:  Damage -
+            Warrior [random(15) + 12]
+            Knight & WarMaster [random(22) + 16]
+         Cost - 
+            Warrior 20 sps + 2 power
+            Knight  26 sps + 4 power
+
+Block <who> or -self-:
+          Protection = r(5) + 2
+          Cost = 10 sp & 1 power
+          Requires a worn shield
+
+Bonus 1-2 handed, and Distance:
+          Auto Bonus of 1-4 for Warrior
+          Additional Bonus of 1-4 for Knight
+          
+Soul Shadow - Additional Attack each round by Pet type object.
+              If pet type is hit, Skeleton takes damage. 
+              One dies, BOTH do.
+              cost of 1 power each round separate. If run out
+              Both die.
+              WC & AC = Knights
+              Subject to Heal_self and other damage.
+              ! is_pet
+
+Parry Mode - Moves wc bonus to ac bonus.
+
+Study Enemy - Shadow or Object.  Gives a bonus of 1/2 intelligence
+              of WarMaster to wc(randomized).  20 power.
+
+Battlecry - Lends a + 1/4 Willpower to WC of all skeletons present.
+            Duration = Average willpower of all skeletons present.
+            1x per fight.  
+            10 power.
+            Wimpy must be off for Bcry to take effect.
+              
+Presence - Automatically gives a +2 to everyone present to wc.
+
+Ambush - All strike named opponent from feign death.  5 power.
+
+
+GXP:
+Guild experience is divided into two categories:
+ Battle Experience -      The actual fighting of the skeleton
+                          vs. an opponent and dealing out damage.
+                          Better XP is awarded when fighting
+                          something of >= level.
+ Fulfillment Experience - The use of a skill to aid in a way that
+                          your rank specifies is legitimate to the
+                          success of the Horde.
+
+Fulfillment Experience Chart__________________________________________
+Warrior Conditions:
+Pk fighting adds 1 per round
+Block for a Knight = block amount
+Block for a WarMaster = block amount * 2
+Being part of a Pk Ambush(as per the WarMaster Ability)
+
+Knight Conditions:
+Pk fighting adds 1 per round
+Leading for a Warmaster = 5
+Resisting Fear during a Pk Fight
+Fighting in PK without wimpy set
+Being part of a PK ambush(as per the WarMaster Ability)
+Block for a WarMaster
+
+Fulfillment xp may also be awarded by WarMaster's and Higher.
+
+
+Battle Experience Chart_______________________________________________
+Strike
+Bonus from Weps
+Being a part of a Warmaster Power
+Fury
+Fighting an Opponent____________________
+|< lvl         : none                   |
+|= lvl         : +1 per round           |
+|> lvl by 1-3  : +2 per round           |
+|> lvl by 4-10 : +3 per round           |
+|> lvl by 11+  : +4 per round           |
+|_______________________________________|
+
+
+
+Attribs:
+gain stats by what powers are used...
+
+Strength boosts:
+ Strike, fury, two-handed skill fighting
+Intelligence boosts:
+ Ambush, study enemy
+Willpower boosts:
+ Bcry, feign death, Soul Shadow, fury, 
+ resisting fear
+Stealth boosts:
+ lead, block, parry mode, distance skill fighting
+Magic boosts:
+ receiving soul power
+
+
+
+Signing:
+
+sign <message> - sends to room only. 
+mind <message> - sends to all skeletons. 5 power. (need 1 priest on)
+horde - who command of members on.
+
+
+Executive Powers:
+Execute <who> - drains away all soul power, killing them.
+Banish <who>  - removes a member permanently.
+Award <amount> - award fulfillment xp.
+Penalize <amount> - removes fulfillment xp.
+Exile <who>   - Block from channel and magical type powers.
+                Soul power regens at a 1/4 rate. No benefits
+                from skeletons.
+
+
+
+
+Ideas:
+Entrance has guardian skeletons that bar the way...corpses are
+brought to the pool and tossed in, which becomes the guards.
+Daemon for guards, max of 2000 skeletons, with level checks.
+
+Priests commune with the gods
+Priests transfer soul energy(distance at a rate of 1/2, same room 9/10)
+Ppl can jump into the pool and max everyones soul energy that
+is on.
+Priests have a greater than normal soul pool
+Priests can steal sps from opponents, but do no hp damage.
+Mages: casting time, passing out, massive drain on sp,hp, and power.
+       can't cast in front line.
+Special items - priests bargain for them. Go to the pool and
+                fill in the info, what want, what give up for it,
+                and why you want it.
+if die and get a corpse of > 20 5 times in a row, become skeletal giant.
+
+
+
+Priests:
+Power Regen 1 per round
+Rank 2 (Acolyte):
+ 1: Wear & Wield, Feign Death
+ 2: Soulpower, transfer <#> max of 10(room only)
+ 3: bless <who> (add ac)
+ 4: transfer <#> max of 30 (room only)
+Rank 3 (Priest):
+ 1: Increased Soul Pool(+20), transfer <#> max of 40 (distance)
+ 2: Drain <who> (lesser)
+ 3: Increased Soul Pool(+20), transfer <#> max of 50 (distance)
+ 4: Guardian Sigil, heal
+Rank 4 (High Priest):
+ 1: Commune, Drain <who> (major)
+ 2: Increased Soul Pool(+40), transfer <#> max of 70 (distance)
+ 3: Mass restore(transfer to all) <#>
+ 4: Home Sigil(regen pw faster)
+
+
+Mages:
+Power regen 1 per 3 rounds
+1:  Feign Death, bolt(wc, no cost)
+2:  Magical Armor (+3 ac), Missiles(wc + spell)  [spammable]
+3:  Charged sphere (surrounds mob and allows more damage)
+4:  hold <mob>
+5:  cone(wc + spell)  
+6:  portal <where> or <who>
+7:  consume soul (gives sps) [finisher], imbue <wep>
+8:  Mana Shield <#> (uses sps to deflect most hp damage)
+9:  Storm (room sweeper) (wc+ spell)
+10: Blast <who> (might pass out)
+11: Annihilate <who> (kills caster) (heal_self + hit_player)
+12: Massive Storm (room sweeper that keeps going) [draws power]
+
+Feign Death: same as warriors.
+Bolt[b]: Takes the place of wep, adds WC.
+      Free to cast. pw must be > 20
+      wc = 16 + random(willpower / 2)
+Magical Armor:
+      adds +3 to ac.
+      cost: 40 sps, 50 power
+Missiles(spam bolt)[b]: 
+      1st = bolt, 2nd & 3rd = spell(6 + random 15)
+      cost: free, 12sps(1pw), 12sps(1pw)
+      Damage: rank/2 + random(rank + 3)
+      Cost:   rank/2 + rank/2 + 2
+Charged Sphere:
+      Adds a bonus of 10% damage to mob within it.
+      cost: 40 sps, 20 power
+Hold Spell:
+      Holds a mob to the room.
+      Cost: 40 sps, 10 pw
+Cone Spell[b]:
+      Hits attacker and Alt attacker
+      Damage: wc = bolt + 
+              5 + r(25) x2
+      Cost: 28sp, 10pw
+Portal:
+      Cost: 80 sp, 50 pw
+      duration: instant or up to rank x 10 hbs
+Consume Soul:
+      Mob only finishing move.
+      Cost: 30 sp, 5 pw
+Mana Shield: 
+      Protects for sp put into it.
+      Cost: X sp, X * 1.5 pw
+      deflects partial damage, removing pts from its total.
+      rank/2 + random(rank/2) each round
+Storm[b]:
+      Room sweeper
+      Cost 60sp, 100pw
+      damage = random(20) + 10 to all in room.
+Annihilate[b]:
+      Kills mage, does random(1k) + 1k damage to a mob.                        
+Blast[b]:
+      Cost: 100 sp, 150 pw
+      Damage: 70 + random(rank * 10) = 56 vs. a player
+      Pass out if random(50) > willpower + stamina
+Massive Storm[b]:
+      Same as storm, lasts random(rank) + 1 rounds
+      power drain of 40 a round[max of 480, which they cannot
+      have, so it must be planned perfectly!]       
+

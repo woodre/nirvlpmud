@@ -1,0 +1,31 @@
+**************
+
+                     Goto
+
+Syntax:    goto <obj>
+
+Desc:
+           This command is a wizard's primary movement ability to get
+           around the mud. It is very flexible and capable of moving
+           a wizard to another player or to a monster or place in 
+           working directory. Available to all levels of wizard.
+           
+Warning:   Command will move you instantly to another point and 
+           display your entry message on arrival and departure. 
+           Courtesy dictates you should inquire with another wizard
+           before teleporting into their workrooms. Should also not 
+           randomly jump into hotel/motel rooms. Aggressive monsters
+           may also take swings at you so be careful not to jump to 
+           players in combat areas.
+
+
+Example:   goto bob, goto hunter
+                  action
+           Wizard would arrive in the room of Bob or hunter.
+                  if no player of that name on game will try to move
+                  you to a monster of similar name.
+
+Related:   place, castle, trans
+
+
+**************

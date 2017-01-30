@@ -1,0 +1,46 @@
+C Y B E R N I N J A S
+
+Fax File: sensei
+Usage: fax <topic>
+
+
+   The Sensei is one of the most senior members of the
+guild. For only Senseis can provide training to black
+belt ninjas. Furthermore, Senseis can award/punish in
+higher amounts of honor.
+
+   As a Sensei, you should not refuse training to ninjas
+in need. Though ninjas who are not Senseis do not have 
+this responsibility, Senseis are encouraged to delegate
+non black belt training tasks to other lower level ninjas.
+
+___________________Sensei Abilities____________________
+
+ens <who>
+     By typing in a name of a guild member after the
+     enhancements command, you may see their enhancements.
+     You may see your own by normally just typing
+     'enhancements'.
+gbalance
+     Allows you to see the credit account balances of all 
+     currently logged on guild members.
+recruit <player>
+     Allows you to recruit a player into the guild.
+     See 'cyber recruit' for more info.
+recruits
+     Allows you to see who you are currently counseling
+     as well as your remaining recruit slots.
+train <member>
+     Allows you to train a fellow CyberNinja in the martial
+     arts, thus allowing that ninja to advance in art level.
+     The student ninja will need to have the required xp
+     in order to be trained successfully.
+uncounsel <player>
+     Allows you to uncounsel a player you have recruited.
+     If you use this command to uncounsel a player who
+     is already a member of the guild, then you will lose
+     honor but your recruit slot will be freed up, so try to
+     recruit players who might be successful in the guild.
+     If you uncounsel a player who is not a member of the
+     guild, there is no honor penalty.
+_______________________________________________________

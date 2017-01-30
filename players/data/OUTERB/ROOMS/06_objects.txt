@@ -1,0 +1,49 @@
+Objects - Putting the "reality" in VR
+
+Some objects are very simple and others are very complex. Every
+room, player, weapon, armor, monster that a player can see or
+interact with is an object. As you look over example code, try to
+remember that the code operates as an object and interacts with
+other objects. Everything the object can do is defined by the object
+itself, either directly [object's code] or indirectly [inherited
+code from another object]. It cannot do anything without it being
+setup to do so somewhere.
+
+An object in LPC is simply a copy of an existing and loaded program
+in computer memory. When a program is loaded into memory to produce
+a master object, the code is compiled to produce the instruction
+list and a chunk of memory is associated to it as specified by the
+program code for use for internal global variables.
+
+[TECHNICAL MUMBO-JUMBO]
+When a copy, a clone of this program is made, a special reference
+called an object pointer is created. That pointer is given a
+reference to the master code instruction list and a unique chunk of
+memory. If you clone the object another time, a new pointer is
+created and a new chunk of memory allocated. When an object is
+destroyed its associated memory is freed for use by other objects,
+but the instruction list is kept untouched. An object is always
+cloned from the master object. If you want to change the program you
+must update the master object to instruct the gamedriver that a new
+list of instructions is to be compiled from the source code.
+
+As a coder there are 'load' and 'update' commands to make sure that
+you are working with the latest copy of what you have coded. Anytime
+you make changes to your objects, you should update and reload the
+object. This will also allow the gamedriver to generate any errors
+that are created by your code.
+
+However, any already existing clones will not change just because
+the master does. They will keep their reference to the old
+instruction list. It's important that you remember this so that you
+don't believe that the behaviour of an old cloned object changes
+just because you have updated the master object. As you see it's
+possible to have clones of objects in the game that behave
+differently, simply because they are made out of different source
+codes, just cloned between updates and changes in code. This could
+be a great source of confusion, so keep it in mind.
+
+All this to say, you will be coding objects for players to interact
+with. There are other things that can [and will] be coded, but they
+will generally only augment the functionality of objects.
+

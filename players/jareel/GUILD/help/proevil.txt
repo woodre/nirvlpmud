@@ -1,0 +1,15 @@
+                    -- PROTECTION FROM EVIL --
+
+TYPE: Spell (Variable)
+INT REQ: 1/level
+USAGE: pevil
+COST TO MAX: 550,000
+
+This spell gives its caster a special defense vs evil aligned monsters
+or evil aligned players.  This spell will only last a limited time so
+be wary.
+
+      /=LEVEL=COST SP=XP COST=\
+      |   1  |   25  | 50,000 |
+      |   2  |   25  |500,000 |
+      \=======================/

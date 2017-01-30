@@ -1,0 +1,195 @@
+#include "/players/pestilence/define.h"
+inherit "room/room";
+
+#define num_skill 7
+int minexp,expcost,expcost2;
+int current;
+object guild_ob;
+object owner;
+
+reset(arg) {
+        if(!present("templar_trainer")){
+                owner = clone_object("/players/pestilence/closed/dark/mob/trainer.c");
+                move_object(owner, this_object());
+        }
+        if (arg) return;
+        set_light(0);
+        long_desc =
+        "  This is the training hall of the Dark Order.  Large Stone blocks\n"+
+        "sit in the corners of the room.  This part of the cave is somewhat\n"+
+        "larger than the rest, partly to give more room for training.  A\n"+
+        "member of the guild wishing to train, would only have type advance.\n";
+        items = ({
+                  "blocks","Large stone blocks, that appear to have been assualted with weapons",
+                  "stone blocks","Large stone blocks, that appear to have been assualted with weapons",      
+                  "stone","Large stone blocks, that appear to have been assualted with weapons",
+                  "cave","A large cave encased in stone",
+        });
+        
+        dest_dir = ({
+                        "/players/pestilence/closed/dark/room/hall2.c","west",
+        
+});
+}
+
+short() {
+    return ""+HIK+"Dark Cave"+NORM+"";
+}
+
+init(){
+        ::init();
+if(this_player())
+if(present("warrior_gob", this_player())) return;
+        add_action("cost_for_level"); add_verb("cost");
+        add_action("advance"); add_verb("advance");
+}
+
+exit(){    if(this_player()) this_player()->clear_fight_area();     }
+
+
+
+
+
+
+
+int next_level;
+int valexp;
+int next_exp;
+int title;
+int rankxp;
+int combatxp;
+int level;
+int exp;
+object player_ob;
+int exp_str;
+
+advance(str) {
+        if (this_player()->query_guild_name() != "Dark Order") {
+                write("You do not belong to this guild.\n");
+                return 1;
+        }
+        
+
+        if(!str) {
+                write("advance rank or combat\n");
+                return 1;
+        }
+        if(!present("templar_trainer", this_object())){
+                write("You do not see a trainer here.\n");
+                return 1;
+
+        }
+        
+        if(str=="rank") {
+guild_ob=present("dknight_ob",this_player());
+                if(!guild_ob) {
+                        write("You do not have the mark of the Dark Order.\n");
+                        return 1;
+                }
+                current = this_player()->query_guild_rank();
+                if(current > 7) {
+                        write("You have reached the highest rank of the Dark Order.\n");
+                        return 1;
+                }
+                expcost = get_rank_exp(current + 1)-get_rank_exp(current);
+                if(this_player()->query_extra_level() < 1 && this_player()->query_level() < 21)
+                minexp = this_player()->query_exp() - call_other("room/adv_guild", "get_next_exp",this_player()->query_level()-1);
+                if(this_player()->query_extra_level() > 0 && this_player()->query_level() < 21)
+                minexp = this_player()->query_exp() - call_other("room/exlv_guild", "get_next_exp",this_player()->query_extra_level()-1);
+
+                if(this_player()->query_level() > 20) minexp = 7000000;
+                if(expcost > minexp) {
+                        write("You do not have enough available experience to to advance your rank.\n");
+                        return 1;
+                }
+                this_player()->add_guild_rank(1);
+                this_player()->add_guild_exp(expcost);
+                this_player()->add_exp(-expcost);
+                this_player()->save_me();
+                write("You advance your rank within the Dark Order.\n");
+                say(this_player()->query_name()+" advances within the Dark Order.\n");
+                return 1;
+        }
+        if(str=="combat") {
+                guild_ob=present("dknight_ob",this_player());
+                if(!guild_ob) {
+                        write("You do not have mark of the Dark Order.\n");
+                        return 1;
+                }
+                if(guild_ob->query_combat() > 7) {
+                        write("You have reached the highest combat level within the Dark Order.\n");
+                        return 1;
+                }
+                expcost2 = get_combat_exp(guild_ob->query_combat() + 1)-get_combat_exp(guild_ob->query_combat());
+                if(this_player()->query_extra_level() < 1 && this_player()->query_level() < 21)
+                minexp = this_player()->query_exp() - call_other("room/adv_guild", "get_next_exp",this_player()->query_level()-1);
+                if(this_player()->query_extra_level() > 0 && this_player()->query_level() < 21)
+                minexp = this_player()->query_exp() - call_other("room/exlv_guild", "get_next_exp",this_player()->query_extra_level()-1);
+                if(this_player()->query_level() > 20) minexp = 7000000;
+               if(expcost2 > minexp) {
+                        write("You do not have enough available experience to to advance your rank.\n");
+                        return 1;
+                }
+                present("dknight_ob", TP)->add_combat(1);
+                this_player()->add_guild_exp(expcost2);
+                this_player()->add_exp(-expcost2);
+                this_player()->save_me();
+                command("dsave",this_player());
+                write("You raise your combat skills.\n");
+                say(this_player()->query_name()+" raises their combat skills.\n");
+                return 1;
+        }
+}
+
+correct_level(player)
+{ 
+        level = call_other(player, "query_level", 0);
+
+        exp = call_other(player, "query_exp", 0);
+        /* Shouldn't "correct" wizards. */
+        if (level >= 20)
+        return;
+        get_level(level);
+        while (exp < next_exp) {
+                level -= 1;
+                get_level(level);
+        }
+        if (next_level == 20 && call_other("room/quest_room", "count", 0))
+        next_level = 19;
+        call_other(player, "set_level", next_level);
+        call_other(player, "set_title", title);
+}
+
+realm() { return "NT"; }
+
+cost_for_level() {
+        call_other("room/adv_guild","cost_for_level",0);
+        return 1;
+
+}
+get_rank_exp(arg) {
+        rankxp=allocate(10);
+        rankxp[1] = 0;
+        rankxp[2] = 90000;
+        rankxp[3] = 200000;
+        rankxp[4] = 450000;
+        rankxp[5] = 800000;
+        rankxp[6] = 1500000;
+        rankxp[7] = 2250000;
+        rankxp[8] = 3000000;
+        return rankxp[arg];
+}
+get_combat_exp(arg) {
+        combatxp=allocate(10);
+        combatxp[1] = 0;
+        combatxp[2] = 15000; 
+        combatxp[3] = 60000;
+        combatxp[4] = 140000;
+        combatxp[5] = 460000;
+        combatxp[6] = 800000;
+        combatxp[7] = 1175000;
+        combatxp[8] = 1600000;
+        return combatxp[arg];
+}
+
+

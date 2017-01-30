@@ -1,0 +1,21 @@
+[============================================================================]
+
+COMMANDS:                  DESCRIPTION:
+---------                  ------------
+assess <who>               Get some info about monster/player
+battlescore, bsc           Engages battlescore
+change <weapon>            Change a weapon into a Paladin weapon
+combat <method>            Sets your combat method
+continual light            Create a light source     
+dispell light              Extinguishes your light source   
+finger <player>            Get information about player
+(ge)mote <message>         Emote a message to unmuffled guildmembers
+(gt)ell/-<message>         Sends a message to unmuffled guildmembers
+gwho                       Lists guildmembers currently logged on
+gtitle                     Set guild title and alignment title
+(id)entify <object>        Will tell you if the weapon or shield 
+                           uses paladin bonuses
+track <who>                Start tracking monster/player
+lose track                 Stop tracking
+
+[============================================================================]

@@ -1,0 +1,82 @@
+
+Saving Objects 10-1-96
+added saving wear, 16-AUG-98
+updated with wear functions, 17-AUG-98 -Bp
+added locker saving separators, 17-Nov-2002 -Bp
+ 
+All storage systems MUST conform to the hotel and/or locker standards or
+be removed from the game.
+ 
+To flag an object such that it will NOT save:
+If using /obj/weapon , /obj/armor , /obj/treasure , etc cloned from a room
+use: call_other(object, "set_save_flag", 1);
+If the object has its own file, use:
+    query_save_flag() { return 1; }
+
+
+
+
+If you have your own personal generic objects like armor and weapon
+please read and follow this section.
+The hotel uses save_object to store everything. So the following applies.
+You need to add the following code:
+
+generic_object() {return 1;}
+restore_thing(str){
+      restore_object(str);
+      return 1;
+   }
+save_thing(str){
+      save_object(str);
+      return 1;
+   }
+if armor,weapon,or treasure is NOT inherited or included by your
+generic object you must copy the save_thing and restore_thing
+functions into your generic object.
+NOTE: Driver modifications were needed to adjust the security for the hotel
+to save generic objects of other wizards. It is most desirable then that you
+use the locker method, however if you do wish to or need to save generic
+items in your saving facility please see boltar about having your save
+path added to the list of where save_object() can write too.
+ 
+The lockers use a write_file system for storage. To save variables there
+you must use the following convention.
+The object must have the function locker_arg() which will return a string
+to be stored after the filename like the quicktyper does in auto_load.
+On restore end there must be the function locker_init(str) which will take
+the string and restore the variable values. The format for the string
+and how you use it to save/restore the variables is totally up to you.
+One rule however, the lockers use the following pattern to sscanf, 
+filename#arg$hits@misses to save items. hits and misses are integers
+for wear on weapons. (for non weapons the functions can be used 
+for other purposes) Please avoid using #,$,@ in your locker arg
+as that may corrupt the restoration of the item.
+
+Items with charges must either save their variables (ie the number of 
+charges remaining) or NOT save at all.
+
+If your object supports only the hotel convention of saving object variables
+use: query_save_flag() { return 2; }
+If your object supports only the locker convention of saving object variables
+use: query_save_flag() { return 3; }
+if both are supported, no save_flag is needed.
+
+If your saving area DOES NOT support any variable saving, all you need
+to do is check the object being saved for the existance of locker_arg()
+or generic_object(). If one of these exists, the object must not save.
+the code will be like the following:
+
+if(ob->locker_arg() || ob->generic_object()) { 
+  write("That object cannot be stored.\n");
+  return 1;
+}
+
+In order to better balance the mud, any stored weapons must save
+their wear value. This needs to be done in a specific way as to not 
+increase load on the mud. The wear value must be saved in the same
+'master-file' that stores all of the items a player stores. This
+is to keep save files to a minimum. 
+
+The wear value is saved as hits and misses. Save both these values.
+At storage, query_misses() and query_hits(). At restoration,
+set_misses(arg) and set_hits(arg).

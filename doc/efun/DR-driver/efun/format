@@ -1,0 +1,24 @@
+SYNOPSIS
+	string format( string text)
+	string format( string text, int linewidth)
+
+DESCRIPTION
+	Formats the given string 'text'.
+	This function inserts '\n' in the string, so that the formatted
+	string will at least have one '\n' for every linewidth characters.
+	Words are _not_ chopped into pieces, '\n' is inserted only when
+	a ' ' is encountered. No hyphenation, of course.
+	If linewidth is not specified, TEXT_WIDTH is used.
+	TEXT_WIDTH cannot be changed, and is probably set to 70.
+
+EXAMPLE
+	format( "An example of how nice format() is. Note that it handles\
+	newline\nvery well.\n", 40);
+	/* result:
+	"An example of how nice format() is.\n\
+	Note that it handles newline\n\
+	very well.\n"
+	*/
+
+SEE ALSO
+	print(E), pad(E)

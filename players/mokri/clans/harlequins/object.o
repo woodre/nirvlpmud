@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A[1;35m G[1;36me[1;31mm[0m studded belt (worn)[0m"
+long_desc "This is an elaborately gemmed belt of the Harlequins, also known asa flip belt, it grants the wearer the ability to be more agile thenthey would otherwise be.  It also marks the wearer as a member ofthe harlequin masques - Servants of the Laughing God and baneto the daemonic.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "belt"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is an elaborately gemmed belt of the Harlequins, also known asa flip belt, it grants the wearer the ability to be more agile thenthey would otherwise be.  It also marks the wearer as a member ofthe harlequin masques - Servants of the Laughing God and baneto the daemonic.[0mType 'clan_help' for commands."
+clan_short "A[1;35m G[1;36me[1;31mm[0m studded belt (worn)[0m"
+damage_type "laser"
+hall_path "/room/sunalley1"
+object_name "belt"
+owner "solitare"
+spell_alias "hkiss"
+spell_mess_me "You spin about gracefully,%newline% point at %AKN%%newline% and %hi red%impale%normal% them upon an %hi cyan%etheric%normal% lance."
+spell_mess_room "%TPN% spins about gracefully,%newline% points at %AKN%%newline% and %hi red%impales%normal% them upon an %hi cyan%etheric%normal% lance."
+spell_mess_them "%TPN% spins about gracefully,%newline% points at you%newline% and %hi red%impales%normal% you upon an %hi cyan%etheric%normal% lance."
+abilities ({})
+chan_history ({"[Thu Jun 16 22:45:20 2011] Fitz raises an eyebrow.","[Thu Jun 16 22:45:56 2011] Lyric wonders aloud, \"Where did you wander, m'lord?\"","[Thu Jun 16 22:46:12 2011] Fitz: And was there a cat?","[Thu Jun 16 22:48:00 2011] Solitare draws in a soft breath, and lightly draws in the air, illuminous cities flash then fade, worlds aflame, Elyisum fields...","[Thu Jun 16 22:48:30 2011] Lyric drops into a graceful curtsey as she offers, \"Well, then, welcome home, m'lord.\"","[Thu Jun 16 22:48:42 2011] Fitz: Yep, there was definitely a cat.","[Thu Jun 16 22:52:02 2011] Solitare taps his mask which appears to be leonine, for the moment.","[Thu Jun 16 22:54:25 2011] Fitz: Ah.  There's some rule about your masks that nobody told me?","[Thu Jun 16 22:55:09 2011] Solitare chuckles silently.","[Tue Jul 12 22:23:28 2011] Alexis: @Testing","[Tue Jul 12 22:26:00 2011] Alexis: Thank you, darling!","[Fri Sep  2 21:27:48 2011] Shojiro: heh","[Sat Jan 25 18:40:12 2014] Illarion has joined the clan!","[Sat Jan 25 18:41:26 2014] Alexis has promoted Illarion to a clan leader!","[Sat Jan 25 18:41:38 2014] Illarion: bwahahahahahaha","[Sat Jan 25 18:42:14 2014] Alexis rolls her eyes.","[Sat Jan 25 18:46:26 2014] Lyric has joined the clan!","[Thu Aug  4 23:40:50 2016] Ahzrei: testing","[Sat Aug 13 21:16:14 2016] Ahzrei: hmm","[Wed Aug 31 22:42:17 2016] Ahzrei: test",})
+leaders ({"armadillo","alexis","ahzrei","lyric","percival","obelix","illarion",})
+join_type 1
+private_coffer 1900000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 30
+last_spell_time 1470410196

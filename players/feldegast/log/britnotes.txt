@@ -1,0 +1,68 @@
+Kadath Notes
+------------
+villa2.c -
+ As twilight fallS...
+  As twilight falls, the day seems to begin over.
+ Second line, you have a tense problem again.
+Third sentence, change 'lead' to 'leads'.
+merchant.c -
+ You are using past tense for the description of the trader.
+ rubie?  ruby?
+ Extraneous comma in the last sentence.
+villa3.c -
+ Twlight is a typo.
+ Past tense again in the first sentence.
+ Gravestones don't have doors, but tombs, crypts, and monuments do.
+ appears
+cem1.c -
+ Past tense again.
+ When you're talking about 'their demise' are you referring to the great ones or the cursed ones?  How can they possess a crude form of socialization if they are dead?
+ How is the passage hidden if you didn't even have to search for it?
+gugs.c -
+ Put a period after forearms and make "It has..." a separate sentence.
+ Also, I think you should make the fangs appear AFTER death.
+ Why are you describing the cursed ones and the great ones in the item descriptions if they aren't really there?  You can't really look at them.
+koth.c -
+ You're mixing past and present tenses again.
+cave.c -
+ prey UPON them
+ Last sentence seems poorly phrased.  Do you mean the night watchers are found battling WITH the dwellers in the towers?
+cave1.c -
+ run -> runs
+ look -> looks
+ Make the hoof appear after the ghast dies.
+ How exactly do I get to cem2.c from cave1.c by squeezing through a crack?
+tunnel.c -
+ seem -> seems
+ hoovering -> hovering
+ I am a little curious how you can see a dark cloud hovering over a mountain, if you are in a tunnel.
+monstary.c -
+ monastary
+ You should indent the room description.
+ The first sentence doesn't make any sense.  Are you trying to say that the tunnel is thousands of feet up on the inside of a hollowed out mountain?
+ strecthed -> stretched
+ Why is a prehistoric monastary dreaded?  If there are legends about them, then technically they aren't pre-historic.
+ Why can't I go back into the tunnel here?
+monstary1.c -
+ doomed? domed?
+ Also, tense again.
+ Is this the same scimiter from the council guy?
+ About Nyar again, you need to set a spell_mess2, or else it will appear as a 0.  You can just set it to "".
+ How exactly do I get from the monastary back to the cemetary?  Why can't I see the monastary from the cemetary?
+6altars.c -
+ have -> has
+ them -> it
+had -> has
+ ticked -> ticks
+ bore -> bears
+ Put a \n at the end of the clock description.
+ altar 1-6, extraneous commas.
+ What exactly are you trying to do with the faces and the pointer?
+ You need another period in Carter's description.
+Kalia is the vamp with login and light problems.
+medallion.c -
+ It is used for sacrificial dances.
+turban.c -
+ rubie -> ruby
+ Also, you can twist off infinite rubies.  Even if you fix that, I suggest making this item unsavable so that players can't store it to bring the ruby back.
+ You could also make it so it saves whether or not the ruby is there even when its been stored, but it is complicated.

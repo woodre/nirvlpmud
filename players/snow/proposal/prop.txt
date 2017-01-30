@@ -1,0 +1,78 @@
+CREATION
+The creation process should be more of a process, where your choices count toward how your character is going to live on Nirvana. A longer creation process, with access to help files, would also let newbies get more familiar with the game before being thrown into it in the church.
+Creation affects everything else in this document.
+
+  Alignment
+The first choice should be how you want your character to live, good or evil. If good, start out at 500. If evil, -500.
+**During play**
+Changing alignment should be difficult. This means no potions, and only special events could change it. Good would be more difficult to maintain than evil, as good killing good could change alignment, but evil killing evil would not. Evil killing good could get more evil. Alignment modifications for killing should be limited to 1-5 points.
+Wizzes could code with alignment-modification as a reward. Perhaps tasks or miniquests. With a 4,000 scale, alignment modification should be limited to 100, or a maximum of 200 for something really nasty. Alignment should not decrease on heartbeat.
+This would allow more alignment-based code, and easier classification of players. For example, a shopkeeper might have higher prices for evil, or not sell at all. Or, a guild such as Templar could really tell the difference in player alignment, since alignment would have been a conscious choice and maintenance for players.
+
+Race
+The players would get detailed documentation in the creation process to determine what race they will choose.
+RACE CANNOT BE CHANGED (except in 'race change' spells such as frog curse)
+Suggest making up a standard set of races, perhaps 20 or so, perhaps dependent on the alignment the player has chosen. For example, someone who chooses evil might have access to 'goblin' whereas good would not.
+Race would modify possible sex and stats characteristics.
+Some examples of races could be: Human, elf, gnome, dwarf, halfling, half-elf, orc, gnoll, goblin, kobold, giant, ogre, faerie, incubus, succubus, troll, minotaur, thri-kreen, drow, half-orc, etc.
+Human could have stat maxes of 20 in everything, but no special abilities.
+Gnome would have infravision, strength max of 18, stealth max of 22, for example.
+Giant would have stamina and strength max of 25, but stealth, wisdom, and intelligence maxes of 10.
+
+Each race would be special. Some may have the infra-vision, race spells, skills, size, weight, ability restrictions or bonuses, death restrictions or bonuses, damage type resistances etc etc. This will make choosing a race important, and worthwhile.  Each will need a special help file which can be accessed in the creation process. A couple of normal would be good with the rest exotic.
+
+  Sex
+Male, female, androgynous, multi, asexual... possibilities depending on race (perhaps one race is all multi, or another only female)
+
+  Base Stats
+Guilds should depend on stats, not modify them. Some races would be better for some guilds than others. Different races would already have different minimum and maximum stats.
+Perhaps player could allocate a set number of points to stats during the creation process.
+It should be more challenging to increase stats, to increase differences between players and give people more to strive for. The curve should be more pronounced (e.g. raising strength from 5 to 6 would be easy, but from 15 to 16 would be very hard).
+There should be another stat dealing with player->npc relations, such as 'charisma'. This would allow more possibilities for wizzes and more interesting areas (different prices, different responses to questions, could relate to aggressiveness as well).
+In relation to the base lib modifications, stats should affect combat with more significance. With separate 'hit' and 'damage' in combat, stealth could modify hitting ability and strength could modify damage. Other stats could come into play as well.
+
+PLAY SECTION 1
+  Death
+When a player dies, there should be several options. One, praying in the church, would be available to everyone but probably the least beneficial. A second, resurrection by a high-level healer, would modify xp lost by the death. This would give high level healers a use and would make people happier.
+The current proportion of exp lost should be examined. Perhaps a maximum of 1 million exp lost on a death, to keep high level players playing. This is related to the pk section as well.
+There is nothing more disheartening to a newbie player than death (especially unpredictable death). Newbies could get a 'teleport to church' option when dead, or some brief message explaining various options, to make things slightly easier. Suggest no experience loss from death if experience is less than 5,000. Since missile comes at level 5 (5,885 exp), players would find it difficult to abuse this and it would be more fun for the lowest levels.
+
+  Experience
+This should be coordinated closely with the monster group in terms of monster exp. There should be large monsters worth a lot of exp.
+Different guilds should be allowed to gain exp in different ways, as they are now in healers.
+There is no real reason to expand the level system, as 21 extra levels should be enough. Usually, players get into a killing system and, with more experience, do not attack more powerful monsters or do anything more interesting, and get more and more exp. This is fine but there is no point in expanding the level system for players who take no risks (we will have the same players, but at extra level 40, in killing zones).
+
+PLAY SECTION 2
+  Heals
+*This is a touchy subject, as it would decrease killing power*
+Heals are out of hand right now. Just about any player can kill just about any monster, due to almost unlimited carrying power and supply of heals.
+With a comprehensive change of the mud, perhaps players can accept a change in heals.
+Large-scale healing should be confined to magical items. Eating food is not likely to heal, except over time. Eating food and drinking beverages could work similarly to alcohol, in that healing rate goes up, but combat effectiveness goes down when stuffed or soaked.
+There should be a large capacity for healing guilds.
+At the very least, combat effectiveness should be decreased when stuffed and soaked (someone with a very full stomach and bladder would not fight as well).
+
+  Money
+This is another section with close ties to the monster group.
+We should make a standard cost matrix for general items, based on craftsmanship and materials. A simple bronze dagger should not be worth more than a steel longsword, if only because of the metal value.
+Magical items should be specified as such, and worth more than they would otherwise be. Still, a gold staff of striking would be worth more than a wooden staff of striking, given the same amount of magic.
+
+PLAY SECTION 3
+  Guilds
+Need more guilds.
+Guilds should depend more on stats.
+There should be a set of generic guilds for players who don't really want to role-play, such as 'fighter' and 'mage'.
+Approval process should be streamlined a bit, with senior wizzes able to approve guilds for beta testing (final approval would stay with the very highest levels).
+
+  Spells
+Should allow option for damage types (and corresponding resistances)
+Could have races with innate resistances
+Most spells should have casting times
+Should remove damage cap restrictions (restrict at approval) to allow for good spells outside of heal_self.
+Restrict teleportation and calm spells by theme (i.e. cybers should not have a calm spell). Teleportation and calm spells should be 'special' abilities, not standard guild spells.
+The mud game spells throw off theme quite a bit. It is very difficult to make a 'mage' guild that can cast spells as effectively as a standard player of level 15, not to mention extralevel 5. An unguilded player can wear any armor, wield any weapon, and cast a maximum legal efficiency (1 cost per random(2) damage) spell per heartbeat.
+
+With standard mud guilds of fighter and mage (standard meaning no entrance restrictions, probably no guild channel, no alignment or conduct restrictions, etc), players could choose to cast spells (and have restrictions on armor and weapons), or wield any weapon and wear any armor (but not cast spells). The standard mud spells could be removed (so truly no-guild players would be like fighters with no special abilities -- this is reasonable since they have no cost or restrictions). Of course, racial abilities, strength and stealth bonuses, etc would all work regardless of guild.
+
+CONCLUSION
+If we make changes to the mud in accordance with the above suggestions, there will be a lot more choices and variety for players. The changes would make the mud much more interesting without, in most cases, restricting players. In many cases, it will increase options and playability.
+Each of the sections in this document will require more detail and code for implementation. If the general idea is adopted, we can fill in what is needed.

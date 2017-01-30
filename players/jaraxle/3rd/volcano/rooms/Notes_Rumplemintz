@@ -1,0 +1,7 @@
+Removed trailing ; from all include statements in every file in this
+dir.  10/06/2006
+
+Changed get_random_mob in room_desc.h and changed every file that called that
+function to have it check for present mobs first - 1/29/2014
+
+--Rumplemintz

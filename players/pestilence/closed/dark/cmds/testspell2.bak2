@@ -1,0 +1,42 @@
+status main(string str) {
+  object target;
+  string tname;
+  int str_bonus;
+/* 
+ str_bonus = present("dknight_ob",this_player())->query_combat();
+*/
+
+  if (this_player()->query_guild_rank() < 6) {
+    write("You are not high enough level to do that.\n");
+    return 1;
+  }
+  if (this_player()->query_sp() < 45) {
+    write("You do not have enough spell points for that.\n");
+    return 1;
+  }
+  if (!str && !this_player()->query_attack()) {
+    write("Unleash Destruction on what?\n");
+    return 1;
+  }
+  if (this_player()->query_attack())
+    target = (object)this_player()->query_attack();
+  else
+    target = present(str, environment(this_player()));
+  if (!target) {
+    write("Unleash Destruction on what?\n");
+    return 1;
+  }
+  if (!this_player()->query_attack()) this_player()->attack_object(target);
+  if (target) {
+    /* Evaluate name here, in case it gets killed before the messages
+       get generated */
+    tname = (string)target->query_name();
+    target->hit_player(45, "other|evil");
+  }    
+  else
+    return 0;
+  this_player()->add_spell_point(-30);
+  write("You D E S T R O Y "+tname + ".\n");
+  say(this_player()->query_name() + " D E S T R O Y S  " + tname + ".\n");
+  return 1;
+}

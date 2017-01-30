@@ -1,0 +1,32 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/uberdead/hall/r1","up","/players/mokri/clans/uberdead/hall/r2","down",})
+short_desc "[1;30mAn evil tower shrouded in darkness[0m[0m"
+long_desc "[1;30mThis is a tower, built solely from the dark magic bound within the[0m[1;30mpowers of Sickness, the Minister of Souls. The tower seems to extend[0m[1;30mupwards forever, and shadows flit around everything. In the center[0m[1;30mof this entryway is the Necronomicon, on a black onyx pedestal, and[0m[1;30mmany books line the shelves on the walls, all filled with words of[0m[1;30mthe darkest of magics. There is also a spiral staircase upwards,[0m[1;30mand a magically sealed trapdoor leading down.[0m[0mType 'exit' to leave."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0

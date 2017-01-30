@@ -1,0 +1,114 @@
+This is LPMud version 3.0-DR (Darker Realms' version).
+
+This version should run with any existing mudlib of version 2.4.x or
+above if run in compatibility mode, although the compiler is a bit 
+more picky, so you might find some actual syntax errors in your code 
+that 2.4.x allowed to slip by.
+
+Please read the README.3.0 file, and DONE, for information on new
+functions and abilities of 3.0.
+
+In addition, please edit the Makefile and config.h, and change the path names
+to be appropriate paths, and make a 'secure' directory wherever you untarred
+the game, to place your security.h file.
+
+
+New to 3.0-DR:
+
+You now have the ability to have "privilege" hosts, that can get into
+the game even if the game is full to 'mortals'.  In config.h, you'll
+see the #define's MAX_PLAYERS and MAX_MORTALS.  MAX_MORTALS is used for
+the maximum number of players, excluding priv users, you will allow
+on your mud.  MAX_PLAYERS is the total number of users ever that can be
+on your mud.  Right now these are set to 40 and 32, meaning that 32 
+non-priv players can be on, and at least 8 priv people can be on.  Please
+look at the function priv_host() in comm1.c, and put the appropriate 
+hex representation of the ip address for each priv host you want.  If
+you don't care to use this feature, comment out the #define MAX_MORTALS
+in config.h.
+
+   Example:  Say you have 31 players on, and 9 priv people.  The game
+       is full to everyone.  If a players logs out, someone can take
+       their place, that being a priv player or a mortal.  Now, say
+       you have 32 players and 8 priv people, and a priv person logs
+       out. No more players can log in, since the number of players is
+       32, which is max. 
+
+attributes  --  The functions add_attribute, query_attribute, delete_attribute,
+                and get_attribute, have been added for dynamic manipulation
+                of properties on objects.  To get the full benifit of these,
+                your  mudlib will probably have to be rewritten to use them.
+                (like add a property "NT" for no teleport realms).
+
+files(path) --  This primative returns an array of all the files in a directory.
+
+grab_file(path) -- This returns an array of a file, one line per element.
+
+format(str, width) -- formats str to width characters, putting \n's in the 
+                      string when necessary.  Default width (configurable in
+                      config.h) is 70.
+
+print(str, width)  -- write(format(str, width))
+
+in_editor(ob) -- returns true if ob is in the editor.
+
+possessive(ob) -- returns "his", "her", or "its" depending on the
+                  return value of query_gender() on ob.  default would
+                  be "its".
+objective(ob)  -- returns "him", "her", or "it".
+subjective(ob) -- returns "he", "she", or "it".
+
+remove_interactive(ob) -- forces ob to go net-dead.
+
+memused() -- returns the amound of memory being used, if using smalloc.c
+
+searcha() -- has been overloaded to take a string as it's first argument.
+             also, index(str, char, start) is also there, which is identical
+             to searcha(str, char, start)
+
+extract() -- has been overloaded to take an array for the first argument, 
+             as well as the string.
+
+explode(str, "") now works, and creates an array of size strlen(str), 
+             with each element being a letter in the string.  The types
+             of each element is a string.
+
+add_action(fun, verb, matchlength) -- This will allow for "abbreviated" matches,
+             or rather, any common beginning substring of matchlength characters
+             or more will match.
+
+             For example, if you did 
+
+                add_action("function", "command", 3);
+ 
+             com  comm  comma  comman  command
+
+             would all match, and call function.  
+
+             This new style will break the old add_action(fun,verb,flag)
+             style, so I have made allowances for that with a 
+             #define OLD_ADD_ACTION in config.h.  If you don't use this
+             old style, use the new one, it's much more useful. :-)
+
+addition works on arrays, as does the += operator.
+
+Many memory leaks have also been fixed.  Memory structures have been 
+packed down, to reduce size.  You may or may not see a size decrease,
+however, due to the way some machines align structures.  (Sparcs will
+not see a reduction, but both a Sun3, HP 9000/300, and a NeXT saw
+some size reduction) Also, this version compiles with no problems under 
+HPUX.  I am currently working on porting this to a NeXT.
+
+LPMud.doc.me isn't in this distribution for some reason.  I'll 
+get it from alcazar.cd.chalmers.se, and put it up for ftp on 
+worf.tamu.edu.
+
+If you have any questions, or find a function that is in 2.4.5-D that 
+isn't supported, please mail me at john@stat.tamu.edu.
+
+I added the trace() efun, although I have no idea what it's supposed 
+to do.  *chuckle*
+
+I will try to go through an document ALL the efuns available in 3.0
+whenever I get the chance.  If anyone out there wants to do this, please
+feel free. 

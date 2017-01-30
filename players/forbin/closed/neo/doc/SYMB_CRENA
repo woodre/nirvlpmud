@@ -1,0 +1,48 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+     CREATION SKILLS
+SKILL
+LEVEL  NAME           AFFECT 
+  1    Shape Armor    Allows player to create 6 types of armor from dark matter
+                      Main armor of AC 2 and helm, misc, boots, bracers and 
+                      amulet of AC 1 - total AC = 7
+         cost=  10 sps & 35 MP for main
+                10 sps & 25 MP for helm, misc, boots, bracers and amulet
+  2    Alarm          This ability allows the player to implant a piece of dark
+                      matter at a specific location.  This dark matter acts as
+                      an alarm and lets the player known with the first other
+                      player besides him or herself enters the area.  A player
+                      may have 3 active alarms.  Alarms autodest after 20 mins.
+         cost=  10 sps
+                3 MP
+  3    Create Item    Player creates a ball of dark matter than can be shaped 
+                      into a piece of armor (main, helm, misc, boots, bracers
+                      or amulet) or a weapon (sword, axe, tridet, spear, mace).
+                      The Items AC or WC is the maximum for the players level
+                      minus 2.
+         cost=  100 sps
+                 75 MP
+  4    Webshield      Allows a player to create a temporary shield.  This shield
+                      takes 1/6 of the damage against the player each round, and
+                      can absorb up to (3*CRE)+random(GLVL*2) damage before it
+                      is destroyed.
+         cost=  50 sps
+                25 MP
+  5    Camouflage     Allows the player to mimic their surroundings, thus 
+                      becoming invisible and silent)
+  6    Create Sphere  Creates a ball that can be used as a heal, attack spell,
+                      or to transfer mp from one symb to another.
+         cost=  50+AMOUNT sps (where AMOUNT is the requested amount of damage or
+                               healing value)
+                50 or TRAN MP (where TRAN is the requested amount of MP value)
+         damage=  (((AMOUNT-(AMOUNT/10))*3/4)+random(((AMOUNT-(AMOUNT/10))/4)
+         heal= (((AMOUNT-(AMOUNT/10))*3/4)+random(((AMOUNT-(AMOUNT/10))/4) hps
+         transfer= (((TRAN-(TRAN/10))*3/4)+random(((TRAN-(TRAN/10))/4) MP
+  7    Left Open for future expansion.
+  8    Animate        This ability allows the player to create a dark matter
+                      clone from a corpse.  This is basically a weak pet that
+                      may or may not help the player fight.
+         cost=  100 sps
+                75 MP
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

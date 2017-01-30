@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[0mA jagged [31mscar [0mabove the left [1;32meye.[0m"
+long_desc "[0mA jagged [31mscar [0mabove the left [1;32meye.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "scar"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[0mA jagged [31mscar [0mabove the left [1;32meye.[0mType 'clan_help' for commands."
+clan_short "[0mA jagged [31mscar [0mabove the left [1;32meye.[0m"
+damage_type "mental"
+hall_path "/players/mistress/sci_fi/star_wars/entrance"
+object_name "scar"
+owner "valen"
+spell_alias "center"
+spell_mess_me "%hi white%Your body and mind become one in purpose. %normal%You attack %AKN% with a %red%Vengeance!"
+spell_mess_room "%TPN%'s %hi white%Your body and mind become one in purpose%normal%You attack%AKN% with a %red%Vegenance"
+spell_mess_them "%TPN%'s %hi white%Your body and mind become one in purpose%normal%You attack%AKN% with a %red%Vegenance"
+abilities ({})
+chan_history ({"[Sun Jul 20 22:15:26 2008] Valen: clan_board","[Wed Jul 23 16:29:13 2008] Valen has promoted Jake to a clan leader!","[Tue Aug  4 00:27:33 2009] Auron has joined the clan!","[Tue Aug  4 00:27:47 2009] Valen: clan_board","[Tue Aug  4 00:28:03 2009] Auron: I assume this has to do with your transcendence?","[Tue Aug  4 00:28:05 2009] Valen: For information on the Clan.  Stuff like how to get the clan hall.","[Tue Aug  4 00:28:09 2009] Valen: yes.","[Tue Aug  4 00:28:31 2009] Valen: So, you can grab some of the gear in there.","[Tue Aug  4 00:28:45 2009] Valen: heals and stuff in the community lockers.  Don't get lost.","[Tue Aug  4 00:31:01 2009] Auron: are the directions to the clan hall from the entrance to the dojo?","[Tue Aug  4 00:31:17 2009] Valen: Those directions are from the green.","[Tue Aug  4 00:32:33 2009] Auron: understood","[Tue Aug  4 00:49:58 2009] Auron: it appears as if the arsenal has been depleted emperor","[Tue Aug  4 00:51:16 2009] Auron: my apologies, I appeared to have gone to the wrong storage area","[Mon Aug 10 00:06:32 2009] Auron: Evening valen","[Fri Aug  5 02:38:44 2011] Konner has joined the clan!","[Fri Aug  5 02:38:48 2011] Glaxgor: welcome","[Thu Feb 21 07:58:24 2013] Jake: duh","[Mon Aug  4 20:16:43 2014] Glaxgor: having fun?","[Sat May  9 10:20:50 2015] Arsenal has joined the clan!",})
+leaders ({"squint","glaxgor","kamikaze","chiele","tirnok","claude","u","donkey","troy","jake",})
+join_type 0
+private_coffer 213790
+public_coffer 0
+spell_delay 2
+spell_id 1
+spell_cost 25
+last_spell_time 1388452601

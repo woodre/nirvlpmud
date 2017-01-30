@@ -1,0 +1,76 @@
+#include "/players/snow/dervish/def.h"
+
+sandblast(str) {
+  object ob, myob;
+  object shld;
+  int obwc, obac;
+  int saved_ac;
+  if(!TP) return;
+  if(TP->query_level() < 19  || TP->query_extra_level() < 10) {
+    write("You are not high enough level to sandblast yet.\n");
+    return 1; }
+  if(TP->query_ghost()) {
+    write("You cannot sandblast while you are a ghost.\n");
+    return 1; }
+  if(TP->query_sp() < 70) {
+    write("You lack the energy to sandblast.\n"); return 1; }
+  if(TP->query_attrib("pie") < 20) {
+    write("You lack in faith.\n"); return 1; }
+  if(environment(TP)->query_no_fight()) {
+    write("You can't use that ability in this room.\n"); return 1; }
+  myob = present(GID, TP);
+  if(!myob) return;
+    if(myob->query_spell_delay()) {
+    write("You cannot cast a spell again so soon.\n"); return 1; }
+  if(!str && !TP->query_attack()) { write("Sandblast what?\n"); return 1; }
+  if(!str) ob = TP->query_attack();
+  if(!ob) ob = present(str, environment(TP));
+  if(!ob || !present(ob, environment(TP)) ) {
+    write("You can't see "+str+".\n"); return 1; }
+  if(!living(ob)) {
+    write("You cannot sandblast inanimate objects.\n"); return 1; }
+  if(ob->is_player()) {
+    write("You cannot sandblast players.\n"); return 1; }
+/* Prevent players from triggering the spell on a monster that's
+ * below 15% health and already fighting someone else.
+ * Illarion 10/30/02
+ */
+  if(ob) if(!myob->check_dervish_attack(ob)) {
+    write("The sands stay your arm, and bid you find a worthy opponent.\n");
+    return 1;
+  }
+
+  write(BOLD+YELLOW+"\tYou shudder with the power of the Sand!\n"+
+        "\tStreams of glowing particles whip into "+
+        ob->query_name()+"!\n\n"+OFF+OFF);
+  say("\t"+BOLD+YELLOW+TP->query_name()+" shudders with power!\n"+
+            "\tStreams of glowing particles whip into "+
+            ob->query_name()+"!\n\n"+OFF+OFF);
+  ob->hit_player(random(40) + 30, "other|earth");
+  /* myob->set_spell_delay(random(50)+20);
+  */
+ if(ob && !present("derv_ac_mod", ob))
+ {
+  ob->set_ac(ob->query_ac()-(saved_ac=(TP->query_extra_level()/20)));
+ }
+  myob->set_spell_delay(120-
+   (TP->query_attrib("wil"))
+   -(TP->query_attrib("pie"))
+   -(TP->query_attrib("mag"))
+   -(TP->query_extra_level()/4));
+  TP->add_spell_point(-(random(40)+30));
+/* Added by Illarion to fix a death bug 10/30/02
+ */
+  if(ob)
+    if(!TP->query_attack()) TP->attack_object(ob);
+  if(ob)
+    if(!ob->query_attack()) ob->attack_object(TP);
+ if(ob)
+ if(!present("derv_ac_mod", ob))
+ {
+  shld=clone_object("/players/snow/dervish/objects/verte_sb");
+  move_object(shld, ob);
+  shld->set_saved_ac(saved_ac);
+  shld->begin();
+ }
+  return 1; }

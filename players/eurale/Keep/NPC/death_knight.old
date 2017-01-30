@@ -1,0 +1,65 @@
+/*  Updated 10/18/01 to conform to /doc/build/RULES/monster.guide  */
+
+#include "/players/eurale/defs.h"
+inherit "obj/monster.c";
+
+reset(arg)  {
+  ::reset(arg);
+  if(arg) return;
+
+set_name("knight");
+set_alias("death knight");
+set_race("creature");
+set_short(BOLD+"Death Knight"+NORM);
+set_long(
+	"  This Death Knight resembles a hulking knight, standing nearly\n"+
+	"7 feet tall and weighing close to 350 pounds.  It's face is a\n"+
+	"blackened skull with shards of shriveled, rotting flesh.  He\n"+
+	"has two tiny, glowing red pinpoints for eyes.  His armor is\n"+
+	"scorched black as if it had been in a fire.  His demeanor is\n"+
+	"so terrifying that even kender have been known to become fright-\n"+
+	"ened of him.  His deep, chilling voice seems to echo from the\n"+
+	"depths of a bottomless cavern.  The DeathMace he carries has\n"+
+	"ended many an adventurer's life.\n");
+
+set_level(21);
+set_hp(925);
+set_al(-1000);
+if(!present("mace")) {
+move_object(clone_object("players/eurale/Keep/OBJ/death_mace"),TO); }
+init_command("wield mace");
+if(!present("gloves")) {
+move_object(clone_object("players/eurale/Keep/OBJ/hard_gloves"),TO); }
+init_command("wear gloves");
+
+set_wc(45);
+set_ac(20);
+set_heal(5,2);
+set_aggressive(1);
+set_dead_ob(this_object());
+
+set_chat_chance(15);
+  load_chat("The Death Knight grins:  hehehe!\n");
+  load_chat("A death tingle runs down your spine...\n");
+  load_chat("The DeathMace glints in the light....\n");
+  load_chat("The Knight whispers: Say your prayers!\n");
+set_a_chat_chance(15);
+  load_a_chat("The Death Knight unleashes a vicious attack..\n");
+  load_a_chat("The Death Knight screams: MEET YOUR MAKER!!\n");
+  load_a_chat("You wince from the blow of the DeathMace!\n");
+
+set_chance(10);
+set_spell_dam(40);
+set_spell_mess1(
+  BOLD+"\nThe Death Knight TOUCHES his target with an icy finger!"+NORM+"\n\n");
+set_spell_mess2(BOLD+
+  "\nThe Death Knight TOUCHES YOU with an icy finger!"+NORM+"\n\n");
+}
+
+#include "/players/eurale/closed/aggro_hb.h"
+
+
+monster_died() {
+  tell_room(environment(this_object()),
+  "\nYou have bested me this time... but "+BOLD+"I'LL BE BACK!"+NORM+"\n\n");
+return 0; }

@@ -1,0 +1,29 @@
+[HIGH MIMIC] Level [7] 75 charges (stats unchanged, no weapons, no armor)
+
+  By taking the form of a mimic, you can imitate the likenesses of objects
+  that are in your inventory or in your immediate environment. Of course
+  you will not be able to imitate other players, but pretty much anything
+  else goes. Please note that you will be able to "say" and perform limited
+  emotes not any of the game standard emotes such as "grin" and "kick".
+  REPEAT - EMOTES DO NOTHING!
+  
+  The high mimic has a better chance of avoiding detection, and again has
+  the ability to perform a limited type of emote.
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+imitate <obj>    (30 SP) Take the form of another object, as to appear in 
+                 its likeness.
+
+mimic <obj>      Same command as above :)
+
+mimic_log        Shows a listing of what other people have been mimicking
+                 recently.
+
+say <msg>        When you say something it appears through the voice of
+                 the object that you have imitated.
+
+emote <msg>      When you emote something it appears through the voice of
+                 the object that you have imitated.
+
+

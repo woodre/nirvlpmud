@@ -1,0 +1,104 @@
+/* hook safety object for vanish spell */
+inherit "/obj/treasure.c";
+#include "/players/zeus/closed/all.h"
+int ocasting, casting, duration, dmg, amt, s;
+object owner, gob, attacker;
+
+reset(arg){
+  if(arg) return;
+
+  set_weight(0);
+  set_heart_beat(1);
+  casting = 0;
+  s = 1;
+  duration = 20+random(11);
+}
+
+id(str){ return str == "shadow_embrace_obj"; }
+get(){ return 0; }
+drop(){  return 0; }
+
+set_owner(object x){ owner = x; }
+
+extra_look()
+{
+  if(environment()->is_npc() && !casting && !s)
+    return BOLD+BLK+ENV->QN+" is embraced by shadows"+NORM; 
+}
+
+heart_beat(){
+  if(!environment()) return;
+  if(!living(environment())){ destruct(this_object()); return; }
+  if(!environment(environment())) return;
+  if(!owner) return;
+  if(!(gob = present("circle_object", owner)) && casting) return;
+
+  ocasting = casting;
+  casting = gob->query_casting();
+  s = 0;
+
+  if(ocasting == 1 && casting == 0) /* success */
+  {
+    tell_room(environment(environment()), "\n"+BOLD+BLK+owner->query_name()+
+      " steps away from "+environment()->query_name()+"...\n"+
+      environment()->query_name()+
+      " has been embraced by the shadows!\n\n"+NORM);
+  }
+
+  if(!casting) /* in effect */
+  {
+    if(environment()->query_attack())
+    {
+      attacker = environment()->query_attack();
+      if(owner != attacker)
+        owner = attacker;
+    }
+    if(duration <= 0 || (gob &&
+      (gob->query_endurance() < 0 && !random(5))))
+    {
+      tell_room(environment(environment()), BOLD+BLK+"\n"+
+        environment()->query_name()+
+        " breaks free from the embrace of the shadows!\n\n"+NORM);
+      destruct(this_object());
+      return;
+    }
+    dmg = owner->query_dam_taken_this_round();
+    if(dmg > 20+random(11))
+    {
+      amt = ((dmg * (20+random(11))) / 100);
+      environment()->hit_player(amt, "other|mental");
+      owner->add_hit_point(amt);
+      tell_room(environment(environment()), "\n"+environment()->query_name()+
+        " screams as the shadows tear apart "+
+        environment()->query_possessive()+" mind!\n");
+      if(owner->query_guild_name() == "fallen")
+      {
+        gob->add_endurance(-1);
+        if(!random(3))
+          duration--;
+      }
+      else
+        duration--;
+    }
+  }
+  else if(!present(owner, environment(environment())) && casting)
+    present("circle_object", owner)->interrupt_casting(1); /* destroy PO */
+  else if(casting)
+  {
+    dmg = owner->query_dam_taken_this_round();
+    amt = ((dmg * (20+random(11))) / 100);
+
+    tell_room(environment(environment()), BOLD+BLK+"\nShadows pour into "+
+      environment()->query_name()+"!\n"+NORM);
+    
+    if(amt > 55+random(31))
+    {
+      tell_object(owner, "\n"+environment()->query_name()+
+        " knocks you back disrupting your embrace!\n\n");
+      tell_room(environment(environment()), "\n"+environment()->query_name()+
+        " knocks "+owner->query_name()+" off of "+
+        environment()->query_possessive()+"!\n\n", ({ owner }));
+      present("circle_object", owner)->interrupt_casting(1);
+    }
+  }
+}

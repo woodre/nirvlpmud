@@ -1,0 +1,13 @@
+
+                           [help display]
+-----------------------=========+=========-----------------------
+                            
+Usage: "display <x>"
+       "display <x> to <y>"
+
+Use 'display <x>' to display an item's long description to everyone
+in the room [equivalent to them looking at it].
+
+Use 'display <x> to <y>' to display an item to a particular player in
+the room.
+

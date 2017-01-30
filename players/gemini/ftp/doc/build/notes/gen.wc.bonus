@@ -1,0 +1,6 @@
+Vertebraker/Maledicta
+
+To use weapon bonus code, simply add an id of "generic_wc_bonus" to
+an object, and create a function called "generic_wc_bonus()"
+which returns a # of weapon class points.
+

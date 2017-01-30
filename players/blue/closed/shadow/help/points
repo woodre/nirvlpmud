@@ -1,0 +1,8 @@
+POINTS
+
+For using guild spells, you have spell points and shadow points.  The shadow
+points are like a spell point storing system.  Your max shadow points are 
+seven times your guild level.  By default, shadow points are drained first,
+then spell points.  You can transfer spell and shadow points ( see 'info 
+transfer' ) or heal yourself ( see 'info cure').  You can also set spell points
+to be drained first ( see 'info toggle').

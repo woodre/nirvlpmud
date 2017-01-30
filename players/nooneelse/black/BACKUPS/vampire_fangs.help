@@ -1,0 +1,126 @@
+assess <who>         Compare your strength vs a monster's            10   1
+bat <msg>            Leave a bat here to tell <msg> to anyone who
+                     comes here.  ('dismiss bat' to get rid of it)    5   1
+bite <who>           Recruit <who> into the cult (must bite 3 times)  0   15
+bury hole            Hide the hole (after you find or dig one)        0   1
+                     (Use 'search' in the same room to find it.)
+call wolf <name>     Call a wolf to help you fight                   50   10
+                     Supply a name for the wolf.
+                     ('wolf come to me' if you have one waiting
+                       somewhere) (DON'T kill it or you'll regret it)
+calm <who>           Stop fighting with <who>                        50   5
+charity <item>       Send item to the guild junk room for other
+                     members use                                     15   1
+charity              without <item> will peek into the charity room
+                     & tell you what's there                          0   1
+clairvoyance <dir>   Sneak a look into a room (or cv <dir>)          15   8
+cult news            To get the latest info for the guild             0   1
+cure disease         Cure yourself of diseases                       30   3
+damn <who>           Put a slow acting curse on <who>                30  12
+defile <what>        Destroy a holy item for experience               5   1
+demon wrath          Bring a demon's anger to all npcs in the room   50  16
+dig hole             Dig a hole to hide stuff in                      0   1
+disguise on/off      Let others see the cape & fangs or not           0   1
+[mist/bat/wolf/
+ normal] form        Change into one of these forms                   0   1
+drain corpse         Drain a corpse's energy for sp                   0   3
+emote                Emote feeling to your room                       0   1
+eyes                 See in the dark for a time                       5   1
+expell <who>         Expell a traitor/bug user & do stuff to them     0  21
+fear <who>           Cause <who> to run in fear                      25   7
+fly <direction>      Fly <direction> as far as you can (ZOOM!)        0   7
+                     (If you're in 'brief' mode the max is 30.
+                      If you're in 'verbose' mode the max is 10.)
+fly ##<direction>    Fly ## rooms to the <direction>                  0   7
+fly <direction> to <what>
+                     Fly <direction> until you find <what>            0   7
+                     (or as far <direction> as you can)
+                     [Try objects in the room & words in the room's
+                      short description.]
+fly -#<dir1>,#<dir2>,#<dir3>,...                                      0   7
+                     Fly # <dir1> then # <dir2> then # <dir3>  etc
+                     If it fails along the way, you'll teleport back
+                     to the room you started from.
+                     (You MUST have the - & the commas)
+friends              List currently playing vampires                  0   1
+glance               Quick peek at your room without seeing the
+                     entire long description                          0   1
+gohome               Turn into a bat and fly to the cult hall        40   5
+grasp <who>          Grasp an enemy and cause damage                 25  18
+health on/off        Turn health monitor on/off                       0   1
+hellfire             Bring hell fire to all npc monsters in the room 25  12
+help <tasks>         Print this help list                             0   1
+                     (<tasks> --> show the effect of the tasks)
+illusion             Leave an illusion in a room. (It will prompt
+                     you for the illusion text.)                     40  17
+infuse <who> <sp>    Transfer some sp to another vampire (There's    ??  13
+                     a chance that some will be lost in the
+                     transfer process)
+leave cult           BEWARE!! This has severe penalties!              0   1
+paralyze <who>       Keep <who> from moving for a short time         50  12
+process skins        Combine the strengths of several skins into one  0   1
+release <who>        Release <who> form cult without penalties        0  21
+repair <who>
+  task/level <#>     Fix a member's task level if it gets screwed up
+                     or set a member's guild level                    0  21
+replace <who>        Give a member a new set of fangs when theirs     0  21
+                     disappears
+remember             Remember this room ('forget' to forget them)     3   1
+reset guild exp      Reset your guild experience to beginners level
+                     so you can solve the tasks                       0   1
+sanctuary [<#>]      Toggle sanctuary on/off                          0   1
+sanctuary [on/off] [<#>] Toggle sanctuary on/off & set hp level       0   1
+                      falls below <#> at a cost of 100 sp.  it will
+                      take the 100 sp even if you don't have them,
+                      leaving you with a negative sp if necessary)
+scan <monster>       Learn the % of original hp the monster has left  5   5
+scratch <who>        Scratch an enemy and cause damage               10   1
+servant <name>       Make a servant from a corpse & name him <name>  30   5
+                     (give him an unique name ex: 'servant george')
+                     (look at him to see what he'll will do for you)
+sew skins            Make some armor from skins [tuxedo(20),
+                     silk shirt(14), top hat(12), boots(10),
+                     linen gloves(6), silk tie(4), ruby ring(2)]
+                     (#)=skin strength required                       0   1
+skin corpse          Skin a corpse and tan the hide for later use     0   1
+shadow [<who>]       Follow someone ('shadow' to stop)                0   1
+sharpen fangs        Get updated version of the fangs                 0   1
+                     (use if something isn't working in your fangs)
+solve task           Solves your current task.  (You must be in the
+                     right place to solve the task.)                  0   1
+startup              From the church, go straight to the guild        0   1
+task                 Find out what your next guild task is            0   1
+telekenetics <dir> door
+                     Attempt to open a door without a key (or tk)     5  10
+telepathy <msg>      Tell all vampires <msg> (or te <msg>)            0   1
+                     ('te on' turns it on; 'te off' turns it off)
+                     ('te buzz' buzzes Nooneelse, Nancy & Magus -
+                                if theirs are off
+                      'te buzz nooneelse' buzzes Nooneelse - if
+                                his is off
+                      'te buzz nancy' buzzes Nancy - if hers is off
+                      'te buzz magus' buzzes Magus - if his is off)
+.telepathy <who> <msg>
+                     Tell <who> vampire <msg> (or .te <who> <msg>)    0   ?
+                     (this is for those who've solved the 1st 5 tasks)
+telepathyfeel <msg>  Emote to all vampires <msg> (or tf <msg>)        0   1
+.telepathyfeel <who> <msg>
+                     Emote to <who> vampire <msg> (or .tf <who> <msg>)0   ?
+                     (this is for those who've solved the 1st 5 tasks)
+title                Set your title to the correct one for the guild  0   1
+transfer <what> to <who>
+                     Transfer an item to another player at a         25   5
+                     distance.  This also costs 10% of the item's
+                     value.  (If recipient is not a vamp, it costs
+                     them 10% too.)
+translate <what>     Sell <what> to the guild's shop from anywhere   25   5
+translate all <what> Sell all the <what>s you have                   25   5
+translate everything Sell everything you have                        25   5
+wraith form          Toggles on/off invisibility.  Duration depends
+                     on your level, ac & stealth.                    25  10
+
+
+NOTE: Several of the commands can be abbreviated to 3 letters. (experiment)
+      Also, you can use 'help <command>' to see the help on just that command.
+
+      <<Minimum levels for spells: missile=8  shock=13  fireball=18>>

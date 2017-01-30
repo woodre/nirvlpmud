@@ -1,0 +1,14 @@
+#include "/players/pestilence/ansi.h"
+
+main(object ob) {
+  string file2;
+  int tellme;
+  if(ob) tellme++;
+  file2 = "players/pestilence/closed/dark/members/" + ob->query_real_name();
+  if(!restore_object(file2)) {
+  if(tellme)tell_object( environment(previous_object()), "Dark order restoration order......\n"); 
+    return 0;
+    }
+  if(tellme)tell_object( environment(previous_object()), "Your mark of the Dark Order darkens...\n"); 
+  return 1;
+}

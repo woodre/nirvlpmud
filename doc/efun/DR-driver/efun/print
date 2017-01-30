@@ -1,0 +1,20 @@
+SYNOPSIS
+	string print( string text)
+	string print( string text, int linewidth)
+
+DESCRIPTION
+	Format the string 'text' and then write it, using the usual write efun.
+	See format(E) for details on the formatting. The only difference is
+	that linewidth must be <= TEXT_WIDTH here.
+	TEXT_WIDTH cannot be changed, and is probably set to 70.
+
+EXAMPLE
+	print( "This text was formatted before it was sent to output.\n",
+	40);
+	/* result:
+	This text was formatted before it was
+	sent to output.
+	*/
+
+SEE ALSO
+	format(E), pad(E), write(E)

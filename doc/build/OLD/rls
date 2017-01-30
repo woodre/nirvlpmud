@@ -1,0 +1,45 @@
+                    WIZARD BUILDING RULES
+                    ---------------------
+
+Healing Guidelines
+------------------
+Healing that doesn't involve intoxicating the player should cost
+approximately 60 coins per hp+spellpt healed.
+Healing that intoxicates the player normally (as per the pub) should
+cost approximately 20 coins per hp+spellpt healed.
+Healing that intoxicates the player much more than 'usual' (as per the pub)
+should cost approximately 10 coins per hp+spellpt healed.
+Healing that SEVERELY intoxicates the player may cost less than
+10 coins per hp+spellpt healed.
+Healing that does not renew spellpts may cost less.
+These guidelines are flexible, but anyone straying too far from them had
+better ask one of the Gods for permission, or else they will be in trouble.
+------------------------
+SEE /doc/build/armor AND /doc/build/weapon FOR ARMOR AND WEAPON GUIDELINES.
+------------------------
+Do not make monsters too easy relative to the amount of treasure they give,
+or make monsters worth too much experience! Anyone doing this will be
+in trouble, unless one of the Gods has okayed it. If you are unsure
+whether a monster/treasure is okay, ask a God.
+------------------------
+Wizards allowing special "wizard items" to fall into the hands of players
+will be in serious trouble. Therefore, all wizard items should have
+security features built in to prevent players from using them.
+Wizard features should only be accessable to players of level *21* or
+greater, to prevent unsponsored apprentice wizards from doing stupid things.
+------------------------
+And please, check your castles for exits that dump players into the void,
+incorrect exits, spelling/grammar errors, and items that do not have long()
+descriptions.
+------------------------
+-- Do not make 'deadly' traps. A player must never die because he didn't
+   know what happens in the next room. If some room is very dangerous,
+   make some hint (like the giant footprints beside the giant lair).
+
+-- Never initialize the destination of an object outside your castle. If you
+   make a monster that can walk out of the castle, be sure that it is a
+   very nice monster.
+
+-- Never generate messages that looks like something it isn't (good and precise
+   rule :-). That is, don't try to fool the player that someone says something
+   when it isn't true etc.

@@ -1,0 +1,82 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+
+
+RangerPower(string item_name, string type){
+   object item;
+   object *items;
+   int i;
+   int count;
+
+   if(!item_name){
+      write("You must specify an item.\n");
+      return 1;
+   }
+
+   if(!PO->QMorphed()){
+      write("You can only access your pack when you are morphed.\n");
+      return 1;
+   }
+   
+   items = "/players/beck/Rangers/Commands/Pack.c"->ListItem(TPRNAME);
+
+   if(items == 0){
+      write("You do not have any items in your pack.\n");
+      return 1;
+   }
+
+   for(i=0; i<sizeof(items); i++){
+      if(items[i]){
+         if(items[i]->id(item_name)){
+            item = items[i];
+            count += 1;
+            if(MASTER->QPowerPoints(type) < item->query_weight()){
+               write("There is not enough power to store that item.\n");
+               return 1;
+            }
+
+            move_object(item,ENV(PO));
+            MASTER->APowerPoints(-(item->query_weight()),type);
+            write("You teleport "+item_name+" from your Power Pack to your inventory.\n");
+            "/players/beck/Rangers/Commands/Pack.c"->RemoveItem(TPRNAME,item);
+            return 1;
+   
+         }
+      }
+      else {
+         "/players/beck/Rangers/Commands/Pack.c"->RemoveItem(TPRNAME,item);
+         item = 0;
+      }
+   }   
+
+
+
+   if(!(item)){
+      write("You do not have "+item_name+" in your pack.\n");
+      return 1;
+   }
+   
+   
+   
+   
+   
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   write("Your pack is a virtual storage area.\n"+
+         "You may use it to store items you do not wish to carry.\n"+
+         "Each transaction will cost some Power Points.  The heavier\n"+
+         "the item, the more power it will consume.\n"+
+         "You must be morphed to use the pack.\n"+
+         "The items remain in the pack even if you log off the mud.\n"+
+         "Items will NOT carry over a reboot cycle.\n"+
+         "Commands:\n\n"+
+         "unpack <item>             moves specified item from the pack to you\n"+
+         "");
+   return 1;
+
+}
+

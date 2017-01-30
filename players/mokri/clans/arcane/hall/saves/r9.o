@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/arcane/hall/r7","up","/players/mokri/clans/arcane/hall/r13","west",})
+short_desc "[1;33mCloning Room[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;33mA Policeman Badge[0m","/players/fred/SP/Obj/badge",0,0,0,"[0mElixir of [1;34mPower [0m[[1;33mLOW TOX[0m][0m [31m[ [36m10[0m[31m ][0m","/players/jareel/heals/YELMALIAN/ltmana","10",0,0,"[0mElixir of [1;34mPower [0m[[1;33mLOW TOX[0m][0m [31m[ [36m10[0m[31m ][0m","/players/jareel/heals/YELMALIAN/ltmana","10",0,0,"[1;32mS[1;30moul[1;32mC[1;30mleaver[0m","/players/sami/area/GPO/obj/vsword",0,243,267,"[1;32mEmerald Trident[0m","/players/eurale/Keep/OBJ/trident",0,0,0,"an oiled honing stone","/players/eurale/OBJ/honing_stone",0,1179,117,"A syringe","/players/jenny/wings/items/shot",0,0,0,"A syringe","/players/jenny/wings/items/shot",0,0,0,"A Hockey Stick","/players/jenny/wings/items/gstick",0,275,230,"[1;30mAegis-fang[0;0m","/players/nightshade/weap/hammer",0,0,0,})

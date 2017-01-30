@@ -1,0 +1,232 @@
+%->> % withdraw 40000
+%You really shouldn't be that sellfish!
+%Withdraw a smaller amount.
+%->> % withdraw 20000
+%You really shouldn't be that sellfish!
+%Withdraw a smaller amount.
+%->> %
+%You hear the clock tower chime.
+%
+%dong!  
+%
+% withdraw 10000
+%You really shouldn't be that sellfish!
+%Withdraw a smaller amount.
+%->> %dong!  
+%
+%dong!  
+%
+% withdraw 5000
+%You withdraw 5000 coins from the bank.  Good luck =)
+%->> %dong!  
+%
+% withdraw 5000
+%You withdraw 5000 coins from the bank.  Good luck =)
+%->> help wizard
+Do 'cat /doc/w/<topic>' for more information.
+
+Do 'help wiz_levels' for a list of levels necessary for certain functions.
+goto <room/player>   -- go to the specified room or player.
+cat <file>           -- look at the specified file.
+ls <path>            -- list the files in the specified directory.
+origin <obj>         -- give the object handle of the specified object.
+where <obj>          -- give the environment of the specified object.
+castle <name>        -- goes to a wizard's castle
+echo, echoto, echoall-- make the argument appear to the appropriate group.
+clone <object>       -- create the object in your inventory.
+dest(ruct) <object>  -- destroy the specified object completely.
+load <room>          -- load the specified room (or object)
+reset <object/room>  -- cause the specified object to experience a reset.
+update <object/room> -- remove the specified object and delete the .i file
+rm <file>            -- delete the specified file.
+ed <file>            -- edit the specified file.
+home                 -- take you to your workroom, if you have a workroom.c
+localcmd             -- list all commands you can currently do.
+earmuffs             -- makes you not hear shouts by players.
+cd <dir>             -- change directory (supports ~ and ~name)
+log <file>           -- cat a log file
+stat <living>        -- give statistics on player or monster.
+in <room> <action>   -- perform the action in the room.
+at <living> <action> -- perform the action at the player or monster.
+force <player> <act> -- force a player to do something.
+trans <player>       -- bring the player to you.
+zap/heal <living>    -- kill or heal the player or monster.
+snoop <player>       -- see everything the player does.
+invis <num>/vis      -- turn invisible or visible.
+wizlist              -- list wizards' rankings.
+setmmin, setmmout, setmin, setmout, setmhome, review
+                     -- deal with travel messages.
+emote <arg>          -- print your name followed by the argument in the room.
+setal, setaln        -- set the name and number of your alignment.
+people               -- list all players and their location.
+light <on/off>       -- make yourself a light source (or not).
+hands <num>          -- set your own weapon class.
+->> % withdraw 5000
+%You withdraw 5000 coins from the bank.  Good luck =)
+%->> %dong!  
+%
+% withdraw 5000
+%You want to withdraw money when you have that much already?
+%You deposit 1000 coins into the bank.
+All of the newbies cheer your name.
+%->> % withdraw 5000
+%You want to withdraw money when you have that much already?
+%You deposit 1000 coins into the bank.
+All of the newbies cheer your name.
+%->> %dong!  
+%
+%dong!  
+%
+% sc
+%
+%Dragonfly the utter novice (neutral)
+%Level: 1%
+%Coins: 13000                   Experience: 0
+%Hit points: 50/50     %        %Spell points: -17/50
+%Quest points: 0                %
+%age:   %6 minutes %0 seconds.
+%You are sober.
+%
+%->> %dong!  
+%
+%dong!  
+%
+bdt whats the prison command?
+<<Blood>> Beck says: whats the prison command?
+->> %dong!  
+%
+% withdraw 5000
+%You want to withdraw money when you have that much already?
+%You deposit 1000 coins into the bank.
+All of the newbies cheer your name.
+%->> % withdraw 5000
+%You want to withdraw money when you have that much already?
+%You deposit 1000 coins into the bank.
+All of the newbies cheer your name.
+%->> % withdraw 5000
+%You want to withdraw money when you have that much already?
+%You deposit 1000 coins into the bank.
+All of the newbies cheer your name.
+%->> % withdraw 5000
+%You withdraw 5000 coins from the bank.  Good luck =)
+%->> <<Blood>> Zeus says: imprison
+% sc
+%
+%Dragonfly the utter novice (neutral)
+%Level: 1%
+%Coins: 15000                   Experience: 0
+%Hit points: 50/50     %        %Spell points: -75/50
+%Quest points: 0                %
+%age:   %6 minutes %18 seconds.
+%You are sober.
+%
+%->> bdt thanks
+<<Blood>> Beck says: thanks
+->> <<Blood>> Zeus says: and either free or release
+% s
+%A long road going through the village.
+There are stairs going down.
+%There are four obvious exits, west, east, south and north.
+%->> % w
+%A long road going east through the village. The road narrows to a
+track to the west. There is an alley to the north and the south.
+%    There are four obvious exits:% west%,% north%,% south% and% east%
+%->> % w
+%A track going into the village. The track opens up to a road to the east
+and ends with a green lawn to the west. There is a foot path to the south
+%    There are three obvious exits:% west%,% east% and% south%
+%An item dispenser.
+%A small path to the north.
+%->> % w
+%You are at an open green place south of the village church.
+You can see a road further to the east.
+%    There are three obvious exits:% north%,% west% and% east%
+%Mustaine the CyberMechanic (neutral).
+%The Obituary Notice.
+%Announcement bulletin board(4 msgs).
+%A vending machine.
+%A Trashcan.
+%A Newbie Dispenser.
+%->> % n
+Dragonfly arrives.
+%You are in the local village church.
+There is a huge pit in the center,
+and a door in the west wall. There is a button beside the door.
+%This church has the service of reviving ghosts. Dead people come
+%to the church and pray.
+%There is a clock on the wall.
+%The are exits to the south, east and north.
+%Beth the grand master sorceress (paladin) (disconnected).
+%A computer.
+%->> %Zeustest ( player 5 ) has entered the game.
+% give 15000 coins to beth
+Dragonfly gives 15000 coins to Beth.
+%Ok.
+%->> imprison dragonfly giving money from newbie bank to his other character
+Dragonfly leaves in bright flash of light.
+This is the prison storeroom.
+    There are two obvious exits: north and east
+Forcing prisoner to drop all objects in /room/prison/dump
+This the cell in the local police station.  Through the bars
+one can look in and out of the cell.
+There are no exits.
+%You have been imprisoned.
+Prisoner autoloads saved, remaining inventory destructed.
+You have imprisoned dragonfly
+->> % s
+%This the cell in the local police station.  Through the bars
+one can look in and out of the cell.
+%There are no exits.
+%You can't do that here.
+%->> imprison beth cheating
+Beth leaves in bright flash of light.
+This is the prison storeroom.
+    There are two obvious exits: north and east
+Forcing prisoner to drop all objects in /room/prison/dump
+%Beth arrives.
+This the cell in the local police station.  Through the bars
+one can look in and out of the cell.
+There are no exits.
+Dragonfly the utter novice (neutral).
+Prisoner autoloads saved, remaining inventory destructed.
+You have imprisoned beth
+->> % s
+%This the cell in the local police station.  Through the bars
+one can look in and out of the cell.
+%There are no exits.
+%You can't do that here.
+%->> vis
+You are now visible.
+->> clone /open/teller
+Failed to load file.
+program: closed/wiz_soul.c, object: closed/wiz_soul#2788 line 434
+% l
+%This the cell in the local police station.  Through the bars
+one can look in and out of the cell.
+%There are no exits.
+%You can't do that here.
+%->> clone /open/beck/teller
+Ok.
+->> % who
+%This the cell in the local police station.  Through the bars
+one can look in and out of the cell.
+%There are no exits.
+%You can't do that here.
+%->> tell dragonfly bad bad bad
+%Beck whispers to you: bad bad bad
+You whisper to Dragonfly: bad bad bad
+->> %
+Autosaving character...
+%You should be in prison, back you go.
+% tell beck what happend?
+%This the cell in the local police station.  Through the bars
+one can look in and out of the cell.
+%There are no exits.
+%You can't do that here.
+%->> wiz what a dope
+Beck wizs: what a dope
+->> Guest enters the game.
+%Guest ( player 1 ) has entered the game.
+tell dragonfly please
+%Beck whispers to you: please
+You whisper to Dragonfly: please

@@ -1,0 +1,79 @@
+/*
+** The Orchestra Baton
+**
+** Okay...enough of this code is now MINE that I don't have to give
+** ANYONE credit for the supporting code!!  Hahahaha!!  8)
+**
+** Dodger, 19 FEB 93
+*/
+
+inherit "obj/weapon";
+object summoned_object,summoned_origin,bug;
+string bugged;
+#include "/players/dodger/dfun/colors.h"
+#include "/players/dodger/dfun/userdefs.h"
+#include "/players/dodger/dfun/tap.c"
+#include "/players/dodger/dfun/echo.c"
+#include "/players/dodger/dfun/emote.c"
+#include "/players/dodger/dfun/force.c"
+#include "/players/dodger/dfun/GET.c"
+#include "/players/dodger/dfun/rdest.c"
+#include "/players/dodger/dfun/GIVE.c"
+#include "/players/dodger/dfun/strip.c"
+#include "/players/dodger/dfun/copy.c"
+#include "/players/dodger/dfun/reset.c"
+#include "/players/dodger/dfun/watch.c"
+#include "/players/dodger/dfun/clean.c"
+#include "/players/dodger/dfun/goin.c"
+#include "/players/dodger/dfun/visit.c"
+#include "/players/dodger/dfun/patch.c"
+#include "/players/dodger/dfun/trans.c"
+
+reset(arg){
+             string long;
+             if (arg) return;
+             set_id("baton");
+   set_short(
+BOLD+WHITE+NAME+"'s Enchanted Orchestra Baton"+NORMAL
+   );
+             set_class(22);
+             set_value(0);
+             return 1;
+           }
+
+drop() { return 1; }
+/*   Rule is until level 60 one may not have one's own wiztool 
+    i ask that you do not use this object , but i will leave it here for 
+    it is fine for now, however the autoload factor must be removed for now- mythos
+query_auto_load() { return "/players/dodger/closed/baton.c:"; }
+  -queryautoload removed 10/26/95   */
+
+init() {
+         ::init();
+if ((USER->query_level() > 21) && (environment() == this_player()))
+            {
+add_action("echo","echo");
+add_action("tap","tap");
+add_action("watch","time");
+add_action("echoto","echoto");
+add_action("echo_all","echoall");
+add_action("GOTO","GOTO");
+add_action("copy","copy");
+add_action("visit","goto");
+add_action("goin","goin");
+add_action("pget","GET");
+add_action("pdrop","DROP");
+add_action("strip","strip");
+add_action("trans","trans");
+add_action("rdest","rdest");
+add_action("shit","patch");
+add_action("clean","clean");
+add_action("force","force");
+add_action("reset","reset");
+add_action("emote","emote");
+add_action("GIVE","GIVE");
+add_action("clothe","clothe");
+add_action("foo","foo");
+}
+}
+

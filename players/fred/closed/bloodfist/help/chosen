@@ -1,0 +1,18 @@
+
+Bloodfist Help:  Chosen
+
+  Chosen displays the list of weapons you are currently training with,
+along with how much experience you have towards each and their level.
+At the start of the guild you can only choose one weapon at a time, but
+as your wisdom increases you can choose up to four at a time.
+  If a line displays as "error" this means that the weapon you chose
+no longer exists in the same place that it used to.  Most likely if
+this occurs, the file was just moved and will need to be updated by
+Zeus or another senior wizard.  However, if you wish to free up the
+slot and permanently lose the experience you put towards the weapon,
+you can still 'unchoose' it.  UNCHOOSE CAN NOT BE UNDONE, so don't
+unchoose a weapon unless you are sure that you do not want to train
+with it any longer.
+
+Usage: chosen
+

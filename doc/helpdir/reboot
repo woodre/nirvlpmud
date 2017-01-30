@@ -1,0 +1,21 @@
+
+
+                          [help reboot]
+-----------------------=========+=========-----------------------
+
+Usage: reboot
+
+  This command reports the current local time, time of last reboot,
+and time of the next reboot.
+
+  Reboot is when Nirvana automatically shuts down, then starts up
+again.  Armageddon the Game Crasher will arrive before reboot and
+announce that it's coming.
+
+  If you stay logged on right up until the moment of a reboot, some
+of your items can be automatically saved, and restored to you when
+you log in after the reboot.  Use the itemtest command to see
+which items will save.
+
+  Currently, Nirvana only has one scheduled reboot every 24 hours,
+at 6:05 AM.

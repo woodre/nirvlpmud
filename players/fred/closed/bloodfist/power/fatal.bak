@@ -1,0 +1,76 @@
+#include "/players/zeus/closed/bloodfist/defs.h"
+#include "/players/zeus/closed/bloodfist/obj/valid_attack.h"
+
+status main(string str, object PO, object User)
+{
+  int dmg, cost, activity;
+  string meat, which;
+  object nmy, wep;
+  if(str)
+  { 
+    sscanf(str, "%s", meat);
+    sscanf(str, "%s %s", meat, which);
+    if(sscanf(str, "%s %s", meat, which) != 2) {}
+    nmy = valid_attack(meat, User);
+  }
+  else if(!str)
+    if(User->query_attack())
+      nmy = (object)User->query_attack();
+    
+  if(!nmy)
+  {
+    TOU"Who do you want to attack?\n");
+    return 1;
+  }
+
+  if(!which && !nmy->id(str) && str)
+    which = str;
+
+  if(which) 
+    wep = DIR+"power/unsheath.c"->main(which, PO, User);
+  else
+    wep = (object)User->query_weapon();
+
+  if(nmy->query_hp() > (50 + (MIT / 10))
+    || (nmy->query_hp() > ((int)nmy->query_mhp() / 10)))
+  {
+    TOU nmy->short()+" is too powerful to finish off.\n");
+    return 1;
+  }
+
+  activity = (int)PO->activity_bonus();
+  cost = 27 - ((WIS / 20) + (FAI / 50));
+  dmg = (int)nmy->query_hp();
+  dmg = (int)PO->stance_bonus(dmg);
+  PO->add_activity(1);
+
+  if(User->query_sp() < cost)
+  {
+    TOU "You are too weak to do this now.\n");
+    return 1;
+  }
+
+  if(!wep)
+  {
+    TOU "You pound "+nmy->short()+" with your fists!\n");
+    TRU Name+" pounds "+nmy->short()+" with "+User->POS+" fists!\n",
+      ({ User }));
+    TRU nmy->short()+" dies from the blow.\n");
+  }
+  else {
+    TOU "You devastate "+nmy->short()+" with your "+wep->short()+"!\n");
+    TRU Name+" devastates "+nmy->short()+" with "+User->POS+" "+
+      wep->short()+"!\n", ({ User }));
+    TRU nmy->short()+" dies from the blow.\n");
+  }
+
+  nmy->hit_player(dmg, "other|zeus"); /* can't be blocked */
+
+  if(which)
+    DIR+"power/sheath.c"->main(which, PO, User);
+
+  User->add_sp(-cost);
+
+  return 1;
+}
+

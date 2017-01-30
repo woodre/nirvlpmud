@@ -1,0 +1,160 @@
+Connection reset by peer detected.
+Failed to load file.
+Current object was bin/wiz/_home, line 99
+"cmd_hook" in "obj/player.c" ("obj/player#1700") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#1700") line 33
+"cmd_home" in "bin/wiz/_home.c" ("bin/wiz/_home") line 14
+Failed to load file.
+Current object was bin/wiz/_home, line 395
+"cmd_hook" in "obj/player.c" ("obj/player#1700") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#1700") line 33
+"cmd_home" in "bin/wiz/_home.c" ("bin/wiz/_home") line 14
+Connection reset by peer detected.
+Bad argument 1 to tell_object()
+Current object was obj/player#1520, line 39
+"heart_beat" in "players/francesco/kale/mobs/superkale1.c" ("players/francesco/kale/mobs/superkale1#2321") line 44
+"::heart_beat" in "obj/monster.c" ("players/francesco/kale/mobs/superkale1#2321") line 291
+"attack" in "obj/monster.c" ("players/francesco/kale/mobs/superkale1#2321") line 1025
+"::attack" in "obj/living.c" ("players/francesco/kale/mobs/superkale1#2321") line 1813
+"do_damage" in "obj/living.c" ("obj/player#1520") line 521
+error when executing program in destroyed object players/francesco/kale/mobs/superkale1#2321
+Heart beat in players/francesco/kale/mobs/superkale1#2321 turned off.
+Connection timed out detected.
+Bad argument 1 to tell_object()
+Current object was obj/player#1520, line 31
+"heart_beat" in "obj/monster.c" ("players/jareel/monsters/chaos/woods2/smith#2907") line 291
+"attack" in "obj/monster.c" ("players/jareel/monsters/chaos/woods2/smith#2907") line 1025
+"::attack" in "obj/living.c" ("players/jareel/monsters/chaos/woods2/smith#2907") line 1813
+"do_damage" in "obj/living.c" ("obj/player#1520") line 521
+error when executing program in destroyed object players/jareel/monsters/chaos/woods2/smith#2907
+Heart beat in players/jareel/monsters/chaos/woods2/smith#2907 turned off.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Bad argument 1 to tell_room()
+Current object was players/llew/closed/crystal/demon#4003, line 104
+"heart_beat" in "players/llew/closed/crystal/demon.c" ("players/llew/closed/crystal/demon#4003") line 80
+Heart beat in players/llew/closed/crystal/demon#4003 turned off.
+Bad argument 1 to call_other()
+Current object was obj/player#4526, line 147
+"logon2" in "obj/player.c" ("obj/player#4526") line 574
+Bad argument 1 to call_other()
+Current object was obj/player#4527, line 147
+"logon2" in "obj/player.c" ("obj/player#4527") line 574
+Bad argument 1 to call_other()
+Current object was bin/play/_give, line 122
+"cmd_hook" in "obj/player.c" ("obj/player#780") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#780") line 57
+"cmd_give" in "bin/play/_give.c" ("bin/play/_give") line 106
+Error in loading object
+Current object was obj/player#698, line 37
+"cmd_hook" in "obj/player.c" ("obj/player#698") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#698") line 33
+Bad argument 1 to call_other()
+Current object was obj/player, line 17
+"heart_beat" in "obj/player.c" ("obj/player") line 1267
+"autosave" in "obj/player.c" ("obj/player") line 1107
+"save_me" in "obj/player.c" ("obj/player") line 2486
+"illegal_patch" in "obj/player.c" ("obj/player") line 2508
+Heart beat in obj/player turned off.
+Bad argument 1 to sscanf()
+Current object was bin/wiz/_load, line 41
+"cmd_hook" in "obj/player.c" ("obj/player#698") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#698") line 33
+"cmd_load" in "bin/wiz/_load.c" ("bin/wiz/_load") line 21
+Bad argument 1 to sscanf()
+Current object was bin/wiz/_load, line 28
+"cmd_hook" in "obj/player.c" ("obj/player#698") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#698") line 33
+"cmd_load" in "bin/wiz/_load.c" ("bin/wiz/_load") line 21
+Error in loading object
+Current object was obj/player#698, line 41
+"cmd_hook" in "obj/player.c" ("obj/player#698") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#698") line 33
+Bad argument 1 to call_other()
+Current object was obj/player#4999, line 37
+"logon2" in "obj/player.c" ("obj/player#4999") line 574
+Connection reset by peer detected.
+Connection reset by peer detected.
+Error in loading object
+Current object was obj/player#698, line 38
+"cmd_hook" in "obj/player.c" ("obj/player#698") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#698") line 33
+Bad argument 1 to call_other()
+Current object was obj/player#5141, line 6
+"logon2" in "obj/player.c" ("obj/player#5141") line 574
+Connection reset by peer detected.
+Bad argument 1 to call_other()
+Current object was bin/play/_give, line 13
+"cmd_hook" in "obj/player.c" ("obj/player#5073") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#5073") line 57
+"cmd_give" in "bin/play/_give.c" ("bin/play/_give") line 106
+Bad argument 1 to call_other()
+Current object was bin/play/_give, line 199
+"cmd_hook" in "obj/player.c" ("obj/player#5073") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#5073") line 57
+"cmd_give" in "bin/play/_give.c" ("bin/play/_give") line 106
+Connection reset by peer detected.
+Failed to load file.
+Current object was bin/wiz/_cp, line 16
+"cmd" in "players/mokri/obj/this.c" ("players/mokri/obj/this#6193") line 25
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"cmd_hook" in "obj/player.c" ("obj/player#4312") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#4312") line 33
+"cmd_cp" in "bin/wiz/_cp.c" ("bin/wiz/_cp") line 35
+"main" in "bin/wiz/_cp.c" ("bin/wiz/_cp") line 135
+Failed to load file.
+Current object was bin/wiz/_cp, line 75
+"cmd_hook" in "obj/player.c" ("obj/player#6860") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#6860") line 33
+"cmd_cp" in "bin/wiz/_cp.c" ("bin/wiz/_cp") line 35
+"main" in "bin/wiz/_cp.c" ("bin/wiz/_cp") line 135
+Connection timed out detected.
+Bad argument 1 to call_other()
+Current object was players/sparrow/exec_temp#9177, line 51
+"qtHook" in "closed/wiz_soul.c" ("closed/wiz_soul#8879") line 18
+"process_hook" in "closed/wiz_soul.c" ("closed/wiz_soul#8879") line 18
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"cmd_hook" in "obj/player.c" ("obj/player#8877") line 2783
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#8877") line 33
+"cmd_exec" in "bin/wiz/secure/_exec.c" ("bin/wiz/_exec") line 33
+"exec_function" in "players/sparrow/exec_temp.c" ("players/sparrow/exec_temp#9177") line 6
+Bad argument 1 to call_out()
+Current object was players/pathfinder/detroit/monsters/tyrone#9471, line 107
+"buy" in "players/pathfinder/detroit/monsters/tyrone.c" ("players/pathfinder/detroit/monsters/tyrone#9471") line 93
+Bad argument 1 to call_out()
+Current object was players/pathfinder/detroit/monsters/tyrone#9471, line 107
+"buy" in "players/pathfinder/detroit/monsters/tyrone.c" ("players/pathfinder/detroit/monsters/tyrone#9471") line 93
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/OBJ/newscloak#9352, line 124
+"poison_player" in "players/eurale/Keep/OBJ/poison2.c" ("players/eurale/Keep/OBJ/poison2#10203") line 28
+"hit_player" in "obj/living.c" ("obj/player#9330") line 272
+"do_damage" in "obj/living.c" ("obj/player#9330") line 458
+"do_special" in "players/forbin/realms/ruins/OBJ/newscloak.c" ("players/forbin/realms/ruins/OBJ/newscloak#9352") line 106
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/zeus/museum/NPC/golem#10574, line 189
+"fake_beat" in "players/mizan/closed/poly/tetrapod.c" ("players/mizan/closed/poly/tetrapod#10296") line 126
+"multilimb_synchronized_attack" in "players/mizan/closed/poly/PDM.c" ("players/mizan/closed/poly/PDM") line 4413
+"hit_creature" in "players/mizan/closed/poly/PDM.c" ("players/mizan/closed/poly/PDM") line 4747
+"hit_player" in "obj/living.c" ("players/zeus/museum/NPC/golem#10574") line 272
+"do_damage" in "obj/living.c" ("players/zeus/museum/NPC/golem#10574") line 587
+"death" in "obj/living.c" ("players/zeus/museum/NPC/golem#10574") line 847
+"second_life" in "obj/monster.c" ("players/zeus/museum/NPC/golem#10574") line 529
+"monster_died" in "players/zeus/museum/NPC/golem.c" ("players/zeus/museum/NPC/golem#10574") line 84
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/zeus/museum/NPC/golem#10574, line 189
+"heart_beat" in "players/zeus/museum/NPC/golem.c" ("players/zeus/museum/NPC/golem#10574") line 165
+"rage" in "players/zeus/museum/NPC/golem.c" ("players/zeus/museum/NPC/golem#10574") line 109
+Heart beat in players/zeus/museum/NPC/golem#10574 turned off.
+Bad argument 1 to call_out()
+Current object was players/pathfinder/detroit/monsters/tyrone#11234, line 34
+"buy" in "players/pathfinder/detroit/monsters/tyrone.c" ("players/pathfinder/detroit/monsters/tyrone#11234") line 93
+Bad argument 1 to call_out()
+Current object was players/pathfinder/detroit/monsters/tyrone#11234, line 34
+"buy" in "players/pathfinder/detroit/monsters/tyrone.c" ("players/pathfinder/detroit/monsters/tyrone#11234") line 93
+Bad argument 1 to call_other()
+Current object was players/guilds/Rangers/Commands/Lead, line 55
+"RangerPower" in "players/guilds/Rangers/RangerCommunicator.c" ("players/guilds/Rangers/RangerCommunicator#9331") line 315
+"RangerPower" in "players/guilds/Rangers/Commands/Lead.c" ("players/guilds/Rangers/Commands/Lead") line 37
+Connection timed out detected.

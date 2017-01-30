@@ -1,0 +1,75 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+string *Rangers;
+
+QMax(){ return 20; }
+
+RangerPower(){
+   if(!Rangers)
+      Rangers = ({});
+
+   if(!(PO->QMorphed())){
+      if(member_array(TPRNAME, Rangers) != -1)
+         Rangers -= ({ TPRNAME });
+      write("You can only use Parry when Morphed.\n");
+      return 1;
+   }
+
+   if(member_array(TPRNAME, Rangers) < 0){
+      write("You turn on Parry Team Tactics.\n");
+      PO->SRangerTactic("Parry");
+      Rangers += ({TPRNAME});
+      return 1;
+   }
+
+   
+   write("You turn Off Parry Team Tactics.\n");
+   PO->SRangerTactic(0);
+   Rangers -= ({ TPRNAME });
+   return 1;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(){
+   write("Parry Team Tactics allow you better defense when facing tough enemies.\n"+
+         "It is best used when in a party of strong players, as you will not be\n"+
+         "Able to hit your enemy as well.\n"+
+         "");
+   return 1;
+}
+
+OffSkill(int level){
+
+   if(!Rangers)
+      Rangers = ({});
+
+   
+
+   if(member_array(ENV(PO)->query_real_name(), Rangers) >= 0){
+      if(!PO->QMorphed() || PO->QRangerTactic() != "Parry"){
+         tell_object(ENV(PO), "You turn off Parry Tactics.\n");
+         Rangers -= ({ ENV(PO)->query_real_name() });
+         return 0;
+      }
+      level = PO->QuerySkillLevel("team");
+      return -(2*(level));
+      
+   }
+   else
+      return 0;
+}
+DefSkill(int level){
+
+   if(!Rangers)
+      Rangers = ({});
+   
+   if(member_array(ENV(PO)->query_real_name(), Rangers) >= 0){
+      level = PO->QuerySkillLevel("team");
+      tell_object(ENV(PO), "[ "+BOLD+RED+"TACTIC"+OFF+" ] "+"You use Parry Team Tactics\n");
+      return 100*(level);
+   }   
+   else
+      return 0;
+}

@@ -1,0 +1,10 @@
+     I have been assigned the task of changing the quests so that the cheat
+sheets floating around do not accurately reflect the solutions.  I have changed
+your quest in the following ways:  I moved the location for finding the disk
+from /sci_fi/galactica/leader.c  to /sci_fi/shark/jaws.c. I left the 'wrong'
+scientist in place to destruct the disk when players with old cheat sheets
+go there.  I then moved the locatin of the correct scientist to
+/sci_fi/galactica/baltar.c  In both cases, rather than change your code, I
+just make copes of the affected rooms and changed the code in them.  They are
+/sci_fi/galactica/Ebaltar and /sci_fi/shark/zjaws.  If you have and questions
+do not hesitate to contact me.    -Eurale  (3/20/97)

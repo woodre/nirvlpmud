@@ -1,0 +1,24 @@
+**************
+
+                     Clear_dir
+
+Syntax:    clear_dir <prompt>
+
+Desc:
+           Command should be used cautiously it will remove all the 
+           files in the directory you are currently working in. It 
+           prompts you for a y/n before proceeding with the removal.
+
+Warning:   Be sure you don't want any of the files before they are 
+           all gone. Offline backups are highly recommended. Don't 
+           use in other wizards or in open files that aren't yours.
+
+Example:   clear_dir in directory /players/bob/test/
+                  result
+           Are you SURE you want to remove all files in: /players/bob/test/?
+           yes to delete, no to cancel
+
+Related:   rmdir,rm
+
+
+**************

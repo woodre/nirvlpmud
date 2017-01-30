@@ -1,0 +1,23 @@
+
+Bloodfist Help:  Throw a weapon
+
+Guild level:  3
+Honor Req:    0
+Base Cost:    30
+
+  Throw a weapon at your enemy.  Not all thrown weapons are going to
+hit the opponent.  Only one weapon can be thrown per round, and can
+not be combined with vigor.  After a weapon is thrown it will drop to
+the ground.  If you are still in combat, there will be a delay before
+the weapon can be retrieved.  You can not 'get' or 'take' a thrown
+weapon, rather the 'bfretrieve' command must be used.  Once combat has
+ended any remaining delays on retrieving weapons are negated.  You
+can throw a wielded weapon, a weapon in your inventory, or a sheathed
+weapon.
+
+Usage:  throw                      - throw current wep at current attacker
+        throw unsheath             - throw 1st sheathed wep at current attacker
+        throw <wep>                - throw <wep> at current attacker
+        throw <npc>                - throw current wep at <npc>
+        throw unsheath <wep>       - throw sheathed <wep> at current attacker
+       

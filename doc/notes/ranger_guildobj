@@ -1,0 +1,13 @@
+Beck [9.10.2003]
+
+If you do not know how to fix a persons guild object correctly, DO NOT ATTEMPT T
+O DO IT.
+Rangers have a guild restore function inside the guild hall.  They can look at G
+lobe if they need to know what it is.
+Do not under any circumstances clone them a guild object.  Because I have a floa
+ting skill system, their object is almost
+complety impossible to reconstruct by hand correctly.
+If a Ranger loses their guild object, please tell them to read the Globe for how
+ to restore it.
+Thanks.
+Beck

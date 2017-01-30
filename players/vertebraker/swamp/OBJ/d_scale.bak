@@ -1,0 +1,30 @@
+#include "../define.h"
+inherit ITEM;
+
+reset(arg) {
+   if(arg) return;
+   set_id("alixa scale");
+   set_alias("scale");
+   set_short("A alixa's scale");
+   set_long(
+      "This is the magical scale of the alixa, the known shapechanger\n"+
+      "and consummate thief.  Legend speaks of this scale being eaten\n"+
+      "by warriors and undead alike to make their alignment be more\n"+
+      "of a reflection.\n");
+   set_weight(1);
+   set_value(1000+random(1000)); }
+
+init() {
+   ::init();
+   add_action("eat","eat"); }
+
+eat(str) {
+   if(id(str) && USER == TP) {
+      write(BOLD+"You take a chomp off of the alixa scale and feel a bit different.....\n"+NORM);
+      say(BOLD+TPN+" takes a bite from an alixa scale....\n"+NORM);
+      if(TP->query_alignment() > 0) TP->add_alignment(1800);
+      else TP->add_alignment(-1800); 
+      destruct(TO);
+      TP->add_weight(-1);
+      return 1; }
+}

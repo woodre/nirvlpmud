@@ -1,0 +1,9 @@
+#define TP this_player()
+#define TPN this_player()->query_name()
+#define AT attacker_ob
+#define AN attacker_ob->query_name()
+#define ENV environment(this_player())
+#define ENVO environment(this_object())
+#define ROOM "room/room"
+#define TON this_object()->query_name()
+#define QN query_name()

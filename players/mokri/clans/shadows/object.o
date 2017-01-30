@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;37mAnkh of Shadows[0m[0m"
+long_desc "[1;31mJohn's [1;30mLocker Room 4[0m[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "ankh"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[1;31mJohn's [1;30mLocker Room 4[0m[0mType 'clan_help' for commands."
+clan_short "[1;37mAnkh of Shadows[0m[0m"
+damage_type 0
+hall_path "/room/forest6"
+object_name "ankh"
+owner "ansem"
+spell_alias "wrap"
+spell_mess_me "%hi black%You absorb the %hi white%Shadows %hi black%around you.%normal%"
+spell_mess_room "%TPN%%hi black% absorbs the %hi white%Shadows %hi black%around them.%normal%"
+spell_mess_them "%TPN%%hi black% absorbs the %hi white%Shadows %hi black%around them.%normal%"
+abilities ({})
+chan_history ({"[Sun Feb 17 22:19:09 2013] Griffter: it's fun being back on","[Sun Feb 17 22:19:21 2013] Ansem: did you find the lockers okay?","[Sun Feb 17 22:19:29 2013] Griffter: yep no sweat","[Sun Feb 17 22:19:39 2013] Ansem: yea man im so happy to talk to you again","[Sun Feb 17 22:19:45 2013] Ansem: seeing ya out the other night was really cool","[Sun Feb 17 22:19:53 2013] Griffter: hell yea","[Sun Feb 17 22:20:11 2013] Griffter: we'll hang out more!","[Sun Feb 17 22:20:21 2013] Ansem: yea man more phill in 2013","[Sun Feb 17 22:20:23 2013] Ansem: yea man more phill in 2013","[Sun Feb 17 22:20:29 2013] Ansem: phil even","[Sun Feb 17 22:20:39 2013] Griffter: woot!","[Sun Feb 17 22:43:35 2013] Ansem: enter","[Sun Feb 17 22:43:47 2013] Ansem: actually its enter_clan_hall","[Sun Feb 17 22:44:01 2013] Ansem: so set and alias for that shit too","[Sun Feb 17 22:51:18 2013] Ansem: yea man","[Sun Feb 17 22:51:40 2013] Ansem: glad to see new players. ive missed phil soo much","[Sun Feb 17 22:51:48 2013] Ansem: take it easy man","[Sun Feb 17 22:52:02 2013] Cydel: you too, I'll keep phil into this","[Sun Feb 17 22:52:30 2013] Ansem: yea im going to have to invite him over or something or do something","[Sun Feb 17 22:52:40 2013] Ansem: pz",})
+leaders ({"john",})
+join_type 1
+private_coffer 450000
+public_coffer 0
+spell_delay 5
+spell_id 2
+spell_cost 30
+last_spell_time 1451756807

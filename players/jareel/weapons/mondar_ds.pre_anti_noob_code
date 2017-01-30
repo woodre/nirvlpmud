@@ -1,0 +1,61 @@
+/* 10/07/05 - Earwax - corrected numerous typos and grammatical errors. 
+ *                   - Also recoded the weapon_hit().  Was buggy.
+ * 10/20/05 - Earwax - Made minor changes to try to solve bugging.
+*/
+
+#include "/players/jareel/define.h"
+#include "/players/jareel/ansi.h"
+inherit "/obj/weapon.c";
+
+object ob;
+int limit = 5;
+
+  reset(arg) {
+    ::reset(arg);
+    if(arg) return;
+
+    set_id("blade");
+    set_alias("death blade");
+    set_short("Iron "+HIK+"Death"+NORM+" Blade");
+    set_long(
+       "The weapon is edged perfection.  A simple bladed\n"+
+       "bastard sword with a inscribed death rune at the\n"+
+       "base of the blade.\n");
+    set_weight(2);
+    set_class(20);
+    set_value(3500);
+    set_type("sword");
+    message_hit = ({
+      HIK+"slash"+NORM," across its chest",
+      HIK+"stab"+NORM," in the chest",
+      HIK+"chop"+NORM," over the head",           
+      HIK+"impale"+NORM,", driving the sword deep into the victim",
+      HIK+"stab"+NORM," in the skull",
+      HIK+"slash"+NORM," across the knee of its foe",
+      HIK+"sweep"+NORM," across its foe"
+      });
+     set_hit_func(this_object());
+}
+
+     init() {
+       ::init();
+}
+
+/* 
+ * 10/07/05 Earwax: Recoded this.  Lots of bugging going on.
+*/
+
+weapon_hit(attacker) {
+
+  if (TPRN == "mondar" || (this_player() != environment(this_object())))
+    return;
+  if (random(100) < 40 && limit--) 
+  {
+    TP->attack();
+    return 1;
+  }
+  limit = 5;
+  return 3;
+}
+        
+

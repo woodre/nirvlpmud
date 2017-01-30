@@ -1,0 +1,24 @@
+**************
+
+
+                     Castle
+
+Syntax:    castle <wizard name>
+
+Desc:
+           This command moves you to the castle of the wizard you 
+           input. Useful if you are wanting to find where it is.
+
+Warning:   Many castles aren't set up with commands and this places
+           you inside of the castle object. Also if the castle isn't 
+           set to load yet you may clone it. Be careful to not open 
+           a castle to players that isn't approved yet.
+
+Example:   castle bob
+                  results
+           moves you to Castle Bob
+
+Related:   goto, place
+
+
+**************

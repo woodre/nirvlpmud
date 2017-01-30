@@ -1,0 +1,144 @@
+
+#include "/players/maledicta/ansi.h"
+
+#define USER this_player()
+#define NAME USER->query_name()
+#define HP   USER->query_hp()
+#define MHP  USER->query_mhp()
+#define SP   USER->query_sp()
+#define MSP  USER->query_msp()
+
+int uses;
+int heal_type;
+
+id(str){ return str == "pack" || str == "medical"; }
+short() { return ""+HIR+"Medical Pack II"+NORM+" "+BOLD+""+BLK+"["+uses+"]"+NORM+""; }  
+long(){
+   write(
+   " This is a large black leather backpack which carries medical\n"+
+   "supplies and material. It is reinforced from within by a steel\n"+
+   "casing, and yet, is very lightweight. You can 'use pack' or\n"+
+   "you can set the type of healing with 'pack'. This pack will\n"+
+   "work while in combat.\n"+
+   "It has "+BOLD+""+BLK+"["+uses+"]"+NORM+" uses left in it.\n"); }
+
+query_value(){ return (uses * 1000); }
+query_save_flag(){ return 1; }
+
+reset(arg){
+  if(arg) return;
+  uses = 10;      
+  heal_type = 4;
+  }
+  
+init(){
+   add_action("use_pack", "use");
+   add_action("set_type","pack");
+   }
+set_type(string str){
+if(!str){
+write(
+"You may set the pack to the following settings:\n"+
+"   "+HIG+"htp"+NORM+"   - heals hps only.\n"+
+"   "+HIG+"spp"+NORM+"   - gives sps only.\n"+
+"   "+HIG+"both"+NORM+"  - gives spellpoints and hitpoints.\n"+
+"Usage: pack <type>\n");
+return 1;
+}
+if(str == "htp"){
+heal_type = 2;
+write(""+HIR+"]MEDICAL["+NORM+" Pack set to heal hit points only.\n");
+return 1;
+}
+else if(str == "spp"){
+heal_type = 3;
+write(""+HIR+"]MEDICAL["+NORM+" Pack set to heal spell points only.\n");
+return 1;
+}
+else if(str == "both"){
+heal_type = 4;
+write(""+HIR+"]MEDICAL["+NORM+" Pack set to heal both hps and sps.\n");
+return 1;
+}
+else{
+write("type 'pack' for usage.\n");
+return 1;
+   }
+}
+				
+   
+use_pack(string str){	
+if(!str){ write("Use what?\n"); return 1; }
+if(str == "pack"){
+if(heal_type == 2){
+if(!call_other(this_player(),"eat_food", 8)) return 0;
+this_player()->add_hit_point(60 + random(30));
+uses -= 1;
+this_player()->recalc_carry();
+write(
+""+HIR+"]MEDICAL["+NORM+"You open the medical pack and apply the contents to your wounds.\n"+
+" HP>>> "+HIG+""+HP+""+NORM+"/"+HIG+""+MHP+""+NORM+" \n"+
+"You have "+uses+" uses left.\n");
+say(                              
+NAME+" uses a medical pack.\n");  
+if(!uses){                                             
+	write(                                         
+	"Useless now, you drop the medical pack.\n");  
+	destruct(this_object());                       
+        return 1; }                                    
+return 1;
+}   
+
+if(heal_type == 3){
+if(!call_other(this_player(),"drink_soft", 8)) return 0;                                           	
+this_player()->add_spell_point(60 + random(30));                                                  
+uses -= 1;
+this_player()->recalc_carry();
+write(                                                                                          
+""+HIR+"]MEDICAL["+NORM+" You open the medical pack and use the contents, feeling a rush\n"+
+"          of energy.\n"+   
+" SP>>> "+HIG+""+SP+""+NORM+"/"+HIG+""+MSP+""+NORM+" \n"+                                        
+"You have "+uses+" uses left.\n");                                                              
+say(                              
+NAME+" uses a medical pack.\n");  
+if(!uses){                                             
+	write(                                         
+	"Useless now, you drop the medical pack.\n");  
+	destruct(this_object());                       
+        return 1; }                                    
+return 1;                                                                                       	
+}                                                                                               
+if(heal_type == 4){
+if(!call_other(this_player(),"eat_food", 4) ||
+   !call_other(this_player(),"drink_soft", 4)) return 0;
+uses -= 1;
+this_player()->recalc_carry();
+call_other(this_player(),"heal_self", 41+random(20));  
+write(
+""+HIR+"]MEDICAL["+NORM+" You open the medical pack and apply some of the contents.\n");   
+write(
+" HP>>> "+HIG+""+HP+""+NORM+"/"+HIG+""+MHP+""+NORM+"  "+    
+" SP>>> "+HIG+""+SP+""+NORM+"/"+HIG+""+MSP+""+NORM+" \n"); 
+write("The pack has "+uses+" uses left.\n");
+say(
+NAME+" uses a medical pack.\n");
+if(!uses){
+	write(
+	"Useless now, you drop the medical pack.\n");
+	destruct(this_object());
+	return 1; }
+return 1; }
+return 1; }
+return; }
+
+get(){ return 1; }
+query_weight(){ 
+if(uses >= 10){ return 5; }
+else if(uses >= 7){ return 4; }
+else if(uses >= 4){ return 3; }
+else if(uses >= 1){ return 2; }
+else{ return 0; }
+return 1;
+}	
+  
+	

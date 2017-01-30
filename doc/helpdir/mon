@@ -1,0 +1,32 @@
+
+                         [help monitor]
+-----------------------=========+=========-----------------------
+
+Usage: "mon"
+       "mon <on/off>"
+       "mon ansi"
+       "mon default"
+
+When you start a new character, your internal combat monitor is
+toggled to ON.  When you fight a creature, you will see some
+information like this every two seconds [one heartbeat]:
+
+    <<<<  HP 100/100 SP 100/100 I 0% F 0% S 0% T 0%  AHP 10/10  >>>>
+
+You can turn off your default monitor by typing 'mon off' or turn 
+it back on by typing 'mon on'.  You can change the color of your 
+monitor to dark red by typing 'mon ansi'.
+
+The letters/numbers represent:
+
+ HP = Current hit points/maximum hit points
+ SP = Current spell points/maximum spell points
+  I = Intoxication (will rise as you use alcoholic heals)
+  F = Fullness or stuff (will rise with certain food heals)
+  S = Soaked (will rise with non-alcoholic drinks)
+  T = Transferred or infusion (rises when another player heals you)
+AHP = Attacker's health based on current hit points/maximum hit points
+
+You can also setup your own combat monitor.  
+For more information type 'help setmon'.
+

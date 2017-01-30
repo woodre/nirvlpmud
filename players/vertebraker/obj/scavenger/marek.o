@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/treasure","/players/wren/Area/starbug/items/groinal","/obj/weapon","/obj/weapon","/players/wren/Area/starbug/items/cottagecheese","/players/wren/Area/starbug/items/hair","/players/mythos/awep/backbite","/obj/armor","/players/mythos/closed/guild/forest/misc/key_myrax","/obj/armor","/players/hippo/heals/nucleus","/players/mythos/awep/claw","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/mythos/mwep/voice","/players/hippo/armour/boots","/players/maledicta/cont/weapons/rweapon","/players/snow/WEAPONS/hon_sword","/players/mistress/other/disk","/players/scathe/armor/mgarb","/players/wren/Area/starbug/items/lightbee","/players/snow/shadows/stuff/axe","/obj/armor","/obj/weapon","/players/saber/armor/mshades","/players/hippo/heals/dna_repair",})
+shorts ({"Zuzu's petals","Kryten's groinal attachment","Golden hoof","Shark`s tooth","a small tub of cottage cheese.","Perfect Hair","[31mBackbiter[0m","Robot Head","Ebon Key","A Jedi Cloak","[35mnucleus of a cell[0m","claws","A Priest's Robes","Voice","anti-blood boots","a Scimitar","A finely honed longsword","A fragile disk","Black Monk Robes","a strange object called a 'light bee'","A dusky axe","A pair of [1mwhite[0m boots","Blaster","Mirrorshades","[32mdna repair string[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

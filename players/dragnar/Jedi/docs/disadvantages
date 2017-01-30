@@ -1,0 +1,36 @@
+Both LS and DS
+===============================================================================
+1.  No game spells (mi,sh,fi,so,pose, and invis)
+2.  Armor restricted to < 2 weight, type armor < 4 weight, no shield
+3.  Lightsaber required for saber attacks, max WC of 16
+4.  Low concentration causes saber to be deadly to wielder -- random(100) damage
+    each round and causes player to miss.  
+      concentration    chance of striking wielder
+      -------------    --------------------------
+      50               4%
+      10               22%
+      5                50%
+      <= 3             100%
+5.  Lightsaber attacks can't be cast mindlessly over and over.  Requires some
+    skill to use well.  Different attacks must be used together (combinations)
+    to get full damage.  Combinations and attacks, if used more than 2 times in
+    a row, begin to decrease in effectiveness.  After 5 in a row or so, user
+    will begin to miss each time.  The attacks have the same cost at all times,
+    even when the player is missing and doing no damage.
+6.  Non-saber spells have a time delay (longer delay for more powerful spells)
+7.  No guild pets that attack.
+8.  Guild hall will be PK, and have limited protection.
+9.  Stats: All stats set to 8 during joining, luc has 8 max, stats raised with
+    skill points (gained by increasing guild level).
+10. Guild experience gained only by using Jedi abilities(more if leading fight) 
+12. No who2 type commands that give locations.
+
+Lightside
+===============================================================================
+1.  Maximum coins: 40k
+2.  Must role-play a Lightside Jedi
+3.  Must not be tempted by Darkside abilities
+
+Darkside
+===============================================================================
+1. No wimpy

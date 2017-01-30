@@ -1,0 +1,70 @@
+#include "../def.h"
+
+object sh;
+int   wt;
+
+reset(arg) {
+ if(arg || root()) return;
+ call_out("end_it", 900+random(900));
+}
+
+load_it(s)
+{
+  sh = s;
+  if(!sh->query_hit_func())
+  {
+    sh->set_hit_func(this_object());
+    wt = 1;
+  }
+  shadow(sh, 1);
+}
+
+is_fireblade()
+{
+  return 1;
+}
+
+short()
+{
+  return sh->short()+" "+HIY+"[blazing]"+NORM;
+}
+
+weapon_hit(atk)
+{
+  if(!random(6))
+  {
+    tell_room(ENV(ENV(sh)),
+      HIY+"* * * FLAMES BURST FROM "+upper_case(sh->query_name())+"! * * *\n"+NORM);
+  if(atk)
+/* 07/18/07 Earwax: gotta start the nerfings somewhere.
+    atk->hit_player(3 + random(8), "other|fire");
+*/
+    atk->hit_player(1+random(4), "other|fire");
+  }
+/* Why call the weapon_hit function and not return the extra damage from it? ill - 6.15.2010
+  sh->weapon_hit(atk);
+*/
+  return sh->weapon_hit(atk);
+}
+
+end_it()
+{
+  tell_object(ENV(sh),
+   "The flames die down around "+sh->query_name()+".\n");
+  if(wt)
+  {
+    sh->set_hit_func(sh);
+  }
+  destruct(this_object());
+}
+
+query_no_clean() { return 1; }
+
+get() {
+  if(this_player()->query_guild_name() != "samurai")
+   {
+    tell_room(ENV(TP), TP->QN+" gets burned by the "+sh->query_name()+"!\n");
+     TP->hit_player(50+random(50),"other|fire");
+  }
+  return sh->get();
+}

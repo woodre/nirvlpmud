@@ -1,0 +1,79 @@
+This chart was constructed using a combat simulator written in C++
+that would quickly simulate 3000 fights with an average monster,
+total up all the damage done and how many sps were used, and divide
+by the number of fights to give the average damage done and average
+spell points used.  The number listed on this chart is the total of
+average hps expended per fight, plus the number of sps expended.
+
+The monster's attributes were assumed to be the same as they are on
+the chart, with the exception of the level 20 monster which had a 
+30% chance of doing 30 points of damage.
+
+On the chart, 'resources expended' means hitpoints+spellpoints used.
+- Feldegast
+
+The following assumptions were made about the player's combat
+abilities:
+"Sonic"
+WC=20
+AC=9
+Spell damage: 12+random(33)
+Spell cost: 25
+Prob. of using spell: 70%
+Pet wc: 16
+
+Level		Resources Expended	Coins	Coins/Resources	Base Xp	Xp/Resources
+-----------------------------------------------------------------------------------------------
+1		22			30	1.36		0	0
+2		29			60	2.07		2	0.07
+3		40			100	2.5		3	0.08
+4		51			150	3.0		4	0.08
+5		64			200	3.12		12	0.19
+6		75			250	3.33		26	0.36
+7		91			300	3.26		56	0.68
+8		105			350	3.33		84	0.8
+9		118			400	3.37		126	1.07
+10		137			450	3.26		189	1.58
+11		158			500	3.33		284	1.76
+12		174			600	3.46		411	2.36
+13		196			700	3.57		622	3.17
+14		221			850	3.8		1036	4.67
+15		255			875	3.45		1305	5.11
+16		475			890	1.87		1726	3.65
+17		538			950	1.77		2189	4.07
+18		610			1000	1.66		2874	4.71
+19		700			2000	2.86		4210	6.01
+20		847			5000	5.9		5263	6.21
+
+
+"Fireball"
+WC=19
+AC=9
+Spell damage: random(40)
+Spell cost: 20
+Prob. of using spell: 70%
+Pet wc: 16
+
+Level		Resources Expended	Coins	Coins/Resources	Base
+-----------------------------------------------------------------------------------------------
+1		20			30	1.5
+2		28			60	2.2
+3		39			100	2.5
+4		50			150	3
+5		64			200	3.12
+6		75			250	3.3
+7		92			300	3.3
+8		110			350	3.2
+9		126			400	3.2
+10		146			450	3.1
+11		171			500	2.9
+12		189			600	3.2
+13		217			700	3.2
+14		250			850	3.4
+15		294			875	3.0	
+16		554			890	1.7
+17		641			950	1.5
+18		752			1000	1.3
+19		876			2000	2.3
+20		1130			5000	4.4
+

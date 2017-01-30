@@ -1,0 +1,69 @@
+
+[*]===================== MAGE GUILD PROPOSAL =====================[*]
+
+  The purpose of this document is to quickly outline the ideas for
+the new mages guild and to gain preliminary approval to try and make
+an actual magic class for Nirvana.
+
+Limitations of the guild:
+ 1] Weapon class is limited regardless of weapon via gen_wc_bonus.  
+    All weapons but the mage staff are lowered by 7 points initially,
+    then again based on weight and type.  The best possible WC a
+    mage may have is 15 (6 below the mud maximum, and only with the
+    guild's mage staff).
+ 2] Armor class is also lowered via RegisterArmor.  Armor class will
+    be lowered based on the weight of the item, so lighter items will
+    benefit the player with more AC than heavier items. 
+ 3] Limited Strength and Stamina.  Both stats are limited to 15, which
+    gives mages lowered carry and 60 less hit points than normal
+    mud characters.
+ 4] Spell failure.  All mage spell will have some failure, anywhere
+    from 20% when beginning to 5% when maxed, and most spells will
+    also have the chance of a miscast (essentially failure with
+    detrimental side effects).
+ 5] Components.  Basically an added cost for casting spells, many
+    of the best abilities will have these.  Some items might be
+    purchased, while others may have to be quested for.
+ 6] Some spells have time delays as to when they can be cast again.
+    The stronger the effect, the longer the delay.
+ 7] Casting times.  Some spells take multiple rounds to cast.
+    
+Advantages of the guild:
+ 1] Increase choices of spells.  There will be a multitude of spells
+    for mages to learn.
+ 2] Increased spell points.  Through an addition in player.c that
+    queries a bonus_spell_points() func in the mage guild object,
+    mages could get a possible 510 spells points above the normal
+    player amount.  This is based on a base of 30 extra spell points
+    per guild level and 3 extra spell points for each point of
+    POWER (a guild attribute that ranges from 0-100).
+ 3] Increased spell regeneration.  Mages regenerate spell points an
+    additional amount based on 1 + random(POWER/15) (a guild attrib
+    that ranges from 0-100) each autoheal.  This would increase a
+    mages heal rate by a maximum of 6 sps each autoheal.
+ 4] Increased spell damage.  Mages can do damage far greater than
+    the normal max of sonic (average 28).
+ 5] Lowered spell costs.  Mages cast spell_object, hit_player, and
+    heal_self spells based on 2/3 of the normal costs, as follows:
+      SPELL OBJECT:
+        Spell does 10+random(31) damage:
+          Regular cost = 10 + 15 = 25 sps
+          Mage cost = 10*(2/3) + 15*(2/3) = 7 + 10 = 17 sps
+      HIT_PLAYER (physical and magical types)
+        Spell does 10+random(31) damage:
+          Regular cost = 20 + 30 = 50 sps
+          Mage cost = 20*(2/3) + 30*(2/3) = 14 + 20 = 34 sps
+      HIT_PLAYER (damage types) and HEAL_SELF
+        Spell does 10+random(31) damage:
+          Regular cost = 30 + 30 = 60 sps
+          Mage cost = 30*(2/3) + 30*(2/3) = 20 + 20 = 40 sps
+    **Note:  all damage spells set a 'casting' variable in the
+             guild object so no more than one spell per hb is 
+             possible.
+   
+  Hopefully, you will agree that the lowered WC and AC will be
+balanced by the increased spell abilities, keeping in mind that all
+of the normal mud WC and AC abilities are passive (i.e. the player
+doesn't have to do anything to receive them but wear/wield), while
+a mage will have to manage sps and actively cast spells to do any
+real damage.

@@ -1,0 +1,301 @@
+/* *************************************************************************
+ * /players/earwax/closed/PK/tracker 
+ *
+ * PK Tracker
+ *
+ * Coded by Earwax 7/24/03
+ *
+ * *************************************************************************
+ * 
+ * This tracks PKs for players.  Players will either already have one if 
+ * they are Shards (basically I'll use the same code for both), or can 
+ * pick this one up in Jareel's Hall of Legends.  It's not meant to take
+ * the place of the Mortal Kombat Scar, because the players will still want
+ * that one for bragging rights, and that one has some nice powers with it.
+ * 
+ * *************************************************************************
+ *
+ * Points Breakdown
+ *
+ * This is not based off levels.  For real pkers, levels don't matter, and
+ * there is a restriction on this object: only level 19s (with the exception
+ * of Shards) can get one.  In fact, the tracker will not record kills that
+ * happen when the player is less than level 19.
+ *
+ * Base points per pk: Victim's level + xlevel modifier
+ *                     xlevel modifier = 1 point per 10 xlevels
+ * 
+ * Level     Base Points    
+ * 1   -   9      0          This sets it so the average base points per
+ * 10  -  19    Level        kill will be around 20-22, since few pkers 
+ * +1  -  +9     20          will be over that, and players won't consider
+ * +10 - +19     21          pks less than 19 points to be worth it (I hope)
+ * +20 - +29     22      
+ * +30 - +39     23          The point differences aren't much, but they
+ * +40 - +49     24          add up fast.  5 kills on level 19+ is 100 
+ * +50 - +59     25          points, takes 10 level 10 kills for that, and
+ * +60 - +69     26          I may make the spread even further, depending
+ * +70 - +79     27          on what happens.  
+ * +80 - +89     28
+ * +90 - +99     29
+ * +100          30  
+ *
+ * Real points are for pking strong pkers.  In other words, you'll get more
+ * points for killing someone with 1000 pk points, than someone with 15.
+ * This also has the effect of encouraging people to go after the best pker
+ * on rather than the weak link.  Players that accumulate enough points to
+ * become a Legendary PKer will have earned the title.
+ * 
+ * PK Point Modifier: 1 point per 100 points.  If you kill a legendary PKer,
+ * assuming they are at least 19+1 by that time (a solid assumption), you
+ * will get a bonus 5 points (perhaps to be raised if this ever happens).
+ * A Legendary PKer (2000/100 + 5) would be worth an additional 25 points to
+ * their base (level based) PK points, for probably at least 45 points.
+ *
+ * In group combat, the killer gets 2 additional points for everyone in the
+ * room hitting him, including the player who died.
+ *
+ * For every killer hitting the victim, however, every killer loses a point.
+ * In other words, in a 5 killers vs 1 victim, the killers each lose 5 
+ * points, although the tank gets points back for being the tank.
+ *
+ * There is a minimum of 1 point per pk (3 if you're the tank or on a solo
+ * kill).
+ *
+ * Note: For a long time, the 2000 kill points to become Legendary will seem
+ *       like a ton, but as players start getting close, and more likely 
+ *       than not, a number of players will be competing to be the first, 
+ *       that 2000 kill points will be easier to get.  More PKers, with more
+ *       points apiece means that there will be a higher potential for
+ *       points in the future than there is right now.  This means that
+ *       points will have to probably go to 3-5k for Legendary eventually.
+ *       I want this to be roughly along the lines of at least 100 strong
+ *       PKs to make a player Legendary.  By strong kills, I mean kills on
+ *       100 players with solid levels/PK points.  Early on, the curve will
+ *       be very skewed, but it won't be for long, and this needs to be 
+ *       something on the order of the Legendary Player title, meaning it
+ *       needs to be similar in time/effort/ability to gaining +100.
+ *
+ * *************************************************************************
+*/
+
+/* Global Variables */
+static   object    Owner;        /* Who the tracker belongs to            */
+static   string    Name;         /* real_name of the owner                */
+         int       Pks,          /* number of pks                         */
+                   Points,       /* total number of points                */
+                   Deaths;       /* total number of deaths                */ 
+static   string   *Commands;     /* all commands they can use             */
+         status    Muffled;      /* channel muffled or not                */
+
+#include "defs.h"
+
+inherit WAXFUNS;
+
+/* *************************************************************************
+ * kill_check
+ *
+ * Called when a player is pk'd.  Passes the object of the victim to the 
+ * killers.
+*/
+
+void
+kill_check(object ob) {
+
+  object here, killer;
+
+  if (!(ob->is_player()))
+    return;
+
+  killer = environment(this_object());
+  here = environment(here);
+
+  if (!here || here->query_spar_area())
+    return;
+
+  tell_object(killer,"You have slain " + ob->query_name() + ".\n");
+  PKD->register_kill(ob, killer);
+}
+
+/* *************************************************************************
+ * Query functions
+ *
+*/
+int query_pks()        { return Pks; }
+int query_deaths()     { return Deaths; }
+int query_points()     { return Points; }
+void set_muffle()      { Muffled = 1;    }
+void toggle_muffle()   { Muffled = ( Muffled ? 1 : 0); }
+status query_muffle()  { return Muffled; }
+
+
+/* *************************************************************************
+ * Reset, load_info, save_info
+ *
+*/
+void
+reset(status arg)
+{
+
+  if (arg)
+    return;
+
+  /* initialize variables */
+
+}
+
+status
+load_info()
+{
+  restore_object(SAVEPATH+Name[0..0]+"/"+Name);
+  write("Your PK stats have been loaded.\n");
+  return 1;
+}
+
+status
+save_info(status silent)
+{
+  save_object(SAVEPATH+Name[0..0]+"/"+Name);
+
+  if (!silent) write("Your PK stats have been saved.\n");
+
+  return 1;
+}
+
+/* *************************************************************************
+ * Item setup functions
+ *
+*/
+
+status get() { return 1; }
+status drop() { return 1; }
+int query_weight() { return 0; }
+int query_value() { return 0; }
+
+string query_auto_load() { return AUTOLOAD; }
+
+status 
+id(string arg)
+{ 
+  /* Only accept kills if the player is level 19 or bigger. No Legions */
+  if (environment() && environment()->query_level() > 18)
+    if (arg == "kill_check_object")
+      return 1;
+
+  return ( 
+    arg == "pk tracker" ||
+    arg == "tracker"    ||
+    arg == "Legendary PK Tracker" );
+}
+
+string 
+extra_look()
+{
+  if (present("shardak_mark",this_player()))
+    return ( HIK +
+      ( this_player() == Owner ? capitalize(Name)+" has " : "You have ")
+      + "slain " + RED + Pks + NORM + HIK + ", died "+ NORM + NORM + RED
+      + Deaths + HIK + " times, and has "+NORM + NORM + RED + Points 
+      + NORM + HIK + " PK points, dedicated\n to the cause of "
+      + environment()->query_possessive() + " god, " + "Shardak."+NORM+NORM );
+
+/* That should look like:
+Dreadnought has slain 36, died 42 times, and has 3000 PK points, dedicated
+to the cause of his god, Shardak.
+*/
+
+  return (
+    ( this_player() == Owner ? capitalize(Name)+" has " : "You have ") +
+    CYN + Pks + NORM + " PKs and a total of " + CYN + Points + NORM +
+    "Legendary PK Points." );
+}
+
+string
+short()
+{ 
+  if (!present("shardak_mark",this_player()))
+  return ( HIK + 
+    ( this_player() == Owner ? possessive(capitalize(Name)) : "Your") +
+    "Legendary PK Tracker"+NORM);
+}
+
+long()
+{
+  int i;
+
+  write(short()+"\n");
+  if (this_player() != environment())
+    write("If you're level 19, you can get your own tracker!\n"
+          + "Just goto Jareel's Hall of Legends (7e,2s,w,enter hall)\n");
+  else
+  { /* Do a real listing with descriptions and shit later */
+    write("You can use the following commands.\n");
+    i = sizeof(Commands); 
+    while (i--)
+      write("\t"+Commands[i]+"\n");
+  }
+}
+
+/* *************************************************************************
+ * kill_information
+ *
+*/
+
+void
+kill_information(int points, string info)
+{  
+  if (stats)
+  {
+    if (points)
+    {
+      Pks++;
+      Points += points;
+    }
+    else
+    {
+      Deaths++;
+    }    
+  }
+}
+
+/* *************************************************************************
+ * command_hook
+ *
+*/
+
+int
+command_hook(string arg)
+{
+  if (Owner->query_level() < 19) 
+  {
+    notify_fail("You lack the experience to use this command.\n"+
+               "You must be level 19 for the tracker to function.\n");
+    return 0;
+  }
+
+  return (int)(BINDIR+query_verb())->main(arg);
+}
+
+/* *************************************************************************
+ * init
+ *
+*/
+
+void
+init()
+{
+  int i;
+
+  if (environment() != this_player())
+    return;
+
+  if (Owner)
+    return;
+
+  Owner = this_player();
+  Name = (string) Owner->query_real_name();
+  load_info();
+  i = sizeof(Commands = (string *)COMMANDSD->get_cmds());
+  while (i--) add_action("command_hook",Commands[i]);
+  if (!Muffled) PKD->register(Owner);  
+}

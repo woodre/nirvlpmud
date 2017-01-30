@@ -1,0 +1,77 @@
+teach_mage(str){
+  object obj;
+  string name;
+  int lvl, what, x;
+  int trains;
+
+  if(tp->query_guild_rank() < 9 && !is_gc()) {
+    write("You are not experienced enough to train anyone.\n");
+    return 1;
+  }
+
+  if(!str) {
+    write("Usage: train <player>\n");
+    return 1;
+  }
+
+  obj = find_player(str);
+
+  if(!obj || !present(obj, env)) {
+    write(capitalize(str)+" is not here.\n");
+    return 1;
+  }
+
+  if(!present("mageobj", obj)) {
+    write(capitalize(str)+" does not have a spellbook.\n");
+    return 1;
+  }
+
+  lvl = obj->query_guild_rank();
+
+  if(lvl == 9 || lvl == 19 || lvl == 29 || lvl == 39 ||
+    lvl == 49 || lvl == 59 || lvl == 70) {
+
+  if(tp->query_guild_rank() < (lvl+1) && !is_gc()) {
+    write("You are not expierencied enough to train this Mage.\n");
+    return 1;
+  }
+
+  if(lvl == 9) what = "Earth";
+  else if(lvl == 19) what = "Air";
+  else if(lvl == 29) what = "Fire";
+  else if(lvl == 39) what = "Dragons";
+  else if(lvl == 49) what = "Storms";
+  else if(lvl == 59) what = "Stars";
+  else if(lvl == 70) what = "Time";
+
+  trains = random(tp->query_guild_rank()/16) + 1;
+
+  write("\n"+
+  "You take it upon yourself to train "+IT+" in the ways of magic.\n"+
+  IT+" will become a Master of "+what+" with your guidance.\n"+
+  "You discipline "+IT+"'s mind and soul in the ways of magic.\n");
+  write(IT+" earns "+trains+" training sessions.\n\n");
+
+  tell_object(obj, "\n"+
+  ME+" has granted you the knowledge to become a Master of "+what+"\n"+
+  "Under "+ME+"'s watchful eye your mind and soul are discplined in\n"+
+  "the ways of magic.  You advance to the status of "+HIM+"Master\n"+NORM);
+  tell_object(obj, "You earn "+trains+" training sessions.\n\n");
+
+  say(ME+" trains "+IT+" in the ways of magic.\n");
+  PAV->tell_members(HIC+"[~"+ME+"~]: "+
+  IT+" has become A Master of "+what+".\n"+NORM);
+
+  obj->add_guild_rank(1);
+  present("mageobj", obj)->add_training_sessions(trains);
+
+  write_file("/players/pavlik/guild/mages/log/advance",
+  ME+" trained "+IT+" as a Master of "+what+"\t["+ctime()+"]\n");
+
+  return 1;
+  }
+  else {
+    write(IT+" does need to be trained.\n");
+    return 1;
+  }
+}

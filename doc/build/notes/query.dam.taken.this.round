@@ -1,0 +1,14 @@
+Vertebraker [4.22.02]
+
+You can query the amount of total damage done to a player in
+the current heart_beat [via any of the methods: hit_player(),
+heal_self(), or add_hit_point()] with the function:
+
+ob->query_dam_taken_this_round();
+
+Actually, it works on all living objects, not just
+players.
+
+Hey.. Zeus found use for it...
+
+                        ~v

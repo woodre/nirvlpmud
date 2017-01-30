@@ -1,0 +1,24 @@
+11-Mar-98 New Doc written to replace previous -Bp
+ 
+A popular item to make, is a speedster or some other command for 
+players which allows them to do multiple actions in the same heart
+beat. However, there are serious problems with this in an unlimited manner.
+The first is that a single player may be able to hog the mud's command
+processing time, actually increasing lag. The second is a unfair advantage
+in combat.
+ 
+The following restrictions are on 'speedsters'
+
+1) Only MOVEMENT commands are allowed. No combat or any other sort of 
+command is permitted.
+
+2) A limit of FIVE (5) commands is to be strictly enforced. Only 
+5 commands must be able to chained together.
+ 
+3) The movement commands should be limited to standard directions,
+n,s,e,w,nw,sw,se,ne,u,d. If not limited to those, some other 
+code MUST be in place to ensure that the speedster is ONLY
+used for MOVEMENT. That a player cannot alias what is typically 
+a movement command to a combat command then use it in the speedster
+for instance.
+

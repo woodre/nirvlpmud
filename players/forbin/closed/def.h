@@ -1,0 +1,1 @@
+#define RCD "/players/forbin/closed/rooms/cycle.c"

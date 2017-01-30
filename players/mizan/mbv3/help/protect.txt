@@ -1,0 +1,14 @@
+>> ORDER: PROTECT CREATURE
+
+Usage:
+order <index> protect <object> <duration>
+
+Example:
+order 3 protect mizan 100
+
+Description:
+This order tells the monster to protect another creature, which will
+be either a raw object passed to it (when used by the monster code) 
+or a string, which converts to the first find_player() and then 
+find_living() which matches.
+

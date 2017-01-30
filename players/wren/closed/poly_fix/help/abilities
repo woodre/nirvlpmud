@@ -1,0 +1,34 @@
+>> LEVEL [1] ABILITIES
+
+vibe <msg>       Tell something to everyone logged on in the guild.
+vibe :<msg>      Emote something to everyone logged on in the guild.
+info guild       To see a listing of all guild functions.
+info toggle      To see a listing of all toggle functions.
+info set         To see a listing of all set functions.
+info polymorph   To see a listing of all polymorph functions.
+regain           Regain the energy within a corpse.
+charge           Transfer some spell point energy into the clay.
+helpme           Tells everyone in guild what you are fighting and where.
+clock            Shows how much time till next reboot.
+Do               A directional speedster command.
+beatfix          Fixes your heartbeat, among other things.
+
+
+>> LEVEL [2] ABILITIES
+
+superwho         An extension and more detailed version of the who command.
+
+>> LEVEL [3] ABILITIES
+
+atomize          Gain some energy or matter from an object.
+ether            A superagile movement spell within the Plane of Etheriel.
+
+>> LEVEL [4] ABILITIES
+
+survey           Gives a detailed scan of surrounding area.
+
+This is a very condensed listing. To get detailed information type
+
+'info <ability>' that is in question.
+
+Type 'info' to see a list of all info topics.

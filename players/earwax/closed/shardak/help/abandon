@@ -1,0 +1,16 @@
+               Servants of Shardak - Abandon - Earwax 7/03
+
+
+Once you leave the guild you can never rejoin.  This is not debatable, it's
+not arguable, and there's nothing that can be done about it.  I have added
+a fair amount of code to ensure that it never happens.
+
+If you get a player to invite you to the guild, and you type 'join' you will
+be executed by Shardak.  Period.  Shards will joyously invite you, just to
+watch you die.  Don't whine, you know the penalty ahead of time.
+
+If you get a wizard to give you a guild object, Shardak will immediately
+execute you.  A guild wizard (Magus) will not do this, no matter what.  This
+has been implemented so that if a non-Magus tries to get you into the guild,
+you pay the price.  You will die full death (execution), lose everything on
+your corpse, etc, and lose the guild object.  

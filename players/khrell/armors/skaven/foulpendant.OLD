@@ -1,0 +1,28 @@
+#include <ansi.h>
+#define ENV environment(this_object())
+inherit "obj/armor";
+
+reset(arg){
+   ::reset(arg);
+
+set_name("pendant");
+set_short(HIK+"The Foul Pendant"+NORM);
+set_long(
+  "A magical Skaven talisman crafted from a giant rat's skull with a\n"+
+  "potent rune of protection etched in warpstone ink on the surface.\n"+
+  "A lazy stream of sickly green fumes constantly drift from the empty\n"+
+  "eye sockets, forming some sort of protective barrier.\n");
+set_type("necklace");
+set_ac(1);
+set_params("other|poison",0,20,0);
+set_weight(1);
+set_value(2000);
+}
+
+do_special(owner){
+if(random(100) < 12) { tell_object(environment(),
+    HIK+"The Foul Pendant's fumes solidify and blunts the attack!\n"+NORM);
+  return 1; }
+ENV->add_hit_point(5);
+return 0;
+}

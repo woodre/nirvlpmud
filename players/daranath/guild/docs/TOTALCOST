@@ -1,0 +1,14 @@
+TotalCost tracks the total spell points it takes to cast each
+spell for the Necros. The true spell points are added to the
+effective cost for the spell components. Spell comps are 
+figured by the following values:
+
+1 part Blood  2 Spell Points
+1 part Skin   8 Spell Points
+1 part Eye   20 Spell Points
+1 part Heart 30 Spell Points
+1 part Spine 30 Spell Points
+1 part Soul  40 Spell Points
+
+Example - Chill costs 10 sp plus 1 Blood, TotalCost of 12
+

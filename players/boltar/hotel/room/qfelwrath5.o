@@ -1,0 +1,29 @@
+no_clean 0
+name "cloak"
+alias "cloak"
+short_desc "A shoddy [1mwhite[0m cloak"
+long_desc "A [1mwhite[0m piece of armor from Bigelow."
+worn_tag_short_flag 0
+buy_value 0
+value 100
+weight 1
+type "cloak"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 1
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"cloak",})
+params ({"physical",1,0,"do_special",})
+enchantments 0

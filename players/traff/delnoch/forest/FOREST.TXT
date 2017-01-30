@@ -1,0 +1,36 @@
+Files used in the forest:
+/players/traff/delnoch/forest/
+  forest1.c - forest11.c
+/players/traff/delnoch/mon/
+  make_fc0 - make_fc9
+
+forest1 is the entry to the forest.  It is adjacent to Delnoch.
+It will have a sign giving information and warnings about
+the forest.  (I may also put in a 'Ranger Station', haven't
+decided on that yet.
+forest2.c - forest11.c are the forest rooms.  The exits are labeled
+North, South, East and West, but in reality all moves by
+these commands will be random moves to another forest room.
+Players who search can find a PATH leading downhill to
+Delnoch, or a TRAIL leading uphill to the mountains.
+PATH and TRAIL will NOT be found in the same room and until
+they learn the destinations players will not know where they
+lead.
+Also, players level 5 and below can use the FLEE command
+which will return them to the forest entrance.
+
+The monster files, make_fc0 - make_fc9 use the method outlined
+in /open/CODING/monster3 and monster3.exp.  One reason I am
+using this method is that it is supposed to save memory.  As
+I am planning on having the forest well populated I thought
+that would be good.  More on that later.  The room files
+will call the make_fc[n] files to make the monsters.
+Certain player or monster actions will cause monsters to move
+to different rooms, giving a lifelike forest look, I hope!
+Originally I had planned on using regular monsters, each with
+random moves coded in.  However, on thinking about it, if a
+player came in and caused the monsters to be created and then
+left all those monsters running around calling out to random
+move would be wasted, and a needless drain on the processer.
+I think I will be able to create nearly the same look,
+without using any callouts at all.

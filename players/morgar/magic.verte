@@ -1,0 +1,81 @@
+/*
+File: magic.c
+Creator: Feldegast
+Date: 1/11/01
+Description:
+  This is a revamp of Morgar's magic shop as part of my urban renewal project.
+Other wizzes should feel free to add new items to this shop, and I encourage
+them to do so.
+*/
+
+#include "/players/feldegast/defines.h"
+
+inherit "/players/feldegast/std/shop.c";
+
+string *dam_types;
+
+void reset(int arg) {
+  ::reset(arg);
+  if(!present("rosenthal"))
+    move_object(clone_object("/players/feldegast/mon/rosenthal.c"), this_object());
+  if(arg) return;
+  set_light(1);
+  short_desc=HIM+"The Magic Shop"+NORM;
+  long_desc=
+"  This is a small, but cluttered shop filled with assorted magical\n\
+artifacts, smelly reagents, and yellowed scrolls.  Near the back of\n\
+the shop is a wooden counter.\n";
+  items=({
+    "shop","reflexive",
+    "artifacts", "You can obtain a list of the items that you can "+BOLD+"purchase\n"+NORM+
+                 "with the "+BOLD+"list"+NORM+" command",
+    "reagents", "You can obtain a list of the items that you can "+BOLD+"purchase\n"+NORM+
+                "with the "+BOLD+"list"+NORM+" command",
+    "scrolls", "You can obtain a list of the items that you can "+BOLD+"purchase\n"+NORM+
+               "with the "+BOLD+"list"+NORM+" command",
+
+  });
+  dest_dir=({
+    "/room/northroad2","east"
+  });
+
+  dam_types=({
+    "dark","light","water","fire","wind","earth","ice","electric",
+    "laser","evil","good","poison","sonic","mental"});
+  add_item("Glowing orb",OBJ_PATH+"gorb.c",1200,3+random(5),1);
+  add_item("Majin potion",HEAL_PATH+"majin.c",1800,8+random(8),1);
+  add_item("Healing potion",HEAL_PATH+"fullheal.c",10000,4+random(3),1);
+  add_item("Crystal amulet",ARM_PATH+"amulet.c",200,8+random(4),1);
+  add_item("Helm of Farseeing",ARM_PATH+"farhelm.c",5000,random(2),3);
+}
+
+void init() {
+  ::init();
+  add_action("buy","buy");
+  add_action("buy","purchase");
+  add_action("list","list");
+}
+
+int buy(string arg) {
+  int x;
+  if(!present("rosenthal")) return 0;
+  if(!arg) return 0;
+  x=invalid_purchase(arg);
+  switch(x) {
+    case 1: write("Rosenthal says: We do not have that item.\n");
+            return 1;
+            break;
+    case 2: write("Rosenthal says: That would cost more money than you possess.\n");
+            return 1;
+            break;
+    case 3: write("Rosenthal says: I am out of that.\n");
+            return 1;
+            break;
+    case 4: write("Rosenthal says: You appear to be a little overburdened at the moment.\n");
+            return 1;
+            break;
+  }
+  write("You purchase "+(::purchase(arg))+".\n");
+  say((string)this_player()->query_name()+" makes a purchase.\n");
+  return 1;
+}

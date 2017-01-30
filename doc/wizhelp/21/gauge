@@ -1,0 +1,23 @@
+**************
+
+
+                     Gauge
+
+Syntax:    gauge <command>
+
+Desc:
+           This command returns the computer usage and time taken 
+           to complete the command entered.
+
+Warning:   
+
+Example:   gauge heh
+                  results 
+           Bob forced you to 'heh'
+           The cmd took 10 utime, 0 stime, and eval cost 0.
+
+Related:   
+
+
+**************
+

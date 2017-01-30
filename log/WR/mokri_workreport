@@ -1,0 +1,47 @@
+[Sep 30 2005 15:11] A: Registered Test Character: Notmokri
+[Nov  7 2005 16:31] 
+  A: editing cyber guild object. changes only effect my test char
+  R: testing
+[Mar 20 2007 18:59] A: edited cyber guild command 'visible' to call new vis function, as one that was in code no longer exists. assuming an LD change.
+[Apr 11 2007 16:39] A: edited cyber 'decorpse' command to work on corpses in inventory as well as in environment. change approved by fred.
+[Apr 20 2007 14:13] A: edited cyber guild object. added command directory so i can add commands. fred gave the 'ok'. also edited help files once command was in (a who list).
+[Apr 26 2007 12:09] A: forgot to log it, but mucked with cyber help files yesterday and day before to include new abilities. blah.
+[May  1 2007 20:38] A: edited cyber 'rat' (/players/snow/ROOM/bar) to add in 'replicator' object. approved by verte.
+[May  4 2007 12:39] A: had to edit fullplate and look into shard 'drain' command. two were bugging each other.
+[May 10 2007 12:31] A: edited fallen crap. was trying to make calls to 'simul_efun' that should have been in the guild object itself. '~guilds/fallen/power/shadowweave.h' specifically changed. call to 'spell_failure'
+[May 10 2007 13:28] A: fixed 'deweave' with same as my last log (calls being made to simul_efun. blah blah blah)
+[May 11 2007 13:39] A: removed 'repliactor' from cyberninjas (/players/snow/ROOMS/bar)
+[Jun  8 2007 12:27] A: edited bard stuff to fix error. call to header in jaraxles area was bugging things (ansi.h)
+[Jun 25 2007 13:52] A: restored missing locker slots for krokus (left empty, though)
+[Sep 21 2007 13:36] A: removed 'public_coffer' commands completely, and references to commands  in help files
+[Oct  8 2007 13:56] A: added portal room for clan purchase. ~mokri/clans/hall_rooms/templates. approved by fred.
+[Oct  9 2007 17:27] A: added command 'clan_stats' to clans. ~mokri/clans/cmds/_clan_stats.c. also added appropriate help file. approved by fred.
+[Oct  9 2007 18:25] A: various edits to clan_stats. cleaning up look, adding fields, etc
+[Oct 23 2007 18:28] A: added ability to 'private_coffer' command in clans to transfer bank balances to coffer balances. approved by boltar.
+[Oct 26 2007 20:10] A: fixed mage 'mmon' command.
+[Nov  1 2007 13:56] A: edited jareels ansi headers to call /obj/ansi.h. was erroring out.
+[Nov 01 2007 17:27] A: added check in ~mokri/clans/room_funcs.h to remove blank elements in array created by 'explode' due to LD-ness
+[Nov 01 2007 18:19] A: modified 'room_funcs.h' for clans to disallow room creation from ld, as it will bug out until save_object() is valid
+[Nov  2 2007 12:05] A: fixed softlys newbie area. was calling 'obj/ansi.h'. needed to add leading slash to path ('/obj/ansi.h'). note, i have ran into this same situation several times in the past few days
+[Nov 13 2007 17:40] A: added 'black' and 'hi black' as options for clan descriptions where appropriate
+[Nov 28 2007 19:02] A: edited avants ranger .o file. he was showing as an incorrect color.
+[Jul  1 2008 16:11] A: added 'wall' spell, 'critter' room, and appropriate documentation to clans. approved by fred.
+[Jul  1 2008 19:36] A: modified the price of purchasing a 'critter' room (~mokri/clans/hall_rooms/templates/critter.c). change approved by fred.
+[Jul  9 2008 20:16] A: added check in clan 'wall' command to test if the room is nofight
+[Jul 10 2008 15:13] A: fixed bug with sami ninja .o file
+[Jun  5 2014 12:41] A: Enabled drone room/item for purchase by clans after approval by Dragnar and Star
+[Jun 25 2014 14:33] A: in /players/trix/castle/primo, updated laisle10.c, laisle11c., nave5.c, raisle15.c, raisle16.c (altarboy rooms) in an effort to get the rooms to reset properly. approved by Dragnar
+[Jul 11 2014 16:45] A: accidently patched 1 exp to Oregon. Patched -1 exp after to correct the mistake
+[Jul 21 2014 11:33] A: moved owner of clan 'baldknobbers' from coglin to timespliter due to coglin's passing
+[Jul 21 2014 17:21] A: moved owner of clan 'century' from brenar to quagmire due to brenar's passing
+[Jul 24 2014 15:50] A: updated bard farsinging (gossip) to work with udpated channel daemon
+[Jul 25 2014 14:46] A: Retrieved Kika's bag from void after disconnect did not push it to the box
+[Jul 28 2014 10:51] A: edited krashtest's .o file to set his level to 19 after karash accidently patched the level to 20
+[Jul 29 2014 14:45] A: moved clan ownership from Mythago to Monoxide due to Mythago's passing
+[Aug  4 2014 16:47] A: refactored 'set_clan_hall' command for clans to properly remove spell points, and to notify player if they are attempting to set the entrace room to its current value
+[Aug  8 2014 15:41] A: modified humbles .o file due to death giving him the wrong xlevel (only had exp for 50 and was at 51). this ws due to his request so he could purchase stats he needed properly
+[Aug 13 2014 14:31] A: reset exp for Shaggy and Jihad, due to error reported by Sami where they both ended up with over a BILLION exp for free somehow. After conversations with shaggy and sami, set shaggy's exp to 10 million, and jihad's to 350k
+[Aug 13 2014 16:01] A: added /players/mokri/obj/gameDispenser to /players/mokri/stuff/paintball/shack, which sells /players/mokri/obj/bship
+[Aug 22 2014 15:46] A: added option for players to clone slot machine in /players/boltar/casino/floor/casinofloor2.c if it is missing. Action is logged to /log/SLOT
+[Aug 29 2014 11:48] A: Added item /players/mokri/obj/farseerBot to list of items sold from item dispenser in paintball shack after approval from Dragnar
+[Aug 29 2014 11:48] A: Updated Armory in Hall of Apprentices to give out a free Farseer Bot

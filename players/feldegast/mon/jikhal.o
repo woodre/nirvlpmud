@@ -1,0 +1,104 @@
+ThisKey "Kar"
+time_to_heal 0
+hcnum 1
+crime 0
+money 0
+luck2 0
+lucky 177
+name "jikhal"
+gender "male"
+msgin "arrives"
+msgout "leaves"
+is_npc 1
+brief 0
+level 21
+armor_class 19
+hit_point 118
+max_hp 600
+experience 2000000
+mmsgout 0
+mmsgin 0
+h_check 0
+weapon_class 34
+shield_ob 0
+ghost 0
+dead 0
+whimpy_dir 0
+local_weight -51
+hunted 0
+hunter 0
+hunting_time 10
+cap_name "Jikhal"
+spell_points -1345
+max_spell 0
+spell_name 0
+disallow_give 0
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 4141
+is_invis 0
+frog 0
+whimpy 0
+auto_load 0
+current_room "/players/feldegast/realm/JalHab/stav5.c"
+alignment -350
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Weapons 0
+WeaponBonuses 0
+no_clean 0
+talk_match 0
+talk_func 0
+talk_ob_str 0
+talk_type 0
+talk_hold_func 0
+talk_hold_type 0
+talk_hold_ob 0
+catch_nr 0
+talk_done 0
+short_desc "Jikhal Bloodsbane"
+long_desc "Jikhal stands approximately 1.8 meters tall and every inch ofhim appears to have some purpose in the dispensation of death.Jikhal is a coldblooded killer and mercenary who lives only forthe thrill of battle.  He is a master of bladed weapons and hefights in the two-bladed style with a shield strapped to his arm.He is the captain of the mercenary company called the Bloody Eagles."
+alias "bloodsbane"
+alt_name "jikhal bloodsbane"
+race "human"
+hbflag 0
+info 0
+move_at_reset 0
+aggressive 0
+can_kill 1
+kill_ob 0
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+heal_start 1
+heal_rate 2
+heal_intv 35
+chat_chance 5
+a_chat_chance 5
+the_text 0
+have_text 0
+desc_ob 0
+init_ob 0
+random_pick 0
+spell_chance 0
+spell_dmg 0
+spellOchance 0
+spell_type 0
+spell_mess1 0
+spell_mess2 0
+static_hits 0
+var_hits 0
+resp_keys ({})
+responses ({})
+things_to_do 0
+armor_params ({"physical",19,0,0,})
+weapon_params 0
+busy_catch_tell 0
+sp 83
+heals 14
+tox 3
+full 1
+last_hp 118
+energy 40
+shield_energy -4
+daggers 5
+enemies ({"feldegast","kasia","newkil","symbio","nytewhisp","rosaly","zeu","coldwind","jarana","jaz","kage","stardream","maxy","hal","little","nisanity","volkar","darque","entropy","simple","layla","keli","whitedawn","saladin","bone","autumn","cricket","click","kotcha","sobeit","sombra","siberia","cooper","vandala","oghma","titan","grudge","carnage","ravennight","luckycurse","jared","noirceur","vistar","vodka","ancient","sparkle","stonerose","goshawk","tarken","ghost","mercy","morpheus","camulus","ceres","handy","enuss","quit","journey","sundin","whoa","war","mosh","roland","somantin","sin","roubaix","tembo","pike","shadowstone","billy","ssvegeta","krillgeta","stardrifter","kinshin","wicket","viper","gamefreak","vashara","crissy","shar","fenris","entreri","tenchu","nakira","rick","hedren","sami","thomas","kael","bishop","ribbit","upus","artos","claude","sunim","sid","marek","silverpaw","humble","smelt","spitgemz","shojiro","brynna","mako",})

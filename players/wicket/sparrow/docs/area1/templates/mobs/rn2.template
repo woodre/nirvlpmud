@@ -1,0 +1,24 @@
+<RN2>
+
+Short Desc: Sean Flair (RN)
+Long Desc: An younger man in his mid-thirties, Sean seems to be very.
+        experienced in his job. He is freshened up very wall and is
+        clean shaved. He has short brown spikey hair and brown eyes.
+        His skin is a very pale complection to where he seems to not
+        see the light of day very much. His scrubs he wears are very
+        dull and boring. A stethoscope hands from the pocket of his
+        scrub pants. A notepad sticks out the backpocket of the pants
+        as well.
+Name: sean
+Alt_name: flair
+Race: Human
+Gender: Male
+Level: 4
+Wc: 8
+Ac: 4
+Hp: 60
+Gold: 150
+Spell: codeblue
+        add_spell("codeblue","#MN# $HY$snaps$N$ #MP# fingers, You shake $HR$violently$N$ gasping for $HW$air$N$.\n",
+                     "#MN# $HY$snaps$N$ #MP# fingers, #TN# shakes $HR$violently$N$ gasping for $HW$air$N$.\n",
+                     20(2d7),"other|mental");

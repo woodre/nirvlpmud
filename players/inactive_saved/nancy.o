@@ -1,0 +1,103 @@
+channel_names ({"wiz","risque","announce","gossip",})
+time_to_heal 0
+hcnum 0
+crime 0
+money 4428
+luck 20
+lucky 29
+name "nancy"
+gender "female"
+msgin "floats silently into the room, her black cape wrapped around her"
+msgout "leaves so quietly she seems to disappear before your eyes"
+is_npc 0
+brief 0
+level 20
+armor_class 0
+hit_point 1434
+max_hp 1434
+experience 2859056
+mmsgout "motions and a mist rises to swirl about her as she fades from sight"
+mmsgin "steps out of a swirling violet mist and lowers the hood of her cloak"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir 0
+local_weight 63
+hunted 0
+hunter 0
+hunting_time -560
+cap_name "Nancy"
+spell_points 1442
+max_spell 1442
+spell_name "magic missile"
+spell_cost 0
+spell_dam 0
+age 1060414
+is_invis 0
+frog 0
+whimpy 0
+no_exp_value 0
+auto_load "obj/quicktyper:6;gn clone nancys/wand;.X.Z;cl goto /players/nooneelse/black/guild_lower_hall;.X.Z;wc clone nancys wand;.X.Z;ra goto /room/adv_inner;.X.Z;bb clone /nooneelse/bubbles.c;.X.Z;al goto /room/narr_alley;.X.Z;^!/players/nooneelse/black/vampire_fangs.c:^!"
+current_room "room/post"
+alignment 400
+follow 0
+follow_num 0
+handshake_data 0
+handshake 0
+quest_point 226
+quests "blind_boy#orb_of_evil#grail#disk_quest#ring#orc_slayer#hades_quest#vale#super#chisel#staff#medallion#trekkie#cyclops_mace#protoculture#loth_quest#keivjam#sage#bishops_ring"
+pregnancy 0
+wkrm 0
+hostname "UICVM.UIC.EDU"
+ok_edit "nooneelse"
+mailaddr "none"
+saved_where 0
+title "the Assistant Guildmaster"
+pretitle "the Assistant Vampire Guildmaster"
+password "7l6kSP0eP74SU"
+race "human"
+al_title "sorta evil but usually pretty nice"
+intoxicated 0
+fight_area 0
+mon 0
+phys_at ({1,5,4,100,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "128.248.100.50"
+msghome "waves and disappears into a swirling violet mist"
+description "is surrounded by a strange violet mist... an enormous black wolf sitsquietly at her feet."
+guild_name "vampire"
+lastime "Jun 19 13:17 1997 to Jun 19 13:18 1997"
+player_killing 0
+invs_count 13
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd "/players/nooneelse/obj/"
+dead 0
+guild_rank 7
+guild_exp 672
+guild_file 0
+home 0
+ex_lv 8
+qc 1
+strength 150
+intelligence 20
+stamina 150
+will_power 20
+magic_aptitude 150
+piety 20
+stealth 150
+stuffed 0
+soaked 0
+no_give 0
+aprv 0
+other_copy 0

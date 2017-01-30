@@ -1,0 +1,52 @@
+/*
+ * spell : Chromatic Orb   (enchantment)
+ * level : 1
+ * effect: spell_object: 10 + random(Ench/5)
+ * cost  : 10 + (Ench/10) sp
+ * spec  : 
+ * files : none
+ */
+
+chromatic_orb(str){
+  object obj;
+  string sname;
+  int dmg;
+
+  sname = "Chromatic Orb";
+
+  if(!KNOW("orb")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(guild->query_next_dmg() > time()) {
+    write("You cannot cast this spell right now.\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  write("You cast a "+HIC+"Chromatic Orb"+NORM+" spell ...\n");
+
+  if(spell_fail2(1, "ench", "int")) {
+    write("You fail the spell miserably.\n");
+    write("Nothing happens.\n");
+    say(ME+"'s spell fizzles.\n");
+    tp->add_spell_point(-5);
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" creates a "+rancol(sname)+" and hurl it through the air!\n"+
+  "The shimmering orb strikes "+IT+" and explodes!\n");
+
+  dmg = 10 + random(guild->query_total_ench() / 5);
+  tp->add_spell_point(-(10 + guild->query_enchantment()/10));
+
+  PAV->tell_damage(dmg,obj);
+  tp->set_spell_dam(dmg * 5 / 2);
+  tp->set_spell_dtype("magical");
+
+  return 1;
+}

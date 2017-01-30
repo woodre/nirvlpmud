@@ -1,0 +1,8 @@
+
+siphon energy
+channeled spell, 6 rounds.
+target-> 20 dmg a round other|shadow
+endurance += 6/hb (9 - 3)
+if(hp% < sp%) hp += 16, else sp += 16
+requires siphon stone object held by auseth NPC
+

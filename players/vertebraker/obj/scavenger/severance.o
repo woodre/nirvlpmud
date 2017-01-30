@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/puppy/s/eq/collar","/players/snow/shadows/stuff/cloak","/players/saber/weapons/lgun","/players/pain/NEW/arm/bplate","/obj/armor","/players/haji/quest/shrub","/players/pain/NEW/arm/helm","/players/pain/NEW/arm/boots","/players/hippo/weapons/molar_sharf","/obj/armor","/players/mythos/aarmor/hara-ate","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/puppy/s/eq/parchment","/players/pain/closed/wands/orb","/players/saber/armor/hardsuit1","/players/hippo/armour/shield","/players/saber/stuff/trink","/obj/weapon","/obj/armor","/players/mythos/aarmor/mempo","/players/snow/WEAPONS/glass_sword","/players/wren/Area/starbug/items/currie","/players/jamila/beach/mobs/skin","/players/wren/Area/starbug/items/flibble","/players/wren/Area/starbug/items/fish",})
+shorts ({"A leather collar","A dusky cloak","A lazer gun","A battered Breastplate","Fawnskin Cloak","A shrubbery","A horned helm","Heavy work boots","A molar sharf","button","Hara-ate","Peasant Rags","Parchment","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","A purple Hardsuit <with pink legs!>","lap of meat","A strange metal trinket","Longsword","An [1mwhite[0m metal ring","Mempo","Glass Sword","A tin of chicken currie","A Lizard Skin","a [1;30mpe[37mngu[1;30min[2;37;0m handpuppet","A box of trout ala crem",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,123 @@
+
+/* HEART BEAT */
+heart_beat() {
+  object me, myenv;
+  me = environment();
+  if(!me || !me->is_player()) return;
+  myenv = environment(me);
+  if(!myenv) return;
+  if(me->query_attack() && !brave) test_attack();
+  if(me->query_level() < 20) test_stats();
+  if(sand_transfer && myenv->query_sandstorm()) sand_transference(me);
+  if(spell_delay) {
+    spell_delay--;
+    if(!spell_delay) TE(me,
+      BOLD+"The power of the Sands is again within you.\n"+OFF); }
+  beats++;
+  if(!myenv->query_sandstorm()) check_sand();
+  check_spatt();
+  return 1;
+  }
+
+test_attack() {
+  object me, it;
+  string *mess;
+  int damage;
+  me = environment();
+  it = environment()->query_attack();
+  if(!me || !it) return;
+  if(!environment(me)) return;
+  if(!present(it, environment(me)) ) return;
+  if(me->query_ghost()) return 1;
+  if(!it->query_attack()) { it->attack_object(me); return 1; }
+  if(it->query_attack() != me) {
+    if(present("dervish_tattoo", it->query_attack())) {
+      damage = me->hit_player( random( it->query_wc() ) );
+      if(!damage) return 1;
+        mess = it->query_message_hit(damage);
+      TE(me, "You step into "+it->query_name()+"'s attack.\n");
+      tell_room(environment(me),
+        it->query_name()+" "+mess[1]+" "+me->query_name()+mess[0]+"\n");
+      return 1; }
+    tell_object(me, "You must lead the fight!\n");
+    tell_object(environment(me),me->query_name()+
+      " leaps forward to lead the fight!\n");
+    it->attack_object(me);
+    return 1; }
+  return 1; }
+
+test_stats() {
+  object me;
+  int mystr, mysta;
+  me = environment();
+  if(!me) return;
+  mystr = me->query_attrib("str");
+  mysta = me->query_attrib("sta");
+  if(mystr > 15) {
+    TE(me, BOLD+RED+"\nThe Sands take away your excess physical strength.\n"+OFF+OFF);
+  me->set_attrib("str",15);
+    me->save();
+    me->reset(); }
+  if(mysta > 15) {
+    TE(me, BOLD+RED+"\nThe Sands take away your excess endurance.\n"+OFF+OFF);
+  me->set_attrib("sta",15);
+    me->save();
+    me->reset(); }
+  return 1; }
+
+sand_transference(ob) {
+  int myhp, mysp;
+  myhp = ob->query_hp();
+  mysp = ob->query_sp();
+  if(mysp < 1) return;
+  if(myhp == ob->query_mhp()) return;
+  ob->add_spell_point(-1);
+  if(random(3)) ob->add_hit_point(1);
+  return 1; }
+
+check_sand() {
+  object me;
+  me = environment();
+  if(!me || !me->is_player() || me->query_level() > 19) return;
+  if(!me->query_interactive() || !environment(me)) return;
+  if(me->query_ghost()) return 1;
+  if(me->query_level() > 18 && sand_points > 10000) {
+    if(!bravery) {
+    toggle_bravery();
+    tell_object(me,BOLD+"\n\tYour bravery has been rewarded!\n\n"+
+         "\tLEAD is at your command!\n\n"+OFF);
+    sand_points -= 9900;
+    save_me();
+    dervish_reset();
+    }
+  }
+  if(sand_points < 1) {
+    tell_object(me, "The sand takes your blood as its sacrifice.\n");
+    me->add_hit_point(-10);
+    sand_points += (21 - me->query_level())*10;
+    if(me->query_hp() < 1) kill_me(me);
+    return 1; }
+  sand_points --;
+  return 1; }
+
+check_spatt() {
+  if(spell_attacks > 3) {
+  sand_points -= 100; }
+  spell_attacks = 0;
+  return 1; }
+
+kill_me(ob) {
+  object sand;
+  sand=clone_object("/players/snow/dervish/objects/sands");
+  TE(ob, BOLD+RED+"\n\n\tTHE SAND TAKES YOUR LIFE!\n\n"+OFF+OFF);
+  sand_points += ob->query_level()*25;
+/*
+  sand->zap_object(ob); return 1; }
+*/
+  move_object(sand, environment(ob));
+  ob->attacked_by(sand);
+  ob->hit_player(100000, "other|snow");
+  sand->emit_chan(ob);
+  destruct(sand);
+  return 1;
+}

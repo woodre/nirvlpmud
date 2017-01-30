@@ -1,0 +1,63 @@
+CONCEPT
+	Cloning and Inheriting. By effeciency head Bal.
+
+DESCRIPTION
+	Clone vs Inherit and Clone:
+	---------------------------
+	When you are creating an object which is directly derived from one of
+	the standard objects, there are two ways of going about doing it.
+	Either you make a new file and inherit the standard object:
+
+	  inherit "obj/weapon";
+
+	  reset( int arg) {
+	    ::reset( arg);
+
+	    if (arg) return;
+	    set_id( "sword");
+	    set_class( 15);
+	    set_weight( 3);
+	  }
+
+	(and this you clone from a room or whereever), or you clone the
+	standard object the same place and then configuring the object:
+
+	    ...
+
+	    object sword;
+
+	    sword= clone_object( "obj/weapon");
+	    sword->set_id( "sword");
+	    sword->set_class( 15);
+	    sword->set_weight( 3);
+
+	    ...
+
+	Okay. Which one do you choose?
+	------------------------------
+	1st solution is handy for structuring your creations. One file - one
+	object.
+	Things will be easy to find when using this method. And, quite
+	important, other wizards/gods will be able to pinpoint the file if
+	a certain item is causing trouble, becuz you can derive the filename
+	for an object with the efun file_name().
+
+	2nd solution has one important virtue, and it is that it uses less
+	system resources. The whole truth is, that when you clone an object
+	first time it actually produces 2 objects. One called the master
+	object (or blueprint), and another called an instantiation of the
+	master object. Most standard objects are loaded, producing the master,
+	when the game is started up.
+	So, you can easily calculate how many objects solution 1 and 2 produces.
+	The more objects of type 1 you clone, the smaller the benefit from
+	using the 2nd solution.
+
+	My way:
+	-------
+	I usually use solution 2, but I put the code in a separate file which I
+	make the precompiler include in my main file, by putting a
+
+	  #include "sword.c"
+
+	in the right place.
+	So much for that one...

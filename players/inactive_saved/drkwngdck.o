@@ -1,0 +1,109 @@
+channel_names ({"gossip","msg","shout","babble","junk","risque","equip",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 80000
+luck 20
+lucky 64
+name "drkwngdck"
+gender "male"
+msgin "The [1m[35mAmethyst[0m Ranger arrives"
+msgout "The [1m[35mAmethyst[0m Ranger leaves"
+is_npc 0
+brief 0
+level 19
+armor_class 0
+hit_point 290
+max_hp 290
+experience 1688738
+mmsgout "disappears in a puff of smoke"
+mmsgin "arrives in a puff of smoke"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -339
+cap_name "Drkwngdck"
+spell_points 62
+max_spell 290
+spell_name "magic missile"
+spell_cost 0
+spell_dam 0
+age 1086546
+is_invis 0
+frog 0
+whimpy 0
+auto_load "/players/mythos/prac/qt.c:;.X.Z;la look at~;.X.Z;bc bless_corpse~;.X.Z;gc get all from corpse~;.X.Z;ps party say~;.X.Z;quack emote quacks!~;.X.Z;tcc teleport command center~;.X.Z;ss apply sphere~;.X.Z;tch teleport church~;.X.Z;dc donate corpse~;.X.Z;sss unpack sphere~;.X.Z;rp ri pack~;.X.Z;wep pweapon~;.X.Z;aas unpack sphere~;.X.Z;snog emote nogs that shit.~;.X.Z;limbo 9e,2n,1e,3n,step~;.X.Z;swho s_who~;.X.Z;grmbl emote grmbls.~;.X.Z;ii inject green~;.X.Z;mm medicate~;.X.Z;calm brandish wand~;.X.Z;mmm unpack kit~;.X.Z;iii unpack injector~;.X.Z;fs follow stop~;.X.Z;arm marmor~;.X.Z;bb eat berries~;.X.Z;.Y;25;^!/players/beck/MortalKombat/QuestKey:^!players/pain/NEW/items/star.c:^!/players/saber/closed/new_mini/larn.c:^!/players/wocket/junk/quill.c:says^!/players/beck/Rangers/RangerCommunicator:^!"
+current_room "/players/beck/Rangers/CommandCenter/CommandCenter.c"
+alignment 829
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Weapons 0
+handshake_data 20
+handshake 69814328
+quest_point 0
+quests 0
+pregnancy 0
+pregtoo 0
+monitor_string " HP[$HG$#hps#$N$/$G$#mhp#$N$]  SP[$HG$#sps#$N$/$G$#msp#$N$] - [ $HR$#ahp#$N$ ] - Intox[$HY$#intox#$N$%] Stuff[$C$#stu#$N$%] Soak[$HC$#soa#$N$%] Trans[$HW$#inf#$N$%]"
+wkrm 0
+hostname "chtn-02-010.dialup.iowatelecom.net"
+ok_edit "none#"
+mailaddr "novowels@usa.net"
+saved_where 0
+title "The [1m[35mAmethyst[0m Ranger"
+pretitle 0
+password "GL/hPpbrwKXSw"
+race "duck"
+al_title "white lord"
+PKGhostCounter 0
+intoxicated 0
+fight_area 0
+mon 1
+phys_at ({1,4,1,193,0,0,})
+headache 0
+max_headache 0
+no_spell 1
+called_from_ip "216.248.123.73"
+msghome "goes home"
+description "is a middle aged duck dressed comfortably for crime-fighting in a light blue turtleneck covered with a button-up purple overcoat.  He is wearing a very wide brimmed fedora hat and has a purple mask tied over his face.  Noticing you looking at him, he swipes his black cape to the side, letting it flutter dramatically in the wind.   Beware, Evildoers, of Darkwing Duck!"
+guild_name 0
+lastime "Jun 28 04:07 2002 to Jun 28 04:16 2002"
+player_killing 1
+invs_count 0
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd 0
+dead 0
+guild_rank 0
+guild_exp 0
+guild_file 0
+home "/room/church"
+ex_lv 0
+qc 1
+strength 20
+intelligence 20
+stamina 20
+will_power 20
+magic_aptitude 20
+piety 20
+stealth 20
+stuffed 0
+soaked 0
+no_give 1025252207
+aprv 0
+hint "I don't need no stinkin' hint."
+cmd_dirs ({"/bin/play/","/bin/",})
+AnsiPref ({"tell",0,"gossip",0,"risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"page",0,})
+old_last "Jun 28 04:07 2002 to Jun 28 04:16 2002"
+saved_equipment ({})
+other_copy 0

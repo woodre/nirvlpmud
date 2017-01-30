@@ -1,0 +1,1 @@
+[1;33mFawkes [2;37;0m[1m: [2;37;0m[1;33mNo one can doubt the quiet savageness and supreme confidence with which Fawkes conducts his blade -- but at the same time he is chivalrous and just.  Fawkes taught me the meaning of being a Knight when I joined, and the Elite owes a great deal to his knowledge and power.  I am proud to call him my brother.[2;37;0m (tristram)

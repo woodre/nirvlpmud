@@ -1,0 +1,29 @@
+no_clean 0
+name "chainmail"
+alias "armor"
+short_desc "a suit of chainmail"
+long_desc "a suit of chainmail"
+worn_tag_short_flag 0
+buy_value 0
+value 500
+weight 3
+type "armor"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 3
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"armor",})
+params ({"physical",3,0,"do_special",})
+enchantments 0

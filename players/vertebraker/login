@@ -1,0 +1,4 @@
+clone ~/closed/hat/hat
+exec this_player()->set_gender("creature");
+cd ~
+home

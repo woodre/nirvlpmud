@@ -1,0 +1,33 @@
+mcspiked.c 
+  -- 
+I changed the return to random(7);
+
+
+unholylongsword.c 
+  --
+I changed the return to random(4); and added 
+a hit_player() of other|evil.
+
+
+holylongsword.c
+  --
+I changed the return to random(4); and added
+a hit_player() of other|good.
+
+
+mspellstaff.c 
+  --
+I fixed a error in the message you had tp
+need the "+tp+" junk.
+Changed the return to 1;
+
+
+Changed some of your bigger mobs down from your set_level()'s.
+It should be very rare to have mobs over lvl 20 even with a couple 
+specials.  
+
+
+
+
+
+      

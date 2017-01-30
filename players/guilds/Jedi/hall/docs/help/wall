@@ -1,0 +1,9 @@
+Syntax: wall [direction]
+
+Place a wall in your current room that will
+block the exit '[direction]' until it is killed.
+
+The cost is 10,000 coins out of the clans coffers,
+and 100 spell points.
+
+Only one wall may be in a room at a time.

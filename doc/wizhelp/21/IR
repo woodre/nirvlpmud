@@ -1,0 +1,22 @@
+**************
+
+
+                     IR
+
+Syntax:    IR <player>
+
+Desc:
+           This command returns the inventory of the room around a
+           target player. It gives the path of all objects in the 
+           room.
+
+Warning:   
+
+Example:   IR mike
+                  results 
+           Bob sees the path of all objects around Mike
+
+Related:   I
+
+
+**************

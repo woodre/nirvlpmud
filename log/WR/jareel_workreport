@@ -1,0 +1,41 @@
+Wed Aug  8 18:24:44 2001--Action: yelmalian_infantry.c Reason: Guard was wandering all over the place so I removed his wandering south to keep him from exiting my area.
+Wed Oct 31 17:07:24 2001--Action: Mondarsxp Reason: got jennys help to figure out his bonus was missing the extra attack he had completly.
+Fri Aug  2 17:40:08 2002--Action: patch smack xp Reason: he died twice in the Elemental test by miraculously coming back to life only returned second deaths loss.
+Tue Sep 10 20:26:41 2002--Action: Replaced two heals on little, dested two heals with wrong short Reason: short came up as a Soulstone and the path was /players/saber/food/hscroll1 little was just concerned.
+Thu Jul 31 16:40:25 2003--Action: Added a stat and lost xp for Yoshi Reason: couldn't have died in the  second time span he died in
+Mon Sep 22 12:25:44 2003--Action: fixed whitewolf,kezef,hoyle Reason: they couldn't log out so I had them drop all dested the party object off of them and dested them, this solution had worked last week when fred did it to blade so I followed the lead.
+[Aug 17 2005 18:55] A: Added xp to tartis for a death that his heals and guild were buggy working together.
+[Sep  7 2005 19:28] A: Registered Test Character: Labrat
+[Sep 18 2005 20:08] A: I made Mondar grab a corpse that he kills.  Change made on 9/18/05
+[Oct  3 2005 02:18] A: Gave Mondar a Mortal Combat Scar cause well it fits thematically...And I am cool that way
+[May 17 2006 19:02] A: Added resistance and damage to dark demons in Sembrak tower...Now take double damage from light and no damage from dark damage types.
+[May 17 2006 20:25] A: Added same res/dam to Sembrak
+[Jun  5 2006 22:39] A: fixed gauntlets so it was 10% and not 0% look at the line I fixed..is kinda funny.
+[Jun 15 2006 14:41] A: Made Tower Pk is thematic to what I am working on...Will probably random Chaos wood PK..cause it is a chaos area...
+[Aug  3 2006 21:59] A: gave Usagi coins to buy his hotel room back hoping to give him incentive to play again..he paid me back
+[Aug 10 2006 22:14] A: Gave money to flap cause he wasted money on a mob of mine that wouldn't die
+[Aug 14 2006 11:10] A: fixed special spam on /players/jareel/weapons/chaos/woods2/hammer.c was purely superficial
+[Mar 25 2008 12:34] A: fixed the hbt problems in my weapons. add     if(!attacker) return 1 to the specials Thanks Fred
+[Jun 18 2014 22:31] A: restored timeless gem and major gold gem to maul after crash drag said I could.
+[Jun 19 2014 12:37] A: fixed /players/jareel/armor/chaos/woods2/orlanth_shield.c Cosmetically as Sin pointed out the desc was the desc of the wrong gear.
+[Jun 19 2014 17:32] A: Made a Test Char Named Whiterat to test out spam do not want him marked as a test character as I just want to see the spam as a player would see it for game play purposes.
+[Jun 24 2014 15:34] A: Added wc_bonus to Gnarlin Drag Approved...as He has extra attack at WC 100
+[Jun 24 2014 15:52] A: Switched Gnarlins axe from Random 5 to random 2 think I switched it when I was coding my swords and it messed up the special...This only affects my area.
+[Jul  1 2014 17:04] A: healed Mosh cause he was losing sps like crazy to see what the issue was was at -1.3 mil
+[Jul  2 2014 21:24] A: Jaraxle tree needed to be reloaded
+[Jul  3 2014 08:52] A: Fixed Gnarlins set_ac_bonus after talking to illarion last night about set_param_physical
+[Jul  4 2014 22:15] A: restored two gems to maul after crash a Level2 gold gem and a timeless gem.
+[Jul 15 2014 22:42] A: returning bag to autumns alt that didn't drop in her box
+[Jul 21 2014 21:48] A: fixed cacodemons res from set_param to set_res and added ac bonus...also fixed his magic resist it was set wrong...he should be a whole lot harder to kill now.
+[Jul 23 2014 19:56] A: Got Ssilles bag from the void as it didn't drop in a box.
+[Aug 17 2014 09:51] A: fixed Thematic stuff to area..added 10% light resist to darkdemon and -10 light damage to dark demon with thematic spam for demon consistency will add it to other demons also..will add it to Sembrak on Sembrak Recode.
+[Sep 11 2014 06:49] A: did Update to Dual axe, Both axes had an Ice special..One was supposed to be fire was an over look in design phase...added fire to one was going to be in both weps to make them at a decent power level but dill look for approval for that change.
+[Sep 11 2014 22:15] A: Made weak versions of mobs with soulbound gear to replace Jaster broken gear...Not sure how to fix the Hotel issue.
+[Sep 11 2014 23:12] A: 2096671 xp added to Noxious for Room bugging and 8 Rhino Broo loading to room where 2 are supposed to be.
+[Sep 12 2014 12:23] A: fixed wc bonus on Rhino Broo...Broo had Extra attack and did not have wc bonus adjusted for spells and wc.  also fixed spell damage types as was set for other|physical.
+[Sep 15 2014 13:39] A: added and inv cmd to the cloak.
+[Sep 22 2014 17:20] A: Changed Dual axe damage from a hit_player dtype to a do_damage dtype with Drags help...was causing some hbt issues..think its fixed.
+[Sep 24 2014 15:08] A: Fixed Gauntlets problem. Had used them to test new weapon on Chandra and the test item got uploaded in game...no one reported the mixed up item not sure if anyone really uses this gear so is not a big deal.  Has the random back on it.
+[Oct  5 2014 18:12] A: remove a test spam from chandra and fixed a typo from revive.
+[Oct 15 2014 15:47] A: Think I fix /players/jareel/armor/mondar_gauntlets not sure why it was buggy put in another check.
+[Oct 15 2014 16:00] A: added a if( !attacker )return 1; To Chaosaxe1 Not sure it will fix the deathcall bugging

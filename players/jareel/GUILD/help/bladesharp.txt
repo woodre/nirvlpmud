@@ -1,0 +1,16 @@
+                    -- BLADESHARP --
+
+TYPE: Spell (Variable)
+INT REQ: 1/level
+USAGE: bladesharp (Must have a wielded weapon)
+COST TO MAX: 100,000 xp
+
+Bladesharp can only be cast upon a bladed weapon. Make the weapon
+smack up your foe.  Effect only lasts a limited time.
+
+ /=LEVEL=COST SP=XP COST=\
+ |   1  |   25  | 10,000 |
+ |   2  |   25  | 20,000 |
+ |   3  |   25  | 30,000 |
+ |   4  |   25  | 40,000 |
+ \=======================/

@@ -1,0 +1,26 @@
+**************
+
+
+                     Idest
+
+Syntax:    idest <player> <item>
+
+Desc:
+           This command dests an object from a players inventory. 
+           Be sure you have the right item name if you are doing this
+           to remove a bugged object or something you gave them.
+
+Warning:   Can dest wrong object easily, be sure you have right 
+           target. Becareful about guild objects, they should be
+           removed using the unguilding functions of the guild to 
+           prevent errors.
+
+Example:   idest mike teller
+                  results
+           object teller is dested from player Mike
+
+
+Related:   hand
+
+
+**************

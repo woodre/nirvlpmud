@@ -1,0 +1,23 @@
+Rank 4
+
+   Blaze [New cmd]:
+     Ignite the room into flames.  Not performable
+     in a village or a non-fight room.  Requires a task
+     and a conjured flame.  Variable 1/4 chance every 3
+     seconds of doing 10-15 heal_self damage to all npc's
+     in room, 10-15 add_hit_point damage to all players.
+     It heals fire-based races [efreeti, etc].
+     When it disappears, it also slight "other|fire"
+     hit_player damage to all.  Costs 100 spell points.
+
+   Confuse [Rewritten]:
+     Calm spell.  Costs 10 spell points per person
+     calmed.
+
+   Slayer [Totally Rewritten]:
+     Used to summon the Slayer Sword.  Requires a sword
+     each time a slayer is summoned.  Strength of slayer 
+     dependent on guild rank and level of player, as
+     well as wc of weapon 'donated'.  Strength max at 150.
+     Requires a task.
+

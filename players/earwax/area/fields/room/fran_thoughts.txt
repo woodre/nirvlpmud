@@ -1,0 +1,116 @@
+
+fields1	missing description for ‘stone structure’
+
+fields2	“A stone building lies to the southeast”.  Is this a description?
+
+fields3	“There is a stone building a short distance to the south of here”.  
+	Is this a description?
+	generally speaking: the description would show the shape, the color, 
+	the dimension etc etc of the object looked at rather than its function or 
+	where it lies.
+
+fields4	“Grass ends where a moat to the north begins.  East a sheer cliff 
+	lies beyond some dense vegetation, and south and west lie grassy fields.” 
+	I would change to: “The grass ends where a moat begins. To the east a sheer 
+	cliff is visible through a dense vegetation.  More grassy fields extend to 
+	the north and to the south”.
+	do_play():  it is written: “……You think it might be best to stay on Earwax's 
+	good side.” A wizard should NOT assume anything about what a player is thinking.
+	beast_desc():   why would I “Trust me” ????? I only trust myself  *wink*
+	and, moreover, who is ‘me’?
+	it is not obvious to ‘search vegetation’. I would add a hint.
+	I would use the add_action ‘pass’ or ‘enter’ rather than ‘e’, also because 
+	later you will ‘out’ the cave
+	castle: "There's a castle beyond the moat, but there is no way to get to it
+	from here." does this describe the castle?
+
+fields5	same comments made in fields 4 apply here too.
+	In previous room there is a hidden hint about ‘search vegetation’ 
+	because it is written “…..but perhaps not” . Same here, but the vegetation 
+	is not searchable.
+	hmmmm, let me re-write the previous sentence: did you just copy and past 
+	fields4 into fields5? Because several items are not here. 
+	hmm, we must check this better
+	castle: "you can see it, but it doesn't look like there's any way to get to it."
+	does this describe the castle?
+
+fields6	castle is not well described. At least, is it huge or small? 
+	missing description for clouds. LOL, I know that clouds are not in the 
+	room description, but they are in the description of the mountains, so, 
+	a player is supposed to be able to “look clouds” and wouldn’t be happy 
+	to see the message: "there are not clouds here." Are there clouds or not???   LOL
+	generally speaking: ALL nouns must be described, even those which are 
+	embedded within the description of items.
+
+fields7	ok
+
+fields8	ok
+
+fields9	ok
+
+fields10 ok
+
+road1	what does it means “there are fields to either side of you”?? it might make 
+	sense if I am traveling south/north, but if I am walking from east to west, 
+	in my sides I see the road (which runs south/north)
+
+road2	“….and a ways to the north is a castle.” hmmm, grammar?
+
+road3	‘read sign’ and ‘look sign’ have the same effect……. I would change that to:
+	look sign: “It is a wooden sign held by a pole, it can be ‘read’”
+	read sign: “Due to the ongoing process …….”
+
+by_shack building: there are two descriptions of it, the players can see only the
+	second one.
+	"To the west and north this grassy field continues." hmmm, i dont like the 
+	verb 'continue'. continue from where? and if i have been staying in this room
+	for several hours, why would i remember what was before this one?
+
+shacks:
+
+entrance lights: who said "Too bad you're not on mushrooms or acid....."??? i am on acid 
+	99% of the times  *wink* 
+	papers: who said "It would be the epitome of rudeness to go through someone 
+	else's papers."???  i am a very rude player  *wink*
+	doorway: "there are two".  is this a description?
+	doorways: "Yup, it's a plural", and? Nirvana is not a school where players come
+	to learn english grammar.  LOL
+	cleaning_gear: again, why should a player "think you should look at the 
+	'cleaning gear' instead." ??? dont assume what a player is or should be thinking.
+
+equarters bunks: "They don't look very comfortable."  ok, but what is their shape? color?	
+	very nice description about the smell. it really made me feel the smelling :)
+
+cell	detainees: there are no detainees. so, why would a player suppose that "It's where 
+	the "+ENG+" keeps their detainees." ???
+	moreover: why would a player suppose that "but all their enemies either end up 
+	dead (not very likely) or laughing at them (much more likely)."  ???
+	ledge: "It doesn't look very comfortable." see bunks above.
+	toilet: "It's functional yet ... functional."  hmmm, see above.
+
+office	"West would most likely take you to where you got here by going east from 
+	(go figure)"  expected :)
+	pettibritches is not lookable, but only lt is. should add an id()
+
+armory	racks have two descriptions
+	racks: "The racks might once have held weapons, it's hard to tell without 
+	disturbing the inch-thick dust." if it is hard to tell, how can you tell?  *wink*
+	dust: i never noticed the difference between high and poor quality dust  *wink*
+
+oquarters ghettochicken is not lookable, but only captain is. should add an id()
+	how can a player assume he was in the "+ENG+"  for 12 years?
+	"the smell is reminiscient....." -> "the smell could be reminiscent...." 
+	and, also, hmmmm how could a player be so immaginative to think "of a month-old 
+	rat corpse stuffed inside a fermented sausage after being spritzed up with 
+	some skunk musk."  ????? (well, it is a great description, but, ... see my point?)
+
+cave	ok
+
+
+
+
+
+
+	
+
+	

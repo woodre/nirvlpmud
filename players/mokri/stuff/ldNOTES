@@ -1,0 +1,18 @@
+you can fix batarsis
+boltar/things/antipk
+something weird the way his gear is cloned
+also cp is not working
+no errors, just simple doesn't work
+
+2014.07.23 12:48:08 program: players/boltar/hotel/hotel.c, object: players/boltar/hotel/hotel line 74
+'          reset' in 'players/boltar/hotel/hotel.c' ('players/boltar/hotel/hotel') line 74
+2014.07.23 12:48:08 Error in process_objects().
+2014.07.23 12:50:47 Error (104) upon reading socket 7 (ip 0x98ae224 'obj/player#323'), closing connection: Connection reset by peer
+2014.07.23 13:02:24 Error in loading object: 'players/boltar/things/antipk'.
+2014.07.23 13:02:24 program: players/boltar/castle.c, object: players/boltar/castle line 83
+'          reset' in 'players/boltar/castle.c' ('players/boltar/castle') line 83
+2014.07.23 13:02:25 Error in process_objects().
+2014.07.23 13:16:06 Bad arg 1 to call_other(): got 'number', expected 'string/array/object'.
+2014.07.23 13:16:06 program: players/boltar/hotel/hotel.c, object: players/boltar/hotel/hotel line 74
+'          reset' in 'players/boltar/hotel/hotel.c' ('players/boltar/hotel/hotel') line 74
+2014.07.23 13:16:06 Error in process_objects().

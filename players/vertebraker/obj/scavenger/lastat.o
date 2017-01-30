@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/ultramagnus/darkweapon","/players/eurale/Glade/OBJ/elven_boots","/players/snow/WEAPONS/tsunami","/players/angel/area/stargate/obj/staff","/players/mythos/aarmor/haramaki","/players/wren/Area/starbug/items/sparehead","/players/mythos/awep/kama","/players/mythos/awep/ring","/players/wren/Area/starbug/items/arrogance","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/obj/armor","/players/saber/stuff/power","/obj/weapon","/players/wren/Area/starbug/items/gauntlet","/obj/armor","/players/mythos/aarmor/kote","/players/mosobp/areas/TEMPLE/OBJ/rags","/obj/treasure","/players/softly/newbie/obj/cheese","/obj/treasure","/players/wren/Area/starbug/items/dreds","/players/saber/stuff/mic","/players/hippo/weapons/glue","/players/scathe/armor/bowboot","/players/snow/ITEMS/ice_shard",})
+shorts ({"Dark Rider Longsword","[1mElven boots[2;37;0m","[34mTsunami[0m","[1;36mSTAFF WEAPON[0m","Haramaki","Kryten's sparehead 3.","kama","Silver Ring","Rimmers arrogance.","A Prince's Robes","Boots","A power system","Steel Longsword","Time gauntlet","A Jedi Cloak","Kote","Peasant Rags","Arctic Seal pelt","[1;33mCheese[2;37;0m","A piece of corundum","Lister's crusty deerstalker with dreds.","A microphone","a strong, 1 second glue","Hard Boots","An ice shard",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

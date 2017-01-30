@@ -1,0 +1,31 @@
+Wizard levels determine what powers and what authority wizards have on Nirvana.
+
+The following powers are granted at the minimum wizard level, and are
+considered to be legal for wizards of any level to use. For more information on
+a power, use the wizhelp command to access the details. i.e. wizhelp <command>
+add_xp        ed            instances   peace       set_level   update_items
+att           errormsgs     ip          people      setal       valias
+attrib        free          IR          place       setaln      vhistory
+castle        gauge         light       plevels     setmhome    vis
+cat           goto          load        pwd         setmin      vnickname
+cd            grep          load_dir    reset       setmmin     where
+church        hand          localcmd    review      setmmout    wizbook
+clean         hands         log         rm          setmout     wizlist
+clear_dir     heal          ls          rmdir       statall     wkrm
+clone         home          man         ruler       tail
+cp            I             mkdir       run         title
+cp_dir        identify      money       set_attrib  trans
+dest          idest         more        set_extra   upd_dir
+earmuffs      imprison      mv          set_home    update
+
+As a wizard progresses in levels, more powers become available to him/her.
+Level 30:   invis   (a better wizard invis)
+Level 40:   echo, echoall, echochan, echoto
+Level 50:   at, authcheck, ecreate, force, in
+Level 60:   fix_guild, snoop
+Level 70:   zap
+Level 80:   climbin, drop!, exec, exiv, get!, give!, put!, trans!
+Level 90:   Nothing special
+Level 100:  Senior commands
+Level 1000: Elder commands
+Level 5000: Arch commands

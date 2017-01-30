@@ -1,0 +1,27 @@
+#include "/players/feldegast/closed/ansi.h"
+string random_color() {
+  switch(random(10)) {
+    case 0: return HIB;
+    case 1: return HIR;
+    case 2: return HIG;
+    case 3: return HIW;
+    case 4: return HIM;
+    case 5: return NORM+BLU;
+    case 6: return NORM+WHT;
+    case 7: return NORM+GRN;
+    case 8: return NORM+RED;
+    case 9: return NORM+MAG;
+    default: return HIG;
+  }
+}
+string colorize_sentence(string str) {
+  string newstr;
+
+  string token;
+  sscanf(str,"%s %s",token,str);
+  while(token) {
+    newstr+=random_color()+token;
+    sscanf(str,"%s %s",token,str);
+  }
+  return newstr;
+}

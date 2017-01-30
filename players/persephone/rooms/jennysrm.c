@@ -1,0 +1,85 @@
+inherit "/players/persephone/closed/thingys.c";
+#include "/players/persephone/rooms.h"
+object trapdoor, corridor;
+reset (int arg){
+  if(!present("slime")){
+    move_object(clone_object("players/persephone/monster/slime"), TOB);
+  }
+ if (!arg) {
+  set_light(1);
+  short_desc="Maid's Room";
+  long_desc="You have just entered the smallest and shabbiest room in this dingy\n" +
+            "hotel. By the look of things you think that it must be the maid's\n" +
+            "quarters as hanging over the only chair in the room is a maid's uniform.\n" +
+            "against the south wall of the room you see a small wardrobe and in\n" +
+            "the middle of the room is a bed. In the north wall is a window and the\n" +
+            "the only possible exit appears to be through the trapdoor.\n" +
+            "\n";
+  items=({"chair","A rather ancient and unsturdy looking chair which you dare not sit\n" +
+                  "on",
+          "uniform","This looks like one of those traditional black French Maid's\n" +
+                    "uniform it actually looks quite kinky",
+          "bed","How could you expect anyone to sleep in this bed there are large\n" +
+                "black Cockroaches crawling all over it.",
+          "wardrobe","Just some more maid's uniforms. Wait a second something appears\n" +
+                     "to be strange about this wardrobe",
+          "window","From this window you get a view of the Harbour and you think\n" +
+                   "you can see some movement on one of the piers",
+           "harbour","The harbour looks fairly busy from up here and the water appears\n" +
+                     "to be very smooth",
+           "cockroaches","These cockroaches seem to be enormous and and quite healthy\n" +
+                        "perhaps you should leave them alone",
+           "pier","It appears as if there is some movement on this pier but you\n" +
+                  "cannot be sure",
+           "ceiling","It looks as if the ceiling needs a good coat of paint as you\n" +
+                     "see large patches of paint",
+           "walls","There are huge cracks in the walls here and you think that \n" +
+                   "the walls should have been repaired long ago. Actually looking\n" +
+                   "closely at the walls you think they are almost paper thin",
+           "floor","Thank god you are wearing your shoes as there is all sorts\n" +
+                   "of junk on the floor",
+           "junk","You would not believe the mess here, there appears to be broken\n" +
+                  "bottles and even nails on the floor",
+           "nails","These nails look totally worthless and extremely dangerous as\n" +
+                   "they are rusty",
+           "trapdoor","This is one of those huge wooden trapdoors it must be extremely\n" +
+                      "heavy",
+          });
+ }
+}
+realm() { return "NT"; }
+init(){
+ ::init();
+ add_action("open1","open");
+ add_action("search1","search");
+ add_action("enter","enter");
+}
+open1(str){
+ if(str=="trapdoor"){
+  write("With much effort you lift open the large wooden trapdoor and fall \n" +
+        "through the hole in the floor. Ouch!!\n");
+  say(capitalize(this_player()->query_name())+" struggles to open the trapdoor in the floor and falls\n" +
+                                             "through the opening with the trapdoor slamming behind him\n");
+  this_player()->move_player("#"+"players/persephone/rooms/paphot1f");
+ return 1;
+ }
+}
+search1(str){
+ if (str=="wardrobe"){
+  write("After a great deal of rummaging you pull a large black switch\n" +
+        "and see a corridor to the east which you can enter\n");
+  say(capitalize(this_player()->query_name())+" rummages around loudly in the wardrobe\n");
+  corridor = this_player();
+  return 1;
+  }
+}
+enter(){
+  if(corridor==this_player()){
+  write("You go east through the back of the wardrobe into the corridor you\n" +
+         "found\n");
+  this_player()->move_player("enter#"+"players/persephone/rooms/jennybl");
+  return(1);
+ }
+ write ("There is no corridor here presently\n");
+ return 1;
+}

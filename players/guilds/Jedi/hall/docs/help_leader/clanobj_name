@@ -1,0 +1,13 @@
+Syntax: clanobj_name [name]
+
+Sets the name of the clan object to 'name'.
+This will be what you type to look at the object,
+etc.
+
+Example:
+  If the short description (clan_help clan_short) were
+  set to 'A big red ball', I'd want to be able to type
+  'look ball' to look at it. To set it's name to 'ball'
+  to be able to do this, I would simply type
+  'clanobj_name ball'
+  

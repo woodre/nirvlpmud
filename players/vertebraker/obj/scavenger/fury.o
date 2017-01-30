@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/torch","/players/wren/Area/starbug/items/comb","/players/snow/shadows/stuff/ring","/players/emerson/obj/box","/players/arrina/weapons/longknif","/players/angel/area/stargate/obj/staff","/players/snow/WEAPONS/souleater","/obj/torch","/players/pain/NEW/weap/mstar","/players/ultramagnus/bdiamond","/players/softly/nhall/obj/green2","/players/puppy/s/eq/quill","/players/emerson/heal/pizza","/players/saber/armor/halter","/obj/treasure","/players/khrell/weapons/skaven/fellblade","/players/saber/weapons/hrev","/players/snow/armor/arch_robes","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/sado/shop/oreo","/players/wren/Area/starbug/items/guitar","/players/jamila/beach/mobs/claw","/obj/armor","/players/mythos/awep/quiver","/players/pain/NEW/weap/mace2",})
+shorts ({"sunflower","the cat's hair pick","A dusky ring","A box of parts","A longknife","[1;36mSTAFF WEAPON[0m","[1mSoulEater[0m","torch","Morningstar","A Blue Diamond","Healing Balm [32m(green)[2;37;0m [2]","A quill","slice of hot pizza","A black halter top","An important sign","[41m[30mFellblade[0m","A Colt .68 Heavy Revolver","Robes of the Archwizard","A Prince's Robes","A box of oreo cookies","Lister's guitar","A Lobster Claw","A shoddy [1mwhite[0m cloak","A quiver","A huge iron mace",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

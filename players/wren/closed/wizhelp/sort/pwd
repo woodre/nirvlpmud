@@ -1,0 +1,22 @@
+**************
+
+
+                     Pwd
+
+Syntax:    pwd
+
+Desc:
+           Displays the current working directory. Helpful if you are
+           working in several directories and need to check before 
+           trying to manipulate a file.
+
+Warning:   None
+
+Example:   pwd
+                  results
+           Bob's working directory is displayed
+
+Related:   cd, ls
+
+
+**************

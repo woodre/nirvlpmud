@@ -1,0 +1,114 @@
+inherit "room/room";
+object ob;
+int count;
+reset(arg) {
+   if(arg)
+      return;
+count=0;
+if(!present("tester")) {
+move_object(clone_object("/players/grimm/closed/obj/badge_stuff/beta"),this_object());
+}
+if(!present("poker machine")) {
+  move_object(clone_object("/players/grimm/closed/obj/poker"),this_object());
+}
+/*
+if(!present("fountain")) {
+  move_object(clone_object("/players/grimm/q/o/fountain"),this_object());
+}
+*/
+if(!present("box")) {
+  move_object(clone_object("/players/grimm/closed/obj/badge_stuff/vbox"),this_object());
+}
+if(!present("cboard")) {
+  move_object(clone_object("/players/grimm/closed/obj/badge_stuff/board2"),this_object());
+  }
+short_desc="Commander's Hideout";
+long_desc="This is a hideout for Doppleganger's Guild Commanders only.\n";
+dest_dir=({
+           "/players/grimm/guild","east",
+           "/players/grimm/closed/obj/badge_stuff/guild_pr", "north",
+           "/room/church","church",
+           "/room/shop","shop",
+           "/players/grimm/guild","guild",
+           "/room/adv_guild","adventures",
+           "/room/pub2","pub",
+           });
+}
+
+
+init() {
+  if((!present("badge",this_player()) && !this_player()->query_npc())
+     || environment(this_player())->id("cloud")) {
+    write("YOU ARE NOT A DOPPLEGANGER!\nOnly the chosen will be allowed to enter this room!\n");
+    say(capitalize(this_player()->query_real_name())+" tried to enter the room but gets kicked out!\n");
+    move_object(this_player(),"/players/grimm/guild");
+    write("Join our guild before entering the guild's party room.\n");
+    return 1;
+  }
+
+  if((this_player()->query_guild_rank()<20 && !this_player()->query_npc()) || (environment(this_player())->id("cloud"))) {
+    write("You are not a guild commander.\n");
+    move_object(this_player(),"/players/grimm/closed/obj/badge_stuff/guild_pr");
+    return 1;
+  }
+  add_action("list","list");
+  add_action("east","east");
+  add_action("north","north");
+  add_action("east","guild");
+  add_action("shop","shop");
+  add_action("church","church");
+  add_action("pub","pub");
+  add_action("adventures","adventures");
+}
+
+east() {
+  this_player()->move_player("to the guild#/players/grimm/guild");
+ return 1;
+}
+
+shop() {
+  this_player()->move_player("to the shop#/room/shop");
+  return 1;
+}
+
+church() {
+  this_player()->move_player("to the church#/room/church");
+  return 1;
+}
+
+
+adventures() {
+  this_player()->move_player("to the adventures guild#/room/adv_guild");
+  return 1;
+}
+
+pub() {
+  this_player()->move_player("to the main pub#/room/pub2");
+  return 1;
+}
+
+north() {
+  this_player()->move_player("to the normal party room#/players/grimm/closed/obj/badge_stuff/guild_pr");
+  return 1;
+}
+
+list() {
+  write("Current guild commanders/leaders are:\n");
+  write("   Guild Master:      Grimm\n");
+  write("   Guild XO:          Scooter\n");
+  write("   Guild Wizzies:     Blue, Darq, Dragnar, Gorgan, Hawkeye,\n");
+  write("                      Mizan, Pavlik, Trix, Yaeger, Zek\n");
+  write("   Guild Senior:      Dirk, Hellbent\n");
+  write("   Guild Commanders:\n");
+  write("            Jewel\n");
+  write("            Lennon\n");
+  write("            Mercedes\n");
+  write("            Redwine\n");
+  write("            Smaug\n");
+  write("            Taliesen\n");
+  write("            Teop\n");
+  write("            Tyme\n");
+  write("            Tyro\n");
+  write("            Wiz\n");
+  return 1;
+}

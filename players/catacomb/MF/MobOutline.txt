@@ -1,0 +1,72 @@
+Durkor Cavern Mob Stuff
+  
+
+Mob            Level    WC     AC     Item       Value
+__________________
+Village/Creek Mobs
+------------------
+elf1.c          14      18     11     tunic.c     750
+
+elf2.c          13      17     10     cloak.c     600
+
+elf3.c          15      20     12     dagger.c    600
+                                      pole.c      400
+
+elfarcher.c     15      20     12     bow.c       750
+
+elfpriest.c     18      26     15     book1.c
+ hpbonus()                            scepter.c   1500
+                                      robes.c     1500
+
+elfboy.c        12      16      9     disks.c     550
+
+elflady.c       16      22     13     staff.c     1000
+                                      boots.c     500
+___________
+Forest Mobs
+-----------
+spirit1.c       17      24     14     N/A
+
+spirit2.c       19      28     16     N/A
+
+spirit3.c       15      20     12     N/A
+
+Chelaris.c      23      40     25     elderRobe.c
+  hpbonus()                           Polaris.c
+
+spectre.c       18      26     15     N/A
+
+ranger.c        17      24     14     katana.c     1000
+                                      shield.c     1000
+
+imp.c           17      24     14     impwing.c    1000
+
+viper1.c        16      22     13     (2)fang.c    700
+
+viper2.c        19      29     16     skin.c       1000
+                                      (2)fang.c    700
+
+viper3.c        15      20     12     N/A
+
+___________________
+Marsh/Clearing Mobs
+-------------------
+Yeroc.c                               Despair.c
+                                      Ycloak.c
+                                      book2.c
+
+troll1.c                              hair.c
+
+troll2.c                              N/A
+
+dog.c                                 N/A
+
+guardian1.c                           axe.c
+                                      orb.c
+
+guardian2.c                           cleaver.c
+                                      orb.c
+
+Gargoyle1.c                           statue.c
+
+Gargoyle2.c                           statue.c

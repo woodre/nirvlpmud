@@ -1,0 +1,121 @@
+channel_names ({"shout","equip","babble","announce","cwiz","newbie","admin","pk","wiz","msg","gossip","junk","risque",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 9976
+luck 49
+lucky 148
+name "vertebraker"
+gender "creature"
+msgin "unfolds from a ball of goo"
+msgout "turns into a ball of goo and rolls"
+is_npc 0
+brief 0
+level 10000
+armor_class 0
+hit_point 80130
+max_hp 80130
+experience 2504815
+mmsgout "turns into a ball of goo"
+mmsgin "unfolds from a ball of goo"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -562
+cap_name "Vertebraker"
+spell_points 80130
+max_spell 80130
+spell_name "sonic"
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 1800
+is_invis 0
+frog 0
+whimpy 0
+auto_load "players/pain/NEW/items/star.c:^!/players/sado/antifos/button.c:^!/players/dreamspeakr/WEDDING/OBJ/wedding_ring:^!"
+current_room "players/vertebraker/workroom"
+alignment 0
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Armors 0
+Weapons 0
+WeaponBonuses 0
+handshake_data 295
+handshake 94468404
+quest_point 0
+quests "bleh#christian_zombie_vampire#"
+pregnancy 0
+pregtoo "vital"
+monitor_string 0
+saved_aliases ({"stardong","exec command(\"star do\"+BEEP+\"ng!\", this_player());","fnpc","clone /players/zeus/stuff/npc","home","goto ~/workroom","nope","reply No comment.","cleanv","exec command(\"update \" + file_name(environment(environment(find_player(\"verte\")))), this_player());","mythtell","cd /players/mythos/closed/tell","bombKoosh","exec int i; i = 100; while(i--) command(\"koosh cooper\", this_player());","lx","exec int i; string x,text; string *fds; fds = get_dir(\"/bin/wiz/\"); i = sizeof(fds); while(i--) { text = read_file(\"/bin/wiz/\"+fds[i]); if(sscanf(text, \"%swrite_file%s\",x,x)) write(\"WF: \"+fds[i]+\"\\n\"); if(sscanf(text, \"%slog_file%s\",x,x)) write(\"LF: \"+fds[i]+\"\\n\"); }","s2","reply cause i am stupid","s1","reply nopes","bw","cd /players/stardream/area/bw/room","replacepfileslvl","exec int x, y, lev; string c, d; string *str; str=({\"arrina\",\"gowron\",\"haji\",\"jenny\",\"kain\",\"hawkeye\",\"mathiast\",\"morgoth\",\"mythos\",\"snakespear\",\"wizardchild\"}); y = sizeof(str); for(x=0;x<y;x++) { c=\"\"; d=\"\"; lev=0; sscanf(read_file(\"/players/vertebraker/tmp/\"+str[x]+\".o\"), \"%slevel %d%s\",c,lev,d); write(\"rm: \"+rm(\"/players/vertebraker/tmp/\"+str[x]+\".o\")+\"\\n\"); write_file(\"/players/vertebraker/tmp/\"+str[x]+\".o\",c+\"level 20\"+d); }","cleanwork","exec destruct(present(\"u-sphere\", find_object(\"/players/vertebraker/workroom\")));","ffireworks","exec int i; i = 100; while(i--) move_object(clone_object(\"/players/llew/junk/firework\"), this_player());","rebuild_castle","mk ~/castle","ministry","cd /players/vertebraker/guilds/ministry/cmds","cw","clone /obj/wiz_tool","pussInBoots","exec command(\"risque \"+BEEP+BEEP+BEEP+BLINK+HIM+\"PUSSY!\"+NORM, this_player());","fetch_mad_koosh","exec int i; i = 100; while(i--) command(\"clone /players/mouzar/closed/koosh\", this_player());","fh","clone /players/eurale/Keep/NPC/hylar","lack_respect","star And you know what hurt the most?  The lack of respect.  Well, I forgot about that other thing.  The other thing hurt the most.  But the lack of respect hurt the second most.","hurt","cd /players/guilds/undead/hurtbrain","trixcastle","cd ~/classic/undead/trix/castle","myroom","cd ~/classic/undead/room","freak","exec command(\"star \"+HIR+BLINK+HBMAG+\"Freak\"+NORM+NORM, this_player());","clerics","cd ~/guilds/clerics","pfilewipe","exec int x, y, lev; string c, d; string *str; str=({\"arrina\",\"gowron\",\"haji\",\"jenny\",\"kain\",\"hawkeye\",\"mathiast\",\"morgoth\",\"mythos\",\"snakespear\",\"wizardchild\"}); y = sizeof(str); for(x=0;x<y;x++) { command(\"rm /pfiles/\"+str[x][0..0]+\"/\"+str[x]+\".o\", this_player()); }","diehard","star ...WITH A VENGEANCE.","wizhall","goto /room/adv_inner","s4","reply cause i have psychological disorders","cm","clone /obj/mail_reader","copypfiles","exec int x, y; string *str; str=({\"arrina\",\"gowron\",\"haji\",\"jenny\",\"kain\",\"hawkeye\",\"mathiast\",\"morgoth\",\"mythos\",\"snakespear\",\"wizardchild\"}); y = sizeof(str); for(x=0;x<y;x++) { command(\"cp /pfiles/\"+str[x][0..0]+\"/\"+str[x]+\".o /players/vertebraker/tmp/\"+str[x]+\".o\", this_player()); }","scat","dump","trix","cd /players/guilds/undead/trix","gc","get all from corpse","pfilesmvtoinact","exec int x, y, lev; string c, d; string *str; str=({\"arrina\",\"gowron\",\"haji\",\"jenny\",\"kain\",\"hawkeye\",\"mathiast\",\"morgoth\",\"mythos\",\"snakespear\",\"wizardchild\"}); y = sizeof(str); for(x=0;x<y;x++) { command(\"cp /players/vertebraker/tmp/\"+str[x]+\".o /players/inactive_saved/\"+str[x]+\".o\",this_player()); }","magedir","cd ~/guilds/mages","ta","take all","undead","cd ~/classic/undead","snoopers","p S","s3","reply cause i am gay","allidle","exec int s, idle_time; object *us; s = sizeof(us=users()); while(s--) if(us[s]) idle_time += query_idle(us[s]); write(\"total idling time: \"+idle_time/3600+\" hours\\n\");","ps","party say","fetchMonkey","exec object obj; obj = clone_object(\"/players/vertebraker/closed/monkey\"); obj->set_owner(this_player()); move_object(obj, environment(this_player()));","ls","ls -d",})
+saved_nicknames ({"ds","demonsemen","vb","vertebraker","qs","quicksilver","dr","dustyrose","sd","stardream","sed","seductress",})
+clan "boston george"
+wkrm "players/vertebraker/workroom.c"
+hostname "pcp03338721pcs.mchncb01.pa.comcast.net"
+ok_edit "none#"
+mailaddr "tmieczkowski@gmail.com"
+saved_where 0
+title "the completely idle"
+pretitle 0
+password "pEmk9FS9rMnjw"
+race "creature"
+al_title "neutral"
+PKGhostCounter 0
+intoxicated 0
+fight_area 0
+mon 1
+phys_at ({1,107,10,30320,0,0,})
+headache 0
+max_headache 0
+no_spell 0
+called_from_ip "68.54.139.182"
+msghome "turns into a ball of goo and rolls home"
+description "the Eater of Worlds."
+guild_name "cyberninja"
+lastime "Jan 20 10:28 2006"
+player_killing 1
+invs_count 0
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd "/players/vertebraker/"
+dead 0
+guild_rank 99
+guild_exp 3064478
+guild_file 0
+home "/players/vertebraker/workroom"
+ex_lv 0
+qc 0
+strength 20000
+intelligence 20
+stamina 19
+will_power 19
+magic_aptitude 19
+piety 20
+stealth 24
+charisma 19
+dexterity 1000
+atrbr ({5,5,20,36,20,18,20,20,20,19,})
+stuffed 0
+soaked 0
+no_give 0
+aprv "pain,snow,eurale,vertebraker,vital"
+hint 0
+AnsiPref ({"tell","[1;36m","gossip",0,"risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"equip",0,"wiz",0,"cwiz",0,"page",0,"admin","[1;36m","pk",0,"title",0,"pretitle",0,"roomtitle",0,"ls .c",0,"ls .h",0,"ls directory","[32m","ls otherFiles",0,})
+old_last "Jan 18 23:55 2006 to Jan 19 00:57 2006"
+BankBalance 7986026
+other_copy 0

@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "gbreak"
+myMsgU "$R$*~* $HK$You break %TRG%'s arm with a fierce roundhouse!"
+myMsgD 0
+roomMsgU "$R$*~* $HK$%SRC% breaks %TRG%'s arm with a fierce roundhouse!"
+roomMsgD 0
+tellMsg 0
+farMsg 0
+owner "pike"

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/obj/weapon","/obj/armor","/players/mythos/awep/katana","/players/mythos/awep/kama","/players/arrina/armor/sveil","/players/pain/NEW/weap/mstar","/obj/weapon","/players/arrina/heals/ale","/players/saber/armor/halter","/players/sado/shop/oreo","/players/wren/Area/starbug/items/reddress","/obj/treasure","/players/arrina/armor/torque","/players/mythos/awep/dstaff","/obj/level_list","/players/wren/Area/starbug/items/gauntlet","/players/ultramagnus/darkweapon","/players/emerson/armor/ntag","/players/wren/Area/starbug/items/straw","/players/emerson/armor/jacket","/players/emerson/weap/bigfoot","/players/wren/Area/starbug/items/leaflets","/players/arrina/treas/onyx","/players/scathe/armor/damulet","/players/arrina/armor/bonering",})
+shorts ({"Golden hoof","A small [1mwhite[0m shield","Katana","kama","[1;37mShadowVeil[2;37;0m","Morningstar","A gardening hoe","[1mbottle of dark ale[0m","A black halter top","A box of oreo cookies","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","Beach Bear pelt","Silver Torque","Dream Staff","A list of the top players","Time gauntlet","Dark Rider Longsword","Name Tag","a long plastic straw","A Pizza Hut Jacket","A BIG foot","a stack of leaflets","A piece of carved onyx","A Dragon Amulet","A Carved Bone Ring",})
+found ({1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,})
+loaded 0

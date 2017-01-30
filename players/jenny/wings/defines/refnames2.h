@@ -1,0 +1,38 @@
+string FIRST;
+string LAST;
+int number;
+number = random(33);
+switch(number) {
+      case 0: FIRST = "blaine"; LAST = "angus";  break;
+      case 1: FIRST = "stephane"; LAST = "auger";  break;
+      case 2: FIRST = "harry"; LAST = "dumas";  break;
+      case 3: FIRST = "eric"; LAST = "furlatt"; break;
+      case 4: FIRST = "conrad";  LAST = "hache"; break;
+      case 5: FIRST = "dave";  LAST = "hanson"; break;
+      case 6: FIRST = "bernard"; LAST = "de"+CAP("g")+"race"; break;
+      case 7: FIRST = "mike";  LAST = "hasenfratz"; break;
+      case 8: FIRST = "shane"; LAST = "heyer"; break;
+      case 9: FIRST = "dave";  LAST = "jackson"; break;
+      case 10: FIRST = "marc";  LAST = "joannette"; break;
+      case 11: FIRST = "greg";  LAST = "kimberly"; break;
+      case 12: FIRST = "tom";  LAST = "kowal"; break;
+      case 13: FIRST = "bob";  LAST = "langdon"; break;
+      case 14: FIRST = "chris";  LAST = "lee"; break;
+      case 15: FIRST = "mike";  LAST = "leggo"; break;
+      case 16: FIRST = "kevin";  LAST = "maguire"; break;
+      case 17: FIRST = "rob";  LAST = "martell"; break;
+      case 18: FIRST = "mick";  LAST = "mc"+CAP("geough"); break;
+      case 19: FIRST = "brad";  LAST = "meier"; break;
+      case 20: FIRST = "dean";  LAST = "morton"; break;
+      case 21: FIRST = "brian";  LAST = "murphy"; break;
+      case 22: FIRST = "dan";  LAST = "o'"+CAP("halloran"); break;
+      case 23: FIRST = "tim";  LAST = "peel"; break;
+      case 24: FIRST = "kevin";  LAST = "pollock"; break;
+      case 25: FIRST = "lance";  LAST = "roberts"; break;
+      case 26: FIRST = "chris";  LAST = "rooney"; break;
+      case 27: FIRST = "kelly";  LAST = "sutherland"; break;
+      case 28: FIRST = "stephen";  LAST = "walkom"; break;
+      case 29: FIRST = "ian";  LAST = "walsh"; break;
+      case 30: FIRST = "dean";  LAST = "warren"; break;
+      case 31: FIRST = "brad";  LAST = "watson"; break;
+      case 32: FIRST = "scott";  LAST = "zelkin"; break;}

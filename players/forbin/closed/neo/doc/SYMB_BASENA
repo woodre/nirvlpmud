@@ -1,0 +1,37 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+     BASE SKILLS
+GUILD
+LEVEL  NAME           AFFECT 
+  1    Absorb         Converts corpses to MP @ the rate of 1+corpse_level.
+  1    Changeform     Allows player to changeform into the symbiote covered mode.
+                      This gives the player access to all guild powers/abilities.
+         cost=  300 MP
+  1    Flee           Since symbiotes are blocked from quitting or moving from 
+                      room to room while engaged in non-pk battle, this ability
+                      allows the player to stop combat.  THIS WILL ONLY REMOVE
+                      THE PLAYER FROM BATTLE - any others in the same battle 
+                      will continue as normal.
+         cost=  50 sps (sps will go negative for this spell - though if they do,
+                5 MP    the negative sps will be zeroed by setting the player to
+                        30 hps)
+  1    Frenzy         This is an auto ability that goes off randomly.  It is
+                      based on the amount of damage that a player takes during
+                      combat - think of it like rage.  When it builds up enough,
+                      Frenzy mode will be set for a (GLVL)+random(GLVL) rounds.  
+         cost=  Continuous drain on sps @ GLVL/5 rate for duration.
+  1    Sense          Symbiotes are blocked from using locational who screens,
+                      so they may use the sense ability to determine who is in
+                      a given area or if a certain person is in the area.
+  1    Threat         A non-locational who screen that shows only pkers.
+  1    Tentacles      10 tentacles that can be placed into attack, defend, 
+                      regen, or burnoff.  The more in one place, the better, but
+                      weakening the others.  
+ 20    Lair           A personal guild hall that can be placed almost anywhere                  
+                      outside of the main village.
+         cost=  10,000 sps
+         cost=  10,000 hps
+         cost=  10,000 MP
+         cost=  2,000,000 coins
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

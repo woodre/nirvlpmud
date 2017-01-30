@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/awep/daikyu","/players/maledicta/cont/weapons/rweapon","/players/sado/shop/rose","/players/mythos/awep/wakizashi","/players/saber/weapons/hrev","/players/hippo/armour/glazour_coat","/players/scathe/armor/suit","/players/mythos/awep/claw","/players/jamila/beach/mobs/shell","/players/angel/area/stargate/obj/P90_no_ammo","/players/saber/armor/mshades","/players/hawkeye/armor/converse","/obj/armor","/players/wren/Area/starbug/items/hair","/players/angel/area/stargate/obj/staff","/players/wren/Area/starbug/items/straw","/obj/bag","/players/snow/cam/stuff/sword","/obj/armor","/players/emerson/weap/pencil","/players/snow/shadows/stuff/cloak","/players/saber/armor/slboots","/obj/armor","/players/wren/Area/starbug/items/fish","/players/snow/shadows/stuff/nightshade",})
+shorts ({"Daikyu","a Shortsword","A beautiful red rose blossom","Wakizashi","A Colt .68 Heavy Revolver","glazour coat","Black Suit","claws","A Large Shell","[36mP90 machine gun[0m","Mirrorshades","[31mConverse All-Stars[0m","stone platemail","Perfect Hair","[1;36mSTAFF WEAPON[0m","a long plastic straw","bag","[34m[1mBlessed Longsword[0m[0m","A large leaf","A Sharp Pencil","A dusky cloak","Stiletto heeled leather boots","Steel Boots","A box of trout ala crem","[1mNightShade[0m, the Broadsword of Death",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

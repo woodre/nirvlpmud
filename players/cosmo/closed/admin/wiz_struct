@@ -1,0 +1,164 @@
+Wizard Hierarchy    - by Cosmo - 8/97
+-------------------------------------
+1  Structure overview:
+    God --> Lords --> Seniors --> Team wizards  --> Novice wizards
+
+  1.1 Definitions:
+      1.1.1 God = Boltar
+      1.1.2 Lords = greater than level 100
+      1.1.3 Supreme Council = God + Lords
+      1.1.4 Seniors = level 100
+      1.1.5 Team wizards = less than level 100
+      1.1.6 Novice wizards = level 21
+
+  1.2 Functions:
+      1.2.1 The God shall serve as final authority on all mud-related
+            issues. Additionally, the God must properly advertise any
+            global mud changes to all wizards, and must advertise the
+            existing Lord and Senior positions.  Alternatively, the
+            God may assign the latter two functions to someone else.
+      1.2.2 The Lords, selected by the God, shall each have a specific
+            function as detailed in section 2.  There shall never exist
+            more than four Lords at any one time.
+      1.2.3 The Supreme Council shall consist of the God and his Lords,
+            and shall serve as an executive governing body.
+      1.2.4 One Senior shall be appointed by majority vote of the
+            Supreme Council for each of the eight development areas, and
+            shall guide team members in this capacity, as described
+            in section 3.
+      1.2.5 Each Senior wizard shall have a team of junior wizards, not
+            to exceed ten members, whose function is to facilitate
+            development within the particular speciality of the Senior.
+            Seniors may establish sub-teams as necessary to serve in a
+            specific capacity within that team (see examples in section 3).
+      1.2.6 All newly appointed wizards shall remain Novice wizards until
+            they have completed an area for player exploration.  Upon
+            completion of an area, they will become part of a team of
+            their choice (adhering to the restriction of no more than
+            ten members per team).
+
+
+2  Lords
+   The primary focus of the Lords should be to maintain a global per-
+   spective of the mud.  Lords must be able to view issues in an unbiased
+   light and keep the good of the entire mud in mind when making decisions.
+   Lords should also bear in mind curtesy and tact when dealing with
+   players as well as other wizards.
+
+  2.1 Lord of Players
+      The Lord of Players is responsible for the Senior of Players and the
+      Senior of Quests (see section 3).  He shall provide assistance and
+      oversight to both Seniors.  As such, he shall make judgement
+      on any player/wizard disputes, be responsible for enforcing all
+      rules and policies for both players and wizards, and ensure that any
+      changes made to quests and/or the quest point system are beneficial.
+
+  2.2 Lord of Guilds
+      The Lord of Guilds is responsible for the Senior of Societies, the
+      Senior of Associates, and the Senior of Mini-guilds (see section 3).
+      He shall provide assistance and oversight to all three Seniors.  As
+      such, he shall make judgement on any disputes involving guild policy
+      and regulations, and shall serve as the approving authority on any
+      changes to guild policy.  This Lord of Guilds MAY NOT be a Guild
+      Wizard.
+
+  2.3 Lord of Realms
+      The Lord of Realms is responsible for the Senior of Weaponry, the
+      Senior of Material and the Senior of Realms (see section 3).  He
+      shall provide assistance and oversight to all three Seniors.  As
+      such, he shall ensure that any new weapons, armors, objects, and
+      realms are beneficial to the mud as a whole.
+
+  2.4 Lord of Ideology
+      The Lord of Ideology has the special role of soliciting and
+      developing new ideas to benefit the mud.  This Lord shall work to
+      improve the overall quality of the mud for both players and wizards.
+      In this role, this Lord must work in close coordination with the
+      other Lords to stay up-to-date with other areas and to develop
+      implementation of ideas provided by wizards and players.  The Lord
+      of Ideology may have a team of wizards working under him.
+
+  2.5 Lord of Security
+
+3  Seniors
+   All Seniors may have a team of less than ten wizards working under them.
+   Seniors are responsible for their team members and may remove members
+   who are unproductive.  Seniors should take an active role in working
+   with team members to assist in coding.  Any Senior may give final
+   approval to a new area provided that it has been reviewed by the Senior
+   of Realms.  Any Senior may sponsor a new wizard.
+     Note: Team wizards may reside on more than one team.
+
+  3.1 Senior of Players
+      Responsible for resolving player complaints, ensuring compliance
+      with player rules, and punishing players as needed.
+
+  3.2 Senior of Quests
+      Responsible for approving any new quests, ensuring current quests
+      are free from bugs, working with their team wizards to develop new
+      quests, and updating the quest point system as needed.
+
+  3.3 Senior of Societies
+      This Senior will be responsible for oversight of half of all the
+      guilds, the determination of such guilds to be made by the Lord of
+      Guilds.  These guilds shall be collectively referred to as the
+      "Society Guilds."  The Senior of Societies MAY NOT be the Guild
+      Wizard of any of the Society Guilds.  This Senior's "team" shall
+      be comprised of those wizards who are in charge of the Society
+      Guilds, as well as any wizard currently developing a new guild to
+      be part of the Society Guilds.
+
+  3.4 Senior of Associates
+      This Senior will be responsible for oversight of half of all the
+      guilds, the determination of such guilds to be made by the Lord of
+      Guilds.  These guilds shall be collectively referred to as the
+      "Association Guilds." The Senior of Associates MAY NOT be the
+      Guild Wizard of any of the Association Guilds.  This Senior's
+      "team" shall be comprised of those wizards who are in charge of
+      the Association Guilds, as well as any wizard currently developing
+      a new guild to be part of the Association Guilds.
+
+  3.5 Senior of Mini-guilds
+      The Senior of Mini-guilds shall be responsible for any changes to
+      the current mini-guilds and the development of new mini-guilds.
+      His team shall be comprised of wizards who work to improve existing
+      mini-guilds, and provide ideas and implementation of new ones.
+
+  3.6 Senior of Weaponry and Elementals
+      Main responsibility is to approve the creation of all weapons and
+      monsters.  Additionally, this Senior must constantly review existing
+      weapons and monsters for changes or historical illegalities, work
+      with team wizards developing new items, and work with Novice wizards.
+      The team of wizards working under this Senior consists of all wizards
+      creating new weapons and monsters.  Subteams may be appropriate in
+      this area.
+
+  3.7 Senior of Material
+      Main responsibility is to approve the creation of all objects that are
+      neither weapons nor monsters.  Such object would include armor, heals
+      and quest items, at a minimum.  Additionally, this Senior must con-
+      stantly review existing objects for changes or historical illegalities,
+      work with team wizards developing new items, and work with Novice wiz-
+      ards.  The team of wizards working under this Senior consists of all
+      wizards creating new material.  Subteams may be appropriate in this
+      area.
+
+  3.8 Senior of Realms
+      The Senior of Realms gives approval of new areas.  He must work together
+      with the Senior of Weaponry and Elementals and the Senior of Material
+      to give approval of new areas.  The Senior of Realms must ensure the
+      new area is free from bugs, all exits are functional and logical, all
+      room descriptions are adequate, and the area adheres to an overall theme.
+      In this capacity it is important that the Senior of Realms works closely
+      with Novice wizards to provide ample examples and coding instructions.
+
+
+4  Novice wizards
+   Novice wizards shall work predominately with their Senior sponsor to gain
+   familiarity with the wizard rules, file structure, coding basics, etc.  The
+   first task for a Novice wizard is to code an area.  As such, Novice wizards
+   should work closely with the Senior of Realms, Senior of Material, and the
+   Senior of Weaponry and Elementals.  Upon completion and approval of an area,
+   the Novice wizard chooses a team or teams to join under one of the eight
+   Seniors.
+

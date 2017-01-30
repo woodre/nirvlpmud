@@ -1,0 +1,116 @@
+[Mar 10 2006 07:14] A: Registered Test Character: Shaade
+[Mar 21 2006 17:37] A: Registered Test Character: Glaare
+[Mar 21 2006 21:51] A: Had stardrifter testing for me
+[Mar 21 2006 21:53] A: Disarm function of bwo_template caused fallen to drop their guild object
+[Mar 21 2006 21:53] A: Cloned guild object back to stardrifter
+[Apr 22 2006 11:28] A: Registered Test Character: Swallow
+[Sep 19 2006 00:48] A: Fixed /players/maledicta/cont/mobs/tower.c
+[Dec 13 2006 21:00] A: /players/sparrow/areas/bwo/npc/bwo_template.c approved by Vertebraker, loads when my castle loads only, loads to a random room, /players/maledicta/cont/rooms/444,771,109,892,887 | /players/earwax/area/fields/room/tunnel3 | /players/jaraxle/cont/rdragon/rooms/pond2. During reset will move again to a random room from same array. Randomly generated statistics, hp, lev, wc, ac, multiple attack functions in /players/sparrow/areas/bwo/include.mob_funcs.c, disarm, break weapon, changes target, also affects preggo attackers and effectively removes preggo. Clones random number of randomly generated accessory armor, template is /players/sparrow/areas/bwo/obj/bwo_acc.c, also approved by Vertebraker
+[Dec 16 2006 01:35] A: Fixed bug with /players/sparrow/areas/bwo/npc/bwo_template.c that would cause the mob to become unresponsive after switching to a target with hp < 1 and the creature dies at end of round
+[Dec 16 2006 19:33] A: Finding that my monk is too easy for the experience that it hands out. On average it is giving 85k xps. Dropped that to around 65k and increased potential damage output by about 40%. Also changed the disarm function so that 33% of the time, the monk will steal the opponent's weapon when disarmed. That should even things out a bit.
+[Dec 16 2006 21:32] A: file permission issues with using write_file to write my logs, switched to log_file. Log file for black willow monk is /log/sparrow.bwm
+[Dec 17 2006 01:31] 
+  A: removed 
+  R: include in /players/saber/closed/new_mini/succ.c, removed call_others also
+[Dec 17 2006 01:35] A: Fixed ; after inherit in /players/saber/closed/new_mini/caning_muzzle.c
+[Jan 02 2007 18:21] A: New working version of Kales area finished. Still needs testing to verify cleanup is working properly. Will make master object report what is going on.
+[Jan  5 2007 22:49] A: moved new kale format to live directory. Files are /players/francesco/kale/rooms/entrance.c and kaleroom.c
+[Jan  7 2007 07:15] A: changed /players/snow/heals/ice_sphere.c to display result of heal in message to player, also added a small bit of color. Original is named ice_sphere_presparrow.c in same directory
+[Jan  8 2007 11:20] A: copied fran's original entrance.c back to be the active file and renamed my entrance.c to entrance_sparrow.c. It seems that there are some issues with the room cleanup that causes some sensitive mind notices.
+[Jan 14 2007 20:28] A: Fixed barter function on Angel's P90 machine gun
+[Feb  8 2007 00:12] A: added 2.5 mil of xp to achilles and 2.3 mil xps to nyteshade for a death bug caused by an object that I will report next
+[Feb  8 2007 00:20] A: gave dara 2500000mil for same bug
+[Mar 10 2007 19:35] A: approved Angel's new Stargate area
+[Mar 11 2007 00:28] A: added a check in /players/mythos/awep/forest/flute.c near line 82 to make sure that the target of the calming spell is actually in combat. Was throwing errors. Works now. Bug reported by Mantis.
+[Mar 11 2007 00:30] A: Fixed syntax error in /players/mythos/closed/guild/forest/mon/dread.c that caused it not to load.
+[Mar  6 2008 22:35] A: Giving lost gear back to tyr due to inactivity
+[Mar  7 2008 20:57] A: Approval of mob /players/angel/area/town/npc/bradly.c
+[Mar  7 2008 20:57] A: Approval of mob /players/angel/area/town/npc/burglar.c
+[Mar  7 2008 20:58] A: Approval of mob /players/angel/area/town/npc/cashier.c
+[Mar  7 2008 20:58] A: Approval of mob /players/angel/area/town/npc/cashier_02.c
+[Mar  7 2008 21:33] A: Approved /players/angel/area/town/npc/customer.c
+[Mar  7 2008 21:39] A: Approved /players/angel/area/town/npc/florist.c
+[Mar  7 2008 21:48] A: Approved /players/angel/area/town/npc/grimace.c
+[Mar  7 2008 21:57] A: Approved /players/angel/area/town/npc/johnny.c
+[Mar  7 2008 22:07] A: Approved /players/angel/area/town/npc/max.c
+[Mar  7 2008 22:24] A: Approved /players/angel/area/town/npc/ronald.c
+[Mar  7 2008 22:25] A: Approved /players/angel/area/town/npc/teller.c
+[Mar  7 2008 22:25] A: Approved /players/angel/area/town/npc/multi.c
+[Mar  7 2008 22:25] A: Approved /players/angel/area/town/npc/multi_02.c
+[Mar  7 2008 22:26] A: Approved /players/angel/area/town/npc/multi_mover.c
+[Mar 10 2008 17:52] A: Non-approval of /players/jareel/areas/chaos/woods2/athgor.c Reason: creature attempts to clone and equip dagger and shield that do not exist in provided path
+[Mar 10 2008 17:55] A: Approved /players/jareel/areas/chaos/woods2/cwf1.c
+[Mar 10 2008 17:57] A: Approved /players/jareel/areas/chaos/woods2/cwf10.c
+[Mar 10 2008 17:59] A: Approved /players/jareel/areas/chaos/woods2/cwf11.c
+[Mar 10 2008 22:19] A: Approved /players/jareel/areas/chaos/woods2/cwf2.c
+[Mar 10 2008 22:19] A: Approved /players/jareel/areas/chaos/woods2/cwf3.c
+[Mar 10 2008 22:23] A: Approved /players/jareel/areas/chaos/woods2/cwf4.c
+[Mar 10 2008 22:27] A: Approved /players/jareel/areas/chaos/woods2/cwf5.c
+[Mar 10 2008 22:30] A: Approved /players/jareel/areas/chaos/woods2/cwf6.c
+[Mar 10 2008 22:30] A: Approved /players/jareel/areas/chaos/woods2/cwf7.c
+[Mar 10 2008 22:30] A: Approved /players/jareel/areas/chaos/woods2/cwf8.c
+[Mar 10 2008 22:43] A: Approved /players/jareel/areas/chaos/woods2/cwf9.c
+[Mar 10 2008 22:54] A: Approved /players/jareel/areas/chaos/woods2/demoncave1.c
+[Mar 10 2008 23:06] A: Not-Approved /players/jareel/areas/chaos/woods2/demoncave10.c - attempts to clone creature with errors (/players/jareel/monsters/chaos/woods2/cacodemon.c)
+[Mar 11 2008 00:01] A: Not Approved /players/jareel/monsters/chaos/woods2/cacodemon.c Reason: Syntax error line 1, Illegal character (hex 0d) '' needs to be hex 0a (new line) instead
+[Mar 11 2008 00:07] A: Approved /players/jareel/areas/chaos/woods2/demoncave2.c
+[Mar 11 2008 00:10] A: Approved /players/jareel/areas/chaos/woods2/demoncave3.c
+[Mar 11 2008 00:13] A: Approved /players/jareel/areas/chaos/woods2/demoncave4.c
+[Mar 11 2008 00:13] A: Approved /players/jareel/areas/chaos/woods2/demoncave5.c
+[Mar 11 2008 00:14] A: Approved /players/jareel/areas/chaos/woods2/demoncave6.c
+[Mar 11 2008 00:16] A: Approved /players/jareel/areas/chaos/woods2/demoncave7.c
+[Mar 11 2008 00:17] A: Approved /players/jareel/areas/chaos/woods2/demoncave8.c
+[Mar 11 2008 00:17] A: Approved /players/jareel/areas/chaos/woods2/demoncave9.c
+[Mar 11 2008 00:26] A: Not Approved - humakt1.c - typo, "small, stout temble." Guessing that should be temple.
+[Mar 11 2008 00:28] A: Approved /players/jareel/areas/chaos/woods2/humakt2.c
+[Mar 11 2008 00:30] A: Approved /players/jareel/areas/chaos/woods2/humakt4.c
+[Mar 11 2008 00:32] A: Approved /players/jareel/areas/chaos/woods2/mt1.c
+[Mar 11 2008 00:35] A: Not Approved /players/jareel/areas/chaos/woods2/mt2.c - typo, "the paths that leads..."
+[Mar 11 2008 00:38] A: Approved /players/jareel/areas/chaos/woods2/mt3.c
+[Mar 11 2008 00:40] A: Approved /players/jareel/areas/chaos/woods2/mt4.c
+[Mar 11 2008 00:42] A: Approved /players/jareel/areas/chaos/woods2/mt5.c
+[Mar 11 2008 00:43] A: Approved /players/jareel/areas/chaos/woods2/mt6.c
+[Mar 11 2008 00:45] A: Approved /players/jareel/areas/chaos/woods2/mt7.c
+[Mar 11 2008 00:50] A: Approved /players/jareel/areas/chaos/woods2/mt8.c
+[Mar 11 2008 00:51] A: Approved /players/jareel/areas/chaos/woods2/mt9.c
+[Mar 11 2008 00:54] A: Approved /players/jareel/areas/chaos/woods2/path1.c
+[Mar 11 2008 00:55] A: Approved /players/jareel/areas/chaos/woods2/path2.c
+[Mar 11 2008 00:57] A: Approved /players/jareel/areas/chaos/woods2/path3.c
+[Mar 11 2008 01:20] A: Approved /players/angel/area/town/obj/bm.c
+[Mar 11 2008 01:21] A: Approved /players/angel/area/town/obj/cash.c
+[Mar 11 2008 01:30] A: Not Approved /players/angel/area/town/obj/coke.c - cost should be 3400 4uses * 9 tox / 200heal points = .18 or 17 coins per heal point. 200*17 = 3400
+[Mar 11 2008 01:44] A: Not Approved /players/angel/area/town/obj/dcb.c - cost should be 2100 3 uses * 12 tox / 150 heal points = .24 or 14 coins per heal point. 150*14 = 2100 coins
+[Jul 21 2009 15:01] A: Edited /players/guilds/Rangers/kezef.o to restore his guild stats
+[Aug 13 2009 20:44] A: Letting worm test out Tears of the Willow to make sure it doesn't break anything with Shards
+[Aug 13 2009 22:30] A: giving marek a piece of equipment from my monks because he found a HUGE bug with it
+[Aug 19 2009 12:05] A: Gave tears to trojan to test out viability on low levels to see if I need to block low levels
+[Oct  6 2009 10:57] A: removed all files from /players/sparrow/areas/bwo/rms. They sucked and I'm rewriting them
+[Oct  6 2009 12:11] A: created /players/sparrow/areas/bwo/rms/willow1.c
+[Oct  6 2009 12:22] A: created /players/sparrow/areas/bwo/rms/willow3.c
+[Oct  6 2009 12:57] A: created /players/sparrow/areas/bwo/rms/willow5.c
+[Oct  8 2009 14:05] A: Tested a hunch about wizard->player object sharing. If a wizard clones an object and drops it, a ranger can donate it without throwing up any flags. I figured as much but was curious.
+[Oct  9 2009 11:19] A: transed whitehawk out of "broken" ooze
+[Dec  2 2010 05:56] A: gave elemental gear back to my character
+[Dec  9 2010 23:37] A: replaced Heinous' gear due to donation bug with khrell's area. He gave me the bugged gear
+[Dec 10 2010 00:11] A: testing changes to wep with wulfgar
+[Dec 10 2010 21:58] A: testing my tears with wulfgar
+[Dec 25 2010 22:45] A: had to refund jester 500k xps for accidentally killing him with a runaway mob of mine
+[Dec 28 2010 01:37] A: Added xp to wulfgar to fix his guild
+[Feb 18 2011 15:51] A: fixed /players/sparrow/areas/bwo/obj/bwo_acc.c so it will only store in hotel rooms
+[Feb 18 2011 22:06] A: reimbursed Cannabinoid 5000 xp for bug death
+[Feb 23 2011 02:43] A: restored 700k xps to chett for disconnection death
+[Mar 13 2011 23:14] A: dested gob off of grain, left dervish and keeps coming back. autoload must still be set up
+[Mar 27 2011 02:19] A: sparrow
+[Mar 27 2011 02:20] A: hahaha I must be tired, just look at that last entry
+[Apr  2 2011 00:36] A: Illarion
+[Apr  2 2011 00:36] A: is
+[Apr  2 2011 00:36] A: cool
+[Apr  2 2011 00:48] A: See
+[Apr  2 2011 00:48] A: what
+[Apr  2 2011 00:48] A: I
+[Apr  2 2011 00:48] A: mean
+[Apr  2 2011 00:48] A: !
+[Apr  2 2011 00:48] A: He
+[Apr  2 2011 00:48] A: ROX!
+[Sep 17 2011 01:25] A: removed darkfyre from neo's and reimbursed xps
+[Sep  6 2012 15:49] A: cloned /players/fred/stuff/excalibur.c to Kyrain, was lost in room

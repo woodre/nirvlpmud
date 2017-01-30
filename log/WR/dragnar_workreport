@@ -1,0 +1,335 @@
+Wed Apr 21 09:54:05 1999  Testing my new filer tool..
+Wed Apr 21 10:37:37 1999  Created test char, 'dragtesttwo' for testing.
+Thu Apr 22 11:00:55 1999  Deleted some BS files are not used in /armor & /weapons.  Changed value of /armor/gloves.c from 4000 (???) to 800.
+Fri Apr 23 19:40:30 1999  Modified /rooms/entrance.c so if MK scar doesn't autoload players can get the object back through an NPC /mons/tyme.c.
+Tue Apr 27 11:42:26 1999  Got disconnected after adding exp's to dragtest, one of my test chars. this weekend so am doing the log now.
+Wed May  5 02:26:49 1999  Started working on Wastelands.  Copying files to /Wastelands as I work on them so I can keep the area open. Finished /Wastelands/rooms/entrance.c.
+Sun May  9 22:22:05 1999  Continued to update the Wastelands in /Wastelands.  Coping over one file at a time and updating it..
+Tue May 18 19:00:17 1999  Started the Jedi guild object /dragnar/Jedi/jedi.c.
+Thu May 20 15:34:11 1999  Worked on /Jedi/cmd/rehash.c and /Jedi/base/command.c which will be the basis for Jedi guild commands.
+Fri May 21 19:10:49 1999  Made bboard for player ideas on room/vill_green at mythos request.  /dragnar/board.c.
+Mon May 24 16:43:24 1999  Worked on /dragnar/shop.c  Trying to set up a new shop that can be inherited that will enhance the play on nirvana. /daemons/lock.c && /daemons/shop.c.
+Thu May 27 14:09:55 1999  Continued working on Jedi guild /Jedi/jedi.c and starting working on MK scar, v2.0 /dragnar/MKScar  This scar will not give credit for newbie kills..
+Tue Jun  1 08:33:17 1999  Healed dragtest while testing Jedi guild last Friday, May 28th (forgot to do a log).  This morning removed bull. board from village green.
+Tue Jun  1 16:56:01 1999  Had a few problems with the guild object id, dragnar/Jedi/jedi.c but the problem will be fixed when boltar resets my guild_rank (currently "13-13" so any int comparisons causes major error.  Guild id check guild_rank.
+Tue Jun  8 13:14:34 1999  Continued work on Jedi guild.  Started /power/crush.c.
+Wed Jun  9 17:44:34 1999  Worked on MK scar, made a top player list for MK, MKScar/daemons/TopList.c, and added code to the current autoloading MK scar /closed/scar.c to add to the list when a kill is made (for testing).
+Fri Jun 11 17:24:46 1999  Updated the new scar obj /MKScar/scar.c so it now autoloads from /dragnar/castle.c  Right now Beck and I are in testing stage.
+Mon Jun 21 22:37:45 1999  Last week has been mad coding MKScar/scar.c with the challenge command MKScar/cmds/challenge.c  Started a low level test char 'Dmen' to do some testing on the scar. Healed test char numberous times..
+Wed Jun 23 15:54:08 1999  Got an error while playing Mysery, so logged on Dragnar to check the debug.log file.
+Tue Jul 13 09:17:12 1999  Had to log in Dragnar while Mysery was dc because of a problem with the scar.
+Tue Jul 20 15:00:25 1999  Made the jedi guild object autoload /dragnar/Jedi/jedi.c  For now only maledicta and I have the object.
+Sat Jul 24 09:48:06 1999  changed dragnar/mons/corpse.c so it no longer stops other npc's from leaving the room and attacking them.
+Tue Jul 27 19:13:34 1999  mag3.c is now on /mons/master.c  Its 1 part of 4 of the key needed for the quest.  It used to be on Goro, moved because getting to Goro would make the quest too difficult.
+Thu Jul 29 20:06:14 1999  Disabled challenge command in /MKScar/scar.c until a bug in the MK Temple is fixed.
+Fri Jul 30 14:17:18 1999  Goofed up a bit, seemed to have left mysery logged on dc while Dragnar logged on.  Didn't realize mysery was on disconnected...
+Wed Sep  1 12:10:45 1999  Changed ~/mons/master.c so MK Scar is not needed to kill him. - Approved by Eurale for the Wastelands quest.
+Thu Sep  9 17:05:02 1999  Added 1801 exps to dolphin because she encountered the death bug and died twice in 10 seconds.
+Wed Sep 15 14:04:56 1999  OK'd Maledicta to open Cave area per Snow/Eurale.
+Thu Sep 23 14:40:38 1999  Approved Zeus's x realm to be opened..
+Tue Sep 28 15:09:56 1999  Approved /players/zeus/dealer for addition to the game.
+Tue Sep 28 17:18:21 1999  Fixed nightmare's hotel room, bugged out with the tsuragi and dragon's bane.  Gave him back the tsuragi.
+Wed Sep 29 13:15:33 1999  Edited /players/mythos/prac/qt.c and edited out some code Mythos added, was causing problems with players "say" command.
+Wed Oct 13 17:03:28 1999  Approved Maledictas new shops, t10.c t17.c t18.c /town/rooms/ and also /town/obj/green.c.
+Thu Oct 21 13:53:47 1999  Modified ~/mons/demon.c (part of quest) so it doesn't give player neg. spell points.  If the player doesn't have enough spell points to drain it does a random(150) hit_player instead.
+Tue Oct 26 16:10:25 1999  Fixed some Vampire guild problems: 1. vampob.c BLOODPTS now set to 0 and save upon death 2. /lib/attack_backhand.h now set target correctly.
+Wed Oct 27 11:01:58 1999  Fixed eurale/VAMPIRES/lib/vamp_quit.h so it now returns 0.
+Wed Oct 27 11:03:28 1999  fixed /room/vill_green.c  None of the objects loaded in the room, bull. board, obit. notice, and item dispenser.  Cloned the items in the room.
+Wed Oct 27 17:02:47 1999  Removed Newbie Bank from the game (not secure, little value added).
+Tue Nov  2 10:42:35 1999  cloned llew/Other/misc/obituary, snow/ITEMS/notice, and mythos/prac/vending to the green, because they didn't load (again).
+Thu Nov  4 10:31:33 1999  Modified /dragnar/items/bag.c so it now must be in the players inventory.
+Thu Nov 11 12:26:17 1999  Modified /players/sandman/WEAPONS/h_mace.c, inherit was from paladin code that is rm, changed to inherit from /obj/weapon.c.
+Thu Nov 11 14:08:58 1999  Larisa had too much gexp, maledicta added 425k to her normal exps, and I subtracted 425k from guild exps..
+Thu Nov 11 15:28:10 1999  Added players/boltar/templar/items/tablet.c to ../recruit.c  Also remove the guideline info.
+Fri Nov 12 19:31:41 1999  Put new templar object in.  Snow approved the new 'cwho' command. /boltar/templar/templar.c  Old file is templar.old.
+Mon Nov 15 18:23:39 1999  Approved change to /players/zeus/realm/NPC/murdok.c  He can now give prizes for /realm/OBJ/ruby_amulet.c and /OBJ/onyx_platemail.c.
+Mon Nov 29 10:32:50 1999  Modified /players/pain/NEW/flet/Wep/eg_scimitar.c so the color doesn't bleed on the weapon hit.
+Wed Dec  1 14:13:59 1999  Approved /players/maledicta/town/obj/green.c as a heal in Mal's shop.
+Mon Dec  6 17:00:01 1999  Modified /players/gowron/closed/quest/floor2/smithers.c  So he now does a check to see if burns is present (read /floor2/CHANGES).
+Tue Dec  7 17:51:55 1999  Modified /players/boltar/templar/items/tablet.c So Knights Templar can now add allies for the guild.
+Tue Dec  7 19:06:50 1999  Approved Vertebrakers area: vertebraker/ed/ed.
+Tue Dec  7 19:34:17 1999  Promotted Vertebraker to level 30.
+Thu Dec  9 17:20:49 1999  Approved maledicta/town/parmor.c, sells for 50k.
+Mon Dec 13 21:57:07 1999  Copied Felegast's updated file of /hurtbrain/obj/potion.c to fix a few issues..
+Thu Dec 16 09:03:43 1999  Had to fix the green again today by cloning obit. notice, vending machine, and announcement board..
+Sat Dec 18 07:32:22 1999  Restored Nisanity's exp lost from buggy Knight retire command.  Exp giving was taken from /log/ENTER.old.
+Tue Dec 21 14:53:28 1999  Approved the mist area, Zeus's taus expansion. /players/zeus/realm/doc/TAUS_EXPANSION.
+Tue Dec 21 15:09:10 1999  Promoted zeus to 50 for his hard work making different interesting areas.
+Mon Dec 27 09:03:53 1999  Approved changes to Vertebrakers chainsaw, /vertebraker/ed/ed/obj/chainsaw.c.
+Mon Dec 27 09:27:55 1999  Deleted fil.o from the polys guild files.  Fil used to be a poly it seems, and now the new fil wants to join.
+Wed Dec 29 09:22:04 1999  Fixed /players/pathfinder/detroit/items/heroin.c    Had problem with the id in the heal function.
+Wed Dec 29 17:27:08 1999  Released lightning because of questionable reasons why he was jailed.
+Thu Dec 30 19:17:56 1999  Changed /players/wocket/mushrooms/shroom.c to a value of 0 coins.  The -100 value could be turned into 120 coin gain each time sold and purchased.
+Mon Jul 17 20:39:05 2000  Modified /dragnar/rooms/temple-enter.c to fix an MK problem.
+Wed Aug  2 21:20:22 2000  Arrow died from bartarsis but the death sequence had a problem.  It caused bartarsis to lose heart_beat.  I dested bartarsis, but did not give arrow his equipment back.  Was a legit death, although not sure why death() bugged out.  Log in /logs/arrow.
+Tue Mar 12 09:43:43 2013  Set Jerich and Hadus up as Council members for Mage guild. Set their guild rank to 72..
+[Mar 13 2013 23:04] A: Registered Test Character: Dragtest
+Thu Mar 28 10:37:42 2013  Updated the mages msc command to not limit the guild bonus to 3 spots..
+[Thu Mar 28 10:41:32 2013]  Updated log command in tool.c.
+[Sun Mar 31 23:54:36 2013]  Fixed definition of mage levels, changed > to >= for training levels.
+[Mon Apr  1 05:50:03 2013]  Updated mages msc to show PK zone.
+[Mon Apr  1 17:36:29 2013]  Added ability to transfer training sessions to spell changes for the Mages at a loss of 3:1.
+[Thu Apr  4 15:47:58 2013]  Updated the mages tlp command so they can now teleport to a set location.
+[Tue Apr  9 08:22:00 2013]  Added mimage to the spell list on the mages monitor.
+[Tue Apr 16 13:12:21 2013]  Updated /players/zeus/museum/OBJ/light_dagger.c to have mage bonus for Illusion, need to have it installed back to zeus's directory.
+[Tue Apr 16 13:12:47 2013]  Updated /players/jaraxle/3rd/pyramid/items/myst_cloak.c to have mage bonus for Illusion, need to have it installed back to jaraxle's directory.
+[Tue Apr 16 13:13:19 2013]  Updated /players/mosobp/areas/BATTLE/OBJ/eaura.c to have mage bonus for Will Power, need to have it installed back to mosobp's directory.
+[Mon Apr 29 14:39:23 2013]  Made Teepo Mage council member.
+[Fri May 17 13:00:15 2013]  Updated the extra_look function in the star and sabers mini guilds to return a string instead of doing a write.  Also added checks for this_object so the players get a custom message when looking at themselves..
+[Sat May 18 17:47:33 2013]  Update /players/zeus/museum/NPC light.c and ninja.c  set_level was after setting hps and/or wc or moved the set_level so mobs will have higher wc and hps.
+[Fri May 24 23:10:46 2013]  Grimer somehow was dc and lost his eq, ended up in the void.  Took a screenshot of his items, will restore when I see him again.
+[Wed May 29 18:01:08 2013]  Updated /players/arrina/armor/sveil.c -> Changed name to be lowercase.
+[Tue Jul  2 17:00:49 2013]  Added initialization of WalkingDead daemon object to castle.c. Area is not open yet but need to test this is working, has zero impact on players.
+[Thu Jul 25 12:28:57 2013]  Removed call to initalize WalkingDead Daemon object.
+[Thu Jul 25 12:29:07 2013]  In castle.c.
+[Thu Jul 25 20:32:27 2013]  updated /players/saber/stuff/mbag to have a bag inventory function.
+[Tue Jul 30 21:54:34 2013]  Returned lost exp to Leonidas after joining mages guild, guild join help is broken.
+[Wed Jul 31 08:16:40 2013]  Fixed the issue with the mage joining room missing a help file for information on requirements to join the guild.
+[Fri Aug  2 09:08:55 2013]  Updated /players/eurale/Keep/NPC/fire_mess.c to have a name. Make short return 0 so it is still invis. Was causing issues with mage mssle command.
+[Fri Aug  2 10:21:00 2013]  Slight update to mage tlp command. Can now set multiple marks.
+[Sat Aug  3 01:26:18 2013]  Updated /players/khrell/armors/skaven/foulpendant.c to give Mage necromancy bonus.
+[Sun Aug  4 09:48:05 2013]  Updated location of set_level in /players/zeus/museum/NPC/golem.c to before set_wc and set_ac.
+[Tue Aug  6 18:12:07 2013]  Had to reset /room/exlv_guild, mapping did not load correctly..
+[Tue Aug  6 18:30:51 2013]  Gave vizjerei 80k coins and a few items lost during with the issues we had today.
+[Tue Aug  6 18:33:09 2013]  Someone updated /players/nooneelse/esc.h and every object in the mud that referred to it started having errors. Zeus, maledicta, fred objects especially had errors. That caused issues with dmages and why I restored Vizjerei.
+[Wed Aug  7 14:38:33 2013]  Replaced items Leonidas lost with the errors yesterday, chestguard, bracers, shadow veil, light dagger.
+[Wed Aug  7 15:52:57 2013]  Updated /players/forbin/realms/salam/NPC/king.c - Raised heal rate.
+[Fri Aug  9 08:09:41 2013]  Updated /players/zeus/museum/NPC/bug_storm.c by moving the set_level before set_wc set_ac. Haven't I gotten all of these buy now!?.
+[Fri Aug  9 21:23:37 2013]  Update /players/pavlik/mages/spells/augury.c - This spell had an issue when the player had other shadow objects, added some checks to make sure augury was cast.
+[Wed Aug 14 20:07:30 2013]  Updated /players/pestilence/amity/obj/lvshake.c to have correct value - 1100 vs 700. Was selling for correct price from his shop but not when sold at by a player.
+[Wed Aug 21 08:21:50 2013]  Worked on approval Mosobp's BATTLE area. Made some notes for him to make some changes. Notes in /players/dragnar/closed/approvals.
+[Tue Aug 27 09:56:23 2013]  Approved /players/mosobp/areas/TOWER to be added to Nirvana after suggested updates were made by Mosobp.
+[Thu Sep  5 10:08:44 2013]  This one is amusing, working on updating Wastelands, so copied all code to the WasteLands directory, used script to update file paths. Forgot about housing. When I went to forest2, it added the room to the housing data. In order to fix I had to manually update:.
+[Thu Sep  5 10:09:32 2013]  1. /players/earwax/housing/land_data.o 2. Deleted /players/earwax/housing/data/dragnar/*103.o.
+[Wed Sep 18 16:32:01 2013]  Opened updated Wastelands after approval from Rumplemintz.
+[Wed Sep 18 17:39:36 2013]  Removed a debug statement in /players/dragnar/WasteLands/mons/master.c.
+[Mon Sep 23 16:16:20 2013]  Updated /players/vertebraker/closed/shardak/def.h to update DEST to point to updated Wastelands rooms.
+[Fri Oct  4 17:55:25 2013]  updated /players/mokri/clans object.o files for renegades, birthoffire, gudaicike, killerz to use new Wastelands room path.
+[Tue Oct 22 15:31:20 2013]  healed Mosh, he had -30,000 hps.
+[Tue Oct 22 15:31:30 2013]  sps.
+[Tue Oct 22 16:46:40 2013]  updated /players/beck/Test/templee.c reference to /players/dragnar/rooms/island2 to include new WasteLands path.
+[Tue Oct 22 16:49:32 2013]  updated /players/dune/closed/guild/rooms/teleport.c reference to /players/dragnar/rooms/island2 to include new WasteLands path.
+[Tue Oct 22 16:52:12 2013]  updated /players/sparrow/closed/cyberninja/rooms/teleport.c reference to /players/dragnar/rooms/island2 to include new WasteLands path.
+[Tue Oct 22 16:55:58 2013]  updated /players/snow/closed/cyber/rooms/teleport.c reference to /players/dragnar/rooms/island2 to include new WasteLands path.
+[Tue Oct 22 16:58:36 2013]  updated /players/fred/forest/Obj/tractus.c reference to /players/dragnar/rooms to include new WasteLands path.
+[Tue Oct 22 17:21:20 2013]  Updated /players/earwax/housing/land_data.o to fix issue with wastelands.
+[Tue Oct 22 17:31:00 2013]  updated /players/wocket/euka/OBJ/questrod.c reference to /players/dragnar/rooms to include new WasteLands path.
+[Wed Oct 30 14:44:02 2013]  Updated references to /players/dragnar/rooms to include new WasteLands directory in /players/mizan/mines/core/mbv3/waypointDM.c.
+[Wed Oct 30 14:47:12 2013]  Updated references to /players/dragnar/rooms to include new WasteLands directory in /players/mizan/mbv3/waypointDM.c.
+[Wed Oct 30 14:47:20 2013]  Updated references to /players/dragnar/rooms to include new WasteLands directory in /players/mizan/mbv2/waypointDM.c.
+[Wed Nov  6 17:43:33 2013]  Updated samurai help file to include leave_guild command..
+[Fri Dec  6 11:20:23 2013]  Added the dervish Sancheck spell to give a rough idea of sand points.
+[Thu Dec 12 12:21:22 2013]  Added /players/snow/dervish/objects/mound.c Which gives a list of top Dervish based on sandpoints.
+[Fri Dec 13 14:52:46 2013]  Gave back Grimer his saddlebag that he lost after being idle, found it in the void.
+[Wed Dec 18 12:04:26 2013]  Gave back Demonic cyberninja honor. He removed a recruit that is no longer a player and lost honor.
+[Thu Dec 19 11:28:59 2013]  Made Ozzy a leader of clan since other leaders haven't logged in for a long time.
+[Fri Dec 20 09:53:15 2013]  Updated /players/eurale/VAMPIRES/OBJ/app_board so I had access to remove notes. Cleaned up obscene notes left by wipeout.
+[Fri Dec 20 17:44:53 2013]  Returned finely honed longsword to Worm after crash.
+[Fri Dec 20 17:47:25 2013]  Returned cowl of assassination and foul pendant to ozzy after crash.
+[Fri Dec 20 18:13:03 2013]  removed 1327779 exp from Sami for exploiting cheat in Wastelands..
+[Tue Dec 24 12:10:47 2013]  Updated /players/nooneelse/black/guild_prohibit so Senior wizards can enter guild and remove traitors from the list.
+[Tue Dec 24 12:10:59 2013]  Removed Shojiro from the vamp traitor list.
+[Tue Dec 24 12:29:12 2013]  Made shojiro a vamp since requires 3 bites and there are never 3 vamps on.
+[Mon Dec 30 09:59:48 2013]  Removed newbie exam save file for Spike, player was reset and he only has 500 exp.
+[Thu Jan  2 14:29:27 2014]  Updated /players/zeus/museum/OBJ/light_dagger, made the chance of wielding based on stats.
+[Jan  6 2014 14:13] A: Updated /players/snow/dervish/objects/mound.c to give a small heal to players on the mound list when they are present in the guild hall
+[Jan  6 2014 17:19] A: Fixed invalid reference in /players/dragnar/WasteLands/rooms/libstorage.c
+[Jan  6 2014 17:25] A: Updated /players/dragnar/WasteLands/rooms/bridge2.c, it was not checking to see if the mob was already present before cloning
+[Jan  9 2014 01:02] A: Gave Gogeta back /players/vertebraker/prizes/gogeta
+[Jan  9 2014 09:42] A: My player character is Beta testing Walking Dead area which Rumplemintz approved.
+[Jan  9 2014 16:19] A: Returned heals to titan after a crash.
+[Jan  9 2014 17:11] A: Titan is going to beta the Walking Dead area.
+[Jan 12 2014 01:18] A: Increased Jasters guild level so the Samurai would have active emperor.
+[Jan 18 2014 21:41] A: gogeta beta testing Walking Dead area.
+[Jan 24 2014 22:40] A: Vizjerei beta testing Walking Dead area.
+[Jan 28 2014 22:01] A: xiao beta testing WalkingDead area.
+[Feb  5 2014 01:43] A: googleplex, thomas, lebronjames did beta test for WalkingDead area.
+[Feb  6 2014 01:56] A: Updated WasteLands/armor/suit.c, the reset was getting called and causing issues.
+[Feb  8 2014 20:50] A: Opened WalkingDead area, approved by Star and Rumplemintz.
+[Feb  9 2014 09:41] A: Fixed /players/snow/dervish/lib/doasis.h that someone had screwed up.
+[Feb 13 2014 17:18] A: Added log_file to /players/cosmo/hslist/svds_new.c in the update_alltime funciton. Yearly list is not working and I believe it is because it is not properly restoring the yearly .o file.
+[Feb 17 2014 17:17] A: Updated /players/dragnar/WalkingDead/mons/walker.c -> Nerfed exp a bit at lower levels.
+[Feb 17 2014 23:49] A: Updated /players/jareel/armor/chaos/woods2/orlanth_earring to do a find_call_out before doing call_out.
+[Feb 19 2014 00:53] A: Updated /players/dragnar/daemons/shop.c -> Fixed bug identified by Timespliter when selling bags.
+[Feb 19 2014 15:48] A: Updated/fixed /players/guilds/dervish/objects/mound.c
+[Feb 20 2014 20:09] A: Updated /players/snow/dervish/hall/hall.c to reset player set_home and move them to new /players/guilds/dervish/hall/hall.c
+[Feb 24 2014 13:13] A: Registered Test Character: Dragtst
+[Feb 26 2014 14:11] A: Updated dervish to use the new channel daemon for guild chats.
+[Feb 27 2014 07:33] A: /room/post was not loading causing a login error in player.c so updated post.c to fix the error.
+[Mar  2 2014 09:14] A: Fixed bug with feelings that had a newline in /bin/channel_daemon.
+[Mar  4 2014 09:23] A: updated /players/shinshi/fun/hourglass.c because it would not load. Restored hourglass to asunder.
+[Mar  4 2014 14:41] A: Gave back kiros the elemental test obj, clearly logged that he completed it multiple times.
+[Mar 13 2014 14:48] A: Updated /room/shop to use new /obj/daemons/shop_daemon. Added few simple functions in player.c to make lists work properly.
+[Mar 14 2014 19:02] A: Updated /players/saber/stuff/corpse2 and /players/guilds/dervish/lib/scatter.c so dervish are not able to buy corpses to use for sand points.
+[Mar 16 2014 16:56] A: Restored Raidon's xp from a dc death.
+[Mar 19 2014 10:16] A: Modified dervish so they no longer lose sand points while a sandstorm is present in the room.
+[Mar 21 2014 18:01] A: Cleaned up /players/earwax/housing/land_data.o, removed Shinshi objects that shouldn't be there.
+[Mar 28 2014 14:10] A: Updated /players/dragnar/WalkingDead/armor/swat_vest -> Removed multiple armor types and just made it chest. Multiple armor types were not working correctly.
+[Apr  3 2014 23:13] A: updated /players/earwax/house_daemon.c to add query_land_owner function.
+[Apr  4 2014 00:33] A: Refunded deathseeker 2mil xp after being killed by Oakley 2x.
+[Apr  8 2014 13:03] A: Added clear_withdrawable_amount to /players/earwax/bank/bankd.c for Prestige.
+[Apr 13 2014 11:06] A: Updated shop daemon to give random coins when item is > 1000 based on charisma stat.
+[Apr 13 2014 23:52] A: Implemented most of prestige. Updated living.c for prestige exp bonus.
+[Apr 14 2014 12:57] A: Updated /obj/player/follow/follow.c -> added call to remove call out in clear_follow() function.
+[Apr 15 2014 22:06] A: Update player.c and living.c to finish putting in prestige bonuses. Just search for comments with PRESTIGE in it.
+[Apr 24 2014 17:51] A: Updated /bin/play/_who.c for prestige.
+[Apr 25 2014 16:24] A: Updated /bin/play/_score.c for prestige. Added _psc.c for people to use in place of guild scores.
+[Apr 28 2014 11:29] A: Updated /room/exlv_guild to not add test characters to the tablet.
+[May  5 2014 16:52] A: Updated shoutout and shoutin functions in player.c for prestige, updated show_stats in living.c.
+[May 13 2014 12:45] A: Gave double xp to Jellek using Fred's double_xp_object.
+[May 14 2014 17:59] A: updated /bin/play/_finger.c to include prestige stats.
+[May 15 2014 18:23] A: updated Wastelands quest to be worth 9 physical since the mobs had heavy upgrades. Used Despoina as a marker which is an 8.
+[May 19 2014 10:14] A: Added mage bonus for /players/coldwind/desert/weapons/ball.c
+[May 20 2014 18:13] A: Updated /players/llew/closed/crystal/xetra_claws to have set_type exotic.
+[May 20 2014 21:35] A: update xtitle to include check for prestige level.
+[May 21 2014 12:19] A: Updated /obj/prego.c - changed the define of cap_name to CAP_NAME since it was causing kid.c to not load (cap_name is inherited from living.c).
+[May 23 2014 16:11] A: added 400k to dreadbane/marsellus for not getting exp while killing Gordie and mobs in wings area. Suspect mage bug.
+[May 25 2014 00:01] A: Added #define DOUBLEXPDAY 1 in living.c, will remove Monday AM.
+[May 25 2014 16:38] A: Restored eq to dreadbane after crash.
+[May 26 2014 07:51] A: Removed double XP from living.c
+[May 27 2014 12:57] A: updated /obj/partymaster.c to not adjust for leader exp when the leader is a Mage mirror image. If the leader is a mage using mimage they will miss out on the lead bonus exp, all exp will be shared evenly. Previously the party was missing exp.
+[May 29 2014 11:16] A: Removed Tristan from knights and moved his guild stats to Alaric. Has been bugging me for a year for a name change.
+[May 29 2014 16:15] A: added is_castle flag to angmar's castle.
+[May 29 2014 16:47] A: Added is_castle flag to padrone/blackadder/kantele/aislinn/zone castles.
+[May 29 2014 21:39] A: Updated hall_path for Humble and Sandlot clans, they were pointing to the old dervish directory.
+[Jun  5 2014 12:33] A: Approved new drone clan hall for Mokri.
+[Jun  9 2014 09:06] A: Added WalkingDead/heals/shake to WalkingDead shop. stuff/soak 10, heal(50,50) cost 1200 coins.
+[Jun 11 2014 09:20] A: Fixed Sin's palace, Entrance was broken but rooms objects were there. Modified /players/earwax/housing/data/mythos/Mythos_Ancient_38.o manually to fix Entrance.
+[Jun 11 2014 09:20] A: Restored 200k gold to Sin for lost properties on his Palace.
+[Jun 13 2014 15:05] A: Added /players/dragnar/WalkingDead/heals/mons/meth.c to the WalkingDead area.
+[Jun 16 2014 13:56] A: Promoted Pestilence to level 40, existing wiz with open area.
+[Jun 16 2014 15:46] A: Updated /zeus/circle/rooms/path to remove exit to /players/zeus/workroom *boggle*
+[Jun 23 2014 09:56] A: Removed Angulus from mage guild per his request.
+[Jun 23 2014 15:58] A: Restored Mauls gear after crash, just happened to have a screenshot of his inventory
+[Jun 26 2014 12:30] A: updated /players/fred/closed/bloodfist/obj/player_shadow and /players/pavlik/guild/mages/objects/fake_party to add top_kill call.
+[Jun 26 2014 15:24] A: updated reset in /players/boltar/casino/floor/casinofloor2 to clone machine during reset.
+[Jun 27 2014 10:57] A: Updated /players/guilds/healers/obj/shade.c to allow for double_xp.
+[Jul  6 2014 22:26] A: Churched players stuck in OPL.
+[Jul  7 2014 17:51] A: Updated player.c and /obj/user/channel.c to use /bin/channel_daemon.c
+[Jul  7 2014 20:07] A: update /obj/user/one_chan.c to use channel_daemon
+[Jul  8 2014 13:18] A: Updated /obj/simu_efun/emit_channel.c to use /bin/channel_daemon.
+[Jul 10 2014 09:07] A: Updated /bin/channel_daemon to better handle when called by non-players.
+[Jul 11 2014 15:43] A: Updated many of pavliks and angels areas to work in LD.
+[Jul 13 2014 10:09] A: update /obj/prego.c -> was causing kid.c to not load on LD.
+[Jul 15 2014 14:46] A: Promoted Pestilence to level 60 for doing a project to update Eurale's quest mobs.
+[Jul 15 2014 22:45] A: reset Marlboro's mage stats so he could repick mage spells.
+[Jul 16 2014 12:18] A: Updated /bin/play/_bug.c, /bin/wiz/_bugs.c, /obj/user/reports/reporter.c, and /obj/user/reports/report_tool.c to work with LD. LD will have a different save file.
+[Jul 18 2014 14:09] A: updated /players/dune/closed/guild/daemons/actions. for LD.
+[Jul 21 2014 23:16] A: Retrieved gear for players in OPL. BCM mob was killed with the players on it, which dested the players and they had to re-log.
+[Jul 22 2014 17:03] A: Recoded /room/exlv_guild in order to fix major LD bugs.
+[Jul 23 2014 13:36] A: Promoted pestilence to 100 to help with LD changes.
+[Jul 24 2014 12:23] A: Added /room/clean to /players/boltar/casino/floor/casinofloor2.c to hopefully stop Slots from getting cleaned from the room.
+[Aug  6 2014 12:28] A: Updated /players/boltars to fix add_action for LD. Lots of files here so just making a note in case I broke something.
+[Aug  7 2014 15:41] A: Changed the way calulate_worth handles hp_bonus in /obj/living.c
+[Aug  9 2014 18:46] A: updated /players/catwoman for obsolete add_verb functions, many files updated
+[Aug 10 2014 21:32] A: Updated /room/exlv_guild to fix correct_extra_level which was always setting exlv 1 higher than it should.
+[Aug 14 2014 22:21] A: Returned some gear to Timespliter, mage rooms clean which needs to be fixed.
+[Aug 15 2014 14:19] A: Implemented new auto setting for monitor command. Need to update help files after doing some more testing.
+[Aug 18 2014 10:23] A: Gave nagasaki back /players/vertebraker/obj/hanzo_sword after losing corpse to Mondar and mob disappeared...
+[Aug 18 2014 17:56] A: updated /obj/partyob and partymaster so if party leader dies party is not disbanded.
+[Aug 21 2014 22:25] A: Gave Chant and Timespliter xp back from deaths from Dark Order beta issue.
+[Aug 25 2014 22:40] A: Updated living.c to fix errors in debug.log, added check for attacker object before call to do_damage for registered weapons.
+[Aug 27 2014 12:05] A: Gave chant back heals after we had to restart.
+[Sep  2 2014 22:04] A: copied /players/nightshade to /players/karash as he has expressed interest in updating this very old area. Removed closed and tool directories.
+[Sep  3 2014 20:08] A: promoted Sami to level 30 for actions taken to fix the mud.
+[Sep  3 2014 22:42] A: Promoted Mosobp to level 60 for his assistance with issues while no seniors were available tonight.
+[Sep  4 2014 13:42] A: fixed experience, money, Bank Balance, clan_name and auto_load for sin/stardrifter/quagmire/jadin/spartan/colbey
+[Sep  5 2014 11:02] A: Registered Test Character: Gnar
+[Sep  8 2014 16:25] A: Restored Talisman's xp after removing him from symbs guild which he joined accidently.
+[Sep 11 2014 10:11] A: Updated /boltar/things/antipk.c to work on LD.
+[Sep 15 2014 09:23] A: Approved Karash's Outpost area.
+[Sep 15 2014 13:59] A: promoted Karash for opening his first area.
+[Sep 15 2014 20:39] A: promoted Shinshi for assistance doing LD changes.
+[Sep 23 2014 20:40] A: Approved /players/pestilence/amity/obj/cblast to be put in the game. 200 extra coins for -30 alignment costs more than Elixir of Malice.
+[Sep 25 2014 18:06] A: added 25k to dameons bank balance because of reboot.
+[Sep 25 2014 20:51] A: added a post_charge_hook function to /obj/generic_heal that heals can override to do functions after a heal is consumed. Updated /players/pestilence/amity/obj/cblast to use that function to change players alignment when heal is used.
+[Sep 29 2014 15:12] A: Added Wickets TMNT to the game.
+[Sep 30 2014 11:56] A: Gave Jabroni 80k that he had given to his squire.
+[Sep 30 2014 12:01] A: Just a note, I did tell Jabroni to stop smoking so much weed.
+[Oct 11 2014 16:28] A: Updated short for /players/dragnar/WasteLands/armor/suit. Gave dreadbane a new suit, logged him in while I was fixing suit and it didn't restore.
+[Oct 23 2014 15:44] A: Approved tweaks Sami made to Llew's xetras, will implement tonight.
+[Oct 26 2014 22:48] A: Ended double xp weekend in living.c
+[Oct 27 2014 21:02] A: Doubled Feyth's exp gained over the weekend since healers do not get double xp when the flag is added in living.c Added 3.3 mil xp.
+[Nov 25 2014 12:18] A: Approved Karash's changes to nightshades area and copied files into nightshades directory.
+[Nov 25 2014 12:23] A: Promoted Karash for doing a significant update to Nightshade's area.
+[Dec 23 2014 11:25] A: Re-opened Sami's area, removed post at green.
+[Jan 15 2015 14:33] A: Commented out Boltar's xmas from init file
+[Jan 16 2015 07:30] A: Had to restart the mud at 8:30AM EST, no players logged in.
+[Jan 26 2015 13:41] A: Restored Cleipa's gear from yesterdays backup file.
+[Jan 30 2015 16:17] A: Mud crashed, restarted.
+[Feb  3 2015 20:42] A: Restored Puppy wiz char.
+[Feb  6 2015 16:03] A: Recoded /bin/play/_itemtest so it is accurate.
+[Feb  6 2015 16:03] A: Updated /bin/play/_inv to show items that will be saved. Required updates to player.c and /obj/user/keep_shadow.c
+[Feb 12 2015 15:33] A: Approved /players/sami/misc/Dtorch to be put in the game.
+[Feb 18 2015 00:15] 
+  A: Added dragon hps to 
+  R: g2# for the setmon command for Mages.
+[Feb 20 2015 01:21] A: fixed /players/boltar/hotel/hotel to clear some errors on LD.
+[Feb 22 2015 22:01] A: Updated /bin/channel_daemon.c to fix vamp bug on LD.
+[Feb 23 2015 20:15] A: Had to replace everyone's weapons (including my alt Dreadbane) because of a bug I introduced into /obj/weapon.c
+[Feb 23 2015 20:41] A: Fixed /players/guilds/healers/obj/list.c to ignore *_LD.o files.
+[Feb 25 2015 12:31] A: Fixed various std objects from Balowski's dir in order to fix Shardak on LD (yes still used by the code in vertebraker's directory).
+[Feb 25 2015 16:39] A: updated monster.c to not use a call_out for autoheal_monster. Was causing an issue on LD and got rid of a callout.
+[Feb 25 2015 23:33] A: Updated dreamspeakr/WEDDING/OBJ/ring_master to add ring chat to users tellhistory.
+[Feb 26 2015 00:49] A: Updated mokri/clans/funcs.c and room_funcs.h to use copy_file efun on LD.
+[Feb 26 2015 10:53] A: Updated /players/forbin/realms/ruins/OBJ/newscloak so it would load on LD.
+[Feb 26 2015 14:36] A: Updated polys to load on LD.
+[Feb 27 2015 16:48] A: Updated cyberninja _more.c daemon to use /obj/more_ob.c which works on LD.
+[Mar  4 2015 18:40] A: Approved Mosobp to put in /players/mosobp/areas/TOWER/OBJ/wbottle.c
+[Mar  4 2015 18:40] A: Updated Knights guild object so it loads on LD.
+[Mar  4 2015 18:41] A: Updated shardak player shadow object to work on LD.
+[Mar  5 2015 13:12] A: Fixed cyberninja shadows bug.
+[Mar 10 2015 00:09] A: Restored a bunch of gear Isamu lost due to a shutdown I started. I checked his inv before the restart but I missed his 2nd bag. I checked my log to confirm a 2nd bag indeed was there.
+[Mar 12 2015 08:20] A: Updated /players/chip/closed/other/SATAN/satanmob to clean up issues in debug.log
+[Mar 12 2015 08:33] A: update /obj/kid Someone messed with libs in living.h, had to add libs to kids to get them to load.
+[Mar 16 2015 15:39] A: Gave Sami access to enhance Healers.
+[Jun  5 2015 16:52] A: fixed Krishna's experience, mage calcxp command strikes again.
+[Jun  8 2015 13:25] A: Healed Mosh, he had -10k sps
+[Jun 10 2015 09:16] A: Restored Laramie's gear from a backup.
+[Jun 12 2015 14:33] A: Changed dervish so prestiged players get the same benefit of using an hourglass without needing the hourglass object.
+[Jun 19 2015 10:22] A: Added ability to reset prestige skills in the prestige guild.
+[Jun 26 2015 23:19] A: Added all option to keep/unkeep as in "keep all pie" and "unkeep all bag"
+[Jul  3 2015 12:24] A: Updated /players/boltar/casino/floor/chips for a future project I am working on. Added init() function, remove code from get()
+[Jul  7 2015 14:27] A: updated clan object to have 0 weight.
+[Jul  7 2015 16:38] A: Updated living.c and corpse.c so the exp value of the mob is now saved to the corpse. For future use possibly by necros/dervish etc.
+[Jul  9 2015 11:02] A: dragtst gave jaster a glove while testing a bug with Samurai guild, glove was cloned by sami so it was logged.
+[Jul  9 2015 11:35] A: Fixed bug with /vertebraker/guilds/samurai/obj/paimei.c guild advancement.
+[Jul  9 2015 12:16] A: Added 500k exp to Dorian for issue with guild advance.
+[Jul 13 2015 15:24] A: updated /players/guilds/dervish/lib/scatter to consider exp worth of mobs.
+[Jul 14 2015 10:16] A: updated player.c heart_beat to check for stuffed/soaked/infuse < 0 and reset to 0.
+[Jul 27 2015 12:08] A: added destruct_inventory to /obj/corpse.c
+[Aug 29 2015 00:15] A: Gave back Symbio his exp from dying to Rosenthal.
+[Aug 31 2015 09:20] A: Approved Sami's GPO area.
+[Sep  2 2015 13:37] A: Fixed typo of query__name in /obj/shut.c
+[Sep 11 2015 12:37] A: updated necros harvest command to add bonus for corpse exp.
+[Sep 11 2015 16:13] A: updated /players/scathe/generic/room.c to inherit /room/room.c
+[Sep 16 2015 23:24] A: updated players/jareel/armor/mondar_gauntlets special, too many issues to list.
+[Sep 23 2015 14:26] A: Fixed a small bug in player.c when saving gear upon quit. Preivously it was possible to drop gear that should save.
+[Sep 24 2015 17:52] A: added wc bonus for prestiged knights based on alignment.
+[Oct  6 2015 08:33] A: updated /room/clean so that objects in the room will also not clean themselves (from /obj/clean.c )
+[Oct  6 2015 16:09] A: fixed /players/pestilence/closed/dark/obj/enrage to be wc bonus of 10 for 12 rounds, 120 random dam for 60 sps.
+[Oct 14 2015 09:21] A: Gave back Shojiro /players/jareel/SoulboundObjects/ARMOR/SetOfShadows/ArmorOfDarkness.c that he lost with the issues yesterday
+[Nov  4 2015 11:59] A: Added bonus to DO spell cooldown for prestige players.
+[Nov 30 2015 12:18] A: added 735300 xp to dreadbane, killed game crasher in jaraxle's area and did not get the xp.
+[Nov 30 2015 16:01] A: 25 days to christmas, added Boltar's Santa to the init_file :)
+[Dec  4 2015 07:21] A: updated /players/boltar/xmas so that it only load in the month of December (no need to remove from init file). Also switched location of christmas tree and the santa.
+[Mar  4 2016 14:40] A: Updated double xp object to have extra_look function.
+[Mar 18 2016 21:42] A: Gave Whitehawk a bag of gold after I *cough* crashed the mud.
+[Apr 16 2016 23:19] A: fixed /players/scathe/cave/cave2
+[May 27 2016 11:44] A: update /players/cosmo/hslist/svds_new.c to keep track off alltime boot exp. I compiled the list manually and updated alltime.o and updated the svds to update alltime going forward.
+[May 27 2016 11:45] A: In order to test the updated svds, I had to add exp to my character, bane. This has been reset.
+[Jun  1 2016 20:43] A: Added /players/dragnar/tmnt.c to the init file & removed from my castle.c
+[Jun 29 2016 00:53] A: Refunded 120k to darude for bank snafu.
+[Jul 18 2016 10:08] A: Gave darude a bag of unique scrolls from /dragnar/SevenSpires/scrolls and 500k (bank transfer) for winning the triple xp contest.
+[Aug  2 2016 12:57] A: Implemented update to /bin/wiz/_update.c that Oberon coded. It takes you back to a room after it is updated.
+[Aug  3 2016 20:37] A: Added clear_params and del_param to /obj/armor.c (oberon)
+[Aug  4 2016 14:09] A: player.c and /bin/play/_score2.c updated to prep for login rewards.
+[Aug  9 2016 16:54] A: Updated /players/wicket/ninja_turtles/quest/turtle_mask.c so it no longer saves. Giving it to the pizza hut manager saves the quest status.
+[Aug 25 2016 15:06] A: Changed /room/adv_guild to handle wiz advancement properly. Coded by darkfire, checked/verified/implemented by me.
+[Sep  9 2016 10:53] A: Added some armor types to elemental gear in snow/closed/test that Sami put together. Same gear, just new types.
+[Oct  6 2016 08:07] A: Updated player.c to be able to handle multiple prestige guilds. Now prestige players can store multiple guilds.
+[Oct 20 2016 21:24] A: added WalkingDead/mons/walker_pet.c to my TWD area.
+[Oct 26 2016 21:32] A: Promoted Oberon to level 30 for fixing elemental weapons.
+[Jan 10 2017 10:49] A: Added 530,026 exp to Syn. Gave incorrect level requirement for DO.
+[Jan 19 2017 15:27] A: Implemented change to /players/earwax/bank/bankd.c to stop loss of coins when players transfer money. Change done by Oberon, checked and put in by me.
+[Jan 20 2017 13:00] A: I think I fixed /players/vertebraker/guilds/samaurai/paimei.c that was bugging out during a fight so players could not advance. Had to give back exp multiple times to darude while we worked out issues.

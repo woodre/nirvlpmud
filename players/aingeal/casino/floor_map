@@ -1,0 +1,28 @@
+               ___________________________
+              |            2        |    |
+              |_____________________|    |
+              |   |                 |    |_________
+      ________|   |                 |    |elevator |
+      | Stairs    |                 | 1  |_________|
+      |_______  3 |                 |    |
+              |   |_________________|____|
+              |   |         4            |
+              |___|______________________|
+      
+It's a basic square shape of hallways. 
+hall 1 has rooms x00-x25
+hall 2 has rooms x26-x50
+hall 3 has rooms x51-x75
+hall 4 has rooms x76-x99
+Where x is the floor number
+
+hall 1 has exit south to hall 4, exit west to hall 2.
+     west to elevator door.
+hall 2 has exit south to hall 3, exit east to hall 1
+hall 3 has exit east to hall 4, exit north to hall 2
+     up/down to stairs
+hall 4 has exit west to hall 3, exit north to hall 1
+
+It repeats for each floor.
+
+

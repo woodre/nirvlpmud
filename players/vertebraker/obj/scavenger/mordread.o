@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/egarb","/players/arrina/weapons/punchknife","/players/sado/shop/oreo","/players/maledicta/cont/weapons/rweapon","/players/wren/Area/starbug/items/fish","/players/snow/chaos/objects/crabmeat","/players/mythos/awep/claw","/players/angel/area/school/obj/charm_01","/obj/weapon","/players/jamila/beach/mobs/skin","/players/hippo/armour/glazour_coat","/players/maledicta/cont/weapons/rweapon","/players/ultramagnus/apple","/players/puppy/s/eq/cape","/players/boltar/things/stove2","/players/maledicta/cont/armor/rgloves","/players/scathe/armor/damulet","/players/pain/closed/wands/orb","/obj/armor","/players/wren/Area/starbug/items/comb","/players/wren/Area/starbug/items/arrogance","/obj/weapon","/players/pathfinder/detroit/weapons/machete","/players/pain/NEW/arm/tunic","/obj/armor",})
+shorts ({"Elder's garb","[1;30mObsidian [1;31mPunchknife[2;37;0m","A box of oreo cookies","a [37mSilver[2;37;0m Longsword","A box of trout ala crem","A slab of giant crabmeat","claws","Charm Bracelet","spirit blade","A Lizard Skin","glazour coat","a Spiked club","A Red Apple","A flowing cape","A stove","a pair of steel gauntlets.","A Dragon Amulet","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","A magical [1mwhite[0m amulet","the cat's hair pick","Rimmers arrogance.","Whip","A deadly looking machete","A handsome blue tunic","A [1mwhite[0m helmet",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/treasure","/players/pain/NEW/weap/mace2","/players/jamila/beach/mobs/claw","/obj/weapon","/players/scathe/armor/rgarb","/obj/treasure","/players/wren/Area/starbug/items/groinal","/obj/weapon","/players/mosobp/areas/TEMPLE/OBJ/tiara","/players/angel/area/stargate/obj/bullets","/players/snow/WEAPONS/tsunami","/players/arrina/weapons/longknif","/obj/weapon","/players/wren/Area/starbug/items/lightbee","/players/pain/closed/weapons/widow","/obj/armor","/players/hawkeye/items/good","/players/arrina/armor/torque","/players/wren/Area/starbug/items/gauntlet","/players/wren/Area/starbug/items/sparehead","/players/wren/Area/starbug/items/sequinjacket","/players/wren/Area/starbug/items/veil","/players/snow/cam/stuff/shield","/players/wren/Area/starbug/items/bat","/players/saber/armor/lpants",})
+shorts ({"A rattlesnake's rattle","A huge iron mace","A Lobster Claw","a sword","Monk's garb","Beach Bear pelt","Kryten's groinal attachment","A Deadly Bullwhip","A Princess' Tiara","A clip of bullets [50]","[34mTsunami[0m","A longknife","Fear","a strange object called a 'light bee'","the Widowmaker, the sword of the Berserker","A Jedi Cloak","A potion","Silver Torque","Time gauntlet","Kryten's sparehead 3.","Cat's red sequin jacket","a big wedding veil","[34m[1mBlessed Shield[0m[0m","a [1;30mballbat[2;37;0m","Black leather pants",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

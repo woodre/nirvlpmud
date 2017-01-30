@@ -1,0 +1,29 @@
+     I spent some time going through the rooms in your area and found the
+following items for you to address:
+~elevator.c - floor descript, tile appears to be 'loose'.
+~rbubble.c - boy has too many coins when his bubble is included.
+	     - there are no exits from this room that I could find.
+	     - I could not wear the bubble, is this intended?
+~rcafe.c - no exit from this room
+~rflower.c  - no exit from this room unless one could 'guess' to cross the 
+	        street (pretty vague)
+~rnazi.c  -  would be nice to be able to smell the aroma
+	  -  the heals are too cheap.  (35 heal * 13 pts per heal at 11 food)
+	     equals 455 coins per shot of soup.  cup = 455, bowl 1820 minimum.
+	  -  no exit
+~rstreet.c - can't look at shops
+~rs1-8.c  - can't look at shops
+~rs2.c  -  the description mentions the building elevator which assumes that
+	   the player has visited there. Keep your room descripts to the room
+	   they are talking about.
+~rs6.c  -  couldn't look at street to know to 'cross'
+~rs8.c  -  couldn't look at 'accident' or 'paramedics'
+
+The water heal that Elaine has cannot be used by the dmages because you use
+'drink' to use it and they cannot use intox heals which are 'drink_alcohol'.
+You might want to find another verb since this is a 'soak' heal.
+
+This is a very good first effort.  Your attention to detail was obvious and
+your descriptions for the most part were very good.  Snow is looking over the
+monsters but I would think with the above corrections, you should be able to
+'get opened' shortly.  Congrats on a fine job...   -Eurale

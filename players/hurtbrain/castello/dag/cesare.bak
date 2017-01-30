@@ -1,0 +1,33 @@
+inherit "obj/monster";
+reset(arg){
+        object ob1, ob2, ob3 ,gold;
+        ::reset(arg);
+   if(arg) return;
+	set_short( "Giulius Caesar, the Emperor") ;
+        set_long("He is an elderly man but he seems to be very powerful.\n") ;
+        set_name ("giulius") ;
+        set_gender( "male") ;
+	set_alias( "caesar" );
+        set_level(20);
+        set_hp(510);
+  	set_al(0);
+  	set_wc(30);
+  	set_ac(17);
+        if(random(2)) set_aggressive(1);
+        if(random(2)) set_whimpy();
+        set_race("human") ;
+        set_chat_chance (20);
+        load_chat("Giulius says: 'The die is cast!'\n");
+        load_chat("Giulius mumbles: 'They want to kill me!'\n");
+        load_chat("Giulius says: 'Damn Gauls! I want to destroy them.'\n");
+        gold=clone_object("obj/money");
+        gold->set_money(800 + random(400));
+        move_object(gold,this_object());
+        ob3 = clone_object ("/players/hurtbrain/castello/dag/crown") ;
+        move_object(ob3,this_object());
+        ob1 = clone_object ("/players/hurtbrain/castello/dag/tunic") ;
+        move_object(ob1,this_object());
+	ob2 = clone_object ("/players/hurtbrain/castello/dag/giul_sword") ;
+        move_object(ob2,this_object());
+}
+

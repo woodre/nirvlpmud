@@ -1,0 +1,115 @@
+Errors - Load, Debug, Rinse, Repeat...
+
+There are generally three types of errors you will come into contact with in your approach to coding.
+
+    1.  Compile Errors
+    
+    2.  Runtime Errors
+    
+    3.  Malfunctioning Code [sort of]
+
+Compile Errors
+
+Compile errors are generally logged to your own, separate error
+file. These occur when the driver tries to load an object into
+memory. Anything that is in the code that the driver can't handle
+will cause the driver to burp and spit out a related error trying to
+delineate where the problem occured. Compile errors can generally be
+broken down into 4 categories:
+    a.  Typos
+    b.  Missing enclosure (), [], {}, ""
+    c.  Improper Declarations
+    d.  General Syntax
+
+    Typos
+        These are things that will happen to you no matter how long
+        you code or how much you know about LPC. Sorry. These are
+        also the easiest to find, so that helps mitigate their
+        unending nature.
+    
+    Missing Enclosures
+        The lack of an enclosure {}, [], () or "" is the second most
+        common type of error that will crop up. They are also the
+        hardest to locate for new coders. The messages in the logs
+        do not reflect the line where the actual problem is, but
+        where the driver notices the need for another beginning (,
+        [, {, " or ending (, [, {, " in the code. The key to finding
+        these types of errors lies in good coding style. Style was
+        covered in earlier documentation and should be reviewed now
+        for compliance. [NB. I will not help with debugging if code
+        is in a horrible format that defies my time and energy to do
+        so. I am willing to help anyone find any problem, but don't
+        waste my time reformatting your messy code.]
+    
+    Improper Declarations
+        These are the easiest to locate from the error logs as they
+        are explicitly pointed out. They may or may not be as easy
+        to correct, depending on your ability and familiarity with
+        LPC. They can often occur in conjunction, or because of [a]
+        or [b] above and will disappear when they are corrected.
+    
+    General Syntax
+        There are also times when the driver simply doesn't
+        recognize what you have typed in for the code. Often you
+        have coded something with spurious elements or used the
+        wrong syntax for a statement.
+        
+Runtime Errors
+
+Almost without exception, runtime errors will be caused by a
+variable being passed to a function that is expecting a different
+type of variable to be present or being passed a NULL value. They
+can sometimes be difficult to understand, but fortunately, the
+errors for these are generally more detailed and make finding them
+easy.
+
+If you get a runtime error, and are sure that you are passing the
+right type of variable to the function, begin by backing up and
+having the functions write out the variables first to double check
+what you are sending forward to the function.
+
+Malfunctioning Code
+
+These are the most insidious of errors. This is code that you have
+set up, compiled and run, and the results either don't match what
+you intended or they are non-existent.
+
+This will often require a line-by-line search through your code to
+find the last point at which the code operated successfully and then
+step through to find the place where things go wrong.
+
+One of the main causes of malfunctioning code is the use of if()
+where some of the conditions are not accounted for, namely there is
+something happening that the code doesn't allow for. It is
+unfortunately like learning a foreign language, in that you may not
+know enough code to say/do what you want to do properly and that is
+ok. You don't learn until you manage to screw it up several times.
+
+You can also use the preprocessor to help with debugging. Using the
+#ifdef and #endif you can check if a preprocessor macro is defined
+and make changed based on that. For example:
+
+#define DEBUG
+int do_something(string arg)
+{
+#ifdef DEBUG   /* is DEBUG defined, even if it's a null define */
+    write(arg);/* yes, so write the variable arg */
+#endif         /* we're done with the debugging here */
+    if ( stringp(arg) ) do_this();
+    else if ( intp(arg) ) do_that();
+    else return 1;
+}
+
+When you get it working, all you have to do is delete #define DEBUG
+and you are ready to go.
+
+So what do we do with all this information? We code and learn, and
+learn and code some more. The more you code the more you will learn
+to debug and vice versa. After years of LPC, I still resort to a
+code/ compile/ debug/ recode/ recomple/ debug/ cycle that may
+iterate through a file multiple times before it even loads correctly
+the first time.
+
+In the end, code that loads but doesn't work will boil down to a
+problem with a variable somewhere because at it's root, LPC code is
+manipulation of variable values.

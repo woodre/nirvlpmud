@@ -1,0 +1,60 @@
+
+
+                         [help attribs]                
+-----------------------=========+=========-----------------------    
+ 
+  Player attributes:
+
+  Stamina:      Increases hit points.
+  Magic:        Increases spell points.
+  Strength:     Increases the amount you can carry
+  Luck:         If you get lucky you take less or no damage from a hit.
+  Stealth:      Maybe you can just slip by those aggressive monsters.
+
+  Piety         These five attributes are used for a variety of
+  Intelligence  things throughout the game. They are mostly used
+  Will Power    for guilds and checks to stay out of harms way.
+  Dexterity     It may be more useful to leave raising these
+  Charisma      until later.
+
+  To see current values use 'score2' or 'sc2'
+  increasing attributes: (start:5 max:20 (30 extended))
+
+          new stat level   cost per pt.
+            -------         --------
+             6-7              1700
+             8-10             2200
+             11-12            3300
+             13-14            3800
+             15-16            5066
+             17-18            6000
+             19-20            8000
+  extended attributes:  
+             21-23            12000
+             24-26            20000
+             27-29            28000
+             30               35000
+ 
+Newbies are allowed to raise attributes 30 times for free, to a
+maximum of 10.  Use these free attributes to customize your
+character.
+
+After spending your 30 free points, you are allowed to raise only
+7 attributes per level if the attrib is going to be raised beyond
+15, and each attrib can be no higher than 10 ranks above your current
+level.
+
+Extended attribute values are an addition to the game intended
+for high level players. They are supposed to be expensive. However,
+once one goes above 20, should he lose a stat point, he may regain
+it at the cost for the 20th point. For instance if a player dies
+and goes from a stealth of 30 to 29 it will cost only 8000 exp 
+to raise it back to 30.
+
+Special note about mag and sta above 20. Each point above 20 gains 2
+sp or 2 hp. The extended attrib values are aimed for higher level 
+characters. Lower level characters still benefit from 8 hp or 8 sp 
+for each attrib point 1-20. 
+
+-----------------------=========+=========-----------------------
+

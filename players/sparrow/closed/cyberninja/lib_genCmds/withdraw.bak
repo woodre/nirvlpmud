@@ -1,0 +1,38 @@
+#include "../DEFS.h"
+
+
+status main(string str)
+{
+  int num, bal, withdrawn;
+if(IPTP->query_nohonor() && TP->query_level() < 20) {
+    write("As a Renegade, you may not use the ATM.\n");
+    return 1; }
+
+  if(!str || !sscanf(str, "%d", num) || num <= 0)
+  {
+    write("Specify an amount to withdraw.\n");
+    return 1;
+  }
+  bal = (int)call_other(POOLD, "query_credits");
+  if (bal < num)
+  {
+    write("There are not that many credits in the ATM.\n"+
+          "The ATM currently contains: "+bal+" credits.\n");
+    return 1;
+  }
+  withdrawn = (int)call_other(POOLD, "withdrawCredits", num);
+  IPTP->addToBalance(withdrawn);
+  write("You withdraw "+withdrawn+" credits from the CyberNinja ATM.\n");
+  bal = (int)call_other(POOLD, "query_credits");
+  if (bal == 0)
+  {
+    write(BOLD+"You have cleaned out the guild finances!"+OFF+"\n");
+  }
+  else
+  {
+    write("The ATM now contains: "+bal+" credits.\n");
+  }
+  write_file(LOGDIR + "/ATM", TRN+" withdrew "+withdrawn+
+    " credits. ("+ctime()+")\n");
+  return 1;
+}

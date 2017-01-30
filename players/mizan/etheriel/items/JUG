@@ -1,0 +1,17 @@
+
+This is a jug of healing. Congrats on your purchase of it!
+It can be a very useful tool when used properly.
+Commands:
+  jug X : where X is the amount of units that you want to heal.
+	  Each unit heals one hitpoint and one spellpoint.
+
+  jug	: shows how many charges are remaining in the jug.
+
+  as	: automatic heal (Using Spellpoints as a marker)
+
+  ah	: automatic heal (Using Hitpoints as a marker)
+
+ Automatic heals work like this: Assuming you use hitpoints as a marker,
+the jug does the following: heal=(max hp - current hp). If you had more
+spellpoints at the time, you should have chosen spellpoint autoheal as
+not to waste any jug units. This proves to be very helpful in quick combat.

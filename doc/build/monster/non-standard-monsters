@@ -1,0 +1,5 @@
+non-standard monsters
+by Mythos [5.10.??]
+
+if you are using non-standard monster.c (such as your own)
+include /obj/living_pretypes.h instead of the /obj/living.h

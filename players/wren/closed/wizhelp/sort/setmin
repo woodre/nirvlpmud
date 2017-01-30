@@ -1,0 +1,20 @@
+**************
+
+                     Setmin
+
+Syntax:    setmin <msg>
+
+Desc:
+           This command sets your movement message for using standard
+           movement ie walking. Default is "arrives".
+
+Warning:   Keep clean and brief
+
+Example:   setmin enters theatrically
+                  results
+           Players would see "Bob enters theatrically" as he enters.
+
+Related:   setmmin, setmmout, setmout, setmhome, review
+
+
+**************

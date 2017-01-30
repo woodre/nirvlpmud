@@ -1,0 +1,178 @@
+Area Approval Notes
+Softly's Winter Area
+by Feldegast
+12/7/00
+
+--  My comments, actions, and responses begin with --
+    Softly
+
+<snip>
+Your area is a little on the small side, but well made.  You have a
+rather odd distribution of monsters, with two level 20's, lots of
+newbie monsters, and two monsters in between.  In case you misunderstood me, you are not REQUIRED to have two level 20's, I just
+meant that that was what you were allowed.  I'm concerned that a newbie
+might come to this area, start killing ermines, and then get whacked
+by the wolf, thinking this was an easy area.  While I'm not going to
+require that you fix this, it is something you should pay attention to
+in future areas.
+
+-- Thanks .. I'm glad it is well made.  I read the firstarea file that
+   you gave me.  It said 15-20 rooms max, and I was trying to stay
+   within that.  (I was actually concerned because I had gone over.)
+   About the mob levels, I added a chat to the hunter that warns
+   of danger near the cabin.  I hope that helps.
+
+<snip>
+
+Rooms
+-----
+You need to set up your castle, or create a new version of sforst2.c with an exit leading east.  I need to see this prior to final approval.
+
+-- Done.  /players/softly/sforst2.c
+
+pond1.c -
+  The first sentence is not complete.  You have a subject...A 
+blindingly bright frozen lake nestled in a ring of dying trees.  But
+you need a verb.  You could say, "There IS a blindingly..." or "A
+blindingly bright frozen lake IS nestled in a ring of dying trees."
+
+  In the description, you refer to the debris to the east as though
+you'd mentioned it previously, which you hadn't.
+
+--Done
+
+pond2.c -
+  You might want to put a message here to indicate why the player
+can't enter the structure.  Something like, 'There is nothing of
+interest in there.'  You can expect that players will try it, so
+you should explain why they can't.  Also, you might want to refer
+to it as a 'shack' in the description rather than a 'structure'.  It
+is more descriptive.  From pond1.c they could tell it was a shack, so
+you shouldn't give them less detail when they are closer.
+
+-- Changed to shack.  If the player tries to go south, Mr. Bryant
+   steps in front of them and asks "May I help you?" ... I thought
+   that it would be obvious that this was Mr. Bryant's space.  If
+   you think a different message is required, please let me know.
+
+pond4.c -
+  "...surrounded BY dying trees..."  (You have this same typo for all
+lake descriptions)
+
+-- Done
+
+pond5.c -
+  Why can't I look at the holes?  I'm usually not very strict about
+item descriptions, but if it is something that I'm interested enough
+to look at, then it should have a description.
+  Also, when I go to the north and northeast, there are no holes. (?)
+
+-- hehe .. the holes are an anachronism from when I intended to
+   have fishing.  I've taken them all out.  Thanks for catching
+   that.  It was something I meant to do.
+
+pond6.c -
+  Same problem(s).  Check it out for all lake rooms.
+
+-- Done
+
+pond9.c -
+  You have an extra . in the last sentence.
+
+-- Done
+
+pond11-12.c -
+  When I mapped out your area on graph paper, the trail didn't link
+up quite right.  If you got rid of one of these rooms, then it would.
+Alternately, you could put in another room near pond16.
+
+-- I added pond15b.c which becomes the turn.  Pond 16 has the hunter.
+
+pond13.c -
+  You have a typo in your undergrowth description.  This typo is in all
+of the trail descriptions.
+
+-- Done.  I love grep :)
+
+pond15.c -
+  The first two sentences are talking about the undergrowth.  Isn't it
+a little monotonous?
+
+-- Yes, it is. It is horrid.  I fixed it. 
+
+pond17.c -
+  How can I 'look' at the sound?
+
+-- Hehe .. I guess you can't.  I can't.  Next time :)
+
+pond18.c -
+  In the 'light' description, blindling -> blindingly.
+  In the 'cottage' description, tail -> tale
+
+-- Done (I'm so ashamed)
+
+pond19.c -
+  In the 'photographs' description, "One photograph IS OF two..."
+
+-- Done
+
+Monsters
+--------
+penguin.c -
+  Okay, this is being kindof picky and you don't have to do anything
+about it, but if the cold is simply the product of an enchantment and
+the rest of the surrounding terrain is still normal, then why are
+there penguins?
+
+-- I like penguins.  I don't have any other excuse.
+
+hhunter.c -
+  Why is his alias 'wolf'?
+  
+-- duh ... fixed
+   I added a 3 chats that warn about the cabin and the wolf.
+
+hblade.c - I don't think you can justify thematically having a wc17
+    knife with a return of 5.  The monster that has it isn't even
+    very difficult.  Comparison: deathmace is wc18 1/3 chance of
+    return 7.
+
+-- I made it wc15 with a 1/3 chance of a return of 3
+
+wwolf.c -
+  As a level 20 monster, this monster requires a spell attack, somewhere in the range of 30% chance of 15 damage, or 10% chance of
+40 damage.
+
+-- I made it 30/15 ... protects the ones who hit it by mistake.
+
+daniel.c -
+  You've got something extra on the end of the description.
+  He also needs a spell attack.
+
+-- I made this one 15/35 ... he is steady with bursts of rage
+   I also added a small attack chat
+  
+caxe.c -
+    This weapon still apears too powerful to me.  Make it wc17.
+
+-- Done
+
+tbryant.c -
+  At the start of his story, you need a Mr. Bryant says:
+
+-- Done
+
+Final notes
+-----------
+  When you finish these corrections, let me know and I will do a final
+look over.  If I don't have any more corrections, then I will inform
+Boltar and he will add your castle to the list.  When your area is in
+the game, I'm promote you to level 30.
+
+-- Cool ... I think I'm done.
+
+  If you have any objections to any of these corrections, then let me
+know.  I'm a reasonable person, and I can be argued with.
+
+-- I'll save the arguing for when I really need it :) 
+   Thanks.

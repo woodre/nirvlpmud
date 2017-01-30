@@ -1,0 +1,37 @@
+*******************************************************************
+
+Name:    bugs (Bugs)
+
+Desc:    Will list all rooms where bugs have been reported.  Then will
+         give the option to look at the multiple bugs that were logged
+         in a room.  You will be given the option to look at he bugs
+         delete the log after you fix a bug or quit out of the file.    
+
+Level:   100  
+
+Warning: 
+
+Syntax:  bugs 
+
+Example: bugs   
+Result:  
+
+Jun 19 17:32 :: parasite     
+Whitewolf the Barbarian in Saber's area when u type kill whitewolf
+doesn't work.. it shows when you are attacking as white wolf <--with
+a space.. it's not a big deal just annoying
+
+1: /players/vertebraker/closed/shardak/room/grotto
+2: /players/mythos/healerguild/guildob
+3: /room/vill_green *
+4-58 ommited for file reasons.
+59: /players/llew/Toys/rooms/aisle22
+60: /players/jenny/wings/rooms/ice2
+
+* indicates a file with multiple reports.
+['1'-'60'], ['d'elete], ['q'uit]: 
+
+
+Related: 
+
+*******************************************************************

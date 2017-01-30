@@ -1,0 +1,28 @@
+#include <ansi.h>
+#include "defs.h"
+
+status main(string str, int glevel) {
+   object target;
+
+list = users();
+ write("<========================================>\n");
+write("Rank:\tName:        \t\n");
+write("-----\t-------------\t\n");
+   for(i=0; i < sizeof(list); i++) {
+      guild = present("seal",list[i]);
+      if(guild) {
+        string name;
+        name = list[i]->query_name();
+        name = capitalize(name);
+        if(strlen(name) < 8)
+          name = name + "\t";
+        rank = guild->query_guild_rank();
+        if(guild->query_muffled() == 0) { muffles = ""; }
+        if(guild->query_muffled() == 1) { muffles = "(muffled)"; }
+        if(list[i]->query_invis() > 0) { write(""); } else
+        write(rank+"\t"+name+"\t"+muffles+"\n");
+      }
+   }
+ write("<========================================>\n");
+   return 1;
+}

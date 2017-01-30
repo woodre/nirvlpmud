@@ -1,0 +1,81 @@
+rank: student
+=============
+ahelp <topic>            display guild help
+anews                    display guild news
+alevels                  display guild levels
+tasks                    show the alchemist the current task
+solve task               solve the alchemist's current task
+loginmsg <msg>           set the alchemist's login message
+logoutmsg <msg>          set the alchemist's logout message
+alight                   create light
+assess <target>          compare user's & target's level, WC, AC, alignment
+awho                     display a 'who' that lists player's guilds,
+aemote <msg>             emote to guild members
+atell <msg/on/off>       tell all guild members stuff
+                         turn guild channel on/off
+athink <msg>             think to guild members
+cpr                      fix player's heartbeat if it stops
+fellows                  list guild members currently playing
+launder pouch            get a new guild object if this one is screwed
+refine corpse            destruct corpse & heal the player some
+resign alchemy guild     leave the guild & lose some experience
+road home                display the path(s) used to walk to the guild hall
+set home here            set the player's login room (a guild room)
+stone skin               turn skin to stone for a time (+AC)
+skin corpse              skin a corpse for later use
+process skin             tan the skin for later use
+sew skins                sew the skins together into armor
+
+rank: acolyte
+=============
+dig hole                 dig a hole to hide stuff in
+detect disease           tells if a player has a disease
+cure <who>               cure diseases
+flash <direction>        blind everyone in room so they don't see
+etheral door             take the user to the guild hall
+ice <target>             damage target with ice (> missile, < fireball)
+reserve <monster>        protect a monster so others can't steal the
+sanctuary [on/off] <hp>  teleport to guild hall if hit points get too low
+
+rank: learned
+=============
+acid <target>            damage target with acid (> fireball, < whatever)
+grease <who>             cause <who> to lose grip on weapon
+air elemental <msg>      speaks a message whenever someone enters the room
+earth elemental          leaves a number on the ground
+fire elemental           gives alarm to owner when someone enters the room
+dismiss <air/earth/fire>
+   elemental             dismisses an elemental type
+peace dust               stops all fights in the room
+transport <component>
+   to <who>              send components to another member
+
+rank: adept
+===========
+charity <item>           send an item to the guild charity room
+fear <who>               cause <who> to leave the room in fear
+poison <who>             does damage over several minutes
+scan <target>            determine pet's condition
+create raven <name>      animate a corpse as a slave
+aid <who> <amount>       transfer some SP to a fellow alchemist
+
+rank: master
+============
+asell <item>             sell an item to the guild shop remotely
+hail <target>            damage target with hail
+repair <item>            repair a broken weapon
+sharpen <item>           sharpen weapon
+call vampire             summons a monster to fight the player's target
+
+rank: grandmaster
+=================
+acheck <who>             check a guild member's status
+areplace pouch <who>     replace pouch of a member if they lose them
+apunish <who>            punish a member who is being a pain
+ademote <who>            demote a member to a lower guild rank
+aexpell <who>            expell a member from the guild
+apromote <who>           promote a member to the next level
+remove <who>             remove a member from the guild without penalty
+
+NOTE: Several of the commands can be abbreviated to 3 letters. (experiment)
+      Also, you can use 'help <command>' to see the help for just that command.

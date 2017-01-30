@@ -1,0 +1,31 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+crossbow.c                     wc15 value 10000 coins
+                               Has a 25% chance of a second
+                               return hit.
+                               Non-storable
+elfsword.c                     wc18 value 2500 coins.
+                               Has specials based on alignment.
+                               Storable.
+*Either one, or the other will be cloned to  *~/3rd/silence/mon/quin.c* at 50% random for each*
+
+
+
+dust.c                         Treasure object value 350 coins
+ *found on dir/3rd/silence/mon/baby.c* 
+
+
+ring_piece1.c - 5.c            Treasure object value 100 coins
+ *need all 5 pieces to make special ring.*
+ *ring5.c can only be found on dir/3rd/silence/mon/queen.c*
+ *random chance of aquiring piece 1 - 4 on any fairy mob*
+
+
+ring.c                         ac2 value 1200 coins
+                               Can be set to raise hp, sp or
+                               both when worn.
+                               Non-storable
+ *found on dir/3rd/silence/mon/queen.c* 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

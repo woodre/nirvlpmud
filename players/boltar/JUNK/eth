@@ -1,0 +1,60 @@
+Detecting more than one ethernet card as modules or not.
+
+http://support.3com.com/infodeli/inotes/techtran/d2fa_5ea.htm
+
+                                             by Pedro Paulo Ferreira Bueno
+
+If you had some problems to make linux recognizes more than one network
+card, here are some tips.
+Since you know that linux can configure your network cand directly in 
+Kernel, or like modules ( see Modules.txt at /usr/src/linux/Documentation )you can use this examples.
+
+If you are using built-in kernel ( not modules ) you have to add an append line at /etc/lilo.conf. Here is a lilo.conf example:
+
+------------------------------------------------------------------
+
+boot=/dev/hda
+map=/boot/map
+install=/boot/boot.b
+prompt
+timeout=50
+default=linux
+append="ether=5,0x300,eth0 ether=15,0x280,eth1"
+image=/boot/vmlinuz-2.2.12-20
+label=linux
+initrd=/boot/initrd-2.2.12-20.img
+read-only
+root=/dev/hda2
+other=/dev/hda1
+label=dos
+
+------------------------------------------------------------------
+
+The append line says to kernel that i have a ethernet card at irq 5 and i/o 0x300 called eth0, and another ethernet card with irq 15 and
+i/o 0x280 called eth1.
+
+If you are using modules you have to specify them and its i/o address at /etc/conf.modules:
+
+-----------------------------------------
+
+alias eth0 ne
+alias eth1 ne
+options ne io=0x240,0x300
+
+------------------------------------------
+Please note that in this case eth0 is I/O 0x240 and eth1 is I/O 0x300. 
+Remember that all values used here to specify irq and I/O are not the same of yours.
+
+You can always find more informations at Ethernet-HOWTO.Good luck.
+
+You can find me at: pedro.bueno@persogo.com.br or network.moderator@linux.cheek.com at 
+Linux Knowledge Base
+
+
+http://www.linuxcare.com/exec/links_catalog?category_id=558
+http://support.3com.com/infodeli/inotes/techtran/d2fa_5ea.htm
+http://www.scyld.com/network/updates.html#rpm
+http://www.scyld.com/network/tulip.html
+
+http://www.redhat.com/support/manuals/archive/RHL-5.0-Installation-Guide-HTML/manual/doc012.html
+http://www.monkey.org/%7Edugsong/dsniff/

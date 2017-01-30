@@ -1,0 +1,7 @@
+guild rank:     grandmaster
+effect:         check a guild member's status
+syntax:         acheck <who>
+                [E] expelled    [CE] council expelled
+                [R] rejected    [P] prohibited
+                [Q] quit guild
+components:	none

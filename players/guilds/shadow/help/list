@@ -1,0 +1,32 @@
+SPELL                 LEVEL      COST        DESC
+<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>--<<>>
+empty                   1         --   heal hit points from a corpse 
+drain                   1   player set attack spell ( damage = cost, 
+                                                      up to 5*guild level)
+trail                   2         5    drops a trail marker
+cure                    3    variable  heals your hp
+forge - dagger          2         45   creates a dagger <wc 8, wt 3>
+      - sword           4         65   creates a sword <wc 12, wt 5>    
+      - blade           10        85   creates a blade <wc 16, wt 7>
+      - chainmail       8         65   creates a suit of chainmail <ac 3, wt 6>
+scan <monster>          4         20   scan a monster for a percentage readout
+                                          of its hp.
+servant things -
+   pearl                6         125  creates a pearl ( see 'info servants' )
+   change               6         --   change the pearl into a servant /
+                                          vice versa.
+   guard <monster>      6         10   commands your servant to guard a monster
+   wait                 6         --   commands your servant to wait behind
+   come                 6       15/--  brings your servant to you/ causes your
+                                          servant to follow you if it wasn't
+                                          ( free if servant present )
+   attack <monster>     6         --   servant can attack
+guild                   5         40   move player to the guild
+stealth                 7         10   attempt to leave/arrive silently
+follow                  3         30   follow another shadow
+                                             up to 5*guild level)
+calm                    5         40   stops all fighting in a room
+peace                   9         35   makes an aggressive monster peaceful
+chain fire              9    variable  casts a chain fireball
+death                   12        70   high level attack spell, costs player 
+                                         15 hit points, does 85 hp damage

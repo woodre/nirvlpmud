@@ -1,0 +1,15 @@
+Syntax: private_coffer [deposit || balance || transfer] [amount]
+
+Displays the status of the clan private coffer, or makes
+a deposit to the coffer. This coffer is used by the clan
+leaders to purchase improvements for the clan, such as
+additional rooms for the clan hall.
+
+If no argument, or an argument of 'balance' is given, the current
+balance will be displayed.
+
+If an argument of 'deposit' is given, 'amount' will be deducted from
+your coins and put into the coffer.
+
+If an argument of 'transfer' is given, 'amount' will be deducted from
+your bank account and put into the coffer.

@@ -1,0 +1,23 @@
+*******************************************************************
+
+                    Shadow Dragon Commands
+
+  dname <name> -- name your dragon
+  dkill <monster> -- make your dragon attack
+  dget <item> -- pick something up
+  dtoss <item> -- drop an item
+  dtransfer <item> to <player> -- have the dragon give someone something
+  mount/dismount -- mount/dismount your dragon
+  yell <msg> -- shout something down when you're on your dragon
+  see -- what you see from the top of your dragon
+  go <direction> -- tell dragon to go somewhere, like "go enter castle"
+  dstop -- make your dragon pay attention to you
+  drest -- make your dragon stop following you.
+  regenerate -- costs 150 sp to regenerate your dragon's hps
+  release -- releases your dragon
+  fade <in/out> -- dragon fades in and out of sight
+  dauto <on/off> -- toggles the auto attack feature
+  dmon <on/off> -- toggles your Dragons monitor
+ 
+********************************************************************
+

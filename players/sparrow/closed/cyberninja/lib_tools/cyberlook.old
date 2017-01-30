@@ -1,0 +1,29 @@
+#include "../DEFS.h"
+
+status main(string str) {
+  object myinv, eyesee;
+
+  if(!((status)IPTP->item_eyes()) && !IPTP->guild_wiz()) return 0;
+  if(!str) {
+    IPTP->do_light(2);
+    write(BOLD+"**CyberEyes**"+OFF+"\n"+GREEN);
+    call_other(TP, "glance");
+    write(OFF);
+    IPTP->do_light(-2);
+    return 1;
+  }
+  write(BOLD+"**CyberEyes**"+OFF+"\n");
+  myinv  = first_inventory(TP);
+  eyesee = present(str, environment(TP));
+  if(!eyesee) eyesee = present(str, myinv);
+  if(!eyesee) { 
+    write(BOLD+"CyberEyes"+OFF+" do not detect "+str+".\n");
+    return 1; 
+  }
+  write(GREEN);
+  IPTP->do_light(2);
+  call_other(TP, "look at "+str);
+  IPTP->do_light(-2);
+  write(OFF);
+  return 1;
+}

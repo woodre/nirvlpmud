@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/sparehead","/players/mythos/aarmor/haramaki","/players/saber/weapons/lgun","/players/wren/Area/starbug/items/guitar","/players/pain/NEW/arm/hood","/players/sado/shop/chocolate","/players/hippo/armour/boots","/players/mythos/awep/zantetsuken","/players/angel/area/stargate/obj/P90","/obj/armor","/players/hawkeye/items/bible","/players/snow/WEAPONS/greydeath","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/wren/Area/starbug/items/gauntlet","/players/saber/stuff/mbag","/players/wren/Area/starbug/items/cowboyhat","/players/puppy/s/eq/quill","/obj/bag","/players/mosobp/areas/TEMPLE/OBJ/tiara","/obj/weapon","/players/snow/chaos/objects/crabmeat","/players/wren/Area/starbug/items/straw","/obj/armor","/players/pain/NEW/weap/sword","/players/wren/Area/starbug/items/indianheaddress",})
+shorts ({"Kryten's sparehead 3.","Haramaki","A lazer gun","Lister's guitar","A Black Hooded Cloak","A box of delicious Belgian chocolates","anti-blood boots","[34mZantetsuken[0m","Machine gun","button","A Bible(autographed by Jesus)","Grey[36mdeath[0m","A nobleman's shortsword","Time gauntlet","A bag of holding","a tiny cowboy hat","A quill","bag","A Princess' Tiara","Longsword","A slab of giant crabmeat","a long plastic straw","Steel Helmet","Sword","a tiny indian headdress",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

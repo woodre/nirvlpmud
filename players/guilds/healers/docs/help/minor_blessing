@@ -1,0 +1,8 @@
+minor_blessing  [level 30]: blesses target and protects target from damage up 
+                            to a certain threshold (threshold is in relation
+                            to your level)
+                            can only be cast once per reset
+                            
+                            syntax: minor_blessing <target>
+                            
+                            cost:  sp:300  hp:150  xp:50000  coins:2000 

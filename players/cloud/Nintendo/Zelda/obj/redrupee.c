@@ -1,0 +1,20 @@
+/*
+ *  Red Rupee
+ *  /Nintendo/Zelda/obj/redrupee.c
+ *  Cloud 2010
+ */
+ 
+#include "/obj/ansi.h";
+inherit "obj/treasure";
+
+reset(arg)  
+{
+	if(arg) return;
+
+   	set_name("red_rupee");
+   	set_alias("rupee");
+   	set_short(""+HIR+"A Red Rupee"+NORM+"");
+   	set_long("A shimmering, red gem. It looks valuable.\n");
+   	set_weight(1);
+   	set_value(1);
+}

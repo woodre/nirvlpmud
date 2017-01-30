@@ -1,0 +1,612 @@
+**************
+
+                     N
+
+Syntax:    
+
+Desc:
+           
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+****************
+                     I
+
+Syntax:    I <player>
+
+Desc:
+           This command gives you the inventory of targeted player in
+           detail. It includes all visible and invisible objects with
+           their paths.
+
+Warning:   
+
+Example:   I mike
+                  results
+           Bob sees list of Mike's inventory
+
+Related:   IR
+
+
+**************
+
+
+                     IR
+
+Syntax:    IR <player>
+
+Desc:
+           This command returns the inventory of the room around a
+           target player. It gives the path of all objects in the 
+           room.
+
+Warning:   
+
+Example:   IR mike
+                  results 
+           Bob sees the path of all objects around Mike
+
+Related:   I
+
+
+**************
+
+
+                     Add_xp
+
+Syntax:    add_xp <player> <amount>
+
+Desc:
+           This command adds experience points to a player. Useful
+           for advancing test characters or for the occasional 
+           reimbursing of players from glitches.
+
+Warning:   Not to be used for no reason on players
+
+Example:   add_xp mike 500
+                  results
+           Mike has 500 xp added to his total
+
+Related:   
+
+
+**************
+
+
+                     Authcheck
+
+Syntax:    authcheck
+
+Desc:
+           This generates a passcode to view the SQL database.
+
+Warning:   
+
+Example:   
+
+Related:   
+
+
+**************
+
+
+
+                     Church
+
+Syntax:     church <name>
+
+Desc:
+           This command moves a player of wizard to /room/church.
+           If no name is given the wizard moves themself. 
+
+Warning:   
+
+Example:   church mike
+                  results
+           Bob moves Mike from his workroom to the church.
+
+Related:   place, trans
+
+
+**************
+
+
+                     Clean
+
+Syntax:    clean
+
+Desc:
+           This command removes all objects in immediate environment
+           with exception of players.
+
+Warning:   Will wipe boards, pets, kids, not to be used on 
+           /room/vill_green
+
+Example:   clean
+                  results
+           Everything but Bob is cleared from his workroom
+
+Related:   dest
+
+
+**************
+
+
+                     Cp_dir
+
+Syntax:    cp_dir <dir> <destination>
+
+Desc:
+           This command copies the entire contents of a directory
+           to another directory.
+
+Warning:   
+
+Example:   cp_dir open/mike/tim /players/bob/tim 
+                  results
+           all contents of 'tim' are transfered to /players/bob/tim
+
+Related:   cp
+
+
+**************
+
+
+                     Gauge
+
+Syntax:    gauge <command>
+
+Desc:
+           This command returns the computer usage and time taken 
+           to complete the command entered.
+
+Warning:   
+
+Example:   gauge heh
+                  results 
+           Bob forced you to 'heh'
+           The cmd took 10 utime, 0 stime, and eval cost 0.
+
+Related:   
+
+
+**************
+
+
+                     Hand
+
+Syntax:    hand <player> <path>
+
+Desc:
+           This command is used to clone an object directly to a 
+           players inventory. Useful for giving tells and the like.
+
+Warning:   Don't hand players thing they aren't supposed to have.
+
+Example:   hand mike /players/bob/wiz/teller.c
+                  results 
+           in teller being cloned to Mike.
+
+Related:   clone, idest
+
+
+**************
+
+
+                     Heal 
+
+Syntax:    heal <name>
+
+Desc:
+           This command heals a target to full hps/sps. Useful when 
+           testing monsters on a test character.
+
+Warning:   Don't use this power to aid players.
+
+Example:   heal bobtest
+                  results
+           Bobtest is returned to full hit points and spell points.
+
+Related:   
+
+
+**************
+
+
+                     Identify
+
+Syntax:    identify <obj>
+
+Desc:
+           This command is used to identify an object in your 
+           environment. It returns basic information including the
+           short, creator, and inherits.
+
+Warning:   None
+
+Example:   identify bag
+                  results
+           Short: bag
+           Weight: 1
+           Value: 12
+           Inherits: obj/bag
+
+Related:   creator, origin
+
+
+**************
+
+
+                     Idest
+
+Syntax:    idest <player> <item>
+
+Desc:
+           This command dests an object from a players inventory. 
+           Be sure you have the right item name if you are doing this
+           to remove a bugged object or something you gave them.
+
+Warning:   Can dest wrong object easily, be sure you have right 
+           target. Becareful about guild objects, they should be
+           removed using the unguilding functions of the guild to 
+           prevent errors.
+
+Example:   idest mike teller
+                  results
+           object teller is dested from player Mike
+
+
+Related:   hand
+
+
+**************
+
+
+                     Instances
+
+Syntax:    instances <path>
+
+Desc:
+           This command returns instances of an object loaded at the 
+           momment.
+
+Warning:   
+
+Example:   instances /obj/bag
+                  results
+           Instances of /obj/bag:
+
+    @184:  players/pathfinder/garbageman
+
+           1 instances found.
+
+Related:   
+
+
+**************
+
+                     Ip
+
+Syntax:    ip
+
+Desc:
+           This command returns the name, idle status, ip address, 
+           and host name for all logged in. Useful for seeing if lack
+           of response is do to long idle. And to check for multiplay
+
+Warning:   
+
+Example:   ip
+                  results
+           ip information is displayed for everyone online
+
+Related:   p
+
+
+**************
+
+                     Load_dir
+
+Syntax:    load_dir <dir>
+
+Desc:
+           This command is to load an entire directory.
+           Can be used to test to see if an entire directory
+           will load to find bugs in large projects.
+
+Warning:   
+
+Example:   load_dir 
+
+Related:   
+
+
+**************
+
+                     Money
+
+Syntax:    money
+
+Desc:
+           This command moves give you 80k in coins for testing
+           shops and the like not for helping players.
+
+Warning:   
+
+Example:   money
+                  results
+           Bob now has 80,000 coins.
+
+Related:   
+
+
+**************
+
+                     People/p
+
+Syntax:    people/p
+
+Desc:
+           This command returns player information in form of ip, 
+           name, age, level, and location path.
+
+Warning:   
+
+Example:   people
+                  results
+           Bob sees ip, name, age, level, and location of all players
+
+Related:   ip
+
+
+**************
+
+                     Peace
+
+Syntax:    peace
+
+Desc:
+           This command calls an end to fighting in the room. May 
+           have to be reissued to stop aggressive monsters.
+
+Warning:   Some monsters can not be calmed conventionally and this 
+           command shouldn't be used to interrupt player activities.
+
+Example:   peace
+                  results
+           Bob calms the room
+
+Related:   
+
+
+**************
+
+                     Place
+
+Syntax:    place <name> <path>
+
+Desc:
+           This command moves a player to the location specified. 
+
+Warning:   Becareful where you drop players.
+
+Example:   place mike /room/vill_green
+                  results
+           Bob moves Mike to the village green
+
+Related:   hand, church
+
+
+**************
+
+                     Ruler
+
+Syntax:    ruler
+
+Desc:
+           This command returns the line length of long_desc() text 
+           in the room. Useful for setting up rooms which should be
+           no longer than 70 characters in length.
+
+Warning:   
+
+Example:   ruler 
+                  results
+           Line lengths for the room description are displayed.
+
+Related:   
+
+
+**************
+
+                     Set_attrib
+
+Syntax:    set_attrib <name> <stat> <#>
+
+Desc:
+           This command allows you to set the stats on test 
+           character.
+
+Warning:   
+
+Example:   set_attrib mike ste 20
+                  results
+           Mikes stealth is now set to 20
+
+Related:   set_level, set_extra
+
+
+****************
+
+                     Set_extra
+
+Syntax:    set_extra <who> <level>
+
+Desc:
+           This is to set a player's extra levels for test characters
+           Reminder that testers are not to be set to +100.
+
+Warning:   
+
+Example:   set_extra mike 10
+                  results
+           Mike's extra level is now 10
+
+Related:   set_level, set_attrib
+
+
+****************
+
+                     Set_level
+
+Syntax:    set_level <name> <level>
+
+Desc:
+           This command sets the level of a test character 
+
+Warning:   
+
+Example:   set_level mike 15
+                  results
+           Mike's level is now 15
+
+Related:   set_extra, set_attrib
+
+
+****************
+
+                     Set_home
+
+Syntax:    set_home <player> <file>
+
+Desc:
+           This command sets the home or login point for a player.
+           Useful for setting testers to load in workrooms or to
+           fix a player whose been set to incorrect room.
+
+Warning:   Don't move a players login without reason.
+
+Example:   set_home mike /room/church
+                  results
+           mike now logs in to church
+
+Related:   workrm
+
+
+****************
+
+                     Upd_dir
+
+Syntax:    upd_dir <dir>
+
+Desc:
+           This command is used to update an entire directory.
+           Useful for debuging a directory that has been recently
+           ftp'd onto the game.
+
+Warning:   
+
+Example:   upd_dir /players/bob/rex
+                  results
+           directory rex is updated
+
+Related:   update, mkdir
+
+
+****************
+
+                     Update
+
+Syntax:    update <file>
+
+Desc:
+           This command updates a file at the next reference.
+
+Warning:   
+
+Example:   update /players/bob/test/monkey.c
+                  results
+           obj monkey will be updated next time its called
+
+Related:   mk, upd_dir
+
+
+****************
+
+                     Valias
+
+Syntax:    valias <player>
+
+Desc:
+           This command will show you all the commands a player has 
+           aliases. It is helpful for debugging when a player says
+           they can't move. Check to see that they didn't alias
+           a movement command to something else.
+
+Warning:   
+
+Example:   valias mike
+                  results
+           all of mike's aliases are displayed
+
+Related:   vhistory, vnickname
+
+
+****************
+
+                     Vhistory
+
+Syntax:    vhistory <player>
+
+Desc:
+           Displays a players history.
+
+Warning:   
+
+Example:   
+
+Related:   valias, vnickname
+
+
+****************
+
+                     Vnickname
+
+Syntax:    vnickname <player>
+
+Desc:
+           This command displays any nicknames a player has set.
+           
+Warning:   
+
+Example:   vnickname mike
+                  results
+           all of Mike's nicknames are displayed
+
+Related:   valias, vhistory
+
+
+****************
+
+                     Wizbook
+
+Syntax:    wizbook
+
+Desc:
+           This command summons a wizard handbook for your viewing.
+
+Warning:   
+
+Example:   wizbook
+                  results
+           A wizbook is cloned to your inventory.
+
+Related:   
+
+
+****************

@@ -1,0 +1,12 @@
+  Spell Name                      Description                        GL    sps
+----------------- ------------------------------------------------- ----  -----
+/*
+  who2             This command can only be used by vampire family   any     0
+                   members who have their PK flag set.  It will
+                   allow one to see any other players with their PK
+                   set as well as any players in a PK area.
+*/
+  who2             This command can only be used by vampire family   any     0
+                   members.  It will allow one to see any players
+                   with their PK flag set as well as any players in
+                   a PK area.

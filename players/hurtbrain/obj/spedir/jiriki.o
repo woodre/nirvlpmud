@@ -1,0 +1,6 @@
+k 2
+backp ({"say testing,tickle necrite,grin,smile","s,w,1 s",0,0,0,0,0,0,0,0,})
+bpatt ({"say testing,tickle necrite,grin,smile","n,e,1 s",0,0,0,0,0,0,0,0,})
+patt ({"smile,grin,tickle necrite,say testing","1 s,e,n",0,0,0,0,0,0,0,0,})
+ggg "say testing"
+comment ({0,0,0,0,0,0,0,0,0,0,})

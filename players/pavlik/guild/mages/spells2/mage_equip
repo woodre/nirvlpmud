@@ -1,0 +1,47 @@
+mage_equip() {
+  object ob, obj;
+  int i;
+
+  write(
+  "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+
+  command("armors", this_player());
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  write(
+  "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+
+  return 1;
+}
+
+
+find_armor_type(str) {
+  object ob;
+  int i;
+
+  ob = all_inventory(tp);
+  for(i=0; i<sizeof(ob); i++) {
+    if(ob[i]->query_type() == str && ob[i]->query_worn())
+      return ob[i];
+  }
+  return 0;
+}
+

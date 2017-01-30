@@ -1,0 +1,14 @@
+SYNOPSIS
+	void add_prot_attribute( string attr)
+	void add_prot_attribute( string attr, int value)
+	void add_prot_attribute( string attr, object obj)
+	void add_prot_attribute( string attr, int value, object obj)
+
+DESCRIPTION
+	Add an undeletable attribute with the name 'attr' to an object.
+	If no object 'obj' is given, the current object is used.
+	If no value is given, 1 is used.
+
+SEE ALSO
+	attributes(C), add_attribute(E), delete_attribute(E),
+	get_attribute(E), query_attribute(E)

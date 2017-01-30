@@ -1,0 +1,22 @@
+**************
+
+                     Fix_guild
+
+Syntax:    fix_guild <name>
+
+Desc:
+           This command clears a player's guild stats and name. 
+           Especially useful for fixing test characters and guild
+           work.
+
+Warning:   Don't use on players, many guilds files are tricky to 
+           restore do to closed directories and variables.
+
+Example:   fix_guild mike
+                  results
+           Bob resets Mikes guild name to None and clears guild stats
+
+Related:   
+
+
+**************

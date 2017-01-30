@@ -1,0 +1,18 @@
+**************
+
+                     Exec
+
+Syntax:    exec <code>
+
+Desc:
+           This command allows you to run a line of code without
+           needing to create an object to do it.
+
+Warning:   Don't tamper with characters.
+
+Example:   exec this_player()-> set_attrib("str", 30);
+
+Related:   run
+
+
+**************

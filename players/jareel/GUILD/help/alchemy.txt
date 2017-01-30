@@ -1,0 +1,21 @@
+                    -- Alchemy --
+
+INT REQ: Variable
+WIL REQ: Variable
+TOTAL XP COST: 3,800,000
+TOTAL COIN COST: 290,000
+SKILL TYPE: Activated/Timed
+                 
+    This skill gives you the ability to brew different concoctions, for healing
+    purposes, or damage purposes, or curing the sick or the poisoned.  Some 
+    specialty guilds may teach magical forms of Alchemy.
+
+      /LEVEL=======ABILITIY=========XP COST==COIN COST=INT=WIL\
+      |  1  | Choose a specialty |1,000,000 | 80,000  | 2 | 3 |
+      |  2  |   allows level 2   |  400,000 | 30,000  | 1 | 1 |
+      |  3  |   allows level 3   |  600,000 | 40,000  | 1 | 1 |
+      |  4  |   allows level 4   |  800,000 | 60,000  | 1 | 5 |
+      |  5  |   allows level 5   |1,000,000 | 80,000  | 1 | 5 |
+      \=======================================================/ 
+
+MORE INFORMATION IN: ghelp acid, ghelp ahealing

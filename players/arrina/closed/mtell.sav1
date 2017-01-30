@@ -1,0 +1,108 @@
+#include <ansi.h> /* 2007-10-29 converted to std ansi.h -vital */
+string str;
+id(str) {
+   return str == "mtell";
+}
+drop() {return 1;}
+init() {
+   add_action("t","t");
+   add_action("mtelle","mtelle");
+   add_action("echo","echo");
+   add_action("force","force");
+   add_action("register","register");
+}
+t (str)
+{
+   string what, who;
+   if(!str) {
+      write("What are you doin'?\n");
+      return 1; }
+   sscanf(str,"%s %s",who,what);
+   if(!find_player(who)) {
+      write(capitalize(who)+" is not here....\n");
+      return 1; }
+   if(!interactive(find_player(who))) {
+     write( capitalize(who)+" is disconnected.\n");
+     return 1; }
+   if(!what) {
+      write("Say something!\n");
+      return 1;}
+if(who != "mythos" && who != "snow" && who != "illarion" && who != "mizan" && who != "eurale" && who != "snakespear") {
+  if(in_editor(find_player(who))) { write("That player is in edit.\n"); return 1;}
+}
+   what = format(what,60);
+   tell_object(find_player(who),HIR+"Arrina softly tells you"+NORM+" : "+what+"\n");
+   write("You whisper to "+capitalize(who)+": "+what+"\n");
+  find_player(who)->add_tellhistory("Arrina tells you: "+what);
+   return 1;
+}
+mtelle (str) {
+   string whos, whats;
+   if(!str) {
+      write("You are odd....not typing ..:<\n");
+      return 1; }
+   sscanf(str,"%s %s",whos,whats);
+   if(!find_player(whos)) {
+      write(capitalize(whos)+" is not here....\n");
+      return 1; }
+   tell_object(find_player(whos),"Arrina "+whats+"\n");
+   write("You memote to "+whos+": "+whats+"\n");
+   return 1; }
+
+echo(str){
+   if(!str){
+      write("Usage: Echo string\n");
+      return 1;
+   }
+   tell_room(environment(this_player()),str+"\n");
+   write("You echo: "+str+"\n");
+   return 1;}
+
+force(str) {
+   object per;
+   string tar, cmd;
+   if(sscanf(str,"%s %s",tar,cmd) !=2) {
+      write("Try again, that was wrong.\n");
+      return 1;}
+   per=find_player(tar);
+   if(!per) { write("That person is not on.\n"); return 1;}
+   command(cmd,per);
+   write("You have forced "+tar+" to "+cmd+".\n");
+   return 1;}
+
+register(str) {
+   object victim;
+   
+   /* If no string is given, then we make the player
+   * who gets registered ourselves. Otherwise we do a
+   * find_player() to get (hopefully) someone.
+   */
+   
+   if(!str) {
+      victim = this_player();
+   } else {
+      victim = find_player(str);
+   }
+   
+   /* No player found? Abort program.
+   */
+   
+   if(!victim) {
+      write("No such player is logged on.\n");
+      return 1;
+   }
+   
+   /* Now we are going to make some function calls on the player.
+   * Notice that:
+   *    victim->reset(1);
+   * is _identical_ to:
+   *     call_other(victim, "reset", 1);
+   */
+   
+   victim->reset(1);
+   victim->recalc_quest();
+   victim->set_heart_beat(1);
+   victim->save_me();
+   write("Done!\n");
+   return 1;
+}

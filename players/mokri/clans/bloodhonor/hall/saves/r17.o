@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/bloodhonor/hall/r16","east","/players/mokri/clans/bloodhonor/hall/r18","west",})
+short_desc "[1;30m Cloaks[0m"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"Shroud","/players/dragnar/armor/shroud",0,0,0,"Shroud","/players/dragnar/armor/shroud",0,0,0,"[33mCloak of the Desert[0m","/players/zeus/desert/OBJ/cloak",0,0,0,"[31mCrimson Cape[0m","/players/jareel/armor/chaos/crimson_cape",0,0,0,"[1;34mScepter [1;37mof [1;30mZultayne[0m","/players/snakespear/zultayne/treasure/staff",0,305,177,"[1;34mBracers [0m[34mof the rushing [1;34mStorm[0m[0m","/players/jareel/armor/chaos/woods2/orlanth_bracelet",0,0,0,"[33mCloak of the Desert[0m","/players/zeus/desert/OBJ/cloak",0,0,0,"[32mCombat Boots[2;37;0m","/players/fred/closed/bloodfist/eq/combat_boots",0,0,0,"[31mRo[30m[1mh[0m[31mt[0m fruit [31m([30m[1m3[0m[31m)[0m","/players/jaraxle/closed/heals/roht","3",0,0,})

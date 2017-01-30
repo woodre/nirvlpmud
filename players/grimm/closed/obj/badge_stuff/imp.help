@@ -1,0 +1,16 @@
+Imp Commands:
+    imp help ................. Shows this menu
+    imp summon ............... Summon a imp to your side (100sp)
+    imp say <str> ............ Let your imp talk for you
+    imp emote <str> .......... Let your imp emote a message
+    imp tell <who> <what> .... Let your imp tell somebody something
+    imp look ................. Let you see through the eyes of your imp
+    imp leave ................ Release your imp
+    imp bring ................ Brings your imp back to you
+    imp follow ............... Command your imp to follow you
+    imp stay ................. Command your imp to stay in the current room
+    attack <monster> .......... Command your imp to attack a monster
+    imp north, south, east, .. Command your imp to move around
+      west, n, s, etc, etc ....
+ 
+NOTE: Anything the imp sees will have a # in front of it.

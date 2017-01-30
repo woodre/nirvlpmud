@@ -1,0 +1,216 @@
+
+bonus gems:
+  can get one from a trial, 
+  maybe % chance from each trial (rewards?), 
+  or in the area.
+  each gem has a rating of 1(easiest to get) to 5(hardest to get)
+  random number: 1-100.  < 50, < 85, < 100
+
+
+gem of minor/ /major agility
+  agl += 20/40/65
+
+gem of minor/ /major might
+  mit += 20/40/65
+
+gem of minor/ /major vigor
+  vig += 20/40/65
+
+gem of minor/ /major accuracy
+  acc += 20/40/65
+
+gem of minor/ /major wisdom
+  wis += 20/40/65
+
+gem of minor/ /major faith
+  fai += 20/40/65
+
+soul gem(2)
+  can be used to trap an NPCs soul inside
+  socketed inside a weapon for sweet msgs, dual leech,
+
+gem of speed(2)
+  dual hit
+  vig += 40
+  agl += 40
+  
+prismatic gem(1)
+  fire / water / ice / lightning / earth specials
+
+gem of decay(1)
+  increased wear on weapon
+  finisher on weapon / corpse stealer / healing
+
+chaos gem(1)
+  makes it look like monster hits itself
+  amusing emotes
+  random peaces, resorting of attackers
+  random side effects: making random coins (<10), summoning small npcs,
+                       changing appearance of wep, moving the player
+
+gem of purity(1)
+  align maxed at positive
+  dmg bonus to neg aligned npcs (wc += 6)
+  can't be poisoned
+
+gem of hatred(1)
+  align maxed at evil
+  dmg bonus to pos aligned npcs
+
+minor/ / major gem of performance
+  mit += 10/17/30
+  acc += 10/17/30
+  vig += 5/10/15
+  agl += 5/10/15
+
+blood gem(2)
+  special leaves puddles of blood on the ground
+  causes target to bleed, slow loss of health, 1% (25 max) every 10 seconds
+
+gem of beauty(1)
+  causes 2 NPCs follow you around praising you.  Will occasionally attack.
+
+sand gem(2)
+  sand whips into NPC
+  tornado of sand NPC dmgs npcs in the room
+  occasional weapon repair
+
+gem of fury(1)
+  drains hp and sp
+  does big dmg based on ac, lower ac more dmg.
+  acc -= 10
+  vig += 10
+  agl += 10
+
+gem of eternity(1)
+  logs hp/sp every few rounds and takes average
+  if hp/sp below avg when log, chance to gain random of difference
+
+vortex gem(1)
+  saves location of battles, 
+  opens portals to random prior locations randomly during combat
+  a couple specials
+
+lightning gem(1)
+  specials relating to lightning
+
+gem of unholy death rites(1)
+  large hp drain
+  hp drain / sp gain vs pos aligned npcs
+  wep short changed 
+  changes corpse short / long
+
+gem of fortitude(1)
+  wep becomes indestructable
+
+gem of moss(1)
+  wep grows a layer of moss lowering wc by 3 points
+
+gem of rain(1)
+  wep summons rain clouds which rain for duration of fight + 10 seconds
+  puddles form with a 10% chance of slipping when try to move base dirs
+
+gem of idiocy(1)
+  causes opponent to laugh and do dumb emotes during combat
+
+gem of emotion(1)
+  causes you and your opponent to do random emotes
+
+ryo gem(2)
+  chance to summon a ryo in combat that fights with you.
+  turns on you at end of combat with chance of being absorbed back into wep
+
+xetra gem(2)
+  same effect as ryo gem but with xetra
+
+minor/ /major gold gem
+  absorbs corpses, gives (corpse level * 50/110/175) in coins
+
+gem of zeus(3)
+  no effect
+
+(holy) angelic gem(2,3)
+  vs evil align chance for angel summons special
+  vs evil align wc += 3/6
+
+(unholy) demonic gem(2,3)
+  vs pos align chance for demon summons special
+  vs pos align wc += 3/6
+
+gem of minor/ /major regeneration
+  +2/4/7 hp a round
+
+gem of minor/ /major rejuvenation
+  +2/4/7 sp a round
+
+gem of minor/ /major restoration
+  +2/4/7 hp/sp a round
+
+gem of instability(1)
+  increased wear 1:4 +1
+
+faerie gem(1)
+  3 or 4 killable faeries follow you around, 
+  casting minor healing spells now and then
+
+gem of provoked aggression(2)
+  1:3 chance of 10% wc increase of NPC maxing at 100% increase (double wc)
+
+gem of the dragon(2)
+  dragon related hit_player() specials: fire, ice
+
+minds eye gem(3)
+  shows enemies hp in %, if player shows toxes and sp in % as well.
+  mental damage hit_player()
+
+gem of inescapable horror(3)
+  creates a mental prison for you and attacker(s) preventing movement 
+  20% failure rate 
+  1:3 drain 6 hp of those affected
+
+gem of pk(1)
+  if opponent is a player, wc += 3
+                           1:3 steals 2 hp/sp
+
+gem of winter(1)
+  environment effects, causes snowfall
+  increased dmg hit_player(10) to "fire" NPCs
+
+
+minor/ /major gem of cleansing
+  detoxing
+
+gem of battle rites(3)
+  agl += 40
+  mit += 40
+  acc += 40
+  vig += 40
+  wis -= 25
+  fai -= 25
+
+sage gem(3)
+  agl += 30
+  mit -= 20
+  acc -= 15
+  vig += 30
+  wis += 40
+  fai += 30
+
+timeless gem(3)
+  indestructable weapon
+  agl += 30
+  acc += 20
+  dual hits
+
+gem of combat skills(1)
+  agl += 8
+  mit += 12
+  acc += 12
+  vig += 8
+
+
+simple:
+
+1:  7,8,9,13,15,16,17,18,21,23,25,26,27,29,31,32
+2:  7,8,10,12,13,15,16,17,18,19,21,22
+3:  10,11,12,13,14,15,16,17,20

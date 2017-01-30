@@ -1,0 +1,23 @@
+
+
+                           [help keep]
+-----------------------=========+=========-----------------------                                 
+
+Usage: keep <item>
+       keep eq
+       keep all
+
+  The keep command allows you to flag an item or items as something
+that you want to hang onto.  You won't be able to drop, give away,
+or sell an item that you've chosen to keep.  You can keep any item
+except an auto-load.
+
+  The 'eq' argument will cause you to keep anything you're wielding
+or wearing.  The 'all' argument will keep everything keepable in
+your inventory.
+
+  Some things can still cause you to loose a kept item: dying,
+quitting, using up all the charges of a heal, or something special
+happening with a monster.  Some shops using older code may also
+be able to buy kept items, so be careful when selling items in
+shops besides the main village shop.

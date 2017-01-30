@@ -1,0 +1,106 @@
+			gilmour mage stuff by verte
+
+/misc/mage:
+
+	mage.c :
+	  Level 22 item carrier.  3 hit_player() specials
+	  of varying types of dmg [physical, magical, other|fire].
+        Wanders every 120 seconds in a random direction.
+        Runs away from any rooms not in /room besides mine.
+        Xports back to my castle facade.  Std stats.
+        Coinage: 500-1300 [MUCH lower than what it should be.]
+        When he runs out of an item, he teleports to his
+        workshop and re-stocks all items. [takes 10 minutes]
+        You can send him a tell and he'll create a portal from
+        your environment to his, for 60-80 of YOUR sps.
+        Also equipment:
+         -non armor cloak [items/cloak.c] [savable]
+         -Ac 3 weight 1 main armor [non-save]
+         -Ac 1-2 weight 1 boots [non-save]
+         -Wc 14 staff [non-save]
+
+	potion.c :
+        Std potion object
+
+	workshop.c :
+	  Room that mage enters when he is brewing a potion;
+        Inaccessible by players
+
+      sign :
+        Sign that is 'cat'ed by the mage's 'list' cmd.
+
+      .h files :
+        Blah!
+
+      stuff.txt :
+        This file ;)
+
+items/
+
+notes: all items are one use, except the wand, which has
+       3 charges :)  .. costs are variable.  i don't
+       give a damn, had nfc how to price the shit since
+       most of this stuff is just NEW.
+
+for prices check root/sign ;)
+
+  cloak.c - nonarmor cloak, does nothing 'cept style.
+            gained from killin tha mage.
+
+  cure.c  - potion of curing [cyan].  destroys
+            most virii, toxins, etc, except for a cpl
+            Eurale ones.
+
+  dark.c  - potion that creates darkness [-1 light] around
+            a room.  effects last ten minutes.
+            linked to shadow.c  can't be used with other
+            dark potions.
+  
+  defend_call.c - call linked to defense.c
+
+  defense.c - potion that adds +1 ac using RegisterArmor()
+              for approx 6-7 mins.
+              linked to defend_call.c [obviously]
+              can't be used with other defense potions.
+
+  hp_regen.c - call linked to regen.c
+
+  id.c - scroll of identification.  gives generic, relative
+         information about items.
+
+  invis.c - clear potion, makes any player who drinks
+            it invisible for ten minutes.  linked to
+            invis_call.c  .. can't be used with other
+            invis potions [duh]
+
+  invis_call.c - call linked to invis.c
+
+  portal.c - green portal created when you send gilmour a tell
+             or when you use the wand of portals [wand.c] ..
+             portal stays open for a minute.
+
+  regen.c - hp regen potion [green potion].  linked
+            to hp_regen.c .. when you are wounded, it heals
+            2 hit points every hb.  only heals a total of 20 hp
+            but it's nontox. can't be used with other
+            green potions [unless you want it to...]
+
+  shadow.c - call linked to dark.c
+
+  tele.c - random teleportation potion linked to /open/TELE_ERR.
+
+  wand.c - wand of portals.  3 uses, creates a portal in the
+           green [if one does not exist] to the location
+           the user is in.
+
+
+
+welp, that wraps it up. there's other little neato stuff
+and everything was pretty well coded.  but if anything's BS..
+just let me know.  i didn't know how to price things,
+and the code may be a little sloppy ;)
+
+verte
+
+
+OH .. gilmour will just autoload from my castle.c

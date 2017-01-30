@@ -1,0 +1,194 @@
+GENERAL NOTES
+
+Ok..  to start with, I love the idea..  It's a great show.  I'm doing this at work and I'm not 
+sure if I have the monster docs on my laptop.  I think I do, but I don't feel like looking right 
+now..  laff.  You've been around, so you know there's a document out there with monster guidelines.
+I'm assuming you know these are within the guidelines, and if you didn't check, please do before 
+you put it in..  *8)
+Check over all the rooms and capitalize the short descs.
+And one more general note..  any time I noted to add an item desc for path or paths, if you 
+mention any footprints on the path, add the desc for those as well.  Before you do though, 
+check my note for f06 about the footprints desc.  Also, if I missed any places to add one for 
+path, the general idea is to put it into any room where the word path is in the long desc..  *8)
+And you're going to have to deal with my overly happy notes and observatons and smilies this 
+time around cos I'm in a very good mood, and as I type this I see them sneaking in all over the 
+place..  laff
+
+ROOMS
+
+entrance.c
+In the long desc, I think the third sentance would sound better as "It is rumored that many 
+different races of Nox actually inhabit the various parts of this forest and are usually..."
+In the items:
+The one to exa trees ought to have a plural description too..  "Giant redwood trees.." and I 
+think both of those would sound better if the comma was replaced with the word "that"..  
+IE: "A giant redwood tree that looks to be.."
+The one for footprints..  there is no mention of footprints in the long desc or in the other 
+items so no one would ever know they are there to look at them.
+For forest..  Capitalize the first word of it even if it's not a complete sentance.  I never 
+harp on item descs being full sentances, cos it's not a big thing, but it still looks nicer 
+with a capital letter..  likely cos we're all used to the first thing we read having one..  *8)
+Add an item desc for shrubs.
+
+f01.c
+For the long desc, the third sentance makes it look like the water is doing the peering..  *8)
+Maybe "The water appears to be relatively clear and looks at least five feet deep"
+In the items:
+For stream, capitalize the desc
+For trees and tree, same thing as in the entrance
+Add a desc for water, which of course can be the same as for stream
+You may also want to add one for boat, that says there is no boat there, in case some player 
+looks in the hope of finding one.
+
+f02.c
+In the long desc, the second sentance, "side" -> "sides"
+In the items:
+Same thing for the tree descs
+For the bird descs, the first sentance is singular and the second is plural.  Since the 
+items are singular nouns, maybe the second sentance would be better as "It also has.. "
+For the tell_room..  I'm not familier with them, but I'm guessing that Fenri is the name of 
+the species and not the bird's name..  so it should be "A Fenri flies in."  This one goes 
+for all the other rooms that clone Fenri also.
+
+f03.c
+In the long desc, first sentance..  "so the going is not.."
+In the items:
+Same thing for the trees, and the one for the plural has an A in front of it this time..  drop 
+that..  *8)
+
+f04.c
+I missed doing a "more" on this one when I was making my log, so I don't have a copy of it here 
+at work.  Check it for some of the same stuff I found in others like it, the tree thing especially,
+and don't worry about it..  I may think to look at it later, but likely won't.  All the rooms are 
+pretty much similar so it's no big thing..  *8)  If it does happen to be a special one, or is 
+really different in some way, let me know and I'll look at it.
+
+f05.c
+In this long desc I would usually yell at you for assuming a player would jump, since we should 
+never put things in a desc assuming what they'd do..  but I like it, so leave it there.. *8)  
+It kinda adds some variety and interest.  *shrug*  Just keep it in mind for other things, cos 
+stuff like "As you look down into the well.." is supposed to be a no-no..  since we have no idea 
+if someone would bother to look..  laff.  This one works for me cos almost anyone would jump if 
+they heard that in a quiet forest.
+In the items:
+The trees thing again
+For animal, capitalize it..  but to keep with the mysterious and kinda scary feeling of hearing 
+something and jumping out of your skin, maybe write a bit more..  something like..  "Whatever 
+may be lurking around, it can't be seen right now."  *8)
+Add a desc for path and paths..  something simple would work just fine.
+
+f06.c
+In the long desc, since the footprints have never been mentioned in a long desc to this point, 
+it would be better to end the first sentance after "heavy use" and start a new one that says, 
+"There are footprints here of an unknown origin."
+In the items:
+The trees thing again.
+Add a desc for shrubs.
+Add a desc for path.
+Maybe the desc for trees should be a little different since these ones are thinner and smaller.  
+They might not appear to be as old.
+For footprints, capitalize the beginning of it, and maybe add something more descriptive about 
+them if you know from the show.  Approximate size, how many toes..  if they don't wear shoes.
+
+f07.c
+No changes for this long desc..  *8)
+In the items:
+The trees again
+For branch, capitalize "one".
+If I was writing this I'd be a smart-butt and add one for limb, since it's in the desc for branch..
+and make the limb one say "One branch in the tree".  But that's just me bein a goof..  Do it if ya
+want, but it's not needed..  *8)
+For vine, capitalize "A", and I think maybe "A long, rope-like plant.." is a better way to say it.
+Add one for shrubs.
+Add one for path.
+
+f08.c
+No changes for this long desc.  For future reference they should be at least 4 lines long, but 
+I'm in a good mood and I'll concede it's not always easy to come up with that much about a plain 
+old room..  *8)
+In items:
+Add path
+The trees again
+
+f09.c
+In the long desc, either "Listening, anyone can.." or "Anyone listening can.."
+In the items:
+Capitalize "There is none."
+The trees thing again
+Add path
+
+f10.c
+In the long desc, "small, shallow pool"
+In the items:
+Capitalize the first word in all the item descs
+For opening, "It looks as.."
+Trees again
+Add one for path
+
+f11.c
+No changes to this long desc
+In the items:
+Capitalize the desc for trail
+Trees again
+
+f12.c
+No changes to this long desc again..  *8)
+In the items:
+Capitalize all the descs
+For ladder..  "wood and boards.  You could.."
+For platform..  service = surface
+And the trees again
+And add one for path
+In the add_action:
+I can't think of a single reason anyone might try to "climb ancient" when there's a ladder there.  
+Also, if all of the trees are ancient, it doesn't really answer the question of which tree they're 
+climbing.  It doesn't hurt anything to leave it there, but I'd suggest that when they succeed the 
+message should read, "You climb the ladder." since that's really what it is that they're climbing.
+
+hut.c
+In the long desc:
+"a couple of mats"
+"made from items within.."
+In the items:
+Capitalize the descs
+Add "It" to the beginning of the desc for table.
+For chairs, "there" should be "they're"
+For chair, add "It" in the beginning
+
+NPCS
+
+anteaus.c
+In his long desc, comma after Lya.
+Hmm..  In his fist spell..  swings his fist in your head doesn't seem right since it's not inside 
+someone's head..  maybe, "swings his fist, hitting you directly in the head"
+
+fenri.c
+Ok..  this is one weird lookin bird..  *8)
+In the long desc:
+Add a comma after "wide" and after "bird" and add the word "it" before "can"..  I hope that makes 
+sense to you..  laff
+
+lya.c
+In the long desc, add a comma after Anteaus.
+I'm guessing the Tollans are a race or a family..  if it's actually a person's name, take out "the" 
+from in front of it.  But if it is a race or family it's fine as it is.
+nafrayu.c
+In the long desc, I don't know what the Nox's ritual of life is, but I doubt an outsider can tell 
+by looking that he was revived by it.  Maybe put instead something about how big he is.  And maybe 
+also his family ties like the others.  I know no one can tell that either, but I've left it slide 
+mostly cos if someone was exploring and talking to the people they might find that out easily enough, 
+and also cos there's very little to describe an invisible person with..  *8)
+ohper.c
+In his long desc, "Ohper is the oldest of this Nox family (432 years old)."  Or you might want to 
+add his age in a separate sentance.  "He is.. "  But as it is it doesn't make much grammatical 
+sense..  *8)
+In the first load_chat, make it two sentances.
+
+And last but not least..
+OBJ
+
+boots.c
+I only have one question about this one..  looks to me like the lines making it impossible for 
+players to pick up are commented out.  I'm kinda half laughingly thinking that it needed done 
+when you were coding it so you could clone them to have a look..  laff.  Don't forget to make 
+that work before you put it in game..  *8)

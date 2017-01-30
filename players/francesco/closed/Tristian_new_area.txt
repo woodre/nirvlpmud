@@ -1,0 +1,113 @@
+
+Fran's comments on Tristian's new area named Club_Fed
+
+/players/tristian/realms/ClubFed/
+
+Start 	in castle.c it is written start.c should turn to be Start.c
+	your -> the
+	box -> there is no box here
+	tables -> there is no tables here
+	after the sentence ‘The bailiff comes over....blah blah blah,” 
+	  there should be something which says that the player had been 
+	  moved somewhere, likely “You are escorted to a cell, whose 
+	  door loudly shuts behind your back”
+        "Strangely enough there is no sound in this room." Why is it strange?
+
+court   "Strangely enough there is no sound in this room." Why is it strange?
+
+
+Cell_B_10 sealy "A Sealy Posturpedic mattress, probably better 
+                than you current sleep on"
+	        Do you have paranormal powers and can guess that
+		MY OWN bed is less confortable than this one???
+	  thier -> their
+	  Its -> It is
+          bathroom -> there is no bathroom here
+
+hall_B_01     door -> there is no door here
+              wall -> there is no wall here
+              the message about the lock/unlock is wrong.
+              should be "The door is already unlocked"
+NOTE: this apply to all hall_B  01-09
+
+hall_B_10     I would strongly advice to put some warning about
+              what would happen if you go 'e'.  We strongly
+              discourage to be insta killed just cuz in the
+              next room there is an aggro lev 22 mob.
+              Note: this apply also to hall_A_10
+
+hall_B_shower "The con drops the soap". I am supposed to be
+              able to look at soap after that. Also, how many
+              soaps is he carrying?  LOL
+              Note: this apply also to hall_A_shower
+
+hall_A_01     door -> there is no door here
+              wall -> there is no wall here
+              the message about the lock/unlock is wrong.
+              should be "The door is already unlocked"
+NOTE: this apply to all hall A  01-09
+
+
+crack   use a different message than heroin when convulsioning
+
+key     "The key to open the cell doors". This is not the description
+        of the key, but it is the description of what it does.
+        I would prefer: 
+        "The key is large and heavy, it seems it could somehow 
+        fit in the cells locks"
+
+cig     the cig must be in player's inventory to be used
+
+guard   why is the guard spraying me with pepper? I just called
+
+Jimmi Tedeschi  should be lookable also by "look at tedeschi"
+                again, his description doesnt describe the guy
+                but describes why he was jailed. if you still want
+                to show players why he was jailed, this could be the way:
+                "Jimmy tedeschi is a tall man, in his mid 50's,
+                wearing a yellow prison uniform, typical of those
+                who defrauded the government"
+                Alternatively, you could put a sign in the prison lobby
+                or wherever which reports all the colors of the 
+                uniforms used in the prison and the corresponding 
+                penalty.
+
+Vito Scagnelli  same than above   
+
+Calvin Jackson  same than above
+
+Jack Spillane   same than above
+
+Sal Goldstein   same than above 
+                moreover, see comment about hall_B_10
+
+Billy Jones     same than above
+
+Marty Roe       same than above
+
+Johnny Santilli same than above
+
+Oscar Schmidt   same than above
+
+Tim Dinduse     same than above
+
+Freddy Numbers  same than above
+
+Joey the Snitch 
+
+
+General comment about the mobs: i would suggest to modify their power according
+                                to some scale of power, eventually related
+                                to the power of their crime. Connected to what
+                                i posted above, this would lead to a better
+                                recognizement of the mobs. I wouldnt like
+                                to see and to kill the same mob over and over.
+                                Make them somehow different is the advice.
+
+General comment on the items: they are ok
+
+General comment about the area: it is a bit repetitive, but this fit well
+                                with the environment..... what is more
+                                repetitive and boring than a prison?
+                                The layout is well organized, so are the mobs
+                                (provided the previous changes are made)

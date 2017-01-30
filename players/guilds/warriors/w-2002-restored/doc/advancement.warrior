@@ -1,0 +1,30 @@
+
+In order to gain rank in the Warrior Profession you must go
+out and gain experience through combat.  In your score(sc),
+you will notice a line that resembles this:
+
+Prof Lvl [1]        Prof Exp [0/15000]      Skill Pts [0]
+
+Prof Lvl - tells your current profession level.
+Prof Exp - tells current experience invested and amount
+           needed to advance your prof level.
+
+In order to add Prof Exp, simply 'convert <exp>', which will
+move it from player experience to profession experience. You
+will automatically advance to the next profession level if
+you convert enough experience.  Gaining a Profession Level
+will give 1 skill point.  
+
+At profession level 5, 8, 12, 18, 23, 29, 33, 37, and 40
+you have a chance of randomly gaining an extra point of 
+stamina, strength, stealth, or an additional skill point.
+What you gain will weigh heavily on the skills you choose
+and their general category of whether they require strength,
+fast movement, etc.
+
+There are 40 profession levels total, giving a total of
+40 skill points.
+
+Good luck in gaining experience, the task will not be easy
+when you first begin.
+

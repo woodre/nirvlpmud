@@ -1,0 +1,864 @@
+Sami's guild test on LD
+
+Bards   -
+Knights -  FUBAR
+  - Loading, continue testing
+Fallen  - 80%
+  - speak issue
+Shardak - 50% 
+  - dragonskin, slayer sword, inferno - Cause entire room to attack like sandstorm
+  - Inferno doing very bad things on LP 
+Dopps   - 50%
+DO      - 90%
+  - who3
+  - reduced cooldown rate
+  - need to switch from autoload
+Rangers - 90%
+  - Need to test parties
+  - Belt level emotes missing?
+Dervish - 90%
+  - Sandstorm causes mobs to attack
+  - Mound broken
+Rogues  - 95%
+  - sap issues? Unable to duplicate
+Poly    - 95%
+  - write_file issues
+Cybers  - 95%
+  - write_file issues
+Healers - 95%
+  - Login issues, unable to duplicate
+Mages   - 100%
+Vampire - 100% 
+Warrior - 100%
+BF      - 100%
+BCM     - 100%
+Necro   - 100%
+Neos    - 100%
+Samurai - 100%
+Symbs   - 100%
+
+-----------------------------:Fallen START:------------------------------------
+speak invite: Broken
+2015.03.03 11:16:22 Error in loading object: 'players/guilds/fallen/OBJ/chan_obj'.
+2015.03.03 11:16:22 program: players/guilds/fallen/circle.c (/players/guilds/fallen/power/chan.h), object: players/guilds/fallen/circle#1749 line 295
+'      speak_cmd' in 'players/guilds/fallen/circle.c (/players/guilds/fallen/power/chan.h)' ('players/guilds/fallen/circle#1749') line 295
+speak mon: Broken
+-----------------------------:Fallen End:------------------------------------
+-----------------------------:Doppleganger START:------------------------------------
+/dopplegangers/obj/gboard.h)' ('players/guilds/dopplegangers/obj/iboard#409') line 68
+program: players/guilds/dopplegangers/power/01_guild_tell_sh
+addup.c, object: players/guilds/dopplegangers/power/01_gts line 20
+'        spells1' in 'players/guilds/dopplegangers/guildob.c' ('players/guilds/dopplegangers/guildob#401') line 355
+'           main' in 'players/guilds/dopplegangers/power/01_guild_tell_shaddup.c
+' ('players/guilds/dopplegangers/power/01_gts') line 20
+2015.03.03 06:20:51 Failed to load file: 'players/dragnar/channeld'.
+2015.03.03 06:20:51 program: players/guilds/dopplegangers/power/01_guild_tell_shaddup.c, object: players/guilds/dopplegangers/power/01_gts line 13
+2015.03.03 06:42:53 Error in loading object: 'players/guilds/dopplegangers/obj/f
+action_pet'.
+2015.03.03 06:42:53 program: players/guilds/dopplegangers/power/12_faction_pet.c
+, object: players/guilds/dopplegangers/power/12_wolf line 35
+'       spells12' in 'players/guilds/dopplegangers/guildob.c' ('players/guilds/dopplegangers/guildob#494') line 399
+'           main' in 'players/guilds/dopplegangers/power/12_faction_pet.c' ('players/guilds/dopplegangers/power/12_wolf') line 35
+
+fang_set-OK
+check_al-OK
+hb/hb2/hb3-OK
+set_morph-OK
+guild_news-OK
+gt-OK/
+gw/gz/ga-OK
+gts-OK
+php=OK
+drain-OK
+dt-OK
+fang-OK
+tonic-OK
+rescue-OK
+gate help-OK
+ginv-OK
+appraise-OK
+cloak-OK
+smelt-OK
+gput-OK
+gget-OK
+other_who-OK
+melt-OK
+direct-OK
+scan-OK
+berserk-OK
+step-OK
+cloak-OK
+horde-OK
+jerky-OK
+guard-OK
+coat-OK
+shift-OK
+hide-OK (NO EXIT FROM HIDING ROOM WTF!?!?!?!?!?!?)
+sleep-Ok (timer dont work)
+strike-OK
+calm-OK
+vandalize-OK
+spice-OK
+
+
+
+
+Barbarian:
+wolf summon-BROKE
+
+barbarian_help: OK
+bt-OK
+cheal-OK
+hack-OK
+store-OK
+retrieve-OK/
+tame-OK no clue what it does, but it seems to work?
+wolf help-OK
+reforge-OK
+firstaid-OK
+terminate-OK
+forge-OK
+squeeze-OK
+polish-OK
+aggress-OK
+forgearmor-OK
+absorb-OK
+quake-OK
+
+
+MYSTICS:Location from guild: e,d,e,e,n,nw,w
+2015.03.03 06:51:05 Error in loading object: 'players/guilds/dopplegangers/obj/faction_pet'.
+2015.03.03 06:51:05 program: players/guilds/dopplegangers/power/12_faction_pet.c
+, object: players/guilds/dopplegangers/power/12_imp line 35
+'       spells12' in 'players/guilds/dopplegangers/guildob.c' ('players/guilds/dopplegangers/guildob#617') line 399
+'           main' in 'players/guilds/dopplegangers/power/12_faction_pet.c' ('players/guilds/dopplegangers/power/12_imp') line 35
+
+2015.03.03 06:53:00 Bad arg 1 to call_other(): got 'number', expected 'string/ar
+ray/object'.
+2015.03.03 06:53:00 program: players/guilds/dopplegangers/power/11_crypt.c, object: players/guilds/dopplegangers/power/11_crypt line 28
+'       spells11' in 'players/guilds/dopplegangers/guildob.c' ('players/guilds/d
+opplegangers/guildob#617') line 395
+'           main' in 'players/guilds/dopplegangers/power/11_crypt.c' ('players/guilds/dopplegangers/power/11_crypt') line 28
+summon imp-BROKE
+crypt=BROKE
+spirits- CANT TELL!???
+plague- CANT TELL!??? both plague and spirits tell me already in use?!?
+
+
+mh-OK
+mt-OK
+cheal-OK
+mbag-OK
+veil-OK
+store-OK
+retrieve-OK/
+weaken-OK
+enchant-OK
+imp help-OK
+dull-OK
+cure-OK
+curse-OK
+death-OK
+ressurect-OK
+scare-OK
+
+Location from guild: e,d,sw,s,s,s,s,s,s,s,w
+-------------------------------------:Doppleganger END-----------------------------------------  
+
+
+
+------------------------------:Healer START:-----------------------------
+OVERVIEW---|ALL ABILITIES WORK|< MINUS THE ONE THAT IS REMOVED, HOWEVER SENSATIVE MIND ERROR ON LOGIN.
+           -------------------
+2015.03.03 02:05:15 Missing 'return <value>' statement.
+2015.03.03 02:05:15 program: players/guilds/healers/obj/newcove.c, object: players/guilds/healers/obj/newcove#934 line 37
+2015.03.03 02:05:53 Bad arg 1 to implode(): got 'number', expected 'array'.
+2015.03.03 02:05:53 program: obj/simul_efun.c, object: obj/simul_efun line 453
+'       cmd_hook' in '        obj/player.c' ('      obj/player#655') line 3346
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('      obj/player#655') line 33
+'         cmd_ls' in '       bin/wiz/_ls.c' ('         bin/wiz/_ls') line 9
+'            xls' in '      obj/user/xls.c' ('         bin/wiz/_ls') line 96
+'             ls' in '    obj/simul_efun.c' ('      obj/simul_efun') line 453
+
+
+hhelp-Ok
+hhelp power-OK
+hhelp 5-OK
+hhelp details-OK
+
+abilities:
+change_msg-OK
+show_msg-OK
+guild_leave-OK
+hhistory-OK
+ht/hte/hta-OK
+light-OK
+add_mon-OK
+need_mon-OK
+clear_need-OK
+need-OK
+hp-OK
+sp-OK
+heal-OK
+peace-OK
+* fortify             :   6-OK
+* mystic_transfer     :   7-OK
+* cure                :   8-OK
+* defend              :   9-OK
+* shield              :  10-OK
+* reduce              :  11-OK
+* resurrect           :  12-OK
+  add_mass_heal       :  13-OK
+  clear_from_mass     :  13-OK
+* mass_heal           :  13-OK
+  show_mass           :  13-OK
+* simulcrum/illusion  :  14-OK
+* potion              :  15-OK
+* reinstate           :  16-OK
+* regenerate          :  17-OK
+* cove                :  18-OK
+* full_heal           :  19-OK
+* haven               :  20-OK
+* salve               :  22-OK
+* grant               :  25 -OK
+* healing_spring      :  30-OK
+* minor_blessing      :  35-OK
+* robe_of_healing     :  39-OK
+* holy_blessing       :  40 Temporarily disabled.  Sorry Angelique.  We'll get you something soon.  (WHEN IS SOON)???
+
+------------------------------:Rogue START:------------------------------
+help files:-
+Rhelp-OK
+rhelp basics-OK
+rhelp rules-OK/
+rhelp recruitment-OK
+rhelp abilities-OK
+rhelp leaving-OK
+help files end
+
+abilities:
+
+                                    'cmd_hook' in 'players/shinshi/closed/rogue/gob2.c' ('players/shinshi/closed/rogue/gob2#831') line 91
+(X      17              Sap-BROKEN  'main' in 'players/shinshi/closed/rogue/spells/sap.c' ('players/shinshi/closed/rogue/spells/sap') line 32
+(X      19+30           Recruit-Tells me 'That player must speak to Shinshi to rejoin'???? test toons AND new toon
+  -- Fixed
+(X      19+8            Backstab-BROKEN    players/shinshi/closed/rogue/spells/backstab.c line 85: Too many arguments to destruct
+  -- Fixed
+
+MIX BERRIES TO POISON-OK
+(X      15              Sinister Strike (sstrike)-OK
+(X      15              Apply poison-OK
+(X      16              Eviscerate (evis)-OK
+(X      18              Shadowstep-OK
+(X      19              Offhand-OK
+(X      19+3            Vanish-OK
+(X      19+13           Expose-OK
+(X      19+18           Pickpocket-OK
+(X      19+22           Ambush-OK
+(X      19+25           Garrote-OK
+(X      19+25           Preparation (prep)-OK
+(X      19+27           Blind-OK                        
+------------------------------:Rogue END-------------------------------------
+
+
+
+
+------------------------------:Rangers START:----------------------------
+*Teleport- OK
+*Ninja morph- you stay invisible after you revert.
+*morph- Morph/ok/ does not unmorph upon death-normal??? i forget. do not see 'Martial Arts' emotes for damage belt lvl 
+  -- Need more info on emotes
+*Pack-OK
+*unpack-OK
+*Rwear- rwear=OK/ rworn armors do not special. 
+*Zord- OK
+*Pweapon- OK
+*Marmor- OK
+*Ninja invisible- OK
+*Ninja footstep log remove- OK
+*Ninja PK check for morph- OK
+*RT- OK
+*RTE- OK
+*guild leveling seems ok,
+
+----------Gnar comments
+- Have we tested Ranger parties?  WE HAVE NOT! GOOD CALL!!!!!
+
+-------------------------------:Rangers END:----------------------------
+
+-------------------------------:Dark Order START:---------------------------
+who3- broke
+  --Need to change map_array to map
+Room light of -2 or more reducing cooldown rate= Broke
+
+Offwield- Broken
+  --Fixed
+dhelp guild help files= Do not work (only main Dhelp works)
+  --Fixed
+blindside= Broke
+  --Fixed
+dwield=broke
+  --Fixed
+doffwield=broke
+  --Fixed
+set_title- broken
+  --Fixed
+chain=manual targeting broken
+  --Fixed
+enrage=broken
+  --Fixed
+Dgrasp=broken
+  --Fixed
+*All drawbacks= ok
+*Drawback Magic_cap 20- ok
+*gblood-seems ok-
+*stun-ok
+*Dtitle- ok
+*Dinvis=ok
+*Rlight-ok
+*Damage for room light- OK
+*Infect-OK
+*Pain-OK
+*Torment=OK
+*gwho2- ok
+*dt=ok
+*ptt- ok
+*pkr- ok
+*pwho- ok
+*de- OK
+*Corrupt- OK
+*Sickness= ok
+*darkness=ok
+*dark of -2 or more ups heal rate ok
+*Death/reaper/fatal= ok
+----------------------------------:Dark Order END------------------------------
+
+--------------------------:Vampire START:---------------------------
+NOt working at all.
+  --Fixed, get cracking!
+--------------------------:Vampire END:---------------------------
+
+
+--------------------------:Shardak:------------------------------------
+*Escape- OK
+*gt- OK
+ge- OK
+gpt/gpe= ok
+tag/untag- OK
+environ- Ok
+summon shardak-Ok
+burn-Ok
+drain-Ok
+scan-Ok
+conjure flame-Ok
+dragonskin-Ok
+light-Ok
+call merchant-Ok
+dragonskin, slayer sword, inferno - Cause entire room to attack like sandstorm
+
+--------------------------:Shardak End:--------------------------------
+
+--------------------------:Warrior's:----------------------------------
+--------------------------:Berzerker:----------------------------------
+Firstaid-OK
+Strike-OK
+Block-OK
+Parry-OK
+charge-OK
+Xcharge-OK
+finish-OK
+rage-OK
+xstrike-OK
+frenzy-OK
+pummel-OK
+ALL WEPAON SKILLS  blunt/polearm/edged....OK
+throw-OK
+punch-OK
+kick-OK
+finish-OK
+dodge-OK
+offhand parry-OK
+bash-OK
+xbash-OK
+blindfight-OK
+block-OK
+(Gonna run them all together here, excuse me for not breaking it down into factions)
+move silent-OK
+backstab-OK
+riposte-OK
+touch-OK
+bcommand-OK
+
+
+--------------------------:Knight/Warrior:----------------------------
+All Knight abilities seem OK.
+--------------------------Monk/Warrior--------------------------------
+all Monk commands seems OK
+--------------------------Assassin/warrior
+all commands seem OK        Warrior/assassin can STILL wield dual handed weapons and offwield at same time. (effective 3 weapons)
+--------------------------paladin/warrior
+all commands seem OK
+-------------------------WARRIOR END-------------------------------------
+
+-----------------------DERVISH----------------------------------
+Dervish Guild Test for LD  ******KRILLGETA********
+
+Commands:
+dervish-works
+dervish advanced-works
+dsharpen-works
+sandburial-offset(Does not work directly at 0/10)=Tested on batarsis not killing directly on 0)
+Sandstorm-Makes mobs bug to hit.(causes not aggression mobs to attack caster of spell)
+Sandblast-Works
+Dheal-works
+Sandcheck-Works
+dpray-Works
+whirlwind-works
+dhome-works
+derv-works
+dreset-works
+dervish rules-works
+dtitle-works
+Doasis-Works
+dinvis-works
+dchant-works
+offwield-works
+confuse-works (on a side not dervish do not hit as hard normally with confused, Tested on vega Only dropped to 6/10 after 15 rounds of damage)
+  -- Vega had an LD bug with mob heal_rate, fixed now
+Mound in guild hall is broken
+
+----------------------------------Dervish END---------------------------------------
+
+
+---------------------------------polymorphs-------------------------------------------------
+FUCKING FEARED DOING THIS GUILD! tons of abilities to test! yay! NOT!
+
+info-Ok
+info conditions-Ok
+info abilities-Ok
+info listing-Ok
+info forms info forms2 info forms3- Ok
+info bugs-Ok
+info wren-Ok
+info policy1,2,3-Ok
+vibe-OK?/Bad file name
+vibe:-OK?/bad file name
+info guild-ok
+info toggle-OK
+info set-OK
+info polymorph-OK
+regain-OK
+charge-OK
+helpme-OK
+clock-OK
+do-OK
+beatfix-OK
+superwho-OK
+survey-OK
+---------*******************FORMS*************------------------
+Rank1 forms
+***pufferfish:"-OK
+
+***spuckball- OK
+spuckball spells:
+gobble-OK
+spew-OK
+squit-OK
+***Wombat-OK?/bad file name
+Wombat spells:
+sniff-OK
+****drag-/dont work****
+burrow-OK
+forage-OK
+
+Rank2 Forms
+Golem-OK?/bad file name
+Golem spells:
+strap/unstrap-OK
+
+Tree:-OK?/bad file name
+
+Catapult-OK/bad file name
+:arm/aim/pulllever-OK
+
+Rank3 Forms
+*Fungoid-OK?/Bad file name
+Fungoid spells:
+gribble-OK
+puff-OK
+spog-OK
+spore-OK
+
+*Sponge: OK/bad file name
+Sponge spells:
+sponge-OK
+evaluate-OK
+
+*blobel:OK?/bad file name
+blobel spells:
+Confusion-OK
+unfrog-OK/even though frog curse is removed....
+tuck-OK
+radar-OK
+deepsurvey-OK
+memorize-OK
+blink-OK/gotta use Capital B or else emote's blink.
+
+*Wumpus:
+Wumpus spells:
+gobble-OK
+spew-OK
+strap/unstrap-OK
+strap all-OK
+defecate-OK FUNNY SHIT GOTTA LOVE MIZAN <3-Ok
+
+*Treehouse:-OK?/bad file name
+treehouse spells:
+yell-OK
+look down-OK
+invite-OK
+expel-OK
+ptoggle listen-OK
+describe-OK
+describe reset-OK\
+
+Rank4 Forms
+Replicant-OK/bad file name
+
+puffball
+puffball:spells
+gain sp:OK
+gain hp:OK
+nova: OK
+fry: OK
+vaporize:OK
+finish:OK
+
+Shoutbox:OK?/bad file name
+Shoutbox spells:
+bellow-OK
+curse-OK
+superblink-OK
+reverb-OK
+shrill-OK
+holler-OK
+calm-OK
+
+Octopus-OK?/bad file name
+strap/unstrap/strap all-OK
+inkjet: OK
+
+Rank5 forms
+Tetrapod-OK?bad file name
+Tetrapod spells:
+strap/unstrap/strap all-OK
+blitz:OK
+raar-OK
+
+Bogglemancer:ok/bad file name
+bogglemancer spells:
+zokwave <mnstr>-OK
+speedball <mnstr>-OK
+charbroil <mnstr>-OK
+sandbag >mnstr>-OK
+tree <mnstr> -OK
+lint <mnstr> -OK
+piano <mnstr> -OK
+anvil <mnstr> -OK
+
+Mimic:-OK bad file name
+mimic spells:
+imitate: OK/Bad file name
+mimic:OK
+mimic_log:ok
+say:ok
+
+Spucktrooper:OK/bad file name
+Spucktrooper spells:
+gobble-OK
+spew-OK
+squit-OK
+hwarf-OK
+Bletch-OK
+
+Divya:OK/Bad file name
+Divya spells:  
+strap/unstrap/strap all-OK
+dswords-OK
+lswords-OK
+egress-OK
+switch-OK
+
+Dark Tetrapod:OK/bad file name
+Dark Tetrapod spells:
+strap/unstrap/strap all-OK
+blitz- OK
+cloak- OK
+decloak-OK
+calm-OK
+raar-OK
+Vigor-OK
+crhit-OK
+
+PHB:OK/Bad file name  FUCKING LOVE THIS FORM ALSO :)
+PHB spells:
+prev-OK
+micr-OK
+dele-OK
+pepr-OK
+buzz-OK
+confcall-OK
+motivate-OK
+mission-OK
+bs-OK
+
+Gambler:OK/bad final name    OMG FINAL FORM AND THIS ONE IS AWESOME TOO!!!!
+DOES NOT WORK!!!!! OOOOOOH NOOOOO!!!!
+---------------------------------polymorphs END-------------------------------------------------
+
+---------------------------------Cyberninja START------------------------------------------------
+Honor-works
+p1-OK
+p2-OK
+p3-OK
+Nem-OK
+net- OK
+techie-OK
+users-OK
+deposit-OK
+withdraw-OK
+deathblow-OK
+ninjaspeed-OK
+shadows-OK
+iscan-OK
+ncon-OK
+xfer-OK
+battlewho-OK
+lead-OK
+retreat-OK
+flux-OK
+fluxcharge-OK
+mask-OK
+stun-OK
+heat_wep-OK
+upwho-OK
+pscan-OK
+member-Bad file name: 0  Unable to clear old membership statistics.
+transto-OK
+plant_mine- OK
+oscan-OK
+origin-OK
+set_title-OK
+train-OK
+fab_chip-OK
+engineer chip-OK
+clock-OK
+honor-OK
+upgrade-OK
+upgrades-OK/
+cc-OK
+exchange-OK
+balance-OK
+cyberware-OK
+auto on/off-OK
+ninjaspeed-OK
+mwho-OK
+cpk-OK
+ens-OK
+usage-OK
+cyberlevels-ok
+beltlevels-Ok
+download-OK
+newlink-OK
+upload-OK
+ladder-still bad file name. not using correct file path, but returns 1.
+
+Strike:
+White:       chop, forearm, finger_jab-OK
+Purple:      side_kick, reverse_kick, backfist-OK
+Blue:        drop_kick-OK
+Green:       palm_thrust-OK
+Brown:       fierce_punch-OK
+Player level 10
+Red:         head_clap, elbow_jab-OK
+Black:       knee, roundhouse-OK
+1st Degree:  thrust_kick-OK
+2nd Degree:  uppercut-OK
+3rd Degree:  lock_and_punch-OK
+Player level 15
+4th Degree:  choke_grab-OK
+5th Degree:  lock_and_twist-OK
+6th Degree:  rapid_fist_strike-OK
+7th Degree:  rapid_kick-OK
+8th Degree:  lock_and_elbow-OK
+9th Degree:  lock_and_throw-OK
+Player level 19
+10th Degree: pressure_point-OK
+
+------------------------------:Samurai START:---------------------------
+*Stun is broke, sensative mind error 
+  --Fixed! query_attribute undefined
+*Meditate does not heal while intox, appears broken as well --fixed
+*Ignite head- broken 
+  --Fixed! query_attribute undefined, adding functions to simul_efun
+*Disarm - broken
+  --Fixed! query_attribute undefined, adding functions to simul_efun
+*Iaijitsu- Broke, infinate cast's/round --fixed 
+*Bladestorm- infinate casts/round --fixed
+*Pai Mei guild advance guy allows you to 'spar' and advance beyond guild max. 
+  --bug for emporer only, fixed. Was checking for guild level == 10 and emp is level 11
+*Pai mei allowing you to 'Spar' for chance to advance in guild for 0 exp. does not check for exp.
+  --Lowered raidons guild level and verified the check worked, could not duplicate
+*Focus- OK
+*Kiai- OK
+*Rend- OK
+*spike head- OK
+*unspike head-OK
+*Kenjutsu- OK
+*Fireblade-Ok
+*Offwield- OK
+*Kneel- OK
+*sharpen- OK
+*Retreat- OK
+------------------------------:Samurai END:---------------------------
+
+--------------------------Necromancer START:-----------------------
+*Read skull- OK
+Necro(nc)-  OK
+*necrowho- OK
+*nupdate= OK
+*polish skull- OK
+*Claim dagger-ok
+*Harvest corpse-ok
+*Harvest each component seperately- OK
+*ntitle= OK
+*chill= OK
+*embalm corpse= OK
+*evoke ghouls= OK
+dismember = ok
+consider- OK
+*consume corpse- OK
+*embrace death- Reads bad file name, but works- OK?
+  -- Bad file name should be fixed
+*grasp= OK
+*excavate corpse= OK
+*dig grave= OK
+*Drain= Ok
+*animate skeleton- OK
+*concrate gravesite= OK
+*summon ghastly stench -OK
+*cloak* OK
+*anguish- ok
+*Echo- OK
+*Disease OK
+*Graft OK
+*siphon- OK
+*bloodmoon= OK
+*raise portal-OK
+*summon pestilence- Was never re-added from a Earwax nerf-
+*Decay-OK
+*abandon-OK
+*animate zombie- Still not in game
+*animate skeleton= OK
+wither-OK
+reanimate-OK
+--------------------------:Necromancer END:---------------------------
+
+
+----------------------------------BCM-----------------------------------------------
+*****************Acheron(BLACK CIRCLE MAGE)**************** AKA Krillgeta
+MUPDATE DOESNT WORK
+  --Fixed
+MOST spells seem to function
+Coat will remove guild object
+  --Unable to duplicate
+will cause character to lose all spells and abilities
+Most BCM spells will say bad file name
+after every cast or even saying something connected to the guild will say bad file name
+it seems anything that is done as a BCM will result in Bad file name commands coming up.
+  - Fixed, this was not a bcm issue
+Vitalize is Sensetive mind error
+  -Fixed
+----------------------------------BCM END---------------------------------------------------
+----------------------------------Cyber Start---------------------------------------------------
+Honor-works
+p1-works
+p2-works
+p3-works
+Advancing in guild works as it should.
+Nem-works
+net- shows bad file name, needs to be updated to LD
+  -- Fixed
+techie-works
+users-works
+deposit-works
+withdraw-works
+deathblow-works
+ninjaspeed-doesnt work
+quit command for cyber commands shows bad file name.
+  -- write_file
+hide-works
+iscan-works
+ncon-works
+xfer-works
+battlewho-works
+lead-works
+retreat-works
+flux-works
+fluxcharge-works
+mask-works
+stun-works
+heat_wep-works
+battlewho-works
+upwho-works
+pscan-works
+member-works
+transto-works
+dismember-works
+all cyber menu commands works,but quit(q) still showing bad file name
+cyber voting has issues with cvote_cast wont let vote happen says votefile doesnt exist even tho is does.
+will allow vote issue 
+  -- Related to the bad file name, players unable to do write_file, will be fixed
+     when Rump fixes write_file
+----------------------------------Cyber End---------------------------------------------------
+
+----------------------------------:Bloodfist START:-------------------------------
+Unstudy- Broken
+  --Fixed
+Chosen= Broken
+  --Fixed
+Choose
+  --Fixed
+set_title
+  --Fixed
+*Concentrate- OK
+*Battle Cry- OK
+*Attack- OK
+*Bash- OK
+*Bloodcloak* OK
+*bloodboil- OK
+*Iron Skin= OK
+Pain aura= OK
+*all 5 stances- OK
+*bftoss sword- ok
+BFtwirl sword- ok
+BFemotes- ok
+retrieve- ok
+Throw-ok
+Study- OK
+Bloodomen= OK
+Dodge= Ok
+Control= OK
+Bloodfury= OK
+Bloodlust- OK
+bloodward- OK
+bloodstep= OK
+Forge weapon- OK
+Socket= OK
+Unsocket- OK
+Guild advancement*seems ok
+--------------------------:Bloodfist END:-------------------------
+
+--------------------------:Vampire START:-------------------------
+Quick summery, All Vampire skills seem-OK
+--------------------------:Vampire END:---------------------------

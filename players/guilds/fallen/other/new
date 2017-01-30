@@ -1,0 +1,22 @@
+sacrifice corpse
+
+requires: black liquid (not used)
+
+trace a crude replication of the circle w/ the black liquid
+prick finger and dab blood onto the symbols (10 hp)
+place hand on circle
+shadows pour from the symbols into your hand
+corpse is replaced with a husk that dests in 20 seconds
+
+if corpse level < 20 THEN timer +gets 1/2 corpse level
+if corpse level < 25 THEN timer +gets corpse level
+if corpse level > 24 THEN timer +gets corpse level * 2
+  if timer
+   msg in hb:  shadows swirl around your fist
+   if end < max, end++, timer--
+   if sp < max, sp++, timer--
+  hp--
+   if blast & timer, bonus hit_player() of timer dmg, costs 1/2 timer sps, 5 endurance
+
+
+look at fist for level of charge

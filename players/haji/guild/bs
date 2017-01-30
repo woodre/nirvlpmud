@@ -1,0 +1,23 @@
+blow(str) {
+    object ob;
+        if(str==0) {
+            write("No such creature alive at this time.\n");
+            return 1;
+        }
+        if(this_player()->query_spell_points() < 10) {
+            write("You don't have enough spell points.\n");
+            return 1;
+        }
+    ob = present(lower_case(str), environment(this_player()));
+    if (!ob) return 0;
+    write("You blow on your opponent!\n");
+    say(this_player()->query_name()+ "blows on his opponent!\n");
+    ob->hit_player(random(15));
+    this_player()->restore_spell_points(-10);
+    return 1;
+    }   else   {
+    write("If you can read this something is wrong.\n");
+    return 1;
+    }
+}
+

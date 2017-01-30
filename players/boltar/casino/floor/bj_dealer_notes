@@ -1,0 +1,37 @@
+notes for /players/plasma/obj/bj_dealer.c
+
+a blackjack dealer. heres a basic rundown of how it works.
+
+there are five seats at the table. players may 'sit' to
+fill a seat. once they sit there, they have that seat until
+they either 'getup' or are kicked off due to idleness. the player
+in the first slot can 'start' to start the game moving. anyone in
+the room (even non-players) may 'kickoff' the person in the first seat
+if they are being idle. this gives a call_out of 20. if the game isnt
+started within that time, the player forfits their seat.
+
+the game starts. each player antes 100 chips and is dealt 2 cards
+face down. the dealer is delt cards in the same fashion. (a player
+reaching a total of 21 here automatically wins 1000 chips and is
+removed from the rest of the game.) once those cards are dealt, 
+the betting round starts. starting with position 1 and going around
+the table, bets are placed. again, a call_out for each player to 
+boot_me() is made for 20 seconds. dont make your bet in that time,
+forfit your seat.
+
+once all bets are placed, the option of 'hit' or 'stand' are given
+to each player around the table, starting with position 1 again.
+and again, the boot_me() call is made. the player in position 1 may
+hit until he decides to stand or until he goes over 21. after his turn,
+the next player goes. after all players have either busted or stood, the
+dealer reveals his hole card and deals himself cards. he must hit on 16 and
+below, must stay on 17 and above.
+
+after the dealer has his cards, scores are shown. anyone who has a higher total
+than the dealer w/o busting (or anyone who didnt bust when the dealer did) wins
+double their bet.
+
+after this, the variables are reset, and the player in position 1 is free to start
+a new game.
+
+questions, yell at plasma.

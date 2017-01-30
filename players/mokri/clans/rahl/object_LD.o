@@ -1,0 +1,33 @@
+#0:0
+no_clean 0
+short_desc "generic clan_object[0m"
+long_desc "a generic clan object.\n[0m\nType 'clan_help' for commands.\n"
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "object"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.\n[0m\nType 'clan_help' for commands.\n"
+clan_short "generic clan_object[0m"
+damage_type 0
+hall_path "/players/data/workroom"
+object_name "object"
+owner "data"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Thu Aug 20 00:25:12 2009] Dtest has joined the clan!",})
+leaders ({})
+join_type 0
+private_coffer 40000
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

@@ -1,0 +1,10 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+
+RangerPower(string msg, string channel){
+   
+   CHANNEL->ChannelHistory(channel);
+   
+   return 1;
+}

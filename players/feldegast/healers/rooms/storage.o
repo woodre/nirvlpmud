@@ -1,0 +1,17 @@
+no_clean 0
+cast_here 0
+dest_dir ({"/players/feldegast/healers/rooms/workshop","south",})
+short_desc "Healer Hall"
+long_desc "  This is a small, but well-organized storage room.  A row ofcabinets are to the left and right of the door, and mahogany shelvesascend the walls.  A sign is prominently placed on the wall oppositethe door.Commands: list, withdraw, deposit"
+items ({"room","reflexive","cabinets","The cabinets are spacious, and well-maintained","door","A simple wooden door leads out","shelves","The shelves are made out of mahogany","sign","The sign has neat lettering on it that you can [1mread[2;37;0m",})
+property 0
+no_castle_flag 0
+no_exits 0
+indoors 0
+is_pk 0
+no_fight 0
+no_magic 0
+no_teleport 0
+numbers 0
+ob_file ({"players/feldegast/wep/summer","players/feldegast/obj/lamp","players/feldegast/obj/vase","players/feldegast/obj/gorb","players/feldegast/obj/hemlock","players/feldegast/equip/redcloak","players/feldegast/equip/furcloak","players/feldegast/equip/farhelm","players/feldegast/obj/watch",0,0,0,})
+ob_arg ({"0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","0$0$0",0,0,0,})

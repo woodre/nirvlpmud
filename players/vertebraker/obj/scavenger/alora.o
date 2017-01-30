@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/saber/armor/slboots","/obj/treasure","/players/wren/Area/starbug/items/leaflets","/obj/armor","/players/saber/armor/hardsuit1","/players/mosobp/areas/TEMPLE/OBJ/robes","/obj/treasure","/players/sado/shop/oreo","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/ultramagnus/darkweapon","/players/mythos/awep/claw","/obj/weapon","/obj/weapon","/obj/weapon","/obj/torch","/players/puppy/s/eq/block","/players/pain/NEW/weap/sword","/obj/armor","/obj/armor","/players/wren/Area/starbug/items/levis","/players/snow/armor/arch_robes","/players/maledicta/cont/armor/rarmor","/players/pathfinder/detroit/weapons/machete","/players/snow/WEAPONS/glass_sword","/players/wren/Area/starbug/items/laundry",})
+shorts ({"Stiletto heeled leather boots","Arctic Seal pelt","a stack of leaflets","A large leaf","A light blue Hardsuit","A Priest's Robes","An important sign","A box of oreo cookies","Peasant Rags","Dark Rider Spear","claws","Baby rattle","Axe","Baby powder","sunflower","A building block","Sword","Steel Shield","A magical [1mwhite[0m amulet","stretched out Levi jeans.","Robes of the Archwizard","leather armor","A deadly looking machete","Glass Sword","Lister's dirty laundry",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

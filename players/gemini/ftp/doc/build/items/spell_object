@@ -1,0 +1,53 @@
+spell_object
+
+Spell_object is a built-in method for players to use spells.  The
+mud spells (missile, fire, etc) are all implemented using spell_object.
+Spell_object is the preferred method for implementing player spells.
+
+To create a spell_object spell, call the spell_object() function in
+the object you want to cast the spell.
+NOTE:  The object should almost always be a player.  For monsters, use
+  the add_spell() functionality.  See /doc/build/monster.spells
+  
+Your call to spell_object should either look like this:
+  player_object->spell_object(target,name,damage,cost)
+or this:
+  player_object->spell_object(target,name,damage,cost,msg1,msg2,msg3)
+
+target: (required)
+  The object the spell is targeting.  The target is checked to
+  make sure it's something the player should be attacking.
+name: (required)
+  The name of the spell.  It should be a string, like "missile" or
+  "sonic"
+damage: (required)
+  The amount of damage the spell does.  This damage is NOT randomized,
+  so make sure that you previously calculate the damage according
+  to the rules outlined in /doc/build/RULES/guild_spells
+cost: (required)
+  The amount of spell points the spell costs the player to cast.
+  If the caster doesn't have enough spellpoints, a message is displayed
+  and the spell isn't cast.  The cost is automaticallt deducted from
+  the casters sp when the spell is cast.
+
+msg1: (optional)
+  If provided, this message is immediately displayed to the caster
+  when the spell_object call is made.
+msg2: (optional)
+  If provided, this message is immediately displayed to the target
+  when the spell_object call is made.
+msg3: (optional)
+  If provided, this message is shown to everone but the caster and
+  the target.
+
+No damage is done to the target until the caster's next heart_beat.
+At this time, the caster attacks the target given, the damage is
+added to the caster's weapon damage, and the cost is subtracted from
+the caster's spell points.  If none of the msg arguments were provided,
+a message is also displayed using the name of the spell.
+
+Finally, if spell_object is called more than once before the next
+heart_beat, any previous spell_information is completely wiped out.  You
+can check for this using the query_spell_dam function- if a caster already
+has spell dam, you should probably prevent him or her from trying to
+cast any more spells.

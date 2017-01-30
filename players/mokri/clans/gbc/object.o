@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A platinum cufflink inscribed [1m[1;37m*GBC*[0m[0m"
+long_desc "          [1;30m*[1;37mGBC[1;30m*[0m[1m cufflink.         [1;37m IF GOD WILLS IT![0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "cufflink"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "          [1;30m*[1;37mGBC[1;30m*[0m[1m cufflink.         [1;37m IF GOD WILLS IT![0mType 'clan_help' for commands."
+clan_short "A platinum cufflink inscribed [1m[1;37m*GBC*[0m[0m"
+damage_type "physical"
+hall_path "/room/temple/path"
+object_name "cufflink"
+owner "marek"
+spell_alias "set_clan_spell"
+spell_mess_me "Marek %hi white%parry's%normal% the attack, knocking his opponent off guard. He scrambles throwing his shield to the ground and grasping his sword with both hands he %hi white%leaps%normal% high into the air driving his sword deep into his unwary opponent. %newline%%hi blue%_______________%newline%\_____________/%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      \_/"
+spell_mess_room "Marek %hi white%parry's%normal% the attack, knocking his opponent off guard. He scrambles throwing his shield to the ground and grasping his sword with both hands he %hi white%leaps%normal% high into the air driving his sword deep into his unwary opponent. %newline%%hi blue%_______________%newline%\_____________/%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      \_/"
+spell_mess_them "Marek %hi white%parry's%normal% the attack, knocking his opponent off guard. He scrambles throwing his shield to the ground and grasping his sword with both hands he %hi white%leaps%normal% high into the air driving his sword deep into his unwary opponent. %newline%%hi blue%_______________%newline%\_____________/%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      |  |%newline%      \_/"
+abilities ({})
+chan_history ({"[Sat Sep 19 22:56:05 2015] Marek: yup","[Sat Sep 19 22:56:07 2015] Marek: u want em?","[Sat Sep 19 22:56:13 2015] Mode: that would be dope","[Sat Sep 19 22:56:21 2015] Mode: i am kind of learning how to play my fallen again.","[Sat Sep 19 22:56:29 2015] Mode: its fun because no one really knows how to play them","[Sat Sep 19 22:57:25 2015] Mode: thanks!","[Sat Sep 19 22:57:27 2015] Marek: np","[Sat Sep 19 22:58:43 2015] Mode: i need a good non pk place to coins","[Sat Sep 19 22:58:47 2015] Mode: coin","[Sat Sep 19 23:00:09 2015] Marek: all the areas in warp","[Sat Sep 19 23:00:13 2015] Marek: except fiendsville","[Sat Sep 19 23:02:23 2015] Mode: wtf","[Sat Sep 19 23:02:33 2015] Marek: sup?","[Sat Sep 19 23:02:37 2015] Mode: the bracers just vanished...","[Sat Sep 19 23:02:41 2015] Marek lafs","[Sat Sep 19 23:03:17 2015] Marek: s'ok, i have anothe rset","[Sat Sep 19 23:06:31 2015] Marek: why you droping your stuff?","[Sat Sep 19 23:06:39 2015] Mode: i don't use that stuff.","[Sat Sep 19 23:06:41 2015] Marek: oh","[Sat Sep 19 23:06:43 2015] Marek nods",})
+leaders ({"bannock","odysseus","jerich",})
+join_type 1
+private_coffer 60305
+public_coffer 0
+spell_delay 1
+spell_id 1
+spell_cost 1
+last_spell_time 1362957504

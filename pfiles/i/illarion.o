@@ -1,0 +1,156 @@
+nrpoints 4318
+totalpoints 4318
+np_xlevel 101
+nbday "072707"
+rlbday 0
+penalty_left 0
+np_age 290
+guild_name "bard"
+guild_file "/players/guilds/bards/instrument"
+guild_rank 0
+guild_exp 0
+guild 0
+guilds 0
+guild_level 0
+guild_info 0
+time_to_heal 0
+hcnum 1
+crime 0
+money 32100
+luck2 0
+lucky 374
+name "illarion"
+gender "male"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 2
+level 5000
+armor_class 0
+hit_point 40180
+max_hp 40180
+experience 3575687
+mmsgout "walks out of your field of vision, and isn't there when you turn to look"
+mmsgin "taps you on your shoulder.  That's funny, he wasn't there a minute ago"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "random"
+local_weight 7
+hunted 0
+hunter 0
+hunting_time -13
+cap_name "Illarion"
+vis_name "Illarion"
+spell_points 40233
+max_spell 44233
+spell_name "blood_feeding"
+disallow_give 0
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 16368002
+is_invis 0
+frog 0
+whimpy 0
+auto_load "/players/mokri/clans/object.c:^!"
+current_room "room/void"
+alignment 0
+Armors 0
+Weapons 0
+WeaponBonuses 0
+pob_dd 0
+channel_names ({"babble","msg","shout","announce","cwiz","gossip","junk","admin","pk","wiz","equip","risque",})
+BankBalance 0
+strength 4999
+intelligence 29
+stamina 19
+will_power 29
+magic_aptitude 30
+piety 28
+stealth 20
+charisma 100
+dexterity 30
+luck 28
+atrbr ({100,30,30,30,20,30,30,30,4999,30,})
+stats ({0,0,0,0,0,0,0,0,0,0,})
+stat_maxes ({0,0,0,0,0,0,0,0,0,0,})
+flag_tester 0
+handshake_data 264
+handshake 0
+quest_point 291
+quests "ring#orc_slayer#rod_quest#trekkie#M*A*S*H#super#disk_quest#cyclops_mace#keivjam#springfield#grail#blind_boy#staff#hooks_hand#temple_quest#protoculture#medallion#phantasm_puzzle#key_quest#melko#t_rexs#toy_store#lost_rood#keep_dragons#*sabbath*#chisel#jungle_village"
+pregnancy 0
+pregtoo 0
+monitor_string "H:[#hps#/#mhp#] S:[#sps#/#msp#] [B:&btox&|T:&ttox&|C:&ctox&|T:#inf#] $R$#ahp#$N$&debuffs& [W:#wep#] [C:#coins#]"
+saved_aliases ({"cd..","cd ..","blog","tail /log/guilds","fs","farsong","destmaze","exec \"/players/illarion/maze/room/dmaster\"->destmaze();","hdir","cd /players/guilds/healers","blob","clone ~/test/blob","bdir","cd /players/guilds/bards","fse","farsonge","te","guild_speak vampire","dring","clone ~/obj/dring",})
+saved_nicknames ({})
+testchar_var 0
+security_level 0
+nirvana_points 0
+clan 0
+sig 0
+wkrm 0
+hostname "ec2-54-225-119-99.compute-1.amazonaws.com"
+ok_edit "none#"
+mailaddr "illairon.nirvana@gmail.com"
+saved_where 0
+title "Silvercloak"
+pretitle "Obvious exits are north, south, and"
+password "cheZCpYQxTIDI"
+spouse 0
+race "half-elf"
+al_title "neutral"
+PKGhostCounter 0
+intoxicated 0
+infuse 0
+stuffed 0
+soaked 0
+headache 0
+max_headache 0
+fight_area 0
+mon 1
+phys_at ({1,5,8,160,9,0,})
+no_spell 0
+called_from_ip "54.225.119.99"
+msghome "walks out of your field of vision, and isn't there when you turn to look"
+description "is tall and slender, like most elves, although he is even paler than most of that already fair race, as if he has never seen the sun at all.  His paleness is even further emphasized by his coal-black hair and eyes.  From his shoulders hangs a long, midnight blue cloak, shot through with silver threads that twist and gleam in unexpected ways.  Underneath he wears a black silk poet's shirt, with the neck left open, and matte black wool trousers, belted with a layered black sash. "
+clan_name "harlequins"
+clan_master 0
+clan_file 0
+lastime "Sep 29 08:57 2015"
+player_killing 0
+invs_count 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd "/players/guilds/healers/power/"
+errormsgs 0
+home "/players/illarion/workroom"
+ex_lv 25
+qc 1
+no_give 0
+aprv "mythos,eurale,arrina"
+hint 0
+AnsiPref ({"tell","[36m","gossip",0,"risque",0,"junk",0,"babble",0,"newbie",0,"msg",0,"announce",0,"wiz","[1;32m","cwiz",0,"equip",0,"page",0,"pk",0,"title",0,"pretitle",0,"ls .c","[1;32m","ls .h","[1;36m","ls directory","[32m","ls otherFiles",0,"admin","[1;35m","roomtitle",0,"lpc",0,})
+old_last "Sep 28 10:47 2015"
+wiz_soul_light 1
+present_log 0
+present_castle 0
+friends 0
+top_boot_xp 0
+top_kill ({1529300,"Hydra","The Proving Grounds of the OverPowerLord [n,s,e]",1406589995,})
+prestige_level 0
+prestige_xp 0
+prestige_qp 0
+prestige_skill_points 0
+prestige_skills ({0,0,0,0,0,0,0,0,0,})
+other_copy 0

@@ -1,0 +1,116 @@
+[Aug  6 2004 11:44] A: Registered Test Character: Captpotato
+[Aug  6 2004 11:44] A: Registered Test Character: Lieutpotato
+[Aug  6 2004 11:46] A: Registered Test Character: Deathpotato
+[Nov  4 2004 12:17] A: Registered Test Character: Newbie
+[Jun  8 2007 14:45] A: Registered Test Character: Parishilton
+[Jun 10 2007 21:54] A: gave worm a ton of crap that i shouldnt have had to but he didnt know the mud was on a 12 hour reboot and needed some more Oxycontin to get bizadooed.
+[Jun 15 2007 01:37] A: warned troy not to swap EQ with krokus
+[Jun 15 2007 01:38] A: consider him warned :) i did not do anything i.e. imprisonment or stat correction etc
+[Jun 30 2007 21:09] A: for some reason recusant was set to login in Mythos' forest. Fixed to village green.
+[Jul  4 2007 14:11] A: for some reason dameon is a samurai. That has been fixed
+[Jul  6 2007 22:06] A: warned garland (zidane) not to use shops to swap equipment. Noticing a general trend of players using obscure shops to xfer objects or using very fast transfers
+[Aug  6 2007 15:24] A: oops, forgot to mention this from earlier- sent a mudmail to all of volkar's chars asking for his side of the story about being caught abusing a reimbursement bug. he did fess up to it, but also named a wiz that he had confided in as 'reporting' the bug
+[Aug  6 2007 15:25] A: after asking him who the wiz was, he gave me attitude because i was invis. I went vis, imprisoned one of his chars to prove a point- that he was in no position to bargain. he named chip. So then i released the char (kosh). Well now he decided to login all his chars an inactive them.
+[Aug  6 2007 15:26] A: As per usual situation, assignment of blame to something unrelated is the issue (he's pissed off that i was invis, not that he was caught abusing a bug).
+[Aug  7 2007 17:28] A: adjusted goten's attribs at his request- strength and stamina down to 30 from 34
+[Aug 15 2007 02:14] A: reset dameon as a member of necro guild, set his guild_file appropriately
+[Aug 15 2007 13:43] A: rmed /players/catwoman/storage/crip as he was passing equipment again
+[Aug 18 2007 17:21] A: i gave soul his exp back, lost from a DC combat situation. Told him it was a freebie and that this sort of thing is generally not reimbursed
+[Aug 21 2007 21:25] A: there seem to be problems with shardak and rooms in /players/zeus/realm/city/
+[Aug 21 2007 21:25] A: shardak assume an id of 'demon' which causes hell with those rooms, that spawn and generate demons and stuff
+[Aug 21 2007 21:26] A: killed Tembo by accident by transing him from aforementioned area into the village church. Not smart on Mizan's part. Reimbursed EXP.
+[Aug 23 2007 22:53] A: Registered Test Character: Sput
+[Aug 24 2007 19:10] A: forbin promoted to L90, restored his player character- for some reason he was not able to login beyond password authentication state
+[Aug 26 2007 12:07] A: made changes to mages pacify (/players/pavlik/guild/mages/pacify.c) and the guild object gob.c to break the 'pacify' command spell when stacked up in combat.
+[Aug 26 2007 12:07] A: fakir caught teferi abusing this, we ffixed this one together, with his testing and input. Woo!
+[Aug 26 2007 14:40] A: it probably needs to be made clear about the withdrawal policy at the nirvana bank... that once the funds are in and a reboot has passed, you can't get anything else back
+[Aug 28 2007 10:18] A: added a line in /players/earwax/bank/bank.c in addition to what was already there, to clarify for n00bs to use 'help bank'
+[Aug 31 2007 01:23] A: i probably crashed the mud. Gave out a metric asston of equipment and heals
+[Sep  3 2007 15:01] A: updated sign in /players/mokri/clans/hall.c with warning that poor clan names will be deleted without warning
+[Sep  3 2007 15:02] A: corrected 'capial' to capital in said room
+[Sep  5 2007 00:21] A: gave mrjones some exp back from a PK gangbang because his soul/quicktyper fragged on him
+[Oct  7 2007 19:50] A: adjusted tara and becka's gold from 200k coins to 20 coins as part of the situation with the disconnect money bug. Angel was the one who has found the bug...
+[Oct  7 2007 19:50] A: we still dont know why it has happened though.
+[Oct 28 2007 16:02] 
+  A: removed semicolons from 
+  R: include statements in hawkeye's code
+[Oct 28 2007 16:02] 
+  A: removed semicolons from 
+  R: include statements in snow's code
+[Oct 28 2007 16:34] A: removed ; from include in /players/saber/stuff/popper.c
+[Oct 28 2007 16:34] A: removed ; from includes in /players/saber/stuff/smear.c
+[Oct 28 2007 16:35] A: removed ; from include in /players/saber/stuff/tag_gun.c
+[Oct 28 2007 16:35] A: removed ; from includes in saber's mini guilds
+[Oct 28 2007 16:48] A: fixed typo in /players/trix/castle/dismonst/AGG-gorilla.c "The gorilla looks..."
+[Oct 28 2007 16:55] 
+  A: removed semicolons from 
+  R: include statements in /players/trix/*
+[Oct 28 2007 17:12] A: made ldmud worky /players/wocket/turtleville/OBJ/heal_potion.c
+[Oct 28 2007 17:13] A: made ldmud worky /players/feldegast/sorcs/daemons/channelD.c
+[Oct 28 2007 17:14] A: made ldmud worky /players/feldegast/sorcs/npc/ganof.c
+[Oct 28 2007 17:15] A: made ldmud worky /players/feldegast/sorcs/obj/telemover.c
+[Oct 28 2007 17:17] A: made ldmud worky /players/wocket/closed/guild/obj/guilddaemon.c
+[Oct 28 2007 17:19] A: made ldmud worky /players/wocket/f_forest/NPC/trilla.c
+[Oct 28 2007 17:19] A: made ldmud worky /players/wocket/mages/daemons/channelD.c
+[Oct 28 2007 17:20] A: made ldmud worky /players/wocket/mages/obj/blankpage.c
+[Oct 28 2007 17:20] A: made ldmud worky /players/wocket/mages/objs/telemover.c
+[Oct 28 2007 17:22] A: made ldmud worky /players/wocket/mages/spells/freezing_touch.c
+[Oct 28 2007 17:23] A: made ldmud worky /players/wocket/mushrooms/mg10_bk.c
+[Oct 28 2007 17:23] A: made ldmud worky /players/wocket/mushrooms/mg11_bk.c
+[Oct 28 2007 17:24] A: made ldmud worky /players/wocket/mushrooms/mg12_bk.c
+[Oct 28 2007 17:25] A: made ldmud worky /players/wocket/mushrooms/mg1_bk.c
+[Oct 28 2007 17:25] A: made ldmud worky /players/wocket/mushrooms/mg2_bk.c
+[Oct 28 2007 17:27] A: made ldmud worky /players/feldegast/sorcs/npc/ganof.c - also changed code order of something it was doing with write_file() to work with ld
+[Oct 28 2007 17:29] A: did the same with /players/wocket/mages/npc/ganof.c
+[Oct 28 2007 17:30] A: made ldmud worky /players/wocket/mushrooms/mg3_bk.c
+[Oct 28 2007 17:30] A: made ldmud worky /players/wocket/mushrooms/mg4_bk.c
+[Oct 28 2007 17:31] A: made ldmud worky /players/wocket/mushrooms/mg5_bk.c
+[Oct 28 2007 17:33] A: made ldmud worky /players/wocket/mushrooms/mg8_bk.c
+[Oct 28 2007 17:35] A: made ldmud worky /players/wocket/mushrooms/mg9_bk.c
+[Oct 28 2007 17:36] A: made ldmud worky /players/wocket/mushrooms/mgcave_bk.c
+[Oct 28 2007 17:36] A: made ldmud worky /players/wocket/mushrooms/mghut_bk.c
+[Oct 28 2007 17:37] A: made ldmud worky /players/wocket/necro/daemons/channel_bk.c
+[Oct 28 2007 17:38] A: made ldmud worky /players/wocket/necro/obj/misc/salt.c
+[Oct 28 2007 17:38] A: made ldmud worky /players/wocket/sorcs/daemons/channelD.c
+[Oct 28 2007 17:40] A: made ldmud worky /players/wocket/sorcs/npc/ganof.c - also changed code order of something it was doing with write_file() to work with ld
+[Oct 28 2007 17:40] A: made ldmud worky /players/wocket/sorcs/obj/telemover.c
+[Oct 28 2007 17:41] A: made ldmud worky /players/wocket/sorcs/spells/freezing_touch.c
+[Oct 28 2007 17:42] A: made ldmud worky /players/wocket/turtleville/questhut_bk.c
+[Oct 28 2007 17:43] A: made ldmud worky /players/wocket/turtleville/SPEAKEASY/channelD.c
+[Oct 28 2007 20:09] A: made ldmud worky /players/softly/algiers/obj/snakeoil.c
+[Oct 28 2007 20:10] A: made ldmud worky /players/softly/back/tape.c
+[Oct 28 2007 20:11] A: made ldmud worky /players/softly/back/tapem.c
+[Oct 28 2007 20:13] A: made ldmud worky /players/softly/junk/cane.c
+[Oct 28 2007 20:15] A: made ldmud worky /players/softly/newbie/obj/coldfire.c
+[Oct 28 2007 20:15] A: made ldmud worky /players/softly/newbie/mobs/ffly.c
+[Oct 28 2007 20:17] A: made ldmud worky /players/softly/newbie/obj/cheese.c
+[Oct 28 2007 20:17] A: made ldmud worky /players/softly/newbie/obj/nut.c
+[Oct 28 2007 20:18] A: made ldmud worky /players/softly/winter/brandy.c
+[Oct 28 2007 20:19] A: made ldmud worky /players/softly/winter/hotchoc.c
+[Oct 28 2007 20:19] A: made ldmud worky /players/softly/winter/marshm.c
+[Oct 28 2007 22:13] A: made ldmud worky /players/tallos/7tigers/mobs/asimar1.c
+[Oct 28 2007 22:14] A: made ldmud worky /players/tallos/7tigers/mobs/asimar2.c
+[Oct 28 2007 22:15] A: made ldmud worky /players/tallos/7tigers/mobs/babau.c
+[Oct 28 2007 22:17] A: made ldmud worky /players/tallos/7tigers/mobs/bonedevil2.c
+[Oct 28 2007 22:17] A: made ldmud worky /players/tallos/7tigers/mobs/balor1.c
+[Oct 28 2007 22:18] A: made ldmud worky /players/tallos/7tigers/mobs/succubus1.c
+[Oct 28 2007 22:18] A: made ldmud worky /players/tallos/7tigers/mobs/horcb.c
+[Oct 28 2007 22:22] A: made ldmud worky players/tallos/victoria/objects/ipexbrarainbow.c
+[Oct 28 2007 22:22] A: made ldmud worky /players/tallos/victoria/mobs/cindycrawford.c hubba hubba
+[Oct 28 2007 22:23] A: made ldmud worky /players/tallos/victoria/mobs/dominatrix.c
+[Oct 28 2007 22:23] A: made ldmud worky /players/tallos/victoria/mobs/model1.c
+[Oct 28 2007 22:24] A: made ldmud worky /players/tallos/victoria/mobs/secretsales1.c
+[Oct 28 2007 22:25] A: made ldmud worky /players/tallos/thevast/ogremage1.c
+[Oct 28 2007 22:26] A: made ldmud worky /players/tallos/tallosautoload/retribution.c
+[Oct 31 2007 15:42] A: made ldmud worky /players/catacomb/Fspirit.c
+[Nov 24 2007 22:32] A: Rumplemintz found a bug in the desc of /room/lanceroad4. I did an edit change to it.
+[Nov 25 2007 00:05] A: added the function 'query_name' to /obj/leo.c - Rumplemintz found this bug
+[Sep 15 2009 19:22] A: fred
+[Sep 15 2009 19:23] A: is
+[Sep 15 2009 19:23] A: cool
+[Sep 17 2009 21:15] A: i stick my peepee in fans for fun
+[Jun 19 2014 09:35] A: Fixed OPL ~/opl/core/monster.c to not break under certain conditions in heart_beat()
+[Jun 19 2014 09:43] A: Doubled heal rate of (200/hb) of ~/opl/environs/poop-volcano.c and fixed heart_beat() breaking in combat
+[Jun 23 2014 15:57] A: Fixed ~/etheriel/items/blockbuster.c to not spam debug.log if someone hands it lit to a wiz
+[Jun 23 2014 22:09] A: fixed some heartbeat-breaking bugs in ~/opl/environs/poop-volcano.c
+[Jun 24 2014 21:49] A: fixed heart beat break error in ~/core/vehicle.c

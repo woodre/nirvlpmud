@@ -1,0 +1,110 @@
+Weapons
+-------------------------
+axe_new.c 
+  -OK, weapon_hit to clone the poison obj would be cool, although it would have to be rare.
+hammer.c 
+  -Change non-fatal hit to 70-80 dmg.  Should be 2 handed weapon with weight of 4?
+holy_mace_new.c
+  -OK
+invis_sword.c
+  -OK
+poison_dagger_new.c
+  -OK
+  
+Armor
+--------------------------
+earcuffs_new.c
+  -OK
+shield_magresist_new.c
+  -change resistances to 2. An armor special could temporarily raise them to 15
+shield_natresist_new.c
+  -same as magic shield.
+  
+Misc
+--------------------------
+black_opal.c
+  -OK
+courage_obj_new.c
+  -OK
+courage_wand_new.c
+  - 3-5 charges or randomize 10 charges. Can reduce heal to 10% of you want. Increase value per charge accordingly. Or change mob
+    mobs to load only once per boot.
+frenzy_obj_new.c
+  - Same as courage wand. 40% dmg penalty seems high, can reduce if desired.
+holy_symbol_new.c
+  -OK
+mirror_new.c
+  -OK
+moonstone.c
+  -OK
+nomelee_obj_new.c
+  -OK
+onyx.c
+  -OK
+paralyze_obj_new.c
+  -OK
+parry_obj_new.c
+  -OK
+poison_obj_new.c
+  -OK, add room message?
+stun_obj_new.c
+  -OK
+topaz.c
+  -OK
+  
+Rooms
+-----------------------
+  -OK since just fixing typos etc.
+  
+Mons
+-----------------------
+basilisk.c
+  -Level 25 requires 2 specials, paralyze is 1, needs another. Best to list these in the header.
+  -Suggestion, poison?
+  -Max coins for level 25 is 11,000, coins are slightly over currently
+captain2_new.c
+  -I'll update the value of the cleaver when we move everything over.
+captain.c
+  -Optional: Not sure why we need 2 copies of the same mob? Understand that 1 is the real one and the other is the mirror.
+   I would think the room could clone 3 of the same file and set the flags to know which is which. A lot of the code
+   is duplicated in the files. If you want to have 2 files to make it cleaner maybe you should inherit from the other so
+   all of the code can be in a single file. Just yell if you need help with this, should not be a lot of rework, let me
+   know if I am wrong.
+cyclo.c
+  -OK
+hook_horror.c
+  -OK, can up coins if we reduce the armor value which is nothing special
+imp_master.c
+  -OK, why not use the poison_obj here? In fact adding suggestion to the axe to call this obj as well.
+kargile.c
+  -Level 25 requires 2 specials, stun is 1, needs 1 more.
+  -Second special idea - have him use the hammers throw command when the player gets below 100 hps! Could manually set
+    the required variables in the weapon so it would work, would be very cool effect.
+ltng_elemental_new.c
+  -OK
+master_cleric.c
+   -OK
+  -Ignoring specials for the masters, since they force you to fight more than 1 and coordinate efforts, and each
+   has at least 1 special attack.
+master_fighter.c
+   -OK
+master_mage.c
+  -OK
+red_dragon.c
+  -OK
+master_thief.c
+  -OK
+  
+Suggestions
+-----------------
+I continue to be very impressed with your code for the amount of experience that you have.  You make it very easy
+on me to do your approvals. Your unique mobs/objects really add something to the game, and you really push the
+boundaries of what you've done before. I'd say one thing to try and focus on is creating functions when
+you have similar code in multiple places. For example in the cleric where he heals the other masters, you have
+a function for each one. This could be a function that maybe you pass the object to to heal it. The code in your
+masters heartbeat, although I did not look closely, I think there are most likely places there that could be combined.
+Or maybe you should even have a master mob that inherits from monster.c, and each master type inherits from your master
+npc. Same with the captain, the mirror and the real mob are essentially the same, and I think they could be combined.
+This are obviously not required for approval, but things to look for as you go on to the next project.
+Again, a great job, I am especially excited to try out the dragon, he is very unique (masters a close second).
+Congrats

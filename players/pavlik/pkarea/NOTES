@@ -1,0 +1,55 @@
+Basic Concept:
+----------------
+Create a PK-Sparring Area were players must remove all objects and money before
+entering (this includes Guild Objects, Quicktypers, Etc...).  Players will recieve
+a weapon and a small amount of coins upon entering the realm.
+
+Removal of Objects:
+--------------------
+ALL objects except for the soul will be removed from the player before entering the
+realm.  This includes guild objects, quicktypers, etc.  I must make sure that desting
+a players guild object will not incur anything more than inconvienance for the player.
+Players are responsible for reaquiring lost items after they leave the area.  If possible
+I will create a room where they can register to regain guild object, quicktyper, star tatoo
+and such various items.
+
+Objects within the Realm:
+---------------------------
+Players may only have objects that are approved for the realm.  Each room init() will scan
+the players inventory and dest any object that does not have the required flag.  This is to
+prevent illegal objects being "delivered" to a player in the realm.
+
+All weapons/armor/money/heals/etc are aquired within the realm and usable only within the
+realm.  These objects will be "cashed in" or dested when the player leaves.
+
+Quitting / Disconnection:
+--------------------------
+Gonna take some time and play-testing to figure out what kind of effects quitting or
+disconnections are going to have in an area of this type.
+
+Special Libs:
+----------------
+Thinking of incorporating special armor and weapon libs to allow for different damage
+types.  This will help break away from a one-dimensional "Hack & Slash" combat.
+
+Player Daemon Object:
+----------------------
+Each player will be carrying an invisible daemon object to help control specific
+needs of the area.  The daemon object will block the basic "fireball" and "sonic"
+spell commands.
+
+
+Damage Types:
+--------------
+slash
+pierce
+bash
+fire
+cold
+acid
+magic
+
+Object Ideas:
+--------------
+Magic Spell Scrolls
+

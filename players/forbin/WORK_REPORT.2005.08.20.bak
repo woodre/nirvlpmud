@@ -1,0 +1,260 @@
+[1;37m[[1;33m2004.07.28 16:48[1;37m] [2;37;0mupdated my workreport loggin
+[1;37m[[1;33m2004.07.28 16:52[1;37m] [2;37;0mupdated values on realms/salam/OBJ/salamite_scales and realms/flame_forest/OBJ/creep_carcass.c, drake_wing.c, essence_ignis.c, shriek_fur.c, and wraith_pelt.c
+                   to bring them in line with monster.guide
+                   see realms/prices for more information
+[1;37m[[1;33m2004.07.28 20:44[1;37m] [2;37;0mchanges percentages on flameforest mobs
+                   approved by Fred
+[1;37m[[1;33m2004.07.29 23:06[1;37m] [2;37;0mmoved cloning of mobs to /realms/salam/RMS/*.* from bottom of reset() to top of reset()
+                   the mobs were not resetting - only occuring once per boot =(
+[1;37m[[1;33m2004.08.01 14:17[1;37m] [2;37;0mchanged archangel mobs from sperate objects to a daemonized verzion
+                   approved by Fred
+[1;37m[[1;33m2004.08.02 19:54[1;37m] [2;37;0mgave ribbit two spears of the martyr
+                   accidentally clean a dir while he was in area...lost kids stuff
+[1;37m[[1;33m2004.08.13 20:49[1;37m] [2;37;0mfixed /players/fred/closed/bloodfist/obj/gem.c
+                   any stored gems weren't setting a
+[1;37m[[1;33m2004.08.15 11:22[1;37m] [2;37;0mgave ribbit 16000 coins to replace spent coins testing wep_shadow.c bug in bf guild
+[1;37m[[1;33m2004.08.15 11:26[1;37m] [2;37;0mgave ribbit 16000 coins to replace spent coins testing wep_shadow.c bug in bf guild (again)
+[1;37m[[1;33m2004.08.15 19:58[1;37m] [2;37;0mgave archangel 66k coins to replace coins lost in a guild bug
+[1;37m[[1;33m2004.08.16 22:15[1;37m] [2;37;0mOH - stared /players/forbin/closed/BF to log any fixes to bloodfist guild while Fred is on vacation
+[1;37m[[1;33m2004.08.21 06:34[1;37m] [2;37;0mgave 6k coins and new bloodfist gem to Ribbit, healed him as well - for a bf bug
+[1;37m[[1;33m2004.08.26 19:09[1;37m] [2;37;0mdested neruumsh.c and axe splatter from koga, replaced the neruumsh
+                   was cloning unintended axe splatter
+[1;37m[[1;33m2004.09.04 20:34[1;37m] [2;37;0mfixed a typo in bastion/obj/flamesword.c
+                   'choas' changed to 'chaos'
+[1;37m[[1;33m2004.09.04 23:36[1;37m] [2;37;0mtold Morgoth he could close down his castle for updating
+                   cause he wanted to update his stuff
+[1;37m[[1;33m2004.09.04 23:51[1;37m] [2;37;0malso, set up morgoth with a filer tool to log his WR
+[1;37m[[1;33m2004.09.05 19:20[1;37m] [2;37;0mfixed ~eurale/Park/OBJ/rex_skin.c to work better when players craft skin on ground
+                   now moves to appropriate environment
+                   was moving object to player without checking carry
+[1;37m[[1;33m2004.09.06 10:15[1;37m] [2;37;0mapproved Khrell's new area addition, pending a couple of needed last changes
+                   ~khrell/area/underways/undermdh1.c-undermdh19.c & ~khrell/monster/underways/golrnd.c
+[1;37m[[1;33m2004.09.06 13:24[1;37m] [2;37;0mpromoted Khrell for addition to his area (from L25 to L30)
+[1;37m[[1;33m2004.09.08 17:23[1;37m] [2;37;0mvahiti reports bug of sergei attacking martin in wings if you dc'd...need to check into this
+[1;37m[[1;33m2004.09.08 19:14[1;37m] [2;37;0mfixed cosmo/hslist/svds_new.c (was preventing reading of other things in it's environment)
+[1;37m[[1;33m2004.09.09 17:17[1;37m] [2;37;0mreplaced red lace teddy for Archangel (his restored as 0 in casino room)
+[1;37m[[1;33m2004.09.12 08:48[1;37m] [2;37;0mfixed ~eurale/Glade/oak1.c to account for updated stat system -see code for changes
+[1;37m[[1;33m2004.09.12 09:03[1;37m] [2;37;0mfixed ~eurale/VAMPIRES/basement.c so players have to enter 'coffin' (was invalid if check before)
+[1;37m[[1;33m2004.09.17 16:21[1;37m] [2;37;0mfixed spelling error in ~wocket/turtleville/OBJ/regen_potion (tentacles was spelled tenticals)
+[1;37m[[1;33m2004.09.18 20:12[1;37m] [2;37;0mspoke with Feldegast about using some of his code/ideas in mage guild, gave ok
+[1;37m[[1;33m2004.09.18 20:12[1;37m] [2;37;0mmailed Wocket to ask for same permission
+[1;37m[[1;36m2004.09.21 22:02[1;37m] [2;37;0mfixed a spell attack problem in ~emerson/mons/hutman.c (there was no message)
+[1;37m[[1;36m2004.09.21 22:02[1;37m] [2;37;0mremoved /log/emerson.rep cause I fixed the reported items
+[1;37m[[1;36m2004.09.21 22:17[1;37m] [2;37;0mfixed couple of errors in pray() and extract() (was his & him, changed to query_posessive() & query_objective()
+[1;37m[[1;36m2004.09.21 22:18[1;37m] [2;37;0mremoved /log/eurale.rep (cause I corrected reported stuff)
+[1;37m[[1;36m2004.09.21 22:22[1;37m] [2;37;0mremoved /log/softly.rep (items had apparently already been fixed)
+[1;37m[[1;36m2004.09.21 22:24[1;37m] [2;37;0mremoved /log/cosmo.rep (items were top xp stuff...from '03)
+[1;37m[[1;36m2004.09.21 22:28[1;37m] [2;37;0mremoved /log/zeus.rep (item wasn't even from zeus' area, was hurtbrain, and was alread fixed anyway)
+[1;37m[[1;36m2004.09.21 22:34[1;37m] [2;37;0medited ~arrina/tmon/fahkri.c added alt_name of "qurd" & changed race from "ghost" to "demon" to match other qurds
+[1;37m[[1;36m2004.09.21 22:35[1;37m] [2;37;0mbased on available evidence, he's a qurd...
+[1;37m[[1;36m2004.09.21 22:35[1;37m] [2;37;0malso made him male...
+[1;37m[[1;36m2004.09.21 22:35[1;37m] [2;37;0mremoved /log/arrina.rep (fixed the items)
+[1;37m[[1;36m2004.09.21 22:42[1;37m] [2;37;0m~eurale/Lab/OBJ/tadji.c changed 'nicks' to 'nicked' in message_hit so it reads right
+[1;37m[[1;36m2004.09.21 22:43[1;37m] [2;37;0mremoved /log/trix.rep (tadji grammar problem (above) was reported here, fixed)
+[1;37m[[1;36m2004.09.21 22:49[1;37m] [2;37;0m~hawkeye/monster/blake.c changed set_alias to "henry" (was blake, same as set_name) and added alt_name of "colonel"
+[1;37m[[1;36m2004.09.21 22:49[1;37m] [2;37;0mremoved /log/hawkeye.rep (fixed items)
+[1;37m[[1;36m2004.09.21 22:54[1;37m] [2;37;0m~jareel/monsters/town/hendrik.c changed a if(attacker_ob) check to if(attacker_ob && present(attacker_ob, environment(this_object())))
+[1;37m[[1;36m2004.09.21 22:55[1;37m] [2;37;0mremoved /log/jareel.rep (fixed items)
+[1;37m[[1;36m2004.09.21 23:05[1;37m] [2;37;0mfixed spelling/grammar mistake in ~nightshade/room/imp18.c
+[1;37m[[1;36m2004.09.21 23:05[1;37m] [2;37;0mremoved /log/nightshade.rep (fixed items)
+[1;37m[[1;36m2004.09.22 06:47[1;37m] [2;37;0m~pathfinder/detroit/items/button.c - changed lot of 'pin' to 'button' so everything would make sense
+[1;37m[[1;36m2004.09.22 06:47[1;37m] [2;37;0mremoved /log/pathfinder.rep (fixed items)
+[1;37m[[1;36m2004.09.23 16:59[1;37m] [2;37;0mCrashed the mud.  NOTE TO SELF:  if(read_file("big old file") == "No No") CrashMud();
+[1;37m[[1;36m2004.09.25 13:14[1;37m] [2;37;0moh, working on hogath's area approval
+[1;37m[[1;36m2004.09.26 17:29[1;37m] [2;37;0mNOTE TO SELF: Vertebraker tells you: Special rewards are probably good ideas
+[1;37m[[1;36m2004.09.26 17:59[1;37m] [2;37;0mupdate ~eurale/Keep/NPC/disir.c, sentry2.c, and sentry3.c to fix poison cloning (was still set up for old 20 max stats)
+[1;37m[[1;36m2004.09.26 22:37[1;37m] [2;37;0mfinished first check of Hogath's area & mailed him required changes
+[1;37m[[1;36m2004.09.29 06:48[1;37m] [2;37;0mfixed ~maledicta/ares/mobs/direthorne.c (added checks for attacker_ob in the environment before specials going off)
+[1;37m[[1;36m2004.09.29 06:55[1;37m] [2;37;0madded set_alt_name("demon"); to ~eurale/Lab/NPC/abishai.c (suggest in bug report, abishai are demons)
+[1;37m[[1;36m2004.09.29 06:55[1;37m] [2;37;0mremoved /log/eurale.rep (fixed item)
+[1;37m[[1;36m2004.09.30 22:32[1;37m] [2;37;0mremoved several lines from /log/maledicta.rep (fixed the items)
+[1;37m[[1;36m2004.09.30 22:41[1;37m] [2;37;0mrm'ed /log/deathmonger.rep (items were apparently already fixed)
+[1;37m[[1;36m2004.09.30 22:45[1;37m] [2;37;0mfixed ~/blue/castle.c (someone had put a '*/' in the wrong place - don't comment out needed returns you doofs!)
+[1;37m[[1;36m2004.09.30 22:45[1;37m] [2;37;0mrm'ed /log/blue.rep (fixed item)
+[1;37m[[1;36m2004.09.30 22:46[1;37m] [2;37;0mrm'ed /log/gowron.rep (no coins/not enough coins is NOT A BUG!)
+[1;37m[[1;36m2004.09.30 22:50[1;37m] [2;37;0mrm'ed /log/lew.rep (looked like a quest log???)
+[1;37m[[1;36m2004.09.30 23:04[1;37m] [2;37;0mrm'ed /log/snakespear.rep (no coins/not enough coins is NOT A BUG!)
+[1;37m[[1;36m2004.09.30 23:07[1;37m] [2;37;0mfixed some ids on  ~/pain/NEW/mon/orc_m.c (set_name(), set_race(), set_alias() were all "orc" - fixed them)
+[1;37m[[1;36m2004.09.30 23:07[1;37m] [2;37;0mrm'ed /log/pain.rep (fixed item)
+[1;37m[[1;36m2004.09.30 23:11[1;37m] [2;37;0mrm'ed /log/stardream.rep (irrelevant item)
+[1;37m[[1;36m2004.10.01 21:31[1;37m] [2;37;0m~mouzar/castle/under/mon/dnoble.c (fixed several spelling/grammar mistakes, and changed a faulty set_spell to add_spell())
+[1;37m[[1;36m2004.10.01 21:34[1;37m] [2;37;0m~mouzar/castle/under/mon/duguard.c (added id of "warrior")
+[1;37m[[1;36m2004.10.01 21:37[1;37m] [2;37;0m~mouzar/castle/under/mon/duhealier.c (changed all instances of "healier" to "healer")
+[1;37m[[1;36m2004.10.01 21:38[1;37m] [2;37;0mrm'ed /log/mouzar.rep (items corrected)
+[1;37m[[1;36m2004.10.01 21:59[1;37m] [2;37;0mcreate emote: bhell
+[1;37m[[1;36m2004.10.01 21:59[1;37m] [2;37;0mcreated emote: spoton
+[1;37m[[1;36m2004.10.01 22:03[1;37m] [2;37;0mcreated emote: bollocks
+[1;37m[[1;36m2004.10.04 06:56[1;37m] [2;37;0mfixed ~/nooneelse/obj/amulet.c (needed:  amulet_color = "black"; in the reset())
+[1;37m[[1;36m2004.10.04 22:46[1;37m] [2;37;0mrm'ed /log/rep_files/coldwind.rep (item was already corrected)
+[1;37m[[1;36m2004.10.05 22:20[1;37m] [2;37;0m~blue/castle/infount.c (gave blade alt_name of "sword"...umm...cause it IS a sword)
+[1;37m[[1;36m2004.10.05 22:21[1;37m] [2;37;0mrm'ed /log/blue.rep (item fixed)
+[1;37m[[1;36m2004.10.05 22:26[1;37m] [2;37;0m~coldwind/desert/weapons/sword.c (changed object user to string user in weapon_hit)
+[1;37m[[1;36m2004.10.05 22:27[1;37m] [2;37;0msword was reported to be causing hb problems, and user variable was actually a string and not object (maybe this will fix it)
+[1;37m[[1;36m2004.10.05 22:28[1;37m] [2;37;0mrm'ed /log/rep_files/dragnar.rep (unrelated item)
+[1;37m[[1;36m2004.10.06 23:26[1;37m] [2;37;0mrm'ed /log/rep_files/emerson.rep (was a duplicate of items I've already fixed)
+[1;37m[[1;36m2004.10.06 23:27[1;37m] [2;37;0mstarted work on a revitialization project (want to see how it goes)
+[1;37m[[1;36m2004.10.06 23:27[1;37m] [2;37;0moh...revitalization project is repairing/correcting/sprucing up Blue's castle
+[1;37m[[1;36m2004.10.06 23:28[1;37m] [2;37;0mmy work on this is currently in forbin/rev/blue/ if anyone cares to look
+[1;37m[[1;36m2004.10.07 20:32[1;37m] [2;37;0mput updated realms/salam/NPC/king.c into play (approved by Fred)
+[1;37m[[1;36m2004.10.09 08:12[1;37m] [2;37;0mupdated forbin/realms/salam/OBJ/neruumsh.c with new set_buy_value()
+[1;37m[[1;36m2004.10.10 20:47[1;37m] [2;37;0meurale/Keep/OBJ/hard_gloves.c (changed from type "misc" to type "ring")
+[1;37m[[1;36m2004.10.10 21:22[1;37m] [2;37;0meurale/Keep/OBJ/hard_gloves.c (also removed set_save_flag(), making them store)
+[1;37m[[1;36m2004.10.11 22:17[1;37m] [2;37;0mfixed forbin/realms/ruins/OBJ/newscloak.c (had uploaded an old testing copy)
+[1;37m[[1;36m2004.10.11 22:17[1;37m] [2;37;0mdested and replaced Somantin (my player char) with updated cloak
+[1;37m[[1;36m2004.10.12 19:22[1;37m] [2;37;0mput /forbin/realms/misc/OBJ/sbd.c in /forbin/realms/shack.c and put forbin/realms/misc/OBJ/saddlebag.c in play for 2000 coin cost
+[1;37m[[1;36m2004.10.21 19:54[1;37m] [2;37;0mpromo'd Hogath to lvl 30
+[1;37m[[1;36m2004.10.21 19:57[1;37m] [2;37;0mon second thought, promo'd Hogath to 40, with Dec. 1 as a D-Day to see progress on next area
+[1;37m[[1;36m2004.10.21 20:57[1;37m] [2;37;0mmailed Boltar about putting Hogath's castle into the autoload rotation
+[1;37m[[1;36m2004.10.23 18:33[1;37m] [2;37;0mllew/Other/misc/obituary.c (added level scale/color for legendary (above +75) players
+[1;37m[[1;36m2004.10.30 08:33[1;37m] [2;37;0mreplaced weapon and a bloodfist gem to Ribbit (item is bugged)
+[1;37m[[1;36m2004.10.30 09:38[1;37m] [2;37;0mgave 3 shakes to sahara (accidentally dested a mob she was fighting)
+[1;37m[[1;36m2004.11.01 20:51[1;37m] [2;37;0mchanged ~saber/armor/chaosarmor.c to AC 5 (we don't have many ac 5 items, and platemail fits the bill)
+[1;37m[[1;36m2004.11.01 21:07[1;37m] [2;37;0mchanged ~feldegast/equip/wyvern_armor.c to AC 5 and added color
+[1;37m[[1;36m2004.11.03 06:52[1;37m] [2;37;0madded a missing "'" in jaraxle/3rd/alt/items/nature_orb.c do_special() tell_room()
+[1;37m[[1;36m2004.11.04 17:52[1;37m] [2;37;0mAfter speaking with Linus, promoted him to level 40 (same accord we've given both Hogath and Khrell)
+[1;37m[[1;36m2004.11.04 17:52[1;37m] [2;37;0mHe has a deadline of Dec 31 to produce some concrete code progress, or back to 30 it is...
+[1;37m[[1;36m2004.11.06 21:29[1;37m] [2;37;0mfixed the format length on fred/closed/bloodfist/power/drag.c, eye.c, flip.c, grip.c, heft.c, sweep.c, and toss.c
+[1;37m[[1;36m2004.11.11 15:18[1;37m] [2;37;0mgave vash snow/shadows/stuff/crown (replaced from a crash)
+[1;37m[[1;36m2004.11.11 15:18[1;37m] [2;37;0mgave ribbit 2 gems, and nature's blessing (replaced from crash)
+[1;37m[[1;33m2004.12.02 18:44[1;37m] [2;37;0m~feldegast/equip/scarab.c (cut CHARGETIME in half, made fully heal player when used, and added "magical" dtype protection)
+[1;37m[[1;33m2004.12.24 07:40[1;37m] [2;37;0mrestored 22000 coins to Cortez for a shop bug (if you keep typing buy 8 w/out listing again...it trys to repurchase the object and just takes your money)
+[1;37m[[1;33m2005.01.20 18:14[1;37m] [0madded some color to the attacks on /players/saber/weapons/hspear.c
+[1;37m[[1;33m2005.01.21 17:56[1;37m] [0madded dtype protection, alignment quirk, and intermittent heal to /players/forbin/realms/ruins/OBJ/anhk.c
+[1;37m[[1;33m2005.01.21 17:56[1;37m] [0madded new spell attacks to /players/forbin/realms/ruins/NPC/guardian.c
+[1;37m[[1;33m2005.01.21 20:33[1;37m] [0madded color and beautified the code a bit in good_hit() in /players/saber/closed/bards/palsword.c
+[1;37m[[1;33m2005.01.23 11:14[1;37m] [0mfixed a tell_room mistake I made in /players/saber/closed/bards/palsword.c
+[1;37m[[1;33m2005.01.24 20:34[1;37m] [0mfixed ansi problem in /realms/ruins/OBJ/ahnk.c
+[1;37m[[1;33m2005.01.24 20:35[1;37m] [0madded dtype weaknesses/protections to /realms/ruins/NPC/angelbase.c
+[1;37m[[1;33m2005.01.30 06:26[1;37m] [0mremoved horse file for Casper, still had his old horse, and wanted a new color
+[1;37m[[1;33m2005.02.16 22:12[1;37m] [0madded set_types to /players/pain/closed/weapons/widow.c and /players/pain/NEW/weap/soulcrusher.c
+[1;37m[[1;33m2005.02.16 22:34[1;37m] [0mfixed a color bleeding problem in ~forbin/realms/ruins/RMS/r21.c
+[1;37m[[1;33m2005.02.19 06:33[1;37m] [0mmade zeus/realm/OBJ/onyx_platemail.c, nightpike.c, and nightpikeS.c storable per new rules, based on email sent to/received from Zeus
+[1;37m[[1;33m2005.02.23 22:21[1;37m] [0mfixed error in ~vertebraker/misc/h/horse.c emote() (around line 580)
+[1;37m[[1;33m2005.02.24 18:16[1;37m] [0madded set_alt_name to /players/llew/closed/crystal/crystal_sword.c
+[1;37m[[1;33m2005.02.24 18:41[1;37m] [0mupdated forbin/realms/ruins/NPC/eghyron.c and all weapons in /realms/ruins/OBJ for new miniquest
+[1;37m[[1;33m2005.02.24 23:09[1;37m] [0mchanged an id(str) { return str == blah  TO  id(str) { return (::id(str) || str == blah in ~zeus/realm/NPC/demon_planar.c
+[1;37m[[1;33m2005.02.24 23:10[1;37m] [0msame as above in ~zeus/realm/NPC/demon_spirit.c
+[1;37m[[1;33m2005.02.24 23:17[1;37m] [0mfixed typo of vivrant => vibrant in ~jaraxle/3rd/pyramid/mon/revenant.c
+[1;37m[[1;33m2005.02.24 23:17[1;37m] [0malso added id(str) { return (::id(str) || str == "mummy"); } ~jaraxle/3rd/pyramid/mon/revenant
+[1;37m[[1;33m2005.02.24 23:23[1;37m] [0madded id(str) { return (::id(str) || str == "smith"); } to /players/eurale/Dis/Hood/NPC/smithy.c
+[1;37m[[1;33m2005.02.26 12:41[1;37m] [0mmoved ~zeus/closed/circle_member/stardrifter.bak to ~zeus/closed/circle_member/backup/stardrifter.bak
+[1;37m[[1;33m2005.02.26 12:41[1;37m] [0mwas adding his name twice when you use 'seek masters' in the circle guild hall
+[1;37m[[1;33m2005.02.27 05:56[1;37m] [0mchanged the name of pet for z.o (was x, changed to y)
+[1;37m[[1;33m2005.03.02 16:55[1;37m] [0mhanded z 8 wocket/turtleville/OBJ/heal_potion
+[1;37m[[1;33m2005.03.02 16:56[1;37m] [0mthey didn't retore after a crash
+[1;37m[[1;33m2005.03.03 21:00[1;37m] [0mforced korgon to set_title special and then save to fix a title problem for him
+[1;37m[[1;33m2005.03.04 18:15[1;37m] [0madded id of silver ring to dusan/area1/armors/ring.c
+[1;37m[[1;33m2005.03.04 18:16[1;37m] [0mswitched ring out for z so he'd have the updated version
+[1;37m[[1;33m2005.03.04 22:11[1;37m] [0madded id of "bracers of speed" to /players/maledicta/cont/rdragon/sbracers.c
+[1;37m[[1;33m2005.03.05 00:33[1;37m] [0mfixed main armor issue in zeus/circle/obj/id.h (was blocking wearing of main armor weight 2 - Zeus intended to allow weight 2 main
+[1;37m[[1;33m2005.03.05 00:40[1;37m] [0mset Z to level 14 (he logged out @ 14, when logged back in, he'd lost gobj and was 929 exp from level 14)
+[1;37m[[1;33m2005.03.05 06:58[1;37m] [0mfixed Z again (logged in the same way this morning)
+[1;37m[[1;33m2005.03.05 08:31[1;37m] [0mmade zeus/realms/OBJ/talisman.c storable (see code for more information)
+[1;37m[[1;33m2005.03.07 17:54[1;37m] [0madded some more tweaks to ~zeus/realm/OBJ/talisman.c [see code for 2005.03.07 changes]
+[1;37m[[1;33m2005.03.08 06:45[1;37m] [0mimproved extra_look() in ~zeus/circle/obj/id.h [shows "You are..." instead of "Name is..." when looking at yourself now]
+[1;37m[[1;33m2005.03.08 17:30[1;37m] [0mset_go() for talisman for z [it restored with go = 0 for some reason]
+[1;37m[[1;33m2005.03.08 21:31[1;37m] [0mfixed z's talisman once again I think reset it causing some messed up things...should test this theory
+[1;37m[[1;33m2005.03.08 21:31[1;37m] [0mmaybe tomorrow...I'm tired
+[1;37m[[1;33m2005.03.09 22:48[1;37m] [0madded an if(arg) return; after ::reset(); in ~zeus/realm/OBJ/talisman.c to prevent resetting of the variables ;)
+[1;37m[[1;33m2005.03.09 22:48[1;37m] [0mbtw I AM AN IDIOT for not catching that.  Thanks Boltar.
+[1;37m[[1;33m2005.03.10 17:15[1;37m] [0mfixed check based on old attrib system in ~feldegast/obj/crystal.c
+[1;37m[[1;33m2005.03.10 17:17[1;37m] [0mchanged an add_spell_point() amount in ~feldegast/obj/soulstone.c
+[1;37m[[1;33m2005.03.10 22:26[1;37m] [0m~saber/weapons/lightning.c [damage in special to "other|electric" and colored short]
+[1;37m[[1;33m2005.03.10 22:41[1;37m] [0m~saber/monsters/lightning.c [updated spell attack to dtype, added 2nd smaller spell, colorized short]
+[1;37m[[1;33m2005.03.11 16:25[1;37m] [0muploaded new saber/weapon/lightning.c
+[1;37m[[1;33m2005.03.12 07:32[1;37m] [0mswitched the places of if(arg) return; and ::reset(); in ~zeus/realm/OBJ/talisman.c [I had them in the wrong place, forcing amulet to reset and default to type 'armor' which screws up lots of things ;)]
+[1;37m[[1;33m2005.03.12 08:03[1;37m] [0mfixed a wrong remove_call_out in ~dusan/area1/armors/ring.c [was remove_call_out("regen_sp") should have been remove_call_out("ringheal")]
+[1;37m[[1;33m2005.03.12 14:58[1;37m] [0m~saber/monsters/lightning.c [upped level to 23, wc, ac, and hp accordingly - was way too low for the WC 21 weapon it held]
+[1;37m[[1;33m2005.03.12 16:23[1;37m] [0m~saber/tower/tower20+8 [fixed grammar mistake :: debts to depths]
+[1;37m[[1;33m2005.03.12 21:54[1;37m] [0m~saber/monsters/lightning.c [added monster_died() for dropping of lightning bolt, reformatted weapon_hit messages for the lightning bolt as well]
+[1;37m[[1;33m2005.03.13 06:59[1;37m] [0m~saber/weapons/lightning.c [changed set_type from lightning to lightning bolt for lack of better type]
+[1;37m[[1;33m2005.03.13 15:02[1;37m] [0msaber/weapons/lightning.c changed weapon to 0 wear,but added a charge that wears 0
+[1;37m[[1;33m2005.03.13 15:03[1;37m] [0m[when charge is gone, specials no longer happen]
+[1;37m[[1;33m2005.03.13 16:00[1;37m] [0mreimbursed darknesss for heals and lockering eq that he couldn't use cause his vamp ob is fuckt [I tried but couldn't fix it]
+[1;37m[[1;33m2005.03.15 20:35[1;37m] [0moh...worked on bf pet for Fred
+[1;37m[[1;33m2005.03.19 11:29[1;37m] [0m~feldegast/std/clothes.c [ fixed extra_look() ]
+[1;37m[[1;33m2005.03.19 16:58[1;37m] [0m~beck/Rangers/Save/cortez.o [ fixed color to something besides lemon ]
+[1;37m[[1;33m2005.03.19 20:34[1;37m] [0m~beck/Rangers/Save/cortez.o [ fixed some skills messups caused by the known 'train 0' bug ]
+[1;37m[[1;33m2005.03.20 06:13[1;37m] [0m~beck/Rangers/RangerCommunicator [ added color to equipment in short() of gob ]
+[1;37m[[1;33m2005.03.20 06:14[1;37m] [0m~beck/Rangers/Commands/Teleport.h [ added color to teleport spell ]
+[1;37m[[1;33m2005.03.20 06:14[1;37m] [0m~beck/Rangers/MasterInc/Teleport.h [ added color to teleport spell ]
+[1;37m[[1;33m2005.03.20 06:42[1;37m] [0m~beck/Ranger/Save/cortez.o [ set RangerDino, RangerAnimal, and RangerWeapon ]
+[1;37m[[1;33m2005.03.20 17:09[1;37m] [0mset Cooper's Ranger Dino, Animal, and Weapon type [ he didn't get much of a choice when he joined...plus he is +100 and deserves it ]
+[1;37m[[1;33m2005.03.21 17:00[1;37m] [0m~beck/Rangers/MasterInc/Donate.h & ~cosmo/Rangers/Commands/Donate.c [ added RangerAnsi color support ]
+[1;37m[[1;33m2005.03.22 17:36[1;37m] [0mgave cortez new demon_pet - it disappeared from hotel room
+[1;37m[[1;33m2005.03.22 21:50[1;37m] [0madded ~heals/oldmongie.c to heal shack [approved by Fred]
+[1;37m[[1;33m2005.03.25 19:41[1;37m] [0mreimbursed Vegeta equip, coins, and heals/bag for a bug with Bloodfist Arena's corpse retrieval
+[1;37m[[1;33m2005.03.27 21:37[1;37m] [0mgave Sunim ~/realms/salam/OBJ/coal_crown as prize for winning a quote competetion
+[1;37m[[1;33m2005.04.08 21:46[1;37m] [0mgave ribbit 65989 coins cause of bf pet bug
+[1;37m[[1;33m2005.04.08 23:06[1;37m] [0m~/eurale/Park/jp65.c [Fixed so always a tooth when Rex is there]
+[1;37m[[1;33m2005.04.15 19:33[1;37m] [0mput fred/closed/bloodfist/obj/scarab.c in Bloodfist Chest...a gift to whichever player takes the time to look
+[1;37m[[1;33m2005.04.16 11:48[1;37m] [0mgave Talus fred/closed/bloodfist/obj/scarab.c as a prize for riddle among some bfs
+[1;37m[[1;33m2005.04.27 06:11[1;37m] [0m~hurtbrain/castello/dag/tunic.c [lowered weight from 3 to 2, need more main armors for fallen/necros]
+[1;37m[[1;33m2005.04.27 06:25[1;37m] [0m~dragnar/armors/suit.c [fixed a color problem when the armor returns to visible]
+[1;37m[[1;33m2005.04.27 18:12[1;37m] [0m~eurale/Keep/OBJ/hard_gloves.c [lightened weight from 2 to 1]
+[1;37m[[1;33m2005.04.29 18:13[1;37m] [0m/players/trix/castle/town/monst/web.c [updated with some color, raised ac, and added a do_special]
+[1;37m[[1;33m2005.05.14 19:47[1;37m] [0mgave Ventoux /softly/algiers/obj/srobe.c [his wouldn't store for some reason]
+[1;37m[[1;33m2005.05.14 23:03[1;37m] [0mmud crashed...it sucked... [Totally out of MEMORY.]
+[1;37m[[1;33m2005.05.14 23:03[1;37m] [0mthe preceeding line was not my fault, I wasn't even on at the time =)
+[1;37m[[1;33m2005.05.15 07:18[1;37m] [0m~jareel/armor/yelmalian_elite_helm.c [removed extra space in short]
+[1;37m[[1;33m2005.05.19 16:42[1;37m] [0mrestored Hal items, I crashed the mud [12 pills, 8 demon hearts, 7 ice spheres, 1 teddy]
+[1;37m[[1;33m2005.05.19 16:45[1;37m] [0mrestored Riptorn's items, see above [1 zantestsuken]
+[1;37m[[1;33m2005.05.19 16:45[1;37m] [0mI HATE CODING!!!!! [see above]
+[1;37m[[1;33m2005.05.22 06:28[1;37m] [0m~jaraxle/3rd/volcano/weaps/krakin.c [made storable]
+[1;37m[[1;33m2005.05.22 07:29[1;37m] [0mfuck...i HATE coding!!!
+[1;37m[[1;33m2005.05.24 22:35[1;37m] [0monce again...I absolutely HATE coding...I mean it...I HATE IT...damn it all to hell
+[1;37m[[1;33m2005.05.28 07:41[1;37m] [0m ~trix/castle/primonst/ring.c [made storable]
+[1;37m[[1;33m2005.05.30 07:13[1;37m] [0m~eurale/Lab/OBJ/feathers.c [changed from misc to ring (more like bracers anyway)]
+[1;37m[[1;33m2005.06.04 16:22[1;37m] [0m~vertebraker/swamp/OBJ/j_earring.c [fixed it so it works, was using query_hurt() instead of a check of sp versus msp]
+[1;37m[[1;33m2005.06.05 11:12[1;37m] [0mtrans'd a player to a new room to give opinions on the long(), put her back promptly
+[1;37m[[1;33m2005.06.11 14:16[1;37m] [0mplayers/ultramagnus/shield_gondor.c [added color to short]
+[1;37m[[1;33m2005.06.12 10:34[1;37m] [0mI changed my mind...at least for today...I LIKE CODING...but just for today
+[1;37m[[1;33m2005.06.12 16:54[1;37m] [0m~snow/WEAPONS/greydeath.c [added color to short and weapon_hit() specials]
+[1;37m[[1;33m2005.06.12 22:21[1;37m] [0m~zeus/realm/OBJ/evil_aura.c [supports variables and stores now, approved by Zeus]
+[1;37m[[1;33m2005.06.19 16:49[1;37m] [0m~zeus/realm/NPC/g-old.c [fixed a bug where players could get free components if the gurther maxed out coins]
+[1;37m[[1;33m2005.06.21 18:54[1;37m] [0m~wocket/turtleville/PETS/neopet.c [made so Fallen empower spell works on wocket pets, fixed an error in set_master() that was mucking up wc]
+[1;37m[[1;33m2005.06.25 07:54[1;37m] [0m~zeus/circle/OBJ/embrace.c [fixed some type casting I missed, might be messing up heart_beat()]
+[1;37m[[1;33m2005.06.25 19:07[1;37m] [0m~zeus/circle/OBJ/embrace.c [made it actually work now, took out Casting/Lastcasting and put in a Tick timer]
+[1;37m[[1;33m2005.06.26 08:52[1;37m] [0m~zeus/realm/OBJ/siphon_stone.c [fix (I think), it was erroring]
+[1;37m[[1;33m2005.06.26 08:52[1;37m] [0m~zeus/circle/OBJ/embrace.c [finally got this working I think, test went well]
+[1;37m[[1;33m2005.06.28 17:50[1;37m] [0mfixed variable that restored wrong in ~zeus/realm/OBJ/siphon_stone for Z [a player character of mine]
+[1;37m[[1;33m2005.06.28 19:25[1;37m] [0mput back in livestrong bracelets till the Tour de France is over again.
+[1;37m[[1;33m2005.06.30 21:45[1;37m] [0m/obj/monster.c [added multiple id support (mimics armor.c, treasure.c, weapon.c)]
+[1;37m[[1;33m2005.06.30 21:46[1;37m] [0msome level 1000 wiz will need to just copy that over [see above]
+[1;37m[[1;33m2005.07.05 18:56[1;37m] [0mput in ~/realms/keats/NPC/wizard, approved by Fred
+[1;37m[[1;33m2005.07.23 07:43[1;37m] [0m~saber/armor/blackcloak.c [added color to short]
+[1;37m[[1;33m2005.07.24 13:43[1;37m] [0m~mythos/healerguild/power/heal.h [added capitalizaion of players's name in a room say]
+[1;37m[[1;33m2005.07.28 17:10[1;37m] [0mput in couple new things in my area, all in flame forest directory:
+[1;37m[[1;33m2005.07.28 17:10[1;37m] [0mNPC/qei.c and ooomani.c, OBJ/gmoloch.c and juju.c [all approved by Fred/Vertebraker]
+[1;37m[[1;33m2005.08.03 21:54[1;37m] [0mgave Jatar /realms/flame_forest/OBJ/ssmail.c replaced an object that didn't restore due to Zeus pulling his bf def.h file
+[1;37m[[1;33m2005.08.07 09:36[1;37m] [0m~vertebraker/swamp/x1/g-necklace.c [made it so if there are no teeth, the teeth short doens't show]
+[1;37m[[1;33m2005.08.10 18:32[1;37m] [0m~feldegast/equip/wyvern_armor.c [added dtype protection from fire, seemed thematic enough]
+[1;37m[[1;33m2005.08.10 20:50[1;37m] [0m~fred/closed/bloodfist/obj/wep_shadow.c [line 145, changed:  if(environment() != this_player()) TO if(environment(ths) != this_player())]
+[1;37m[[1;33m2005.08.10 20:50[1;37m] [0mthe above was preventing bloodfist from wielding weapons ;)
+[1;37m[[1;33m2005.08.10 20:50[1;37m] [0mreimbursed Ribbit 9000 coins for two forged weapons [see above problem]
+[1;37m[[1;33m2005.08.10 21:01[1;37m] [0malso replaced Ribbit's gem of performance
+[1;37m[[1;33m2005.08.11 20:25[1;37m] [0mwrote a inlcude that makes regular eq into bf eq, just need to switch /obj/armor.c to this file and add some set_bf_guild_bonus() lines
+[1;37m[[1;33m2005.08.12 17:55[1;37m] [0m~feldegast/equip/tsymbol.c [made inherit BF Eq code and modify BF attribs, added color and fixed up the special]
+[1;37m[[1;33m2005.08.12 18:00[1;37m] [0m~forbin/realms/flame_forest/OBJ/juju.c [changed object to an extra worn item and removed physical ac, added in BF Eq code]
+[1;37m[[1;33m2005.08.12 18:28[1;37m] [0m~feldegast/equip/tsymbol.c [made inherit BF Eq code and modify BF attribs, added color and fixed up the special]
+[1;37m[[1;33m2005.08.12 18:28[1;37m] [0m~feldegast/equip/wandereye [made inherit BF Eq code and modify BF attribs, added color and fixed up the special]
+[1;37m[[1;33m2005.08.12 18:44[1;37m] [0m~maledicta/cont/rdragon/sbracers.c [made inherit BF Eq code and modify BF attribs, added color to short]
+[1;37m[[1;33m2005.08.12 18:51[1;37m] [0m~feldegast/equip/guardhelm.c [made inherit BF Eq code and modify BF attribs]
+[1;37m[[1;33m2005.08.12 20:04[1;37m] [0m~feldegast/equip/dwarf_plate.c [made inherit BF Eq code and modify BF attribs]
+[1;37m[[1;33m2005.08.12 20:07[1;37m] [0m~zeus/realm/OBJ/onyx_platemail.c [made inherit BF Eq code and modify BF attribs]
+[1;37m[[1;33m2005.08.12 20:09[1;37m] [0m~zeus/realm/OBJ/ruby_amulet.c [made inherit BF Eq code and modify BF attribs]
+[1;37m[[1;33m2005.08.12 20:13[1;37m] [0m~zeus/realm/OBJ/blackrobe.c [made inherit BF Eq code and modify BF attribs, added color to short]
+[1;37m[[1;33m2005.08.12 20:16[1;37m] [0m~vertebraker/swamp/OBJ/j_earring.c [made inherit BF Eq code and modify BF attribs]
+[1;37m[[1;33m2005.08.12 20:24[1;37m] [0m~feldegast/equip/dwarf_plate.c, guardhelm.c, tsymbol.c, & wandereye.c [changed ::reset(arg); if(arg) return; to correct order of if(arg) return; ::reset(arg)]
+[1;37m[[1;33m2005.08.12 20:29[1;37m] [0m~zeus/realm/OBJ/onyx_platemail.c & ruby_amulet.c [changed ::reset(arg); if(arg) return; to correct order of if(arg) return; ::reset(arg)]
+[1;37m[[1;33m2005.08.13 09:35[1;37m] [0m~ultramagnus/shield_gondor.c [mademade inherit BF Eq code and modify BF attribs, added in if(arg) return; ::reset(arg);]
+[1;37m[[1;33m2005.08.13 11:26[1;37m] [0m~maledicta/cont/rdragon/sbracers.c [took out color I put in short(), cause players are whiny bitches]
+[1;37m[[1;33m2005.08.13 11:44[1;37m] [0mreimbursed Ribbit (my character) 80k coins that vanished from private BF room [odd...room's never reset before]
+[1;37m[[1;33m2005.08.13 17:26[1;37m] [0m~ultramagnus/shield_gondor.c [changed the name to "shield of gondor", it was "armor" which conflicts with 
+                    or ready commands]
+[1;37m[[1;33m2005.08.13 17:31[1;37m] [0m~fred/closed/bloodfist/power/concentrate [fixed a typo]
+[1;37m[[1;33m2005.08.14 05:40[1;37m] [0m~trix/castle/primonst/habit.c [made inherit BF Eq code and modify BF attribs]
+[1;37m[[1;33m2005.08.14 05:40[1;37m] [0m~trix/castle/primonst/ring.c [made inherit BF Eq code and modify BF attribs]
+[1;37m[[1;33m2005.08.16 20:15[1;37m] [0m~pavlik/armor/storm_cloak.c [made inherit BF Eq code and modify BF attribs, made save, gave short color]
+[1;37m[[1;33m2005.08.16 20:16[1;37m] [0m~pavlik/armor/storm_shield.c [gave color short]
+[1;37m[[1;33m2005.08.20 06:01[1;37m] [0m~fakir/ways/NPC/hobat.c [fixed a couple spelling mistakes]

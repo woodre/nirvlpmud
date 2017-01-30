@@ -1,0 +1,769 @@
+Sun Sep 20 20:08:03 1998 ** /players/saber/closed/new_mini/spells/dream.h has been taken out...
+Sun Sep 27 14:29:35 1998 ** since /players/mythos/awep/forest/snake.c was made non-savable.. its wc is now 20 from 18 (returns -4  and various self iflicting damagee)
+Sun Sep 27 14:30:07 1998 ** and since increased the wc of above the monster carrying it /players/mythos/amon/forest/fudo.c wc is now 55 from 50, hp 1000 from 900, and ac 18 from 15
+Sun Sep 27 14:53:42 1998 ** also fudo now has a 1 in 3 chance of being wc 80/ac 15 every hb.. else it is wc 55 ac 18
+Mon Oct 12 21:06:56 1998 ** madea chage to /players/heroin/hunting_grounds/pred/predstone.c .. the stone was doing a wuery_realm() not a realm().. now fixed.. also added in 40 sp cost
+Sun Nov  1 07:24:07 1998 ** players/sandman/NEWBIE/newbie_bag added in a check for holder's level.. if greter than 5 it dests...
+Sun Nov  1 07:24:19 1998 ** it is a newbie bag
+Sun Nov  1 07:36:22 1998 ** placed back my register cmd in the mmisc/watch.c and placed in aghost check
+Sun Nov  1 07:36:51 1998 ** placd back the cut bals cmd in the /players/saber/closed/new_mini/succ.c the price wa raised fro 40 sp to 120 sp
+Sun Nov  1 13:03:02 1998 ** apporved daranath's new qultor city area
+Mon Nov  9 09:29:16 1998 ** promoted daranath from 69 to 70... "69" was a joke... *grins*
+Sun Nov 15 23:19:47 1998 ** gave sleepwalker back 10k sp ... he was at negative sp
+Mon Nov 30 20:57:26 1998 ** mved /players/lew/closed/quarter.c and lew.c to .bak files (level 21 wiz must use /obj/wiz_tool.c)
+Mon Nov 30 20:57:44 1998 ** also commented out quarter.c loading in /players/lew/castle.c
+Thu Dec  3 08:33:34 1998 ** released ravyn ferom prison
+Wed Dec  9 16:19:51 1998 ** opened a limited version of the Healer's guild.. only up to 6 members can join right now .. Beta test
+Wed Dec  9 17:57:51 1998 ** healed puck because he showed a bug for me in the xp code fof the guild.. in doing so he took damage..
+Mon Dec 14 13:45:02 1998 ** added -150 coins to zephyra (she was 150 over 80k max limit)
+Mon Dec 14 16:40:41 1998 ** made /players/saber/stuff/process.c so it can not be used by a healer
+Mon Dec 14 17:26:00 1998 ** /players/saber/closed/new_mini/spells/bless_corpse.h healers can not use this
+Tue Dec 22 13:45:37 1998 ** fixed /players/nightshade/armor/talisman.c so that it loads
+Thu Dec 24 10:01:49 1998 ** did some cleaning of /open... rm the empty dirs
+Wed Dec 30 13:40:17 1998 ** released tara from my prison
+Sun Jan  3 12:22:43 1999 ** /players/saber/armor?teddy.c was weight 0 now 2
+Mon Jan  4 13:36:43 1999 ** added in a environment check to /players/saber/closed/toys/fire2.c
+Tue Jan  5 17:56:31 1999 ** testing new workreport system
+Thu Jan  7 17:45:53 1999 ** added in a wizes command to the watches that shows a list of currently online and visible wizes
+Fri Jan  8 10:37:07 1999 ** set up so dazed is imprisoned
+Fri Jan  8 10:37:43 1999 ** dazed == worm == damage == etc etc tec.... im only allowing him damage
+Sat Jan  9 00:30:50 1999 ** set it up so smoke's chars login to my prison automatically/... he's being idiotic (refer to /log/PRISON)
+Sat Jan  9 00:31:09 1999 ** note: the above does not auto load at boot
+Sun Jan 10 09:48:21 1999 ** set it up my darkroom2.c sets the prisoners' home to /room/prison.c
+Sun Jan 10 09:50:21 1999 ** set up my autosets to capture prisoners into room/prison
+Sun Jan 10 11:21:27 1999 ** healed eevee due to a stupid mistake on my part that caused one of the spells to bring the caster down to negative sp
+Sun Jan 10 11:21:45 1999 ** view /log/MYTHOS_GUILD for the info
+Fri Jan 15 07:58:48 1999 ** /players/deathmonger/CASTLE/tavern.c took out exit to the "party room" which gave player's the old party object
+Fri Jan 15 07:59:53 1999 ** just in case i mved /players/deathmonger/CASTLE/ptroom.c to .bak file (see above)
+Fri Jan 15 10:12:53 1999 ** /players/sandman/ASGARD/EVIL/trees.c added in a varioable that gets reset every reset so that when a player types sit on logs and get trees to fight that it can only happen once per reset
+Fri Jan 15 10:13:16 1999 ** basically the room allowed infinate monster loads .. now it no longer does that
+Fri Jan 15 13:15:12 1999 ** /players/hawkeye/monster/sarge.c was ac 5 now ac 9 per rules (level 11)
+Fri Jan 15 13:16:54 1999 ** /players/hawkeye/monster/corporal.c was lvl 7, ac 5, wc 7, hp 200.. now is lvl 7 ac 6, wc 11, hp 200 as per rules
+Fri Jan 15 13:19:45 1999 ** /players/hawkeye/monster/guard2.c was l 15, ac 5 wc 20, hp 300.. changed ac to 11
+Wed Jan 20 12:02:55 1999 ** added into /players/mizan/poly/PDM.c so when a player leaves the guild their home gets set to /room/church.c
+Fri Jan 22 15:53:43 1999 ** /players/sandman/pets/pet.c READDED the spell point drain i put in the heartbeat... now costs 1 - 4 sp per hb
+Sat Jan 23 08:03:42 1999 ** beck's rangers/dark rangers need reviewing since he obvious didnt take my request for a list of changes and woh approved them.... snow has agreed to spend the time reviewing them and reapproving things...in short the rangers are on probation
+Sat Jan 23 08:14:09 1999 ** fixed a prob with /players/saber/closed/bards/bardswordb.c when sno added in the set_type("sword") he left out a ; which was causing errors
+Sun Jan 24 07:58:27 1999 ** /players/rich/lower/borg.c lvl 17 ac 13 wc 17 coins 1k + rnd2k now lvl 17 qc 13 wc 30 coinds 100+rnd1k
+Sun Jan 24 22:59:45 1999 ** /players/lew/closed/quarter.c is rmed.. lew decided he was above the rules and put back the wiztool which i had mved over as a bak file...
+Sun Jan 24 23:20:34 1999 ** also mved the lew.bak and quarter.bak files to my wiztools dirs...
+Wed Jan 27 13:33:34 1999 ** /players/pavlik/closed/stuff/rabies-master.c line 86 added in a check for environment
+Mon Feb  1 16:20:31 1999 ** /players/wocket/mushrooms/armor.c added in a set_type("armor") so it shows up as type armor properly
+Mon Feb  1 17:23:52 1999 ** /players/sandman/NEWBIE/newbie_armor.c was ac 3 now is ac 2
+Mon Feb  1 17:25:22 1999 ** /players/sandman/NEWBIE/newbie_sword.c was wc 6 now wc 12
+Mon Feb  1 17:26:05 1999 ** teh above two things (the drop in ac for the newbiearmor and increase of wc in the newbie sword)
+Mon Feb  1 17:26:37 1999 ** are to help and hinder the newbie...:>  reason to drop in ac is that ac 3 should be something one must get
+Mon Feb  1 17:26:50 1999 ** while wc 6 is waaay to low... even the feline claws are wc 14
+Mon Feb  1 17:28:21 1999 ** wups.. feline claws are wc 10 return 2... so ill cha
+Mon Feb  1 17:28:44 1999 ** ill change the newbie sword to wc 10
+Thu Feb 25 11:39:16 1999 ** mved /players/mizan/etheriel/beasties/sarawak.c to .bak file and replaced it with a bean
+Thu Feb 25 11:40:33 1999 ** also cleaned up /players/hippo/c/ery.c (had an extra reset in it and all sorts of wacky stuff)
+Thu Feb 25 11:52:37 1999 ** added a environ check in /players/mizan/etheriel/environs/exploder.c
+Thu Feb 25 13:52:01 1999 ** changed /players/mizan/closed/RandomRoom.c a bit .. trying to fix it from showing up in debug.log
+Thu Feb 25 13:52:11 1999 ** ill be tweaking it off and on
+Thu Feb 25 13:58:39 1999 ** /players/wizardchild/auto_load.c took out reference to mizan's stuff
+Thu Feb 25 16:01:34 1999 ** added in an object check in /players/saber/closed/new_mini/spells/succubus_bye.h
+Fri Feb 26 09:51:22 1999 ** /players/mizan/etheriel/tornado.c fixed up the callouts
+Fri Feb 26 09:56:04 1999 ** /players/mizan/extheriel/beasties/exploding-mac.c now has an environment check in the callout
+Fri Feb 26 11:39:47 1999 ** /players/nooneelse/black/vamp_servant.c put a check for find_player(master_name) in the follow callout
+Fri Feb 26 12:28:01 1999 ** ok the dit is fdone
+Fri Feb 26 12:30:03 1999 ** /players/pavlik/weapons/falcon_rapier.c added in a log check
+Fri Feb 26 14:54:33 1999 ** added ina check to /players/nooneelse/black/vamp_guild_wolf.c in the heartbeat to double check existance of attacker
+Fri Feb 26 15:12:35 1999 ** demoted pavlik to level 20
+Fri Feb 26 15:14:07 1999 ** because of this stupid illegal handing out illegal weapons deal
+Fri Feb 26 15:19:59 1999 ** mved /players/pavlik/closed/cloak.c to .bak since he is now level 20
+Fri Feb 26 15:20:13 1999 ** btw.. pavlik decided to throw a fit and deleted most of his files...
+Fri Feb 26 15:23:01 1999 ** /players/pavlik/closed/workroom.c commented out the more wizlike abilities
+Fri Feb 26 16:41:31 1999 ** /players/pavlik/guild/room/start.c made so that meijin's wont have issues logging in.. 1/3 of thier guild xp is given to them as real xp
+Fri Feb 26 16:46:33 1999 ** changed /players/pavlik/workroom.c to inherit church
+Mon Mar  1 11:24:47 1999 ** /players/beck/object/tractor.c  addedin a this_player() check in the id()
+Mon Mar  1 11:43:13 1999 ** mved /players/pavlik/closed/workroom.c and workroom2.c to bak files
+Mon Mar  1 13:06:25 1999 ** /players/snow/closed/cyber/objects/clean.c added in an environment check to the clean_up function
+Mon Mar  1 13:09:47 1999 ** /players/snow/closed/cyber/objects/living.c in test_if_any_hear() added in environment check
+Mon Mar  1 13:27:32 1999 ** /players/mizan/closed/DescMasterDM.c fixed an array error
+Mon Mar  1 14:56:32 1999 ** /players/nooneelse/black/vamp_guild_wolf.c added in a check to make sure when checking for owner in the room it checks objects that are living only
+Mon Mar  1 14:57:46 1999 ** /players/sandman/SURR/path4.c took out exit to paladon guild hal
+Mon Mar  1 15:33:51 1999 ** /players/nooneelse/black/vamp_guild_wolf.c took out the whole loop that checks every hb if the owner is being attacked.. also added in an environment check in hb
+Mon Mar  1 15:45:11 1999 ** /file /players/unsane/castle.c took out the add_action("say");add_xverb(""); as the callout was being called by ANY action done by anyone..
+Mon Mar  1 16:22:36 1999 ** /players/mizan/etheriel/items/wooly.c ac 2 wight 0 is now weight 2
+Mon Mar  1 21:27:03 1999 ** /players/mizan/etheriel/items/telephone-pole/.c  set up so that weapon_hit() works properly
+Mon Mar  1 21:29:02 1999 ** /players/beck/room/venus6.c addedin a this_player() check in the exit()
+Mon Mar  1 21:32:08 1999 ** /players/mizan/closed/borg-cube.c added in envornment checks throuout the code
+Mon Mar  1 21:35:16 1999 ** /players/eurale/Keep/poison.c addedin a living check in the callout
+Tue Mar  2 07:42:13 1999 ** /players/snow/shadows/mon/death_knight.c line 77 added in an environment check to the callout
+Tue Mar  2 07:44:59 1999 ** /players/mizan?etheriel/beasties/lawnmower.c added in a this_player() check as well as took out the callout in reset().. callout is called at init() by this_player(*)
+Tue Mar  2 07:46:43 1999 ** actually yook out the trigger by this_player()
+Tue Mar  2 07:53:53 1999 ** /players/nooneelse/black/vamp_guild_wolf.c added in a check for attacker() on line 130
+Tue Mar  2 07:56:35 1999 ** /players/mizan/etheriel/items/green-cape.c weight was 0 now is 1
+Tue Mar  2 07:58:19 1999 ** /players/mizan/items/hoopak.c made sure the weapon_hit() works
+Tue Mar  2 08:06:13 1999 ** same with wood-sword.c (mizan';s)
+Tue Mar  2 08:14:10 1999 ** /players/snow/shadows/stuff/ring,c line 20 added in a this_player() check
+Tue Mar  2 08:34:16 1999 ** added in to /players/snow/shadows/mon/death_knight.c a if(MEAT) check on line 80
+Tue Mar  2 10:22:56 1999 ** /players/nooneelse/mon/wraith.c money was set to 300 now 200 (as per monster guide) aso  now has a if(arg) return; check and a ::reset(arg);
+Tue Mar  2 10:25:24 1999 ** same with ghoul.c and skeleton.c
+Tue Mar  2 10:26:10 1999 ** same with spectre.c
+Tue Mar  2 10:27:42 1999 ** same with lich.c
+Tue Mar  2 11:10:16 1999 ** /players/nooneelse/mon/skeleton.c spectre.c and wraith.c changed the object obj to object obb
+Tue Mar  2 16:31:18 1999 ** reset akumalore's sta from 24 to 10
+Tue Mar  2 16:35:38 1999 ** /players/aber/closed/quest/devo.c added in a environment check in the callout
+Tue Mar  2 16:39:48 1999 ** /players/dragnar/rooms dir... added in this_player() checks to all rooms with exit()
+Tue Mar  2 20:50:07 1999 ** /players/sandman/SURR/path2.c took out exit to now defunct tower area
+Tue Mar  2 20:52:05 1999 ** /players/saber/closed/new_moini/blade_switch./c added in environment checks into callouts
+Tue Mar  2 20:53:07 1999 ** /players/saber/closed/poison.c added in environment check to callout
+Tue Mar  2 21:00:28 1999 ** /players/saber/monsters/hero/scorp.c added in environ check to callout
+Tue Mar  2 21:11:17 1999 ** added in a /players/saber/ryllian/orin_ruin2.c a check for living
+Wed Mar  3 09:19:37 1999 ** /players/catwoman/city/17.c took out the exit to west to hall.c since hall.c isnt loading
+Wed Mar  3 09:39:43 1999 ** /players/beck/room/venus4.c fixed it so that the large_flytrap.c would clone.. (note: beck had them loading as large_flytrap .c   the space is key)
+Wed Mar  3 09:46:29 1999 ** /players/ultramagnus/bridge1.c took out exit to room/rowboat.c as file doesnt exist
+Wed Mar  3 12:28:24 1999 ** /players/nooneelse/black/guild_curse_ (wups.. guild_damn_curse.c) added in environ check to all callouts
+Wed Mar  3 15:27:49 1999 ** /players/sandman/SURR/path6.c took out exit to desert as it no longer exists
+Wed Mar  3 15:47:59 1999 ** /players/morgar/tower3.c made the special on the sword return -20 instead of "miss" when alignment of user is less than 0 (miss causes errors)
+Wed Mar  3 17:15:54 1999 ** /players./boltar/things/clock_tower.c moved a } so that the environment check includes call s of envst (envst should only be set if environment exists
+Thu Mar  4 09:31:25 1999 ** /players/deathmonger/tavern.c commented outobjects not being able to be cloned cause they no longer exist
+Thu Mar  4 09:33:23 1999 ** /players/saber/ryllian/gym.c took out an exit that no longer works
+Thu Mar  4 09:40:53 1999 ** fixed my sciwatch so fight area gets reset to what it is supposed to be when player registers in a pk area
+Thu Mar  4 11:45:44 1999 ** /players/wocket/turtleville/NPC/sylic.c fixed so if(arg) return; exists and so monster doesnt clone a new set of sword and armor at reset
+Thu Mar  4 14:44:01 1999 ** /players/llew/closed/crystal/regen.c put in environment checks... also edited the code so it works properly.. (had some wierd useless stuff in there)
+Thu Mar  4 15:04:28 1999 ** fixed my lock_ob.c so that if objects dont clone the player gets reimbursed and the array member is wiped
+Thu Mar  4 15:09:02 1999 ** /players/saber/ryllian/ryll11.c took out exit that doesnt exist (
+Thu Mar  4 15:21:26 1999 ** players/daranath/mons/orc_thief.c added in environment check to callout
+Thu Mar  4 15:22:53 1999 ** /players/ultramagnus/moria.c had a misspelling with a filepath to rohan.c now fixed
+Thu Mar  4 15:24:17 1999 ** also took out an exit that no longer exists
+Thu Mar  4 15:25:41 1999 ** /players/ultramagnus/orcs.s\c took out exit that doent exist
+Thu Mar  4 15:26:59 1999 ** same with gimili.c
+Thu Mar  4 15:30:48 1999 ** same with ins_gondor.c
+Thu Mar  4 15:34:18 1999 ** created /players/mizan/etheriel/ROOMS/0.c as it crops up
+Thu Mar  4 15:34:56 1999 ** as well as /players/mizan/etheriel/0.c
+Thu Mar  4 17:42:07 1999 ** /players/nooneelse/black/vamp_guild_curse.c or whatever.. guild_damn_curse.c is now set to destruct if the target isnt there
+Thu Mar  4 17:45:53 1999 ** also took out the damage doing to is_player
+Thu Mar  4 20:51:02 1999 ** /players/deathmonger/hall1.c made the west function work properly
+Thu Mar  4 21:00:37 1999 ** /players/mizan/etheriel/eenvirons.explody.c took out inherit to clean and moade it dest if no environ
+Thu Mar  4 21:08:09 1999 ** all files in /players/,mizan/etheriel/ROOMS where changed to have reset(arg) { ::reset(arg) if(arg) return;     in them
+Thu Mar  4 21:08:27 1999 ** also added a change to /players/mizan/closed/RandomRoom.c to reflexct the usage of arg
+Thu Mar  4 22:33:37 1999 ** took out the call to wolf_leak() in /players/nooneelse/black/vamp_guild_wolf.c as the functions doeesnt exist
+Fri Mar  5 09:48:13 1999 ** /players/mizan/closed/LiquidRoomsDM.c added in query_level() > 0 check in bleat()
+Fri Mar  5 09:57:08 1999 ** /players/saber/ryllian/orin_ruin2.c fixed so it loads
+Fri Mar  5 10:02:32 1999 ** added a query_level() check of 0 in /players/mizan/closed/sql/datalogger.c
+Fri Mar  5 10:29:10 1999 ** /players/molasar/WEAPONS/sword.c now inherits / /obj/weapon and not sandman's paladin weapon
+Fri Mar  5 10:39:03 1999 ** same withh all other weapons in that dir... as well as made sure the reset(arg) works properly
+Fri Mar  5 11:04:51 1999 ** redid the ruins of orin/bards area (/players/saber/ryllian/orin_ruin2, /players/saber/closed/old_bard.room dir etc)
+Fri Mar  5 13:46:06 1999 ** /players/trix/.closed/obj/scanner.c made sure there was a if!arg) check in the register()
+Fri Mar  5 13:46:58 1999 ** rmed /players/trix/closed/obj/SUMMER.bak .. no need for an old version of summerhead to have around
+Fri Mar  5 13:49:59 1999 ** gave usagi a new scanner (the trix on) since i had him get rid of the old since i just fixed it and a new instance should be cloned
+Fri Mar  5 14:10:28 1999 ** /players/mizan/etheriel/beasties/ziggle.c commented out the iggle_rot.c attack as the object doesnt exist to clone
+Fri Mar  5 14:18:59 1999 ** ziggle now calls run_away() properly...
+Fri Mar  5 14:46:29 1999 ** fixed mustaine to have only gothic and blade miniguilds.. took out the gypsy for him
+Fri Mar  5 15:24:01 1999 ** /pl
+Fri Mar  5 15:24:39 1999 ** /players/llew/junk/rosefall.c mved to bak file till i sit down and fix it...(im lazy)
+Fri Mar  5 15:27:49 1999 ** mved petals.c as well same reason
+Fri Mar  5 15:36:05 1999 ** /players/llew/junk/item_rock.c made so it wont try to clone the rose thingy
+Fri Mar  5 16:33:34 1999 ** fixed my healing chamber so if you exit with neg coins you are set to 0 coins
+Fri Mar  5 16:58:12 1999 ** created a fix for the money and corpse combo bug... copy is /players/mythos/money.c .. mailed boltar about mving it to /obj
+Fri Mar  5 17:57:08 1999 ** fixed /players/trix/castle/dismonst/dealer.c so it checks to see that who exists
+Fri Mar  5 17:57:16 1999 ** and is a player
+Fri Mar  5 18:03:55 1999 ** /players/saber/closed/new_mini/spells/value_weapon.h has a if(str) check
+Fri Mar  5 18:20:09 1999 ** fixed my tunic (/platers.mthos/closed/guild/forest/armor/tunic.c)
+Fri Mar  5 18:26:14 1999 ** fixed my /players/mythos/amisc/forest/pegg.c
+Fri Mar  5 21:13:59 1999 ** fixed /players/mythos.amon/forest/fuji.c and raiden.c  the callouts needed environ checks
+Fri Mar  5 21:18:08 1999 ** same with /players/mythos./aarmor/forest/light.c
+Sat Mar  6 10:52:39 1999 ** /players/mizan/closed/LiquidRoomDM.c added in an environment check for ob at line 290
+Sat Mar  6 11:02:37 1999 ** /players/mizan/closed/RandomRoom.c added in a this_playuer() environment this_player() and environmentthis_object check to short() at line 109
+Sat Mar  6 11:07:25 1999 ** /players/mizan/closed/borg-cube.c added in environment checks and made reset() work properly.. also took out unneccessary callouts
+Sat Mar  6 11:10:13 1999 ** /players/mizan/etheriel/heals/pickles.c moved the destruct over  so it made senese
+Sat Mar  6 11:14:21 1999 ** /players/eurale/Park/jp65.c made sure that the pry command checked FIRST to see if a corpse existed when tooth was used as an arg
+Sun Mar  7 10:53:31 1999 ** /players/lew/elof/virus2.c fixed it up with environment checks and made the callout at rate of 10 not 1
+Sun Mar  7 10:58:19 1999 ** same with virus1.c
+Sun Mar  7 11:06:43 1999 ** added a line at 467 of /players/mizan/closed/RandomRoomDM.c that checks everything this_player() environment etc
+Mon Mar  8 09:40:07 1999 ** /players/cyrex/private/pepsimachine.c made it so it is out ot\f order... it clones objects that dont exist
+Mon Mar  8 11:28:12 1999 ** /players/ultramagnus/hobshop.c took out the exit to a nonexistant file
+Mon Mar  8 11:48:55 1999 ** /players/bastionantaria/belgaers/road2.c took out 2 exits that go to objects that dont exist
+Mon Mar  8 11:50:51 1999 ** /players/eurale/Druid/df12.c took out call to callout of heal_druid() not sure what he wanted to do with it...
+Mon Mar  8 11:52:55 1999 ** /players/wocket/graveyard/groom.c added in a this_player() check to exit() and took out the return 1; which prevents people from exiting
+Mon Mar  8 13:03:49 1999 ** /players/snow/shadows/fort/throne_room.c made sure exit()  does athis_player() check
+Mon Mar  8 13:05:57 1999 ** same with base.c
+Mon Mar  8 13:59:21 1999 ** /players/nooneelse/black/vamp_servant.c fixed at line 384-385 to check for find_player and then present()
+Mon Mar  8 14:45:18 1999 ** /players/boltar/things/hoth.c lines 60ish - 65 broke down the ordero f the if checks from double statments to single statments (basically each check is its own if statment)
+Mon Mar  8 14:48:51 1999 ** same with cop.c
+Mon Mar  8 15:02:32 1999 ** fixed the vamp_servant again.. this time for ereal..:>
+Mon Mar  8 15:02:42 1999 ** fixed my snake monsters from the snake weapon..
+Mon Mar  8 15:46:51 1999 ** /players/saber/closed/new_mini/spells/succubus_bye.h made sure OBJ is set to 0 when gone is called
+Mon Mar  8 16:56:48 1999 ** /players/nooneelse/black/vamp_servant.c adde din a item check at line 207
+Mon Mar  8 22:18:22 1999 ** /players/daranath/qualtor/mon/mourn_coil.c fixed the callout to check is_player() before doing the query_staattrib
+Tue Mar  9 11:59:47 1999 ** changed /players/nooneelse/black/guild_damn_curse.c from hit_player to heal_self since its creating a bug wdoing a hitplayer call when monster dies
+Tue Mar  9 12:07:49 1999 ** added in a this_player() check in /players/arrina/grounds/hunttrap.c
+Tue Mar  9 15:42:43 1999 ** /players/saber/armor/ozring.c  environment check and object check in callout
+Tue Mar  9 15:55:41 1999 ** /players/nooneelse/black/lib/wraith_form.h it was trying to turn people vis when they are invis when they move from wraith form to nonwraith form...
+Tue Mar  9 15:55:55 1999 ** which is fine but it wasnt calling the proper function.. made sure it did
+Tue Mar  9 17:42:37 1999 ** /players/nooneelse/mon/druid.c   added in checks to the heart_beat
+Tue Mar  9 17:43:29 1999 ** and fixed the fucntion call from query_attacker() to query)attack()
+Tue Mar  9 17:49:17 1999 ** added ina this_player() check in exit() of /players/eurale/Fiend/mm1.c
+Tue Mar  9 17:55:46 1999 ** /players/molasar/WEAPONS/elfsword.c made it inherit obj/weapon made sure the special only happens 1 out of 3 and fixed the reset()
+Wed Mar 10 04:47:06 1999 ** /players/bastion/obj/vender/.c made sure that if nothing is set to clone then nothing is cloned
+Wed Mar 10 04:56:08 1999 ** fixed the files in /players/bastion/antaria/citadel so that exits that lead to files that dont exist are taken out
+Wed Mar 10 09:26:10 1999 ** /players/nooneelse/black/vampire_fangs.c on line 797 tookm out the reove_callout and replaced with return 1;
+Wed Mar 10 12:14:12 1999 ** /players/boltar/things/antipk.c added in living checks and is_player() checks at line 88
+Wed Mar 10 12:16:14 1999 ** same with hoth.c
+Thu Mar 11 10:06:11 1999 ** set up /players/pavlik/mages/rooms/guild_room5.c so that people logging into this room (i.e. home being set) has their home set to church and moved to church
+Thu Mar 11 10:11:27 1999 ** /players/pavlik/ilstkarn/weapons/rock_breaker.c and ilstkarn/armor/thief_boots.c created inheriting /players/boltar/things/tree.c so when stored items of these two are cloned they get trees
+Thu Mar 11 10:21:49 1999 ** players/omega/ocity/magicshop blocked off the buy and list commands as they dont work
+Thu Mar 11 11:21:35 1999 ** /players/pain/Legion/gob.c added in a this_player() check at line 265 so that an error in debug.log doesnt happen
+Thu Mar 11 15:08:23 1999 ** /players/saber/stuff/tag_gun.c added in an environment check at line 116
+Thu Mar 11 15:10:23 1999 ** /players/mizan/etheriel/items/wet-noodle.c made the weapon_hit() work
+Thu Mar 11 16:54:52 1999 ** added some checks to /players/mizan/etheriel/beasties/spuck.c
+Thu Mar 11 17:35:56 1999 ** /players/molasar/MONSTER/guard.c fixed reset and callout
+Thu Mar 11 18:36:19 1999 ** /players/mizan/etheriel/items/br-necklace.c was weight 0 now
+Thu Mar 11 18:36:35 1999 ** now is weight 1
+Thu Mar 11 21:15:35 1999 ** /players/eurale/Keep/poison3.c changed the hi_player to heal_self neg because it would attempt to hit_player when the person was dead or dying
+Thu Mar 11 21:18:26 1999 ** /players/molasar/CASTLE/INNER/meeting.c took out the cloning of the staff cause the object doesnt exist
+Thu Mar 11 21:21:28 1999 ** made sure the reset works in /players/molasar/CASTLE/INNER/meeting.c
+Thu Mar 11 21:57:02 1999 ** /players/beck/MortalKombat/Temple.c added in a present warrior check to the BeginFight and Fight functions
+Fri Mar 12 00:44:28 1999 ** /players/catwoman/tl.c added ina n argument check so no null values get passed
+Fri Mar 12 10:23:07 1999 ** added a check in /players/nooneelse/black/guild_damn_curse.c for query_attack()
+Fri Mar 12 10:32:15 1999 ** /players/molasar/WEAPONS/curved_sword.c fixed it so it will clone
+Fri Mar 12 12:24:42 1999 ** /players/feldegast/arena/melee/m10.c added in a if(!targ) check in the callout
+Fri Mar 12 15:48:54 1999 ** /players/saber/closed/toys/fires2.c made correction in callout so errors dont erupt
+Fri Mar 12 16:18:19 1999 ** /players/saber/closed/bards/bardsword.c fixed the weapon_hit so that query_name is called not query_real_name
+Fri Mar 12 16:19:41 1999 ** gave heavena a new bardsword because i just fixed a bug in it (refer above) (had to dest her old version)
+Sat Mar 13 01:56:58 1999 ** /players/boltar/templar/templar.c added ina if(!str) check at line 1683
+Sat Mar 13 02:47:03 1999 ** /players/dreamspeakr/WEDDING/OBJ/restore.c added in a check for the find_player() in the timer callout
+Sat Mar 13 09:15:16 1999 ** /players/feldegastarena/melee/m10.c ad changed the function type of river from void to int and made all the returns return 1
+Sat Mar 13 09:21:34 1999 ** /players/feldegast/arena/melaa/m11.c same deal as m10.c void to int
+Sat Mar 13 09:25:48 1999 ** /players/arrina/grounds/hunttrap.c added in living check to DoDomage()
+Sat Mar 13 09:27:12 1999 ** /players/bastion/isle/wiz/bedroom.c added in a check for damian
+Sun Mar 14 03:39:41 1999 ** fixed /players/monsters/mr/minotar.c so it loads
+Sun Mar 14 03:42:55 1999 ** /players/boltar/templar/templar.c line 700 added in a check
+Sun Mar 14 09:25:37 1999 ** /players/saber/monsters/hero/sscorp.c addedin an is_player() check in the callout
+Sun Mar 14 09:34:29 1999 ** /players/snow/dark/rooms/arch.c addin exit a check for this_player()
+Sun Mar 14 09:36:35 1999 ** /players/mizan/etheriel/heals/zagnuts.c moved the destruct over till after the player gets the messegae about the wrapper being used up
+Sun Mar 14 09:40:25 1999 ** added a living check in /players/saber/closed/toys/fire2.c in endgame()
+Sun Mar 14 09:41:43 1999 ** /players/snow/shadows/fort/main_hall.c added in a thisplayer check to the eit
+Sun Mar 14 09:43:09 1999 ** /players/daranath/qualtor/mon/alchemist.c addedin a environ check to the callout
+Sun Mar 14 09:43:59 1999 ** same with keeper.c
+Sun Mar 14 09:45:25 1999 ** /players/llew/closed/crystal/xetra_claws.c added in a wielded_by check at line 126
+Sun Mar 14 09:47:35 1999 ** /players/mizan/closed/4cc.c added a break down of the if checks at line 64
+Sun Mar 14 09:51:15 1999 ** /players/nooneelse/black/skin.c added a arg check and changed the sscanf to a if(sscanf) in function set_skin_msg()
+Sun Mar 14 09:55:01 1999 ** /players/saber/closed/new_mini/succ.c added in aif(!ov) check at line 50
+Sun Mar 14 09:56:09 1999 ** added in an environ check to /players/saber/monsres/mr/rider.c
+Sun Mar 14 10:01:37 1999 ** /players/sado/shop/drunk.c added in a if(!str) to line 72
+Sun Mar 14 10:02:51 1999 ** /players/dune/closed/guild/rooms/entrance.c added in a thisplayer check to exit()
+Sun Mar 14 10:04:23 1999 ** /players/hurtbrain/obj/pigeon.c changed evironement to environment on lione 106
+Sun Mar 14 10:05:47 1999 ** mved /players/pavlik/ilstkarn/weapons/rocke_break.c to rockbreaker.c .. my bad...
+Sun Mar 14 14:06:46 1999 ** /players/dune/closed/guild/objects/shadow.c added in a this_player() check at lone 43
+Sun Mar 14 14:34:19 1999 ** /players/unsane/castle.c made sure the command call was correct
+Sun Mar 14 22:07:53 1999 ** /players/nooneelse/b;lack/lib/grasp_enemy.h took out the ability to use in pk
+Sun Mar 14 22:12:23 1999 ** same with scratch_enemy.h
+Sun Mar 14 22:19:48 1999 ** /players/haji/rush/ny/estreet3.c  took out the exit which leads to an object that doesnt exist
+Sun Mar 14 22:23:25 1999 ** copied saber's wiztool over for daranath (by permission of saber and daranath)
+Sun Mar 14 22:29:24 1999 ** /players/traff/delnoch/forest/forest1.c took out the exit that led to no file
+Sun Mar 14 22:35:01 1999 ** /players/saber/weapons/dance.c made query-real_name into query_name
+Sun Mar 14 22:38:55 1999 ** /players/boltar/templar/room.c at line 219 added a if(!str) check
+Sun Mar 14 22:41:29 1999 ** /players/boltar/things/antipk.c a around line 265 - 280 added in a return 1l at end of callout
+Sun Mar 14 22:43:49 1999 ** added in an environment check as well
+Sun Mar 14 22:56:15 1999 ** created a file here.c that automates the ability to edit and update a room that one is currently in
+Sun Mar 14 22:56:25 1999 ** copied over to daranath as it was his request
+Sun Mar 14 23:03:01 1999 ** /players/saber/closed/toys/xmas.c addedin environment checks in the callouts
+Mon Mar 15 09:36:26 1999 ** /players/snow/gate.c added in a this_player() check in exit()
+Mon Mar 15 09:41:10 1999 ** /players/llew/Other/monsters/llew.c added in a environment check in heart_beat()
+Mon Mar 15 09:42:44 1999 ** /players/nooneelse/mon/woodsmith added in a if(!str) in say()
+Mon Mar 15 09:44:46 1999 ** also added inthe proper ::reset(arg) and if(arg) calls
+Mon Mar 15 11:55:30 1999 ** /players/mizan/closed/poly/PDM.c line 2937 added in if(!str) and environ this_player checks
+Mon Mar 15 11:57:15 1999 ** /players/mizan/closed/poly/gob.c added at line470 a check for !str
+Mon Mar 15 12:54:21 1999 ** /players/beck/Rangers/RangerCommunicator.c line 130 call to save_ranger() is SaveRanger().. (no save_ranger() exists)
+Mon Mar 15 17:33:33 1999 ** /players/llew/closed/crystal/frag_demon.c added in a if(!target) check in hb as well as an environ check in die()
+Mon Mar 15 17:34:39 1999 ** /players/morgoth/CASTLE/fire_tower1.c took out exit that doesnt exist
+Mon Mar 15 20:54:54 1999 ** /players/unsane/xmen/comicbook.c added in a if(!str) check in the read function
+Mon Mar 15 21:57:08 1999 ** /players/arrina/tmon/qmage.c added an environ check into the randOM_move callout
+Mon Mar 15 22:05:36 1999 ** /players/arrina/tmon/qmage.c also added a if query-attack() in the random move so that if being attacked the mage doesnt leave
+Tue Mar 16 09:56:42 1999 ** /players/saber/stuff/popper.c added in a if!find_living check
+Tue Mar 16 10:09:50 1999 ** /players/llew/Other/monsters/llew.c took out the stuff that moves him back to the lazy room .... its redundant and not really needed.. and its creating errors because of timing (he leaves the room just as player enters the room then he returns again ... kinda screwy)
+Tue Mar 16 12:11:55 1999 ** /players/boltar/templar/templar.c lines 649-655 (who function) added in environment checks
+Tue Mar 16 12:14:06 1999 ** /players/dune/closed/guild/lib_tools/diges.c added in a if(!ob) check
+Tue Mar 16 12:17:08 1999 ** /players/mizan/etheriel/ROOMS/slowbo.c had the force_quit.c as an object to loadd... took that out
+Tue Mar 16 14:48:05 1999 ** /players/boltar/closed/guild/log.c added in a if(!str) check in the roll()
+Tue Mar 16 16:55:20 1999 ** /players/mizan/etheriel/beasties/spuck.c made sure the checks to be able to seell is correct
+Tue Mar 16 17:34:11 1999 ** /players/nooneelse/black/guild_summons.c drop () .. added a check for !str
+Tue Mar 16 21:26:04 1999 ** /players/mizan/etheriel/ROOMS/linna.c added a return 1; in init after the check for guild
+Tue Mar 16 21:43:21 1999 ** /players/dune/closed/guild/snow/weapons/wepmanager.c added at line 322 a check for if (!this-player() and a if(!IPTP)
+Tue Mar 16 21:45:23 1999 ** added in a str check in /players/dune/closed/guild/implants/c at line 222
+Wed Mar 17 09:56:11 1999 ** /players/dune/closed/guild/lib_tools/digest.c fixed so tht type matches returns
+Wed Mar 17 10:09:37 1999 ** /players/asmithrune/objects/staff.c mved to staff.bak
+Wed Mar 17 10:48:02 1999 ** /players/haji/ny/wstreet4.c took sout exist that dont exist
+Wed Mar 17 10:48:42 1999 ** same with etstreet1.c
+Wed Mar 17 13:37:52 1999 ** /players/saber/closed/new_mini/kenderbag.c changed line 62 from clonign an obsolete object to a pillow
+Wed Mar 17 13:44:25 1999 ** mved /players/beck/Rangers/RangerSpaceship.c to .bak.. it HASNT been approved
+Wed Mar 17 13:51:22 1999 ** /players/nightshade/misc/talisoman.c changed the amount of charges below which it becoems dested... basically ifthe charges fdall below 1 + random 7 then it dests
+Wed Mar 17 13:55:07 1999 ** /players/feldegast/wep/winter_light.c added in weight of 4 and made sure reset is done right
+Wed Mar 17 14:01:34 1999 ** /players/feldegast/wep/gladius.c weight was 2 now 4 (wc 19) also made sure the add_hit_point drain works (was add_hp which doesn t work)
+Wed Mar 17 14:38:14 1999 ** /players/beck/castle.c commented out the loading of the rangerspaceship
+Wed Mar 17 22:51:02 1999 ** /players/nooneelse/closed/guild_form.c line 210 added a if(!str) check
+Wed Mar 17 22:55:06 1999 ** /players/mizan/closed/poly/PDM.c added a if(!str) check at line 2441
+Wed Mar 17 23:02:15 1999 ** /players/mizan./etheriel/beasties/Amelia.c made is when she moves the attacker to a different room that the proper calls are being made
+Wed Mar 17 23:59:25 1999 ** /players/mizan/etheriel/items/blue-robe.c wasw eight 0 now 2
+Thu Mar 18 00:06:44 1999 ** /players/dune/closed/guild/rooms/mechshop.c added a check at line 50 to check to see if str is not equal to one of the mechs available.. if not then let the player know
+Thu Mar 18 09:45:22 1999 ** /players/saber/fur/selcoffin2.c made sure not savable
+Thu Mar 18 09:45:44 1999 ** as well as selcoffin.c
+Thu Mar 18 11:45:21 1999 ** /players/morgar/mirror.c made reset() work
+Thu Mar 18 23:08:18 1999 ** /players/saber/closed/quest/maz/wfallb.c added in a if(!ob) line at 54
+Thu Mar 18 23:19:47 1999 ** /players/daranath/mons/dark_naga.c added in an environ check in the callout
+Thu Mar 18 23:43:31 1999 ** /players/trix/closed/obj/scanner.c addin a check for who in recu callout
+Fri Mar 19 16:19:01 1999 ** /players/mizan/etheriel/ROOMS/storo.c added in a if(file) check
+Fri Mar 19 16:21:23 1999 ** created a /players/dragnar/armor/suit2.c it inherits boltar's xmas tree... this is for those items that have suit2.c stored in lockers and such
+Fri Mar 19 16:38:54 1999 ** /players/boltar/templar/templar.c line 1031 added in a check for the targeted object   if(!victim)
+Fri Mar 19 16:43:48 1999 ** /copied /players/pavlik/ilstkarn/weapons/rockebreaker.c to /players/pavlik/ilstkarn/rockbreaer.c some lockers are holidng this filepath....
+Fri Mar 19 17:36:14 1999 ** /players/snow/chaos.arch.c line 61 added in a this_player() check in exit()
+Fri Mar 19 17:55:43 1999 ** /players/mizan/closed/LiquidRoomDM.c added in a if(!str) check at line 270
+Sat Mar 20 00:20:03 1999 ** gave 1mil xp to milamber  i had a bug in hunger.c that was killing the players..
+Sat Mar 20 09:02:18 1999 ** /players/mizan/etheriel/items/thingamajig.c added in a this_player check to the weapon_hit()
+Sat Mar 20 17:51:51 1999 ** /players/llew/closed/crystal/energy.c placed environment checks where needed
+Sat Mar 20 17:54:25 1999 ** /players/boltar/templar/templar.c lines 670-  made the check for if !victim and if  !living(victim) two sepearate checks
+Sat Mar 20 22:35:11 1999 ** reset vital's home to /players/beck/room/headqtr.c it was set to spaceship which was taken out because it had not been approved
+Sat Mar 20 23:19:49 1999 ** /players/saber/closed/toys/xmas.c made sure it loaded porperly
+Sat Mar 20 23:22:05 1999 ** reset avis/ home to the church (same issue as vital)
+Sat Mar 20 23:29:02 1999 ** /players/beck/Rangers?RangerCommun icator.c commenedted out the section that set the players with glevel > 69 's home to the spaceship
+Sun Mar 21 00:10:10 1999 ** /players/arrina/grounds/hunttrap.c added ina this_player() check in climb()
+Sun Mar 21 00:47:00 1999 ** gave back 1mil xp to blast
+Sun Mar 21 00:47:38 1999 ** (blasts loss of 1mil xp was due to my bug in hunger,c which is now fixed)
+Sun Mar 21 01:48:41 1999 ** /players/snow/shadows/catacatabase.c added in a this_player() check in the exit()
+Sun Mar 21 03:30:00 1999 ** /players/boltar/thimgs/pawnholder.c addded in a this_player() check to id()
+Sun Mar 21 09:55:24 1999 ** /players/sow/chaos/mon/cater.c added in if(!attacker_ob) return 1; where needed
+Sun Mar 21 10:02:04 1999 ** /players/boltar/santaland/santa_house.c the cookies were cloning to  the stove but the clong process was doing a funcky next_inventory so i made the cooikes clone directly to the stoive
+Sun Mar 21 10:05:48 1999 ** /players/dune/closed/guild/snow/mechs/mech.c in mech_kill(arg) meat = present(arg) was being set immediately before the check to see if arg existed... moved so it works properly
+Sun Mar 21 20:10:40 1999 ** gave back an additional 800k xp to weasel (for the bug i made  ...and now fixed)
+Mon Mar 22 10:14:41 1999 ** /players/saber/armor/aura.c made sure the checks are working properly
+Mon Mar 22 11:53:35 1999 ** /players/dragnar/weapons/swordinvis.c made the rtrun match the sword that is visible (sword.c)  (i.e. return rnd5 not 8)
+Mon Mar 22 13:27:38 1999 ** /players/llew/closed/crystal/frag_demon.c added a if !environ check in heart_beat
+Mon Mar 22 15:14:28 1999 ** /players/saber/weapons/fist.c made query_real_name into query_name
+Mon Mar 22 15:21:42 1999 ** gave skyfyre a new fist (sabers thing) cause i just fixed a bug init that causes hb probs
+Mon Mar 22 16:31:20 1999 ** rmed /log./mizan.SQLDATA up to and thru the 20th of march
+Mon Mar 22 18:25:06 1999 ** /players/arrina/grounds/hunttrap.c moved the lin that does the hit_player after the check for is_player() (if who was a monster who could have died and then there would be no who to query to)
+Tue Mar 23 02:20:17 1999 ** /players/arrina/closed/awt.c fixed a sscanf bug in arrin'a wiztool since that bug was a bug i made as well...
+Tue Mar 23 02:22:25 1999 ** /players/pavlik/weapons/ilstkarn/rockbreaker.c   APPARENTLY pavlik made serveral copies of this rockbreaker item throughout his old directories before he rmed them
+Tue Mar 23 02:22:53 1999 ** so iapparently people have these several versions stored away in lockers... in anycase i made a copy so that the errors will go away
+Tue Mar 23 09:35:54 1999 ** /players/catt/MAGICAL/frostgloves.c made sure that they dont save, that there is a charge system (3 + rnd4) charges) that they can not be used against a player and that the code works without error
+Tue Mar 23 11:57:10 1999 ** /players/drganar/mons/master.c added in a if(!att) check in heart_beat() line 43
+Tue Mar 23 13:39:18 1999 ** /players/saber/ryllian/portal.c put in a dan entrance to  /players/daranath/qualtor/wayin2.c for daranath
+Tue Mar 23 15:27:06 1999 ** /players/boltar/templar/templar.c made suer the who does the environment check correctly (line 650ish)
+Tue Mar 23 16:31:57 1999 ** /players/.nooneelse/obj/poker_machine.c to .ba file.. its calling some files that dont exist.. and i dont have the tinme to track down where its being loaded
+Tue Mar 23 19:07:54 1999 ** /players/mizan/closed/borg-cube.c added in a str check for enter_cube()
+Tue Mar 23 19:24:48 1999 ** /players/morgar/mirror.c added in object checks
+Wed Mar 24 11:40:54 1999 ** /players/mizan/etheriel/ROOMS/storo,c took out the extra array member that is null
+Wed Mar 24 11:41:12 1999 ** in the STORO-LISTITEM.o file
+Wed Mar 24 12:29:44 1999 ** /players/snow/chaos/mon/hunter.c added in an enivorn check to hb
+Wed Mar 24 16:30:23 1999 ** /players/nooneelse/entryforest/e_forest0.c took out exit to the resteraunt
+Wed Mar 24 16:31:43 1999 ** /players/nooneelse/restaurant.c moved to a bak file (its buggy and i dont want to take the time to fix it)
+Wed Mar 24 16:34:47 1999 ** /players/boltar/templar/templar.c 1328 added a if attacker check
+Wed Mar 24 16:41:30 1999 ** /players/mizan/closed/poly/golem.c added in a if attacker check in fake_beta
+Wed Mar 24 17:11:02 1999 ** /players/boltar/things/clock_tower.c added in aquery_level() check when it does a while loop thru users()
+Thu Mar 25 19:12:20 1999 ** /players/beck/object/tractor.c added in if(!str) check in dt(st) as well as sp check and sp cost of 20 since it is a gossip
+Thu Mar 25 19:19:36 1999 ** /players/snow/gate.c put insome this_player checks in init
+Thu Mar 25 19:20:42 1999 ** as well as /players/snow/dark/rooms/arch.c
+Thu Mar 25 19:22:23 1999 ** /players/rich/ob.c placed if(!ob) check iat line 47
+Thu Mar 25 22:12:53 1999 ** copied over a notes.txt to snow's dervish dir... has some number info stuff i think is eneeded to reference...
+Fri Mar 26 09:33:17 1999 ** /players/deathmonger.UNDERDARK/mycon/myconid.c made reset work properly as well as put a check in heart()
+Fri Mar 26 09:35:51 1999 ** /players/deathmonger/MONSTERS/mycoking.c fixed it so reset() is done right as well as took out unneccessary set_heart_nbeat() call
+Fri Mar 26 11:36:04 1999 ** /players/mizan/etheriel/ROOMS/STORO-ITEMLIST.o was buggy so i mved it over so that storo.c can create a new one
+Fri Mar 26 13:18:45 1999 ** /players/nooneelse/pie_shop.c to .bak since it is connected to the souveniershop which has been mved
+Fri Mar 26 13:19:04 1999 ** /players/nooneelse/forest/e_forest0.c took out exit to the souvenir shop
+Fri Mar 26 13:20:22 1999 ** /players/boltar/templar/templar.c line 1464 added a if(!str) check
+Fri Mar 26 14:50:31 1999 ** approved Snow's new guild (Dervish) for beta testing (only wiz test chars and 3 players max)
+Fri Mar 26 17:36:42 1999 ** /players/eurale/Vamp/RMS/souvenir_shop.c exit to pie shop taken out
+Sat Mar 27 03:36:10 1999 ** /players/boltar/things/antipk.c added a remove_call_out in the hut()
+Sat Mar 27 03:43:01 1999 ** /players/nooneelse/mon/granite_golem.c fixed the rest(arg) to work properly so it can clone...
+Sat Mar 27 03:55:05 1999 ** /players/mizan/etheriel/items/nitro-glycerin.c added ina str check in give()
+Sat Mar 27 19:33:55 1999 ** /players/saber/closed/bards/ring.c weight was 0 now is 1
+Sat Mar 27 19:38:38 1999 ** /players/rich/bridge.c added a if(query_level() > 1) in the while loop at line 219
+Sat Mar 27 19:41:13 1999 ** /players/mizan/etheriel/beasties/onogbeast.c put an if !environ check in heartbeat
+Mon Mar 29 12:17:05 1999 ** /players/dune/closed/pavlilion/monster.c made it include /obj/clean.c and made the living.c in the same dir at line 877 (test_if_any_hear()) check for environment
+Mon Mar 29 14:10:04 1999 ** approved transfer thungy for snow's edervish guild (obnly occurs in sandstorm  room (1 room) with a loss of 1 in 3 ) every hb
+Mon Mar 29 14:10:36 1999 ** this is again still beta test mode and is subject to same scrutiny of the guild
+Mon Mar 29 18:04:19 1999 ** /players/saber/stuff/mmiror.c added in an environment check to the search
+Mon Mar 29 18:06:39 1999 ** /players/pain/NEW/items/star_daemon.c line 160 made the sscanf check to make sure it has the proper number of elements
+Tue Mar 30 14:35:04 1999 ** /players/nooneelse/black/vampire_fangs.c added a check for MY_ROOm if the fb()
+Tue Mar 30 14:38:34 1999 ** unguild alexela .. a monk...
+Tue Mar 30 15:48:56 1999 ** changed the /players/nooneelse/black/lib/defs.h MY_NAME define to not contain a lower_case()
+Wed Mar 31 09:36:42 1999 ** /players/saber/closed/maze/devo.c added in a is_player(0 check to the slam_player)
+Wed Mar 31 10:28:09 1999 ** /players/mizan/closed/poly/PDM.c line 2440 aded a this_player() check for this_player() call to remote_say()
+Wed Mar 31 16:59:40 1999 ** /players/beck/Rangers/MasterInc/Study.h added in a if(!str) check
+Thu Apr  1 12:08:42 1999 ** /players/gowron/closed/quest/guard.c made sure reset() worked properly
+Thu Apr  1 17:05:49 1999 ** /players/dune/closed/guild/includes/flux_damage.h added in a if(num == 0) num = -1; so that a divide by zero error doesnt occur
+Fri Apr  2 09:55:34 1999 ** /players/llew/closed/crystal/demon.c added in a check for the arrayed object and if it is living at line 105
+Fri Apr  2 09:57:21 1999 ** /players/beck/Rangers?masterInc.PowerPoints.h added in a check for null of num to GeneratePoints()
+Fri Apr  2 10:42:37 1999 ** gave jake 60k sac and 10k xp for pinting a bug which allowed for multiple cloning of a monster see nect note
+Fri Apr  2 10:49:29 1999 ** /players/eural4e/Fiend/mm36.c line 57 i aded a drac = 0;//.. this sets up so that dracula doesnt clone more than once.. problem was
+Fri Apr  2 10:50:03 1999 ** that eurale had it on a callout.. so if you hit the function several times before the first call completes the callout you can clone multiple monsters...
+Fri Apr  2 12:58:15 1999 ** /players/mouzar/castle/newbie/shop.c made it so objects are destructede properly when seold
+Fri Apr  2 14:01:33 1999 ** gave 10k xp to soria for  info to the bug about mouzar's shop.c
+Sat Apr  3 09:09:41 1999 ** /players/hawkeye/room/rose.c added a return 1; to end the function bribe() it was causeing a error and preventing players from continuing on the quest
+Mon Apr  5 13:48:23 1999 ** /players/boltar/templar/items/voteb.c line 55 added a if(!str) check
+Tue Apr  6 11:10:56 1999 ** approved the opening of the Dervish (snow's new) guild
+Tue Apr  6 14:39:27 1999 ** /players/nooneelse/black/lib/defs.h fixed it so eurale/Vamp/RMS/vguild_hall is the new guild hall not the nooneelse/black/guild_lower_hall.c
+Wed Apr  7 16:44:18 1999 ** /players/unsane/closed/hell/hurricane.c added at line 74 a if(!str)
+Wed Apr  7 17:42:42 1999 ** /players/mizan/closed/4cc.c line 67 was a if statment of if(filname = etc etc) was changed to if(filname == etc etc)
+Wed Apr  7 17:45:57 1999 ** /players/mizan/etheriel/items/nitro-glycerin.c made it so it is not givable to a non-player
+Thu Apr  8 09:55:48 1999 ** /players/beck/MortalKombat/MKWarrior.h added in environment checks as well as RealAttack checks at lines 70 -
+Thu Apr  8 10:04:48 1999 ** took out the xp gain in MK (beck's) the whole point was that you dont GAIN any xp from it
+Thu Apr  8 17:16:26 1999 ** /players/saber/closed/quest.items/sand.c can no longer be given to npcs
+Fri Apr  9 05:24:06 1999 ** /players/mizan/etheriel/heals/thermos.c value was 500 now 1 for now...
+Fri Apr  9 05:56:51 1999 ** /players/eurale/Keep/demon_pet.c fixed line 195 so it is no longer this_obect but this_object
+Fri Apr  9 06:03:03 1999 ** copied over most of predator's dir to reflex so he can download it and work on it offline
+Fri Apr  9 06:24:37 1999 ** 0
+Fri Apr  9 06:24:53 1999 ** mved the files i copied to reflex's back to predators
+Fri Apr  9 06:40:12 1999 ** /players/beck/Rangers/CommInc/RangerWeapon.h line 279 added a if(!str) check
+Fri Apr  9 06:46:20 1999 ** /players/wocket/turtlville/OBJ/fountain.c moved the callout to the reset ( iut was in init) to prevent mutiple callouts from happening
+Fri Apr  9 06:48:39 1999 ** also fixed the reset a bit
+Fri Apr  9 08:03:47 1999 ** /players/languilen/fun/rooms/intank.c line 49 added in a if(!ob) check
+Fri Apr  9 11:57:57 1999 ** /players/bastion/closed/ring.c made sure the help command states the proper amount of sp cost for bring and go
+Mon Apr 12 22:45:07 1999 ** /players/beren/Monsters/Gdemia/miner.c added in a environment check in the callout as well as cleaned up the code which calls query_attack()
+Mon Apr 12 23:07:26 1999 ** APPROVED some changes to the dervishs... 1> sta max is set to 15  now (10 ) also approved the gradual armor  loss system
+Mon Apr 12 23:08:02 1999 ** which basically is that as player levels go up the lessarmor they can wear
+Wed Apr 14 12:55:13 1999 ** /players/pain/NEW/mon/merchant.c added in an environ check to the callout
+Wed Apr 14 18:40:44 1999 ** /players/mouzar/castle/under/obj/crossbow.c fixed so it would clone
+Thu Apr 15 20:55:01 1999 ** added in on line 141 of /players/snow/shadows/mon/death_knight.c a check for if(attacker_ob)
+Fri Apr 16 11:00:42 1999 ** /players/catwoman/ts.c took out of the buy() those items which dont exist anymore (like the menu.c and the amulet.c)
+Fri Apr 16 17:18:10 1999 ** /players/llew/closed/crystal/energy,c made sure the des() callout does a set_heart_beat(0) before destructing
+Mon Apr 19 18:29:43 1999 ** /players/heroin/count.c took out a command that calls to a non-exstant this_player
+Tue Apr 20 11:51:14 1999 ** /players/blue/dengeon dir all rooms in there were not cloning right.. fixed them all
+Tue Apr 20 12:23:33 1999 ** took away 6k coinds from antonio.. he had used his other char auri to give coins
+Tue Apr 20 13:59:32 1999 ** gave back 400k xp to faust who died because of an old guild change which he didnt know about cause he wasnt around
+Tue Apr 20 14:07:57 1999 ** gave an extra 1mil xp to faust.. turns out he had died twice from this problem..:<
+Wed Apr 21 13:27:03 1999 ** /players/lew/grad/firstfloor.c commented out the exit that doesnt exist
+Wed Apr 21 15:35:24 1999 ** /players/lew/elof/virus2.c made it so it cloned
+Wed Apr 21 15:42:22 1999 ** /players/sandman/pets/pet_store.c mved to .bak getting outdated and with upcoming pet changes going to be a pain to maintain
+Wed Apr 21 15:42:38 1999 ** /players/sandman/SURR/[ath6.c took out exit to petstore
+Wed Apr 21 15:45:17 1999 ** /players/lew/elof/virus1.c added an environment check to the callout
+Wed Apr 21 15:47:23 1999 ** /players/lew/elof/virus.c made it so it clons .. added in evnronment chek to callout and made it inherit obj/monster.c not monster.talk
+Wed Apr 21 15:49:21 1999 ** same with virus3.c
+Wed Apr 21 15:52:47 1999 ** same with keivjam.c
+Wed Apr 21 15:53:29 1999 ** same with keivjam2.c
+Wed Apr 21 15:54:17 1999 ** /players/lew/elof/link.c was weight 0 now is 1
+Wed Apr 21 15:56:33 1999 ** /players/lew/elof/scalpel.c mved to .bak file i dont want to take chances that this gets into game
+Wed Apr 21 22:00:53 1999 ** approved maledicta for wizship.. eurale will be his sponsor
+Thu Apr 22 21:00:30 1999 ** /players/snow/shadows/cata/cata_lair1.c added an if(this_player()) check in exot()\
+Fri Apr 23 11:36:17 1999 ** /players/bastion/isle/wiz/observatory.c made the pendant weight of 3 was 0
+Tue Apr 27 10:41:56 1999 ** /players/hipoo/rooms/blood3.c commented out the cloning of hiv.c its causing a problem and preventing the room from cloning properely
+Wed Apr 28 14:10:16 1999 ** /players/.snow/shadows/cata/cata_lair2.c added a this_player checkk in exit()
+Thu Apr 29 17:53:14 1999 ** gave lebonan 5k xp for losing it due to a bug in leaving the healer guild
+Thu Apr 29 17:59:15 1999 ** placed a bounty on coren/warbird's head.. i want him feel fear when logging on thi s mud
+Thu Apr 29 17:59:23 1999 ** impersonating me... what gall..:>
+Fri Apr 30 15:41:35 1999 ** mved /players/lew/closed/rocko.c to .bak file... dont think theres a real need for an object  e
+Fri Apr 30 15:42:11 1999 ** that every hb checks again luck and heals the player a random100 and autoloads..
+Mon May  3 09:45:35 1999 ** /players/saber/fur/selcoffin2.c made the weight from 20 to 10k (as the selcoffin.c is) to prevent people from walking around with it
+Mon May  3 20:38:53 1999 ** /players/emerson/obj/bb.c added in str checks for the actions
+Tue May  4 10:15:54 1999 ** /players/beren/Gdemia/miner.c fixed it so the query_attack() calls work in the callout
+Tue May  4 14:42:46 1999 ** /players/zeus/realm/NPC/emon1.c moved the callout to within the if(!arg) and added a environment check in the callout
+Tue May  4 14:43:34 1999 ** also fixe dthe tell_room
+Wed May  5 10:15:42 1999 ** /players/hurtbrain/life.c set up so at init it dests also too out autoloading since this is now obsolete
+Wed May  5 10:18:29 1999 ** /players./eurlae/Keep/death_mace.c fixed it so TP is replaced with this_player() so the switch in init works
+Wed May  5 11:59:11 1999 ** jailed coren
+Wed May  5 12:03:35 1999 ** actually zapped him down to level 1
+Wed May  5 19:21:36 1999 ** gave tyschire 800 xp.. reimbursement for  buggy newbie locker system that doesnt hadle well when item dests
+Thu May  6 09:17:35 1999 ** /players/eurale/Fiend/jekyll.c fixed so that the pison filepath is correct
+Thu May  6 09:20:51 1999 ** /players/nooneelse/black/guild_summons.c fixed it so !str is checked
+Thu May  6 09:23:49 1999 ** /players/mizan/ethereiel/beasties/minga.c commented out the set_ep in reset
+Fri May  7 11:21:56 1999 ** /players/rich/castle.c made the callout check for user environment (line 98 ish)
+Sun May  9 12:12:11 1999 ** /players/llew/closed/crystal/demon.c PUT BACK the changes snow made to this creature.. llew decided that he didnt want it in...
+Sun May  9 13:09:50 1999 ** this rechange to llew's demon.c makes it so players cant run out of the room and avoid the big attack
+Mon May 10 13:31:50 1999 ** /players/boltar/templar/board.c added a check to make sure what_msg is given before doing a ssscanf call to it (line 165)
+Thu May 13 12:49:49 1999 ** okeyed wocket to put orb in play.. note close scrutiny is needed
+Thu May 13 12:59:36 1999 ** /players/hippo/games/blackjack.c made it so no money is gained or lost (i.e. coin is set to 0)
+Thu May 13 13:01:39 1999 ** same with twentyone.c and owee.c
+Thu May 13 13:01:51 1999 ** oware.c i meant
+Thu May 13 13:08:37 1999 ** zapped clericoluzio for botting at the games in hipos
+Thu May 13 15:22:43 1999 ** moved inv_no = 0; to before the save_object in /players/boltar/hotel/room.c at sado's suggestion to fix possible bug in restoring items
+Fri May 14 14:23:16 1999 ** /players/eurale/Wep/death_mace.c fixed so it will clone (it had the var TP which was not defined)
+Sun May 16 10:14:14 1999 ** /players/mizan/closed/poly/golem.c added in checks for weapona nd weapon_weapon_class() at lines 52 - 53
+Sun May 16 12:57:26 1999 ** copied /players/eurale/OBJ/cattle_prod.c to /players/eurale/Wep/cattle_prod.c because there are players with this filepath in their lockers
+Mon May 17 09:43:00 1999 ** /players/llew/Other/monsters/llew.c took out the move at reset since the file is being cloned and moved to a room in the rooms reset.. this is causing problems as we are having double rmoves at reset happening...
+Mon May 17 11:53:59 1999 ** set up so nutstaine gets nailed (come on the guy made the char to insult and badger Mustaine)
+Tue May 18 09:36:16 1999 ** /players/wizardchild/toys/hoop.c changed line 50 to be environment(this_object()) instead of this_player() since there is NO this_player() that can be refernced / passed
+Tue May 18 12:41:35 1999 ** addded a change to wocket's orb so that when it logs it adds in time
+Wed May 19 16:52:38 1999 ** /players/boltar/templar/helper.c added in line 148 an environemtnt check in sq_follow()
+Wed May 19 16:55:13 1999 ** also added in check for environment of owner
+Thu May 20 18:26:56 1999 ** made it so the random ryo room also randomly leads to the Hunter's Forbidden Forest (deep within it)
+Sun May 23 07:39:38 1999 ** /players/lew/lounge2.c took out exits that dont go anywehere
+Mon May 24 09:14:47 1999 ** /players/hurtbrain/obj.stone.c made it so it checks for value > 700  900 if so then 700+rnd200 coins are given
+Mon May 24 10:00:56 1999 ** /players/mizan/etheriel/items/spectacles.c was weight 0 now 1
+Mon May 24 16:57:46 1999 ** put in a ip knock for global.mactemps.com.. smoke is getting too obnoxious and harrassing that this is unfortunately needed..:<
+Mon May 24 17:35:07 1999 ** /players/saber/closed/bards/bardswordb.c changed query_real_name() to query_name()
+Tue May 25 09:55:08 1999 ** /players/eurale/Glade/NPC/rue.c made sure there is a check to make sure you even have the object specified
+Tue May 25 12:46:03 1999 ** /players/saber/armor/fmask.c added in a if(arg) return; in reset
+Tue May 25 13:21:10 1999 ** /players/wizardchild/toys/dispense.c added in a if(!str) check at line 46
+Tue May 25 13:22:06 1999 ** same with chick.c at line 22
+Tue May 25 14:06:08 1999 ** /players/saber/armor/lgloves.c same deal with if(!arg)
+Tue May 25 14:27:16 1999 ** /players/saber/armor/lgloves changed type from gloves to ring
+Tue May 25 14:47:58 1999 ** gave 20k coins to madigan for loss of pet and weapons and stuff cause i updted a room by accident..:<
+Tue May 25 14:59:16 1999 ** /players/mizan/closed/Tracker-D.c added in a check for environment and for query_attack()
+Fri May 28 16:26:33 1999 ** changed newbie lockers to have a query_exp check .. if char has enough for level 7 they are not allowed in
+Tue Jun  1 09:20:31 1999 ** approved a change to the dervishes where the dervish at level 19 and 10k sandpoints can "lead" combat the sandpoint cost is 9900
+Fri Jun  4 09:08:03 1999 ** fixed the instrument.c in saber's closed/old_bard so that the gossiped song formats properly...
+Fri Jun  4 11:47:09 1999 ** /players/hawkeye/monsters/sarge.c made whimpy
+Sun Jun  6 17:06:33 1999 ** /players/hurtbrain/castlello dir made sure all monsters had if(arg) return; in the reset  to prevent double agin of items at reset
+Sun Jun  6 17:08:07 1999 ** same with /players/hurtbrain/castello/dag/gaul dir
+Sun Jun  6 17:10:01 1999 ** same with /players/hurtbrain/castello/gang
+Sun Jun  6 17:46:59 1999 ** /players/saber/food dir.. changed all shops to check for weight
+Mon Jun  7 19:17:57 1999 ** /players/traff/delnoch/town/wall6.c added a short to it
+Mon Jun  7 19:32:20 1999 ** reinstated siberia (to level 10, stats str,sta,mag to 20, the reset to 11) added xp amount was 80k
+Mon Jun 21 18:54:50 1999 ** /players/heroin.count.c made sure it checks for this_player() properly
+Wed Jun 23 11:46:56 1999 ** /players/saber/monsters/darkone.c added code that beck wanted in it to do the mortal kombat thing
+Wed Jun 23 14:28:27 1999 ** took out the entrance to saber's maze area from /players/saber/ryllian/ryllian1.c its a set_light(-5) and its part of an incompleted quest
+Wed Jun 23 14:30:07 1999 ** set blackstar's sp to -10k for abusing this -5 light area
+Thu Jun 24 15:32:11 1999 ** /players/deathmonger/ASSASSIN/MINES/soot_mine.c added in check for target (find_player())
+Thu Jun 24 15:57:35 1999 ** set up so foxinternet.net (usagi's host) are dested
+Wed Jun 30 09:27:34 1999 ** /players/pain/NEW/mon/korean.c added a environment check in the callout
+Thu Jul  1 09:28:15 1999 ** /players/rich./shop.c took out entrance to torpedo room
+Thu Jul  1 09:28:47 1999 ** mved /players/rich/torproom.c to .bak file... its broken and fixing it is a pain
+Thu Jul  1 13:06:45 1999 ** my pets now cost 20sp to heel because of a bug zeus found concerning the usage of heel during combat
+Thu Jul  1 16:29:37 1999 ** /players/mizan/closed/RandomRoom.c made room_beat() call in init into a callout(3)
+Wed Jul  7 08:14:19 1999 ** fixed /players/eurale/VAMPIRES/vampob.c in hearbeat to check for environment and if environment exists whether it is living or not  (this was causing bugs)
+Wed Jul  7 17:02:57 1999 ** /players/mizan/etheriel/ROOMS/rhubarb.c copied to rubarb.c because there is a call to rubarb.c in mizan's coe somewhere...:<
+Wed Jul  7 17:27:18 1999 ** /players/mizan.closed/poly/PDM.c added a check for vic in function check_points() on lines 2188 - 2194
+Thu Jul  8 08:38:04 1999 ** /players/beck/Rangers/Commands/Rwho.c added in a check to make sure the particular object in array exists
+Fri Jul  9 08:48:24 1999 ** /players/catwoman/obj/potion.c added a environment check in heartbeat
+Fri Jul  9 13:26:19 1999 ** /players/snow/shadows/fort/recep_room.c added in this_player() check in exit()
+Sat Jul 10 08:26:55 1999 ** /players/beck/Rangers/CommInc/RangerWeapon.h in check_ranger_kill() made sure all needed variables are checked for
+Sun Jul 11 00:32:56 1999 ** /players/trix/closed/obj/scaner.c mved to a bak file it was taken out of game before and somehow its back..
+Sun Jul 11 11:11:10 1999 ** /players/hippo/rooms/games_mach_room.c mved to a bak file.. people are abusing it to get unlimited coins.. and im sick of having changes rechanged by pothers so its now illegal
+Sun Jul 11 11:18:20 1999 ** /players/saber/tower/tower14.c (etrnal barfight) now loads a xb.c  which brings the corpses to life (like in forbidden forest)
+Sun Jul 11 11:18:30 1999 ** this is because of abuse botting in this room
+Sun Jul 11 11:19:44 1999 ** /players/hippo/games dir mved to games_bak dir so games will not load if old paths are called
+Wed Jul 14 16:33:41 1999 ** /players/daranath/qualtor/redtowr4.c approved changes that daranath made to prevent players from doing some actions while coils are n room
+Wed Jul 14 16:33:59 1999 ** that was 6 not 4
+Thu Jul 15 17:28:32 1999 ** /players/hippo/nose.c took out other exists becaue of my move to games to games_bak
+Fri Jul 16 19:52:29 1999 ** recoded the master.c in droom to handle increase grid growth properly...
+Fri Jul 16 22:01:42 1999 ** /players/bagera/jungle/room31.c fixed it so ione can exit to  room30
+Sun Jul 18 01:34:07 1999 ** players/mizanetheriel/ityems/rack.c made if(arg) return; instead of 0 in reset and commented out an object that doesnt exist
+Tue Jul 27 16:10:49 1999 ** added a if(!mwhat_msg) check to /players/daranath/qualtor/obj/bull_board.c on line 159
+Mon Aug  2 10:16:29 1999 ** /players/saber/armor/strring.c changed ac from -2 to 0 and weight from -2 to 1
+Mon Aug  2 12:45:37 1999 ** /players/deathmonger/CASTLE/complaint_room.c changed the north() to _old_north() and created a new north() which simply states "what?"  I dont want players with an object of id licennse to walk into pain's cenguild room (if it exists)
+Thu Aug 12 10:13:23 1999 ** approved wocket's wedding stuff (in /players/wocket/wedding dir)
+Sun Aug 15 22:19:33 1999 ** set it up so bishop, dacker,bort,dread,green,picar,void,matt greeny  get imprisoned.. they are all USAGI
+Tue Aug 17 13:29:07 1999 ** set it up so that my qt dests if a non player has it in their inventory
+Thu Aug 19 20:16:35 1999 ** /players/asmithrune/monsters/mongrelking.c commented out clonging of stave.c since stave no longer exists
+Thu Aug 19 20:42:38 1999 ** rmed /open/pavlik dir (pavlik is no longer a wiz so why have an open dir?)
+Thu Aug 19 20:46:25 1999 ** rmed /open./mizan as as well
+Thu Aug 19 20:52:14 1999 ** basically cleaned up some stuff in /open (like dirs of people no longer here.. or stuff that tyakes up a  lot of space but hasnt changed or used in the last 2 years)
+Sat Aug 21 23:12:20 1999 ** reset guest to level 1
+Mon Aug 23 10:16:18 1999 ** /players/bern/fizban/staff.c mved to closed/fizban.staff.bak
+Mon Aug 23 10:16:42 1999 ** /players/bern/guild/ robes.c robesback.c robest.c r2.c r.c all mved to bak files
+Mon Aug 23 10:19:54 1999 ** mved a bunch of wiztools from /players/bern/magic to /players/bern/closed as bak files
+Mon Aug 23 10:20:08 1999 ** mved /players/bern/workroom.c to bak file
+Mon Aug 23 22:40:56 1999 ** added a environment check in /players/saber/closed/virus/flu.c init()
+Sat Aug 28 12:25:50 1999 ** /players/trix/castle/town/monst/manatwork.c fixed so it traps erros like !str also cleaned up the code a bit
+Sat Aug 28 12:31:36 1999 ** /players/saber/weapons/net.c set it up so tplayers can not wear thenet
+Sat Aug 28 12:35:58 1999 ** also fixed net so that it droppes the ac of entangled by -2 .. it does not set the ac of entangled to -2
+Sat Aug 28 12:36:14 1999 ** also made it so that entangled attacks player who threw it
+Sat Aug 28 12:36:24 1999 ** if the entangled is not fighting
+Sat Aug 28 14:21:40 1999 ** /players/trix/castle/dismonst/waiter.c fixed file so it checks for who and checks for arg
+Sat Aug 28 14:23:52 1999 ** fixed my mchat.c to check for inactive first before checking for idle
+Sat Aug 28 16:52:13 1999 ** /players/boltar/templar/room.c addded a check for thing then thing->short() at line 204-205
+Sat Aug 28 18:22:34 1999 ** added a check for hit_point > 0 in the hb of /players/wocket/mushrooms/nonge.c
+Sat Aug 28 21:38:46 1999 ** players/boltar/templar/templar.c added at line 959 a if(!i) return 0;
+Sat Aug 28 22:32:08 1999 ** /players/saber/armor/amuletpro.c added ina  if(arg) return; in reset
+Tue Aug 31 20:20:38 1999 ** /players/bastion/obj/newdoor.c a check inline 152 to check for partner_ob
+Sun Sep  5 11:49:51 1999 ** /players/snow/shadows/mon/sdragon.c added in a check for environment at line 95
+Mon Sep 13 15:27:26 1999 ** /players/boltar/hotel/room.c added in a check for str (if(!str) return 0; ) in the function invite(str) at line 217
+Fri Sep 17 15:20:18 1999 ** /players/nightshade/misc/rock.c value was 500 no w is 0 for a suposedly immovabe rock..
+Fri Sep 17 15:22:08 1999 ** /players/nightshade/room/imp.c can onl imp_slayer can only be retrieved by players now
+Fri Sep 17 15:28:22 1999 ** caught ariakas getting an idtem droppped by almin.. they are the same person.. gave a single warning.. he gets knocked into jail next time
+Sat Sep 18 11:10:46 1999 ** set it up so guest auto teleports back to the church if guest goes beyond the normal village regions
+Sun Sep 19 12:58:01 1999 ** /players/mizan/etheriel/tornado./c line 92 return1 is not return 0 as per feldegast finding a bug with the tornado preventing gets
+Tue Sep 21 10:41:55 1999 ** /players/eurale/Keep/k63.c fixed line 167 so that it doesnt call this_player() instead calls "player"
+Tue Sep 21 15:11:31 1999 ** /players/arrina/treas/stick.c added in line 20 a if!str) return 0;
+Wed Sep 22 22:01:32 1999 ** /players/saber/closed/new_mini/succubus.c set it up so at init_arg() the object dests itself.. since we aparently have some issues with this guild of some sort *shrugs* stupid issue but oh well
+Wed Sep 22 22:13:58 1999 ** fixed
+Wed Sep 22 22:14:49 1999 ** put back the succubus guild thingy...
+Wed Sep 22 22:15:17 1999 ** at boltar's request and i think i made my point
+Sat Sep 25 08:25:25 1999 ** commented out loading of the Decpticons guildbase cause it keeps bugging out and spitting back errors in debug.log (commented from castle of Beck's)
+Sat Sep 25 08:25:37 1999 ** i have asked him to fix it it 3 yomes already
+Sat Sep 25 08:31:33 1999 ** also commented out the offending HB() in the players/beck/Transformers/Decepticons/GUilkd/Daemons/EnergonDAemon.c
+Sat Sep 25 08:33:50 1999 ** /players/zeus/realm/NPC/tyborlek.c added in a check for x at line 243
+Mon Sep 27 21:12:11 1999 ** /players/mizan/closed/poly/PDM.c line 4339 added in a check for arg
+Tue Sep 28 17:01:25 1999 ** apprved beta test for eurale's new vamp guild stuff... up to 5 members may beta test and time for beta is 1 - 2weeks
+Wed Sep 29 09:08:45 1999 ** set up so guest cant say whisper, ', or party...
+Wed Sep 29 16:27:33 1999 ** fixed the problem that dragnar pointed out with preventing guest using say etc...in my qt
+Thu Sep 30 21:57:57 1999 ** /players/mizan/etheriel/environs/grey-button.c took out the second hit_player() chances are the first time around will kill the npc...
+Thu Sep 30 22:09:50 1999 ** copied over some files for fakir as examples to look at
+Fri Oct  1 16:05:50 1999 ** imprisoned guesty ... can we say shared char?
+Tue Oct  5 13:06:24 1999 ** /players/saber/tower/tower20+10.c realm set to NT
+Wed Oct  6 05:15:33 1999 ** /players/sandman/paladin dir mved to /players/sandman/paladin_old  someone keeps trying to load the paladin stuff
+Wed Oct  6 05:25:17 1999 ** /players/mizan.closed/poly/wombat.c added in at line 50 in the fake_beat() a if(ENV) move_object(this_object(),ENV) so the sell block circulates
+Thu Oct  7 11:09:26 1999 ** /players/eurale/VAMPIRES/NPC/vamp_wolf.c line 226 added in a check for query_attack()
+Sun Oct 10 09:27:23 1999 ** /players/players/eura/eAbyss/NPC/despoina.c added in at line 116 a check for query_attack()
+Sun Oct 10 09:36:21 1999 ** took out zeus's addition to the open/.tele-_Err cause he put in a place which has heals an you can buy.. *sighs*
+Wed Oct 13 16:08:12 1999 ** /players/mizan/closed/poly/PDM.c added in a check to make sure the room file exists before attempting to call it at line 2977-2980
+Wed Oct 13 16:13:02 1999 ** /players/saber/closed/bard main files (instrument.c, master.c etc mved to bak files)
+Wed Oct 13 21:34:10 1999 ** /players/mizan/closed/poly/PDM.c line 531 changed loss of xp if leaving guild from 1/2 to 4/5
+Wed Oct 13 21:50:24 1999 ** /players/mizan/etheriel/beasties/spuck.c changed all costs of xp to 4 times original amount
+Wed Oct 13 21:55:07 1999 ** /players/mizan/closed/poly/gob.c added in a init_arg() so guildnews could be set up
+Fri Oct 15 08:39:52 1999 ** /players/mizan/closed/poly/gob.c added in an id of no_spell
+Fri Oct 15 16:40:21 1999 ** /players/saber/closed/bards/bardswordb.c changed references to query_real_name to query_name
+Fri Oct 15 23:40:24 1999 ** /players/mizan/closed/poly/gob.c took out the nospell addition at arrina's request
+Fri Oct 15 23:55:55 1999 ** /players/mizan/closed/poly/tetrapod.c changed the DEATHTIME from 1200 to 3000 since the poly's have had a 4times increase in cost for leveling and attributes
+Fri Oct 15 23:56:05 1999 ** changes for polys all in accordance to arrina
+Sun Oct 17 19:22:29 1999 ** /players/feldegast/movies/Darkcity/Npc/mrbook.c lines 77 - 87  moved the say(ob->query_name() BEFOREW the actual damage is done so if object dies dont get an error...
+Sun Oct 17 19:23:11 1999 ** also added a if
+Sun Oct 17 19:23:29 1999 ** wups.. also moved the ob->attacked_by so that it happenbs before the damage
+Wed Oct 20 13:24:03 1999 ** APPROVED the offically opening of eurlae's vamp guild. beta test is over now for the real thing..:>
+Wed Oct 20 15:11:55 1999 ** demoted feldegast to 40 for not getting things approved etc
+Wed Oct 20 15:25:44 1999 ** apparently he feels that he does not need to get major changes to code approved... *shrugs*
+Thu Oct 21 17:20:59 1999 ** /players/boltar/thingshedset.c added a check on line 49 for !arr
+Fri Oct 22 08:56:17 1999 ** /players/eurale/ARM/rex-skin.c created a file that autodested in 10 sec after cloning because someone out there was one in their locker
+Sat Oct 23 08:14:49 1999 ** approved Brittany as she sseems to have a general plan for what she will be doing as a wiz
+Fri Oct 29 01:09:23 1999 ** /players/snow/dark/mons/spectre.c added lines 119-121 checking one by one whether objects needed are there
+Fri Oct 29 10:58:01 1999 ** /players/deathmonger/MISC/bull_board.c line 161 added in a check for what_msg
+Fri Oct 29 10:59:53 1999 ** /open/catt/catts_note.c added in a destruct to the drop
+Fri Oct 29 11:00:27 1999 ** and made it gettable so it clones
+Fri Oct 29 11:03:21 1999 ** and added a check for level.. people need to learn to do this type of checking GEESH
+Mon Nov  8 20:33:52 1999 ** /players/saber/closed/bards/dagger.c made it so it inherits obj/weapon not the sandman paladin weapon
+Sun Nov 14 18:17:20 1999 ** /players/pain/closed/weapons/widow.c lines 113-114 added in environment checks
+Wed Dec  8 06:40:39 1999 ** /players/zeus/museum/NPC/sd.c added in a environ check
+Fri Dec 10 02:51:39 1999 ** added a wait time for firing of the daikyu as
+Fri Dec 10 02:52:07 1999 ** also unstaticed the functions in quiver and daikyu to allow for aliases
+Wed Dec 15 19:37:43 1999 ** /players/bastion/monster/doppleganger.c added in this_player() checks
+Sun Dec 19 04:18:44 1999 ** /players/lew/sewer.c took out the exit to lew's sewer area... its not an open area
+Sun Dec 19 14:24:56 1999 ** /players/dreamspeakr/mesa/OBJ/rmaker.c  was wc 17 with 8 out 11 times it gets a return 7... now has a 2 out of 11 return 7, and the rest is either return 0 or return -1
+Sun Dec 19 14:29:18 1999 ** replaced player "eville" illegal rainmaker with a now legal one
+Thu Dec 23 15:25:37 1999 ** eville1a.txt tell
+Thu Dec 23 15:25:45 1999 ** ack the above was a mistake
+Sun Dec 26 16:22:10 1999 ** /players/hurtbrain/castello/shop.c was giving 1k + rnd(400) now gives 1k + rnd (100)
+Thu Dec 30 14:23:08 1999 ** reset kezana's mag to 20 as it was 21 and she is not part of any guild at this moment
+Sun Jan  2 22:37:07 2000 ** /players/saber/closed/new_mini/succubus.c fixed the light on stuff so that it checks to make sure that the var lighton is what it expects (so that players can not keep adding 2 or -2 to light)
+Thu Jan 13 21:25:26 2000 ** /players/dreamspeakr/WEDDING/NPC/hera.c added in a check to first make sure the player referenced exists
+Sun Jan 23 19:53:44 2000 ** guest can no longer use scream
+Sun Jan 23 19:54:14 2000 ** after guest spammed the mud by screaming
+Fri Jan 28 13:28:56 2000 ** /players/catwoman/obj/potion.c moved the destruct(this_object()) from line 97 to 104 thus placing the destruct after all the other calls to itself
+Sun Feb  6 11:20:42 2000 ** /players/aislinnobjects/ring.c mved to .bak file.. its a free heal
+Sun Feb  6 11:21:10 2000 ** same with diamond_ring.c
+Sun Feb  6 11:21:42 2000 ** same with bottle.c
+Sun Feb  6 11:23:34 2000 ** /players/aislinn/objects/test.c mved to ~/closed/test.bak its a wiz tool
+Fri Feb 18 10:10:20 2000 ** addeda this_player() check in the id of /players/dune/closed/guild/implants.c due to the fact that there is a this_player()->?query_level() check in it and something other than living is checking
+Wed Feb 23 15:47:26 2000 ** okayed Daranath's Necromancers for 2 week beta test (max 5 players)
+Wed Feb 23 15:47:40 2000 ** okayed Zeus's Fallen for beta test 2 weeks (max 5 players)
+Wed Feb 23 15:48:00 2000 ** okayed maledicta's Symbiotes for 2 week beta test (max 5 players)
+Thu Feb 24 17:47:46 2000 ** added into /players/mythos/prac/pet.c a change for maledicta so that the pets can not be used by a symbiote
+Sun Feb 27 09:15:05 2000 ** /players/aislinn/ppool_shallow.c changed the ball that gets cloned from a level 7, wc 5 , ac 3, money rnd 5000 into a level 7, wc 9, ac 5, money rnd (300)
+Sun Feb 27 09:16:28 2000 ** /players/aislinn/pool_deep.c
+Sun Feb 27 09:17:18 2000 ** turned shark which is cloned from a lvl 20, wc 22, ac 14 into a wc 40, ac 17
+Sun Feb 27 09:22:52 2000 ** /players/aislinn/castle.c closed ftemporilt closed until i can get some time to fix it up .. most monsters are illegal (example level 19 with wc 22 and ac 4)
+Tue Feb 29 14:27:12 2000 ** okayed maledicta to implement the excess corpse healing to go to the player if it goe over the mp max.. however i suggesta  1 to 3 or  1 to 4 ratio
+Tue Feb 29 14:27:40 2000 ** okayed maledicta to move hypermode to level 19 with concept of moving it to 19 + 1 at a later date...
+Tue Feb 29 14:28:10 2000 ** okayed Vanish for zeus .. must have NT and NM checks
+Wed Mar  8 16:40:30 2000 ** silvaric.. reset sp so it is not over max
+Thu Mar  9 12:15:32 2000 ** /players/beren/Monsters/Olgyo/hunter.c line 22 missing a ;
+Sat Mar 11 20:27:23 2000 ** /players/beren/Monsters/Olgyo/champion.c took out a extra ;
+Wed Mar 15 14:04:00 2000 ** /players/ultramagnus/mines.c deleted the loading of the armor (breastplate) since the file no longer exists
+Wed Mar 15 14:05:08 2000 ** same with gondor_gates.c
+Wed Mar 22 14:10:50 2000 ** /players/snow/dark/mons/vampire.c added in at line 119 a environ check
+Wed Mar 22 15:40:56 2000 ** /players.eurale/Fiend/mm33.c added in a reset to the variable in to = 0 immediately before the callout is made so people dont repeatedly do it and cause multiple callouts to occur
+Wed Mar 22 15:52:38 2000 ** set it up so guest can not have money
+Fri Mar 24 12:16:51 2000 ** /players/hawkeye/guildent.c took out the init() as it loads hawkeye's guild join object
+Tue Mar 28 16:12:43 2000 ** mailed hellfire and dutch and warned them to stop harrassing each other.. looks like imprisonment may occur
+Fri Mar 31 09:56:51 2000 ** /players/pain/NEW/mon/korean.c added at line 46 a set_heart_beat(0); since the destruct is causing hb problems left and right
+Tue Apr  4 10:29:16 2000 ** /players/saber/tower/tower6.c fixed the long
+Sat Apr 15 10:09:46 2000 ** okeyed the opening of the necros and the Fallen
+Sun Apr 16 21:20:35 2000 ** okayed Fallen 's shield and focus spells
+Sun Apr 16 21:21:12 2000 ** also okayed 10+ level joining Fallen.. insisted on exp gain log watch to see if things are truly equal
+Mon Apr 17 16:51:17 2000 ** gave stark a new fixed /players/mythos/awep/forest/ken.c (i had to remov every object of it in game due to callout problems) (once i fixed it i gave him a clone)
+Mon Apr 17 21:06:34 2000 ** made speed.c (speedster), watch.c (wtch) and mizan's beatfixer so they will not autoload due to the integration of said items into player and soul
+Mon Apr 17 21:14:52 2000 ** took out the above objects out of the castles
+Mon Apr 17 21:19:34 2000 ** took out my chatter boxes too since they have been integrated into the soul as well
+Tue Apr 18 10:35:15 2000 ** took out from /players/mizan/etheriel/items/wombat_repellent.c an extra ; from the id()
+Wed Apr 19 00:25:28 2000 ** /players/molasar/CASTLE/tower_top.c due to eurale's commenting out the extra_reset() he forgot to take out the call to extra_reset().. took out the call
+Wed Apr 19 16:08:16 2000 ** /players/trix/castle/town/mainroad2.c fixed it so it checks to make sure 'george' exists before attempting to call him
+Thu Apr 20 09:52:20 2000 ** /players/deathmonger/ASSASSIN dir moved to ASSASSIN_BAK
+Thu Apr 20 11:57:15 2000 ** delete the cloading of the feeler from /players/snow/castle.c
+Thu Apr 20 12:03:53 2000 ** also took out the autoload aspect of the dfeeler.c
+Thu Apr 20 13:47:48 2000 ** commented out the gypsy's miniguild spell 'curse' people were using it get around their alignment restrictions
+Fri Apr 21 12:01:16 2000 ** /players/vertebraker/ed/ed/obj/hatchet.c and chainsaw.c added weight to them since they didnt have any
+Fri Apr 21 12:10:51 2000 ** /players/eurale/VAMPIRES/vampob.c changed the 2 vars in_a_form and levitating to static to prevent them from saving accross boots quits etc
+Mon Apr 24 00:14:34 2000 ** promoted wocket to 85 and feldegast to 100
+Tue Apr 25 23:04:44 2000 ** commented out the chisel quest out of catwoman's castle due to its rundown condition and out of dateness...
+Tue Apr 25 23:07:36 2000 ** /players/catwoman/obj//menu2.c and menut.c to bak files.. no protable shops are allowed
+Wed Apr 26 14:27:07 2000 ** okeyed /players/cosmo/apt/obj/bizarro.c and bi biz_temp.c
+Wed Apr 26 14:37:46 2000 ** /players/eurale/VAMPIRES/OBJ/hemlock.c mved to abak file.. there should not be any easy way to change your alignment
+Wed Apr 26 14:46:14 2000 ** /players/hawkeye/items/good.c made nonsavable
+Thu Apr 27 09:19:54 2000 ** removed the hemlock.c from eurale's stuff again.. he put it in but he didnt realize that the object has gotten out beyond the vampire trials
+Thu Apr 27 16:33:00 2000 ** /players/unsane/backbite.c whats he doing with a copy of my backbiter ?
+Tue May  2 15:08:16 2000 ** /players/mizan/closed/poly/blobel.c fixed a problem with the blobel_radar()
+Wed May  3 10:25:33 2000 ** /players/mizan/etheriel/heals/portable_cow.c added in a check for this_player(), also made the check for 3 drinks == 0 to #drinks < 1
+Wed May  3 10:27:34 2000 ** /players/sado/shop/doggie.c made sure the heart_beat had a environment check
+Wed May  3 10:31:34 2000 ** mved /players/unsane/tool.c to /players/unsane/closed/tool.c
+Wed May  3 14:06:56 2000 ** approved fred
+Wed May  3 16:54:39 2000 ** gossip
+Wed May  3 16:56:01 2000 ** gave naz a /players/trix/castle/town/monst/knife.c she lost heres while helping me debug a healer change
+Sun May  7 21:57:59 2000 ** /players/maledicta/ships/ss.c added into id() and long() checks for this_player() and environment(this_player())
+Sat May 13 13:26:38 2000 ** took the bug off vertebraker
+Sat May 13 21:52:28 2000 ** /players/deathmonger/MISC/bull_board.c added in a check so that rumba's posts dont save.. its getting annoying dealing with his whining
+Sun May 14 23:44:07 2000 ** set it up so malsgay gets imprisoned
+Mon May 15 10:08:47 2000 ** i have IP blocked orbitworld.net (worm/rumba's /myra's account)
+Mon May 15 10:08:53 2000 ** he didnt stop
+Tue May 16 09:18:10 2000 ** doh.. forgot a check on level for the code imprisoning rumba etc... levekl is only checked now for > 0
+Thu May 18 00:15:38 2000 ** set it up so myra will be ok to come into game
+Fri May 19 19:44:25 2000 ** /players/mizan/etheriel/ROOMS/linna.c took out the tug, push commands due to a bug which allows for infiniate objects... i decided taking them out is better than fixing since the players arent willing to report it
+Sun May 21 21:15:27 2000 ** /players/maledicta/venom/OBJ/symb_shadow.c okeyed its use after 2 coding problems are fixed
+Mon May 22 09:55:17 2000 ** set up logging for the rumba/beez/ etc imprisonment
+Tue May 23 16:28:26 2000 ** /players/eurale/VAMPIRES/NPC/vamp_wolf.c added at lines 169-170 checks for master and envitronment
+Wed May 24 17:04:16 2000 ** gave morgana a goth miniguild object since she loses heres
+Wed May 24 17:08:33 2000 ** added in a curse() to the gypsy miniguild object.. i had removed the function but forgot to replace it with a msg
+Fri May 26 09:29:22 2000 ** added into the imprisoning of ip addresses Level3.net since thats where rumba is coming from now
+Fri May 26 20:49:08 2000 ** set up ip locker for Houston1.Level3.net
+Fri May 26 20:49:14 2000 ** as that is rumba
+Fri May 26 20:51:42 2000 ** changed /players/molasar/rowan/castle2.c so it doesnt reference an obsolete piece of sandman code (i.e. object doenst exist)
+Sat May 27 18:40:26 2000 ** removed my ip block of rumba etc on order by Boltar
+Wed May 31 21:43:52 2000 ** zeroed out stone's money (took ff 56k + coins) and reduced xp from 3629086 to 3309000
+Wed May 31 21:44:12 2000 ** this is in penance for money cheat
+Wed May 31 21:45:08 2000 ** daranath has gone inactive due to this as well.. daranath ash no intention of returning to nirvana at this point and if he does will have another peneance placed when he returns to make up for problem
+Tue Jun  6 09:38:22 2000 ** bugged grimm
+Wed Jun  7 10:58:04 2000 ** mved /players/grimm/closed/obj/wand.c wand2.c bone.c to .bak files (wiz tools)
+Sat Jun 17 10:31:37 2000 ** /players/mizan/etheriel/ROOMS/linna'c the storage capability has been restored (damn thing wasnt checking things properly)
+Wed Jun 21 11:13:20 2000 ** /players/catt/ARM/slayermail.c upped the weight from 2 to 5 (ac 3 )
+Fri Jun 23 11:44:50 2000 ** reset jareel's strength to 20 from 21...
+Fri Jun 23 12:13:29 2000 ** changed in Daranath's Qualtor area glass tower references (which was Crsyatl til feldegast changed it) to Crystallum (the latin term for crystal)
+Fri Jun 23 16:28:47 2000 ** /players/pathfinder/trashcan.c made checks so that items not gettable, have no weight, are living , or have no short can not be trashed
+Fri Jun 30 09:18:03 2000 ** reset noiceur's sta from 21 to 20
+Fri Jul  7 16:52:26 2000 ** /players/verebreaker/workroom.c put in a check for this_player() in the short() since he manipulates for the name of the this_player()
+Sun Jul  9 11:05:11 2000 ** /players/pathfinder/detroit/items/thingee.c fixed it so it does a command look instead of a direct callout to look().. also added in appropriate environment checks
+Sun Jul  9 11:08:01 2000 ** /players/llew/junk/chtell.c didnt check properly to ensure arguments in action... fixed that with a change toe the sscanf
+Fri Jul 14 11:29:12 2000 ** reset mememoomoo's coinage from -2 to 0
+Mon Jul 17 15:52:40 2000 ** /players/mythos/mmisc/biomtere.c added in a check to ensure that the user's max hp is 0 or above then display.. otherwise tell the user to log out
+Tue Jul 18 10:24:30 2000 ** /players/nooneelse/b;lack/kid_fangs.c lines 115, 116 added.  checks to ensure that environment objects exist
+Tue Jul 25 09:24:41 2000 ** /players/kazer/specialty/OBJ/healpack.c changed weight from straight 5 to 5 8 the number of heals contained
+Tue Jul 25 13:05:50 2000 ** okayed the opening of the Symbiotes guild
+Thu Jul 27 09:50:03 2000 ** /players/bastion/isle/wiz/vault2.c added a check for ob at line 86
+Thu Jul 27 14:52:04 2000 ** /players/snow/WEAPONS/tsunami.c copied to tsunami_old.bak and changed the actual file to a wc 20 with return of 7  1/4 times  non-savable
+Fri Jul 28 09:12:20 2000 ** /players/kazer dir... mved closed dir to closed_NOT mved guild dir to guild_BAK mved various wiz tool objects to .bak files
+Fri Jul 28 11:17:49 2000 ** promoted zeus to level 70 for his guild contributions
+Thu Aug  3 14:41:17 2000 ** commented out lines 86-91 in /players/maledicta/castle.c since theyit keeps causeing an error at boot
+Fri Aug  4 10:28:15 2000 **  promoted maledicta to 70 from 60 for his guild contribution
+Fri Aug  4 10:32:05 2000 ** added to /players/eurale/VAMPIRES/NPC/vamp_wolf.c checks for this_player() in ths hoprt and long
+Fri Aug  4 16:01:21 2000 ** /players/vertebraker/closed/guild/hb.h added in a environment check in the heartbeat
+Mon Aug  7 09:42:33 2000 ** /players/boltar/templar/templar.c added a check at line 2435 for a check fore lwho
+Wed Aug  9 08:32:50 2000 ** /players/saber/closed/new_mini/spells/cast_light.h added a check of if(set_light(0) < 2) then do set_light(1) this way ligh cant increase to a stupid amount
+Wed Aug  9 08:36:46 2000 ** /players/saber/closed/new_mini/spells/darken_light.h added a check for set_light(0) > 0 then do a set_light(-1) this way rooms cant get too dark
+Thu Aug 10 13:41:04 2000 ** /players/eurale/VAMPIRES/NPC/vamp_wolf.c at line 135 added in a if(master) so errors wont occur
+Mon Aug 14 09:49:35 2000 ** this is getting ridiculous again.. when was worm reallowed back into game as any char?  the char heh has been causing trouble.... reinstated my imprisonment method for orbitworld.net  which blcoks all but myra
+Thu Aug 17 09:50:09 2000 ** reset tifa's strength to 20 from 21
+Fri Aug 18 14:28:07 2000 ** /players/feldegast/realm/JalHab/sandstorm.c added at line 94 an environment check
+Mon Aug 21 17:12:46 2000 ** /players/feldegast/.realm/JalHab/mound19.c added in at line 44 a check for the pbject PATH+mound20.c
+Mon Aug 21 17:16:24 2000 ** /players/grimm/closed/obj/badge.c line 123 added in a environment check
+Thu Sep  7 12:34:46 2000 ** reset ensco's stealth to 19 from 24 (obviously it was 25 but she lost one stealth)
+Sat Sep  9 16:25:44 2000 ** /players/dragnar/weapons/angel.c copied from aboltar's xmas tree....  reason: file angel.c was moved to .bak a while back but because osomeone has iit in their locker it is causing problems.. so i have created a angel.c that is legal
+Wed Sep 13 11:12:09 2000 ** reset guest 's frog so guest is human again
+Mon Sep 18 13:51:10 2000 ** okayed the modification to the Symbiotes so that in the short the name of the player shows
+Mon Sep 18 16:56:23 2000 ** /players/lew/things/booger.c mved out to a bak file and then created a file for lew to see when he clones it again informing him of the level 40 rule
+Wed Sep 20 10:20:50 2000 ** reset raesh's mag to 20 from 21
+Mon Sep 25 14:42:33 2000 ** /players/mizan/etheirel/items/nitro-glycerin.c inserted in the drop() a check for environ == this_player()
+Mon Sep 25 15:24:29 2000 ** okayed Maledicta to help out with approvals... he is report to me in this regards
+Wed Sep 27 08:59:58 2000 ** removed wearing of armor of my officer's of taira  (~/amon/gtaira.c and ~/amon/gtaira2.c) due to new armor system making the ac way too high
+Wed Sep 27 17:33:58 2000 ** /players/dune/closed/guid/lib_tools/digest.c added in an environment check in callout
+Wed Sep 27 17:35:24 2000 ** actually change that.. added a remove call out
+Thu Sep 28 09:31:15 2000 ** /players/zeus/circle/daemon/daemon.c line 56 i added a check for local_users[x] as well as level to ensure that player exists fully in nirvana
+Sat Sep 30 00:14:38 2000 ** made my Chamber of Realms query_no_fight()
+Sat Sep 30 09:45:37 2000 ** /players/zeus/circle/daemon/daemon.c line 36 added a check for local_user and if local_user level is above 0 to ensure that checks and such after are only on players who are actually fully in game
+Sun Oct  1 09:22:47 2000 ** /players/vertebraker/castle.c i commented out the loading of the shardak stuff since one of the objects (actions.c) which is central to the guild objects wont load properly.. one should NEVER set up autoloading of unclonable objects!
+Tue Oct  3 14:18:10 2000 ** approved new version of /players/verbraker/swamp/OBJ/j_earring.c
+Wed Oct  4 17:54:57 2000 ** /players/pathfinder/trashcan.c set it up so objects dont move to /room/prison and instead /room/void
+Mon Oct  9 19:04:39 2000 ** /playersa/sber/food/diet.c fixed a problem which prevented it from being loaded
+Mon Oct  9 19:08:53 2000 ** /players/mizan/etheriel/items/space-dye.c took out section which was causing it not to load
+Fri May 17 23:52:19 2002 ** promoted daranath to 99.. intended to do that a loooong time ago
+Fri May 17 23:52:35 2002 ** NOTE: daranath didnnot ask for it.. this is purely my own decision

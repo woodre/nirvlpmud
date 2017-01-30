@@ -1,0 +1,12 @@
+reset(arg) {
+  if (arg) return;
+  /* Autoloading objects */
+  call_other("/players/feldegast/obj/poison2.c","???");
+  call_other("/players/feldegast/std/clothes.c","???");
+  call_other("/players/feldegast/closed/tool/bug.c","???");
+  call_other("/players/feldegast/obj/prize.c","???");
+  call_other("/players/feldegast/healers/gob.c", "???");
+  if(extract(ctime(time()),4,9)=="Feb 14") /* Seasonal Valentine's day dispenser */
+    call_other("/players/feldegast/obj/v-day.c","???");
+}
+

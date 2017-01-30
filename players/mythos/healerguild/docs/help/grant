@@ -1,0 +1,8 @@
+grant  [level 25]: grants target with a staff of light containing 
+                   referenced power. (can be used on non-healers)
+                   effective level of the referenced power is half
+                   of your level
+                   
+                   syntax: grant <target> <powername>
+                   
+                   cost:  sp:200  hp:100  xp:1000  cost:20000 

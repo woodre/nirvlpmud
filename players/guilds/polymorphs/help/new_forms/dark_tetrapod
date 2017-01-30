@@ -1,0 +1,39 @@
+[DARK TETRAPOD] Level [7] 1000 charges 
+                                (++sta, --int, --mag, +str, ++ste, ++luck)
+
+  Dark Tetrapods, like their smaller cousins are capable of wielding four
+  weapons at once, but have the added gift of training in the dark arts
+  of magic. Capable of casting a limited array of spells, they are much
+  feared and well on their way of become adepts in both fighting and the
+  dark spell arts.
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+strap <weapon>   Wield a second weapon offhand.
+
+strap all        Same as above but cycles through inventory and straps
+                 weapons on a first-come, first-serve basis.
+
+unstrap <weapon> Remove a weapon wielded offhand.
+
+blitz            (60 sps) Charge whatever you are fighting and hopefully land
+                 as many hard hits as possible in one combat round.
+
+raar <sp>        (variable, or automatic by default) Regenerate
+                 hp to sp on a 2sp : 1 hp heal ratio.
+
+sonic <monster>  Dark Tetrapods are not completely ignorant of magic but for
+                 the most part they are. If you are capable of casting the
+                 game spell sonic, it will work for the most part here.
+
+vigor <sp>       Vigor restores physical hitpoints directly from charges
+                 stored within the clay. Be aware that the conversion rate
+                 is not entirely efficient, and that energy transfer of this
+                 sort has some reliability issues.
+
+cloak            (50 sps) Cloaking hides the player from the outside world.
+                 While cloaked you can conduct your own regneration or other
+                 business without the nosy world probing in on you. Cloak can
+                 be cast during combat but will cost higher (75 sps).
+
+decloak          Return from cloaking in the shadows to the surface world. 

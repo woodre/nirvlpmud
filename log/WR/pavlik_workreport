@@ -1,0 +1,13 @@
+[Feb 24 2006 17:08] A: added 50 sp to crip to reimburse faulty guild spell
+[Mar  6 2006 14:58] A: Reimbursed Crip 350,000 guild xp for xp he used in the guild on something that wasn't ready yet.
+[Mar  9 2006 21:49] A: Registered Test Character: Pavtest
+[Mar 10 2006 17:13] A: Reimbursed Crip with 700,000 experience points, lost due to faulty guild spell
+[Mar 10 2006 21:35] A: Reimburse crip again, 597k exp for bad death
+[Mar 13 2006 15:13] A: previous reimburse of XP from Crip was converted to guild XP by guild object.
+[Mar 13 2006 15:14] A: deducted 500k guild xp and added 500k regular XP to Crip to correct
+[Mar 21 2006 12:24] A: x
+[Mar 22 2006 22:47] A: had to add 3,000,000 back to Mortarion that was stripped by the guild object update
+[Mar 23 2006 22:22] A: fixed room in Catt's area where if(present()) check for lag demon was messed up.
+[Mar 23 2006 22:22] A: the bug in Catt's area was reported by Salina.  Gave her a full heal for reporting the bug.
+[Mar 30 2006 12:23] A: Reimbursed Squint with 689124 XP due to buggy death (guild pet)
+[Apr  6 2006 17:17] A: changed Mage gen_sp_bonus from 3 to 4 so that it matches the gen_hp_bonus of -4

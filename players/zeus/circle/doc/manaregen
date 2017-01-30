@@ -1,0 +1,27 @@
+mana regen changes:
+
+ now:
+
+  if(0 == random(3))
+    USER->add_spell_point(1+random(guild_exp / 1600000));
+
+ old:
+
+  if(0 == random(3+random(4)) && guild_exp >= 2000000)
+    USER->add_spell_point(guild_exp / 2000000);
+
+
+hp/sp comparison rates of current setup:
+
+max gxp:
+<<<<  HP 232/300 SP 141/345 I 0% F 0% S 0% T 0%  >>>>
+<<<<  HP 247/300 SP 224/345 I 0% F 0% S 0% T 0%  >>>>
+<<<<  HP 252/300 SP 277/345 I 0% F 0% S 0% T 0%  >>>>
+<<<<  HP 260/300 SP 338/345 I 0% F 0% S 0% T 0%  >>>>
+
+< 1.6 mil gxp:
+<<<<  HP 65/178 SP 30/218 I 0% F 0% S 0% T 0%  >>>>
+<<<<  HP 74/178 SP 49/218 I 0% F 0% S 0% T 0%  >>>>
+<<<<  HP 80/178 SP 68/218 I 0% F 0% S 0% T 0%  >>>>
+<<<<  HP 90/178 SP 91/218 I 0% F 0% S 0% T 0%  >>>>
+<<<<  HP 104/178 SP 130/218 I 0% F 0% S 0% T 0%  >>>>

@@ -1,0 +1,43 @@
+                       [help monexamples]
+-----------------------=========+=========-----------------------
+
+Here are a few examples of how you might use the customizable 
+combat monitor to create your own..
+
+       --------------------------------------------------             
+
+Babs is a Knight Templar.  She wants to display her alignment 
+in her combat monitor to make sure she doesn't become evil.  
+Babs also wants to make her combat monitor a bit different, 
+and she wants to brightly color it so she can see it more easily.
+She can type (all on one line):
+
+setmon {Hp: $HR$#hps#$N$/#mhp# Sp: $HG$#sps#$N$/#msp# I: #intox#%
+F: #stu#% S: #soa#% T: #inf#% $HM$#ahp#$N$ (#al#)}
+
+and her monitor will display:
+
+{Hp: [1;31m150[2;37;0m/150 Sp: [1;32m150[2;37;0m/150 I: 0% F: 0% S: 0% T: 0% [1;35mAHP: 10/10[2;37;0m (white lord)}
+
+        ---------------------------------------------------       
+
+Jim is a Healer.  He never uses intox heals, and doesn't want 
+to take up space monitoring intox.  He rarely fights an enemy
+so he does not need the attacker's relative hit points.  However
+he would like to see his current hit points and spell points 
+in a bright red color.  So he types:
+
+setmon [[ H: $HR$#hps#$N$ S: $HR$#sps#$N$ ]]
+
+and his monitor will display:
+
+[[ H: [1;31m180[2;37;0m S: [1;31m180[2;37;0m ]]
+
+-----------------------------------------------------------------
+
+For information about specific ANSI color attributes and their 
+codes, [$] type 'help moncolor'.
+
+For information about the values [HP, SP, etc] and their codes, 
+[#] type 'help monvalues'.
+

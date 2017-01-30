@@ -1,0 +1,22 @@
+
+                            [help boards]
+-----------------------===========+=========-----------------------
+
+Usage: boards [list || view || read || post || remove] [board number] [post number || subject]
+
+boards list
+  List boards
+
+boards view [board number]
+  View headers of posts on board [board number]
+
+boards read [board number] [post number]
+  Read post [post number] on board [board number].
+  If no [post number] is given, reads the next unread note.
+
+boards post [board number] [subject]
+  Create a new note on [board number] with subject [subject].
+
+board remove [board number] [post number]
+  Remove post number [post number] from board [board number].
+

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/snow/heals/ice_sphere","/obj/weapon","/players/hippo/heals/blood","/players/scathe/armor/suit","/players/scathe/armor/mgarb","/players/hippo/armour/glazour_coat","/obj/weapon","/obj/weapon","/players/wren/Area/starbug/items/laundry","/players/pain/NEW/arm/bplate","/players/ultramagnus/rsack","/players/angel/area/stargate/obj/bullets","/players/wren/Area/starbug/items/cottagecheese","/players/wren/Area/starbug/items/bat","/players/mythos/awep/dstaff","/players/mythos/awep/wakizashi","/obj/armor","/players/wren/Area/starbug/items/reddress","/players/hawkeye/items/bourbon","/players/wren/Area/starbug/items/currie","/players/snow/cam/stuff/plate","/players/ultramagnus/darkarmor","/players/wren/Area/starbug/items/leaflets","/players/snow/shadows/stuff/crown","/obj/torch",})
+shorts ({"An [1;36mIce[0m Sphere","A gardening hoe","[1;31mdrops of blood[0m","Black Suit","Black Monk Robes","glazour coat","Bow","Pillow","Lister's dirty laundry","A battered Breastplate","A red sack","A clip of bullets [50]","a small tub of cottage cheese.","a [1;30mballbat[2;37;0m","Dream Staff","Wakizashi","A magical [1mwhite[0m amulet","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","bottle of bourbon","A tin of chicken currie","[34m[1mBlessed Plate Armor[0m[0m","Dark Rider Gloves","a stack of leaflets","[1mShadowCrown[0m","light spell",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

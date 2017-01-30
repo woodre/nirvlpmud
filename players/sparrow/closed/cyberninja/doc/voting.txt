@@ -1,0 +1,78 @@
+C Y B E R N I N J A S
+
+Operation File: voting
+Usage: cyber <topic
+
+         The voting system is a state-of-the-art guild issue
+resolution system. All ninjas can and should use this system.
+It is very dishonorable to not know of the fine details of
+this system.
+
+         CyberNinja voting was designed to account for the fact
+that players are not usually logged in all at once. Thus, the
+voting system keeps track of vote tallies over the lifetime of 
+a vote.  Votes are saved until the vote day limit expires.
+These cdays (short for "CyberNinja days") are equivalent to 
+real days, except that a cday does NOT pass if no CyberNinja
+logs on for that day. During the cday period, ninjas will be
+automatically informed of any votes in progress, and will be
+able to cast their vote if they so choose. When the cday
+period has ended, the vote is automatically closed. During the
+vote, and after the vote has closed, ninjas may view the
+current vote results.
+
+        Guild issue resolution has been made easy.  Any ninja
+who can create a vote can set up a vote about an issue. The 
+ninja has the choice of whether to make this a secret ballot
+vote or an open vote.  When the vote has closed, the ninja may
+view the results to see how the vote went.
+
+   _____________________Voting Commands___________________
+
+   cvotes
+        Displays the current votes in progress.
+   cvote_results <voteName>
+        -If <voteName> is not specified, shows all the votes 
+that have been created... referenced by voteName (a name that 
+uniquely identifies a vote).
+        -If <voteName> is specified, shows the results for
+that vote.
+        Note that if a vote is still in progress, more results
+may come in at a later time.
+
+   cvote_create issue <issueName> [secret|open] <cdays> <issueDescription>
+        Sets up a vote about a guild issue.
+        <issueName> should be a short one-word ID name for
+your vote.
+        -Specify 'secret' if you wish to hide the identities 
+of those who vote on your issue (the name "Someone" will 
+appear instead).  The issueDescription is your chance to 
+explain the issue. Be sure to clearly state what a vote of
+votes that they see fit.  They may create a new law or
+simply take the opinions into consideration.
+The following is an example of (ignore the short poor
+description)
+        usage: vote_create issue pkShard open 30 PK lonely 
+Shardaks? 
+
+      cvote_close <voteName>
+Use this to close a vote about a guild issue that you have
+created. A vote that is closed ends prematurely, and results
+are tallied up and saved.  The results can be viewed with the
+'vote_results' command. Closing a vote is useful if you do not
+wish to wait the whole time limit to gather votes (i.e. you
+could hold a 5-minute vote). Remember that you can only close 
+your own vote.
+
+     cvote_cast <voteName> [yea|nay]
+       This is how someone actually casts his or her vote.
+'yea' means yes, 'nay' means no If you created the vote, don't
+forget to cast your own vote.
+
+     cvote_cancel <voteName>
+       Cancels a vote in progress. Note that votes that have
+already closed cannot be canceled.  You must have created the 
+vote to cancel it.
+  _______________________________________________________
+
+  See also: influence 

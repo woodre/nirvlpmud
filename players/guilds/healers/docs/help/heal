@@ -1,0 +1,15 @@
+heal [level 5]: the basic heal spell.  
+                 healer can cast on any living being. 
+                 healer gains some xp for healing others. 
+                 note: hp/sp are to heal only hp or sp
+                 
+                 syntax:  heal <target> <amount>
+                          hp <target> <amount>
+                          sp <target> <amount>
+                
+                note: <amount> is optional 
+                      if you do not put in an amount your max healing
+                      ability will occur
+                          
+                 cost:  sp: the amount you healed       
+                 

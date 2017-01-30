@@ -1,0 +1,51 @@
+/* WTF is this? oks so im a tad strong in terminology
+  but come on this is a tad sick...
+  return 11, return 7 return 5 and return 2 and a 1 in 1000 chance of return rnd 50... 
+with no drawback and savabel?  yeah right...
+plus that add_sp deal... 1> the function is
+add_spell_point and 2> if(w > 400 && w < 700) return 2 .. the how the hell
+does one get 2 == 6666 after that?
+this is being taken out for now
+and im redoing some f it
+- Mythos <12-1-96>
+*/
+#define tp this_player()->query_name()
+ inherit "obj/weapon.c";
+int w,d;
+ reset(arg) {
+    ::reset(arg);
+    if(arg)  return;
+   set_name("claws");
+   set_alias("insect claws");
+set_short("Insect Claws");
+set_long("You must have broken these off while killing the insect.  The appear\n"+
+"to be oozing something.  They make you feel very sinister just holding them.\n");
+set_class(17);
+   set_weight(2);
+   set_value(random(1000));
+   set_hit_func(this_object());
+}
+weapon_hit(attacker){
+  w = random(1000);
+if (w < 50) {
+write("You hit "+attacker->query_name()+" very hard.\n");
+return 11; }
+if (w > 50 && w < 200) {
+write("You hit "+attacker->query_name()+" hard.\n");
+return 7;}
+if (w > 200 && w < 400) {
+write("You hit "+attacker->query_name()+" hard.\n");
+return 5; }
+if (w > 400 && w < 700) {
+write("You grazed "+attacker->query_name()+".\n");
+return 2;}
+if (w == 666) {
+write("The claws turn on you and attack.\n");
+this_player()->add_sp(-random(50));
+}
+if (w == 999) {
+write("The claws seep poison into "+attacker->query_name()+".\n"+
+"\nYour foe begins to die slowly.\n");
+return random(50); }
+return 0;
+}

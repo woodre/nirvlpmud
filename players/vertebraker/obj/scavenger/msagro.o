@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/scathe/armor/igarb","/players/mythos/amisc/egg","/players/scathe/armor/rgarb","/players/angel/area/stargate/obj/P90_no_ammo","/players/mythos/awep/wakizashi","/obj/weapon","/players/wren/Area/starbug/items/straw","/players/wren/Area/starbug/items/ogunit","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/mythos/aarmor/haramaki","/players/hippo/weapons/molar_sharf","/players/snow/heals/kw_meat","/players/hawkeye/items/stone","/players/pain/NEW/arm/pmail","/players/pain/NEW/arm/helm","/players/ultramagnus/apple","/players/mistress/other/disk","/players/ultramagnus/darkweapon","/players/hippo/armour/shield","/players/hippo/heals/blood","/obj/weapon","/players/scathe/weap/lbow","/obj/weapon","/players/angel/area/stargate/obj/staff","/obj/armor",})
+shorts ({"Initiate's garb","A strange looking egg","Monk's garb","[36mP90 machine gun[0m","Wakizashi","Shark`s tooth","a long plastic straw","a case containing an OG unit.","Peasant Rags","Haramaki","A molar sharf","A hunk of whale meat","A Stone","Gleeming Platemail","A horned helm","A Red Apple","A fragile disk","Dark Rider Spear","lap of meat","[1;31mdrops of blood[0m","A gardening hoe","Longbow of Force","A horse whip","[1;36mSTAFF WEAPON[0m","Robot Head",})
+found ({1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

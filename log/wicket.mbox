@@ -1,0 +1,43 @@
+From: pestilence
+Subj: weapon
+
+Date: Oct 12 14:28
+
+tell wicket cp'd jareel's paramswep, instead of physical do "other|fire" I 
+think and make the number lower than 20 ;) 
+
+From: sparrow
+Subj: Map looks good, now moving on.
+
+Date: Sep  3 19:05
+
+Ok the map looks good, the next step is to flesh out all of the  
+monsters and objects(armor,weapons,etc). 
+ 
+What I want you to do is now create a file called Overview 
+This is where you start working on details. 
+Area Name 
+Area Description 
+Level Range 
+ 
+Next list out all of the unique monsters in the are, starting 
+with the weakest. I want the name, short desc, long desc, level 
+ac, wc, hp. For those stats I want to see ranges like 75-120 hps 
+or 12-14 wc. We will code these ranges into the monsters to allow 
+for flexible creatures. Lastly what treasure do they drop 
+ 
+Next, everything that you listed in the treasure drop needs spec'ed 
+out. Weapon- name, short desc, long desc, wc, value. Type of deal 
+for the armors. 
+ 
+Better get started! 
+-S 
+
+From: sparrow
+Subj: Check out your Notes folder
+
+Date: Sep  2 08:35
+
+Check your notes folder 
+-S 
+

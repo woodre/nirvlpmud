@@ -1,0 +1,34 @@
+no_clean 0
+wielded 1
+name_of_weapon "staff"
+cap_name "Staff"
+broke 0
+silentwield 0
+eff_wc 16
+misses 1
+hits 16
+alt_name 0
+alias_name 0
+short_desc "Soldier's Staff of [31mFire[2;37;0m"
+long_desc "This is a staff of Master quality."
+read_msg 0
+save_flag 0
+class_of_weapon 16
+value 2870
+local_weight 2
+hit_func_fn "/players/jaraxle/closed/weapon/weapon2"
+wield_func 0
+wield_func_fn 0
+info 0
+type "polearm"
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+time_delay 0
+two_handed_wield 1
+two_handed_wep 1
+no_break 0
+special_damage ({3,})
+special_chance ({30,})
+special_message 0
+special_rmessage 0
+special_fun ({"/players/jaraxle/closed/weapon/powers/fire.c",})
+yup 1

@@ -1,0 +1,33 @@
+no_clean 0
+wielded 0
+wielded_by 0
+name_of_weapon "stinger"
+cap_name "Stinger"
+broke 0
+silentwield 0
+eff_wc 0
+misses 120
+hits 0
+alt_name 0
+alias_name "newbie_wep"
+short_desc "[1m[30mStinger[0m"
+long_desc "A bumblebee [1m[30mstinger[0m."
+read_msg 0
+save_flag 0
+class_of_weapon 14
+value 120
+buy_value 0
+local_weight 1
+hit_func 0
+hit_func_fn "/players/softly/newbie/mobs/bbee"
+wield_func 0
+wield_func_fn 0
+info 0
+type "knife"
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+multipleIds ({})
+owner 0
+ids 0
+params ({"physical",14,"hit",})
+offwielded 0
+offwield_desc 0

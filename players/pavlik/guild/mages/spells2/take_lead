@@ -1,0 +1,10 @@
+take_lead(){
+  if(!tp->query_attack()){
+    write("You aren't fighting anyhting.\n");
+    return 1;
+    }
+  write("You step to the front of the battle.\n");
+  say(ME+" steps to the front of the fighting,\n");
+  tp->query_attack()->attack_object(tp);
+  return 1;
+}

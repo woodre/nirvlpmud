@@ -1,0 +1,16 @@
+                    -- PROTECTION FROM GOOD --
+
+TYPE: Spell (Variable)
+INT REQ: 1/level
+USAGE: pgood
+COST TO MAX: 550,000
+
+This spell gives its caster a special defense vs good aligned monsters
+or good aligned players.  This spell will only last a limited time so
+be wary.
+
+      /=LEVEL=COST SP=XP COST=\
+      |   1  |   25  | 50,000 |
+      |   2  |   25  |500,000 |
+      \=======================/
+

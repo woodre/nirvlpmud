@@ -1,0 +1,31 @@
+/* Apartment Room */
+#define tp this_player()->query_name()
+#define mp this_player()->move_player
+#include "/players/cosmo/closed/ansi.h" 
+inherit "players/cosmo/dc/dcroom";
+
+reset(arg) {
+  if(arg) return;
+  set_light(1);
+  set_room_type("street");
+  short_desc=GRN+"Upper East Side"+NORM;
+  long_desc=
+"  The street continues east-west here.  You begin to notice\n"+
+"how loud it is here in the city.  Cars driving by, maintenance\n"+
+"and construction at nearly every corner.  Who would want to live\n"+
+"in a major city with all of this chaos constantly going on? There\n"+
+"is a small cafe on the south side of the street.\n",
+
+  items= ({
+    "buildings","Old dirty buildings. Who knows what you might find in them",
+    "shops","All of the typical city shops may be found along this street",
+    "cafe","A sign on the door reads: Reggie's Cafe. Perhaps you can enter\n"+
+           "the cafe",
+  });
+
+  dest_dir= ({
+    "players/cosmo/apt/rooms/rs7", "east",
+    "players/cosmo/apt/rooms/rs3", "west",
+    "players/cosmo/apt/rooms/rreggies", "cafe",
+  });
+}

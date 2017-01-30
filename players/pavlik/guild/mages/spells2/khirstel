@@ -1,0 +1,145 @@
+/*
+ * spell : Khirstel   (conjuration)
+ * level : 3
+ * effect: summons a pet
+ * cost  : 50 sp
+ * spec  : see below for more details
+ * files : ~/mages/obj/khirstel.c
+ *
+ * Summons a pet.  The Khirstel is NOT a fighting pet, merely a pack
+ * animal with some emotes.  The khirstel MAY fight sometimes depending
+ * on its 'mood', but the player can never command it to attack.
+ * See '/players/pavlik/guild/mages/obj/khirstel.c' for more
+*/
+
+khirstel(){
+  object obj;
+
+  if(!KNOW("khirstel")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(present(rlname+"'s khirstel", env)){
+    write("You already have a khirstel.\n");
+    return 1;
+  }
+
+  write(
+  "You cast a "+HIM+"Khirstel"+NORM+" spell ... \n");
+
+  if(spell_fail2(3,"conj", "int")){
+    write("You miscast the conjuration spell and summon something\n"+
+          "other than a little khirstel.  This thing is big, and\n"+
+          "ugly ... and hungry!\n");
+    say(ME+" miscasts a summoning spell and a demon appears!\n");
+    obj = clone_object("players/pavlik/guild/mages/obj/demon");
+    move_object(obj, env);
+    obj->do_demon(tp);
+    tp->add_spell_point(-10);
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" summons a magical Khirstel.\n"+
+  "The furry little creature materializes at "+ME+"'s feet!\n"+
+  "The slobbering Khirstel nips playfully at your ankles.\n");
+
+  obj = clone_object("players/pavlik/guild/mages/obj/khirstel");
+  move_object(obj, env);
+  obj->set_owner(rlname);
+  obj->do_khirstel();
+  tp->add_spell_point(-50);
+  return 1;
+}
+
+kwhistle(){
+  object obj;
+
+  if(!guild->knowit("khirstel")){
+    write("What?\n");
+    return 1;
+    }
+
+  if(!find_living(rlname+"'s khirstel")){
+    write("You do not have a khirstel.\n");
+    return 1;
+    }
+
+  write("You whistle loudly.\n");
+  say(ME+" whistles loudly.\n");
+  write("Khirstel runs into the room panting heavily.\n");
+  write("Khirstel gives you a big slobbery lick.\n");
+  say("A Khirstel runs into the room panting heavily.\n");
+  say("Khirstel goes over to "+ME+".\n");
+  destruct(find_living(rlname+"'s khirstel"));
+  obj = clone_object("players/pavlik/guild/mages/obj/khirstel");
+  obj->set_owner(rlname);
+  move_object(obj, this_object());
+  obj->do_khirstel();
+  return 1;
+}
+
+k_getall(khir){
+  object ob;
+  int canget;
+  canget = 1;
+  ob = first_inventory(khir);
+  if(!ob){
+    write("Your khirstel doesn't have anything to give you.\n");
+    return 1;
+    }
+  while((ob)&&(canget==1)){
+    object cur;
+    cur = ob;
+    ob = next_inventory(ob);
+    if(!transfer(cur, this_player())){
+    write("Khirstel gives you "+cur->short()+".\n");
+    say(ME+"'s khirstel gives him "+cur->short()+".\n");
+    } else {
+    write("You cannot carry anything more.\n");
+    canget = 0;
+    }
+  }
+  return 1;
+}
+
+ktake(khir, str){
+  object ob;
+  int canget;
+  if(!str){
+    write("Your khirstel gives you a confused look.\n");
+    return 1;
+    }
+  if(str == "all"){
+    ob = first_inventory(environment(khir));
+    while(ob){
+      object cur;
+      cur = ob;
+      ob = next_inventory(ob);
+      if(living(cur)){
+       tell_room(environment(khir),
+       "Khirstel gives "+capitalize(cur->query_name())+" a big slobbery lick!\n");
+      } else if(!transfer(cur, khir)){
+       tell_room(environment(khir),
+       "Khirstel grabs "+cur->short()+" and stuffs it into his furry body.\n");
+      }
+    }
+    return 1;
+  } else {
+    ob = present(str, environment(khir));
+    if(!ob){
+      write("There is no "+str+" here.\n");
+      return 1;
+    }
+    if(!transfer(ob, khir)){
+    tell_room(environment(khir),
+    "Khirstel grabs "+ob->short()+" and stuffs it into his furry body.\n");
+    } else {
+    tell_room(environment(khir),
+    "Khirstel's face turns purple as he tries to lift "+ob->short()+".\n"+
+    "Khirstel tried to take "+ob->short()+", but failed.\n");
+    }
+    return 1;
+  }
+}

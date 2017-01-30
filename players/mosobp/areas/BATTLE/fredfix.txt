@@ -1,0 +1,14 @@
+
+android.c
+  -  In the dragonpunch add_spell() you have to change it to
+     "40-50" if you want it to work that way.  Need the quotes.
+
+videl.c
+  -  Change the lvl to 20 instead of 26.
+  -  set_multi_cast(3) doesn't have any affect.  It has to be
+     either a set_multi_cast(1) or set_multi_cast(0) and it's
+     only for mobs that have 2 or more add_spells so it 
+     wouldn't be needed at all on this mob.
+
+Fred
+

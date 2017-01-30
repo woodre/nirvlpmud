@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/joab/hall/r4","north","/players/mokri/clans/joab/hall/r28","south",})
+short_desc "Locker Room for Donation Items[0m"
+long_desc "This room is full of Items to be donated to those inneed. Continue to add quality Items for our allies.[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;30mObsidian [1;31mPunchknife[0m","/players/arrina/weapons/punchknife",0,0,0,"[1m[34mLightning Robes[0m","/players/jareel/armor/orlanthi_wind_priestess_robes",0,0,0,"[1;30mBastard Sword[0m","/players/jareel/weapons/sword",0,0,0,"[34mWind Shield[0m","/players/jareel/armor/orlanthi_wind_lord_shield",0,0,0,"[1mGrandor, Great Hammer[0m","/players/jareel/weapons/chaos/woods2/hammer",0,0,0,"[1;30mBastard Sword[0m","/players/jareel/weapons/sword",0,0,0,"[1m[34mLightning Robes[0m","/players/jareel/armor/orlanthi_wind_priestess_robes",0,0,0,"[35mFlowing purple robes[0m","/players/vertebraker/swamp/OBJ/j_robes",0,0,0,"A [33mgolden[0m earring","/players/vertebraker/swamp/OBJ/j_earring",0,0,0,"[1m[30mShadowVeil[0;0m","/players/arrina/armor/sveil",0,0,0,})

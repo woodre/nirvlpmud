@@ -1,0 +1,41 @@
+
+[SET]
+
+  Allows you to set a series of variables, which are imbedded in the
+  guild object and can be custom-tailored to fit the way you play.
+
+Usage:  set <attribute> <arg>
+
+
+Parameters:  Type 'set' with no arguments to see a list of all
+             the variables you can set.
+
+
+ doing      Sets your doing message displayed in 'guild who /d'
+
+ panic      Type this key, hit return and will initiate wimpy.
+            Default setting is 'p'. Can be set to anything you wish.
+
+ monitor    Sets how many heartbeats your monitor will delay in messaging.
+
+ msgin      Sets your entry guild emote to the game (see toggle msg parameter)
+
+ msgout     Sets your quit guild emote to the game (see toggle msg parameter)
+
+ nickname   Sets your nickname displayed in 'guild who /n'
+
+ pretitle   Sets your pretitle to something. To set your pretitle to a blank
+            value give the command 'set pretitle |', which is similar to
+            what the mud core uses as 'pretitle |'.
+
+ statkey    Sets the quick-stat action key.
+
+ sig        Sets your signature message, appended to newsgroup msgs.
+
+ title      Sets the title of your player character (level 2)
+
+
+ wimpy      Sets the percentage of hitpoints that upon having left
+            causes you to flee. Setting to 0 disables guild
+            wimpy. Valid numerals are 0 - 90.
+

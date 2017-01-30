@@ -1,0 +1,22 @@
+*******************************************************************
+
+Name:     Copy Path
+
+Desc:     This command copies file to another location without 
+          changing the original. Useful for making second copies
+          of a file for altering and testing alternate versions of
+          an object. File name can also be changed.
+
+Level:    Your accessable files  
+
+Warning:  Remember to observe proper etiquette and credit sources 
+          when borrowing code from other wizards. 
+
+Syntax:   cp /players/bob/bag.c /open/bob/bag.c 
+Example:  cp /players/bob/bag.c /open/bob/bag.c  
+Result:   It will copy the bag file from Bob's directoy in Bob's 
+          open dir.
+
+Related:  mv, rm, ed, cp_dir
+
+*******************************************************************

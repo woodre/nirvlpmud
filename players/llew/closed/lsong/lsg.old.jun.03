@@ -1,0 +1,96 @@
+#include "/players/llew/closed/ansi.h"
+
+#define CHANNEL "players/llew/closed/lsong/line"
+
+
+reset (arg)
+{
+}
+
+init() {
+   CHANNEL->listener(this_player(),1,0);
+   add_action("lsg","lsg");
+   add_action("lse","lse");
+   add_action("deafen","deafen");
+   add_action("members","members");
+
+   add_action("test","test");
+
+}
+
+test()
+{
+   write("Root for this is: " + root("players/llew/closed/lsong/lsg") + "\n");
+   return 1;
+}
+
+drop() { return 1; }
+get() { return 0; }
+id(nom) { return nom == "lsong"; }
+
+long() { 
+   int x, size;
+   string *names;
+   write(RED+"\t@"+GRN+"}-,--`--                              --,--`-{"+RED+"@\n\n");
+   write(NORM+"\t   A song drifts through your mind carrying your thoughts to\n\t   "+
+         "others with the song.  You can lsg to think or lse to send actions.\n\t   "+
+         "Deafen will remove the song from your mind. \n\n\t\tThe song drifts to:\n\t "+
+         "    "+BOLD+"-------------------------\n\n"+NORM);
+   for (names = ({}), x = 0, size = sizeof(CHANNEL->listener(0,0,1)); x < size; x++)
+      names += ({ CHANNEL->listener(0,0,1)[x]->query_name() });
+   write(format("\t" + implode(names,"\t"),60)+"\n");
+   return 1;
+}
+
+query_auto_load() { return "/players/llew/closed/lsong/lsg.c:"; }
+
+lsg(mess) {
+   object listen;
+   int loop,sl;
+   if (!mess)
+   {
+      write("Please say something more eloquent than nothing.\n");
+      return 1;
+   }
+   listen = call_other(CHANNEL,"listener",0,0,1);
+   for(loop=0,sl=sizeof(listen);loop < sl;loop++) {
+   tell_object(listen[loop],GRN+"-,-{"+RED+"@ "+HIW+this_player()->query_name()+" "+NORM+RED+"@"+GRN+"}-`- "+NORM+format(mess+"\n",60));
+   }
+   return 1;
+}
+
+lse(mess) {
+   object listen;
+   int loop,sl;
+   if (!mess)
+   {
+      write("Please do something more eloquent than nothing.\n");
+      return 1;
+   }
+   listen = call_other(CHANNEL,"listener",0,0,1);
+   for(loop=0,sl=sizeof(listen);loop < sl;loop++) {
+   tell_object(listen[loop],GRN+"-,-`-{(" + RED + "@ " + HIW + this_player()->query_name() + NORM + " " + format(mess + "\n", 60));
+   }
+   return 1;
+}
+
+members() {
+   int x,so;
+   object list;
+   list=CHANNEL->listener(0,0,1);
+   for(x=0,so=sizeof(list);x < so;x++) {
+   write(list[x]->query_real_name()+", ");
+   }
+   write("\n");
+   return 1;
+}
+
+deafen() {
+   write("\n"+BOLD+pad("",70,'~')+"\n\n"+RED+"\tYou stop listening to the beautiful song.\n\t"+
+         "Your heart longs to flow with the lost melodies of life.\n\tYour deaf ears "+
+         "will never hear the same.\n\n"+NORM+BOLD+pad("",70,'~')+"\n\n"+NORM);
+
+   CHANNEL->listener(this_object(),0,0);
+   destruct(this_object());
+   return 1;
+}

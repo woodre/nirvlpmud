@@ -1,0 +1,16 @@
+inherit "obj/armor";
+
+reset(arg){
+   ::reset(arg);
+
+   set_name("robe");
+   set_short("A long black robe");
+  set_long(
+"A long black robe once worn by the monk Tyborlek.  The robe\n"+
+"is made of cloth, and very finely woven.  A strange magical aura\n"+
+"radiates forth from the robe, consuming whoever wears it.\n");
+  set_type("misc");
+  set_ac(1);
+  set_weight(1);
+  set_value(666+random(333));
+}

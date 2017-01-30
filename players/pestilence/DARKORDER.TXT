@@ -1,0 +1,130 @@
+ Spell              Pain                      Corrupt                Torment
+Damage      1 + combat/2 + random 10     5+ combat/2 +          4 + combat +random combat +     
+Formula                                     random combat            random 5
+
+Max Damage           21     49 other|physical     35       49  other|magic 49 other|evil
+Min Damage
+@ max combat         11      14                   15        14               14
+
+sp cost              10     10+combat           5+combat 10+combat         10+combat
+sp @ maxed
+combat               10       30                   25        30              30
+______
+CHANGED so all the spells do the same, but different damage types, so 
+they can still be a valid choice when maxed and don't become obsolete 
+after obtaining the next power,  also cost goes up as it gets better.
+__________________________________________________________________________________________
+gen wc bonus 1 + combat /2
+add faster spell delay with -3 darkness or less
+________________________________________________________________________________________________
+spell               Sickness                   enrage                          dwield/doffwield
+
+spell delay        spell_delay(275-           150 callout                             0
+                wil-mag-pie"-level() * 5)
+				  -extra_level()/2));
+
+
+
+cost            160-3/4level-3/4extralvl        50                                    30  
+                 -str/2-sta/2-wil/2
+
+how long         lvl/2+xtralvl/2+mag/4+         5 rounds                            900+random900
+                 pie/4+wil/4   
+				 
+				 
+what it does     doubles damage to cap of       boost wc wil/(1 + random2)         random 6 damage 1 + random 4
+                  55                             unable to move while             unable to transfer weapon to another
+                                                  active and in battle				  goes away,drop,give,unwield
+________________________________________________________________________________________________												  
+												
+distraught /maniacal chains                   infect                                   blindside   
+
+prevents mob from wimpying               poisons mob                            battle starting spell, only works if mob is 10/10 
+                                                                                         and not already in battle
+35 cost                                   35 sp                                          33 sps     
+if random 100 > int+wil + random 100   possible 4 hits of 10+random 10              20 + 2* combat       max 60 reduced to 55 per cap
+spell fails
+lasts 20 +lvl+extra
+________________________________________________________________________________________________
+												
+fatal/death/reaper                       stun                                       demon
+finish spell                         lowers wc4 raises ac4                       summons demon to hit npc with you
+mob must be 0/10                         35 sps                                       cost 50 sps
+and < 60 hps                            max twice                                      only once per npc
+sp cost is npc health /3                                                             wc 14+random 3 lasts 2-5 rounds
+damage is sp cost * 4                                                                ac2 spell 33 chance 10 +4rand damage
+
+________________________________________________________________________________________________
+ravage                                 dlead                                           darkness  
+              
+costs 20 hps                          take lead in fight                             portal back to guild hall
+damage 10+combat                          10 sps                                         80 sps 
+30 max                                                                                 with chance to go wrong
+
+
+drain/decorpse                            align                                            rlight
+ heal corpse value                       tells your alignment or of npc                  gives light level of the room
+
+________________________________________________________________________________________________
+
+offwield                                 dgrasp
+wield second weapon                 cost 40, fail cost 20 stops movement and hits for 4 rounds once a battle unless it goes longer than approx 50 hbs callout 150
+
+       G U I L D  R A N K  C O S T S^
+       Rank               Cost       Free Xp needed
+         1                     0                 0
+         2                 90000             90000
+         3                200000            110000
+         4                450000            250000
+         5                800000            350000
+         6               1500000            700000
+         7               2500000           1000000
+         8               3750000           1250000
+         9               5250000           1500000
+        10               7000000           1750000
+ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               C O M B A T
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Usage:  dhelp combat
+
+Combat Level Total Combat Xp Free XP Needed
+ [1]                     0        0
+ [2]                 15000    15000
+ [3]                 60000    45000
+ [4]                140000    80000
+ [5]                280000   140000 
+ [6]                510000   230000
+ [7]                860000   350000
+ [8]               1285000   425000
+ [9]               1935000   650000
+ [10]              2900000   965000
+ [11]              4150000  1250000
+ [12]              5650000  1500000
+ [13]              7400000  1750000
+ [14]              9400000  2000000
+ [15]             11900000  2500000
+ [16]             15000000  3100000
+ [17]             18500000  3500000
+ [18]             22500000  4000000
+ [19]             27000000  4500000
+ [20]             32000000  5000000
+
+Drawbacks__________________
+
+No Party object til guild rank 8
+light damage up to 5 appox every third hb
+heals in dark up to 5 approx every third hb
+align damage > 200, hits you combat amount
+approx every 4th round
+No shield,No ring, No underwear
+no helmet, boots ,No certain main armors
+veil,robes,tunic,robes,capes,wings,vest
+coat
+
+
+
+
+
+
+												  

@@ -1,0 +1,97 @@
+#include "/players/llew/closed/lsong/line.h"
+
+mapping lines;
+string *list;
+
+
+reset(arg){
+   if(arg) return; 
+   lines = ([]);
+}
+
+listener(chan, name, arg) {
+   int h;
+
+   if (!lines[chan]) lines[chan] = ([]);
+
+   if(name){
+      if (arg == ADD_MEMBER)
+         if (!lines[chan][name])
+            lines[chan] += ([ name: 1 ]);
+      if (arg == SUB_MEMBER)
+         lines[chan] = m_delete(lines[chan], name);
+   }
+
+   lines[chan] = clean_line(lines[chan]);
+}
+
+broadcast(chan, mess)
+{
+   if (lines[chan])
+   {
+      int x;
+      string *index;
+      int msize;
+      lines[chan] = clean_line(lines[chan]);
+
+      index = m_indices(lines[chan]);
+
+      for (x = 0, msize = sizeof(index); x < msize; x++)
+      {
+         if (lines[chan][index[x]] == 1)
+            tell_object(find_player(index[x]), mess);
+      }
+   }
+}
+
+get_list_all(chan)
+{
+   if (!lines[chan]) return list = ({});
+
+   lines[chan] = clean_line(lines[chan]);
+
+   list = m_indices(lines[chan]);
+   return list;
+}
+
+get_list_listeners(chan)
+{
+   int x;
+   int msize;
+   string *index;
+   list = ({});
+
+   if (!lines[chan]) return list = ({});
+
+   lines[chan] = clean_line(lines[chan]);
+
+   index = m_indices(lines[chan]);
+
+   if (lines[chan])
+      for (x = 0, msize = sizeof(index); x < msize; x++)
+         if (lines[chan][index[x]] == 1)
+            list += ({ index[x] });
+
+   return list;
+}
+
+playerOn(who) { return find_player(who); }
+
+clean_line(map)
+{
+   int x;
+   int size;
+   string *index;
+   string *bad;
+   index = m_indices(map);
+   bad = ({});
+
+   for (x = 0, size = sizeof(index); x < size; x++)
+   {
+      if (!find_player(index[x])) bad += ({ index[x] });
+   }
+   for (x = 0, size = sizeof(bad); x < size; x++)
+      map = m_delete(map,bad[x]);
+
+   return map;
+}

@@ -1,0 +1,34 @@
+/* this allows mages to turn HPs to SPs */
+/* only 80% is actually transferred so there is no 1:1 */
+devote(str){
+  int much;
+
+  if(!tp->query_guild_rank()) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(!str){
+    write("Devote how much?\n");
+    return 1;
+  }
+
+  sscanf(str, "%d", much);
+
+  if(much < 10){
+    write("You must devote at least 10 hit points.\n");
+    return 1;
+  }
+
+  if(much >= tp->query_hp()){
+    write("You do not have that many hit points.\n");
+    return 1;
+  }
+
+  write("You'll sacrifice anything for the magic, even your own blood.\n"+
+  "You devote "+much+" hit points.\n");
+  tp->add_hit_point(-much);
+  tp->add_spell_point((much*4)/5);
+  return 1;
+}
+

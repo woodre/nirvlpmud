@@ -1,0 +1,28 @@
+
+By using 'title', you can make your own color
+title.
+Here is how:
+
+Examples:
+1] You type:
+[1;37m"[2;37;0mtitle $R$the Warrior$N$ [1;37m"[2;37;0m and get:
+[2;37;0m [2;37;0m [31mthe Warrior[2;37;0m 
+
+     Colors must always be in the syntax: $<color>$
+
+Valid colors:
+ [35mM[2;37;0m = Magenta  [30mK[2;37;0m = blacK  [36mC[2;37;0m = Cyan  [32mG[2;37;0m = Green
+ [33mY[2;37;0m = Yellow   [37mW[2;37;0m = White  [31mR[2;37;0m = Red   [34mB[2;37;0m = Blue
+Note:  [1mH[2;37;0m will make the color Bold and N is used to
+       reset the color scheme if you should need to (see examples)
+
+This ability is acquired at Profession level 30.
+
+NOTE:  Your title must keep within some semblance of what you present
+yourself as.  For instance, "the Samurai", "the Bounty Hunter", 
+"[Monk]", etc.  Do NOT test my patience on this.  And if a wizard
+says that your title is inappropriate, change it.  This is an
+ability that is not to be taken for granted, as it has never
+existed in such a way before.   - Maledicta
+
+

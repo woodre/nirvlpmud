@@ -1,0 +1,18 @@
+                  -}===-  Assassin Guild Help  -==={-
+-------------------========] Help List One [========-----------------------
+Command:         Cost:   Description:
+COMBAT POWERS:
+harm             50      Main spell attack. Simple but effective.
+backstab                 Powerful first attack.  Make sure you are stealthy.
+
+COMBAT AIDES:
+o                        Toggle health monitor.
+wimpydir <dir>           Set wimpy direction to dir.
+wimpyhp <amt>            Set hit points at which you wimpy to amt.
+cann					 Cannibalize corpse for healing.
+consider <who>   15      Consider who's suitability for killing.
+stalk <who>      15      Follow who around silently.
+sneak <who>      75      Teleport silently to who.
+escape			 15		 Teleport to guild hall.
+reserve <what>   10      Reserve a monster so only you can attack it.
+unreserve                Opposite of reserve.

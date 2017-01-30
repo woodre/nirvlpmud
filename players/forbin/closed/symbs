@@ -1,0 +1,128 @@
+Symbiotes
+-----------------------------------------------------------------------
+Overview
+
+The symbiote guild is one based on a symbiotic relationship between the
+player (the host) and the symbiote mob.  Guild is joined by the player 
+touching a ball of dark matter - as they do, the symbiote enters their
+body and forms a bond.  Players will give their symbiote A name.  The
+player will have no special powers until they 'changeform', letting the
+symbiote cover them with darkmatter.
+-----------------------------------------------------------------------
+Drawbacks
+
+ 1. Most abilities require the use of MP or matter points to use them.
+    MP are gained from draining corpses or items and this amount is
+    saved on the gobj over boot, etc. [essentially an added cost]
+ 2. Abilities require 'changeform'.  When unchanged, player receives no 
+    special powers and cannot use the general mud spells.
+ 3. No mud pets or kids.  The symbiote is a jealous organism and will 
+    fight at ALL costs for your total attention.
+ 4. No mini guilds.
+ 5. Major weakness to "other|fire".  [one and one half damage]
+ 6. Severe weakness to "other|sonic". [double damage]          
+ 7. Reduced SPs.
+ 8. Reduced spell point healing rate.
+ 9. Infusion harms the symbiote.
+10. Take greater damage than normal players.
+11. Extreme damage can cause player to revert to normal [quite painful
+    to the symbiote and therefore the player as well]   
+-----------------------------------------------------------------------
+Advantages
+
+1. Increased WC.
+2. Increased physical resistance. [10% res]
+3. Major resistance to "other|mental". [75% resistance]
+4. Increased HPs.
+5. Increased hit point healing rate.
+-----------------------------------------------------------------------
+Abilities (given in general order acquired)
+
+changeform [costs sps and MPs]
+  Allows symbiote to cover player with dark matter.  Most of the guild
+  abilities do not work when player is not changed.  The exception is
+  'absorb'.
+say [auto ability]
+  When changed, says and tells are changed to support the host/symbiote
+  relationship, i.e. I = We, Me = Us, etc.  [mainly thematic]
+absorb <corpse> [no cost]    
+  Allows player to drain corpse for Matter Points.  Based off of corpse
+  level, however they receive slight bonus if they absorb corpse while 
+  changed.
+tentacles [auto ability, pushed through gen_wc_bonus()]
+  Tentacles are an automatic ability that either attempts to attack or
+  defend based on player specified settings.  Players can assign each,
+  some, or all of the 10 tentacles to either defend or attack.  The
+  amount in each mode affects its effectiveness (sort of like having to
+  home in on a target).  The amount of armor that the player wears 
+  while changed affects the number of free tentacles (mimicing armor
+  does not affect the number of tentacles). [note:  later in the guild, 
+  the player gains the ability to place tentacles into either burn off 
+  or regen, also]
+web slam [cost sps]
+  Player can shoot a weblike substance at an attacker causing damage.
+mimic [costs sps and MPs]
+  Player can touch armor and mimic it, giving the player the half the 
+  ac but not the special from the armor.  Mimicing an armor will 
+  destroy it.
+darts [cost sps and MPs]
+  This is a fairly strong attack that can only be used while in combat
+  and while not being directly hit.
+burn off [cost hps, sps and MPs to start, hps to maintain]
+  Player can put tentacles toward burning off toxins (soak/stuff/intox)
+  in their body.  The more tentacles put toward burn off, the quicker
+  and more effective it is.
+absorb <item> [no cost]
+  Allows player to drain item for Matter Points.  They receive slight 
+  bonus if they absorb item while changed.
+suffocate [costs sps and MPs]
+  Player tries to suffocate an attacker with dark matter.  Can only be
+  initiated when attacker is at 3/10 health or less, chance of failure.
+  Causes damage over time.
+fatal [costs sps]
+  General fatal ability.  Can only be initiated when attacker is at
+  0/10 health.
+regen [costs sps and MPs to start, sps to maintain]
+  Player can put tentacles toward regenerating hit points at an 
+  increased pace.  The more tentacles put toward regen, the quicker and
+  more effective it is.
+wep [costs sps]
+  Causes the player to shape a weapon from dark matter and lash out at
+  opponent with a one time attack.  This ability can be used at the
+  same time as webslam or darts, however the player must have a free
+  hand to use it.  (weapon and no shield, or shield and no weapon)
+create [costs sps and MPs]
+  Player creates a ball of dark matter that can be 'form'ed several 
+  into different items: an armor, a weapon, an attack spell, a web 
+  spell, a heal spell, or MP storage for themselves or other symbiote.
+KO [costs sps]
+  Allows player to knock a mob unconcious.  Player can then drag this
+  unconcious mob around and either: devour, feed, or later dominate it.
+  Player receives no exp when KO'ing a mob.  Mob will eventually wake
+  up.
+devour
+  Allows player to essentially 'eat' an unconcious mob for a heal based
+  on the mobs stats [note: heal is better than normal corpse healing]   
+feed
+  Allows player to slowy (over time) 'eat' an unconcious mob for a heal
+  based on the mobs stats [note: heal is better than 'devour' healing]  
+camouflage [costs sps and MPs]
+  Total invisibility, unseen by any player except wizards.  Moving 
+  forces visibility, so only useful as an ambush tactic.
+alarm [costs sps and MPs]
+  Leave a piece of dark matter behind to alert you to someone else 
+  entering the room.
+ambush [costs sps]
+  A strong initial attack.  Can only be used once on a given mob, and
+  player must be camouflaged to use it.
+wound [costs sps and MPs]
+  An attack that can wound a mob with dark matter.  Use is delayed to
+  simulate player looking for the right opportunity.  Does damage over 
+  time after successful wounding.
+dominate [costs sps and MPs]
+  Player subjugates an unconcious mob as a weak pet.
+frenzy [costs sps and MPs]
+  For the duration of combat, gain possiblity of up to two extra 
+  attacks per round.  Can only be initiated from combat. [note: similar
+  to bloodfist bloodfury]
+    

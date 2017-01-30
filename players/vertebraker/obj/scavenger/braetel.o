@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/marmor/shirt","/players/hippo/armour/glazour_coat","/players/wren/Area/starbug/items/bazookoid","/players/mythos/closed/guild/forest/misc/pelt","/players/boltar/things/tree2","/players/scathe/armor/suit","/players/puppy/s/eq/apron","/players/scathe/armor/igarb","/players/arrina/armor/torque","/obj/weapon","/players/snow/shadows/stuff/nightshade","/obj/weapon","/players/puppy/s/eq/scepter","/obj/treasure","/obj/weapon","/players/arrina/armor/sveil","/players/saber/armor/mini","/players/sado/shop/chocolate","/players/hippo/heals/bubbles","/obj/torch","/players/saber/stuff/brief","/players/ultramagnus/apple","/players/arrina/heals/ade","/players/angel/area/stargate/obj/bullets","/players/pain/closed/wands/orb",})
+shorts ({"Shirt","glazour coat","Bazookoid [1;30mmkII[2;37;0m","A beautiful white pelt","A Christmas tree","Black Suit","An apron","Initiate's garb","Silver Torque","Curved sword","[1mNightShade[0m, the Broadsword of Death","Razor collar","A scepter ","Zuzu's petals","An evil-looking lightsabre","[1;37mShadowVeil[2;37;0m","A skin tight leather mini skirt","A box of delicious Belgian chocolates","[1;36mbubbles of 7up[0m","light spell","A black briefcase","A Red Apple","bottle of refreshing [33mlemonade[0m","A clip of bullets [50]","An Onyx Orb [[31m0[0m] ([34mreadied[0m)",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

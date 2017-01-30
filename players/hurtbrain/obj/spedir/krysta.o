@@ -1,0 +1,6 @@
+k 10
+backp ({"s,w,w,w,n","n,u,u,n,w,w,w,w,w,w,w,w,w,n","n,n,do shop,do enter,w,s,w,w,w,w,w,n","market,portal,do pass,w,w,w,w,w,w,w,w,w,w,w,n","s,s,s,portal,s,enter realm,s","w,w,w,n","e,s,s,w,w,w,w,n","enter crystal,s,s,s,e,e,e,e,n","w,forest,s,w,ancient,pass,w,w,w,w,w,w,w,w,w,w,n","w,s,e,e,e,e,enter realm,s",})
+bpatt ({"n,e,e,e,s","s,d,d,s,e,e,e,e,e,e,e,e,e,s","s,s,do shop,do enter,e,n,e,e,e,e,e,s","market,portal,do pass,e,e,e,e,e,e,e,e,e,e,e,s","n,n,n,portal,n,enter realm,n","e,e,e,s","w,n,n,e,e,e,e,s","enter crystal,n,n,n,w,w,w,w,s","e,forest,n,e,ancient,pass,e,e,e,e,e,e,e,e,e,e,s","e,n,w,w,w,w,enter realm,n",})
+patt ({"s,e,e,e,n","s,e,e,e,e,e,e,e,e,e,s,d,d,s","s,e,e,e,e,e,n,e,do enter,do shop,s,s","s,e,e,e,e,e,e,e,e,e,e,e,do pass,portal,market","n,enter realm,n,portal,n,n,n","s,e,e,e","s,e,e,e,e,n,n,w","s,w,w,w,w,n,n,n,enter crystal","s,e,e,e,e,e,e,e,e,e,e,pass,ancient,e,n,forest,e","n,enter realm,w,w,w,w,n,e",})
+ggg "n"
+comment ({"SHOP","MONKS","LOCKERS","MARKET","ALTARBOYS","MARBLE STATUE","HOTEL OR MAGIC SHOP","CRYSTAL","RYOS","TRIXTOWN DRUGSTORE",})

@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/shadows/hall/main","north","/players/mokri/clans/shadows/hall/r8","south",})
+short_desc "Dark room[0m"
+long_desc "[1;31mBlood's [1;30mLocker Room 1[0m[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;31mBloodfist Ring[2;37;0m","/players/fred/closed/bloodfist/eq/bloodfist_ring",0,0,0,"[31mAmulet of Blood [[2;37;0maccuracy aura[31m][2;37;0m","/players/fred/closed/bloodfist/eq/blood_amulet","2",0,0,"Hockey Skates","/players/jenny/wings/items/skates",0,0,0,"[1mH[1;31melm of [0m[1mR[1;31manzarak[0m","/players/saber/armor/dragonhelm",0,0,0,"[1;30mThe Glove of [0m[36mM[1;36mo[0m[36mlo[1;36mc[0m[36mh[0m","/players/forbin/realms/flame_forest/OBJ/gmoloch",0,0,0,})

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1;30mDiet [1;31mCoke [0mbottle[0m"
+long_desc "This is a full Diet Coke bottle which gives you access to all of theArkham clan abilities. It is a 20 fluid oz bottle with a silver wrappingaround it with a design that says "Diet Coke".[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "bottle"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is a full Diet Coke bottle which gives you access to all of theArkham clan abilities. It is a 20 fluid oz bottle with a silver wrappingaround it with a design that says "Diet Coke".[0mType 'clan_help' for commands."
+clan_short "A [1;30mDiet [1;31mCoke [0mbottle[0m"
+damage_type 0
+hall_path "/players/scathe/cave/monk1"
+object_name "bottle"
+owner "shotcallin"
+spell_alias "shake_bottle"
+spell_mess_me "You shake your bottle vigorously and open it, spraying Diet Coke everywhere!"
+spell_mess_room "%TPN% shakes his bottle vigorously, spraying Diet Coke everywhere!"
+spell_mess_them "%TPN% shakes his bottle vigorously, spraying Diet Coke everywhere!"
+abilities ({})
+chan_history ({"[Sun Mar 29 15:30:16 2009] Shotcallin: heh","[Wed Apr  1 02:56:57 2009] Maximus has joined the clan!","[Wed Apr  1 02:57:17 2009] Lazar: alright im a try and figure this shit out, deleting it didn't work","[Wed Apr  1 02:57:29 2009] Maximus: heh","[Wed Apr  1 02:57:35 2009] Maximus: kk have fun dude","[Sat Apr  4 01:35:59 2009] Lazar: HEY","[Wed Apr  8 03:36:14 2009] Maximus: heh","[Fri Apr 10 20:52:07 2009] Miette has joined the clan!","[Sat Aug  1 18:52:46 2009] Maximus has written a note to the clan board.","[Wed Dec 25 11:56:21 2013] Shojiro has joined the clan!","[Wed Dec 25 11:59:49 2013] Shotcallin: heh","[Wed Dec 25 12:00:33 2013] Shotcallin: ugh","[Wed Dec 25 12:00:39 2013] Shotcallin: i dont know how to make you a leader","[Wed Dec 25 12:00:57 2013] Shotcallin has removed Lazar as a clan leader!","[Wed Dec 25 12:01:01 2013] Shotcallin has promoted Shojiro to a clan leader!","[Wed Dec 25 12:01:07 2013] Shotcallin: there we go heh","[Wed Dec 25 12:01:09 2013] Shotcallin nod","[Wed Dec 25 12:01:13 2013] Shotcallin nods.","[Wed Dec 25 12:23:19 2013] Shotcallin: heh","[Wed Dec 25 12:23:23 2013] Shotcallin: Elemental Test, eh?",})
+leaders ({"shojiro",})
+join_type 0
+private_coffer 4536
+public_coffer 0
+spell_delay 5
+spell_id 2
+spell_cost 65
+last_spell_time 1238541950

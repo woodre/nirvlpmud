@@ -1,0 +1,38 @@
+
+[TREEHOUSE] Level [3] 200 charges (no stat changes)
+
+       (loss of total mobility, cannot fight in combat)
+
+
+  Taking the form of a treehouse makes you an instant party. Fellow
+  guild members and allies can take comfort within your facilities and
+  both rest and entertain themselves. Note that you will be able to hear
+  events from both inside and outside the treehouse. It gets a little
+  bit weird to cope with that kind of text bandwidth but once mastered
+  is quite fun indeed.
+
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+yell <msg>         Yell a message to the people down below.
+
+look down          Observe the people that are below you on the ground.
+
+invite <plyr>      Invite someone who is immediately outside to climb
+                   up into your treehouse.
+
+expel <creature>   Boot someone who has had one too many or is just that
+                   undesireable and bad behaved from the treehouse.
+
+ptoggle listen     Toggles on/off environment noise listening.
+                   Give 'info ptoggle' for more info about the ptoggle
+                   command.
+
+describe           Enters a prompt to begin describing your treehouse.
+                   You can customize the description to whatever suits your
+                   fancy. Descriptions are saved between reboots and morph
+                   forms. There is a 15 line limit in descriptions.
+
+decribe reset      Resets the description to the standard one.
+
+

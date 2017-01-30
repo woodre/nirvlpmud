@@ -1,0 +1,6 @@
+stopwield() {
+   call_other(this_player(), "stop_wielding");
+wielded = 0;
+wielded_by = 0;
+return 1;
+}

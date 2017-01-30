@@ -1,0 +1,253 @@
+#include "/players/feldegast/log/logs.h"
+#include "/players/feldegast/defines.h"
+#include "defs.h"
+
+
+#define MAX_RATIO 9/8
+#define MIN_RATIO 15/16
+#define NUM_ITEMS 11
+
+int *prices;
+int *inventory;
+int *values;
+int *sales;
+
+reset(arg) {
+  int i;
+  int maxmin;
+  if(arg) {
+    for(i=0; i < NUM_ITEMS; i++)
+    {
+      /* Raise and lower prices accordingly */
+      if(inventory[i] <= 5)
+      {
+        prices[i]+=random(5);
+        maxmin=values[i]*MAX_RATIO;
+        if(prices[i] > maxmin)
+          prices[i]=maxmin;
+      }
+      else if(inventory[i] >= 45)
+      {
+        maxmin=values[i]*MIN_RATIO;
+        prices[i]-=random(5);
+        if(prices[i] < maxmin)
+          prices[i]=maxmin;
+      }
+
+      inventory[i]+=({
+                      10,10,10,
+                      10+random(10),10+random(10),10+random(10),
+                      5,
+                      10,10,
+                      3,
+                      6
+                    })[i];
+      if(inventory[i] > 50) inventory[i]=50;
+    }
+    tell_room(environment(this_object()),"A deliveryman arrives with new goods for the market.\n");
+    command("save_me",this_object());
+    return;
+  }
+  if(!restore_object("players/feldegast/mon/vendor")) {
+    inventory=({
+      25,25,25,
+      30,30,30,
+      12,20,20,
+      5,14
+    });
+    values=({
+      1400,1400,1400,
+      2400,1950,2400,
+      1800,
+      1800,1800,
+      10000,
+      2250,
+    });      
+    sales=allocate(11);
+    /* Copy values to prices */
+    prices=allocate(NUM_ITEMS);
+    for(i=0; i < NUM_ITEMS; i++)
+      prices[i]=values[i];
+  }  
+}
+init() {
+  add_action("menu","ask");
+  add_action("menu","list");
+  add_action("buy","buy");
+  if(this_player()->query_level() > 29)
+    add_action("refill","refill");
+}
+id(str) {
+  return str=="vendor";
+}
+
+short() {
+  return "A food vendor";
+}
+
+long() {
+  write("A short merchant with a wooden cart full of healing items.\n"+
+        "You can 'ask' him for a list of what he has.\n"
+  );
+}
+
+menu() {
+  write("The vendor says:  I sell the following:\n\n"+
+        "\t    Item                      Quantity        Price\n"+
+        "\t-------------------------------------------------------\n"+
+        "\t 1. Blackberry juice          "+pad(inventory[0],16)+prices[0]+
+        "\n\t 2. Biscuits                  "+pad(inventory[1],16)+prices[1]+
+        "\n\t 3. Southern Comfort          "+pad(inventory[2],16)+prices[2]+
+        "\n\t 4. White Zinfandel           "+pad(inventory[3],16)+prices[3]+
+        "\n\t 5. Pecan pie                 "+pad(inventory[4],16)+prices[4]+
+        "\n\t 6. Nectar                    "+pad(inventory[5],16)+prices[5]+
+        "\n\t 7. Fermented berries         "+pad(inventory[6],16)+prices[6]+
+        "\n\t 8. Vita potion               "+pad(inventory[7],16)+prices[7]+
+        "\n\t 9. Majin potion              "+pad(inventory[8],16)+prices[8]+
+        "\n\t10. Potion of [fullheal]ing   "+pad(inventory[9],16)+prices[9]+
+        "\n\t11. Spiced Rum                "+pad(inventory[10],16)+prices[10]+
+        "\n\nYou may 'buy <str>' or 'buy # of <str>'.\n"
+  );
+  return 1;
+}
+
+check_weight(W) {
+  if(!this_player()->add_weight(W)) {
+    write("You can't carry that!\n");
+    return 1;
+  }
+}
+buy(str) {
+  object ob;
+  string kind;
+  int quantity; 
+  int i;
+
+  string file;
+  int weight;
+  int tcost;
+  int temp;
+  int index;
+
+  if (!str) {
+    write("The vendor asks: What do you want to buy?\n");
+    return 1;
+  }
+  if(sscanf(str,"%d of %s",quantity,kind)!=2) {
+    quantity=1;
+    kind=str;
+  }
+
+
+#ifdef MARKETLOG
+  write_file(MARKETLOG,
+  ctime(time())+" "+pad(capitalize(TP->query_real_name()),20)+quantity+"   "+kind+"\n");
+#endif
+
+  for(i=0; i < quantity; i++) {
+    switch(kind) {
+      case "juice": case "jug":case "1":
+        weight=2;
+        file="/players/feldegast/heals/juice";
+        index=0;
+        break;
+      case "biscuit": case "biscuits": case "tin": case "2":
+        weight=2;
+        file="/players/feldegast/heals/biscuits";
+        index=1;
+        break;
+      case "comfort": case "southern comfort": case "soco": case "3":
+        weight=2;
+        file="/players/feldegast/heals/soco";
+        index=2;
+        break;
+      case "heal": case "fullheal": case "10":
+        weight=1;
+        file="/players/feldegast/heals/fullheal";
+        index=9;
+        break;    
+      case "zinfandel": case "white zinfandel": case "wine": case "4":
+        weight=1;
+        file="/players/feldegast/heals/zinfandel";
+        index=3;
+        break;
+      case "pie": case "pecan pie": case "5":
+        weight=1;
+        file="/players/feldegast/heals/pecan_pie";
+        index=4;
+        break;
+      case "nectar": case "6":
+        weight=1;
+        file="/players/feldegast/heals/nectar";
+        index=5;
+        break;
+      case "berries": case "7":
+        weight=1;
+        file="/players/feldegast/heals/berries";
+        index=6;
+        break;
+      case "vita": case "8":
+        weight=1;
+        file="/players/feldegast/heals/vita";
+        index=7;
+        break;
+      case "majin": case "9":
+        weight=1;
+        file="/players/feldegast/heals/majin";
+        index=8;
+        break;
+      case "rum": case "11":
+        weight=1;
+        file="/players/feldegast/heals/rum";
+        index=10;
+        break;
+        default: write("Vendor says: Pardon sir, I do not sell that.\n");
+                 return 1;
+    }
+    if(TP->query_money() < prices[index]) {
+
+      write("You don't have enough money for that!\n");
+
+      temp=i;
+      i=quantity;
+      quantity=temp;
+    } else
+    if(inventory[index] <= 0) {
+      write("Vendor says: I apologize sir, but we're out of that item.  Is there\n"+
+            "             something else you'd like?\n");
+      temp=i;
+      i=quantity;
+      quantity=temp;
+    } else
+    if(!TP->add_weight(weight)) {
+      write("You can't carry that!\n");
+      temp=i;
+      i=quantity;
+      quantity=temp;
+    } else {
+      TP->add_money(-prices[index]);
+      tcost+=prices[index];
+      inventory[index]--;
+      ob=clone_object(file);
+      move_object(ob,this_player());
+    }
+  }
+  write("You buy "+quantity+" of "+kind+" for "+tcost+" coins.\n");
+  say(TPN+" buys something from the vendor.\n");
+  save_object("players/feldegast/mon/vendor");
+  return 1;
+}
+
+int refill(string str)
+{
+  reset(1);
+  return 1;
+}
+
+void save_me() {
+  save_object("players/feldegast/mon/vendor");
+}
+
+remove_object() {
+  command("save_me",this_object());
+}

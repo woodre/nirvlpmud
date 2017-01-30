@@ -1,0 +1,522 @@
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard very hard.
+%<<<<  HP 112/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%Guard died.
+%[ Pre-Mezuh-Hu-Tay ] The party has gained 1111 experience.
+%[ Pre-Mezuh-Hu-Tay ] You have gained 1111 experience.
+%You killed Guard.
+IR chef
+chef's room's inv
+ROOM: OBJ(players/molasar/CASTLE/INNER/meeting)
+OBJ(obj/corpse#1458) corpse of Guard
+OBJ(obj/player#918) Tiny Chef the simple wanderer (paladin) [leader of Pre-Mezuh-Hu-Tay]
+OBJ(players/molasar/MONSTERS/kguard#1278) King's guard
+done.
+->> stat chef
+Tiny Chef the simple wanderer (paladin) [leader of Pre-Mezuh-Hu-Tay]
+level: 2
+extra_level: 0
+coins: 100
+max: 114
+hp: 114
+spell: 58
+max spell: 58
+experience: 6461
+armor class: 5
+armor: silk robe
+weapon class:   17
+weapon: battleaxe
+composite: 189
+
+intoxinated:  0
+carry:  9
+align:  480
+gender:         male
+age:    6 hours 12 minutes 20 seconds.
+room: players/molasar/CASTLE/INNER/meeting
+this_object()=OBJ(obj/player#918)
+crime: 0
+->> I chef
+chef's inv
+ROOM: OBJ(players/molasar/CASTLE/INNER/meeting)
+OBJ(obj/soul#934) INVIS
+OBJ(players/mythos/healerguild/obj/defend_spell#1416) INVIS
+OBJ(obj/partyob#1260) A Party Object
+OBJ(players/saber/stuff/process#1240) A rod of corpse processing
+OBJ(players/softly/nhall/obj/green3#1175) Healing Balm (green) [1]
+OBJ(players/softly/nhall/obj/blue3#1174) Healing Balm (blue) [1]
+OBJ(players/mythos/prac/bag#1166) Bottomless Bag
+OBJ(players/softly/algiers/obj/srobe#1145) Silk Robe  < ac 4, armor > (worn)
+OBJ(players/maledicta/ruins/weapons/flaming_axe#1144) Chu'Tath Battleaxe [Firebrand]  < wc 17,17 > (wielded)
+OBJ(players/mythos/prac/qt#935) Chef's quicktyper
+done.
+->> p i
+There are now 12 players. 1.84 cmds/s, 61.91 comp lines/s
+   Address        Name      Idle   Level      Location  
+........................................................................
+151.100.85.79   Francesco            60  players/francesco/workroom
+129.3.28.133    Carlie        3m      5  players/softly/nhall/rooms/n1
+24.31.200.111   Tyr           1m     19  room/vill_green
+66.157.210.147  Wrasse       12s      5  room/vill_green
+64.26.83.69     Cleipa               13  players/saber/tower/tower10+4
+64.208.88.81    Zeus          4m     80  players/zeus/workroom
+4.47.231.214    Chef          2m      2  players/molasar/CASTLE/INNER/meeting
+198.109.214.46  Kiros         6s      5  room/vill_green
+24.50.83.48     Feyth                17  room/vill_green
+216.114.208.166 Happy         2s     19  room/vill_green
+24.95.212.158   Martha        6s     17  players/dune/closed/guild/rooms/guildhall
+172.142.182.51  Cooper        8s     19  room/vill_green
+->> % pc
+%You drain the essence of the corpse into your body.
+You feel stronger.
+%->> % l
+%You have entered the meeting hall of the castle.  Their is a large
+table where open discussions are held.  A small room lies to the south
+while the King's private audience chambers lie to the west.
+%   There are three obvious exits:  south, east, west
+%A suit of leather armor.
+%A metal shield.
+%King's guard.
+%->> % 
+%->> % l
+%You have entered the meeting hall of the castle.  Their is a large
+table where open discussions are held.  A small room lies to the south
+while the King's private audience chambers lie to the west.
+%   There are three obvious exits:  south, east, west
+%A suit of leather armor.
+%A metal shield.
+%King's guard.
+%->> % kill guard
+%You missed.
+%->> %Your Axe pulses with a Flaming Aura as you strike your foe!
+%You tickled Guard in the stomach.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 9/10 >>>>
+% e
+%You are now hunted by Guard.
+%This is the grand lobby of the castle.  Large murals and tapestries line
+the walls.  A bench is here for tired travellers.
+%    There are two obvious exits:% west% and% east%
+%->> % e
+%This is the center of a hallway which runs north and south.  A large
+lobby lies to the west.
+%    There are two obvious exits:% east% and% west%
+%->> % e
+%This is the entry of the castle.  A giant red carpet lies on the white
+marble floor.  Emblazoned on the carpet is the symbol of a giant dragon
+clutching a sword.  A hall lies to the west and the outer compound to
+the east.
+%    There are two obvious exits:% east% and% west%
+%->> % e
+%You are just outside the castle entrance.  To the west the gate stands
+open allowing you to enter.  A cobblestone path runs north and south.
+%    There are four obvious exits:% west%,% east%,% north% and% south%
+%A castle guard.
+%->> % e
+%A path that leads to the entrance of the inner castle.  The exit of
+the castle's compound lies to the east.
+%There are two obvious exits, east and west.
+%A castle guard.
+%->> % e
+%This is a lavishly decorated courtyard of the castle.  Numerous
+%colorful trees line the sides while a beatiful fountain lies
+%in the center.  A cobblestone road lies to the south while
+%you can see a garden to the north.
+%   There are four obvious exits:  north, south, east, and west
+%A large marble fountain.
+%->> % e
+%You have reached the entrance to the castle.  A large stone
+%arch to the west leads to the inner area of the castle.
+%A small guard booth stands on both sides of the arch.
+%   There are two obvious exits:  south and west
+%A heavy iron gate (open).
+%A gate guard.
+%A gate guard.
+%->> % 
+%->> % w
+%This is a lavishly decorated courtyard of the castle.  Numerous
+%colorful trees line the sides while a beatiful fountain lies
+%in the center.  A cobblestone road lies to the south while
+%you can see a garden to the north.
+%   There are four obvious exits:  north, south, east, and west
+%A large marble fountain.
+%->> % drink water
+%The fountain seems to be drained right now.
+%Come back later after someone fills it up.
+%->> % drink water
+%The fountain seems to be drained right now.
+%Come back later after someone fills it up.
+%->> % drink water
+%The fountain seems to be drained right now.
+%Come back later after someone fills it up.
+%->> % w
+%A path that leads to the entrance of the inner castle.  The exit of
+the castle's compound lies to the east.
+%There are two obvious exits, east and west.
+%->> % w
+%You are just outside the castle entrance.  To the west the gate stands
+open allowing you to enter.  A cobblestone path runs north and south.
+%    There are four obvious exits:% west%,% east%,% north% and% south%
+%A castle guard.
+%A castle guard.
+%->> % w
+%This is the entry of the castle.  A giant red carpet lies on the white
+marble floor.  Emblazoned on the carpet is the symbol of a giant dragon
+clutching a sword.  A hall lies to the west and the outer compound to
+the east.
+%    There are two obvious exits:% east% and% west%
+%->> % w
+%This is the center of a hallway which runs north and south.  A large
+lobby lies to the west.
+%    There are two obvious exits:% east% and% west%
+%->> % w
+%This is the grand lobby of the castle.  Large murals and tapestries line
+the walls.  A bench is here for tired travellers.
+%    There are two obvious exits:% west% and% east%
+%->> % w
+%You have entered the meeting hall of the castle.  Their is a large
+table where open discussions are held.  A small room lies to the south
+while the King's private audience chambers lie to the west.
+%   There are three obvious exits:  south, east, west
+%A suit of leather armor.
+%A metal shield.
+%King's guard.
+%->> % kill guard
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%->> % sc
+%
+%Tiny Chef the simple wanderer (paladin) [leader of Pre-Mezuh-Hu-Tay]
+%Level: 2%
+%Coins: 100                     Experience: 6467
+%Hit points: 114/114     %      %Spell points: 58/58
+%Quest points: 0                %
+%age:   %6 hours %13 minutes %26 seconds.
+%You are sober.
+%
+%->> %You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 9/10 >>>>
+% ga
+%A suit of leather armor: Ok.
+%A metal shield: Too heavy.
+%->> % i
+%A suit of leather armor.
+%A Party Object.
+%A rod of corpse processing.
+%Healing Balm (green) [1].
+%Healing Balm (blue) [1].
+%Bottomless Bag.
+%Silk Robe (worn).
+%Chu'Tath Battleaxe [Firebrand] (wielded).
+%Chef's quicktyper.
+%->> %You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 9/10 >>>>
+% put armor in bag
+%Ok.
+%->> % ga
+%A metal shield: Ok.
+%->> %You tickled Guard in the stomach.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 9/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 9/10 >>>>
+% put shield in bag
+%Ok.
+%->> %You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 9/10 >>>>
+Tyr tells you: Can u still get me my mal weapon back?
+
+%Your Battleaxe discharges a stream of FLAME which engulf's your foe!
+%You hit Guard very hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 8/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 8/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 8/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard very hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 7/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 7/10 >>>>
+%Your Battleaxe discharges a stream of FLAME which engulf's your foe!
+%You hit Guard very hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 7/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 7/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+say see what happens: the king guard doesnt seem alive
+You say: see what happens: the king guard doesnt seem alive
+
+->> %You tickled Guard in the stomach.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%Your Battleaxe discharges a stream of FLAME which engulf's your foe!
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+IR chef
+chef's room's inv
+ROOM: OBJ(players/molasar/CASTLE/INNER/meeting)
+OBJ(obj/player#918) Tiny Chef the simple wanderer (paladin) [leader of Pre-Mezuh-Hu-Tay]
+OBJ(players/molasar/WEAPONS/shortsword#1285) 0  < wc 0,0 >
+OBJ(players/molasar/MONSTERS/kguard#1278) King's guard
+done.
+->> %Your Axe pulses with a Flaming Aura as you strike your foe!
+%You grazed Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 5/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 5/10 >>>>
+%You tickled Guard in the stomach.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 5/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 5/10 >>>>
+%You hit Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 5/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+%You tickled Guard in the stomach.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+IR chef
+chef's room's inv
+ROOM: OBJ(players/molasar/CASTLE/INNER/meeting)
+OBJ(obj/player#918) Tiny Chef the simple wanderer (paladin) [leader of Pre-Mezuh-Hu-Tay]
+OBJ(players/molasar/WEAPONS/shortsword#1285) 0  < wc 0,0 >
+OBJ(players/molasar/MONSTERS/kguard#1278) King's guard
+done.
+->> %You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You grazed Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+I chef
+chef's inv
+ROOM: OBJ(players/molasar/CASTLE/INNER/meeting)
+OBJ(obj/soul#934) INVIS
+OBJ(players/mythos/healerguild/obj/defend_spell#1416) INVIS
+OBJ(obj/partyob#1260) A Party Object
+OBJ(players/saber/stuff/process#1240) A rod of corpse processing
+OBJ(players/softly/nhall/obj/green3#1175) Healing Balm (green) [1]
+OBJ(players/softly/nhall/obj/blue3#1174) Healing Balm (blue) [1]
+OBJ(players/mythos/prac/bag#1166) Bottomless Bag
+OBJ(players/softly/algiers/obj/srobe#1145) Silk Robe  < ac 4, armor > (worn)
+OBJ(players/maledicta/ruins/weapons/flaming_axe#1144) Chu'Tath Battleaxe [Firebrand]  < wc 17,17 > (wielded)
+OBJ(players/mythos/prac/qt#935) Chef's quicktyper
+done.
+->> %Your Axe pulses with a Flaming Aura as you strike your foe!
+%You grazed Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+%You hit Guard very hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard very hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+Cleipa hugs you from afar.
+%You hit Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 1/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 1/10 >>>>
+hug cleipa
+You hug Cleipa from afar.
+->> %You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 1/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 1/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 1/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+p i
+There are now 12 players (11 active). 1.89 cmds/s, 59.73 comp lines/s
+   Address        Name      Idle   Level      Location  
+........................................................................
+151.100.85.79   Francesco            60  players/francesco/workroom
+129.3.28.133    Carlie        1m      5  players/softly/nhall/rooms/n1
+24.31.200.111   Tyr           1m     19  room/vill_green
+66.157.210.147  Wrasse                5  players/scathe/cave/cave5
+64.26.83.69     Cleipa        4s     13  room/south/sforst24
+64.208.88.81    Zeus          6m     80  players/zeus/workroom
+4.47.231.214    Chef          1m      2  players/molasar/CASTLE/INNER/meeting
+198.109.214.46  Kiros         2s      5  room/south/sforst24
+24.50.83.48     Feyth         2s     17  room/vill_green
+216.114.208.166 Happy         1m     19  room/vill_green
+24.95.212.158   Martha       46s     17  players/dune/closed/guild/rooms/guildhall
+172.142.182.51  Cooper        8s     19  room/vill_green
+->> %You grazed Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%Guard died.
+%[ Pre-Mezuh-Hu-Tay ] The party has gained 1111 experience.
+%[ Pre-Mezuh-Hu-Tay ] You have gained 1111 experience.
+%You killed Guard.
+say see? he is even idle
+You say: see? he is even idle
+
+%You missed.
+%<<<<  HP 110/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%You missed.
+%<<<<  HP 110/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%You missed.
+%<<<<  HP 110/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%You missed.
+%<<<<  HP 111/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 111/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 6/10 >>>>
+%You hit Guard very hard.
+%<<<<  HP 111/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 5/10 >>>>
+%You hit Guard very hard.
+%<<<<  HP 111/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+say this is happening with another monster****************************
+You say: this is happening with another
+monster****************************
+
+->> %You missed.
+%<<<<  HP 111/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+%You hit Guard very hard.
+%<<<<  HP 112/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You missed.
+%<<<<  HP 112/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+%You missed.
+%<<<<  HP 112/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 4/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 112/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+I chef
+chef's inv
+ROOM: OBJ(players/molasar/CASTLE/INNER/g_room)
+OBJ(obj/soul#934) INVIS
+OBJ(players/mythos/healerguild/obj/defend_spell#1416) INVIS
+OBJ(obj/partyob#1260) A Party Object
+OBJ(players/saber/stuff/process#1240) A rod of corpse processing
+OBJ(players/softly/nhall/obj/green3#1175) Healing Balm (green) [1]
+OBJ(players/softly/nhall/obj/blue3#1174) Healing Balm (blue) [1]
+OBJ(players/mythos/prac/bag#1166) Bottomless Bag
+OBJ(players/softly/algiers/obj/srobe#1145) Silk Robe  < ac 4, armor > (worn)
+OBJ(players/maledicta/ruins/weapons/flaming_axe#1144) Chu'Tath Battleaxe [Firebrand]  < wc 17,17 > (wielded)
+OBJ(players/mythos/prac/qt#935) Chef's quicktyper
+done.
+->> %Your Battleaxe discharges a stream of FLAME which engulf's your foe!
+%You hit Guard hard.
+%<<<<  HP 112/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+IR chef
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You missed.
+%<<<<  HP 113/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+chef's room's inv
+ROOM: OBJ(players/molasar/CASTLE/INNER/g_room)
+OBJ(obj/player#918) Tiny Chef the simple wanderer (paladin) [leader of Pre-Mezuh-Hu-Tay]
+OBJ(players/molasar/MONSTERS/kguard#1425) King's guard
+OBJ(players/molasar/MONSTERS/kguard#1420) King's guard
+done.
+->> %Your Axe pulses with a Flaming Aura as you strike your foe!
+%You tickled Guard in the stomach.
+%<<<<  HP 113/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+%You hit Guard hard.
+%<<<<  HP 113/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 3/10 >>>>
+p i
+There are now 13 players (12 active). 1.86 cmds/s, 55.76 comp lines/s
+   Address        Name      Idle   Level      Location  
+........................................................................
+24.58.28.1      Jareel       24s     21  players/jareel/workroom
+151.100.85.79   Francesco            60  players/francesco/workroom
+129.3.28.133    Carlie        4m      5  players/softly/nhall/rooms/n1
+24.31.200.111   Tyr           1m     19  room/church
+66.157.210.147  Wrasse                5  players/scathe/cave/cave4
+64.26.83.69     Cleipa               13  players/francesco/univ/rooms/dimec5
+64.208.88.81    Zeus          9m     80  players/zeus/workroom
+4.47.231.214    Chef          1m      2  players/molasar/CASTLE/INNER/g_room
+198.109.214.46  Kiros        16s      5  players/francesco/univ/rooms/dimec1
+24.50.83.48     Feyth         1m     17  players/mythos/healerguild/room/study#1551
+216.114.208.166 Happy         1m     19  players/mizan/etheriel/ROOMS/quicko
+24.95.212.158   Martha               17  players/dune/closed/guild/rooms/guildhall
+172.142.182.51  Cooper               19  room/vill_green
+->> %You hit Guard very hard.
+%<<<<  HP 113/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+%You hit Guard.
+%<<<<  HP 113/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You grazed Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+say and, again, he is even idle
+You say: and, again, he is even idle
+
+->> %You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 2/10 >>>>
+%
+Autosaving character...
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 1/10 >>>>
+Zeus wizs: 230- WARNING! 134570592 bare linefeeds received in ASCII mode
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 1/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 1/10 >>>>
+Zeus wizs: File may not have transferred correctly
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You hit Guard very hard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You tickled Guard in the stomach.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%You grazed Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%Your Battleaxe discharges a stream of FLAME which engulf's your foe!
+%You missed.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+%You grazed Guard.
+%<<<<  HP 114/114 SP 58/58 I 0% F 0% S 0% T 0% AHP 0/10 >>>>
+Zeus wizs: but it says the transfer was completed
+%Your Axe pulses with a Flaming Aura as you strike your foe!
+%Guard died.
+%[ Pre-Mezuh-Hu-Tay ] The party has gained 1111 experience.
+%[ Pre-Mezuh-Hu-Tay ] You have gained 1111 experience.
+%Guard removes leather armor.
+%Ok.
+%Guard removes helmet.
+%Ok.
+%Guard removes shield.
+%Ok.
+%You killed Guard.

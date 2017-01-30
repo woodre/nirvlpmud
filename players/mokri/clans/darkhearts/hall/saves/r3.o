@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/darkhearts/hall/r2","south","/players/mokri/clans/darkhearts/hall/r6","west","/players/mokri/clans/darkhearts/hall/r7","east","/players/mokri/clans/darkhearts/hall/r8","north",})
+short_desc "Casiers de Chateau[0m"
+long_desc "Casiers de ChateauAlong the walls of this room are ten beautiful marble lockers that can be used to store items that might be needed at a later time. The room is very dark except for a faint light from a red candle burning softly in the corner. Leaders may find their rooms to the east and west.[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"Lifeblood, the long sword","/players/dune/weapons/lifeblood",0,0,0,"[1;30mA Dark Demon's Hide[0m","/players/jareel/general_stuff/demonhide",0,0,0,"A [1;37mcrystal[0;0m ring with a [1m[1mblack[0;0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,})

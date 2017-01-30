@@ -1,0 +1,11 @@
+#include "/players/blue/closed/lib/esc.h"
+#define TP this_player()
+#define TO this_object()
+#define ENV(x) environment(x)
+#define CAP(x) capitalize(x)
+#define ENV(x) environment(x)
+#define ENVTP ENV(TP)
+#define ENVTO ENV(TO)
+#define CN CAP(TP->query_name())
+#define RN TP->query_real_name()
+#define LEVEL TP->query_level()

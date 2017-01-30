@@ -1,0 +1,35 @@
+look into /players/pain/closed/ASSASSIN/cenguild.c and recruiter
+find enough land, make changes to realty, find spot for it
+work on dm's rooms, a few rooms at a shot at least
+start working on assassins again, shouldn't take long
+bug/helper/etc stuff
+non-guild skills
+pk miniguild
+economy system
+player-run shop system
+noob helper enhancements
+daemonize the plan reader, for PLAN.wiz and PLAN.player so they can be in wiz dir, and then add com for it to /bin/wiz
+Sheep-O-Philes mini-guild (velcro gloves and sheep shears as a gob?)
+change donation box to remove value and saveability (mizan's permission given), put obit notice in HIK
+add weapon condition field to mon, also a 'glance weapon' command to just show condition, or have it show in short desc for weapon
+noobs command, for noob helpers: shows players <=8, true noob flag as well?
+add emote: 'pants' to depants someone
+do up a 'report' command to show full combat monitor to everyone in room....their actual custom mon, prolly have to modify setmon.c to do it.....add ability to do it on channels, particularly party and guild channels - add to channeld?
+have some mobs become ghosts when they die.....hell, mebbe kill them again :)
+emote contest, revisited...barrywhite emote, .....
+combat dummy...ok,...this really needs to happen:  a realistic combat dummy, one that hits back, settable ac, settable damage, so that we can see what guilded players actually are inflicting, and taking vs mobs, and variety of mob types (low/high wc/ac, special damage, multiple hits, etc)....that way we can make a realistic omparison of guilds forsake of balance.....if one guild is doing more damage against all mob types than another yet taking less, the two are not balanced
+emote: pullmyfinger, .....also heals that give gas, lower price perhaps, slightly
+faster regen property for housing
+watch them die: bastard son (bastard son), opeth: the grand conjuration
+trivium: requiem
+dark tranquility: mind matters (character)
+ill nino: this is war (one nation underground)
+the absense: necropolis (from your grave) *****
+a perfect murder:path of resistance (strength through vengeance)
+team flynn/howard jones: the dagger; (roadrunner united: all-star sessions)
+Property taxes, welfare program (can't own anything, gets repo'd, gear, heals etc available but not storable)
+laera's area for housing, mudmail her...~laera/cforest/cf17.c, 21.c, ~laera/balamb/forests/f215.c specifically.
+*************************
+I see you! quit reading this shit ya sheep-felchers.
+*************************
+~zeus/realm/taus/guth2

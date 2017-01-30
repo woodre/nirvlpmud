@@ -1,0 +1,25 @@
+SYNOPSIS
+	mixed *filter_array( mixed *arr, string func, object ob)
+	mixed *filter_array( mixed *arr, string func, object ob, mixed extra)
+
+DESCRIPTION
+	Run an array through a filter.
+	The function 'func' in 'ob' will be called with each element
+	in the array 'arr'. If 'func' returns a non-zero value for a
+	a particular element, then the element will be included in
+	the returned array.
+	
+	'ob' can also be the name of an object.
+	if 'extra' is given, it will be the second parameter passed
+	to 'func'.
+
+EXAMPLE
+	mages= filter_array( users(), "guild", this_object(), "Mage");
+	..
+	guild(object ob, string gname) {
+		return ob->query_guild_name() == gname;
+	}
+
+SEE ALSO
+	arrays(LPC)
+

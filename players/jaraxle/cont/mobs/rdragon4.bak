@@ -1,0 +1,216 @@
+#include "/players/jaraxle/ansi.h"
+
+inherit "obj/monster.c";
+
+
+
+int bdelay;
+
+
+
+reset(arg)  {
+
+
+
+  ::reset(arg);
+
+  if(arg) return;
+
+set_name("dragon");
+
+set_alt_name("cont_dragon");
+
+set_race("dragon");
+
+set_short(HIR+"Red "+NORM+RED+"Dragon"+NORM+" [elite guard]");
+
+set_long(
+
+"This huge red dragon belongs to the elite guard of the\n"+
+
+"King. It is the largest of the soldier class, and holds\n"+
+
+"more devastating power than any two. Its body is over\n"+
+
+"140 feet in length, and is covered in a tough red plate\n"+
+
+"scale. Its head is covered in small spikes, with two\n"+
+
+"large horns jutting out to the back. Its forearms end\n"+
+
+"in huge claws, capable of rending any armor. It is a\n"+
+
+"terrible sight to behold.\n");
+
+set_level(23);
+
+set_hp(850);
+
+set_al(-1000);
+
+set_wc(45);
+
+set_wc_bonus(50);
+
+set_ac(20);
+
+set_aggressive(1);
+
+set_heart_beat(1);
+
+set_chance(15);
+
+set_spell_dam(25);
+
+set_spell_mess1(
+
+"The "+HIR+"Red "+NORM+RED+"Dragon"+NORM+" bites down on its opponent!\n");
+
+set_spell_mess2(
+
+"You feel your flesh tear apart under the assault of the dragons bite!\n");
+
+set_chat_chance (10);
+
+load_chat("The Red Dragon glares at you with hatred.\n");
+
+load_chat("The Red Dragon's huge tail swishes back and forth.\n");
+
+}
+
+
+
+heart_beat(){
+
+int rnum;
+
+object *peeps;
+
+object *peeps2;
+
+int dam_amt;
+
+int i;
+
+int j;
+
+int yup;
+
+::heart_beat();
+
+
+
+rnum = random(100);
+
+dam_amt = random(120) + 60;
+
+
+
+
+
+
+
+if(attacker_ob && random(100) < 50 && !bdelay){
+
+ 
+
+  peeps = all_inventory(environment());
+
+  for(i = 0; i < sizeof(peeps); i++){
+
+     if(peeps[i] != this_object() && living(peeps[i]) && !call_other(peeps[i], "id", "cont_dragon")){
+
+      yup += 1;
+
+      }
+
+  }
+
+ if(yup){
+
+tell_room(environment(),
+
+   "The "+HIR+"Red "+NORM+RED+"Dragon"+NORM+" raises its head high...\n\n\n"+
+
+   "                "+HIR+"F L A M E"+NORM+"\n\n"+
+
+   "                        Engulfs it's enemy!\n");
+
+   peeps = all_inventory(environment());
+
+   dam_amt = dam_amt / yup;
+
+   for(j = 0; j < sizeof(peeps); j++){
+
+    if(peeps[j] != this_object() && living(peeps[j]) && !call_other(peeps[j], "id", "cont_dragon")){
+
+      tell_object(peeps[j], HIR+"You are burned by the flames of the Dragon!"+NORM+"\n");
+
+      peeps[j]->hit_player(dam_amt);
+
+      bdelay = 4;
+
+      }
+
+    }    
+
+  }
+
+}
+
+
+
+if(bdelay){  bdelay -= 1; }
+
+
+
+if(bdelay && attacker_ob){
+
+
+
+if(random(100) < 70 && attacker_ob){
+
+   tell_room(environment(),
+
+   "The "+HIR+"Red "+NORM+RED+"Dragon"+NORM+" slashes its opponent with its gleaming claws!\n",
+
+   ({ attacker_ob }));
+
+   tell_object(attacker_ob,
+
+   "You feel a terrible pain as the Dragon rakes you with its claws!\n");
+
+   attacker_ob->hit_player(random(25) + 13);
+
+   }
+
+else{
+
+   tell_object(attacker_ob,
+
+   "You barely dodge the long claws of the Dragon!\n");
+
+   }
+
+
+
+if(attacker_ob && alt_attacker_ob && random(100) < 30){
+
+   tell_object(alt_attacker_ob,
+
+   "You are "+HIR+"SLAMMED"+NORM+" by the long tail of the Dragon!\n");
+
+   alt_attacker_ob->hit_player(random(20) + 11);
+
+   tell_room(environment(),
+
+   "The dragon's tail lashes out and strikes "+alt_attacker_ob->query_name()+"!\n");
+
+   }
+
+ }
+
+}
+
+
+

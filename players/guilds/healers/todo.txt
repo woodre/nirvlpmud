@@ -1,0 +1,30 @@
+Healers to-do list:
+------------------
+fortify - this spell doesn't work with the new armor code...My solution
+          was to make an invisible shield that the player wears
+shield spell - bad implementation...My solution was to reimplement it
+               using the resistance code
+reinstate - no cap on stats...There's no current system for keeping
+            track of the max stats that a guild can have, so I changed
+            it to a temporary stat bonus that wears off after an hour
+            or so. Also, made the cost less.
+cove - This spell wasn't efficient...Healers had no reason to cast it,
+       so I fiddled with it so they might cast it occasionally.
+holy blessing - You were here for that conversation...Softly suggested
+                that the time not be reduced if its cast on a healer,
+                because healers have little offensive power.
+
+I had some other plans for changes to healers as a result of my
+conversations with Softly...
+
+1. Reduce the amount of tox that high-level healers give.  Apparently,
+high-level healers can't heal newbies at all because they get too
+toxed.
+
+2. Let healers be able to heal more at a single time, but also allow
+them to set how much they can heal.  For example, make a level 5 able
+to heal up to 10 hp/sp, but they can set the healing amount to 2 if
+they really want to.
+
+Feldegast
+2-9-01

@@ -1,0 +1,6 @@
+07/17/10 21:47: Bilbill     ((19+21 /Cyberninja)   24(1/1)
+07/17/10 23:05: Silverpaw   ((19+15 /Dervish)      23(1/1)
+01/ 2/11 19:01: Narlav      ((18    /Mage)         20(1/1)
+01/27/11 23:41: Nagasaki    ((17    /Cyberninja)   19(1/1)
+01/27/11 23:42: Nagasaki    ((17    /Cyberninja)   19(1/1)
+03/15/11 01:51: Tsukune     ((11    /Cyberninja)   13(1/1)

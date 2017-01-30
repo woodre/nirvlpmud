@@ -1,0 +1,60 @@
+/*
+ * spell : Acid Arrow   (conjuration)
+ * level : 3
+ * effect: spell_object: random (Conj/3)
+ * cost  : 30 sp
+ * spec  : ext. damage: random (Conj/5), random (Conj/5)
+ * files : ~/mages/obj/acid_arrow
+ */
+
+acid_arrow(str){
+  object ob, obj;
+  int dmg;
+
+  if(!KNOW("acid")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(guild->query_next_dmg() > time()) {
+    write("You cannot cast this spell again yet.\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  write("You cast an "+HIG+"Acid Arrow"+NORM+" spell ...\n");
+
+  if(spell_fail2(3,"conj", "int")){
+    write(HIR+"The spell backfires!!!\n"+NORM+
+    "Deadly Acid sizzles into your skin!\n");
+    say(ME+" casts a spell and it backfires!\n"+
+    "Deadly acid sizzles into "+ME+"'s flesh!\n");
+    tp->hit_player(20, "other|poison");
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" casts a spell and a "+HIG+"hissing arrow of acid"+NORM+" appears!\n");
+  if(random(2)==0) tell_room(env,
+  "The arrow streaks through the air and "+GRN+"splatters"+NORM+
+  " across "+IT+"'s skin!\n");
+  else tell_room(env,
+  "The toxic missile screams through the air and "+GRN+"sizzles"+NORM+
+  " into "+IT+"'s flesh!\n");
+
+  ob = clone_object("players/pavlik/guild/mages/obj/acid_arrow");
+  move_object(ob, obj);
+  ob->set_owner(tp);
+  ob->do_acid(obj);
+
+  dmg = random(guild->query_total_conj()/3);
+  tp->add_spell_point(-30);
+  PAV->tell_damage(dmg,obj);
+  tp->set_spell_dam(dmg*5/2);
+  tp->set_spell_dtype("other|poison");
+  guild->set_next_dmg(time() + 60);
+
+  return 1;
+}

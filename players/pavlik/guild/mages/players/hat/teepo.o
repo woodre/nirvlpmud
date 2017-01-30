@@ -1,0 +1,36 @@
+no_clean 0
+name "wizard's hat"
+alias "hat"
+short_desc "[1;34mWizard's Hat[0m"
+long_desc "[1;34mWizard's Hat[0m."
+worn_tag_short_flag 0
+buy_value 0
+value 0
+weight 0
+type "helmet"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 1
+ac 1
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"helmet",})
+params ({"physical",1,0,"do_special",})
+enchantments 0
+k 7
+backp ({"1","enter hall,e,n,n,n,e,e,e,e,n,n,n,e,e,e,e,e,e","enter shack,w,n,n,n,n,e,e,e,e,n,n,n,e,e,e,e,e,e","w,w,w,w,w,w,s,w,w,w,w,s,s,w,n,n,n,w,w,w,w","ne,n,e,e,e,e,e,e,e,e,e,e,e,e","e,e,n,n,n,n,n,n,n,n,e,e,e,e,e,e,e,e,n,e,e,e,e","shop,s,s,w,w,enter gate,s,s,e,e,d,s,s,s,s,s,s,e,e,e,e",0,0,0,})
+bpatt ({"e,e,e,e,e,n,e,e,e,e,n,n,e,s,s,s,e,e,e,e","enter hall,w,s,s,s,w,w,w,w,s,s,s,w,w,w,w,w,w","enter shack,e,s,s,s,s,w,w,w,w,s,s,s,w,w,w,w,w,w","e,e,e,e,e,e,n,e,e,e,e,n,n,e,s,s,s,e,e,e,e","sw,s,w,w,w,w,w,w,w,w,w,w,w,w","w,w,s,s,s,s,s,s,s,s,w,w,w,w,w,w,w,w,s,w,w,w,w","shop,n,n,e,e,enter gate,n,n,w,w,u,n,n,n,n,n,n,w,w,w,w",0,0,0,})
+patt ({"e,e,e,e,s,s,s,e,n,n,e,e,e,e,n,e,e,e,e,e","w,w,w,w,w,w,s,s,s,w,w,w,w,s,s,s,w,enter hall","w,w,w,w,w,w,s,s,s,w,w,w,w,s,s,s,s,e,enter shack","e,e,e,e,s,s,s,e,n,n,e,e,e,e,n,e,e,e,e,e,e","w,w,w,w,w,w,w,w,w,w,w,w,s,sw","w,w,w,w,s,w,w,w,w,w,w,w,w,s,s,s,s,s,s,s,s,w,w","w,w,w,w,n,n,n,n,n,n,u,w,w,n,n,enter gate,e,e,n,n,shop",0,0,0,})
+ggg "w"
+comment ({"elixirs","hall of images","forbins","elixirs","continent","terkula","derellia",0,0,0,})
+obj 0

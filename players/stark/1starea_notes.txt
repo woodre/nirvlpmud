@@ -1,0 +1,282 @@
+I've gone through your list.  I used most of your suggestions 
+dirrectly.  Sorry about the large amt of typos.  Thanks for all
+the hints and tips.   This should be it.
+
+  stark
+
+
+
+Approval Notes
+for Stark's Forest area
+by Feldegast
+
+  First of all, I really like the theme of this area, more than any of
+the areas that I've approved so far.  The smaller monsters seem to
+lead up to bigger ones, which is the way it should be.  There's hidden
+stuff, such as the snakes, and disguised entrances.  Best of all, each
+of the monsters is unique.  You didn't even seem to have any technical
+problems.  Unfortunately, your weak point seems to be spelling and
+grammar.  I've listed a series of technical corrections, but you also
+had some descriptions that were just poorly phrased and sounded odd.
+For the most part, I just ignored those due to time constraints, but
+you might want to have somebody you know look through your area and
+make a few suggestions.
+
+Rooms
+------------
+forest1.c
+
+  Why is 'east' not an obvious exit?  There is a path leading that way.
+Just because I want them to look around.
+  The second sentence uses the past tense rather than present.
+  In the third sentence, there is no subject.
+merged
+  Typo "vegetion".
+
+forest2.c
+
+  Typo "thing".
+fixed
+  Capitalize "trees".  Why are the trees screaming?
+fixed and altered
+  Typo "fomerly".  Typo "nurish".
+fixed
+
+forest3.c
+
+  Am I currently standing on the log from forest2.c, or have I crossed
+it yet?  You might want to make this clearer.
+done
+  Perhaps it should be "at the sand" rather than "and the sand".
+done
+  In the description of "fabric", typo "opresive".
+fixed
+
+forest4.c
+
+  Typo "it's" should be "its".
+fixed
+  Is the "sand" "finely grounded" or "finely ground"?
+ground
+  In "rock" and "boulder", you should break that up into two sentences.
+broken
+  In the climb command, you should remove the period from the emote
+ section of the move_player function.  A period is appended 
+ automatically.  It is a little annoying having to guess which functions
+ append what, but you'll get used to it.
+tell me about it.. yeesh  So THIS one puts the period in... but NOT the \n?
+
+water.c
+
+  AN open cave.
+  Regarding the final sentence, if I'm already in a cave, then doesn't
+the cliff lead into a tunnel?
+hmm... true.
+
+cave.c
+
+  You're doing something that I have a bad habit of doing sometimes,
+which is giving geology lessons when I should be describing the room.
+This isn't Mammoth Cave and you're not a tour guide.  You might want
+to avoid doing this for future areas.
+  Do you really mean the HEAD of the cavern, or the MOUTH?
+but... but...  I LIKE describing!  It's FUN to use neat words to 
+describe things...
+
+cavern1.c
+
+  Scrapped refers to scrapping.  How about scraped?  Scratched?  
+aaah... fixed w/ scraped
+  In the description for "rock", "lies" instead of "lays".
+fixed
+  In the description for "ceiling", you have a misplaced "a".
+removed
+
+cavern2.c
+
+  THE smooth stone.
+added
+  In "junction", "separate".
+fixed
+
+cavern3.c
+
+  The long description refers to a dome to the east, but the domed
+room is to the west.  Shouldn't the ceiling be lower rather than 
+shorter?
+fixed, thanks btw.
+  These smartass item descriptions sound like something I'd write...
+On the other hand, nobody will probably read them, so that's okay.
+VERY VERY small rocks! 
+
+
+cavern4.c
+
+  The third sentence doesn't make much sense.
+true... seemed neat when I did it... I just removed it.
+  For "path", rephrase.  That isn't grammatical.
+tried to fix...
+  For "paths", "chunch".
+fixed
+  For "sides", "The walls slide together into one wall that is being 
+chipped away at"
+changed
+  For "tunnel", Talking like Yoda, this sentence does.
+not as interesting... but straight forward
+
+cavern5.c
+
+  Item descriptions don't necessarily have to have a subject, but for
+longer ones, you probably should.  The "tunnel" description should
+probably be changed to: The tunnel branches out here and there, with
+broken stones and rock chipped to gain access to the underground.
+subjected
+  Oh, and you misspelled "chipped".
+  In ceiling, "although".
+both fixed
+
+cavern6.c
+
+  AN intricate...
+  The semi-colon is extraneous.
+  For "picture", you have an extra \n in the first line.
+all fixed
+
+tunnel1.c
+
+  Change the fourth sentence to, "There don't seem to be any cracks
+of any sort along the passage."  
+changed
+
+tunnel2.c
+
+  Do the four stone slabs center onto or around the door?
+around
+  For "slabs", and A meter thick...
+ment it that way actually... but grammer I suppose...
+
+tunnel3.c
+
+  Had a problem with this room loading, minor typo in gir.c.  I fixed
+it.
+ok...
+  Is the rock really wet, or is it shiny?
+shiny
+  Change "a room" to "the room".
+changed
+  For "cube" and "room", "dimensions".
+  For "slabs", "A meter..."
+all 3 changeed
+
+Monsters
+--------
+
+snake1.c
+
+  "The snake[subject] is only a meter IN length..."
+  It's -> Its
+done
+
+snake2.c
+
+  It's -> Its
+  "to opposite" -> "the opposite"
+done
+
+snake3.c
+
+  There's no subject in the second sentence.
+  "at it's" -> "in its"
+  "is seems" -> "it seems"
+done
+
+drand.c
+
+  "...the entirety of his body, the only bald spot being..."
+  Missing period at the end of the barter chat.
+done
+
+derz.c
+
+  the -> they
+  The attacking chats that you have for him seem better suited to
+ordinary chats.  Same problem in the previous monster.
+set_chat_chance != set_a_chat_chance
+      load_chat != load_a_chat
+fixed in all.  I didn't know the WAS attack/non attack
+
+neiz.c
+
+  Same problem.
+same fix.
+
+hidz.c
+
+  spin -> spun
+  Same problem as above.  You should go through all of your
+monsters and check on this.
+Fixed... only here
+
+sheeh.c
+
+  "...of the Tribe of Sithos, her womanly form..."
+fixed
+
+par.c
+
+  Outstaged is one word.
+  "...by a wide scar..."
+fixed
+
+wahz.c
+
+  "an assassin"
+fixed
+
+irz.c
+
+  "an assassin"
+fixed
+
+gir.c
+
+  "Hir scaly feet and arms ARE constantly prepped..."
+  His head has been plucked from their sockets?  Huh?
+that's just plain wacky... can't believe I missed that.
+fixed
+
+skir.c
+
+  "...an attack upon her..."
+  Impressing -> Impressive
+fixed
+
+sithos.c
+
+  The fangs are "flicked out"?  Or are they extended?
+  The spell isn't frequent enough.  Jack it up to 25.
+fixed...
+
+------
+to do later
+
+monster:
+
+denaiz.c
+
+  As the first member of the Sithos tribe that the players will
+encounter, perhaps you should describe his snakish attributes better?
+Fiiiixed
+
+
+trasz.c
+
+  Ac1 is really wimpy for a body armor, especially one that is supposed
+to be plate mail.  I suggest you make it scale mail, ring mail, or
+something like that, and make it ac3, with a higher weight.
+-
+changed weight and ac to 3
+changed it to be leather.
+
+
+aaaaand I'm spent.

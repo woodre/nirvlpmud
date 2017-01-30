@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "netfile_gatm"
+myMsgU "$HG$~~~$K$Gatm Rules$G$@CyberNet>>$N$  $HR$**WARNING**$N$  Each new recruit is allowed a one time withdrawal of 70,000 credits.  Any other withdrawal of credits from the gatm is subject to disciplinary action, including suspension or removal."
+myMsgD 0
+roomMsgU "%SRC% connects to CyberNet."
+roomMsgD 0
+tellMsg 0
+farMsg 0
+owner "pike"

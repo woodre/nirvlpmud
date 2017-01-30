@@ -1,0 +1,8 @@
+SYNOPSIS
+	mixed *keys( mapping map)
+
+DESCRIPTION
+	Returns an array of all the keys/indices to the mapping 'map'.
+
+SEE ALSO
+	mappings(LPC), allocate_mapping(E), deletem(E),	sizeof(E), mapp(E)

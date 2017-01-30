@@ -1,0 +1,10 @@
+SYNOPSIS
+	int cp( string file1, string file2)
+
+DESCRIPTION
+	Rename file1 to file2.
+	Returns 1 for success. 0 for failure.
+	Checks are done for read and write rights.
+
+SEE ALSO
+	cp(E)

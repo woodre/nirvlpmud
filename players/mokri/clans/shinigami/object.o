@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30mWh[1;37mi[1;30mte [1;36mO[0m[36mb[1;36mi [0m[33mS[1;33ma[0m[33ms[1;33mh[0m[0m"
+long_desc "A long white sash wraped about your waist and neatly tied in the front to hold your Kosode closed.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "sash"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A long white sash wraped about your waist and neatly tied in the front to hold your Kosode closed.[0mType 'clan_help' for commands."
+clan_short "[1;30mWh[1;37mi[1;30mte [1;36mO[0m[36mb[1;36mi [0m[33mS[1;33ma[0m[33ms[1;33mh[0m[0m"
+damage_type "poison"
+hall_path "/players/mistress/path/cove"
+object_name "sash"
+owner "kenpachi"
+spell_alias "Hadou"
+spell_mess_me "%TPN% thrusts his hand forward and yells "%hi cyan%Hadou #91 %hi black%Kuro Hitsugi (Black Coffin)%normal%""
+spell_mess_room "Reiatsu flys toward %AKN% from all directions encasing %AK_POS% body in a black prism causing damage to %AK_POS% entire body."
+spell_mess_them "%TPN% thrusts his hand forward and yells "%hi cyan%Hadou #91 %hi black%Kuro Hitsugi (Black Coffin)%normal%""
+abilities ({})
+chan_history ({"[Thu Jul 16 23:05:35 2009] Kikio has joined the clan!","[Thu Jul 16 23:05:51 2009] Kikio: Ty","[Sun Jul 19 13:45:58 2009] Yachiru has joined the clan!","[Sun Jul 19 17:37:50 2009] Kenpachi has promoted Kikio to a clan leader!","[Mon Jul 20 23:18:21 2009] Shaya has joined the clan!","[Sun Aug  2 21:02:47 2009] Kezef has joined the clan!","[Sat Aug  8 01:52:24 2009] Rukia has joined the clan!","[Sat Aug  8 01:53:30 2009] Kenpachi has promoted Rukia to a clan leader!","[Sun Aug  9 19:49:35 2009] Alpha has joined the clan!",})
+leaders ({"kikio","rukia",})
+join_type 1
+private_coffer 161478
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 45
+last_spell_time 1250259809

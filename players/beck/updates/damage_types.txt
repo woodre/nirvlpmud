@@ -1,0 +1,214 @@
+Damage Types - implimented by Beck
+
+
+Not all protection or damage is physical in nature.  Damage types are a way of distinguishing
+between certain types of attacks to allow monsters to have specific strengths/weaknesses in 
+combat.  It also gives the players the ability to choose what equipment/guild they want to 
+use accordingly.
+
+This document will explain what damage types can be used, as well as how you would create monsters,
+weapons, and armor to take advantage.
+
+
+Damage types are broken intro three categories:  physical, magical, and other.
+Furthermore the other category is broken into sub categories such as fire, water, etc.
+The syntax used for these is other|fire, other|water, etc.
+
+Physical - 90% of attacks are physical.  This is the default standard.
+
+Magical - spell or spell like attacks.  Sonic and other standard mud spells fall here (for now).
+
+Other:
+
+Fire  - Powers of Fire and Heat
+Water - Powers of Water
+Wind  - Powers of Wind and Air
+Earth - Powers of Earth and Rock
+Light - Powers of Light and Sun
+Dark  - Powers of Darkness and Shadow
+Ice   - Powers of Ice and Cold
+Electric - Powers of Lightning and Electricity
+Laser - Powers of Laser and futuristic weapons
+Evil  - Powers of Evil, Death, or the Unholy
+Good  - Powers of Good, Life, or the Holy
+Poison - Powers of Poison or Venom
+Mental - Powers of the Mind
+
+
+
+The neat thing about the damage types code is its flexibility.  Now not only can the normal monsters, weapons
+and armor be used to modify weapon class and armor class, but now you have several different categories.
+Also you are not limited to using just using worn or wielded items, but any item (including rooms) can
+modify Weapons or Armor.
+You can make a spell that protects everything in the room for a limited time, or you could make a room that hurts
+everyone that remains in it.  You can do all this without placing objects on a player or npc.  The object giving
+attack or defense bonuses does not have to be present on the player, nor does it have to work only on one player
+at a time.  Multiple players/npcs can use the same object at once, thus saving resources.
+
+
+
+On to how to make stuff....
+
+
+
+How to Make damage types Weapons:
+
+By default weapons are of type physical.  Using the standard functions as before, you can setup most weapons.
+
+set_style(x)  -  makes the weapon use x damage type (ie "physical", "magical", "other|water", etc)  by
+                 default this is set to "physical" so you do not need this function if you want to 
+                 make your weapon of type "physical"
+                 ex:  set_style("magical");
+
+set_class(x)  -  makes the weapon class of your weapon equal to x for the style you choose (see above).
+                 ex:  set_class(18);
+
+set_special(x) - the name of a function x within your weapon, that you call for additional information to modify
+                 weapon class.  In the past this is known as the weapon_hit function, and you do not need this
+                 function if you wish to use the weapon_hit function, as that is the default.
+                 ex:  set_special("my_weapon_hit")
+                      my_weapon_hit(){  if(random(100) < 10) return 5; }
+
+set_params(style, class, special) -  
+                 allows you to change or add other damage types.
+                 If you choose a style that is not currently used, it will add this data to the weapon.
+                 If you choose a style that is already used, it will be updated to use this data.
+                 ex:  set_params("other|light", 2, "light_special");
+
+
+How to make damage types Armor:
+
+By default armors are of type physical.  Using the standard functions as before, you can setup most armors.
+
+
+set_protect(x) - makes the armor use x damage type.  By default this is physical, so you do not need
+                 to use this function for physical armors.
+
+set_ac(x)     -  makes the armor have an armor_class of x.  
+                 ex: set_ac(2);
+
+set_res(x)    -  makes the armor have a resistance of x.  Note that resistance works
+                 different that class.  Resistance takes off a percentage of damage, while class just 
+                 subtracts the class from the damage done.  Use resistances with caution as it can be
+                 very powerful.
+                 ex: set_res(5);
+
+set_special(x) - the name of a function x within your armor, that you call for additional information to modify
+                 armor class.  In the past this is known as the do_special function, and you do not need this
+                 function if you wish to use the do_special function, as that is the default.
+                 ex:  set_special("my_do_special")
+                      my_do_special(){  if(random(100) < 10) return 5; }
+
+set_params(protect, ac, res, special) -
+                 allows you to change or add other damage types.
+                 If you choose a style that is not currently used, it will add this data to the armor.
+                 If you choose a style that is already used, it will be updated to use this data.
+                 ex:  set_params("other|light", 2, 0, "light_special");
+
+
+How to make Monsters:
+
+set_wc(x)      -  Sets monster weapon class for type "physical".
+                 ex: set_wc(25);
+
+set_weapon_special(x) - the name of a function x within your monster, that you call for additional information to modify
+                 weapon class.  
+                 ex:  set_weapon_special("monster_weapon_hit")
+                      monster_weapon_hit(){  if(random(100) < 10) return 5; }
+
+
+set_weapon_params(style, class, special) -  
+                 allows you to change or add other damage types.
+                 If you choose a style that is not currently used, it will add this data to the monster.
+                 If you choose a style that is already used, it will be updated to use this data.
+                 ex:  set_weapon_params("other|light", 2, "light_special");
+
+
+set_ac(x)     -  makes the monster have an armor_class of x for type "physical".  
+                 ex: set_ac(2);
+
+set_res(x)    -  makes the monster have a resistance of x.  Note that resistance works
+                 different that class.  Resistance takes off a percentage of damage, while class just 
+                 subtracts the class from the damage done.  Use resistances with caution as it can be
+                 very powerful.
+                 ex: set_res(5);
+
+set_armor_special(x) - the name of a function x within your monster, that you call for additional information to modify
+                 armor class.  
+                 ex:  set_armor_special("monster_armor_special")
+                      monster_armor_special(){  if(random(100) < 10) return 5; }
+
+set_armor_params(protect, ac, res, special) -
+                 allows you to change or add other damage types.
+                 If you choose a style that is not currently used, it will add this data to the monster.
+                 If you choose a style that is already used, it will be updated to use this data.
+                 ex:  set_armor_params("other|light", 2, 0, "light_special");
+
+set_spell_type(x) - Sets the monster spell to use x damage type.  By default this is set to "physical", so you dont
+                    need to use this function when using physical damage type.
+
+set_spell_dam(x) - Sets ths spell damage for the spell type (see above).
+
+
+
+
+
+How to make generic objects use damage types.
+
+The most powerful ability of this code is that it allows you to make any generic object modify weapons and
+armor for npcs or players.  To do this you need two functions.  One turns it on, and the other turns it off.
+With generic options it is critical that this be setup correctly and tested well, or it can lead to 
+undesired results.  The code does have some protections built in.  It prevents registering the same object
+multiple times, and also accounts for spelling errors.
+
+
+target->RegisterWeapon(object, parameters)
+
+  target is the object you wish to modify.  Usually this would be a player or a monster.  This is an object and not
+  a string.
+
+  object is the object being registered.  Most of the time this would be this_object(), but it does not have to be
+  (in the case of a spell for instance).
+
+  parameters is an array of parameters that are registered.
+  ex: ({"physical", 10, "Weapon_hit" })
+  ex: ({"physical", 10, "weapon_hit", "other|fire", 5, "fire_special"})
+  This array can be as big as you wish and do as many types as you want.
+  It is important that you set the array in the order of style, class, special.
+  If the same style is set twice in the array, only the last one will be used.
+
+
+
+target->RemoveWeapon(object)
+
+     Removes object from the target.
+     It is important to use this function when you want to turn off the object from modifying the players/npc's weapon.
+
+
+
+target->RegisterArmor(object, parameters)
+
+  target is the object you wish to modify.  Usually this would be a player or a monster.  This is an object and not
+  a string.
+
+  object is the object being registered.  Most of the time this would be this_object(), but it does not have to be
+  (in the case of a spell for instance).
+
+  parameters is an array of parameters that are registered.
+  ex: ({"physical", 10, 0, "Weapon_hit" })
+  ex: ({"physical", 10, 0, "weapon_hit", "other|fire", 5, 2, "fire_special"})
+  This array can be as big as you wish and do as many types as you want.
+  It is important that you set the array in the order of style, class, resistance, special.
+  If the same style is set twice in the array, only the last one will be used.
+
+
+
+target->RemoveArmor(object)
+
+  Removes object from the target.
+  It is important to use this function when you want to turn off the object from modifying the players/npc's armor.
+
+
+
+
+

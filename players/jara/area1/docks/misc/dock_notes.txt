@@ -1,0 +1,64 @@
+Approval notes for
+Jara's dockside area
+by Feldegast
+
+Room by room analysis:
+
+wrhs1.c -
+  In the item description for "table", you have an extra period at the
+end.
+
+worker.c -
+  I apologize for this, it's partly my fault.  You should have a check
+for attacker_ob in the random movement function, unless you want him
+to run away at random points.  I'm not adding this automatically, 
+because it might be your intention anyway.  It should look like this:
+
+random_move() {
+  if(!attacker_ob)
+    ::random_move();
+  call_out("random_move",6+random(10));
+}
+
+I also think you should change the time between movement to 
+6+random(10) from 3.  It's annoying how fast he's moving now.
+
+walk0.c
+  It occurs to me that you can't indicated whether the beach is to the
+north or to the south.  You might want to indicate this some way, so
+that the player doesn't have their orientation confused later on.
+
+walk2.c
+  In the description for "cabin" it should be "beneath THE frame".
+
+wharf1.c
+  You might want to add some variety to the menu.
+
+walk3.c
+  The direction to go north here is 'path', but the way to come back
+is 'south'.  That might be a little confusing.  Also, the cat will be
+able to go south, but he won't be able to come back north.  Or is that
+your intention?
+
+amelia.c
+  She only has 700 coins worth of loot.  According to the chart, she
+can have up to 850.  It's up to you tho.
+
+fisher.c
+  In the conversation topic "queen", it should be "is A beautiful"
+unless it is simply his dialect.  "daugther" should be daughter".
+
+  pole.c - This needs to have SOME weight.
+
+sailor.c
+  This guy's loot is also a little low.
+
+Summary:
+  This is a very well done area with excellent attention to detail.
+I had to really look for typos and I didn't find many.  The only
+problem with it is that it is a little boring.  It would make a
+great transition area, and for setting up the plot for a larger area
+with more interesting goings-on, but it probably won't be able to
+stand on its own.  It is up to you, but I suggest you wait until you
+finish some more sections of this area before you put this one in the
+game.

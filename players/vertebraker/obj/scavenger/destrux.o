@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/marmor/shirt","/players/arrina/weapons/revenant","/obj/weapon","/players/wren/Area/starbug/items/mirror","/players/wren/Area/starbug/items/veil","/players/mythos/closed/guild/forest/misc/prop","/players/mythos/awep/dstaff","/obj/weapon","/players/arrina/armor/bonering","/players/maledicta/cont/weapons/rweapon","/players/scathe/armor/suit","/players/angel/area/stargate/obj/bullets","/players/mythos/amisc/egg","/players/pain/NEW/arm/helm","/players/saber/armor/mini","/players/scathe/weap/baxe","/obj/weapon","/players/sado/shop/rose","/obj/armor","/players/ultramagnus/darkweapon","/players/mythos/aarmor/sune-ate","/players/jamila/beach/mobs/shell","/players/hippo/armour/boots","/players/pain/NEW/weap/mace2","/players/mythos/awep/ring",})
+shorts ({"Shirt","Revenant Blade","Rabbit foot","a slim pocket mirror","a big wedding veil","Essence of Vraith- vine sap","Dream Staff","Golden hoof","A Carved Bone Ring","a Scimitar","Black Suit","A clip of bullets [50]","A strange looking egg","A horned helm","A skin tight leather mini skirt","A Huge Double Bladed Axe","A glowing lightsabre","A beautiful red rose blossom","Ring of Death","Dark Rider Longsword","Sune-ate","A Large Shell","anti-blood boots","A huge iron mace","Silver Ring",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

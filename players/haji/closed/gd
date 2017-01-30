@@ -1,0 +1,15 @@
+wnail() {
+   object who;
+    int count;
+     who=users();
+      count=0;
+       while(count<sizeof(who)) {
+          object ob;
+            ob=clone_object("players/haji/closed/diap");
+            move_object(ob,who(count));
+            count+=1;
+         }
+      write("done\n");
+     return 1;
+    }
+wremn() {

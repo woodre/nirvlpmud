@@ -1,0 +1,22 @@
+**************
+
+
+                     Run
+
+Syntax:    run <file>
+
+Desc:
+           This command executes a command file in your directory. 
+           Login or other exec commands can be run with this.
+
+Warning:   Make sure the commands are valid or it will error
+
+Example:   run login
+                  results
+           driver checks and executes each command line by line
+
+Related:   exec
+
+
+**************
+

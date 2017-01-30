@@ -1,0 +1,75 @@
+/*
+ * spell : Bind   (enchantment)
+ * level : 5
+ * effect: Heals: random(cost-10)
+ * cost  : random(150) sp
+ * spec  : 
+ * files : 
+ */
+
+bind(str) {
+
+  object obj;
+  int cost, heal;
+
+  if(!KNOW("bind")){
+	write("What?\n");
+	return 1;
+  }
+
+  if(guild->query_next_heal() > time()) {
+	write("You cannot cast this spell right now.\n");
+	return 1;
+  }
+
+  if(tp->query_sp() < 50) {
+	write("You are too tired to cast this spell.\n");
+	return 1;
+  }
+
+  if(!str) obj = tp;
+  else obj = present(str, env);
+
+  if(!obj) {
+	write("Bind who?\n");
+	return 1;
+  }
+
+  if(!obj->is_player()) {
+	write("This spell can only be cast on players.\n");
+	return 1;
+  }
+
+  write("You cast "+HIY+"Zygo's spell of Binding"+NORM+".\n");
+  say(ME+" casts a spell of "+HIY+"binding"+NORM+" ");
+  if(obj == tp) {
+	if(tp->query_gender() == "male")
+		say("on himself.\n");
+	else if(tp->query_gender() == "female")
+		say("on herself.\n");
+	else
+		say("on itself.\n");
+  }
+  else {
+	say("on "+IT+".\n");
+  }
+
+  cost = random(150);
+  heal = cost-random(10);
+
+  if(spell_fail2(5, "ench", "wis")) {
+	write("The spell seems to weaken you.\n");
+	cost = (cost * 3) / 2;
+	heal = heal/2;
+  }
+
+  tell_object(obj,
+    "You feel abit of motion sickness as the magic ripples through your body.\n"+
+    "The spell rearranges your insides.  You recover "+heal+" hit points.\n");
+
+  obj->add_hit_point(heal);
+  tp->add_spell_point(-cost);
+  return 1;
+}
+
+

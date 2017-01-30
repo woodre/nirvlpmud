@@ -1,0 +1,88 @@
+#include "../DEFS.h"
+
+void get_all(object from);
+int get_ob(object ob);
+
+status main(string str) {
+    string item;
+    string container;
+    object item_o;
+    object container_o;
+    int weight;
+
+    if(!((status)IPTP->item_eyes()) && !IPTP->guild_wiz()) return 0;
+    if (!str) {
+        write("Usage: cyberget <item>\n");
+        return 1; }
+    if (TP->query_ghost()) {
+        write("Your incorporeal hand passes right through it.\n");
+        return 1; }
+    if (str == "all") {
+        get_all(environment(TP));
+        return 1; }
+    if (sscanf(str, "%s from %s", item, container) != 2) {
+        if (!present(str, environment(TP))) {
+            write(BOLD+"[[ "+OFF+GREEN+str+OFF+BOLD+" ]] is not here."+
+                OFF+"\n");
+            return 1; 
+        }
+        if (get_ob(present(str, environment(TP))) == 2)
+            say(TPN+" takes: "+str+ ".\n");
+        return 1; 
+    }
+    container_o = present(container,TP);
+    if(!container_o) container_o = present(container,environment(TP));
+    if (!container_o) {
+        write("  [[ "+GREEN+container+OFF+" ]] is not here.\n");
+        return 1; }
+    if (!call_other(container_o, "can_put_and_get", 0)) {
+        write("You can't do that!\n");
+        return 1; }
+    if (item == "all") {
+        get_all(container_o);
+        return 1; }
+    item_o = present(item, container_o);
+    if(!item_o) {
+      write("There is no "+item+" in the "+container+".\n");
+      return 1; }
+    get_ob(item_o);
+    weight = (int)item_o->query_weight();
+    call_other(container_o, "add_weight", -weight);
+    say(TPN+" takes "+item+" from "+container+".\n");
+    return 1;
+}
+
+
+void get_all(object from) {
+  object ob, ob2;
+  ob = first_inventory(from);
+  while(ob) {
+    ob2 = next_inventory(ob);
+    get_ob(ob);
+    say(TPN+" takes: "+ob->short()+ ".\n");
+    ob = ob2;
+  }
+}
+
+
+int get_ob(object ob) {
+  int weight;
+  string item;
+  if((string)ob->short() && (status)ob->get() &&
+  !living(ob) && !((status)call_other(ob, "drop", 1)) &&
+  !call_other(ob, "id", "soul") ) {
+    weight = (int)call_other(ob, "query_weight");
+    item   = (string)ob->short();
+    if(TP->add_weight(weight)) {
+      write(BOLD+"You take [[ "+OFF+GREEN+item+OFF+BOLD+" ]]"+OFF+"\n");
+      transfer(ob, this_player());
+      TP->recalc_carry();
+      return 2;
+    }
+    else
+      write(BOLD+"[[ "+OFF+GREEN+item+OFF+BOLD+
+            " ]] is too heavy or ungettable."+OFF+"\n"); 
+    return 1;
+  }
+  return 0;
+}

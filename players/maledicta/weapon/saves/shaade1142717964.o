@@ -1,0 +1,41 @@
+collect 1850
+no_clean 0
+wielded 1
+name_of_weapon "lance"
+cap_name "Lance"
+broke 0
+silentwield 0
+eff_wc 17
+misses 42
+hits 80
+alt_name "collectable_obj"
+alias_name "icebrand"
+short_desc "[1m[30mChu'Sarth Footman's Lance[1;34m [Icebrand][2;37;0m"
+long_desc "  Looking at this long powerful weapon you see a spectre ofwhat the owner must have been like. Cold, deadly, and evil.The weapon is covered with a light frost which never seemsto diminish, even at the touch of warmth."
+read_msg 0
+save_flag 0
+class_of_weapon 17
+value 200
+buy_value 0
+local_weight 6
+hit_func_fn "/players/maledicta/weapon/ice_lance"
+wield_func 0
+wield_func_fn 0
+info 0
+type "spear"
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+multipleIds 0
+owner 0
+params ({"physical",17,"hit",})
+offwielded 0
+offwield_desc 0
+time_delay 0
+two_handed_wield 0
+two_handed_wep 1
+no_break 0
+special_damage ({7,4,})
+special_chance ({10,30,})
+special_message ({"	$H$K$Holding the Lance before you, you summon forth a$N$$H$B$                        CYCLONE OF FROST$N$		$H$K$ which engulf's your foe with tendrils of pure pain!$N$","$H$K$Your Lance drives into your foe sending shards of$H$B$ ICE[2;37;0m$H$K$ digging into their flesh!$N$",})
+special_rmessage ({"	$H$K$UN$ holds the Lance before $UOB$ summoning forth a$H$B$                                        CYCLONE OF FROST $N$		$H$K$which engulf's its victim with tendrils of pure pain!$N$","$H$K$UN$'s Lance drives into it's victim slamming them with shards of $H$B$ICE!$N$",})
+special_fun ({"/players/maledicta/weapon/powers/death.c","/players/maledicta/weapon/powers/nova.c",})
+yup 1

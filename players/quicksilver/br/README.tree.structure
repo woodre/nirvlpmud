@@ -1,0 +1,15 @@
+base structure for: /players/quicksilver/br
+--------------------------------------------
+cre/			- creatures/monsters...the living and unliving  -grin-
+doc/			- documentation/non-code stuff
+etc/			- stuff that doesn't fit elsewhere   f.e. .o files
+lib/			- standard objects
+obj/			- general objects -- non-ac/wc/heal items
+obj/armor/		- armor objects
+obj/heal/		- healing objects
+obj/weapon/		- weapon objects
+r/			- rooms...organized by dir when logical
+std/			- header files for includes, etc
+
+(Note: Some of these branches may be empty, but have been created to keep 
+things organized.)

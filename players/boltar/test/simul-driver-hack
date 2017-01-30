@@ -1,0 +1,25 @@
+#ifdef COMPAT_MODE
+char *file_size_name_too(file, writeflg)
+char *file;
+int writeflg;
+{
+   struct svalue *ret;
+   struct object *stuff = command_giver;
+   char *str;
+
+      if (file[0] == '/')
+         str = file+1;
+      else
+         str = file;
+   strncpy(debug_file_size, str, sizeof debug_file_size);
+   debug_file_size[sizeof debug_file_size- 1] = 0;
+   if (!legal_path(str))
+   {
+      add_message("Illegal path: %s\n", str?str:"<null>");
+      return 0;
+   }
+   if (str[0] == '\0')
+       return ".";
+   return str;
+}
+#endif

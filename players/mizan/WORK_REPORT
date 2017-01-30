@@ -1,0 +1,103 @@
+Sun Oct  9 23:20:48 1994 ** /players/slothie/castle.c renamed castle.old because of heartbeat use
+Sat Oct 15 20:40:18 1994 ** /players/wizardchild/house/room_lock.c -> BS filtering file renamed and made harmless
+Sat Oct 15 21:04:52 1994 ** /players/wizardchild/food.c -> description changes nuked due to player abuse
+Fri May 19 21:24:32 1995 ** /players/heroin/hunting_grounds/preds/predstone fixed to check combat and realm
+Fri May 19 21:25:08 1995 ** /players/heroin/hunting_grounds/preds/predatorx.c adjusted to level 20 stats..formerly too weak
+Mon May 22 17:55:34 1995 ** /players/snow/ITEMS/dfeeler.c fixed to prevent invis player use.
+Wed May 24 15:13:38 1995 ** quint demoted to 20 for esc keyed file reappearing and testchar abuse
+Fri May 26 20:11:43 1995 ** /players/gorgan/heals/chips.c made legal, formerly
+Fri May 26 20:12:29 1995 ** did 50 heal_self, 10 uses, no intox, 6.5k gold
+Fri May 26 20:14:08 1995 ** /players/gorgan/shop.c everything just nuked up in price, nothing is legal there
+Fri May 26 20:26:53 1995 ** closed /players/gorgan/shop.c not worth fixing all
+Mon May 29 03:43:34 1995 ** mythos made changes to CN guild, removed guide and adjusted force wimpy spell
+Mon May 29 03:43:42 1995 ** i authorized file changes
+Wed May 31 01:21:17 1995 ** /players/hurtbrain/obj/stone.c changed to cost 20 sp per use,
+Wed May 31 01:21:41 1995 ** converted items into gold coins
+Thu Jun  1 16:38:53 1995 ** CN speedsters back to unrestricted again, i had already  told snow to cut back to 5 cmds per HB
+Fri Jun  2 15:03:07 1995 ** told snow again to fix CN speedster
+Sat Jun  3 02:15:23 1995 ** /players/dune/closed/guild/board, 59k in gboards
+Sat Jun  3 02:15:43 1995 ** /players/glaendor/QUEST/obj/mageblade.c wizardchild got it
+Sat Jun  3 02:16:00 1995 ** last of its kind stored by reflex.
+Sat Jun  3 02:23:39 1995 ** /players/pain/closed/items/patchd.c tell changed to correct for invis wizzes
+Sat Jun  3 03:31:14 1995 ** rain and his fucking seconds booted out of my guild
+Sun Jun  4 01:34:24 1995 ** closed heroins castle
+Sun Jun  4 01:34:51 1995 ** i dont believe it was fucked intentionally, there were mem leaks
+Sun Jun  4 01:35:04 1995 ** from set_heart_beat(1) and wrong lfun ordering
+Sun Jun  4 22:56:00 1995 ** /players/mouzar/closed/wand.c 21k cream based wiztools rmed
+Sun Jun  4 22:58:07 1995 ** /players/mouzar/weapons/castle/robe.c decreased from ac 5 to a low number
+Sun Jun  4 23:03:53 1995 ** /players/mouzar/castle/newbie/inn.c init() shut down
+Mon Jun  5 03:06:47 1995 ** shydow = mouzar? (no s7 around)
+Fri Jun  9 01:30:47 1995 ** I should make my guild object comply with weight transfer regs
+Fri Jun  9 01:31:04 1995 ** the more energy stored in it the heavier it gets. etc.
+Sun Sep 24 02:20:07 1995 ** /players/unsane/closed/predator.c monster had set_heart_beat1 in reset
+Wed Oct  4 04:01:31 1995 ** /players/hawkeye/armor/cross.c
+Wed Oct  4 04:01:39 1995 ** some weird shit
+Sat Nov 11 04:53:49 1995 ** /players/mouzar/castle autoloading wiztools again
+Sun Nov 12 22:49:41 1995 ** going on a deletion spree
+Sun Nov 12 23:02:57 1995 ** rmed extra shit in my closed, and slava's (plyer.c and scar.c)
+Wed Nov 15 21:28:43 1995 ** rm /players/sado/staff.c
+Wed Nov 15 21:28:53 1995 ** rm /players/bismarck/workroom.c
+Fri Nov 17 04:49:04 1995 ** fixed /players/hippo/c/staphylococ.c
+Fri Nov 17 04:49:16 1995 ** too few hps for a monster of what its carrying
+Mon Jan  8 13:55:10 1996 ** fuzzytead and fionn- possibly seconds
+Tue Jan  9 01:35:32 1996 ** merlin, grendell, redwolf darren marek
+Tue Jan  9 01:36:30 1996 ** DDM6050@exodus.valpo.edu
+Tue Jan  9 11:57:48 1996 ** quazark = canoper
+Tue Jan  9 12:21:52 1996 ** reflex = tarzan
+Wed Jan 24 02:18:45 1996 ** nailed NR-mode switching EQ
+Wed Jan 24 02:18:57 1996 ** in the past- yesterday nailed gumba-pogg-perrin combo
+Wed Jan 24 02:19:24 1996 ** in the past-yesterday nailed taco-perrin-dc switching chars with boone
+Wed Jan 24 03:15:29 1996 ** nuked sync,mode,NR,pimp
+Wed Jan 24 03:47:53 1996 ** nightraver alt addr ipa-*-*.ipa.net
+Wed Jan 24 03:48:18 1996 ** file oops scratch that
+Wed Jan 24 21:21:22 1996 ** redrum-sadist dualchar
+Thu Sep 11 23:05:14 1997 ** gave chaundre 100k exp for rerting money bug in spuckball tubes
+Mon Sep 15 00:33:45 1997 ** rewarded scratch (before) 170k exp for death regen free bug in polys
+Mon Sep 15 00:33:56 1997 ** xi = dan (MSSQL)
+Mon Sep 15 21:32:33 1997 ** malt password- hoopla
+Mon Sep 15 22:12:23 1997 ** wren = goshawk (MSSQL)
+Mon Sep 15 23:12:42 1997 ** aelithnanar = khrell
+Wed Sep 17 01:16:10 1997 ** crystallis = declarius (observation)
+Wed Sep 17 01:16:27 1997 ** imprisoned declarius for xferring a bag of stuff
+Wed Sep 17 01:17:31 1997 ** theseius = crystallis
+Wed Sep 17 17:56:49 1997 ** anakin - pwd 'varsity'
+Wed Sep 17 17:58:21 1997 ** thrawn = anakin
+Wed Sep 17 18:09:40 1997 ** tick = scratch
+Wed Sep 17 21:55:36 1997 ** budman = jimbo
+Wed Sep 17 22:43:25 1997 ** sven = aegis
+Wed Sep 17 23:14:42 1997 ** khrell = mortarion
+Wed Sep 17 23:40:58 1997 ** butt = ladydiamond
+Sat Sep 20 02:30:38 1997 ** spawn = shek
+Sat Sep 20 13:47:33 1997 ** shadowmane = wilson
+Sat Sep 20 15:41:12 1997 ** dracula = emerson
+Mon Sep 22 20:32:21 1997 ** vertebraker = dan (observation)
+Wed Sep 24 01:51:47 1997 ** soria = alanna
+Thu Sep 25 01:00:32 1997 ** rosser = johan
+Thu Sep 25 16:48:39 1997 ** vertebraker = corleone (told)
+Sun Oct 12 23:40:13 1997 ** alucard = armblessed (MSSQL)
+Mon Oct 13 23:37:58 1997 ** dove = dvna (observation)
+Wed Oct 15 23:21:17 1997 ** shiverheart = z (admission)
+Thu Oct 16 23:08:23 1997 ** fele = nick osborn, osborn@vax1.mankato.msus.edu
+Thu Oct 16 23:18:45 1997 ** legion = revenge
+Sun Oct 19 01:07:25 1997 ** adrock = green (admission)
+Sun Oct 19 01:08:49 1997 ** draven = demonsweat (admission)
+Thu Oct 30 22:29:05 1997 ** snuggles = newbie (admission)
+Sun Jan  4 00:04:23 1998 ** tony = fox (observation)
+Sun Jan  4 16:27:40 1998 ** /players/morgoth/CASTLE/Efield14.c has bad xenobyte monsters
+Sat Jan 10 01:29:52 1998 ** lopus = armdillo (observation)
+Sat Jan 10 23:06:50 1998 ** jesper = dimitrix
+Mon Jan 12 23:19:53 1998 ** unibeaver = minus (admission, and this is a playful char, no harm meant)
+Mon Jan 12 23:20:05 1998 ** if you are reading this keep the above confidential.
+Sat Jan 24 19:28:12 1998 ** dakota = tira
+Sun Aug 12 01:16:53 2001 ** Gave seyran 4 heal spells as minor reimbursement for dragging him out of an area... and then mud promptly crashed
+Sun Aug 12 01:17:25 2001 ** Gave click and kotcha 4 heals, backpack, 3 cardboard tubes, 1 spuckcannon (coiled) for reporting a bug
+Sun Aug 12 01:17:36 2001 ** the bug was in a shardak attack
+Sun Aug 12 16:12:56 2001 ** Gave sid some exp (80000) for reimbursement. Polymorph stats were set WAY too high by snow. 72000 per exp point is way much
+Sun Aug 12 16:30:50 2001 ** Polymorph changes - stats had once cost 72000 exp per stat! I changed this to 6000
+Sun Aug 12 16:31:12 2001 ** Other stats accordingly were changed... 3000 exp per point at 1-12 value
+Sun Aug 12 16:31:20 2001 ** and 4500 points between 13 and 16.
+Tue Aug 21 15:04:39 2001 ** mental note. prancer == handy == happy
+Tue Aug 21 22:05:07 2001 ** mental note - usagi == bishop
+Tue Aug 21 22:16:53 2001 ** mental note - grudge == volkar
+Tue Aug 21 23:16:20 2001 ** Restored bishop 809527 exp for amount lost in sparring arena failure
+Tue Aug 28 13:56:08 2001 ** wicket == gothchic

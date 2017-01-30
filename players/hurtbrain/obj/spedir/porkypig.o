@@ -1,0 +1,7 @@
+k 6
+backp ({"w,w,nw,n,w,w,n","n,n,w,w,n","w,w,nw,s","e,s,s,s,w,w,w,w,w,n","n,n,n,n","w,w,w,w,w,w,w,w",0,0,0,0,})
+bpatt ({"e,e,se,s,e,e,s","s,s,e,e,s","e,e,se,n","w,n,n,n,e,e,e,e,e,s","s,s,s,s","e,e,e,e,e,e,e,e",0,0,0,0,})
+patt ({"s,e,e,s,se,e,e","s,e,e,s,s","n,se,e,e","s,e,e,e,e,e,n,n,n,w","s,s,s,s","e,e,e,e,e,e,e,e",0,0,0,0,})
+ggg "e"
+comment ({"church->guild","church->post","post->guild","church->rift","rift->market",0,0,0,0,0,})
+obj 0

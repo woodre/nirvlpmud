@@ -1,0 +1,61 @@
+/* <change by="Erasmios" date="2001-07-08"> */
+inherit "/players/guilds/bards/pet/petbase";
+
+create()
+{
+	::create();
+
+	set_self_damage(15);
+
+	set_name("hawk");
+	set_short("A large hawk");
+	set_alt_name("bird");
+	set_gender("creature");
+	set_race("bird");
+	set_long
+		("A large hawk with beautiful dusky feathers and strong eyes.\n"
+		 + "The hawk has a small silver band around its left foot.\n");
+	set_level(3);
+	set_heal(4, 20);
+	set_ac(5);
+	set_wc(10);
+	set_hp(75);
+	set_al(400);
+	set_aggressive(0);
+	set_chat_chance(3);
+	set_a_chat_chance(2);
+	load_chat("The hawk ruffles its feathers.\n");
+	load_chat("The hawk looks at you.\n");
+	load_chat("The hawk soars high overhead.\n");
+	load_chat("The hawk flies high into the sky and circles.\n");
+	load_chat("The hawk gazes at something.\n");
+	load_a_chat("The hawk circles its foe.\n");
+	load_a_chat("The hawk screams as it rakes its foe.\n");
+	set_spell_mess1
+		("The hawk rakes the face of its foe with razor sharp claws.");
+	set_spell_mess2
+		("The hawk rakes your face with razor sharp claws.");
+	set_chance(15);
+	set_spell_dam(10);
+}
+
+a_short()
+{
+	return "A hawk";
+}
+
+the_short()
+{
+	return "The hawk";
+}
+
+sic_sound(str)
+{
+	return ("The hawk screams and flies towards " + capitalize(str) + ".\n");
+}
+
+munch_sound()
+{
+	return ("The hawk descends upon the corpse and plucks out its eyeballs.\n");
+}
+/* </change> */

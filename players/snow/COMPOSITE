@@ -1,0 +1,24 @@
+int comp_special;
+set_comp_special(int num) { comp_special = num; }
+query_comp_special() { return comp_special; }
+query_composite() { 
+  int composite;
+/* Attack Composite */
+  composite = weapon_class;
+  if(weapon_class > 40) composite += 5;
+  if(weapon_class > 60) composite += 10;
+  if(weapon_class > 80) composite += 10;
+  composite += (spell_chance * spell_dam) / 100;
+  if(spell_dam > 50) composite += 5;
+  if(spell_dam > 100) composite += 10;
+/* Defense Composite */
+  composite += armor_class;
+  if(armor_class > 25) composite += 2;
+  if(armor_class > 40) composite += 3;
+  if(armor_class > 60) composite += 5;
+  composite += (heal_rate * 3) / heal_intv;
+  if( (heal_rate / heal_intv) > 2 ) composite += heal_rate / heal_intv;
+/* Composite Special (Wiz Defined) */
+  if(comp_special < 20) composite += comp_special;
+  return composite; 
+}

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1;36mAncient Spirit[0m floats beside this being[0m"
+long_desc "[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "spirit"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "[0mType 'clan_help' for commands."
+clan_short "A [1;36mAncient Spirit[0m floats beside this being[0m"
+damage_type "mental"
+hall_path "/room/church"
+object_name "spirit"
+owner "bahamut"
+spell_alias "tt"
+spell_mess_me "You summon an %hi cyan%Ancient Spirit%normal% to attack%bold%%AKN%.%normal%%newline% %bold%%AKN%%normal% looks %red%WEAKER!!!"
+spell_mess_room "%TPN% has a summoned an %hi cyan%Ancient spirit%normal% to attack %bold%%AKN%.%normal% %newline%The Ancient spirit reaches into %bold%%AKN%.%normal%%newline% %AKN% looks %red%WEAKER!!!"
+spell_mess_them "%TPN% has summoned an %hi cyan%Ancient Spirit.%normal%  The spirit grasps your heart and squeezes! %newline% %red%You feel %hi red%WEAKER!!!"
+abilities ({})
+chan_history ({"[Wed Sep  2 17:59:00 2009] Silverpaw: ahh","[Wed Sep  2 17:59:02 2009] Tavenous: busy usually.","[Wed Sep  2 17:59:02 2009] Silverpaw: heh","[Wed Sep  2 17:59:06 2009] Silverpaw: gotcha","[Wed Sep  2 17:59:08 2009] Silverpaw: thats when im on mostly","[Wed Sep  2 17:59:10 2009] Silverpaw: heh","[Wed Sep  2 17:59:12 2009] Tavenous: but i have the week off.","[Wed Sep  2 17:59:16 2009] Silverpaw: nice","[Wed Sep  2 17:59:22 2009] Silverpaw: wish i did heh","[Wed Sep  2 17:59:38 2009] Silverpaw: well i gotta run.... 4 now..... if you on later tonite i might catch ya","[Wed Sep  2 17:59:44 2009] Tavenous: k. cya","[Sun May 16 20:22:47 2010] Silverpaw has joined the clan!","[Sun May 16 20:22:49 2010] Silverpaw: heh","[Sun May 16 20:23:13 2010] Sabin: ok 1 north is clan hall","[Sun May 16 20:23:17 2010] Silverpaw: can i use stuff as long as i put it back?","[Sun May 16 20:23:27 2010] Sabin: im cool with","[Sun May 16 20:23:33 2010] Silverpaw: aight","[Sun May 16 20:24:25 2010] Sabin: ill coin up 2marrow morning so you can make some rooms if u want","[Tue May 18 21:08:45 2010] Silverpaw: heh","[Tue May 18 21:08:51 2010] Sabin: sup?",})
+leaders ({"sabin","alkizer","wasion","crom","tavenous",})
+join_type 1
+private_coffer 0
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1361169473

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/armor","/obj/weapon","/players/scathe/armor/bowboot","/players/saber/weapons/lgun","/players/wren/Area/starbug/items/cowboyhat","/players/wren/Area/starbug/items/leaflets","/players/haji/quest/diary","/players/hawkeye/armor/converse","/players/hippo/armour/glazour_coat","/players/pathfinder/detroit/weapons/machete","/players/snow/WEAPONS/glass_sword","/players/scathe/armor/igarb","/players/mythos/awep/wakizashi","/players/scathe/armor/suit","/players/scathe/armor/rgarb","/players/wren/Area/starbug/items/lunchbox","/obj/weapon","/players/snow/shadows/stuff/axe","/players/hippo/heals/dna_repair","/players/ultramagnus/bsack","/obj/treasure","/players/maledicta/cont/rdragon/scepter","/players/boltar/things/stove2","/players/saber/weapons/hrev","/players/wren/Area/starbug/items/flibble",})
+shorts ({"A small [1mwhite[0m shield","A glowing lightsabre","Hard Boots","A lazer gun","a tiny cowboy hat","a stack of leaflets","A diary","[31mConverse All-Stars[0m","glazour coat","A deadly looking machete","Glass Sword","Initiate's garb","Wakizashi","Black Suit","Monk's garb","a lunch box","A gardening hoe","A dusky axe","[32mdna repair string[0m","A blue sack","Arctic Wolf pelt","[1;32mJe[1;34mwe[1;31mll[1;35med[1;37m Scepter[2;37;0m","A stove","A Colt .68 Heavy Revolver","a [1;30mpe[37mngu[1;30min[2;37;0m handpuppet",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

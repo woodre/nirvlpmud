@@ -1,0 +1,361 @@
+Thu Nov 27 03:02:10 2003--Action: Cloned etest aura to Hugh. Reason: He lost his, and I know he has one, because a) I helped him coin for the etest the first time he did it, b) he's on the e-test list.
+Thu Dec  4 15:07:46 2003--Action: reimbursed alexander 10k, cloak/hood of masters, trident of war, shadowveil (10k for other items i didn't reimburse) Reason: was d/c when it crashed, he can chalk the rest up to a learning experience
+Mon Dec 15 02:23:48 2003--Action: reimbursed chant an e-ammy Reason:  he it lost in a \crash, other stuff was more replaceable or he got cash for
+Thu Dec 25 23:03:37 2003--Action: Opened my area (4w, all n from green). Reason: approved by Fred.
+Sat Dec 27 08:06:39 2003--Action: patched sobear's exp to pre-death, and fixed his guild name, guild exp as well Reason: he died due to a bug in bcm guildhall, fred's been notified via bcm bug report and mail
+Thu Jan  1 20:23:12 2004--Action: reimbursed 1489752 exp to khrell Reason: per wocket: khrell gained negative xp through killing a beano
+Mon Jan  5 04:05:13 2004--Action: handed korwrath 3 shakes Reason: He notified me of a bug with apu in gowron's area (same bug as moe, which still exists), i looked at code, made a fix in my dir, and asked korwrath to test it, and gave him shakes to make up for the hp loss testing it - fix worked, btw
+Fri Jan 16 14:16:00 2004--Action: Removed the daemonization from mobs in my area Reason: Wasn't worth the eval cost, so they are just standard mobs now.  It was mainly just an experiment anyway.
+Fri Jan 16 14:16:26 2004--Action: Changed description of item dispenser in my area. Reason: To make it look nicer.
+Fri Jan 16 14:17:12 2004--Action: Changed the way the pk tracker calculates deaths. Reason: Boltar implemented a lib-change for it, and this should make it much more efficient, and less apt to bug.
+Sat Jan 17 03:24:06 2004--Action: Boltar replaced bin grep with mine. Reason: Mine won't lag the mud, and allows use of wildcards.
+Fri Apr 30 23:08:49 2004--Action: Idested 3 items off of Dasani Reason: They weren't supposed to be autoloads - one was a wizteller from khrell, one was discreet emoter from snow, and the last was the claws object from feline miniguild
+Thu May 20 06:31:42 2004--Action: Worked on ls2 Reason: It shows whether files are loaded or not and directories stand out a little more.  More work needed on it however.
+Thu May 20 06:32:48 2004--Action: simul_efun: normalize_path() or resolve_path() Reason: Necessary efuns.  I can do a lot of work on file manipulation commands with this function, whatever Verte ends up calling it.
+Thu May 20 12:47:16 2004--Action: Coded, and vertebraker implemented 'man' command Reason: It is just a nifty little helper for finding things in /doc ... especially for noob wizards hopefully.
+Thu May 20 15:26:46 2004--Action: Added ansi color and pref checking to ls Reason: Verte stuck the ansiprefs into play, it makes ls nice and purty now :)
+Mon May 24 00:42:28 2004--Action: picked up tenchu's stuffs and gave it to him Reason: phantom killed him while he was still dead, got him out of there so it could be worked on...mizan got exp portion of it i believe
+Tue May 25 00:52:29 2004--Action: Worked on/half recoded jaraxle's misty cloak and he cp'd over Reason: it had some bugs, and was simpler to recode parts than to ghetto-rig them to work as they were
+Tue May 25 00:54:27 2004--Action: ghetto-rigged dakeyras to screw up his login earlier Reason: it was to interrupt his login procedure - something in it was hosing and causing him to destruct, so i forced his char to lockup and he stayed on as a result :) (fear crashing a character fixing a problem:)
+Tue May 25 08:50:19 2004--Action: added 46666 exp to sacrifice Reason: Warrior refund apparently screwed up, and that's what he's listed at in the log
+Tue May 25 08:52:17 2004--Action: removed the exp from sacrifice Reason: it didn't show up in view current, but i checked entrance logs just to make sure, and it had been refunded
+Wed May 26 03:37:14 2004--Action: argued with vertebraker about 'repairing my repair' of misty cloak Reason: he was wrong, i was right.  my fix worked, it's the lib that's fucked, so hug my garlicy red-furred nutsack ya hoser :)
+Sat Jun  5 12:23:03 2004--Action: Changed viper's ansicolor Reason: he was yellow before, no longer is for some reason so i set it.
+Wed Jun  9 03:45:30 2004--Action: coded and placed ~/obj/viral_gag.c on viral.  This blocks the major communication channels for him, only allows him to talk to wizards, and players from fawn's ip block.  This is an autoloading object.  Blocks star, gossip, risque, emote, say, etc...only allows tell and reply Reason: If he can't code, and received an extension of the 3 month deadline for an area because of this, he has no business sitting at green and bs'ing as a test char.  His reasoning is that he needs to coordinate with fawn, well, this allows him to focus purely on fawn.
+Wed Jun  9 03:48:48 2004--Action: Reimbursed Sundin 450k exp Reason: duncan somehow managed to self-destruct while he was killing him.  There was no log entry, no actual death, illarion believes somehow he dested, as there were no bugs or anything.  There's a lot of time and effort involved in prepping to solo duncan, and why alienate a player over a bogglement like this.
+Wed Jun  9 08:08:34 2004--Action: put player-housing system up for approval Reason: It's finished and will be an asset to the mud, I hope.
+Wed Jun  9 08:10:50 2004--Action: sent out mail to a number of wizards and players trying to gather ideas for pk  Reason: to gather ideas about how to improve and encourage pk.
+Sun Jun 27 01:12:04 2004--Action: handed ~snow/closed/test/aura.c to cgi Reason: he lost his etest object in the crash that hosed save_object() a while back
+[Sep 22 2005 22:16] 
+  A: used snoop and force on gogeta
+  R: he was bugged, asked me to.  He was indeed bugged but there was nothing I could do.
+[Sep 23 2005 01:18] 
+  A: Made changes to tracker that will take effect after boot
+  R: Removal of bugs and allow level 10s to use it.
+[Sep 23 2005 01:31] 
+  A: Fixed some problems in housing, tweaked some things, converted some of my area to land as well
+  R: Because housing should go in shortly :)
+[Sep 27 2005 07:23] 
+  A: Snooped (with his permission) grog for purpose of seeing a bug.
+  R: Couldn't replicate it as a wizard.
+[Sep 27 2005 07:24] 
+  A: Posted on green and wiz hall boards regarding housing
+  R: It's in, approved; Needed to let players and wizards know how to deal with it.
+[Sep 29 2005 07:31] 
+  A: Began updating Deathmonger's area
+  R: It's long overdue, be nice to see it used.
+[Oct  7 2005 06:27] 
+  A: changed alignment of /players/emerson/closed/button.c from 100 to -350
+  R: per joab's idea entry: he's an 'evil button man' his align should be evil, not righteous
+[Oct  7 2005 06:44] 
+  A: Added ability to read sign in /players/saber/ryllian/portal.c
+  R: Should be able to read and look at signs, per idea rep by lungbutter
+[Oct  7 2005 07:36] 
+  A: Added command to do 'mon' to this_player, and the target, in cure_wounds spell in mages guild, filename /players/vertebraker/guilds/mages/spells2/cure_wounds
+  R: To show monitor to the caster and target at conclusion of spell, per Mortarion's suggestion.
+[Oct  7 2005 08:14] 
+  A: Sent out mails to reporters of various ideas asking for clarification, or letting them know that their entries were being worked on
+  R: Some of them were phrased heinously, or already addressed, or not ready to be addressed quite yet, and I figured that it would be a good policy to at least let players know that their suggestions were being read, considered and acted upon.
+[Oct  7 2005 08:59] 
+  A: Added a check for attacker in /players/jareel/armor/crimson_cape.c
+  R: Was bugging when special was called and there was no attacker - bug rep by marlboro
+[Oct  8 2005 01:22] 
+  A: Corrected numerous typos and grammatical errors in ~jareel/weapons/mondar_death_sword.c
+  R: They were causing me physical pain when I read them over and over.
+[Oct  8 2005 01:23] 
+  A: Recoded the weapon_hit() in above file.
+  R: It was completely fucked.
+[Oct  8 2005 01:54] 
+  A: Added code to /players/mizan/etheriel/items to disallow lit firecrackers from being given to wizards.
+  R: Players were able to wimpy wizards out of rooms and generally annoy them with these.  Per bug report by Worm. *fear worm reporting a bug like this :)*
+[Oct  8 2005 02:22] 
+  A: Changed id in present() check in ~jareel/areas/orlanthi_temple/foyer.c from 'infantry' to 'initiate'
+  R: Per a bug report by one of my alts (Lungbutter), it was cloning one additional one per reset(), regardless of presence of them.
+[Oct  9 2005 01:14] 
+  A: Modified my tracker twho command
+  R: Per a shift in developer (formerly wizard) ethics and standards, we're removing devs from who lists, just doing my part.
+[Oct  9 2005 01:24] 
+  A: Added says to /players/boltar/sprooms/weaponsmith.c (with Boltar's permission)
+  R: To indicate players sharpening and repairing their weapons to the room.
+[Oct  9 2005 06:45] 
+  A: added set_guild_file(guildob file) to /players/wocket/necro/guildob.c
+  R: Problem with Wocket's castle - due to ansi.h changes, and noticed that it didn't have the guild file set for necromancers.
+[Oct  9 2005 07:44] 
+  A: Also added ID of "GI" and switched init_arg() to guild_login() in necro gob
+  R: Make it in line with current way of setting up guild objects for stability.
+[Oct  9 2005 08:04] A: Registered Test Character: Waxman
+[Oct  9 2005 09:19] 
+  A: Handed hoyle /players/jareel/weapons/mondar_death_sword.c
+  R: Was nerfed when weapon wear was hosed.  The original version (that got broken in a single fight) will be destroyed.
+[Oct  9 2005 09:20] 
+  A: Sent out information, and uploaded it to my /open (specifically armor_proposal, skills_proposal1, skills_proposal2) to various wizards
+  R: So they could review it and give feedback and begin the refinement process for design of armor changes and skill/spell system.
+[Oct 10 2005 05:12] 
+  A: Changed long desc.  
+  R: It sucked.  Still does, but not as bad.
+[Oct 10 2005 16:09] 
+  A: Changed desc of /players/saber/monsters/wwolf.c from White wolf/White Wolf to Whitewolf
+  R: I don't think he was a white wolf, much less a capitalized White Wolf.
+[Oct 11 2005 10:21] 
+  A: Changed concreate to concrete in ~dragnar/rooms/room_road2.c
+  R: Typo.
+[Oct 11 2005 10:23] 
+  A: changed ABSOLUTLY to ABSOLUTELY in ~dragnar/rooms/bridge.c
+  R: Typo.
+[Oct 11 2005 10:31] 
+  A: Changed step to steep in ~dragnar/rooms/gorge3.c
+  R: Typo.
+[Oct 11 2005 10:38] 
+  A: changed it's to 'they are' and 'frount' to 'front' in ~dragnar/rooms/island2.c
+  R: Grammatical error, typo.
+[Oct 11 2005 10:57] 
+  A: Converted a number of Dragnar's wastelands rooms into land.
+  R: Cool place for land, shards really seem partial to the area especially.
+[Oct 11 2005 11:00] 
+  A: Changed streach to stretch in ~dragnar/rooms/forest4.c
+  R: Typo.
+[Oct 11 2005 11:41] A: Changed enterance to entrance in ~mythos/aroom/village.c
+[Oct 11 2005 12:38] A: Converted 6 mythos rooms to land
+[Oct 11 2005 12:43] A: Converted some of Pain's area into land.
+[Oct 11 2005 12:57] A: Converted 8 rooms in Molasar to land.
+[Oct 11 2005 13:20] A: Converted numerous Maledicta rooms to land.
+[Oct 11 2005 14:16] 
+  A: Changed 2 rooms in morgar's area: hills4.c, hills3.c
+  R: Converted them to inherit room.c, and to be land.
+[Oct 11 2005 14:22] A: Converted 2 rooms in zone's area to land.
+[Oct 11 2005 17:41] 
+  A: Housing is now in the game :)
+  R: Verte approved, added realty to e,2s,w from green.
+[Oct 12 2005 06:53] 
+  A: Misc snoops, forces on Chett, Fleshhunter, Springdawn
+  R: Fixing a bug in housing/bank system.
+[Oct 13 2005 00:39] A: /players/forbin/realms/misc/OBJ/saddlebag.c Fixed a bug where 'read' was overriding everything else.  Figuring out how to fix the override on get/put, it's a little more convoluted than your normal bag code.
+[Oct 13 2005 19:34] 
+  A: Daemonized the bank.
+  R: Problems with room cleaning destroying the current balance.
+[Oct 14 2005 05:24] 
+  A: Made ~/bastion/isle/rocky2 into land.
+  R: Custom lot for Upus.
+[Oct 16 2005 08:53] 
+  A: Honored raziel a bunch of times
+  R: He's pretty much noob, didn't understand how cybers worked and basically nerfed his own char to the point of uselessness.  He couldn't access any guild functions, and it was giving him 'What?' instead of an actual notify_fail() telling him why.  That guild really needs a recode, this was the simplest way I could unhose him.  I let him know what he did and not to repeat it.  I think that all devs other than verte, vital and myself should be kept from messing with ninja any further, since things go in without being reviewed enough, and then get nerfed too drastically, while leaving drawbacks in place.
+[Oct 16 2005 22:52] 
+  A: changed formula for pk fights in armor special in /players/jaraxle/3rd/alt/items/eagle_armor.c
+  R: The previous one penalized for high piety, and pretty much didn't heal anything.  This is a body armor, on a 200+k mob in a very nasty area.  Other body armors are on 30k mobs or less, best are ac 5, weight 1, on 20k mobs.  This armor is special and should reflect that, this isn't gamebreaking, it's common sense.
+[Oct 17 2005 00:25] 
+  A: Made a couple other changes.  Eagle armor only specials against evil mobs/players now, added some color.
+  R: Jaraxle and I figured it was more thematic that way.
+[Oct 17 2005 01:06] 
+  A: artos - unset his pk.  He claims verte's dealt with it already, from a sparring area problem with it setting his pk flag.
+  R: He's a level 15 bloodfist, big deal, if he has pk set in future i'll give it further thought, but otherwise i find no reason not to believe him.
+[Oct 17 2005 01:11] 
+  A: Snooped and reset artos's pk flag
+  R: There's a problem with sparring flag, shows players as pk, apparently after they die in arena it might be setting them at 1, or at least somehow they are going to 1 (regular pk flag) after setting the spar version.
+[Oct 18 2005 13:54] 
+  A: Changed sanctuary in my area to only boot my mobs from room
+  R: No need for it with monster guild not in right now.
+[Oct 19 2005 07:44] A: snooped thork, saw him log another char on, then thork back after 5 minutes, but looks like he's clean.
+[Oct 20 2005 02:47] 
+  A: Used snoop and force on springdawn
+  R: Describe was hosing, wanted to see it from her perspective and to see what it was doing.
+[Oct 20 2005 05:40] 
+  A: Adjusted ninja chances of pulling out of shadows
+  R: They were horrendously out of line.  Ninja stealth should be best in game, instead it's long been the worst, including game spell invisibility.
+[Oct 20 2005 05:42] 
+  A: Changed failure rates for ninja targetting
+  R: A max ninja fails 90% of the time for int/wil checks, and no notification of that?  Come on now, they spend on those enhancements (very expensive) and they can't target?  It's no thematic, not practical, not funny, it's just frustrating for players.
+[Oct 20 2005 20:31] 
+  A: Put a hack in ~boltar/templar/templar.c to set players with guild rank 9 or higher to be able to have the council commands
+  R: It's not saving properly for some reason, and affecting suspend/restore/recruit/expel/etc
+[Oct 20 2005 21:12] 
+  A: Converted ~snow/ROOMS/summit.c to land
+  R: Oz paid 1.25 mil for the custom lot.
+[Oct 20 2005 21:21] A: various snoops/forces to fix bugs and to see process of creating palace to assist in it
+[Oct 21 2005 01:34] 
+  A: made another change to ~jareel/weapons/mondar_death_sword.c
+  R: Still bugging, I simplified it even further, it might help
+[Oct 21 2005 05:25] A: Registered Test Character: Waxmantoo
+[Oct 21 2005 05:36] A: Registered Test Character: Earwaximus
+[Oct 21 2005 09:23] 
+  A: My changes to living.c, armor.c, /bin/play/_armors.c went in
+  R: Vital checked them out.  They allow multi-slot armors now.
+[Oct 21 2005 09:24] 
+  A: Changed ~jenny/wings/items/combinedrings.c type from gloves to ring, ring
+  R: They were only put in as gloves as a temporary hack until multi-slot capability was added.  Idea repped by Cooper.
+[Oct 22 2005 14:42] 
+  A: handed oz a gator necklace and set its teeth to 4 big, 3 small
+  R: his was not saving, couldn't repair, nerfed somehow, think from zantetsuken
+[Oct 22 2005 15:40] 
+  A: Added check for owner in ~dune/closed/guild/snow/mechs/mech.c
+  R: It was bugging.  Nothing major, just getting it out of the bug logs :)
+[Oct 22 2005 17:53] A: Added master check in mech code in another place
+[Oct 23 2005 13:04] A: vertebraker
+[Oct 23 2005 21:50] 
+  A: brought viper to his gear twice
+  R: bf arena supposed to spit it out, it doesn't
+[Oct 23 2005 22:52] 
+  A: Changed ~jareel/weapons/mondar_death_sword.c to change some of the hit messages again a little and put in anti-noob code.
+  R: Level 13 rangers having kids using this?  Level 13s using this?  I say bah, and not cuz i need a sheep either.
+[Oct 23 2005 23:49] 
+  A: Filtered wizards from polymorph guild who
+  R: Per new policy.
+[Oct 23 2005 23:50] 
+  A: filtered invis 19s from <19s seeing them in poly guild who
+  R: As it should be.
+[Oct 27 2005 12:09] A: catt
+[Oct 27 2005 17:46] 
+  A: Ordered vahiti to hand over either one of his wielded weapons or his shield, then dested it (iron death shield was what he chose)
+  R: He was wielding 2 weapons and wearing a shield.  Claims he didn't realize it was a bug.  Now he does.
+[Oct 30 2005 22:05] A: made changes to simul_efun resolve_path() to give it full capability to handle ..
+[Nov  1 2005 17:01] 
+  A: Changed ~snow/shadows/stuff/plate.c to lower align by 100 rather than 1000 every 40 hb.
+  R: Too easy for evil guilds to ignore that aspect of the game by using this armor.  Will add a 'curse' to it later, maybe lower piety by a point every 1000 or 2000 alignment points it helps with.
+[Nov  3 2005 02:18] 
+  A: various forces, valias on springdawn
+  R: she somehow managed to alias null ("") to assist sami, and eventually had to exec a delete_alias()
+[Nov  4 2005 06:43] A: added exp to demonchild - i updated bank, he went to void, and died running through church.
+[Nov  4 2005 16:31] A: finally finished wildcards and resolve_path() i think, time to start on cp/mv/rm/rmdir/etc
+[Nov  6 2005 20:21] 
+  A: Added very basic door/key checks into ~star/rooms/hallway2.c
+  R: Easier than walking her with it or finding a suitable example and walking her through.  Documented it fairly well so she should be able to follow it.
+[Nov  7 2005 00:56] 
+  A: gave 65k to demonchild, removed 65k from his bank account
+  R: bank reset - it's not supposed to.
+[Nov 12 2005 12:22] A: commented out some code in ~jaraxle/castle.c as it is no longer needed, and was incorrect anyways :(
+[Nov 14 2005 17:00] A: gave feldegast/wep/starfire.c to bone - apparently it's some kinda prize item, was lost from his lockers when felde took his area out, see no reason not to restore it to him
+[Nov 15 2005 00:34] A: edited ~snow/shadows/stuff/ring.c to add if (arg) return; in reset()...it was creating a new callout every reset, and that code only needs to be executed upon creation anyways
+[Nov 15 2005 01:08] A: worked on khrell's weepingblade (~khrell/weapons/skaven/weepingblade.c and poison2.c) ... reduce number of callouts, add in duration to it, add a tell to the room that victim is in, a few efficiency things
+[Nov 15 2005 06:42] 
+  A: my wildcards was added to /obj/daemons
+  R: To allow use of them in lib commands.
+[Nov 15 2005 06:44] 
+  A: cat, hand, more, tail command changes were cp'd over
+  R: support of .. and ~ argument syntaxes via resolve_path() efun
+[Nov 15 2005 06:45] 
+  A: cp, mv, rm, load, clone, update, and mk commands recoded and added
+  R: they fully support use of wildcards now, eliminating need for stuff like upd_dir, etc, and to allow much better functionality - last 3 wlog entries  were approved and implemented by vertebraker
+[Nov 15 2005 16:17] A: changed 'paw' to 'foot' all through ~hurtbrain/obj/pigeon.c per Fenris typo report.  Boggle.
+[Nov 15 2005 16:23] A: removed ring id from ~jareel/armor/mondar_gauntlets.c
+[Nov 15 2005 16:27] A: moved if(arg) return; to above cloning of staff in ~feledgast/island/npc/storyteller.c as it was creating a new staff each reset
+[Nov 15 2005 16:29] A: did same with birdtalker, same dir
+[Nov 16 2005 04:30] A: reimbursed scrag (my char) 80k in coinage (was actually supposed to be a lot more) and 3 ice spheres - bug with dragon where it nuked when i died
+[Nov 16 2005 08:10] A: commented out call to moe_pacemaker.c in ~mizan/castle.c and commented out ~mizan/closed/noirceur.c ... no reason to have that stuff in there (I fixed moe about 2 years ago, and wtf is with noirceur shit?)
+[Nov 16 2005 08:19] A: switched callout in linus castle.c from reset() to init(), and made it so that it only continues the callout if a player is present in the room.
+[Nov 16 2005 08:44] A: promo'd jareel to 21 so he can use ftp at least...
+[Nov 16 2005 16:15] A: vertebraker
+[Nov 17 2005 17:43] A: added a long desc to ~pestilence/closed/dark/obj/wound.c
+[Nov 17 2005 23:57] A: recoded khrell's poison ob and modified his weepingblade to use it: now it uses one callout and works properly - re-approved by fred
+[Nov 18 2005 00:34] A: ~vertebraker/closed/std/room.c - added check so callouts for room_msg() won't occur unless a player is present in room - verte's permission
+[Nov 18 2005 00:46] A: changed /players/khrell/monster/skaven/stormverin.c set_alias from skaven to stormvermin, so players could attack it with both ids
+[Nov 18 2005 12:34] A: changed ~eurale/castle.c autoloads from cloning to loading
+[Nov 21 2005 14:57] A: changed add_hit_pont to add_hit_point() in ~jareel/armor/mondar_boots.c
+[Nov 21 2005 15:52] A: recoded the special in ~jareel/armor/mondar_armor2.c - was bugging, and i recoded it for aesthetics
+[Nov 21 2005 15:57] A: traded out jatar's boots and krillgeta's armor2 for updated versions
+[Nov 22 2005 00:44] A: at jatar's suggestion, made ~wizardchild/darkwood/obj/nighteye.c a misc rather than helmet - goggles are face covering, not head, and we have almost no miscs
+[Nov 22 2005 10:20] A: changed e-armor (~snow/closed/test/gauntlets.c and neckguard.c) types from 'ring' and 'chest' to 'gloves' and 'misc' respectively.  posted on it, so players may contact me to exchange their neckguards and gloves for alternate armors
+[Nov 22 2005 10:35] A: changed ~zeus/realm/OBJ/evil_aura.c define of EV from environment() to environment(this_object())
+[Nov 22 2005 12:28] A: colorized (random color) polymorph wumpus song - just something been meaning to do a long time
+[Nov 22 2005 13:02] A: fixed typo in ~llew/closed/crystal/demon.c: it's to its
+[Nov 24 2005 14:52] A: changed fun get_key() in ~nooneelse/obj/door.c to get_door_key() as it was bugging - clashing with the efun get_key() and updated a room in graveyard that used it
+[Nov 26 2005 04:51] A: changed /trix/castle/primonst/gloves.c to gloves from ring, ~dragnar/Wastlands/armor/gloves.c to gloves from misc
+[Nov 27 2005 00:30] A: fixed typo in ~hawkeye/monster/burns.c
+[Nov 28 2005 05:12] A: changed ~players/guilds/Rangers/Commands/Lead.c to allow rangers to use the mud-lead command
+[Nov 28 2005 10:15] A: beck
+[Nov 28 2005 10:26] A: changed ~jaraxle/templar/mobs/crier.c - alliance contact is slacker now, not lacar - reported by lacar
+[Nov 28 2005 11:15] A: forgot to log this, but wrote wildcards daemon and made changes to resolve_path() simul_efun and updated/in some cases practically recoded, cat, tail, more, mv, rm, cp, rmdir, clone, hand, mk, update commands to take advantage
+[Nov 28 2005 23:24] A: mailed jara regarding her plans with the templar - i am sick of hearing 'that's jara's deal' and that she's difficult to deal with as a fellow gwiz, and is rarely on on top of it.
+[Nov 30 2005 00:26] 
+  A: jailed worm 3 days, pending review by a pa type
+  R: listing mizan and his playerchars on star:  ~*~Worm~*~: mizan,fishnugget,domino  ~*~Worm~*~: oops, can i list those?
+[Dec  2 2005 03:46] A: changed a move_object() in ~fred/mages/mon/drakyr.c to /room/void.c, was bugging there
+[Dec  4 2005 14:05] A: gave mage obj and set jason up as a beta tester for mages to have some real beta'ing going on
+[Dec  4 2005 19:34] A: added 242241 exp to toranaga (mage beta) cuz vahiti killed him
+[Dec  4 2005 19:34] A: added toranaga to mages btw
+[Dec  4 2005 21:38] A: misc patches, destings, etc, to fix toranaga in mage guild
+[Dec  4 2005 22:34] A: commented out all the mage stuff in verte's castle.c
+[Dec  5 2005 06:06] A: reimbursed various gear (minor for most part) to stonecold, casa room got nuked
+[Dec  5 2005 06:22] A: patching 320k gold to my char snelz - due to crash he had 600 before, but when he went to get coins while killing it nuked him to 80k, he spent prolly 150k on heals and whatnot, so he's assed-out on about 50k or so
+[Dec  6 2005 06:10] A: preston xfered funds to me by mistake, so i patched them back to him, 1.51 mil, log in /log/TRANSFERS
+[Dec  7 2005 14:10] A: changed add_hp() in ~jaraxle/3rd/alt/items/eagle_armor.c to add_hit_point() - why should it transfer infuse?
+[Dec  7 2005 14:12] A: also switched out juggernaut's eagle armor as it was the old variety that transfer infused
+[Feb  7 2006 10:52] A: modified ~jaraxle/templar/mobs/templar_guard.c to change way exit-blocking was done...it was xverb-blocking sonic (so it was blocking since it's an xverb for 'south')
+[Feb  7 2006 11:09] A: delete misc repeat/undecipherable entries from 'bugs' list as well as ones that have been addressed
+[Feb 23 2006 16:29] 
+  A: changed how ~jaraxle/closed/weapon/weapon2.c inherit handles saving, to make it locker only
+  R: no reason it should have been hotel-style only
+[Feb 23 2006 16:58] A: added logging to ~vertebraker/obj/j_lava.c so i can see what the hell is loading it, so i can nuke it, and avoid lots o processing and heaping assloads of callouts.
+[Feb 23 2006 17:38] A: promoted data back to 21.  He did everything I asked him to regarding his area outline, did much of the necessary code, and will abide by very strict rules (no player-interaction until he is 40, among others), and I feel he'll be an asset and is more than worth a second chance.
+[Feb 24 2006 04:47] A: reset sephiroth's exp, died due to a bug, ranger bug apparently
+[Feb 24 2006 04:50] A: also dested the mob that snagged his gear and gave him his cash back
+[Feb 27 2006 01:56] A: cloned machete: jaraxle/3rd/warrior/weaps for sephiroth:  boy died but didn't die (bug) and that's what he drops (for mk scar)
+[Feb 27 2006 13:24] A: added a check to ~jareel/armor/mondar_misc.c for attacker
+[Feb 27 2006 13:36] 
+  A: monitor change implemented by fred:  setmon 
+  R: wep# shows weaponwear
+[Feb 28 2006 04:16] A: dested vd off sephiroth - shit needs to be looked at for legality, it's funny, but not really fair
+[Mar  1 2006 13:27] A: fixed typo in ~jaraxle/closed/phoenix/rooms/crack1.c that was irritating me
+[Mar  1 2006 13:59] A: fixed typo in ~eurale/Keep/OBJ/death_mace.c
+[Mar  2 2006 17:02] A: unset krillgeta and whitehawk pk flags - known issue, they were sparring and it set their regular flag
+[Mar  3 2006 03:15] A: patched annihilator's exp - died to a crazy weird thing with death knight (balathuil)
+[Mar  4 2006 02:51] 
+  A: changed ac on ~verte/swamp/OBJ/j_earring.c from 1 to 0
+  R: no reason an earring should have ac
+[Mar  6 2006 00:37] A: wizzed haywire - slacker, long-time player, deserves it, can do some good here
+[Mar  6 2006 05:20] A: fixed bug in ~khrell/monster/goblins/gobmob involving no 2nd arg to move_object()
+[Mar  6 2006 22:39] A: allowed wipeout to rejoin polys
+[Mar  6 2006 22:58] A: ~jaraxle/3rd/alt/items/hero_sword.c lowered value from 50k to 10k, that's kinda ridiculous
+[Mar  7 2006 00:13] A: edited ~jaraxle/templar/rooms/hope.c to close off entrance to ghall to non-knights
+[Mar  8 2006 17:34] A: jailed whitehawk 1 day, for telling me to stfu
+[Mar  8 2006 17:35] A: jailed harmen 999 days for being stupid on top of telling me to stfu and telling me i need to mind my own business
+[Mar  8 2006 17:37] A: hula jailed 999 days too, further stupidity:  Hula gossips: keep it up earwax ill make sure your dewizzed for sure
+[Mar  9 2006 16:08] A: fixed 3 typos in ~eurale/Keep/OBJ/trident.c
+[Mar  9 2006 17:22] A: /players/eurale/Wep/stgun.c - fixed typos
+[Mar  9 2006 18:16] A: ~eurale/Park/NPC/tri.c fixed typos
+[Mar  9 2006 18:23] A: typo corrections to almost every single file in ~eurale/Park/NPC/*.c - all but 1, actually
+[Mar  9 2006 18:26] A: also put a note in that dir so eurale can learn from it, were he ever to read it.
+[Mar 10 2006 08:49] A: gave a syringe with my new ninja addition to mosh, for playtesting and thoughts, so i can hammer out some of the emotes and have a proven player tell me how much it helps.
+[Mar 11 2006 11:36] A: added my syringe to game - temporary/stopgap solution for ninja lack of offense
+[Mar 11 2006 11:38] A: syringe (adrenaline):  ~/obj/products/syringe.c and products/support/adrenaline.c   approved by fred
+[Mar 12 2006 12:43] A: ~guilds/Rangers/RangerCommunicator.c added some checks to the save fun in hopes of fixing one of the ranger issues
+[Mar 13 2006 00:05] A: handed chett one of my syringes....wanna get feedback as to how potent it is from playerview
+[Mar 13 2006 06:14] A: filtered this_player() from a say() in ~wocket/turtleville/PETS/neopet.c as it was messaging twice to the user.
+[Mar 13 2006 06:21] A: typo fix: ~mythos/closed/guild/task/8/knife3.c
+[Mar 13 2006 06:22] A: ~mythos/closed/guild/task/8/knife3.c btw was a deleted file restored by bolts
+[Mar 13 2006 06:27] A: ~mythos/closed/guild/spells/freeze.c changed duration in the freeze in ice knife from 50+r50 seconds to 1+r3, may lower even further
+[Mar 13 2006 06:33] A: ~mythos/closed/guild/task/8/knife3.c lowered chance of special from 1/3 to 1/15 special now is 1-3 seconds of 'freezing'
+[Mar 13 2006 07:00] A: at derian's request via idea command, added a belt to ~feldegast/realm/JalHab/stailor.c
+[Mar 13 2006 07:11] A: typo fix, minor bug fix to ~paulasx/temple/stairway_down.c
+[Mar 13 2006 07:19] A: ~paulasx/temple/temple3.c fixed some typos
+[Mar 13 2006 07:23] A: ~players/gemini/myarea/mon/goodrat.c and badrat.c fixed typos
+[Mar 13 2006 07:26] A: ~pavlik/ilstkarn/enter.c fixed typo
+[Mar 13 2006 07:34] A: ~saber/monsters/sassak.c, per unknown's suggestion in idea reps, made her wear her armors and wield her weapon
+[Mar 13 2006 08:09] A: yanked some of old verte-entries from 'bugs' list....placed in file ~earwax/v_bugs.txt and mailed them to V as well
+[Mar 13 2006 08:16] A: ~softly/nhall/obj/decant1.c, decant2.c, decant3.c added is_heal() { return 1; } so it will show properly in inventory
+[Mar 13 2006 16:07] A: /players/forbin/realms/ruins/OBJ/anhk.c changed align change from 1000 to 100
+[Mar 13 2006 17:27] A: made jaraxle's weapon generator weapons nonsaveable ~jaraxle/closed/wep_gen.c and weapon2.c
+[Mar 13 2006 17:34] A: removed jaraxle's save files for weapon2 from ~jaraxle/closed/weapon/saves into oldsaves, to see if there's issues before rm'ing them completely
+[Mar 14 2006 00:01] A: Registered Test Character: Waxknight
+[Mar 14 2006 01:02] A: made ~players/saber/monsters/stormlich.c wield staff, at fenris's suggestion in idea reps
+[Mar 14 2006 01:09] A: corrected typo in ~jareel/monsters/chaos/ice_demon.c
+[Mar 14 2006 02:39] A: typo fix ~saber/food/magshop.c
+[Mar 14 2006 04:34] A: commented out the calls for volcano eruption in verte's castle.c, closing that part of jaraxle's area
+[Mar 14 2006 04:43] A: edited ~jaraxle/3rd/volcano/rooms/trail2.c, 3,4,6,7,8 to close the volcano caves from game until they can be recoded without the 50 spawned items that each callout regularly
+[Mar 14 2006 05:19] A: edited my dispenser so ninja can now use guild credits to purchase my syringe/adrenaline
+[Mar 14 2006 14:51] A: commented out bleat() fun in ~mizan/closed/LiquidRoomDM.c - it's a useless fun without mizan on and it keeps bugging clashing with pavlik's room short()
+[Mar 14 2006 15:45] A: typo fix untop of typo fix once again:  ~eurale/Keep/NPC/disir.c, disir2.c, disir3.c
+[Mar 15 2006 14:34] A: changed adrenaline object to use RegisterWeapon() for the attack specials instead of the ghetto armor-special method...works much better, approved by fred
+[Mar 15 2006 17:19] A: patched salina's guild title - she asked me to, and i agreed, cuz the one she had was really ugly and not fitting with the standard guild titles for that guild, bog
+[Mar 16 2006 00:56] A: unset the taken slot for squires for templar - old one was released but didn't allow her to take another out, bug in code
+[Mar 16 2006 01:48] A: changed ~beck/Rangers/HonorRangerCommunicator query_auto_load() to point to /players/guilds version, causing hosings
+[Mar 16 2006 01:49] A: changed ~beck/Rangers/Commands/Rwho to include /players/guilds version
+[Mar 16 2006 01:54] A: also changed RangerCommunicator.c to point to ~guilds/ instead
+[Mar 16 2006 03:28] A: gave 10k and syringe to kyllur for playtesting the adrenaline, there's a bug
+[Mar 16 2006 17:58] A: forgot to logit but handed tombsurfer the noob helper object yesterday....something she wants and she's an asset in that area with no peer
+[Mar 16 2006 21:25] A: patched squint 444041 exp, and a statpoint, he was killed while idling, via the uranium, and is beta to boot
+[Mar 17 2006 02:52] A: added checks to adrenaline, it bugs when it forces a special at end of combat
+[Mar 17 2006 04:03] A: patched chett to be pregnant: he kept talking to me in leet, so i'm doing something evil and insidious that he won't catch for a bit, when he catches on i'll get it unset heh
+[Mar 17 2006 04:54] A: helped star with a minor code issue, also gave data "homework" regarding his area for approval
+[Mar 17 2006 05:57] A: patches to kyllur's cash:  add_money() specifically....he HAD 3.8 mil (not a typo) but it zapped it somehow
+[Mar 17 2006 06:32] A: did ghetto fix to my bankd so i could hook kyllur up for his lost cash - for this reboot at least, after that, we'll see, i'm not gonna maintain this, but 3.8 mil is a LOT of cash heh :)
+[Mar 17 2006 06:37] A: fixed typo in ~eurale/Park/NPC/raptor3.c - repped by kyllur
+[Mar 18 2006 10:07] A: edited some files in angel's dir:  setting up masons as a miniguild, so i setup the initial command loading and command hook, as well as converted the original decorpse over to bin, also setup the defs in such a way so he can see how to convert the remaining commands

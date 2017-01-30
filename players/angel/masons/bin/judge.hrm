@@ -1,0 +1,51 @@
+#include <ansi.h>
+#include "defs.h"
+
+status main(string str, int glevel) {
+   object target;
+   
+    if(!str) {
+      write("You must specify someone to judge.\n");
+      return 1;
+    }
+    if(sscanf(str, "%s", what) != 1) {
+      write("Useage:  judge <living>.\n");
+      return 1;
+    }
+    if(call_other(this_player(),"query_spell_point") < 5) {
+      write("You are too low on power.\n");
+      return 1;
+    }
+    if(!find_living(what) || find_living(what)->query_invis() > 0 ||
+            !present(find_living(what), environment(this_player()))) {
+      write(capitalize(what)+" is not here!\n");
+      return 1;
+    }
+    if(find_living(what)->query_level() > 20) {
+      write("Who are you to judge a Wizard??\n");
+      return 1;
+    }
+    if(call_other(find_living(what),"query_alignment") < -500) {
+      write(capitalize(what)+" is very mean.\n");
+      call_other(this_player(), "add_spell_point", -5);
+      return 1;
+    }
+    if(call_other(find_living(what),"query_alignment") < 0) {
+      write(capitalize(what)+" is mean.\n");
+      call_other(this_player(), "add_spell_point", -5);
+      return 1;
+    }
+    if(call_other(find_living(what),"query_alignment") == 0) {
+      write(capitalize(what)+" is neutral.\n");
+      call_other(this_player(), "add_spell_point", -5);
+      return 1;
+    }
+    if(call_other(find_living(what),"query_alignment") > 500) {
+      write(capitalize(what)+" is very good.\n");
+      call_other(this_player(), "add_spell_point", -5);
+      return 1;
+    } else
+      write(capitalize(what)+" is good.\n");
+      call_other(this_player(),"add_spell_point", -5);
+      return 1;
+}

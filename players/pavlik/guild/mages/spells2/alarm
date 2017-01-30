@@ -1,0 +1,56 @@
+/*
+ * spell : Alarm   (enchantment)
+ * level : 3
+ * effect: Leaves an object that reports when someone enters.
+ * cost  : 40 sp
+ * spec  : can only have 1 alarm at any time.
+ * files : ~/mages/obj/alarm_obj.c
+ */
+
+alarm(str){
+  object obj;
+
+  if(!KNOW("alarm")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(str) {
+    if(!guild->query_alarm()) {
+      write("You don't have an Alarm set.\n");
+      return 1;
+    }
+    else if(str == "loc" || str == "location") {
+      write("Alarm Location: "+environment(guild->query_alarm())->short()+"\n");
+      return 1;
+    }
+    else {
+      write(
+      "You end the alarm spell.\n"+
+      "The magical runes burn slowly into the ground,\n"+
+      "leaving no trace of their existence.\n");
+      obj = guild->query_alarm();
+      if(obj) destruct(obj);
+      guild->set_alarm(0);
+      return 1;
+    }
+  }
+
+  if(!str && guild->query_alarm()){
+    write("You already have an alarm spell cast.\n");
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" traces a magical rune on the ground.\n"+
+  "The enchanted symbol "+HIY+"glows brightly"+NORM+" and then "+
+  "slowly fades away.\n");
+  write("You set a glyph of "+HIY+"Alarming"+NORM+".\n");
+
+  obj = clone_object("players/pavlik/guild/mages/obj/alarm.c");
+  obj->set_owner(tp->query_real_name());
+  move_object(obj, env);
+  guild->set_alarm(obj);
+  tp->add_spell_point(-50);
+  return 1;
+}

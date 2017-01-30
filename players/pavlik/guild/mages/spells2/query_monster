@@ -1,0 +1,56 @@
+/*
+ * spell : Query   (necromancy)
+ * level : 3
+ * effect: Give the % health of target
+ * cost  : 35 sp
+ * spec  :
+ * files : none
+ *
+ * updated: 11/30/2005 - pavlik
+ *	increased spell cost to 35
+ *	changed to report % health
+ */
+
+mage_query(str) {
+
+  object obj;
+  int failed, con;
+
+  if(!KNOW("query")) {
+	write("What?\n");
+	return 1;
+  }
+
+  if(!str)
+	obj = tp->query_attack();
+  else
+	obj = present(str, env);
+
+  if(!obj) {
+	write("That is not here.\n");
+	return 1;
+  }
+
+  if(!living(obj)){
+	write("You can only cast Query on living objects.\n");
+	return 1;
+  }
+
+  write("You cast a "+MAG+"Query"+NORM+" spell ... \n");
+  say(ME+" casts a spell.\n");
+
+  failed = 0;
+  if(spell_fail2(3, "necr", "pow"))
+	failed = 1;
+
+  /* report of % health approved by Earwax, 11-2005 */
+  con = (obj->query_hp() * 100)/obj->query_mhp();
+  if(failed) con = con + (1+random(8));
+
+  tell_room(env, "A ghostly apparition rises from the ground and passes through "+IT+".\n");
+  write("A hollow voice whispers in your ear: "+con+"%\n");
+
+  tp->add_spell_point(-35);
+  return 1;
+
+}

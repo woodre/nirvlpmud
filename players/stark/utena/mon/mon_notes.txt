@@ -1,0 +1,84 @@
+Monsters
+--------
+
+tsuwabuki.c (19)
+  Why would a young boy be level 19?
+
+mari.c (19)
+  Why would a young girl be level 19?
+
+anthy.c (1)  **done**
+  Her whole description is too wide.
+  'Anthy looks AT you and smiles.'
+
+mikage.c (20) ***done***
+  HE is highly REGARDED
+  Regarding the spell attack, why does he repeatedly grab new sabers?
+  500 coins short?
+
+mamiya.c (19)  ***done***
+  The last sentence seems a little awkward.  You might want to think
+    of a new way of phrasing it.  He is conspiring with Mikage to replace
+    The Rose Bride himself?  What is the rose bride anyway?
+  Averages 250 coins short?
+
+utena.c (20)  ***done***
+  My screen is linewrapping on her description.
+  I don't know about the theme, but is she really level 20 dangerous?
+    She doesn't sound very ferocious in her descrip, but this is anime
+    so god knows...
+
+saionji.c (20)   **done, because he wears it in the desc***
+  Nothing about his jacket indicates why it would be worth ac3.  Make it
+    ac2.  And why is it only cloned after his death?
+
+juri.c (20) ***done***
+  ...blond THAT fall just...
+  brining -> bringing
+  You might want to put a period at the end of her spell.
+
+shiori.c (19) **done***
+  ...A student at...
+  Why is Shiori cloned again when the room is searched?  Was that
+    intentional?  If so, a little more explanation is required.
+
+a-ko.c (20)  ***done***
+  An unseen hand smacks her foe across the back of your head?
+
+b-ko.c (20)
+
+c-ko.c (20) **done***
+  ...a small kit falls IN the shadows.
+
+nanami.c (20)  ***done****
+  daintly -> daintily
+  ...her her foe's side.
+  Don't forget punctuation on her spell attack.
+
+keiko.c  ***done***
+aiko.c
+yuuko.c (20)
+  Punctuate their spell emotes.
+
+kozue.c (19)  ***done****
+  ...blue hair IS cut AS short...
+  Her spell attack is to flash the player?  Heh...
+
+miki.c (20)
+
+akio.c (20) ***done***
+  Description is too wide.
+  ...A roguish look...
+  pull -> pulled
+  oldER brother
+  
+Items
+-----
+purse.c   ***done***
+  You don't have a set_coins function in this item, so the cash obtained
+    from purses is always 3000+random(3200).
+
+?_ring.c   ***because the way they break***
+  These all look exactly alike.  Why are they different files?
+
+The katanas all need to weigh at least 3.   ***done***

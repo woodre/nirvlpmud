@@ -1,0 +1,366 @@
+/*  Logs from April/99 - July/2000  */
+
+   Sun Apr 11 14:10:19 1999     Mailed mythos about the /obj/wiz_master_tool writing the worklogs to
+
+   Sun Apr 11 14:11:25 1999     Checked out catwoman's new identifying ball and wrote to seniors about it.
+
+   Wed Apr 14 15:32:28 1999     Discussed the vamp 'grasp' spell and changed it as per his instructions.  Apparently there was some concern about its effectiveness.
+
+   Mon Apr 19 20:33:46 1999     Making headway in recoding the entire vampire guild, abeit slowly.
+
+   Tue Apr 20 20:46:25 1999     Set up a filer for Dragnar so he could log important stuff like we all do... yippee.
+
+   Wed Apr 21 20:56:27 1999     Talked to mythos about guild stuff and changes the vamp heals to conform to mud rules and also allow anyone to use them.
+
+   Thu Apr 22 21:49:50 1999     Made some serious headway tonight.  Feeling good and leaving on a high note. :)
+
+   Thu Apr 22 21:50:32 1999     Talked to Dragnar about changes to his wastelands.  Sounds like too much to do so he's going to shut down, make changes, and get reapproval before reopening.
+
+   Mon Apr 26 10:47:15 1999     Changes /players/saber/stuff/darkey.c to value 0.
+
+   Tue Apr 27 21:48:12 1999     Sponsored Maledicta and wished him the customary 'good luck'.
+
+   Wed Apr 28 17:08:16 1999     Copied some of my files into Maledicta's dir so he could have a look at them.  All std stuff.
+
+   Sat May  1 08:48:03 1999     Worked on updating most of my files...  This is going to take a while I'm afraid.
+
+   Mon May  3 19:19:20 1999     Did final walkthrough on Zeus's area.  Helped him set his castle up.  Wrote to Boltar about adding it to init in a different location (room/giant_path). Promoted Zeus to level 30 for his efforts.
+
+   Mon May  3 19:20:10 1999     Wrote to Seniors about going through the guild changes.  I'm very comfortable that the changes have been reasonable and will make the vampire guild a much more challenging guild.
+
+   Tue May  4 13:08:03 1999     Worked at straightening up the files in ~/Keep.  Almost done.
+
+   Wed May  5 12:02:32 1999     Gave Katya 30k coins to buy another safe after the crashed goofed hers up and I dested it.
+
+   Wed May  5 14:03:22 1999     Checked through the Vampire trials... they will certainly be a challenge compared to the old tasks....  I like the way they turned out.
+
+   Fri May  7 11:41:51 1999     Redid my ~/Sable area to make it so that every monsters wasn't called the same thing.  It was terrible.
+
+   Fri May  7 12:59:42 1999     Organized the files in ~/Hotel so they were uniform.
+
+   Fri May  7 19:32:05 1999     Went through ~/Drygulch and cleaned up all the files.  Beginning to make some headway on my stuff.  :)
+
+   Fri May  7 21:26:10 1999     Finished cleaning up the files for ~/Cave.
+
+   Fri May  7 22:06:46 1999     Cleaned up files in ~/Maze.
+
+   Fri May  7 22:54:59 1999     Garbled Tristian as he wouldn't stop shouting... Being his usual self.
+
+   Sun May  9 11:57:25 1999     Repaired two objects of mine that weren't working correctly.  Added line 231 to Pain's star to make it destruct if the player is less than level 4.  Mailed Pain.
+
+   Sun May  9 14:45:24 1999     Put a shadowstaff back in Keep dir with changes to dest and replace it.
+
+   Sun May  9 20:33:28 1999     Tentatively approved ~/wocket/std/orb.c for game play.  Teleport objects still make me nervous, however.
+
+   Thu May 13 11:13:36 1999     Added item limits to more items sold in the glade.  I agree with Snow that there shouldn't be unlimited suppies of every item.
+
+   Thu May 13 11:14:42 1999     Changes ~/Glade/NPC/rue.c so that she can 'barter' for more items.  I will slowly change all my 'unique' items over to this system.  Also made a 'template' for others to use if they choose to go this new direction.
+
+   Thu May 13 21:57:01 1999     Repairs Hippo quest so people could actually leave the game.
+
+   Tue May 25 10:32:46 1999     Changed ~/saber/armor/lgloves 'type from ring to gloves.
+
+   Wed May 26 10:32:35 1999     Updated heals in ~/VAMP/RMS/cafe, ~/Fiend/inn and ~/Fiend/pub to conform to /doc/build/RULES/heals3.
+
+   Wed May 26 10:41:39 1999     Updated the rock candy heals Drucilla sells in the warp to /doc/build/RULES/heal3.
+
+   Fri May 28 13:02:13 1999     Cleaned up some inop code in my abyss.
+
+   Fri May 28 20:04:43 1999     Caught Minus multiplaying... made him forfeit the coins and gear he passed to Stardream to get as his second.  He said SD didn't know they were both him and she indicated the same as I talked to her first.
+
+   Wed Jun  2 06:57:08 1999     Talked to Trix & Francesco about helping players as wizzes. Fran's part was overblown.  Demoted Trix 10 levels for his part and he assured me it wouldn't happen again.
+
+   Mon Jun  7 16:29:50 1999     Happily promoted maledicta to level 40 today for his efforts to date.
+
+   Mon Jun  7 17:31:09 1999     Approved minor changes in ~/zeus/realm/NPC/murdok and ~/../OBJ/nightpike.c
+
+   Mon Jun  7 21:32:57 1999     Reorganized ~/eurale/Park and ~/eurale/Valley so it conformed to my 'new' standards.
+
+   Mon Jun  7 22:16:07 1999     Repaired a bug in my vamp task that allowed players to kill multiple monsters.... caught alanna and fakir abusing it.
+
+   Tue Jun  8 12:56:40 1999     Reorganized the files in ~/eurale/Dis/Hood.
+
+   Tue Jun  8 13:24:42 1999     Rearranged the files in ~/eurale/Dis/Pan.
+
+   Wed Jun  9 08:14:56 1999     Reorganized my files in ~/eurale/Dis/SnWht to standardize.
+
+   Wed Jun  9 11:48:14 1999     Repaired ring messages and errors from lockers on ~/eurale/Dis/Hood/royal_ring.c
+
+   Wed Jun  9 18:57:57 1999     Replaced 3 weapons katya lost when I changed file paths and didn't make allowance.
+
+   Wed Jun  9 19:04:06 1999     Zeus whined about dying because his server didn't DC him fast enough.  He was going to 'restore' his lost exp from his death.  I told him no but he wanted to argue and bring in other cases.  I'm not happy about this.
+
+   Wed Jun  9 19:12:58 1999     Finished updating all my ~/eurale/Dis files.
+
+   Thu Jun 10 16:22:34 1999     Rearranged files in ~/eurale/Fiend for standardization.  Also modified the price of my ~/eurale/Drygulch/OBJ/tea, jerky, rotgot to conform to /doc/build/RULES/heals3.
+
+   Thu Jun 10 19:33:51 1999     Rearranged files in ~/eurale/Space for standardization.
+
+   Sat Jun 12 16:50:24 1999     Changed my drygulch quest a bit so I don't rely on anyone else's code (ie Trix) for completion.  I made another 'holy man' to take the bishops place. ~/eurale/Cave/NPC/dontayne.c
+
+   Mon Jun 14 19:09:43 1999     Vamp cafe is now /doc/build/RULES/heals/heal3 compliant.
+
+   Mon Jun 14 19:19:08 1999     Changes my Drygulch heals to be /doc/build/RULES/heals/heal3 compliant.
+
+   Mon Jun 14 19:41:13 1999     I think I've gone through all my heal seller objects and brought them up to /doc/build/RULES/heals/heal1,2,3 compliance.
+
+   Mon Jun 14 20:06:16 1999     Changed ~/VAMPIRES/lib/shift_hp to lose some random hps when shifting.
+
+   Tue Jun 15 20:30:41 1999     Rearranged my files in ~/eurale/Abyss for standardization.
+
+   Wed Jun 16 13:19:57 1999     Commented out the game 'emote' of ~/catt/WPN/hammerdest.c since it was not done on appropropriate channel and was being used to spam the game. (by larisa)
+
+   Wed Jun 16 21:41:50 1999     Changed the value of ~/mizan/etheriel/items/kickme from 100 to 7.
+
+   Mon Jun 21 13:38:05 1999     Finished checking Anshars castle and loaded it into play.  Will write to Boltar to add it and promoted Anshar to level 30 for his work.
+
+   Wed Jun 23 12:18:38 1999     Found a level 4 monsters with an ac2 shield on it in mistress area, changed the ac to 0.
+
+   Wed Jun 23 14:55:14 1999     Checked other ~/mistress/child/snow objects for out of line 'things'.
+
+   Fri Jul  2 09:09:56 1999     Made changes to some heals to make sure they were in inventory to be used... more to do but got started.
+
+   Mon Jul  5 16:09:11 1999     Added the line to Hippo blood heals to make sure it must be in player iunventory to use.
+
+   Thu Jul  8 16:35:25 1999     Hopefully repaired ~/Space/Xorn from errors.  We'll see.. :)
+
+   Sat Jul 10 20:34:37 1999     Added a light variable to ~/saber/stuff/etorch.c so it couldn't
+
+   Sat Jul 10 21:23:59 1999     Added check so only one tome/scroll could be gotten from ~/saber/monsters/bardman as they were being abused.
+
+   Sun Jul 11 17:32:00 1999     Changed the vending machine in Trix's to indicate 'sold out' scanners until I hear otherwise.  Mythos removed them as they appeared to be illegal.
+
+   Sun Jul 18 11:29:05 1999     Continued to repair 'problems' caused by moving all my old vamp files into a 'common' directory.  Updated things as I went as well.
+
+   Tue Jul 20 13:35:36 1999     Gave third 30k for a new safe since I screwed up his old one.
+
+   Wed Jul 21 19:01:32 1999     Checked out ~/saber/tower/tower14 as the mobs were loading double objects for a time.  I reset the room and it seemed to be okay.
+
+   Mon Jul 26 16:43:34 1999     Went through Beren's area and cleaned it up a bit.... will spend more time there at a future date.
+
+   Wed Jul 28 19:13:00 1999     Went over /players/zeus/TEST/heals and they all look good to go now.  He has been very good about changes.
+
+   Thu Jul 29 15:11:19 1999     Promoted Zeus for another good area and general helpfulness around the mud.
+
+   Thu Jul 29 15:45:23 1999     Changed ~/feldegast/equip/amulet value to 15. People were buying them for 100 and selling them for 150....
+
+   Fri Jul 30 17:01:40 1999     Made some changes to the coffin invitation since the MK invitation was interfereing with them.
+
+   Sun Aug  1 18:42:50 1999     ip
+
+   Sun Aug  1 18:58:49 1999     Went through /open/TELE_ERR and made sure all the random teleport rooms were teleport compliant... so they made sense.
+
+   Mon Aug  9 21:42:11 1999     Checked Fakirs quest points against  his quest credits... it was correct now.
+
+   Mon Aug  9 21:51:23 1999     Made a 'minor' change in Nooneelse's tuxedo since nobody is supposed to still have one.  Of course, the change was lower :)  (easier than arguing)
+
+   Mon Aug  9 22:07:01 1999     Added code to ~/pathfinder/detroit/items/button.c so that only 1 could be given to a player... was being used to spam player inventories.
+
+   Tue Aug 10 21:37:30 1999     Changed value of ~/daranath/qualtor/obj/sm_shield to 50 from 360 as players were buying them for 100 and selling them for 360.  I watched Clericuzio so I made him show me and took 30k from him as retribution.
+
+   Wed Aug 11 19:29:36 1999     Added tellhistory to my wiz tool at Arrina's request... :)  Been long overdue but hasn't been high on my priority list.
+
+   Wed Aug 11 20:47:02 1999     Watched I tell M and Z that he had other players passwords.  Not a good situation
+
+   Thu Aug 12 16:44:43 1999     Repaired vampire object for checking traitor history in Nooneelse's dir.
+
+   Sat Aug 14 07:48:32 1999     Went through ~/zeus/heals/zp1,2,3 and they looked to be okay.  I am not sure of the pricing structure but it mirrors others already in play so....
+
+   Sat Aug 14 13:52:33 1999     Fixed a 'what?' in one of my sellers... forgot the 'return 1;'
+
+   Wed Aug 18 09:23:06 1999     Changed ~/daranath/qualtor/obj/sandles.c value so that they sold for less than they bought for.... another money maker.
+
+   Wed Aug 18 09:26:14 1999     Mailed Daranath to check his other items to make sure they are not being abused.
+
+   Wed Aug 18 23:05:13 1999     Larisa had a mail problem but I couldn't locate the mail files so...
+
+   Thu Aug 19 14:11:12 1999     Approved Vertebraker and agreed to sponsor him as per our deal.  All his others have been removed from the game so he can concentrate.
+
+   Mon Aug 23 12:07:39 1999     Redid my poisons so they 'hopefully' will not produce errors.
+
+   Mon Aug 30 19:09:49 1999     Added a couple of heal locations to the newbie book.
+
+   Tue Sep 14 08:08:44 1999     Looked at Zeus's heals (shadow1 and shadow2) again and still find them to be outside the heals guidelines.  Mailed snow and dragnar who are checking his stuff.
+
+   Sun Sep 19 18:48:49 1999     Worked on Vampire changes again.....
+
+   Sat Sep 25 12:55:14 1999     Promoted Zeus 5 levels for continued work and constant help with player issues in Nirvana.
+
+   Thu Sep 30 19:53:12 1999     Changed Molasar's quest descript just a tad to reflect the location more accurately.
+
+   Tue Oct  5 19:50:36 1999     Took the 'paladin guild' exit out of molasar's room /molasar/rowan/w_twn_sq.c so players didn't keep asking about it.
+
+   Wed Oct  6 11:12:17 1999     Checked out a spell complaint from Ensco (testor) but found it was his lack of reading, not a code problem.
+
+   Wed Oct  6 11:33:34 1999     Closed off Molasar's Rowan area again as per Boltar's instructions.  Boltar mailed Molasar.
+
+   Fri Oct  8 18:10:32 1999     Removed some unneeded code from the new vamp object.
+
+   Sat Oct  9 10:49:48 1999     Reimbursed Brittany 5mil exp for a death caused by a typo on my vampob not allowing her to use a viable exit.  Repaired typo.
+
+   Sat Oct  9 10:53:50 1999     Added line of code to a spells that was left out making it inoperative.
+
+   Tue Oct 12 19:34:32 1999     Fixed some potential errors in the guild hall rooms and with levitate.
+
+   Wed Oct 20 19:19:00 1999     Darkened the vamp guild hall.
+
+   Thu Oct 21 09:14:37 1999     Capped the number of bloodpts a vampire can accumulate.
+
+   Fri Oct 22 15:09:43 1999     Added a couple of lines to ~/saber/ryllian/cshop.c to stop vampires from buying corpses for bloodpts.
+
+   Fri Oct 22 15:31:45 1999     Added a line to change login home of vampires who quit the guild to church so they don't continue to log into the vamp guild.
+
+   Fri Oct 22 16:31:16 1999     Added code to vamp object to reset their blood energy to 0 upon death.
+
+   Sat Oct 23 15:38:36 1999     off to work :)
+
+   Sat Oct 23 15:50:19 1999     Changed a line in the vampire summons to allow spell point reduction in sender when used.
+
+   Sat Oct 23 15:51:03 1999     Upped the wc of all the trialmasters by 2.... just seemed too easy
+
+   Sat Oct 23 15:57:59 1999     Added a 'no quit' function to the levitation object so it can't be done.
+
+   Thu Nov 11 07:29:12 1999     Added a line to make sure the vamp summons destructs when it randomly fails.
+
+   Mon Dec  6 06:26:09 1999     Made changes in path names so coffin invitations would work
+
+   Thu Dec  9 07:43:35 1999     Replaced Thaed's old vampire stuff since I made it all inaccessable.
+
+   Wed Dec 15 08:04:03 1999     Fixed Stardreams's levitate flad
+
+   Tue Dec 28 08:32:11 1999     Fixed spacing in scratch command emote.
+
+   Wed Jan  5 08:50:24 2000     Fixed the vampire obit list so that it includes the new millenium.
+
+   Sat Jan 15 09:20:58 2000     Loaded Mythos and Llew's castles so that their stuff would be at the green.
+
+   Sun Mar 12 09:23:41 2000     Have been going through Zeus's quest for past few days.  Still ironing out the kinks.
+
+   Wed Mar 15 08:36:41 2000     Finished going through Zeus's quest.  Looks good but I have some questions for him before I put it into play.
+
+   Wed Mar 29 21:15:37 2000     Fixed the exit and plate in the coffins.  Now, invited members can actually get out.
+
+   Fri Mar 31 22:13:55 2000     Fixed a typo in one of the vamp spells and added a clone code line to nooneelse's castle so old vamps will get the change fangs of the new guild.
+
+   Fri Mar 31 22:58:46 2000     Added a new command to set a vampire's login to the guild hall.  Seem to be having a problem with this so it's a simple solution.
+
+   Fri Mar 31 23:27:53 2000     Approved a new ~/jenny/dukes/mobs/boss for selling radar guns.
+
+   Tue Apr  4 20:37:29 2000     Changed the help files doc about changing forms so the spell and info agree.
+
+   Fri Apr 14 09:02:15 2000     Removed maxy from vampire guild at his request since he never got a new vampire object.
+
+   Sat Apr 22 15:01:18 2000     Fixed some minor bugs in the vampire coffins thanks to help from mythos.
+
+   Sat Apr 22 15:14:53 2000     Fixed the Drygulch caves so the black wolves there do not interfere with the vampire wolves.
+
+   Thu Apr 27 21:15:27 2000     Changed hemlock so it can only be used in the trials.
+
+   Thu Apr 27 21:38:06 2000     Fixed the coffin so it saved the players descript.
+
+   Sat Apr 29 19:20:57 2000     Reworded the 'changefangs' object so old vamps will know they start from level 1 when they change.
+
+   Mon May  1 18:17:42 2000     Fixed the 'check' command in the vampire summons so it doesn't interfere with the 'check' command for new/old players.
+
+   Mon May  1 18:42:39 2000     Added code check so levitating vamps couldn't change forms as well.
+
+   Mon May  8 08:44:02 2000     Moved my 'warp' from my closed dir to /players/eurale/RMS/warp.c to standardize a bit and for anticipated changes I am working on.
+
+   Mon May  8 08:59:10 2000     Removed access to Anarchist guild from /players/dersharp/road/anarch.c  Added appropriate comments in the room code.
+
+   Tue May  9 08:40:03 2000     Added a nirvana titles room off the warp so players can reset their nirvana titles.
+
+   Thu May 11 07:19:43 2000     Removed Pavlik's 'special code' from ~/Glade/OBJ/ankheg_shell.c to correct problems.  Changed the inherit over to the std /obj/armor as well.
+
+   Fri May 12 08:27:03 2000     Fixed the Nirvana Titles room.  Made sure all titles matched their appropriate level of experience.
+
+   Fri May 12 08:40:49 2000     Added Fred's South Park area directions to the newbie book.
+
+   Fri May 12 22:54:06 2000     Got Kazer situated and gave him a filer in case he forgets about the wiz tool.
+
+   Sat May 13 18:38:40 2000     Warned Beth about botting, she assured me she would take care of it.
+
+   Mon May 15 18:38:36 2000     Added a vamp help file to explain the vampire wings.
+
+   Tue May 16 21:00:31 2000     Helped Laera set up her castle and get her area ready for play.
+
+   Tue May 16 21:04:03 2000     Promoted laera to level 30 for completing her first area.
+
+   Thu May 18 19:45:47 2000     Some kind of problem with Cricket accusing Wocket/Neo/others of hitting on her unsolicited.  Checking into it.
+
+   Tue May 23 16:00:30 2000     Added some additonal language to some help files in the vampire guild.  Actually I forgot the info the first time. :(
+
+   Wed May 24 20:12:05 2000     Refereed a squabble between Giles and Neo.  After Neo left, Giles began insulting me for not doing more.  He then made a derogatory remark and took off so I imprisoned him to cool down.
+
+   Wed May 24 20:13:31 2000     Changed some code lines in ~/Keep/OBJ/eyewing_tear, ~/Keep/OBJ/disir_slime, ~/Park/OBJ/bronto_nail and ~/Glade/OBJ/newt_skin to make them barterable.
+
+   Thu May 25 11:30:02 2000     Added my newest area after Feldegast, Mythos and Pain had looks at it.
+
+   Thu May 25 19:27:19 2000     Removed personality code from wolves?  How do wolves have a personality?
+
+   Thu May 25 20:39:19 2000     Warned soundgarden about logging in Rlguest and spamming the deaths notice and players.  He said he understood next time there would be severe ramifications.
+
+   Sun May 28 15:07:52 2000     Redoing some code so that it actually functions.  Sheesh...
+
+   Tue May 30 14:45:23 2000     Removed 'who2' from vamp access and repaired code of vampire tux relating to ac.
+
+   Thu Jun  1 11:58:00 2000     Approved Kazers supply room with sellable items for game play.
+
+   Thu Jun  1 19:08:24 2000     Had a conversation with Scathe about conflict with Tiffany and his handling of the situation.  Discussed his options.
+
+   Sat Jun  3 14:36:46 2000     Made Vampire cafe available to all players on Nirvana.
+
+   Wed Jun  7 21:36:00 2000     Mailed Grimm about changes needed before I would start wading through all his old code.
+
+   Sun Jun 11 07:59:33 2000     Upped the cost of the vampire wolves by 700%.  They were just too cheap imho and the penalty for them dying not severe enough.
+
+   Sun Jun 11 08:31:28 2000     Equalized the small bats cost vs. value for the vampire guild.
+
+   Tue Jun 13 10:43:11 2000     Added some more info to the help files of the vampire guild that were missing.
+
+   Wed Jun 14 12:24:53 2000     Removed wocket's regen potion from ~/wocket/turtleville/NPC/wizard until it can be reapproved.  A 900 hp heal with no side effects is out of line.
+
+   Thu Jun 15 13:49:48 2000     Approved Kazer's auction system for play after Beck, Pain and I all looked through it and found it okay.
+
+   Thu Jun 15 13:50:26 2000     Made some minor changes to the wand of calming and added an item check to the vampire trial arena.
+
+   Sat Jun 17 21:24:02 2000     Went through the majority of Brittany's first area and left a QC note in her ~/kadath dir.
+
+   Wed Jun 28 09:07:15 2000     Fixed a levitation/quit problem.
+
+   Fri Jun 30 15:27:54 2000     Approved Kazer 'themist' area for play and promoted him to level 40.
+
+   Mon Jul  3 08:46:35 2000     Added some color to a couple of shorts () for more interest.
+
+   Tue Jul  4 09:44:46 2000     Changed Hippo's blood short() so that it conforms to all the new heals and gives the number of charges.
+
+   Tue Jul  4 14:00:54 2000     Looked over some of Kazer's wiz tool commands.  They look fine to me.
+
+   Tue Jul  4 14:01:28 2000     Kazer has a new heal concept, took a preliminary look and have a nuymber of questions for him.  Not sure they're within guidelines.
+
+   Tue Jul  4 14:02:06 2000     Talked to Kazer about his heals.. they heal too much but he says Feldegast has some that do essentially the same.  Who approved those?
+
+   Wed Jul  5 19:18:06 2000     Added a variable to ~/saber/tower/tower21.c so unlimited number of items cannot be found and sold for coins.
+
+   Thu Jul  6 13:44:51 2000     Approved the replacement bow of Jenny in her Dukes of Hazzard area.  Same bow, different way to get the special done.
+
+   Thu Jul  6 14:02:27 2000     Changes 'type' in ~/saber/armor/mshield to 'shield' from 'magic'.
+
+   Fri Jul  7 22:24:48 2000     Mailed boltar about the mailreader when used remotely only working once.
+
+   Tue Jul 11 10:07:00 2000     Fixed typos.
+
+   Tue Jul 11 10:36:22 2000     Changed the vampire levitate spell to cost 20 times more in blood energy than original.
+
+   Tue Jul 11 19:06:37 2000     Fixed ~/bastion/obj/wakeup so it functioned.
+
+   Thu Jul 20 08:32:10 2000     Fixed typos in vamp spells.... duh!
+
+   Thu Jul 20 13:26:04 2000     Upped the hps->sps loss to double.  Made it more random.
+
+   Thu Jul 20 13:47:04 2000     Tentatively approved Kazer's healpacks for play.
+
+   Fri Jul 21 13:38:08 2000     Changes all the ~/Park/OBJ over from 'cash' on the fly to 'barterable' items.  Fits theme better and more realistic.
+
+   Sat Jul 22 19:41:48 2000     Fixed typos in Space area.
+

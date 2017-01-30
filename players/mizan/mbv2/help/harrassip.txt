@@ -1,0 +1,12 @@
+>> ORDER: HARRASS PLAYERS BY IP ADDRESS
+
+Usage:
+order <indexnum> harrassip <ipaddress> <duration>
+
+Example:
+'order 3 harrassip 192.168.1.1 10'
+
+Description:
+Similar to the basic harrass command, but applies to players by specific
+IP address. Use carefully. Be aware that wildcards cannot be specified.
+

@@ -1,0 +1,18 @@
+no_clean 0
+cast_here 0
+dest_dir ({"players/nooneelse/black/guild_office_floor_top","east",})
+short_desc "A Vampire Guild Assistant's Office"
+long_desc "This is a small private office.  There is a large rosewood deskwith a crystal lamp and a brass name plaque on it and a comfortablypadded chair sitting in front of a wall of bookshelves.There is a small cheerful fire in the fireplace.The door is locked.You can do many things here:   lock/unlock door        (this will not keep players in,                            but will keep them out)   lamp on/off             turns the lamp on the desk on or off   light/extinguish fire   lights or puts out the fireplace   decorate office [reset] change the description of your office or                           reset it to the original"
+items ({"desk","It is a beautiful old rolltop desk with a brass name plaque on it.All the drawers are locked","drawers","All the drawers are locked","drawer","The drawer is locked","chair","A nice comfortable chair","bookshelves","They contain books with titles like 'Disciplining Unruly Vampires','No One Else Can Top This' and 'Running A Happy Guild'","shelves","They contain books with titles like 'Disciplining Unruly Vampires','No One Else Can Top This' and 'Running A Happy Guild'","shelf","They contain books with titles like 'Disciplining Unruly Vampires','No One Else Can Top This' and 'Running A Happy Guild'","lamp","It is made of fine-cut crystal.  It is fixed to the desk","fireplace","It is a red brick fireplace","fire","It is a red brick fireplace",})
+property 0
+no_castle_flag 1
+no_exits 0
+numbers 0
+door_is_locked 1
+lamp_is_on 1
+fire_is_out 0
+long_desc_office "This is a small private office.  There is a large rosewood deskwith a crystal lamp and a brass name plaque on it and a comfortablypadded chair sitting in front of a wall of bookshelves."
+fire_msg "There is a small cheerful fire in the fireplace."
+door_msg "The door is locked."
+command_str "You can do many things here:   lock/unlock door        (this will not keep players in,                            but will keep them out)   lamp on/off             turns the lamp on the desk on or off   light/extinguish fire   lights or puts out the fireplace   decorate office [reset] change the description of your office or                           reset it to the original"
+new_long_desc_office 0

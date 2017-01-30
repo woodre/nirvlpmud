@@ -1,0 +1,77 @@
+/* original code by Maledicta.  recoded by Illarion for the Bards
+ * duration can be increased without limit, but wc/ac can go no
+ * lower than 2/3 of their original value
+ */
+
+get(){ return 1; }
+drop(){ return 1; }
+
+query_weight(){ return 0; }
+query_value(){ return 0; }
+
+int owc;
+int oac;
+int wc_difference;
+int ac_difference;
+int duration;
+
+originals(){ 
+ if(!environment() || owc || oac)
+   return;
+ owc = environment()->query_wc(); 
+ oac = environment()->query_ac();
+ wc_difference = 0;
+ ac_difference = 0;
+
+}
+             
+wc_mod(){ 
+  if(!environment() || !owc) return;
+  duration += 6;
+  if(wc_difference >= owc * 2 / 3) return;
+  environment()->set_wc(environment()->query_wc() - 1);
+  environment()->set_wc_bonus(environment()->query_wc_bonus() + 1);
+  wc_difference++;
+} 
+      
+ac_mod(){ 
+  if(!environment() || !oac) return;
+  duration += 6; 
+  if(ac_difference >= oac * 2 / 3) return;
+  environment()->set_ac(environment()->query_ac() - 1);
+/* commented out until a bug is fixed  
+  environment()->set_ac_bonus(environment()->query_ac_bonus() + 1);
+*/
+  ac_difference++;
+}
+
+reset() { 
+  duration = 6;
+  set_heart_beat(1);  
+}
+
+id(str) { return str == "bard_acwc_modifier"; }
+
+heart_beat(){
+ if(!environment())
+   return;
+ if(!living(environment())){ destruct(this_object()); }
+ if(duration > 0)
+   duration--;
+ if(duration <= 0){
+   return recover();
+  }
+}
+
+
+recover() {
+  if(!environment()) return;
+  tell_room(environment(environment()),environment()->query_name()+" recovers from "+environment()->query_possessive()+" agony.\n");
+  environment()->set_wc(owc);
+  environment()->set_wc_bonus(environment()->query_wc_bonus() - wc_difference);
+  environment()->set_ac(oac);
+/* commented out until a bug is fixed
+  environment()->set_ac_bonus(environment()->query_ac_bonus() - ac_difference);
+*/
+  destruct(this_object());
+}

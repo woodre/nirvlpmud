@@ -1,0 +1,23 @@
+FAMILY ABILITIES:
+Here is a summary of all family abilities, broken down by family title.
+
+ABILITY       TYPE      DESCRIPTION
+-----------   --------  -----------
+Soldier
+  fam         basic     Family channel and family who list.
+Hitman
+  contracts   family    Show a list of open contracts.
+  ice         family    Prevent a mobster from using guild powers.
+  unice       family    Restore guild powers.
+Lieutenant
+  account     family    Show a breakdown of the family graft.
+  plate       heal      Put a meal on the table for a family member.
+  feast       heal      Put six meals on the table.
+Don
+  contract    family    Offer graft for the death of a target.
+Godfather
+  make        family    Mark a mobster as a made-man.
+  retire      family    Cancel all of a mobster's powers.
+  unretire    family    Reinstate a mobster, if membership allows.
+
+<END>

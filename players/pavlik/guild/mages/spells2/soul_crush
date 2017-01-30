@@ -1,0 +1,95 @@
+/*
+ * spell : Soul Crush   (necromancy)
+ * level : 3
+ * effect: Killing Blow on target (see below)
+ * cost  : (2 * Necr) / 3 sp
+ * spec  : see below
+ * files : 
+ *
+ * This spell hits the target with a final killing blow.
+ * The amount of damage possible is determined by the players
+ * Necromancy stats (Necr/2).
+ * The target must always be below the max damage for this spell
+ * to work.
+ * Possible Damage Total: Necr/2
+ * Spell Cost: Necr
+ */
+
+soul_crush(str){
+  object obj;
+  int total, dmg;
+  int msg;
+
+  if(!KNOW("crush")) {
+    write("What?\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  /* some monsters are too powerful for this spell */
+  if(obj->query_level() >= 25) {
+    write(IT+" is too powerful for this spell.\n");
+    return 1;
+  }
+
+  /* the max damage we can do is based on guild stat */
+  total = guild->query_total_necr() / 2;
+  if(total > 50) total = 50;
+
+  /* if monster is healthier than max damage then we cannot do this */
+  if(obj->query_hp() > total) {
+    write(IT+" is to healthy for this spell to succeed.\n");
+    return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  write("You cast a "+HIB+"Soul Crush"+NORM+" spell ...\n");
+
+  if(spell_fail2(3, "necr", "pow")){
+    write("You "+HIR+"miscast"+NORM+" the spell!\n");
+    write(IT+"'s lifeforce grows stronger from your mistake.\n");
+    obj->hit_player(total, "other|vertebraker");
+    say(ME+" miscasts a spell.\n");
+    tp->add_spell_point(-25);
+    return 1;
+  }
+
+  msg = random(4);
+  if(msg == 0)
+    tell_room(env, "\n"+
+    ME+" "+HIY+"SHOUTS"+NORM+" a powerful word of magic!\n"+
+    IT+"'s body "+HIR+"explodes instantly"+NORM+", showering the room with gore!\n"+
+    IT+"'s mutlilated body crumples to the ground.\n");
+  else if(msg == 1)
+    tell_room(env, "\n"+
+    ME+" releases a powerful death spell!\n"+
+    IT+"'s body "+HIG+"turns to stone"+NORM+", and then crumbles to dust!\n");
+  else if(msg == 2)
+    tell_room(env, "\n"+
+    ME+" raises his hands to the sky!\n"+
+    "A brilliant bolt of lightning streaks down and "+HIY+"incinerates"+NORM+" "+IT+"!\n"+
+    IT+"'s charred body falls to the ground.\n");
+  else if(msg == 3)
+    tell_room(env, "\n"+
+    ME+" traces an ancient sigil in the air.\n"+
+    "The bones of "+IT+" "+HIB+"instantly disintegrate"+NORM+" inside its body!\n"+
+    IT+"'s shapeless body forms a puddle on the ground.\n");
+
+  /* always hit for maximum amount allowed since we are */
+  /* trying to kill the target on one shot. */
+  /* total check above makes sure we are not doing damage */
+  /* above our limitations. */
+  /* REMEMBER - the purpose of this spell is to KILL the target */
+/*
+  obj->heal_self(-(obj->query_hp()));
+2005.08.31 changed to death() call */
+  obj->death();
+  tp->add_spell_point(-(2*guild->query_necromancy()/3));
+
+  return 1;
+}
+

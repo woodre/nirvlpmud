@@ -1,0 +1,146 @@
+Overlook Hotel by Star@Nirvana
+
+The area is located in /players/star/hotel and is an extension of my
+first area.  More specifically, it is the second floor of the hotel.
+The files for the first one are also in this same directory.
+
+There are 15 rooms in /players/star/hotel/rooms that are a part of
+this new extension.  They are:
+207.c           up_hall1.c
+209.c           up_hall2.c
+211.c           up_hall3.c
+213.c           up_hall4.c
+215.c           up_hall5.c
+217.c           up_hall6.c
+219.c           up_hall7.c
+217_bath.c
+
+
+----------------------------------------------------------------------
+
+There are 12 mobs in /players/star/hotel/npcs that are a part of the
+new extension.  Following is a breakdown of the second floor mobs and
+their stats and abilities.
+
+
+Ghost of Jimmy_Ricks (/players/star/hotel/npcs/carl.c)
+level 15, ac 12, wc 20, hp 250, random(150)+850 coins
+-Carl "Jimmy-Ricks" Prashkin stands in a room with Vito the Chopper
+and his chats are kissing some major butt with Vito, nodding in
+agreement with everything Vito says, and looking at Vito with adoring
+respect.
+-He casts a spell, cold fear, which does a max of 20 physical damage
+to the attacker.
+
+
+Ghost of Baby Charlie (/players/star/hotel/npcs/charlie.c)
+level 14, ac 11, wc 18, hp 220, random(100)+650 coins
+-Baby Charlie's chat is looking you over, and not looking impressed.
+-He casts a spell, life drain, which does a max of 10 physical damage
+to the attacker.
+
+
+A Corpse of a Lady (/players/star/hotel/npcs/corpse.c)
+level 13, ac 10, wc 17, hp 195, random(100)+500 coins
+-The corpse of a lady clones when a player pulls back the shower
+curtain in 217_bath.c.  She gets out of the tub and attacks the person
+who pulled back the curtain.  Her only chat is to raise her arms
+toward your neck.
+-The corpse has one add_spell to strangle a player which does a max of
+15 physical damage.
+
+
+Danny Torance (/players/star/hotel/npcs/danny.c)
+level 10, ac 8, wc 14, hp 150, random(50)+400 coins
+-Danny is the son of the new caretaker, and the only mob on the second
+floor who is not a ghost.  His chats ask the player to please not tell
+his mommy and daddy he's upstairs, to tell you there's something scary
+in the bathroom of room 217, and to tell you that Dick, the cook, said
+he doesn't think the things Danny sees can hurt him.
+
+
+Ghost of Delbert Grady (/players/star/hotel/npcs/delbert.c)
+level 12, ac 9, wc 16, hp 180, random(50)+500 coins
+-Delbert is the ghost of a former caretaker, and his chats inform you
+of that, as well as telling you the hotel wants the little boy, and
+that the management is very interested in Danny.
+-He casts the life drain spell with a max of 10 physical damage to the
+attacker.
+
+
+Ghost of Charles Grondin (/players/star/hotel/npcs/grondin.c)
+level 14, ac 11, wc 18, hp 220, random(100)+650 coins
+-Charles Grondin brags that he was once a made man, looks you over
+with disdain, and informs you that his mob connections could take you
+out easily.
+-He casts the life drain spell with a max of 10 physical damage to the
+attacker.
+
+
+Ghost of Horace Derwent (/players/star/hotel/npcs/horace.c)
+level 16, ac 13, wc 22, hp 300, random(200)+1300 coins
+-Horace brags about how he used to own most of the stock for the hotel
+and tells you that he used to be very rich.
+-He casts the cold fear spell for a max of 20 physical damage to the
+attacker.
+
+
+Ghost of Peter Zeiss (/players/star/hotel/npcs/peter.c)
+level 14, ac 11, wc 18, hp 220, random(100)+650 coins
+-Peter tells you that the feds never proved anything against him and
+that they have no idea how mobbed up he was.
+-He casts the life drain spell for a max of 10 physical damage to the
+attacker.
+
+
+Ghost of Richard Scarne (/players/star/hotel/npcs/richard.c)
+level 14, ac 11, wc 18, hp 220, random(100)+650 coins
+-Richard tells players that the feds think he was involved with the
+mob, but that they could never prove a thing.
+-He casts the life drain spell for a max of 10 physical damage to the
+attacker.
+
+
+Ghost of Roger Macassi (/players/star/hotel/npcs/roger.c)
+level 15, ac 12, wc 20, hp 250, random(150)+850 coins
+-Roger growls menacingly and stares around the room suspiciously
+-He casts the cold fear spell for a max of 20 physical damage to the
+attacker.
+
+
+Ghost of Victor T. Boorman (/players/star/hotel/npcs/victor.c)
+level 15, ac 12, wc 20, hp 250, random(150)+850 coins
+-Victor cracks his knuckles, pounds his fist into his hand, and tells
+players that no one gets in to see "da boss".
+-He casts the cold fear spell for a max of 20 physical damage to the
+attacker.
+
+
+Ghost of Vito the Chopper (/players/star/hotel/npcs/vito.c)
+level 15, ac 12, wc 20, hp 250, random(150)+850 coins
+-Vito is the mob boss, and says to put the snitch in concrete boots,
+tells Jimmy-Ricks that he will inherit all his dealings, and sees the
+player in the room and yells "What are you doing here"
+-He casts the cold fear spell for a max of 20 physical damage to the
+attacker.
+
+
+----------------------------------------------------------------------
+
+There are no heals in the area.
+
+----------------------------------------------------------------------
+
+The only items are on the living mobs downstairs, which are already in
+game and approved.  The upstairs ghosts have no gear, since ghosts
+don't generally wear clothes.
+
+
+----------------------------------------------------------------------
+
+Other info about the area
+
+In up_hall1.c the player must kill both mobs in order to be able to
+get into 207.c.  As mentioned above, in 217_bath.c a player must pull
+the curtain back to clone the corpse of the lady.  This resets with
+each room reset.

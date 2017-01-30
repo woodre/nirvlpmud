@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/snow/closed/q/orb","/players/wren/Area/starbug/items/straw","/players/snow/chaos/objects/crabmeat","/players/mythos/awep/zantetsuken","/players/wren/Area/starbug/items/ogunit","/players/mythos/awep/backbite","/players/hippo/heals/nucleus","/players/softly/newbie/obj/cheese","/players/snow/shadows/stuff/crown","/players/saber/armor/lpants","/players/hippo/armour/helmet","/players/angel/area/stargate/obj/P90_no_ammn hoof###/obj/weapon","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/hippo/armour/glazour_coat","/obj/torch","/obj/armor","/players/puppy/s/eq/hammer","/players/jamila/beach/mobs/claw","/players/ultramagnus/cap","/players/scathe/armor/bowboot","/players/hippo/weapons/glue","/players/arrina/armor/bedsheet","/players/maledicta/cont/ltown/objects/dshield","/players/angel/area/stargate/obj/P90",})
+shorts ({"Orb of the Ancients","a long plastic straw","A slab of giant crabmeat","[34mZantetsuken[0m","a case containing an OG unit.","[31mBackbiter[0m","[35mnucleus of a cell[0m","[1;33mCheese[2;37;0m","[1mShadowCrown[0m","Black leather pants","nutshell helmet","[36mP90 machine gun[0m","An [1mwhite[0m metal ring","A Priest's Robes","glazour coat","light spell","Steel Boots","A hammer","A Lobster Claw","An Elven Cap","Hard Boots","a strong, 1 second glue","A Linen Bedsheet","[32mShield of the [1;32mDrake[2;37;0m","Machine gun",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,})
+loaded 0

@@ -1,0 +1,11 @@
+Regulate Stamina and Magic Aptitude raising.  If the changes to
+these stats (max sta = 24, max mag = 14) I will have to make
+it so the player can raise these stats to the appropriate level.
+
+Need a way to force the player into Brave Mode (no wimpy) and keep
+them there.  Wimpy is currently a static function in player.c
+
+Add a few tiny spells into the guild pet.  The pet has a magic stat
+that can be trained by the player.  The magic stat will be used
+to calculate how the pet uses spells.  (max spell damage will be
+5+random(20).

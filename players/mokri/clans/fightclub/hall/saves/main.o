@@ -1,0 +1,32 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/fightclub/hall/r1","south","/players/mokri/clans/fightclub/hall/r2","west","/players/mokri/clans/fightclub/hall/r4","east","/players/mokri/clans/fightclub/hall/r7","north","/players/mokri/clans/fightclub/hall/r8","down","/players/mokri/clans/fightclub/hall/r13","up",})
+short_desc "[1mBasement[0m of the local thieves pub[0m"
+long_desc "You're standing in the basement of the local thieves' pub. It's dark, dingy and smells of mold and dust. You can feel the dampness of the walls and floors under you. Sheets of cardboard on the floor are laid out in a square pattern. Dark red splotches, of what looks like dried, old blood, splatter across the cardboard. Some might consider this modern art. To the south of the room, a large metal container is set up to store various items.[0mType 'exit' to leave."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 1

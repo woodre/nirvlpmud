@@ -1,0 +1,63 @@
+
+                             Item Files
+
+     Key                        
+   
+---  All files should have a header no matter how small. Add a header to valen_key.c
+
+---  All files should have as the first line of code: #include "/sys/lib.h"
+     while it works fine with out it, this is a file needed when and if we
+     switch from LP to LD.  So add it to valen_key.c
+     
+---  Unless you have some really wild key that is extra heavy then I see no
+     reason for the key to have a weight of 2.  Change it to 1.
+     
+---  I am a little confused with the keys desc. it states:
+     The emblem is a crossed Sword and Feather
+     Is it a feather that is crossed with a single sword or  is there 
+     2 swords crossed along with the feather???  either way it should be 
+     changed.  I do like the color.
+     
+     Some ideas.....
+     
+     The emblem is two crossed Swords and a Feather
+     
+     The emblem is a Sword crossed with a Feather
+
+     
+     
+     Belt
+          
+---  set_ac(2);   should be set_ac(1);
+     we always want to make the best, but this is dropped by an average mob so
+     no reason to make it higher.
+
+---  set_alias("a belt"); 
+     alias are for an alternate name for players to look at objects
+     alias are not required.
+     I guess it is not improper the type "l at a belt"
+     but really who will think to type that? maybe if the short was just a belt...
+     If you want to use alias I would either use leather belt or
+     Demon Cursed belt, but not a belt
+     
+---  add a special for the belt. It will be cool to do, especially with its desc.
+     have something with the aura...
+     special can help a player or just add cool phrases during combat.
+     A lot of time if it look cool in and out of combat players use it...
+     looks like this:
+     
+  do_special(owner){
+    if(!worn) return;
+    if (!owner || !owner->query_attack())
+      return;
+  if(random(10) < 3)
+  {
+    tell_object(owner,
+      " ADD COOL PHRASE HERE this is for the owner to see \n");
+    tell_room(environment(owner),
+      owner->query_name()+" ADD COOL ACTION HERE this is for the room to see \n", ({ owner }));
+    owner->add_hit_point(random(5));
+    return 1;
+  }
+  return;
+}

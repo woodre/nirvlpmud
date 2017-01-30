@@ -1,0 +1,147 @@
+Tue Jan  5 17:39:48 1999 updated work filer
+Tue Jan  5 17:41:07 1999 updated work filer
+Fri Jan 22 15:35:39 1999 added set_type("sword") to bardsword
+Sun Apr  4 21:51:31 1999 approved wocket/turtleville/NPC/mayor.c to remove crime flag for a 10k bribe
+Tue Apr  6 12:49:48 1999 opened Dervish guild per Mythos approval
+Tue Apr  6 19:27:21 1999 reduced Bacchus' coins to 0 for abusing an unlimited coins source - catwoman quest item - now fixed
+Tue Apr  6 19:34:19 1999 dested Bacchus' bag 'o full heals and about 10 full heal scrolls in his inventory he bought with unlimited coins
+Thu Apr  8 16:17:52 1999 approved /players/languilen/play area
+Thu Apr 22 02:13:42 1999 approved adding a slightly larger modifier to healer xp gain as well as healing of modified levels. these changes for enhanced playability of the healer guild. It won't make a great difference however
+Mon Apr 26 15:58:41 1999 xetras given 50% wimpy chance as they are being massacred in mass quantities
+Tue Apr 27 13:00:24 1999 changed llew/closed/crystal rooms to random(3) chance of having an xetra
+Wed Apr 28 20:27:49 1999 replaced Beth's lost xp to a second death as a ghost. I will fix the poly ob since it is continuing the fight after death
+Wed Apr 28 20:54:31 1999 mizan/closed/poly/PDM.c and gob.c removed monitor (as used in call_out) as guild monitors are now illegal and it serves no purpose
+Wed Apr 28 20:55:07 1999 mizan/closed/poly/golem.c and tetrapod.c put in check for ghost in attacks so the fight doesn't keep going after the player dies
+Fri Apr 30 12:10:28 1999 made poly golems unable to cast sonic (as they should never have been able to cast sonic)
+Mon May  3 00:48:12 1999 changed saber/fur/selcoffin2.c to weight 20 from 7. Players are carrying this around and resetting it at various places. more should be done but I don't have the time right now
+Tue May  4 15:53:16 1999 approved Zeus changing demon system to destruct, approved Zeus taking most of the the stat requirements out of his gdagger.c as it falls within the realms of normal storable weapons
+Tue May  4 18:42:50 1999 changed saber/armor/aura.c to ac2 and weight 3 - now it will be unstorable as it should have been always (plus the weight of 6 before was just plain wierd for an 'aura')
+Tue May  4 20:11:41 1999 restored Fakir's exp and extralevels lost from dying to the Sands while dc'd
+Tue May  4 20:14:24 1999 On the Fakir situation - confirmed he was dc'd by Arrina who was icq'ing with him at the time
+Thu May  6 17:39:38 1999 promoted Wocket to level 70 for good work with the CyberNinja guild over the last year. He has gained a lot of knowledge and is a lot more responsible than he was when promo'd to 60
+Thu May 13 19:24:30 1999 /players/wocket/turtleville/NPC/shoppekeeper.c commented out a destruct and added a notify fail failure. this was due to calls to the destructed object.
+Thu May 13 20:57:21 1999 help Eurale with form changing stuff
+Thu May 20 03:45:22 1999 made wocket/turtleville/OBJ/heal_potion.c and regen_potion.c unstorable. This due to very high power. When storable, high price does not limit quantity as players can save up and go at monsters, quests, and tests with possibly 18 stored. Note that this does not limit quantity as players may buy as many as they want with the money they can gain in a boot (which is nearly limitless given the help of other players)
+Thu May 20 04:03:34 1999 moved wocket/std/stand.c to wocket/turtleville/tville_fount.c
+Thu May 20 04:07:12 1999 commented stand.c out of wocket/castle.c
+Thu May 20 04:09:59 1999 set maximum number of oranges in the stand to 50
+Thu May 20 12:49:30 1999 put log on orange runout - wocket/std/standlog
+Sun May 30 03:20:31 1999 restored 15k exp to Outrage (funky loss when he returned from inactive) ENTER logs show him logging in at level 12 exp and losing 15k xp (and changing to level 11) within at most 18 seconds from login. there wasn't a cause I could locate
+Tue Jun  1 19:02:40 1999 approved /beck/MortalKombat/MKMonk.c as a promotion for the new and improved MK tourney to be put on the Green until the tourney begins (unless serious delays develop). Statue will be moved if it causes annoyances
+Fri Jun 11 13:32:41 1999 approved arrina's reformated ale, honeycomb, and ade
+Tue Jun 15 04:55:25 1999 wocket orange heals with reset rotting and rotten orange chance in stand for cost of 1500
+Tue Jun 15 15:47:53 1999 approval (based on function and subject to revision) of separation personal and guild ranger power pools - personal pool only increased in guild hall by 2/hb
+Wed Jun 16 02:09:25 1999 approved ranger spaceship with checks for fighting and nt as well as gossip cost - if rangers get annoying with it, it will get yanked
+Thu Jun 17 15:11:44 1999 approved ranger weapon cost to 2*KarateLevel + random(KarateLevel), approved an 'encourage' command that unrandomizes karatelevel damage in combat (approved unrandomization of KarateLevel basically)
+Thu Jun 24 02:06:34 1999 Due to usagi's repeated logging on for hours with different obscene and annoying names and spamming anyone he could, I reduced him to nothing, along with his other chars.
+Thu Jun 24 04:26:12 1999 changed saber/weapons/net.c to type 'misc' from 'shield' to avoid problems with offwield when thrown on a monster
+Sat Jun 26 23:20:45 1999 Changed polymorph form death time from 5400 to 2400 for golem (1.5 hours to 40 mins) and from 4600 to 1200 for tetrapod (1.3 hours to 20 mins).  This due to low cost for guild and low cost/damage ratio on storable clay charges
+Sun Jun 27 22:36:52 1999 approved wocket's snail workroom with a change from instablick
+Sun Jun 27 23:51:42 1999 approved ranger encourage and tactic multiple player stacking. will keep eye on how it works out
+Mon Jun 28 12:49:29 1999 changed /mythos/amon/forest/snake.c to leave if snake weapon is not wielded
+Tue Jun 29 18:39:48 1999 cut off 12 rooms full of sergeant by making /hawkeye/room/newbie3.c the end of the newbie area. 200 sergeants, 20 corporals, and 10 privates just does not make sense. there are still 30 low level monsters in the newbie area. If someone wants to make it more interesting, that is fine
+Tue Jun 29 18:47:39 1999 set a reset(1) destruct on /pain/NEW/mon/korean.c so they would not fill up MASH
+Wed Jun 30 00:02:48 1999 made a bouncer command to keep aggro level 20 monsters out of hawkeye's newbie area. hawkeye/room/newent.c
+Thu Jul  1 13:08:20 1999 changed Arrinas ade ale and honeyc heals to only be used when in player inventory
+Thu Jul  1 13:10:18 1999 changed wocket's orange.c to only be usable while in player inventory
+Fri Jul  9 17:25:16 1999 approved dragnar/beck's mortal kombat to open for a 2-week trial period. if there aren't any major problems in that time, it can become a fixture
+Mon Jul 12 20:48:04 1999 Changed dreamspeakr/WEDDING/NPC/hera.c wedding message from channel msg to channel junk. It's on the same level as logs rolling
+Tue Jul 13 11:47:39 1999 dreamspeakr/mesa/OBJ/rmaker.c changed to 2-handed because it seems logical for a staff and it was causing problems with offwield
+Tue Jul 20 13:37:40 1999 approved maledicta's town area for opening - with Eurale's approval of rooms and heals
+Thu Jul 22 12:40:13 1999 Promoted Dragnar to level 70 due to his good work with MK, willingness to comply with rules and regulations, and continuing work with a variety of projects
+Thu Jul 22 18:10:50 1999 promoted Beck from 60 to 70 for his work on the new MK and his continuing work on the Ranger guild
+Thu Jul 29 13:28:22 1999 Approved Zeus' new Taus area monsters and associated items. Eurale has approved the rooms and heals so the area can open now.
+Thu Aug  5 18:31:14 1999 Commented out a line in /players/daranath/qualtor/obj/depositor.c that was restoring daranath's save file for everyone
+Thu Aug  5 18:52:56 1999 Took out the deposit_list command on depositor.c as it restores the last file in the directory to the player, which is not desirable
+Thu Aug 19 12:33:23 1999 approved zeus/taus/OBJ/onyx_platemail.c for sp gain. it is a hard item to get and is in a pk area. also limited to access by time
+Thu Aug 26 13:12:38 1999 Approved Zeus' ~/museum area for test period with logs. The items are pretty exceptional but so are the monsters.
+Thu Aug 26 13:19:54 1999 Approved Maledicta's cave ar (dependent on Eurale's approval)
+Fri Aug 27 19:23:14 1999 llew/Other/misc/obituary.c added /n to notify_fail message
+Sat Aug 28 02:02:52 1999 lew/lounge2.c added an exit to lew/easthall/firstfloor.c since it seems like there should be an exit to there and players need to get to easthall/firstfloor.c to be able to do the quest
+Sun Aug 29 14:28:45 1999 Fixed non-functional function in eurale/Cave/cav6.c
+Wed Sep 15 13:40:47 1999 Promoted Feldegast from 60 to 70 due to his adopted channel histories
+Wed Sep 29 17:47:00 1999 added a freeze to picking the rose in saber/tower/tower20+2.c  - now whoever picks it will be frozen for 60 secs - not necessarily lethal but scary (most of the time frozen, the wraiths are not cloned yet)
+Thu Sep 30 16:03:10 1999 Sponsored Fakir, gave wiz talk, showed him the resources and rules
+Thu Oct 14 13:51:55 1999 Unguilded Mugzee due to lack of response to questions
+Thu Oct 14 17:37:44 1999 changed anshar/closed/mydef.h FITEM directory to forest instead of farm so his delit tail would clone as it should. note that the change leading to this error was undocumented
+Mon Oct 18 17:09:19 1999 Temporarily closed feldegast/arena/npc/vendor1.c due to most heals having a price well below the base price as documented in RULES/heals/heal3 with no apparent approval or justification. If the heals and prices were approved, this injunction will be removed
+Sun Oct 24 03:47:17 1999 Changed Obituary Notice to not show deaths of players under level 5 (thus preventing easy spamming and also easy stealing newbie corpses)
+Tue Oct 26 15:28:22 1999 Edited the vshadow.c to help ease the bad move_player light problem. instead of the full fix (which would require a lot more code), recommend having vamps reset the guild ob when they encounter a bad exit
+Thu Oct 28 13:44:02 1999 /players/saber/armor/overload.c changed to avoid possible abuse (armor dest while keeping ac)
+Mon Nov  1 18:29:25 1999 Imprisoned Kazer for multiplaying Melko quest with Blackstar - Blackstar killed all the monsters then Kazer logged in to kill the final monster and get the quest points
+Sat Nov 13 03:04:39 1999 Made fishing hat and converse shoes effective as good armor in hawkeye's areas only. might modify later. I know a fishing hat would not protect me from anything other than sunlight on my ears
+Mon Nov 15 15:31:47 1999 approved Feldegast's heals and vendor at prices according to heals/heal3 documentation
+Mon Nov 15 19:01:09 1999 approved Zeus' reformatted heals (following heals/heal3 regs) and new dispenser with limited supply
+Mon Nov 15 20:28:53 1999 approved Beck's proposed modifications to Rangers: subtract from weapon extra damage, add 1 to wc, raise encourage max from 3* to 4* present rangers
+Mon Nov 29 17:03:40 1999 Fixed up a ranger guild hall regen problem
+Fri Dec  3 18:36:11 1999 imprisoned Noyz for being a prick after I told him to stop. surprise surprise
+Sat Dec  4 15:06:03 1999 /airwoman/CASTLE/rmen5.c moved set_ac to after the monster wears ac1 gloves
+Wed Dec  8 14:14:19 1999 Approved Francesco's area for player use. He has authorization to fix typos and english problems, as well as exit names
+Thu Dec  9 14:42:15 1999 /mythos/awep/daikyu.c took away capability to fire at players (player command to do heal_self damage)
+Fri Dec 10 14:49:56 1999 approvedbeta testing for maledicta/venom guild. by wiz seconds only
+Mon Dec 13 12:41:01 1999 promoted Francesco to level 30 for his area
+Tue Dec 14 13:44:20 1999 /players/nightshade/room/vroad9.c pry bug (unlimited coins) fixed
+Wed Dec 15 18:02:37 1999 moved damage in /players/nightshade/weap/hammer.c to weapon class from weapon_hit(). was a wc1 weapon that returned 8+random(10) all the time. now it is simply wc16. this to avoid certain potential abuses related to guild uses
+Wed Dec 15 18:18:27 1999 reset daredevil's spell_dam to 0 so he could cast guild spells.. of course a single combat round would do the same and I let him know that
+Wed Dec 15 20:33:00 1999 restored the exp Sticks lost due to a guild bug. he had it logged and my next workreport will explain the bug
+Thu Dec 16 18:50:02 1999 removed a return 1; if the vamp wolf is present on the command levitate. because the doggy is dested doesn't mean the command should stop
+Thu Dec 16 18:51:53 1999 jailed Tiffany for incessant tells to me about her failed online relationships after I told her I didn't want to hear about it. she was blaming me for not desting everyone involved
+Sat Jan  1 05:41:19 2000 updated Llew's obituary board for Y2K
+Sun Jan  2 19:22:30 2000 promoted Kazer to level 20 due to his rash actions in dropping a castle without his sponsor present, after my explicit instructions not to do so
+Sun Jan  2 20:28:23 2000 imprisoned Kazer due to his quasi-wiz status. can't trust that he won't do something stupid
+Sat Jan 15 14:20:02 2000 changed function save_ranger() to SaveRanger() as save_ranger is undefined. in RangerCommunicator.c
+Wed Jan 19 17:42:01 2000 Changed Moon's OldTitle to her current level title. was at level 11 title. mailed Beck re: OldTitle updating
+Wed Jan 19 20:21:01 2000 Added a missing { in dreamspeakr/WEDDING/NPC/hera.c
+Mon Jan 24 12:29:28 2000 Changed room exit 'north' to 'newbie' in persephone/rooms/hall.c  to reduce confusion (there is a trap for non-newbies using the exit but no clue)
+Mon Jan 24 12:43:50 2000 persephone/monster/warglea and wwolf.c changed to better fit description and level (coin values reduced on warglea and level raised on wwolf)
+Mon Jan 24 13:07:15 2000 Changed navigation commands in junpat2.c and junpatd.c so that players could move around without looking at the room code (it was not very user-friendly)
+Fri Jan 28 16:24:46 2000 commented lockrae.c and lockmil.c out of loading in mizan/castle.c these chars no longer log in and the constant call_outs are drain
+Tue Feb  1 11:37:51 2000 approved Traff's new version of Delnoch arena (6 of each gladiator type, rather than 6 total, so that both low and high level players can enjoy it)
+Fri Feb  4 14:10:22 2000 Changed emerson/mons/manager.c to level 16 from 20. Too hard to justify level 20 on a repeat monster with no description and no logical reason for being powerful. left coins fairly high due to the managers being guarded and wimpy. emerson/weap/pencil.c changed value from 1000 to 300 and wc from 17 to 15. Even if it is a special pencil, it is still a pencil.
+Mon Feb  7 12:49:47 2000 altered and restored Spiral's hps to test his unworking wimpy theory. no result
+Tue Feb  8 03:42:17 2000 restored 34.7k exp to Arete for double death
+Tue Feb 15 20:54:42 2000 mythos/awep/forest/air.c put in a if(me != environment()) return 0; check so the weapon does not set other players' armor class to 0 when they attack the wielder
+Wed Feb 16 18:28:07 2000 approved Traff's new arena (6 gladiators cloned per person, low level bias) for game play
+Wed Feb 16 19:50:00 2000 put a check in mythos/closed/guild/spells/monster2.c for if(attacker_ob)
+Sun Feb 20 22:18:46 2000 re-released Lightning due to Dragnar's release not functioning. actually had to reset his wkrm and home since the free did not work
+Sun Feb 27 03:01:49 2000 /players/pathfinder/detroit/monsters/bloodleader.c removed excessive cloning call_out
+Tue Feb 29 01:54:34 2000 put check in necromancer dis_burial.h so that it will not function in the town area (this due to aggro spirits killing newbies)
+Tue Feb 29 05:49:51 2000 /players/deathmonger/CASTLE/shop.c changed random(800) coin bonus to random(50)
+Thu Mar  2 15:47:30 2000 catt/NPC/missionary.c changed alias from repeat of 'missionary' to 'demon'
+Thu Mar  2 16:02:06 2000 eurale/Dis/Hood/rh8.c Tuck will not allow evil to pass, but good may now pass. This to increase playability for good-aligned guilds
+Fri Mar  3 20:35:37 2000 approved /players/jenny/bundy for use
+Sat Mar  4 03:43:23 2000 Made multiple changes to Beren's Rocannon's World area, adapting stats to levels, upgrading and downgrading weapons and armor based on description and level, etc. still more work to be done but it's a start
+Sat Mar  4 15:35:50 2000 Approved Fakir's inn area for player use
+Sat Mar  4 20:35:40 2000 approved Illarion's pokemon area for player use
+Sat Mar  4 20:42:22 2000 approved wc18 storable blade weapon as prize (instead of multiple full heal) for Jerek in Zeus' arena
+Sun Mar  5 04:13:16 2000 changed vertebraker/ed/ed/obj/linda_pendant.c (something like that) to non store as it is ac2 pendant in a midlevel area
+Sun Mar  5 04:27:28 2000 maledicta/town/rooms/t10.c upped average intelligence for shopkeeper to 20. There is a haggle function that compares shopkeeper int with player int to drop or add price.. with players averaging 20 and shopkeeper averaging 10 (before change), this basically reduced heal prices
+Mon Mar  6 13:12:04 2000 closed /players/deus/castle.c until players can logically leave the area without teleporting and some rooms are given fairly clear exit commands. right now it is a trap for anyone who cannot teleport
+Mon Mar  6 18:23:43 2000 approved maledicta/nhall newbie hall for player use. changed newbie dispenser in green to be more interesting and move to newbie hall
+Mon Mar  6 20:35:47 2000 Changed newbie_dispenser to new format. replaced /obj/bag with pain/NEWBIE/newbie_bag
+Mon Mar  6 21:05:53 2000 made Lacar the first official Newbie Helper
+Wed Mar  8 16:16:46 2000 Updated Ultramagnus' area - several monsters used to wield after setting wc. lowered some of the very high hps (e.g. dark rider, level 18, 875hp. now has around 475 average). made the weapon Sting good vs. spiders and dark riders. more cosmetic changes. made exit from hobbit houses (no longer no-exit traps)
+Fri Mar 10 03:30:31 2000 eurale/Glade/oak2.c replaced 'retubn' with 'return'
+Sat Mar 11 19:11:20 2000 updated more of Ultramagnus, gave dark riders random weapons and armor
+Sat Mar 11 19:34:18 2000 updated a bunch of Beren's Gdemia monsters. at least some profit possible now, mostly midlevel area
+Sat Mar 11 19:38:38 2000 updated some monsters in Beren's Olgyo area to have a little profit as well. mid-high level area
+Sun Mar 12 14:22:52 2000 moved Ultramagnus' castle 1 room west (from vill_shore2 to jetty) so that the south room exit in vill_shore2 will be accessible. were 3 castles based in vill_shore2 and none in jetty, so I moved the castle rather than changed the entrance command
+Mon Mar 13 19:12:54 2000 Dune's Amerasu fixed for catch_tell recursion loop
+Wed Mar 15 13:41:54 2000 fixed some load errors in Ultramagnus (base object was used rather than clone.. changed to clone)
+Wed Mar 15 14:33:28 2000 approved Zeus X area as non-pk
+Thu Mar 16 12:43:43 2000 zeus/dealer/room.c commented out dealer until changes are made (dealer should not keep money spent on heals)
+Thu Mar 16 17:13:11 2000 Promoted Maledicta for working on the new newbie hall, helping get new wiz areas ready for game play, and helping with old areas and general mud function
+Fri Mar 17 14:13:26 2000 Fixed /players/saber/closed/evil/para.c (Yuki's paralysis) so that it no longer causes heartbeat errors on wimpy
+Tue Mar 21 03:58:36 2000 promoted Fakir to level 40 for excellent work on second area, continuing contributions to game play ideas (and helping take care of Templar guild), and to help him learn faster. He shows good judgement, good attitude, and willingness to learn.
+Thu Mar 23 03:49:29 2000 Changed Issiac hps from 485 to 850, due to the power of the trident of war. it is a very good storable weapon and should not be so easily obtained
+Thu Mar 23 16:56:07 2000 Approved Fakir's low level woods area for player use
+Fri Mar 24 12:52:12 2000 Changed monsters in hawkeye/monster from evil alignment to neutral, in cases where the description indicates a good or neutral disposition. Changed Pain's korean sapper from good alignment to evil, as this makes sense given the monster's description and circumstances of the area theme. Monsters with evil descriptions were left as evil.
+Fri Mar 24 13:43:19 2000 Promoted zeus to level 60 for quest completion and approval, as well as continuing area work
+Fri Mar 24 19:06:13 2000 Approved jenny's dukes are for player use
+Thu Apr 27 21:08:16 2000 put in required code line for damage types in templar obj
+Wed May 10 00:16:48 2000 Replaced /eurale/closed/emonster.c with a copy of monster.c so that players can get exp from his monsters. there were no readily apparent differences. may change back if bugs arise
+Wed May 10 17:46:07 2000 Changed define target for Vertebraker from armour.c to armor.c
+Wed May 17 13:44:32 2000 Added wc bonuses to mourning coil, alchemist, and keeper of the red tower (daranath qualtor)
+Thu May 18 15:30:36 2000 /players/quantos/desert/oasis.c - fixed teleportation device (was using query_spell_point and restore_spell_point)
+Fri Jun  8 03:14:58 2001 testing new cyber hide in shadows with snowtest. seems to work as designed
+Fri Jun  8 03:23:31 2001 modified the dervish confusion shadow to fully implement the functional changes. The shadow was originally a heartbeat (presumably the heartbeat was failing, thus the change) and now it is changed to a straight call_out. However, heartbeats run on a 3 sec call_out timing so the time in call_out needs to be multiplied by 3 to simulate the original heartbeat specs. so I did that

@@ -1,0 +1,35 @@
+inherit "/obj/monster";
+
+reset(arg) {
+   ::reset(arg);
+   if (!arg) {
+   object ob, gold;
+  ob = clone_object("/players/saber/weapons/lightning.c");
+move_object(ob,this_object());
+gold = clone_object("obj/money");
+gold->set_money(1500);
+move_object(gold,this_object());
+     set_name("lightning elemental");
+      set_short("A LIGHTNING Elemental");
+     set_alias("elemental");
+     set_race( "elemental");
+       set_long("A large sphere of softly glowing lightning.\n"+
+          "The elemental pulses like a living heart.\n");
+     set_level(20);
+     set_ac(20);
+     set_wc(35);
+     set_hp(600);
+     set_al(-750);
+     set_aggressive(1);
+     set_chat_chance(20);
+     set_a_chat_chance(15);
+      load_chat("Lightning Elemental pulses softly.\n");
+     load_a_chat("Lightning Elemental pulses softly.\n");
+     load_a_chat("Lightning Elemental emits a blinding flash of light.\n");
+
+     set_spell_mess1("Lightning Elemental strikes its foe with a mighty bolt of blue lightning.");
+     set_spell_mess2("Lightning Elemental strikes you with a mighty bolt of blue lightning.");
+     set_chance(17);
+     set_spell_dam(50);
+   }
+}

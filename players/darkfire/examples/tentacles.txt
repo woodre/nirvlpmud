@@ -1,0 +1,20 @@
+"You focus your will and "+GRY+"black tentacles"+NORM
++ " rise from the ground under your feet and wrap themselves around "
++ USER->query_name()+"'s head and throat."
+
+"A "+GRY+"tentacle"+NORM+" worms its way into " 
++ USER->query_name()+"'s " + random_orifice() 
++ ". It oozes "+HIR+"blood "+NORM+" and "
++USER->query_name()+" gibbers insanely.\n");
+
+"A cluster of "+GRY+"tentacles"+NORM+" erupts from the center of " 
++ USER->query_name()+"'s forehead and wave wildly about. They "
++ "are tipped with "+HIR+"blood"+NORM+" and "+GRY+"grey matter"
++NORM+". "+USER->query_name()+" shrieks in horror.\n");
+
+
+#define ORIFICES ({"eye","ear","nose","mouth"})
+
+string random_orifice() {
+	return ORIFICES[random(sizeof(ORIFICES))];
+}

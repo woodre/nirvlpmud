@@ -1,0 +1,25 @@
+>>--------------------- Welcome to Etheriel ----------------------<<
+
+    There are some functions added in to this area that make it very
+different from anywhere else on the mud...
+
+'bleat' is a special channel available only to those who are currently
+  in the Plane of Etheriel. It behaves very much like 'gossip' and
+  'shout' channels, etc.
+
+bleat <msg>	Tell something to everyone who is currently in the area.
+bleat :<msg>	Emotes over the channel.
+bleat list	Displays who is currently in the castle.
+
+jumpto <plyr>	Teleports you to <plyr> player, provided he/she/it is
+		is currently in the realm.
+
+wormhole <dest>	Allows you to build a tunnel to <dest> destination.
+		Experiment with it to figure out what is going on...
+
+help jello	This screen.
+
+** HINT: It would be advisable for new travellers to buy some panic buttons
+   from the refridgerator (If it is still alive at the 'entrance'.
+
+Any questions, comments, etc. please mail Mizan.

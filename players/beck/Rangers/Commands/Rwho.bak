@@ -1,0 +1,68 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+
+RangerPower(string msg, string channel){
+   object *rangers;
+   object person;
+   string type;
+   int i;
+   rangers = CHANNEL->ChannelWho(channel);
+   write("\n");
+   write("============================ The "+channel+"s ======================================\n");
+   write("\n");
+   write(justify("Level",7)+justify("M",2)+justify("Name",17)+justify("Color",15)+justify("Type",15)+justify("Btl?",5)+justify("Place",45));
+   write("\n");
+   write("\n");
+   for( i = 0; i<sizeof(rangers); i++) {
+      person = 0;
+      if(rangers[i])
+         if(rangers[i]->id("ranger_locator") || rangers[i]->id("ranger_camera"))
+         person = rangers[i];
+         else
+         person = ENV(rangers[i]);
+      if(person){
+           if(!person->query_invis()){
+            write(justify(person->is_player() ? person->LEVEL : "?? ",3));
+            if(person->query_extra_level() > 0)
+               write(justify(person->is_player() ? "+"+person->query_extra_level() : "  ",4));
+            else
+               write(justify("  ",4));
+            if(PO)
+               write(justify(rangers[i]->QMuffles() ? "*" : " ",2));
+            else
+               write(justify(" ",2));
+            write(justify(person->NAME,17));
+            if(PO)
+               write(rangers[i]->QRangerAnsi());
+            if(PO)
+               write(justify(rangers[i]->COLOR+OFF,19));
+            else
+               write(justify("Enemy",15));
+            write(OFF);
+            if(PO){
+               write(justify(rangers[i]->QRangerType(),15));
+               write(OFF);
+            }
+            write(justify(person->query_attack() ? "Yes" : "No",5));
+            if(PO){
+               if(PO->QuerySkillLevel("communication") > 2){
+                  if(environment(person)) /* check added 6.11.01 by verte, else statement also written */
+                  {
+                     write(environment(person)->short());
+                     write(OFF);
+                  }
+                  else write("Logging in\n");
+                  write("\n");
+               }
+               else
+                  write("Unknown\n");
+            }
+         }
+       }
+      
+   }
+   write("\n");
+   write("=====================================================================================\n");
+   return 1;
+}

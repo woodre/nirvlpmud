@@ -1,0 +1,32 @@
+Prelimary rules for dtypes:
+
+Items granting resistance for physical and magical types should be very
+rare and almost always be non-storable.
+For the most part physical and magical should have class, rather than
+res- the more powerful an item, the closer its magical ac should be to
+its physical ac.  The most powerful items should have the same magical
+ac as their 
+
+For all other| dtypes, resistances should be used primarily, although you
+may also set a class if you wish, with the same limit as physical class.
+
+Without specific approval, these should be the max resistances for
+each armor type:
+armor     20
+shield    15
+helmet    15
+boots     15
+ring      10
+amulet    10
+misc      10
+
+This will allow a player to potentially build up a 95% resistance to a dtype
+or even full resistance with exceptional equipment.
+
+Note that if you prefer you can provide variable resistances that average
+out to these:  for example, an amulet can provied 100% resistance against fire
+10% of the time, or 50% resistance 20% of the time.
+
+Also, most armors should have vulnerabilities as balance- they don't need
+to be opposite, though.  An armor that protects you against evil could be
+vulnerable to good, or to light, or even to laser.

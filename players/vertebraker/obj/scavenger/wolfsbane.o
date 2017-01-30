@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/aarmor/sode","/players/scathe/armor/bowboot","/players/mythos/aarmor/mempo","/players/puppy/s/eq/collar","/players/forbin/heals/dhuez","/players/snow/shadows/stuff/crown","/obj/armor","/obj/weapon","/obj/weapon","/players/mythos/awep/arrow","/players/saber/stuff/mic","/players/scathe/armor/igarb","/obj/treasure","/players/wren/Area/starbug/items/laundry","/players/wren/Area/starbug/items/lightbee","/players/puppy/s/eq/apron","/players/mythos/aarmor/kabuto","/players/scathe/armor/bowarmor","/players/emerson/obj/instructions","/players/puppy/s/eq/crown","/players/wren/Area/starbug/items/bat","/obj/weapon","/players/puppy/s/eq/hammer","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/wren/Area/starbug/items/sparehead",})
+shorts ({"Sode","Hard Boots","Mempo","A leather collar","d[0m[32m'[0mHuez [0m[32mleaves[0m","[1mShadowCrown[0m","Steel Boots","Glamering","Rabbit foot","arrow","A microphone","Initiate's garb","Arctic Seal pelt","Lister's dirty laundry","a strange object called a 'light bee'","An apron","Kabuto","Light Leather Armor","A piece of paper","A golden crown","a [1;30mballbat[2;37;0m","Bow","A hammer","Peasant Rags","Kryten's sparehead 3.",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

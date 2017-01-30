@@ -1,0 +1,23 @@
+
+Bloodfist Help:  Duration Abilities
+
+  Bloodfist have a number of abilities which last for a duration of time.
+For most Bloodfist, only two of these abilities can be performed at once,
+however a well trained Bloodfist can use three at once.  Whenever one
+of these abilities is active it will display in the duration monitor,
+which can display either the full name or the abbreviation of the ability.
+If the ability only lasts a certain amount of time, the remainings seconds
+will be displayed in the monitor.  These are the duration abilities:
+
+    Name               Duration
+
+  1. BB  Bloodboil     lasts X seconds
+  2. BC  Battlecry     lasts X seconds
+  3. GD  Guard         lasts until target dies or is ended
+  4. CC  Concentrate   lasts X seconds
+  5. DG  Dodge         lasts until ended
+  6. PA  Pain aura     lasts X seconds
+  7. IS  Iron skin     lasts X seconds
+  8. BF  Bloodfury     lasts duration of combat
+  9. BL  Bloodlust     lasts X seconds
+

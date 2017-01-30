@@ -1,0 +1,16 @@
+                           [help alias]
+-----------------------=========+=========-----------------------
+
+Usage: "alias <alias> <definition>"
+       "aliases"
+       "unalias <alias>"
+
+       These are used to alias commands to shorter, easy-to-remember
+names.  Essentially, aliases allow one to type X to do Y.
+For example, if a player types "alias fb use heal",
+whenever that player types "fb", he will use his heal.  Obviously,
+this is only one use of many.
+
+       "aliases" lists all of the aliases the player has, with a maximum
+of 50.  Use "unalias <alias>" to remove an alias already in use.
+

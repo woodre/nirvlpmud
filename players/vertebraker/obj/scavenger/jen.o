@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/NEW/weap/sword","/players/wren/Area/starbug/items/thermos","/obj/armor","/obj/treasure","/players/ultramagnus/bdiamond","/players/mythos/awep/arrow","/players/wren/Area/starbug/items/sequinjacket","/players/mythos/awep/backbite","/players/mythos/closed/guild/forest/misc/prop","/players/wren/Area/starbug/items/gauntlet","/players/snow/shadows/stuff/plate","/players/jamila/beach/mobs/claw","/players/mythos/aarmor/mempo","/players/ultramagnus/darkarmor","/players/ultramagnus/staff","/players/hippo/armour/endotheel","/obj/weapon","/players/wren/Area/starbug/items/comb","/players/wren/Area/starbug/items/levis","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/obj/armor","/players/wren/Area/starbug/items/mirror","/players/snow/WEAPONS/hon_sword","/players/saber/stuff/trink","/players/hippo/heals/blood",})
+shorts ({"Sword","a thermos","A suit of [1mwhite[0m platemail","Ruby","A Blue Diamond","arrow","Cat's red sequin jacket","[31mBackbiter[0m","Essence of Vraith- vine sap","Time gauntlet","[1mBlack Platemail[0m","A Lobster Claw","Mempo","Dark Rider Gloves","An Old Long Staff","endotheel","Baby rattle","the cat's hair pick","stretched out Levi jeans.","A Prince's Robes","A magical [1mwhite[0m amulet","a slim pocket mirror","A finely honed longsword","A strange metal trinket","[1;31mdrops of blood[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

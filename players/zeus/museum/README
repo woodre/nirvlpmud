@@ -1,0 +1,44 @@
+The Museum of Legendary Warriors
+
+  The museum features 9 different monsters which players can fight.  There
+are 1 of each that can be killed per reset.  They are all difficult npcs,
+and have good items on them.
+-NOTE: there are 5 chances to fight each npc, but they may only be killed once.
+  The monsters are fought in a 9 room arena.  ~/arena/ it is pk and non
+teleport, however players can exit at any time from any room.  Once there
+are no players in it, the arena is cleaned of all items and NPCs left.  So
+there is no way to leave, heal, and return to continue the fight.  Once
+a person has entered the arena, nobody else may use it until they have left.
+-NOTE:  the arena is PK for everyone, except polymorphs!
+-NOTE:  all fights are player vs npc only, no team ups.
+  The museum itself features holographic projections of the NPCs which just
+makes it seem like an actual museum.   Just a futuristic one.
+Added a heal dispenser in lounge.c, selling zp1, zp2, and zp3.c
+
+/players/zeus/museum/
+
+~/NPC/    monster descriptions
+
+bug_storm.c  -  has a strong special & treasure that does dmg.
+                        bug.c & bug_ring.c is the treasure, summons bugs
+						to aid in combat.
+light.c  -  hits hard, low ac, has light_dagger.c great wep.
+                          wanders during combat.
+ninja.c  -  2 atcks per round, can do good dmg.  has ninja_gloves.c
+                        which use hb to heal occasionally.
+tol'kor.c - uses arena to the fullest.  nice special. has powerful wep.  
+golem.c  - creates many tiny_golem.c which follow player.  very difficult
+             fight.  has gstaff.c - which has a great special, lim chargs.
+mage.c  - strong atk spells, can call ice_monger.c which can't be peaced.
+                 has mage_robe.c which uses hb to increase sp heal rate.
+sd.c  -  nice specials, follows player, high ac -  has gun.c which is a
+                        -very- powerful wep with limited charges.
+mutant.c  - unique specials for healing and great dmg.  has glob_heal.c
+                        on it which is a 3 shot full heal.
+ani.c  -  a very nice npc, multi hits per hb, can do -great- dmg, has
+                        cloak.c - emergency healing && high ac
+
+all items can be found in ~/OBJ/ dir, includ the "p-" objs, which
+        are the objs which are in the 'museum' part of the area.
+
+note:  would be easy to add more npcs later if desired.

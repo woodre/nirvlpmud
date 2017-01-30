@@ -1,0 +1,22 @@
+Current options are:
+    -h       This option will enable arena heals so that
+             the smaller fighter will automatically heal
+             as much as the difference in hps between the
+             two fighters during the fight.
+
+    -b       This option will allow you to fight a bloodmatch
+             instead of a fight to the death.  Whoever reaches
+             80 hps or below first loses.  It is possible to
+             have a tie.
+             Note: This option is now the default. (11/11/98)
+
+    -d       If you select this option, then the fight will be
+             to the death and the loser will lose some experience.
+
+    -n       This option will make the arena a null-magic area
+             so that no spells may be cast.  This option only works
+             for The Pit.
+
+    -m1      Choose The Pit as the arena. (default)
+
+    -m2      Choose Feldaria to be the arena.

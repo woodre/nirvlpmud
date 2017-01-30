@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/igarb","/players/wren/Area/starbug/items/currie","/players/snow/heals/kw_meat","/players/maledicta/cont/armor/rgloves","/players/arrina/heals/ale","/obj/armor","/players/hippo/armour/endotheel","/players/mizan/etheriel/heals/carbo-blast","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/ultramagnus/darkweapon","/players/mythos/awep/kama","/players/snow/WEAPONS/tsunami","/players/hippo/weapons/molar_sharf","/players/hippo/weapons/glue","/players/mythos/awep/quiver","/players/ultramagnus/darkarmor","/obj/weapon","/obj/armor","/players/saber/armor/lpants","/obj/weapon","/players/saber/stuff/power","/obj/weapon","/players/jamila/beach/mobs/shell","/players/wren/Area/starbug/items/mirror","/obj/weapon",})
+shorts ({"Initiate's garb","A tin of chicken currie","A hunk of whale meat","a pair of steel gauntlets.","[1mbottle of dark ale[0m","Ring of Death","endotheel","A bottle of Carbo Blast","A Priest's Robes","Dark Rider Broadsword","kama","[34mTsunami[0m","A molar sharf","a strong, 1 second glue","A quiver","Dark Rider Chainmail","Steel Longsword","A magical [1mwhite[0m amulet","Black leather pants","An evil-looking lightsabre","A power system","Hand axe","A Large Shell","a slim pocket mirror","Whip",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

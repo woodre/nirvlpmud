@@ -1,0 +1,54 @@
+/*
+ * spell : Stone Skin   (enchantment)
+ * level : 6
+ * effect: Creates magical armor for the player
+ * cost  : 60 sp
+ * spec  : delay spell type protection: 3 minutes
+ *         player can wear no other armor.
+ * files : ~/mages/obj/stone_skin.c
+ */
+
+stone_skin() {
+
+  object obj;
+  int myac;
+
+  if(!KNOW("stoneskin")) {
+	write("What?\n");
+	return 1;
+  }
+
+  if(present("stone_skin", tp)) {
+	write("You already have stone skin.\n");
+	return 1;
+  }
+
+  if(guild->query_next_prot() > time()) {
+	write("You cannot cast this spell yet.\n");
+	return 1;
+  }
+
+  write("You cast a "+MAG+"Stone Skin"+NORM+" spell ... \n");
+
+  if(spell_fail2(6, "ench", "int")){
+	write("You "+HIR+"fail"+NORM+" the spell miserably.\n");
+	say(ME+" casts a spell, but nothing happens.\n");
+	tp->add_spell_point(-20);
+	return 1;
+  }
+
+  tell_room(env,
+  ME+" takes a small gemstone and crushes in "+PO+" hands.\n"+
+  ME+" sprinkles the dust over "+PO+" body.\n");
+  write("Your body tingles with magic and your skin becomes rock-solid!\n");
+
+  obj = clone_object("players/pavlik/guild/mages/obj/stone_skin");
+  move_object(obj, tp);
+  myac = guild->query_total_ench() / 10;
+  obj->do_stone_skin(myac);
+  tp->add_spell_point(-60);
+  guild->set_next_prot(time() + 180);
+
+  return 1;
+
+}

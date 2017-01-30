@@ -1,0 +1,87 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+string *Owners;
+
+RangerPower(string str, string type){
+   string msg, shortmsg;
+   object pet;
+   if(!PO->QMorphed()){
+      write("Zordon tells you: You must be morphed to summon your Battlezord.\n");
+      return 1;
+   }
+   if(!Owners)  Owners = ({});
+
+   if(member_array(TPRNAME+PO->QRandomNumber(), Owners) != -1){
+      write("You already have summoned your Battlezord.\n");
+      return 1;
+   }
+   if(!present("ViewingGlobe",environment(this_player()))){
+      if(MASTER->QPowerPoints(type) < (200+60*(PO->QuerySkillLevel("machine")))){
+         write("There is not enough power to use.\n");
+         return 1;
+      }
+   }
+   if(MASTER->QPowerPoints(type) < (100+30*(PO->QuerySkillLevel("machine")))){
+      write("There is not enough power to use.\n");
+      return 1;
+   }
+   msg = "Zord Power";
+   shortmsg = " Zord";
+   if(PO->QuerySkillLevel("morph") >9 ){ msg = PO->DINO+" Dinozord Power"; shortmsg = PO->DINO+" Dinozord"; }
+   if(PO->QuerySkillLevel("morph") > 19){ msg = PO->DINO+", "+PO->ANIMAL+" Thunderzord Power"; shortmsg = PO->ANIMAL+" Thunderzord"; }
+   if(PO->QuerySkillLevel("morph") > 29){ msg = PO->ANIMAL+" Ninjazord Power"; shortmsg = PO->ANIMAL+" Ninjazord"; }
+   if(PO->QuerySkillLevel("morph") > 39){ msg = PO->ANIMAL+" Zeozord"; shortmsg = PO->ANIMAL+" Zeozord"; }   
+   if(PO->QuerySkillLevel("morph") > 49){ msg = PO->ANIMAL+" Turbo-Zord"; shortmsg = PO->ANIMAL+" Turbo-Zord"; }
+   if(PO->QuerySkillLevel("morph") > 59){ msg = PO->ANIMAL+" Rescue-Zord"; shortmsg = PO->ANIMAL+" Rescue-Zord"; }
+   if(PO->QuerySkillLevel("morph") > 69){ msg = PO->ANIMAL+" Astro-Zord"; shortmsg = PO->ANIMAL+" Astro-Zord"; }
+   if(PO->QuerySkillLevel("morph") > 79){ msg = PO->ANIMAL+" Galaxy-Zord"; shortmsg = PO->ANIMAL+" Galaxy-Zord"; }
+   if(PO->QuerySkillLevel("morph") > 89){ msg = PO->ANIMAL+" Time-Zord"; shortmsg = PO->ANIMAL+" Time-Zord"; }
+   if(PO->QuerySkillLevel("morph") > 99){ msg = PO->ANIMAL+" Wild-Zord"; shortmsg = PO->ANIMAL+" Wild-Zord"; }
+
+   tell_room(environment(TP),TPNAME+" yells: "+msg+"\n");
+   pet = clone_object("/players/beck/Rangers/RangerZord.c");
+   pet->set_level(PO->QuerySkillLevel("machine"));
+   pet->set_hp(1+20*(PO->QuerySkillLevel("machine")));
+   pet->set_short("A "+shortmsg);
+   pet->set_Owner(TP);
+   pet->set_OwnerName(TPRNAME);
+   pet->set_OwnerNumber(TPRNAME+PO->QRandomNumber());
+   if(TP->RangerNPC()){
+      pet->set_OwnerName(TP->query_name());
+   }
+   pet->set_wc(PO->QuerySkillLevel("machine"));
+   pet->set_ac(2+(random(PO->QuerySkillLevel("machine") / 2)));
+   pet->set_alt_name(PO->COLOR+"Zord");
+   pet->set_message(shortmsg);
+   move_object(pet, environment(this_player()));
+   MASTER->APowerPoints(-(100+30*(PO->QuerySkillLevel("machine"))),type);
+   if(!present("ViewingGlobe",environment(this_player()))){
+      MASTER->APowerPoints(-(100+30*(PO->QuerySkillLevel("machine"))),type);
+   }
+   Owners += ({ TPRNAME+PO->QRandomNumber() });
+   tell_room(environment(TP),"A "+shortmsg+" arrives.\n");
+   return 1;
+}
+
+QRangerInfo(){ return 0; }
+
+RangerInfo(str){
+  write("Your Zord is your most trusted companion.  The Zord\n"+
+        "assists you in combat automatically.  Statistics\n"+
+        "(Hp, Ac, Wc) and Power cost of calling your Zord\n"+
+        "depend on your skill level in Machine.\n\n");
+  return 1; 
+}
+
+int
+reset_ownership(int OwnerNumber)
+{
+  if(!Owners) return 0;
+  if(member_array(OwnerNumber, Owners) != -1)
+  {
+    Owners -= ({ OwnerNumber });
+    return 1;
+  }
+}
+

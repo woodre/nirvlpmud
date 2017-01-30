@@ -1,0 +1,99 @@
+Catacombs of Magi Isle done by valen@nirvana
+
+dirs used:
+/players/valen/area/catacombs/rooms/
+/players/valen/area/catacombs/heals/
+/players/valen/area/catacombs/armors/
+/players/valen/area/catacombs/mobs/
+/players/valen/area/catacombs/misc/
+
+
+Theme: The theme idea is basically a dungeon area that once used by the magi
+that lived on the isle. I want the theme dark and curious.
+
+Concept: It will lead to other areas in the future.  Thats why I'm sticking in the
+archways into the description. Very simple NPC's called vermin. There will about 4-6
+of them.  But two rather sizable NPC's that are hidden. Which will be a Imp and a skeleton.
+The imp will have two items.  The imp will carry heals and a belt.  Plus the imp will have
+a chance to drain SPS as the special attack.  The Skeleton will be a straightforward melee
+attacker and carrying coins and a bronze key.  But to get to the skeleton the player must
+search the wall and push the hidden button.  The key will unlock the gate to the imp. And
+the players are done.  Pretty simple!
+   
+Layout: 3x3 catacombs. The entrance/exit is in the middle.
+The hidden button will be  in the second row , third column.
+The gate with bronze key hole will be in the third row,  second column.  
+
+Items in rooms: Some rooms will contain the following: floor, ceiling, wall,
+pillar, torch, fountain, archway, runes, broken pillar, pebbles, and dust.
+Everything will be put in the catacombs file. The Castle entrance will be
+changed to Catacombs. I'm not sure where to begin just yet.  But I'm completely
+open to suggestions.
+
+
+map:
+
+Entrance leads to catacombs b2.
+
+catacombs level 1:
+
+@@@@@@@@@@@@@@@@@@@
+@  a1 - b1 - c1   @
+@   |    |    |   @@@@
+@  a2 - b2 - c2 - d2 @
+@   |    |    |   @@@@
+@  a3 - b3 - c3   @
+@@@@@@@  | @@@@@@@@
+      @ b4 @    
+ @@@@@@  | @
+ @ a5 - b5 @
+ @@@@@@@@@@@
+
+LEGEND:
+@  = non movable area
+a1 = archway, vermin
+a2 = archway, vermin
+a3 = archway
+a5 = imp carrying blue vital and belt
+b1 = archway
+b2 = archway, vermin
+b3 = bronze key hole, locked gate 
+b4 = path, vermin
+b5 = path
+c1 = archawy
+c2 = archawy, hidden button
+c3 = archway, vermin
+d2 = skeleton carrying bronze key and coins.
+
+
+NPCs:
+
+Vermin /players/valen/catacombs/mobs/vermin.c
+Level            Wc               Ac               Hp               Coins
+11+(random 3)    15+(random 3)    9+(random 3)     165+(random 30)  500+(random 100)
+say/write "scrurries around on the floor." "sniffs the floor."        
+add_spell bite
+
+Imp  /players/valen/catacombs/mobs/imp.c
+Level    Wc     Ac      Hp      Coins
+24      42      22      900     0 
+say "I stole these vials from a corpse of a ArchAngel." "I will hide here forever!
+emotes cackles with glee!"
+add_spell mana burst "imp is overloading with mana!
+The room explodes with Mana flaring everywhere!"
+special mana drain 100 sps+random(50), mana siphon drains 25+random(25) sps for 4+randoms(3) rounds.
+carryies two blue vials and belt
+
+Skeleton /players/valen/catacombs/mobs/skeleton.c
+Level    Wc     Ac      Hp      Coins
+21       34     19      600     6000    
+say "Skeleton is looking at you with green eyes!" "Skeleton laughs manically!"
+add_spell swing "Skeleton swings his heavy mace and SMASHES into its target!"
+special charge "Charges with no fear and with a evil laughter!"
+
+
+Items:
+Type:      Class:  Weight:  heal:      charges:   cost:   Path:
+Blue vial   heal    1       detox 40%     3        n/a     /players/valen/catacombs/heals/detoxheal.c
+belt        belt    3        n/a          n/a      n/a     /players/valen/catacombs/armors/armorbelt.c 
+key         item    1        n/a          n/a      n/a     /players/valen/catacombs/misc/bronzekey.c

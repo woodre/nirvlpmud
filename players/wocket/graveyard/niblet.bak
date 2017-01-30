@@ -1,0 +1,48 @@
+#include "/players/wocket/closed/ansi.h"
+inherit "/obj/monster.c";
+
+reset(arg){
+object gold;
+  ::reset();
+gold = clone_object("/obj/money.c");
+gold->set_money(random(200));
+move_object(gold,this_object());
+get_short();
+    if(arg) return;
+set_name("niblet");
+set_race("seussian");
+set_long("This is a small rat like animal.  It scurries about eating almost anything\nin its path.  Many have found small trinkets and coins inside the stomachs of\na niblet.\n");
+set_level(5);
+set_hp(75);
+set_wc(10);
+set_ac(6);
+set_chat_chance(10);
+load_chat("The niblet scurries around.\n");
+load_chat("Chittering comes from the niblet as it shoves something into its mouth.\n");
+load_chat("The niblet peers at you.\n");
+load_chat("The niblet wiggles its nose.\n");
+set_al(random(500)+100);
+}
+
+get_short(){
+int i;
+i = random(7);
+switch(i){
+case 0:  set_short("A scurring niblet");
+        set_aggressive(1);
+         break;
+case 1:  set_short("A chittering niblet");
+         break;
+case 2:  set_short("A curious niblet");
+         break;
+case 3:  set_short("A frightened niblet");
+         break;
+case 4:  set_short("A clumsy niblet");
+         break;
+case 5:  set_short("A young niblet");
+         break;
+case 6:  set_short("A cute niblet");
+        set_aggressive(1);
+         break;
+}
+}

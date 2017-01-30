@@ -1,0 +1,21 @@
+**************
+
+                     Ip
+
+Syntax:    ip
+
+Desc:
+           This command returns the name, idle status, ip address, 
+           and host name for all logged in. Useful for seeing if lack
+           of response is do to long idle. And to check for multiplay
+
+Warning:   
+
+Example:   ip
+                  results
+           ip information is displayed for everyone online
+
+Related:   p
+
+
+**************

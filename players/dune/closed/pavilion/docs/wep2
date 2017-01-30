@@ -1,0 +1,23 @@
+---===ROBOMECH WEP2===---
+
+     Weapon blast radius is the number of rooms
+a target (if hit) will be blasted through upon
+impact with bullet.  Blast radius direction is
+randomly determined, since bullets may hit at
+any angle... causing different impact result
+directions.  
+     Every weapon dissipates some amount of
+heat upon weapon fire (punches do not dissipate heat,
+however).  This heat may accumulate after continued
+weapon fire, which may result in overheating.
+Overheating is the inability of the RoboMech to
+cool itself.  Upon an overheat, the RoboMech will
+shut down.  All systems will de-activate, except
+your ability to 'bail' out of the cockpit.
+During system shutdown, your mech will attempt to
+cool itself down.  However, you will be unable to
+attack and thus be vulnerable to enemy fire.
+After your systems cool down enough, your mech
+will re-activate and you may continue combat as
+normal.
+

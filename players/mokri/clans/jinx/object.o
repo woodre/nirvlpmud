@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;31mV[1;34moo[1;31mD[1;34moo [1;31mD[1;30moll[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "VooDoo Doll"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;31mV[1;34moo[1;31mD[1;34moo [1;31mD[1;30moll[0m"
+damage_type 0
+hall_path "/room/exlv_guild"
+object_name "VooDoo Doll"
+owner "booker"
+spell_alias "regen"
+spell_mess_me "You've cast regen"
+spell_mess_room "%TPN% cast %hi-green%REGEN%normal on %AKN%."
+spell_mess_them "You have been healed by regen"
+abilities ({})
+chan_history ({"[Sun Oct 18 21:11:38 2009] Wicket has joined the clan!","[Sun Oct 18 21:12:16 2009] Booker: heh u like where its at","[Sun Oct 18 21:12:20 2009] Wicket: nice","[Sun Oct 18 21:12:42 2009] Wicket: cant build can i","[Sun Oct 18 21:12:46 2009] Wicket: dont see build commands","[Sun Oct 18 21:13:06 2009] Wicket: damn heh","[Sun Oct 18 21:13:16 2009] Booker: dont have nuff coin in coffer for building yet","[Sun Oct 18 21:13:20 2009] Wicket: ahh","[Sun Oct 18 21:14:02 2009] Wicket: hmmm","[Sun Oct 18 21:14:08 2009] Wicket: how you add coins to coffer?","[Sun Oct 18 21:14:30 2009] Booker: private_coffer deposit","[Sun Oct 18 21:14:54 2009] Wicket: aightr","[Sun Oct 18 21:14:58 2009] Wicket: well im off for nite","[Sun Oct 18 21:15:04 2009] Booker: cya","[Sun Oct 18 21:15:08 2009] Wicket: gonna coin and stuff this week to help ya out","[Sun Oct 18 21:15:18 2009] Booker: is all good bro",})
+leaders ({})
+join_type 2
+private_coffer 420000
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 40
+last_spell_time 1284821163

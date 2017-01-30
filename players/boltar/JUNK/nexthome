@@ -1,0 +1,31 @@
+Brent Peterson <bap9@my-dejanews.com> writes:
+> I have Color Turbo Slab and a 25MHz 68040 Mono cube systems
+> ...
+> What equipment would I need to buy to network the machines? Just
+> a hub and cables? Is there anything special I need to do in the 
+> configuration of the machines, especially with the slab so that 
+> it can use the modem and still communicate via the ethernet port?
+
+I use a Baystack Instant Internet firewall/router with a V.90 modem
+and hang everything off its minihub (see
+http://www.nortelnetworks.com/link/baystack_ii for further details).
+I used to run PPP directly on my NeXTstation, but this works much
+better: it offers dynamic dialup so that my wife and kids can do their
+email and browsing without worrying about connecting to the net -- and
+the PPP daemon never panics since it's not running (which used to
+happen occasionally with my old setup).
+
+Note, I work for Nortel, so my recommendation may be biased. :)
+
+The box I'm using is really intended for small business office use,
+however there is a consumer version available for a lot less money.
+See http://www.netgearinc.com/products/routerhome.shtml for details.
+
+YMMV,
+Christopher
+---
+Christopher Rath (4Y10)  SKY
+Sr. Mgr., Desktop Computing Support
+Internal ESN: 395-3141 (voice)   393-3283 (fax)
+External:     613-765-3141 (v)   613-763-3283 (f)
+mailto:Christopher.Rath@NortelNetworks.com

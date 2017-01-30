@@ -1,0 +1,458 @@
+#define ETO environment(this_object())
+#define SAVE "players/pestilence/closed/dark/members/"
+#define CMD_DIR "/players/pestilence/closed/dark/cmds/"
+#define tpn      ENV()->query_real_name()
+#include "/players/pestilence/define.h"
+#include "/players/pestilence/closed/dark/obj/hb.h"
+static string *cmds;
+static status wielded;
+static int no_go_time;
+static int no_go_over;
+static object wielded_by;
+static int broke;
+static int eff_wc;
+static int misses,hits;
+static int save_flag,class_of_weapon;
+static object hit_func;
+static string type;
+static string *message_hit;
+object offwep, firstwep;
+int spell_delay,combat,glvl;
+int recruit;
+int offwep_wc;
+
+
+
+
+id(str) {
+  if(previous_object()) {
+/*
+if(this_player()->query_guild_rank() < 8){
+return str == "generic_wc_bonus"|| str == "dknight_ob"  ||  str == "no_spell"  ||  str == "dark aura" || str == "aura" || str == "notarmor"  || str == "pro_object"  || str == "dark_sight_object"  || str == "no_mini"  || str == "party_object"; }
+*/
+  if(!test_my_wear(previous_object())) {
+return str == "generic_wc_bonus"|| str == "dknight_ob"  ||  str == "no_spell"  ||  str == "dark aura" || str == "aura" || str == "notarmor" || str == "pro_object"  || str == "dark_sight_object"  || str == "no_mini"  ||  str == "pesty_guild"; }
+
+}
+return str == "generic_wc_bonus"|| str == "dknight_ob"  ||  str == "no_spell"  ||  str == "dark aura" || str == "aura" || str == "pro_object"  || str == "dark_sight_object"  || str == "no_mini"  ||  str == "pesty_guild"; }
+
+test_my_wear(ob) {
+  int me, mylevel,  atype;
+  me = environment();
+  if(!me) return;
+  mylevel = me->query_level();
+ if(mylevel < 5) return 1;
+  atype = ob->query_type();
+   if(!atype) return;
+ if(mylevel < 20) {
+ if(ob->query_type() == "shield"){
+   tell_object(USER, "This armor would block the path of darkness.\n");
+   return 0;
+   }
+   if(ob->query_type() == "helmet"){
+   tell_object(USER, "This armor would block the path of darkness.\n");
+   return 0;
+   }
+   if(ob->query_type() == "boots"){
+   tell_object(USER, "This armor would block the path of darkness.\n");
+   return 0;
+   }
+  if(ob->query_type() == "armor" && !no_knight(ob)){
+   tell_object(USER, "You wouldn't want to embarrass yourself wearing this.\n");
+   return 0;
+   }
+   if(ob->query_type() == "ring"){
+   tell_object(USER, "Rings would hurt your wielding ability!\n");
+   return 0;
+    }
+   if(ob->query_type() == "underwear"){
+   tell_object(USER, "Its better to let air flow easier to your nether regions!\n");
+   return 0;
+    }
+   if(ob->query_type() == "Necklace"){
+   tell_object(USER, "A necklace would seem to choke you!\n");
+   return 0;
+    }
+    else return 1; }
+}
+
+no_knight(object ob){
+if(call_other(ob,"id", "habit") || call_other(ob, "id", "robe") ||
+   call_other(ob, "id", "veil") || call_other(ob, "id", "robes") ||
+   call_other(ob, "id", "cloak") || call_other(ob, "id", "tunic") ||
+   call_other(ob, "id", "cape") || call_other(ob, "id", "wings") ||
+   call_other(ob, "id", "duster") || call_other(ob, "id", "vest") ||
+   call_other(ob, "id", "coat") || call_other(ob, "id", "shirt") ||
+   call_other(ob, "id", "hide") || call_other(ob, "id", "skin"))
+   return 0;
+else return 1;
+}
+reset(arg) {
+  if (arg) return 0;
+}
+
+long() {
+write("A dark aura engulfs your body.\n"+
+      "You sense an air of honor, with a touch of evil\n"+
+      "in your soul.\n"+ 
+      "<"+BOLD+"dhelp"+NORM+"> to see the dark order help files.\n");
+  }
+get() { return 1; } /* changed to return 1 by verte for wizs to clone */
+
+extra_look() {
+write(environment()->query_name()+" is encircled with a "+HIK+"dark"+NORM+" aura around "+
+  environment()->query_possessive()+" body.\n");
+}
+init() {
+  object s;
+if(environment(this_object()) == this_player()) {
+  if(!restore_object(SAVE+tpn)) {
+   save_object(SAVE+tpn);
+}
+  }
+  if(tp->query_level() < 20) {
+    tp->set_guild_name("Dark Order");
+}
+add_action("restore_me","drestore");
+add_action("save_me","dsave");
+add_action("guild_quit","guild_leave");
+add_action("restore_me","drestore");
+add_action("guild_update","gupdate");
+add_action("guild_quit","leave_guild");
+add_cmds();
+ if(this_player()->query_level() < 80){
+write(""+HIK+"I'm changing up the format of some commands so some things"+NORM+"\n"+
+""+HIW+"might bug, don't go whining, i know you won't just report it to me, Thanks"+NORM+".\n");
+return 1;
+}
+init_callout();
+}
+
+init_callout() {
+if(ETO) {
+while(remove_call_out("align_hurt") != -1);
+call_out("align_hurt",3);
+while(remove_call_out("light_damage") != -1);
+call_out("light_damage",3);
+while(remove_call_out("test_str") != -1);
+while(remove_call_out("test_str") != -1);
+call_out("test_str",3);
+while(remove_call_out("test_stats") != -1);
+call_out("test_stats",3);
+while(remove_call_out("f_you") != -1);
+call_out("f_you",5);
+while(remove_call_out("f_youwiz") != -1);
+call_out("f_youwiz",10);
+}
+}
+query_auto_load() {
+    return "/players/pestilence/closed/dark/dark.c:";
+}
+
+drop() {return 1;}
+
+/* Light hurts Draw back Thanks to Eurale*/
+light_damage() {
+int hurt;
+
+if(!environment()) return 1;
+if(!environment(environment()) || environment(environment())->no_light_damage()) return (call_out("light_damage", 6), 1);
+hurt = set_light(0);
+
+if(environment(TO)->query_level() < 21) {
+
+  if(hurt > 1)
+  tell_object(environment(TO),
+    HIK+"The light burns the darkness in your soul, causing extreme pain and discomfort...\n"+NORM);
+
+if(hurt < -1 &&
+  environment(TO)->query_mhp() != environment(TO)->query_hp())
+    tell_object(environment(TO),
+      HIK+"Darkness comforts your soul...\n"+NORM);
+  if((environment(TO)->query_hp() - hurt) > 0) {
+    if(hurt > 5) hurt = 5;
+    if(hurt < -5) hurt = -5;
+if(environment(TO)->query_interactive()){
+    environment(TO)->add_hit_point(-hurt);
+    environment(TO)->add_spell_point(-hurt);
+/*
+    if(me->query_hp() < 19) kill_me(me);
+*/
+}
+  }
+call_out("light_damage",6);
+return 1; }
+}
+
+/* Good alignment draw back Thanks to Eurale*/
+align_hurt() {
+if(ETO) {  /*  needed for startup  */
+  if(living(ETO)) {
+   if(USER->query_alignment() > 10) {
+    tell_object(environment(this_object()),
+      ""+HIK+"You feel pain from the goodness inside you"+NORM+".\n");
+    if(interactive(ETO)) 
+    ETO->hit_player(25 + random(20), "other|pestilence");
+    call_out("align_hurt",random(30));
+    return 1; }
+  else {
+    call_out("align_hurt",random(30));
+ }
+   }
+}
+}
+
+
+/* Magic stat of 20 Drawback */
+test_stats() {
+if(ETO) {
+  if(living(ETO)) {
+if(environment(TO)->query_level() < 21) {
+  if(USER->query_attrib("mag") > 20) {
+ tell_object(environment(TO),HIR+"\nThe ancients powers of Darkness rids you of your extra magic.\n"+NORM);
+    USER->set_attrib("mag",20); 
+    USER->save();
+    call_out("test_stats",3);
+    return 1;
+ }
+  else{
+call_out("test_stats",3);
+ }
+}
+}
+}
+}
+
+test_str() {
+if(ETO) {
+  if(living(ETO)) {
+if(environment(TO)->query_level() < 21) {
+  if(USER->query_attrib("str") > 19) {
+ tell_object(environment(TO),HIR+"\nThe ancients powers of Darkness rids you of your strength.\n"+NORM);
+    USER->set_attrib("str",19); 
+    USER->save();
+    call_out("test_str",3);
+    return 1;
+ }
+  else{
+call_out("test_str",3);
+ }
+}
+}
+}
+}
+
+f_you(){
+if(ETO) {
+  if(living(ETO)) {
+  if(USER->query_real_name() == "grit") {
+    USER->set_guild_name(0);
+      USER->add_guild_exp(-USER->query_guild_exp());
+    USER->set_guild_rank(0);
+    USER->set_title(HIR+"is annoying and a loser. "+HIW+"("+HIK+"Annoyer of the Order"+HIW+")"+NORM+"");
+    USER->set_home("/room/church");
+    tell_object(environment(this_object()),
+      ""+HIK+"You have annoyed this guild long enough.  You are no longer a  part of this guild."+NORM+".\n");
+ move_object(USER, "/room/church.c");  
+      destruct(this_object());
+return 1; }
+else
+return 1;
+}
+}
+}
+
+f_youwiz()
+{
+    int manager, wizlevel;
+
+    if(!ETO || !living(ETO)) return 0; 
+
+    /* init our shit */
+    manager = USER->query_real_name();
+    wizlevel = USER->query_level();
+    /* if they don't have enough strength, we bail out. */
+    if(wizlevel < 20)
+        return 0;
+
+    /* now we do our checking */
+    
+    /* if we are too weak, we get our bonus */
+    if(manager == "puppy" || manager == "pestilence" || manager == "vertebraker" || manager == "sparkle"  || manager == "forbin")
+         return 0;
+    if(wizlevel > 20 && wizlevel < 100)
+    {
+        tell_object(environment(TO), HIR+"\nYou don't have permisson for this guild object.\n"+NORM);
+        destruct(this_object());
+        return 1; 
+    }
+
+
+}
+
+guild_update() {
+    if (USER->query_attack()){
+        write("You can't update while fighting.\n");
+        return 1;
+    }
+  move_object(clone_object("/players/pestilence/closed/dark/dark.c"),tp);
+  write("<"+
+HIK+"Dark Order"+NORM+"> Guild Status Updated.\n");
+  destruct(this_object());
+return 1; }
+
+
+add_cmds() 
+  {
+   int x; string cmd;
+   cmds = get_dir(CMD_DIR);
+   for(x=0;x<sizeof(cmds);x++)
+   if(sscanf(cmds[x],"%s.c",cmd)) 
+     {
+     if(cmd == "\"") 
+       { 
+       add_action("cmd_hook"); add_xverb(cmd); 
+       }
+     else if(cmd == "'") 
+       { 
+       add_action("cmd_hook"); add_xverb(cmd); 
+       }
+     else add_action("cmd_hook",cmd); 
+     }
+   add_action("cmd_emote"); add_xverb(":");
+  }
+
+cmd_hook(str) 
+  {
+  string verb;
+  verb = query_verb();
+  /* sloppy communication bug fix */
+  if(verb == "'") 
+   { 
+    call_other(CMD_DIR+"say.c","main",str); 
+      return 1; 
+    }
+  if(call_other(CMD_DIR+verb+".c","main",str)) 
+    return 1; 
+  }
+
+cmd_emote(str)
+  {
+  if(!str) return;
+  write("You "+str+"\n");
+  TP->remote_say(capitalize(TPRN)+" "+str+"\n");
+    return 1;
+  }
+
+guild_login(str) {
+  if(!str){write("Where do you want to login? (church/guild)\n"); return 1;}
+  if(str == "church") {tp->set_home("/room/church.c"); }
+  if(str == "guild") {tp->set_home("/players/pestilence/closed/dark/room/hall.c"); }
+ write("<"+HIK+"Dark Order"+NORM+"> Your login position has been changed.\n");
+  return 1;
+}
+
+guild_quit() {
+      tp->set_guild_name(0);
+      tp->add_exp(tp->query_guild_exp());
+     tp->set_home("room/church");
+      tp->add_guild_exp(-tp->query_guild_exp());
+      tp->add_guild_rank(-tp->query_guild_rank());
+          tp->add_exp(-(tp->query_exp()/2));
+      tp->set_attrib("sta",1);
+          tp->reset(1);
+          command("save",tp);
+          write("Silly fool, see u on the flip side!\n");
+          destruct(this_object());
+return 1; } 
+
+save_me(object ob) {
+  string file;
+  int tellme;
+  if(ob) tellme++;
+  if(!ob) ob = ENV();
+  file = "players/pestilence/closed/dark/members/" + ob->query_real_name();
+  if(!save_object(file)) {
+    if(tellme) tell_object(ob,"Save error...\n");
+    return 0;
+    }
+  if(tellme) tell_object(ob,"Saving the Dark Order...\n");
+  write(""+HIK+"Saving the Dark Order"+NORM+"...\n");
+  return 1;
+
+}
+
+
+restore_me(object ob) {
+  string file2;
+  int tellme;
+  if(ob) tellme++;
+  if(!ob) ob = ENV();
+  file2 = "players/pestilence/closed/dark/members/" + ob->query_real_name();
+  if(!restore_object(file2)) {
+  if(tellme) tell_object(ob,"Dark order restoration order...\n");
+    return 0;
+    }
+  if(tellme) tell_object(ob,"Your mark of the Dark Order darkens...\n");
+  return 1;
+}
+
+gen_wc_bonus(){
+        int total,str_bonus,dex_bonus;
+        total = 0;
+   if(no_go_time < time()) no_go_over = 0;
+   if(no_go_over >= 2) return;
+   no_go_time = time();
+   no_go_over += 1;
+        if(!USER) return 0; /* just a test!  added by verte 6.23.01 */
+/*
+        str_bonus = USER->query_attrib("str");
+*/
+            str_bonus = present("dknight_ob",this_player())->query_combat();
+/*
+             if(present("dknight_ob",TP)->query_offwep()) dex_bonus = 6+random(10);
+*/
+        
+        
+        /********  This only happens if no Wep is wielded **********/
+        if(USER->query_weapon() == this_object()){
+                total += clawstwo();
+                total += clawstwo();
+        }
+        /**********************************************************/
+        
+
+
+        total += ((1+random(str_bonus))/2); 
+/*
+        total += str_bonus + dex_bonus; 
+*/
+        
+        if(!environment(this_object())->query_attack()) return 0;  /* added by verte 6.23.01 */ 
+
+if(USER->query_real_name() == "pestilence") tell_object(USER, "TOTAL IS: "+total+".\n");
+        return total;
+}
+
+
+set_offwep(ob) { offwep = ob; }
+query_combat_method() { return 3; }
+set_offwep_wc(num) { offwep_wc = num; }
+add_offwep_wc(num) { offwep_wc += num; }
+query_offwep_wc(num) { return offwep_wc; }
+query_offwep() { return offwep; }
+set_firstwep(ob) { firstwep = ob; }
+query_firstwep() { return firstwep; }
+remove_offwep() { offwep = 0; }
+remove_firstwep() { firstwep = 0; }
+
+add_spell_delay(num) { spell_delay += num; }
+set_spell_delay(num) { spell_delay = num; }
+query_spell_delay() { return spell_delay; }
+add_recruit(num) { recruit +- num; }
+query_recruit(num) { return recruit; }
+query_grank(num) { return combat; }
+add_combat(num) { combat += num; }
+query_combat(num) { return combat; }
+add_glvl(num) { glvl += num; }
+query_glvl(num) { return glvl; }

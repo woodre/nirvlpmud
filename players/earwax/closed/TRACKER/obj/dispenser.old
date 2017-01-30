@@ -1,0 +1,101 @@
+/* *************************************************************************
+ * Dispenser
+ *
+ * - Earwax 9/15/03
+ *
+ * *************************************************************************
+*/
+
+#include "../defs.h"
+
+inherit WAXFUNS;
+
+int get() { return 0; }
+string short() { return HIK+"Legendary PK Tracker Dispenser"+NORM+NORM; }
+
+status id(string arg) {
+  return (  arg == "dispenser" || arg == "tracker dispenser" 
+         || arg == "legendary pk tracker dispenser" || arg == "box");
+}
+
+void long() {
+  write("\
+This is a large metal box with a couple buttons on it.  A small\n\
+plate on it indicates that you can 'dispense tracker' to get a\n\
+PK tracker, or 'info tracker' to get some information about the\n\
+PK tracker.\n\n");
+write(HIR+"Note: You must be at least level 19 in order to receive a tracker."+NORM+"\n");
+}
+
+status show_info(string arg) {
+
+  if (!arg || arg != "tracker") {
+    notify_fail("syntax: info tracker\n");
+    return 0;
+  }
+
+  write(HIK+"Legendary PK Tracker"+NORM+NORM+"\n\
+The PK tracker was developed by Earwax and Jareel to provide a standard of \n\
+judging the worth of player-kills.  It's a small device that will autoload \n\
+on a player, and provide a means of tracking their kills, deaths, and the \n\
+point values of their kills.\n\n");
+
+write("\
+The way points break down is fairly complex, but in a nutshell, players \n\
+below level 10 are worth no points, players from level 11 to 19 are worth \n\
+their level in points, and there's an additional point per 10 x-levels of \n\
+the target.  The killer also gains a point per 100 PK points of their victim. \n\
+In other words, a level 19+9 player with 230 PK points would be worth 19+1+2 \n\
+base points.  Finally, the tank of a fight will gain 2 additional points, \n\
+although for everyone hitting behind him, he loses 1 point.  In other words, \n\
+for each additional player killing the victim, everyone loses 1 point, but \n\
+the tank gains a bounus of 2 points. \n\n");
+
+write("\
+The reason for the points being done this way is simply an attempt to encourage \n\
+more players to attack groups, to attack stronger pkers (rather than attacking \n\
+the weak link every time), and to slightly discourage the usual pack-hunting. \n\
+Solo kills are more rewarding under this system, as is attacking strong pkers \n\
+and higher level players.  Lastly, kills recorded by players under level 19, \n\
+whether they have a tracker or not, will not award points.  This is to create \n\
+a more even playing field, where players won't be trying to stay at level 13 to \n\
+pull kills or prey on other low level chars, if all players are over level 19 \n\
+it's a more even playing-field, and the integrity of the points is more valid. \n\
+In other words, no Legions or newbie-killers.  \n\n\
+"+HIR+"Comments, bugs, and suggestions can be mailed to Earwax and/or Jareel."+NORM+"\n");
+  return 1;
+}
+
+status dispense_tracker(string arg) {
+  object ob;
+
+  if (!arg || arg != "tracker") {
+    notify_fail("syntax: info tracker\n");
+    return 0;
+  }
+
+  if (present(TRACKER_ID,this_player())) {
+    notify_fail("You already have a PK Tracker.\n");
+    return 0;
+  }
+
+  if ((int)this_player()->query_level() < 19) {
+    notify_fail("You must be level 19 to receive a PK Tracker.\n");
+    return 0;
+  }
+
+  ob = clone_object(TRACKER_OBJ);
+  if (!ob) {
+    notify_fail("Object did not clone.  Mail Earwax.\n");
+    return 0;
+  }
+  write("Congratulations, you now have a PK Tracker.  Good luck and happy\
+ hunting.\n");
+  move_object(ob,this_player());
+  return 1;
+}
+
+void init() {
+  add_action("dispense_tracker","dispense");
+  add_action("show_info","info");
+}

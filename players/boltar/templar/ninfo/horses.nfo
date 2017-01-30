@@ -1,0 +1,26 @@
+                -=[ Horses ]=-
+
+
+Horses can be obtained from the Stables southwest of the
+  Castle, from Harker Bolmont, the StableMaster, for a
+  nominal fee.
+
+Your horse is your friend.. if it dies, you lose it.
+Keep it well-fed, and discharge it to Simon's care when you are done...
+Horses are not exactly great in combat, so keep 'em out of harm's way!
+(Some spells will cost additional if you are mounted)
+
+Commands:
+
+ mount/dismount - ...
+ hbag / hunbag    - Place something in, or
+                  Take something out from your horse's saddle bag
+                  [hunbag all will take all items from the saddle bag]
+ listbag        - List all items in the saddle bag
+ tie / untie    - Tie your horse off it doesn't wander off / Untie it
+ silence        - Silence your horse if it gets too noisy
+ lead           - Begin leading your horse around, in case you can't ride it
+                  certain places
+ hname          - Name your horse
+ ride           - Ride your horse sevral rooms at a time:
+                 'ride <dir1, dir2, ..dir5>'

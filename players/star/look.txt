@@ -1,0 +1,26 @@
+The boobs are done like this..
+extra_look_two() {
+return this_object()->query_adj()+" "+this_object()->query_bust()+" "+this_object()->query_cup()+" breasts";
+}
+
+Looks all confusing cos it's getting values from what the player sets their boobs to be
+Basic seems to be like this..
+extra_look_two() {
+"blah"
+}
+
+The star has this..
+
+extra_look()
+{
+
+/* verte fixed this to display "You have" etc. */
+  if(environment() == this_player())
+    write("You have a small " + YELLOW + "gold star" + END + " tattoo on " +
+      "your inside right ankle.\n");
+  else write(environment()->query_name() + " has a small " +
+      YELLOW + "gold star" + END + " tattoo on " +
+      possessive(environment()) + " inside right ankle.\n");
+}
+
+I dunno the difference between the extra_look and the extra_look_two..  shrug

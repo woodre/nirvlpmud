@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/mythos/awep/wakizashi","/players/sado/shop/rose","/players/scathe/armor/suit","/players/ultramagnus/darkarmor","/players/ultramagnus/darkarmor","/players/angel/area/stargate/obj/bullets","/players/hippo/heals/blood","/players/pathfinder/detroit/weapons/machete","/players/maledicta/cont/armor/rarmor","/players/hawkeye/armor/converse","/obj/weapon","/players/mythos/awep/kama","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/snow/WEAPONS/glass_sword","/players/wren/Area/starbug/items/lunchbox","/players/mythos/aarmor/do","/players/wren/Area/starbug/items/laundry","/players/wren/Area/starbug/items/indianheaddress","/players/hippo/armour/boots","/obj/weapon","/players/angel/area/school/obj/charm_01","/obj/weapon","/obj/weapon","/players/mythos/awep/claw","/players/ultramagnus/darkarmor",})
+shorts ({"Wakizashi","A beautiful red rose blossom","Black Suit","Dark Rider Chainmail","Dark Rider Hood","A clip of bullets [50]","[1;31mdrops of blood[0m","A deadly looking machete","leather armor","[31mConverse All-Stars[0m","Longsword","kama","A Priest's Robes","Glass Sword","a lunch box","Do-Maru","Lister's dirty laundry","a tiny indian headdress","anti-blood boots","Spear","Charm Bracelet","Axe","Rabbit foot","claws","Dark Rider Gloves",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

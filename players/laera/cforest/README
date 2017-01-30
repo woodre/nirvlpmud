@@ -1,0 +1,32 @@
+Chocobo Forest
+
+This area contains 24 rooms, each with a forest description.  Not everyone of the room descriptions are different, however, I have included the room templates for the forest.  Rooms cf01.c and cf12.c have their own room descriptions.  For the rest of the rooms I have 4 templates, and I've made sure that none of the descriptions that are the same touch another room that is the same.
+
+Here is a map of the area:
+
+
+				X     X
+				
+			   X	   X       X
+		
+		      X    X       X       X     X
+		      
+		      X    X       X       X     X
+		      
+		      X    X       X       X     X
+		      
+		           X       X       X
+		           
+		                   X
+		                   
+It's as close to a dome as I could get it!
+
+
+There are 4 different npcs in this area.  They are all named Chicobos, but each type is a different one.  The playful chicobo, shy chicobo and singing chicobo are all level 7 and carry the same object, a golden feather.  The chubby chicobo is a level 9 and carries a chocowis.  I've placed 9 of the smaller chicobos in the area and 3 of the larger ones for a total of 12 altogether.  All carry items and none carry gold.
+
+The feather is a treasure item and has a value of 300 gold to sell and a weight of 1.  As well, it has a tickle emote that works in the room and from afar.  
+
+The chocowis is also a treasure item and has a value of 400 gold and a weight of 2.  It has a room emote.
+
+In the future, when more areas are created, this area will be incorporated into a quest.  The Chocobo Forest originates from the Final Fantasy 8 game, and I will be expanding on this theme in the near future.
+

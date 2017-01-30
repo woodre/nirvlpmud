@@ -1,0 +1,21 @@
+**************
+
+                     Setal
+
+Syntax:    setal <msg>
+
+Desc:
+           This command allows you set your alignment to whatever 
+           rather than the usual "white lord, nuetral, lord of evil"
+
+Warning:   Keep brief or you'll end up with a multiple line 
+           short_desc. And please keep message appropriate.
+
+Example:   setal beige
+                  results 
+           Bob the Shiney Wiz (beige) is now displayed 
+
+Related:   setaln, title
+
+
+**************

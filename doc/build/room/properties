@@ -1,0 +1,18 @@
+(c) Vertebraker 2001
+
+Specific properties within room.c have been added, because exit() and handling
+of clearing fight area code and such is still not being handled properly
+by wizards.
+
+A property alone is handled by the game as one string, more than one property
+is added to an array. You can still have non-fight rooms and non-magic rooms
+at the same time, and this system makes it much easier.
+
+Examples are in /open/examples/props/
+
+VALID PROPERTIES:
+
+       no_follow    no_teleport    no_magic
+       no_fight     spar_area      fight_area
+
+These should be self explanatory -- for clarification, contact a senior wizard.

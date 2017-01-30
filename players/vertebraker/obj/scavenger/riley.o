@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/blue/weapons/obsidian_sword","/players/ultramagnus/darkarmor","/players/snow/WEAPONS/hon_sword","/obj/weapon","/players/puppy/s/eq/quill","/players/mythos/aarmor/do","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/rags","/obj/level_list","/players/scathe/armor/hood","/players/snow/WEAPONS/glass_sword","/players/hippo/heals/bubbles","/players/mosobp/areas/TEMPLE/OBJ/tiara","/obj/weapon","/players/puppy/s/eq/apron","/players/snow/WEAPONS/ice_star","/players/hippo/armour/endotheel","/players/hippo/heals/dna_repair","/players/wren/Area/starbug/items/mirror","/obj/armor","/players/ultramagnus/bsack","/players/wren/Area/starbug/items/jacket","/players/scathe/armor/suit","/obj/armor","/players/saber/stuff/mic",})
+shorts ({"An Obsidian Sword","Dark Rider Hood","A finely honed longsword","A gardening hoe","A quill","Do-Maru","Ring of Death","Peasant Rags","A list of the top players","Hood","Glass Sword","[1;36mbubbles of 7up[0m","A Princess' Tiara","Spear","An apron","Ice Shuriken","endotheel","[32mdna repair string[0m","a slim pocket mirror","a hat","A blue sack","Lister's leather jacket","Black Suit","A Jedi Cloak","A microphone",})
+found ({0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

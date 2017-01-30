@@ -1,0 +1,8 @@
+TOGGLE
+
+usage: 'toggle'
+
+Most guild spells cost a certain number of points.  The 'toggle' command 
+lets you choose whether your spell points will be drained first, or your
+shadow points will be drained first.  In either case, if one runs out the 
+other will be drained.  

@@ -1,0 +1,29 @@
+*******************************************************************
+
+
+Name:      Destruct (Destruct)
+
+Desc:      This is a counterpoint of clone. You use this command to 
+           remove an object from your immediate surroundings or 
+           inventory. Be considerate and do not dest things in public
+           areas like green that are not yours or that are still in 
+           use by others.
+    
+
+Level:     21
+
+Warning:  If you dest a monster it drops all its current inventory
+          as it departs so if removing a bugged monster remember 
+          not to leave things for players to find. Don't dest mobs
+          for players and don't dest players without good reason.
+
+
+Syntax:   destruct bag
+
+Example:  destruct bag
+Result:   Ok.
+          The bag gets destroyed and you will need a new one.
+
+Related:  clean, dest
+
+*******************************************************************

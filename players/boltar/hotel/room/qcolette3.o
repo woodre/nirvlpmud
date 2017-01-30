@@ -1,0 +1,29 @@
+no_clean 0
+name "cyberman's head"
+alias "head"
+short_desc "A cyberman's head"
+long_desc "The metal head of a cyberman. It looks like it can be worn.The eyes seem to glow."
+worn_tag_short_flag 0
+buy_value 0
+value 600
+weight 4
+type "helmet"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 2
+res 0
+siz 0
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"armor",})
+params ({"physical",2,0,"do_special",})
+enchantments 0

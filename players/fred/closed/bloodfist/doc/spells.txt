@@ -1,0 +1,354 @@
+nomad / mercenaries
+
+0
+vigor    - standard spell_object()
+rest     - recouperate your endurance [prevent movement]
+preserve - preserve a corpse so it doesn't decay as quickly
+*prepare
+1
+light/extinguish torch - gain light
+sacrifice corpse       - gain honor potential from corpse
+2
+bash        - spell_object() head attack, force NPC to attack you
+fatal       - hit_player() chance to kill NPC
+bloodcloak  - make yourself invisible (honor req 200)
+3
+examine     - get info on target
+attack      - same as descend, hit_player() starter attack
+throw       - spell_object() + hit_player()
+bloodprayer - minor heal spell (honor req 400)
+4
+guard       - protect target
+battle cry  - increased detoxing & healing [dur]
+socket      - ability to socket weapons (must be wep lvl 8+)
+bloodboil   - move hp to sp at 3/hb (honor req 650)
+5
+concentrate - increased combat attributes [dur]
+stun        - spell_object() rm self and NPC from combat
+study       - fight better against NPC type
+bloodstep   - teleport back to guild hall (honor req 800)
+6
+dodge         - chance to dodge attack - togglable ability
+absorb corpse - adds to "charge" of wep
+pain aura     - gain endurance based on dmg taken [dur]
+bloodomen     - great heal spell (honor req 900)
+7
+iron skin   - AC bonus based on dmg taken. if take 100 in a hb, AC += 15[dur]
+control     - basic pet of NPC
+bloodfury   - gain multiple attacks for duration of combat (honor req 1100)
+8
+bloodlust           - dmg++.  end constantly maxed, then drops to half
+                      (honor req 1100)
+construct bloodward - heals bloodfist in the room.  req 3 corpses.
+
+dur: bloodboil, battlecry, guard, concentrate, dodge, pain aura,
+     iron skin, bloodfury, bloodlust  [BB BC BF BL PA DG CC GD IS]
+
+duration abilities: 
+
+BB bloodboil,    hp -> sp (3/hb)
+BC battlecry,    detox & healing++
+GD guard,        protect a player/npc
+CC concentrate,  gain attribute bonuses
+DG dodge,        chance to take 0 dmg in a round
+PA pain aura,    endurance is reversed
+IS iron skin,    ac bonus
+BF bloodfury,    multi attack
+BL bloodlust     dmg++
+
+* = not coded
+
+strength gains 1 at lvl 2,4,5,6,7,8 for a total of str 26
+
+5.6:
+coded rest
+coded sacrifice corpse
+coded iron skin
+5.7:
+coded control
+rm'd dash from spell_list
+5.10:
+coded bloodlust
+added and coded pain aura - reverses endurance gain in combat
+coded dodge
+coded absorb corpse
+coded stun
+coded attack
+coded fatal
+coded torch commands light/extinguish
+5.13:
+coded study
+coded guard
+rm'd socket spells from spell_list
+5.14:
+coded examine
+wep_shadow work, created wep_daemon
+(left off at soul gem in daemon)
+5.16:
+coded some rooms, remapped out ghall
+finished ~/desert area
+5.19:
+fixed some issues/errors with advancing guild rank.
+coded trial2.c
+coded trial3.c
+5.20:
+coded arena entry details
+added code to Erilon and Atheos to fight in arena
+coded trial4.c (5 and 8 are done)
+5.21:
+coded trial7.c
+blocked mud attack spells & invisible
+coded remove all command
+5.23:
+coded logit command
+coded personal log viewer command
+added auto-saving code to channel daemon
+added a channel shout to Erilon when players advance
+added some code to arena.c for the 60 second time_out
+coded players getting their corpse back when they die in the arena
+coded swap command
+added 'unsheath all' to unsheath ability (and fixed a problem)
+coded trial6.c
+coded well.c
+coded hall.c
+began coding private.c
+5.24:
+coded retrieve for thrown weapons and made mods to throw, wep_shadow
+5.28:
+added check to hall.c for entering private room if already exists and occupied
+added remove player cmd to private.c
+modified room_guard and private so the time_out on invitation works
+added pk logging
+coded sheath all cmd (will not sheath wielded weapon)
+coded bfhelp command (help.h) and began coding help files
+fleshed out honor titles, put into alignment
+5.29:
+made changes to choose, unchoose and chosen.
+added 10% honor loss/gain if die to a fellow bloodfist, channel shout
+worked on help files
+5.30:
+fixed some problems with unchoose and swap
+added toggle list to toggle command
+added a tier of wep xp vals for "special case" weps like elemental weps.
+worked on help files
+5.31:
+worked on help files
+6.02:
+implemented endurance in armor.h and wep_shadow.c  endurance_bonus()
+6.03:
+added blood crystal identity to gob
+coded bloodcloak.h  (glvl 2 h 200)
+coded bloodprayer.h (glvl 3 h 400)
+coded bloodboil.h   (glvl 4 h 650)
+coded bloodstep.h   (glvl 5 h 800)
+coded bloodomen.h   (glvl 6 h 900)
+6.04:
+coded bloodfury.h   (glvl 7 h 1100)
+incorporated honor abilities into regular guild levels
+changed wep_shadow to give bonus dmg based on actual numbers not %
+coded preserve corpse - extend length to 10 minutes
+coded construct bloodward
+coded honor display and top honor display in Erilon.
+debugged honor_daemon - need to figure out why saving size rather than value?
+6.06:
+accidentally copied old settings.h over new one.  I added in spell funcs
+  for above spells.  I think the only thing left is to copy endurance_bonus()
+  back into it from the settings.h I have at home.  *sigh*
+Activity Bonuses:
+  attack: +2
+  bash:   +2
+  fatal:  +1
+  stun:   +2
+  throw:  +2
+  vigor:  +2
+coded obj/chest.c for temp item storage, in armory.c
+coded wep sharpening/repair in blacksmith.  cost varies.
+coded r/graveyard.c
+coded r/entrance_in.c
+coded r/entrance_out.c
+coded NPC/merchant.c
+coded r/open.c
+coded r/meeting.c
+coded obj/mboard.c (from Snow's dervish board)
+added 3 active dur spell limit to [BB BC BF BL PA DG CC GD IS]
+debugged guard spell
+6:07:
+added lvl reqs to beastmaster.c for advancing: 7,10,13,15,17,19,+3,+5
+added gxp formula to calc_honor() and blocked gxp command
+blocked dur abilities to 2, 3 after 240 attribs
+added a log for when players die in the arena to arena_daemon
+coded obj/arena_obit.c and added it to arena.c
+coded combat monitor for dur abilities (needs tweaking)
+6.09:
+debugged bloodfury npc so it won't die
+coded power/set_title.h and daemon/title_daemon.c
+6.10:
+coded obj/desert_wall.c (shield with +30 mit bonus)
+6.12:
+debugged blacksmith weapon forging
+coded some more equipment and added selling code to blacksmith.c
+coded water heal to be sold at merchant.  adds to endurance.
+coded r/ravine1.c
+coded r/ravine2.c
+began coding NPC/guardian.c - guard, membership.
+(darwinian hierarchy, honor vs honor pk bonuses)
+6.13:
+more work on guardian.c
+coded NPC/guard.c w/ channel shout for r/entrance_out.c
+coded leaving guild code w/ autoload scar object (obj/scar.c)
+6.14:
+coded r/lockers.c
+modified help.h and worked on help files
+6.16:
+worked on and finished help files
+debugged channel muffle code
+coded a "zeus" command for logging bugs
+added examine room to examine.h
+6:17:
+incorporated incremental penalties for non-standard weps in wep_shadow
+coded pk obits and added to r/armory.c
+coded pk logging but not fully tested (crashed mud twice)
+6.18:
+RECODED SPELL DAEMON
+worked on weapon daemon code a bit
+added timer code for bloodprayer and bloodomen
+6.19:
+added random movement to trial2.c, but NOT hunting
+modified endurance_percent values.  6,14,20 -> 16,18,20
+coded a way to climb the mountain, although not sure what to do with it
+added guild monitor code - but needs to be fixed by V.
+added guild death code but couldn't do what i wanted with it.  resets end now
+6.20:
+coded player shadow
+coded a bfm command on the channel to talk to only guild members
+coded joining the guild code and debugged
+added entry code to ~/desert/r/ec4.c and modified desert_daemon.c slightly
+6.21:
+debugged joining with Cobain and created him a test char
+coded desert1.c and the related code.  first part of the random movement desert
+6.23:
+coded r/desert.c, as well as r/desert2.c, its treasure and NPC
+coded the greyhorn equipment for r/desert3 (not yet coded)
+6.24:
+verte went inactive
+7.08:
+added "guild age" - thanks to Mal for the code.
+modified command hook to not use a predefined array of spell names - tnks mal
+7.09:
+replaced ac bonuses with shadow of hit_player in player_shadow.c
+7.10:
+added in player shadow with verte's help.  removed wield fun from gob.
+worked on the NPCs a bit.  Added water heal and alt_attacker side attack.
+did some testing, tweaked endurance (faster drain) and wc (lower)
+tested and tweaked bloodlust and bloodfury
+7.11:
+added combat messages for bloodlust and pain aura in obj/combat_messages.c
+fixed, tested and tweaked honor daemon
+7.15:
+added free gem award distribution through gem_seller.c [updated help file]
+  gem counts on trial NPCs:  2,2,3,4,5,6,7,8 - currently no msg to players
+added a no_store check in the wep shadow for forged weps
+added help descriptions for inmsg/outmsg, and added a reset command
+7.16:
+coded some emotes:
+  clean weapon    - coded 7/16
+  twirl weapon    - coded 7/16
+  plunge weapon   - coded 7/16
+  pose
+  overhead weapon - coded 7/16
+  swing weapon    - coded 7/16
+  throat <who>
+fixed some errors in retrieve and the emotes
+7.17:
+Jatar joins as 1st beta tester.
+fixed query_honor() in the daemon is returning a -1 for a player that is good.
+fixed numerous help file typos
+set login to church or ghall
+fixed endurance going over max.
+fixed wc too low?  <18,-40>
+fixed not taking enough dmg?  seems low, especially for stance insane, but
+fixed the problem with the alignment cover, moved from heart_beat to shadow
+fixed unchoose:  You remove weapon 0 as a chosen weapon.
+activity too high?  maybe a little..
+not gaining any honor at glvl 0 vs regular npcs
+debugged query_dam_taken() with verte for hours...  still no luck.
+7.18:
+fixed private rooms erroring (some defines were changed)
+fixed sacrifice corpse erroring (tell_object to me was left in)
+moved honor_calc() from gob to player shadow
+setup bfist char for legion to use as a temporary test character
+removed xp loss if chosen wep is lvl 10
+removed 'gxp' as an additional command
+moved endurance code into player shadow as well.
+7.19:
+fixed the emotes.
+made resting end if endurance is maxed.
+began to use the color stance names, and added to the guild monitor.
+fixed the advanced lvl msg in the personal log
+fixed bash.  made changes to spells that call a wep's short.
+tweaked endurance, dmg, vigor dmg, trial3.
+7.22:
+fixed display problem in guild score
+fixed trial4 not loading
+fixed attack.c, removed compatability with sheathed weapons
+fixed vigor.c, removed compatability with sheathed weapons
+fixed bash.c, removed compatability with sheathed weapons
+fixed stun.c, removed compatability with sheathed weapons
+cleaned up code in many abilities that use the short() of a wep
+added a check to gupdate() for attribsb
+fixed a problem with 'guard stop' and changed color to green.
+7.23:
+fixed a bug in the player shadow regarding score and the al_title
+adjusted all honor reqs for spells
+7.24:
+added a combat monitor to arena stands via a hb in arena_daemon
+fixed wep shadow for attrib bonuses and gems
+modified the BF ring to increase in ac with glevel, from 0 to 2.
+added a portal room east of meeting.c that leads to the goportal room
+fixed weapon logging (on advancement) not working, and debugged another prob.
+adjusted attrib xp reqs so they are more smooth
+added wimpy code to trial4 and made him more stuborn to kill
+added code to beastmaster and elder so if they kill you they'll go back home
+fixed display problem in "Next" of the guild score.
+7.25:
+hopefully now fixed NPC prob and wep logging probs.
+7.26:
+worked on private rooms a bit trying to fix a bug.  made more stable.
+added check to rest if attacker isn't present
+moved guild age into a seperate cmd, joined, since it's throw away info
+added color stance names to stance cmd (thanks to colour_pad())
+added a help file for emotes
+add a desert daemon check to ~r/ravine2.c for the NPCs
+7.30:
+fixed forged not being set in weapon shadow, so bad things could happen
+fixed problem with unchoosing weps 2-4 and having lvl not reset
+added current time to channel histories
+modified names used in swap command so they filter extra baggage
+
+todo:
+  big things:
+   1) gem/wep daemon code [NPC for beauty/faerie]
+   2) flesh out and test trial NPCs
+  small things:
+   1) add to channel daemon, if security breached clone 1-2 guards every
+       so often to attack the intruders.  aggression code in NPCs
+   2) code aggressive NPC code if guild is attacked.
+   3: add a "fight is over" msg for spectators on arena fights
+   4: fix the top honor sort, first and last entries are wrong
+   5: add a way to save 1 forged wep in your room (trophy)
+   6: 'display' of the gob looks like shit cause of the \n in short
+   7: add checks for invis monsters in all spells vs npcs (fatal, etc)
+   8: add a msg when a player enters the arena to fight
+   9: add help files for the individual NPCs on what their commands are
+   10: recode how increased detoxing/healing works.  recode battle cry
+   11: joined doesn't work, at 11 days it's saying 21 days.  goes too fast
+   12: throw doesn't work vs "npc 2" - need to simplify.
+   13: not sure if dodge/iron skin even works anymore.
+   14: need to expand upon absorb corpse skill
+  later:
+   1) desert: w, then w and you're in it from church.
+              a few smaller agro npcs
+              1:12 to hit an oasis w/ a npc, "leave" exit rather than n'e's'w
+              hard monsters give: gems, eq, etc.
+   2) code weapon emotes and emotes in general
+

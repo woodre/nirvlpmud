@@ -1,0 +1,28 @@
+INFO:
+  This is a 1 room area, seperate from my other areas.
+  It connects to my castle from the north.
+  It is easy access to encourage players to use it.
+  It features once npc, dealer.c, who sells 4 heals and 2 detoxers.
+  There are no special room features.
+  Dealer features:
+    All coins from purchases go to it.
+    High heal rate random(30) each hb.
+    High spell damage, 4% of 200 dmg.
+    High hps, 1000 or so.
+    Will take coins from the ground, check when someone arrives.
+    Random chance 1:3000 and 1:50000 bad thing will occur when heals used.
+    1:1500 == damage taken, chance of death.
+    However there is a chance, that they will be spared, and get a
+      heal_self(100) instead.  if(random("luc") >= 19)
+    No limit to heal amounts.
+
+  Heal stats:
+
+   tox - heal amount - type - cost
+
+1.  7,7      50 sp    stuff/soak  318
+2.  7,7      50 hp    stuff/soak  318
+3.  -7,-7    0        stuff/soak  280
+
+  cost:  (50 * 100 * 2 / 3) - 15 == 318
+  see heal_notes for price calculation info.

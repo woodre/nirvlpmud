@@ -1,0 +1,9 @@
+no_clean 0
+emoteName "claugh"
+myMsgU "You laugh so hard your Flux generators spark and flare!"
+myMsgD "You laugh so hard at %TRG% your Flux generators spark and flare!"
+roomMsgU "%SRC% laughs so hard %SRCPOS% FluX generators spark and flare!"
+roomMsgD "%SRC% laughs so hard at %TRG% %SRCPOS% FluX generators spark and flare!"
+tellMsg "%SRC% laughs so hard at you %SRCPOS% FluX generators spark and flare!"
+farMsg 0
+owner "dune"

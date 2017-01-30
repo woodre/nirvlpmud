@@ -1,0 +1,44 @@
+expansion - the swamplands
+
+**
+
+i wrote this stuff up 'cause nobody knew to barter teeth
+at the old gurther in zeus's fallen lands, cause i was stupid
+enough to never say anything about it.  anyway this solves
+that problem and adds a bit more theme to the area.
+
+**
+
+stuff in this dir [~/swamp/x1/]:
+
+  npc.c  : the gator hunter [point of the addition]
+  g-*.c  : equipment for npc.c
+  gator_tooth.c & young_tooth.c : 
+    the altered gator teeth, ready to go in ~/swamp/OBJ/
+  path3.c : starting point for the hunter, ready
+            to go in ~/swamp/village/
+  stuff.txt : this file ;)
+
+**
+
+npc.c - A gator hunter.  Level 22 stats per mguide.
+        A 1/3 chance fearsome spell attack [hit_player 55]
+        and a 1/3 chance alt spell attack to hit any
+        pets, etc. [same dmg].  Also he can 'dodge'
+        attacks 1/5 of the time for a slight hp bonus
+        for any dmg taken.  Only carries 100-200 coins + gear.
+
+g-boots.c - ac 2 boots, nonsave, special emotes for wear/remove
+            worth 555-666 coins, weight 1
+
+g-knife.c - wc 16 knife, 1/10 return 4.  special
+            bonus of being able to see the am't of wear in the short()
+            weight 2
+
+g-necklace.c - necklace that ppl can string their gator teeth
+               on and save as a trophy.  weight/value is variable
+               depending on how many teeth it holds, etc.
+
+g-vest.c - ac 3 type armor, weight 1, value 444-666.  it can
+           hold items in its pockets with a max weight of 12.
+

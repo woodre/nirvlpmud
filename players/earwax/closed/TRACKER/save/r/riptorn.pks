@@ -1,0 +1,8 @@
+05/23/05 22:44: Sticks      ((19+7  /Vampire)      25(1/1)
+05/24/05 00:05: Mantis      ((19+64 /Necromancer)  27(2/1)
+05/24/05 02:00: Darkfyre    ((19+2  /None)         21(2/1)
+05/24/05 20:30: Darkfyre    ((19    /None)         17(3/1)
+05/24/05 22:43: Rick        ((19+100/Rangers)      28(5/1)
+05/30/05 14:16: Rage        (len bigger than field 16(4/1)
+05/30/05 14:18: Oz          (len bigger than field 21(5/1)
+05/30/05 15:39: Sticks      ((19+5  /Vampire)      25(3/2)

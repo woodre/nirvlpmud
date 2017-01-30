@@ -1,0 +1,18 @@
+COMMANDER POWERS
+
+The commander functions have a '<>' before the commmands.  They should be used
+very carefully, and the are all logged.
+
+<>promote <shadow> <number>  :     Promotes a shadow ( negatives can be used,
+                                        max of 12)
+                                   If the number is '0', their xps will be
+                                   reset to match there level.  Use this to fix
+                                   a players xps.
+<>mark <player>              :     Give a player a shadow mark.  Check first
+                                        to make sure the player shows up as not
+                                        being in a guild on the 'ow'
+<>remove <shadow>            :     Takes away a shadows mark.   For now, this
+                                        is kinda pointless becuase it doesn't
+                                        erase their guild variables.
+ct <mesage>                        Tell a message over the commander channel
+ce <emote>                         Do an emote over the commander channel.

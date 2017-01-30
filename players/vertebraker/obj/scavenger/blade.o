@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/straw","/players/puppy/s/eq/ruler","/players/mythos/closed/guild/forest/misc/prop","/players/angel/area/stargate/obj/bullets","/players/mythos/awep/tanto","/players/mythos/awep/backbite","/players/scathe/armor/igarb","/players/mythos/aarmor/mempo","/obj/weapon","/players/saber/armor/mini","/players/wren/Area/starbug/items/indianheaddress","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/players/puppy/s/eq/block","/players/snow/WEAPONS/glowknife","/obj/armor","/players/wren/Area/starbug/items/dreds","/players/maledicta/cont/weapons/rweapon","/players/wren/Area/starbug/items/veil","/obj/weapon","/players/mythos/awep/katana","/obj/weapon","/players/wren/Area/starbug/items/cottagecheese","/obj/bag","/players/ultramagnus/apple","/players/snow/WEAPONS/souleater",})
+shorts ({"a long plastic straw","A wooden ruler","Essence of Vraith- vine sap","A clip of bullets [50]","Tanto","[31mBackbiter[0m","Initiate's garb","Mempo","Baby powder","A skin tight leather mini skirt","a tiny indian headdress","A Prince's Robes","A building block","A glowing knife","Robot Head","Lister's crusty deerstalker with dreds.","a Spiked mace","a big wedding veil","Pillow","Katana","Fear","a small tub of cottage cheese.","bag","A Red Apple","[1mSoulEater[0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,144 @@
+**----------------------------------------------------------------------**
+
+This is a description of how my Bishops Ring quest is suppopsed to work.
+
+>>> Indicates areas that I intend to expand later
+
+
+General synopsis:
+  The player needs to kill Barnabas, the head vampire in the attic
+  of my mansion.  To do this, the player must have some special items:
+    a stake made by the woodsmith
+    a hammer (anything that id's as a hammer)
+    a cross from the lich in my graveyard
+    a clove of garlic
+
+  Some things that are not mandatory, but REAL helpful:
+    a vial of holy water from the female vampire in the basement of my mansion
+    & some really good armor & a really good weapon & lots of $ for healing &
+    maybe some friends to help
+
+Specifics:
+  How to get:
+      A stake made by the woodsmith.  (The stake in the shop will only work
+      on the female vampire, not on Barnabas.  The stake from the woodsmith
+      will work on either.)
+        The woodsmith is in a cabin near the entrance to my area.  Through
+        his chats, he tells the player that he wants a bear hide and that
+        he will do some woodwork in trade.  The player also must give him
+        an oak branch to make the stake from.  Once given both the hide and
+        the branch, the player receives a stake.
+
+        To get the oak branch, the player must find the rabbit in the light
+          forest and 'remove thorn' or 'pull thorn' from rabbits paw to get
+          some mistletoe.
+
+          The player must take the mistletoe through the maze in the dark
+          forest in my area to the druid.
+          (The correct path from the light forest: n s w w s e s s n w s s)
+          The player gives the mistletoe to the druid & receives an oak branch.
+        >>> Later:  Will be moved to a larger area so he's harder to find
+
+          To get the bear hide, the player must follow a path through the
+          maze in the dark forest in my area to find the trapper.
+          (The correct path from the light forest: n e w w s s n w)
+        >>> Later:  Will be moved to a larger area so he's harder to find
+
+          The player must lead the trapper to the bears using the commands
+          'say south', 'say north', 'say east', 'say west'.
+          (The correct path through the maze to the bears, from the trapper:
+           e w e e s n s e s e)
+          (The correct path through the maze to the bears, from light forest:
+           e w e e s n s e s e)
+          When the trapper & player are in the room just outside the cave & the
+          players type 'say east', the trapper will give the player a bear hide.
+          (The momma bear has a bear skin as treasure.  That's not the item the
+           woodsmith wants. :)
+        >>> Later:  Will be moved to a larger area so he's harder to find
+
+      A hammer.
+        The hammer can be anything that answers to 'hammer'.  The clerk in
+        the souvenir shop near the entrance to my area has one.
+
+      A vial of holy water from the female vampire in the basement of my
+      mansion.
+        To find her, the player must find the kitchen in the mansion and
+        pump the handle on the water pump three times.  This unlocks the
+        secret door in the pantry off the kitchen and fills the water glass
+        (which is used to get to Barnabas).
+        She's tough.  She must be knocked down with standard combat techniques.
+        When it looks like she dies, the player has only a few moments to type
+        'stake vampire', 'pound stake', 'pound stake into vampire',
+        'drive stake' or 'drive stake into vampire'.  If the player has both
+        a stake and a hammer, the vampire dies for real & the player gets
+        some treasure & exp.  If the vampire is not staked within the time
+        limit, the vampire regenerates fully and laughs at the player.
+
+      A cross from the lich in my graveyard.
+        In the light forest are two different quarys.  In each is a stone
+        golem that has a key.  The player needs both keys.
+
+        The player must then find the graveyard in the light forest.
+        In there is a mimic that looks like a chest.  It has an icon with
+        some writing on it.  The writing is a clue that the icon must be
+        placed on the pedestal in one of the lower crypts.
+        >>> Later:  Will be moved to a larger area so he's harder to find
+        >>>         Will probably expand the crypts & graves & hide the mimic
+        >>>         in there somewhere
+
+        In both the northwest and northeast corners of the graveyard are
+        crypts.  The doors in them are the ones the golems keys are for.
+        Through those doors & down, takes the player to the liches room.
+        The lich starts in the lower room of the east crypt.  The player
+        must 'put icon on pedestal', 'place icon on pedestal',
+        'set icon on pedestal' or 'sit icon on pedestal'.  (Once placed, it
+        cannot be removed, except by the next reset.)
+
+        The player must then kill the lich.  (If the lich is being killed in
+        the east crypt, the icon must have been placed in the west crypt on
+        the pedestal.  If the lich is being killed in the west crypt, the icon
+        must have been placed in the east crypt on the pedestal.  If the icon
+        has not been placed, the lich regenerates & goes to the other crypt.
+        If the icon has been placed, the lich dies & the player gets the cross.)
+
+      A clove of garlic.
+        This one is easy/hard.  All the player has to do to find this is go to
+        the highest mountain peak.  Then 'say' something.  There'll be an
+        'echo' then in a couple of minutes a sphinx will appear.  If you
+        answer his riddle correctly, you will get a hint on killing the vampire
+        and a hint to 'follow your nose'.  If you sniff in that room after
+        getting the hint, you'll find the garlic.
+
+      Ok.  Now that we have all that, we have to find the maze in the attic
+      of the mansion, solve it and kill Barnabas.
+        To get to the maze in the attic, the player must pump the handle on
+        the water pump in the kitchen, while the glass is sitting there.  This
+        fills the glass with water.  The player then goes to the study and
+        types 'throw water on fire' or 'pour water on fire' to put the fire out.
+        Then the player types 'touch amulet to indentation',
+        'put amulet in indentation', 'place amulet to indentation' or
+        'place amulet in indentation'.  When they do that, they're teleported
+        to the entrance to the maze in the attic.  They must defeat the
+        doppleganger to enter the maze.
+        (The correct path in: changes with every reset)
+        (The correct path out: s takes them to the doppleganger room)
+
+        Once the maze is solved, the player finds Barnabas' coffin room.
+        (The player MUST have all the items or Barnabas will throw them
+         out to the entrance of the mansion.)
+        He's tough.  He must be knocked down with standard combat techniques.
+        When it looks like he dies, the player has only a few moments to type
+        'stake vampire', 'pound stake', 'pound stake into vampire',
+        'drive stake' or 'drive stake into vampire'.  If the player has both
+        a stake and a hammer, the vampire dies for real & the player gets
+        some treasure & exp.  If the vampire is not staked within the time
+        limit, the vampire regenerates fully and laughs at the player.
+
+  Oh yeah, one note:  In the basement of the mansion is an alchemist.  He has
+                      a ring that's cursed.  If the player takes it, they
+                      will begin dropping things at random, like a coin, a
+                      piece of armor, a weapon, something random.  They cannot
+                      get rid of the ring unless they go to the adventurer's
+                      guild and drop the ring.
+
+**----------------------------------------------------------------------**

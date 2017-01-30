@@ -1,0 +1,47 @@
+druids
+-faery
+-wolf
+-ent
+
+
+All spells based in Mana
+Must meditate to raise mana.  -1HP -1SP => +1 MP
+Spell book?
+Pet Control as a 7th disiplne
+no shield
+only our pets
+pets die-> You get hurt and -shocked-
+only 2 dirrect spell attacks
+
+Faery
+STA -> 1.  Can raise to 5
+STr -> 1.  Can raise to 5
+Still based off mana.
+Can use calls, 
+
+
+Wolf:
+Much less mag, cannot be higher than 5.  Set to 1 at start.
+Much less int, cannot be higher than 10.  Set to 1 at start.
+Wil -> 0 at start.
+Still based off mana.
+Access to druid spells when not in form.  But much weaker.
+
+Lunas blessing.
+ sight - mud who
+ howl - guild msg
+ leave scent - msg obj.
+ alert - show those who to fear.  low mana - names, mid mana - areas, high mana - infos
+ Absorb - Take weapon into claws.  random chance of adding abit of wc.
+Control
+ Pray - Uses mana to gain glvls.
+ Pray to Gaea - Wolf - must attack to change.
+ Human form - Turn back.
+ Transform - Wolf on command.  less chance of problem.
+ Grip - Grip 2 weapons, add wc and have chance of special which does wc*lvl and shatters weapons.  Also hits (wc*lvl)/3 to self.
+Rage
+ Claw - basic attack spell using mana
+ growl - random(aggro to room, spell using mana to mob, or just neat emote)
+ fury -  wc+10 ac-15(or 0) + claw.  lasts 10 rounds.  random attack self or attack self w/ rip. cannot wimpy, cannot move.
+ Rip - Rip into mob, stun/calm yourself for one round.
+ Raging Warlord - wc+10 ac-15(or 0) + attack.  lasts 10 rounds.  random attack self or attack self w/ rip. cannot wimpy, cannot move.

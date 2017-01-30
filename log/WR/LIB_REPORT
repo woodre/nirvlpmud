@@ -1,0 +1,756 @@
+---------------------------------------------------------------------
+May  1 14:51 Vertebraker
+hullo i am a test i am just a test
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May  2 22:29 Forbin
+modified /bin/play/_inv to not print object as autoload when it has
+an id of "mask_autoload", well, Verte did it for me, but I'll log it
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May  3 03:12 Vertebraker
+/obj/player - fixed infamous charmisa/charisma typo
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May  3 14:47 Fred
+modified /bin/play/_heals.c and also _heals_all.c.  Changed
+heals[(string)ob->query_short()] to just heals[(string)ob->short()]. 
+If the heal just used short(){ return "Name"; } it would print out as
+a 0 on the heals and heals+ commands.
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May  4 17:18 Vertebraker
+heals, heals+ cmd - modified fred's modify of my modify to reflect
+query_short() if it exists, otherwise short()
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May  5 17:20 Forbin
+~/bin/play/_inv.c put in a query for "mask_weapon" to hide not show
+wielded objects if they have that id.  Basically I added it to
+prevent a gob that might have a short and it wielded from being shown
+as a weapon on player's i.
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 12 01:32 Earwax
+made a ton of formatting changes to player.c
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 12 01:32 Earwax
+recoded various functions in player.c, didn't change anything
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 12 01:32 Earwax
+moved attribute stuffs out of player.c into /obj/player/stats.c
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 12 22:23 Fred
+tweaked some stuff in the add_alignment() portion in player.c  wasn't
+working.
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 13 15:45 Illarion
+the mudmail subject line is now truncated at 60 characters for all
+new messages.  existing messages won't be affected
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 15 14:54 Earwax
+made fix to query_title(), recoded autoheal(), added testchar stuffs
+to player.c (as an inherit)
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 15 15:20 Earwax
+recoded intoxicate() as well, minor stuff but slightly more efficient
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 15 15:34 Earwax
+misc changes for efficiency to heartbeat(), more to come
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 15 16:53 Earwax
+other misc changes to player.c, setup logging to determin if funs are
+being used, and if so, where, yanked some obsolete code, reformatted
+some other stuffs, etc
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 16 01:51 Earwax
+daemonized ip check for level 1000+ wizzes, yanked some obsolete
+code, daemonized some other code, binned pose, misc reformatting, etc
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 16 12:51 Earwax
+commented out some things related to logs that were causing much lag
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 18 16:46 Earwax
+made it so the living being hit is underlined in combat spam, for
+visibility - around 2200 in living.c
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 18 17:16 Earwax
+make that line 1868
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 18 17:23 Earwax
+actually, 1911, laf
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 23 15:39 Fred
+made some changes to infuse in the player.c heartbeat.  Wasn't
+actually reducing at all.
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 25 10:56 Fred
+changed line 879 from command("unkeep all"); to command("unkeep all",
+this_object());
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 26 08:18 Fred
+changed the infuse decrease in heart_beat to original amounts.  Last
+time I changed I set it up in the same fashion as soak and stuff.
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+May 26 14:22 Fred
+modified player.c so if there's a bag on the ground in the room
+you're in you can still get items out of the bag that is in your
+inventory.
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jun  1 17:29 Earwax
+added forbin's work ip to login check
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jun  1 19:01 Earwax
+added soul off/soul on to register
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jun  2 02:52 Earwax
+setup living.c so all doing a doublexp day requires is defining
+DOUBLEXPDAY 1  or TRIPLEXPDAY 1   and recompiling living.c
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jun 27 03:20 Earwax
+created following dirs and readmes:   /doc/build/monster, item,
+item/(weapon,armor,treasure,autoload), player/ ... Also mv'd the
+files from /doc/build/RULES that pertained to monsters to that dir,
+it's time we organize this crap a bit more
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jun 28 23:43 Earwax
+moved more files around in /doc
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul  4 04:04 Earwax
+coded /obj/objtracker.c to replace mizan's object tracking, added it
+to /obj/weapon, /obj/armor, /obj/treasure, /obj/container, /obj/bag
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul  4 04:55 Earwax
+modifed ~verte/closed/std/monster.c so mobs wander 3 times then kick
+out, eating too many resources having 100s of mobs wandering for
+hours on end....a player being present resets the wander limit to 0
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul  6 04:08 Earwax
+added 'add_id()' and 'query_id()' funs to /obj/weapon.c, will
+eventually add them to the others, cleared up a potential bug in the
+id fun having to do with multipleIds
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul  6 05:32 Earwax
+capped reimbursements at 1 mil - lines 2140-2143 in /obj/player.c
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul 10 00:38 Earwax
+switched how unkeepings obs done in player.c, hopefully this will
+knock out most of the bugging in d/c stuff
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul 10 23:40 Earwax
+changed command() force of save in player.c to save_me() - was having
+issues with d/c chars
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul 12 01:24 Earwax
+added a couple checks to id() in /obj/monster.c to hopefully fix
+where it tends to nerf and show up in bug logs
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul 13 02:20 Earwax
+added is_container() to /obj/container, mythos bag, forbin saddlebag
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul 13 03:15 Earwax
+added object *query_gear() to /obj/player.c ... returns all
+worn/wielded/offwielded items, will use it in the crash save code and
+other purposes
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul 19 18:44 Earwax
+added /closed/bin/_eval.c ... 'eval' command for admins, allows us to
+see evaluation cost for commands issued
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul 19 18:56 Earwax
+added /doc/commands directory, and /doc/commands/eval
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Jul 20 14:57 Earwax
+set wlog to also log to /log/WR/WORK_REPORT
+---------------------------------------------------------------------
+Jul 21 05:02 Earwax
+put invs_counter() into exit() in /room/room.c as no reason for it to
+be in player.c, also daemonized glance, look, examine and removed the
+code and actions from player.c, also coded and put in
+/obj/player/modify_command.c and /obj/daemons/commands.c although
+they will require ldmud to be in for full testing
+---------------------------------------------------------------------
+Jul 21 06:39 Earwax
+removed callouts from prison, put in check in login in player.c
+instead
+---------------------------------------------------------------------
+Aug  2 03:30 Earwax
+changed 'light' command to use variables in player.c rather than
+wizard soul, yanked that crap from wiz soul
+---------------------------------------------------------------------
+Aug  2 13:26 Fred
+changed 'setal', 'setaln', 'setmin', 'setmout', 'setmmin',
+'setmmout', 'setmhome', 'goto', in /bin/wiz to work out of player.c. 
+Pulled code out of wizsoul.
+---------------------------------------------------------------------
+Aug  2 14:31 Fred
+pulled the 'at' and 'in' commands out of wizsoul and threw into
+/bin/wiz directory.
+---------------------------------------------------------------------
+Aug  2 16:31 Fred
+pulled the 'exec' code out of the wizoul and threw it into the
+/bin/wiz directory.
+---------------------------------------------------------------------
+Aug  3 09:16 Fred
+mad another adjustment to player.c for getting items from bags.  Last
+change I made to look at bag in your inventory instead of one that
+may be on the ground made it so if you didn't have a bag in your inv
+you couldn't get anything out of a bag that was on the ground.
+---------------------------------------------------------------------
+Aug  7 12:12 Fred
+moved promote/shutdown/cd out of wizsoul and threw into /bin/wiz/
+---------------------------------------------------------------------
+Aug  8 11:26 Earwax
+added item number to I command
+---------------------------------------------------------------------
+Aug 11 15:54 Earwax
+semi-summary of things:  consolidated some of the includes in
+/obj/player.c, separated blocks of code within player.c using #ifdef
+__LDMUD__ and #ifndef, pulled the valid_read(), valid_write() code
+into an #include for dr, the ldmud version is inherited, setup
+command system on ldmud, yanked wiz_soul from being cloned on ldmud,
+player chars shouldn't be hosed there, but it's possible as i haven't
+checked that object yet really....
+---------------------------------------------------------------------
+Aug 21 13:29 Earwax
+added remove_object() fun to obj/weapon.c and support into /obj.clean
+to use remove_object() first rather than destruct(), will add this to
+the other lib objects as well
+---------------------------------------------------------------------
+Aug 23 08:54 Earwax
+yanked invis code from wiz soul, it's not in /bin/wiz/secure/invis
+and vis....added support to player.c for it as well of course
+---------------------------------------------------------------------
+Aug 31 17:45 Earwax
+made it so no new chars can be created from 216.206.81.158 .... ice's
+ip
+---------------------------------------------------------------------
+Aug 31 18:54 Earwax
+made it so monsters now show who they are fighting
+---------------------------------------------------------------------
+Sep 19 00:20 Earwax
+fixed minor bug in /obj/monster.c wander code
+---------------------------------------------------------------------
+Nov 16 03:18 Earwax
+edited /closed/wiz_soul.c and /bin/wiz/_cd.c to fix a bug where
+editing any files required pwd if your saved pwd was a lib path
+---------------------------------------------------------------------
+Nov 16 19:43 Earwax
+did ghetto-fix on /obj/simul_efun.c to fix find_player() ... allows
+multiple logons, disallows tells, etc when there's invis over
+60...later i'll have to go back and add code in to make sure if
+there's a this_player() and they are lower level than the
+invisibility level and invis level >= 39 it returns 0
+---------------------------------------------------------------------
+Nov 19 18:37 Vertebraker
+/obj/living - cap_name changed to this_object()->query_name() in many
+cases
+---------------------------------------------------------------------
+Nov 24 16:53 Vertebraker
+cut out the bin from /obj/play/suicide.h
+---------------------------------------------------------------------
+Nov 24 17:20 Vertebraker
+binned tellblock
+---------------------------------------------------------------------
+Nov 25 10:24 Vertebraker
+binned tellhistory
+---------------------------------------------------------------------
+Nov 25 10:39 Vertebraker
+binned follow
+---------------------------------------------------------------------
+Nov 25 10:44 Vertebraker
+binned fstatus
+---------------------------------------------------------------------
+Nov 25 17:14 Vertebraker
+binned lead, put follow stuff in /obj/play/follow/ from /obj
+---------------------------------------------------------------------
+Nov 25 17:23 Vertebraker
+binned monitor and setmon
+---------------------------------------------------------------------
+Nov 25 17:25 Vertebraker
+Deactivated logme
+---------------------------------------------------------------------
+Dec 12 02:41 Vertebraker
+removed logme
+---------------------------------------------------------------------
+Dec 12 03:04 Vertebraker
+binned give... backup in player.121206
+---------------------------------------------------------------------
+Dec 12 03:22 Vertebraker
+Binned pretitle
+---------------------------------------------------------------------
+Dec 12 20:50 Vertebraker
+binned ready
+---------------------------------------------------------------------
+Dec 12 21:13 Vertebraker
+binned score
+---------------------------------------------------------------------
+Dec 13 09:51 Fred
+added a this_player() arguement tothe command("wear "+ob); command in
+_ready.c wasn't working.
+---------------------------------------------------------------------
+Dec 15 11:02 Vertebraker
+Added query_free_exp() to /obj/player
+---------------------------------------------------------------------
+Dec 15 12:04 Vertebraker
+Binned score2
+---------------------------------------------------------------------
+Dec 17 13:01 Vertebraker
+added query_odors/feels/sounds/tastes to room/lib/sensory.h
+---------------------------------------------------------------------
+Dec 21 21:52 Earwax
+setup funs in player.c for score() and score2() - it just calls the
+bin command, but it's so old guilds don't get hosed
+(coughvampirescough)
+---------------------------------------------------------------------
+Jan 13 16:40 Vertebraker
+~snakespear/zultayne/rooms/bchoice - points to village green
+---------------------------------------------------------------------
+Jan 13 16:41 Vertebraker
+oops fuck
+---------------------------------------------------------------------
+Mar 20 13:10 Vertebraker
+added save,put,quit cmds
+---------------------------------------------------------------------
+Mar 20 13:10 Vertebraker
+[did not remove quit()/do_quit()/save()]
+---------------------------------------------------------------------
+Mar 20 13:19 Vertebraker
+binned get
+---------------------------------------------------------------------
+Mar 20 13:27 Vertebraker
+binned drop
+---------------------------------------------------------------------
+Mar 20 13:45 Vertebraker
+backups in player.032007
+---------------------------------------------------------------------
+Mar 24 12:54 Vertebraker
+binned the action for password... not the function
+---------------------------------------------------------------------
+Mar 24 12:54 Vertebraker
+binned wiz cmd rep
+---------------------------------------------------------------------
+Mar 24 12:55 Vertebraker
+removed converse mode
+---------------------------------------------------------------------
+Mar 24 13:08 Vertebraker
+binned sex, channels,muffle,channel [actions]
+---------------------------------------------------------------------
+Mar 24 13:10 Vertebraker
+backup in player.032407
+---------------------------------------------------------------------
+Mar 25 04:20 Vertebraker
+added a clan object hook to short() to display an emblem
+---------------------------------------------------------------------
+Apr  1 11:25 Vertebraker
+/room/adv_guild - added notification when newbie players gain magic
+missile, shock, fireball
+---------------------------------------------------------------------
+Apr  1 17:44 Vertebraker
+added clan_name/clan_file to player.c
+---------------------------------------------------------------------
+Apr 14 23:12 Vertebraker
+/obj/player - boosted heal from intoxicated by 4x
+---------------------------------------------------------------------
+Apr 28 23:28 Vertebraker
+modified pose to have colour :))))))
+---------------------------------------------------------------------
+May 14 15:26 Vertebraker
+fixed a bug in kill_players
+---------------------------------------------------------------------
+May 14 16:58 Vertebraker
+fixed some bugs with add_guild_bonus() in ./obj/weapon
+---------------------------------------------------------------------
+May 16 00:01 Vertebraker
+allowed mages to set their mag/int to 40 in adv_guild
+---------------------------------------------------------------------
+May 17 12:09 Mokri
+added command 'update_clan' to /play/bin/ to refresh clan object, or
+restore missing ones
+---------------------------------------------------------------------
+May 19 15:15 Vertebraker
+changed add_money() in /obj/living to clone stacks of gold if a
+player exceeds 80000 coins
+---------------------------------------------------------------------
+May 24 16:47 Mokri
+per request of a wizard, modified 'spank'. left verte in, though
+(youll see what i mean if you look at it. heh) ;)
+---------------------------------------------------------------------
+May 24 18:02 Vertebraker
+patched assist to not allow assist to go thru if already in combat -
+exploit found with xar
+---------------------------------------------------------------------
+Jun  5 00:45 Vertebraker
+added a clean_up return 0 to /room/mine/tunnel13 so teh cyberjesus
+doesn't clean
+---------------------------------------------------------------------
+Jun  5 17:07 Mokri
+added call to 'update_clan' in player object
+---------------------------------------------------------------------
+Jun  6 11:44 Mokri
+edited ninja 'heat_wep' and 'plant_mine' commands to include ghost
+check (no casting while dead!)
+---------------------------------------------------------------------
+Jun 19 14:25 Mokri
+edited locker file of ensco to restore missing lockers (just the
+slots. NOT the items)
+---------------------------------------------------------------------
+Jun 25 14:05 Mokri
+modified 'mokri' entry in 'ipcheck' to reflect new ip
+---------------------------------------------------------------------
+Jul 12 03:52 Earwax
+added /daemons directory, added misc.c and nrpoints.c to it for
+support for the nirvana reward points, added
+/obj/lib/security/daemons.h with #defines for those, added it to
+all.h in that dir, and created /obj/player/nrpoints.c and made
+player.c inherit it
+---------------------------------------------------------------------
+Jul 12 04:09 Earwax
+added to player.c nrpoints + 1 every 30 minutes (900 hbs) and added
+the logon checks that will cause nirvana birthdays to be recorded and
+xlevels to give 10 nrpoints apiece
+---------------------------------------------------------------------
+Jul 12 04:32 Earwax
+made it so all wizards can use liblog command to view the log, only
+appropriately levelled wizzes can make entries in it however
+---------------------------------------------------------------------
+Jul 12 12:27 Earwax
+edited score2 to show nirvana birthday and nirvana points
+---------------------------------------------------------------------
+Jul 12 16:39 Earwax
+/obj/partymaster.c added a random chance (xp amount > random(2 mil))
+for a points award to party members, must be more than 1 member in
+the party, tank gets a small bonus
+---------------------------------------------------------------------
+Jul 13 13:48 Earwax
+added some code to living.c and player.c, created /daemons/combat.c
+and added a define to /obj/lib/security/daemons.h, as well as adding
+the 'combat' command which shows damage dealt, taken, and heartbeats
+in combat for all players
+---------------------------------------------------------------------
+Jul 17 00:36 Earwax
+modified /daemons/combat.c to make ;combat; command show damage per
+hb, damage dealt per taken, and then the raw numbers for damage
+dealt, taken, and hbs in combat
+---------------------------------------------------------------------
+Jul 17 03:35 Earwax
+made some changes to /obj/monitor.c and created /bin/play/_report.c
+... to give a command that allows players to display their monitor
+and current monitor stats to the people in the room.  There is an
+issue with it however in that tell_room() and say() can break off
+large strings, so i'll overcome this later today, otherwise it's
+mostly operational.
+---------------------------------------------------------------------
+Jul 27 16:54 Earwax
+moved the formatting and analysis from /daemons/combat.c to
+/bin/wiz/_combat.c since i should have done that to begin with, added
+a 'rating' which is (damage dealt - damage taken) / hbs in combat    
+which hopefully will give a decent base rating to work off of for
+analyzing guilds, or at least noticing anomalies
+---------------------------------------------------------------------
+Jul 31 03:42 Vertebraker
+hacked /bin/wiz/secure/_promote to allow 10k to demote other 10k
+---------------------------------------------------------------------
+Aug  7 23:34 Earwax
+changed 'combat' command rating
+---------------------------------------------------------------------
+Aug  8 00:24 Earwax
+changed room.c so that mage guild members can't leave room if they've
+reached their spell limit per round
+---------------------------------------------------------------------
+Aug 16 05:53 Earwax
+added min-xlevel code to armor.c and weapon.c...you can
+set_min_xlevel() and set_min_xlevel_message()
+---------------------------------------------------------------------
+Aug 16 21:01 Earwax
+changed boots to 24 hours so can see how it works
+---------------------------------------------------------------------
+Aug 28 02:45 Earwax
+added an ip for fred
+---------------------------------------------------------------------
+Aug 28 09:31 Earwax
+added 'logins' command to show recent logins of vis wizzes and
+players.  This entailed mods to player.c, creating /daemons/logins.c
+and /bin/play/_logins.c as well as a helpfile
+---------------------------------------------------------------------
+Oct 10 17:18 Fred
+added a valid_board() for LDMUD starting at like line 3452 of
+player.c.  Something for Mokri.
+---------------------------------------------------------------------
+Oct 10 17:49 Fred
+added another #ifdef __LDMUD_ at line 2616 in /obj/player.c for Mokri---------------------------------------------------------------------
+Oct 15 21:56 Fred
+added a check to valid_attack in player.c to help stop rangers from
+attacking good aligned mobs.
+---------------------------------------------------------------------
+Oct 26 03:34 Earwax
+edited /room/vill_green.c, /room/adv_inner.c to add sql boards of
+mokri's manufacture, to aid in ldmud communications, thanks mokri :) ---------------------------------------------------------------------
+Oct 26 03:35 Earwax
+also under direction of mokri, post office was changed on ld side to
+incorporate the mysql version, and player.c edited to allow use of
+the mysql boards                                                     ---------------------------------------------------------------------
+Oct 26 04:00 Earwax
+unfucked /sys/esc.h                                                  ---------------------------------------------------------------------
+Oct 29 15:59 Mokri
+added code to player.c to update players database entry with info
+from players .o file on login                                        ---------------------------------------------------------------------
+Oct 29 22:47 Earwax
+made it so logging an inactive char on ld doesn't rm it              ---------------------------------------------------------------------
+Oct 30 00:36 Earwax
+made new bin directory, added an sql subdir to it.... /cmds/dev/mysql
+... so i can start coding some sql tools                             ---------------------------------------------------------------------
+Oct 30 00:36 Earwax
+also added that path to command hook in player.c and to valid_read()
+check in master.c                                                    ---------------------------------------------------------------------
+Oct 30 01:19 Earwax
+also added /cmds/dev to the command hook paths and /object/news for
+ld news/board stuffs ... /object in general is to be used for all
+actual objects, /lib for ldmud lib inherits/lib stuffs               ---------------------------------------------------------------------
+Oct 31 18:02 Mokri
+added cyberninja board to ld system                                  ---------------------------------------------------------------------
+Nov  7 18:49 Vertebraker
+/obj/monster - had to readjust the add_spell() msg
+---------------------------------------------------------------------
+May  7 15:04 Fred
+added 2 lines of code in player.c for pk tournaments.  Don't want the
+tunnel to appear to transport people out.  Lines 2067 and 2068
+---------------------------------------------------------------------
+May  7 15:21 Fred
+I modified living.c to block corpses in the PK Tourney area.  LInes
+813-817 roughly.
+---------------------------------------------------------------------
+May  7 15:21 Fred
+made backups of player.c.5.7.09 and living.c.5.7.09 as backups before
+changes.
+---------------------------------------------------------------------
+Feb 15 16:43 Vertebraker
+/bin/play/_put - added a query_wep_shadow() call for put all to
+prevent bugs from players trying to put their offwielded weapon away
+---------------------------------------------------------------------
+Feb 15 16:49 Vertebraker
+/bin/play/_inv - added hook to not show shadowed weapons from players
+in autoload display
+---------------------------------------------------------------------
+Feb 15 17:11 Vertebraker
+/room/room - updated instead of to check file size of whether a room
+exists or not, it tries to load that room and only errors if that
+object cannot be loaded.
+---------------------------------------------------------------------
+Feb 15 20:41 Vertebraker
+/bin/wiz/_more - added a "here" argument that works the same if !arg
+---------------------------------------------------------------------
+Feb 15 20:43 Vertebraker
+/bin/play/_give - added dest_ob check line 107 was bugging with
+Sneaky thief
+---------------------------------------------------------------------
+Feb 15 21:12 Vertebraker
+added "attribs" cmd to point to sc2
+---------------------------------------------------------------------
+Feb 16 13:07 Vertebraker
+/obj/bartender - updated to /obj/monster, moved old to bartender.bak
+---------------------------------------------------------------------
+Feb 16 13:27 Vertebraker
+/obj/living - added a name_of_weapon check before processing weapon
+enchantments. bugged out with mythos mobs causing hb loss for some
+reason
+---------------------------------------------------------------------
+Feb 16 15:03 Vertebraker
+/obj/player - TP check before ranger alignment check is initiated
+---------------------------------------------------------------------
+Feb 16 20:00 Vertebraker
+/obj/living - added "disallow_give" variable and query/set functions
+---------------------------------------------------------------------
+Feb 16 20:26 Vertebraker
+Implemented disallow_give command
+---------------------------------------------------------------------
+Feb 17 00:37 Vertebraker
+/obj/user/chistory - added timestamp
+---------------------------------------------------------------------
+Feb 17 00:53 Vertebraker
+implemented functions/vars in /obj/player for xprate as well as a
+command
+---------------------------------------------------------------------
+Feb 17 00:57 Vertebraker
+/bin/play/_offer - if no argument, selects the first corpse in the
+room
+---------------------------------------------------------------------
+Feb 17 12:50 Vertebraker
+/room/init_file - uncommented daranath's castle
+---------------------------------------------------------------------
+Feb 17 20:41 Vertebraker
+With Sparrow, debugged ~cosmo/hslist/vds_new so it updates properly
+[finally]
+---------------------------------------------------------------------
+Feb 18 14:14 Vertebraker
+Instituted lower (80k cap) on reimbursements. Also modified
+compute_treasure() so items are calculated at no more than 1500 coins
+each, as a shop would give.
+---------------------------------------------------------------------
+Feb 18 14:30 Vertebraker
+/obj/monster - added readied var, ready_eq() to /obj/monster for
+automatic wield/wear
+---------------------------------------------------------------------
+Feb 18 14:57 Vertebraker
+/bin/wiz/_cd - added ~<wizname> support
+---------------------------------------------------------------------
+Feb 18 14:59 Vertebraker
+/bin/wiz/_cd - made it so you can't cd .
+---------------------------------------------------------------------
+Feb 18 22:33 Vertebraker
+/obj/monster - in query_damage_potential() and
+query_defense_potential(), took out the adding wc/ac bonuses based on
+what the mob is wielding/wearing
+---------------------------------------------------------------------
+Feb 19 14:05 Vertebraker
+/bin/play/_inv & /bin/play/_score - added hooks to call
+transfer_extra_eq()
+---------------------------------------------------------------------
+Feb 19 14:05 Vertebraker
+/obj/player - added transfer_extra_eq() to drop items in excess of
+100%
+---------------------------------------------------------------------
+Feb 19 14:06 Vertebraker
+also tweaked guild file cloning stuff in /obj/player
+---------------------------------------------------------------------
+Feb 20 01:38 Vertebraker
+/bin/play/_sell - took out the unique id code that probably never
+worked, but got removed by someone at some time anyway. added a log
+file to VERTE_SELL to check for objs that don't have a query_name() -
+they should.
+---------------------------------------------------------------------
+Feb 20 03:24 Vertebraker
+/doc/helpdir/Movie - Changed Reflex's actor from Tony Danza to Meat
+Loaf, and Maledicta's from Inigo Montoya/Iceman from Top gun to Fat
+Val Kilmer
+---------------------------------------------------------------------
+Feb 20 03:25 Vertebraker
+/doc/helpdir/Movie - added Fred as John Candy
+---------------------------------------------------------------------
+Feb 20 18:55 Vertebraker
+/obj/living - added a hook in death() to clone a tombstone if it is a
+player dying
+---------------------------------------------------------------------
+Feb 20 18:56 Vertebraker
+/obj/user/tomb/ - added these files
+---------------------------------------------------------------------
+Feb 21 15:55 Vertebraker
+/bin/arg_check - allowed wizard emotes to go thru tellblock
+---------------------------------------------------------------------
+Feb 22 00:11 Vertebraker
+/bin/play/_look - added if(!sdesc) check after strlen() calc
+---------------------------------------------------------------------
+Mar  7 00:21 Vertebraker
+/obj/player - modified test_dark() to allow black willows to be
+blinded by light
+---------------------------------------------------------------------
+Mar  8 00:27 Vertebraker
+/obj/weapon - stopwield() : if(!silentwield) check before printing
+Ok.
+---------------------------------------------------------------------
+Mar  8 13:51 Vertebraker
+/obj/weapon - changed notify_fail() in notweapon display in
+wield()/offwield() to write() , return 1
+---------------------------------------------------------------------
+Jul 21 16:09 Fred
+changed where exp is added to playersin living.c around line 860. 
+Now the msg you get after the kill about you need this much to
+advance should be accurate.
+---------------------------------------------------------------------
+Jul 21 16:10 Fred
+put acopy of living.c before changes as living.c.7212011
+---------------------------------------------------------------------
+Dec 13 13:02 Rumplemintz
+added lpc channel for lpc code talking
+---------------------------------------------------------------------
+Dec 13 13:16 2013 Rumplemintz
+test
+---------------------------------------------------------------------
+Dec 13 13:30 2013 Rumplemintz
+Changed liblog to log year
+---------------------------------------------------------------------
+Dec 31 14:35 2013 Fred
+updated living.c for crushing blow dmg calculation.  Around line 556.
+Old living.c at living.c.123113
+---------------------------------------------------------------------
+Jan 10 21:40 2014 Fred
+edited player.c to add && ob->is_player() check to line 1127.
+---------------------------------------------------------------------
+Jan 23 17:29 2014 Rumplemintz
+living.c - Added crime stuff back in
+---------------------------------------------------------------------
+Jan 27 14:24 2014 Rumplemintz
+Added /log to password protected directories, after I have
+successfully removed it twice now
+---------------------------------------------------------------------
+Jan 31 12:09 2014 Rumplemintz
+adjusted crime stuff in living.c to check for sparring
+---------------------------------------------------------------------
+Feb 10 16:40 2014 Rumplemintz
+/obj/player.c - /obj/play/new_communicate.h - changed it to evaluate
+query_name instead of using a set variable
+---------------------------------------------------------------------
+Mar 18 14:53 2014 Rumplemintz
+removed static (nosave) modifier from testchar_var so it will save
+---------------------------------------------------------------------
+Mar 24 16:10 2014 Rumplemintz
+/bin/channel_daemon.c added silently flag to add_channel and
+remove_channel
+---------------------------------------------------------------------
+Mar 24 17:09 2014 Rumplemintz
+obj/player.c Made it so the player count on the welcome screen counts
+invisible PK'ers
+---------------------------------------------------------------------
+Mar 26 12:08 2014 Rumplemintz
+Replaced all instances of 'check_file' with 'file_size' in ALL files
+- crea
+---------------------------------------------------------------------
+Mar 26 12:08 2014 Rumplemintz
+created backups of all files changed with .check_file extension
+---------------------------------------------------------------------
+Mar 26 12:26 2014 Rumplemintz
+/obj/player.c changed caller() calls to previous_object() calls
+---------------------------------------------------------------------
+Mar 26 12:44 2014 Rumplemintz
+and... changed them back
+---------------------------------------------------------------------
+Mar 28 12:42 2014 Rumplemintz
+replaced file_name with object_name in a ton of files
+---------------------------------------------------------------------
+May 12 11:23 2014 Rumplemintz
+Changed to 10k, promoted Gnar to 5k - approved by B
+---------------------------------------------------------------------

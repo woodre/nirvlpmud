@@ -1,0 +1,12 @@
+#include "../defs.h"
+
+cmd(str){
+  if(!str){
+    notify_fail("What would you like to say on wiz?\n");
+    return 0;
+  }
+  if(str == "history") return 0;
+  tp->chan_msg("["+HIY+"wiz"+OFF+"] "+tp->query_name()+" says, \""+str+"\"\n"+OFF,"wiz");
+
+  return 1;
+}

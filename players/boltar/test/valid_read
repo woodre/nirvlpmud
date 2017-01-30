@@ -1,0 +1,98 @@
+nomask string valid_read_too(string arg) {
+    string str, who,tmpa,tmpb, file, temp,tmp;
+    object c, prev_caller;
+    int tempb;
+
+    /*
+     * Because argument lists are passed unevaluated, by the time caller()
+     * gets executed, the real caller() will be valid_read, not whoever
+
+     * actually called us.  Thus, we get caller() before calling valid_write.
+     */
+    c = caller();
+    if (c!=this_object() && !in_editor(this_object()))
+    if (extract(file_name(c),0,3)=="room" ||
+		extract(file_name(c),0,2)=="obj" ||
+                extract(file_name(c),0,2)=="bin" ||
+                extract(file_name(c),0,7)=="post_dir" ||
+		extract(file_name(c),0,5)=="closed")
+	c=this_object();
+
+
+    if(sscanf(arg, "%sacces%s", temp,tmp) == 2) return arg;
+    file = valid_write(arg,c);
+    if (file)
+	return file;
+
+    str = arg;
+    if (str == "~" || str == "~/") 
+	str = "/players/" + name;
+    else if (sscanf(str,"~/%s",temp) == 1)
+	str = "/players/" + name + "/" + temp;
+    else if (sscanf(str,"~%s",temp) == 1)
+	str = "/players/" + temp;
+    else if (str[0] != '/')
+	str = pwd + str;
+    if (sscanf(str, "//%s", temp)) return 0;
+    if (sscanf(str, "%s//%s", temp, temp)) return 0;
+    if (sscanf(str, "/.%s",  temp)) return 0;
+    if (sscanf(str, "%s/.%s", temp) > 1) return 0;
+    if (sscanf(str, "%star_castles%s", temp) > 1) return 0;
+    if(sscanf(str, "/players/%s/PLAN", who) == 1) return "players/" + who + "/PLAN";
+    if (sscanf(str, "/players/%s/closed/%s", who, file) == 2) {
+  if (who == name || level >= 100)
+    {
+       return "players/"+who+"/closed/"+file;
+          }
+  return 0;
+  }
+    if (sscanf(str, "/players/inactive_saved/%s.o", who) == 1) {
+  if (((who == name || level >= SENIOR) && c==this_object()) || (prev_caller && (prev_caller == find_object("/obj/simul_efun"))))
+	    return "players/inactive_saved/" + who + ".o";
+	return 0;
+    }
+   if (sscanf(str, "/players/guilds/%s",who) == 1) {
+      if(level >= ITEM_OVER && c==this_object())
+         return "players/guilds/" + who;
+      return 0;
+   }
+    if (sscanf(str, "/players/%s/%s", who, file) == 2) {
+    if(!ok_edit) ok_edit="none#";
+	if ((who == ok_edit || sscanf(ok_edit, "%s"+who+"%s", tmpa,tmpb)==2 || who == name || level >= READ_OTHERS) && c==this_object())
+    {
+	    return "players/" + who + "/" + file;
+    }
+	return 0;
+    }
+    if (sscanf(str, "/players/%s.o", who) == 1) {
+  if (((who == name || level >= SENIOR) && c==this_object()) || (prev_caller && (prev_caller == find_object("/obj/simul_efun"))))
+	    return "players/" + who + ".o";
+	return 0;
+    }
+    if (sscanf(str, "/pfiles/%s.o", who) == 1) {
+  if (((who == name[0..0]+"/"+name || level >= SENIOR) && c==this_object()) || (prev_caller && (prev_caller == find_object("/obj/simul_efun"))))
+	    return "pfiles/" + who + ".o";
+	return 0;
+    }
+    if (sscanf(str, "/post_dir/%s"+".o", who) == 1 || sscanf(str, "post_dir/%s"+".o", who) == 1) {
+	if ((who == name || level >= ELDER) && c==this_object())
+	    return "/post_dir"+"/" + who + ".o";
+	return 0;
+    }
+    if (sscanf(str, "/pa/%s", file) == 1) {
+        if(str=="/pa/admin/pa-list.txt") return "pa/admin/pa-list.txt";
+        if (level >= ELDER || "/pa/admin/pa-daemon"->query_name(name)) return "pa/"+file;
+        return 0;
+      }
+    if (sscanf(str, "/closed/%s", file) == 1) {
+	if (level >= ELDER && c==this_object())
+	    return "/closed/"+file;
+	return 0;
+    }
+    if (sscanf(str, "/%s", file) == 1)
+	return file;
+
+    write("Bad file name.\n");
+    return 0;		/* Should not happen */
+}
+

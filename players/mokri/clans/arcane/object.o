@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A placebo[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "A Placebo"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "A placebo[0m"
+damage_type "poison"
+hall_path "/players/deathmonger/room/board_rooms/change_room"
+object_name "A Placebo"
+owner "monoxide"
+spell_alias "pox"
+spell_mess_me "%TPN% practices %hi red%Bad Medicine%normal%.%AKN% convulses %hi green%vomiting %hi red%blood%normal%."
+spell_mess_room "%TPN% practices %hi red%Bad Medicine%normal%.%AKN% convulses %hi green%vomiting %hi red%blood%normal%."
+spell_mess_them "%TPN% practices %hi red%Bad Medicine%normal%.%AKN% convulses %hi green%Vomiting"
+abilities ({})
+chan_history ({"[Fri Sep  4 21:28:00 2015] Charm: test","[Fri Sep  4 21:28:02 2015] Charm: okay","[Fri Sep  4 21:28:12 2015] Charm: so many things i dont know about","[Fri Sep  4 21:28:16 2015] Monoxide: hehehe","[Fri Sep  4 21:28:18 2015] Charm: just learned about nicknames and logins","[Fri Sep  4 21:28:26 2015] Monoxide: well clan_help helps alot wit clans...","[Fri Sep  4 21:29:36 2015] Charm: have you done a history on this..","[Fri Sep  4 21:30:20 2015] Charm: i joined in march..kinda neat","[Fri Sep  4 21:35:16 2015] Charm: lots of nuts","[Fri Sep  4 21:35:20 2015] Monoxide: hehee","[Fri Sep  4 21:35:58 2015] Charm: you stole my heals?","[Fri Sep  4 21:36:04 2015] Monoxide: lol","[Fri Sep  4 21:36:08 2015] Monoxide: i didnt steal them","[Fri Sep  4 21:36:18 2015] Charm: fine you borrowed them?","[Mon Sep 21 16:10:13 2015] Charm: nothing wrong with putting it first","[Mon Sep 21 16:10:19 2015] Charm: eek","[Mon Nov 30 20:44:20 2015] Byron has joined the clan!","[Mon Nov 30 20:46:28 2015] Monoxide: hrm","[Mon Nov 30 20:46:34 2015] Monoxide: our clan_spell is 'pox'","[Mon Nov 30 20:46:52 2015] Monoxide: its pretty funny...damage spell",})
+leaders ({"jacksparrow","charm",})
+join_type 2
+private_coffer 0
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 40
+last_spell_time 1418273875

@@ -1,0 +1,40 @@
+
+[POLYMORPH]
+
+
+  Without arguments, displays a brief listing of polymorphs available.
+  Otherwise, lets you assume the shape and powers of given polymorph
+  or displays relevant polymorph information.
+
+
+  NOTE: As of 07 OCT 2001 some changes will be implemented:
+
+  ** There is a limit of how many times you can assume a morph form within
+  a 24 hour day. The day is determined by the game clock.
+
+  ** There is also a 'lag time' between forms. You must wait a certain
+  time period between forms. For example, if Tetrapod has a 30 minute
+  lag period, and you had just assumed the form of a Tetrapod you must wait
+  30 minutes before being allowed to assume the form again.
+
+  ** All of this information is displayed with the 'polymorph chart'
+  command.
+
+
+Usage: polymorph <form>
+
+
+
+
+Alternate usage:
+
+
+  polymorph history      Shows a listing of all recent morph changes.
+
+  polymorph chart        Shows the listing of how many times you can
+                         assume a morph form as well as the time that
+                         you must wait before assuming them.
+
+
+Type 'info forms' to see a listing of all available polymorph forms.
+

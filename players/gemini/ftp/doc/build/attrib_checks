@@ -1,0 +1,7 @@
+ 
+The base for attrib checks is random(50) 
+for example
+  
+    if(this_player()->query_attrib("attrib") > random(50)) {
+       good_thing_happens
+    }

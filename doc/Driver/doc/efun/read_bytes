@@ -1,0 +1,11 @@
+SYNOPSIS
+	string read_bytes(string file, int start, int len)
+
+DESCRIPTION
+	Reads len bytes bytes from file, beginning with byte start.
+	If start is a negative value it will be counted	from the end
+	of the file. The start and len parameters are optional, they
+	default to 0 (not really useful, though).
+
+SEE ALSO
+	read_file(E), write_bytes(E), write_file(E)

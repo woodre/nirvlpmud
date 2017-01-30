@@ -1,0 +1,17 @@
+no_clean 0
+cast_here 0
+dest_dir ({"/players/feldegast/crystal/rooms/crystal2","east",})
+short_desc 0
+long_desc "  This is a small, but well-organized storage room.  A row ofcabinets are to the left and right of the door, and mahogany shelvesascend the walls.  A sign is prominently placed on the wall oppositethe door.Commands: list, withdraw, deposit"
+items ({"room","reflexive","cabinets","The cabinets are spacious, and well-maintained","door","A simple wooden door leads out","shelves","The shelves are made out of mahogany","sign","The sign has neat lettering on it that you can [1mread[2;37;0m",})
+property 0
+no_castle_flag 0
+no_exits 0
+indoors 0
+is_pk 0
+no_fight 0
+no_magic 0
+no_teleport 0
+numbers 0
+ob_file ({"players/feldegast/obj/lynx","players/feldegast/wep/summer","players/feldegast/wep/fscimitar","players/feldegast/wep/winter_light","players/feldegast/wep/death-hoe","players/feldegast/wep/ravensword","players/feldegast/equip/shield","players/feldegast/equip/midnight","players/feldegast/equip/badhat","players/feldegast/heals/cabernet","players/feldegast/wep/soulthief","players/feldegast/equip/wandereye",})
+ob_arg ({"0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","0$0$0","2$0$0","0$10000$10000","187$0$0",})

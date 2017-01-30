@@ -1,0 +1,85 @@
+This is a log of the changes I made to Qual'tor since I shut it down
+     Everything that says 'built' is in /qualtor/newstuff
+
+changed the short for everything in the city and the mountain (/clearing)
+changed room descripts for vast majority of qualtor
+split city into 3 Wards: City, Arena and Ghost
+added /storage directory for rooms no longer used
+
+Ghost Ward: all cryst rooms, old_road3 and 4, gateway, child_path4 thru 5,
+            back, nor_road1 thru 2, war_way1 and 2
+
+Ghost Ward ash effect so players take damage from red-hot falling debris
+     (tail /gateway.c for example of Ash)
+Built Breathing Scarf to combat Ash effect
+     (players must use scarf - taking up the misc slot for armors)
+Built garden near the Keep and Necro Guild Hall, moved Crusader Knight there
+Boosted power of Tormentor and he gives coins now
+Boosted power of war_wife.c and she gives coins now
+Warlord on mountain (gungir) gives coins, armor and eyepatch now
+Undead knights guarding Warlord give small amount of coins
+Removed and renamed Necromantic Guardian, now Dark Guardian
+Moved Earth Elemental so it is guarding Geomancer Guild Hall
+     (geomancers are not something that I am gonna code, just fancy rooms)
+Moved RedTower and Scimitar alley, so they are in opposite places
+Shadow Master had cloak taken away and gives coins now
+Dark Stalker has been removed (stupid mob)
+Tungus Grump gives small amount of coins
+
+Tried to have Coils and Drifters assist each other, can't work it the way I 
+     wanted, so scrapped the idea
+
+Moved Crusader Knight into garden around the keep
+Rape sceen from Mountain has been removed to appease Jaraxle
+All broken items named "goblet" have been fixed 
+Built Kaya the monk, placed up on Mountain near Shou Lung's Wife
+Fixed tent Shou Lung wife is in (directions were broken)
+Boosted power of Zyagx and he now gives coins too
+Built barricade guards (3 types) and Paladin to guard city ward
+Built samuel, East road Shopkeeper
+Built marketsquare and new shops (4 total) in City Ward
+Closed capture1 and 2.c 
+Took Dagger Alley and made it run through to shield street
+Built Coil of Vengance and Floating Torso for Ghost Ward
+Built Coil of Spite for Ghost Ward
+
+Built dark hole and placed in nor_road1.c - Lord of the Pit's Lair
+made ash falling from sky strong near pit (6 pts damage)
+Build highpriest and put in RedTower courtyard
+Built demon_hole.c to enter rift.  Place in nor_road1.c
+  rift will hold Lord of the Pit, and the Ash Golems
+Built Mace of Disruption and gave to highpriest.
+Moved Kaya into the city, built new guardian for wife, fixed tent exits
+Re-named nor_road4.c Falcon lane  (same file name, however)
+Built Child of Thought as tease in case I code the Psion
+Cut off Cryst11.c and 12.c (guard post) in crystalline tower
+Every room in Crystalline Tower has random chance of having drifter
+Updated and put Crystalline Elemental into place
+Built Crysmals, which infest the crystalline tower
+Built Undead Reaver and put into crystalline tower and 1 room in Ghost Ward
+  Reaver has random chance of appearing in both locations (total of 2 possible)
+
+Re-checked and fixed all the prices on all my heals (old and new) according
+    to /doc/build/RULES/heals/heal3
+Built Tauros and put him at the end of arena_way (room4)
+Changed the long() descript of about half the rooms in qualtor (updating) to
+   reflect that its about 5 years later
+
+Removed the Necromantic (Dark) Guardian and Changed the Earth Elemental so
+   that he doesn't give 75k+ in exp anymore (now about 55k)
+Built new races of spirits (The Gloom) and put them into Ghost Ward
+Built Gloom Assassin and he appears in 2 rooms, 1 is always and 1 randomly 
+  loading (Ghost Ward, always in City Ward)
+Built Ash Golem, Ash Grinder and Lord of the Pit and put them into rift, rift4 and
+  pit_lair, under the hole in nor_road1.c - You have to fight through 4 grinders,
+  and 2 golems to get to the pit_lord
+Added some minotaurs around Tauros (he is their champion)
+Built and Added in the UnderCity, including the Bone MarketPlace and put in new
+  clan object (bone marketeers).  /closed/market for more info
+Built town Constable for middle of marketplace
+Built Stable Boy for the stables, and to add something to low level area
+Built new_entry and Qual'tor Herald to replace entry.c in /qualtor
+
+5-15-02 opened expanded qualtor   (qualtor 2.0?)
+
+    end

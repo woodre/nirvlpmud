@@ -1,0 +1,113 @@
+
+
+This is an information file for the Bardic Guild, version 1.0
+
+The bardic guild is a guild for players that do not want to pk.
+The guild is for players who are more interested in social functions
+than in combat.  Bards cannot kill players, even in player killing areas.
+
+Bards advance in levels by doing 'Bard Quests'.  There is a minimum level
+required to do each bard task.  
+
+    Level    Bard Level
+      1          1     Apprentice
+      2          2     Lyrist
+      5          3     Journeyman
+      8          4     Minstrel
+      10         5     Troubadour
+      12         6     Bard
+      14         7     Guardian of Secrets
+      16         8     Master of Riddles
+      18         9     Master Bard
+                10     Song Master   (prestige title, no addition powers)
+                11     Keeper of Lore  (Guild Commander)
+
+Bard trials make the players use their wits and problem solving
+abilities instead of simply donating xp.  The theory is that trials
+are more in the bardic tradition than xp donation. (less killing, more int)
+
+Bardic abilies can be divided into a few basic areas:
+
+Instrumental Abilities:
+  These abilities deal with communications (bards have a lot of this),
+technical stuff (like hp monitors) and traditional abilities (such as
+blessing people, charming animals with music, ect.)  Bardic Pets fall
+into this catagory.  See the help file in /pet, as bardic pets differ
+from the 'normal' type of pet.
+
+Bard Lore:
+  Perhaps the strongest ability of the Bards is their 'Lore' abilities.
+Bards are designed around obtaining and presenting information.  Thus,
+they have a LOT of divination abilities.
+
+Shaping:
+  Bards have two types of shaping - that of Music and of Chaos.
+Musical shaping involves 'spell' like effects delivered through music.
+All shaping music can be divided into either healing, illusion or
+evocation.  All abilities are from tradition or myth.
+Chaos shaping is a completly new ability.  It deals with the bards
+ability to shape chaos to a more desired reality.  With their music,
+a bard may create small items from the actual faberic of chaos.
+  NOTE - THIS IS ALL SPECIAL EFFECT.  This ability can only create
+'junk' items.  No weapons, no armor, ect.
+
+Cantrips:
+  This only true 'magic' bards can cast are cantrips.  These are trivial
+little abilities which may liven up the atmosphere.
+
+Bards also have new emotions, the ability to sing full songs
+(in real time!), traditions and games.
+
+Combat stuff
+
+  Bards have 2 direct combat spells:
+    Words of Pain  (10 sp, d20 damage)
+    Tunes of Elemental Power  (25 sp, d50 damage)
+
+ Bards have 2 'other' evocation spells:
+    Psalm of the Chromatic Sphere  (100 sp, creates a globe with 4 chages,
+                                    each charge does d20 damage)
+    Requiem of the Falling Stars   (area effect spell, material component of
+                                    a gem.  It costs a min of 50 sp.  It will
+                                    do d40 damage to each monster in the room
+                                   (not kids/pets), charging an additional 15
+                                   sp for each creature if there are more than
+                                    3.  This slightly reduced cost is because
+                                    there must me 4 monsters to make it 
+                                    effective, and becuase it makes them ALL
+                                    attack the bard.  c.f. material component)
+
+ Bards have other spells that can effect creatures:
+  Healing:
+    Chant of Healing             (15 sp, 11 hp healed)(can be used on a player/
+                                  monster other than the caster)
+    Hymn of Healing              (50 sp, 41 hp healed.)(caster only)
+    Chord of Agony               (20 sp, stops a monster(not player/pet/kid) 
+                                  from healing at the normal rate)
+    Rhapsody of Regeneration     (100 sp, bard regenerates faster until healed)
+
+  Illusion:
+    Note of Cloaking               (10 sp, stops the hunter)
+    Chords of Distortion            (20 sp, lowers the bards ac by 2(temp))
+    Harpers Song of Spectral Binding (35sp, lowers the wc/ac of a creature by
+                                      0-2 each, maxes out.)
+
+  Lore:
+    The bards specality.  A lot of 'detects' and such.
+    True Name                    (lvl 9, 100sp, 
+                                  d40 damage, lowers the ac/wc of the target
+                                  by 0-2 each, stops healing.  May only be
+                                  used on the creature once.
+
+Note the heavy use of special effect throughout all of the abilities.  This
+is intentional.
+
+A player must be recruited into the bardic guild by a guild master.
+
+Note that the bards have no weapons which progress with level (c.f. monks),
+do not specialize in weapons (c.f. palidans), and do not
+have pk oriented abilities (c.f shadows & undead).  This is intentional.
+Hopefully this guild will round out the atmosphere, providing a home for the
+lost combative players.  (c.f. mini guilds)
+
+                                                 -- Saber

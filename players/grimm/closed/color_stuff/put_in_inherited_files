@@ -1,0 +1,13 @@
+The line:
+  #include "/obj/color_func.h";
+should be put in the folowing inheritted files:
+  /room/room.c
+  /obj/treasure.c
+  /obj/weapon.c
+  /obj/armor.c
+  /obj/monster.c
+  /obj/monster.talk.c
+  and any others you can think of that are inheritted on a normal basis
+  ("special" files made by the wizzies can have the include line in it
+  on the initiative of the wizz (more will be noted on that in the help
+  file included in this directory))

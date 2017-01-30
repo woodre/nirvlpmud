@@ -1,0 +1,8 @@
+#define MASTER    "/players/dragnar/closed/scar_master"
+#define SCAROBJ   "/players/dragnar/closed/scar"
+#define SAVE_PATH "players/dragnar/kills/"
+#define DEST      "/players/dragnar/workroom"
+#define CHANNAME  "Blood"
+#define CHANNELD  "/players/dragnar/closed/scar_chan"
+#define LOGFILE   "/players/dragnar/logs/scar.log"
+#define CHAMPLOG  "/players/dragnar/logs/champions.log"

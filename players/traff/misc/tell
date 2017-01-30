@@ -1,0 +1,3 @@
+  if(!find_player("traff")) {return 1;}
+  tell_object(find_player("traff"),HIC+"[]"+"  "+
+  BLU+capitalize(this_player()->query_real_name())+NORM+": has entered Delnoch.\n");

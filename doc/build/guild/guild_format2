@@ -1,0 +1,119 @@
+Guild Format 2- Sample guild objects <mythos 3-15-98>
+
+Below is a sample guild object that has the bare min of functions
+normally found in most guild objects.
+
+Note: granted that this advocates a daemonization method
+      this is one of the easier ways for viewing and finding files
+      
+* Remember to name fuctions for ease of understanding.
+
+** Please try to follow the format as closely as possible.
+
+guildob.c
+
+/* ~~*~~ */
+
+         /* defines and includes */
+  #include "def.h"
+  
+         /* vars that save  */
+  object hellokitty, iamavariable;
+  string sayhello;
+  int iwishiwereadog, switch;
+
+         /* static vars - vars that dont save */
+  static object thisobjectisstatic;
+  static string iamastaticstring;
+  static int wishuponastar;
+
+         /* id of the object */
+  id(str) { return str == "guildob"; }
+
+         /* autoloading */
+  query_auto_load() { return "/players/<whoever>/guildob.c:" }
+    
+         /* drop and get */
+  drop () { return 1; }  /* undroppable */
+  get() { return 0; }    /* ungettable */
+
+         /* reset function  */ 
+  reset(arg) {
+    if(arg) return;
+    iwishiwereadog = wishuponastar = 0;
+    set_heart_beat(1);
+    call_out("calling",10);
+  }
+
+         /* short function */
+  short() { return "This is a sample guild object"; }
+
+          /* long function */
+  long() { write("A sample guild object.\n"); }
+
+         /* init function where all addactions should be placed */
+  init() {
+    add_action("guildattack","guildattack");
+  }
+
+         /* optional hear_beat */
+  heart_beat() {
+    if(!environment()) { set_heart_beat(0); return 1; }
+    Iamahb();
+  }
+
+         /* optional call_outs */
+  calling() {
+    if(!environment()) return 1;
+    sayhello = 0;
+    call_out("calling",100);
+  return 1;}
+
+         /* internal functions */
+  iamahb() { return 1; }
+  set_level(n) { iwishiwereadog = n; }
+
+         /* static internal functions */
+  static internal() { if(switch) switch = 0; else switch = 1; }
+
+         /* functions that call to the guilddaem.c */
+  guildattack() { GUILDDAEM->guildattack(sayhello); return 1; }
+
+/* ~~*~~ */
+
+NEXT is the guilddaem.c sample
+
+guilddaem.c
+/* ---<>--- */
+
+        /* base includes and defines */
+  #include "def.h"
+      
+        /* power includes */
+  #include "power/guildattack.h"
+
+         /* other functions */
+  otherfunction() { 
+    write("haha\n");
+  return 1; }
+
+/* ---<>--- */
+
+NEXT is a sample of guildattack.h found in dir power
+
+guildattack.h
+/* -+- */
+
+  guildattack(string what) {
+    write(what.\n");
+    return 1; 
+  }
+
+/* -+- */
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+12/ 9/10 12:37: Soul        ((19+9  /Bloodfist)    22(1/1)
+12/11/10 00:59: Fury        ((17    /Shardak)      20(1/1)
+01/ 2/11 20:08: Krylos      ((19+22 /Neo symbiote) 24(1/1)
+01/ 2/11 20:08: Krylos      ((19+22 /Neo symbiote) 24(1/1)
+03/ 1/11 12:39: Kadaj       ((19+9  /Warrior)      21(2/1)
+03/ 4/11 14:38: Darkfyre    ((18    /Neo symbiote) 20(1/1)
+08/10/11 16:05: Darkfyre    ((19+34 /Neo symbiote) 25(1/1)
+08/12/11 19:00: Xypher      ((19    /Rangers)      20(2/1)

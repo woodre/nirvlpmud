@@ -1,0 +1,8 @@
+#include "../DEFS.h"
+
+status main(string str) {
+  write("You tap into the cybernet to check on recent player deaths...\n\n");
+  tail("/log/DEATHS");
+  write("\n"+"Perhaps you should help some pk'rs make this list...\n");
+  return 1;
+}

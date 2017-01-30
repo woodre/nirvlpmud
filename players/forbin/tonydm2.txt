@@ -1,0 +1,132 @@
+                                                                                                                                                                                                                                                               
+
+
+----[ The Order ]--- [new dark mage guild] ---(General Overview)-----
+
+REQS - players must be level 6.
+
+ADVANTAGES -    1. players are healed by the presence of other 
+                   players in a room with wimpy set (this is thematic 
+                   to the books where the Hunter feed off of others'
+                   fears).  For each person in the room with wimpy
+                   set, the player receives 1 hp/sp 3 seconds (up to 
+                   a maximum of 3 hp/sp per second). ALSO NOTE THAT
+                   MEMBERS OF THE ORDER MAY _NOT_ SET THEIR WIMPY!
+                2. players gain xp from sacrifice at the rate of
+                   sac points/1+random(3) on all things save the 
+                   sacrifice of players level.
+                3. increased spell casting powers.
+
+DISADVANTAGES - 1. players is hurt by light - based on total light.
+                   value of the room - i.e. light 3 = 3 hps/3 sps of
+                   damage every 3 hbs or so.
+                2. player gives up 1/5 of xp from each kill
+                3. player cannot 'quit out' while in combat.
+                4. player cannot use alcohol based heals.
+                5. player may not have mini-guilds.
+                6. player may not use standard mud-pets.
+                7. player takes constant dmg if wimpy is set.
+
+-[ Level & Advancement Setup ]---------------------------------------
+
+  G LVL  FAE  TITLE                          
+    1     1    the Neophyte                  
+    2     2    the Apprentice               
+    3     3    the Apprentice              
+    4     4    the Adept                 
+    5     5    the Adept                 
+    6     6    the Adept                   
+    7     8    the Learned                 
+    8    10    the Learned             
+  
+
+FAE - an independant stat that ranges from 0 to 10.  Each additional
+      point of fae will cost the guild member 5,000 xp. Each fae point
+      adds an additional 8 spell points as well as being used to determine
+      how much fae the dmage can draw upon before things go bad. See Fae
+      text document.
+
+TASKS - there will be 8 tasks that are used to confer new levels on
+        the player.  Once a certain fae and game level have been 
+        reached - the player will sense a message in the fae (the 
+        message will appear when the criteria is first reached, then
+        every random 45 minutes, and at each login - until the task
+        has been completed).
+
+      - There are also several spell tasks that must be completed in
+        order to use powers of a new found level.  Players will know
+        which spells are task dependant - it will be up to then to
+        read the books and discover what to do. These tasks has a high
+        chance of failure resulting in the players death. Death will be
+        a common thing to a dmage.
+
+                                               
+
+-[ Spell List ]------------------------------------------------------
+LEVEL 1     tw                tracking who, max of 1 player trackable per glvl
+            ot                order talk (guild line)
+            oe                order emote (guild line emote)
+            om		      silence Order line
+            owho              this is not a guild who, dmages dont get together,
+                              this shows who is on the dmages ally list
+            ally              tag a player as an ally to this specific dmage                         
+            sacrifice         sacrifice item/stat/self/child/wife
+            feed              fatality spell, also a lifedrain
+            drain	      life drain, attack spell
+            beckon            summons fae to concentrate on player
+                              building up to much fae will result in death
+            shift             ability to store a max of 3000 sps, not used in combat
+            embrace_order     update guild object
+            abandon_order     leave The Order
+            set_title         set The Order title         
+
+LEVEL 2     whip              attack spell using whisps of coldfire
+            sending           telepathic image (custom emote)
+            divining          Item info - wep/armor scale
+            empower           imbue a weapon with the fae, as you gain guild ranks you
+                              can bestow more abilities upon weapon, must choose a specific
+                              weapon and from that point on you can never empower any other
+                               
+LEVEL 3     myst              weak light blocking ability in a room and adjacent rooms
+            mesermize         peace spell, effects all in room, wont allow combat for 4 secs
+            coldshield        shield of cold, cold resist, cold dmg to attackers
+
+LEVEL 4     warding           creates ward in a room, no combat in room til ward ends
+            calling           creates a portal, nightmares enter and randomly attack things                  
+
+LEVEL 5     terror            lowers mob wc,ac, no wimpy, regens dmage for duration
+            summon            summon type spell, summon a willing player	
+
+LEVEL 6     flare             attack spell, using lashes of coldfire
+            darkness          creates darkness in a single room
+
+LEVEL 7     dcloak	      creates a cloak of darkness for x time
+            know              shows mob statistics
+
+LEVEL 8     shapechange       wolf, crow, raven, rat, panther, unhorse
+            pact_spell	      pact to request a custom ability or item
+
+
+Quest Spells
+
+            Awe               +fae to charisma temporarily
+            demon ring        nightmares wont attack wearer
+            spirit ring       spirits wont attack wearer, bind a spirit to the ring, can drain
+                              spirits life into wearer til it dies, no xp gain from binding spirit                             
+            call animal        summon yer chosen animal to aid you in combat
+                  wolf         summon a white wolf to yer side to aid in combat
+                   pack        summon the pack to your side to aid in the hunt, must have call wolf
+                  rat          summon a giant rat
+                   swarm       summon a swarm of rats
+                  crow
+                   flock
+                  raven
+                   flock
+                  panther
+            purge poison      removes poison from a player using coldfire to burn it away, causes dmg
+            wound             harm self to do dmg
+            creeping doom     summon a horde of insects that ravage the victim
+            symbol            fear, insanity, death
+            true_night        entire mud suffers light reduction temporarily            
+            
+  

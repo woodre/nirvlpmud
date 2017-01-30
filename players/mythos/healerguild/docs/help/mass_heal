@@ -1,0 +1,25 @@
+mass_heal [level 13]: heal for mutiple targets in room. 
+                      targets must be entered into your Mass Heal Members List
+                      
+                      syntax: mass_heal <type> <amount>
+					 
+                      note: <type> and <amount> are optional
+                      <type> is either hp or sp
+                      
+                      cost:  sp: amount healed * (1-3)  coins:5000
+                      
+add_mass_heal       : adds target to Members List
+ 
+                      syntax: add_mass_heal <target>
+                      
+clear_from_mass     : clears target from Members List
+                      'all' will clear the whole list
+                      
+                      syntax: clear_from_mass <target>
+                              clear_from_mass all
+
+show_mass           : shows Mass Heal Members List
+                      
+                      syntax: show_mass
+
+

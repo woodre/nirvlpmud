@@ -1,0 +1,118 @@
+This is Version 0.01 of the WIZ TREE docs, please feel free to edit and add
+comments as you see fit.  Mail me back your suggestions and we'll see if they
+will be incorporated into the next version.  Speeling and grammar corrections
+be they will ignored.  =)  leesung1@elof.acc.iit.edu
+
+
+WIZ_TREE.3.3.1994
+~~~~~~~~~~~~~~~~~
+                   IMPLEMENTER
+                     100,000
+                    (Boltar)
+                        |
+MORTAL PROBLEMS --- GUILD BALANCE --------   LAW              SECURITY
+   10,000              10,000              10,000               100
+  (Hawkeye)           (Sandman)            (Omega)           (Conquest)
+      |                   |                   |                  |
+ Assistant(s)        Assistant(s)        Assistant(s)       Assistant(s)
+     100                 100                 100                 90
+                                                            
+GROUP LEADERS/SPONSORS
+      I   ---   II    ---   III   ---   IV   ---   V   ---   VI   ---   VII
+     100        100         100         100       100        100        100
+ Persephone   Airwoman     Molasar     Saber      Blue     Ladyfinger  (empty) 
+      |          |           |           |         |          |          |
+ Assistant(s)
+     80           NOTE:  New groups will be added as needed.  The current
+      |           group leaders will all nominate wizards they think can
+ 12 Wizs MAX      or want the job, then leaders will be selected by the gods.
+   21-70          If you think your name should be up here, mail a letter to
+                  me telling me why.  We'll review all applicants.
+
+WIZPOOL
+     All wizards of level 20.  Where they wait to be chosen by a group leader.
+If they are not chosen by anyone.  They must wait for a week minimum to pass
+where they will then be put into a random group by one of the gods.
+
+
+
+DESCRIPTION OF EACH POSITION AND DUTIES:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* IMPLEMENTER:  Focuses on general quality and efficiency of mud code.  Updates
+the mud driver as needed, keeps the mud running, and owns it all!
+* MORTAL PROBLEMS:  Handles problems with players (e.g. wedding rings).
+* GUILD BALANCE:  Keeps the guilds balanced in terms of game play.  Decides
+which guilds are allowed and what they can do.
+* LAW:  What's legal and what's not.  Rules & Regs, finance, bookkeeping (yuk!)
+* SECURITY:  Checks on cheaters both players and wizards and has the power to
+demote on the spot.  Especially unruly players or wizards may be banished by a
+god at the recommendation of the Security Chief.  Coding experience not needed.
+* GROUP LEADERS/SPONSORS: Train new wizards, approve castles, promote/demote
+wizards within their group, can serve as assistants to gods as needed to help
+out in special projects or functions (e.g. castle relocation, internal audit
+of all castles, etc.)  Any wizard that fails to meet the expectations of the
+group leader can be dismissed and put back into the WIZPOOL, especially unruly
+wizards may be banished by a god at the recommendation of the group leader.
+* GROUP ASSISTANTS:  Must be available to train the other members of the group
+on the finer points of mud coding.  Has authority over group when group leader
+is not present.  Assists group leader with other group functions.  Position is
+limited because you can't directly edit other wizard's files.
+* WIZPOOL:  All new wizards, allowed to peruse the docs and trans randomly
+around at leisure, if caught helping another player will be immediately banished
+and forgotten.  Should write a letter to the groups they want to join and ask
+for sponsorship.
+      
+
+
+PROMOTION GUIDELINES:
+~~~~~~~~~~~~~~~~~~~~~
+1.   For now use the following levels of promotion:
+* 21 - New group wizard, try and find a personal mentor within the group for
+this guy!  We don't want bad habits forming.
+* 30 - Wizard who shows promise and wants the privacy of 'invis' for coding.
+* 40 - Trusted wizard with a fair knowledge of LPC so that they can assist other
+wizards with coding, or for trusted wizards who you want to allow to peruse the
+group's files. 
+* 50,60,70 - as desired.  We may group all these level's powers together.
+I'm not quite sure what duties to put on these levels.
+* 80 - Assistant Group Wizard, someone you trust enough to represent you when
+you're not around or to help you out with group admin.  Still deciding on how
+many of these to allow (maybe 1 or 2).  This person will most likely be the
+next candidate for group leadership if a new group is formed or if a group
+leadership position becomes vacant.  This is the highest level within a group.
+* 90 - Reserved for security assistants so they can 'snoop' the majority.
+Who watches the watchmen?  The gods will, but the buck stops here.  =)
+
+2.   Promotions above 30 in increments of 1 are not allowed, as it only leads
+to pettiness since there's no real gain.  We may have a use for increments of 1
+at a later date.  
+
+
+NOTES AND UNRESOLVED ISSUES:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.   In order to minimize code changes, the level numbers and corresponding
+numbers will not be changed.  However, incremental promotions (i.e. level 61,
+31) will no longer be allowed.  All wizards below 100 with such a level will
+be moved to the lowest level which will still enable them to retain their
+current 'powers'.
+2.   How to handle the allotment of guilds.  One idea was to allow only group
+leaders to run a guild.  This may or may not apply to current guild wizards.
+3.   The idea of realms was tossed about, where each group leader would design
+a realm in which to put their groups castles within.  This could be applied as
+an extension of the current mud backbone or be like placing the group's castles
+within the castle of the group leader.
+4.   Should we change the way wizards are sponsored (i.e. Leo and the 
+portable castle) since it requires both the sponsor and newbie wiz to be on at
+the same time, or modify it.
+    This will not be changed -Bp
+5.   Need to modify the file access so that wizards of level 40-100 can only
+see/edit files within their own group. 
+       Can give ability for assisants to edit files of others in group
+   otherwise I want file access to remain the same. -Bp
+6.   Should we modify the way certain powers are allocated amongst the wiz
+levels (e.g. move 'localcmd' to level 20, combine level 21-30 for invis).
+    level 21 should not have invis. they can get by with the player invisiblity
+spell if they wish to hide from players -Bp
+7.   Possible voting board, made up of the group leaders and gods to decide
+on rule changes or standards.  Would be another priviledge of being a group
+leader.

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[33ma Tarnished Medalion[0m[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "medalion"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[33ma Tarnished Medalion[0m[0m"
+damage_type 0
+hall_path "/players/dragnar/rooms/forest4"
+object_name "medalion"
+owner "wallace"
+spell_alias "focus"
+spell_mess_me "You focus your mind and body to fight better."
+spell_mess_room "%TPN% focuses their mind and body to fight longer."
+spell_mess_them "%TPN% focuses their mind and body to fight longer."
+abilities ({})
+chan_history ({"[Tue Aug 11 00:28:56 2009] Blackblade: sok","[Tue Aug 11 00:37:07 2009] Wallace: give your woman a nice smooch for me :)","[Tue Aug 11 00:37:29 2009] Blackblade: lol","[Tue Aug 11 00:37:39 2009] Blackblade: only 4 u","[Tue Aug 11 00:37:47 2009] Wallace grins","[Tue Aug 11 00:38:13 2009] Blackblade: how r your coins?","[Tue Aug 11 00:38:23 2009] Wallace: pretty good, especially with mort's bag","[Tue Aug 11 00:38:39 2009] Blackblade: ok take care","[Tue Aug 11 00:38:55 2009] Blackblade: have a great evening bro","[Fri Sep 11 16:47:06 2009] Wallace: do you know who recusant is?","[Fri Sep 11 16:48:48 2009] Blackblade: no idea","[Fri Sep 11 16:48:52 2009] Wallace nod","[Fri Sep 11 16:49:46 2009] Wallace: think we should give him an invite to our clan since hes assassin?","[Fri Sep 11 16:50:50 2009] Blackblade: he is in a clan","[Fri Sep 11 16:51:02 2009] Wallace: heh he made his own","[Fri Sep 11 17:01:40 2009] Blackblade: how was the swimming?","[Fri Sep 11 17:01:52 2009] Wallace: was good, hot tub felt nice","[Fri Sep 11 17:21:55 2009] Wallace: heh got an urge to look in old areas for a better small","[Fri Sep 11 17:22:20 2009] Blackblade: and?","[Fri Sep 11 17:22:24 2009] Wallace: no luck yet",})
+leaders ({"blackblade",})
+join_type 1
+private_coffer 10000
+public_coffer 0
+spell_delay 0
+spell_id 2
+spell_cost 25
+last_spell_time 1258452182

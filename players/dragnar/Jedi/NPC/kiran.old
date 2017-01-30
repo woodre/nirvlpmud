@@ -1,0 +1,357 @@
+#include <ansi.h>
+inherit "obj/monster";
+
+#define TIME random(4)+1
+#define Space "             "
+#define MAX 10      /* Max skill level */
+
+status BUSY;        /* Am I training? */
+status Training;    /* Mode: 0 - Knowledge; 1 - Training */
+string *skills;     /* The skills I can train */
+object gob;         /* Jedi guild object on this_object() */
+object Trainee;     /* Person being trained */
+int counter;        /* Status for HB for being attacked */
+status Member;      /* Is the person a guild member? */
+object Jedi;        /* Guild object on the Trainee */
+status Skills;      /* Does trainee have skill pts? */
+
+reset(arg){
+   ::reset(arg);
+   if(arg) return;
+   skills = ({ "aid","heal","dodge","absorb",});
+   set_name("kiran");
+   set_race("human");
+   set_gender("male");
+   set_alias("master");
+   set_short("Kiran ["+HIG+"jedi master"+NORM+"]");
+   set_long("Kiran wears a black cloak around his body with the hood pulled\n"+
+            "over his head.  The details of his face are lost in the darkness,\n"+
+            "but you can feel when he looks at you.  His gaze is intense, and it\n"+
+            "seems as if he is looking into your soul.  Kiran is not a tall man,\n"+
+            "but you get the feeling that he is able to take care of himself.\n"+
+            "You can't help wonder if he could teach you about the Jedi ways.\n");
+   set_level(20);
+   set_hp(2000);
+   set_al(random(800));
+   set_wc(40);
+   set_ac(20);
+   gob = clone_object("/players/dragnar/Jedi/jedi.c");
+   move_object(gob, this_object());
+   gob->set_saber_level(20);
+   gob->set_wep_life(1000);
+   command("colorwep HIY",this_object());
+   set_aggressive(0);
+   set_heart_beat(1);
+}
+
+init() {
+  add_action("start_training","kneel");
+  add_action("end_training","stand");
+}
+
+/********************************************************
+ **   HB makes the Jedi Master look like a real Jedi   **
+ **   The NPC actually has a jedi guild object for     **
+ **   effect, and to get the lightsaber                **
+ ********************************************************/
+heart_beat() {
+  ::heart_beat();
+  if(Trainee && !present(Trainee->query_real_name())) {
+    tell_object(Trainee, "\nKiran tells you: \"Come back another time then.\"\n");
+    ResetVar();
+  }
+  if(this_object()->query_attack()) {
+    if(!present("lightsaber",this_object())) {
+      command("unlatch saber", this_object());
+      command("ignite saber", this_object());
+    }
+    else command("ignite saber",this_object());
+    counter = 0;
+  }
+  else {
+    if(present("lightsaber",this_object())) {
+      if(counter > random(8)) command("collapse saber", this_object());
+      if(counter == 12) command("latch saber", this_object());
+    }
+    if(counter < 13) counter++;
+  }
+}
+
+/*************** Commands the players can do ****************/
+status start_training() {
+  if(BUSY) {
+    write("Kiran says:  \"I'm am already training someone.  Come back later.\"\n");
+    return 1;
+  }
+  BUSY = 1;
+  Trainee = this_player();
+  Jedi = present("jedi_object", this_player());
+  write("You kneel before the master in a sign of respect.\n");
+  if(Jedi) Member = 1;
+  call_out("TellTrainee",2,0);
+  return 1;
+}
+
+status end_training() {
+  if(!BUSY) return 0;
+  if(this_player() != Trainee) return 0;
+  write("You stand to your feet and end the training session.\n");
+  call_out("TellTrainee",3,3);
+  return 1;
+}
+
+/*********** Catch tell, makes the NPC 'interactive' **********/
+void catch_tell(string str) {
+  string who,what,junk;
+
+  if(!BUSY) return;
+  if(sscanf(str, "%s says: %s",who, what) == 2) {
+    what = lower_case(what);
+    if(who == (string) Trainee->query_name()) {
+      if(sscanf(what, "%sknowledge", junk)) {
+        Training = 0;
+        call_out("TellTrainee",TIME,1);
+      }
+      if(sscanf(what, "%straining", junk)) {
+        if(Member) {
+          Training = 1;
+          call_out("TellTrainee",TIME,4);
+        }
+        else call_out("TellTrainee",TIME,5);
+      }
+      if(sscanf(what, "%slist", junk)) {
+        call_out("TellTrainee",TIME,2);
+      }
+      if(sscanf(what, "%s"+skills[0]+"",junk)) {
+        call_out("SkillTrain",TIME,0);
+      }
+      if(sscanf(what, "%s"+skills[1]+"",junk)) {
+        call_out("SkillTrain",TIME,1);
+      }
+      if(sscanf(what, "%s"+skills[2]+"",junk)) {
+        call_out("SkillTrain",TIME,2);
+      }
+      if(sscanf(what, "%s"+skills[3]+"",junk)) {
+        call_out("SkillTrain",TIME,3);
+      }
+      if(sscanf(what, "%sforce", junk)) {
+        if(!Training) call_out("TellTrainee",TIME,6);
+      }
+      if(sscanf(what, "%scode", junk)) {
+        if(!Training) call_out("TellTrainee",TIME,7);
+      }
+      if(sscanf(what, "%sdedication", junk)) {
+        if(!Training) call_out("TellTrainee",TIME,8);
+      }
+    }
+  }
+}
+/*****************************************************************
+ **   Helper functions for training and talking to the player   **
+ *****************************************************************/
+TellTrainee(int arg) {
+  string temp;
+
+  if(!BUSY || !Trainee ) return;
+  if(!present(Trainee->query_real_name())) {
+    ResetVar();
+  }
+  switch(arg) {
+  case 0:
+    if(Member) temp = "Jedi";
+    else temp = "warrior";
+    tell_object(Trainee, "\nKiran says: \"Greetings young "+temp+", do you come here seeking knowledge\n"+
+      Space+"or training?\"\n");
+    break;
+  case 1:
+  if(Member) {
+    tell_object(Trainee, 
+          "\nKiran says: \"Ahh, Knowledge is an ally with the Force.  Your first step\n"+
+      Space+"on the path of becoming a Jedi Master begins here.\n"+
+      Space+"Which aspect of the force are you interested in? Or,\n"+
+      Space+"if you are not sure, please ask me for a list, and I\n"+ 
+      Space+"will tell you the Force powers that I have mastered.\"\n");
+  }
+  else {
+    tell_object(Trainee, "\nKiran says: \"Ahh, so you wish to learn about the Jedi?  State the topic\n"+
+      Space+"you wish to learn more about, or ask for a list of topics.\"\n");
+  }
+    break;
+  case 2:
+    if(Training) {
+      tell_object(Trainee, "\nKiran says: \"Very well, listen and consider carefully, \n"+
+        Space+"the choices you make decide much for your future.  Each\n"+
+        Space+"skill will grant you an additional level of power, but\n"+
+        Space+"you must use it wisely.\"\n");
+      call_out("ListPowers",TIME);
+    }
+	    else ListPowers();
+    break;
+  case 3:
+    tell_room(environment(this_object()), "Kiran says: \"May the Force be with you,  "+Trainee->query_name()+".\"\n");
+    ResetVar();
+    break;
+  case 4:
+    if(Jedi && Jedi->query_skill_points() > 0) {
+      Skills = 1;
+      tell_object(Trainee, "\nKiran says: \"Yes, I feel your readiness.  You have grown stonger with\n"+
+        Space+"the Force.  If you know the skill you wish to train, state\n"+
+        Space+"it.  Otherwise, ask for a list and I will gladly tell you.\"\n");
+
+    }
+    else {
+      Skills = 0;
+      Training = 0;
+      tell_object(Trainee, "\nKiran says: \"I understand your eagerness, but you are not yet ready to\n"+
+        Space+"take on the responsibility of more power.  Come back when\n"+
+        Space+"you have gained more control of the Force.\"\n");
+    }
+    break;
+  case 5:
+    tell_object(Trainee, "\nKiran says: \"Training to become a Jedi is a life long obligation.  A\n"+
+      Space+"Jedi has the most serious mind; the highest dedication.\n"+
+      Space+"Until you have gone before the Council and taken the oath,\n"+
+      Space+"I cannot train you.  If you want to learn about the Force\n"+
+      Space+"however, just ask for knowledge and I will tell you\n"+
+      Space+"about the Jedi.\"\n");
+    break;
+  case 6:
+    tell_object(Trainee, "\nKiran says: \"The Force is the energy that surrounds us, binds us.\n"+
+      Space+"Life creates it, makes it grow.  A Jedi feels the Force, and uses\n"+
+      Space+"it to do his will.  But, there is a Darkside of the Force.  A Jedi\n"+
+      Space+"must be aware of it; calm, peace, inner reflection are the allies\n"+
+      Space+"of the force.  Hate, fear, aggression will lead you down the dark\n"+
+      Space+"path, forever will it consume your destiny.\n");
+    break;
+  case 7:
+    tell_object(Trainee, "\nKiran says: \"The code the Jedi must live by is not an easy one.  A\n"+
+      Space+"Jedi walks the world of Nirvana, serving the Council in what\n"+
+      Space+"is good and just.  The Council is a group of Jedi Masters\n"+
+      Space+"that decides as a body what items the Jedi will face.  A Jedi\n"+
+      Space+"may be called upon at any time to serve a request from the Council.\n"+
+      Space+"And every duty must be carried out with the highest regard to\n"+
+      Space+"priority for the Light Side of the Force.\"\n");
+    break;
+  case 8:
+    tell_object(Trainee, "\nKiran says: \"The dedication of a Jedi must be a lifelong commitment.\n"+
+      Space+"A Jedi's life is based on training and serving the Force.  From\n"+
+      Space+"the time a Jedi first becomes an apprentice, they sacrifice their\n"+
+      Space+"entire lives to training and gaining knowledge about the force.\n"+
+      Space+"Becoming an apprentice is not easy however.  The candidate must\n"+
+      Space+"be identified by a Jedi Master, and then go before the council\n"+
+      Space+"for approval.  And that is the begining of the journey.\"\n");
+    break;
+  default:
+    tell_object(Trainee, "\nKiran says: \"I don't seem to know about that.\"\n");
+    break;
+  }
+}
+
+string ListPowers() {
+  int i;
+  string temp, temp2;
+
+  if(Training) temp2 = "assist with your training are:";
+  else temp2 = "help you with are:"; 
+  tell_object(Trainee, "\nKiran says: \"The Force powers I can "+temp2+"\n"+Space);
+  if(!Member) { 
+    temp = "force, code, or dedication.\"\n";
+  }
+  else {
+    if(!Training) temp = "force, code, dedication, ";
+    else temp = "";
+    for(i=0; i<sizeof(skills); i++) {
+      temp += skills[i];
+      if(i == sizeof(skills)-1) {
+        temp += "\"\n";
+      }
+      else if(i == sizeof(skills)-2) temp += ", and ";
+      else temp += ", ";
+    }
+  }
+  if(Trainee) tell_object(Trainee, temp);
+  return temp;
+}
+
+void SkillInfo(int num) {
+  if(!Member || !Trainee) return;
+  switch(num) {
+  case 0:
+    tell_object(Trainee, "\nKiran says: \"Aid is a spell that will enable you to help your friends\n"+
+    Space+"in combat.  It will cause you to rush to the front of the\n"+
+    Space+"battle, keeping your ally from harm.  A well trained Jedi will\n"+
+    Space+"even be able to heal their friend while running into battle.  To\n"+
+    Space+"use your power, just type: aid <person>.\"\n");
+    break;
+  case 1:
+    tell_object(Trainee,  "\nKiran says: \"Heal is a powerful Jedi skill.  It enables a Jedi\n"+
+      Space+"to bind the living Force to heal their wounds.  It is a\n"+
+      Space+"rather difficult task however, so only the most well trained Jedi\n"+
+      Space+"is able to do it effectively.  It can also be used on a friend.\n"+
+      Space+"To use your power, type: heal <ally> (defaults to the caster).\"\n");
+      /*
+      Heal is a powerful Jedi skill that enables the Jedi to 
+      call on the force to increase the rate of regeneration in the users 
+      body. This effect is instantaneous, sealing wounds and wiping away
+      the pains of battle. It can also be used on a Jedi's allies for the
+      same effect. To use your power, type: heal <ally> (defaults to the
+      caster). 
+      */
+    break;
+  case 2:
+    tell_object(Trainee, "\nKiran says: \"Dodge is a Jedi skill that comes directly from the\n"+
+      Space+"Force.  It can not be controlled, but a trained Jedi will\n"+
+      Space+"move on instict to dodge the blow of an enemy.  A Jedi that is\n"+
+      Space+"better trained will dodge more blows than one that is not.\n");
+     /*
+      Dodge is a skill that comes directly from the force. A Jedi is able
+      to foresee an attack, therefore, dodging it before it can cause
+      them bodily harm. This ability takes the form of a superpowerful
+      instinct, and is not controlled by the Jedi, but occurs auto-
+      matically during combat.
+     */
+    break;
+  default:
+    tell_object(Trainee, "\nKiran says: \"Absorb is a Jedi power that allows a trained Jedi\n"+
+      Space+"to use the Force to cushion part of an enemies blow.  The\n"+
+      Space+"better trained the Jedi, the more effective the absorb will\n"+
+      Space+"be.  To use this skill, type: absorb.\"\n");
+    /*
+      Absorb allows a Jedi to summon the living force around their
+      body, taking part of the kinetic energy concentrated on 
+      them and redirecting it harmlessly away. To use this skill
+      type: absorb.
+     */
+    break;
+  }
+}
+
+ResetVar() {
+  BUSY = 0;
+  Trainee = 0;
+  Member = 0;
+  Jedi = 0;
+  Training = 0;
+}
+
+void SkillTrain(int num) {
+  if(Training && Skills && Jedi) {
+    if(!Jedi->query_skill_points()) {
+      TellTrainee(4);
+      return;
+      }
+    if(Jedi->query_skill(skills[num]) >= MAX) {
+      tell_object(Trainee, "\nKiran says: \"You have learned all that you need to know about\n"+
+        Space+skills[num]+". I have nothing left to teach you.\"\n");
+      return;
+    }
+    tell_object(Trainee, "\nKiran says: \"Yes, you have become stronger with the power "+skills[num]+".\n"+
+      Space+"May you use it wisely, and beware of the Darkside of\n"+
+      Space+"the Force.\"\n");
+    Jedi->adj_skill_points(-1);
+    Jedi->adj_skill(skills[num], 1);
+    return;
+  }
+  else SkillInfo(num);
+  return;
+}

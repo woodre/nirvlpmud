@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1mpirate[0m medallion made of cursed Aztec [33mgold[0m"
+long_desc "This is a medallion made of cursed Aztec [33mgold[0m from the stone chest ofCortez himself. It is one of 882 identical pieces and places its curseof unjust proportions upon each person who has hold of a piece. It hasa skull and crossbones on it and is double-layered with an outer circle.You can feel an [1;31mevil aura[0m emanating from it.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "medallion"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is a medallion made of cursed Aztec [33mgold[0m from the stone chest ofCortez himself. It is one of 882 identical pieces and places its curseof unjust proportions upon each person who has hold of a piece. It hasa skull and crossbones on it and is double-layered with an outer circle.You can feel an [1;31mevil aura[0m emanating from it.[0mType 'clan_help' for commands."
+clan_short "A [1mpirate[0m medallion made of cursed Aztec [33mgold[0m"
+damage_type "physical"
+hall_path "/players/snow/gate"
+object_name "medallion"
+owner "nyteshade"
+spell_alias "impale"
+spell_mess_me "Your %green%pirate%normal% medallion shimmers, and your weapons lash out in a %hi yellow%|%normal% %hi yellow%|%normal% b l u r %hi yellow%|%normal% %hi yellow%|%normal% of attacks!"
+spell_mess_room "You see %TPN%'s %green%pirate%normal% medallion begin to glow brightly as he flurries %AKN% with a series of brutal stabs."
+spell_mess_them "A series of well placed stabs %red%IMPALE%normal% you! %TPN%'s %green%pirate%normal% medallion glows brightly."
+abilities ({})
+chan_history ({"[Tue Jun 10 22:41:19 2008] Vahiti: ok yea u can man lol","[Tue Jun 10 22:41:55 2008] Nyteshade: i know, we roll like that, and you're not one of Nirvana's big douches, heh","[Tue Jun 10 22:41:59 2008] Vahiti: i dont lie cheat or steal unless ur a cyber or some other guild","[Tue Jun 10 22:42:31 2008] Nyteshade: Thomas, Derian, and Annihilator used to be leaders too, but I don't completely trust any of em cept Annihilator, and he hasn't been around in nearly a year as any character","[Tue Jun 10 23:13:00 2008] Nyteshade has written a note to the clan board.","[Thu Jul 10 16:53:09 2008] Nyteshade: nadda, u?","[Thu Jul 10 16:53:15 2008] Derian: nadda","[Thu Jul 10 16:54:07 2008] Nyteshade: just got off work","[Thu Jul 10 16:54:29 2008] Derian: word","[Fri Jul 18 09:44:32 2008] Nyteshade: sup Derian","[Fri Aug  1 13:03:38 2008] Alora: blah","[Wed Apr 29 00:39:11 2009] Ansem: hi","[Mon Jun 15 12:44:49 2009] Milk has joined the clan!","[Mon Jun 15 12:45:13 2009] Nyteshade has promoted Milk to a clan leader!","[Sun Aug  2 03:02:19 2009] Thomas: ogre","[Sun Aug  2 03:09:33 2009] Thomas: seht","[Mon Aug  3 16:13:15 2009] Thomas: golem","[Sat Jun 12 11:25:53 2010] Thomas: golem","[Sat Jun 12 12:41:14 2010] Thomas: fiona","[Thu Sep 15 08:01:34 2016] Hex: wall",})
+leaders ({"vahiti","alora","milk",})
+join_type 2
+private_coffer 7704
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1474055758

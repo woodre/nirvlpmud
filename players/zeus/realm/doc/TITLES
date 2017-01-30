@@ -1,0 +1,12 @@
+
+Tyborlek's titles.
+
+  The npc tyborlek can set the players' title.
+  Each title costs a certain amount of 'kills'.
+  The player gets kills by killing demons.
+  5 titles are available in red, black and white.
+
+  In the room ~/realm/entrance.c is the code
+  which keeps the .o files clean.  It checks
+  a minimum of every 2 weeks.
+

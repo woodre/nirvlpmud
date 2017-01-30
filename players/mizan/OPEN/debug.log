@@ -1,0 +1,264 @@
+Connection reset by peer detected.
+Connection timed out detected.
+Bad argument 1 to call_other()
+Current object was bin/wiz/_clone, line 919
+"cmd_hook" in "obj/player.c" ("obj/player#3065") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#3065") line 33
+"cmd_clone" in "bin/wiz/_clone.c" ("bin/wiz/_clone") line 77
+Bad argument 1 to call_other()
+Current object was players/vertebraker/closed/shardak/obj/skeleton#4685, line 53
+"heart_beat" in "players/vertebraker/closed/shardak/obj/skeleton.c" ("players/vertebraker/closed/shardak/obj/skeleton#4685") line 89
+"::heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/vertebraker/closed/shardak/obj/skeleton#4685") line 356
+"::heart_beat" in "obj/monster" ("players/vertebraker/closed/shardak/obj/skeleton#4685") line 291
+"attack" in "obj/monster" ("players/vertebraker/closed/shardak/obj/skeleton#4685") line 1026
+"::attack" in "obj/living.c" ("players/vertebraker/closed/shardak/obj/skeleton#4685") line 1755
+error when executing program in destroyed object players/vertebraker/closed/shardak/obj/skeleton#4685
+Heart beat in players/vertebraker/closed/shardak/obj/skeleton#4685 turned off.
+Bad argument 2 to tell_object()
+Current object was players/angel/area/stargate/npc/tealc#5093, line 88
+"heart_beat" in "obj/monster.c" ("players/angel/area/stargate/npc/tealc#5093") line 291
+"attack" in "obj/monster.c" ("players/angel/area/stargate/npc/tealc#5093") line 1007
+"execute_spell" in "obj/monster.c" ("players/angel/area/stargate/npc/tealc#5093") line 988
+error when executing program in destroyed object players/angel/area/stargate/npc/tealc#5093
+Heart beat in players/angel/area/stargate/npc/tealc#5093 turned off.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Indexing on illegal type.
+Current object was players/vertebraker/guilds/samurai/bin/_id, line 491
+"cmd_hook" in "players/vertebraker/dev/guild_object.c" ("players/vertebraker/guilds/samurai/gob#6054") line 50
+"cmd_id" in "players/vertebraker/guilds/samurai/bin/_id.c" ("players/vertebraker/guilds/samurai/bin/_id") line 4
+Indexing on illegal type.
+Current object was players/vertebraker/guilds/samurai/bin/_id, line 10
+"cmd_hook" in "players/vertebraker/dev/guild_object.c" ("players/vertebraker/guilds/samurai/gob#6054") line 50
+"cmd_id" in "players/vertebraker/guilds/samurai/bin/_id.c" ("players/vertebraker/guilds/samurai/bin/_id") line 4
+Bad argument 1 to call_other()
+Current object was bin/wiz/_clone, line 34
+"cmd" in "players/mokri/obj/this.c" ("players/mokri/obj/this#7843") line 25
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"cmd_hook" in "obj/player.c" ("obj/player#5316") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#5316") line 33
+"cmd_clone" in "bin/wiz/_clone.c" ("bin/wiz/_clone") line 77
+Error in loading object
+Current object was players/vertebraker/guilds/samurai/gob#6054, line 99
+"cmd_hook" in "players/vertebraker/dev/guild_object.c" ("players/vertebraker/guilds/samurai/gob#6054") line 50
+Error in loading object
+Current object was players/vertebraker/guilds/samurai/gob#6054, line 99
+"cmd_hook" in "players/vertebraker/dev/guild_object.c" ("players/vertebraker/guilds/samurai/gob#6054") line 50
+Illegal save file name /players/mokri/clans/testobject
+Current object was players/mokri/clans/object#8644, line 14
+"build_cmd" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 35
+"execute_me" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 12
+"execute" in "players/mokri/exec_file.c" ("players/mokri/exec_file") line 6
+"set_clan_short" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8644") line 144
+"save_me" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8644") line 26
+Illegal save file name /players/mokri/clans/test/object
+Current object was players/mokri/clans/object#8650, line 163
+"build_cmd" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 35
+"execute_me" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 12
+"execute" in "players/mokri/exec_file.c" ("players/mokri/exec_file") line 6
+"set_clan_short" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8650") line 144
+"save_me" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8650") line 26
+Illegal save file name /players/mokri/clans/test/object
+Current object was players/mokri/clans/object#8723, line 14
+"build_cmd" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 35
+"execute_me" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 12
+"execute" in "players/mokri/exec_file.c" ("players/mokri/exec_file") line 6
+"set_clan_short" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8723") line 144
+"save_me" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8723") line 26
+Illegal save file name /players/mokri/clans/test/clan_object
+Current object was players/mokri/clans/object#8737, line 163
+"build_cmd" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 35
+"execute_me" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 12
+"execute" in "players/mokri/exec_file.c" ("players/mokri/exec_file") line 6
+"set_clan_short" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8737") line 144
+"save_me" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8737") line 26
+Illegal save file name /players/mokri/clans/test/object
+Current object was players/mokri/clans/object#8820, line 14
+"build_cmd" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 35
+"execute_me" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 12
+"execute" in "players/mokri/exec_file.c" ("players/mokri/exec_file") line 6
+"set_clan_short" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8820") line 144
+"save_me" in "players/mokri/clans/object.c" ("players/mokri/clans/object#8820") line 26
+Illegal save file name /open/mokri/clans/test/object
+Current object was players/mokri/clans/object#9006, line 14
+"build_cmd" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 35
+"execute_me" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 12
+"execute" in "players/mokri/exec_file.c" ("players/mokri/exec_file") line 6
+"set_clan_short" in "players/mokri/clans/object.c" ("players/mokri/clans/object#9006") line 144
+"save_me" in "players/mokri/clans/object.c" ("players/mokri/clans/object#9006") line 26
+Bad argument 1 to call_other()
+Current object was players/jaraxle/cont/bdragon/amulet#9016, line 112
+"cmd_hook" in "obj/player.c" ("obj/player#8831") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#8831") line 57
+"cmd_wear" in "bin/play/_wear.c" ("bin/play/_wear") line 20
+"wear" in "obj/armor.c" ("players/jaraxle/cont/bdragon/amulet#9016") line 357
+"add_guild_bonus" in "players/jaraxle/cont/bdragon/amulet.c" ("players/jaraxle/cont/bdragon/amulet#9016") line 32
+Bad argument 1 to call_other()
+Current object was players/vertebraker/closed/shardak/obj/skeleton#5148, line 28
+"heart_beat" in "players/vertebraker/closed/shardak/obj/skeleton.c" ("players/vertebraker/closed/shardak/obj/skeleton#5148") line 89
+"::heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/vertebraker/closed/shardak/obj/skeleton#5148") line 356
+"::heart_beat" in "obj/monster" ("players/vertebraker/closed/shardak/obj/skeleton#5148") line 291
+"attack" in "obj/monster" ("players/vertebraker/closed/shardak/obj/skeleton#5148") line 1026
+"::attack" in "obj/living.c" ("players/vertebraker/closed/shardak/obj/skeleton#5148") line 1755
+error when executing program in destroyed object players/vertebraker/closed/shardak/obj/skeleton#5148
+Heart beat in players/vertebraker/closed/shardak/obj/skeleton#5148 turned off.
+Error in loading object
+Current object was players/mokri/cmds/_mexec, line 8
+"build_cmd" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 35
+"execute_me" in "players/mokri/cmds/_mexec.c" ("players/mokri/cmds/_mexec") line 12
+Bad argument 1 to call_other()
+Current object was players/vertebraker/closed/shardak/obj/skeleton#9834, line 250
+"heart_beat" in "players/vertebraker/closed/shardak/obj/skeleton.c" ("players/vertebraker/closed/shardak/obj/skeleton#9834") line 89
+"::heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/vertebraker/closed/shardak/obj/skeleton#9834") line 356
+"::heart_beat" in "obj/monster.c" ("players/vertebraker/closed/shardak/obj/skeleton#9834") line 291
+"attack" in "obj/monster.c" ("players/vertebraker/closed/shardak/obj/skeleton#9834") line 1026
+"::attack" in "obj/living.c" ("players/vertebraker/closed/shardak/obj/skeleton#9834") line 1755
+error when executing program in destroyed object players/vertebraker/closed/shardak/obj/skeleton#9834
+Heart beat in players/vertebraker/closed/shardak/obj/skeleton#9834 turned off.
+Connection timed out detected.
+Bad argument 1 to environment()
+Current object was room/store, line 51
+"buy" in "room/shop.c" ("room/shop") line 133
+"buy" in "room/store.c" ("room/store") line 115
+Bad argument 1 to call_other()
+Current object was players/vertebraker/closed/shardak/obj/skeleton#9991, line 596
+"heart_beat" in "players/vertebraker/closed/shardak/obj/skeleton.c" ("players/vertebraker/closed/shardak/obj/skeleton#9991") line 89
+"::heart_beat" in "players/vertebraker/closed/std/monster.c" ("players/vertebraker/closed/shardak/obj/skeleton#9991") line 356
+"::heart_beat" in "obj/monster" ("players/vertebraker/closed/shardak/obj/skeleton#9991") line 291
+"attack" in "obj/monster" ("players/vertebraker/closed/shardak/obj/skeleton#9991") line 1026
+"::attack" in "obj/living.c" ("players/vertebraker/closed/shardak/obj/skeleton#9991") line 1755
+error when executing program in destroyed object players/vertebraker/closed/shardak/obj/skeleton#9991
+Heart beat in players/vertebraker/closed/shardak/obj/skeleton#9991 turned off.
+Connection reset by peer detected.
+Bad argument 1 to call_other()
+Current object was players/jaraxle/cont/bdragon/amulet#9016, line 92
+"heart_beat" in "obj/monster.c" ("players/tallos/7tigers/mobs/golddragon1#10556") line 291
+"attack" in "obj/monster.c" ("players/tallos/7tigers/mobs/golddragon1#10556") line 1026
+"::attack" in "obj/living.c" ("players/tallos/7tigers/mobs/golddragon1#10556") line 1824
+"do_damage" in "obj/living.c" ("obj/player#8831") line 592
+"death" in "obj/living.c" ("obj/player#8831") line 841
+"transfer_all_to" in "obj/living.c" ("obj/player#8831") line 1124
+"drop" in "obj/armor" ("players/jaraxle/cont/bdragon/amulet#9016") line 401
+"remove_guild_bonus" in "players/jaraxle/cont/bdragon/amulet.c" ("players/jaraxle/cont/bdragon/amulet#9016") line 40
+Heart beat in players/tallos/7tigers/mobs/golddragon1#10556 turned off.
+Bad argument 1 to call_other()
+Current object was players/jaraxle/cont/bdragon/amulet#9016, line 19
+"cmd_hook" in "obj/player.c" ("obj/player#8831") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#8831") line 57
+"cmd_wear" in "bin/play/_wear.c" ("bin/play/_wear") line 20
+"wear" in "obj/armor" ("players/jaraxle/cont/bdragon/amulet#9016") line 357
+"add_guild_bonus" in "players/jaraxle/cont/bdragon/amulet.c" ("players/jaraxle/cont/bdragon/amulet#9016") line 32
+Net unreachable detected.
+Net unreachable detected.
+Connection reset by peer detected.
+Bad argument 1 to call_other()
+Current object was players/jaraxle/cont/bdragon/amulet#9016, line 34
+"cmd_hook" in "obj/player.c" ("obj/player#8831") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#8831") line 57
+"cmd_quit" in "bin/play/_quit.c" ("bin/play/_quit") line 5
+"quit" in "obj/player.c" ("obj/player#8831") line 1010
+"drop_all" in "obj/player.c" ("obj/player#8831") line 1863
+"drop_one_item" in "obj/player.c" ("obj/player#8831") line 1839
+"drop" in "obj/armor" ("players/jaraxle/cont/bdragon/amulet#9016") line 401
+"remove_guild_bonus" in "players/jaraxle/cont/bdragon/amulet.c" ("players/jaraxle/cont/bdragon/amulet#9016") line 40
+Failed to load file.
+Current object was players/mokri/clans/hall, line 8
+"cmd" in "players/mokri/obj/this.c" ("players/mokri/obj/this#11517") line 25
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"create_clan" in "players/mokri/clans/hall.c" ("players/mokri/clans/hall") line 33
+Bad argument 1 to keys()
+Current object was obj/simul_efun, line 76
+"cmd" in "players/mokri/obj/this.c" ("players/mokri/obj/this#12569") line 25
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"create_clan" in "players/mokri/clans/hall.c" ("players/mokri/clans/hall") line 33
+"add_clan" in "players/mokri/clans/funcs.c" ("players/mokri/clans/funcs") line 48
+"query_clan_exists" in "players/mokri/clans/funcs.c" ("players/mokri/clans/funcs") line 28
+"member" in "obj/simul_efun/m_efuns.c" ("obj/simul_efun") line 57
+Connection reset by peer detected.
+Failed to load file.
+Current object was players/vertebraker/guilds/priests/bin/_bless, line 55
+"cmd_hook" in "players/vertebraker/dev/guild_object.c" ("players/vertebraker/guilds/priests/gob#13477") line 50
+"cmd_bless" in "players/vertebraker/guilds/priests/bin/_bless.c" ("players/vertebraker/guilds/priests/bin/_bless") line 50
+Bad argument 1 to keys()
+Current object was obj/simul_efun, line 72
+"cmd" in "players/mokri/obj/this.c" ("players/mokri/obj/this#13246") line 25
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"clan_command" in "players/mokri/clans/object.c" ("players/mokri/clans/object#13666") line 80
+"main" in "players/mokri/clans/cmds/_clan_help.c" ("players/mokri/clans/cmds/_clan_help") line 14
+"query_leader" in "players/mokri/clans/object.c" ("players/mokri/clans/object#13666") line 89
+"member" in "obj/simul_efun/m_efuns.c" ("obj/simul_efun") line 57
+Bad argument 1 to tell_room()
+Current object was players/fred/closed/bloodfist/NPC/faerie, line 26
+"time_to_go" in "players/fred/closed/bloodfist/NPC/faerie.c" ("players/fred/closed/bloodfist/NPC/faerie") line 137
+Error in call out.
+Too long evaluation. Execution aborted.
+Current object was players/boltar/things/dead#13425, line 76
+"go_east" in "obj/player/dr/dirs.c" ("obj/player#7564") line 16
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"move" in "room/room.c" ("room/forest1") line 266
+"move_player" in "obj/player.c" ("obj/player#7564") line 3224
+"::move_player" in "obj/living.c" ("obj/player#7564") line 221
+"catch_tell" in "players/boltar/things/dead.c" ("players/boltar/things/dead#13425") line 57
+"random_move" in "players/boltar/things/dead.c" ("players/boltar/things/dead#13425") line 112
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"north" in "players/aislinn/castle.c" ("players/aislinn/castle") line 43
+"move_player" in "obj/living.c" ("players/boltar/things/dead#13425") line 207
+Error in loading object
+Current object was players/mokri/clans/cmds/_enter_clan_hall, line 37
+"cmd" in "players/mokri/obj/this.c" ("players/mokri/obj/this#13689") line 25
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"clan_command" in "players/mokri/clans/object.c" ("players/mokri/clans/object#13820") line 75
+"main" in "players/mokri/clans/cmds/_enter_clan_hall.c" ("players/mokri/clans/cmds/_enter_clan_hall") line 22
+Indexing on illegal type.
+Current object was players/vertebraker/guilds/samurai/bin/_id, line 53
+"cmd_hook" in "players/vertebraker/dev/guild_object.c" ("players/vertebraker/guilds/samurai/gob#14727") line 50
+"cmd_id" in "players/vertebraker/guilds/samurai/bin/_id.c" ("players/vertebraker/guilds/samurai/bin/_id") line 4
+Indexing on illegal type.
+Current object was players/vertebraker/guilds/samurai/bin/_id, line 53
+"cmd_hook" in "players/vertebraker/dev/guild_object.c" ("players/vertebraker/guilds/samurai/gob#14727") line 50
+"cmd_id" in "players/vertebraker/guilds/samurai/bin/_id.c" ("players/vertebraker/guilds/samurai/bin/_id") line 4
+Bad argument 1 to call_other()
+Current object was players/vertebraker/swamp/OBJ/denim_shorts#15656, line 141
+"cmd_hook" in "obj/player.c" ("obj/player#15583") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#15583") line 57
+"cmd_ready" in "bin/play/_ready.c" ("bin/play/_ready") line 26
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"wear" in "obj/armor.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 357
+"add_guild_bonus" in "players/vertebraker/swamp/OBJ/denim_shorts.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 27
+Bad argument 1 to call_other()
+Current object was players/vertebraker/swamp/OBJ/denim_shorts#15656, line 46
+"cmd_hook" in "obj/player.c" ("obj/player#15583") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#15583") line 57
+"cmd_drop" in "bin/play/_drop.c" ("bin/play/_drop") line 21
+"drop_all" in "obj/player.c" ("obj/player#15583") line 1863
+"drop_one_item" in "obj/player.c" ("obj/player#15583") line 1839
+"drop" in "obj/armor.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 401
+"remove_guild_bonus" in "players/vertebraker/swamp/OBJ/denim_shorts.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 35
+Bad argument 1 to call_other()
+Current object was players/vertebraker/swamp/OBJ/denim_shorts#15656, line 79
+"cmd_hook" in "obj/player.c" ("obj/player#15583") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#15583") line 57
+"cmd_ready" in "bin/play/_ready.c" ("bin/play/_ready") line 26
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"wear" in "obj/armor.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 357
+"add_guild_bonus" in "players/vertebraker/swamp/OBJ/denim_shorts.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 27
+Bad argument 1 to call_other()
+Current object was players/vertebraker/swamp/OBJ/denim_shorts#15656, line 109
+"cmd_hook" in "obj/player.c" ("obj/player#15583") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#15583") line 57
+"cmd_drop" in "bin/play/_drop.c" ("bin/play/_drop") line 21
+"drop_all" in "obj/player.c" ("obj/player#15583") line 1863
+"drop_one_item" in "obj/player.c" ("obj/player#15583") line 1839
+"drop" in "obj/armor.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 401
+"remove_guild_bonus" in "players/vertebraker/swamp/OBJ/denim_shorts.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 35
+Bad argument 1 to call_other()
+Current object was players/vertebraker/swamp/OBJ/denim_shorts#15656, line 39
+"cmd_hook" in "obj/player.c" ("obj/player#15583") line 2409
+"::cmd_hook" in "obj/user/cmd_hook.c" ("obj/player#15583") line 57
+"cmd_ready" in "bin/play/_ready.c" ("bin/play/_ready") line 26
+"command" in "closed/verte/command_efun.c" ("obj/simul_efun") line 22
+"wear" in "obj/armor.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 357
+"add_guild_bonus" in "players/vertebraker/swamp/OBJ/denim_shorts.c" ("players/vertebraker/swamp/OBJ/denim_shorts#15656") line 27

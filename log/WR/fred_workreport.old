@@ -1,0 +1,305 @@
+Fri Nov 17 13:40:53 2000--Action: conan  Reason:  I gave him 3 pieces of equipment that didn't restore in his hotel room, 3 restored and then he got a sensitive mind error.
+Fri Dec  1 01:28:43 2000--Action: vinni Reason: added 2 lines to log who receives an amulet or sword.
+Fri Dec  1 01:29:03 2000--Action: overlord Reason: added a line to see who all kills him
+Fri Dec  1 01:29:37 2000--Action: forest Reason: added a line to see you goes into my area for curiousity
+Sun Dec  3 00:20:41 2000--Action: forest4 Reason: changed an exit it was going to the wrong room.
+Sat Dec  9 05:35:33 2000--Action: tiger Reason: gave him a cwep.c for killing the overlord becuase it actually donated from his blaster and shouldn't have, changed it set_name to remains instead of corpse now.
+Wed Jan  3 00:54:47 2001--Action: forest14,15,16 Reason: had to change code on monkey.c and kmonky.c somehow screwed it up =(
+Tue Jan  9 03:44:47 2001--Action: vinni Reason: ls
+Tue Jan  9 03:45:13 2001--Action: vinni Reason: changed one thing as to what he needed to get the sword.
+Wed Jan 17 00:34:31 2001--Action: splooge Reason: fixed a typo
+Mon Jan 22 14:46:39 2001--Action: splooge Reason: it was saveable =9
+Mon Jan 22 14:47:21 2001--Action: jarana Reason: gave her a title for reporting a bug.
+Thu Apr 26 23:33:24 2001--Action: updated snake.c in my forest Reason: it had a 50% chance of double hit added a wc_bonus to it.
+Fri Apr 27 23:55:29 2001--Action: updated castle.c Reason: there was a typo in it pointed out by Lord Wocket.
+Mon Apr 30 14:39:51 2001--Action: gave exp to chupacabra Reason: poison killed him he prayed same poison killed him again.
+Fri May 11 22:39:15 2001--Action: updated forest30.c Reason: there was a typo concerning the syrup cost.
+Mon May 14 11:32:25 2001--Action: changed set name on my ferret overlord Reason: I wanted overlord instead of ferret.
+Sat Jun 16 20:31:42 2001--Action: gave dw a guild level in vamps Reason: he defeated the first trial got the message but didn't get the level, I assumed it was from the green snake he was using.
+Sat Jun 16 20:42:29 2001--Action: another guild level for dw Reason: did same thing, blah.
+Wed Jul  4 15:28:33 2001--Action: gave keli a tootsie pop Reason: Just cause I can! value 10 =P
+Sat Jul  7 17:24:37 2001--Action: cloned an object to nytewhisp Reason: I felt like it and it doesn't do anything besides add an extra_look line.
+Sat Jul 21 21:06:08 2001--Action: talked to the foam cow a bit Reason: nobody on and I was bored.
+Sat Jul 21 22:00:33 2001--Action: gave Tony some equipment Reason: he got a sensitive mind notice from an old phb in his room. cleared it out, gave him a new one.
+Fri Jul 27 19:16:26 2001--Action: I got promoted!!!! Reason: Cause oreos aren't just for breakfast anymore.
+Tue Aug 14 19:00:19 2001--Action: gave a phb to silhouette Reason: he/she/it had an old one in newbie lockers, didn't restore.
+Wed Aug 22 23:55:10 2001--Action: saber Reason: changed a line wasn't cloning the wound.c for some reason.
+Sun Aug 26 22:04:33 2001--Action: changed saber.c in ~/misc to be no-save Reason: Mal said so!!
+Fri Sep 14 00:52:13 2001--Action: dested vital Reason: he asked me too :)
+Fri Sep 14 01:00:07 2001--Action: dested Vital again Reason: cause I got skills.
+Sun Oct  7 16:41:51 2001--Action: dested Jaraxle Reason: he was stuck in a room Pestilence misdid the exit() on so couldn't leave. That and I've always wanted to dest him. :P
+Sun Oct  7 16:42:09 2001--Action: dested Pestilence Reason: yeah he was stuck too :)
+Thu Oct 11 19:50:48 2001--Action: tried to promote reflex Reason: He jailed Handy making him my new hero...
+Sun Oct 28 17:52:06 2001--Action: dested smartkid Reason: he was multiplaying and didn't figure it was worth jailing him.
+Thu Nov  1 19:34:19 2001--Action: dested a ranger communicator off Maxy Reason: he/she had two of them and was seeing double messages.
+Fri Nov 16 00:30:32 2001--Action: gave a doll to sparkle Reason: cause she wanted one and it's worth nothing.
+Sun Nov 25 20:02:03 2001--Action: gave keli a fred doll Reason: she won something I think.
+Wed Nov 28 01:25:22 2001--Action: reset ronin's guild xp and guild rank Reason: dmage bug couldn't join a different guild.
+Wed Nov 28 01:35:31 2001--Action: added xp to ronin Reason: dmage thingy.
+Wed Nov 28 01:35:51 2001--Action: reset ronin mag to 20 Reason: was still at 30.
+Wed Nov 28 01:36:15 2001--Action: reset ronin's home Reason: was still at dmage setting.
+Wed Dec  5 01:35:06 2001--Action: gave sylvan some autoloads that didn't load Reason: he said Verte reset something on his char and then nothing loaded.
+Sun Dec 23 22:13:47 2001--Action: changed up blood knight a little Reason: gave it a 1:3 chance of a saveable saber. the saveable one does not work on players.
+Sun Jan 20 23:05:55 2002--Action: reset souvenir_shop Reason: it wasn't working right when you hit the bell
+Tue Jun 18 22:33:43 2002--Action: gave some pills to tristian Reason: I was bored and he liked them.  HE LIKED THEM!!!!!!!!!
+Mon Jan 20 16:29:24 2003--Action: fixed up oz Reason: he thought he was leaving the warrior profession i.e. knight, paladin. left the guild helped him rejoin still had guild exp, gave back his stats and some exp. Happy days are here again YIPPIE!!!
+Tue Feb 25 20:42:50 2003--Action: edited derv dhelp file Reason: needed it so the help file would work.
+Wed Feb 26 14:04:15 2003--Action: added a new dervish ability Reason: Vertebraker approved it.
+Wed Feb 26 14:04:53 2003--Action: edited/updated all necessary files for it Reason: just makes sense!
+Mon Mar  3 19:10:45 2003--Action: gave 3k to moadeep Reason: he lost it trying to get married but it wouldn't accept his bard say
+Sun Mar  9 22:29:14 2003--Action: changed whirlwind in dervish Reason: should be able to use while in battle.
+Thu Mar 13 17:06:52 2003--Action: gave out some pills Reason: I was bored. and it amuses me.
+Thu Mar 13 18:46:25 2003--Action: added a pill dispenser to my forest area Reason: sells one pill no real benefits makes you say random junk and hallucinate.
+Thu Mar 13 19:04:23 2003--Action: added an alias to ery.c in hippo's realm Reason: just didn't work right.
+Thu Mar 13 19:06:56 2003--Action: edited leuco.c in hippo's realm Reason: needed an alias so people could look at it.
+Thu Mar 13 19:07:26 2003--Action: edited thrombo.c in hippo's realm Reason: needed an alias so people could look at it. there was no THROMBOCYTE!!
+Fri Mar 14 17:22:44 2003--Action: edited stone.c in hippos realm Reason: typo in the long.
+Fri Mar 14 17:24:14 2003--Action: edited acid.c in hippos Reason: typo in long.
+Fri Mar 14 17:31:36 2003--Action: edited cahepar.c in hippo Reason: added some coins it should have coins.
+Fri Mar 14 17:41:58 2003--Action: edited calangerh.c in hippo Reason: also no coins lvl 20 mobs.
+Fri Mar 14 17:49:35 2003--Action: edited influenza.c in hippo Reason: gave some coins lvl 14 mob no coins no equip for the kill, changed hps to standard lvl 14 mob.
+Fri Mar 14 17:56:16 2003--Action: edited leuco.c in hippo Reason: gave coins once again lvl 17 mob 600 coins worth of eq on it.
+Fri Mar 14 17:59:09 2003--Action: edited nut.c in hippo Reason: typo in the long
+Fri Mar 14 18:03:37 2003--Action: edited something.c in hippo Reason: typo in long, lvl 17 mob no eq on it added some coins. only had 950.
+Fri Mar 14 18:07:13 2003--Action: edited staphylococ.c in hippo Reason: more typo in long, lvl 20 mob only 1k eq on it. woo.
+Fri Mar 14 18:09:49 2003--Action: edited tobacco.c in hippo Reason: another typo in the long!!! Who approved this stuff!! :P
+Fri Mar 14 18:13:24 2003--Action: edited valvula.c in hippo Reason: added some coins 600 coins of eq on a lvl 20 mob.
+Sat Mar 15 14:58:40 2003--Action: edited dna_string.c in hippos heals Reason: typo in long.
+Sat Mar 15 15:08:28 2003--Action: edited skinbite.c in hippos weapons Reason: some typos in weapon_hit messages.
+Sat Mar 15 15:18:59 2003--Action: edited armor.c in hippos armour Reason: not even sure why it's here didn't load syntax errors missing the include but it works now YIPPIE!!
+Sat Mar 15 15:23:13 2003--Action: edited shield.c in hippos armour Reason: there weren't any new line breaks in the 3 sentence long so it was just one big line!@!  and meet is different from meat.
+Sun Mar 16 11:54:13 2003  test test
+Mar 16 11:57  check ! ;>
+Mar 16 11:57  WOO!
+Mar 16 12:06  edited a typo in hippos room appendix.c
+Mar 16 12:10  edited a couple typos in blood1 in hippos rooms
+Mar 16 12:13  edited some typos in blood10 in hippos rooms
+Mar 16 12:37  edited same typos in rooms blood2 - blood8 in hippos rooms.
+Mar 16 13:00  edited some typos in kots.c in hippos rooms
+Mar 17 10:47  edited liver.c in hippos rooms changed the cost of his heals they were insane!!
+Mar 17 10:50  edited atp.c in hippos heals it had add_intoxication() which didn't add anything changed to drink_alcohol.
+Mar 17 10:52  edited adp.c in hippos heals same reason didn't raise intox.
+Mar 17 10:54  edited amp.c in hippos heals same reason no tox raise =(
+Mar 17 11:08  edited pancreas.c in hippos rooms couple typos in long.
+Mar 17 11:13  edited ratrium.c in hippos rooms typo typos we love the typos.
+Mar 17 11:18  edited shit.c in hippos rooms typos again.
+Mar 17 11:21  edited stomac.c in hippos rooms for some typos.
+Mar 17 11:23  edited thick_colon2 in hippos rooms typo.
+Mar 17 11:27  edited thin_colon3 for some typos hippos rooms
+Mar 17 11:28  edited throat.c in hippos rooms.
+Mar 17 11:30  edited vene1.c in hippos rooms for some more typos.
+Mar 17 18:35  edited psquirrel.c in ~/forest/Mon.....for some reason 'so' for sonic set off my direction block.
+Mar 17 21:20  changed the dervish lead toggle command to dlead instead of lead so it doesn't conflict with the basic muds lead command.
+Mar 18 10:20  changed confuse.h in dervish lib to confuse without an arg if player is attacking something.
+Mar 20 11:40  edited sandstorm.c in dervish yesterday (forgot to log it) V did a quick edit on it and fudged it so wouldn't work! Come back V!!
+Mar 20 18:43  changed wepshad.c in dervish/objects the emotes got funky with color because of certain weapons that for some reason have the set_name() in ansi!
+Mar 21 11:37  edited heartbeat.h in dervish/gobdir just added some ansi to a message so it was easier to spot while in combat.
+Mar 27 13:11  patched Journey from being in the shards. exp, home, rank, guild name.
+Mar 27 14:34  patched greymir was still in shards.
+Apr  2 15:33  changed typo in get_title() in dchat.h for dervish.
+Apr  5 11:20  dested elem hammer from cgi and gave him the sword instead. He decided he'd rather have a sword. *shrug*
+Apr  5 13:38  gave Cgi an ac2 amulet with a few specials for reporting bugs per V's permission/approval.
+Apr  8 16:40  gave morpheus some eq he lost from his hotel room not storing.
+Apr  8 22:09  edited whirlwind.h in the dervish lib was supposed to be able to be used by anyone, didn't know a lvl 5 can't have a piety of 20 changed to 15.
+Apr 13 19:10  test test
+Apr 15 15:00  changed dchant in dervish so you only need a pie of 19, was told they couldn't have a pie of 20 with the new attrib caps at lvl 10.
+Apr 15 16:06  removed rank8 from scrag he still had guild rank.
+Apr 15 17:05  removed guild exp from Brimstone he was trying to join a guild and it wouldn't let him because he still had guild exp.
+Apr 16 14:47  edited dpray.h in dervish lib more stat restrictions on cap couldn't use spell
+Apr 16 16:42  changed confuse.h in dervish lib stupid ass cap on stats.
+Apr 18 00:29  Per Boltar's Review check check
+Apr 18 00:30  fixed dark_stalker so it's like you look at person, changed msave to check stats, used a call_out to auto guild save, and changed the cost on attack spells.
+Apr 18 08:02  changed dispenser.c in ~/forest/Obj I was using get pill and it was bugging when people tried to 'get' other items in the room.
+Apr 18 11:46  changed blackbook.c in mages/obj so that you need to have an int of 20 to join the guild.  That way I don't have to deal with players complaining that they can't use their spells.
+Apr 18 15:52  edited msave.c in mages/lib it was zapping stats even on wizes put in a level check.
+Apr 21 16:41  zapped some guild exp off of Vizjerei.
+Apr 21 19:41  added Krag, Budman, Vizjerei, and Bleh as beta testers. One more to come.
+Apr 21 19:43  WOO started Beta =)  Whoopty Whoop!
+Apr 21 19:44  edited entrance.c in ~/forest/Rooms to allow for a new exit to the BCM guild hall.
+Apr 21 20:04  updated some pills that were changed for Krag that he had stored in lockers.
+Apr 21 20:45  changed id.h in BCM still had notarmor in id couldn't wear anything.
+Apr 21 21:09  added one more beta player Vashandra
+Apr 21 21:22  changed dart.c so you couldn't cast more than once a round 'emote only.
+Apr 21 21:44  changed the command to see guild members from circle to mages.
+Apr 22 07:58  commented out the init() in stalker until I can figure it out.
+Apr 22 08:11  changed typo in midas.c and in drain.c
+Apr 22 08:12  added a message to heal.c showing they were actually healed.
+Apr 22 11:46  fixed midas forgot endline.
+Apr 22 11:56  changed follow to gfollow on ghoul so it wouldn't conflict with muds follow.
+Apr 22 12:01  changed follow in shadowdragon for same reason.
+Apr 22 15:09  fixed a typo in blast.c
+Apr 22 20:08  changed the short in id.h
+Apr 22 20:08  changed the long in ghoul.c and a check for string.
+Apr 22 20:52  changed ghoul some more to allow for it to stop fighting itself.
+Apr 22 21:30  changed ghoul for the 5th time today to show what kind of shape it's in and to be able to absorb corpses to heal itself.
+Apr 22 21:45  changed pillusion so you couldn't make illusions of senior wizes.
+Apr 22 21:47  added a stop fight in ghould and dragon
+Apr 23 10:10  changed an if statement in ghoul.c for the long desc.
+Apr 23 11:35  added a ready command to ghoul, and made it attack whatever owner is attacking if you use fight without an arg.
+Apr 23 12:07  added a monitor to ghoul so they knew how hurt it was.
+Apr 23 12:56  had issues with if statements in long desc of ghoul just got rid of it and added a ghoul_commands in the info files.
+Apr 23 20:00  changed up the score to include exp to next glvl =)
+Apr 24 11:03  added a check on ghoul for attacking.
+Apr 28 16:08  changed lich.c and deathknight.c in /mages/obj I had the time set really low for when I tested them forgot to change them back.
+Apr 29 16:16  put the new ghoul into play. per Boltar's approvail.
+May  1 15:37  added another tester cause Mode wasn't going to do it.
+May  1 16:48  fixed risk.c in the lib it was buggy.
+May  1 18:24  changed enter/exit messages on ghoul.c in /mages/mon
+May  1 18:24  edited drain.c in /mages/lib was costing players sps to heal doesn't make sense.
+May  1 22:34  patched lillygirl out of the Shards.
+May  1 23:04  fixed ghoul it would cause an error if a corpse wasn't present.
+May  2 00:03  fixed some typos in Ghoul had mixed up references some things said corpse does this other said ghoul does that.
+May  2 14:33  added a line to lich so people would notice it in combat.
+May  2 14:45  made the same change to deathknight.c in mages/obj
+May  2 14:54  added to init so you can easily see ghoul and dragon commands without having to type info ghoul_commands or info dragon_commands.
+May  2 15:36  changed ghoul.txt and dragon.txt to support new commands.
+May  2 19:51  changed dragon to autofollow.
+May  4 22:12  changed Shadowdragon.c in /mages/mon and dragon.c in /mages/lib. Dragon name now saves to the guild object so they don't have to retype it all the time.
+May  5 11:35  changed dragon.c in mages/mon was desting mobs now calls the death();
+May  6 12:25  changed dragon/ghoul so they autoattack now.
+May  6 12:26  added checks to make sure they only didn't have more than 1 ghoul and dragon at a time.
+May  6 22:44  changed the small damage bonuses for lich and dknight to a generic_wc_bonus per Boltar's approval.
+May  7 18:11  added some color to the obillusion spell.
+May  8 18:00  changed the int requierement for disrupt forgot a lvl 19 can't have int of 30.
+May  8 19:20  fixed a bug with the shadowdragon.
+May 12 08:16  changed it so your ghoul and dragon destruct when a player quits out. =)
+May 13 15:26  gave a fred doll to Sparkle.
+May 15 08:16  edited sabers storm lich because of problems with BCM sitting on throne as a lich.
+May 15 08:17  edited sabers room tower20+13 for same reasoning.
+May 16 16:15  fixed typo in /players/snow/MONSTERS/arctic_wolf.c
+May 16 16:21  fixed a typo in the long() of pit_enter in /players/blue/castle
+May 16 16:37  fixed typo in entry3.c in /players/blue/castle
+May 16 16:40  fixed typo in capt.c in /players/eurale/Dis/Pan/NPC
+May 16 16:54  edited mits.c in players/emerson/armor they were set as misc armor should be a ring.
+May 18 10:24  fixed something in the hit_player() of the mages freeze.c object, got buggy if used with an elemental weapon.
+May 19 15:02  edited templar guild object to try to fix the exp, next on the score.
+May 19 15:25  it worked yippie!
+May 21 15:43  ~/jenny/wings/items/tedskates.c changed her id() so it would show up as boots in the 'armors' command.
+May 21 16:39  fixed ~/coldwind/desert/mobs/witch.c had some heart_beat issues.
+May 21 16:52  added a line to ~/zeus/desert/OBJ/wand.c now destroys the wand if used to complete the quest. Only seems fitting so you can't keep using it.
+May 21 16:58  imprisoned Oran for spamming on gossip, was pretty annoying probably not jail worthy but I let him out shortly.
+May 22 11:35  changed the guild say to show emotions ie asks, exclaims, Thanks to whoever wrote up the new_communications.
+May 23 10:05  added a gen_wc_bonus to the dervish that works off sand_points, talked it over with Jaraxle, he thought was a good idea and gave the go ahead.
+May 29 01:37  gave kid an MK scar he lost his.
+May 29 02:27  sparred with kid to test pk bugs, he volunteered and it was a pain in the arse to try to control two test chars myself.
+May 29 02:27  NO ERRORS THOUGH!!!!! =)
+May 29 14:39  added an exit message on the guild line when players quit out.
+May 30 12:04  changed Busta's pretitle for using fuk in it.
+May 30 18:10  OPENED THE BCM!!!  =)
+Jun  1 22:32  due to thinking the guild may be too powerful I made some changes.
+Jun  1 22:33  change 1. ~/mages/obj/freeze.c changed the hit_player() to (amount*10)/8; returns less damage than before.
+Jun  1 22:34  change 2. ~/mages/mon/shadowdragon.c changed the base wc down to 16 and changed the spell_dam to random(20)+10, down from random(40)+30.
+Jun  1 22:35  change 3. ~/mages/homedir/weapon.h changed the gen_wc_bonus for dknight from 5+random(7); to 3+random(7);
+Jun  2 16:43  commented out a couple lines in ~/mages/mon/shadowdragon.c it's not needed and causes some annoyances  in hotel rooms when locked.
+Jun  2 17:12  edited ~/mythos/amon/forest/masakado.c fixed the ob->set_haunt() to query real name instead of name or it wouldn't work if they were a Lich or Dknight.
+Jun  3 08:16  changed ghoul I had the command of 'equip <what>' and then you couldn't use the 'equip' channel. changed to gwear.
+Jun  3 16:29  gave back some equip to people that lost stuff in the crash, second crash today and I was in a good mood.
+Jun  4 09:43  lowered the chat chance on Emerson's bigfoot mob it was a little spammy.
+Jun  4 18:06  approved 3 new heals for Eurale, hemoglobin, poppers, and liver. ~/eurale/VAMPIRES/OBJ/
+Jun  5 08:06  edited ~/coldwind/desert/mobs/apes.c just a typo.
+Jun  7 09:29  changed the BCM fog spell. used to work only in combat cost was 25 now will work outside of combat but will cost 35+random(5)
+Jun  8 15:20  changed weapon.h in BCM lowered the gen_wc_bonus for both lich and dknight.
+Jun  8 15:24  lowered the chance of the special on BCM robes.
+Jun  9 09:09  changed BCM heal spell from LVL+random(10) to random(LVL)+10
+Jun  9 16:10  edited ~/coldwind/desert/mobs/witch.c it keeps losing it's heartbeat. :P
+Jun 11 11:46  edited ~/zeus/museum/NPC/golem.c and light.c
+Jun 11 11:47  Zeus had a few typos so when they died it didn't flag the right mobs so you could continously select and kill either.
+Jun 12 13:08  changed moe some, it was buggy where if you attacked and left and came back attacked again it wouldn't hit back.
+Jun 13 15:36  fixed Jarana she lost all her skill points sword, shield etc..
+Jun 13 15:37  edited Jar's squire_daemon.c sign said 7000 coins subtracted 10000 coins.
+Jun 18 11:47  reset Vashara's home to the church, she quit the bards and she was still loggin in to the bard hall.
+Jun 24 11:29  gave some eq. to Darkfyre.  He said it didn't save in the crash.
+Jun 26 13:29  added a new guild tell that shows player real name instead of name, now people won't get lich/deathknight tells you: blah.
+Jun 27 09:57  edited /players/beck/monster/aikido.c typo in init which caused it's hb to shut off and someone killed it for 600k without getting hit.
+Jul  1 09:17  edited /players/beck/room/venus5 made it no fight, was easier than trying to figure out why the mob was losing it's hb and having players get 600K exp on a mob that wasn't hitting back.
+Jul  7 16:48  changed the value of Dune's moon dial to 0, the way Dune has the room that it's in could be abused easily.
+Jul  8 10:02  took out the lowered damage from both lich and deathknight objects, lowered hp amts on ghouls, cut down on the gen_wc_bonus.
+Jul 10 13:20  gave some equip to scrag had problems with his hotel room.
+Jul 11 09:29  edited the leave file for warriors.  It still reset people's stats to the old max of 20, added a line so it actually removed guild exp so they didn't have problems joining other guilds.
+Jul 11 12:15  fixed a line in Pain's castle he was trying to clone something that didn't exist.
+Jul 22 15:48  edited tentacles.h in the neo symb object needed control 3 for something but command checked for control > 3.
+Jul 28 13:23  edited /players/maledicta/cont/rdragon/rooms/r13.c it was set up to stop movement south but it would not allow so for sonic. fixed now.
+Jul 28 13:26  edited ~mal/cont/rdragon/rooms/r20.c I added a symbols 2 to the items. If you are in larn you can't look at the symbol in the room you look at your larn symbol.
+Jul 28 21:50  fixed Mal's chestguard. Made it save the heal so you couldn't use it, store it, restore it, use it again, repeat.
+Jul 29 12:02  added a set_heart_beat(1); to Mal's chest guard in the reset. Otherwise if you stored it before it was fully recharged it wouldn't restart the recharging process.
+Jul 29 13:16  fixed several typos today, and a bug in Jar's blue dragon caves. Mob blocks the south direction and for some reason when you use "south", 1); sonic won't work.
+Jul 29 17:45  fixed Jar's misty cloak, it wasn't actually being worn so you could wear it and still wear another cloak.
+Jul 31 09:33  edited Zeus' desert cloak, had a line that bled color.
+Aug  4 13:44  fixed Pain's orb, infinite coin cheat.
+Aug  4 22:13  fixed Llew's crystal longsword. it was inheriting something from one of Snow's weapons that caused hb errors with offwield.
+Aug 19 16:12  approved Pestilence's arena.
+Aug 20 15:27  approved Jareel's area chaos, sembrak tower.
+Aug 21 09:48  released kia from Jail.  He said that a friend of his knew his password and logged him, told him to change his password and it shouldn't happen again.
+Aug 31 00:41  changed risk.c in the BCM lib added some more stuff to it so now it shows generals on wc,ac, and overall exp val. of a mob.
+Sep  1 12:26  rest pepino's ex lvls to +52, V killed him twice cloning a mob, V refunded exp and coins on corpse but didn't reset lvl.
+Sep  3 18:56  reimbursed Bleh some equip, his box fudgeled when he got dc'd.
+Sep  3 19:11  made some changes to the 2003 exp board got files if you want to see. =)
+Sep  3 19:13  made some changes to archangel's warrior file doobie doobie doo......
+Sep 15 12:33  fixed Wind. It was buggy and shit.
+Sep 15 20:07  fixed an error on the 2003 exp list.
+Sep 16 09:24  ~jareel/armor/orlanthi_wind_priestess_robes - add if(!worn) checks and fixed an error with capitalize.
+Sep 19 10:43  ~mythos/awep/forest/air.c added some code for if a ghoul is wielding it.
+Sep 19 13:53  ~maledicta/templar/honorary.c switch the home() so it would set thier home to the new guild hall instead of the old one.
+Sep 24 11:59  cp my ansi.h forbin's ansi.h cause Pestilence was inheriting forbin's ansi.h and forbin's ansi got corrupted so rooms weren't loading.
+Sep 24 18:03  promoted Pestilence to lvl 69. Cause I haven't used that yet and it looks hella cool.
+Sep 29 16:36  patched Fenfir for some buggy deaths with Phoenix.
+Oct  3 16:19  dested a light shield off of Hoyle, wouldn't go away.
+Oct  7 21:06  changed ~dune/closed/guild/boards/cboard.c there was a syntax error that prevented a board from cloning and a room loading properly
+Oct  7 21:07  changed ~pathfinder/detroit/monsters/fixer.c added a set_heal(20,1) because for some reason although it has an ac of 5000 rangers can still hit it now and then to get a 5mil exp kill.
+Oct  7 22:09  helped puppy with some problems with ~dune/closed/guild/rooms/council.c
+Oct  8 13:20  edited ~mythos/awep/forest/nodachi.c somebody edited it and had sed_weight(5) ? oh well.
+Oct 10 05:22  edited ~pathfinder/detroit/monsters/fixer.c once again got sick of it neutered it down to a nothing of a mob good good.
+Oct 10 17:07  ~pathfinder/detroit/monsters/skeeza.c added a set_heal pretty much the same mob as the fixer fixed a little earlier.
+Oct 10 17:14  ~pathfinder/detroit/monsters/tyrone.c same thing as skeeza.
+Oct 15 11:38  cloned a new MK scar to Miso he lost his.
+Oct 17 08:03  added an exit to ~snow/gate.c
+Oct 24 21:18  alrighty did some wicked editing on the elemental weapons. Just piddly stuff. One of the emotes was like impales <name> with a vicious thrust! But that was on all the weapons. You don't impale with a vicious thrust with a whip or hammer!! So I just cleaned that up some =)
+Oct 25 10:33  added 4 new elemental weapons at a players request. Basically the same as the original sword with different name, alias, short, and few small emote differences for theme.
+Oct 25 10:54  ~zeus/realm/d/ttop.c edited a typo. said Congradulations instead of Congratulations.
+Oct 27 09:41  ~trix/castle/quest/Esee10.c fixed a typo
+Oct 27 09:43  ~jenny/wings/mobs/closed/stewart.c fixed a typo.
+Oct 27 11:48  ~maledicta/closed/w/test_obj4/leave_guild.h - added a line to subtract the guild exp when they leave so I don't have to do it manually all the time when they want to rejoin a guild.
+Oct 28 13:12  I moved the new elemental armors over to snow's dir. New armors approved by Vertebraker.
+Oct 28 20:33  did a bunch of stuff with elemental gear with the new armors and long() on weapons lot of editing I OWN THE ED_OTHER LOG!!!!!
+Oct 28 20:34  Thanks Forbin for the help with all the desc! I never was much for descriptions myself.
+Oct 29 10:34  ~zeus/desert/OBJ/desert_daemon.c I have no idea why the CO("/players/eurale/Fiends/OBJ/tea.c") was doing in the npc array but I got rid of it.
+Oct 29 16:25  fixed a typo in all the e-weapons.
+Oct 30 09:44  fixed Data's channel object, he was trying to add a muffle command it just wasn't working for him.
+Nov  7 09:00  removed the exchange stand for the elemental equipment.
+Nov  7 16:49  ~maledicta/town/rooms/t1.c adjusted the price on it.  It used to only heal hps but now it heals both and the price was never adjusted.
+Nov 22 08:03  ~snow/dervish/lib/confuse.h It needed updating. At like +100 it would actually give sps because it was originally based on the max 20 stat restrictions.
+Nov 22 08:19  ~jaraxle/3rd/alt/mobs/wolf.c fixed the call_out for follow.
+Dec  3 22:58  ~snow/dervish/gobdir/heartbeat.h -- added some code to readjust the attribute system they have.
+Dec 22 22:24  ~boltar/templar/members/angelus.o -- had to do some editing to deal with the warrior/templar it didn't transfer right when the warriors closed.
+Dec 25 22:28  approved Earwax's fields area.  Told him he's free to open it once he finishes the changes I had for him. =)
+Dec 26 12:08  fixed Vashandra's stats....she was inactive and for some reason all her stats were reset to 5's.
+Jan  3 18:25  ~snow/dervish/objects/sandstone.o -- said there were 45 messages when there were only 38.
+Jan  7 22:11  ~snow/dervish/gobdir/heartbeat.h -- fixed a problem with the stamina stats change.
+Jan 26 21:13  approved /players/dune/closed/guild/rooms/stands.c for Puppy.  It's just a room that shows a catchtell so they can watch the arena battles.
+Feb 20 12:13  ~snow/dervish/objects/sandstone.o -- had the wrong number of messages listed on the guild tablet.
+Mar  3 19:21  ~fred/mages/mon/shade.c -- I was missing a check to make sure they were in the guild to raise lvls.
+Mar  4 22:17  ~snow/dervish/objects/sandstone.o -- still has problems when deleting messages.
+Mar 14 01:19  fixed up dreadwolf he some how lost his training of sword 2 and shield 2.
+Mar 27 09:27  ~katya/area/esquire/r/concession.c -- fixed the prices for the Reeses Pieces, Popcorn, Medium Soda, and Nachos with melted cheese.
+Apr 17 10:27  ~zeus/desert/r/ec4.c fixed some code that got back in there somehow dealing with the bloodfist guild.
+Apr 17 10:28  ~zeus/desert/OBJ/desert_daemon.c -- fixed the daemon so it loads everything properly again. Area reopened.. Whoopty Whoop!
+Apr 17 12:31  Finally added Drakyr to the Black Circle guild. See ~/mages/mon/drakyr.c, ~/mages/lib/drakyr.c, and ~/mages/homedir/weapon.h =)
+Apr 17 13:04  Made Sylvan a Knight since he was a warrior Knight and they didn't transfer over properly.
+Apr 18 19:09  worked on my pet monkey.  BRASS MONKEY....that funky MONKEY.... heh
+Apr 19 23:12  ~fred/mages/obj/lich && ~fred/mages/obj/deathknight -- updated the short on both shadows to list if mounted and a party name if in a party.
+Apr 22 22:44  ~jenny/wings/items/omask.c -- fixed the id(str) so it would show up in armors when worn.
+May 12 21:53  ~cosmo/hslist/2004.o -- changed the person with the top score which was Unseen since it was due to an illegal patch by a wiz.
+May 24 10:46  ~jaraxle/3rd/alt/mobs/phantom2.c -- added a present(attacker_ob) check so they're not a freak of nature.
+May 24 11:11  ~llew/Toys/room/aisle13.c -- fixed a typo.
+May 24 20:47  ~zeus/closed/circle_member/unseen.o -- hacked it down to zilch since he was illegally patched with exp to advance within the guild.
+May 25 23:34  ~jenny/wings/items/gstick.c -- added a little something something as a drawback to players under lvl 19 using it.
+May 25 23:46  ~nightshade/armor/capt_cloak.c -- fixed a typo.
+May 26 20:27  ~players/snow/closed/test/elem_*all.c -- fixed all the elemental weapons so they would actually show that they were broken.
+May 30 18:01  ~snow/shadows/stuff/crown.c -- added code to store the number of charges on it.
+May 31 13:43  ~softly/point/mobs/bonny.c -- fixed me some typo.
+Jun  1 20:48  ~saber/closed/new_mini/canine.c -- helped Puppy fix a problem with an emote. also edited emotions/canine_slobber.h
+Jun  3 19:35  ~deathmonger/UNDERDARK/mycon/mycon2.c -- changed add_alias() to set_alias so you can look at the mob.
+Jun  3 19:39  ~deathmonger/UNDERDARK/treasure.c -- changed set_alias from mimic to chest? It's A large treasure chest but it's a monster, but you couldn't look at chest, bog.
+Jun  5 09:56  ~cosmo/hslist/2004.o -- took Rek off the list since it was reimbursement exp from the Shards.
+Jun  5 18:52  ~mythos/closed/guild/forest/armor/tunic.c -- made the player remove the armor if they worn before it dested so they could wear a different piece of armor without relogging.
+Jun 17 20:03  ~fred/forest/Mon/ferret.c -- fixed a typo in set_spell_mess1()

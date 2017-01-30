@@ -1,0 +1,22 @@
+SERVANTS2
+
+Commands currently available....
+
+'pearl'                     - make a pearl.
+'change'                    - change the pearl into a servant, or vice versa.
+'attack <monster>'          - have the servant attack a monster.
+'wait'                      - have your servant wait behind in a room.
+'guard'                     - have your servant guard a monster for you, while
+                              your not around. ( your servant will tell you if
+                              someone starts to attack the monster )
+'come'                      - Stop your servant from waiting/guarding; brings
+                              servant to your room.
+'name <name>'               - sets your servants name.
+'command move <direction>'  - move your servant in a certain direction
+'command <command>'         - command your servant.  Possible commands are:
+                                 give       look
+                                 get        wait
+
+The monitor also puts your servants 'hps' in bold when the servant is under
+attack.
+

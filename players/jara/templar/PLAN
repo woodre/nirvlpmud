@@ -1,0 +1,28 @@
+   
+This is the current plan for the changes I'm planning to do for the
+Knights Templar guild.
+ 
+  1. Update room descriptions in guild hall.
+  2. Conform all descriptions to approximately 70 spaces, but not to
+  exceed 70.
+  3. Modify the layout of the castle.
+  4. Update the War Room and have the castle defenses in proper 
+  working order.
+  5. Update and add to the 'info' files.
+  6. Create and implement quests for Knights.
+  7. Modify current boards to allow removal of own notes.
+ 
+I'm currently working on 1, 2, 3, 6.
+
+COMPLETE:
+ 
+The Village Crier: /players/jaraxle/templar/mobs/crier.c
+Elite Command Post: /players/jaraxle/templar/rooms/command_post.c
+Equipment Room: /players/jaraxle/templar/rooms/equipment.c
+Training Room: /players/jaraxle/templar/rooms/adv_guild.c
+Templar Lockers: /players/jaraxle/templar/rooms/templar_locker.c
+Templar Storage: /players/jaraxle/templar/rooms/storage.c
+Community Room: /players/jaraxle/templar/rooms/adv_inner.c
+Private Rooms: /players/boltar/templar/private.c and
+               /players/boltar/templar/room.c
+

@@ -1,0 +1,30 @@
+-=[ Dragons ]=-
+
+The following commands are available for Dragons.  To execute
+any give command type the Dragon's name followed by the command
+and any other input necessary.
+
+name <name> .............. set dragon name to <name>
+setdescrip ............... set the dragon's description
+setmove <arg> ............ set dragon's movement message to <arg>
+exp <amount> ............. transfer <amount> guild xp to your dragon
+kill <what> .............. command your dragon to attack <what>
+assist <on/off> .......... toggle combat auto-assist
+wimpy <hp> ............... command dragon to wimpy at <hp> hit points
+dismiss .................. dismiss dragon
+stay ..................... command dragon to stay
+follow ................... command dragon to follow
+get <item> ............... command to get <item>
+give <item> to <who> ..... command dragon to give <item> to <who>
+drop <item> .............. command dragon to drop <item>
+feed ..................... command dragon to eat a corpse (heals dragon)
+
+
+If you are currently maxed in the guild (rank 71) and need to
+transfer experience into guild experience to advance your dragon
+use the command: 
+
+xferxp <amount>........... transfers mud exp. into guild exp.
+
+
+See Also: dragon

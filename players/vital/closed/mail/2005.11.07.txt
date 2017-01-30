@@ -1,0 +1,520 @@
+From: worm
+Subj: hey
+
+Cc: (To: vertebraker) vital,earwax
+Date: Oct 16 13:41
+
+ya know, we have storm, at Glvl 8. never used. 
+this guild was original formed as Shardak Assassins. 
+an old Assassin move, disarm, would fit so well. 
+can ya dump Storm and give us a 'disarm' ability? 
+sure, all they gotta do is rewield it, but i think in 
+the thick of combat, it'd help us so much more than 
+'storm'. lemme know what you guys think. and thanks  
+for your time. 
+-me 
+
+From: fred
+Subj: Than/Vahiti
+
+Cc: (To: vertebraker) vital,forbin,earwax,francesco
+Date: Oct 16 15:46
+
+I jailed them both for multiplaying/cheating.  I didn't say anything 
+just jailed Vahiti and he hasn't logged on since.  Imprisoned Than 
+on an impending imprisonment since he wasn't on anymore.  Basically 
+Vahiti died to mondar lost corpse.  Logged off. Logged Than on.  Killed 
+Mondar with Than.  Cleipa got mondar corpse brought to casino room.  
+Than logged off, logged on Vahiti and got stuff from corpse that  
+Cleipa had in room.  Will also probably jail Cleipa for basically  
+passing equipment helping out.  Just thought I'd let you guys know  
+what was going on since I don't know for sure if I'll be on when 
+ever it is Vahiti logs back in. 
+ 
+Fred 
+
+From: mosobp
+ Re:   /players/mosobp/areas/HOUSING/rooms/h14.c
+Date: Oct 16 16:19
+
+thanx nope wasnt intentional 
+moso 
+
+From: earwax
+ Re:   Than/Vahiti
+Cc: (To: fred) vertebraker,vital,forbin,earwax,francesco
+Date: Oct 16 17:35
+
+If you get jailed, you shouldn't be allowed to login another char. 
+Therefore we should make it so you can't quit from there, combine 
+that with rules against multi-playing, jail becomes much more of a 
+deterrent, since the only way you could logon another char would be 
+to disconnect and wait for that char to poof.   
+
+From: earwax
+Subj: multiple slot armors
+
+Cc: (To: vertebraker) vital
+Date: Oct 17 06:25
+
+Check out living.c, armor.c, _armors.c in my dir...they are for 
+the corresponding inherits and the /bin/play/_armors.c command. 
+I tested the armor.c, but I can't do anything with the living.c of 
+course, unless I want to go through a whole lot of shit to test. 
+Anyways, it won't be perfect, I don't know what else checks 
+query_type() besides armors command and various id commands, but 
+anything that does use it can be switched to accept an string array 
+and display query_types() instead. 
+ 
+New funs in armor.c: 
+add_type(string type) 
+add_types(string *types) 
+remove_type(string type) 
+remove_types(string *types) 
+string *return_types(); 
+ 
+Changed wear() and remove_wear() in living.c to work with it. 
+Armors.c should show the armor in all slots it's applicable to. 
+ 
+From a functionality perspective, it should be fine for the most 
+part, it's just that things would have to be switched to accept the 
+array from query_types() over time in stuff like developer short() 
+displays.  I'd prolly have to write a doc on it I guess.   
+ 
+-Dave 
+ 
+doh, almost forgot, added the types to the id() in armor.c as well. 
+ 
+Those 3 files are in ~/earwax for right now. 
+
+From: hercules
+Subj: bugs, or just some info
+
+Date: Oct 17 12:04
+
+Hi V, 
+1.u need to add the \n at the end of the msg that zordon gives when ranger tries  
+to call zord when not morphed.... 
+2.not that i understand why we need unmorph ,now that u set that we can recall the zord w/o reloging, 
+but when i unmorph, the zord sticks around,which is kinda weird... 
+:) 
+Yours, 
+The green ranger 
+
+From: vertebraker
+ Re:   hey
+Cc: (To: worm) vital,earwax
+Date: Oct 17 17:21
+
+no guild work is going to be done on shardaks 
+for a while. it would sort of be pointless 
+at the moment. the guild will be rewritten at 
+some point. i don't know when. 
+ 
+:~( 
+
+From: vertebraker
+Subj: oops
+
+Cc: (To: earwax) vital
+Date: Oct 17 17:23
+
+can you handle this vital. :P 
+
+From: martha
+Subj: rick
+
+Cc: x
+Date: Oct 17 21:21
+
+Hey there!  Just writing because Rick has been unable to 
+log on. He is getting a sensitive mind error notice.  I also get 
+one when I finger him.  Not sure if it has to do with his Ranger 
+object or something else.  I just wanted to let you know because I 
+was not sure how to fix him. 
+Thanks 
+
+From: vertebraker
+Subj: dev mud
+
+Date: Oct 18 03:02
+
+dev mud is getting updated to the current lib. 
+i'm getting shell access there. 
+
+From: hercules
+Subj: team alignment
+
+Date: Oct 19 16:12
+
+Hi V. 
+another thought... 
+when i party... 
+actually it's not just rangers prob,but it concerns us .... 
+i noticed when i [party for long time, after i log again,my aligment drops alot... 
+is there a way we can get alignment points when we party (with other rangers) or something 
+so those who're not leading wont drop thier aligment ? 
+like i said,just an idea ... 
+yours, 
+the green test ranger 
+
+From: hercules
+Subj: Center's items
+
+Date: Oct 19 18:55
+
+Hi V. 
+u should make the remote locator and comera untakeable, like alpha and zordon 
+ppl pick them up sommetimes and they create bugs 
+Yours, 
+the green test dummy 
+*** 
+
+From: vertebraker
+Subj: shell access
+
+Date: Oct 20 00:36
+
+i have shell access to the dev mud now. 
+
+From: vertebraker
+Subj: channel daemon
+
+Date: Oct 21 03:15
+
+when is the channel daemon going to be operational 
+on mud channels . 
+
+From: earwax
+Subj: 2 things I missed, now that I think about it:
+
+Date: Oct 21 09:46
+
+can you add the following function to armor.c: 
+void set_types(string *arg) { Types = arg; } 
+ 
+and can you add a check into add_type() for the following: 
+if it's a ring or earring, and there's only 1 in Types, OR if  
+member_array() on it is < 0 Types += ({ arg }) or whatever the variable 
+i used in there..... 
+ 
+I forgot about rings, earrings with that, since there can be two. 
+ 
+Sorry, i fucked up with it :( heh 
+
+From: vital
+ Re:   2 things I missed, now that I think about it:
+Cc: (To: earwax) vital
+Date: Oct 21 10:32
+
+Also, what about the set_types() and add_types() functions. Those don't 
+check for multiple identical types. I mean, it would just make the armor 
+useless, so a developer would probably figure it out pretty quick, but 
+I didn't know if we wanted armor to check for that. 
+ 
+I would argue for NOT adding it in, as we may further modify the armor 
+selection at a later date [for instance if we made it so that you could 
+wear 10 rings]. This would allow for that growth. On the other hand, it 
+has the potential to bork armor for the unsuspecting developer. 
+ 
+--little v. 
+
+From: vital
+Subj: _armors.c command
+
+Cc: (To: earwax) vital
+Date: Oct 21 11:51
+
+A couple of thoughts/comments. On items like the combined rings and others 
+that use multiple slots, should we list the item multiple times? The 
+combined rings look stupid seeing two of them. One each under ring and 
+ring2. Not sure how you would want to tackle that. Check if the object is 
+the same and then just not display that slot? No, that would be confusing 
+too. Ideally we could have something that displays: 
+ 
+Ring 1 & Ring 2 - Combined Rings Chest, Armor & Helmet - Hooded Sweatshirt 
+Pants, Boots & Underwear - Bootie Pajamas 
+ 
+Maybe? --little v. 
+
+From: vital
+Subj: orbs
+
+Cc: (To: jaraxle) vital,vertebraker,fred
+Date: Oct 21 16:19
+
+had to edit /players/jaraxle/3rd/alt/items/flame.c and backed up the 
+original in the bak/ directory in the same location. I tried to comment on 
+the changes I made, several parts of the code seem redundant and were 
+actually causing them to load at main armor types. You'll probably want to 
+apply similar changes to the other orbs [nature's blessing is also bugging] 
+or I can get them if you don't catch this first. 
+ 
+thanks vital 
+
+From: vital
+Subj: id bug in id.c
+
+Cc: (To: francesco) vital
+Date: Oct 21 16:22
+
+I pulled your castle and tried to fix /players/francesco/univ/items/id.c as 
+it was causing an issue with it's id of id. I'll get back to it later 
+tomorrow after i get done. 
+thanks, 
+vital 
+
+From: earwax
+ Re:   _armors.c command
+Date: Oct 21 17:13
+
+Something like that - I'm at a loss for it personally, i'll give it thought later 
+
+From: vertebraker
+Subj: jaraxle's orbs
+
+Cc: fred
+Date: Oct 22 01:05
+
+i wrote an inherit for all of his orbs and a sample usage of it 
+for him to fix them all. DO NOT FIX THEM FOR HIM. 
+we have other things to do than continually fix his crappy code. 
+he has to learn eventually, and now he's active anyways. 
+
+From: vertebraker
+Subj: mud ftp dev mud
+
+Date: Oct 22 04:08
+
+mud ftp on the dev mud should be ok now. 
+
+From: vital
+Subj: bak dirs
+
+Cc: (To: vertebraker) vital,fred
+Date: Oct 23 14:56
+
+I created a bak/ directory in most of the lib dirs so that as files are 
+updated they can be moved into those directories and not accumulate. 
+ 
+Please put a note in the file header as to what is changed and a date. Name 
+the backed up file something like <filename.yyyy.mm.dd> where yyyy.mm.dd is 
+year.month.day, so we can keep track of rollbacks should it become 
+necessary. 
+ 
+Thanks, 
+little v. - anal retentive structured disciplinarian 
+
+From: vertebraker
+ Re:   bak dirs
+Date: Oct 25 00:46
+
+you should write a backup command. 
+
+From: vertebraker
+Subj: access rewrite
+
+Cc: (To: boltar) vital,fred
+Date: Oct 26 06:09
+
+Implementing a somewhat major access rewrite to clean it all 
+up and improve its speed. When it fubar's, just replace player.c 
+with player.armageddon and mail me a description of what 
+went wrong. Thanks. 
+ 
+Tom 
+
+From: vertebraker
+Subj: news read
+
+Date: Oct 26 21:34
+
+Think there could be an option to review any new messages posted 
+in the last week?  That way people don't have to keep going thru 
+all the different posts. 
+
+From: unforgiving
+Subj: Bugs.
+
+Cc: (To: vertebraker) sparkle,vital,earwax,fakir,jara,stardream,boltar,forbin,morpheus,linus,pestilence,beck,feldegast,wocket,eurale,star
+Date: Oct 27 00:21
+
+Not sure the bug you think I am abusing.  If your talking about the jinro 
+monster I think the fact he killed me a bunch of times proves its not a 
+bug.  I saw  that you changed mythos monsters so people can not leave said 
+rooms or what not. As far as anything else, I have just logged on to idle 
+mostly.  And maybe look at gossip or something a bit.  As far as being a 
+wiz, I had finished the expansion on my area and was just going to ftp it 
+and have wax approve it or tell me what needed to be changed, balanced and 
+I cant Ftp so I was  just going to drop it.  There are things I did as a 
+wiz character I  shouldn't have.  I admit that and I did not get pissed 
+about it when I had levels removed from me.  I far from abuse any bugs as a 
+player actually as far as bugs go as a player I really don't know any, I 
+know how to kill stuff using judo against a mob, using their own strength 
+against them or using abilities that I can get from the game to the fullest 
+advantage, in no way  do I find crazy bugs and abuse them.  If I did I 
+would be a much higher level than level 5 and I would kill much cooler 
+stuff than Patrons in pizza hut.  If you are delusional enough to think 
+that killing a Patron or a driver in pizza hut warrants abuse than you need 
+an enema to get what ever  is stuck up your butt out. is stuck up your butt 
+out. Heh Zmud, anyway this Mudmail was directed at Vert but I figure it 
+will end  up in his Mbox anyway cause he is a tool so I will just mudmail 
+it to  all who would see it anyway. 
+ 
+Peace out. 
+
+From: vertebraker
+Subj: addendum
+
+Cc: (To: unforgiving) vital
+Date: Oct 27 00:29
+
+Stop running your mouth. 
+If you want to continue, don't login. 
+I don't need to be told how much of a tool I am. 
+Much less have it broadcasted to people that I don't even know. 
+If your case assumably was that I am unfairly discriminating 
+against you by doing nothing, then you're wrong. We gave you plenty 
+of chances which you kept blowing. Then you decided to continue 
+running your mouth and now, abusing bugs. That's about it. 
+Don't play stupid and don't call names. Just login, or don't. 
+If you are going to login and continue acting like an infant, 
+then you'll be stripped of the ability to login. 
+It's up to you. 
+
+From: vertebraker
+Subj: list_assigned_roles
+
+Date: Oct 27 04:00
+
+check out list_assigned_roles. 
+any more changes i should make ? 
+
+From: vertebraker
+Subj: just curious
+
+Date: Oct 27 23:52
+
+why are some message headers in red, some in blue? 
+just curious 
+
+From: vertebraker
+Subj: acuff
+
+Date: Oct 28 04:20
+
+Wow. Thanks for introducing me to Roy Acuff. 
+fREAKING AMAZING 
+* 
+ 
+uh, er 
+
+From: vertebraker
+Subj: lacar
+
+Date: Oct 28 16:55
+
+Lacar doing something yet? 
+
+From: vital
+ Re:   lacar
+Cc: (To: vertebraker) vital
+Date: Oct 28 23:17
+
+Not yet. We've been doing some "training" mostly and trying to get her up 
+to speed. She's having some difficulty making the cognitive distinctions 
+between being 'in' a place and 'at' a file location. :) 
+ 
+She'll get there though. 
+
+From: sparkle
+Subj: Contest
+
+Cc: sparkle
+Date: Oct 29 05:18
+
+Heyas Vital. I was talking with Verte today about a contest that I would 
+like to throw here. It was originally an idea that Earwax brought to me. I 
+love poetry and would love to see the poetry thread in the news utilized. 
+So whats better than a poetry contest? What I am wondering though is if 
+there is a way, if we do this, for players to utilize the news program and 
+post their entries under the poetry section there. Then the judges can go 
+in and make a decision based on the poetry posted. It would be a way for 
+people to get used to the new news program and maybe a way to stir up some 
+fun interest in something new here. 
+ 
+Verte suggested I talk to you so maybe you can help figure something out 
+with me about the players posting in news. If you can help, please let me 
+know. I would appreciate any help! I told Verte that we would get together 
+beginning of next week and try to get things rolling on this. If players 
+cannot post there, we will use the mail system instead and maybe post top 5 
+to the news. 
+ 
+Thanks for your time and any help! 
+ 
+Sparkle 
+
+From: viper
+Subj: Gogeta
+
+Date: Oct 29 08:56
+
+I only told him to not teleport to players that are in wizards workroom cause he can get in trouble for it. 
+Then he started stuff with me saying that I should set PK and we can find out who the better Ranger is. 
+That's the only reason why I said I was going to kick him out if he didnt stop. 
+
+From: korn
+Subj: rangers
+
+Cc: vertebraker
+Date: Oct 30 16:42
+
+I logged in, and i like went into darkness and i have lost 
+my guild object.  If i could get fixed i'd greatly appreciate it 
+Thanks. 
+Korn 
+
+From: vertebraker
+Subj: maledicta
+
+Cc: (To: angel) beck,catt,earwax,eurale,fakir,feldegast,forbin,francesco,fred,gemini,illarion,jamila,jara,jaraxle,jenny,khrell,lacar,linus,lishe,martha,mokri,mosobp,pain,pavlik,pestilence,sampson,skie,sparkle,star,stardream,subotai,tristian,veeshan,vital,wocket,wren,zeus
+Date: Oct 31 15:44
+
+ 
+  Maledicta [the wizard] wishes to return to Nirvana. 
+  Please mail a vote [yes/no] and your comment to Vertebraker 
+
+From: earwax
+Subj: query_actions
+
+Cc: vertebraker
+Date: Oct 31 23:18
+
+We got a doc for it, so doc prolly should be removed, as the efun 
+itself is an undefined function.  It would be very very nice if we 
+actually had this efun(), and if query_verbs() just returned the  
+array rather than printing them out, btw :) 
+ 
+just random thoughts as i ponder my sheeplovin weekly 
+
+From: vertebraker
+Subj: ~vital/closed/news/composer
+
+Date: Nov  1 01:09
+
+players/vital/closed/news/composer.c: Return type not matching: "void " 
+line 120 
+ 
+fixed from return 1 to return  
+ 
+poster wasn't loading/cloning 
+
+From: vertebraker
+Subj: cwiz
+
+Date: Nov  1 04:24
+
+we should ditch the cwiz channel. 
+all wizes should be coding anyway. 
+laf. 
+

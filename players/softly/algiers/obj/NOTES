@@ -1,0 +1,3 @@
+Your items that have uses, you add_weight, and it ends up lowering it
+(the players carry) by 2 pts, instead of 1.  
+You can instead destruct(this_object()); and then recalculate the weight of the player

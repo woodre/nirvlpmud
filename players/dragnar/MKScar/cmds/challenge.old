@@ -1,0 +1,131 @@
+#include "../scar.h"
+
+#define COST 25          /* cost to challenge, sps */
+#define TIME 900         /* seconds player has to prepare */
+#define ChampionMin 10   /* ranks below #1 that can challenge champion */
+#define HIGH 25          /* # ranks we can challenge higher than us */
+#define LOW 10           /* # ranks we can challenge lower than us */
+#define TEMPLE MKDIR+"Temple"
+
+main(str) {
+  int Finished, i;
+  object ob,target;
+  mapping warriors;
+  string *war_keys;
+
+  if (!str) {
+    write("Who do you wish to challenge?\n");
+    return 1;
+  }
+
+  if (this_player()->query_ghost()) {
+    return 1;
+  }
+  if(previous_object()->QMKChallenge()) {
+    write("The current Mortal Kombat Challenge must be finished first.\n");
+    return 1;
+  }
+  if(previous_object()->QMKRank() < 1 ) {
+    write("You are unable to challenge for some reason.\n");
+    return 1;
+  }
+  warriors = WARRIORS;
+  war_keys = keys(warriors);
+  str = capitalize(str);
+  if(str == "Subzero" || str == "Sub-zero") str = "Sub-Zero";
+  if(str == "Johnnie" || str=="Cage" || str=="Johnnie cage") str = "Johnnie Cage";
+  if(str == "Liu kang" || str=="Kang" || str == "Liu") str = "Liu Kang";
+   if(MAP->member_map(str, warriors) > -1) {
+    if(previous_object()->QMKVictim(str)) {
+      target = warriors[str];
+    }
+    else {
+      write("Shang Tsung tells you: You are not worthy of challenging "+str+"!\n");
+      for(i = 0; i < sizeof(war_keys) && !Finished; i++) {
+        if(!previous_object()->QMKVictim(war_keys[i])) {
+          target = warriors[war_keys[i]];
+          str = warriors[war_keys[i]]->query_name();
+          Finished = 1;
+        }
+      }
+      write("Shang Tsung tells you: You will fight "+target->query_name()+" instead.\n");
+    }
+  }
+  else {
+    str = lower_case(str);
+    target = find_player(str);
+    }
+  if (!target) {
+    write(capitalize(str) + " is not logged on.\n");
+    return 1;
+  }
+  /************************************************************
+  *              Checks for players only
+  ************************************************************/
+  if( target->is_player()) {
+    ob = present("bloodscar",target);
+    if(target->query_ghost()) {
+      write("That player is dead.\n");
+      return 1;
+    }
+  
+    if (target == this_player()) {
+      write("A great warrior like you wants to fight yourself?  How weak.\n");
+      return 1;
+    }
+
+     if(ob->QLoginTime() < TIME) {
+      write(capitalize(str)+" has not had time to prepare for battle.\n");
+      tell_object(target, capitalize(this_player()->query_name())+" attempted to challenge you.\n");
+      return 1;
+    }
+    if(ob->QMKRank() == 1 && previous_object()->QMKRank() > ChampionMin) {
+      write("Your rank is too low to challenge the Champion.\n");
+      return 1;
+    }
+    if(ob->QMKRank() <= previous_object()->QMKRank()) {
+      if(previous_object()->QMKRank() - ob->QMKRank() > HIGH) {
+        write("Your rank is not high enought to challenge "+capitalize(str)+".\n");
+        return 1;
+      }
+    }
+    else {
+       if(ob->QMKRank() - previous_object()->QMKRank() > LOW) {
+         write(target->query_name()+" is ranked too low for you to challenge.\n");
+         return 1;
+       }
+    }
+  }
+  else {
+    target = target->Target();
+    move_object(target, "/room/void");
+    ob = present("bloodscar",target);
+   }
+  
+  /************************************************************
+  *          Checks both players and NPC's
+  ***********************************************************/
+  if (!ob) {
+    write("You can only fight Champions of Mortal Kombat.\n");
+    return 1;
+  }
+  if(ob->QMKChallenge()) {
+    write(capitalize(str)+" has already been challenged by another.\n");
+    return 1;
+  }
+ 
+  if (this_player()->query_spell_point() < COST){
+    write("You don't have enought spell points.\n");
+    return 1;
+  }
+  this_player()->add_spell_point(-COST);
+  ob->Challenged(1, this_player());
+  previous_object()->Challenged(0, target);
+
+  write("You have challenged " + capitalize(str) + " to fight to the death in Mortal Kombat!\n");
+  tell_object(target, capitalize(this_player()->query_real_name()) +
+        " challenges you to fight in Mortal Kombat.\n" +
+        "You can either 'accept challenge' or 'forfeit'.\n");
+  if(!target->is_player()) ob->MKNPC();
+  return 1;
+}

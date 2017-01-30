@@ -1,0 +1,19 @@
+Rank 3
+
+  Call merchant [untouched]:
+     Call the demon merchant to do remote selling of items.
+     Requires a task.  Costs 10 spell points.
+
+  Escape [rewritten]:
+     Teleportation spell to the grotto.  Costs 45 spell points,
+     1/5 chance of failure.  Requires a task.
+
+  Light [rewritten]:
+     Summon a light source.  Costs 20 spell points.
+
+  Dragonskin [rewritten]:
+     Form dragonskin around your body [misc armor]
+     1/6 chance of return 3.  set_res(30) protection
+     to other|fire as well.  Takes approx 20 seconds
+     for the transformation, costs 40 spell points.
+

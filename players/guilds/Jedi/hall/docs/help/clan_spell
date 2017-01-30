@@ -1,0 +1,17 @@
+Syntax: clan_spell
+
+Obtain information on your clan spell.
+
+Spell type        Either 'damage' or 'heal'
+Spell name        Command you type to use the spell
+Spell cost        Cost in spell points to use the spell
+Spell delay       Number of seconds between castings
+Damage type       Type of damage ('damage' type spells only)
+Caster message    Message given to caster when the spell is cast
+Target message    Message given to the target when the spell is cast
+Room message      Message given to the rest of the room when the spell is cast
+
+Note that 'delay' is clan wide. For example, if 'delay' is set to 10, then only
+one member of the clan may cast the spell every 10 seconds.
+
+The higher the cost and delay, the more effective the spell.

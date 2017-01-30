@@ -1,0 +1,56 @@
+Wed Aug 22 00:26:26 2001 [31m-->[2;37;0m figure out which rooms in Acadie need mobs
+Wed Aug 22 00:27:16 2001 [31m-->[2;37;0m review shuttles and fix landings
+Mon Aug  4 07:03:01 2003 [31m-->[2;37;0m screw the whole shuttle system
+Sun Sep 14 15:43:27 2003 [31m-->[2;37;0m figure out why the super_pda wigs out in battle
+Mon Sep 15 14:40:26 2003 [31m-->[2;37;0m super_pda fixed
+Thu Sep 18 12:54:13 2003 [31m-->[2;37;0m unique items should come from a preset list
+Thu Sep 18 12:55:15 2003 [31m-->[2;37;0m if item is chosen, the ability to do the quest again and get qpts should be discussed.
+Thu Sep 18 13:11:30 2003 [31m-->[2;37;0m previous two comments are slightly out of touch w/ reality...you might be willing to let them be ignored
+Thu Sep 18 13:11:44 2003 [31m-->[2;37;0m how about mud-news
+Thu Sep 18 15:04:36 2003 [31m-->[2;37;0m begin, read, options, subscribe, next, previous, mark, mall, maread, maunread, exit, back, help, update...for starters
+Thu Sep 18 15:05:52 2003 [31m-->[2;37;0m perhaps one folder per group, group permissions decided by obj and/or lvl
+Thu Sep 18 15:07:20 2003 [31m-->[2;37;0m notes saved by id# w/i folder. slight maintenance cost to keep up with news dirs? or allow maintenance from w/i the news object
+Wed Nov  5 06:04:57 2003 [31m-->[2;37;0m Hercules' Ranger Idea: machine >= 20, int >=20, repair zord
+Wed Nov  5 11:01:53 2003 [31m-->[2;37;0m race of mob: Vargs or the Vars - mobile, nomadic, tribal people with simple culture and no technology. They don't have strong weapons, but they do have other techniques for dispatching larger enemies. They have poisons, tribal chants, dream thiefs, and other various and sundry methodologies available to them. They need to travel in groups and if there isn't another tribe member in the room they will wonder on out of the room.
+Thu Nov 27 15:34:20 2003 [31m-->[2;37;0m Zidane: 2nd offence, check in 25 days
+Sat Nov 29 11:30:06 2003 [31m-->[2;37;0m Billy won a gold star
+Wed Jan 14 04:08:36 2004 [31m-->[0m just a possibilty of using a specialized daemon for notify_fail() for shardak commands.c
+Tue Jan 20 14:18:29 2004 [31m-->[0m make newsdaemon check for copies.
+Sun Jan 25 06:45:54 2004 [31m-->[0m Earwax tells you: btw, in case you were wondering - the most serious, hardcore, superghetto-fab (ghetto fabulous for the uninitiated), pimpadocious, cold lampin in the crip drink ever (more ghetto than 'red' flavored kool-aid) is a courvousier strawberry daiquiri (easy ice
+Mon Feb  2 07:50:19 2004 [31m-->[0m stypend/sire/deraak
+Mon Feb  2 13:38:23 2004 [31m-->[0m talen = budah
+Tue Feb  3 13:36:58 2004 [31m-->[0m viper/billy/dork just reiterated why I ignore him. bleh.
+Tue Feb  3 13:37:28 2004 [31m-->[0m viper/billy/dork just reiterated why I ignore him. bleh.
+Tue Feb  3 14:19:24 2004 [31m-->[0m why why why why
+Tue Feb  3 14:19:30 2004 [31m-->[0m somtimes I think we should have an application form for ppl who want to play on Nirvana. It should include basic math, spelling, basic deductive reasoning, and perhaps one question involving reading comprehension. Wait, comprehension, I'm asking too much
+Sat Feb  7 14:36:37 2004 [31m-->[0m nyasia = jorja
+Sat Feb  7 14:39:11 2004 [31m-->[0m zara = nyasia
+Tue Feb 17 14:18:47 2004 [31m-->[0m hugh = psychax = krag
+Tue Feb 17 14:18:59 2004 [31m-->[0m sin data
+Fri Apr 30 14:10:23 2004 [31m-->[0m completely rewrite save_object() functionality for my own personal use, is really beginning to seem like a better deal. *garenghablih*
+Thu May 13 17:34:59 2004 [31m-->[0m /open/examples/OBJ/amulet.c
+Thu May 13 17:35:05 2004 [31m-->[0m for resistance
+Thu May 13 17:36:27 2004 [31m-->[0m /open/verte/dmg_types/ice_shield.c for a more consice piece of resistance code.
+Sun May 16 13:49:01 2004 [31m-->[0m ~mythos/closed/play/newBaka.c
+Sun May 16 13:49:01 2004 [31m-->[0m ~vertebraker/closed/hat/cmds/unbaka.c & dest
+Sun May 16 16:05:57 2004 [31m-->[0m hp_regen_object & sp_regen_object
+Mon May 17 14:35:22 2004 [31m-->[0m maybe something like if(this_player()->query_guild_name() == "meta" && target != this_player())
+Thu May 27 15:52:08 2004 [31m-->[0m added cheap sheild to badman and tried to recomp the stuff he lost in the jailing debacle.
+Thu May 27 15:53:26 2004 [31m-->[0m warned Dakeyras to actually get something coded or go away. Also, keep mouth shut and stay out of player afairs.
+Thu May 27 15:54:00 2004 [31m-->[0m tried to forget Dakeyras and Badman existed. Failed
+Fri Jun  4 09:10:33 2004 [31m-->[0m stardrifter, darkness, data, shadowstone, angelus, wallace, sin, genesis, vodka, viral
+Fri Jun 11 06:44:28 2004 [31m-->[0m charm/curse/desiree
+Mon Aug  9 15:20:28 2004 [31m-->[0m neo/entropy/wrayth/wulfgar = tyr
+Thu Aug 11 10:09:09 2005 [31m-->[0m figure out how to get zords to do some typed damage specials
+Sun Aug 14 16:35:35 2005 [31m-->[0m caravelle
+Sun Aug 14 16:35:53 2005 [31m-->[0m caravelle/sundin
+Thu Sep 15 14:50:13 2005 [31m-->[0m add damage type information to the pda
+Thu Sep 22 15:18:43 2005 [31m-->[0m 53,000 xp to Odysseus if I find out he was killed wrongly
+Thu Sep 22 17:16:36 2005 [31m-->[0m cvql->add_name("");
+Thu Sep 22 18:09:28 2005 [31m-->[0m  /players/vital/dest/acadie/room/shop.c
+Sat Sep 24 19:31:39 2005 [31m-->[0m add censorship to poster
+Sat Sep 24 19:31:43 2005 [31m-->[0m work on poster
+Sat Sep 24 19:36:05 2005 [31m-->[0m return to get out of news reader
+Tue Sep 27 17:46:36 2005 [31m-->[0m sscanf for newsreader
+Sat Oct  1 07:51:40 2005 [31m-->[0m add set_plural_name();
+Mon Jun 18 04:16:16 2007 [31m-->[0m Need to fix generic_heal to not allow negative sps on detox items

@@ -1,0 +1,55 @@
+/*
+ * spell : Reveal   (evocation)
+ * level : 4
+ * effect: Turns all invis players in the room visible.
+ * cost  : 35 sp
+ * spec  : 
+ * files : 
+ */
+
+reveal() {
+
+  object ob;
+  int i, count;
+
+  if(!KNOW("reveal")) {
+	write("What?\n");
+	return 1;
+  }
+
+  if(guild->query_next_alter() > time()) {
+	write("You cannot cast this spell again yet.\n");
+	return 1;
+  }
+
+  write("You cast a spell of "+HIC+"Revealing"+NORM+" ...\n");
+
+  if(spell_fail2(4, "evoc", "pow")) {
+	write("You fail the spell.\n");
+	say(ME+" casts a spell but nothing happens.\n");
+	tp->add_spell_point(-15);
+	return 1;
+  }
+
+  tell_room(env, ME+" casts a spell and the air around you begins to waver...\n");
+
+  ob = all_inventory(env);
+  count = 0;
+  for(i=0; i<sizeof(ob); i++) {
+    if(living(ob[i]) && ob[i]->query_invis() > 0 && ob[i] != tp &&
+      ob[i]->query_level() < 20) {
+	ob[i]->visible();
+	count++;
+    }
+  }
+ 
+  if(count == 0)
+	tell_room(env, "Nothing special seems to happen.\n");
+  else
+	write("Your spell revealed "+count+" invisible players.\n");
+
+  if(count > 0) guild->set_next_alter(time() + 60); 
+  tp->add_spell_point(-35);
+
+  return 1;
+}

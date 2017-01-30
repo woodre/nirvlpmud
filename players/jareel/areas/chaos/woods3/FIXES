@@ -1,0 +1,8 @@
+Fix long_descriptions in all objects/rooms to be max of 79 length
+Go through and make sure there is no ANSI bleed where you are using ANSI
+Remove DEBUG messages in all objects
+
+Ideas:
+Make it random if the monster(s) appear in the spire - having all of them
+there at every reset may be a bit much
+Chandron is fine, as it will be a difficult kill

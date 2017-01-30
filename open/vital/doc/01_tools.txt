@@ -1,0 +1,65 @@
+I may or may not be your sponsor, so if this conflicts with
+something else you have been instructed or have been told by
+another, do it their way. A lot of differences that exist from
+coder to coder are stylistic and do not have a lot of bearing
+on the way the actual code works. They do have importance
+though, in the areas of readability, documenation, etc.
+
+The first things I would suggest involves things only
+indirectly related to coding, namely: finding and using a
+good text editor and learning how to ftp your code to the
+mud. Editting your code offline, on your own machine is much
+easier to start with and makes tracking down errors easier.
+[opinion: mine]
+
+Text Editors:
+
+    If you are using a unix box [linux, Free/OpenBSD, etc] I
+    can't recommend the emacs program highly enough. It handles
+    syntax/language coloring, indentation, reformatting, etc,
+    etc, etc very well. [included in most default installs]
+    
+    For MacOS I would suggest the very good and very free,
+    TextWrangler. It offers syntax/language color, powerful text
+    tools, glossaries, customizations out the wazoo and can edit
+    files remotely via ftp.
+    <http://www.barebones.com/products/textwrangler/index. shtml>
+    
+    For Windows I would suggest an good program called "Crimson
+    Editor" and has auto-indent, colorizing reserved words and
+    good search and replace functionality necessary for a good
+    text editor. It is currently located at:
+    <http://crimsoneditor.com/>
+    
+    Another excellent text editor for use is called PFE. It's out
+    of production, but it really is a nice text editing tool. It
+    can be found at
+    <http://downloads.zdnet.co.uk/downloads/download/1003-2352-
+    904159.html>
+
+    Additional free text editors can be found from this page:
+    <http://directory.google.com/Top/Computers/Software/Freeware
+    /Editors/>
+
+FTP programs:
+
+    If you are using a unix box you probably don't have any
+    trouble getting a ftp program working to your specs.
+    
+    For MacOS you can choose from several good shareware ftp
+    clients. The freeware market is bit more sparse. Only the
+    RBrowser Lite is worth its salt.
+    
+    For Windows, CuteFTP is the best, but shareware. There are
+    several free ftp clients that can be found online.
+    
+    The ftp login is similar to the mud, but port 3000. So from
+    a command line you would type: ftp nirvana.mudservices.com
+    3000 and then login with your name and password as usual. In
+    graphical ftp client you'll probably need to check for an
+    option to create a passive connection [it may be listed as
+    [PASV] to the mudftp server.
+
+All this and I still haven't helped w/ any coding...ha... sorry
+
+Next installment will have actual code!

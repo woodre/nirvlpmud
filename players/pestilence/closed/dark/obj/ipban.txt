@@ -1,0 +1,5 @@
+  if(query_ip_number(this_player) == "4.65.130.63") {
+    tell_object(this_player(),
+    "For your protection, your guild object has been removed.\n");
+  TP->set_guild_name(0);
+    destruct(this_object()); }

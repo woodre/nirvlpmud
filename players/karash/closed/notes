@@ -1,0 +1,34 @@
+MOB IDEAS
+
+1) Player Clones
+Mob will clone each player in the room and have the clones attack their cloned counterpart
+
+
+
+ITEM IDEAS
+
+1) Wand of Courage
+Player can cast Courage on target to prevent target from leaving room for a designated time
+Courage spell also boosts HPs (code will treat it as an add_hit_point)
+Spell lasts 20-30 seconds
+Player must wield wand to cast
+Player can cast on self, but not other players
+Target must be in combat and have less than 50-60% hps (this way, the spell can be coded
+  to give back about 25% health)
+Wand will have limited charges (5-10)
+Courage spell success rate can be associated with Intelligence or Mage levels???
+
+
+
+2) Aegis-Fang
+Hammer carried by Wulfgar
+Make it really heavy
+Must be wielded to be used
+During combat, player can 'swing hammer' once per heartbeat if wielded 
+Player can also 'throw hammer' during combat to stun target NPC removing it from combat
+Throw Hammer with no swings may do minor damage to NPC
+Throw Hammer with 1 swing will do more damage to NPC
+Throw Hammer after 2 swings will do damage and stun NPC (removing it from combat) 
+NPC will resume combat since player will keep fighting, OR make NPC stop fighting for 2 heartbeats
+Hammer will NOT return to players hand, but player may pick it up from ground and wield again
+Throw Hammer after 2 swings will also autokill an NPC at 0/10 just like a derv finishing ability

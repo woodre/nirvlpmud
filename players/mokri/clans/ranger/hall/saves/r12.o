@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/ranger/hall/r11","up","/players/mokri/clans/ranger/hall/r21","north",})
+short_desc "[32mEmerald Ranger's[31mstorage[0m"
+long_desc "This locker room has been dedicated to the [32mEmerald Ranger[0m.  A [1;31mproud[0m statue stands erect in the resemblance of Krash, the [32mEmerald[0m one.[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A [1mdragon-head[2;37;0m katana","/players/illarion/high/obj/dkatana_new","0",0,0,"[1mMaster Sword[0m","/players/sami/area/coinarea/obj/wep/msword",0,0,0,"[1;30mDeath's Scythe[0m","/players/sami/area/coinarea/obj/wep/scythe",0,0,0,"Hero's Shield","/players/sami/area/coinarea/obj/armor/shield",0,0,0,"A [1;37mcrystal[0;0m ring with a [1m[1mblack[0;0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"[1m[31mPentacle [0m[1mof [30mDefense[0m","/players/fred/forest/Obj/pentacle",0,0,0,"Ring of [1;30mShadows[0m","/players/sami/area/coinarea/obj/armor/ring",0,0,0,"A [1;37mcrystal[0;0m ring with a [1m[1mblack[0;0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"[0mElixir of [1;31mHealth [0m[[1;33mLOW TOX[0m][0m [31m[ [36m10[0m[31m ][0m","/players/jareel/heals/YELMALIAN/lthpts","10",0,0,})

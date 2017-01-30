@@ -1,0 +1,78 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+QRangerInfo(){ return 1; }
+RangerInfo(str){
+   if(str){ return 1; }
+ 
+   write(""+
+   "-------------------   Ansi   --------------------\n"+
+   "Allows you to change the ansi color of your title\n"+
+   "Availible colors:\n\n"+
+   WHITE+"white"+OFF+"\n"+
+   REVERSE+BOLD+BLACK+"black"+OFF+"\n"+
+   BOLD+BLACK+"grey"+OFF+"\n"+
+   RED+"red"+OFF+"\n"+
+   BOLD+RED+"bold red"+OFF+"\n"+
+   GREEN+"green"+OFF+"\n"+
+   BOLD+GREEN+"bold green"+OFF+"\n"+
+   BLUE+"blue"+OFF+"\n"+
+   BOLD+BLUE+"bold blue"+OFF+"\n"+
+   BROWN+"brown"+OFF+"\n"+
+   YELLOW+"yellow"+OFF+"\n"+
+   CYAN+"cyan"+OFF+"\n"+
+   BOLD+CYAN+"bold cyan"+OFF+"\n"+
+   MAGENTA+"purple"+OFF+"\n"+
+   BOLD+MAGENTA+"bold purple"+OFF+"\n\n"+
+
+   "To change use the command 'ansi <color>'\n"+
+   "");
+   return 1;
+}
+
+
+
+RangerPower(str){
+   if(!str){
+      PO->SRangerAnsi(OFF);
+      return 1;
+   }
+   if(str == "green")
+      PO->SRangerAnsi(GREEN);
+   else if(str == "bold green")
+      PO->SRangerAnsi(BOLD+GREEN);
+   else if(str == "blue")
+      PO->SRangerAnsi(BLUE);
+   else if(str == "bold blue")
+      PO->SRangerAnsi(BOLD+BLUE);
+   else if(str == "red")
+      PO->SRangerAnsi(RED);
+   else if(str == "bold red")
+      PO->SRangerAnsi(BOLD+RED);
+   else if(str == "white")
+      PO->SRangerAnsi(BOLD);
+   else if(str == "black")
+      PO->SRangerAnsi(REVERSE+BOLD+BLACK);
+   else if(str == "grey")
+      PO->SRangerAnsi(BOLD+BLACK);
+   else if(str == "purple")
+      PO->SRangerAnsi(MAGENTA);
+   else if(str == "yellow")
+      PO->SRangerAnsi(YELLOW);
+   else if(str == "brown")
+      PO->SRangerAnsi(BROWN);
+   else if(str == "cyan")
+      PO->SRangerAnsi(CYAN);
+   else if(str == "bold cyan")
+      PO->SRangerAnsi(BOLD+CYAN);
+   else if(str == "bold purple")
+      PO->SRangerAnsi(BOLD+MAGENTA);
+   else{
+      write("That is not a valid ANSI Color.\n");
+      return 1;
+   }
+   write("Ansi Color set to "+str+"\n");
+   return 1;
+}
+
+

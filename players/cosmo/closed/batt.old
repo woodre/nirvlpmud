@@ -1,0 +1,154 @@
+#include "/players/cosmo/closed/ansi.h"
+#define SYM HIR+"~"+HIY+"o"+HIR+"~"+NORM
+#define TP capitalize(this_player()->query_real_name())
+int check,li;
+
+id(str) {
+    return str == "bat";
+}
+
+short() {return(SYM); }
+
+reset(arg) {
+  if(arg) return;
+  check = 0;
+  li = 0;
+}
+
+silence(n) { check = n; }
+query_silence() { return check; }
+
+long() {
+    write("Cosmo's talking bat\n");
+    write("Usage: batt [msg] or batte [emote]\n");
+}
+
+drop() {return 1;}
+get() { return 0; }
+
+
+query_auto_load() {
+    return "/players/cosmo/closed/batt.c:";
+}
+
+init() {
+  add_action("batt","batt");
+  add_action("batte","batte");
+  add_action("pounce","pounce");
+  add_action("squeal","squeal");
+  if(this_player()->query_real_name() == "cosmo") {
+    add_action("bat_to","bat_to");
+    add_action("bat","bat");
+    add_action("bate","bate");
+  }
+}
+
+batt (str) {
+string what, who;
+  if(!str) {
+    write("~o~ What message would you like the bat to give to Cosmo?\n");
+  return 1; }
+  if(!sscanf(str, "%s",what)) {
+    write("Usage: batt [message]\n");
+  return 1;}
+  who = find_player("cosmo");
+  if(!who || check == 1) {
+    write("~o~ Cosmo is unavailable.\n");
+  return 1; }
+  tell_object(who,SYM+" "+TP
+    +": "+HIY+format(what,60)+NORM+"\n");
+  write(SYM+" The bat squeaks to Cosmo: "+HIY+format(what,60)+NORM+"\n");
+  who->add_tellhistory(TP+" tells you: "+what);
+  return 1;
+}
+
+batte (str) {
+string whats;
+  if(!str) {
+    write("~o~ What feeling would you like the bat to convey to Cosmo?\n");
+  return 1; }
+  if(!sscanf(str, "%s",whats)) {
+    write("Usage: batte [emote]\n");
+  return 1; }
+  if(!find_player("cosmo") || check == 1) {
+    write("~o~ Cosmo is unavailable.\n");
+  return 1; }
+  tell_object_wblock(find_player("cosmo"),SYM+" "+TP
+    +HIY+" "+format(whats,45)+NORM);
+  write(HIR+"~"+HIY+"o"+HIR+"~ "+NORM+"The bat squeaks to Cosmo: "+TP
+    +HIY+" "+format(whats,45)+NORM);
+  return 1;
+}
+
+bat_to(str) {
+object bat, target;
+  target = find_living(str);
+  if(!target) { write("No one on with that name.\n"); return 1; }
+  bat = clone_object("players/cosmo/closed/batt.c");
+  move_object(bat,target);
+  tell_object(target, "Cosmo has given you a bat.\n");
+  write("You gave "+str+" a bat.\n");
+  return 1;
+}
+
+bat (str) {
+object target;
+string who, what;
+  sscanf(str, "%s %s",who,what);
+  target = find_living(who);
+  if(!str) {
+    write("~o~ What message would you like the bat to give to "+who+"?\n");
+  return 1; }
+  if(!target || check == 1) {
+    write("~o~ "+who+" is unavailable.\n");
+  return 1; }
+  tell_object_wblock(target,SYM+" "
+    +"Cosmo tells you: "+format(what,60)+NORM);
+  write(SYM+" The bat squeaks to "+
+    capitalize(who)+": "+HIY+format(what,60)+NORM);
+  target->add_tellhistory(TP+" tells you: "+what);
+  return 1;
+}
+
+bate (str) {
+object target;
+string who, whats;
+  sscanf(str, "%s %s",who,whats);
+  target = find_living(who);
+  if(!str) {
+    write("~o~ What feeling would you like the bat to convey to "+who+"?\n");
+  return 1; }
+  if(!target || check == 1) {
+    write("~o~ "+who+" is unavailable.\n");
+  return 1; }
+  tell_object_wblock(target,SYM+" "+TP+HIY+" "+format(whats,60)+NORM);
+  write(SYM+" The bat squeaks to "+capitalize(who)+": "+
+    TP+HIY+" "+format(whats,45)+NORM);
+  return 1;
+}
+
+int pounce(string str) {
+object who;
+  if(!str) { write("Pounce on whom?\n"); return 1; }
+  who = present(str, environment(this_player()));
+  if(who && living(who)) {
+    if(who == this_player()) return 0;
+    write("You pounce playfully on "+capitalize(str)+".\n");
+    tell_object(who, this_player()->query_name()+" playfully pounces on you!\n");
+    say(this_player()->query_name()+" playfully pounces on "+capitalize(str)+".\n", who);
+  }
+  else {
+    who = find_player(str);
+    if(!who || who == this_player() || in_editor(who) || who->query_invis() >= 20)
+       { write("Pounce on whom?\n"); return 1; }
+    write("You pounce playfully on "+capitalize(str)+" from afar.\n");
+    tell_object(who, this_player()->query_name()+" pounces on you playfully from afar.\n"); 
+  }
+return 1;
+}
+
+int squeal() {
+    write("You squeal with delight!\n");
+    say(this_player()->query_name()+ " squeals with delight.\n");
+    return 1;
+}

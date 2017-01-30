@@ -1,0 +1,1 @@
+full_heal(str) { if(full_heal_var[0] > lev) return 0; call_other(POWER,"full_heal",lev,pow,str); return 1; }

@@ -1,0 +1,143 @@
+#define tp this_player()
+#define etp environment(tp)
+#define tpn tp->query_real_name()
+#define atp  capitalize(attacker->query_name())
+#define TPN capitalize(tpn)
+#define eo environment(this_object())
+
+#include "/players/mythos/closed/ansi.h"
+
+int n;
+
+inherit "obj/weapon.c";
+reset(arg){
+  ::reset(arg);
+  if (arg) return;
+  set_name("backbiter");
+  set_alias("sword");
+  set_short(RED+"Backbiter"+NORM);
+  set_long("A blade of pure silver, ornated at the hilt with\n"+
+           "black gemstones.  When you look at this out of\n"+
+           "the corner of your eye, you can see a red aura\n"+
+           "eminating from the blade.\n");
+  set_read(BOLD+"Beware the Second Bite  - "+RED+"HUNTER\n"+NORM);
+  set_class(16);
+  set_weight(7);
+  set_value(80000);
+  n = 0;
+  set_hit_func(this_object());
+  call_out("hb",3);
+}
+
+query_save_flag() { return 0; }  /* saveable */
+
+weapon_hit(attacker){ 
+string msg,msgg;
+int x;
+
+if(n == 1) {
+       switch(random(7)) {         /* when the extra attacks go off what 
+                                      occurs is this part <disads too> */
+         case 0: msgg = "Blood sprays from "+TPN+"'s arm!\n";
+                 tp->heal_self(-1-random(5));
+                 break;
+         case 1: msgg = "Fire lashes out everywhere!\n"; 
+                 attacker->set_ac(attacker->query_ac() + 1); 
+                 if(attacker->query_hp() > 20) {
+                 attacker->heal_self(-1-random(3));
+                 }
+                 break;
+         case 2: msgg = "Energy snaps and the smell of ozone is in the air!\n"; 
+                 tp->heal_self(-5);
+                 break;
+         case 3: msgg = TPN+" screams with a bloodcurdling sound!\n"; 
+                 tp->set_crime();
+                 break;
+         case 4: msgg = atp+" screams in pain!\n"; 
+                 break;
+         case 5: msgg = "Backbiter slices deeply into "+atp+".\n"; 
+                 break;
+         case 6: msgg = TPN+" screams: Die "+atp+"!!!!!\n"; 
+                 break;
+                 
+       }
+       
+       tell_room(etp,msgg);
+   }
+
+if(random(3) == 0) {
+  
+  switch(random(4)) {            /* this is the message changer */
+      case 0: msg = HIR+"<  <"+NORM+" Backbiter lashes out with incredible speed! "+HIR+">  >"+NORM+"\n"; 
+              break;
+      case 1: msg = HIR+"<  <"+NORM+" "+TPN+" strikes with great fury! "+HIR+">  >"+NORM+"\n"; 
+              break;
+      case 2: msg = HIR+"<  <"+NORM+" Energy crackles and the air sears with heat! "+HIR+">  >"+NORM+"\n"; 
+              break;
+      case 3: msg = HIR+"<  <"+NORM+" The ground shudders as "+TPN+" slices into the enemy! "+HIR+">  >"+NORM+"\n"; 
+              break;
+    }
+
+  if(attacker->query_hp() < 21) {
+    if(random(2)) tell_room(etp,msg);
+    return random(5);
+  }
+  
+  if(attacker->query_hp() > 20) {  /* this is to prevent hb problems */
+   
+   if(n == 0) {
+    
+    switch(random(2)) {
+      case 0: n = 1; 
+              tell_room(etp,msg);
+              if(!attacker || attacker->query_hp() < 20) { return 0; break; }
+              hit(attacker);
+              if(!attacker || attacker->query_hp() < 20) { return 0; break; }
+              tp->attack();
+              if(!attacker || attacker->query_hp() < 20) { return 0; break; }
+      case 1: n = 1; 
+              tell_room(etp,msg);
+              if(!attacker || attacker->query_hp() < 20) { return 0; break; }
+              hit(attacker);
+              if(!attacker || attacker->query_hp() < 20) { return 0; break; }
+              tp->attack();
+              n = 0; break;
+    } 
+   }
+  }
+}
+}
+
+hb() {
+string mssg;
+if(eo) {
+  if(living(eo)) {
+    switch(random(3)) {
+      case 0: eo->heal_self(-1-random(5)); 
+              mssg = "You feel drained.\n"; 
+              break;
+      case 1: eo->add_spell_point(-2-random(10)); 
+              mssg = "You feel spiritually weakened.\n"; 
+              break;
+      case 2: eo->add_hit_point(-2-random(10)); 
+              mssg = "You feel physically weakened.\n"; 
+              break;
+    }
+    tell_object(eo,mssg);
+  } }
+  call_out("hb",100 + random(1000)); 
+return 1;
+}
+
+weapon_breaks(){ 
+  ::weapon_breaks();
+  if(living(eo)) { 
+    tell_room(environment(eo),"\n\n"+HIR+"\t\t<    <  <  < CRACK >  >    >\n\n\n"+
+                               NORM+BOLD+"BACKBITER EXPLODES!\n\n\n"+NORM);
+    eo->heal_self(- 5 - random(50));
+  }
+  else {
+    tell_room(eo, "\n\n"+HIR+"\t\t<    <  <  < CRACK >  >    >\n\n\n"+
+                               NORM+BOLD+"BACKBITER EXPLODES!\n\n\n"+NORM);
+  }
+return 1; }

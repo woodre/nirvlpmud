@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/NEW/weap/mace","/players/mythos/awep/backbite","/players/hippo/heals/grain","/players/puppy/s/eq/collar","/obj/bag","/players/wren/Area/starbug/items/leaflets","/obj/weapon","/obj/weapon","/players/puppy/s/eq/nathat","/players/scathe/armor/hood","/obj/armor","/obj/armor","/players/mythos/aarmor/haramaki","/players/scathe/weap/lbow","/players/wren/Area/starbug/items/mirror","/players/snow/WEAPONS/glass_sword","/players/hippo/heals/blood","/obj/weapon","/players/wren/Area/starbug/items/currie","/players/wren/Area/starbug/items/gauntlet","/obj/weapon","/players/sado/shop/oreo","/players/saber/armor/hardsuit1","/players/wren/Area/starbug/items/groinal","/players/maledicta/cont/weapons/rweapon",})
+shorts ({"A large iron mace","[31mBackbiter[0m","[33mcrumbs of grain[0m","A leather collar","bag","a stack of leaflets","Steel Longsword","Studded collar","A straw hat","Hood","Robot Head","A cartoon character's shoes","Haramaki","Longbow of Force","a slim pocket mirror","Glass Sword","[1;31mdrops of blood[0m","Blaster","A tin of chicken currie","Time gauntlet","Decorated Broadsword","A box of oreo cookies","A purple Hardsuit <with pink legs!>","Kryten's groinal attachment","a Dagger",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

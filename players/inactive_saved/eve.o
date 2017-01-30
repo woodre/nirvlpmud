@@ -1,0 +1,104 @@
+channel_names ({"msg","shout","equip","gossip","junk","risque","babble",})
+time_to_heal 0
+hcnum 1
+crime 0
+money 56193
+luck 16
+lucky 213
+name "eve"
+gender "female"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 1
+level 15
+armor_class 0
+hit_point 255
+max_hp 258
+experience 646342
+mmsgout "disappears in a puff of smoke"
+mmsgin "arrives in a puff of smoke"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "back"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -1390
+cap_name "Eve"
+spell_points 258
+max_spell 258
+spell_name "magic missile"
+spell_cost 0
+spell_dam 0
+age 158772
+is_invis 0
+frog 0
+whimpy 50
+auto_load "obj/quicktyper:16;bow curtsey;.X.Z;t run;.X.Z;er enter realm;.X.Z;es enter shrine;.X.Z;1 goportal;.X.Z;. emote;.X.Z;k drink majin;.X.Z;j drink breath;.X.Z;h eat fruit;.X.Z;p need;.X.Z;nds emote nods with a smile.;.X.Z;an add_need;.X.Z;cn clear_need;.X.Z;nm need_mon;.X.Z;pr need room;.X.Z;y eat orange;.X.Z;^!/players/saber/closed/new_mini/gypsy.c:^!players/pain/NEW/items/star.c:^!/players/saber/closed/new_mini/gypsy.c:^!players/boltar/sprooms/clinic/boobs:medium 35 4^!"
+current_room "players/cosmo/apt/rooms/lobby"
+alignment 0
+Armors 0
+Weapons 0
+handshake_data 244
+handshake 10017616
+quest_point 4
+quests "ring"
+pregnancy 0
+pregtoo 0
+monitor_string "$B$  [] $N$$HC$Healer:$N$  [$HG$#hps#$N$/#mhp#] - [$HG$#sps#$N$/#msp#] - [#stu#% #intox#% #soa#%] #ahp#"
+wkrm 0
+hostname "64.208.88.81"
+ok_edit "none#"
+mailaddr "none"
+saved_where 0
+title "the priestess"
+pretitle "No Adam, just"
+password "VlQyJM1kZvakE"
+race "spirit"
+al_title "neutral"
+intoxicated 0
+fight_area 0
+mon 1
+phys_at ({1,5,11,154,0,0,})
+headache 8
+max_headache 0
+no_spell 1
+called_from_ip "64.208.88.81"
+msghome "goes home"
+description 0
+guild_name "healer"
+lastime "Jun  1 11:20 2001 to Jun  1 12:07 2001"
+player_killing 0
+invs_count 0
+infuse 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+pwd 0
+dead 0
+guild_rank 15
+guild_exp 0
+guild_file "players/mythos/healerguild/guildob.c"
+home "/players/mythos/healerguild/room/hall.c"
+ex_lv 0
+qc 1
+strength 20
+intelligence 20
+stamina 20
+will_power 15
+magic_aptitude 20
+piety 20
+stealth 16
+stuffed 0
+soaked 0
+no_give 991411643
+aprv 0
+other_copy 0

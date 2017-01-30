@@ -1,0 +1,6 @@
+k 8
+backp ({"w,se,w,n,n,n,w,w,n","n,n,n,e,e,e,e,e,e,n","s,s,s,s,s,w,w,w,w,w,w,w,w,n","w,s,w,w,w,w,w,n","sw,s,s,w,w,w,w,n","s,s,s,e,e,e,e,n","s,w,s,s,w,w,w,w,n","w,s,s,w,w,w,w,n",0,0,})
+bpatt ({"e,nw,e,s,s,s,e,e,s","s,s,s,w,w,w,w,w,w,s","n,n,n,n,n,e,e,e,e,e,e,e,e,s","e,n,e,e,e,e,e,s","ne,n,n,e,e,e,e,s","n,n,n,w,w,w,w,s","n,e,n,n,e,e,e,e,s","e,n,n,e,e,e,e,s",0,0,})
+patt ({"s,e,e,s,s,s,e,nw,e","s,w,w,w,w,w,w,s,s,s","s,e,e,e,e,e,e,e,e,n,n,n,n,n","s,e,e,e,e,e,n,e","s,e,e,e,e,n,n,ne","s,w,w,w,w,n,n,n","s,e,e,e,e,n,n,e,n","s,e,e,e,e,n,n,e",0,0,})
+ggg "n"
+comment ({0,0,0,0,0,0,0,0,0,0,})

@@ -1,0 +1,23 @@
+Command                   Function
+--------------------------------------------------------------
+$[msg]                    echo a string
+@[msg]                    echo a string to all
+atp [whom] [msg]           echo at a player
+bring [whom]              summon a player/monster
+send [whom] [location]    transport a player/monster
+to [location]             silently teleport
+pocket [whom]             enter a player/monster inventory
+id [object]               identify an object
+inv [object]              get an object's true inventory
+patch [x] [y] ([z])       call an object function
+rset ([location])         call a reset
+meteor [whom]             cast a meteor swarm
+trash/sober [whom]        intoxicate/sober a player
+cash [whom] [amt]         give a player/monster cash
+force/make [whom] [cmd]   force/command a player/monster
+retitle [whom] [what]     set a player's title
+(de)frog [whom]           (re)transform a player
+raise [whom]              resurrect a player's ghost
+itell [whom] [msg]        tell while invisible
+ishout [msg]              shout while invisible
+(un)par [whom]            (un)paralyze a player

@@ -1,0 +1,31 @@
+Convert will allow you to trade in experience
+for guild experience. There are 16 total guild
+levels, each costing gradually more experience.
+You cannot convert more experience than you have
+free.  Score will show your current guild
+experience as well as guild level.
+The rank costs are as follows:
+Rank | Experience Cost
+================================
+1    |  Starting Rank
+2    |  500,000
+3    |  500,000
+4    |  750,000
+5    |  750,000
+6    |  750,000
+7    |  1,000,000
+8    |  1,000,000
+9    |  1,000,000
+10   |  1,500,000
+11   |  1,500,000
+12   |  1,500,000
+13   |  2,000,000
+14   |  2,000,000
+15   |  2,000,000
+16   |  3,000,000
+================================
+Total cost to max: 19.75 million
+Usage: convert <# of experience>
+Cost: 0
+Skill Level: 0
+

@@ -1,0 +1,22 @@
+I poked around in the driver source once again to see why I wrote that
+shadows can intercept messages.
+It _is_ true: A shadow can redefine catch_tell and the shadow will then
+receive all messages sent to the shadowed object, unless the shadow is
+the originator of the message. That lets you e.g. do a simple filter:
+In the shadowing object:
+
+  object player; /* object that we shadow */
+
+  catch_tell(msg) {
+      string who, rest;
+      if (sscanf(msg, "%s %s", who, rest) == 2 && who == "moo") {
+              /* all from moo is filtered out */
+      } else {
+              tell_object(player, msg); /* this doesn't get intercepted */
+      }
+  }
+
+Now, mind that I haven't tried this myself, but I am thinking that there
+might be some little quirks here. Like, a shadowing catch_tell may receive
+all messages twice and messages that are filtered out won't show on snoop.
+

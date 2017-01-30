@@ -1,0 +1,145 @@
+int local_weight,charges;
+string pict;
+string pict_desc;
+init() {
+   charges=6;
+   add_action("trump"); add_verb("trump");
+   add_action("contact"); add_verb("contact");
+   add_action("spy"); add_verb("spy");
+/*
+   add_action("summon"); add_verb("summon");
+*/
+}
+set_pict(s) { 
+   pict = s;
+}
+set_pict_desc(s) { 
+   pict_desc = s;
+}
+id(str) {
+   return str == "trump" || str == "card";
+}
+short() {
+   return "A " + pict + " trump";
+}
+long() {
+   write("A trump card bearing an image of " + pict + ".\n");
+   write(pict_desc);
+}
+query_value() { return 250; }
+query_weight() { return 0; }
+get() { return 1; }
+can_put_and_get() {return 1; }
+add_weight(w) {
+}
+trump(str)
+{
+   object ob;
+   object ob1;
+   string here_realm, dest_realm;
+   if (charges == 0) {
+      write("Your trump is used up. It disappears!\n");
+      destruct(this_object());
+   }
+   if (str != pict)
+      return 0;
+   ob = find_living(pict);
+   if (!ob) {
+      write(pict + " is not in range of this trump.\n");
+      return 1;
+   }   
+   if (call_other(ob,"query_level",0) > 19) {
+      write("Wizards may not be trumped to at this time\n");
+      write("Watch for a future upgrade.\n");
+      return 1;
+   }
+   ob1 = environment(ob);
+   here_realm=environment(this_player())->realm();
+   dest_realm=ob1->realm();
+   if((here_realm==dest_realm) && (dest_realm!="NT")) {
+       say(call_other(this_player(),"query_name",0) + " trumps out.\n");
+       write("Reality slowly dissolves and is reformed.\n");
+       call_other(this_player(),"move_player","trump#"+file_name(ob1));
+       say(call_other(this_player(),"query_name",0) + " trumps in.\n");
+       charges=charges-1;
+       return 1; }
+   else {
+       write("Something prevents you from using the trump\n");
+       return 1; }
+}
+contact(str)
+{
+   object ob;
+   string msg;
+   string who;
+   if (!str || sscanf(str,"%s %s", who, msg) != 2)
+      return 0;
+   if (who != pict)
+      return 0;
+   ob = find_player(pict);
+   if (!ob) {
+      write(pict + " is not in range of this trump.\n");
+      return 1;
+   }   
+   if (in_editor(ob)) {
+      write(pict + " is editing.\n");
+      return 1;
+   }
+   tell_object(ob,call_other(this_player(),"query_name",0) +
+      " tells you via trump:\n    " + msg + "\n");
+   write("Ok.\n");
+   return 1;
+}
+spy(str)
+{
+   object ob;
+   object ob1;
+   object ob2;
+   if (str != pict)
+      return 0;
+   ob = find_living(pict);
+   if (!ob) {
+      write(pict + " is not in range of this trump.\n");
+      return 1;
+   }   
+   ob1 = environment(ob);
+   write("You concentrate on the trump.\n");
+   call_other(ob1,"long",0);
+   ob2 = first_inventory(ob1);
+   while(ob2) {
+      if (ob2 != ob) {
+         string sd;
+         sd = call_other(ob2,"short");
+         if (sd)
+            write(sd + ".\n");
+         }
+      ob2 = next_inventory(ob2);
+   }
+   return 1;
+}
+summon(str)
+{
+   object ob;
+   if (str != pict)
+      return 0;
+   ob = find_living(pict);
+   if (!ob) {
+      write(pict + " is not in range of this trump.\n");
+      return 1;
+   }
+   if (call_other(ob,"query_level",0) > 19) {
+      write("Wizards may not be summoned!\n");
+      return 1;
+   }
+   tell_room(environment(ob),call_other(ob,"query_name",0) +
+      " has been summoned via trump!\n");
+   tell_object(ob,"Reality slowly dissolves and is reformed.\n");
+   call_other(ob,"move_player","via trump#" + file_name(environment(this_player())));
+   say(pict + " Appears in a blinding flash!\n");
+   write(pict + " Appears in a blinding flash!\n");
+   return 1;
+}
+reset(arg) {
+   if (arg)
+      return;
+}

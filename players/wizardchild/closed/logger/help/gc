@@ -1,0 +1,27 @@
+  ____________________________________________________________________________
+ /                                                                           /|
+(---------------------------------------------------------------------------( |
+| Logger's Guild help: Guild Commanders and Guild Wizards                   |/|
+|>-------------------------------------------------------------------------<|/|
+| As a GC, you have a responsibility to ensure that players don't abuse     | |
+| any bugs that the guild code may have, and to provide stability in the    | |
+| guild. This means not letting John go around exploiting a bug that I have | |
+| no knowledge of, and reporting the bug to me. In order to help you, the   | |
+| following commands have been written.                                     |/|
+|>-------------------------------------------------------------------------<|/|
+| Command:         | Purpose                                                |/|
+|>-----------------+-------------------------------------------------------<|/|
+| lct/lce <str>    | Talk or emote on the GC channel; it cannot be muffled  | |
+| gstat <plyr>     | Check a player's guild stats                           | |
+| npack <plyr>     | Give a player a new pack *****                         | |
+| gprom <plyr> <x> | Promote a player to rank x                             | |
+| gxp <plyr> <x>   | Give a player x guild xps                              |/|
+|>-----------------+-------------------------------------------------------<|/|
+| Guild Wizards: You have the ability to banish players from this guild.    | |
+| ban_logger <plyr>  Ban a player from the logger guild                     |/|
+|>-------------------------------------------------------------------------<|/|
+| *****: Giving a player a new pack destructs and reclones the object;      | |
+| because of the store/retrieve ability, this disrupts a players inventory  | |
+| slightly. Please do not use it for entertainment; abuse of this is asking | |
+| for demotion to normality (gasp).                                         | |
+|___________________________________________________________________________|/

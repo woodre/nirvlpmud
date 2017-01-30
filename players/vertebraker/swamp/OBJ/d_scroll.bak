@@ -1,0 +1,70 @@
+#include "../define.h"
+inherit ITEM;
+
+int t;
+reset(arg) {
+   if(arg) return;
+   t = 1;
+   set_id("scroll");
+   set_alias("magical scroll");
+   set_short("A magical scroll <tied>");
+   set_long(
+      "This is a thin, rolled up scroll of papyrus.\n"+
+      "It is bound by a small red ribbon around its\n"+
+      "middle that you can \"untie\" and then read\n"+
+      "the scroll.\n");
+   set_weight(1);
+   set_value(2000); }
+
+short() { if(t) return short_desc; if(!t) return "A magical scroll <unbound>"; }
+long() {
+   if(t) write(long_desc);
+   else write("This is a thin, unfolded scroll of papyrus.\n"+
+         "A small red ribbon has been glued on the back\n"+
+      "for easy tying.  You can \"read\" this perhaps,\n"+
+      "or \"tie\" it up for another time.\n");
+}
+
+init() {
+   ::init();
+   add_action("tie","tie");
+   add_action("tie","untie");
+   add_action("read","read"); }
+
+tie(str) {
+   if(!str) return 0;
+   if(id(str)) {
+      if(t) {
+         write("You grab hold of the red ribbon, and untie the magical scroll...\n");
+         say(TPN+" unties a magical scroll.\n");
+         t = 0; return 1; }
+      write("You carefully roll the scroll back up, and tie it with the red ribbon.\n");
+      say(TPN+" rolls the scroll back up and ties it with a ribbon.\n");
+      t = 1; return 1; }
+}
+
+query_save_flag() { return 1; }
+
+read(str) {
+   if(id(str)) {
+      if(t) {
+         write("The scroll is tied up....\n");
+         return 1; }
+      if(TP->query_attrib("int") < 20) {
+         write("You attempt to read the scroll of restoration, but cannot\n"+
+            " begin to decipher the ancient texts.\n");
+         return 1; }
+      write("You read the scroll of restoration!\n");
+      say(TPN+" reads the scroll of restoration aloud!\n");
+      tell_room(ENV(TP),TPN+" intones,\" J'ar My'lazxyl RA'xzYl!\"\n");
+      tell_room(ENV(TP),"The scroll of restoration disappears!\n");
+      tell_room(ENV(TP),"Lightning crashes overhead and strikes "+TPN+"!\n");
+      tell_object(TP,HIY+"Light pours into your soul, filling it with holy essence!\n"+NORM);
+      MO(CO(OBJ_DIR+"sp_heal"),TP);
+      if(TP->query_attrib("luc") < random(30)) {
+         write(BOLD+"\n  your strength is sapped....\n"+NORM);
+         TP->raise_strength(-1); }
+      destruct(TO);
+      TP->add_weight(-1);
+      return 1; }
+}

@@ -1,0 +1,32 @@
+
+
+
+                           [Character]
+-----------------------=========+=========----------------------- 
+                              
+    The following is a listing of all commands and topics
+ relating to character information, settings and upkeep.
+ For further information type: help <topic name>
+ 
+   Information:   Room:   Security/Activity:  Descriptions:
+ -----------------------------------------------------------
+      monitor     brief       inactive          describe
+      setmon                  logme             pretitle
+      score                   password          xtitle               
+      score2                  save              ansipref
+      bootxp                  quit
+      rlinfo
+      report
+      
+    Automation:
+ -----------------------------------------------------------
+      alias       nickname    unalias           %
+      aliases     nicknames   unnickname        %%
+      do          resume      history 
+
+    Misc.
+ -----------------------------------------------------------
+      suicide     register    check_item        guild_object         
+      beatfix     movie       newbie
+
+  For further information type: help <topic name>

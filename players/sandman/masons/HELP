@@ -1,0 +1,30 @@
+(=============================================================================)
+Command:                       Function:                                Cost:
+--------                       ---------                                -----
+
+assess weapon/armor <item>  -- Assess weapon/armor class of <item>       30 sp
+cast light                  -- Casts light spell in room                  5 sp
+compare <item> <item>       -- Compares one item to another               8 sp
+dream <player/monster>      -- Sends the target a dream causing damage   35 sp
+greet <member>              -- Greets fellow <member> properly            0 sp
+judge <living>              -- Judges alignment of <living>               5 sp
+masons                      -- Lists all guildmembers logged on           0 sp
+muffles <on/off>            -- Toggles muffles (don't hear mt)            0 sp
+munch corpse                -- Allows you to eat a corpse giving 10 hp    2 sp
+mt <msg>                    -- Allows you to talk with fellow members     0 sp
+news                        -- Tells stuff about the guild                0 sp
+rank                        -- Shows your states and guild rank           0 sp
+recon                       -- recon <player> shows if in another guild   0 sp
+recruit <player>            -- Recruits <player> into the guild           0 sp
+reset                       -- Updates your seal                          0 sp
+spy <player>                -- Shows the location of <player>            10 sp
+teleport <member/lodge>     -- Teleports you to <member> or lodge       150 sp
+gtitle                      -- Sets title to guild title (see titles)     0 sp
+treat <player>              -- Heals <player> random 60 hp               80 sp
+xsell <item>                -- Sell <item> w/o being in a shop           10 sp
+
+
+Additional Information -> Type "seal" then:
+-------------------------------------------
+ranks    start    battle    summon
+(=============================================================================)

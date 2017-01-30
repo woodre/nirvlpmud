@@ -1,0 +1,13 @@
+
+==============================================================================
+---- Rank 3 Spells -----------------------------------------------------------
+ Cl              -- (Chain Lightning) Strike all Monsters in room        35
+ Mheal <plyr> <amt> -- Heal a Player                                     amt
+ Speed           -- Get a Monk Speedster (if you dont already have one)  0
+ Status <target> -- View the status of a Monster                        20
+---- Rank 4 Spells -----------------------------------------------------------
+ Balance         -- Balance your Hit Points and Spell Points
+ Peace           -- Stop all fighting in the Room                        30
+ New_Title <string> -- Change your title to <string>                     10
+  Free speech    -- at rank 4, all tells are free                       
+==============================================================================

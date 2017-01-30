@@ -1,0 +1,16 @@
+no_clean 0
+name_of_weapon "holysinger"
+broke 0
+misses 96
+hits 289
+alt_name "holy blade"
+alias_name 0
+short_desc "A blessed blade named 'Holysinger'"
+long_desc "An gleaming white longsword of blessed steel.It is very light, and has a wicked edge to it.There is a Bardic rune on the hilt."
+read_msg "This blade was forged by Saber for the Paladin's Guild"
+class_of_weapon 18
+value 2000
+local_weight 2
+info 0
+deny_save 0
+weapon_type "sword"

@@ -1,0 +1,21 @@
+[===========================================================================]
+[1]  Standard combat method
+     ----------------------
+     This is the method used by all players on Nirvana. 
+
+[2]  Mounted combat method
+     ---------------------
+     Employ this method when using a warhorse to attack a target.
+
+[3]  Shield & Sword method
+     ---------------------
+     This allows you to parry attacks decreasing damage inflicted upon you.
+     You can only use special paladin shields.
+
+[4]  Dual Weapons method
+     -------------------
+     Allows you to wield two weapons simultaneously. Increases the damage  
+     done to your opponent.
+
+To set a combat method: combat <standard/mounted/shield/dual>
+[===========================================================================]

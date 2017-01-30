@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/weapon","/players/snow/shadows/stuff/cloak","/obj/armor","/players/saber/armor/hardsuit1","/players/wren/Area/starbug/items/lightbee","/players/ultramagnus/staff","/obj/weapon","/players/hippo/armour/endotheel","/obj/weapon","/players/hippo/heals/bubbles","/players/sado/shop/chocolate","/players/arrina/treas/horseshoe","/players/maledicta/cont/weapons/rweapon","/players/hippo/heals/grain","/obj/weapon","/players/boltar/things/xmaslights","/players/puppy/s/eq/quill","/players/wren/Area/starbug/items/sparehead","/players/angel/area/stargate/obj/bullets","/players/puppy/s/eq/brush","/players/mythos/aarmor/do","/players/pain/NEW/arm/pmail","/players/pain/closed/wands/orb","/players/snow/cam/stuff/sword","/players/saber/armor/hardsuit1",})
+shorts ({"An evil-looking lightsabre","A dusky cloak","Metal gloves","A light blue Hardsuit","a strange object called a 'light bee'","An Old Long Staff","A gardening hoe","endotheel","Fear","[1;36mbubbles of 7up[0m","A box of delicious Belgian chocolates","A Silver Horseshoe","a Scimitar","[33mcrumbs of grain[0m","Fire collar","Christmas lights","A quill","Kryten's sparehead 3.","A clip of bullets [50]","A paint brush","Do-Maru","Gleeming Platemail","An Onyx Orb [[31m0[0m] ([34mreadied[0m)","[34m[1mBlessed Longsword[0m[0m","A purple Hardsuit <with pink legs!>",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

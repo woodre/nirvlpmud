@@ -1,0 +1,142 @@
+inherit"obj/weapon";
+#include "std.h"
+int i, charges, price;
+object targetloc, otherplayer;
+string pointo;
+
+id(str) { return str == "staff"; }
+
+reset(arg) {
+::reset(arg);
+    if (!arg) charges=random(6);
+    price = charges * 20;
+   set_short("An Old Withered Staff");
+   set_class(12);
+   set_hit_func(this_object());
+}
+
+weapon_hit(attacker) {
+string type;
+type = 0;
+   if(type == 0) {
+    switch(random(11)) {
+      case 0: type = "a fireball"; break;
+      case 1: type = "a lightning bolt"; break;
+      case 2: type = "magic missles"; break;
+         case 3: type = "a cone of frost"; break;
+         case 4: type = "a blinding spray of light"; break;
+         case 5: type = "clenched spectral hand"; break;
+         case 6: type = "several small flaming meteors"; break;
+         case 7: type = "a large tentacle of spectral energy"; break;
+         case 8: type = "hundreds of small ice darts"; break;
+         case 9: type = "a wall of fire that rises out of the "+
+                        "ground"; break;
+         case 10: type = "a ray of pain"; break;
+    }
+    write("Your staff hits "+attacker->query_name()+" with "+type+".\n");
+    say(attacker->query_name()+" is hit with "+type+".\n");
+  return 3; }
+return 0; }
+
+query_save_flag() { return 1; } /* non saveable */
+
+
+long() {
+write("An old withered staff with distinct runes carved in black.\n" +
+      "You seem to feel a strange power in the staff, and the    \n" +
+      "markings tell you that the Demon Lords had some part in the\n" +
+   "making of it.\n");
+}
+
+
+query_value()
+{
+    return price;
+}
+
+
+get() {
+    return 1;
+}
+
+query_weight() {
+    return 1;
+}
+init() {
+   add_action("use","invoke");
+   add_action("set","point");
+   add_action("charge","info");
+}
+
+use(arg) {
+   string realm, destrealm;
+   object target_env;
+   if(!arg || arg != "staff") {
+      write("Use What?\n");
+      return 1;
+   }
+   realm = call_other(environment(this_player()), "realm", 0);
+   if(otherplayer = find_living(pointo)) {
+      targetloc = environment(otherplayer);
+   }
+   if(target_env = pointo) {
+      targetloc = environment(target_env);
+   }
+   destrealm = call_other(targetloc, "realm", 0);
+   if((realm == destrealm) && (realm != "NT")) {
+      write("A great bolt of lightning slams into you, knocking\n"+
+            "you unconcious. When you awake you are elsewhere.\n");
+      say(this_player()->query_real_name()+" is struck by a bolt "+
+          "of lightning and disappears.\n");
+      move_object(this_player(), targetloc);
+      say(this_player()->query_real_name()+" is dropped to the "+
+          "ground by a massive lightning demon.\n");
+      call_other(this_player(), "look");
+      charges = charges -1;
+      if(charges == 0) {
+         write("The staff bursts info flame and is consumed.\n");
+         destruct(this_object());
+         return 1;
+      }
+      return 1;
+   }
+   write("The staff tries to work, but burns you instead.\n");
+   return 1;
+}
+
+catch_tell(str) {
+    string s1, s2;
+   if(sscanf(str, "point staff %s %s", s1, s2) == 2) {
+      if(s1 != "at") return 0;
+      if(otherplayer = find_living(s2)) return 1;
+   }
+   if(sscanf(str, "point %s", s1) == 1) {
+      if(s1 != "staff") return 0;
+      if(pointo = environment(this_player())) return 1;
+   }
+   return 0;
+}
+/*
+set(arg) {
+   if(!arg) {
+      pointo = environment(this_player());
+      write("Strange glowing runes appear upon the withered staff.\n");
+      return 1;
+   }
+   if(arg) {
+      pointo = lower_case(arg);
+      write("Stange glowing runes appear upon the withered staff.\n");
+      return 1;
+   }
+   return 0;
+}
+*/
+charge(arg) {
+   if(!arg || arg != "staff") return 0;
+   if(arg == "staff") {
+      write("Staff Stats: \n Charges -- "+charges+
+            "\nSetting -- "+pointo+"\n");
+      return 1;
+   }
+   return 0;
+}

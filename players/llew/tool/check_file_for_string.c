@@ -1,0 +1,19 @@
+int file_size_for_string(string filename, string check_string)
+{
+   int x;
+   string file_input;
+   string junk;
+
+   x = file_size(filename);
+   if (x == 0)
+   {
+      write("File does not exist or is 0 bytes.\n");
+      return 0;
+   }
+
+   file_input = read_file(filename);
+   if (sscanf(file_input, check_string + "%s", junk));
+      return 1;
+
+   return 0;
+}

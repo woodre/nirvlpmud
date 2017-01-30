@@ -1,0 +1,19 @@
+destp(str) {
+  string who, what;
+  object ob;
+  if(this_player()->query_level() < 21) destruct(this_object());
+  if(sscanf(str, "%s %s", who, what) != 2) return 0;
+  if(!find_player(who)) {
+    write("player not found.\n");
+    return 1;
+  }
+  ob = present(what, find_player(who));
+  if(!ob) {
+    write("Object not present.\n");
+    return 1;
+  }
+  destruct(ob);
+  write("dumped.\n");
+  tell_object(find_player(who), "Item dested.\n");
+  return 1;
+}

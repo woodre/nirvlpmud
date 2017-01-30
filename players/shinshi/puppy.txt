@@ -1,0 +1,29 @@
+heart_beat()
+{
+	::heart_beat();
+
+	if(!environment()) return;
+
+	object ob;
+	int x;
+
+	ob = all_inventory(environment(this_object()));
+
+	for(x=0;x<sizeof(ob);x+=1)
+	{
+		if(ob[x]->query_level() > 20)
+		{
+			write("Blah.\n");
+		}
+
+		if(ob[x]->query_guild_name() == "cyberninja")
+		{
+			write("Blah.\n");
+		}
+
+		else
+		{
+			ob[x]->attack_object(this_object());
+		}
+	}
+}

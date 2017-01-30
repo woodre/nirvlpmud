@@ -1,0 +1,40 @@
+in set_long it should say:
+"He has been around for ages and is very knowledgeable"
+"old, dusty, woven, red robe"
+
+Since he is a level 27 mob, he has to have several powerful
+spells (which he has 2.) Make one more spell.
+
+He also has to have three "special" advantages.
+
+1) He stops movement
+
+2) None
+
+3) None
+
+You need to come up with 2 other special advantages. I
+would suggest Gnar's idea of summoning a turtle that is
+alive to come assist him. Then an additional one.
+
+Weapon class should be no higher than 48
+Armor class should be no higher than 25
+Health should be no higher than 1500
+Coins should be no higher than 17500
+
+The only rule that Splinter violates as of right now
+is the weapon class of 50 which is 2 over. Fix that.
+
+load_chat fixes:
+First one: Put a period after Chi. Lowercase "Clear"
+Second one is fine
+Third one: Lowercase "Must"
+Fourth one: Lowercase "way", "master". Put a comma after "body"
+
+add_spell changes:
+
+cane_whack:
+Splinter shakes his head shakes his head? Remove one set of "shakes his head"
+
+hip_thow:
+Put a period after shoulders not a comma. 

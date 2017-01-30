@@ -1,0 +1,23 @@
+*******************************************************************
+
+Name:    cd (Current Directory)
+
+Desc:    This is change directory. It is basic command for 
+         navigating through your files. It can be done layer by
+         layer or the whole path can be entered at once. Without
+         arguement it returns you to your base directory 
+         /players/<wiz_name>.
+
+Level:   21   
+
+Warning:  
+
+Syntax:  cd <path> 
+
+Example: cd /open/bob  or  cd  
+Result:  cd /open/bob will put you in bobs open directory
+         cd will put you in your home directory
+
+Related: pwd, cp, mv, rm, ed, mkdir, rmdir 
+
+*******************************************************************

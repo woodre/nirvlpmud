@@ -1,0 +1,23 @@
+*******************************************************************
+
+Name:    add_testchar (Add the Test character flag to player)   
+
+Desc:    Will make a character who you can mess with and give
+         items too.  This command allows other wizards to
+         know that the Test Character is not just a cheating
+         person.     
+
+Level:   21   
+
+Warning: For the initial registration, your prospective test
+         character must be active from the computer you are
+         using right now.
+
+Syntax:  add_testchar <player>
+
+Example: add_testchar labrat 
+Result:  Labrat will be registered as your test character
+
+Related: 
+
+*******************************************************************

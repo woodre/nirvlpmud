@@ -1,0 +1,62 @@
+#include "/players/pavlik/guild/mages/defs.h"
+#include "/players/pavlik/guild/mages/include/spell_costs.h"
+inherit "players/pavlik/guild/mages/inherit/spell";
+
+#define PHANTASM_COST		50
+#define PHANTASM_COMPONENT_ID	"spider"
+
+reset(arg) {
+  if(arg) return;
+  set_verb("phantasm");
+  set_name("Phantasm");
+  set_color_name(MAG+"Phantasm"+NORM);
+  set_level(6);
+  set_school("illusion");
+  set_stat("power");
+  set_type("damage");
+  set_sp_cost(PHANTASM_COST);
+  set_cost_string(PHANTASM_COST + " sp + Spider");
+  set_component_id(SDAGGER_COMPONENT_ID);
+  set_component_string("Spider");
+  set_combat_spell(1);
+  set_descrip(
+	"Coming soon ... \n"
+  );
+}
+
+
+spell()
+{
+  object obj;
+
+  if(tp->query_real_name() != "pavlik" && tp->query_real_name() != "pavtest")
+  {
+	notify_fail("Sorry, this spell is still in alpha testing.\n");
+	return 0;
+  }
+
+  if(!spell_cast())
+	return 0;
+
+  write("You cast a " + query_color_name() + " spell ... \n");
+
+  if(spell_fail(level, school, stat))
+  {
+	write("You "+HIR+"fail"+NORM+" the spell miserably.\n");
+	say(ME+"'s spell fizzles.\n");
+	tp->add_spell_point(-10);
+	return 1;
+  }
+
+  obj = tp->query_attack();
+
+  if(!present("mage_casting_object", tp))
+  {
+	tp->add_spell_point(-(query_sp_cost()));
+	if(present(component_id, tp))
+		destruct(present(component_id, tp));
+  }
+
+  return 1;
+}
+

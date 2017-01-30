@@ -1,0 +1,11 @@
+fortify  [level 6]: one casts this targetting another healer
+                    the targetted healer's next heal is at max rate 
+                    (i.e. no random amount) at an ability level
+                    of your level + healer's level at a cost of a 
+                    heal normally cast  (note: more than one
+                    healer may cast this on a healer)
+                    
+                    syntax: fortify <target>
+                    
+                    cost:  sp:10  xp:100  coins:500
+                    

@@ -1,0 +1,69 @@
+#define TP this_player() 
+/* daemon for wedding ring object */
+
+
+/* tries to send a message to str, 1 if successful, 0 if not */
+ring_tell(string who,string message) {
+  object obj;
+  message = "[ring] "+message;
+  if(!(obj=find_player(who))) return 0;
+  tell_object(obj,format(message,70));
+  return 1;
+}
+
+/* the help screen for the ring */
+display_commands() {
+   write(
+"ring              this message\n"+
+"rt <msg>          send a message to your spouse\n"+
+"rte <msg>         send an emote to your spouse\n"+
+"rta <msg>         send an echo to your spouse\n"+
+"rinmess [msg]     create or check your login message\n"+
+"routmess [msg]    create or check your logout mesage\n"+
+"rtype [msg]       change or check the appearance of your ring\n");
+}
+
+
+/* basic command for the ring */
+cmd_ring(str,spouse) {
+  string verb;
+  verb = query_verb();
+  if(!verb) { write("no verb.\n"); return 0; }
+  switch(verb) {
+    case "ring": display_commands(); return 1;
+    case "rt": return str?ring_tell(spouse,TP->query_name()+" "+str):0;
+    case "rte":  return str?ring_tell(spouse,TP->query_name()+" "+str):0;
+    case "rta":  return str?ring_tell(spouse,str):0;
+    case "rinmess":  write("Your login message is:\n");
+                     if(str) previous_object()->set_inmess(str);
+                     write(TP->query_name()+" "+previous_object()->query_inmess()+"\n");
+                     return 1;
+    case "routmess": write("Your logout message is:\n");
+                     if(str) previous_object()->set_outmess(str);
+                     write(TP->query_name()+" "+previous_object()->query_outmess()+"\n");
+                     return 1;
+    case "rtype":    write("Ring types have not been implmented yet.\n"); return 1;
+    default: return 0;
+  }
+}
+
+/* sets up the ring upon login */
+/* the type string can be used to setup different looks for the ring. */
+startup(string spouse,string type,string inmess) {
+  object ring;
+  ring=previous_object();
+  if(ring_tell(spouse,TP->query_name()+" "+inmess))
+    write(capitalize(spouse)+" is here waiting for you.\n");
+  else
+    write(capitalize(spouse)+" is not here.\n");
+  ring->set_short(TP->query_name()+"'s wedding ring ["+capitalize(spouse)+"]");
+  ring->set_long(
+"This ring symbolizes the undying love you have pledged to your mate,\n"+
+capitalize(spouse)+".  With your love comes a few abilities, which can\n"+
+"be listed with the command 'ring'.\n");
+}               
+/* logout messages */
+shutdown(string spouse,string outmess) {
+  if(ring_tell(spouse,TP->query_name()+" "+outmess))
+    write("You leave "+capitalize(spouse)+" all alone.\n");
+}

@@ -1,0 +1,43 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+     COMBAT & CONTROL SKILLS
+SKILL
+LEVEL  NAME           AFFECT 
+ 3/3   Devour         This ability allows the player to heal from a KO npc.  The
+                      player will be healed a number of hps equal to the target
+                      npc's hps/4 (Not to exceed 100 hps).
+ 6/6   Feed           This ability allows the player to heal from a KO npc over
+                      time.  The player will be healed a number of hps equal to 
+                      the target npc's hps/3 (not to exceed 150 hps).  This 
+                      spell acts over time - taking 3 minutes to complete.
+ 7/7   Suffocate      Attack ability that may begin when target's health is 30%.
+                      Does damage each round over time until battle is over or
+                      player leaves room.
+         cost=  30 sps
+                 5 MP
+         damage=  (CON/2)+random(COM/2)
+     COMBAT & CREATION SKILLS
+SKILL
+LEVEL  NAME           AFFECT        
+ 2/2   Wound          Massive attack spell that can only be cast on a given
+                      target once.  Player will be unable to cast again for
+                      5 minutes or until the target is killed.
+         cost=  40+(4*GLVL) sps [150 max]
+                5+(COM+CRE) MP [20 max]                  
+         damage=  25+(COM+CRE)+random(15*GLVL)
+         *There is a 6-25% chance of wounding for 5+random(6) rounds (based on
+          COM & CRE) that has 30% chance of ((COM+CRE)*3/4)+random((COM+CRE)*3)
+          damage over each round it is active.
+ 4/4   Block          Increases AC by (COM+CRE)/4 for (COM/2)+ran(CRE) rounds.
+                      There is a ((COM+CRE)*2/3)+random((COM+CRE)*2/3) delay.
+         cost=  50sps
+                (COM+CRE)/3 MP
+
+     CONTROL & CREATION SKILLS
+ 2/2   Gtitle         Allows the player to set their own color title.
+ 6/6   Dominate       Creates a pet from a KO'd corpse.  This pet is able to
+                      wield weapons and wear some types of armor.
+         cost=  150 sps
+                100 MP
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

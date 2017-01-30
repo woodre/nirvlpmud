@@ -1,0 +1,275 @@
+
+
+                    SEAGATE TECHNOLOGY, INC.
+                                          1-800-SEAGATE
+                                      http://www.seagate.com
+                                        (C)opyright 1993
+
+
+
+            ST-32430N SCSI-2 Fast (Hawk 2LP)
+
+              +-----------+
+              | REAR VIEW |  (ST-32430N only)
+              +-----------+
+
+                     50 pin I/O Cable Connection
+                     |
+                J1+------------------------1+ /---------\    TOP (HDA)
+                 -+:::::::::::::::::::::::::+-| 0 0 0 0 |--
+                  +-------------------------+ +-5-G-G-12+    BOTTOM
+
+
+
+              +-----------------+
+              | RIGHT SIDE VIEW |  (ST-32430N)
+              +-----------------+
+
+
+            BACK   +-+       J2  12345678                    TOP (HDA)  FRONT
+             OF    J1+----------------------P-W-A----------------------- OF
+            DRIVE  +-+           ::::::::                    BOTTOM     DRIVE
+                                 ||||||||
+               |Terminator Power +||||||+ Enable T-Res
+              ++Terminator Power -+||||+- Start Delay (12 secs * ID)
+              |         Reserved --+||+-- Motor Start
+              |    Parity Enable ---++--- Write Protect
+              |
+              |
+              | +--------------------------------+
+              +-+ Termination Power-source Table |
+                +--------------------------------+-------------+
+                |-----....-----....-----PWA edge-----          |
+                |                                              |
+                |  1 2     1 2      1 2                        |
+                | +-+       +-+    +---+  A Drive Supplies Bus |
+                | ||     ||    +-+  B Drive Supplies Own |
+                | ++     ++         C Bus Supplies Drive |
+                |   A       B        C                         |
+                +---------Default------------------------------+
+
+
+              +----------------+
+              | LEFT SIDE VIEW |  (ST-32430N)
+              +----------------+             If these ID jumpers are used,
+                                             then ID jumpers shown in front
+                                             view ARE NOT USED.
+
+              FRONT                TOP (HDA)                 J5 +--1+ +-+BACK
+               OF   --------P-W-A-------------------------------+:::+-+J1 OF
+              DRIVE                BOTTOM                       +---+ +-+DRIVE
+                                                                 |||
+                                                           ID 1 -+|+- ID 4
+                                                                ID 2
+
+
+              +------------+
+              | FRONT VIEW |  (ST-32430N)
+              +------------+
+                                              +--+Reserved. Shipped with cover installed.
+                                              |  +Do not remove. Do not install jumpers
+                                  TOP (HDA)  ++---+     1
+                 --P-W-A---------------------+::::|::::::+--
+                             *    BOTTOM     +----+123456
+                             |               J6    ||||||
+                        LED -+                     ||||||
+                                              ID 4 +||||+ Reserved
+                                              ID 2 -+||+- Remote LED (pin-3 +5v)
+                                              ID 1 --++-- Reserved
+
+                If these ID jumper are used, then ID jumpers shown in left side view J5
+                  ARE NOT USED.
+
+
+                                        ST-32430N
+                                        Hawk 2LP
+
+                   UNFORMATTED CAPACITY (MB) ________________2590
+                   FORMATTED CAPACITY (xx SECTORS) (MB) _____2140
+                   AVERAGE SECTORS PER TRACK ________________116
+                   ACTUATOR TYPE ____________________________ROTARY VOICE COIL
+                   TRACKS ___________________________________35,928
+                   CYLINDERS ________________________________3992
+                   HEADS ______PHYSICAL______________________9
+                   DISCS (3.5 in) ___________________________5
+                   MEDIA TYPE _______________________________THIN FILM
+                   RECORDING METHOD _________________________ZBR RLL (1,7)
+                   INTERNAL TRANSFER RATE (mbits/sec)________35.8 to 62.2
+                   EXTERNAL TRANSFER RATE (mbyte/sec) _______5.2 Async
+                   EXTERNAL TRANSFER RATE (mbyte/sec) _______10 Sync
+                   SPINDLE SPEED (RPM) ______________________5411
+                   AVERAGE LATENCY (mSEC) ___________________5.54
+                   BUFFER ___________________________________512 KByte
+                     Read Look-Ahead, Adaptive,
+                     Multi-Segmented Cache
+                   INTERFACE ________________________________SCSI-2 FAST
+                                                             ASA II
+                   TPI (TRACKS PER INCH) ____________________4200
+                   AVERAGE ACCESS (ms) (read/write)__________10.4/11.4
+                     Including controller overhead
+                   SINGLE TRACK SEEK (ms) (read/write)_______2.1/2.5
+                   MAX FULL SEEK (ms) (read/write)___________20.4/21.4
+                   MTBF (power-on hours) ____________________800,000
+                   SHOCK (G's):
+                            operating (Read/Write) __________10
+                            nonoperating ____________________75
+                   ACOUSTICS (typ/max dBA) __________________
+                   POWER REQUIREMENTS: +12V START-UP (amps) _2.0
+                                       +12V TYPICAL (amps) __0.35
+                                       +5V START-UP (amps) __0.61
+                                       +5V TYPICAL (amps) ___0.35
+                                       TYPICAL (watts) ______6
+                                       MAXIMUM (watts) ______9
+                   LANDING ZONE (cyl) _______________________AUTO PARK
+                   IBM AT DRIVE TYPE ________________________0 or NONE
+
+                   Physical:
+                                    Height (inches/mm):     1.00/25.4
+                                    Width  (inches/mm):     4.02/101.6
+                                    Depth  (inches/mm):     5.74/145.8
+                                    Weight    (lbs/kg):     1.5/0.68
+
+            Already low-level formatted at the factory with 1 spare sector
+            per head (all spare sectors are on one track) and 2 spare
+            cylinders per unit.
+
+            ZBR = Zone Bit Recording = Variable sectors per track
+
+            Seagate reserves the right to change, without notice, product
+            offerings or specifications. (08/26/94)
+
+
+
+
+
+
+
+
+
+
+Specifications for ST-1480N 
+        This text file can be obtained by ftp. ASCII linedraw characters are used that display normally in textmode. Windows based
+        environments can use the Letter Gothic Line TrueType font to display and print ASCII linedraw characters. 
+
+
+
+                                     SEAGATE TECHNOLOGY, INC.
+                                          1-800-SEAGATE
+                                      http://www.seagate.com
+                                        (C)opyright 1997
+
+
+
+            ST-1480N SCSI-2
+
+              +-----------+
+              | REAR VIEW |
+              +-----------+
+
+                     50 pin I/O Cable Connection
+                  +------------------------1+
+                J4|:::::::::::::::::::::::::| /---------\
+                 -+--P-W-A--------------------| 0 0 0 0 |--
+                   +------1 +------1 +------1 +-5-G-G-12+
+                   +------+ +---+--+ +------+
+                    +Terminating Resistors+
+
+
+              +----------------+
+              | LEFT SIDE VIEW |
+              +----------------+
+
+                             12345678
+                            +--------+
+            FRONT         J6|::::::::|                                      BACK
+             OF   ----------+1-------+------P-W-A--------------------------  OF
+            DRIVE            ||||||||                                       DRIVE
+                 Factory Use +||||||+ Terminator Power (see below)|
+                 Motor Start -+||||+- Terminator Power (see below)+--+
+                 Start Delay --+||+-- Reserved                       |
+               Write Protect ---++--- Parity   +---------------------+----------+
+                                               | Termination Power-source Table |
+                                               +--------------------------------+--------+
+                                               | 7 8    7 8   7 8                        |
+                                               |  +-+  +-+   +---+  A Drive Supplies Own |
+                                               | ||  ||  +-+  B Drive Supplies Bus |
+                                               | ++  ++       C Bus Supplies Drive |
+                                               |  A      B     C                         |
+                                               +------------P-W-A------------------------+
+
+              +-----------------+
+              | RIGHT SIDE VIEW |
+              +-----------------+
+
+
+                       +--1+
+            BACK     J5|:::|                                                FRONT
+             OF   -----+---+---P-W-A---------------------------------------  OF
+            DRIVE       |||                                                 DRIVE
+                  ID 4 -+|+- ID 1   If these ID jumpers are used,
+                       ID 2         then ID jumpers shown in front
+                                    view ARE NOT USED.
+
+
+              +------------+
+              | FRONT VIEW |
+              +------------+
+                                      If these ID jumper are used,
+                   +-----+            then ID jumpers shown in right side
+                 J7|:::::|            view ARE NOT USED.
+                 --+1----+-------P-W-A---------------------
+                    |||||
+               ID 4 +|||+ Remote LED
+               ID 2 -+|+- Spindle Synchronization (default jumper ON)
+                    ID 1
+
+                                          ST - 1480N
+
+                   UNFORMATTED CAPACITY (MB) ________________492
+                   FORMATTED CAPACITY (xx SECTORS) (MB) _____426*
+                   AVERAGE SECTORS PER TRACK ________________62
+                   ACTUATOR TYPE ____________________________VOICE COIL
+                   TRACKS ___________________________________13,302
+                   CYLINDERS ________________________________1476 (user)
+                   HEADS ____________________________________9
+                   DISCS ____________________________________5
+                   MEDIA TYPE _______________________________THIN FILM
+                   RECORDING METHOD _________________________ZBR
+                   INTERNAL TRANSFER RATE (mbits/sec) _______17 to 25
+                   SPINDLE SPEED (RPM) ______________________4,412
+                   AVERAGE LATENCY (mSEC) ___________________6.8
+                   BUFFER ___________________________________64 Kbyte
+                     Read Look-Ahead, Adaptive,
+                     Multi-Segmented Cache
+                   INTERFACE ________________________________SCSI-2
+                   BYTES PER TRACK __________________________37,037 avg
+                   SECTORS PER DRIVE ________________________823,608
+                   TPI (TRACKS PER INCH) ____________________1760
+                   BPI (BITS PER INCH) ______________________
+                   AVERAGE ACCESS (ms) ______________________14
+                   SINGLE TRACK SEEK (ms) ___________________2.5
+                   MAX FULL SEEK (ms) _______________________26
+                   MTBF (power-on hours) ____________________150,000
+                   POWER REQUIREMENTS: +12V START-UP (amps) _2.5
+                                       +12V TYPICAL (amps) __0.54
+                                       +5V TYPICAL (amps) ___0.53
+                                       TYPICAL (watts) ______9.1
+                                       MAXIMUM (watts) ______15
+                   BUFFERED STEP PULSE RATE (micro sec) _____
+                   WRITE PRECOMP (cyl) ______________________N/A
+                   REDUCED WRITE CURRENT (cyl) ______________N/A
+                   LANDING ZONE (cyl)________________________AUTO PARK
+                   IBM AT DRIVE TYPE ________________________0 or NONE
+
+             * 512 bytes per sector, one spare sector per track,
+               two spare cylinders per unit.
+
+            Already low-level formatted at the factory.
+            ZBR = Zone Bit Recording = Variable sectors per track
+
+            Seagate reserves the right to change, without notice, product
+            offerings or specifications. (9/24/97)
+
+
+
+

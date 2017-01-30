@@ -1,0 +1,18 @@
+---===ROBOMECH QUICKSTART===---
+
+      The very first thing you should do is to make a RoboMech.
+At the Hangar, type: 'assemble <name> <type of mech>'.
+Then you must install weapons and ammo, so find the weapons you
+want with the command 'robo wepinfo' and 'robo ammoinfo' to
+choose.  Now type: 'install <weapon>' and 'supply <weapon>'
+until you have filled your mech with weapons.  Type 'sys' to
+see your current mech status.
+     When ready to fight, type: 'walk up'.  You will be placed
+somewhere on the battlefield.  Type: 'mechs' to see the location
+of other mechs.  When ready, 'aim <direction>', 'target <mech>' or
+'target any' if you are not sure which mech you want to kill.
+Then fire away by typing: 'fire <weapon>'.  If you want to punch
+a mech, type: 'punch <mech>'.  For any more information, 
+type 'robo' for the list of topics, then 'robo <topic>' for help
+on a specific topic.
+

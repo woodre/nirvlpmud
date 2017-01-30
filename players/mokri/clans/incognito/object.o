@@ -1,0 +1,32 @@
+no_clean 0
+short_desc " Power Actuators[0m"
+long_desc "yoyoyoyoyoyoyoyoyoyo[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "card"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "yoyoyoyoyoyoyoyoyoyo[0mType 'clan_help' for commands."
+clan_short " Power Actuators[0m"
+damage_type "fire"
+hall_path "/players/snow/gate"
+object_name "card"
+owner "symbio"
+spell_alias "dm"
+spell_mess_me "You grab a poisoned needle and stab %AKN% with it."
+spell_mess_room "%TPN% quickly stabbed %AKN% with something..."
+spell_mess_them "%TPN% stabbed you with something..."
+abilities ({})
+chan_history ({"[Sat Sep  5 21:36:38 2015] Symbio: it's possible that they'll roll through here","[Sat Sep  5 21:36:38 2015] Xiao: wall it up too","[Sat Sep  5 21:37:02 2015] Symbio: i hope this fuckin' Firecracker emote shit wears off before they get here","[Sat Sep  5 21:37:08 2015] Symbio: heh","[Sat Sep  5 21:37:16 2015] Symbio: also, Wicket is friends with all those people","[Sat Sep  5 21:37:22 2015] Symbio: I would be really surprised if he didn't tip them off","[Sat Sep  5 21:50:13 2015] Xiao: other wierd moments","[Sat Sep  5 21:50:17 2015] Xiao: calling paige","[Sat Sep  5 21:50:21 2015] Xiao: bahah","[Sat Sep  5 21:50:23 2015] Symbio: haha","[Sat Sep  5 21:50:27 2015] Symbio: PAIGE","[Sat Sep  5 21:50:29 2015] Xiao: too much vodka and pink lemonade","[Sat Sep  5 21:50:33 2015] Symbio: and Keystone light","[Sat Sep  5 21:50:35 2015] Symbio: heh","[Sat Sep  5 21:50:37 2015] Symbio: Yuck","[Sat Sep  5 21:50:37 2015] Xiao: N*A*S*T*Y","[Sat Sep  5 21:50:41 2015] Symbio: power hour with keystone","[Sat Sep  5 21:50:45 2015] Xiao: git er done","[Sat Sep  5 21:50:47 2015] Symbio: I'd rather drink dog piss","[Sat Sep  5 21:51:01 2015] Xiao: me too",})
+leaders ({"xiao",})
+join_type 0
+private_coffer 76711
+public_coffer 0
+spell_delay 5
+spell_id 1
+spell_cost 50
+last_spell_time 1441160939

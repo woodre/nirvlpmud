@@ -1,0 +1,11 @@
+2>>In fixing the bards I found a way to make sscanf 'pivot' on ansi
+3>>codes. Basically use one of the popular ansi.h files and use the
+4>>defined var name. For instance, if I wanted to pivot on the ansi
+5>>off code.
+6>>  sscanf(str,"Cormorant ( player 1 ) has entered the game.
+%s"+NORM+"%s", a,b);
+7>>
+8>>everything in ansi in the begining, cept the off code of course
+9>>goes into a. everything after the off code goes into b.
+10>>this should allow grabing of text that is only in one color
+11>>etc.

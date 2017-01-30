@@ -1,0 +1,58 @@
+#include "/players/llew/closed/ansi.h"
+inherit "obj/treasure";
+
+object petals2;
+string caller;
+
+reset(arg)
+{   if (arg) return;
+set_id();
+   set_short();
+   set_long();
+   call_out("bye", 900);
+   call_out("effect", 150);
+}
+bye()  {
+  destruct(this_object());
+}
+ 
+extra_look()  {
+  object ex_look;
+  ex_look = environment(this_object())->query_name();
+  write(ex_look+" is covered head and shoulder in beautiful red "+RED+"rose "+NORM+"petals.\n");
+}
+
+effect() {
+   if(random(2)) {
+      petals2 = clone_object("/players/llew/junk/petals2.c");
+      transfer(petals2, environment(environment(this_object())));
+      transfer(petals2, environment(environment(this_object())));
+      write("Some of the petals fall gently to the ground.\n");
+      say("A few petals gently fall from "+environment(this_object())->query_name()+"'s shoudlers.\n");
+      call_out("effect", 300);
+      return 1;  
+   }
+   
+   if(random(2)) {
+      write("Your thoughts drift back to the beautiful song "+capitalize(caller)+" sang\n"+
+            "for you.  The memory makes you smile.\n");
+      say(environment(this_object())->query_name()+" smiles radiantly.\n");
+      call_out("effect",300);
+      return 1;
+   }      
+
+   if(random(2)) {
+      write("The fragrance of the petals makes you feel happier.\n");
+      environment(this_object())->add_alignment(25);
+      call_out("effect", 300); 
+      return 1;
+   }
+return 1;
+}
+
+drop()  { return 1; }
+
+set_caller(str) {
+   caller = str;
+}
+

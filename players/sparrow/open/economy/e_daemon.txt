@@ -1,0 +1,12 @@
+Economy Daemon
+
+Values
+	e_cap:		Maximum total value possible of funds in circulation
+	e_cur:		Current total value of funds in circulation
+	e_avail:	Amount of funds available for distribution (e_cap-e_cur)
+	p_cur:		Total value of current player holdings
+	s_loan_num:	Number of shop loans outstanding
+	s_loan_val:	Value of outstanding shop loans
+	s_ids[]:	Array of id's of shops with oustanding loans
+	s_loan_bal[]:	Array of balances owed by shops indexed by s_ids
+	

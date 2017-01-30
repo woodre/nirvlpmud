@@ -1,0 +1,29 @@
+no_clean 0
+name "black ring"
+alias 0
+short_desc "[1m[30mA black ring[2;37;0m"
+long_desc "This is a rather simple ring constructed from a black materialsimiliar to Erilon's sword.  There is a pattern etched into thering which circles the length of it."
+worn_tag_short_flag 0
+buy_value 0
+value 1100
+weight 1
+type "ring"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 1
+res 0
+siz 1
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+multipleIds ({})
+Types ({"ring",})
+params ({"physical",1,0,"do_special",})
+enchantments 0

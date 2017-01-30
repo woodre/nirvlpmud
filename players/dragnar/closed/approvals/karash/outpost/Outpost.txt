@@ -1,0 +1,113 @@
+Rooms
+-----------
+so01
+  - Need following items added:
+    - From path:
+        ground
+        prints
+    - From buildings:
+        solar panels
+        satellite dishes
+so02
+  - Need following items added:
+    - From path:
+        ground
+        prints
+        door
+    - From buildings:
+        solar panels
+        satellite dishes
+so03
+  - Need following items added:
+    - From tables:
+        marks
+    - seats
+so04
+  - Need following items added:
+    - From laptop:
+        cable
+    
+so05
+  - Need following items added:
+     - From path:
+        ground
+        prints
+    - From buildings:
+        solar panels
+        satellite dishes
+    - doors
+  - Just a suggestion, add an action to the room that adds a message to the room about the automatic doors
+    when the player leaves to the n or s. ASCII would be cool
+  - Guards are pretty spammy when both are in the room
+  - Guards not meant to prevent player from entering?
+so06 - Good
+so07
+  -Missing "." at the end of room description
+so08
+  - computer equipment
+  - door
+  - wall
+so09
+  - computer equipment
+  - power supplies
+  - wall
+so10
+  - lights
+
+Mobs
+-------
+a_carmack.c - Good
+t_hall.c
+  - Not sure I understand the point of the bitch_slapped function being called from
+    the spell. It looks like the room will get two messages for the spell, and
+    the spell has an 80% fire rate. I'd suggest lowering the % and increasing the
+    damage a bit, then doing the second message from the function only when the
+    damage is close to the max amount.
+guard.c - Good
+s_petersen.c - Good
+a_mcgee.c - Good 
+keen.c 
+  - Where is the GB packers helmet for armor?!
+  - I think you should drop the % of spells firing and increase damage.
+  - He needs 1 more special ability for this level
+j_carmack.c - Good
+romero.c - Good
+  - Had issue with catch_tell with the dark order guild obj on me
+  - Suggestion, add to the message something about John empowering his daikatana when switching to crit.
+romero_proud.c 
+  - Again I think you should drop the % of spells firing and increase damage.
+    This keeps the fight a bit less predictable even though multi cast is on
+  - He needs 1 more special ability for this level
+romero_crit.c
+  - Same theme for spells, lower % and increase dam. Spells should be in the
+    60+ range for a mob this level, even with multicast on. If you wanted you
+    could remove spells or reduce spell dam while shield is active?
+  - Coin limit for level 28 is 23k, but he clearly meets requirements for level 29
+    so you can bump level to 29 to increase max of 30k coins
+  - Emp daikatana is valued at 23k which must be included in the mobs value. However
+    the weapon only heals 150, and doesn't store, so I think you could drop the
+    value of this wep to 5k which would require lowering gold a bit. You can
+    either increase heal amount to make the weapon more valuable and lower coins,
+    or keep wep as is, lower value of wep, and only lower coins a bit to stay under
+    30k.
+fanboy.c - Good
+
+  
+Note: 3500 coins can be 2000 + random(3000) but nice when they are not always max
+
+Items
+-----------
+All good, only comments on daikatana value noted under romero_crit.c
+
+General Feedback
+-----------------
+  - Very nice job Karash
+    - Headers done, comments added, easy to read code, nice overview
+    - Rooms well done with descriptions and items, grammar (coming from me take that for whatever it is worth)
+    - Well done theme with nice humor adding to it, setup will for future areas
+    - Obvious that you took the time to understand the base objects like monster.c and use the
+      functions available from those objects.
+    - Nice that your mobs don't all have max coins and gear isn't all 100% pushing limits, while your
+      bigger mobs are still interesting and different from anything else.
+    - Tied up a lot of lose ends I would not expect from a wizards first area, good example is resetting
+      John romero during room reset but still knowing to ensure he wasn't engaged in combat.

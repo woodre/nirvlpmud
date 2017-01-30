@@ -1,0 +1,99 @@
+                              [Paladin Profession]
+                                      By
+                                   Maledicta
+                                   11.05.01
+
+
+
+[OVERVIEW]
+The Paladin Profession is an add-on to the Warriors.  This means that new
+skills and abilities, as well as drawbacks, are acquired by choosing
+this field.  
+A Paladin is a holy warrior that draws from both the physical and magical
+side of skills.  It is truly the only 'mystical' type of profession
+available.
+
+[DRAWBACKS]
+As with all profession add-ons, the Paladin's special powers run on an
+endurance level.  The endurance level will drop in combat as special
+powers are used.  When this reaches a low level, the Paladin becomes
+less effective, and sometimes cannot perform their skills.
+
+Paladins have the drawback of having their coins max at 50k.  Once
+their coins reach over this, they are dested.
+
+Paladins also have the drawback of having to choose an alignment and
+staying within those guidelines in order to use their powers.  If
+they choose good, for instance, and their alignment falls to 40 or
+less, all paladin powers cease to work.  Also, some powers are based
+on alignment choice and are not available to both sides.
+
+Paladins have 1 skill point less than any other profession because
+they must spend a point in Holy studies, in order to take on the
+more mystical skills they can have.
+
+[SKILLS]
+Each skill has a max level of 5, except a few skills which require
+only 1 point to have.  A Paladin will have 20 points to spend; 18 total
+but they must spend 1 point in order to choose from paladin skills,
+and another point in Holy studies in order to choose anything more 
+than weapon skills.
+
+Skill Name:           Description:
+Advanced blunt          Allows for 5 more skill pts in Blunt.
+Advanced Edged          Allows for 5 more skill pts in Edged.
+Advanced Polearm        Allows for 5 more skill pts in Polearm.
+Advanced Small          Allows for 5 more skill pts in Small.
+Advanced Exotic         Allows for 5 more skill pts in Exotic.
+
+Protection from Good -  An aura that harms anything attacking the
+                        player that is of good alignment.  Cost is
+                        3 endurance each time it goes off.  Damage
+                        is random skill level + a bonus based on
+                        attackers alignment (max of 3).
+
+Protection from Evil -  An aura that harms anything attacking the
+                        player that is of evil alignment.  Cost is
+                        3 endurance each time it goes off.  Damage
+                        is random skill level + a bonus based on
+                        attackers alignment (max of 3).
+
+Regeneration         -  Chance of going off is: random(100) < skill lvl * 4.
+                        Gives 1 hp, and takes 1 endurance point.
+
+Cleanse              -  Removes all poisons.  Cost = 20 sp & 20 endurance.
+
+Holy Bolt            -  Harms undead type for 5 + (skill lvl *2), or heals
+                        OTHER players, not the caster, for random(6) + skill
+                        lvl * 2.  Cost is 5 + skill lvl * 2.
+
+Plague               -  Does damage over time vs. a monster.  Duration is 
+                        skill lvl * 2, and damage is random(skill lvl) + 1.
+                        Cost = 25 sp & 20 endurance.
+
+release              -  Decorpse.  Gives x2 corpse level in hitpoints.
+
+Redemption           -  Works only on other players.  If they accept, will
+                        adjust their alignment by 200 * skill lvl. Cost
+                        100 sps & 25 endurance.
+
+Corrupt              -  Works only on other players.  If they accept, will
+                        adjust their alignment by -200 * skill lvl. Cost
+                        100 sps & 25 endurance.
+
+Detect               -  Tells alignment of monster or player.
+
+Sacrifice            -  Increases Wc of player for one round.  Takes 8% of 
+                        players current health + 4.  Gives a bonus of 7 +
+                        skill lvl * 2 in wc.
+
+
+
+[ADVANCEMENT]
+Monks advance the same as Warriors, by converting over xp.  Each level costs
+500k xp, with 16 additional levels for the add-ons.  Raising skills is done
+by visiting the guild hall and going to the Book of Monks.  Each time a level
+is earned, 1 skill point is given that they can spend on skills.
+
+
+

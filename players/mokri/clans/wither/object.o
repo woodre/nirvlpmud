@@ -1,0 +1,33 @@
+no_clean 0
+short_desc "[[1;31mMISSING[0m] [1;34mBambi[0m'[1;34ms [0mface on a [1;37mmilk carton[0m [[1;30mReward[0m][0m"
+long_desc "I gots the withers.Yous gots teh souls.Oh yes TEH![0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+drop_flag 0
+name "clan_object"
+alias_name "Wet spots from a cryin' stripper"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "I gots the withers.Yous gots teh souls.Oh yes TEH![0mType 'clan_help' for commands."
+clan_short "[[1;31mMISSING[0m] [1;34mBambi[0m'[1;34ms [0mface on a [1;37mmilk carton[0m [[1;30mReward[0m][0m"
+damage_type "fire"
+hall_path "/players/boltar/hotel/lostandfound"
+object_name "Wet spots from a cryin' stripper"
+owner "smelt"
+spell_alias "ll"
+spell_mess_me "You find its quite a %hi yellow%Thrill"
+spell_mess_room "%hi magenta%A lapdance is so much better when the stripper is %hi cyan%crying"
+spell_mess_them "You %hi white%grind %hi black%Smelt%normal% against your %hi blue%%underline%WILL!"
+abilities ({})
+chan_history ({"[Wed Nov  4 21:14:46 2015] Barf has joined the clan!","[Wed Nov  4 21:15:40 2015] Smelt has promoted Barf to a clan leader!","[Wed Nov  4 22:19:42 2015] Smelt has removed Barf as a clan leader!",})
+leaders ({})
+join_type 0
+private_coffer 350000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1485725518

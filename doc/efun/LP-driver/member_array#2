@@ -1,0 +1,15 @@
+int member_array(str, arr)
+string str, arr;
+
+Checks to see if string "str" is a member of the array "arr".
+
+Returns -1 if the string is not found within the array, otherwise it returns
+the position of the first element matching the string.
+
+Warning: If the array is not initialized to ({ }) the function generates a
+bad argument error.
+
+Example: arr=({ "foo", "bar" });
+         member_array("hello", arr);        /* returns -1 */
+         member_array("foo", arr);          /* returns  0 */
+         member_array("bar", arr);          /* returns  1 */

@@ -1,0 +1,30 @@
+#include "/players/fred/mages/defs.h"
+
+color_info(){
+ write("***********************************\n\n"+
+       "Colors Available are:\n"+
+       "H = Bold\n"+
+       "BLU = Blue\n"+
+       "RED = Red\n"+
+       "GRN = Green\n"+
+       "YEL = Yellow\n"+
+       "CYN = Cyan\n"+
+       "MAG = Magenta\n"+
+       "K = Black\n"+
+       "N = Norm\n");
+  write("Examples:\n"+
+        "You want an illusion of you robes:\n"+
+        ""+BOLD++BLK+"Black Robes"+NORM+" (worn).\n");
+  write("You would enter:\n"+
+        " obillusion HKBlack RobesN (worn).\n");
+
+  write("Lets say you used the coat spell and they're glowing:\n"+
+        "You want an illusion that looks like this:\n"+
+        ""+BOLD+BLK+"Black Robes "+YEL+"(Glowing) "+NORM+" (worn).\n");
+  write("You would enter:\n"+
+        "obillusion HKBlack Robes YEL(Glowing)N (worn).\n");
+  write("Just play around with it. You'll get the hang of it.\n");
+  return 1; }      
+
+  
+

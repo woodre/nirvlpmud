@@ -1,0 +1,15 @@
+#include "/players/pestilence/ansi.h"
+
+main() {
+      this_player()->set_guild_name(0);
+      this_player()->add_exp(this_player()->query_guild_exp());
+      this_player()->set_home("room/church");
+      this_player()->add_guild_exp(-this_player()->query_guild_exp());
+      this_player()->add_guild_rank(-this_player()->query_guild_rank());
+      this_player()->add_exp(-(this_player()->query_exp()/2));
+      this_player()->set_attrib("sta",1);
+      this_player()->reset(1);
+      command("save",this_player());
+      write("Silly fool, see u on the flip side!\n");
+      destruct("dknight_ob");
+return 1; } 

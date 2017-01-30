@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30mMark of the [1;31mForsaken[0m"
+long_desc "[1;30mThe brand that marks the [1;31mForsaken[0m[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "clan"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({"forsaken","mark of the forsaken",})
+clan_long "[1;30mThe brand that marks the [1;31mForsaken[0m[0mType 'clan_help' for commands."
+clan_short "[1;30mMark of the [1;31mForsaken[0m"
+damage_type 0
+hall_path "/room/sunalley2"
+object_name "clan"
+owner "dreadbane"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Thu Aug  1 08:49:44 2013] Leonidas has joined the clan!","[Sat Aug  3 15:16:57 2013] Dreadbane: test",})
+leaders ({})
+join_type 2
+private_coffer 100917
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

@@ -1,0 +1,229 @@
+#define SST capitalize(str)
+
+sponsor(str){
+  object ob, obj;
+
+  /* look at my sponsor info */
+  if(str == "who") {
+    sponsor_report();
+    return 1;
+  }
+
+  /* sponsor string unparsed */
+  if(str == "pav") {
+    write("Sponsor string: "+guild->query_sponsor()+"\n");
+    return 1;
+  }
+
+  if(tp->query_guild_rank() < 69) {
+    write("You are not high enough in the guild to sponsor.\n");
+    return 1;
+  }
+
+  if(!str) {
+    write("Sponsor who?\n");
+    return 1;
+  }
+
+  /* usable by wizards only */
+  if(str == "reset" && tp->query_level() > 20) {
+    write("Reseting sponsor string.\n");
+    guild->set_sponsor("0#0+");
+    return 1;
+  }
+
+  if(restore_object("/players/pavlik/guild/mages/players/banned/"+str)) {
+    write(capitalize(str)+" has been banned from the Circle of Mages.\n");
+    write("This person cannot be sponsored.\n");
+    return 1;
+  }
+
+  obj = find_player(str);
+
+  if( (!obj) || (!present(obj, env)) ) {
+    write(capitalize(str)+" is not here.\n");
+    return 1;
+  }
+
+  if(obj->query_guild_name() == "mage") {
+    sponsor_2(obj);
+    return 1;
+  }
+
+  if(obj->query_guild_name() != 0) {
+    write("You cannot sponsor the member of another guild.\n");
+    return 1;
+  }
+
+  if(!check_valid_sponsor(str)) 
+    return 1;
+
+
+  write(
+  "You have deemed "+SST+" to be worthy.  The power of magic\n"+
+  "flows through his veins and burns in his soul.  You have permitted\n"+
+  "this person entry into the Circle of Mages upon your own word.\n"+
+  "So be it.\n");
+  tell_object(obj,
+  ME+" has deemed you worthy.  He has seen the potential that lies\n"+
+  "yet untapped within you.  Upon "+ME+"'s word you will be able to\n"+
+  "enter the Circle of Mages.\n"+
+  "So be it.\n");
+  say(
+  ME+" places his hands upon "+SST+"'s shoulders and incants a spell.\n");
+  ob = clone_object("players/pavlik/guild/mages/obj/sponsor.c");
+  ob->set_sponsor(tp->query_real_name());
+  move_object(ob, obj);
+
+  add_name(str);
+
+  return 1;
+}
+
+
+sponsor_2(obj){
+  string name, str;
+  string who, x, y;
+
+  name = obj->query_real_name();
+
+  if(obj->query_guild_rank() < 20) {
+    write(capitalize(name)+" is not ready to be sponsored again.\n");
+    return 1;
+  }
+
+  if(obj->query_guild_rank() > 20) {
+    write(capitalize(name)+" does not need to be sponsored again.\n");
+    return 1;
+  }
+
+  sscanf(present("mageobj", obj)->query_sponsor(), "%s#%s+%s", who, x, y);
+
+  if(who == tp->query_real_name()) {
+    write("You have already sponsored "+capitalize(name)+".\n"+
+    "Someone else must be the 2nd sponsor of this person.\n");
+    return 1;
+  }
+
+  if(!check_valid_sponsor(name))
+    return 1;
+
+  str = name;
+  write(
+  "You acknowledge that magic has become "+SST+"'s life and that\n"+
+  "he is worthy of the power it may yield.  Upon your name "+SST+"\n"+
+  "can continue to study and wield the powers of Magic.\n");
+  tell_object(obj,
+  ME+" acknowledges that magic has become your life.  You may\n"+
+  "continue your studies and know what it is to become a full\n"+
+  "member of the Circle of Mages.\n");
+  say(
+  ME+" speaks a word of power to "+SST+".\n");
+
+  add_name(name);
+  present("mageobj", obj)->set_sponsor(who+"#"+tp->query_real_name()+"+");
+
+  return 1;
+}
+
+check_valid_sponsor(str) {
+  string spon, trash;
+  string who1, who2;
+  int count, max;
+
+  /* council members can always sponsor */
+  if(tp->query_guild_rank() > 71)
+    return 1;
+
+  /* define the max ppl we could sponsor */
+  if(tp->query_guild_rank() > 69) max = 4;
+  else if(tp->query_guild_rank() > 59) max = 3;
+  else if(tp->query_guild_rank() > 49) max = 2;
+  else if(tp->query_guild_rank() > 39) max = 1;
+
+  sscanf(guild->query_sponsor(), "%s+%s", trash, spon);
+
+  if(spon == "") {
+    count = 0;
+  }
+  else if(sscanf(spon, "%s#%s", trash, who1) != 2) {
+    count = 1;
+  }
+  else {
+    while(sscanf(spon, "%s#%s", who1, spon)==2)
+      count++;
+  }
+
+  if(count >= max) {
+    write("You cannot sponsor anyone else at this time.\n");
+    return 0;
+  }
+
+  return 1;
+}
+
+add_name(str) {
+  string list,stuff;
+  int x;
+
+  sscanf(guild->query_sponsor(), "%s+%s", stuff, list);
+
+  x = strlen(list);
+
+  if(list == "")
+    guild->add_sponsor(str);
+  else
+    guild->add_sponsor("#"+str);
+
+  return 1;
+}
+
+sponsor_report(){
+  string mine, othr, my1, my2;
+  string who, others;
+  string tmp1, tmp2;
+  int x;
+  others = allocate(5);
+  
+  sscanf(guild->query_sponsor(), "%s+%s", mine, othr);
+
+  sscanf(mine, "%s#%s", my1, my2);
+
+  x = 0;
+
+  if(othr == "") {
+    others[x] = 0;
+  }
+  else if(sscanf(othr, "%s#%s", tmp1, tmp2) != 2) {
+    others[x] = othr;
+  }
+  else {
+    while(sscanf(othr, "%s#%s", who, othr)==2){
+      others[x] = who;
+      x++;
+    }
+    others[x] = othr;
+  }
+
+  if(!my1 || my1 == "0") my1 = "unknown";
+  if(tp->query_guild_rank() < 20) my2 = "---";
+  else if(!my2 || my2 == "0") my2 = "unknown";
+
+  write("\t\t\tSponsorship Info:\n");
+  write("You were sponsored by:\n");
+  write("1): "+my1+"\n");
+  write("2): "+my2+"\n");
+  write("\n");
+
+  if(tp->query_guild_rank() >= 40) {
+    write("You have sponsored:\n");
+    if(others[0]) write("1): "+others[0]+"\n");
+    if(others[1]) write("2): "+others[1]+"\n");
+    if(others[2]) write("3): "+others[2]+"\n");
+    if(others[3]) write("4): "+others[3]+"\n");
+  }
+
+  write("\n");
+  return 1;
+}
+    

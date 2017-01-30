@@ -1,0 +1,28 @@
+[PUFFBALL] Level [4] 400 charges (--sta, ++int, ++mag, --str, +ste, +luck)
+           (cannot wear armors)
+
+  The puffball is a creature that exists in a near pure-energy state.
+  Able to cast a devastating array of offensive spells, and deal with
+  energy-matter reactions much easier and faster than a normal polymorph,
+  the puffball is most fearsome in combat. Its main drawbacks are
+  a severely weakened physical form, in terms of its crippled
+  constitution, and inability to carry almost anything.
+
+>>-------------------------------ABILITIES-------------------------------<<
+
+gain sp <X>      Transfers X matter in hit points to spell points.
+gain hp <X>      Transfers X energy in spell points to hit points.
+ 
+nova <X>         An area attack spell, does potentially X in _total_
+                 damage to all available targets in the environment.
+
+fry <monst>      (45 sps) Zaps <monster> with a bewildernoggling
+                 amount of voltage. 
+
+vaporize <monst> (40 sps) Another fearsome element attack spell.
+
+finish           Deals a critically-hitting, finishing blow to the
+                 monster you are currently fighting provided it has
+                 been weakened enough.
+
+

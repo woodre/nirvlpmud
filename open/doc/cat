@@ -1,0 +1,18 @@
+*******************************************************************
+
+Name:    Cat
+
+Desc:    Cat shows the first 15 lines of a file. 
+
+Level:   21 
+
+Warning: 
+
+Syntax:  cat <filename>
+
+Example: cat /obj/monster.c  
+Result:  first 15 lines of monster.c are displayed
+
+Related: tail, more, dump
+
+*******************************************************************

@@ -1,0 +1,10 @@
+>> Refueling The Vehicle
+
+In order to refuel the vehicle, you need to have the hatch key, and the
+proper fuel type. Refueling can only be done outside the vehicle.
+You need to give the command 'refuel <vehiclename>'.
+
+The battery of the vehicle might become dead at some point as well.
+A suitable battery replacement is required, and to make the swap the
+command 'replace <batteryname>' is needed. Note that battery changes must
+be done inside the vehicle, while refueling must be done from the outside.

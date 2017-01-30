@@ -1,0 +1,18 @@
+   Other attacks:
+   Slash - You slash quickly from left to right.
+   Overhead - You cut straight down at +opp+.
+   Feint - You feint to the side, misleading +opp+ into your attack.
+   Reverse - You strike at +opp+ with a reverse grip-thrust.
+   Roll - You shoulder roll evasively, leading into +opp+.
+   Leap - You leap over +opp+ slicing downward.
+   Strike - You strike out at +opp+.
+   Cross - You do a double crossing slice at +opp+.
+   Quick - You quick jab at +opp+.
+   Side - You sidestep around +opp+ slashing at their exposed flank.
+
+Notice though that this doesn't say how hard you hit them or where, just
+what move you do. The damage message will reflect the how hard as it
+directly goes to wc.
+
+This doesn't have all the necessary checks in either, like what skill
+level they get each of them, etc.

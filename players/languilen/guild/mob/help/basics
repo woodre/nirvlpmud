@@ -1,0 +1,10 @@
+BASICS:
+  Every mobster has the following basic abilities to get started:
+     mhelp      -  the Mobster help files
+     mwho       -  listing of everyone currently on Nirvana
+     mob        -  listing of all Mobsters currently logged on
+     mob <str>  -  talk on the Mobster channel
+     mob <:str> -  emote on the Mobster channel
+     fam        -  listing of other family members (if joined)
+     fam <str>  -  talk on your family channel (if joined)
+     fam <:str> -  emote on your family channel (if joined)

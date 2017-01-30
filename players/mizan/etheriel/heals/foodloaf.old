@@ -1,0 +1,24 @@
+inherit "/obj/generic_heal.c";
+
+void reset(int arg)
+{
+  ::reset(arg);
+  if(arg) return;
+  set_name("food loaf");
+  add_alias("loaf");
+  add_alias("food");
+  set_short("A North Korean Food Loaf");
+  set_long("This is a small but deceptively heavy brick of 'food' which\n" +
+	"barely looks edible, as it has the consistency of rotting hay and\n" +
+    "seems to be made mostly of sawdust and mucilage...\n");
+
+  set_type("food");
+  set_msg("You bite off a chunk of the food loaf. It tastes disgusting.\n");
+  set_msg2(" takes a bite into a North Korean Food Loaf.\nIt looks awful...\n");
+  add_cmd("eat");
+  set_heal(20+random(10), 20+random(10));
+  set_charges(4);
+  set_stuff(7);
+  set_value(100); /* Per charge! */
+}
+

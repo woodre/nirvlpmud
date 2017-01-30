@@ -1,0 +1,51 @@
+		Alchemist Guild
+
+
+alchemy components =	alchemist pouch
+
+			'pouch list' = show how many of each component you have
+
+			id =	Alchemist Pouch
+				Alchemist Guild Obj
+
+			short =	A large <color> pouch on a stout leather belt.
+
+			long =	This pouch is used to contain all of the components used to
+				create the potions, tonics, oils, ointments, philters, &
+				powders using your alchemy skills.
+
+				pouch      guild
+                                color     = rank level    title
+
+				brown     =    1        = student (no task solved yet)
+				white     =   10  5-7	= student
+				yellow    =   20  8-11	= acolyte
+				blue      =   40  12-14	= learned
+				red       =   60  15-18	= adept
+				black     =   80  19+	= master
+				gold      =  100  wiz   = master      (not guildmaster)
+				platinum  = 1000  wiz   = grandmaster  guildmaster
+
+
+main attributes	minimums (once they have enough to join, they don't lose membership
+                          even if they die & lose stats)
+
+intelligence	12
+wisdom		12
+luck		12
+
+Alchemists cannot wear conventional armor. They must make the armor they wear.
+Thus, they have a 'stone skin' spell for use while they are obtaining the
+skins (of dead monsters) to make armor from. They will not be able to use the
+stone skin spell while wearing any other armor, including the armor they make.
+
+Alchemists must buy their spell components from a guild shop. Their spells cost
+a combination of spell points and the cost of the spell components. Thus, just
+looking at the <spell>.h file will not show the entire cost. The formula
+for this (for combat spells) came from the docs. The cost, in gold, for other
+kinds of spells was determined based on the cost for combat spells.
+
+The costs for components are in
+/players/nooneelse/Alchemist/alchemist_spell_components
+and in
+/players/nooneelse/Alchemist/room/component.c (the component shop)

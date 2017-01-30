@@ -1,0 +1,46 @@
+
+Monks:
+
+[Overview]
+
+Monks will be loosely based on many different styles of Shaolin Kung-Fu.  Each "Style" will have it's own exp to gain for training
+through the ranks up to Master (attaining style specific abilities
+as the player progresses).  The way of the Monk is not a close knit
+guild, but one of self advancement through training and combat.  A
+"Master" monk may take on an apprentice (or more than one) to train
+in their style of combat.  Certain Styles can only be learned by combining two or more styles into one (This will be noted further down)
+
+ _________
+[Drawbacks]
+ '-------'
+
+Some of the drawbacks of the guild:
+Although Monks can wear armor, the weight of the armor will greatly affect the combat in a negative manor.  
+The Monk will not have any spellpoints (no matter the mag stat) all
+spell_object damage will come from the styles learned and the level
+of the style.
+
+************************************************************************
+
+Styles / Abilities: (This is the fun part)
+
+Yingzhao Quan :Eagle Claw :
+  The eagle claw features simple but powerful moves. When moving, the boxer attacks relentlessly and looks formidable, but when standing still, he looks like an eagle awaiting the chance to pounce on rabbits.
+
+Skill Level 1 { -Hand to Hand combat (basic combat no special moves)
+Skill Level 2 { -Eagle Scratch (low level direct damage attack)
+                -Crouching Eagle (Pre-attack stance, multiply first
+                 attack by 1/2 if stroke hits)
+Skill Level 3 { -Swooping Claw (mid level direct damage attack)
+                -Screaching Eagle ([toggle effect] can make the Monk
+                 be continuous target of NPC attack)
+                -Martial Arts (raises attack power of Eagle Claw
+                 technique) [1st upgrade]
+Skill Level 4 { -Deadly Strike (high level direct damage with chance of
+                 continued damage from "bleeding wounds"
+                -Talons Grasp (chance to push a playero another room)
+                -Eagles Flight (Can remove self from combat)
+Skill Level 5 { -Martial Arts (raises attack power of Eagle Claw
+                 technique) [2nd upgrade]
+                -Ability to apprentice
+

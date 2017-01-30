@@ -1,0 +1,36 @@
+Ok, this is an explanatory file about how to use color.h
+
+Basically, you must include color.h in the file you want to
+put colors into. To do this, type:
+#include "/players/fakir/color.h"
+- at the top of the file.
+
+Then, when you want to put color in, just type the color
+name wherever you want the color to start, and type OFF or END
+wherever you want it to end. For example, if you wanted an ogre
+to be a red ogre, in reset you might have the line:
+set_short(RED+"Ogre"+OFF);
+Or, if you want to add the color in the middle of a line:
+set_short("A Ferocious "+RED+"Ogre"+OFF);
+
+Another example could be in a message to the player or to
+the room in a function:
+write(BOLD+"You fall down a hole!\n"+OFF);
+or
+say("A "+YELLOW+"Banana"+OFF+" falls to the ground.\n");
+
+It's pretty simple. You just have to remember to include
+the file and treat each of the colors as a text string,
+which means adding the "" and the ++ around the color.
+I will make a sample file below:
+
+inherit "/obj/monster.c";
+#include "/players/fakir/color.h"
+
+reset() {
+  set_name("bob");
+  set_short("A "+YELLOW+"Biliously"+OFF+" ugly man named "+BOLD+"Bob"+OFF);
+  set_etc etc
+}
+
+If you have any more questions, let me know. -Snow

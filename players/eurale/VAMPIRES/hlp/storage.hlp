@@ -1,0 +1,9 @@
+  ~o~  Vampire Coffin Storage  ~o~
+-------------------------------------------------------------------------------
+  Every vampire has the option of buying storage space in their coffins.  The
+cost is $40,000 gold coins for the ability to store up to 3 items.  The coffin
+commands to use the storage you buy are:
+
+	store <name> - stores the item if it's storable.
+	retrieve <name> - gets the item out of storage.
+	list - lists all the items you currently have in storage.

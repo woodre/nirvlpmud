@@ -1,0 +1,39 @@
+i added something to my room.c [again].
+
+  add_exit_msg(string direction, mixed msg(s));
+                 -or-
+  set_exit_msgs(mapping map);
+
+This handles something i do frequently in my rooms,
+displaying a little message like,
+
+    You carefully scale the mountain.
+
+when they travel up.
+
+To do something like that, all you have to do is:
+
+add_exit_msg("up", "\tYou carefully scale the mountain.\n");
+       -or-
+set_exit_msgs(([ "up" : ({ "\tYou carefully scale the mountain.\n" }) ]));
+
+Obviously add_exit_msg() is a little bit more maneuverable.
+Also you have the option of adding another argument, for
+the say() msg that prints to the room.  In that example, 
+let's say you wish to print to the room: 
+
+Nameofplayer carefully scales the mountain.
+
+All you must do is:
+add_exit_msg("up", "carefully scales the mountain.\n");
+ IF you have already added the exit msg for the write()
+ [as in the previous example]
+
+If you want to make it nice and simple, just plug em together in
+the same array:
+
+add_exit_msg("up", ({ "\tYou carefully scale the mountain.\n",
+                      "carefully scales the mountain.\n" }));
+
+if you don't understand wtf this doc is about, tell me.
+

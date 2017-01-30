@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A Set of [1;33mMassive [1;35mS[0m[35ma[1;35mt[0m[35my[1;35mr [1;30mHorns [0m([1;31mBl[0m[31maz[1;31min[0m[31mg[0m) (worn)[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "horns"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "A Set of [1;33mMassive [1;35mS[0m[35ma[1;35mt[0m[35my[1;35mr [1;30mHorns [0m([1;31mBl[0m[31maz[1;31min[0m[31mg[0m) (worn)[0m"
+damage_type 0
+hall_path "/room/church"
+object_name "horns"
+owner "silverwind"
+spell_alias "sstorm"
+spell_mess_me "You close your eyes....%newline%A %hi magenta%mystical %hi yellow%sandstorm %normal%whips into the room... %newline%You %hi red%embrace %normal%the storm as your %red%wounds%normal% regenerate and heal.%normal%"
+spell_mess_room "%TPN% closes %TP_POS% eyes....%newline%A %hi magenta%mystical %hi yellow%sandstorm %normal%whips into the room... %newline%%TPN% %hi red%embrace %normal%the storm as %TP_POS% %red%wounds%normal% regenerate and heal.%normal%"
+spell_mess_them "%TPN% closes %TP_POS% eyes....%newline%A %hi magenta%mystical %hi yellow%sandstorm %normal%whips into the room... %newline%%TPN% %hi red%embrace %normal%the storm as %TP_POS% %red%wounds%normal% regenerate and heal.%normal%"
+abilities ({})
+chan_history 0
+leaders ({})
+join_type 0
+private_coffer 84454
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 80
+last_spell_time 1446694207

@@ -1,0 +1,48 @@
+/*
+ * spell : Make Bag   (enchantment)
+ * level : 2
+ * effect: make a bag out of corpse
+ * cost  : 10 sp
+ * spec  : 
+ * files : ~/mages/obj/corpse_bag.c
+ */  
+
+make_bag(){
+  object obj;
+  string name;
+
+  if(!KNOW("mbag"))
+    notify_fail("What?\n");
+
+  obj = present("corpse", tp);
+  if(!obj) obj = present("corpse", env);
+
+  if(!obj) {
+    write("You must have a corpse for this spell.\n");
+    return 1;
+  }
+
+  write("You cast a "+HIG+"Make Bag"+NORM+" spell ...\n");
+
+  if(spell_fail2(2, "ench", "wil")) {
+    write("You miscast the spell and ruin a perfectly good corpse!\n");
+    say(ME+" miscasts a spell.\n");
+    tp->add_spell_point(-5);
+    destruct(obj);
+    return 1;
+  }
+
+  name = obj->query_name();
+  destruct(obj);
+  obj = clone_object("players/pavlik/guild/mages/obj/corpse_bag");
+  obj->set_name(name);
+  move_object(obj, tp);
+
+  tell_room(env,
+  ME+" casts a vile spell and strips the flesh from a corpse!\n"+
+  ME+" treats the hide with a bubbling potion and makes a bag!\n");
+  write("You now have a Bag made from "+name+" hide!\n");
+  tp->add_spell_point(-10);
+  return 1;
+}
+

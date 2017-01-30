@@ -1,0 +1,17 @@
+  Syntax:  who [-b,-s,-t,-old]
+
+    
+         -b     gives a list of whos in battle
+         -s     gives a list of players stats
+         -t     gives a list of titles
+         -old   the old who
+
+  Legend:
+      magenta  yellow  blue     blue     red
+         [       *      *        X        *
+      editing   dead   invis  non-tele  pk area
+
+  Explination: 
+  Gives a listing of all the players visible to you
+  along with other data depending on which switch
+  is used.

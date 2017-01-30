@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/vikroth/hall/main","south","/players/mokri/clans/vikroth/hall/r2","north",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A [1;37mcrystal[0;0m ring with a [1m[1mblack[0;0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"[1;32mM[1;30mikal's[0m earring","/players/sami/area/GPO/obj/dring",0,0,0,"[1;37mNishiki[0;0m","/players/vertebraker/guilds/samurai/armor/nishiki",0,0,0,"[1;37mShikoro[0;0m","/players/vertebraker/guilds/samurai/armor/shikoro",0,0,0,"[1;31mBloodfist Ring[2;37;0m","/players/fred/closed/bloodfist/eq/bloodfist_ring",0,0,0,"A [1;37mcrystal[0;0m ring with a [1m[1mblack[0;0m bug","/players/zeus/museum/OBJ/bug_ring",0,0,0,"[2;37;0m[34mThe Cloak of the [1;30mNight[2;37;0m[34m Sky[2;37;0m","/players/zeus/museum/OBJ/cloak","--40--",0,0,"[1;32mM[1;30mikal's[0m earring","/players/sami/area/GPO/obj/dring",0,0,0,"[2;37;0m[34mThe Cloak of the [1;30mNight[2;37;0m[34m Sky[2;37;0m","/players/zeus/museum/OBJ/cloak","--0--",0,0,"[1;35mOrb [0mof [1;30mdarkness[0m","/players/cloud/Fayawyn/obj/orb",0,0,0,})

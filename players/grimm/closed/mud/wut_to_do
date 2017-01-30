@@ -1,0 +1,13 @@
+To instate the quest_ok stuffs just:
+  1.    cp /players/grimm/closed/mud/quest_ok.c /obj/quest_ok.c
+  2.    ed /room/adv_guild.c
+  3.    insert the line:
+               #include "/obj/quest_ok"
+        at the top of the file
+  4.    insert the following at line 254:
+               if(!quest_ok(next_lvl)) return 1;
+  5.    exit the editor, load, and update the adv_guild
+this will take care of advancing and a bug found on another mud where the
+player could get their exp high enough, die, and pray to SKIP the questing
+part.
+   -Grimm

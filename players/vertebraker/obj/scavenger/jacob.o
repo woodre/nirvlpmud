@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/NEW/arm/hood","/players/jamila/beach/mobs/skin","/players/scathe/armor/suit","/players/scathe/armor/mgarb","/obj/weapon","/players/saber/stuff/brief","/players/mythos/aarmor/hara-ate","/obj/armor","/players/mythos/awep/zantetsuken","/players/pain/NEW/weap/sword","/obj/armor","/players/maledicta/cont/rdragon/scepter","/obj/weapon","/players/scathe/armor/hood","/obj/armor","/players/wren/Area/starbug/items/jacket","/players/forbin/realms/keats/OBJ/nazal_owr","/players/puppy/s/eq/quill","/players/softly/nhall/obj/decant3","/players/wren/Area/starbug/items/cowboyhat","/players/arrina/treas/onyx","/players/scathe/weap/baxe","/players/mythos/awep/ring","/players/wren/Area/starbug/items/charisma","/players/blue/weapons/obsidian_sword",})
+shorts ({"A Black Hooded Cloak","A Lizard Skin","Black Suit","Black Monk Robes","Whip","A black briefcase","Hara-ate","A small [1mwhite[0m shield","[34mZantetsuken[0m","Sword","A shoddy [1mwhite[0m cloak","[1;32mJe[1;34mwe[1;31mll[1;35med[1;37m Scepter[2;37;0m","spirit blade","Hood","A large leaf","Lister's leather jacket","[1;37mOp[0m[37mal [1;37mWiz[0m[37mard [1;37mRo[0m[37mbes[0m","A quill","Decanter of Healing [[1m3[2;37;0m]","a tiny cowboy hat","A piece of carved onyx","A Huge Double Bladed Axe","Silver Ring","a charismatic aura","An Obsidian Sword",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

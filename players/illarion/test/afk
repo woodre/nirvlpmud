@@ -1,0 +1,18 @@
+                           [help afk]
+-----------------------=========+=========-----------------------
+
+Usage: afk <message>
+       afk
+
+  Set a message letting others know that you've gone away from
+your keyboard.  If you're already afk, using the command again
+removes the message.
+
+  Your afk status will show to other players in the room, and in
+who.  Your afk message will be displayed to anyone who sends you
+a tell while you're afk.  The tell will still go through
+normally.  You'll remain afk until you turn it off or log out.
+
+WARNING: afk is purely for informational purposes.  It does not
+protect you from being killed, or being automatically logged out.
+

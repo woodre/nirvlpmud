@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 0
+cast_here 0
+dest_dir ({"/players/mokri/clans/ancients/hall/main","south","/players/mokri/clans/ancients/hall/r3","north",})
+short_desc "[1;36m<Spirit World>[0m[1m Bahamut's storage area.[0m"
+long_desc "The [1;36mAncient Spirits[0m hold items for Bahamut.[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[1;31mBloodfist Ring[2;37;0m","/players/fred/closed/bloodfist/eq/bloodfist_ring",0,0,0,"[32mCombat Boots[2;37;0m","/players/fred/closed/bloodfist/eq/combat_boots",0,0,0,"[2;37;0m[34mThe Cloak of the [1;30mNight[2;37;0m[34m Sky[2;37;0m","/players/zeus/museum/OBJ/cloak","--0--",0,0,"Monkey's Robes","/players/mouzar/castle/armor/robe",0,0,0,"[34mWind Shield[0m[1m ( [34mSwirling Wind[0m[1m )[0m","/players/jareel/armor/orlanthi_wind_lord_shield",0,0,0,"[0m[33mGold Dragon Leggings[0m","/players/tallos/7tigers/objects/dragon_legs",0,0,0,"[1;30mCowl of Assassination[0m","/players/khrell/armors/skaven/acowl",0,0,0,"[1m[31mPentacle [0m[1mof [30mDefense[0m","/players/fred/forest/Obj/pentacle",0,0,0,"[31mAmulet of Blood [[2;37;0mfaith aura[31m][2;37;0m","/players/fred/closed/bloodfist/eq/blood_amulet","5",0,0,"A [33mgolden[0m earring","/players/vertebraker/swamp/OBJ/j_earring",0,0,0,})

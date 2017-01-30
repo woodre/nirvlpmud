@@ -1,0 +1,70 @@
+#define POR "/players/pavlik/ilstkarn/ilstkarn_portal.c"
+#define PATH "players/pavlik/monsters/ilstkarn/"
+
+/*
+ * This file is included by all the cellX.c rooms of the
+ * Arcydia Dungeon area.  These functions are only specific
+ * to those rooms and not usable elsewhere.
+ */
+
+/*
+ * this function randomly selects a monster to be created.
+ * ob is the room that the monster is to be placed in.
+ */
+create_monster(ob) {
+  string *monsters;
+  string which;
+  int i;
+
+  /* is there already a monster present? */
+  if(present("ilstkarn_monster", ob)) {
+    return 1;
+  }
+
+  /*
+   * the array the holds all the monster names.
+   */
+  monsters= ({
+    "alligator",
+    "cell_guard",
+    "black_bat",
+    "vampire_bat",
+    "cutthroat",
+    "green_slime",
+    "prisoner",
+    "rats",
+    "zombie",
+    "special",      /* priestess */
+  });
+
+  i = random(sizeof(monsters));
+  which = monsters[i];
+
+  /* if this is a special case we treat differently */
+  if(which == "special") {
+    create_special(i,ob);
+  }
+  else {
+    move_object(clone_object(PATH+which), ob);
+  }
+  return 1;
+}
+
+/*
+ * Some monsters need to be treated specially.
+ * x is the place holder in the array.
+ * obj is the room the monster is to be cloned in.
+ */
+create_special(x,obj) {
+
+  if(x == 8) {
+    if(find_living("laithyra")) {
+      return;
+    }
+    move_object(clone_object("players/pavlik/monsters/ilstkarn/priestess"),
+    obj);
+  }
+
+  return 1;
+}
+

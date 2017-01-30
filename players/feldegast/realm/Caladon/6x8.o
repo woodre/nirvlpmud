@@ -1,0 +1,18 @@
+no_clean 0
+cast_here 0
+dest_dir ({"/players/feldegast/realm/Caladon/6x9.c","north","/players/feldegast/realm/Caladon/5x8.c","west","/players/feldegast/realm/Caladon/7x8.c","east","/players/feldegast/realm/Caladon/6x7.c","south",})
+short_desc "[32mForest[2;37;0m"
+long_desc "  Gnarled old trees dot the foothills of the Caladonian countryside.A particularly gnarled and ugly dwarf tree sits at the top of a lowhill.  To the west you can make out a road and some sort of marker."
+items ({"spine","Many miles to the east, you see the snow-capped mountain rangeknown as the Spine of Allandria","tree","A gnarled and ugly dwarf tree sits at the top of a low hill.  Itscomplicated root system is filled with holes and crevices","foothills","The hills surrounding you are dotted with trees","hills","The surrounding hills are dotted with trees","hill","The surrounding hills are dotted with trees","trees","Tall, deciduous trees dot the hills","marker","A short obelisk about waist-height sits beside the road","holes","dynamic","hole","dynamic","crevices","dynamic","roots","dynamic",})
+property 0
+no_castle_flag 0
+no_exits 0
+indoors 0
+is_pk 0
+no_fight 0
+no_magic 0
+no_teleport 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+x 6
+y 8
+coins 40022

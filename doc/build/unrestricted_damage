@@ -1,0 +1,19 @@
+Beck: [4.21.02]
+
+When doing damage to living objects (or whatever), please use the standard
+damage functions which are hit_player() and do_damage().
+
+Do not use add_hit_point(-x) to cause damage.
+This does not properly calculate death.
+
+If you wish to cause something unrestricted damage, just use a
+hit_player() with a non-standard damage type of "other|[wizardname]".
+
+Example: player->hit_player(x, "other|beck");
+
+This will cause unrestricted damage (no armor class) but still
+has all the proper checks involved.
+
+Also, put a note as to why you are using unrestricted damage.
+Please make these changes if you can.
+I will modify the ones I come across.

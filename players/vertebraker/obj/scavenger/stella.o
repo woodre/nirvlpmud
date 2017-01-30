@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/weapon","/players/mythos/awep/dstaff","/players/angel/area/stargate/obj/P90_no_ammo","/players/wren/Area/starbug/items/comb","/players/puppy/s/eq/block","/obj/armor","/players/snow/WEAPONS/ice_star","/players/saber/armor/hardsuit1","/players/mythos/mwep/voice","/players/sado/shop/oreo","/players/hippo/heals/dna_repair","/players/pain/closed/weapons/widow","/players/snow/shadows/stuff/plate","/players/pain/NEW/weap/sword","/players/blue/weapons/obsidian_sword","/players/saber/stuff/brief","/players/mythos/amisc/mirror","/players/snow/heals/kw_meat","/players/mosobp/areas/TEMPLE/OBJ/rags","/obj/bag","/players/puppy/s/eq/crown","/players/mythos/awep/kama","/obj/armor","/players/scathe/armor/egarb","/obj/armor",})
+shorts ({"spirit blade","Dream Staff","[36mP90 machine gun[0m","the cat's hair pick","A building block","A [1mwhite[0m helmet","Ice Shuriken","A purple Hardsuit <with pink legs!>","Voice","A box of oreo cookies","[32mdna repair string[0m","the Widowmaker, the sword of the Berserker","[1mBlack Platemail[0m","Sword","An Obsidian Sword","A black briefcase","A small mirror","A hunk of whale meat","Peasant Rags","bag","A golden crown","kama","A large leaf","Elder's garb","Robot Head",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,20 @@
+>> ORDER HELP INDEX
+
+A variety of orders are available to the monsters. To see
+specific information about an order, use the command 'orderhelp <cmd>'.
+The listing below is what is available that monsters understand:
+
+    defend             hold             pestername
+    dismiss            hound            protect
+    explode            huntobj          pillagecastle
+    explodespot        killguild        pillageloiter
+    harrass            killip             
+    harrassip          killname                  
+    harrassname        killobj
+    hitfade            loiter                     
+    hitfadename        pester
+
+Monsters will be given more capabilities as needs are dictated.
+For more information about the tactical daemon, please refer to the
+documentation that comes with that object.
+

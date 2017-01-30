@@ -1,0 +1,16 @@
+guild_file "/players/vertebraker/guilds/sith/gob"
+guild_name "sith"
+cmd_dir "/players/vertebraker/guilds/sith/bin/"
+save_dir "players/vertebraker/guilds/sith/save/"
+no_clean 0
+short_desc "Mark of the [1;31mSith[0m"
+long_desc "The mark of the Sith is upon you.[31m[0mType <shelp> to see your guild's abilities."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "Mark of the Sith"
+alias_name 0
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})

@@ -1,0 +1,41 @@
+                         [help channels]
+-----------------------=========+=========----------------------- 
+                                 
+The following is a listing of all channels available and
+their usage.  For detailed listings and rules for each
+                   channel type 'help <channel name>' 
+     (Note : All players must read and understand the
+                rules of the channels. If you do not under-
+                stand any rules of channel behavior consult
+                a Wizard. )
+Command:                      Description:                          
+channel <channel name>........Activate a channel
+<channel name> <message>......Talk on a channel
+                             (Note : You must be on a channel
+                                 before you can talk on it.)
+<channel name> :<message>.....Emote on a channel
+<channel name> :<mud emote>...Use a built-in emote on a channel
+                              (see 'help emotes')                                 
+muffle <channel name>.........Stop listening to a channel
+<channel name> list...........Tells who is on a channel
+<channel name> history........Show the channel's last 20 messages
+channels......................List what channels you are
+                              currently on.
+
+Please use the right channel for the right topic!
+
+newbie  - Help for new players.
+risque  - Vulgar language, lewd topics, and
+          anything considered inappropriate.
+gossip  - Idle chat and Mud discussions.
+shout   - For mild emergencies to all players. 
+emergency - For extreme emergencies.  Read 'help emergency'
+junk    - Object and area messages. (ex: catapults, logs, etc..)
+equip   - Selling, and trading of armors, weapons, and items.
+babble  - For fun and confusing language and messages.
+msg     - Login / Logout messages
+pk      - A place to talk about player killing, and flap
+          about it.
+
+A special thanks to Shadowhawk for putting them in.
+

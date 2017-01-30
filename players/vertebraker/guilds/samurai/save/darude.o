@@ -1,0 +1,25 @@
+guild_file "/players/vertebraker/guilds/samurai/gob"
+guild_name "samurai"
+cmd_dir "/players/vertebraker/guilds/samurai/bin/"
+save_dir "players/vertebraker/guilds/samurai/save/"
+no_clean 0
+short_desc "Mark of the [1;37mSamurai[0;0m"
+long_desc "The mark of the ancient Samurai is upon you.[31m  _______// //______[0;0mType <shelp> to see your guild's abilities."
+info 0
+save_flag 0
+value 0
+local_weight 1
+drop_flag 0
+name "Mark of the Samurai"
+alias_name 0
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+firstwep 0
+meditate 0
+frozen 0
+shame 0
+head_count 355
+kamae "chudan"
+notweapon_msg "You may only wield swords or knives as a Samurai."
+notarmor_msg 0

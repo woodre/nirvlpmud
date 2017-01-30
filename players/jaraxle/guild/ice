@@ -1,0 +1,46 @@
+ice(str) {
+   object victim;
+   string b1,b2;
+   if(elite) return 0;
+   if (!test_piety(17)) return 1;
+   if(TP->query_level() < 19){
+           write("You must be at least 19th level to cast this spell.\n");
+           return 1;
+   }
+   if(TP->query_spell_dam()) return 1;
+   if(str) victim = present(str, environment(TP));
+     else {
+      victim = TP->query_attack();
+      if(victim && !present(victim, environment(TP)))
+        victim = 0;
+     }
+   if(!str && !victim) return 0;
+   if(!victim) { write("That is not here.\n"); return 1; }
+   if (!living(victim)) {
+      write("You cannot attack that!\n");
+      say(TP->query_name() + " foolishly tries to attack "+ str+"\n");
+      return 1;
+   }
+   spell_cost(30,1);
+   if (!spell_ok) {
+      write("You lack the spell/donation points for that spell.\n");
+      return 1;
+   }
+if(sscanf(file_name(environment(this_player())),"%stemplar%s",b1,b2) == 2){
+TP->spell_object(victim, "ice coating", random(26)+15, 30, 
+"You give your weapon a coating of Ice, shattering and sending shards upon impact \n", TP->query_name()+
+" casts a spell of ice upon "+TP->query_possessive()+" weapon, shards piercing your skin.\n", 
+TP->query_name()+" coats a weapon with ice\n");
+}
+else{
+TP->spell_object(victim, "ice coating", random(15)+26, 30, 
+"You give your weapon a coating of ice, shattering and sending shards upon impact \n", TP->query_name
+()+" casts a spell of ice upon "+TP->query_possessive()+" weapon, shards piercing your skin.\n", 
+TP->query_name()+" coats a weapon with ice\n");
+}
+/*
+   write(TP->query_name()+" fires ice arrows at " + victim->short()+"\n");
+   say(TP->query_name()+" fires ice arrows at " + victim->short()+"\n");
+*/
+   return 1;
+}

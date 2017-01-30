@@ -1,0 +1,1 @@
+[1;33mDrkwngdck [2;37;0m[1m: [2;37;0m[1;33mDrkwngdck is a hero of the utmost caliber.  Always willing to lend a hand even when his might was not as great, and constantly braving incredible odds to assist an ally or knight in peril.  He may not be the strongest or the biggest, but his bravery wins any day's fight.  And he is a truly great friend.[2;37;0m (tristram)

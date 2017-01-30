@@ -1,0 +1,22 @@
+**************
+
+
+                     Clean
+
+Syntax:    clean
+
+Desc:
+           This command removes all objects in immediate environment
+           with exception of players.
+
+Warning:   Will wipe boards, pets, kids, not to be used on 
+           /room/vill_green
+
+Example:   clean
+                  results
+           Everything but Bob is cleared from his workroom
+
+Related:   dest
+
+
+**************

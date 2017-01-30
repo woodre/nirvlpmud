@@ -1,0 +1,63 @@
+/*
+ * spell : Shield   (evocation) (protection)
+ * level : 2
+ * effect: Absorbs some of the damage down to a player
+ * cost  : 45 sp
+ * spec  : Requires spell component: onyx powder
+ *         Can only be cast once every 5 minutes
+ * files : ~/mages/obj/energy_shield.c
+ * NOTE  : SEE energy_shield.c FOR SPECIFIC EFFECTS OF THIS SPELL!
+ */  
+
+energy_shield() {
+
+  object ob;
+
+  if(!KNOW("eshield")) {
+        write("What?\n");
+	return 1;
+  }
+
+  if(present("energy_shield_obj", tp)) {
+	write("You already have a shield.\n");
+	return 1;
+  }
+
+  /* has enough time passed to cast again? */
+  if(guild->query_next_prot() > time() && tp->query_level() < 20) {
+	write("You can not cast this spell right now.\n");
+	return 1;
+  }
+
+  /* spell component? */
+  if(!present("onyx powder", tp) && tp->query_level() < 20) {
+	write("You do not have the neccesary components for this spell.\n");
+	return 1;
+  }
+
+  write("You cast an "+HIC+"Energy Shield"+NORM+" spell ... \n");
+
+  if(spell_fail2(2, "evoc", "int")){
+	write("You "+HIR+"fail"+NORM+" the spell miserably.\n");
+	say(ME+" casts a spell, but nothing happens.\n");
+	tp->add_spell_point(-30);
+	guild->set_next_prot(time() + 60);
+	return 1;
+  }
+
+  write("You recite the ancient words of a powerful spell.\n");
+  say(ME+" recites the ancient words of a powerful spell.\n");
+  tell_room(env,
+    "A shooting star streaks across the clear sky ...\n"+
+    "   ...The air around you tingles with unknown energy...\n"+
+    "       A "+HIB+"crackling energy shield"+NORM+" appears around "+ME+".\n");
+
+  ob = clone_object("players/pavlik/guild/mages/obj/energy_shield");
+  move_object(ob, tp);
+  ob->start_me(present("mageobj", tp)->query_evocation(),
+               present("mageobj", tp)->query_power());
+  tp->add_spell_point(-45);
+  guild->set_next_prot(time() + 300);
+  destruct(present("onyx powder", tp));
+  return 1;
+}

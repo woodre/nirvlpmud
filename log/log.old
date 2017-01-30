@@ -1,0 +1,643 @@
+Sat Sep 19 21:43:31 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Sat Sep 19 23:51:51 2015: obj/monster2.c line 170:Undefined function offwield
+Sat Sep 19 23:51:51 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Sat Sep 19 23:51:51 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Sat Sep 19 23:51:51 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Sat Sep 19 23:51:51 2015: obj/monster2.c line 170:Undefined function offwield
+Sat Sep 19 23:51:51 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Sat Sep 19 23:51:51 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Sat Sep 19 23:51:51 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Sat Sep 19 23:51:53 2015: obj/monster2.c line 170:Undefined function offwield
+Sat Sep 19 23:51:53 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Sat Sep 19 23:51:53 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Sat Sep 19 23:51:53 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Tue Sep 22 17:48:49 2015: obj/monster2.c line 170:Undefined function offwield
+Tue Sep 22 17:48:49 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Tue Sep 22 17:48:49 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Tue Sep 22 17:48:49 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Tue Sep 22 17:48:49 2015: obj/monster2.c line 170:Undefined function offwield
+Tue Sep 22 17:48:49 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Tue Sep 22 17:48:49 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Tue Sep 22 17:48:49 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Tue Sep 22 17:48:51 2015: obj/monster2.c line 170:Undefined function offwield
+Tue Sep 22 17:48:51 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Tue Sep 22 17:48:51 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Tue Sep 22 17:48:51 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Wed Sep 23 14:18:52 2015: obj/play/follow/follow.c line 39:Redeclaration of function query_leader.
+Wed Sep 23 14:18:52 2015: obj/play/follow/follow.c line 43:Redeclaration of function end_follow_calls.
+Wed Sep 23 14:18:52 2015: obj/play/follow/follow.c line 50:Redeclaration of function set_leader.
+Wed Sep 23 14:18:52 2015: obj/play/follow/follow.c line 55:Redeclaration of function query_followers.
+Wed Sep 23 14:18:52 2015: obj/play/follow/follow.c line 75:Redeclaration of function remove_follower.
+Wed Sep 23 14:18:52 2015: obj/play/follow/follow.c line 82:Redeclaration of function add_follower.
+Wed Sep 23 14:19:08 2015: obj/play/follow/follow.c line 39:Redeclaration of function query_leader.
+Wed Sep 23 14:19:08 2015: obj/play/follow/follow.c line 43:Redeclaration of function end_follow_calls.
+Wed Sep 23 14:19:08 2015: obj/play/follow/follow.c line 50:Redeclaration of function set_leader.
+Wed Sep 23 14:19:08 2015: obj/play/follow/follow.c line 55:Redeclaration of function query_followers.
+Wed Sep 23 14:19:08 2015: obj/play/follow/follow.c line 75:Redeclaration of function remove_follower.
+Wed Sep 23 14:19:08 2015: obj/play/follow/follow.c line 82:Redeclaration of function add_follower.
+Wed Sep 23 14:19:16 2015: obj/play/follow/follow.c line 39:Redeclaration of function query_leader.
+Wed Sep 23 14:19:16 2015: obj/play/follow/follow.c line 43:Redeclaration of function end_follow_calls.
+Wed Sep 23 14:19:16 2015: obj/play/follow/follow.c line 50:Redeclaration of function set_leader.
+Wed Sep 23 14:19:16 2015: obj/play/follow/follow.c line 55:Redeclaration of function query_followers.
+Wed Sep 23 14:19:16 2015: obj/play/follow/follow.c line 75:Redeclaration of function remove_follower.
+Wed Sep 23 14:19:16 2015: obj/play/follow/follow.c line 82:Redeclaration of function add_follower.
+Wed Sep 23 14:19:32 2015: obj/play/follow/follow.c line 39:Redeclaration of function query_leader.
+Wed Sep 23 14:19:32 2015: obj/play/follow/follow.c line 43:Redeclaration of function end_follow_calls.
+Wed Sep 23 14:19:32 2015: obj/play/follow/follow.c line 50:Redeclaration of function set_leader.
+Wed Sep 23 14:19:32 2015: obj/play/follow/follow.c line 55:Redeclaration of function query_followers.
+Wed Sep 23 14:19:32 2015: obj/play/follow/follow.c line 75:Redeclaration of function remove_follower.
+Wed Sep 23 14:19:32 2015: obj/play/follow/follow.c line 82:Redeclaration of function add_follower.
+Wed Sep 23 14:19:36 2015: obj/play/follow/follow.c line 39:Redeclaration of function query_leader.
+Wed Sep 23 14:19:36 2015: obj/play/follow/follow.c line 43:Redeclaration of function end_follow_calls.
+Wed Sep 23 14:19:36 2015: obj/play/follow/follow.c line 50:Redeclaration of function set_leader.
+Wed Sep 23 14:19:36 2015: obj/play/follow/follow.c line 55:Redeclaration of function query_followers.
+Wed Sep 23 14:19:36 2015: obj/play/follow/follow.c line 75:Redeclaration of function remove_follower.
+Wed Sep 23 14:19:36 2015: obj/play/follow/follow.c line 82:Redeclaration of function add_follower.
+Sat Sep 26 11:50:18 2015: obj/monster2.c line 170:Undefined function offwield
+Sat Sep 26 11:50:18 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Sat Sep 26 11:50:18 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Sat Sep 26 11:50:18 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Sat Sep 26 11:50:18 2015: obj/monster2.c line 170:Undefined function offwield
+Sat Sep 26 11:50:18 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Sat Sep 26 11:50:18 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Sat Sep 26 11:50:18 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Sat Sep 26 11:50:22 2015: obj/monster2.c line 170:Undefined function offwield
+Sat Sep 26 11:50:22 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Sat Sep 26 11:50:22 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Sat Sep 26 11:50:22 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+Tue Sep 29 12:10:31 2015: obj/monster2.c line 170:Undefined function offwield
+Tue Sep 29 12:10:31 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Tue Sep 29 12:10:31 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Tue Sep 29 12:10:31 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Tue Sep 29 12:10:31 2015: obj/monster2.c line 170:Undefined function offwield
+Tue Sep 29 12:10:31 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Tue Sep 29 12:10:31 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Tue Sep 29 12:10:31 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Tue Sep 29 12:10:33 2015: obj/monster2.c line 170:Undefined function offwield
+Tue Sep 29 12:10:33 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Tue Sep 29 12:10:33 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Tue Sep 29 12:10:33 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Wed Sep 30 19:03:07 2015: obj/monster2.c line 170:Undefined function offwield
+Wed Sep 30 19:03:07 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Wed Sep 30 19:03:07 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Wed Sep 30 19:03:07 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Wed Sep 30 19:03:09 2015: obj/monster2.c line 170:Undefined function offwield
+Wed Sep 30 19:03:09 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Wed Sep 30 19:03:09 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Wed Sep 30 19:03:09 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Wed Sep 30 19:03:49 2015: obj/monster2.c line 170:Undefined function offwield
+Wed Sep 30 19:03:49 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Wed Sep 30 19:03:49 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Wed Sep 30 19:03:49 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Wed Sep 30 20:09:41 2015: obj/monster2.c line 170:Undefined function offwield
+Wed Sep 30 20:09:41 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Wed Sep 30 20:09:41 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Wed Sep 30 20:09:41 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Wed Sep 30 20:10:19 2015: obj/monster2.c line 170:Undefined function offwield
+Wed Sep 30 20:10:19 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Wed Sep 30 20:10:19 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Wed Sep 30 20:10:19 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Wed Sep 30 20:13:22 2015: obj/monster2.c line 170:Undefined function offwield
+Wed Sep 30 20:13:22 2015: obj/monster2.c line 179:Variable second_weapon not declared !
+Wed Sep 30 20:13:22 2015: obj/monster2.c line 185:Undefined function ::stop_offwielding
+Wed Sep 30 20:13:22 2015: obj/monster2.c line 186:Variable second_weapon not declared !
+Wed Sep 30 20:20:20 2015: obj/monster2.c line 182:Variable second_weapon not declared !
+Wed Sep 30 20:20:20 2015: obj/monster2.c line 188:Undefined function ::stop_offwielding
+Wed Sep 30 20:20:20 2015: obj/monster2.c line 189:Variable second_weapon not declared !
+Tue Oct  6 15:18:04 2015: bin/play/_xtitle.c line 15:Bad assignment. Rhs: "unknown "
+Tue Oct  6 15:18:04 2015: bin/play/_xtitle.c line 16:Bad assignment. Rhs: "unknown "
+Wed Oct  7 11:09:45 2015: obj/monitor.c line 232:Undefined function align_bar
+Wed Oct  7 11:09:45 2015: obj/monitor.c line 247:Too few arguments to find_object
+Wed Oct  7 11:10:31 2015: obj/monitor.c line 233:Undefined function align_bar
+Wed Oct  7 11:10:31 2015: obj/monitor.c line 248:Too few arguments to find_object
+Wed Oct  7 11:10:57 2015: obj/monitor.c line 233:Undefined function align_bar
+inherit/container.c line 403: Missing 'return <value>' statement
+inherit/container.c line 403: Missing 'return <value>' statement
+obj/user/xls.c line 96: Missing arguments to simul_efun ls
+inherit/container.c line 403: Missing 'return <value>' statement
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:05:10 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:00 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Illegal LHS
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:Too few arguments to log_file
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 35:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 24:syntax error
+Thu Oct 15 06:07:01 2015: obj/simul_efun/destruct.c line 28:Illegal LHS

@@ -1,0 +1,10 @@
+Symbname "Unnamed"
+SavedSkills ({"combat",8,"creation",0,"control",4,})
+SavedProf ({"combat",1000000,"creation",0,"control",1543,})
+Tents ({"attack","attack","defend","attack","unassigned","unassigned","attack","burnoff","regen","attack",})
+MP 375
+GuildExp 13311331
+GuildLevel 15
+PGCol "[0m[31m"
+SGCol "[0m[1;31m"
+SavedStored ({"hp",0,"sp",0,"mp",0,"coins",0,})

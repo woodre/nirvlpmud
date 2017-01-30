@@ -1,0 +1,282 @@
+/* *************************************************************************
+ * 
+ * Patch
+ *
+ * - Earwax 09/15/03
+ *
+ * Patch command for my wiztool.
+ *
+ * ************************************************************************* 
+ *
+ * Support for up to 3 args.
+ * 'near' means environment of
+ * 'in' means inside
+ * Also checks my nicknames for matches
+ *
+ * Syntax:
+ * p armor in player,armor_class
+ * p weapon near monster,weapon_class
+ * p player,query_weapon
+ * p player,set_title,The fungus among us
+ * p player,set_attribs,str,5
+ *
+ * NOTE: Add checks for the functions existing, or a catch() to make sure
+ *       that it's a valid function call.
+ * 
+ *       Also, it probably needs better array tracing than it has right now.
+ *       Worry about that shit later.
+ *
+ * *************************************************************************
+*/
+
+#include "../defs.h"
+
+#pragma weak_types
+
+inherit NICKNAMES;
+inherit WAXFUNS;
+
+/* *************************************************************************
+ * not_found
+ *
+ * Yes, I'm THAT lazy :)
+*/
+
+object
+not_found(string arg)
+{
+  write("Object not found: "+arg+"\n");
+  return 0;
+}
+
+/* *************************************************************************
+ * return object
+ *
+ * Find the object to patch.
+*/
+
+object
+return_object(string what, object where)
+{
+  string str;
+  object ob;
+
+  what = query_nickname(what);
+
+  if (!where)
+  {
+    ob = present(what,this_player());
+    if (!ob) ob = present(what,environment(this_player()));
+    if (!ob) ob = find_player(ob);
+/* This is supposedly buggy
+    if (!ob) ob = find_living(ob);
+*/
+    if (!ob) ob = find_object(ob);
+    if (!ob) return 0;
+    return ob;
+  }
+
+  ob = present(what,where);
+  if (ob) return ob;
+  else return 0;
+}
+
+/* *************************************************************************
+ * parse_what
+ *
+ * I imagine this will get huge over time as I add more syntax and
+ * capabilities to this thing.  For now, I'm trying to just leave as much
+ * room for improvement as possible.
+*/
+
+object
+parse_what(string arg)
+{
+  string what, where;
+  object ob;
+
+  what = arg;
+
+  what = query_nickname(what);
+
+  if (what == "me") return this_player();
+  if (what == "here") return environment(this_player());
+
+  /* I can do this a lot more efficiently, but I like very explicit error
+   * messages. */
+
+  /* Near means environment of */
+  if (sscanf(arg, "near %s", where) == 1)
+  {
+    ob = return_object(where,0);
+    if (!ob) return not_found(where);
+    ob = return_object(environment(ob),0);
+    if (!ob) return not_found("Environment of "+where);
+    return ob;
+  }
+
+  if (sscanf(arg, "%s near %s", what, where) == 2)
+  {
+    ob = return_object(where,0);
+    if (!ob) return not_found(where);
+    ob = return_object(environment(ob),0);
+    if (!ob) return not_found("Environment of "+where);
+    ob = return_object(what,ob);
+    if (!ob) return not_found(arg);
+    return ob;
+  }
+
+  /* In means inside */
+  if (sscanf(arg, "%s in %s", what, where) == 2)
+  {
+    ob = return_object(where,0);
+    if (!ob) return not_found(where);
+    ob = return_object(what,ob);
+    if (!ob) return not_found(arg);
+    return ob;
+  }
+
+  ob = return_object(arg);
+  if (!ob) return not_found(arg);
+  return ob;
+}  
+
+/* *************************************************************************
+ * Output Functions
+ *
+ * Main determines what kind of output is returned.
+ * These functions do the outputting.
+*/
+
+void
+display_array(mixed *stuffs)
+{
+  int i, siz;
+
+  siz = sizeof(stuffs);
+  write("Result: ARRAY of size "+siz+"\n");
+
+  for (i = 0; i < siz; i++)
+  {
+    if (pointerp(stuffs[i]))
+      display_array(stuffs[i]);
+    else if (objectp(stuffs[i]))
+      write("OBJECT: "+stuffs[i]+"\n");
+    else
+    write(stuffs[i]);
+  }
+}
+
+void
+display_results(mixed result)
+{
+  write("Result: ");
+  if (intp(result))
+    write("INT: "+result+"\n");
+  else if (stringp(result))
+    write("STRING: "+result+"\n");
+  else if (objectp(result))
+    write("OBJECT: "+result+"\n");
+  else if (pointerp(result))
+    write("POINTER:" + "\n");
+  else
+    write("UNKNOWN"+result+"\n");
+}
+
+/* *************************************************************************
+ * main
+ *
+ * Break the argument apart
+ * Parse it to find out what to patch
+ * Find the object to patch
+ * Patch it
+ * Output the results
+*/
+
+status
+varargs
+main(string arg, status flag_array)
+{
+  mixed *st, *results;
+  mixed result;
+  object target;
+  int i, j;
+
+  i = sizeof(st = explode(arg,","));
+  target = parse_what(st[0]);
+  if (!target) return 1;
+
+  if (i == 1)
+  {
+    write("Must supply a function to call.\n");
+    return 1;
+  }
+
+  if (i == 2)
+  {
+    if (flag_array)
+    {
+      results = (mixed*)call_other(target,st[1]);
+      display_array(results);
+      return 1;
+    }
+    result = (mixed)call_other(target,st[1]);
+    display_result(result);
+    return 1;
+  }
+
+/* For making sure the mixed* works properly */
+for (j = 2; j < siz; j++) {
+  write(j+")\t"+st[j]+" (");
+  if (stringp(st[j])) write(i+"STRING)");
+  if (int(st[j]))     write(i+"(INT)");
+  write("\n");
+}
+
+  if (i == 3)
+  {
+    if (flag_array)
+    {
+      results = (mixed*)call_other(target,st[1], st[2]);
+      display_array(results);
+      return 1;
+    }
+    result = (mixed)call_other(target,st[1],st[2]);
+    display_result(result);
+    return 1;
+  }
+    
+  if (i == 4)
+  {
+    if (flag_array)
+    {
+      results = (mixed*)call_other(target,st[1], st[2], st[3]);
+      display_array(results);
+      return 1;
+    }
+    result = (mixed)call_other(target,st[1],st[2], st[3]);
+    display_result(result);
+    return 1;
+  }
+
+  if (i == 5)
+  {
+    if (flag_array)
+    {
+      results = (mixed*)call_other(target,st[1], st[2], st[3], st[4]);
+      display_array(results);
+      return 1;
+    }
+    result = (mixed)call_other(target,st[1],st[2], st[3], st[4]);
+    display_result(result);
+    return 1;
+  }
+
+  write("Patch unsuccessful: "+arg+"\n");
+  return 1;
+}
+
+
+
+
+    

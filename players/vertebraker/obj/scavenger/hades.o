@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/saber/armor/lpants","/players/hippo/heals/blood","/players/puppy/s/eq/scepter","/players/wren/Area/starbug/items/wrench","/obj/weapon","/obj/treasure","/players/wren/Area/starbug/items/guitar","/players/softly/nhall/obj/green2","/players/hippo/heals/bubbles","/players/puppy/s/eq/crown","/players/wren/Area/starbug/items/thermos","/players/wren/Area/starbug/items/comb","/players/hippo/armour/boots","/players/hippo/armour/shield","/players/mythos/aarmor/hara-ate","/players/blue/weapons/obsidian_sword","/players/scathe/armor/bowboot","/players/wren/Area/starbug/items/laundry","/players/wren/Area/starbug/items/indianheaddress","/players/haji/quest/diary","/players/puppy/s/eq/cape","/players/hippo/heals/nucleus","/players/mythos/amisc/mirror","/players/mosobp/areas/TEMPLE/OBJ/robes","/obj/torch",})
+shorts ({"Black leather pants","[1;31mdrops of blood[0m","A scepter ","small pipe wrench","Baby powder","Arctic Seal pelt","Lister's guitar","Dark Rider Chainmaigreen)[2;37;0m [3]","[1;36mbubbles of 7up[0m","A golden crown","a thermos","the cat's hair pick","anti-blood boots","lap of meat","Hara-ate","An Obsidian Sword","Hard Boots","Lister's dirty laundry","a tiny indian headdress","A diary","A flowing cape","[35mnucleus of a cell[0m","A small mirror","A Priest's Robes","light spell",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

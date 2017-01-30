@@ -1,0 +1,14 @@
+C Y B E R W A R E
+ 
+FluxCharge
+Usage: fluxcharge
+Cost: 15 sp/charge
+ 
+     This command is used to charge a CyberNinja's internal power
+generator up to a limit defined by the CyberNinja's guild level.
+It will continue charging until the charge limit is reached, there
+are no more spell points left to charge, or the charging is stopped
+by repeating the 'fluxcharge' command. Once the power generator is
+charged to any degree, the FluX generators can be used. Each use of
+a FluX generator will lower the total fluxcharges by 1.
+

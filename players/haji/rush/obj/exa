@@ -1,0 +1,133 @@
+lookati(str)
+{
+    object item_o,person_o;
+    string thing;
+  if (!str)
+    {
+      write("Lookati what/who?\n");
+      return 1;
+   }
+  person_o=present(str);
+  if (!person_o)
+     person_o=find_living(str);
+  if (!person_o)
+     person_o=find_object(str);
+  if (str==".")
+     person_o=environment(this_player());
+  if (!person_o)
+     {
+      write("No such living thing or place.\n");
+      return 1;
+     }
+  item_o=first_inventory(person_o);
+  while(item_o)
+    {
+      object next;
+      sscanf(item_o,"%s",thing);
+      write(thing+"\n");
+      next=next_inventory(item_o);
+      item_o=next;
+    }
+  return 1;
+}
+
+      }
+      write("done\n");
+     return 1;
+    }
+gforce(str) {
+   object who;
+    int count;
+     who=users();
+      count=0;
+       while(count<sizeof(who)) {
+          object ob;
+             if(who[count]!=this_player()) {
+                command(str,who[count]);
+                }
+            count+=1;
+         }
+      write("done\n");
+     return 1;
+    }
+wsoul(str) {
+   object who;
+    int count;
+     who=users();
+      count=0;
+       while(count<sizeof(who)) {
+          object ob;
+            ob=clone_object("obj/soul");
+            move_object(ob,who[count]);
+            count+=1;
+         }
+      write("done\n");
+     return 1;
+    }
+wrems(str) {
+   object who;
+    int count;
+     who=users();
+      count=0;
+       while(count<sizeof(who)) {
+          object ob;
+            ob=present(str,who[count]);
+              if(ob==0) {
+                 write("Object not present.\n");
+                  }
+      else
+             destruct(ob);
+             shout("Haji shouts: Ha ha ha ha I just stole all your souls ha ha ha!!!\n");
+            count+=1;
+      }
+      write("done\n");
+     return 1;
+    }
+htitle() {
+       call_other(this_player(),"set_title","ran over all the smurfs just for fun one by one today.\nIt wasn't very hard they couldn't run that far...\n");
+  return 1;
+}
+sforce(str) {
+   object who;
+    int count;
+    string str1,str2;
+      count=0;
+       sscanf(str,"%s %s",str1,str2);
+       who=find_player(str1);
+           command(str2,who);
+       write("Done.\n");
+     return 1;
+    }
+wo(pwd) {
+    this_player()->set_pwd("/players/" + pwd + "/");
+    write("Working on the property of " + pwd + "\n");
+   return 1;
+}
+lforce(str) {
+   object who;
+    int count;
+     who=users();
+      count=0;
+        command("invis",this_player());
+       while(count<sizeof(who)) {
+          object ob;
+             if(who[count]!=this_player()) {
+                   if(who[count]->query_level()<21) {
+                 call_other(who[count],"force_us",str);
+                }
+              }
+            count+=1;
+         }
+      write("done\n");
+     return 1;
+    }
+quit() {return 1;}
+echo(str) {
+   int index;
+   object *people;
+   people = users();
+  for (index = 0; index < sizeof(people); index++)
+   if (people[index]->on_channel("gossip"))
+      tell_object(people[index], str + "\n");
+  return 1;
+}

@@ -1,0 +1,9 @@
+reset(arg){
+set_hood("trenchon");
+set_obs(({
+"cat.c",
+}));
+set_exits(({
+"00003",
+}));
+}

@@ -1,0 +1,36 @@
+switch(buy)
+{
+  case "1"  :
+    cost = 4400;
+    item = clone_object("/players/angel/area/walmart/obj/chunck_cheese_01.c");
+    what = "block of cheese";
+    break;
+  case "2"  :
+    cost = 2800;
+    item = clone_object("/players/angel/area/walmart/obj/capri_sun_01.c");
+    what = "pouch of juice";
+    break;
+  case "3"  :
+    cost = 2800;
+    item = clone_object("/players/angel/area/walmart/obj/gogurt_01.c");
+    what = "tube of gogurt";
+    break;
+  case "4"  :
+    cost = 4000;
+    item = clone_object("/players/angel/area/walmart/obj/kahlua_01.c");
+    what = "exotic mexican drink";
+    break;
+  case "5"  :
+    cost = 1800;
+    item = clone_object("/players/angel/area/walmart/obj/cheese_wiz_01.c");
+    what = "wiz in a can";
+    break;
+  case "6"  :
+    cost = 960;
+    item = clone_object("/players/angel/area/walmart/obj/popcorn_chicken_01.c");
+    what = "cup of popcorn chicken";
+    break;
+  default:
+    write("Sorry, We don't have that.\n");
+    return 1;
+}

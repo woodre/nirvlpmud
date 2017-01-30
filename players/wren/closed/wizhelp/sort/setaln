@@ -1,0 +1,21 @@
+**************
+
+                     Setaln
+
+Syntax:    setaln <#>
+
+Desc:
+           This command sets your alignment based on the number you
+           input. White lord is positive 1000 and Lord of Evil is 
+           negative 1000.
+
+Warning:   none
+
+Example:   setaln -1000
+                  results
+           Bob the Shiney Wiz (lord of evil) is new title
+
+Related:   setal, title
+
+
+**************

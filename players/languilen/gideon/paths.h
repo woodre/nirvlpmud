@@ -1,0 +1,7 @@
+#define BA "/players/languilen/gideon/"
+#define AREA   BA  + "rooms/"
+#define MON    BA  + "mons/"
+#define OBJ    BA  + "objs/"
+#define WEP    OBJ + "weps/"
+#define ARM    OBJ + "arms/"
+#define MYENTRANCE "/players/languilen/areas/inside.c"

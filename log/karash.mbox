@@ -1,0 +1,31 @@
+From: dragnar
+Subj: Area
+
+Date: Sep 15 09:23
+
+Just change the ac of the gear you added to 1 for the helmet and 0 for the 
+shirt and then you can open it.  Good job man! 
+--Gnar 
+
+From: dragnar
+Subj: Exits
+
+Date: Sep 15 18:51
+
+As far as blocking exits, just add an action to the room for the dirs, 
+and check the name of this_player() and if it is your mob, deny them 
+moving (i.e. return 0) 
+
+From: dragnar
+Subj: Imp Master
+
+Date: Sep 28 13:31
+
+This is what I see when I stat him: 
+Weapons: 
+   players/karash/nightshade/updated/imp_master_upd#6244 
+      other|poison 20 0 
+      physical 40 0 
+ 
+Not sure why the exp would be different? 
+

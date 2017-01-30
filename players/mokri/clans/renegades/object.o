@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30mInsignia[0m of [31mTerror[0m (grafted to his forehead)[0m"
+long_desc "      [1;30m<[31m*[1;30m> I N S I G N I A  [0mO F  [31mT E R R O R [1;30m<[31m*[1;30m>[0mThis insignia is in your posession due to one fact, and one fact only:Only the terrorists can win.Clan Hall is located north of the entrance to the Wastelands, the same placeas the guild hall of the [31mServants[0m of [31mShardak[0m, our greatest allies.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "insignia"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "      [1;30m<[31m*[1;30m> I N S I G N I A  [0mO F  [31mT E R R O R [1;30m<[31m*[1;30m>[0mThis insignia is in your posession due to one fact, and one fact only:Only the terrorists can win.Clan Hall is located north of the entrance to the Wastelands, the same placeas the guild hall of the [31mServants[0m of [31mShardak[0m, our greatest allies.[0mType 'clan_help' for commands."
+clan_short "[1;30mInsignia[0m of [31mTerror[0m (grafted to his forehead)[0m"
+damage_type "evil"
+hall_path "/players/dragnar/WasteLands/rooms/arena"
+object_name "insignia"
+owner "muerte"
+spell_alias "flurry"
+spell_mess_me "In a series of fatal chops and slashes, your flurry %hi black%<%red%*%hi black%>%hi red% O B L I T E R A T E S %hi black%<%red%*%hi black%>%normal% %AKN%!"
+spell_mess_room "In a series of fatal chops and slashes, %TP_POS%'s flurry %hi black%<%red%*%hi black%>%hi red% O B L I T E R A T E S %hi black%<%red%*%hi black%>%normal% %AKN%!"
+spell_mess_them "In a series of fatal chops and slashes, %TP_POS%'s flurry %hi black%<%red%*%hi black%>%hi red% O B L I T E R A T E S %hi black%<%red%*%hi black%>%normal% you!"
+abilities ({})
+chan_history ({"[Sun Jun  1 20:55:12 2008] Muerte: 100000","[Sun Jun  1 20:55:14 2008] Muerte: oops",})
+leaders ({})
+join_type 2
+private_coffer 7093
+public_coffer 0
+spell_delay 1
+spell_id 1
+spell_cost 80
+last_spell_time 1212020736

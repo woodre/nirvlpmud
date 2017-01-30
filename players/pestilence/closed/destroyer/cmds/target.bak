@@ -1,0 +1,66 @@
+#include "/players/pestilence/define.h"
+#define IPTP   present("destroyer_ob", this_player())
+
+/* TARGETTING SYSTEM */
+
+
+status main(string str)
+{
+  object meat;
+  int mywil, myint, myglev, mylinks;
+
+  if (str)
+  {
+    meat = present(str, environment(TP));
+    if (!meat)
+    {
+      write("[ "+str+" ] is not here.\n");
+      return 1;
+    }
+    if (!living(meat))
+    {
+      write("You cannot target [ "+str+" ]\n");
+      return 1;
+    }
+  }
+
+  if (!str)
+  {
+    if (!TP->query_attack())
+    {
+      write("Target what?\n");
+      return 1;
+    }
+    else
+    {
+      meat = (object)TP->query_attack();
+      str = (string)meat->query_name();
+    }
+  }
+
+  mywil = (int)TP->query_attrib("wil");
+  myint = (int)TP->query_attrib("int");
+  myglev = (int)IPTP->guild_lev();
+  mylinks = (int)IPTP->item_weplink();
+
+  if ((object)IPTP->query_target() == meat)
+  {
+    write("You have already targetted [ "+str+" ]\n");
+    return 1;
+  }
+
+  if (mywil   < random(25))
+  {
+    tell_object(TP, "Targetting Failure.\n");
+    return 1; 
+  }
+
+  /* Spell point cost removed because weplink damage
+     never required targetting in the first place.
+     I did raise the failure rate just for fun though. - Dune
+   */
+
+  tell_object(TP, "Targetting [ "+str+" ]\n");
+  IPTP->set_target("meat");
+  return 1;
+}

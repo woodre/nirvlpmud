@@ -1,0 +1,71 @@
+#include "/players/hippo/bs.h"
+#include "/obj/ansi.h"
+int drinks, price;
+string level;
+
+id(str) { return str == "blood";}
+
+reset(arg) {
+/*
+   if(!arg) drinks = 9;
+       charges were changed to accomodate boltar's rules... i.e. TOTAL HEALING must not exceed 175
+        - mythos <8-10-96> */
+  if(!arg) drinks = 5;
+   price = drinks *540;
+}
+long() {
+  write("Bright red drops of sticky, sweet blood.\n");
+}
+short() {
+/*
+  return HIR+drinks+" drops of blood"+NORM;
+*/
+
+  string chk_tot;
+   if(drinks == 1) chk_tot = "drop";
+   else chk_tot = "drops";
+  return HIR + drinks + " " + chk_tot + " of blood" + NORM;
+}
+query_value()
+{
+   price = drinks *540;
+    return price;
+}
+query_save_flag()
+   { return 1; }
+init() {
+   add_action("drink","drink");
+}
+drink(arg) {
+object tp;
+tp = this_player();
+if(environment() != this_player()) return;  /* added by Eurale 7/5/99  */
+if(arg!="blood"){
+   notify_fail("You'd better check your stuff, fellow.. you don't have that!"+BS);
+	return 0;
+}
+level=call_other(tp,"query_level");
+if(!tp->drink_alcohol(13)) {
+   write ("Look at yourself, bud. I can't allow you to drink more."+BS);
+   say("You never seen another person as drunk as "+
+   tp->query_name()+
+   "before."+BS);
+   return 1;
+}
+drinks=drinks - 1;
+this_player()->heal_self(35);
+  write("The blood makes you think you have become a bit better..."+BS);
+   say(capitalize(tp->query_name()) + " drinks some blood."+BS);
+if(drinks == 0){
+	destruct(this_object());
+   write("You just finished the last drop of blood."+BS);
+		}
+return 1;
+		}
+
+get() {
+    return 1;
+}
+query_weight() {
+   return 1;
+}

@@ -1,0 +1,796 @@
+
+/* 
+knight horse by verte
+version 4
+*/
+
+#include "/players/vertebraker/define.h"
+
+#define DIR "/players/vertebraker/misc/h/"
+#define SAVEPATH "players/vertebraker/misc/h/s/"
+#define STORAGE "/players/vertebraker/misc/h/super_storage.c"
+inherit NPC;
+
+string color;
+
+static string owner_real_name;
+static object owner;
+static int silent_follow, follow, tethered, silenced, hunger;
+static string old_desc;
+
+#define SAFE "/players/vertebraker/closed/safehouse"
+void
+dump_all_stuff()
+{
+    object *o;
+    int i, s;
+    if(!owner_real_name) return;
+    s = sizeof(o = all_inventory(this_object()));
+    for(i = 0; i < s; i ++)
+    {
+      if(transfer(o[i], SAFE) == 0)
+      STORAGE->add_locker(owner_real_name, o[i]);
+    }
+}
+
+
+war_horse() { return 1; }
+
+reset(x)
+{
+   if(x) return;
+   ::reset();
+   hunger = 6000;
+   set_dead_ob(TO);
+   MO(CO(DIR+"knight_thing"),TO);
+   set_alias("warhorse");
+   set_race("horse");
+   set_al(100);
+   set_level(12);
+   set_hp(200);
+   set_wc(3);
+   set_ac(5);
+   set_no_exp_value();
+   if(!present("bag",TO)) MO(CO(DIR+"bag"),TO);
+   enable_commands();
+}
+
+id(str)
+{
+   int x;
+   if(!owner) return str == "VerteDooDoo";
+    if((previous_object() && previous_object() == owner) || (previous_object() && previous_object() == this_object())) return ::id(str);
+   else if(owner->query_mounted() != TO) 
+     return ::id(str);
+   else if(previous_object() && previous_object()->query_npc())
+     return ::id(str);
+   else if(previous_object() && previous_object()->is_player())
+   {
+    if(owner->query_level() < 9 && previous_object()->query_level() > 8)
+           return str == "BlahBlahBlah";
+     else if(owner->query_pl_k() && previous_object()->query_pl_k())
+           return ::id(str);
+     else if(owner->query_fight_area() && previous_object()->query_fight_area() 
+&&
+             (owner->query_fight_area() == USER->query_fight_area()))
+           return ::id(str);
+   }
+   if(!previous_object() || !living(previous_object())) return ::id(str);
+   return str == "VerteDooDoo";
+}
+query_guild_file() { return "players/boltar/templar/templar"; }
+is_mine() { return 1; }
+
+init()
+{
+   string *dir;
+   int x;
+   ::init();
+    if(TP && (TP == owner) && !TP->query_mounted()) { TP->clear_mounted(); TP->reset(1); }
+   add_action("name_me","hname");
+   add_action("mount_me","mount");
+   add_action("dismount_me","dismount");
+   add_action("bag_thing","bag");
+   add_action("unbag_thing","unbag");
+   add_action("follow_guy","lead");
+   add_action("tether_me","tether");
+   add_action("tether_me","tie");     /* some added syntax */
+   add_action("release_me","release");
+   add_action("release_me","untie");
+   add_action("release_me","untether");
+   add_action("ride_me","ride");
+   add_action("listbag","listbag");
+   add_action("silence_me","silence");
+   add_action("pet","pet");
+   add_action("cmd_give","give");
+   dir = valid_dir();
+}
+
+heart_beat()
+{
+   ::heart_beat();
+   if(!USER) return;
+   if(!owner)
+      {
+      move_object(TO, "/room/void");
+      dump_all_stuff();
+      destruct(TO);
+      return; 
+   }
+   hunger--;
+   if(hunger < 500 && !random(10)) hunger_pain();
+   if(hunger < 1) hunger_death();
+   if(attacker_ob && present(attacker_ob,USER))
+      {
+      tell_object(owner,HIR+"< "+NORM+cap_name+HIR+" >"+NORM+" : "+(((hit_point*10) / max_hp))+HIR+"/"+NORM+"10\n"+NORM);
+      hunger--;
+   }
+   if(!silenced && !random(15)) emote();
+   if(silent_follow && !present(owner,USER)) MO(TO,ENV(owner));
+   else if(!tethered && !follow && !silent_follow && !present(owner,USER) && !random(2))
+      random_move();
+   if(0 == random(4)) hit_point += 1;
+   if(hit_point > max_hp) hit_point = max_hp;
+   if(attacker_ob && present(attacker_ob,USER) && environment()->query_no_fight())
+   {
+     tell_room(environment(), "The horse bucks wildly!\n");
+     hit_point += 15;
+     if(hit_point > max_hp) hit_point = max_hp;
+     attacker_ob->heal_self(-(20 + random(10)));
+   }
+}
+
+set_name(string str)
+{
+   if(str != "horse") short_desc = "A "+color+" warhorse named "+CAP(str);
+   else short_desc = "A "+color+" warhorse";
+   if(silent_follow) short_desc = 0;
+   str = LOWER(str);
+   ::set_name(str);
+}
+
+set_color(string str)
+{
+   if(str == "white") color = HIW+"white"+NORM;
+   if(str == "grey")  color = WHT+"grey"+NORM;
+   if(str == "black") color = BOLD+BLK+"black"+NORM;
+   if(str == "brown") color = YEL+"brown"+NORM;
+   if(str == "brown and white") color = YEL+"brown"+NORM+" and "+HIW+"white"+NORM;
+   if(str == "white and black") color = HIW+"white"+NORM+" and "+BOLD+BLK+"black"+NORM;
+   if(str == "black and brown") color = BOLD+BLK+"black"+NORM+" and "+YEL+"brown"+NORM;
+   if(!short_desc) short_desc = "A "+color+" warhorse";
+}
+
+short()
+{
+   if(!silent_follow && !short_desc) set_name(name); /* strange bug */
+   if(!short_desc) return 0;
+   if(tethered)
+     return short_desc +" (tethered)";
+   else return short_desc;
+}
+
+follow_the_leader()
+{
+   if(follow)
+      {
+      if(!owner)
+         {
+         move_object(TO, "/room/void");
+         dump_all_stuff();
+         destruct(TO);
+         return;
+      }
+      if(!present(owner,USER))
+         {
+         tell_room(USER,cap_name+" trots off after "+owner->QN+".\n");
+         MO(TO,ENV(owner));
+         tell_room(USER,cap_name+" trots in, following "+owner->QN+".\n");
+      }
+      call_out("follow_the_leader",3); 
+   }
+}
+
+ride_me(str)
+{
+   int cnt; string tmp; string *dir;
+   if(TP == owner)
+      {
+      if(!TP->query_mounted())
+         {
+         write("You must mount your horse first!\n");
+         return 1;
+      }
+      if(TP->query_mounted() != TO)
+         {
+         write("You are mounted on something else...\n");
+         return 1;
+      }
+      if(!str)
+         {
+         write("Ride where?\n");
+         return 1;
+      }
+      dir = valid_dir();
+      while(sscanf(str,"%s,%s",tmp,str) == 2)
+      {
+         if(cnt > 4)
+            {
+            write("Your horse tires and stops.\n");
+            return 1;
+            }
+         if(member_array(tmp,dir) == -1)
+            {
+            write("  Your horse stops abruptly and neighs loudly!\n"+
+               "  You sense its confusion.\n");
+            return 1;
+            }
+         command(tmp,TP);
+         MO(TO,ENV(TP));
+         cnt++;
+      }
+      if(member_array(str,dir) == -1)
+         {
+         write("  Your horse stops abruptly and neighs loudly!\n"+
+            "  You sense its confusion.\n");
+         return 1;
+      }
+      if(cnt > 4)
+         {
+         write("Your horse tires and stops.\n");
+         return 1;
+      }
+      command(str,TP);
+      return 1;
+   }
+}
+
+mount_me(string str)
+{
+   if(TP == owner)
+      {
+      if(TP->query_mounted() == TO)
+         {
+         write("You are already riding your horse.\n");
+         return 1;
+      }
+      if(TP->query_mounted() && TP->query_mounted() != TO)
+         {
+         write("You are already mounted on something.\n");
+         return 1;
+      }
+      if(!str || !id(str))
+         {
+         write("Mount your horse, or what?\n");
+         return 1;
+      }
+      if(TP->query_attack())
+         {
+         write("You cannot mount your horse while engaged in combat!\n");
+         return 1;
+      }
+    if(follow) follow = 0;
+      if(tethered)
+         {
+         write("You must release your horse from the tether before you\n"+
+            "can mount it again.\n");
+         return 1;
+      }
+      write("  You place your left food firmly into the stirrup, and lift yourself\n"+
+         "  up into the saddle.  Satisfied, your horse neighs a hello.\n"+
+         "  You look out into the horizon and grab your reins, ready for a ride.\n");
+      tell_room(USER,TPN+" climbs into "+cap_name+"'s saddle gracefully, and grabs\n"+
+         "the reins.  Looking into the horizon with a quiet smile,\n"+
+         subjective(TP)+" prepares for a difficult ride ahead.\n", ({ TP }));
+      old_desc = short_desc;
+      short_desc = 0;
+      TP->set_mounted(TO);
+      MO(CO(DIR+"extra_look"),TP);
+      start_silent_follow();
+      return 1;
+   }
+}
+
+dismount_me()
+{
+   if(TP == owner)
+      {
+      if(TP->query_mounted() != TO) return;
+      else
+         {
+         if(TP->query_attack())
+            {
+            write("You cannot dismount while engaged in combat!\n");
+            return 1;
+         }
+         write("  You throw your left leg over to the side of "+cap_name+" and\n"+
+            "  ease it into the stirrup.  You gracefully descend onto\n"+
+            "  the ground, and get your bearings straight.\n");
+         TP->remote_say(TPN+" gracefully dismounts from the horse "+cap_name+".\n");
+         destruct(present("horse_extra_look",TP));
+         TP->clear_mounted();
+         short_desc = old_desc;
+         end_silent_follow();
+         return 1;
+      }
+   }
+}
+
+bag_thing(string str)
+{
+   int x;
+   object bag, thing;
+   string msg;
+   if(TP == owner)
+      {
+      if(!str)
+         {
+         write("What would you like to bag?\n");
+         return 1;
+      }
+      bag = present("saddle bag",TO);
+      if(!bag) { bag = CO(DIR+"bag"); MO(bag,TO); }
+      thing = present(str,TP);
+      if(!thing)
+         {
+         write("You do not have that.\n");
+         return 1;
+      }
+      x = transfer(thing,bag);
+      switch(x)
+      {
+         case 0: msg = "You place "+thing->short()+" in your bag.\n"; break;
+         case 1: msg = "The saddle bag is full.\n"; break;
+         case 2: msg = "You can't drop that!\n"; break;
+         case 4: msg = "That will never fit in the saddle bag.\n"; break;
+         default: msg = "You can't do that!\n"; break;
+      }
+      write(msg);
+      TP->remote_say(TPN+" rummages around in the horse's saddle bag.\n");
+      return 1;
+   }
+}
+
+unbag_thing(string str)
+{
+   object bag, thing; string msg; int x;
+   object *inv;
+   int y;
+   if(TP == owner)
+      {
+      bag = present("saddle bag",TO);
+      if(!bag) { bag = CO(DIR+"bag"); MO(bag,TO); }
+    if(!str) return 0;
+      if(str == "all")
+         {
+         inv = all_inventory(bag);
+         for(y = 0; y < sizeof(inv); y++)
+         {
+            write(inv[y]->short()+"... ");
+            if(!transfer(inv[y], TP)) write("Ok!\n");
+            else write("You fail!\n");
+         }
+         TP->recalc_carry();
+         return 1;
+      }
+      thing = present(str,bag);
+      TP->remote_say(TPN+" rummages around in the horse's saddle bag.\n");
+      if(!thing)
+         {
+         write("That is not in the saddle bag.\n");
+         return 1;
+      }
+      x = thing->query_weight();
+     if(!transfer(thing, TP)) write("You take " + thing->short() + " from the saddle bag.\n");
+     else write("You can't carry that.\n");
+     TP->recalc_carry();
+     return 1;
+   }
+}
+
+tether_me(string str)
+{
+   if(TP == owner)
+      {
+      if(!id(str)) return;
+      if(TP->query_mounted() == TO)
+        command("dismount horse", TP);
+      if(TP->query_attack())
+         {
+         write("You cannot tether your horse while you are engaged in combat.\n");
+         return 1;
+      }
+      if(tethered)
+         {
+         write("Your horse is already tethered.\n");
+         return 1;
+      }
+      write(
+         "  You grab a length of rope, a stake, and a hammer from your\n"+
+         "  horse's saddle bag.  You set to work, measuring out the\n"+
+         "  rope and tying it in a knot around the stake.  You hammer\n"+
+         "  the stake deep into the ground, and place your tools back\n"+
+         "  into the bag, admiring your handiwork.\n");
+      TP->remote_say(TPN+" ties a rope around "+cap_name+"'s reins.\n"+
+         TPN+" hammers a stake into the ground and ties the rope in\n"+
+         "a triple knot around the stake, and as the horse tries to leave,\n"+
+         "it is caught by the rope.\n");
+      tethered = 1;
+      follow = 0;
+      remove_call_out("follow_the_leader");
+      return 1;
+   }
+}
+
+release_me(string str)
+{
+   if(TP == owner)
+      {
+      if(!id(str)) return;
+      if(!tethered)
+         {
+         write("Your horse is not tethered.\n");
+         return 1;
+      }
+      if(TP->query_attack())
+         {
+         write("You cannot release your horse when you are engaged in combat!\n");
+         return 1;
+      }
+      write("  You pull the stake from the ground and roll back up\n"+
+         "  the length of rope, after which you place both items\n"+
+         "  back into the saddle bag and close it back up.\n");
+      TP->remote_say(TPN+" unties the horse's reins, and places the rope\n"+
+         "back within the saddle bag.\n");
+      tethered = 0;
+      return 1;
+   }
+}
+
+silence_me()
+{
+   if(TP == owner)
+      {
+      if(!silenced)
+         {
+         write("  You pat "+cap_name+" lovingly and tell him to quiet down.\n"+
+            "  He seems to obey your command.....\n");
+         TP->remote_say(TPN+" tells "+cap_name+" to quiet down.\n");
+         silenced = 1;
+      }
+      else
+         {
+         write("  You pat "+cap_name+" lovingly and tell him that he can\n"+
+            "  make as much noise as he wants.\n"+
+            "  He neighs happily in response.\n");
+         TP->remote_say(TPN+" whispers something into "+cap_name+"'s ears.\n"+
+            cap_name+" neighs happily.\n");
+         silenced = 0;
+      }
+      return 1;
+   }
+}
+
+follow_guy(string str)
+{
+   if(TP == owner)
+      {
+      if(!id(str)) return;
+      if(tethered)
+         {
+         write("You must release your horse before you can have it follow you.\n");
+         return 1;
+      }
+      if(mounted)
+         {
+         write("You are already mounted on the horse, how can it follow you?\n");
+         return 1;
+      }
+      if(follow)
+         {
+         write("Your horse will no longer follow you.\n");
+         follow = 0;
+         remove_call_out("follow_the_leader");
+         return 1;
+      }
+      write("  You grab "+cap_name+"'s reins with your hand and begin leading\n"+
+         "  it along.  It follows faithfully behind.\n");
+      TP->remote_say(TPN+" grabs "+cap_name+"'s reins in one hand and begins\n"+
+         "leading it along.\n");
+      follow = 1;
+      call_out("follow_the_leader",3);
+      return 1;
+   }
+}
+
+valid_dir()
+{
+   return ({ "n","s","e","w","nw","ne","sw","se","north","east","west","south",
+         "southwest","southeast","northeast","northwest","enter","step","pass" });
+}
+
+monster_died()
+{
+   object h;
+  if(!owner) return;
+   if(owner->query_mounted() == TO)
+      {
+      tell_room(environment(owner),
+         "\nThe horse sputters and kicks wildly!\n\n"+
+         "It falls to the ground, hurling "+owner->QN+" to earth...\n\n");
+      MO(owner,environment(owner));
+      owner->add_hit_point(- ( 50 + random(30)));
+   }
+   tell_object(owner,
+      "\tYour horse has died...\n"+
+      "You pray for your lost comrade.\n");
+   owner->clear_mounted();
+   owner->remote_say(owner->QN+" prays for "+possessive(owner)+" lost comrade.\n");
+   rm("/"+SAVEPATH+owner->RN+".o");
+   h = present("KnightTemplar",owner);
+   if(h) h->set_horsed(0);
+}
+
+start_silent_follow()
+{
+   silent_follow = 1;
+}
+
+end_silent_follow()
+{
+   silent_follow = 0;
+}
+
+query_owner()
+{
+   if(previous_object() && previous_object()->id("neopet")) return 0;
+   return owner;
+}
+set_owner(object ob)
+{
+   if(ob)
+   owner_real_name = (string)ob->query_real_name();
+   owner = ob;
+}
+
+on_what()
+{
+   return "a "+color+" warhorse named "+cap_name;
+}
+
+random_move()
+{
+   string dir;
+   switch(random(4))
+   {
+      case 0: dir = "north"; break;
+      case 1: dir = "south"; break;
+      case 2: dir = "east"; break;
+      case 3: dir = "west"; break;
+   }
+   command(dir,TO);
+   return 1;
+}
+
+emote()
+{
+   string mm, tm;
+   switch(random(8))
+   {
+      case 0:
+      mm = cap_name+" looks up at you lovingly.\n";
+      tm = cap_name+" looks up at "+owner->QN+" lovingly.\n";
+      break;
+      case 1:
+      mm = cap_name+" trots a few steps, and then stops.\n";
+      break;
+      case 2:
+      mm = cap_name+" whinnies loudly!\n";
+      break;
+      case 3:
+      mm = cap_name+" neighs loudly!\n";
+      break;
+      case 4:
+      mm = cap_name+" munches on some nearby grass.\n";
+      break;
+      case 5:
+      mm = cap_name+" shows a broad 'smile' on its huge mouth.\n";
+      break;
+      case 6:
+      mm = cap_name+" swishes its tail back and forth.\n";
+      break;
+      case 7:
+      mm = cap_name+" blinks its big brown eyes.\n";
+      break;
+   }
+   if(!tm) tm = mm;
+   tell_object(owner,mm);
+   owner->remote_say(tm);
+   return 1;
+}
+
+save_me()
+{
+   if(owner) save_object(SAVEPATH+(owner->RN));
+}
+
+restore_me()
+{
+   if(owner) restore_object(SAVEPATH+(owner->RN));
+}
+
+remove_object()
+{
+   object k;
+   if(owner)
+      {
+      k = present("KnightTemplar",owner);
+      owner->clear_mounted();
+      if(k) k->set_horsed(0);
+   }
+}
+
+add_hunger(ah)
+{
+   hunger += ah;
+   if(hunger > 6000) hunger = 6000;
+   if(hunger < 0) hunger = 0;
+}
+
+query_hunger()
+{
+   return hunger;
+}
+
+hunger_pain()
+{
+   string msg;
+   switch(random(5))
+   {
+      case 0: msg = cap_name+" looks very sickly.\n";
+      case 1: msg = cap_name+" prances around, disturbed.\n";
+      case 2: msg = "You sense that your horse is hungry.\n";
+      case 3: msg = cap_name+" begins to weaken.....\n"+
+      "It needs some food.\n";
+      case 4: msg = "It looks like "+cap_name+" could use some food.\n";
+      break;
+   }
+   tell_object(owner,BOLD+msg+NORM);
+   return 1;
+}
+
+hunger_death()
+{
+   tell_room(USER,
+      "\n"+cap_name+" reels in pain as it collapses!\n\n");
+   death();
+   return 1;
+}
+
+name_me(str)
+{
+   if(owner != TP) return;
+   if(!str)
+      {
+      write("Name your horse what?\n");
+      return 1;
+   }
+  if(TP->query_mounted() == TO)
+  {
+    notify_fail("You must dismount before renaming your horse.\n");
+    return 0;
+  }
+   write("You name your horse "+str+".\n");
+   set_name(str);
+   return 1;
+}
+
+pet(str)
+{
+   if(str == "horse" || str == name || str == cap_name || str == "warhorse")
+      {
+      write("You pet "+cap_name+" lovingly.\n");
+      TP->remote_say(TPN + " pets " + cap_name + " lovingly.\n");
+      return 1;
+   }
+}
+
+long()
+{
+   if(!short_desc)
+      {
+      short_desc = "A "+color+" warhorse named "+cap_name;
+      ::long();
+      short_desc = 0;
+   }
+   else ::long();
+}
+
+/*
+id(str)
+{
+   int x;
+   if(!owner) return str == "VerteDooDoo";
+    else if(previous_object() && previous_object() == owner) return ::id(str);
+   else if(owner->query_mounted() != TO) 
+     return ::id(str);
+   else if(previous_object() && previous_object()->query_npc())
+     return ::id(str);
+   else if(previous_object() && previous_object()->is_player())
+   {
+     else if(owner->query_level() < 9 && previous_object()->query_level() > 8)
+           return str == "BlahBlahBlah";
+     else if(owner->query_pl_k() && previous_object()->query_pl_k())
+           return ::id(str);
+     else if(owner->query_fight_area() && previous_object()->query_fight_area() &&
+             (owner->query_fight_area() == USER->query_fight_area()))
+           return ::id(str);
+   }
+   return str == "VerteDooDoo";
+}
+*/
+
+verte_valid_check(ob)
+{
+   if(!ob->is_player()) return 0;
+   if(ob == owner) return 0;
+   if(owner->query_level() < 9 && ob->query_level() > 8) return 0;
+   if(ob->query_fight_area() && owner->query_fight_area()
+      && ob->query_fight_area() == file_name(USER)) return 0;
+   if(ob->query_pl_k() && owner->query_pl_k()) return 0;
+   return 1;
+}
+
+
+listbag()
+{
+   int x; object *inv;
+   object b;
+   if(TP != owner) return 0;
+   b = present("saddle bag",TO);
+   inv = all_inventory(b);
+   write(" Saddle Bag Inventory:\n ----------------------\n");
+   for(x=0;x<sizeof(inv);x++)
+   write((x+1)+"] "+inv[x]->short()+"\n");
+   return 1; }
+
+cmd_give(str)
+{
+   string one, two;
+   if(!str) return 0;
+   if(sscanf(str,"%s to %s",one,two))
+      {
+      if(id(two))
+         {
+         write("The horse cannot take it from you.\n");
+         return 1;
+      }
+   }
+}
+
+query_save_flag() { return 1; }  /* haha stupid templar room bug fix */
+
+void
+catch_tell(string s)
+{
+    object m, e;
+    string x, y;
+    if(!owner) return;
+    if((sscanf(s, "%s leaves on " + on_what() + " %s.\n", x, y) == 2) 
+    && ((string)owner->query_name() == x) && (this_player() && this_player() == owner))
+
+      command(y, this_object());
+}
+
+move_player(x)
+{
+    object a;
+    string y, z;
+
+    if(!owner) return ::move_player(x);
+    sscanf(x, "%s#%s", y, z);
+    if(!(a = find_object(z))) z->load_it();
+    a = find_object(z);
+    move_object(this_object(), a);
+}
+

@@ -1,0 +1,12 @@
+  I am in the process of changing quests so that the cheat sheets that
+are out there do not accurately reflect the solutions.  I have done
+some changing to yours and finished 3/30/97.  Specifially, I've done
+the following things:
+  *I added an access card to the assistant in ~/hire/level4.c
+  *I made a duplicate room of ~/tunnel.c and called it ~/Etunnel.c
+  *instead of 'touch light' they must now 'insert card'
+  *I moved the location of entry to the ~/quest/shockroom from
+     ~/quest/hive12.c to hive1.c
+The rest of the quest was left basically intact but will require a
+redo to find the  appropriate combos.  
+	-Eurale

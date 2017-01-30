@@ -1,0 +1,16 @@
+  -- COORDINATION --
+
+TYPE: Spell (Variable)
+INT REQ: 1/level
+USAGE: coordination
+COST TO MAX: 1,560,000 xp
+
+This spell raises your ability to avoid damage from an enemy
+and hit an enemy harder.
+
+      /=LEVEL=COST SP===DURATION===DEX REQ===XP COST===\
+      |   1  |   25   |  60 secs |    2    |    10,000 |
+      |   2  |   30   | 120 secs |    1    |    50,000 |
+      |   3  |   35   | 240 secs |    1    |   500,000 |
+      |   4  |   40   | 480 secs |    1    | 1,000,000 |
+      \================================================/

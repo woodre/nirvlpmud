@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "Joab Clan"
+long_desc "This is the Private Clan of Joab. Type 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "spandex"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is the Private Clan of Joab. Type 'clan_help' for commands."
+clan_short "Joab Clan"
+damage_type "physical"
+hall_path "/room/temple/1"
+object_name "spandex"
+owner "joab"
+spell_alias "Blast"
+spell_mess_me "%hi white%You B L A S T %AKN% with EMINENCE F O R C E!!!%normal%"
+spell_mess_room "%hi white% %TPN% Joab used EMINENCE F O R C E to ATTACK %AKN% his F O E!!!"
+spell_mess_them "%hi white%You have been B L A S T E D with EMINENCE F O R C E!!!%normal%"
+abilities ({})
+chan_history ({})
+leaders ({})
+join_type 2
+private_coffer 2480070
+public_coffer 0
+spell_delay 5
+spell_id 1
+spell_cost 80
+last_spell_time 1259269488

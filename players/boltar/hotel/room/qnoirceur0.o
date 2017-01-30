@@ -1,0 +1,23 @@
+no_clean 0
+name "Tarrasque Plate"
+alias "plate"
+short_desc "Tarrasque Plate, tougher than nails"
+long_desc "Clearly the best armor you can get."
+value 2000
+weight 3
+type "armor"
+protect "physical"
+special "do_special"
+size 0
+save_flag 0
+worn 0
+ac 4
+res 0
+silently 0
+worn_by 0
+next 0
+info 0
+ac_hold 0
+broke 0
+set_ac_flag 7
+params 0

@@ -1,0 +1,14 @@
+
+
+                           [help shock]
+-----------------------=========+=========-----------------------                                    
+
+Usage: shock <target>
+       sh <target>
+
+   This command will cast the spell Shock. When in combat no argument
+is necessary, as it will automatically target your opponent. If not
+in combat then casting this on a monster will start a fight. Shock
+has a cost of 15 spell points to cast each use and does 1-30 points
+of damage. You must be level 10 to cast this spell.
+

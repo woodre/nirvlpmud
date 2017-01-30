@@ -1,0 +1,18 @@
+From: dragnar
+Subj: mons spells
+
+Date: Jun 25 23:18
+
+You were right. The old spell types are called from heart_beat, 
+however add_spell spells are called from attack().  Which I think 
+means that Gnarlin could fire 2 of those spells in a single round. 
+Fearsome. 
+--Gnar 
+
+From: dragnar
+Subj: Gear
+
+Date: Sep 15 12:25
+
+Hotel didn't work? What about clan/guild storage? 
+

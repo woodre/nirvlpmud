@@ -1,0 +1,17 @@
+Created 11/15/05 by Earwax:
+
+The following are the conventions for filenames and paths supported
+here:
+
+~:  Your home directory
+~filename:  Filename in your home directory
+~wizname/filename:  /players/wizname/filename
+~wizname/dir/filename:  /players/wizname/dir/filename
+../../doc:  .. moves dir up one level, so if this was done from home
+            directory, it would result in /doc
+blah/blah2/filename:  Would be your pwd/blah/blah2/filename
+
+To have a path/filename converted to the absolute path (meaning
+the full path and filename from root) use the sfun resolve_path().
+
+See also: wizhelp wildcards, efun resolve_path()

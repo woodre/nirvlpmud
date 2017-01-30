@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "Triluminary[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "triluminary"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "Triluminary[0m"
+damage_type 0
+hall_path "/room/sunalley2"
+object_name "triluminary"
+owner "deacon"
+spell_alias "Pray"
+spell_mess_me "You %hi black%PRAY%normal%%hi white% for the blessing of your Deity%normal%"
+spell_mess_room "%TPN%%hi black%PRAY%%normal% to %TP_POS% deity"
+spell_mess_them "%TPN%%hi black%PRAY%normal%%hi white% for the blessing of %TP_POS% deity"
+abilities ({})
+chan_history ({"[Thu Jun 19 23:59:03 2008] Deacon: i just hope i can kill sembak","[Thu Jun 19 23:59:03 2008] Sparkle: just is.. paternity kits and you turn them in.. in the hospital lol its game, its funny","[Thu Jun 19 23:59:17 2008] Deacon: lol","[Fri Jun 20 00:00:13 2008] Sparkle: lol told you my ex did that one time.. it wasnt his lol","[Fri Jun 20 00:00:29 2008] Deacon: yea, ya did","[Fri Jun 20 00:00:31 2008] Deacon snicker","[Fri Jun 20 00:06:03 2008] Sparkle: and if i do it, he'll know lol","[Fri Jun 20 00:06:11 2008] Deacon: heh","[Fri Jun 20 10:17:01 2008] Deacon: damn, couldnt break down your door, lol","[Fri Jun 20 10:17:19 2008] Sparkle: I can unlock it if you like","[Fri Jun 20 11:45:22 2008] Deacon: what is nico gonna be","[Fri Jun 20 11:45:32 2008] Sparkle: not sure yet.. thinkin mage maybe","[Fri Jun 20 11:45:58 2008] Deacon: heh, kewl","[Fri Jun 20 11:46:02 2008] Sparkle: why you ask?","[Fri Jun 20 11:46:08 2008] Deacon: no reason","[Fri Jun 20 11:46:12 2008] Sparkle: kk :)","[Fri Jun 20 11:46:22 2008] Deacon lick sparkle","[Fri Jun 20 11:46:30 2008] Sparkle: Enjoy :)","[Fri Jun 20 11:46:36 2008] Sparkle: the food that is lol","[Mon Aug  4 16:19:42 2008] Deacon: rar",})
+leaders ({})
+join_type 0
+private_coffer 22783
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 30
+last_spell_time 1217053888

@@ -1,0 +1,36 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/sandstorm/hall/main","up","/players/mokri/clans/sandstorm/hall/r2","north","/players/mokri/clans/sandstorm/hall/r3","west","/players/mokri/clans/sandstorm/hall/r4","east","/players/mokri/clans/sandstorm/hall/r5","south","/players/mokri/clans/sandstorm/hall/r6","northeast","/players/mokri/clans/sandstorm/hall/r7","down","/players/mokri/clans/sandstorm/hall/r10","northwest","/players/mokri/clans/sandstorm/hall/r11","southwest","/players/mokri/clans/sandstorm/hall/r14","southeast",})
+short_desc "Clan Hall - locker room"
+long_desc "generic clan hall locker room."
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+call_out_func 0
+call_out_int 0
+call_out_int_rand 0
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"[31mThe Berserker Axe '[1;37mBite[0m[31m' [1;30m[[1;36m Chaos Honed [1;30m][0m [[1;32mSet of the Berzerker[0m][0m[0m","/players/jareel/weapons/stormbull/ROGAR/ChaosAx2",0,1,1,"[31mBerserker Axe '[1;37mRoar[0m[31m' [1;30m[[1;36m Chaos Honed [1;30m][0m [[1;32mSet of the Berzerker[0m][0m[0m","/players/jareel/weapons/stormbull/ROGAR/ChaosAx1",0,1,1,"A Hockey Stick[1m [Acuminated][0;0m","/players/jenny/wings/items/gstick",0,0,0,"A Hockey Stick[1m [Acuminated][0;0m","/players/jenny/wings/items/gstick",0,0,0,"A finely honed longsword[1m [Acuminated][0;0m","/players/snow/WEAPONS/hon_sword",0,0,0,"A finely honed longsword[1m [Acuminated][0;0m","/players/snow/WEAPONS/hon_sword",0,0,0,"A [1mdragon-head[2;37;0m katana","/players/illarion/high/obj/dkatana_new","22",0,0,"A [1mdragon-head[2;37;0m katana","/players/illarion/high/obj/dkatana_new","23",0,0,})

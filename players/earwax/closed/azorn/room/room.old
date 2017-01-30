@@ -1,0 +1,45 @@
+/*
+ *      File:                   /players/earwax/closed/azorn/lib/room.c
+ *      Function:               Inherit for Azorn quest area rooms
+ *      Author(s):              Earwax@Nirvana
+ *      Copyright:              Copyright (c) 2005 Earwax/David Halek
+ *                                      All Rights Reserved.
+ *      Source:                 10/21/2005
+ *      Notes:                  
+ *      Change History:
+ */
+
+#include "../defs.h"
+inherit "/room/room.c";
+
+void set_short(string arg) { short_desc = HIK+arg+" "+NORM; }
+
+/* 
+ * Function name:
+ * Description:
+ * Arguments:
+ * Returns:
+ */
+
+string realm() { return "NT"; }
+
+status okay_follow() {
+	if (this_player() && !((status)this_player()->is_npc())
+	&& (int)this_player()->query_level() < 19)
+	{
+		write("You are too inexperienced to follow into that area.\n");
+		return 0;
+	}
+	return 1;
+}
+
+void reset(status arg)
+{
+	if (arg)
+	  return;
+	
+	add_property("fight_area");
+  return;
+}
+	  
+

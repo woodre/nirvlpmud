@@ -1,0 +1,150 @@
+------------------GUEST REGISTER----------------
+200      Apr 24         Boltar
+203      Jun  8         Mosh
+204      Jun 10         Lucius
+208      Mar  8         Kaleia
+210      Jun 11         Breeti
+216      Jun 10         Teepo
+217      May 29         Wolfpac
+218      Jun  8         Sharpe
+221      Jun  7         Mantis
+225      Jun 10         Zidane
+227      Jun 12         Morpheus
+228      Apr 25         Slag
+235      Mar 16         Nelk
+239      Jun  3         Forsaken
+241      Jun  9         Gohan
+242      Mar  8         Helpme
+250      May 17         Archangel
+253      Mar 22         Circuit
+262      Jun  9         Feyth
+263      Jun 12         Jason
+264      Jun  1         Rage
+268      Jun  3         Pantera
+269      Mar  6         Wmurdoc
+270      Mar 20         Drizzt
+272      Jun 11         Psychax
+275      Feb 27         Cross
+276      Mar  2         Gravedigger
+277      Jun  5         Jamila
+280      Jun  2         Disturbed
+283      Jun  3         Vizjerei
+285      Jun  9         Tenchu
+286      Feb 26         Racsan
+287      Mar 18         Jexster
+290      Feb 28         Shadowlich
+291      Feb 23         Forgefire
+292      Apr 29         Feli
+293      Jun 12         Cgi
+294      Feb 28         Scoobydoo
+295      Apr 17         Gigalo
+296      Mar  3         Beer
+298      Jun  6         Savannah
+299      Mar 11         Vashara
+300      Jun 12         Chance
+301      Jun  3         Saliva
+302      Mar  9         Guest
+303      Jun  5         Piper
+304      May 19         Keeper
+305      Apr  9         Misohoney
+306      Apr 26         Lans
+307      May  3         Lyric
+308      Jun 11         Selena
+309      May 25         Scrag
+313      Mar 22         RESERVED
+316      Apr 13         Mara
+319      May 26         Toranaga
+324      Jun  2         Isabeau
+325      Jun  8         Grit
+326      Apr 17         Minnie
+328      Jun  4         Teiannia
+329      Apr 19         Snelz
+330      Apr 16         Ugh
+331      Jun  8         Tank
+332      Jun 12         Busta
+333      Jun 12         Zara
+336      Jun  1         Fantasy
+337      Jun 12         Krag
+338      May 20         Whatever
+339      Jun 12         Moadeep
+341      May 25         Budman
+343      Jun  8         Devon
+344      Jun 12         Hakashu
+345      May 28         Kristos
+346      May 28         Howdy
+347      Jun 12         Hardly
+348      Jun  1         Music
+349      Jun  1         Scorpion
+350      May  4         Kalypso
+351      Jun  6         Whitewolf
+352      May 25         Whoa
+353      Jun 13         Aphix
+354      May 12         Erik
+355      Jun 11         Sparkle
+357      Jun  8         Rykus
+358      Jun 11         Keli
+359      May 29         Kazil
+361      Jun 12         Talis
+362      Jun 12         Delilah
+363      Jun  8         Telina
+364      Jun  3         Tkai
+366      May 21         Elvonrash
+369      May 20         Tallos
+370      May 21         Apu
+372      Jun  5         Tricie
+373      Jun 12         Jubei
+374      Jun 12         Zander
+375      Jun 11         Fionn
+376      May 25         Debbie
+377      Jun 1#include "room.h"
+init() {
+     ::init();
+     add_action("look", "look");
+     add_action("look", "l");
+     add_action("look", "examine");
+}
+
+look(str) {
+  if (!str) return 0;
+  if (str == "at grass"||str=="at rocky fields" ||str=="at field" ||
+      str=="at fields") {
+    write("The grassy field is full of large and small rocks alike.\n"+
+         "making the land unusable for farming, grazing, and difficult\n"+
+         "to travel across.\n");
+    return 1;
+  }
+  if (str == "at mountains" || str=="at cliff" || str=="at gap") {
+    write("The mountains rise steeply to the north and west. To the\n"+
+       "west is small opening but it appears impassable from fallen\n"+
+       "rocks and trees.\n");
+     return 1;
+  }
+  return 0;
+}
+
+ONE_EXIT("room/sunalley1","east",
+"Sun alley",
+"Sun alley runs east-west along the edge of mountains and cliffs to\n"+
+"the north. There are also mountains to the west blocking all but a\n"+
+"small gap. The south side of the road is just rocky fields difficult\n"+
+"to travel on
+Busta leaves west.
+Busta arrives.
+Busta leaves south.
+Starfire ( player 9 ) has left the game.
+Blade ( player 19+14 ) has entered the game.
+Sparkle arrives.
+Sparkle leaves west.
+Sparkle arrives.
+Sparkle smiles at you.
+Sparkle leaves west.
+update front_desk
+Everything you see is disolved. Luckily, you are transported somewhere...
+room/void
+The void.
+You come to the void if you fall out of a room, and have nowhere to go.
+Give the command 'church', and you will come back to village church.
+players/boltar/casino/front_desk will be reloaded at next reference.
+->> goto front_desk
+players/boltar/casino/front_desk
+You are in the opulent lobby of the Casa de Nirvana Hote

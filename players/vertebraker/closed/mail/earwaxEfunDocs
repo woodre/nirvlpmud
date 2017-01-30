@@ -1,0 +1,9 @@
+/doc/Driver/efun/ and typeof, mapp - I know those two work, I haven't
+tried out the others in that directory yet, but I know typeof() and
+mapp() work for sure.  Can you cp them to /doc/efun ... just so we
+can work on having all the efuns in one place instead of in 
+/doc/efun
+/doc/efun/DR-driver
+/doc/Driver/efun
+
+Etc

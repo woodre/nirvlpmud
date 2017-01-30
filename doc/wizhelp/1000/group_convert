@@ -1,0 +1,20 @@
+**************
+
+
+                     Group_Convert
+
+Syntax:    group_convert [letter]
+
+Desc:
+           Scans through directory /pfiles/letter/. removes all players found there
+           from the 'players' database, and re-creates them.
+
+Example:   group_convert x
+                  results
+           Takes all players whos names begin with 'x' and updates their entries in the
+           'players' database
+
+Related:   player_convert
+
+
+**************

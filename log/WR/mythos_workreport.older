@@ -1,0 +1,465 @@
+Sun Dec  1 15:02:42 1996 ** fixed /players/unsane/closed/hell/claw.c  the original is now CLAW.bak  ... i fixed it so it is now legal ... (btw it was saveable before so  i set it up to be legal as savable)
+Sat Dec  7 22:40:44 1996 ** added in a query_tellblock() check in /players/snow/ITEMS/feeler.c
+Sun Dec  8 09:55:42 1996 ** added in a sp drain to /players/pavlik/armor/storm_cloak.c
+Sun Dec  8 09:55:59 1996 ** to balance the internal attack on line 32
+Sun Dec  8 10:13:30 1996 ** added a destruct sequence to players/unsane/xmen/staff once all charges are used up
+Sun Dec  8 10:15:05 1996 ** also changed the number opf charges.. no longer 7 it is now 3 + random(5)
+Sun Dec  8 10:29:32 1996 ** gave back akumalore's bloodscar (/players/dragnar/closed/scar.c) he lost his autoloads in the crash 2 days ago....
+Sun Dec  8 11:23:24 1996 ** unguilded reaver .. apparently the vampire guild leave doesnt clear the guild name .. mailing noonelese
+Sun Dec  8 11:30:15 1996 ** mved /players/catwoman/t begin.c to begin.bak...  its a way to do easy kills... ill probably fiddle with the code a bit later when i have more time
+Fri Jan 24 21:39:45 1997 ** fixed /players/hurtbrain/obj/pigeon.c so that it checks for nt and invis
+Sat Jan 25 03:14:21 1997 ** mved /players/reflex/amberlee.c to AMBER.bak  this was an issue before.. i.e. no personalized rooms to be coded for a player
+Mon Jan 27 21:15:21 1997 ** dungeoned gimp - pogg.. for the postings of quests on the adv_board
+Mon Jan 27 21:18:45 1997 ** same as gump
+Sat Feb  1 01:59:50 1997 ** gave 1928537 xp to akumalore..  his second death was a bugged death via my deat h room. (somehow two demons appeared)
+Sat Feb  1 09:24:49 1997 ** fixed tiamat7.c (in mizan/closed) he requested that a heal_self neg check be placed
+Wed Feb  5 22:42:12 1997 ** uploaded some files for daranath (he doesnt have ftp access as of yet)
+Sat Feb 15 09:01:02 1997 ** commented out the autoloads in blue's castle... the shadow's are gone and a autoloading wiztool is a nono
+Sat Feb 15 11:04:03 1997 ** copied over /players/saber/closed/new_mini to daranath's dir ... permission granted from saber
+Sat Feb 15 11:05:10 1997 ** set up terse and charisma to log in in daranath's workroom.. for daranath so that he may test materal
+Sat Feb 22 08:51:22 1997 ** added in a 1 in 3 chance for players/trix/castle/dismonst/guy to be aggressive
+Sat Feb 22 08:53:42 1997 ** added in a 1 in 4 chance for players/trix/castle/dismonst/girl to be aggressive
+Sat Feb 22 09:04:56 1997 ** added in a 1 in 3 for aggessive in players/scathe/monsters/mmaster
+Sat Feb 22 09:25:31 1997 ** added in #include "/players/mythos/amon/hb_ag.h" to /players/scathe/monsters/elder.c
+Sat Feb 22 09:27:14 1997 ** added in #include "/players/mythos/amon/hb_ag.h" to /players/trix/castle/dismonst/guy.c
+Sat Feb 22 09:29:07 1997 ** added #include "/players/mythos/amon/hb_ag.h" to ~/amon/forest/ryo2.c and ryo4.c
+Sat Feb 22 09:55:01 1997 ** players/mythos/amon/hb_ag.h is a small heart_beat() add that allows the monster to attack randomly every so often when not in combat
+Sun Feb 23 20:08:10 1997 ** set charisma's ste,sta , mag to 20 for daranath - i made a booboo in the wiz_tool_master.c  *wah*
+Sat Mar  1 07:50:05 1997 ** mailed nooneelse about demon_wrath.h, hoptooffice , returnto office and sanctuary.... waiting the standard week
+Sat Mar  1 07:54:00 1997 ** after seeing one of the vamp gcs abuse the office commands.. i have gone in and added an sp check for the hop_to_office and return_from_office spells in the vamp guild.. mailed nooneelse
+Sat Mar  1 11:40:06 1997 ** mailed pavlik about players/pavlik/mages/obj/dragon   players should not see #'s
+Sat Mar  1 11:40:26 1997 ** waiting the usual week
+Sat Mar  1 13:19:58 1997 ** am in the oking part of eurale's area... some things need to be cleaed up
+Sat Mar  1 13:20:21 1997 ** cleared that was
+Sat Mar  1 15:24:40 1997 ** checked snow's guild weapons... as he has made a few changes to them... looks good...
+Tue Mar  4 20:19:25 1997 ** took out the clone for daranath's castle in /players/mizan/castle.c
+Wed Mar  5 05:35:20 1997 ** oked eurale's new area the Keep... i still shudder at the idea of a dragon being the same as the average toughy.. level 20 - 23
+Wed Mar  5 05:46:10 1997 ** took out the loading of the obit.c in /players/mizan/castle.c
+Wed Mar  5 19:49:56 1997 ** opened Daranath's first realm.. Clearing...
+Wed Mar  5 19:51:12 1997 ** promted daranath to level 40
+Mon Mar 10 16:46:31 1997 ** changed /players/hawkeye/monster/private  's money to 0
+Tue Mar 11 21:19:48 1997 ** added in /players/cosmo/jb/jukebox.c to load in the /room/pub2.c at boot (added it into my castle )
+Tue Mar 11 22:08:34 1997 ** added in /players/mythos/amon/hb_ag.h to the players/pathfinder/detroit/monsters/blood.c
+Tue Mar 11 22:11:07 1997 ** added "/players/mythos/amon/hp_ag.h" to players/pathfinder/detroit/monsters/crip.c
+Tue Mar 11 22:15:30 1997 ** changed value of players/pathfinder/detroit/weapons/knife.c from 1500 to 100....
+Fri Mar 14 23:51:11 1997 ** unguilded nepthys ... her polymorph guild file got wiped and she elected to start over rather than playing around with the guild files
+Mon Mar 17 15:48:05 1997 ** oked llew's new realm the Toys..  it is now openable
+Tue Mar 18 20:08:07 1997 ** oked /players/nooneelse/black/lib/rip_throat.h
+Tue Mar 18 20:52:19 1997 ** added in set_extra_level into the wiztool as well as fixed the short()
+Tue Mar 18 21:04:44 1997 ** granted llew level 50 for his area and quest
+Wed Mar 19 22:30:05 1997 ** because /players/hawkeye/monster/rambo.c is no longer in game (i.e. the file is gone) i have commeneted put the section that supposed to load rambo.c in /players/hawkeye/room/rambo.c
+Thu Mar 20 17:53:31 1997 ** fixed /players/catwoman/obj/amulet.c line 57 move_object was spelled move_objcet
+Thu Mar 20 19:41:46 1997 ** oked the cyberninja's cybereyes....  to be placed into the cyberninja newdaem.c... basically allows cybers to see in the dark
+Fri Mar 21 17:04:09 1997 ** added into /players/bastion/closed/ring.c so that guest can not have one
+Fri Mar 21 17:22:16 1997 ** fixed /players/daranath/underdark/level1/farm_hut.c for daranath so that the serch function works properly
+Sat Mar 22 07:59:24 1997 ** made players/pavlik/armor/bracers br_punch() static as well as cost 2 sp
+Sat Mar 22 08:18:35 1997 ** added in a query_invis() and query_tellblock to /players/pavlik/armor/tel_helm.c
+Mon Mar 24 19:43:02 1997 ** oked cninja's shadow spell.... since they can not move when shadowed...
+Thu Mar 27 05:35:23 1997 ** rmed /players/torture/wiztoy.c ... level 21 can not have custom made wiztools
+Sun Mar 30 20:43:26 1997 ** announced Eurale's full seniorship as well as snow's acting seiorsip over monsters
+Sun Mar 30 21:02:06 1997 ** oked snow's dark area to open
+Wed Apr  2 08:23:44 1997 ** added in a query_sp() into my pets... so it checks if owner has > -10 it drains 1 - 2 sp
+Wed Apr  2 20:55:56 1997 ** change about ~/mmon/dance.c to fit snow's suggestions... actually i made some sick additions..:> *grins*
+Thu Apr  3 09:43:21 1997 ** reopened players/mizan/etheriel/ROOMS/tempest.c with tiamat in it.. i added a sick twist to tiamat7.c
+Fri Apr  4 08:06:15 1997 ** fixed players/bastion/isle/wiz/arena.c (snow had placed his comment on a wierd line disrupting the code
+Fri Apr  4 08:51:53 1997 ** fixed players/trix/castle/town/monst/sting.c so that set_ac comes After wearing the web
+Fri Apr  4 08:52:22 1997 ** 0
+Fri Apr  4 08:52:26 1997 ** wups the path was players/trix/castle/town/monst/ungwe.c
+Fri Apr  4 11:47:23 1997 ** brought back my test char braxana... doing experiments with directories
+Sat Apr  5 09:39:30 1997 ** added in a sp drain to players/pain/NEW/arm/helm2 as well as a destruould it become broken object is still savable ac 2
+Sat Apr  5 10:17:04 1997 ** changed rnd 7 to rnd 5 for chance of tiamat7.c to decide to attack player instead of npc (duuring combat with npc)
+Sat Apr  5 10:17:19 1997 ** above is per mizan
+Sat Apr  5 10:34:58 1997 ** raised weight of ~/awep/forest/shurato.c up to 7 and increased the chance of chaos taking hold
+Tue Apr  8 11:46:52 1997 ** fixed /players/heroin/hunting_grounds/preds/hg1 - hg 10 and hg100.c from set_light(5) to 2 .. i see nothing in the description that would give reason to light of that amount...
+Sat Apr 12 08:31:24 1997 ** fixed players/nightshade/weap/carp_sword.c  snow had recoded the weapon_hit() wrong using attacker_ob() instead of attacker, also added a small visual effect doing 1 - 5 damage
+Fri Apr 18 17:04:44 1997 ** ddun sparrowhawk for roboplaying...
+Sat Apr 19 09:26:16 1997 ** fixed players/catt/monk.c  was missing a ;
+Sat Apr 19 09:28:09 1997 ** fixed players/catt/mons/emperor.c  mssing ;
+Sat Apr 19 09:30:06 1997 ** changed wc of /players/catt/monk.c to 7 + rnd(4)
+Sun Apr 20 22:19:39 1997 ** set up bard levels = actual levels /2 until saber fixes his mess
+Sun Apr 20 22:58:49 1997 ** gave odin 90k xp to replace 1/2 of what he had lost by his last death.. his last death is fishy.... i saw the logs... so insetad of giving full i gave half because its a situation that needs further looking into (its partially his fault as well as something else im looking into)
+Sun Apr 20 22:59:08 1997 ** boy the above was redundant.. im tired....im going to bed soon..:
+Tue Apr 22 18:02:31 1997 ** fixed hinotori.c
+Thu Apr 24 23:03:54 1997 ** set thorgrim back to level 17 with stats as well.. he is a person i know in rl who wishes to bring back this char
+Mon Apr 28 08:43:32 1997 ** changed /players/eurale/Abyss/entry2.c for eurale..
+Sat May  3 08:40:49 1997 ** gave odin 400859 xp for compensation of buggy death
+Sat May  3 08:43:00 1997 ** healed and set odin's level to 16 (again matching the xp addition)
+Tue May  6 07:04:35 1997 ** included my /players/mythos/amon/hb_ag.h into /players/hippo/c/contr_wave.c
+Tue May  6 07:05:38 1997 ** same with /players/hippo/c/valvula.c
+Tue May  6 07:07:35 1997 ** same with /players/hippo/c/thrombo.c
+Tue May  6 07:09:20 1997 ** same with ~/c/wow.c
+Tue May  6 07:10:52 1997 ** same with hiv.c
+Tue May  6 07:12:06 1997 ** same with calangerh.c
+Sun May 18 05:44:56 1997 ** fixed /players/saber/closed/bard/pwr/obscure.h
+Sat May 24 08:49:19 1997 ** granted dune level 60...  he both needs and deserves it
+Sun May 25 09:18:27 1997 ** added in a random(3) check in the weapon_hit for players/beren/Objects/Weapons/Olgyo/staff
+Sun May 25 09:21:05 1997 ** players/beren/Objects/Weapons/Olgyo/cudgel   - changed random(20) return to random(10)
+Sun May 25 09:23:06 1997 ** players/beren/Objects/Weapons/Gdemia/glongs.c  changed the check of special from random(10) > 2 return 0 to > 3
+Sun May 25 09:25:27 1997 ** players/beren/Objects/Weapons/Gdemia/gsword.c- changed return 5 + rnd(15) to return 5 + rnd(8)
+Mon May 26 09:02:04 1997 ** took the ; off the #include in players/emerson/heal/x-lax.c
+Mon May 26 09:05:01 1997 ** players/bagera/monster/louie.c- changed gold from 900 to 450
+Mon May 26 09:11:57 1997 ** line 54 of if(attack_spell(-50,8,20,TARG) == -1) - took out an extra ) , ill talk to geof laters
+Mon May 26 09:14:38 1997 ** fixed players/pathfinder/detroit/monsters/crip.c so that hb_ag.h includes properly
+Mon May 26 09:23:21 1997 ** /players/bagera/monster/wolf.c  gold->set_money(55000+random(150)) is a tad excessive dont you think? changed to 55 + rnd(150)
+Mon May 26 09:27:44 1997 ** /players/bagera/monster/ravish.c - interesting someone was using this as a cheater... (assuming it loads somewhere) lets see wc 16,ac 1,hp 1,level 19 creature... now a wc 25, ac 20, hp 800 level 19 creature with a spell chance of 70 damage 800
+Mon May 26 09:29:32 1997 ** /players/bagera/monster/elephant.c money was 950.. now 90
+Mon May 26 09:33:45 1997 ** /players/bagera/weapons/collar.c wc100000000000???  now 10
+Mon May 26 09:36:35 1997 ** /players/bagera/weapons/claw.c  wc 15 return (wis check > rnd(21)) hitplayer 4 return 1... now wc 13 rnd(50) hitplayer 4 return 1
+Tue May 27 22:02:51 1997 ** promted quicksilver to level 21... he hsa been granted wizship again....
+Thu May 29 00:11:53 1997 ** promoted daranath to 50 for his new additions to his underdark
+Wed Jun  4 07:26:29 1997 ** mv /players/ladyfinger/closed/ribbon.c to RIBBON.bak until level 40 the rule is to only use /obj/wiz_tool.c
+Fri Jun  6 08:36:59 1997 ** healed gargor  bcause of some screwy things that are going on with him... im investigating
+Sun Jun  8 20:59:33 1997 ** commented out the autoload striing in /players/catwoman/closed/glove.c no autoloading wiztools
+Fri Jun 13 23:10:37 1997 ** reset zeus's piety to 1 from -4... brught down his luc from 9 to 4 in exchange.... dont know how it got to -4...shouldnt have....:<
+Tue Jun 17 08:14:22 1997 ** changed the cost in /players/eurale/Wep/calm_wand.c fom 5 - 15 hp/sp to 35 - 40 hp/sp as well as added in a hp/sp check .. this is because all peace spells shall eventually cost 100 sp
+Tue Jun 17 08:19:37 1997 ** changed my flute.c as well to cost 30 - 60 sp/hp and 40 - 70 sp/hp for single target
+Wed Jun 18 09:16:20 1997 ** players/arrina/armor/sveil weight from 1 to 8
+Wed Jul  9 07:05:42 1997 ** fixed some typos in the long of /players/nightshade/room/trail.c
+Fri Jul 11 07:59:45 1997 ** opened my healing room players/mythos/reg.c , players/mythos/block.c deoes the healing... 30 coins per hp or sp healed  with 60 if both
+Sun Jul 13 07:30:11 1997 ** changed /players/saber/monsters/hero/rdragon.c from wc 32,ac17,spelldam 50 to wc 40,ac 20,spelldam 100
+Sun Jul 13 07:34:15 1997 ** /players/saber/monsters/hero/yuki.c from wc 30,spellchance 5,spelldam rnd75 to wc 38,spellchance 15,spell dam 50+rnd50
+Sun Jul 13 07:36:29 1997 ** /players/saber/monsters/hero/scorp.c from wc 31,ac 15,spelldam rnd40 to wc 37,ac 17,spelldam 30+rnd40
+Sun Jul 13 07:38:33 1997 ** /players/saber/monsters/hero/bdragon.c wc 32,ac17,spellchance5,spelldam rnd100 to wc 39,ac 21,spellchance 10,spelldam 80+rnd50
+Wed Jul 16 07:50:11 1997 ** unguilded ceinwen because som IDIOT set her guildname to something rather dumb and obcene
+Fri Jul 18 04:58:50 1997 ** changed /players/saber/monsters/lightning.c from wc 28,hp 475,spelldam 20 to wc 35,hp 600,spelldam 50
+Fri Jul 18 05:00:34 1997 ** /players/saber/monsters/banshee.c from wc 30,ac17,spelldam 30 to wc 33,ac 21,spelldam 70
+Fri Jul 18 05:02:53 1997 ** /players/saber/monsters/stormlich.c from wc 35,hp500,spellchance10,spelldam 40 to wc 40,hp 1000,spellchance 25,spelldam 90
+Fri Jul 18 05:04:12 1997 ** /players/saber/monsters/guardian.c from wc 32,ac 18,spelldam 40 to wc 35,ac 21,spelldam 80
+Fri Jul 18 05:55:42 1997 ** /players/unsane/xmen/uniform.c weight is now 4 from 1
+Mon Jul 21 08:09:03 1997 ** changed the final return of /players/llew/closed/crystal/xetra_claws.c from 2 to 0 else the weapon is effective wc is 22 not 20
+Tue Jul 22 17:43:53 1997 ** /players/deathmonger/MISC/laugh.c now checks for invis
+Tue Jul 22 17:54:25 1997 ** fixed /players/mizan/etheriel/items/nitro-glycerin.c so that laugh does not trigger it
+Wed Jul 23 00:31:10 1997 ** mv /players/pavlik/armor/isltkarn_ring.c to ISTLKARN_RING.bak (sp)
+Wed Jul 23 00:31:35 1997 ** mved the istlkarn_portal.c as well... because pavlik opened a nbew realm without approval...
+Wed Jul 23 08:18:41 1997 ** fixed /players/mizan/etheriel/items/solenoid.c it was missing a str in the first line of id()
+Thu Jul 24 10:58:49 1997 ** /players/zone/obj/loincloth.c - added a quick long and changed the weight from 1 to weight of 4 (ac 4)
+Thu Jul 24 11:11:12 1997 ** /players/zone/monster/banshee.c hp 200,wc15ac10 -> hp 250,wc20ac12
+Thu Jul 24 11:15:27 1997 ** /players/zone/monster/boar.c level17wc17hp500ac5 -> level17wc26ac14hp500
+Thu Jul 24 11:19:05 1997 ** /players/zone/monster/goblin.c leve7hp70wc12ac5 -> level7hp105wc12ac6
+Thu Jul 24 11:22:53 1997 ** /players/zone/obj/collar.c weight 0 -> weight 1
+Thu Jul 24 11:25:02 1997 ** /players/zone/obj/leash.c weight 0->weight 1
+Thu Jul 24 11:26:49 1997 ** /players/zone/obj/lemmingskin.c weight 0-> weight 3
+Thu Jul 24 11:28:14 1997 ** /players/zone/obj/mushrooms.c weight 0->wieigth 1
+Thu Jul 24 11:31:30 1997 ** /players/zone/obj/sword.c rnd(100)<100 return 100  ->  rnd(100)<30 return 7 as well as weight 1 -> weight 5
+Thu Jul 24 11:38:30 1997 ** /players/zone/monet/demon.c level19hp175wc19ac17 -> level19wc30ac19
+Thu Jul 24 11:39:11 1997 ** above hp changed to 475
+Thu Jul 24 11:41:04 1997 ** same dir dog.c level7wc6ac2hp50 -> level7hp120wc12ac7
+Thu Jul 24 11:42:48 1997 ** druid.c wc14 ->wc 20
+Thu Jul 24 11:44:54 1997 ** dunk.c hp30wc5ac2 -> hp75wc9ac5
+Thu Jul 24 11:46:51 1997 ** hunt.c level21hp400wc17ac13 -> level21hp600wc35ac20
+Thu Jul 24 11:48:38 1997 ** guardian.c level25hp1500wc25ac15 ->level25hp1500wc40ac25
+Thu Jul 24 11:49:48 1997 ** guardian.c also spelldam 10 -> 100
+Thu Jul 24 11:51:24 1997 ** huntmaster.c level20hp1500wc20ac10sppdam10 ->level20hp1500wc30ac10sppdam40
+Thu Jul 24 11:52:20 1997 ** above ac 10 -> ac 20
+Thu Jul 24 11:55:28 1997 ** lem.c = dunk.c lem2.c = lem3.c = dunk.c with change from lemmingskin.c to leash.c
+Thu Jul 24 11:56:32 1997 ** monkey.c level 20hp200wc10ac17 -> level20hp500wc30ac17
+Thu Jul 24 11:57:46 1997 ** monkeyking.c level30hp1750wc25ac20 -> level30hp1750wc50ac25
+Thu Jul 24 11:59:01 1997 ** ronin.c level25hp500wc25ac20 -> level25hp600wc50ac23
+Thu Jul 24 12:00:24 1997 ** shaman.c level18hp200wc15ac12 -> level 18 hp450wc28ac15
+Thu Jul 24 12:02:27 1997 ** tengu.c level19hp1000wc19ac17 -> same but wc 30
+Thu Jul 24 12:04:01 1997 ** weight.c level19hp300wc18ac15sppdam5 -> level19hp475wc30ac17sppdam30
+Thu Jul 24 12:05:06 1997 ** temp.c = wicker.c
+Thu Jul 24 12:05:30 1997 ** /players/zone/monster/wraith.c
+Thu Jul 24 12:06:04 1997 ** level19hp800wc18ac15sppdam15 -> level19hp800wc30ac17sppdam30
+Fri Jul 25 07:37:15 1997 ** bugged wocket at pain's request
+Fri Jul 25 08:55:06 1997 ** /players/pavlik/items/dove_feathers.c
+Fri Jul 25 08:55:30 1997 ** weight was 0 changed to 1 and mailed pavlik about adding cost
+Fri Jul 25 09:08:12 1997 ** fixed /players/saber/closed/new_mini/spells/dream.h so that tellblock blocks it (succubus' dream)
+Fri Jul 25 15:09:54 1997 ** ddun corleone because he was logged on with cocaine at the same time.. when discovered had the stupid idea of running.. he logged off cocaine and dced corleone
+Thu Jul 31 07:32:18 1997 ** mved /players/pavlik/items/dove_feathers.c to DOVE_FEATHERS.bak... i asked tat pavlik change this about 1 week ago.. he hasnt so i have made it unloadable
+Thu Jul 31 08:37:26 1997 ** /players/heroin/hunting_grounds/preds/bioarmor.c weight of 1 now is 3
+Fri Aug  1 10:27:06 1997 ** mved both /playyers/kain/teddy.c and enkil.c to respective cap.bak files.. ac 1,wc1,level1,hp1000 creatures made for only 1 player is a nono
+Tue Aug  5 08:55:27 1997 ** rmed /players/nightshade/closed/AREA  its a log of those who enter the castle.c it was over 500k large
+Fri Aug  8 08:59:15 1997 ** added in an extra check in /players/hawkeye/items/good.c so that if align > 450 only add 10 to align
+Fri Aug  8 09:05:07 1997 ** /players/hawkeye/room/shop.c now gives only 1000 + rnd 100 if value above 1000
+Fri Aug  8 09:08:43 1997 ** /players/hawkeye/monsters/hawkeye.c ac17wc34+rnd3hp550 -> ac20wc38+rnd3hp1500 (level is 21)
+Fri Aug  8 09:53:15 1997 ** commented out 4 lines in /players/hawkeye/castle.c as they load his wiztool
+Fri Aug  8 12:21:47 1997 ** mved /players/trix/closed/obj/fangs.c to FANGS.bak and summer.c to SUMMER.bak... it was a one person item (nikki) which gave access to a low level summerhead??  i dont think so
+Fri Aug  8 15:09:31 1997 ** healed massa and dested the poison off massa as this involves a broken hb
+Fri Aug  8 15:20:27 1997 ** approved kain's /players/kain/roses.c
+Sat Aug  9 09:45:37 1997 ** /players/trix/castle/quest/monst/helmet.c weight from 1 to 4.. its a ac 2 platinum helmet... it should be somehwat heavy
+Sat Aug  9 09:48:44 1997 ** /players/cyrex/tarmor.c weight 3 set to 8.. its a "Heavy Polymer Armor"
+Tue Aug 12 08:25:33 1997 ** fixed /players/bastion/closed/ring.c so that one can only have one wedding ring at a time
+Tue Aug 12 15:35:10 1997 ** /players/snow/closed/cyber/droid.c added line 238 which checks to make sure that the item has weight and is not money
+Tue Aug 12 20:01:57 1997 ** /players/blackadder/grenade.c added in a check for npc.. so that it cant be used on players.. the original check was only for valid_attack...
+Wed Aug 13 10:35:20 1997 ** added in a npc check to /players/blackadder/mi_wand.c
+Wed Aug 13 10:46:01 1997 ** /players/blackadder/trumps dir mved black.c, gen_trump.c, church.c,trump.c to respective .bak files.. the trumps are cool but i dont have the time to make them fully legal the tub.c i have allowed because it only goes to a diferent realm of blackadder
+Fri Aug 15 00:16:57 1997 ** /players/nooneelse/romulan/romunlan_bridge.c  commented out the set_ep(800k) thingy for the first officier.. a level 16 wc 20 ac 16 monster for 800k xp.. i dont think so
+Fri Aug 15 14:27:52 1997 ** /players/unsane/closed/hell/mane.c added a check so that if alignment is > -800 then the addalignment(-200) otherwise no alignment change
+Sun Aug 17 02:19:52 1997 ** gave odin back 538745 xp so to compensate for a buggy death casued by a glitchy monster
+Tue Aug 19 07:19:16 1997 ** mved /players/quicksilver/closed/foo.c to foo.bak  no wiztool till level 40
+Wed Aug 20 22:53:27 1997 ** reset shek's mag to 20 as well as ste (both were are 21 and 22 respectively)
+Thu Aug 21 02:08:23 1997 ** ddun armagedon....
+Thu Aug 21 02:08:53 1997 ** also set up a check for pogg's ip
+Thu Aug 21 20:56:28 1997 ** approved /players/wocket/closed/orb.c to be allowed in game
+Mon Aug 25 08:59:59 1997 ** mved /players/ladyfinger/room/prison.c to pri.bak too much abuse of ladyfinger's stuff
+Mon Aug 25 09:46:35 1997 ** set up /players/hurtbrain/life.c so that it clears the guild files and whatnot of the players- the Undead guild is no longer
+Mon Aug 25 09:48:53 1997 ** /players/trix/center.c deleted the lines that cloned the undeadguild obj reseter
+Mon Aug 25 09:58:01 1997 ** fixed /players.hurtbrain/guildent.c so that the only action is east to the church
+Mon Aug 25 10:03:14 1997 ** /players/trix/closed/guild/guild_room.c set up so only action is church
+Mon Aug 25 10:10:00 1997 ** /players/gorgan/closed/guild/guild_adv_room.c fixed so the only action is church
+Tue Aug 26 08:23:31 1997 ** /players/hawkeye/closed/guild/join.c took out the sign as well as commented out all actions to do with the monks
+Tue Aug 26 22:47:40 1997 ** mved /players/kain/stupor.c to stupor.bak
+Wed Aug 27 00:00:30 1997 ** commented out the /player/hurtbrain/obj/newspeed.c in /players/hurtbrain/castle.c  undead are obsolete ...
+Fri Sep  5 22:04:12 1997 ** fixed /players/saber/effects/torch.c so the callouit checks for !environ
+Fri Sep  5 22:07:14 1997 ** /players/saber/armor/dragonhelm.c now checks for !environ
+Fri Sep  5 22:09:43 1997 ** /players/saber/monsters/hero/yuki.c checks for !environ now
+Sun Sep  7 23:07:31 1997 ** /players/wocket/mushrooms/lance.c weight was 0 now 8
+Tue Sep  9 12:11:31 1997 ** released mortarion at balowski's request
+Tue Sep  9 14:57:19 1997 ** added /players/saber/closed/old_bard/instrument.c to saber's castle of autoloads
+Tue Sep  9 14:57:41 1997 ** the above object will become the new bard instrument
+Wed Sep 10 20:00:11 1997 ** set revenge,dreamspeakr,medewsa ste to 19 because of their ste being 24
+Wed Sep 10 20:03:43 1997 ** deraak mag was 21 now 20
+Wed Sep 10 22:44:53 1997 ** added in line 132 to /players/pin/NEW/ashop.c so that the proper set_weightis done
+Thu Sep 11 16:24:44 1997 ** /players/mistress/other/heal.c had a bug in it that allowed players to if they had multiple disks to hand them one by one to the scientist and get a free heal
+Thu Sep 11 16:25:09 1997 ** fixed the bug and made an extra surprise for those that have exploited this bug
+Thu Sep 11 16:37:30 1997 ** basically the bug was that players would by from boltar's clothing shop a piece of clothing with the id of "disk"
+Thu Sep 11 16:37:45 1997 ** everytime they handed the scientist a "disk" they got a free heal
+Thu Sep 11 16:37:54 1997 ** again, this has been fixed
+Thu Sep 11 18:36:32 1997 ** set wolfbane's ste to 19 as it was 24
+Fri Sep 12 15:25:40 1997 ** bug for torture is set... snow to sponsor torture with clear understanding of rules...
+Tue Sep 16 16:07:41 1997 ** reinstated darkfire
+Tue Sep 16 18:00:19 1997 ** /players/eurale/Keep/death_mace.c took out the hit_player(6) which makes with the return 7 effective 18 return 13 and increased weight from 2 to 7
+Tue Sep 16 18:05:47 1997 ** /players/eurale/Dis/Hood/bsword.c had a hit_player(5) which made the weapon a 18 return 11  took out the hhit_player()
+Wed Sep 17 11:12:14 1997 ** /players/traff/delnoch/weps/halfsword.c  moved 2 lines so that the random check in the special checks first before checking id of monster  that way the special no matter what gets a 1 /3 chance
+Thu Sep 18 15:51:57 1997 ** mved /players/nooneelse/black/magic_dart.c  to ~/black/MAGIC_DART.bak  it is a weapon that allows the player to attack from a distance (if you can say distance in this object based world) highly illegal
+Thu Sep 18 18:43:16 1997 ** /players/nooneelse/black/svamp_servant.c line 58 was vampirefangs  fixed to vampire fangs typo was causing a bug with dismission of servants
+Thu Sep 18 20:32:11 1997 ** /players/catwoman/tshop.c value for items > 1000 was changed it was 1100 now is 1000
+Thu Sep 18 20:36:33 1997 ** /players/catwoman/ts.c took out sale of amulet of teleportation per boltar.. such item is not to be sold
+Thu Sep 18 21:19:16 1997 ** made /players/nooneelse/black/FIX.txt givig standard 1 week for nonimmediate
+Wed Sep 24 22:09:53 1997 ** /players/pathfinder/garbageman.c ...  added a check in the random_movement callout for !environment()
+Wed Sep 24 22:16:49 1997 ** /players/pathfinder/garbageman.c actually i changed it so that if !environ then move the object to room/adv_guild.c
+Thu Sep 25 20:42:27 1997 ** /players/morgar/tower3.c  the paladin that gets cloned.. wc 23 -> 28, hp 600 -> 1000, ac 16 -> 18  wups wc is now 35  the paladin has a nice wc 20 weapon....
+Mon Sep 29 20:34:11 1997 ** /players/blue/castle/infount.c weight of sword was 1 now is 4, also, spirit wc was set before wielding.. now it wields and then wc is set.. wc is now 33 was 27
+Mon Sep 29 20:37:08 1997 ** hp of above is now 780 was 500
+Mon Sep 29 20:49:43 1997 ** /players/blue/castle/tree1b.c  mac of gnome was ac 10 now 18
+Mon Sep 29 21:00:07 1997 ** /players/blue/castle/stable.c  stable hand was ac 10 and wc 19.. now is ac 18 wc 30
+Mon Sep 29 21:00:14 1997 ** also hp was 400 now is 600
+Tue Sep 30 13:33:59 1997 ** /players/mizan/closed/poly/golem.c added in an environment() check in the fake_beat callut
+Tue Sep 30 22:31:56 1997 ** dduned deathkitty for being a handaround char
+Wed Oct  1 08:55:20 1997 ** mved /players/pavlik/ilstkarn/ilstkarn_portal.c and ~/armor/ilstkarn_ring.c to respective .BAK2 files... the area has not been totally approved
+Wed Oct  1 12:24:16 1997 ** include /players/pavlik/ilstkarn/secret_entrance.c to the above as well
+Thu Oct  2 19:11:32 1997 ** reset braxana again....
+Thu Oct  2 20:27:07 1997 ** fixed /players/kain/sado.c at sado's request
+Sun Oct  5 23:43:58 1997 ** added a check() in /players/saber/ryllian/portal.c .. getting ready for invasion
+Mon Oct  6 19:38:49 1997 ** /players/heroin/huning_grounds/keys.c the special was going off 3/4 of the time.. it is now set to 1/4 of the time
+Sun Oct 12 21:34:14 1997 ** restored some of wulfgars stats and xp becuase of a wielrd bug/glitch that drained stuff
+Wed Oct 15 15:39:01 1997 ** promoted braxana (ME) to 80 so that i can utalize the exec function during testing
+Tue Oct 28 15:05:10 1997 ** put my bag back into play after recoding it to fit boltar's new standards... its weight is now 1/8th of the items inside and the selling remotely thingy takes 10% off the value
+Tue Oct 28 15:33:46 1997 ** added a new momnster to my hunter forest area... /players/braxana/horlach/mon/min_death.c is the creature... its tough a level 19 creature that averages 50hp of damage
+Wed Oct 29 09:51:41 1997 ** /players/saber/closed/bards/pouch.c now does the 10% off deal
+Wed Oct 29 10:18:55 1997 ** /players/saber/food/atone.c changed the formula a bit so that should the temp value go above 1000 only added value is 5
+Thu Oct 30 17:39:12 1997 ** BARDS guild has been closed
+Sat Nov  1 10:48:03 1997 ** took 10k xp and all his coins from rattlesnake ... he was abusing a bug with the clothing store and the magic pool in my realm
+Sat Nov  1 10:50:09 1997 ** gave back 2k xp for a small tip he gave me about the issue
+Sun Nov  2 12:56:05 1997 ** rauised price of the potion of atonment sold at /players/saber/food/atonshop.c from 300 to 7000
+Sun Nov  2 12:57:31 1997 ** raised value of a full potion from 300 to 7000
+Sun Nov  2 13:13:05 1997 ** /players/catt/mons/master_hunter.c is now level 20 .. was level 50.. *growls*
+Wed Nov  5 08:53:33 1997 ** fixed /players/snow/MONSTERS/iceoct.c so that the callout checks for environment() and checks if it is attacking
+Wed Nov  5 08:57:45 1997 ** /players/pain/NEW/items/star.c now checks for environmet() in its callout as well as this_player()  (callout stuff)
+Wed Nov  5 09:01:37 1997 ** /players/snow/closed/cyber/implants.c callout fake_beat now checks for environment()(
+Wed Nov  5 09:07:02 1997 ** /players/saber/fur/fireplace.c callout blaze now checks for environment()
+Wed Nov  5 09:09:48 1997 ** /players/snow/closed/cyber/hands.c now has a check for this_player() in reset
+Wed Nov  5 09:14:11 1997 ** /players/eurale/Glade/LOOT/shawl.c now checks for this_player() in the add and remove of guild_bonus()
+Wed Nov  5 09:17:06 1997 ** /players/pavlik/armor/storm_cloak.c callout funks now checks for environment() and environment(environment())
+Wed Nov  5 09:21:50 1997 ** /players/pavlik/mages/mage-master2.c callout mage_autosave checks to make sure member of users() has environment()
+Wed Nov  5 09:25:56 1997 ** /players/hawkeye/room/newent.c object army now object arm
+Wed Nov  5 09:28:11 1997 ** same deal with nnewentd.c
+Wed Nov  5 09:35:45 1997 ** /players/pavlik/mages/obj/dragon.c follow callout now checks for environment()
+Wed Nov  5 09:40:12 1997 ** /players/saber/armor/dragonhelm.c in callout dragon_talk now checks if environment() is living
+Thu Nov  6 21:41:56 1997 ** z
+Thu Nov  6 21:42:45 1997 ** because pain mved /players/wocket/closed/orb.c the castle wasnt loading properly... i had to comment out the cloning of said object in /players/wocket/castle.c
+Thu Nov  6 21:50:34 1997 ** /players/pathfinder/garbageman.c line 97 changed from command to init_command
+Fri Nov  7 08:56:41 1997 ** set lizzar's ste to 19 as it was 24
+Fri Nov  7 19:04:36 1997 ** /players/hawkeye/monster/private.c from level 0 now level 1 (set appropriate stats as well) because level 0 setting was causing bug calls
+Fri Nov  7 19:15:50 1997 ** /players/boltar/templar/shield.c  added in a check for this_player()
+Fri Nov  7 19:16:34 1997 ** in the done() so that the command() would go thru only if check returned true
+Sat Nov  8 11:31:36 1997 ** reset wulfgar's pie and luc to 1 (were -9)
+Tue Nov 11 22:08:57 1997 ** handed remy a /players/wocket/junk/quill.c at neowocket (wocket)'s request
+Wed Nov 12 22:37:16 1997 ** /players/saber/closed/new_mini/succ.c was wc 13 now is wc 10
+Fri Nov 14 07:24:35 1997 ** mved /players/snow/closed/cyber/rooms/arena.c arenalounge.c arenamon.c to respective .bak files
+Fri Nov 14 08:02:30 1997 ** mved /platyers/snow/closed/cyber/rooms/heal_pod.c to HEAL_POD.bak for there is no cost for the healing
+Fri Nov 14 08:13:03 1997 ** mved /players/anshar/closed/cninja/b_room.c to B_ROOM.bak until the android is fixed
+Fri Nov 14 08:17:18 1997 ** damn android shows exact damage done to it to whomever is attacking it
+Fri Nov 14 08:43:14 1997 ** added in a write() to /players/snow/closed/cyber/rooms/covert.c so that players know that the heal_pod.c has been plced out of order for now
+Fri Nov 14 09:03:59 1997 ** mved /players/nooneelse/black/regenerate_room.c to REGENERATE_ROOM.bak because of low cost healiing (initial cost of 50 sp and no cost during healing) (this allows sp transferarnce spells to be used in conjuction abusing the healing)
+Fri Nov 14 09:04:18 1997 ** plus the above issue is also none stable... one can do it almost anywhere
+Fri Nov 21 20:03:35 1997 ** gave illarion 137166 xp because of buggy deaths
+Wed Nov 26 22:24:16 1997 ** reset pitsniffer's ste to 18 since it was at 23
+Thu Nov 27 23:24:02 1997 ** reset laera's ste to 19 cause it was at 24
+Thu Nov 27 23:24:29 1997 ** reset usagi's ste to 1 cause it was at 0
+Thu Nov 27 23:25:10 1997 ** in return set usagi's luc to 8 from 12
+Fri Nov 28 06:59:53 1997 ** reset balmark's ste to 17 from 22
+Fri Nov 28 07:27:08 1997 ** /players/saber/closed/new_mini/feline.c a new check is placed within for player's ste.. should it be > 20 and != 25 the ste will be reset to 20-(25-ste)
+Sat Nov 29 18:39:22 1997 ** added in /players/beck/weapon/holy_avenger.c a random(3) check for special
+Sat Nov 29 19:28:29 1997 ** gave back wulfgar 400k xp for deaths caused some odd bug in callout with a stuck object of mine...
+Sun Nov 30 08:39:23 1997 ** /players/pavlik/mages/rooms/bank_stairs.c light was -7 now is -2
+Sun Nov 30 08:43:26 1997 ** the loswest light should be no lower than -2
+Tue Dec  2 22:46:55 1997 ** changes /players/saber/closed/ew_mini/spells/succor.h to cost 55 + rnd(5) sp
+Tue Dec  2 23:03:48 1997 ** /players/snow/closed/cyber/newdaem.c changes:
+Tue Dec  2 23:04:01 1997 ** shadow now costs 75 in combat 40 + rd(5) in no-combat
+Tue Dec  2 23:04:28 1997 ** ad the teleportation ablity is now 55_rnd(5)
+Tue Dec  2 23:19:45 1997 ** /players/bastion/closed/riing.c the teleportation cost is now 70 from 50
+Thu Dec  4 21:53:43 1997 ** /players/bastion/.closed/ring.c plasyer/saber/closed/new_mini/spells/succor.h and players/snow/closed/cyber/newdaem.c all have had added to them code i ref to telportation error
+Thu Dec  4 21:53:54 1997 ** made /obj/base_tele.c
+Sat Dec  6 23:51:10 1997 ** /players/nooneelse/blackvampire_fangs.c the sanctuary spell was changed accordingly with the new teleport rules
+Sat Dec  6 23:51:27 1997 ** /players/nooneelse/black/guild_summons.c as well
+Sat Dec  6 23:52:19 1997 ** /players/nooneelse/black/lib/hop_to_office.h return_from_office.h summon.h go_home.h as well
+Sun Dec  7 16:18:16 1997 ** mved /players/bastion/closed/finger.c to finger_old.c
+Sat Dec 20 07:05:11 1997 ** /players/pavlik/weapons/silver_dagger.c is a wc 17 (it lists as 16 but has an automatic return 1 if special does not go off
+Sat Dec 20 07:07:39 1997 ** now has a check of 1 in 2 right before the special because the special originally ws set up with a check against the person's drunkness and level
+Sat Dec 20 07:09:40 1997 ** /players/trix/castle/quest/monst/plate.c ac of 5 weight of 2 is now weight of 10
+Sat Dec 20 07:11:35 1997 ** /players/eurale/Arm/rex_plate.c ac 5 weight 1 is now weight 8
+Sat Dec 20 07:19:45 1997 ** /players/saber/closed/bard/pwr/obscure.h was missing int RAN;
+Wed Dec 24 13:10:18 1997 ** players/pavlik/weapons/ilstkarn/ice_wand weight was 1 now is 8 (wc 19  + 5 /3 /1)
+Wed Dec 24 16:35:44 1997 ** /players/saber/closed/bards/palsword.c has been changed by me to make it a better weapon for al to usae as the paladins are defunct
+Wed Dec 24 16:37:36 1997 ** /players/saber/monsters/hero/rdragon.c has been upped from wc 40 spell chance 10 spell dam, 100 to wc 60 spell chance 15 spell dam 250
+Wed Dec 24 16:38:02 1997 ** also ac from 20 to 27
+Wed Dec 24 16:38:33 1997 ** and hp from 1k to 2k
+Thu Dec 25 10:18:21 1997 ** /players/nooneelse/obj/slingshot.c now checks for invis
+Fri Dec 26 20:09:52 1997 ** /players/sandman/WEAPONS/spear..c changed from a query_attrib("int") > random(21) chance of pecial to a 1 in 3
+Fri Dec 26 20:11:29 1997 ** same with players/sandman/WEAPONS/odin_spear
+Fri Dec 26 20:19:44 1997 ** same as /players/sandman/WEAPONS/h_mace.c
+Fri Dec 26 20:22:51 1997 ** the justice_swd.c has a 1 in 3 as well now
+Mon Dec 29 07:35:24 1997 ** /players/snow/closed/cyber/implants.c mask and the spy_room cmds have been removed
+Mon Dec 29 22:45:10 1997 ** /players/vbalowski/guild/obj/pet.c mved to PET.bak because teleport error has not been in place
+Mon Dec 29 23:04:40 1997 ** /players/balowski/guild/cmds/spy.c mved to spy.bak because it shows weapon of target player (portable and from afar) as well as environetn of room and cpondition of target
+Wed Dec 31 07:35:21 1997 ** /players/balowski/guild/obj/dskin.c from ac 2 to ac 1
+Wed Dec 31 08:19:26 1997 ** mved /players/pavlik/weapons/ilstkarn/vanguard_sword.c to a bak file
+Wed Dec 31 08:21:51 1997 ** why? easy the weapon in its special queries pie.. does a random of the number and depending on the number that shows up a different return occurs.. nice idea but: only a 1 or a 0 will not return a positive #
+Wed Dec 31 08:22:57 1997 ** i.e. a player with piety of 3 has the 1 in 3 chance of good return others have a better chance .. plus a random(pie) > 17 will heal the player as well
+Wed Dec 31 08:27:18 1997 ** /players/pavlik/items/ilstkarn/fortress_key..c wieght was 0 now 3
+Thu Jan  1 12:14:46 1998 ** reset somnus's ste to 19 since it was at 24
+Thu Jan  1 12:16:05 1998 ** reset eagle's ste to 20 from 25 (she is not a feline)
+Fri Jan  2 11:00:35 1998 ** /players/noonelese/klingon/klingon_communicator.c to .bak file
+Sat Jan  3 01:16:35 1998 ** reset silence and icepick's ste to 20 from 25 (they are not feline mini-guilders)
+Sat Jan  3 01:38:26 1998 ** /players/snow/closed/cyber/rooms/shop.c now gives player 1000+rnd100 for over 1000 value items.... before it was 1k+rnd400
+Sat Jan  3 08:41:15 1998 ** set up so zeus has bug
+Sat Jan  3 08:57:43 1998 ** mved /players/dragnar/closed/scar.c to .bak because it is causeing login bugs... currently fixing
+Sat Jan  3 09:48:39 1998 ** scar is now fixed added in the scar_chan.c and changed scar.h to include that
+Sat Jan  3 09:57:09 1998 ** note: the quick fix (scar_chan.c) is not efficient , its a quick patch, but it will do for now
+Sat Jan  3 13:57:28 1998 ** reset armadillo's ste to 20 from 25 (also not a feline)
+Sat Jan  3 16:45:00 1998 ** added -    -19500 coins to sticks because he had over 80k
+Sat Jan  3 16:52:51 1998 ** /players/nooneelse/black/guild_coffin_shelf.c items over value 1k now is value of 1k when stored
+Sun Jan  4 00:12:19 1998 ** mved /players/pavlik/weapons/ilstkarn/vanguard_sword.c to .bak/again file
+Sun Jan  4 00:14:02 1998 ** he put it in game without fixing it
+Mon Jan  5 18:14:24 1998 ** added in to /players/pavlik/weapons/ilstkarn/vanguard_sword.c a 1/3 in the return system.. mailed pavlik to change it within that constraint
+Mon Jan  5 19:08:42 1998 ** gave wulfgar back 3432109 xp because of some odd bug that keeps killing him for no apparent rreason
+Mon Jan  5 19:41:04 1998 ** mved /players/balowski/std/random/generate.c to .bak file it keeps failing to load because balowski didnt leave the daemons.h file behind that is included...
+Mon Jan  5 19:41:58 1998 ** since said file doesnt exist it is rather poitless to have it where it can be loaded
+Thu Jan  8 18:36:16 1998 ** reinstated lopus.. somehow during reactivayion from inactive the char file erased and would nbot allow a save
+Thu Jan  8 18:37:07 1998 ** all stats were set to 20 again, 623783 xp, and 38926 coins
+Tue Jan 13 17:05:39 1998 ** reset jimbo's ste to 20 from 25
+Thu Jan 15 22:55:28 1998 ** mved /players/saber/closed/new_mini/gypsy.c and kender.c to .bak files.. until i can sort out this damn bug abuse
+Thu Jan 15 22:59:24 1998 ** reset hugh's ste to 18 from 23
+Thu Jan 15 23:00:25 1998 ** reset snakespear's ste to 20 from 25
+Sat Jan 17 07:43:14 1998 ** /player/unsane/xmen/staff.c charges are nonw 1 - 3 with return of 4
+Sat Jan 17 09:56:49 1998 ** imprisoned rumba because of multiplaying rumba = eagle
+Sun Jan 18 15:21:03 1998 ** approved snakespear
+Sun Jan 18 15:35:37 1998 ** approved francesco
+Sun Jan 18 17:12:03 1998 ** removed the taunt commad from the kender miniguild and the curse from the gypsy guild
+Sun Jan 18 17:12:17 1998 ** bboth cmds were being used in abusation with pk
+Sun Jan 18 17:29:48 1998 ** the 2 miniguilds are back in play
+Sun Jan 18 18:38:40 1998 ** /players/molasar/TREASURE/cloth.c wieght 0 is now 1
+Sun Jan 18 18:46:28 1998 ** /players/molasar/MAGIC/grimoire.c ow checks to make sure player's attrib is less than 20 before adding a stat
+Sun Jan 18 18:48:30 1998 ** same with helm_int.c
+Sun Jan 18 18:57:57 1998 ** approved dreamspeakr
+Thu Jan 22 18:23:52 1998 ** unguiled arizona.. somehow the unguilding from the shardaks didnt work properly... so i had to manually do it
+Fri Jan 23 16:46:16 1998 ** reset myra's ste to 20 from 25 (same ordeal with felines)
+Sat Jan 24 08:03:11 1998 ** rest maddog's mag to 20 from 21
+Sun Jan 25 16:30:46 1998 ** reset angelique's ste to 20 from 25
+Mon Jan 26 19:55:38 1998 ** reset slashdragon's ste to 20 from 25
+Tue Jan 27 21:49:13 1998 ** fixed /players/nooneelse/black/vamp_guild_wolf.c so that in reset(arg) the master_name is set to "null"; that way the loading of said object does not trigger a problem with the follow() callout
+Tue Jan 27 21:52:24 1998 ** reset catacomb's ste from 24 to 19
+Thu Jan 29 22:01:15 1998 ** -140 coins off silence (he was at 80140)
+Thu Jan 29 22:36:54 1998 ** copied oover /players/saber/closed/new_mini/scroll.c to /players/saber/mini/mini.c and set weight to 1 from 0 ...
+Thu Jan 29 22:58:17 1998 ** fixed all of /players/saber/effects files
+Thu Jan 29 22:58:23 1998 ** to have check for environ
+Thu Jan 29 23:22:12 1998 ** added in line 262 to /players/pavlik/mages/mage-master2.c so that the automagesave checks for environment
+Sun Feb  1 19:42:33 1998 ** reset lilia's mag from 21 to 20
+Sun Feb  1 20:49:59 1998 ** /players/eurale/bag.c was orignally a copy of my bag... i have copied a new version of my bag to this file
+Mon Feb  2 11:27:50 1998 ** set up /players/snow/closed/cyber/newdaem.c so that get_ob returns 2 when getting has been done.. 1 if not... have also
+Mon Feb  2 11:28:09 1998 ** respectively changed all other cyberget cmds to reflect this change
+Mon Feb  2 11:48:31 1998 ** oks.. the fix was done to /players/dune/closed/guild/lib/enhanceentsdir/cyberget.h
+Sun Feb  8 19:18:34 1998 ** mved /players/wocket/closed/orb.c to orb.c.bak because the object does not utalize the base_tele.c and the issue of initial cost
+Sun Feb  8 19:18:43 1998 ** have also commenetd out the loading of the orb.c in the castle.c
+Mon Feb  9 17:55:06 1998 ** reset z's ste from 21 to 16 (i.e. 25 - 4 = 21 so 20 - 4 = 16)
+Wed Feb 11 22:51:30 1998 ** reset icepick's level from +22 to +21
+Wed Feb 11 23:10:17 1998 ** reset azazel's ste from 24 to 19
+Wed Feb 11 23:19:48 1998 ** mved /players/illarion/obj/bcloak.c to bcloak.bak... its becoming a damn wiztool
+Wed Feb 11 23:46:44 1998 ** /players/snow/closed/mech.c changed so that set_heart_beat is called only at reset  and took out a attacker_ob->add_spell_point(-10) if attacker_ob->is_player() in the attack sequence
+Wed Feb 11 23:47:28 1998 ** also put in a if(arg) return; in the reset*arg)
+Thu Feb 12 20:16:08 1998 ** recoded /players/snow/closed/cyber/implants.c utalizes the old newdaem.c nstead of dune's... dune has not ade any changes to the new rules
+Thu Feb 26 18:59:06 1998 ** reset apathy's ste to 20 from 25
+Tue Mar  3 20:45:41 1998 ** mved /players/pavlik/mages/obj/teleport_obj.c and summon_obj.c to .bak files... teleportation objects that arent compliant
+Wed Mar  4 17:44:52 1998 ** /players/apvlik/mages/rooms/guild_room5.c init() sens player immediately to the church
+Wed Mar  4 17:45:46 1998 ** /players/pavlik/mages/mageobj2.c is now a .bak file
+Wed Mar  4 17:46:13 1998 ** too many illegal (non-approved) changes have been made
+Wed Mar  4 17:50:12 1998 ** mage guild is closed until pavlik redoes them and gets approval
+Wed Mar  4 17:51:23 1998 ** mage-master2.c is a bak file as well
+Tue Mar 10 13:07:58 1998 ** reset avengelyne's coinds from 95413 tp 80000
+Thu Mar 12 13:35:48 1998 ** adde din lines 112 and 115 to /players/mizan/closed/poly/tetrapod.c with a if(ENV) check
+Fri Mar 13 13:01:14 1998 ** reset worm's ste from 25 to 20
+Fri Mar 13 13:05:51 1998 ** /players/dragnar/closed/scar_master.c  the give scar cmd has been removed because of absue and complaints...
+Sat Mar 14 07:02:49 1998 ** /players/heroin/hunting_grounds/killjk..c special was 15 in 20 now 5 in 20
+Sat Mar 14 09:30:20 1998 ** went thru dune's guild stuff.. /players/dune/closed/guild/change.txt is a list of items of concern...
+Sat Mar 14 23:13:35 1998 ** /players/catwoman/stuff/vend.c mved to a bak file because of catwoman's abuse
+Sun Mar 15 10:34:06 1998 ** blocked entrance into wizardchild's castle till he fixes some things...
+Sun Mar 15 10:42:20 1998 ** various illegal monsters and such so instead i closed up the entrance...
+Sun Mar 15 12:28:31 1998 ** /players/catwoman/stuff/dneck.c wieght was 0 now
+Sun Mar 15 12:28:33 1998 ** 1
+Sun Mar 15 12:29:27 1998 ** mailed catwoman about her stuff in stuff dir
+Sun Mar 15 17:13:27 1998 ** /players/snow/heals/pblast.c if shots reach < 1 then destruct object... before was == 0
+Sun Mar 15 17:15:45 1998 ** same with /players/snow/heals/lpblast.c
+Sun Mar 15 17:18:42 1998 ** ice_sphere.c is the same as well
+Sun Mar 15 17:21:51 1998 ** same with lsgoop.c
+Sun Mar 15 17:23:51 1998 ** in fact same with all the heals in /players/snow/heals
+Sun Mar 15 21:55:42 1998 ** took out the fly command in the vamps becasouse of the ability of usage of any cmd
+Fri Mar 20 13:09:00 1998 ** /players/saber/fur/selcoffin.c weight was 7 now is 1k because people would drag selena to the church
+Tue Mar 24 12:26:25 1998 ** imprisoned worm for spamming... geesh when will he learn
+Tue Mar 24 12:33:40 1998 ** imprisoned damage as well..its worm and he still continues
+Wed Mar 25 11:33:37 1998 ** reset motivator's ste to 17 from 22 (25 - 3 = 22)
+Fri Mar 27 12:46:21 1998 ** reset skimmer's ste from 23 to 18
+Mon Mar 30 09:02:53 1998 ** oked new version of cybers
+Mon Mar 30 09:24:08 1998 ** mved /players/reflex/closed/wiz_obj.c out of game...
+Mon Mar 30 09:24:19 1998 ** its a damn wizwarish wiztollish thingy.. blah
+Tue Mar 31 13:34:54 1998 ** added in line 57 to /players/mizan/closed/poly/fungoid.c to check for environment
+Tue Mar 31 19:54:05 1998 ** trask had 111000 coins.. took away some to make 80k
+Tue Mar 31 20:36:58 1998 ** reset johan's ste to 16 from 21
+Wed Apr  1 09:42:11 1998 ** /players/llew/junk/chtell.c now is undropabble
+Wed Apr  1 13:38:32 1998 ** /players/catwoman/stat1.c took out the last return 1; and } so that file loads properly
+Wed Apr  1 13:40:02 1998 ** /players/catwoman/castle.c commented out the stat1.c load
+Thu Apr  2 12:45:18 1998 ** mved /players/dune/closed/guild/adv_libCmds/wepsync.c to a .bak file
+Thu Apr  2 13:22:03 1998 ** /players/dune/closed/guild/implants.c wepsyc = 0; placed at lines 183 and 195 to prevent wepsync usage
+Fri Apr  3 09:35:34 1998 ** took away 31209 coins from truth... had waaaay too much
+Fri Apr  3 10:38:27 1998 ** headled truth because he is helping be detremine a glitch in illarion's realm...  (he had a prob we tried to sole it)
+Mon Apr  6 14:17:57 1998 ** /players/llew/junk/pixie.c approved
+Tue Apr  7 19:32:57 1998 ** reimprisoned damage.. who let him out?
+Wed Apr  8 11:48:56 1998 ** mved /players/dune/closed/guild/lib_advCmds/p1_sync.c p2_sync and p3_sync to .bak respectively.. just doublec heck on the wepsync issue
+Wed Apr  8 22:14:21 1998 ** took away 659 cois from sarsha (over the max)
+Thu Apr  9 13:48:28 1998 ** /players/mizan/etheriel/beasties/lawnmower.c placed a environment() check in with the nukeme()
+Wed Apr 15 07:12:40 1998 ** /players/llew/Other/rooms/lazy.c added line 130 a check for find_player()
+Wed Apr 22 11:35:39 1998 ** /players/deathmonger/KMART/dreadnought.c added in lines 60-64 it hits the "driver" for 100 damange.. and destructs (dests even with no driver)
+Wed Apr 22 11:37:03 1998 ** cchange that... this_player()
+Mon Apr 27 17:29:35 1998 ** /players/llew/junk/chtell.c changed the level check from 250 to 19
+Mon Apr 27 22:45:26 1998 ** /players/quicksilver/666/r/forest_daemon.c mvd to .bak file... it was causing the tremendous lag becuse of the room loading system in it
+Mon Apr 27 22:45:58 1998 ** also modifided /players/quicksilver/closed/cavern.c so that the attempt to load the forest_daemon.c is commented out
+Wed Apr 29 21:28:21 1998 ** unguiled stratus (a paladin)
+Wed Apr 29 21:51:42 1998 ** recommented out the loading of forest_daemon.c in /players/quicksilver/closed/cavern.c
+Wed Apr 29 23:14:17 1998 ** /players/saber/monsters/hero/rdragon.c changed spell dam fom 250 to 150+rnd(100) [was told a bit too tough for what iit is]
+Wed Apr 29 23:28:56 1998 ** players/unsane/closed/hell/harpy level 15 wc 18 ac 8 is now wc 22 ac 12
+Wed Apr 29 23:29:59 1998 ** also hp is now 300
+Wed Apr 29 23:33:15 1998 ** /players/usane/clsed/hell/furies.c  level 18 wc 22 ac 15 coins rnd3000 is now wc 30 ac 15 coins rnd900x
+Wed Apr 29 23:40:28 1998 ** medusa.c (same dir) level 17 wc 18 ac 20 hp 300 coins rnd 9k is now wc 30 hp 900 coins rnd 700
+Wed Apr 29 23:43:15 1998 ** plutus.c a god is level 21 wc 40 ac 25 hp 1k is now wc 50hp 2k
+Wed Apr 29 23:46:19 1998 ** miserly.c level 15 wc 15 ac 8 coins rnd1k + 200 is now wc 25 ac 15 hp 250 coins rnd100+200
+Wed Apr 29 23:47:48 1998 ** same with prodigal.c
+Wed Apr 29 23:49:09 1998 ** same with wrathful.c
+Wed Apr 29 23:50:53 1998 ** same with killer.c
+Thu Apr 30 13:33:12 1998 ** /players/mizan/closed/lockmil.c and lockrae.c placed an environment check in the callout
+Thu Apr 30 23:56:11 1998 ** /players/nightshade/swordd.c is a .bak file now... i dont have the time to fix it to make it legal right now
+Thu Apr 30 23:58:44 1998 ** /players/nightshade/weap/invis_sword.c weight ws 0 now is 1.. chance for special was a rnd 4 now a rnd 10
+Thu Apr 30 23:59:19 1998 ** wups.. weight is now 10 not 1
+Fri May  1 08:43:47 1998 ** reset fonz's ste from 25 to 20
+Fri May  1 13:39:07 1998 ** added in a check for 'lucky' in /players/unsane/castle.c
+Fri May  1 13:41:52 1998 ** se up /players/unsane/closed/hell/circle1.c so that the command("look"),this_player() ) is taken out of the callout (sinec this_player() doesnt carry over)

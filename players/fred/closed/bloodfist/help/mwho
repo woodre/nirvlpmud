@@ -1,0 +1,18 @@
+
+Bloodfist Help:  Mud Who
+
+  Mwho is an improved version of the who2 command.  It shows who is
+online, as well as where they are, what guild they're in, their level,
+and 6 more true or false variables in the form of [p a i c d h].  You
+can not see invisible wizards with mwho, or the locations of invisible
+players who are greater or equal level to yours.
+
+  p - this player has their pk flag set
+  a - this player is in a pk area
+  i - this player is idle
+  c - this player is currently fighting something
+  d - this player is a ghost
+  h - this player is hidden
+
+Usage: mwho
+

@@ -1,0 +1,72 @@
+/* Heal that includes 2 types. stuff, and soak. Heals for 40 + random(20)
+   hit points at 4 stuff, 4 soak. 3 uses. 
+   Cost is figured by toxamount(8)*3 = 24 divided by heal total of 40 normal
+   and 20 random = .14 tox amount = 20 per point. 20*120 normal= 2400 +
+   60*7 random points = 420. Total is 2820. Divided by 2/3 for healing
+   only one type = 1782. rounded up for a cost of: 1950 coins. 650 per
+   dose. */
+
+#include "/players/maledicta/ansi.h"
+
+#define USER this_player()
+#define NAME USER->query_name()
+#define HP   USER->query_hp()
+#define MHP  USER->query_mhp()
+#define SP   USER->query_sp()
+#define MSP  USER->query_msp()
+
+int uses;
+
+id(str){ return str == "kit" || str == "medical"; }
+short() { return ""+HIR+"Medical Kit"+NORM+" "+BOLD+""+BLK+"["+uses+"]"+NORM+""; }  
+long(){
+   write(
+   "  This is a small box with a medical symbol imprinted on its lid. Inside\n"+
+   "are numerous tools and items used for healing. You can 'medicate' and\n"+
+   "heal your wounds.\n"+
+   "It has "+BOLD+""+BLK+"["+uses+"]"+NORM+" uses left in it.\n"); }
+
+query_value(){ return (uses * 450); }
+query_save_flag(){ return 1; }
+
+reset(arg){
+  if(arg) return;
+  uses = 3;      
+  }
+  
+init(){
+   add_action("use_kit", "medicate");
+   }
+   
+use_kit(){
+
+if(!call_other(this_player(),"eat_food", 4) ||
+   !call_other(this_player(),"drink_soft", 4)) return 0;
+write(
+"You open the medical kit and apply some of the contents to your wounds.\n");   
+say(
+NAME+" uses a medical kit.\n");
+
+
+call_other(this_player(),"add_hit_point",41 + random(20));
+call_other(this_player(),"recalc_carry");
+write(
+"     HP>>>"+HIR+""+HP+""+NORM+"/"+HIR+""+MHP+""+NORM+" "+
+"   Soak["+HIR+""+USER->query_soaked()*100/(USER->query_level()*8)+"%"+NORM+"] "+
+" Stuff["+HIR+""+USER->query_stuffed()*100/(USER->query_level()*8)+"%"+NORM+"]\n");
+uses -= 1;
+write("The kit has "+BOLD+""+BLK+"["+uses+"]"+NORM+" left.\n");
+if(!uses){
+	write(
+	"Useless now, you drop the kit.\n");
+	this_object()->set_weight(0);
+	call_other(this_player(), "recalc_carry");
+        destruct(this_object());
+
+	return 1; }
+	
+return 1; }
+
+
+get(){ return 1; }
+query_weight(){ return 1; }	

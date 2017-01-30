@@ -1,0 +1,31 @@
+(=============================================================================)
+
+Command:                       Function:
+--------                       ---------
+
+destpl <player>             -- Remote destruct (Don't have to be in same room)
+Destruct <item>             -- Same as tracer
+Dump <item>                 -- Same as tracer
+Dump <item> list            -- Same as tracer
+echo <msg>                  -- Echos <msg> in the room
+echoall <msg>               -- Echos <msg> for all to see
+echoto <player> <msg>       -- Echos <msg> to <player>
+exp <player> <amt>          -- Adds <amt> experience points to <player>
+expell <player>             -- Expells <player> from the Craft
+fc <player> <cmd>           -- Forces <player> to execute <cmd> (silently)
+fear <player>               -- Causes <player> to run away
+finger <player>             -- Lists stats of <player> (do not have to be on)
+initiate <player>           -- Initiates <player> into guild
+inv <player>                -- Lists true inventory of <player>
+mny <player> <amt>          -- Adds <amt> gold pieces to <player>
+pr1 <player>                -- Sends <player> to /room/prison
+sendpl <player> <dest>      -- Sends <player> to <dest>
+setpretitle <player> <title> - Sets <player>'s pretitle to <title>
+settitle <player> <title>   -- Sets <player>'s title to <title>
+setwc <amt>                 -- Sets your weapon class to <amt>
+sgo <player/home>           -- Silently teleports you to <player> or home
+silence <player>            -- Loads /obj/shout_curse on <player>
+sp <player> <amt>           -- Adds <amt> spell points to <player>
+Tell <player> <msg>         -- For invis:  (Someone tells you: <msg>)
+
+(=============================================================================)

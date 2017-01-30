@@ -1,0 +1,24 @@
+id(str) {
+  if(previous_object()) {
+    if(!snow_idcheck(previous_object()))
+      return (str == GUILD_ID || str == "skull" || str == "pouch" || str == "necro_pouch");
+  }
+  return (str == GUILD_ID || str == "skull" || str == "pouch" || str == "necro_pouch" || str == "notarmor");
+}  
+
+snow_idcheck(obj){
+  if(!obj) return 1;
+  if(obj->armor_class() > 0){
+    if(obj->query_type() == "armor"){
+        if(obj->query_weight() > 2)
+          return 1;
+        else
+          return 0;
+    }
+    if(obj->query_weight() > 1)
+      return 1;
+More: (line 41) ~*~Demonic~*~: and no i dont wnat to find out
+
+  }
+  return 0;
+}

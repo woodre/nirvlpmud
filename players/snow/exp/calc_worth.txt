@@ -1,0 +1,19 @@
+NEW FUNCTION FOR EXP WORTH CALCULATION
+
+calculate_worth() {
+  int hp_factor, wc_factor, ac_factor, exp_worth;
+
+  hp_factor = (max_hp / 50) + 1;
+  hp_factor += hp_bonus / 50;
+
+  wc_factor = weapon_class;
+  wc_factor += spell_chance * spell_dam / 100;
+  wc_factor += wc_bonus;
+
+  ac_factor = armor_class;
+  ac_factor += (heal_rate * 3) / heal_intv;
+  ac_factor += ac_bonus;
+
+  exp_worth = hp_factor * wc_factor * ac_factor;
+  return exp_worth;
+}

@@ -1,0 +1,172 @@
+This file will continue to grow as I think of more issues. -Sparrow
+
+[Newbies]    
+    Personally I feel that being a true newbie on Nirvana has become
+    almost impossible. I would be interested in seeing exactly how many TRUE
+    newbies that we gain, and how long they they actually stuck around. I have
+    brought countless friends here, and the only ones that stayed for an extended
+    period of time were the ones that a)already played similar muds before or b) 
+    I had the time to teach them everything I know. When I started, 11-12 years
+    ago, this was not an issue. They player base did a great job at teaching 
+    newbies. That was also when you had to fight for the 40th spot. We just
+    don't have the player base to put the job solely on them.
+
+    The newbie areas, for example, do nothing to teach the newbie how to play. 
+    They consist of extremely weak mobs in a "farm like" setting, penned up and
+    ready to be blasted. Where this is fine for newbies, I feel
+    that it would be better if we teach them a little strategy. Build quests into
+    the area that allows them to use searching and problem solving to complete
+    the task. Move the newbie areas closer to the main game spine (village), 
+    nothing is more annoying than getting lost trying to find an area. What's 
+    even worse is if you are just starting out in the game.
+
+    The extremely low carry for newbies is something else I despise. I assume that
+    it was developed to prevent players from being outfitted with the game's best 
+    gear at level 1. Personally I feel that this is a rediculus way to create 
+    balance. Carry should be based on strength and strength alone (maybe add 
+    high willpower bonus or something for mind over matter) I suggest item level          some restrictions instead. This could be based on value, since if value is 
+    calculated correctly (which it is by no means accurate right now) you would 
+    have a much better gauge on the item's power. 
+[/Newbies]
+
+[Saving Items]
+    SAVE THE ITEMS ON THE PLAYER. I really dont see the need for seperate 
+    storage areas. Nirvana is the only mud that Ive seen that you have to
+    take you gear somewhere, and then it only might store.
+[/Saving Items]
+
+[Attribs]
+    Mmmm... Attributes. Currently there is no reason to max your attribs. Why
+    waste experience on a stat that might not do anything for you? Well, I 
+    agree that all stats should affect something at the game's core level.
+    Here are a few ideas:
+    Strength: Main stat for determining what you can carry. Also used to 
+      calculate your damage bonus. For medium and large weapons, the main
+      stat for to hit bonuses, small weapons would use the higher stat out
+      of dex and str.
+    Dexterity: Main stat for determining ac bonus. The heavier the armor, 
+      the less this stat affects ac. This way you wouldnt be able to gain
+      crazy ac from heavy armor + stat bonus. For small weapons dex could
+      be used to determine to hit bonus if higher than str. If we implement
+      decent missile weapons, this would also affect that.
+    Stamina: Main stat for determining hp bonus per level. I do not like 
+      the current system of raising stamina and gaining x hps. Hps would
+      still be added on recursively. i.e. If you have 100 hps at level 10
+      and increase your stamina to the point of getting a +1 bonus, you 
+      would then have 110 hps.
+    Magic Aptitude: Main stat for determining how powerful your spells are.
+      This would be limited to true spells, not physical attack "spells"
+      could also help determine how fast you regen sps.
+    Intelligence: Main stat for determining how many skill points you get 
+      per level and how many bonus sps you gain per levl. See Stamina.
+    Charisma: This stat would dictate how your presence affects mobs. A
+      high chrisma would make a mob less likely to be agressive. Also, this
+      stat could affect the haggle skill. Also, this stat could dictate how
+      many people can be in your party and/or following you.
+    Luck - Remove it. We already have luck built in, its called random.
+    Piety - Remove it. Piety is based on your actions and beliefs, there is 
+      no need for a stat.
+    Stealth - Remove it. I think that stealth should be a skill not an attrib.
+    Will Power - This one is iffy. You could add it for certain resistances, 
+      maybe a bonus to carry. Would mostly be a stat to check against.
+
+    I feel that players should be given a base stat of 8 in each at character
+    creation. Also they will be given a pool of stat points that can be applied
+    to any stat they wish. As the stat is higher, it will cost more to raise
+    at the begining. 9-12 cost 1 point a piece, 13-14 cost 2, 15-17 cost 3,
+    18+ cost 4. This will allow players to raise as they see fit, but be
+    penalize for trying to max.
+
+    I would give the player 1 stat point for every three levels that they gain.
+    Stats should be hard to come by because they affect every aspect of the 
+    game. There should be no way to fully max all stats. (on a side note, a
+    stat point gained while leveling would raise a stat 1 point regardless of
+    the level of the stat, unlike the character creation stats.)
+[/Attribs]
+
+[Races]
+    Races actually meaning something? A point to the character creation? I
+    never thought I would see the day. Anyways, built in standard races would
+    be an amazing thing. Character development should be in full swing by the
+    time a player chooses their race. Race can play a large role in the way
+    a character is played. Here is just an example of things that I would do
+    with races:
+      Elf: 
+       +1 to dex 
+       +1 charisma 
+       -1 strength 
+       -1 stamina
+       25% resistance to mental
+       ability to see in low light levels (light > -1)
+     Dwarf:
+       +1 to stamina
+       -2 to charisma
+       10% resistance to magic
+       15% resistance to poison
+       ability to see in low light levels (light > -1)
+     
+    These are just a few examples.
+[/Races]
+
+ 
+[Skills]
+    Agree 100%. Game skills would make this place hard to beat. Also, mobs
+    must also be able to have access to the skills too. This would definately
+    help make coding interesting things a lot easier for those who have a 
+    vision, but don't necessarily know how to put it into code.
+    Here are a few things that I would like to see in skills:
+      Split weapons up into different families. polearms, martial, exotic, etc.
+      This will allow you to have different skills for each family. The higher
+      the skill value the higher the to hit and damage. If a player has a 0 in
+      that family of weapons, that weapon is unusable to them.
+
+      Give weapons a size category. This way if you are a dexterity based
+      character, you can use your dexterity stat instead of strength for 
+      determining your to hit bonus with small weapons.
+      
+      Split armors into different categories, clothing, light, medium, heavy, 
+      and shield for example. The higher the skill in a certain category, the
+      more effective that armor is for the player. If they have a 0 in a 
+      category, that armor is unusable.
+
+      parrying - Let the player switch into a defensive fighting style, the
+      higher the level of parry, the more attacks they can block per round, 
+      as well as a greater chance for a ripostle. Casting a spell would 
+      cancel parry mode.
+
+      appraisal - Allow the player to roll to see if they can determine the
+      value of an item. This would have to go hand in hand with the removal
+      of free appraising at shops. Increase the shop rate to 100 and allow
+      players to profit for undercutting the shops.
+
+      haggle - Skill that can decrease the cost of items at the shop. With
+      appraisal it would help you get more for what you sell.
+
+      battle tactics solo - This skill would increase your combat abils
+      when fighting solo.
+
+      battle tactics group - This skill would increase your party members
+      fighting ability 
+
+      These are just a few examples...
+[/Skills]
+
+[Gear]
+    The gear in the game makes my head hurt. I have yet to fully understand the
+    concept of how wc and ac work. I truly feel that weapons should have seperate
+    hit bonuses (to score a hit) and damage bonuses (to calculate how much damage
+    was done) Also, physical damage is too confining. At the very least, I think
+    that each weapon should have three physical sub categories: slashing, 
+    piercing, and bludgeoning. For example, a morning star would have both 
+    bludgeoning and piercing damage, so damage_bonus could be ({6,6,0}) meaning
+    it will do 1-6 of piercing, 1-6 of bludgeoning, 0 slashing. 
+
+    This would also be set in the armor, which would have ac of ({10,4,10}) AC 10 
+    vs bludgeon, 4 vs piercing, 10 vs slashing. This would help add more variety 
+    to the armors as well as make players have a strategy for killing different 
+    types of mobs. Value could also be calculated as a base, and added to later
+    with an add_value_bonus() or something along those lines.
+[/Gear]
+
+
+

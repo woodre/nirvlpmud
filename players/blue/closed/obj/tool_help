@@ -1,0 +1,26 @@
+The LPC tool is a very flexible object to make a wizards life a little
+easier.  The two current functions are 'lpc' and 'path'.
+  -'lpc'-
+   The 'lpc' function is a convenient way to see if a function exists, or to
+do simple patching/debugging.  Whatever argumant you give to 'lpc' will be
+executed as written. A value will be printed, relating to whatever value the
+function returned.
+   For example-
+   'lpc find_player("blue")->query_level();' would print my level.
+   'lpc tell_object(find_player("boltar"), "This is an echo from Blue.\n");'
+      would probably get me in trouble.
+   'lpc write("This is a test.\n");' would print "This is a test." twice.
+        ( once when it executed the write(), and again because write() returns
+        the messgage its given.)
+   'lpc write(present("tool", this_player())->query_auto_load()+"\n");
+      would print the auto_load string of your tool.
+   For convenience, I've made many macros that could make it easier to do all
+this.  Type 'help macros' to see them.
+   The 'path' commands make it easier to change directories.  The commands are
+relatively straightforward.
+   'setpath (<num>) <full path name> <alias>' sets up an alias for a path.
+         <num> is optional.
+   'showpaths'  shows all current path aliases.
+   'path (<alias>)' tries to match <alias> to a path.  If successful, it puts
+       you in that directory.  'path' with no alias puts you in your home dir.
+   'tool <name>' gives someone a tool.

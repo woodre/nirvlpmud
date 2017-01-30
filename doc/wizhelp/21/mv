@@ -1,0 +1,25 @@
+**************
+
+
+                     Mv
+
+Syntax:    mv <file name> <new path>
+
+Desc:
+           This command is for moving a file to a different directory
+           Simply enter the file name (or full path if not in same 
+           working directory) of the file to move and then the path 
+           plus file name of its new location. Can also be use in 
+           same directory to change the name of a file.
+
+Warning:   Be careful to not move files that other files inherit or 
+           they will cease to function.
+
+Example:   mv /players/bob/turkey.c /players/bob/mobs/turkey.c
+                  results
+           turkey.c is moved to .../mobs/turkey.c
+
+Related:   cp, rm, ed
+
+
+**************

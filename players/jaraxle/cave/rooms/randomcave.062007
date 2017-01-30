@@ -1,0 +1,1382 @@
+#include "/players/jaraxle/ansi.h"
+
+int room_num;
+
+string room_desc;
+
+int spec_mob;
+
+
+
+int *blocked;
+
+int *desc;
+
+int *encounter;
+
+mixed *items;
+
+#include "/players/jaraxle/cave/include/roomdescs.h"
+
+
+
+reset(arg){
+
+	if (arg) return;
+
+	set_light(1);
+
+	enable_commands();
+
+	blocked = allocate(120);
+
+	desc = allocate(120);
+
+	encounter = allocate(120);
+
+	blocked = ({ });
+
+	desc = ({ });
+
+	items = ({ });
+
+	encounter = ({ });
+
+	room_num = 5;
+
+	
+
+	items = ({
+
+			"stone",
+
+			"Crudely cut stone that was obviously created by amateur hands",
+
+			1,
+
+			"supports",
+
+			"A heavy wood that has been cut to fit into this area to support it",
+
+			1,
+
+			"floor",
+
+			"A stone floor covered in sand",
+
+			14,
+
+			"walls",
+
+			"Made of greenish crystal, it is absolutely beautiful",
+
+			8,
+
+			"ceiling",
+
+			"Made of greenish crystal, it is absolutely beautiful",
+
+			8,
+
+			"floor",
+
+			"Made of greenish crystal, it is absolutely beautiful",
+
+			8,
+
+			"ceiling",
+
+			"A simple stone ceiling",
+
+			500,
+
+			"floor",
+
+			"A simple floor made of stone",
+
+			500,
+
+			"walls",
+
+			"A simple wall made of stone",
+
+			500,
+
+			"wall",
+
+			"A simple wall made of stone",
+
+			500,
+
+			"torches",
+
+			"Made of ringed steel and wooden stakes, it seems to be able to burn quite a while",
+
+			1,
+
+			"shadows",
+
+			"Long shadows that are cast about the room",
+
+			1,
+
+			"art",
+
+			"Created by an expert artist, it is somehow beautiful and odd at the same time",
+
+			2,
+
+			"statues",
+
+			"Strange stone statues of otherworldly creatures",
+
+			2,
+
+			"pillars",
+
+			"Large stone pillars that support the ceiling",
+
+			2,
+
+			"slime",
+
+			"A thick sludgy slime that reeks of decay",
+
+			3,
+
+			"cobwebs",
+
+			"Thick stringy cobwebs that have collected over time",
+
+			3,
+
+			"mat",
+
+			"A worn out straw bed that has seen much use",
+
+			3,
+
+			"table",
+
+			"A wooden table made horribly and barely able to stand on its own",
+
+			3,
+
+			"candles",
+
+			"Small wax candles that cast about light",
+
+			3,
+
+			"pedestal",
+
+			"A large stone pedestal that stands about waist height",
+
+			4,
+
+			"pillars",
+
+			"These stone pillars stand at about eye level and are well crafted",
+
+			4,
+
+			"chandelier",
+
+			"A golden chandelier which hangs over the pedestal. It gives off a soft glow",
+
+			4,
+
+			"torches",
+
+			"Made of ringed steel and wooden stakes, it seems to be able to burn quite a while",
+
+			5,
+
+			"sconces",
+
+			"Steel sconces designed to hold torches",
+
+			5,
+
+			"pit",
+
+			"A huge pit with a bottom that cannot be seen. It spans most of the rooms center",
+
+			6,
+
+			"path",
+
+			"A stone path that spans the pit",
+
+			6,
+
+			"light",
+
+			"A greenish glow that eminates from a fluid dripping from the ceiling",
+
+			6,
+
+			"weapons",
+
+			"Old rusted and decaying weapons, they are completely useless",
+
+			7,
+
+			"armor",
+
+			"Old and rusting armor that is now completely useless",
+
+			7,
+
+			"racks",
+
+			"Made of wood, they are rotting and falling apart",
+
+			7,
+
+			"crystal",
+
+			"A fine polished crystal that glimmers green in the light",
+
+			8,
+
+			"mirror",
+
+			"A polished mirror of crystal, it reflects with a greenish tint",
+
+			8,
+
+			"reflection",
+
+			"A reflection of the room you are in",
+
+			8,
+
+			"torches",
+
+			"Made of ringed steel and wooden stakes, it seems to be able to burn quite a while",
+
+			9,
+
+			"sconces",
+
+			"Made of steel, they hold torches",
+
+			10,
+
+			"torches",
+
+			"Made of ringed steel and wooden stakes, it seems to be able to burn quite a while",
+
+			10,
+
+			"stone",
+
+			"A smoothly cut stone",
+
+			11,
+
+			"supports",
+
+			"A heavy wood that has been cut to fit into this area to support it",
+
+			11,
+
+			"light",
+
+			"A bright light that takes the shadows from the room",
+
+			11,
+
+			"sconces",
+
+			"Made of steel, they hold torches",
+
+			11,
+
+			"stone",
+
+			"A polished white stone that is beautifully crafted",
+
+			12,
+
+			"gold",
+
+			"A bright gold that outlines the stone in the room",
+
+			12,
+
+			"brazier",
+
+			"A huge bronze brazier that is burning brightly",
+
+			12,
+
+			"pillars",
+
+			"Huge pillars made of stone. They seem to support the domed ceiling",
+
+			12,
+
+			"table",
+
+			"A large dining table that has been marked and scratched badly. It is\n"+
+
+			"covered in dust",
+
+			13,
+
+			"chairs",
+
+			"Several wooden chairs that look to be in bad shape",
+
+			13,
+
+			"dust",
+
+			"A thick dust that has gathered over time",
+
+			13,
+
+			"paintings",
+
+			"Old painting that are now unrecognizable",
+
+			13,
+
+			"piles",
+
+			"Huge piles of rocks that have collected from the broken surroundings",
+
+			15,
+
+			"beams",
+
+			"Wooden beams that support the ceiling",
+
+			16,
+
+			"sconces",
+
+			"Made of steel, they hold torches",
+
+			16,
+
+			"water",
+
+			"A clear stream of water that is pouring from the wall",
+
+			17,
+
+			"waterfall",
+
+			"A short waterfall with softly streaming water",
+
+			18,
+
+			"stream",
+
+			"A small stream of running water that flows into a wall",
+
+			18,
+
+			"water",
+
+			"A dark water that is cast in shadow and flows softly",
+
+			18,
+
+			"sconces",
+
+			"Made of steel, they hold torches",
+
+			18,
+
+			"pit",
+
+			"A small pit that has been gouged out of the center of the room",
+
+			19,
+
+			"coals",
+
+			"Softly glowing coals that were recently burning brightly",
+
+			19,
+
+			"pillars",
+
+			"White stone pillars that are beautifully crafted",
+
+			20,
+
+			"sconces",
+
+			"Metal sconces that hold torches. They are giving off a soft light",
+
+			20,
+
+			"door",
+
+			"A large steel door that is wide open",
+
+			21,
+
+			"banners",
+
+			"Made of a bright red cloth and edged and filled with a black, they are\n"+
+
+			"beautifully crafted",
+
+			21,
+
+			"engraving",
+
+			"A raised engraving of a sword",
+
+			21,
+
+			"light",
+
+			"A soft light that filters into the crawlspace",
+
+			22,
+
+			"beds",
+
+			"Made of straw, these beds look very uncomfortable, and yet well used",
+
+			23,
+
+			"torches",
+
+			"Crudely worked up wooden torches that barely give off any light",
+
+			23,
+
+			"smoke",
+
+			"A thick black smoke that has stained the ceiling black",
+
+			23,
+
+			"shelves",
+
+			"Old wooden shelves that are decaying with time and damage",
+
+			24,
+
+			"cookware",
+
+			"Rusted and nearly gone, it is all completely useless",
+
+			24,
+
+			"food",
+
+			"Rotted and nearly eaten away by rodents, it is disgusting to look at",
+
+			24,
+
+			"stove",
+
+			"A large iron stove that is out of repair",
+
+			24,
+
+			"fireplace",
+
+			"A huge brick fireplace with a large fire burning in it",
+
+			24,
+
+			"fungus",
+
+			"Thick patches of dark fungus created by the damp environment",
+
+			25,
+
+			"slime",
+
+			"A thick slime that covers just about everything in the area",
+
+			25,
+
+			"devices",
+
+			"Several instruments of pain that look well used",
+
+			27,
+
+			"tables",
+
+			"Old wooden tables that are bloodstained and covered with torture devices",
+
+			27,
+
+			"racks",
+
+			"Created to be sturdy, they hold many large instruments of pain",
+
+			27,
+
+			"cages",
+
+			"Rusted cages made of iron. They look as if they have seen much use",
+
+			27,
+
+			"blood",
+
+			"Very old blood that has dried and caked on the floor",
+
+			27,
+
+			"sconces",
+
+			"Made of steel, they hold torches",
+
+			28,
+
+			"chains",
+
+			"Long iron chains that are attached high at the ceiling",
+
+			29,
+
+			"links",
+
+			"Large iron links that make up the chains",
+
+			29,
+
+			"gore",
+
+			"A thick plastering of human blood and intestines",
+
+			29,
+
+			
+
+	});
+
+	
+
+	
+
+}
+
+
+
+short(){
+
+switch(random(7)){
+case 0: return "Under the Ooze";
+break;
+case 1: return ""+HIM+"Under the Ooze"+NORM+"";
+break;
+case 2: return ""+HIY+"Under the Ooze"+NORM+"";
+break;
+case 3: return ""+HIR+"Under the Ooze"+NORM+"";
+break;
+case 4: return ""+HIB+"Under the Ooze"+NORM+"";
+break;
+case 5: return ""+HIC+"Under the Ooze"+NORM+"";
+break;
+case 6: return ""+HIG+"Under the Ooze"+NORM+"";
+break;
+}
+}
+
+
+
+long(str){
+
+	int i;
+
+	if(!str){
+
+		write(room_desc);
+
+		write("\n"+GRN+"Obvious exits are:"+NORM+" ");
+
+		if(room_num <= 90){
+
+			if(blocked[room_num + 10] > 0){
+
+				write("["+HIY+"north"+NORM+"] ");
+
+			}
+
+		}
+
+		if(room_num > 10){
+
+			if(blocked[room_num - 10] > 0){
+
+				write("["+HIY+"south"+NORM+"] ");
+
+			}
+
+		}
+
+		
+
+		if(room_num != 1 && room_num != 11 && room_num != 21 && room_num != 31 && room_num != 41 &&
+
+			room_num != 51 && room_num != 61 && room_num != 71 && room_num != 81 && room_num != 91){
+
+			if(blocked[room_num - 1] > 0){
+
+				write("["+HIY+"east"+NORM+"] ");
+
+			}
+
+		}
+
+		if(room_num != 10 && room_num != 20 && room_num != 30 && room_num != 40 && room_num != 50 &&
+
+			room_num != 60 && room_num != 70 && room_num != 80 && room_num != 90 && room_num != 100){
+
+			if(blocked[room_num + 1] > 0){
+
+				write("["+HIY+"west"+NORM+"] ");
+
+			}
+
+		}
+
+		if(room_num == 5){
+
+			write("["+HIY+"leave"+NORM+"]");
+
+		}
+
+		write("\n");
+
+		return 1;
+
+	}
+
+	
+
+	if (!items)
+
+	return;
+
+	
+
+	i = 0;
+
+	while(i < sizeof(items)) {
+
+		if (items[i] == str && (items[i+2] >= 500 || items[i+2] == desc[room_num])){
+
+			write(items[i+1] + ".\n");
+
+			return;
+
+		}
+
+		i += 3;
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+id(string str){
+
+	int i;
+
+	if (!items)
+
+	return;
+
+	while(i < sizeof(items)) {
+
+		if (items[i] == str)
+
+		return 1;
+
+		i += 3;
+
+	}
+
+	return 0;
+
+}
+
+
+
+
+
+init(){
+
+	add_action("move_north", "north");
+
+	add_action("move_south", "south");
+
+	add_action("move_east", "east");
+
+	add_action("move_west", "west");
+
+	add_action("move_leave", "leave");
+
+	add_action("map_func", "map");
+
+	call_out("room_check", 1);
+
+}
+
+
+
+
+
+creation(){
+
+	int num1, number1;
+
+	int num2, number2;
+
+	int num3, number3;
+
+	int woot;
+
+	num1 = 0;
+
+	num2 = 0;
+
+	num3 = 0;
+
+	/**** create blocked rooms *****/
+
+	while(num1 < 120){
+
+		number1 = random(4);
+
+		blocked += ({ number1 });
+
+		num1 ++;
+
+	}
+
+	/*******************************/
+
+	
+
+	
+
+	/* make sure the room you start in isn't blocked */
+
+	blocked[5] = 1;
+
+	/*************************************************/
+
+	
+
+	/***** Special Mob **************/
+
+	woot = random(15) + 80;
+
+	spec_mob = woot;
+
+	blocked[spec_mob] = 1;
+
+	blocked[spec_mob - 10] = 1;
+
+	blocked[spec_mob + 1] = 1;
+
+	blocked[spec_mob - 1] = 1;
+
+	
+
+	/**** create room descs *********/
+
+	while(num2 < 120){
+
+		number2 = random(30);
+
+		desc += ({ number2 });
+
+		num2 ++;
+
+	}
+
+	/********************************/
+
+	
+
+	/**** Encounters ****************/
+
+	while(num3 < 120){
+
+		number3 = random(3);
+
+		encounter += ({ number3 });
+
+		num3 ++;
+
+	}
+
+	/********************************/
+
+	encounter[5] = 1;
+
+	encounter[spec_mob] = 0;
+
+	
+
+	return 1;
+
+}
+
+
+
+
+
+room_check(){
+
+	int i;
+
+	object *inv3;
+
+	inv3 = all_inventory(this_object());
+
+	for(i=0; i<sizeof(inv3); i++) {
+
+		if(inv3[i]->is_player()){
+
+			remove_call_out("room_check");
+
+			call_out("room_check", 180);
+
+			return 1;
+
+		}
+
+	}
+
+	call_out("dest_me", 20);
+
+return 1; }
+
+
+
+
+
+renew_room(int x, int a){
+
+	int inv, i;
+
+	while(inv < 2){
+
+		object *inv2;
+
+		inv2 = all_inventory(this_object());
+
+		for(i=0; i<sizeof(inv2); i++) {
+
+			if(!inv2[i]->is_player() &&
+
+				!inv2[i]->is_pet() &&
+
+				!inv2[i]->is_neopet() &&
+
+				!inv2[i]->is_mine() &&
+
+			!inv2[i]->query_race("machine")){ destruct(inv2[i]); }
+
+		}
+
+		inv++;
+
+	}
+
+	room_desc = get_long(room_num);
+
+	if(a > 0){
+
+		if(encounter[room_num] < 1){
+
+			if(room_num == spec_mob && x > 18){
+
+    switch(random(2)){
+                          case 0: move_object(clone_object("/players/jaraxle/cave/mobs/special.c"), this_object());
+  break;
+                          case 1:  move_object(clone_object("/players/fred/misc/bknight.c"), this_object());
+      break;
+}
+
+			}
+
+			else if(x < 6){
+
+				if(random(100) < 50){
+
+					move_object(clone_object("/players/jaraxle/cave/mobs/newbie.c"), this_object());
+
+				}
+
+				move_object(clone_object("/players/jaraxle/cave/mobs/newbie.c"), this_object());
+
+			}
+
+			else if(x < 15){
+
+				if(random(100) < 50){
+
+					move_object(clone_object("/players/jaraxle/cave/mobs/midlevel.c"), this_object());
+
+				}
+
+				move_object(clone_object("/players/jaraxle/cave/mobs/midlevel.c"), this_object());
+
+			}
+
+			else if(x > 14){
+
+				if(random(100) < 50){
+
+					move_object(clone_object("/players/jaraxle/cave/mobs/highlevel.c"), this_object());
+
+				}
+
+				move_object(clone_object("/players/jaraxle/cave/mobs/highlevel.c"), this_object());
+
+			}
+
+			else{
+
+				if(random(100) < 50){
+
+					move_object(clone_object("/players/jaraxle/cave/mobs/midlevel.c"), this_object());
+
+				}
+
+				move_object(clone_object("/players/jaraxle/cave/mobs/midlevel.c"), this_object());
+
+			}
+
+		}
+
+	}
+
+	else{
+
+		if(encounter[room_num] < 1){
+
+			if(room_num == spec_mob && x > 18){
+
+                         move_object(clone_object("/players/jaraxle/cave/mobs/special.c"), this_object());
+
+			}
+
+			else if(x < 6){
+
+				if(random(100) < 50){
+
+					move_object(clone_object("/players/jaraxle/cave/mobs/gnewbie.c"), this_object());
+
+				}
+
+				move_object(clone_object("/players/jaraxle/cave/mobs/gnewbie.c"), this_object());
+
+			}
+
+			else if(x < 15){
+
+				if(random(100) < 50){
+
+					move_object(clone_object("/players/jaraxle/cave/mobs/gmidlevel.c"), this_object());
+
+				}
+
+				move_object(clone_object("/players/jaraxle/cave/mobs/gmidlevel.c"), this_object());
+
+			}
+
+			else if(x > 14){
+
+				if(random(100) < 50){
+
+					move_object(clone_object("/players/jaraxle/cave/mobs/ghighlevel.c"), this_object());
+
+				}
+
+				move_object(clone_object("/players/jaraxle/cave/mobs/ghighlevel.c"), this_object());
+
+			}
+
+			else{
+
+				if(random(100) < 50){
+
+					move_object(clone_object("/players/jaraxle/cave/mobs/gmidlevel.c"), this_object());
+
+				}
+
+				move_object(clone_object("/players/jaraxle/cave/mobs/gmidlevel.c"), this_object());
+
+			}
+
+		}
+
+	}
+
+	return 1;
+
+}
+
+
+
+
+
+
+
+/******************* Movement in the cave ********************************/
+
+move_north(){
+
+	if(room_num > 90){
+
+		return 0;
+
+	}
+
+	
+
+	if(blocked[room_num + 10] <= 0){
+
+		return 0;
+
+	}
+
+	if(present("cave_mob", this_object()) && !this_player()->query_ghost()){
+
+		write("The "+present("cave_mob",this_object())->query_name()+" jumps in front of you blocking your path!\n");
+
+		return 1;
+
+	}
+
+	tell_object(this_player(),
+
+	"You walk north.\n");
+
+	tell_room(environment(this_player()),
+
+	"You follow "+this_player()->query_name()+".\n", ({ this_player() }));
+
+	room_num += 10;
+
+	renew_room(this_player()->query_level(), this_player()->query_alignment());
+
+	encounter[room_num] = 1;
+
+	command("look", this_player());
+
+	return 1;
+
+}
+
+
+
+move_south(){
+
+	if(room_num < 11){
+
+		return 0;
+
+	}
+
+	
+
+	if(blocked[room_num - 10] <= 0){
+
+		return 0;
+
+	}
+
+	if(present("cave_mob", this_object()) && !this_player()->query_ghost()){
+
+		write("The "+present("cave_mob",this_object())->query_name()+" jumps in front of you blocking your path!\n");
+
+		return 1;
+
+	}
+
+	
+
+	tell_object(this_player(),
+
+	"You walk south.\n");
+
+	tell_room(environment(this_player()),
+
+	"You follow "+this_player()->query_name()+".\n", ({ this_player() }));
+
+	room_num -= 10;
+
+	renew_room(this_player()->query_level(), this_player()->query_alignment());
+
+	encounter[room_num] = 1;
+
+	command("look", this_player());
+
+	return 1;
+
+}
+
+
+
+move_east(){
+
+	if(room_num == 1 || room_num == 11 || room_num == 21 || room_num == 31 || room_num == 41 ||
+
+		room_num == 51 || room_num == 61 || room_num == 71 || room_num == 81 || room_num == 91){
+
+		return 0;
+
+	}
+
+	
+
+	if(blocked[room_num - 1] <= 0){
+
+		return 0;
+
+	}
+
+	if(present("cave_mob", this_object()) && !this_player()->query_ghost()){
+
+		write("The "+present("cave_mob",this_object())->query_name()+" jumps in front of you blocking your path!\n");
+
+		return 1;
+
+	}
+
+	
+
+	tell_object(this_player(),
+
+	"You walk east.\n");
+
+	tell_room(environment(this_player()),
+
+	"You follow "+this_player()->query_name()+".\n", ({ this_player() }));
+
+	room_num -= 1;
+
+	renew_room(this_player()->query_level(), this_player()->query_alignment());
+
+	encounter[room_num] = 1;
+
+	command("look", this_player());
+
+	return 1;
+
+}
+
+
+
+move_west(){
+
+	if(room_num == 10 || room_num == 20 || room_num == 30 || room_num == 40 || room_num == 50 ||
+
+		room_num == 60 || room_num == 70 || room_num == 80 || room_num == 90 || room_num == 100){
+
+		
+
+		return 0;
+
+	}
+
+	
+
+	if(blocked[room_num + 1] <= 0){
+
+		return 0;
+
+	}
+
+	if(present("cave_mob", this_object()) && !this_player()->query_ghost()){
+
+		write("The "+present("cave_mob",this_object())->query_name()+" jumps in front of you blocking your path!\n");
+
+		return 1;
+
+	}
+
+	
+
+	tell_object(this_player(),
+
+	"You walk west.\n");
+
+	tell_room(environment(this_player()),
+
+	"You follow "+this_player()->query_name()+".\n", ({ this_player() }));
+
+	room_num += 1;
+
+	renew_room(this_player()->query_level(), this_player()->query_alignment());
+
+	encounter[room_num] = 1;
+
+	command("look", this_player());
+
+	return 1;
+
+}
+
+
+
+move_leave(){
+
+	if(room_num != 5){
+
+		return 0;
+
+	}
+
+	tell_object(this_player(),
+
+	"You leave the underground.\n");
+
+	tell_room(environment(this_player()),
+
+	this_player()->query_name()+" leaves the underground.\n", ({ this_player() }));
+
+	call_out("dest_me", 20);
+
+	move_object(this_player(), "/players/jaraxle/cave/rooms/entrance.c");
+
+	command("look", this_player());
+
+	return 1;
+
+}
+
+/******************************************************************************/
+
+dest_me(){
+
+	int i;
+
+	object *inv3;
+
+	inv3 = all_inventory(this_object());
+
+	for(i=0; i<sizeof(inv3); i++) {
+
+		if(call_other(inv3[i], "id", "cave_mob")){
+
+			destruct(inv3[i]);
+
+		}
+
+		else{ move_object(inv3[i], "/players/jaraxle/cave/rooms/entrance.c"); }
+
+	}
+
+	destruct(this_object());
+
+	return 1;
+
+}
+
+
+
+
+
+
+
+
+
+map_func(){
+
+	int numero;
+
+	int uno;
+
+	while(numero < 100){
+
+		if(uno == 0){
+
+			write(
+
+			"                          ");
+
+		}
+
+		uno ++;
+
+		
+
+		if(blocked[100 - numero] == 0){
+
+			write(BOLD+BLK+"#"+NORM);
+
+		}
+
+		if(blocked[100 - numero] >= 1 && (100 - numero) != room_num){
+
+			write(HIM+"+"+NORM);
+
+		}
+
+		if((100 - numero) == room_num){
+
+			write(HIY+"U"+NORM);
+
+		}
+
+		if(uno == 10){
+
+			write("\n");
+
+			uno = 0;
+
+		}
+
+		numero ++;
+
+	}
+
+	return 1;
+
+}
+
+
+
+catch_tell(string str){
+
+	string what;
+
+	string what1;
+
+	
+
+	tell_room("/players/jaraxle/work.c",
+	str);
+
+}
+
+mystic_cave(){ return 1; }
+
+realm(){ return "NT"; }
+
+okay_follow(){ return 1; }
+
+no_hiding(){ return 1; }
+

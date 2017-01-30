@@ -1,0 +1,152 @@
+
+       M_EFUNS: Mappings, Mappings, Mappings.  And other stuff.
+
+           "/players/vertebraker/closed/std/m_efuns"
+
+	[must inherit or include the file to use it]
+
+* m_indices(mapping map) .. the same thing as keys(map) ..
+    just an alias cause i'm used to another driver
+
+* reconstruct_mapping(mixed *array)..
+   takes array and makes a new map with 
+   element1 its key, and element2 the key's value and so on,
+   infinitely.  there must be an even number of elements
+   in the array, obviously.  example..
+
+	   mapping map;
+	   string *a;
+
+	   a = ({ "dog", "woof", "cat", "meow" });
+	   map = reconstruct_mapping(a);
+  
+   map would be:
+    ([ "dog" : "woof", "cat" : "meow" ]);
+
+   this is useful for restoring maps.
+
+* deconstruct_mapping(mapping map) ..
+   takes map and breaks it down into an array.
+   example..
+
+	   mapping map;
+         string *b;
+
+         map = ([ "car" : "beep", "goose" : "honk" ]);
+         b = deconstruct_mapping(a);
+
+    b would be:
+     ({ "car", "beep", "goose", "honk" });
+
+    this is useful for saving maps.
+
+* int member(mixed what, mixed element) ..
+
+    1] acts as an alias for member_array() ..
+       you can check existance of element in
+       what.  it returns the position, or -1
+       if not found.
+
+       ie
+        string *things;
+        things = ({ "rock", "stone", "boulder" });
+        return member(things, "rock");
+
+        would return 0.  0 is the position of
+        "rock" in the array.
+
+    2] mainly used to check mapping 'what' for the
+       existance of key 'element'.  returns 1
+       if found, else returns 0.
+
+       ie
+         mapping map;
+         map = ([ "gold" : 200, "silver" : 500 ]);
+         return member(map, "gold");
+
+         would return 1, because "gold" is in the map.
+
+* mixed m_delete(mapping map, mixed key)
+    completely erases key and its corresponding value
+    from map, and returns the new map.  this differs
+    a great deal from deletem() because it actually
+    DOES delete the value.  if 'key' is not present in map,
+    it returns 0.
+
+     ie
+       mapping map;
+       map = ([ "garfield" : "lasagna", "scooby" : "scooby snacks" ]);
+       map = m_delete(map, "garfield");
+
+    the new map would be:
+      ([ "scooby" : "scooby snacks" ]);
+
+* string colour_pad(string text, int length)
+    this supports the bulk of the pad() efun.
+    takes a string, evaluates any ANSI colour code lengths, and adds them
+    to the length you specify, and returns a newly padded string.
+
+    previously, if you used pad() without accounting for ANSI colour,
+
+      string str;
+      str = RED + "blah" + NORM;
+
+      pad(str, 4); would return only the red ANSI code,
+      causing bleeding and just general lameness.
+      [each ANSI code (even the escape character) has a length].
+
+    colour_pad() would pad this properly..
+      colour_pad(str, 4); would return "[31mblah[2;37;0m"
+
+    *** something should be written here, because Feldegast
+    *** gave me the idea to write it, as i'd seen his color_pad
+    *** in existance.  i wanted to try my hand at it ;)
+
+* m_values(mapping map)
+   returns an array of all the values in map.. virtually
+   the opposite of m_indices
+
+   ie
+
+    string *x;
+    map = ([ "honky" : "tonk" , "hubba": "bubba" ]);
+    x = m_values(map);
+    
+    x would be ({ "tonk", "bubba" });
+
+* get_key(mapping map, mixed val)
+   returns the first corresponding key for value 'val'
+   in mapping 'map'.
+
+   ie
+   
+    string k;
+    mapping map;
+
+    map = ([ "circle" : "oval", "square" : "rectangle" ]);
+    k = get_key(map, "oval");
+
+    k would be "circle";
+
+* text_contains(string str, string key)
+	returns 1 if text "key" is present in string "str", 0 if not.
+
+   ie
+       string x, y, z;
+
+       x = "bonzo";
+       y = "onz";
+
+     It would return 1.
+
+* upper_case(string text)
+	Capitalizes each letter in a word, and returns the result.
+	ie
+		string b;
+		string c;
+
+		b = "hello";
+		c = upper_case(b);
+
+	c would be: "HELLO" .
+

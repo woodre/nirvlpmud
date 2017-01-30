@@ -1,0 +1,13 @@
+  -- LIGHT --
+
+TYPE: Spell (Fixed)
+INT REQ: 1
+USAGE: cast light
+COST: 1,000 xp
+
+  Makes your guild weapon glow.
+
+      /=COST SP=SPELL EFFECT=\
+      |    5   |  +1 light   |
+      \======================/
+

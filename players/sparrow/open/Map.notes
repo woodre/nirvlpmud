@@ -1,0 +1,29 @@
+Map notes:
+Wicket, you are very close on your map, there is only one
+real problem, your '-' (e/w exit) should be attached to the 
+rooms not the '|' (n/s junction). so for example your map 
+should look more like this:
+
+
+               |
+             H-N-H
+            /  |  \
+        RR-H   |   H-RR
+           |   |   |
+        RR-H   HR  H-RR
+           |   |   |
+        RR-H   FO  H-RR
+           |       |
+        RR-H       H-RR
+           |       |
+        RR-H       H-RR
+           |       |
+        RR-H       H-RR
+           |       |
+        RR-H       H-RR
+           |       |
+        RR-H       H-RR
+            \     /
+            
+  You are getting there though my friend.
+-S

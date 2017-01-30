@@ -1,0 +1,10 @@
+Syntax: c_chat [message]
+
+With argument of 'message', displays 'message' to all
+members of your clan.
+
+If 'message' is 'history', the last 20 messages said on
+the channel will be displayed.
+
+If the first character of 'message' is ':', the message
+will come out as an emote.

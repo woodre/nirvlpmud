@@ -1,0 +1,23 @@
+Vertebraker [2.24.01]
+
+i rewrote the mud's follow, and here's a quick guide.
+
+if you wanna make a room followable but not teleport,
+add:
+
+                realm() { return "NT"; }
+                okay_follow() { return 1; }
+
+to the code.
+
+if you wanna make a room teleport but not followable,
+add:
+
+            realm() { return "LA"; }
+
+and if you wanna make a room not teleport and not followable,
+continue using:
+
+            realm() { return "NT"; }
+
+by itself.

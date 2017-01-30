@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "A [1;31mBlood Moon[0m on a [1;30mAncient Pendant[0m ([1;33mGlowing[0m)(worn)[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "pendant"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "A [1;31mBlood Moon[0m on a [1;30mAncient Pendant[0m ([1;33mGlowing[0m)(worn)[0m"
+damage_type 0
+hall_path "/room/vill_track"
+object_name "pendant"
+owner "shojiro"
+spell_alias "bmoon"
+spell_mess_me "You close your eyes and focus your %hi black%dark energy%normal% calling down the %magenta%ancient powers %normal%of the %hi red%blood moon%normal% to %hi yellow%heal %normal%your %red%wounds%normal%."
+spell_mess_room "%TPN% closes their eyes and focuses their %hi black%dark energy%normal% calling down the %magenta%ancient powers %normal%of the %hi red%blood moon%normal% to %hi yellow%heal %normal%%TP_POS%%red% wounds%normal%."
+spell_mess_them "%TPN% closes their eyes and focuses their %hi black%dark energy%normal% calling down the %magenta%ancient powers %normal%of the %hi red%blood moon%normal% to %hi yellow%heal %normal%your%red% wounds%normal%."
+abilities ({})
+chan_history ({"[Sat Dec 24 15:42:25 2016] Sinner has joined the clan!",})
+leaders ({})
+join_type 0
+private_coffer 444593
+public_coffer 0
+spell_delay 10
+spell_id 2
+spell_cost 80
+last_spell_time 1446682878

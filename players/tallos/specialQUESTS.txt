@@ -1,0 +1,107 @@
+QUESTING IN NIRVANA
+
+With these few notes i wish 
+        to set some basic concepts about questing;
+        to stimulate wizards to design new quests;
+        to help wizards to design interesting quests.
+
+QUESTING GUIDELINES
+First of all, under the word quest I would include all related features, 
+such as riddles, puzzles, tasks, adventuring, discovering, etc etc. So, 
+all that follows could apply to almost everything in the mud, and not 
+only wizzing-related matter (i.e the old quest system which served 
+only to wizzing).
+
+Postulate 1
+Players don’t like questing.
+
+Theorem 1:
+In order to let players like the quests, these must be rewarding, 
+interesting and fast.
+Demonstration:
+Let us assume the quest might be useless, boring, and time comsuming. 
+If this happens, the players wont like to do it. So, the quest must 
+be rewarding, interesting and fast. 
+The theorem 1 is demonstrated.
+
+After demonstrating theorem 1, we need to define better the words used:
+Rewarding: 	it might give credits for wizzing;
+       		it might give more coins than used to solve it;
+		it might give unique items;
+		it might give an amazing amount of experience;
+		it might give special power;
+		it might give access to special information.
+Interesting:	it should stimulate the player to challenge himself;
+		it should involve the player in something different 
+		than the usual kill and run;
+		it should not be based only on a bazillions monster 
+		killing, or on the kill of a super duper monster;	
+		it should challenge player’s brain and ability overall;
+		it should be original and innovative:
+Fast: 		velocity in this way doesn’t necessarily mean that the 
+		quest should be made in a set time limit (like, 15 minutes)
+		but that it should present the player new challenges
+	        every a bit.
+        
+Within the previous statement, some require special attention:
+	uniqueness of the items rewarded;
+	special power;
+	special information;
+	originality and innovation.
+Such statements are those which could mostly stimulate a player 
+to switch from kill and run to questing. 
+	
+Postulate 2:
+The quests should NOT be cheatable.
+
+Postulate 3:
+If postulate 2 holds, then coding a quest is tough.
+
+There is a simple basic concept which permits to overcome postulate 3: 
+it is called ‘randomness’. When several random situation are put into
+a quest, then more difficult is for a player to rebuild the route to 
+reach the solution. Of course, the randomness should be effective,
+and this gives more problems to the coder. For instance, lets imagine
+that a player reaches a set point along the route of the quest, solves
+a riddle and is given an object which will be part of the solution:
+if we want true randomness, we should code infinite objects all different 
+from one another. And, of course, when we make the final checksum at 
+the end of the quest, the code must be smart enough to recognize which 
+is the correct item the player should carry in his inventory. 
+
+Postulate 4:
+The wizards don’t like to code a quest.
+
+Well, I understand that everything made mandatory might stop the 
+creativity and therefore could scary wizards away from moving on 
+the difficult route of coding a quest, but, if we adequately reward 
+their efforts, then we might expect wizards be interested in coding 
+a quest. Moreover, if we provide some simple examples and some hints
+they might use such hints to expand their creativity and to go further.
+
+HINTS
+Hint 1:
+Make a monster randomly appear around the mud.
+Player must find and kill it
+
+Hint 2:
+Invent a game and let player solve it (examples are mastermind and hippo’s)
+
+Hint 3:
+Let player say hello to a certain amount of monster around the mud
+
+Hint 4:
+Let player collect several objects around the mud and show them to someone 
+(old style quest)
+
+Hint 5:
+Make a route a player must follow and in doing so he must collect items 
+(keys) and open doors, talk to monsters, etc. (old style quest).
+
+PROMOTIONS
+From 40 -> 50 a wizard must code a quest
+
+MISC
+just add here what you want :)
+
+

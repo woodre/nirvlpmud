@@ -1,0 +1,22 @@
+**************
+
+
+                     Mkdir
+
+Syntax:    mkdir <name>
+
+Desc:
+           This command creates a directory in the current directory
+           or in the path specified.
+
+Warning:   Don't make the directory name to complicated in those 
+           you'll be using often. It becomes a nuisance to type.
+
+Example:   mkdir cheese
+                  results 
+           directory cheese is added to current directory.
+
+Related:   rmdir, cd, cp_dir
+
+
+**************

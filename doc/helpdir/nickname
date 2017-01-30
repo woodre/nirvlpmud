@@ -1,0 +1,16 @@
+                         [help nickname]
+-----------------------=========+=========-----------------------
+
+Usage: "nickname <nick> <definition>"
+       "nicknames"
+       "unnickname <nick>"
+
+       A nickname is similar to an alias [see "help alias"] -- 
+however, nicknames are used in association with targets, rather than
+commands.  Type "nickname x bobby" and you'll be able to send tells
+to Bobby simply by typing "tell x <whatever>".  Use "nickname d dragon"
+and slap dragons around simply by typing "slap d"!  The uses are infinite.
+
+       "nicknames" lists all of the nicknames you have, with a maximum
+of 50.  Use "unnickname <nick>" to remove a nickname already in use.
+

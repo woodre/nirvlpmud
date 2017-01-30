@@ -1,0 +1,27 @@
+
+Bloodfist Help:  Toggle
+
+  The toggle command allows you to customize the guild in various ways.
+The toggle list command lets you see all of your toggles at once.
+
+  ac   additional commands
+       Displays a list of related commands when various guild commands
+       are used.
+
+  fs   full score
+       Displays the guild info as well as the mud info in the guild score.
+
+  as   auto sheath on retrieve
+       When you retrieve a thrown weapon, it can either be moved to the
+       inventory or automatically sheathed on your back.
+
+  fm   full monitor
+       Whether or not the duration monitor displays the abbreviations
+       of the spells names or the full names.
+
+  hm   heartbeat monitor
+       Whether or not the duration monitor is displayed during combat.
+
+Usage: toggle <which>
+       toggle list
+

@@ -1,0 +1,11 @@
+took me less than 5 minutes to update it....all i did was make sure
+that anything in create or reset was moved to on_create(), removed the
+::create() and ::reset(arg) and so on of course, and changed the exits/
+items functions
+
+just look at it, see that only 3 functions are in it really, other than
+the necessary board ones....on_create() on_reset() and on_init() would be
+there...
+
+change the inherit for the rooms to GHALL, btw, instead of ROOM or whatever
+room file they inherit

@@ -1,0 +1,147 @@
+#define BALL present("ball", this_player())
+
+ /*
+   this is the function which will give the player back the spell points
+   which they have since put in the object.  This is 1/2 the amount of
+   what they had spent to get the object.
+ */
+
+crush_the_ball(str)
+{
+  if((!str) || (str != "ball"))
+  {
+    write("You might want to 'crush' the ball.\n");
+    return 1;
+  }
+
+  write("With all your physical might, you crush the ball into eternity\n");
+  write("releasing all the mystical energy trapped within!\n");
+  say("You see " + capitalize(this_player()->query_name()) + " crush a ball\n"+
+      "to nothingness, with a bright flash of light replacing it for an\n" +
+      "instant.\n");
+  this_player()->add_spell_point(BALL->query_total_sps());
+  this_player()->add_weight(-1); /* remove the weight from the player */
+  BALL->die();
+  return 1;
+}
+
+ /*
+   this function will let the player give the ball to someone else
+   even if they are not in the same room as them.
+ */
+
+pass_the_ball(str)
+{
+  object whom;
+
+  if(!str)
+  {
+    write("Who do you want to pass the ball to?\n");
+    return 1;
+  }
+
+ /*
+   lets check to see if the person whom they want to send it to is on
+ */
+
+  whom = find_player(str);
+  if(!whom) /* not online */
+  {
+    write(capitalize(str) + " is not online.\n");
+    return 1;
+  }
+
+  write("You gather up all your physical energy and throw the mystical\n");
+  write("ball of energy to " + capitalize(whom->query_name()) + ".\n");
+  say("You see " + capitalize(this_player()->query_name()) + " throw a \n");
+  say("mystical ball to " + capitalize(whom->query_name()) + ".\n");
+  tell_object(whom, capitalize(this_player()->query_name()) + " has tossed " +
+              "you a ball of mystical energy!\n");
+  transfer(BALL, whom);
+  return 1;
+}
+
+
+ /*
+   This function will let the player use the ball of energy to do damage
+   to their opponent.  The formula for this is as follows:
+   total damage = 1/2 set + 1/2 random  maximum of 50 points of damage.
+ */
+
+toss_the_ball(str)
+{
+  object foe;
+  int max, dam1, dam2, total;
+
+ /*
+   check to see if they forgot to put the person they want to attack
+ */
+
+  if(!str)
+  {
+    write("You feel your ball of mystical energy grow with power, then fade\n");
+    write("away as you failed to select a target.\n");
+    return 1;
+  }
+
+
+ /*
+   check to see if the monster they want to attack is present,
+   if not display an error message, if it is, continue
+ */
+
+  for = present(str, environment(this_player()));
+
+  if(!foe)
+  {
+    write(capitalize(str) + " is not present.\n");
+    return 1;
+  }
+
+ /*
+   We'll check to see if the monster they want to attack is indeed a monster
+   or a player, if its a player, we give an error message
+ */
+
+  if(!foe->query_npc())
+  {
+    write("You cannot attack a player with your mystical ball.\n");
+    return 1;
+  }
+
+ /*
+   We'll now check to see what the total amount of sps are in the object.
+   Since the player who purchased this has already spent 2x the amount
+   for the object, we'll let them get their spell points worth out of it
+   by letting them do up to the amount of spell points that are stored
+   in the object currently.  This, of course is subject to the maximum
+   spell damage allowed, which is currently 50.
+ */
+
+  max = BALL->query_total_sps();
+ /*
+   if the points stored in the ball are more than 50, set them to 50 to
+   deal with the spell
+ */
+  if(max > 50) max = 50;
+  dam1 = max / 2; /* 50% of damage is set */
+  dam2 = random(max/2); /* 50% of damage is random */
+  total = dam1 + dam2; /* total damage */
+
+ /*
+   now lets cast the spell that will do the damage
+ */
+
+  write("You muster up all the strength that you can and hurl your\n");
+  write("precious mystical ball at " + capitalize(foe->query_name()) + ".\n");
+  say("You see " + capitalize(this_player()->query_name()) + " throw their\n");
+  say("precious ball at " + capitalize(foe->query_name()) + ".\n");
+  this_player()->spell_object(foe, "mystical energy", total, 0);
+
+ /*
+   now that the spell is cast, we will get rid of the original ball.
+ */
+
+  BALL->die();  /* call function in slave object to self-destruct */
+  return 1;
+}

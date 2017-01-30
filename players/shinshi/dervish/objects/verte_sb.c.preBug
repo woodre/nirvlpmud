@@ -1,0 +1,23 @@
+#include "/players/vertebraker/ansi.h"
+int saved_ac;
+begin()
+{
+  call_out("tick_end", 1800);
+}
+
+tick_end()
+{
+ if(environment())
+ {
+    tell_room(environment(), BOLD+"The power of SandBlast seems to have worn off.\n"+NORM);
+    environment()->set_ac(environment()->query_ac() + saved_ac);
+ }
+ destruct(this_object());
+}
+
+set_saved_ac(x) { saved_ac=x; }
+
+drop() { return 1; }
+get() { return 1; }
+
+id(str) { return (str=="derv_ac_mod"); }

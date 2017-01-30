@@ -1,0 +1,110 @@
+static sand_missile(str) {
+  object meat;
+  int dmg;
+  if(this_player()->query_level() < 5) return 0;
+  if(this_player()->query_spell_dam()) {
+    write("The Sands are already lending strength to your attack.\n");
+  spell_attacks ++;
+    return 1; }
+  if(str) meat = present(str, environment(TP));
+  if(!meat) meat = TP->query_attack();
+  if(!meat) { write("Attack what?\n"); return 1; }
+  dmg = 5+random(10);
+  TP->spell_object(meat,"",dmg,10,
+      get_at_msg(meat,dmg),"",get_rm_msg(meat,dmg));
+  return 1; }
+
+static sand_shock(str) {
+  object meat;
+  int dmg;
+  if(this_player()->query_level() < 10) return 0;
+  if(this_player()->query_spell_dam()) {
+    write("The Sands are already lending strength to your attack.\n");
+  spell_attacks ++;
+    return 1; }
+  if(str) meat = present(str, environment(TP));
+  if(!meat) meat = TP->query_attack();
+  if(!meat) { write("Attack what?\n"); return 1; }
+  dmg = 8+random(14);
+  TP->spell_object(meat,"NAME",dmg,15,
+      get_at_msg(meat,dmg),"",get_rm_msg(meat,dmg));
+  return 1; }
+
+static sand_fireball(str) {
+  object meat;
+  int dmg;
+  if(this_player()->query_level() < 15) return 0;
+  if(this_player()->query_spell_dam()) {
+    write("The Sands are already lending strength to your attack.\n");
+  spell_attacks ++;
+    return 1; }
+  if(str) meat = present(str, environment(TP));
+  if(!meat) meat = TP->query_attack();
+  if(!meat) { write("Attack what?\n"); return 1; }
+  dmg = 12+random(16);
+  TP->spell_object(meat,"NAME",dmg,20,
+      get_at_msg(meat,dmg),"",get_rm_msg(meat,dmg));
+  return 1; }
+
+static sand_sonic(str) {
+  object meat;
+  int dmg;
+  if(this_player()->query_extra_level() < 5) return 0;
+  if(this_player()->query_spell_dam()) {
+    write("The Sands are already lending strength to your attack.\n");
+  spell_attacks ++;
+    return 1; }
+  if(str) meat = present(str, environment(TP));
+  if(!meat) meat = TP->query_attack();
+  if(!meat) { write("Attack what?\n"); return 1; }
+  dmg = 15+random(18);
+  TP->spell_object(meat,"NAME",dmg,25,
+      get_at_msg(meat,dmg),"",get_rm_msg(meat,dmg));
+  return 1; }
+
+get_at_msg(object meat, int num) {
+  string meatn, msg;
+  if(!meat) return;
+  meatn = meat->query_real_name();
+  if(!meatn) meatn = meat->query_name();
+  if(!meatn) meatn = "something";
+  meatn = capitalize(meatn);
+  switch(num) {
+  case 0..9:     msg = "A zephyr gives speed to your arm."; break;
+  case 10..15:   msg = "The Sands lend power to your blow."; break;
+  case 16..18:   msg = BOLD+"Particles of sand whip into "+meatn+"."; break;
+  case 19..22:   msg = BOLD+"You attack with ungodly speed!"; break;
+  case 23..25:   msg = RED+"The Scirocco whips into "+meatn+"!"; break;
+  case 26..28:   msg = RED+"Winds flay the skin from "+meatn+"'s bones!"; break;
+  case 29..31:   msg = RED+"Flecks of fire burn into "+meatn+"!"; break;
+  case 32..34:   msg = BOLD+RED+meatn+" is hammered by the Sands!"; break;
+  case 35..37:   msg = BOLD+RED+"Your motions blur as you rip into "+meatn+"!";
+                 break;
+  case 38..45:   msg = BOLD+RED+"The SandStorm blasts into "+meatn+"!"; break;
+  }
+  return msg+OFF+"\n";
+}
+
+get_rm_msg(meat, num) {
+  string meatn, msg;
+  if(!meat) return;
+  meatn = meat->query_real_name();
+  if(!meatn) meatn = meat->query_name();
+  if(!meatn) meatn = "something";
+  meatn = capitalize(meatn);
+  switch(num) {
+  case 0..9:     msg = "A zephyr gives speed to "+TP->query_name()+"'s arm."; break;
+  case 10..15:   msg = "The Sands lend power to "+TP->query_name()+"'s blow."; break;
+  case 16..18:   msg = BOLD+"Particles of sand whip into "+meatn; break;
+  case 19..22:   msg = BOLD+TP->query_name()+" attacks with ungodly speed!"; break;
+  case 23..25:   msg = RED+"The Scirocco whips into "+meatn+"!"; break;
+  case 26..28:   msg = RED+"Winds flay the skin from "+meatn+"'s bones!"; break;
+  case 29..31:   msg = RED+"Flecks of fire burn into "+meatn+"!"; break;
+  case 32..34:   msg = BOLD+RED+meatn+" is hammered by the Sands!"; break;
+  case 35..37:   msg = BOLD+RED+TP->query_name()+"'s motions blur as "+
+                 TP->query_gender()+" rips into "+meatn+"!"; break;
+  case 38..45:   msg = BOLD+RED+"The SandStorm blasts into "+meatn+"!"; break;
+  }
+  return msg+OFF+"\n";
+}
+

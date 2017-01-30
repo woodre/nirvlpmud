@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/puppy/s/eq/collar","/players/scathe/armor/suit","/obj/armor","/players/scathe/armor/bowarmor","/players/wren/Area/starbug/items/reddress","/players/pain/NEW/arm/gloves","/obj/torch","/players/snow/cam/stuff/plate","/obj/armor","/players/mythos/aarmor/hara-ate","/players/snow/shadows/stuff/axe","/players/wren/Area/starbug/items/ogunit","/players/jamila/beach/mobs/skin","/players/snow/WEAPONS/tsunami","/players/emerson/obj/straw","/players/mythos/awep/kama","/players/morgar/say","/obj/weapon","/obj/weapon","/players/mythos/awep/arrow","/players/puppy/s/eq/hammer","/players/scathe/weap/baxe","/players/arrina/armor/torque","/players/sado/shop/rose","/obj/treasure",})
+shorts ({"A leather collar","Black Suit","Robot Head","Light Leather Armor","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","Leather work gloves","sunflower","[34m[1mBlessed Plate Armor[0m[0m","A magical [1mwhite[0m amulet","Hara-ate","A dusky axe","a case containing an OG unit.","A Lizard Skin","[34mTsunami[0m","A Straw","kama","say with echo and quotes","Bow","Decorated Broadsword","arrow","A hammer","A Huge Double Bladed Axe","Silver Torque","A beautiful red rose blossom","Arctic Wolf pelt",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

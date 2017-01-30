@@ -1,0 +1,52 @@
+Variables - An ever-changing world
+
+Variables are the basic building blocks from which the mud is formed. A
+variable is a kind of container you can store data in for use by the
+code. They are divided into several different catagories based on the
+type of information they hold, their function and their position in the
+code. This document will try to cover both of them quickly, but there
+will be additional information in depth later on. Every variable must be
+'declared' before being used. This means that the type of information
+they will hold and their name must be set up.
+
+The first factor to consider is the type of information that they will
+contain. There are several different types of variables available to
+store information into. The following is a list of some of the most
+common variables with examples of what they can hold and how they are
+set up in the code.
+
+Strings:
+    e.g.    string name, short_desc, info;
+    These variables store text.
+
+Integers:
+    e.g.    int x, y, level;
+    These variables store whole numbers [1, 9, 255, etc.]
+
+Objects:
+    e.g.    object ob, me, monster, weapon;
+    These variables contain objects.
+
+They all follow the same basic format:
+    <data type> <variable name>, <another variable>, ..., <last variable>;
+
+A variable as a container will hold the information necessary for the
+functions to operate. Variables can be passed [given to other
+functions], evaluated [compared to other variables or standards] or
+manipulated [add, subtract, changed, replaced] within the program.
+
+There are three other types of variables that we will cover later, float
+[not available on Nirvana] which stores floating point numbers [e.g.
+1.2345], arrays which store lists of variables but all must be the same
+type, and mappings which are actually 'data trees' that can best be
+described as dictionaries. Arrays and mappings are a special set of
+variables that will get in deep with later.
+
+What do we actually do with these variables then?
+
+We need to use variables in many ways. Anytime there is information that
+needs to be used by another function or object, then a variable is the
+best way to give that information. If a piece of information is going to
+be used multiple times, then a variable is the best way to go about it.
+Where the information is detailed and/or convoluted, a variable is often
+the best way to deal with it. 

@@ -1,0 +1,30 @@
+                         -=[ Crimes ]=-
+
+Criminals are the enemies of the Knights Templar.  They are
+the muderers and thieves that plague Nirvana.  In order to
+keep track of our foe, we have a criminal list.  It is every 
+Knights responsibility to log criminal activity (refer to the 
+Tablet), and pardon a criminal once they have paid with their 
+life.  It is important to note that crimes must be logged
+to when they occur, for the person must be logged on. Folowing 
+is a list of command to help aid you:
+
+cwho
+criminal <name>
+*record <name> <crime-type> <details of situation>
+pardon <name>
+
+*crime-type must be an integer:
+1  Pet/Kid Killer
+2  Thief
+3  Attacking Ally
+4  Muderering Ally
+5  Repeat Offender
+6  Sworn Enemy
+
+Examples: 
+record badplayer 1 Badplayer killed my squire
+record badplayer 2 Badplayer stole the coins from my kill.
+record badplayer 3 Badplayer attacked me when I was in Fallen Lands.
+record badplayer 4 Badplayer killed newbie for no reason.
+

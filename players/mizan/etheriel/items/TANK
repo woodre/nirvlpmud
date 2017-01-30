@@ -1,0 +1,20 @@
+
+This is a large blue plastic tank to store Berynol in. You are not
+too sure exactly what Berynol is but that is not
+the point. It's a strong alcoholish stuff that heals
+so it must be good.
+
+Commands:
+ tank X : where X is the amount of units that you want to heal.
+	  Each unit heals one hitpoint and one spellpoint.
+
+ tank	: shows how many charges are remaining in the thermos.
+
+  bs	: automatic heal (Using Spellpoints as a marker)
+
+  bh	: automatic heal (Using Hitpoints as a marker)
+
+ Automatic heals work like this: Assuming you use hitpoints as a marker,
+the tank does the following: heal=(max hp - current hp). If you had more
+spellpoints at the time, you should have chosen spellpoint autoheal as
+not to waste any tank units. This proves to be very helpful in quick combat.

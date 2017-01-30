@@ -1,0 +1,40 @@
+KEATS
+1bridge	bridge to keats
+1word02	entrance
+1word01	main road
+1square	town square
+1vigeous01	vigeous road
+1vigeous02	before burned palace
+
+CHURCH
+1church01	entrance
+1church02	main
+1church03	east alcove (sarcophagus w/ key)
+1church04	west alcove (sarcophagus w/ niche:
+                         opens stairway down around column at before altar)
+                         [requires key from sarcophagus in 1church03 
+1church05	before altar
+1church06	altar
+
+CATACOMBS
+1cat01	entrance
+1cat02	hall 1 dead end (locked gate)
+1cat03	hall2
+1cat04	hall2 alcove1
+1cat05	hall2 alcove2
+1cat06	hall3
+1cat07	hall3 alcove1
+1cat08	hall3 alcove2
+1cat09	hall4 dead end (standing sarcophagus, hidden door)
+1cat10	dark room with stairway down (destroys all light)
+1cat11	dark room with rock bridge (destroys all light)
+1cat12	dark mage joining room (destroys all light)
+
+BURNED PALACE
+1palace01	front drive
+1palace02	back yard
+1palace03	tool shed
+1palace04	entrance
+1palace05	living room
+1palace06	atrium	
+1palace07	upstairs

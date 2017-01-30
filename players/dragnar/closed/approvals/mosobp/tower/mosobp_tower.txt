@@ -1,0 +1,52 @@
+ROOMS
+	* I didn't find any real issues with the rooms, but I have suggestions for future areas:
+		o Room descriptions should be a bit more detailed.
+		o Items in the room as well could use more flushing out.
+		o It would be good to have more interaction with your rooms. If a player spends time 
+      exploring and never finds anything interesting with the items in your rooms it won't 
+      encourage exploring. Hidden room exits, hidden items needed for other rooms etc. make 
+      it more interesting for the player.
+OBJ
+	* daura.c
+		o Fix path in the header
+		o I think a mage bonus should be added to match the original aura, if you need help 
+      just let me know.
+	* dki, gloves, pants, sarmor, sboots are all OK.
+NPC
+	* chiaotzu.c
+		o Level 15 but with 500 hps, max gold for level 15 is 1000. Either raise level to 17 
+      and raise wc/ac to 24/14, or lower gold.
+		o Need to update header information.
+	* garlicjr.c
+		o Fix long, incomplete sentence: After escaping from the dead zone.
+		o Looks similar to piccolo, needs the same changes we made to piccolo by removing 
+      HB and adding spell to handle heals & room damage.
+		o If you leave HB (not my first choice), debug messages need to be removed.
+		o Total loot needs to be a max of 11,000 including gear.
+	* korrin.c
+		o Room has sign that describes buying sensu beans, but I don't see an action in the 
+      room or the mob to buy the beans?
+	* mustard.c
+		o Coins are high for level 17, lower total value to 2100 including gloves (can lower 
+      hps if desired), or change to level 20, increase wc/ac to 30/17. Spell damage is 
+      already high enough for level 20.
+	* nappa.c
+		o  set_multi_cast(1) doesn't do anything since he only has 1 spell. 
+		o Lower gold to max of 2750. 2750 + 1250 + 1000 for armor = 5000
+	* piccolo.c
+		o Gold is at max, needs to be lowered to account for armor.
+		o Which version do you plan to use, the one I helped you with? If so the message 
+      needs to be updated in heal_check function.
+		o Remove the commented out HB.
+		o I'm never fighting this mob :)
+	* raditz.c
+		o Level 15 max is 1000, armor is worth 1250 + 1000. Need to increase to level 17 stats.
+	* salt.c
+		o Should be level 20
+	* tien.c
+		o set_multi_cast(3); should be set_multi_cast(1); It is either on or off.
+		o Change gold to 4500 + r(1000)
+	* vinegar.c
+		o Ensure value of gear + gold does not exceed 8000
+	* yamcha.c
+		o OK

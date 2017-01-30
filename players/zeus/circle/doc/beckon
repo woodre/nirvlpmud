@@ -1,0 +1,15 @@
+
+I coded something else for the fallen.  Originally it was just a cool emote
+but I turned it into a spell.  They get it at 50k gxp.  For a sp cost of
+10-59 they summon an obj to the room that slightly heals their endurance
+if they're outside of combat.  Max endurance gain is about 8, or 10%.
+Duration is directly related to gxp.  The goal with this is not to give
+them a sp->end conversion spell, so if the numbers need tweaking (although
+I don't think they do) then I'll certainly tweak.  Never did touch Vigor
+and players seem to like it, although I had a helluva time using it as
+a player.  Well, let me know.
+
+files:  ~/circle/power/beckon.h
+        ~/circle/OBJ/shadows.c
+
+Zeus

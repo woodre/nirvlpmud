@@ -1,0 +1,14 @@
+Because objects shaped from pure chaos are different from more
+ordinary objects, you must refer to them in a special way.  To refer
+to an object originally draw from chaos, put an underscore (_)
+before and after the name.
+
+There is one exception to this:  you may look at an object without using the
+underscores.
+
+For example, a Bard wishing to pay court to a lady might use the following
+commands to shape a rose for her:
+cantrip strand
+shape _strand_ name rose | A red, red, rose | flower
+shape _rose_ detail Yep, it's a rose.
+shape _rose_ mass

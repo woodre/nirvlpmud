@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;30mA pair of Glock G19 9mm's[0m (strapped)[0m"
+long_desc "This is a pair of customized Glock G19 9mm pistols. With the clips full,they feel perfect in your grips. Let 'em bleed, ryda.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "glocks"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This is a pair of customized Glock G19 9mm pistols. With the clips full,they feel perfect in your grips. Let 'em bleed, ryda.[0mType 'clan_help' for commands."
+clan_short "[1;30mA pair of Glock G19 9mm's[0m (strapped)[0m"
+damage_type "physical"
+hall_path "/players/trix/castle/primo/entrance1"
+object_name "glocks"
+owner "skarekrow"
+spell_alias "chop"
+spell_mess_me "%hi white%You %normal%chop%hi white% %AKN% in the throat. They hit the floor, barely able to breathe.%normal%"
+spell_mess_room "%hi white%Skarekrow %normal%chops%hi white% %AKN% in the throat. %AKN% hits the floor, barely able to breathe.%normal%"
+spell_mess_them "%hi white%Skarekrow %normal%chops%hi white% you in the throat. You hit the floor, barely able to breathe.%normal%"
+abilities ({})
+chan_history ({"[Thu Dec 10 01:03:53 2015] Skarekrow: sup","[Thu Dec 10 01:04:13 2015] Skarekrow: ok, from green, 2n, enter realm, n, enter_clan_hall","[Thu Dec 10 01:05:13 2015] Skarekrow: 2n is your area, rooms around it are storage wazoo","[Thu Dec 10 01:05:27 2015] Skarekrow: build on it however you like","[Thu Dec 10 01:05:55 2015] Numark: word thx","[Thu Dec 10 01:08:43 2015] Skarekrow: 21 wocket fulls hanging around in the west, east, and north rooms from here","[Thu Dec 10 01:09:35 2015] Numark: nice","[Thu Dec 10 01:10:23 2015] Numark: thanks man","[Thu Dec 10 01:11:55 2015] Numark: woot","[Thu Dec 10 01:14:31 2015] Numark: u around?","[Thu Dec 10 01:16:11 2015] Skarekrow: yeah","[Thu Dec 10 01:16:13 2015] Skarekrow: sorry","[Thu Dec 10 01:16:21 2015] Numark: np im headed to bed man","[Thu Dec 10 01:17:09 2015] Skarekrow: before ya do..... what do you think I should do about what I feel for her?","[Thu Dec 10 01:17:47 2015] Numark: you really want my advice","[Thu Dec 10 01:18:07 2015] Numark: first i will need to ask you a few questions","[Thu Dec 10 01:18:17 2015] Numark: can i call you?","[Thu Dec 10 01:18:29 2015] Skarekrow: of course","[Thu Dec 10 01:18:39 2015] Numark: ill call ya in a few","[Thu Dec 10 01:18:47 2015] Skarekrow: kk bro i'll be here",})
+leaders ({"sephira","numark",})
+join_type 2
+private_coffer 6080872
+public_coffer 0
+spell_delay 9
+spell_id 1
+spell_cost 65
+last_spell_time 1390153929

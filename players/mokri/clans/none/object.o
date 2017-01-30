@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "An [1;31mUnidentified [36mThing[0m"
+long_desc "An [1;31mUnidentified [36mThing[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "thing"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "An [1;31mUnidentified [36mThing[0mType 'clan_help' for commands."
+clan_short "An [1;31mUnidentified [36mThing[0m"
+damage_type "good"
+hall_path "/room/church"
+object_name "thing"
+owner "bella"
+spell_alias "Spell"
+spell_mess_me "You smack %AKN% across the face!"
+spell_mess_room "%TPN% smacks %AKN% across the face!"
+spell_mess_them "%TPN% smacks you across the face!"
+abilities ({})
+chan_history ({"[Fri Jun 19 17:04:47 2009] Guest has joined the clan!","[Fri Jun 19 17:05:14 2009] Guest: where is the hall?","[Fri Jun 19 17:05:20 2009] Guest: or can you slap it hrere real quick?","[Fri Jun 19 17:05:40 2009] Bella: slap it here real quick?","[Fri Jun 19 17:05:52 2009] Guest: move the clan hall to where i am :)","[Fri Jun 19 17:05:54 2009] Bella: its at the base of the mountain","[Fri Jun 19 17:06:00 2009] Bella: Oh.","[Fri Jun 19 17:06:04 2009] Bella: I can do that.. heh","[Fri Jun 19 17:06:29 2009] Bella: sorry got stopped by that stupid thief.","[Fri Jun 19 17:07:21 2009] Guest: clan owner only ;)","[Fri Jun 19 17:07:33 2009] Guest: so its an owner room.","[Fri Jun 19 17:07:35 2009] Guest: yep :)","[Fri Jun 19 17:07:47 2009] Bella: ah, ok.. so i have like 3 lockers in there :)","[Fri Jun 19 17:08:23 2009] Bella: I took everything.","[Sat Jun 20 13:18:50 2009] Bella: Oh, and what am I?","[Mon Jun 22 08:24:36 2009] Bella has removed Quagmire from the clan!","[Mon Jun 22 08:25:20 2009] Bella: test","[Wed Jul  1 16:28:12 2009] Bella: Deaths are fun :)","[Wed Jul  1 16:28:38 2009] Bella: Heh","[Sun Aug 23 15:51:21 2009] Bella: but someone who starts with a C did a whitehawk :)",})
+leaders ({"jaster",})
+join_type 0
+private_coffer 182200
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 50
+last_spell_time 1296786065

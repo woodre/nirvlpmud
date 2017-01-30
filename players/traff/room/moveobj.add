@@ -1,0 +1,16 @@
+    }
+    drink = clone_object("obj/drink");
+    if (!call_other(this_player(), "add_weight",
+	call_other(drink, "query_weight"))) {
+	write("You can't carry more.\n");
+	destruct(drink);
+	return 1;
+    }
+    move_object(drink, this_player());
+    call_other(this_player(), "add_money", - value);
+    write("You pay " + value + " for a " + name + ".\n");
+    say(call_other(this_player(), "query_name", 0) + " orders a " +
+	name + ".\n");
+    return 1;
+}
+

@@ -1,0 +1,34 @@
+#include "/players/beck/Defs.h"
+#include "/players/beck/Rangers/RangerDefs.h"
+
+RangerInit(){
+   if(PO->QuerySkillLevel("machine") >= 5){
+      PO->AHiddenSkill("zord","beck");
+   }
+   if(PO->QuerySkillLevel("machine") >= 20){
+     PO->AHiddenSkill("megazord","beck");
+   }
+}
+
+RangerPower(str,Align){
+   
+}
+
+QMax(){
+   return 20;
+}
+
+QRangerInfo(){ return 1; }
+
+RangerInfo(str){
+   write("Machines are powerful vehicles/robots that fight with the Power Rangers.\n"+
+         "Some fight alongside the Power Rangers, while others are used with the \n"+
+         "Power Ranger inside.\n"+
+         "\nAvailable machines:\n\n"+
+         BOLD+RED+"Zord"+OFF+"                  5\n"+
+         "Thunder Megazord      20 (The biggest baddest fighter on Nirvana)\n"+
+         "\nOther machines will be available soon.\n"+
+         "");
+
+}
+

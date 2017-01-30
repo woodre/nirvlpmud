@@ -1,0 +1,24 @@
+<FO>
+
+Short Desc: Bailey Watkinson (Owner)
+Long Desc: An younger man in his twenties, he is very upbeat.
+         His money and the income from the facility is all that
+         matters to him. He cares nothing of anyone elses well
+         being. He is wearing a fancy white button up dress shirt
+         and a black pair of dress pants. His black leather dress
+         shoes just shine from the lights in the facility. The 
+         ignorance and the overall cocky attitude just vibrate
+         from every pore in his body.
+Name: bailey
+Alt Name: watkinson
+Race: Human
+Gender: Male
+Level: 7
+Wc: 11
+Ac: 6
+Hp: 105
+Gold: 300
+Spell: bloodcough
+        add_spell("bloodcough","#MN# $HK$curses$N$ you. You start $HW$coughing$N$ as $HR$blood$N$ flows from your mouth.\n",
+                     "#MN# $HK$curses$N$ #TN#. #TN# starts $HW$coughing$N$ as $HR$blood$N$ flows from their mouth.\n",
+                     20(2d12),"other|poison");

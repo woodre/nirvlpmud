@@ -1,0 +1,78 @@
+MONSTERS
+
+You should add set_gender() to all these critters.
+
+prof.c -
+
+    In the long description, why is search in ''s?
+    Need a comma after As he moves around
+    I don't like the system you use to determine damage
+    for the heal_self() special.
+    You're using very low figures, and adding bonuses to
+    them.  To determine wc bonuses, use ONLY the guidelines
+    in /open/NEWEXPGUIDE.  Do not create your own.
+    If it is not an exact 10% chance or so forth, don't INVENT
+    what the outcome may be .. And also, you certainly DON'T
+    need a WC bonus for the ushers.  You get experience for
+    killing them.
+
+    Why does the Professor's yell do 100 damage, straight off
+    the top?  That doesn't even begin to make sense.  I know
+    this is Nirvana, but still.
+
+    As far as the WC bonus goes in general, if you use this system,
+    I would only grant a 10 point bonus total.  You also
+    forgot that heal_self damage is to be counted twice.  This is
+    how i arrived at the 10 point figure.
+
+    You should add additional id's for "derossi",
+    and "full professor" so the players can just kill the stupid
+    thing.
+
+    You spelled "miniscule" incorrectly in the long description.
+
+    The spell chance is entirely too low.  Raise it to around 25-35%,
+    and the spell damage should be much higher for a level 22
+    monster.  Preferably around 60-70.
+    You need a set_spell_dam2() as well.  And why is the
+    spell just a Professor asking if they are studying?  Why would
+    that do damage?
+
+Prof2.c -
+   Casual dresses should be "casual dress".
+   You should add an id for "dr. smith" or "smith".
+   Why is set_dead_ob() here?
+
+Ushers -
+   Take out their chats.  They only apply to when the Professor
+   is there.  What if he's dead?  They'll still go off, and they'll
+   make no sense.  Why do you have set_dead_ob() on these objects?
+   Especially without any monster_died() functions.
+
+Usher1.c - 
+
+   A pin on its collar?  How about HIS collar.
+   "like to let him involved" should be "like to let him get involved".
+
+Usher2.c -
+   A pin on its collar.. blah.
+   "very cautious in the movements".  -> very cautious in his movements
+   "to feel himself safe" -> "to feel safe"
+
+Usher3.c -
+   A pin on its collar.. again!
+   You can't be "tiny" of complexion.  Complexion is what your
+   skin looks like.
+
+Usher4.c -
+   A pin on its collar.. okay i'm getting sick of this!
+   "since little time" should be "not long ago"
+   "her issues and doesnt know very well the secrets of the Academy"
+    should be
+   "her duties, and she is just getting acquainted with the secrets
+    of the Academy"
+
+Usher5.c
+
+   A pin on its collar.
+   

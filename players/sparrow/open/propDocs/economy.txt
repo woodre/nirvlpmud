@@ -1,0 +1,114 @@
+Proposal for New Nirvana Economy
+
+The biggest cause of the inflation is that there is money being produced with no
+control over it. That is the main idea behind having an Economy Daemon as it 
+forces only so much money to be available in the world. If the amount of money 
+is fixed, inflation is non-existant.
+
+The downside is that you could (and most likely will) encounter the problem of 
+lack of enough money in the world. That could be resolved by slowly increasing 
+the amount of currency in your world, thus causing a controlled inflation but 
+makes the money available to everyone.
+
+The Economy Daemon is responsible for tracking the amount of money in the game:
+
+- All money sources and sinks are tracked and understood
+- Run time money stats are available just as a sanity check on things
+- 'dangerous' or unexpected money changes are logged
+- Large money changes, even valid transactions, trigger notifies just in case
+- There's a single global value representing all money in circulation
+- Global Offset Controller (see below) would tweak money sources as needed
+  as a fail safe against total system lockout.
+- Whenever an NPC is created with a fixed amount of money, have it get the 
+  amount from the Economy Daemon. One the limit is reached no money is given
+  to NPC's until money is retuned into the Economy Daemon. If an NPC with money 
+  dies and the money isn't taken by someone, then return that amount as well.
+- NPC's money drops are modified by thier death or theft rates. Item value 
+  is similarly modified with every looting. 
+                        -AND/OR-
+- Conversely all items sold in Nirvana are tracked, NPC shop buy prices
+  are modified based on supply and demand. As more of the same item is sold
+  in shops the offer made by the NPC Shopkeepers drop.
+  
+     [The purpose of the dynamic feedback is to encourage variety]
+     
+This system would give rise to the possibilty of a money shortage with all 
+of the available places for players to store money that should be circulating.
+We would need to place limits on the amount of money (or equivalent item value)
+that a player could store at each locaion and find ways to charege players
+regular fees that slowly drain back into the Economy Daemon. Here are my
+suggestions:
+
+- Large quantities of money are taxed. Characters hoarding more than ?1 million?
+  units of money could be taked on the amount over 1 million. A rate of 2-3%
+  per week would prevent packrats from accumulating unlimited sized hoards.
+  This includes all bank accounts and items stored.
+  
+- Clan and guild bank accounts can only hold a LIMITED amount. Since the very
+  existence of the clan indicates that money has been paid, this limited 
+  amount is fairly high (50 million?)
+  
+- Implement player run shops as an option for players to store a much higher
+  equivalent value as stock. These shops would only accept the higest quality
+  items that NPC shops automatically hide away. Owners can set their own sale
+  prices. Owners pay very high rent rates so money turnove shouldnt be an issue.
+  
+- Clean up irrational sources of money. Animals don't carry money so why do some
+  areas reward you with money when you kill them? 
+
+- Force the carrying of money to always be stored in some sort of container/sack
+  that has a limit and that adds increasing weight related to amount. This will 
+  make players have to store their money either on them in another container 
+  that will negatively impact carry, deposit it into a back, or spend it. 
+
+- Get money back from the players by tying your vendor-type NPCs to your Economy
+  Daemon. Set up the initial roll-out in such a way that all your vendors have a
+  loaned amount, say 25,000 money units, that they must pay back. As they make 
+  profits, those profits are returned back to the Economy Daemon until their 
+  loan is fulfilled. The amount of money they current have to be persistent 
+  otherwise our own rule. For example, if a vendor is created with a default 
+  of 25,000 money units and purchased stuff from a player, their balance would 
+  be lower than the 25,000 money. If the vendor is unloaded and then reloaded, 
+  they are reset to 25,000 money.  
+
+But by far the most critical part of the system is the global offset controller. 
+This control system monitors the total quantity of money in existence, and 
+subtly tweaks the money sources based on that value. The short-delay term of 
+the control system looks at local deviations from the long term expectation, 
+and fairly aggressively modifies the global money sources. This short-delay 
+term can change total money influx on the order of 50% in a one week period 
+if necessary.
+
+As the total quantity of money in existence changes, the long-delay term of the 
+control system slowly adjusts the set point for the short-delay calculations. 
+If a large amount of money is in circulation, the short-delay set point will 
+be lowered, globally lowering the input of money into the system.
+
+The net result of all this is that we have a system that allows for fairly 
+substantial deviations in the short term, but always returns to long term 
+stability. Total money in circulation has varied by approximately 10% in the
+course of a year with very little impact on the experience for the player.
+
+Inactive players, Nirvana has many. What do we do with the money that isn't 
+available since frozen in inactive accounts? I don't think that the amount 
+of money tied up in inactive would be a significant percentage, it could add up.
+
+To offset this, we need a few mechanisms in place that returns money back to
+the system.:
+
+- Change inactive system to allow players to stipulate duration of inactivity.
+  Charge a re-occouring rate calculated from that span.
+  
+- Have a system in place that if players are absent for more than 60 days their
+  money is temporarily returned back into the sysem. When they log on, it's
+  returned to them. If the return of the money causes a negative balance in 
+  the Economy Daemon and dry out NPC drops or activate the Global Offset
+  Calculator
+
+These are just suggestions from the research that I have done on proven
+examples of different mud econonies.  We can use all, none, some. Please give
+your feedback and/or examples of how you would improve upon them.
+
+Sparrow 
+
+

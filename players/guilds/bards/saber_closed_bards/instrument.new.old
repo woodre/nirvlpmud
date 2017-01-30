@@ -1,0 +1,524 @@
+/* Guild object of the Bards.
+ * First version by Saber.
+ * Version 1.07
+*/
+
+static string music, pet_name, haunt_flag, haunt_x;
+static string track_monster;
+
+#include "/players/sandman/paladin/dual/weap_pro.h"
+#include "/players/saber/closed/esc.h"
+#include "/players/saber/closed/ansi.h"
+#include "/players/saber/closed/bards/extra2.h"
+#include "/players/saber/closed/bards/zhealing.c"
+#include "/players/saber/closed/bards/zcantrip.c"
+#include "/players/saber/closed/bards/zlore.c"
+#include "/players/saber/closed/bards/ztitle.c"
+#include "/players/saber/closed/bards/zevocation.c"
+#include "/players/saber/closed/bards/zillusion.c"
+#include "/players/saber/closed/bards/zinstr.c"
+#include "/players/saber/closed/bards/zshape.c"
+#include "/players/saber/closed/bards/zsongs.c"
+#include "/players/saber/closed/bards/zemotions.c"
+#include "/players/saber/closed/bards/zhelp.c"
+#include "/players/saber/closed/bards/zgc.c"
+#include "/players/saber/closed/bards/zpal.c"
+
+static int line_flag, is_lit, health_flag;
+static int level, ex_lv, XXX, YYY;
+static int A, B, C, D, E, F, G, H;
+int bard_level, bard_xp, age, guild_status;
+string instr_string, sponsor;
+static string pretitle, name, title, gender, guild_name, al_title, lastime;
+
+reset(arg)  {
+  if(arg) return;
+  line_flag = 1;
+  is_lit = 1;
+  set_instrument_string("Harp");
+  set_light(0);
+  health_flag = 1;
+
+         }
+
+id(str)  {
+/*
+return str == instr_string || str == "instrument" || str=="bard_obj" || str == "guild_obj" || str == "pro_object";
+*/
+return str == instr_string || str == "instrument" || str=="bard_obj" || str == "guild_obj";
+        }
+
+
+  drop()  { return 1; }
+  get()   { return 1; }
+  can_put_and_get()  { return 0; }
+  query_auto_load()  { return "/players/saber/closed/bards/instrument.c:"; }
+
+short()  {
+  return "A Bardic Instrument (("+instr_string+"))"; 
+        }
+
+  long()  {
+  write("A test version of the guild object of the Bards.\n");
+   write("Type <lore> for more information.\n");
+         }
+
+
+init_arg(str)  {
+   bard_news();
+        }
+
+init()  {
+/*
+  restore_me();
+  */
+  
+  set_level();
+  
+   add_action("ayre_of_ability","ayre");
+   add_action("animal_list","animal_list");
+   add_action("animal_list2","animal_list2");
+   add_action("animal_list3","animal_list3");
+   add_action("b_help","bard");
+   add_action("bard_players","bardlist");
+   add_action("bard_farsing","farsong");
+   add_action("bard_faremote","farsonge");
+   add_action("bard_lore","lore");
+   add_action("bard_talk","bt");
+   add_action("bard_title","bard_title");
+   add_action("special_bard_title","special_title");
+   add_action("bard_title_list","bard_title_list");
+   add_action("bard_instrument_list","instrument_list");
+   add_action("bard_instrument_name","instrument_name");
+   add_action("bard_emote","bte");
+   add_action("bard_kin","kin");
+   add_action("bard_update","clean_instrument");
+   add_action("bard_who","bwho");
+   add_action("bury_corpse","bury");
+   add_action("bard_image","bising");
+   add_action("bard_songs","bsing");
+   add_action("bless","bless");
+   add_action("cantrip","cantrip");
+   add_action("bards_cant","cant");
+   add_action("canticle_of_darkness","song");
+   add_action("chant_heal","cheal");
+   add_action("chant_heal","chant_heal");
+   add_action("charm","charm");
+   add_action("chord_of_agony","agony");
+   add_action("chord_of_distortion","distort");
+   add_action("chromatic_sphere","sphere");
+   add_action("detect_magic","detect");
+   add_action("elemental_tune","elemental");
+   add_action("elemental_tune","ele");
+   add_action("emote","emote");
+   add_action("emote",":");
+   add_action("gypsy_me","gypsy_me");
+   add_action("history","History");
+/*
+   add_action("haunt","haunt");
+*/
+   add_action("hawk_eyes","hawks");
+   add_action("hymn_of_healing","healing");
+   add_action("identify","identify");
+   add_action("illusion_armor","cover");
+   add_action("song_of_illusion","illusion");
+   add_action("know_monster","know");
+   add_action("monitor","monitor");
+   add_action("new_say",";");
+   add_action("note_of_cloaking","cloak");
+   add_action("pyre_corpse","pyre");
+   add_action("reflect","reflect");
+   add_action("regeneration","regeneration");
+   add_action("requiem_of_stars","starfire");
+   add_action("shape","S");
+   add_action("spectral_binding","bind");
+   add_action("succor","succor");
+   add_action("score_new","sco");
+   add_action("strength","strength");
+   add_action("strength","stre");
+   add_action("sing_light","song");
+   add_action("out_light","song");
+   add_action("song_of_balance","balance");
+   add_action("toggle","toggle");
+   add_action("true_name","true_name");
+   add_action("wander_music","sight");
+   add_action("wealth","wealth");
+   add_action("weather","weather");
+   add_action("words_of_pain","word");
+   add_action("watch_creature","watch");
+   add_action("check_max","CHECK");
+
+   add_action("juggle","juggle");
+   add_action("juggle2","juggle2");
+   add_action("scarf","scarf");
+   add_action("blueli","blueli");
+   add_action("disappear","disappear");
+   add_action("sing1","sing1");
+   add_action("sing2","sing2");
+   add_action("holo","holo");
+   add_action("strings","strings");
+   add_action("clearth","clearth");
+   add_action("tune","tune");
+   add_action("sparkle","sparkle");
+   add_action("bows","bows");
+   add_action("handkiss","handkiss");
+   add_action("game_over","quit");
+/*   add_action("save_me","pppp");  */
+   add_action("no_no","kill_players");
+   add_action("check_kill","kill");
+   add_action("bard_set","Bset");
+   add_action("bard_song_sing","sing");
+   add_action("teach_pal","teach");
+   add_action("sponsor","sponsor");
+        }
+
+
+int toggle()  {
+  if(line_flag) write(BARD_OFF); else write(BARD_ON);
+  line_flag=1-line_flag;
+  return 1;
+        }
+
+int query_on()  { return line_flag;}
+
+game_over()  { save_me(); }
+
+int bard_sing(string str, int i_emote)  {
+  object instrument, person, *list;
+  int i, c;
+  string temp, color_temp;
+  instrument = present ("instrument",TP);
+  if(spell(-400,1,1) ==-1) return 0;
+  if(!instrument) {notify_fail(NO_INSTRUMENT); return 0; }
+  if(!instrument->query_on()) {notify_fail("You must tune your instrument if you want to talk to your kin. <toggle>\n"); return 0; }
+  if(!str) { notify_fail ("It is a wise Bard that says something when they talk.\n"); return 0; }
+  temp = HIB+"*"+HIM+""+tp+""+NORM;
+  if(!i_emote) temp = temp+" sings:";
+  temp=temp+" "+str;
+  c = 0;
+  list=users();
+  for(i=0; i<sizeof(list); ++i)  {
+    person=list[i];
+    instrument=present("instrument",person);
+    if(instrument && (int)instrument->query_on())  {
+      tell_object(person,format(temp));
+      ++c;
+      }
+    }
+    if(c==1) write("There are no other Bards within the realms of magic.\n");
+    return 1;
+        }
+
+int bard_talk(string str) {return bard_sing(str,0); }
+int bard_emote(string str) {return bard_sing(str,1); }
+
+emote(str)  {
+  if(!str)  {
+   write("Emote what?\n");
+   return 1;
+        }
+  say(tp+" "+str+" \n");
+  write(tp+" "+str+"\n");
+   return 1;
+        }
+
+bard_update()  {
+string temp;
+object OBJ;
+/* save_me(); */
+this_player()->set_guild_name("bard");
+remove_call_out("pulse");
+temp = TO->query_pet_name();
+OBJ = clone_object("/players/saber/closed/bards/instrument.c");
+destruct(this_object());
+move_object(OBJ,this_player());
+OBJ->set_pet_name(temp);
+write("Your "+instr_string+" shines like new\n");
+  return 1;
+        }
+
+sing_light(str)  {
+if(str == "light")  {
+if(!is_lit)  {
+write("You have already used the Canticle of Light.\n");
+  return 1;        }
+if(spell(-100,2,10,TO) == -1)  return 0;
+set_light(1);
+is_lit = 1 + is_lit;
+write("You weave a mixture of prayers and song into a canticle.\n"+
+  "You are surrounded by an aura of light.\n");
+say(tp+" weaves a mixture of prayers and song into a canticle.\n"+
+  tp+" is surrounded by an aura of light.\n");
+call_other(TP, "add_spell_points", -10);
+  return 1;
+        }
+        }
+
+out_light(str)  {
+if(str == "out light")  {
+if(is_lit)  {
+  set_light(-1);
+is_lit = 1 + is_lit;
+write("You sing a single word, causing the light to fade.\n"+
+  "The area dims.\n");
+  say(tp+" sings a single word.\n"+
+  "The area dims as the aura of light surrounding "+tp+" fades away.\n");
+  return 1;
+        }
+write("You have not yet whispered the Canticle of Light.\n");
+  return 1;
+         }
+         }
+
+b_help()  {
+  cat("/players/saber/bards/bard_bard");
+  return 1;
+        }
+
+bard_players()  {
+  ls("/players/saber/closed/bards/stats");
+  return 1;
+        }
+
+score_new()  {
+string temp, temp1, temp2;
+int tmp1;
+object obj;
+
+write("\n");
+write("* Bards Guild\n");
+write("* "+TP->query_pretitle()+" "+tp+" "+TP->query_title()+"\n");
+ write("* Guild Level "+TO->query_bard_level()+"     Guild Exp: "+TO->query_bard_xp()+"\n");
+write("*\n");
+write("* Level: "+pad(TP->query_level(),33)+" Strength: "+TP->query_attrib("str")+"\n");
+write("* Ex_Level: "+pad(TP->query_extra_level(),30)+" Stamina: "+TP->query_attrib("sta")+"\n");
+write("* Hit Points:   "+pad(TP->query_hp()+"/"+TP->query_mhp(),26)+" Magic: "+TP->query_attrib("mag")+"\n");
+write("* Spell Points: "+pad(TP->query_sp()+"/"+TP->query_msp(),26)+" Intelligence: "+TP->query_attrib("int")+"\n");
+write("* Experience:   "+pad(TP->query_exp(),26)+" Will Power: "+TP->query_attrib("wil")+"\n");
+write("* Golden Coins: "+pad(TP->query_money(),26)+" Piety: "+TP->query_attrib("pie")+"\n");
+write("* Quest Points: "+pad(TP->query_quest_point(),26)+" Stealth: "+TP->query_attrib("ste")+"\n");
+write("* Gender: "+pad(TP->query_gender(),32)+" Luck: "+TP->query_attrib("luc")+"\n");
+write("*\n");
+write("* Intox: "+TP->query_intoxination()+"               Stuffed: "+TP->query_stuffed()+"         Soaked: "+TP->query_soaked()+"\n");
+temp = TP->query_wimpy();
+ if(temp == 1) {
+  temp = "yes";  }
+  else { temp = "no "; }
+temp1 = TP->query_crime();
+ if(temp1 == 1) {
+  temp1 = "yes";  }
+  else { temp1 = "no "; }
+obj = present("base_obj",TP);
+  if(!obj)  {
+   temp2 = "none"; }
+   else  {
+temp2 = obj->query_newguild();
+        }
+write("* Wimpy: "+temp+"             Crime: "+temp1+"         Mini Guild: "+temp2+"\n");
+write("* Weapon Training: "+TO->query_weapon_pro("sword")+"\n");
+write("*\n");
+write("* Age: ");
+check_age();
+write("*\n");
+write("* You are an active member of the Bards Guild of Ryllian.\n"+
+  "* Type lore to get an extensive help file, or bard for a short one.\n");
+write("\n");
+return 1;
+}
+
+check_age(str)  {
+int a;
+ if(!str)  {  a = TP->query_age();  }
+   else  {  a = age;  }
+  if(a/43200)  {
+  write(a/43200 +" days ");
+  a = a - (a/43200)*43200;
+        }
+  if(a/1800)  {
+  write(a/1800 +" hours ");
+  a = a - (a/1800)*1800;
+        }
+  if(a/30)  {
+  write(a/30 +" minutes ");
+  a = a - (a/30)*30;
+        }
+  write(a*2 +" seconds\n");
+        }
+
+query_instrument()  { return instr_string; }
+set_instrument_string(str)  { instr_string = str; }
+
+
+pulse()  {
+ A = environment(TO)->query_hp();
+ B = environment(TO)->query_mhp();
+ C = environment(TO)->query_sp();
+ D = environment(TO)->query_msp();
+ E = environment(TO)->query_stuffed();
+ F = environment(TO)->query_intoxination();
+say(BOLD);
+say("*  Hit Points <"+A+"/"+B+">  Mana <"+C+"/"+D+">  Intox. <"+F+">  Stuff <"+E+">.\n");
+say(NORM);
+call_out("pulse",6);
+return 1;
+        }
+
+int monitor()  {
+  if(health_flag) 
+        {
+    write("You turn on your health monitor\n");
+    call_out("pulse",6);
+  }  else  {
+    remove_call_out("pulse");
+    write("You turn off your health monitor.\n");
+        }
+  health_flag = 1 - health_flag;
+  return 1;
+        }
+
+haunt(str)  {
+object ob;
+if(!str && !haunt_flag)  {
+   write("Who do you want to haunt?\n");
+   return 1;
+        }
+  if(!str && haunt_flag)  {
+  write("You stop haunting "+TO->query_haunt_x()+".\n");
+  remove_call_out("haunt_z");
+  haunt_flag = 1 - haunt_flag;
+   return 1;
+        }
+  ob = present(str, environment(TP));
+   if(!ob)  {
+    write("There is no "+str+" here to follow.\n");
+    return 1;
+       }
+  if(spell(-123,2,5) ==-1) return 0;
+  write("You whistle a haunting tune and cloak yourself in illusion.\n"+
+    "You are now haunting "+CAP+".\n");
+  TO->set_haunt_x(str);
+  haunt_flag = 1 - haunt_flag;
+   call_out("haunt_z",2);
+  call_other(TP,"add_spell_point",-5);
+   return 1;
+        }
+
+query_health_flag()  { return health_flag; }
+query_haunt_flag()  { return haunt_flag; }
+set_haunt_x(str)  { haunt_x = str;  }
+query_haunt_x()   { return haunt_x; }
+
+haunt_z()  {
+object ob, ob2;
+string there;
+ob = environment(TO);
+ob2 = find_living(TO->query_haunt_x());
+  if(find_living(TO->query_haunt_x()) && !present(find_living(TO->query_haunt_x()),environment(ob)))  {
+move_object(ob,environment(find_living(TO->query_haunt_x())));
+  there=call_other(environment(ob),"long");
+  command("look",ob);
+        }
+  call_out("haunt_z",2);
+        }
+
+set_bard_level(str)  {
+  bard_level = str;
+    }
+query_bard_level()  {
+  return bard_level;
+        }
+query_bard_xp()      { return bard_xp; }
+set_bard_xp(str)     { bard_xp = str;  }
+set_pet_name(str)  { pet_name = str; }
+query_pet_name()   { return pet_name;}
+set_guild_status(str)  { guild_status = str; }
+
+set_sponsor(str)    { sponsor = str;   }
+query_sponsor()     { return sponsor;  }
+
+no_no()  {
+  write("HAY!  That is NOT a bardic thing to do!\n\n");
+  return 1;
+        }
+
+check_kill(str)  {
+object target;
+  if(target = present(str,environment(this_player())))  {
+  if(target->is_player())  {
+  write("NO PLAYER KILLING!!!\n\n");
+  return 1;
+        }
+        }
+        }
+
+save_me()  {
+string file;
+  file = "players/saber/closed/bards/stats/" + environment(this_object())->query_real_name();
+  if(!save_object(file))  {
+  tell_object(environment(TO), "Error in saving guild score!\n");
+   }  else   {
+  tell_object(environment(TO),
+    HIM+"Guild scores saves.  Party on!\n"+NORM);
+    save_object(file);
+        }
+  environment(this_object())->set_guild_name("bard");
+  return 1;
+        }
+
+restore_me(name)  {
+object player;
+  if(!name)  {
+    if(!environment(this_object()) || !environment(this_object())->query_name())  return 0;
+  name = environment(this_object())->query_real_name();
+        }
+  player = find_player(name);
+  if(!player) return 0;
+  tell_object(player, "Checkin your Bard stats...\n");
+  restore_object("players/saber/closed/bards/stats/" + name);
+   if(guild_status == -1)  {
+   write("You have been banished from the Bards.\n"+
+        "Mail Saber if you don't agree.\n");
+   destruct(TO);
+        }
+  if(guild_status == -2)  {
+    write("You have been placed on suspension from the Bards.\n"+
+       "Mail Saber is you don't agree.\n");
+    destruct(TO);
+        }
+  environment(this_object())->set_guild_name("bard");
+  return 1;
+        }
+
+aceme(str)  {
+object ob;
+  ob = present("instrument",this_player());
+  call_other(ob, "set_bard_level", str);
+  write("ok.\n");
+  return 1;
+        }
+
+bard_news()  {
+write(HIM+
+  "Part o the directory containing the Bard player files corrupted.  Until\n"+
+  "I get this fixed, all bard will be bard level =  actual level / 2.  Have fun!\n\n"+NORM);
+  return 0;
+        }
+
+set_level() {
+  if(environment()->query_name() == "Saber" ||
+     environment()->query_name() == "Mythos" ||
+     environment()->query_name() == "Alustryx" ||
+     environment()->query_name() == "Bambua" ||
+     environment()->query_name() == "Alexi"  )  {
+     write("Bard level set to 11.\n");
+     bard_level = 11;
+     
+        }  else  {
+  if(environment()->query_level() < 20)
+   bard_level = environment()->query_level() / 2;
+else bard_level = 9;
+  write("Setting Bard level to "+bard_level+"\n");
+        
+        }
+        }
+        

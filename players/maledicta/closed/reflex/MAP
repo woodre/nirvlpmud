@@ -1,0 +1,64 @@
+Map of the Coastline
+
+
+
+
+		1 -2 - 3       4 - 5 - 6 - 7        1-  e
+		|  |   |       |                    3-  w
+		8- 9- 10- 11- 12                    8-  n     
+		   |   |   |                        9-  n,w,e
+		   13-14- 15                        10- n,w,s
+                                          13- n
+                                          14- n,w
+
+Rooms in order, left to right, top to bottom.
+                  Goblins:
+(1) plains9.c       500
+(2) main.c          1800
+(3) plains8.c       2000
+4 mount_ent.c
+5 pass.c
+6 pass_ent.c
+7 path.c
+(8) plains7.c       500
+(9) plains5.c       2500
+(10) plains4.c      2500
+11 plains1.c
+12 mount_ents1.c
+(13) plains6.c      800
+(14) plains3.c      800 
+15 plains2.c
+
+Special Rooms:
+
+main.c - This is where you put the commander of the army.  
+	 THe room is darkened by fog, and requires a minimum
+	 of 8 moves to reach.  Of course that assumes that a
+	 player knows he is there.
+
+plains1.c - This is be beginning of the open plains and is
+	    where you should place the serious opposition and
+	    bulk of the army.  Rooms in the plains are 3D, and
+	    as a result movement is fully free in all 8 
+	    directions(n,s,e,w,ne,nw,se,sw) except where a dir
+	    is blocked explicitly in the description.
+
+mount_ent.c/mount_ents1.c - This is the mountains, harrassing
+	troops should be here, but this is not where the bulk
+	of the army should be.  Your call of course.
+
+pass.c/pass_ent.c - This is the edge of the border, and where
+	both goblins and Knights will have to pass in order to
+	get in or out of the plains.  Lots of good ideas roam
+	around my head for this paticuliar bottleneck...
+
+path.c - Entrance to the realm, this is designed to connect to
+	 the western edge of the mud.
+
+
+TODO:
+ Tent(templar)
+ Tent(King)
+ Rcaves
+ Main treasure for rcaves
+ 

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;34mA kazoo[0m[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "kazoo"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[1;34mA kazoo[0m[0m"
+damage_type 0
+hall_path "/players/dragnar/workroom"
+object_name "kazoo"
+owner "mokri"
+spell_alias "clanheal"
+spell_mess_me "You cast a heal on %AKN%."
+spell_mess_room "%TPN% casts a heal on %AKN%."
+spell_mess_them "%TPN% casts a heal on you."
+abilities ({})
+chan_history 0
+leaders ({"dragnar",})
+join_type 0
+private_coffer 456301
+public_coffer 0
+spell_delay 1
+spell_id 2
+spell_cost 80
+last_spell_time 1402674260

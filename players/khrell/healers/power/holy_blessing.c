@@ -1,0 +1,1 @@
+holy_blessing(str) { if(holy_blessing_var[0] > lev) return 0; call_other(POWER,"holy_blessing",lev,pow,str); return 1; }

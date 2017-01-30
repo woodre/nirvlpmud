@@ -1,0 +1,31 @@
+cmd_ritual(string str) {
+  object donorWep;
+  if(!str) {
+      write("Usage: ritual <weapon>\n");
+      return 1;
+  }
+  donorWep = present(str, environment(previous_object()));
+  if(!donorWep->is_weapon()) {
+	  write("The object to be ritualized must be a weapon!\n");
+	  return 1;
+  }
+  if(!donorWep) {
+      write("Usage: ritual <weapon>\n");
+      return 1;
+  }
+  /* Mask the stats of the weapon */
+  say(environment()->query_name()+" takes "+donorWep->query_short()+" and performs a ritual over it.\n");
+  write("You begin a ritual on "+donorWep->query_short()+".\n");
+  donorWep->set_short("The Blade of the Black Willow");
+  donorWep->set_long("This is the guild weapon of the Black Willow Order.\n");
+  donorWep->set_class(20);
+  donorWep->set_weight(2);
+  donorWep->set_value(0);
+  donorWep->set_type("sword");
+  donorWep->set_name("Black Willow Blade");
+  donorWep->set_alias("bwblade");
+  donorWep->set_params("other|dark",30);
+  write("The "+str+" waivers for a moment then changes into the Blade of the Black Willow.\n");
+  say("The "+str+" waivers for a moment then changes into the Blade of the Black Willow.\n");
+  return 1;
+}

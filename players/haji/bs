@@ -1,0 +1,32 @@
+lookati(str)
+{
+    object person_o;
+  if (!str)
+    {
+      write("Lookati what/who?\n");
+      return 1;
+   }
+  person_o=present(str);
+  if (!person_o)
+     person_o=find_living(str);
+  if (!person_o)
+     person_o=find_object(str);
+  if (str==".")
+     person_o=environment(this_player());
+  if (!person_o)
+     {
+      write("No such living thing or place.\n");
+      return 1;
+     }
+  item_o=first_inventory(person_o);
+  while(item_o)
+    {
+      object next;
+      sscanf(item_o,"%s",thing);
+      write(thing+"\n");
+      next=next_inventory(item_o);
+      item_o=next;
+    }
+  return 1;
+}
+

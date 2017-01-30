@@ -1,0 +1,10 @@
+DRAIN
+
+usage: 'drain <monster>'
+       'drain'            ( if your already attacking a monster )
+
+Drain is the standard shadow attack spell.  The damage ( and cost ) are 
+controled by you, upto 5 times your shadow level.  So, I tenth level shadow
+can do up to 50 points of damage on a monster, or less if they choose.  To
+"set" your drain damage/cost, type 'dd <number>'.  The cost is equal to the 
+damage you do.

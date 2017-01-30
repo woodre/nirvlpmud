@@ -1,0 +1,19 @@
+>> Hatch Operation
+
+The hatch should be fairly intuitive to operate. It can be opened and
+closed with the commands:
+
+'open door'
+and
+'close door'
+
+Anyone can open and close the hatch from the inside or outside.
+The hatch can be locked or unlocked from the outside.
+In order to get in, a key is needed. The commands used are:
+
+'unlock door'
+and
+'lock door'
+
+Of course on some vehicles, you must use 'hatch' instead of 'door',
+or whatever suitable condition given by looking at the vehicle.

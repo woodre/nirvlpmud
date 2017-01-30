@@ -1,0 +1,60 @@
+#define tp this_player()
+id(str) { return str == "barbs" || str == "downers"; }
+int cadd, ctol, catime;
+
+/* cadd = the addictive value for the user
+ * ctol = the tolerance value for the user
+ * catime = the last time barbs was used */
+ 
+long() { write("A small green pill.  You may 'swallow' it.\n"); }
+
+short() { return "A small dose of barbs: downers"; }
+
+get() { return 1; }
+drop() {return 0;}
+query_weight() { return 1; }
+query_value() { return 0; }
+query_save_flag() { return 0;}
+
+init() {
+    add_action("swallow", "swallow");
+}
+
+swallow(str) {
+object ob;
+    if (str == "barbs" || str == "downers") {   
+    if(!present("sterm_barbs",tp)) {
+    ob = clone_object("/players/mythos/mmisc/drugs/barbs/sterm.c");
+    ob->set_timer(0);
+    move_object(ob,this_player());
+    command("save",tp);}
+    else {
+    present("sterm_barbs",tp)->set_timer(-1); }
+    say(capitalize(tp->query_real_name())+" pops a dose of barbs into "+
+        tp->query_possesive()+" mouth.\nStrength seems to flow into "+
+        tp->query_objective()+"!.\n");
+    write("You pop a barbs into your mouth.  You become less intoxicated!\n");
+    if(restore_object("players/mythos/mmisc/drugs/barbs/add/"+tp->query_real_name())) {
+      if(time()-catime > 3000) {
+         cadd = cadd - 1;
+         if(cadd < 0) { cadd = 0; }
+         ctol = ctol - 1;
+         if(ctol < 0) { ctol = 0; }
+      } else {
+      cadd = cadd + 1;
+      ctol = ctol + 1; }
+    } else {
+    cadd = 1;
+    ctol = 1; }
+    catime = time();
+    if(ctol > 5) {
+    if(ctol - 5 > 10) {
+    tp->add_intoxination(-15); }
+    else {
+    tp->add_intoxination(-25 + (ctol - 5));}
+    } else {
+    tp->add_intoxination(-25);}
+    save_object("players/mythos/mmisc/drugs/barbs/add/"+tp->query_real_name());
+    destruct(this_object());
+    return 1;}
+}

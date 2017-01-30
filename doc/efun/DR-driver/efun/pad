@@ -1,0 +1,28 @@
+SYNOPSIS
+	string pad( string text, int width)
+	string pad( string text, int width, int padchar)
+	string pad( int number, int width)
+	string pad( int number, int width, int padchar)
+
+DESCRIPTION
+	pseudofun:	justified_text pad( text, +/-len, padchar);
+
+	Format and justify the string 'text'. If 'number' is given, then
+	'number' is first converted to a string and then padded.
+	The absolute value of 'width' specifies the length of the justified
+	return string.
+	The text is
+		left-justified when 'width' is positive
+		right-justified when 'width' is negative
+	Default 'padchar' is ' ' (space).
+
+EXAMPLES
+	pad( "Balowski", 10);      /* result: "Balowski  " */
+	pad( "Balowski", -10);     /* result: "  Balowski" */
+	pad( 200, -5);             /* result: "  200" */
+	pad( "", 8, '-');          /* result: "--------" */
+	pad( "Whatever", +/-4);    /* result: "What" */
+	pad( "asfd", 0);           /* result: "" */
+
+SEE ALSO
+	format(E), print(E)

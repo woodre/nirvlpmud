@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1mBook of Necronomicon[0m"
+long_desc "Every[1mEvil[0mdeed is written in this book.  The book calls for[31mBLOOD![0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "necronomicon"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "Every[1mEvil[0mdeed is written in this book.  The book calls for[31mBLOOD![0mType 'clan_help' for commands."
+clan_short "[1mBook of Necronomicon[0m"
+damage_type "physical"
+hall_path "/players/persephone/rooms/hall"
+object_name "necronomicon"
+owner "artos"
+spell_alias "blast"
+spell_mess_me "Energy BLASTS from your finger tips"
+spell_mess_room "B O O M"
+spell_mess_them "You have been BLASTED"
+abilities ({})
+chan_history ({"[Thu May 26 23:33:11 2011] Artos: i need to remove recusant from the clan.","[Thu May 26 23:33:15 2011] Asclepius: shadowy rift","[Thu May 26 23:33:29 2011] Asclepius: recusant he is in another clan","[Thu May 26 23:33:29 2011] Artos: from green, go, west,enter portal,enter_clan_hall","[Thu May 26 23:33:33 2011] Artos: he's in mine","[Thu May 26 23:33:37 2011] Artos: or at least, I have him on my roster","[Thu May 26 23:33:45 2011] Asclepius: finger recusant","[Thu May 26 23:33:47 2011] Artos: aaah","[Thu May 26 23:33:49 2011] Artos: my bad","[Thu May 26 23:34:33 2011] Asclepius: not enough full heals!","[Thu May 26 23:34:37 2011] Artos: laf","[Thu May 26 23:34:39 2011] Artos grins","[Thu May 26 23:34:49 2011] Artos: don't forget down, when you first come in","[Thu May 26 23:34:53 2011] Artos: i got some gear in there, u can hav.e","[Thu May 26 23:34:59 2011] Asclepius: k","[Thu May 26 23:36:09 2011] Asclepius: dang","[Thu May 26 23:36:13 2011] Artos: sup?","[Thu May 26 23:36:15 2011] Asclepius: i didn't have my party formed.","[Thu May 26 23:36:17 2011] Asclepius: whoops","[Sat May 28 23:04:35 2011] Artos: heh",})
+leaders ({"recusant","asclepius",})
+join_type 0
+private_coffer 500427
+public_coffer 0
+spell_delay 2
+spell_id 1
+spell_cost 80
+last_spell_time 1306469698

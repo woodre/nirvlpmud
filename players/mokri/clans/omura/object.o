@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "Poop[0m"
+long_desc "poop[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "poo"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "poop[0mType 'clan_help' for commands."
+clan_short "Poop[0m"
+damage_type "fire"
+hall_path "/room/eastroad1"
+object_name "poo"
+owner "tirnok"
+spell_alias "1"
+spell_mess_me "        ME%newline%%newline%        ||%newline%        ||%newline%       \||/%newline%        \/%newline%%newline%       ___         YOU%newline%      /   \%newline%      \___/         ||%newline%        |           ||%newline%        |          \||/%newline%   _____|_____      \/     __%newline%        |      ___________/  \%newline%        |      |      \   \__/%newline%       / ====> |       \%newline%      /   \  __|        \%newline%"
+spell_mess_room "        ME%newline%%newline%        ||%newline%        ||%newline%       \||/%newline%        \/%newline%%newline%       ___         YOU%newline%      /   \%newline%      \___/         ||%newline%        |           ||%newline%        |          \||/%newline%   _____|_____      \/     __%newline%        |      ___________/  \%newline%        |      |      \   \__/%newline%       / ====> |       \%newline%      /   \  __|        \%newline%"
+spell_mess_them "        ME%newline%%newline%        ||%newline%        ||%newline%       \||/%newline%        \/%newline%%newline%       ___         YOU%newline%      /   \%newline%      \___/         ||%newline%        |           ||%newline%        |          \||/%newline%   _____|_____      \/     __%newline%        |      ___________/  \%newline%        |      |      \   \__/%newline%       / ====> |       \%newline%      /   \  __|        \%newline%"
+abilities ({})
+chan_history ({"[Fri Feb 15 19:02:11 2013] Derian has joined the clan!","[Fri Feb 15 19:05:19 2013] Tirnok has promoted Derian to a clan leader!",})
+leaders ({"derian",})
+join_type 0
+private_coffer 441638
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 80
+last_spell_time 1443493944

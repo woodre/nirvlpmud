@@ -1,0 +1,57 @@
+/*
+ * spell : Create Food   (enchantment)
+ * level : 4
+ * effect: Turns a corpse into a healing object
+ * cost  : 10 sp
+ * spec  : 
+ * files : none
+ */
+
+create_food() {
+
+  object obj;
+  int ammt;
+
+  if(!KNOW("food") && !KNOW("create_food")) {
+	write("What?\n");
+	return 1;
+  }
+
+  obj = present("corpse", env);
+  if(!obj) obj = present("corpse", tp);
+
+  if(!obj){
+	write("You need a corpse to cast this spell.\n");
+	return 1;
+  }
+
+  write("You cast a "+HIW+"Create Food"+NORM+" spell over the corpse ... \n");
+
+  if(spell_fail2(4,"ench", "int")){
+	write(
+	  "You screw up the spell and ruin a perfectly good corpse!\n"+
+	  "The corpse bubbles of sizzles then dissolves into the ground.\n");
+	say(ME+" casts a spell and a corpse sizzles and dissolves into "+
+	  "the ground.\n");
+	tp->add_spell_point(-2);
+	destruct(obj);
+	return 1;
+  }
+
+  tell_room(env,
+    ME+" withdraws a bubbling concoction from "+PO+" robes and pours\n"+
+    "it over a corpse.  The corpse steams and boils for a moment\n"+
+    "until it seems to have disappeared!\n");
+  write(
+    "You turn a miserable smelly corpse into a healthy meal!\n");
+
+  ammt = obj->heal_value();
+  destruct(obj);
+  obj = clone_object("players/pavlik/guild/mages/obj/heals/corpse_burger");
+  move_object(obj, tp);
+  obj->set_amount(ammt * 5 / 4);
+  tp->add_spell_point(-10);
+  return 1;
+
+}
+

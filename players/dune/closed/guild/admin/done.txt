@@ -1,0 +1,90 @@
+>>>>>>> The following rules are in place:
+arena.c is only to be used under closest supervision (and is only
+accessable by a teleport from a wizard). If a player was pk before 
+the fight, then the monitoring wiz must set that player's pk 
+(probably by commanding the player to "kill_players").
+
+
+
+
+>>>>>>> The following changes have been done:
+>>>>>>> (text preceded with a * is something you suggested, for reference):
+
+lib_advCmds/retreat.c   *cost of "peace" spells will be changed to about
+                        100 sp for mass, 120 for specific
+includes/enhancements.h changed sp cost of emt to above cost
+
+lib_tools/emt.c         follows above suggestion for sp cost (mass)
+
+remove lib_genCmds/transfer.c (renamed to xfer.c)
+
+lib_genCmds/transfer.c  redone to follow /doc/build/RULES/teleports
+lib_genCmds/xfer.c      same as above
+
+lib_advCmds/shadows.c   follows costs of teleports, i.e. 55 sp
+                        40 noncombat, 70 in combat
+
+lib_advCmds/transto.c   *cost of 200 is fine 
+                        this now follows the other requirements in 
+                        /doc/build/RULES/teleports
+                        (i.e. usage of obj/base_tele.c)
+                        Both xfer.c and transto.c use obj/base_tele.c
+
+daemons/combat.c        disallowed guild spells in pk, except for
+                        p1, p2, and p3 (because these completely
+                        replace missile, shock, and sonic...
+                        for obvious thematic reasons).
+
+lib_tools/overload.c    made sure that this does not affect players
+lib_advCmds/lead.c      made sure it can not be used vs players
+
+doc/cmds+short.txt      changed sp costs to reflect chgs in this file
+
+rooms/teleport.c        removed mailroom location
+object/cyber_mail.c     *no offense but isnt one mail system enough?
+                        *i feel there is no need for more mem for mail
+                        for now, i've just removed the room entrance to
+                        get to the mail room that uses this mail object.
+
+lib_tools/digest.c      *justification of cost for this power is needed
+                        *otherwise this is illegal (in short: the cost is 
+                        *not enough to merit this power at all)
+				REDUCED heal_self from 2 to 1 (halved healing)
+
+lib_tools/reg.c         there is now some random loss in transfer
+lib_tools/rej.c         same as above
+
+lib_advCmds/ncon.c      made the 100's into 10's- no exact numbers!
+
+snow/weapons  wepmanager.c- dropped the multiple attack max to 3
+              5 attacks per round every hb.
+              *waaaay too much on cpu- in short lag producer
+              *note: the weapons are still subject to scrunity
+              *      as a very close examination is needed
+
+snow/mechs/laser.c      took out set_heart_beat(1);
+
+includes/mechs.h        increased mech costs (range is 8k to 60k)
+mechs/mech.c   changed this to cover the changes made to
+               /players/snow/closed/cyber/mech.c
+               said changes:
+                 set_heart_beat() call to be placed in
+                 reset(arg) not in init()
+                 in heartbeat take out the sp drain to
+                 the attacker if the attacker is a player
+snow/mechs     *the pricing of mechs of 2k to 20k is a bit low 
+               changed to 8k to 60k
+               also, made sure that set_heart_beat(1) is ONLY called 
+               in the reset(arg) of the mech.c [laser.c for instance
+               calls it again]
+mechs          also, add_exp() in mech.c  - the amount handed over to
+               the player is now a fraction, else the player could 
+               have the pet attack and never lift a finger and get xp
+               *suggestion of fraction would be 1/10 or 1/15
+               fraction is 1/10
+               made sure "kami" does not allow for mechs to smash into pets
+               there is now an sp cost of the player as well when doing a "kami"
+               mech_guard- made sure can not be used in combat with a pet
+mechs          made sure that when stopping a mech in combat that the
+               opponent does not completely stop the attack should
+               it be attacking another- i.e. no free peace spells

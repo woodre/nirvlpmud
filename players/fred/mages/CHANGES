@@ -1,0 +1,69 @@
+Apr 18 00:29  Per Boltar's Review check check
+Apr 18 00:30  fixed dark_stalker so it's like you look at person, changed msave to check stats, used a call_out to auto guild save, and changed the cost on attack spells.
+Apr 18 11:46  changed blackbook.c in mages/obj so that you need to have an int of 20 to join the guild.  That way I don't have to deal with players complaining that they can't use their spells.
+Apr 18 15:52  edited msave.c in mages/lib it was zapping stats even on wizes put in a level check.
+Apr 21 19:41  added Krag, Budman, Vizjerei, and Bleh as beta testers. One more to come.
+Apr 21 19:43  WOO started Beta =)  Whoopty Whoop!
+Apr 21 20:45  changed id.h in BCM still had notarmor in id couldn't wear anything.
+Apr 21 21:09  added one more beta player Vashandra
+Apr 21 21:22  changed dart.c so you couldn't cast more than once a round 'emote only.
+Apr 21 21:44  changed the command to see guild members from circle to mages.
+Apr 22 07:58  commented out the init() in stalker until I can figure it out.
+Apr 22 08:11  changed typo in midas.c and in drain.c
+Apr 22 08:12  added a message to heal.c showing they were actually healed.
+Apr 22 11:46  fixed midas forgot endline.
+Apr 22 11:56  changed follow to gfollow on ghoul so it wouldn't conflict with muds follow.
+Apr 22 12:01  changed follow in shadowdragon for same reason.
+Apr 22 15:09  fixed a typo in blast.c
+Apr 22 20:08  changed the short in id.h
+Apr 22 20:08  changed the long in ghoul.c and a check for string.
+Apr 22 20:52  changed ghoul some more to allow for it to stop fighting itself.
+Apr 22 21:30  changed ghoul for the 5th time today to show what kind of shape it's in and to be able to absorb corpses to heal itself.
+Apr 22 21:45  changed pillusion so you couldn't make illusions of senior wizes.
+Apr 22 21:47  added a stop fight in ghould and dragon
+Apr 23 10:10  changed an if statement in ghoul.c for the long desc.
+Apr 23 11:35  added a ready command to ghoul, and made it attack whatever owner is attacking if you use fight without an arg.
+Apr 23 12:07  added a monitor to ghoul so they knew how hurt it was.
+Apr 23 12:56  had issues with if statements in long desc of ghoul just got rid of it and added a ghoul_commands in the info files.
+Apr 23 20:00  changed up the score to include exp to next glvl =)
+Apr 24 11:03  added a check on ghoul for attacking.
+Apr 28 16:08  changed lich.c and deathknight.c in /mages/obj I had the time set really low for when I tested them forgot to change them back.
+Apr 29 16:16  put the new ghoul into play. per Boltar's approvail.
+May  1 15:37  added another tester cause Mode wasn't going to do it.
+May  1 16:48  fixed risk.c in the lib it was buggy.
+May  1 18:24  changed enter/exit messages on ghoul.c in /mages/mon
+May  1 18:24  edited drain.c in /mages/lib was costing players sps to heal doesn't make sense.
+May  1 23:04  fixed ghoul it would cause an error if a corpse wasn't present.
+May  2 00:03  fixed some typos in Ghoul had mixed up references some things said corpse does this other said ghoul does that.
+May  2 14:33  added a line to lich so people would notice it in combat.
+May  2 14:45  made the same change to deathknight.c in mages/obj
+May  2 14:54  added to init so you can easily see ghoul and dragon commands without having to type info ghoul_commands or info dragon_commands.
+May  2 15:36  changed ghoul.txt and dragon.txt to support new commands.
+May  2 19:51  changed dragon to autofollow.
+May  4 22:12  changed Shadowdragon.c in /mages/mon and dragon.c in /mages/lib. Dragon name now saves to the guild object so they don't have to retype it all the time.
+May  5 11:35  changed dragon.c in mages/mon was desting mobs now calls the death();
+May  6 12:25  changed dragon/ghoul so they autoattack now.
+May  6 12:26  added checks to make sure they only didn't have more than 1 ghoul and dragon at a time.
+May  6 22:44  changed the small damage bonuses for lich and dknight to a generic_wc_bonus per Boltar's approval.
+May  7 18:11  added some color to the obillusion spell.
+May  8 18:00  changed the int requierement for disrupt forgot a lvl 19 can't have int of 30.
+May  8 19:20  fixed a bug with the shadowdragon.
+May 12 08:16  changed it so your ghoul and dragon destruct when a player quits out. =)
+May 18 10:24  fixed something in the hit_player() of the mages freeze.c object, got buggy if used with an elemental weapon.
+May 22 11:35  changed the guild say to show emotions ie asks, exclaims, Thanks to whoever wrote up the new_communications.
+May 29 02:27  sparred with kid to test pk bugs, he volunteered and it was a pain in the arse to try to control two test chars myself.
+May 29 02:27  NO ERRORS THOUGH!!!!! =)
+May 29 14:39  added an exit message on the guild line when players quit out.
+May 30 18:10  OPENED THE BCM!!!  =)
+Jun  1 22:32  due to thinking the guild may be too powerful I made some changes.
+Jun  1 22:33  change 1. ~/mages/obj/freeze.c changed the hit_player() to (amount*10)/8; returns less damage than before.
+Jun  1 22:34  change 2. ~/mages/mon/shadowdragon.c changed the base wc down to 16 and changed the spell_dam to random(20)+10, down from random(40)+30.
+Jun  1 22:35  change 3. ~/mages/homedir/weapon.h changed the gen_wc_bonus for dknight from 5+random(7); to 3+random(7);
+Jun  2 16:43  commented out a couple lines in ~/mages/mon/shadowdragon.c it's not needed and causes some annoyances  in hotel rooms when locked.
+Jun  3 08:16  changed ghoul I had the command of 'equip <what>' and then you couldn't use the 'equip' channel. changed to gwear.
+Jun  7 09:29  changed the BCM fog spell. used to work only in combat cost was 25 now will work outside of combat but will cost 35+random(5)
+Jun  8 15:20  changed weapon.h in BCM lowered the gen_wc_bonus for both lich and dknight.
+Jun  8 15:24  lowered the chance of the special on BCM robes.
+Jun  9 09:09  changed BCM heal spell from LVL+random(10) to random(LVL)+10
+Jun 26 13:29  added a new guild tell that shows player real name instead of name, now people won't get lich/deathknight tells you: blah.
+Jul  8 10:02  took out the lowered damage from both lich and deathknight objects, lowered hp amts on ghouls, cut down on the gen_wc_bonus.

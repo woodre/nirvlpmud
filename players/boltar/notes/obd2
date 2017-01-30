@@ -1,0 +1,77 @@
+
+
+Path: 
+                          nntp.cig.mot.com!newshost.mot.com!newsgate.mot.com!news.xnet.com!nntp-out.monmouth.com!newspeer.monmouth.com!news.maxwell.syr.edu!nntp2.deja.com!nnrp1.deja.com!not-for-mail
+                    From: 
+                          shape@my-deja.com
+              Newsgroups: 
+                          rec.autos.makers.ford.mustang
+                   Subject: 
+                          Re: EEC/OBDII Software? I want to tap into the computers to get statistics.
+                     Date: 
+                          Fri, 28 Jan 2000 13:34:05 GMT
+              Organization: 
+                          Deja.com - Before you buy.
+                    Lines: 
+                          42
+             Message-ID: 
+                          <86s5se$3vc$1@nnrp1.deja.com>
+               References: 
+                          <86pgid$o5v$1@nntp8.atl.mindspring.net>
+      NNTP-Posting-Host: 
+                          161.114.71.63
+ X-Article-Creation-Date: 
+                          Fri Jan 28 13:34:05 2000 GMT
+      X-Http-User-Agent: 
+                          Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0; compaq)
+            X-Http-Proxy: 
+                          1.0 PROXY.COMPAQ.COM, 1.0 x35.deja.com:80 (Squid/1.1.22) for client 161.114.71.63
+          X-MyDeja-Info: 
+                          XMYDJUIDshape
+
+
+
+
+In article <86pgid$o5v$1@nntp8.atl.mindspring.net>,
+  "Lowgrey" <lowgrey@pcpunks.com> wrote:
+> Does anyone have any information or software that would allow me to
+tap my
+> laptop PC into the EEC/ODBII port on my Mustang.  I'm just interested
+in
+> seeing the information and maybe logging it on long trips.  Cheap is
+the
+> word here too...
+
+Currently, this is the cheapest datalogger I have found:
+http://www.obd-2.com/
+
+$122 gets you the interface and the software.
+
+I bought EaseSim last year.
+http://www.easesim.com/
+
+Their software/interface is $300 for the lowest model.
+
+However, standard OBDII only lets you grab something like 10 samples
+per second.  It is a real pain in the butt.
+
+I know for a fact that there are other packages out there for Fords
+that know the code that will let you sample at many more times per
+second.  I don't know if EaseSim or the obd-2 one do this or not.
+
+I use EaseSim to datalog my O2 voltages, ignition timing and RPM when
+I am doing the 1/4mi.  The knock sensor directly affect ignition timing.
+So I can see how close to knock I am.  Then, using my Super AFC, I can
+lean out or richen up the RPM band that looks like it is off.
+
+Works great as a tuning tool.
+
+Josh Wingell
+'97 Eclipse GSX - 12.884@104.55mph / 1.726s 60ft
+                         Best 60ft - 1.68s
+Car web page -> http://www.geocities.com/shapegsx/
+
+
+Sent via Deja.com http://www.deja.com/
+Before you buy.
+

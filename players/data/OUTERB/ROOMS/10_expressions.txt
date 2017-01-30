@@ -1,0 +1,38 @@
+Expressions - Making it all add up
+
+An expression is an instruction or combined set of instructions that results
+in a value of some kind. Take +, for example. It uses two other
+expressions to make up a result. A variable actually is an
+expression since it also yields its contents as a result. The
+combination of the following two expressions and an operator is a
+valid expression: a + b, a and b being variables (expressions) and +
+being the operator used on them. a = b + c; is a full statement
+ending in a ;.
+
+Examples:
+    1 + 2;
+    y * 4;
+    x - y;
+
+Function calls are valid expressions. They are written simply as the
+name followed by a set of matched parentheses with the arguments
+that the functions uses listed inside. Take the hypothetical
+function max() for example, that could return the maximum of two
+arguments given to it. Thus, to determine the maximum of 4 and 10,
+you would write max(4, 10) as the expression. Naturally the
+resulting value must be either stored or used.
+
+Examples:
+    my_function(x, str)
+
+With what we know about variables being containers, we can now use
+expressions to put information into them. At the very simplest level
+<variable> = <value> is valid. Other values can be computed by
+operators to create more complex values for variables.
+
+Examples:
+    x = 1 + 2;
+    y = x * 4;
+    z = y - x;
+    value = my_function(x, str);
+

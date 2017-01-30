@@ -1,0 +1,435 @@
+Wed Jun 25 12:29:12 1997 dested life off of tragedy twice to try to fix undead object.. no luck..
+Thu Jun 26 15:19:23 1997 i have vexlron back his empowered wep
+Fri Jun 27 01:03:26 1997 wizkid and sm aproved ~/junk/balloon.c
+Wed Jul  2 01:58:44 1997 imprisoned mode for swearing on gossip 'mythos is a goddam fucking bastard *snicker*'
+Wed Jul  2 06:41:27 1997 quen restored dmguild objects and speedster..
+Thu Jul  3 03:05:00 1997 released mode.. asked mode to change pretitle, he abliged "fuck fosboy" -> "dowm with fos"
+Fri Jul  4 02:03:25 1997 imprisoned pandemoiom for swaring..
+Fri Jul  4 02:07:34 1997 imprisoned kurtis.. then released kurtis.. he didnt actually swear on gossip..
+Fri Jul  4 02:11:45 1997 ack.. :( was in dm guild hall.. thought i was in workroom.. transed kurtis to me.. quen killed kurtis.. :(
+Fri Jul  4 02:29:22 1997 released pandemonium after talking with him as other chars..
+Sun Jul 13 12:09:16 1997 updated the feather.. change name from quill to feather -cause of player quill added some guardian commands that allow players to be removed and frozen by other players who are been deemed worthy.. also fixed the poets so z's name doesnt mess it up
+Fri Jul 18 02:50:22 1997 dested 3 /players/sado/shop/drunk off of terral
+Fri Jul 18 15:27:50 1997 change ~/junk/quill.c cmd 'poets' to not show 21 invis wizards
+Sun Jul 20 16:51:02 1997 added cale to poetmaster list
+Tue Jul 22 16:22:30 1997 gave ladydiamond 800,000 exp and subtracted taht from her guild exp.. she transfered accedently 1,000,000 instead of 100,000
+Sat Jul 26 00:49:56 1997 updated the ~/junk/quill.c added a write line in the add_poet cmd telling players to view qhelp and qrules.. made it so when one askes a quetsion in set_mode says changes set_mode to asks and lengthened the char cut for titles from 30 to 33...
+Mon Aug 11 22:34:29 1997 added aenom as a 'poetmaster'
+Thu Aug 14 01:19:26 1997 moved my /players/wocket/junk/quill.c to my castle to autoload.. for some reason it failed to autoload.. assuming eurale took it out of his castle as was suppose to be the arrangement.. havent confirmed such
+Sun Aug 17 18:23:37 1997 added a ::init() to /players/wocket/mushrooms/armor.c
+Sun Aug 17 18:26:58 1997 fixed typo in ~/mushrooms/lance.c
+Thu Aug 21 19:24:11 1997 imprisoned godzilla for swearing on gossip --no warning-- see log for exact msg (did it at the same time as feld did)
+Thu Aug 21 19:47:53 1997 freed godzilla..
+Fri Aug 22 03:03:26 1997 typo in orb.c .. fixed it...
+Wed Aug 27 23:10:37 1997 ~/closed/orb.c  added exit 'rift'
+Fri Sep  5 04:38:25 1997 patched luthien exp .. used the abandon bard cmd.. and it took the exp.. the abandon bard cmd is buged..
+Mon Sep  8 01:22:17 1997 made ~/mushrooms/armor.c weight of 2 was 0
+Mon Sep  8 01:26:06 1997 changed ~/mushrooms/lance.c from wc 19 to 17 and lowered weight from 8 to 3.. (eight seemed execssive but 0 was unacceptable)
+Wed Sep 17 11:24:08 1997 changed cost of ~/closed/orb from 100 hp & sp   to 150
+Wed Sep 17 11:36:57 1997 gave darkfire mythos' guild objects back...
+Sat Sep 20 05:36:53 1997 dest armageddon 1 min before morning crash of elof.. crash didnt happen.. found a way to reset crash (might want to look into secruity)
+Sat Sep 20 05:45:39 1997 umm.. armageddon counted down.. but didnt reboot.. *boggle*.. going to just leave it
+Mon Oct 13 01:34:16 1997 reclone spawns lost guild objs...
+Mon Oct 13 05:23:38 1997 reset dreamspeakrs exp from deing.. it was a bug withthe sacrifice cmd and her child.. i witnessed it.. i beleive it has something to do with the child not being saved in the day care and dieing.. i got a error msg for line 442
+Mon Oct 13 05:25:11 1997 also found a bug in mythos' desert.. found a way to enter a room with aggro monsters and no possible way to leave.. exits give a sensative mind error .. problem with the master.c object for that area, an oout of index error.. the area is also np..
+Mon Oct 13 05:25:24 1997 so no escape is possible...
+Tue Oct 14 16:01:43 1997 made testchar 'nika'
+Wed Oct 15 22:28:27 1997 added anzha as a poetry nazi..
+Fri Oct 17 17:01:47 1997 restored lillygirl's exp for death in coliesum (feldegast's area) feldegast was there.. tied.. went to resuration room.. wimpied and jabber killed her.. shouldnt have happened.. am not restoreing stat from death.. feldegast is aware of this error..
+Fri Oct 17 17:01:56 1997 for more info please ask me or feldegast..
+Tue Oct 21 17:36:44 1997 add a cut to my quill's feather.
+Wed Oct 22 13:49:52 1997 added a if(!str) to poet line ...
+Mon Nov 24 15:41:18 1997 fixed my castle so ppl dont lose hp and sp when they try to get an orb that pain removed
+Thu Dec  4 04:03:03 1997 removed jabberwocky and maddog from poetry line watchers
+Thu Dec  4 20:02:57 1997 changed error msg with ~/castle.c and 'touch orb'
+Thu Dec  4 20:45:09 1997 fixed room desc typo in ~/mushrooms/mg11.c
+Mon Dec  8 03:42:28 1997 fixed bug in ~/mushrooms/newbiepool.c  -- wasnt taking sp.. :(
+Wed Dec 10 04:05:26 1997 changed /room/south/ssforest45 to the proper /room/south/sforst45 in the TELE_ERR file
+Tue Dec 23 20:31:37 1997 readded orb to my castle with approval from boltar.. cost is now 60sp + random(10) hp   16% chance of fail.. just steals sp and ht
+Tue Dec 23 20:33:59 1997 just steals sp and hp but doesnt move to random location.
+Wed Dec 24 02:32:59 1997 found out jenny has her level set to +22.. when i told her i was going to change it.. she quit out before i could..
+Wed Dec 24 02:33:17 1997 the set_extra_level cmd in the wiztoold doesnt work
+Thu Dec 25 01:07:19 1997 gave 5340 xp to fstndntls and 9408 coins.. something happened apparently he was returning from inactive.. got a lot fo sensitive errors, loged out.. when he logged back in he was a new char.. the numbers i got from the enter log showing what he starte
+Thu Dec 25 01:07:24 1997 stared with and left with..
+Fri Dec 26 17:00:37 1997 fixed newbie pool again.. everything should work now.. player should lose -25sp and heal 15+random(10) hp.. still for only under level 6 players..
+Sun Dec 28 17:58:08 1997 added color to the fail msg with the orb, HIY
+Fri Jan  2 03:40:01 1998 noticed the klingong transporter is illigal according to the teleport rules.. no cost.. no limit.. and not sure but pretty certain no error..
+Fri Jan  2 03:40:11 1998 mail nooneelse about it..
+Sun Jan  4 22:25:56 1998 added a history cmd to the poetry line.. also keep ing a log
+Tue Jan  6 04:33:06 1998 messed up shiveerhearts character.. fixed it.. logs in cyberninaj stuff
+Sat Jan 10 15:33:07 1998 ~/graveyard/ghostsoul was using add_spell_points fixed to add_spell_point
+Sun Jan 11 17:36:46 1998 replaced some of armblesses guild exp - got numbers from train log file.. replaced what was in train and quality levels to get the correct belt levels.. talked to both eurale and arrina about it
+Fri Jan 23 16:05:09 1998 mailed mythos about a bug with his bottemless bag -- infinate carry in players inv
+Sat Jan 24 07:40:09 1998 added /players/wocket/std/stand.c to my castle, it is now part of the game
+Sun Jan 25 22:36:33 1998 added a remove function to my ~/closed/orb.c  "rip" cost 50 hp and 50 sp to remove orb.  checks to make sure player has 50 hp/sp so will not kill
+Mon Jan 26 04:58:21 1998 created testchar neowocket
+Wed Jan 28 04:05:54 1998 gave mourne a shardak guild mark so he could regain his exp and quit the guild
+Thu Jan 29 18:10:12 1998 changed poet who to fix bleeding problem...
+Fri Jan 30 18:27:57 1998 removed 140k guild exp from poke (apparently bug gave it to him) and asked for it removed...
+Sat Feb  7 04:34:38 1998 added autoloading /players/wocket/wedding/ring.c to castle  (private ring)
+Mon Feb  9 15:34:50 1998 commented out the orb from castle so players cant touch it and lose sp and hp
+Sun Mar 15 04:23:57 1998 bugged jake aprox 2 mins on multiplaying suspicion.. nothing found.. suspicion settled
+Thu Apr  2 06:48:19 1998 dested updater in cyberninja guild hall -- wepsync allows spells cast with no spellpoints taken away
+Thu Apr  2 06:49:04 1998 object is currently in room to dest updater , cant remove updater (oppse forgot to set id) but ill be dested when room is updated
+Thu Apr  2 06:49:51 1998 noone has become a new cyberninja so hopefully this problem will be containted quickly
+Sat Apr 18 01:36:08 1998 dested shadowcat s guild object so she could have child (ranger) at her request
+Sat May  2 12:31:00 1998 dested xetraclaws off star - causing her to get a mind error and not be able to quit.. when i tried to dest her i got error - bad argument 1 to call_other() program: obj/weapons.c, obj: players/llew/closed/crystal/xetra_claws#3721 line 141.. when i dested the claws she could quit again...
+Wed May  6 11:53:54 1998 am desting dreams ring.. check her log for reasons..
+Sun May 10 03:15:37 1998 jailed lardass..
+Tue May 12 14:34:59 1998 mailed crosis for swearing on gossip 'fucking lag can kiss my ass' i gave him awarning... next time i catched punishment will be severe.
+Wed May 13 19:20:48 1998 gave pestilence a shardak mark to leave the guild
+Mon Jun  8 21:10:34 1998 changed ~/graveyard/opening.c to check for environment as per mythos example in ~/mushroom/opening.c
+Thu Jun 18 18:39:24 1998 readded the underscore to the cyberninja channel emote...(i like it better.. its different)
+Fri Jun 19 16:03:16 1998 added turtleville to the game
+Fri Jun 19 16:03:54 1998 changed ~/graveyard/gr3.c and ~/mushrooms/mr2.c to give access to turtleville and changed my castle.c
+Sat Jun 20 23:00:18 1998 fixed ~/graveyard/gr3.c error with move cmd..
+Sun Jun 21 03:23:23 1998 buged tristian..
+Tue Jun 23 00:58:06 1998 added ::reset(arg); to ~/turtleville/priest.c so it is now a living object and can be attacked..
+Tue Jun 23 02:34:38 1998 changed ~/std/orange.c so that it wouldnt save.. *grumble* .. i cant beleive i missed it.. anyhow fixed now..
+Sat Jun 27 18:03:32 1998 changed ~/turtleville/OBJ/fountain.c from notify_fail to write return 1; so that pain's star wish cmd doesnt override it.
+Sat Jul  4 22:13:04 1998 jailed then dested fucker...
+Sat Jul  4 22:36:27 1998 set nighttime and naika sps to 0 after they were set to negative from mythos pet
+Sun Jul  5 15:34:54 1998 changed mayor stats to that of a level 14 char
+Mon Jul 13 07:33:07 1998 jenny's guild_exp is 800001 .. very odd because the max for the guild is 800k but the guild doesnt use the players guild exp var... so that var should have been set to 2 which it was a couple days ago.
+Wed Jul 15 05:27:00 1998 jenny reported being able to soul on and getting a new set of implants.. ie having multiple objects..so regen equil ..blades and bions would go off more then allowed.. problem was in the giuld id not being set to 'GI'.. that has been remedied.
+Wed Jul 15 06:05:56 1998 fixed bug with 'wep' cmd and sp cost
+Thu Jul 16 01:44:34 1998 bugged guardian.. players conflicts with guardian and kazer.. boy is that stuff annoying..
+Thu Jul 16 01:52:43 1998 changed ~/turtleville/OBJ/bloodlust.c from wc17->19 with snow's approval.. sword is nonsavable..
+Mon Jul 20 04:01:08 1998 rechanged jenny's title back to what it was.. it was a reward for reporting a bug.. if that isnt an appropriate award i guess i could give her exp or something else.. id appreciate it if you change it back you notify me first.. she should have it till she loses it naturally
+Sat Jul 25 00:54:13 1998 changed /players/dune/closed/guild/boards/board.c to allow me to remove msgs...
+Tue Jul 28 01:45:01 1998 fixed typo in ~/turtleville/OBJ/mstaff.c
+Thu Jul 30 14:07:06 1998 switched anzha to isis as a 'post master'
+Thu Jul 30 14:12:42 1998 set terrals sp to 0 after beeing -1000000 ..
+Mon Aug  3 20:40:00 1998 caught locutus botting.. (he had a trigger to keep him logged on.. and when quit out he logs back in) took all his exp.. his money.. dested him.. and as of current im playing with him so other things may happen
+Tue Aug  4 14:36:47 1998 readded mstaff.c to ~turtleville/NPC/wizard.c after making modifications .. approved by snow
+Wed Aug  5 02:01:44 1998 opened my next area ~/caves/ for testing as per snows approval.. set up log file to log monster deaths..
+Wed Aug  5 13:46:59 1998 edited blackstar tim and beers guild file changing honor stat..
+Wed Aug  5 14:13:53 1998 fixed reset bug with spongejuice and spongeflesh
+Wed Aug  5 22:57:13 1998 fixed spongejuice/flesh to destruct like they are suppose to...
+Thu Aug  6 16:50:51 1998 fixed ~/graveyard/ggiant.c so that it doesnt steal sp below 0
+Thu Aug  6 17:03:49 1998 fixed bug in maincroom and croom .. couldnt listen smell or search cause ::init(); wasnt called..
+Sun Aug  9 11:54:37 1998 added check so only one person may fight the sinja worm at a time
+Mon Aug 10 17:24:03 1998 dested sado's nick-a-nyzer off a couple ppl (dimitrix & blackstar) mailed sado about adding a way to remove it for the players self
+Mon Aug 10 20:54:38 1998 reopened dark caverns after fixed hb bug mentioned by eurale
+Wed Aug 12 03:39:34 1998 changed /players/dune/closed/giuld/daemons/honor_levels.c to only autohonor for pk combat if honor is less then high.. was savant
+Sun Aug 16 11:05:41 1998 changed descip lengths in sinajroom.c and sinjaroom2.c
+Mon Aug 17 12:05:33 1998 installed new ~/turtleville/tvmarsh7.c , questhero.c questhut.c mayor.c questsword.c  to turtleville per eurales okay
+Mon Aug 17 12:06:03 1998 changed ~/caves/NPC/sinja.c to attacke 1-7 per round .. as aposed to 5-7 per round.. per eurales okay
+Mon Aug 17 17:17:30 1998 fixed typo in /caves/OBJ/sliver.c
+Fri Aug 21 05:31:28 1998 fixed typo in mstaff.c    check_magic (int check) was return 1 instead of i (i = int) so all spells were crippled..
+Fri Aug 21 14:12:21 1998 fixed typo in groom.c  'wales' -> 'wails'
+Sun Aug 23 02:13:02 1998 added new cyberninja area to the guild w/ snow's okay
+Sun Aug 23 17:39:08 1998 typo in ~/closed/cyber/a_entrance.c fixed
+Mon Aug 24 12:43:44 1998 added emote to /players/wocket/closed/cyber/a_entrance.c to sit on couchs and chairs
+Tue Aug 25 01:46:42 1998 added yell command to the a_balcony.c
+Tue Aug 25 02:25:16 1998 added 'look at arena' cmd to a_balcony.c
+Wed Aug 26 09:42:36 1998 unguilded clericuzio  removed guild_name set home to church -11 guild rank -4600 guild exp  didnt feel guild exp was enough to give back to exp
+Wed Aug 26 15:48:08 1998 added in sections to make my quest playable with eurales okay..quest is now online
+Thu Aug 27 23:11:58 1998 made changes to ~/closed/cyber/a_entrance.c to accomadate player.c changes
+Fri Aug 28 17:49:51 1998 changed max's race from flea bitten dog to dog.. apparently wizards are changing it with out players approval
+Sat Aug 29 03:41:13 1998 changed shroom.c diamond.c ruby.c and sliver.c .. fixed cashs to cashes in 'cash' say
+Wed Sep  2 01:30:49 1998 reported bug with this_player()->reset(); and /players/mythos/mmisc/watch.c
+Wed Sep  2 18:32:55 1998 changed questsword from wc 16 to wc 14  also changed questhut to not clean so there will only be one questsword a reboot
+Thu Nov 26 16:37:59 1998 changes /dune/closed/guild/implants.c  to return guild_wiz's as guild_officer  line 308
+Thu Nov 26 16:53:16 1998 ~/graveyard rooms now return gravesite() "YES"
+Thu Nov 26 17:41:42 1998 changed nonges -> now 25% chance of run_away() when hp < 42%    nonges are thematically peaceful.. agro only randomly set when alignment is below -500  (alingment is random (range -1000 to 1000) )
+Thu Nov 26 18:36:21 1998 changed ~/mushrooms/guard.c  so that if two guards are in the same room and one is attacked the other will attack.
+Thu Nov 26 18:58:25 1998 added notification line so when any nonge defends another ppl in the room are notified.. ie. guard/hpnonge.c
+Thu Nov 26 18:59:31 1998 also added a slight delay to when the backup attacks
+Sat Nov 28 01:49:51 1998 edited /players/dune/closed/guild/rooms/shop.c to illiminate multiple cloning of pk light board.
+Tue Dec 15 18:43:08 1998 fixed ninja leave so that the exciled could nolonger see the channel..
+Tue Dec 15 18:59:37 1998 added oath board to /players/dune/closed/guild/rooms/archives.c
+Tue Dec 22 22:02:17 1998 mailed beck about moon's zord completing mk for her
+Wed Dec 23 12:01:38 1998 changed regen_potion so that only one can be used at a time
+Wed Dec 23 12:15:42 1998 changed regen_potion so that it cant be droped during usage
+Sat Dec 26 20:56:54 1998 changed dravens race back to human.. was 'mooch'.. he claimed nikki did it
+Sun Jan  3 01:53:04 1999 added guild entrance to ~/turtleville/tville_tower.c   note: it is not accessable to anyone without the guild ob.. so its only for my test chars at this moment
+Tue Jan  5 02:07:09 1999 changed filer to the new work report location
+Wed Jan  6 17:57:20 1999 modified ~/std/orange.c from heal(40)x4 to heal(50)x3  lowered cost from 1600 to 1500
+Fri Jan  8 15:11:21 1999 fixed bug in /players/dune/closed/guild/daemons/honor_levels.c and mailed snow about it
+Sun Jan 10 13:02:20 1999 mailed eurale about not using clear_fight_area() in exit in fiendsville
+Sun Jan 10 13:25:03 1999 edited ~/std/stand.c and orange.c to try to fix a weight setting problem
+Sun Jan 10 14:25:13 1999 edited p1,p2,p3 cyber attackes so you cant attack yourself  (*grins sheepishly*)
+Sat Jan 23 16:11:58 1999 changed ~/turtleville/NPC/shoppekeeper.c to check for dest_flag
+Sun Jan 24 02:28:56 1999 mailed snow about /players/rich/lower/borg.c being below standards
+Mon Jan 25 12:46:28 1999 fixed nonges wimpy.. for some reason command wasnt working.. has been fixed..
+Fri Feb 26 00:36:54 1999 fixed cyber shadow problems with there being no this_player();
+Fri Feb 26 03:07:10 1999 removed the log checks for the caves cept sinja worm and pojoui
+Fri Feb 26 23:00:50 1999 added exp to candy 1/3 of what he had.. was a  mage 25982 was the number.. cleared stats
+Fri Feb 26 23:11:46 1999 jayjay had sta 24 and mag 14.. now 20,18 (part of mejin guild)
+Fri Mar  5 18:29:34 1999 editied ~/graveyard/groom.c to check for this_player before setting set_fight_area
+Fri Mar 12 01:14:02 1999 spared konya twice for fun.. didnt remeburse anything.. changed her title to usagi's clan thingy.. theme and roleplaying are a good thing
+Sun Mar 14 00:49:20 1999 dested star off lebonan (was being annoying) imprisoned lebonan (swearing on gossip _
+Thu Mar 18 03:48:30 1999 mailed mythos about bug abuse with dm rooms
+Thu Mar 18 03:48:48 1999 edited user cmd in cybers to change my cyber title
+Thu Mar 18 03:49:52 1999 mailed mythos about bug with /players/saber/fur/selcoffin2.c where you can reclone selena with lockers (reported by jaraxle)
+Thu Mar 18 05:01:01 1999 maile bolts/mythos about wimpy problem
+Sun Mar 21 04:22:24 1999 adjusted panthers exp because of death to a pk bug.. added 730000.. also mailed mythos and boltar about the bug
+Fri Mar 26 09:59:04 1999 have lowered sting tassadar and armblessed honor levels for breaking guild rules all within the past two weeks
+Tue Mar 30 17:51:11 1999 changes ~/turtleville/NPC/maid.c to check for query_stuffed (was query_stuff) and changed intox value for 'ale' from 14 to 4 so lower levels can use it in ~/turtleville/NPC/bartender.c
+Wed Mar 31 22:04:12 1999 fixed rooms in turtleville to check for the monster before cloning another one.. some had it some didnt..
+Fri Apr  2 12:12:08 1999 reported bug on /players/mouzar/newbie/castle/shop.c where object is sold but not destructed
+Sun Apr  4 21:43:47 1999 added a bribe cmd to ~/turtleville/NPC/mayor.c .. it clears crime for a cost of 10k  approved by snow
+Mon Apr  5 00:24:53 1999 added line to /players/dune/closed/guild/daemons/membership.c in leave_guild to account for shadow object
+Tue Apr  6 02:40:51 1999 changes /players/dune/closed/guild/includes/flux_damage.h  on of the strings was missing a mess =
+Tue Apr  6 03:34:24 1999 added history cmd to cyberninjas
+Tue Apr  6 05:55:41 1999 uncommented orb autoload in ~/castle.c
+Sat Apr 10 02:01:34 1999 added time stamp to wish log
+Sat Apr 10 02:48:22 1999 cloned ghost /players/dragnar/closed/scar.c   was snooping and saw him win.. but in monster_died didnt give it to him.. also transedh im out of room because ghost lost his heart_beat and monster didnt die.
+Sat Apr 10 13:40:34 1999 gave vertebraker /players/saber/food/hscrool1.c  for his wish.. see log /players/wocket/closed/log/WISHES
+Sat Apr 17 23:21:55 1999 reembursed beth exp for a famous double death.. see death log for more info :)
+Sun Apr 18 00:19:12 1999 setup so you can no longer honor outside of your honor range.. added onyx stone to the list of honor levels
+Sun Apr 18 05:56:48 1999 fixed mech repair bug.. allowed sp to go negitive
+Sun Apr 18 05:58:31 1999 set coren's sp to 0 .. was -2040 .. see previous bug
+Tue Apr 20 04:36:16 1999 changing ttitles for cyberninjas
+Tue Apr 20 09:37:33 1999 fixed bug in oathboard with it not saving
+Sat Apr 24 13:15:59 1999 adjusted how history works for cyber and mage guild line
+Sun Apr 25 19:52:38 1999 changed cost of cybereyes from 20k to 50k because of new usefullness
+Sat May  1 17:07:25 1999 transed rattlesnake out of elemental test.. he lost his hb while fighting granite
+Tue May  4 22:58:05 1999 restored max's deathmace after leading her through the clearing of it.. so instead of spamming my workreport with the weps im restoring from this locker bug.. it will be in /players/wocket/WEP_RESTORE
+Thu May  6 19:54:20 1999 fixed intox read out on oranges so it is correct
+Fri May  7 23:21:12 1999 gave hugh exp he lost from somehow him not saving when he quit and reloged in.. restored values that were in the log
+Sat May  8 12:47:22 1999 hudson used insanity on my snail.. so while they were fighting i stopedfight my snail.. my snail killed her next round.. reminder to put insainty check in snail
+Sat May  8 12:50:13 1999 snailed rekilled hudson when she went to get her corpse.. replaced exp from death log
+Wed May 12 20:23:07 1999 changed how ~/mushrooms/shroom.c and ~/graveyard/diamond.c and ruby.c so that they must be sold at (for shrooms) hpnonge.c or lladious or for others at a 'jeweller'
+Thu May 13 12:57:20 1999 put orb back in game.. watching logs carefully
+Thu May 13 12:57:36 1999 zapped clericuzio for botting
+Thu May 13 21:58:59 1999 fixed values of shell armor to match that of shell+cost to make.. added in random(15) coins bonus for going to the trouble of making the armor
+Mon May 17 06:29:52 1999 made a statue and put it in the turtleville park..
+Mon May 17 06:29:56 1999 when inactive :)
+Fri Jun 11 15:39:35 1999 changed stand so that it the boy brings more heals back faster.. call_out 100.. plus put int rotten oranges which happens currently !random(15) at time of purchase
+Fri Jun 11 15:40:15 1999 rotten oranges heal random(20)-10 with same intox and cost
+Mon Jun 14 05:00:48 1999 changed value of rotten oranges to 10*charges to reflect its worthlessness.
+Tue Jun 15 04:55:01 1999 changed oranges to go 'rotten' after two resets.. for thematic reasonings .. also allows initial cost of oranges to remain at 1500 instead of 1650... approved by snow
+Wed Jun 16 21:12:46 1999 made sinjaroom2.c NT
+Tue Jun 22 18:21:05 1999 added mkquest stuff for ~/turtleville/NPC/sylic.c
+Sun Jun 27 03:33:13 1999 changed /players/feldegast/movies/DarkCity/pawnshop.c to check for "pawnbroker" instead of "broker" since the mon doesnt have an id of "broker"
+Sun Jul  4 16:47:51 1999 reset sires ac to 0.. was -6.. have no clue how it got that way
+Mon Jul  5 01:50:46 1999 restored 30k coins to rattlesnake /players/daranath/qualtor/obj/depositor.c takes the money even if the input_to is a 'no'
+Mon Jul  5 02:02:03 1999 restored another 30k to rattlesnake.. he did it again..
+Wed Jul  7 01:14:04 1999 making visual changes to my feather
+Fri Aug  6 03:27:05 1999 gave fraggle 5k in coins.. something abut larn taking it.. dont know what bug..but it was only 5k so im not to worried about it..
+Tue Aug 10 02:06:45 1999 drake tried to join polies but an old .o file prevented.. cloned gob to him.. and set stats.. i dont know how to set the charges.. so he got 610.. if any senior knows how feel free to remove them..
+Tue Aug 10 02:14:33 1999 maxed his sta,str,and mag stats because they were restored
+Tue Aug 10 02:15:14 1999 from the old .o file.. he kept everything else..
+Thu Aug 12 10:18:59 1999 moved ~/wedding/priest2.c to ~/turtleville/NPC/priest.c which puts the approved wedding rings into the game.
+Thu Aug 12 12:52:19 1999 did the usual typo fixing on my rings and a couple bug corrections.. wear and remove werent working cause head armor wasnt getting set correctly.. thats been fixed..
+Mon Aug 16 16:36:35 1999 cloned /snow/castle to /room/plane10... updateing and loading didnt restore it.. boggle
+Mon Aug 16 18:03:17 1999 jailed outrage.. hhe is only logging on to be annoying.. not to play..:(
+Wed Aug 18 01:09:50 1999 jake as 18+1 now 18 :)
+Sun Aug 22 14:08:30 1999 reagranged tville_fount (so fountain loades before stand) also fixed mghut and mg12 so it checks for the guards and priest before cloning new ones
+Mon Aug 23 17:05:31 1999 added new shorts to the wedding ring
+Tue Aug 24 02:11:25 1999 changed how cyber weapons were droped.. they now dest and emoted that they are offered to the vortex.. tested ac and weight readjustments to make sure it all worked..
+Fri Aug 27 17:42:45 1999 fixd it so that kids dont run th init on rings..
+Sun Aug 29 11:04:31 1999 added in hit_poitn check to ~/tutleville/NPC/ped.c
+Thu Sep  2 23:50:56 1999 deguilded jezebel from the shardaks
+Fri Sep  3 02:01:09 1999 added in fucntion to reset autos after blades break in fake_beat.c
+Fri Sep  3 02:42:35 1999 capped spouse name in ring short...
+Fri Sep  3 20:24:55 1999 changed feldegast room inherit to have a notify fail search
+Fri Sep  3 20:25:11 1999 set jakes extra level to 0.. was level 13+1
+Sat Sep 18 10:06:59 1999 gave 10900 coins to ezekial cause laera had a blonde moment.. (eurale witness)
+Wed Sep 29 23:12:19 1999 fixed stark back to the old vampire object per request by eurale
+Thu Sep 30 11:20:40 1999 fixed bug with auto blades and them breaking.. should be okay now..
+Mon Oct  4 13:16:56 1999 removed ~/mushrooms/hpnonge.c autoattack if the guard was being attacked.  would have been pointless to kill those
+Mon Oct  4 13:17:30 1999 also makes more sense that now because the guard is guarding the hpnonge..
+Mon Oct 18 03:55:35 1999 moved ghost out of maledictas caves.. rooms exits are messing up.. having ghost mail him
+Fri Oct 22 17:10:18 1999 fixed sticks vamp object (he lost it for some reason .. gave him the new one and set up his guild exp properly.. didnt see changefangs till after i had done this.. but did everything changefangs did..
+Tue Oct 26 19:08:34 1999 reset vampire trial room.. still some probablem with ppl dieing and it not reseting
+Tue Nov  9 16:48:58 1999 changed rottenorange.c so it can not be eaten while on the groud
+Fri Nov 12 02:05:05 1999 unset kazer's levitate variable (was stuck at 1 when he wasnt levitating)
+Sun Nov 14 00:25:56 1999 doombunny got stuck in a zeus room.. has a movement function that doesnt work
+Fri Nov 19 18:58:41 1999 added in anti spell spam to the cybers approved by snow
+Thu Nov 25 04:16:34 1999 added in a recruiter option so that players now know who recruited other players.
+Thu Nov 25 04:17:08 1999 also changed users slightly to reflect the changes
+Thu Nov 25 07:00:49 1999 changing output display some cyber commands.. (purely cosmetic)
+Tue Dec  7 03:43:50 1999 added guild board to phase_hall for the cybers (guild board can not be seen nor used by non cybers)
+Wed Dec 22 03:07:30 1999 first suspened vach from the cybers but then made him a renegade seeing that it fit his personal atitude towards the guild better. shame he left.
+Thu Jan 13 22:17:56 2000 added in healerguild and poly guild block objects to tville_adv so they cant train with sylic (per mythos request)
+Sat Jan 15 00:54:51 2000 changed the guild block fromt he objects to a check in sylic so that im not cloning multiple objects and such.  added an array so if other guilds choose to have such features they can easily be added to the BANNED define
+Thu Jan 27 00:14:12 2000 added a ring short & long to my ring
+Sun Feb 27 23:58:17 2000 fixed ncon
+Fri Mar  3 00:26:48 2000 changed the id of the implants for wizards (so i can post notes).  also added in the ~q cmd to the cyber boards so that they can be exited out without posting.
+Thu Apr 13 02:57:12 2000 changed the train cmd to look for max art level when training black belts instead of ruby stone so that maxed intellects could also train.
+Fri Apr 28 02:05:07 2000 changed orange destruct from == 0 to < 1
+Fri Apr 28 03:39:14 2000 added adena(jara) to the necromancers to beta test.. transfer files from daranaths dir to mine so i could ftp
+Fri Apr 28 12:57:01 2000 save
+Sun May 14 04:29:19 2000 fixed cyber blade damage so it no longer takes sp from players in pk.
+Mon May 15 00:01:29 2000 cleared out cyrics locker and replaced a demon bane to him.. told him not to store it to prevent future bugs
+Sat May 20 00:54:34 2000 added in a fake finger for the _finger.c so that wizards can create pseudo players files... see /open/fakefin/README for more details.
+Sat May 20 02:22:36 2000 fixed but in talieos misstyped shellsheild
+Sat May 20 17:03:33 2000 set it up so that the necro guild hall is now in my dir
+Mon May 29 22:01:35 2000 restored a couple of eurales bsword to calysto .. they changed dir and was bugging out the lockers
+Wed Jun 14 23:54:22 2000 reentered potion into game with 13 hp healed for 30 rounds at a cost of 15600 which is 2/3 of 60coins per the heal docs (sorta)
+Wed Jun 21 19:05:28 2000 removed frog curse from coldwind .. she didnt understand why she couldnt carry anything and after my playing with recalc and such i kissed her and that worked.. somebody should either get rid of that.. or makeit more noticable
+Mon Jun 26 03:56:38 2000 added new beta testers tot he guild and removed the ones that werent showing up anymore. added mphstls, damien, and anubis...
+Wed Jun 28 03:46:25 2000 restored solistice lost honor for wild pet.. and coldwind lost honor for wild kid.. freaky
+Wed Jun 28 14:07:39 2000 commented out north exit and descrip of exit in long in /players/daranath/qualtor/cryst2.c because the file for the room doesnt exist.
+Thu Jun 29 04:12:26 2000 added ::reset() to feldegst's trenchcoat and fixed my ring so that they work with the new do_damage crap
+Thu Jun 29 04:12:40 2000 found error in do_damage with head_armor
+Sun Jul  2 21:41:10 2000 added exp bonuses to the monsters in the dark caverns /players/wocket/caves/NPC
+Sun Jul  2 22:18:25 2000 added bonus to /players/wocket/graveyard/NPC/ggiant.c okayed by feldegast for bonus additions
+Mon Jul  3 03:13:01 2000 added animate skeleton to necros.. needs a bit of emote refinement
+Wed Jul  5 19:34:50 2000 restored tarrasque plate to alexis.. vamp lockers bugging out.. eurale made aware of problem
+Fri Jul  7 00:52:35 2000 deguilded ireland after being released from prison.. did not restore guild exp and is not beta testing any longer..
+Sat Jul  8 23:49:32 2000 unguilded lucidity.. was mage
+Fri Jul 21 19:04:56 2000 set hughs sta stat to 20 with his permission.. apparently healers can set other ppls stats and they never get reset.. am invistgating more into it
+Sun Jul 23 14:01:29 2000 dested off a mythos quicktyper off of faizil.. apparently there is no way for the player to remove it themselves..
+Sun Jul 23 14:51:56 2000 added in a no berzerk clause for no_fight rooms in daranaths gungnir
+Sun Jul 23 15:49:22 2000 dested off party object from faizil and her two kids.. was bugging out.. didnt investigate
+Thu Aug  3 12:28:43 2000 gave massa back a cyber guild obj
+Thu Aug  3 13:05:42 2000 fixed cybers 'second' guild hall issues because guild is no longer open for invasion
+Thu Aug  3 13:06:40 2000 reset massa's guild stats.. they were deleted when he was released from jail and not updated to the new guild object properly.
+Sat Aug  5 03:34:46 2000 changed the alignment of niblet from 1000 to random(500)+100.. 1000 was probably a bit excessive
+Thu Aug 10 13:47:56 2000 changed holodeck to insure that it wont lock ppl out if nobody is in.. it works fine for me originally but apparently minus had a problem.. shrug
+Thu Aug 31 02:30:22 2000 changed it so that my monster in the caves dont attack other monsters.. cept nyddles.. they are so cute :)
+Sun Sep  3 23:27:00 2000 fixed /players/feldegast/realm/JalHab/realm4.c so that the chest can only be opened once.. he just forgot to set open =1; when opened.. everything else was in place.
+Sat Sep 30 01:45:50 2000 allowed jenny to delete notes from board
+Sat Sep 30 01:46:04 2000 err cyberninja boards
+Sat Sep 30 22:34:36 2000 restored domanik's guild status
+Wed Oct  4 00:22:51 2000 removed blackstar, exile, and deciet from hotelrooms to clear up space
+Wed Oct  4 02:43:02 2000 deguilded budman from mages returned 500k exp from -1,925,206 exp he lost
+Sun Oct  8 23:34:35 2000 changed cybers so they can now have all three types of enhancements (cosmetic)
+Sun Oct  8 23:39:58 2000 changed it back.. due to complaints
+Wed Oct 18 13:08:22 2000 fixed /players/daranath/qualtor/necro_path3.c so it doesnt block out necros when ther eis a skeleton
+Sat Oct 21 02:25:25 2000 fixed the cyber score to conform tothe new pregnancy regs.
+Sun Oct 22 00:23:59 2000 made it so that the mechs dont take -sp and damage themself if player has less sp then needed..
+Mon Oct 23 00:11:54 2000 made it so that the sinja room can not be wimpied out of while in combat
+Wed Oct 25 00:08:27 2000 released neopets to the mud per feldegast approval
+Thu Oct 26 02:28:17 2000 readjusted tristrams pet.. the save didnt save for some reason.. looking into the problem..
+Fri Oct 27 12:29:05 2000 switched cost switch of pets from being changed init() to when a pe tis bought.
+Fri Oct 27 12:45:13 2000 fixed reset bug with turtles.. restored tallos' pet
+Fri Oct 27 13:26:27 2000 fixed pet bugs with put_to_sleep messing up what pets where out and not out.. feeding bug.. going over maxhp bug.. and am now logging advances
+Mon Oct 30 01:08:29 2000 zapped elloco.. asked me to.
+Mon Oct 30 02:25:57 2000 fixed healing problem with pet and heal_start not getting reset...
+Fri Nov  3 18:20:55 2000 fixed bug where pets might attack ppl after their masters have quit out
+Fri Nov  3 18:58:38 2000 changed orb cause.c eurale changed his directory structure causing it to error with his warp.
+Sat Nov 11 02:43:28 2000 changed strikes to reflect renegade and modes..
+Sat Nov 11 18:16:38 2000 set it up so the oranges can be buried to get rid of them.. also set it up so that the stand clones oranges set to rotten and not rottenorange.c
+Sat Nov 11 20:45:28 2000 made it so ninjas arent dishonored while dead
+Sun Nov 19 15:03:19 2000 changed shoppekeeper to not buy query_no_sell() objects
+Sun Nov 19 22:02:07 2000 added 300k exp to neo cause he exchanged 600k more then he needed removed the 600k from his cyber file.
+Sun Nov 19 22:24:29 2000 set it up so they cant exchange any more then the tottal amount needed for the guild
+Thu Nov 30 17:48:34 2000 added in a broom object to pains star s_who function to try to cut back on the calls to find_living and fix the batarsis problem
+Sat Dec  2 22:06:01 2000 fixed name problem with my pet in the long.. fix cyber recruit function with unknown var.
+Wed Dec  6 01:09:33 2000 adjusted sell value of tomato to 1044 so ppl will stop telling me they can sell them for more then they bought them. :)
+Mon Dec 11 23:18:39 2000 changes healer guildob to remove shadow when player leaves guild...as well as save player object.
+Sat Dec 16 20:04:27 2000 okayed jenny's personal teller
+Mon Dec 18 23:14:01 2000 removed jong's title after he was expelled from the knights
+Tue Dec 19 06:33:49 2000 changed /players/languilen/fun/rooms/intank.c to make sure that a dunkee was present before telling to it.
+Sat Dec 30 03:18:38 2000 approved softly's bwand at a 150 delay at random(14)+5 on /players/softly/point/mobs/erica.c (there is no sp cost) but the delay and mob should make up for it minimal damage
+Sun Dec 31 19:24:34 2000 added in line to train_pet to tell if the pet is maxed
+Thu Jan  4 11:12:06 2001 changed hippo's castle to remove the extra /n from the short
+Thu Jan  4 11:13:22 2001 added a lighting fail to /players/saber/stuff/etorch.c
+Thu Jan  4 13:24:58 2001 put in max checks for neopet when it saves
+Sat Jan  6 10:38:29 2001 okayed fallen vigor spell
+Sun Jan  7 09:34:10 2001 added in recruit code to the cybers to limit their recruiting habits..
+Fri Jan 19 22:19:22 2001 added 'flu' to the list of curable cures for the healers
+Fri Jan 19 22:30:43 2001 restored a winterlight for ghost after a bug with his kid now being able to drop it.
+Fri Jan 19 22:30:59 2001 now - not.. but i guess you assumed that..
+Sat Jan 27 18:10:10 2001 promoted jenny to level 50
+Sun Jan 28 23:51:55 2001 hopefully removed honor from being given to cybers from spars
+Sun Feb  4 23:17:30 2001 promoted fakir to level 50 yesterday
+Sun Feb 11 00:17:31 2001 changed felds contest. he had his ages set to 86400 but when age is calculated it uses a 2 click = 1 second.. or 2 seconds = 1 sec.. or whatever.. so that in the finger age is 43200
+Sun Feb 11 04:06:34 2001 added an adjustment of the exp of my snail..
+Mon Feb 12 20:51:57 2001 fixed girn emote in pains star_daemon (added a space after tpn)
+Thu Feb 15 23:31:55 2001 approved jars area 3rd/volcano
+Thu Feb 15 23:33:05 2001 prmoted jaraxle to 40
+Sun Feb 18 16:35:47 2001 added levels to mobs /players/ultramagus/treehut.c
+Sun Feb 18 16:37:01 2001 set level to 1 on previuos -- set level stat 10 (wasn't set matches stats) to mob ~/turtleville/NPC/duck.c
+Sun Feb 18 16:49:28 2001 raised elf in /players/ultramagus/blueoffice.c ac's to 8 to match level of 10
+Sat Feb 24 04:03:37 2001 reembursed summer 40k for death bug with hb / wimpy apparently (many witnesses)
+Wed Feb 28 00:12:46 2001 added lead str return 0 to cyber and dervish cmds so that the lead follow function can be called
+Sat Mar  3 00:09:41 2001 okayed anshars /players/anshar/junk/lipstick.c to be giving out at a wc of 3 and a value of 0
+Sat Mar  3 15:44:34 2001 okayed for softly's newbie sign to be in church along with mal
+Wed Mar  7 03:08:10 2001 fixed move_player bug in dark caves allowing player to kill monsters with out getting hit by leaving the room (gave little the MAMMOTH title for reporting it)
+Wed Mar  7 03:08:23 2001 fixed salve spell for the healers
+Wed Mar  7 03:13:31 2001 fixed salve so if you can dab it on someone else. and it would heal them instead of you
+Thu Mar  8 00:03:51 2001 added a line to salve to show how to use it..
+Thu Mar  8 02:39:08 2001 fixed bug with sinjaroom and caves.. (bad file_name to a string :) )
+Thu Mar  8 14:22:52 2001 okayed frans area for temp approval meaning that its open.. but we still need to go over more indepth room and item descripts.  i think that allowing players in will help fran with his items sothat he can get their feed back as well...
+Fri Mar  9 14:07:19 2001 added a block to the nose from the mouth because prior apparently the games were removed from the nose giving the nose no purpose and it was confusing players.
+Sat Mar 10 02:26:46 2001 added in crusader check in /daranath/qualtor/gateway.c so that the mob isn't cloned when reset is called if there already is a mob
+Sun Mar 11 00:36:03 2001 changed coopers password from "cooper" to "stupidsilly" after someone figured it out
+Tue Mar 13 00:19:51 2001 okayed jenny's ncaa tourney thingy /players/jenny/special/ncaa/  didn't spellcheck so if you find something .. mail her :) ..
+Thu Mar 15 03:04:54 2001 restored minus' honor status for the ninjas.. (apparently others, character, stolen, renegade) .. he paid me 20k gold for my services :)
+Mon Mar 19 20:53:33 2001 added a if(broke) return 1; to /players/saber/weapons/spiritsword.c to query_save_flag so that it would not store.
+Tue Mar 20 03:28:31 2001 added environment check to tomatoair.c (been procrastinating :) )
+Tue Mar 20 03:32:05 2001 /players/hurtbrain/castello/dag/giul_sword.c set_type("sword");
+Tue Mar 20 03:42:15 2001 added broke weapon save checks to saber/weapons/bane.c 2scimitars.c giant_killer.c stormstaff.c as well as spiritsword.c from before
+Wed Mar 28 00:44:38 2001 added a save everytime that the vds_new.c remove_object function is called.
+Sat Mar 31 14:30:55 2001 made chill anguish and decay pk spells (spell_object) .. poor mantis was getting picked on.. stupid players.. no respect
+Thu Apr  5 08:54:47 2001 fixed call_out bug with my graveyard and vertebrakers horses (fixed graveyard end)
+Sat Apr  7 05:53:06 2001 added in worn msg to the cyberninja weapons
+Tue Apr 10 01:20:20 2001 fixed a typo in the shield help file for healers (costs 80 not 60 sp) .. added notify_fail msgs if chip level for cybers is not high enough to recruit
+Wed Apr 11 21:31:52 2001 fixed the healers guild titler.h
+Thu Apr 12 02:38:20 2001 fixed undeclared variable sb_miniguns_rounds to sb_minigun_rounds which was erroring SpuckweaponDM.c which errors spuckcannons.. which would make ppl lose their hb.. all should be fixed now :)
+Wed Apr 25 01:37:02 2001 okayed fran's mastermind .. may need tweaking after we see how it reacts ingame
+Wed Apr 25 15:10:35 2001 opened necro guild
+Wed Apr 25 17:27:59 2001 minor repairs to necros.. doubled length of the raise portal spell (could be longer still)
+Wed Apr 25 21:04:44 2001 added in interactive check for the necro guild who
+Thu Apr 26 21:41:00 2001 returned itesm to deacon that he lost from his corpse dying in his motel room : 2 marshmallows, 41839 coins
+Thu Apr 26 22:21:47 2001 changed the sacrifice spell from 3 to 2 dembraces / fixed logging of dembrace
+Fri Apr 27 13:12:51 2001 okayed zeus beckon shadows spell for the fallen guild
+Fri Apr 27 13:28:51 2001 restored 32833 coins to amoril.. for casting embrace death
+Fri Apr 27 13:49:42 2001 okayed fallen wep illusion spell for game play
+Fri Apr 27 14:14:00 2001 fixed sacrifice spell - made it dest corpse and raised return value to 5/6 of corpseheal instead of 3/4
+Fri Apr 27 14:54:51 2001 added atmopshere to the sacrifice spell where the wounds will now heal
+Sat Apr 28 00:40:32 2001 changed succor.h cost from 55r(5) to 60r(5)
+Sat Apr 28 01:15:43 2001 changed xfer cost from 40 to 80 sp
+Sat Apr 28 01:20:14 2001 upped knight teleport to 80 sp from 55+r(5)
+Sat Apr 28 01:35:50 2001 upped haunt to 80 from 40sp
+Sat Apr 28 01:53:37 2001 upped power ranger tleport from 60 to 80 morphed 80->100 unmorphed
+Sat Apr 28 02:29:03 2001 changed color of mflux from green to magenta due to popular demand
+Sat Apr 28 02:34:18 2001 changed succor to 75+r(10) sp
+Sat Apr 28 03:26:44 2001 /players/rich/lower/sco.c (scotty) now costs 80 sp to teleport
+Tue May  1 18:03:55 2001 changed /players/snow/MONSTERS/brute.c to match closer to the monchart: upped ac by 2 wc by 2 hp by 60 and coins by 430 : should average to be a level 14 monster now
+Tue May  1 18:18:31 2001 changed fail rate on turtleville bar intox to match that of the /room/pub2.c and other bars
+Tue May  1 21:33:25 2001 disabled field in storm staff because shield_prot doesn't work properly and was allowing konya to make monsters lose hb
+Sun May  6 12:38:59 2001 added stones 4mil boot recored to the 2001 list .. fred vouched for him actually getting it (also log to back up)
+Thu May 24 13:27:42 2001 moved and edited my old workreport to wocket_workreport.old cause well.. zeus told me to .. so i just had to do it..
+Sat May 26 13:13:34 2001 changed set_alias("hide") to set_id("hide"); in /players/dusan/area1/items/vhide.c was declaring set_alias twice and players didn't know the correct syntax
+Mon May 28 01:06:53 2001 made it so officer budsen /players/pathfinder/detroit/monsters/budsen.c isn't transed to the jail during combat and then transed to the church
+Mon May 28 01:12:44 2001 added in a resetting of a necro member home when they leave the guild
+Mon May 28 02:19:15 2001 made some changes to necro guildob to prevent errors in cmdhook.. semi successful
+Sat Jun  2 17:52:19 2001 added \n to /players/mythos/healerguild/obj/shield_spell.c to some of the emote lines
+Wed Jun 13 11:35:40 2001 made /players/sado/tailor/welt.c not save non drop and gave it an id.c
+Fri Jul 20 01:51:27 2001 added an id of 'rotten orange' to the ~/std/orange.c object as per vertebrakers request
+Fri Jul 20 01:57:01 2001 added rotten tomato id to the umm.. tomatos?
+Thu Aug  2 00:38:36 2001 Removed beta char only code from the formation.c for the shardaks (they are now really open)
+Thu Aug  9 02:35:40 2001 added pet emotes to the neopets.
+Thu Aug  9 19:44:10 2001 banished the name 'history'
+Wed Aug 15 00:19:37 2001 made necro guild hall pk.
+Fri Aug 24 02:29:55 2001 added pet type 'rat' to my petstore. (same as all the others . .purely cosmetic)
+Fri Aug 24 02:44:15 2001 added hematite as a short option to my rings
+Fri Aug 24 02:44:23 2001 you can now have hematite wedding rings
+Tue Oct 16 00:33:34 2001 changed decay from 3skin cost to 2skin 4 blood
+Wed Oct 24 01:09:38 2001 changed decay back to original cost
+Wed Oct 24 01:14:48 2001 added turtle emotes to the neopet.c
+Tue Dec 11 17:22:57 2001 gave coldwind okay to let kylie keep dkatana from kazer fiacso for services rendered
+Wed Jan 16 01:48:42 2002 i think i fixed cosmos thingy exp reader.. but who knows..
+Sun Jan 27 16:11:15 2002 changed how neopets handled wimpying to prevent changing the attack order
+Mon Feb 11 18:27:28 2002 changed it back as it made it so that the pet would continue to be attacked after it wimpied.
+Mon May 27 15:27:37 2002 moved the necro guild hall from qual'tor to dryant graveyard
+Mon May 27 15:28:01 2002 made it so ggiant.c (ghost dryants) don't auto attack necros
+Mon May 27 15:28:11 2002 closed qual'tor necro guild hall entrance.
+Mon May 27 16:17:16 2002 added a if(ac == 0) return check to /players/maledicta/closed/w/OBJ/player_mod.c to try to fix a hb problem.. no luck.
+Mon Jun 10 03:06:14 2002 make the necro hall no follow
+Mon Jun 10 03:06:20 2002 fixed a lot of typos in the necros
+Mon Jun 24 02:31:40 2002 added in a no_clean code to the necro 'donation' room.
+Sun Oct  6 00:59:40 2002 moved cyber arena from in their guild hall to a teleport exit
+Sun Dec  1 23:43:43 2002 Added Cha and Dex stats to Necro scores
+Sun Jul 27 02:48:26 2003 removed guild exp from sabino (145000) so he could 'rejoin' the warriors... apparently the warriors doesn't remove it when they quit.but its in a closed dir.. and i lost my 100 level :(
+Mon Aug  4 22:55:55 2003 made it so that when cybers post on the main guild board they broadcast that fact.
+Sun Aug 24 01:11:18 2003 changed eurales Glade/oak3 to move rue about the if (arg) return call so she would respawn.. same with /RMS/barter
+Sun Sep 21 04:40:08 2003 changed the feline object to work with the 35 max ste and hopefully fix the problems with going above.  now you can only raise it if you are 30 initially
+Fri Oct 31 03:25:29 2003 made it so emerson's freezer would only spawn a bigfoot if there wasn't already one there..
+Sat Nov  1 20:50:01 2003 made it so that if cybers don't wield a cyber weapon they lose honor
+Wed Nov  5 02:37:31 2003 added a no string check to wizardchild's snowball
+Mon Dec  1 05:21:03 2003 changed /players/snow/dervish/objects/wepshad.c to check to see if it can actually be droppable before removing the shadow
+Wed Jan  7 22:50:46 2004 made it so that evoke ghouls could only be casted one at a time.. it was possible to spam the cmd before it was fully cast getting multiples
+Wed Jan 21 04:21:47 2004 zapped pullmyfngr .. an earwax char.. who was level 5
+Sun May 16 03:27:58 2004 fixed spirit_armor so it is actually worn and activated (there was a bad this_player call)
+Wed Jul  7 03:25:32 2004 added my first emote to the game .. "eye" :)
+Sat Jan  8 00:58:16 2005 added extra look to sabers no_sex item to show that they have had thier balls cut off
+Sat Aug 13 07:21:41 2005 opened a portal allowing fil to join the necromancers
+Sun Sep 18 15:44:12 2005 changed /players/vital/Rangers/Commands/Rwear.c lines 57 and 76.  needed a PO->QuerySkillLevel() instead of just a QuerySkillLevel.

@@ -1,0 +1,252 @@
+***** NEW SPECIAL *****
+Favored Enemy
+The guild object will now keep track of the top 5 races
+that the BWO member successfully kills. Every 4 ranks
+the BWO will gain bonus damage to one of those 5 races
+so at rank 20 they will gain bonus damage to all 5
+races. For example if they fight xetras all of the time
+they will learn better ways to fight demons, granting 
+them a slight damage bonus to all demons. [random(5)],
+not much but enough to make it fun. Fire off a message
+letting them know they are getting the bonus damage and
+why.
+
+***** NEW SPECIAL *****
+At rank 10 the BWO's hands have gained the ability to cause
+a wound on the opponent. The chance of causing a wound is 
+rank/100. So at rank 10 there is a one in 10 chance of 
+causing a wound. If a wound is caused it loads a wound
+object to the opponent that slowly does damage over time.
+Length of the wound is rank + random(rank) rounds. Damage
+is 5 + random(rank/2) hp per round. If the wound ability
+fires and there is already a wound object present, the
+wound has become infected, poisoning the opponent. This
+causes an additional 3 + random(rank/3) POISON damage
+per round.
+
+Create cmd called intimidate. This ability allows a BWO
+to intimidate an evil npc and show it what true evil
+really is. This causes the npc's alignment to shift
+towards good. 
+Specifications:
+Guild Rank:     3
+SPS Cost:       Variable (see below)
+Parish Cost:    Variable (see below)
+Damage: 0
+Formulae:
+If BWO alignment is negative:
+Amount of Change: rank*50
+SPS Cost: rank*5
+Parish Cost: rank*25
+Gain: The BWO gains -(rank*5) alignment
+Notes:
+The spam for this will have to be very brutal and
+explicit. This will also take around 20 seconds 
+perform the ritual. I don't want BWO's using this
+while engaged in combat as well. I envision 
+something like:
+Sparrow waves his hands, a swirling portal of
+shadows opens up in front of him. Dozens of people
+pass through the portal, all bearing the mark of
+the Black Willow Order. In their hands they hold
+small children and babies. The children are lined
+up in a row, none making a sound. Sparrow walks
+down the line and one by one, slits the throats
+of the children. His hands covered in the blood
+of babies, Sparrow peers up at Masakado, smiling.
+wickedly. Masakado gasps in horror at the carnage
+and leaps to attack Sparrow!
+
+Then the npc is forced to attack the BWO after
+alignment is adjusted. (man I'm twisted)
+DOH!!!!!! I JUST THOUGHT OF THIS!!!!!!!!!!
+THIS GUILD NEEDS TO WORK ON BOTH DRIVERS!!!!!
+I'LL START DOING SOME TESTING ON LD
+Created _darkness cmd that clones darkness object to
+player with light level equal to rank*-1 darkness object
+costs 2sp per round. If this causes light level of the
+room to dip below 1 then the cost is 1sp. See below
+
+Added check in BWO.c heart_beat to check light level
+of room. Light level less than 1 heals 1 sp per hb.
+Heals more hps based on the light level of the room.
+
+Multiple Attacks Formulae
+2nd attack - Cap of 99% reached at level 7
+Base: Guild Rank * 15%
+3rd attack - Cap of 95% reached at level 12
+Base: Guild Rank * 8%
+4th attack - Cap of 90% reached at level 18
+Base: Guild Rank * 5%
+
+Modifiers to Base
+(Dex/3)% Max of 10% bonus
+(Luck/6)% Max of 5% bonus
+Light Level of Room * -1%
+
+The way multiple attacks work:
+There is a check to see if the 2nd attack fires, if so
+we check to see if there is a third attack. If third attack
+is successful then we move on to the fourth.
+
+MORE SPAM
+
+DODGE -- VERTE USE A PLAYER SHADOW FOR THIS. CAN DODGE ALL TYPES OF ATTACK
+Calculating Percentage:
+(100 - Weight Percentage)/3 +
+Guild Rank*2 +
+(Dex + Luck + Int)/6
+
+A rank 1 BWO carrying 50% and 15's in stats.
+2 + 16 + 7 = 25% Dodge.
+A max rank BWO carrying nothing and has maxxed stats:
+40 + 33 + 15 = 89% Dodge.
+
+Calculating Damage Reduction for Dodge:
+I need your help for this one. I dont want to make it too high
+Throw some ideas at me.
+
+
+DISARM (weapon special)
+BWO members are masters of the martial arts, at rank 10 they gain
+the ability to disarm their opponent. At rank 15 the disarm has
+a chance of taking the weapon instead of dropping it in the room.
+At rank 20 the disarm has become so strong that there is a chance
+that the weapon will break in the opponent's hands and cannot be
+repaired.
+
+My black willow monks have these abilities, they are kept in
+/players/sparrow/areas/bwo/include/mob_funcs.c
+
+Weapon Specials:
+  Name         Damage    Cost     Description
+1 dClaws I     3-10      damage   While in combat, BWO's hands
+                                  turn black as night, enlong-
+                                  ating into sharp claws of
+                                  pure darkness. Dtype is
+                                  other|dark
+
+2 Sharpness    special   15       The dark claws have gained
+                                  an edge that can cut through
+                                  almost anything. When fires
+                                  clones an object to opponent
+                                  that slowly causes them to
+                                  "bleed" does random(4) dam
+                                  per round for 10 rounds.
+                                  The opponent can have 1
+                                  bleeding obj at one time.
+                                  Dtype is physical. 
+
+3 Law Slayer   5-9       damage   BWO does additional damage
+                                  to opponent with 500+ align
+                                  Dtype is other|evil.
+2 
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+
+Work Charisma, luck stats into _exhibition                                    
+Work Charisma Piety and luck stats into _convert                                
+Add upkeep costs to keeps that drain coffers slowly                             
+                                                                                
+Armor Drawbacks                                                                 
+Can wear any piece of armor in the game but AC maxxes at 10.                    
+
+Cannot wield weapons of any kind
+
+Base wc per rank
+Level   Base WC
+1       10
+2       10
+3       10
+4       10
+5       12
+6       12
+7       13
+8       13
+9       14
+10      14
+11      15
+12      15
+13      16
+14      16
+15      17
+16      17
+17      18
+18      18
+19      19
+20      20
+
+WC Modifiers
+Light level modifier. Light level/-2  (2 = -1wc)
+
+Alignment Modifier
+-1000..-500 =  +3
+-500...-250 =  +2
+-250...-001 =  +1
+          0 =   0
+ 001....250 =  -1
+ 250....500 =  -2
+ 500....750 =  -4
+       750+ =  -5
+
+
+
+Spell		Cost	Renown	Parish	Description
+bt		0	1	1	Guild Channel Talk
+be		0	1	1	Guild Channel Emote
+bwo		0	1	1	Guild Help 
+bsave		0	1	1	Guild Save
+btitle		0	1	1	Set Guild Title
+assert		15	1	100	Lead in an attack
+extract		0	1	1	Extract the darkness from a 
+					dead body.
+darkness	varies	1	varies	Summons a globe of darkness
+					to surround the player.
+					
+					
+					
+					
+Guild Ranks (Parish Renown)
+Level   Exp (total)     Parish Size     Parish Worth    Title
+1       0               1               0               [Oblate]
+2       40000           1200            5000            [Postulant]
+3       120000          7200            12000           [Novice]
+4       350000          20000           50000           [Lay Brother/Sister]
+5       750000          50000           100000          [Monk]
+6       1250000         100000          200000          [Heirodeacon]
+7       2000000         200000          300000          [Heiromonk]
+8       3000000         300000          500000          [Subprior/Subprioress]
+9       4000000         500000          750000          [Prior/Prioress]
+10      6000000         750000          1000000         [Abbot/Abbess]
+11      8000000         1000000         1250000         [Hegumen/Ihumenia]
+12      10000000        1250000         1500000         [Archimandrite/Archimandrate]
+13      12000000        1500000         2000000         [Master/Mistress of the Dark Hand]
+14      14000000        1750000         2500000         [Whisper of a Night Breeze]
+15      16000000        2000000         3000000         [Shadowdancer]
+16      18000000        2500000         3500000         [Bishop]
+17      21000000        3000000         4000000         [Master Nightweaver]
+18      24000000        3500000         5000000         [Dreamstalker]
+19      27000000        4000000         6000000         [Dark Hand of the Nightlord]
+20      30000000        5000000         8000000         [Black Willow Incarnate]
+Combat Messages:
+Im trying to find something online that can give me decriptions
+of unarmmed combat, kinda like the kung fu weapons. If you have
+any idea where I can find this information let me know.
+

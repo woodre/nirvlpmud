@@ -1,0 +1,35 @@
+Syntax: ls
+        ls -<options>
+        ls <path>
+        ls -<options> <path>
+        
+Lists all the files in path.  If path is blank, the current directory
+is used.  The path is relative to your current directory unless it
+begins with / or ~.  / makes it relative to the mud root directory,
+~/ makes it relative to your directory, and ~wizname makes it relative
+to wizname's dir.
+
+By default, the files are sorted by type: dirs, .h files, .c files, then
+other files, then by aphabetical order.  Files are marked with an 
+approximation of their size in kilobytes, and with a * for loaded .c 
+files.  At the end of the list, the total number of directories and
+files displayed is shown, as well as the total size of the files found,
+in kilobytes.
+
+If path is a single file, that file's modified timestamp is displayed.
+
+Here are the possible options.  Note that options must be preceeded by a
+dash (-) and must not contain any spaces.
+
+  old        Use old-style ls (other options don't apply)
+  h or ?     Show a brief help file.
+  w<#>       Specify your screen width from 60-120.  Default is 80.
+  c<#>       Specify the max number of columns displayed.  If the list
+             won't fit in your screen width, the number of columns is 
+             reduced, to a minimum of 1.
+  S          Show the full fize size in bytes (up to 6 digits)
+  s          Don't show the file size at all
+  L          Don't check for loaded .c files
+  d          Don't sort the list by filetypes.
+  
+See Also: cat, more, cp, mv, rm, mkdir, rmdir

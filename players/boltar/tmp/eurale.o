@@ -1,0 +1,6 @@
+messages "boltar**Subj: locklist.cCc: (To: mythos) arrina,euraleDate: Jun  4 19:16 Ok, I have set up a standard on-the-fly lock out system.Look at /obj/locklist.c all calls need to be done via a wiz tool oran exec command at present. All that is needed is all or part of anIP or hostname. Any matches will be blocked from loging in. this will avoid the damaging of player files.-Bp**boltar** Re:   panop.comCc: mythos,arrina,pain,snowDate: Jun 19 13:47type authcheck**wocket**Subj: vampiresDate: Apr 26 21:26  if(num < speed) {    tell_object(environment(),      BOLD+"You strike "+      capitalize(environment()->query_attack()->query_name())+      " again with lightning quickness.\n"+NORM);    /* added line to reduce damage in pk */    if(environment()->query_attack()->is_player()) damage = damage/4;    (environment()->query_attack())->hit_player(damage/vdiv);    return; }If you could please add that line to the code as it permits vampires to go over the damage cap, it would be appreciated.  -wocket**Subj: new heal fileDate: Aug 27 04:33Hi Eurale,I did a few minor changes to the newheal.c template and copied it as newheal2.c to your folder..in /open/eurale  .. Hoping those changes might make it a bit easier to understand :)CheersCobs**"
+new_mail 0
+line_length 0
+level 0
+channel_block 0
+is_reading 1

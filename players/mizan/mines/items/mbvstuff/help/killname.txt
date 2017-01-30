@@ -1,0 +1,16 @@
+>> ORDER: KILL BY NAME
+
+Usage:
+order <index> killname <string name> <duration>
+
+Example:
+'order 3 killname mizan 10'
+
+Description:
+This order tells the monster to continue its standard wandering, 
+but to kill any creature that reports to the id matching the string
+that is fed to the order. 
+
+Note that currently the command does not support monsters with spaces
+in their names. Player names do not have this problem however.
+

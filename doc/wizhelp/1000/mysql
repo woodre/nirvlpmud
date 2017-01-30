@@ -1,0 +1,22 @@
+**************
+
+
+                     Mysql
+
+Syntax:    mysql [command]
+
+Desc:
+           With an argument of 'command', executes mysql command 'command'.
+           
+           With no argument, enter a 'mysql' environment whereby all input
+           is passed to mysql as a command.
+           Type '\q' on a blank line to exit.
+           
+Example:   mysql select * from players where name='mokri'
+                  results
+           Shows entry for player 'Mokri' from table 'players'
+
+Related:   
+
+
+**************

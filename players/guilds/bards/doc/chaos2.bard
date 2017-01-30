@@ -1,0 +1,20 @@
+Bards of level 7 or above who have summoned a strand of
+chaos can use the shape command to set the following
+characteristics.
+
+shape <name> name <name> | <appearance> | <common name> (20 mana)
+    Begin the process of seperating an object from chaos.
+    example: shape strand rose | A red rose | flower
+shape <name> mass (5 mana)
+    Reduces the weight of the object.
+shape <name> xname <xname> (5 mana)
+    Sets a third name for the object.
+shape <name> detail <description> (5 mana)
+    Sets the in depth appearance of an object.
+shape <name> inscribe <inscription> (5 mana)
+    Write text on the object, which can be seen if it's read
+shape <name> shine (10 mana)
+    Make the object into a light (or no longer a light)
+
+See "lore chaos3" for important information about the names of shaped
+objects.

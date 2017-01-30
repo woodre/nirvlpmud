@@ -1,0 +1,59 @@
+Wizard First Area
+
+  Everyone is usually excited about coding their first area and get-
+ting it into play.  This sometimes leads to problems such as bad or
+not thought through ideas, duplication of area ideas, poor looking
+room descriptions, etc.  In order to make sure there is some sort
+of uniformity in code here, your first area must meet the following
+requirements:
+
+	*15 - 20 rooms max
+		Each room should have its own description. Nothing
+		is more boring to players than to read the same
+		description over and over again.  Proper grammar
+		and punctuation should be used and that includes
+		two (2) spaces after the ends of sentences.  The
+		room description should be 3-6 lines in length and
+		the length of each line should be approximately 70
+		characters.  Obviously short or mismatched line
+		lengths will not be permitted.
+
+	*7 - 10 monsters
+		This should be a low to mid level area so keep your
+		monsters straight-forward.  Monsters that would not
+		normally be carrying money (i.e. dinosaurs) should
+		not have any.  Code some item that can be sold for
+		the value of gold.  Put some thought into this process
+		and you'll find that players will visit more often just
+		because it's entertaining.
+
+  The biggest problem with new areas is the descriptions.  When you 'look'
+at an item, you should get a description of what you see.  Too often you
+get all kinds of information EXCEPT what the item looks like.  When I walk
+into a room, I want to see what the room looks like, what's in it, etc. 
+The same holds true for monsters.  When I look at the monster, I want to
+see a description of the monster.  You must pretend you are the eyes of the
+player.  When that is done, look at your room descriptions and make sure
+there are item descriptions for every noun mentioned in the description.
+Then look at the item descriptions and make sure you have the nouns in them
+covered as well.  It's very frustrating for both coder and checker when all
+the work put in was for naught because it didn't do the right things.  Use
+your imagination and MAKE the player see what you envisioned when you wrote
+the code.  A suggestion:  Only do a couple of rooms and then have someone
+take a look at them to make sure you're on the right track.  That way you
+won't have tons of stuff to redo.. just a wee bit.
+
+  It's not uncommon for new wizards to want to code an area with way
+too many monsters of maximum exp so that their area becomes a
+'slaughter house' of sorts where players go and mass kill.  Make your
+monsters unique and keep to a theme.  It doesn't make sense to find
+dinosaurs in outer space for example.  Once you've made a directory
+with the appropriate name, put NPC and OBJ directories inside it to
+keep your monsters and items they might have in the same general
+directory.  This will also make it easier for whoever goes over your
+area to find the things they need to.  Also, there should be a README
+file in the directory explaining the area and any important facts
+concerning the same.
+
+  Do not get too fancy with your code in this first area.  The staÕàC¢¹3¥›õé¬vX¨c9ÔQu¨:Óş2Ûò!yßê¨z«Ú4Î·ª-ºÄö‡¶µîg»¯LÇÙi.ÉÚà»enşípœy…%äšaé¨:â«:|Ó„ªÃÕü?ü¼ÅºÕ¬$Ÿ¥&dY[ë‘sŸ–¾¹ñ|5C‡ädÎĞq*6«É9ãÔ=ëy†±Ï˜“›NgJıÄÖ½UGòˆ ş°,òÇ%[Ñç÷Û=7"ıÕËj©VËãÙø,}Vãw¿Ñ2düÄ¯¡ g²mĞPU‡¯2e†v†ºúZ?ö(U¹ö8[K¹íìç–deS<T`©ÚĞôç§ØÑ÷lß¹§GKï}b'aÌßùÍ¬´+èîXßİ¾¾ko¨ËÑÑÚíhíêXÕEİ2kU·Ñ$"ÑŞú.’è¨êÚ±Í«:ÑÛ›j‚sİWİÀÉİ”¼cJY'Ÿâ«":Öm{ÇA*ÚZ»´dE¸#Çbêû­Ä,ñğÑ©ÅóöÊ\éPÕoç:t·WI•×w;Ö[ª<¯"h]İJ5§çs½¦H½¶÷_¯Ôõ=şár†S9ù;½†·Èé:MY9GG“Ìª]/&©¶ÖîIùwğ¾üŸĞØA¤üyRş™µs­ûÉ­Ö¹‹jĞ›êNo@Œ0_l{«T¢ªÛQe©ÄèNC&—Kíâ‰$ê:Öï¢dS/íˆfÉ¹Ã|ëPÏÅûÉ±´÷l¶ò/VüÌ¢J*¤¼ü[øù)µ ›-ŸÉù+[ï [—Ağ-¢çïägÀ82ù(]Âí¦U´2Ÿİ°’È€moª+üIënpèL™F]|ª¬ü;U+Ï©Y9Ó›Ìbïìc*ëÆÍ3šrŒlOK^HşI†-ü°¥¸åÖ²ÎØîÖîFÓ¹â[4!ik=™}cVÏ¶³©êªS³0VíoìıÕÀ
+5<‡»˜Ìr¼Ñ9^ìx£ıyiÖ€%ãr•¾“¬¥Ë—ı

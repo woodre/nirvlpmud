@@ -1,0 +1,13 @@
+inherit "obj/treasure";
+
+reset(arg) {
+ if(arg) return;
+set_short("A Corn Cob Pipe");
+set_alias("pipe");
+set_long("A Corn Cob Pipe.\n");
+   set_weight(1);
+    set_value(500);
+set_save_flag(1);
+}
+ id(str) { return str == "cpipe" || str == "pipe"; }
+

@@ -1,0 +1,45 @@
+#include "/players/snow/dervish/def.h"
+
+sandblast(str) {
+  object ob, myob;
+  int obwc, obac;
+  if(!TP) return;
+  if(TP->query_level() < 19  || TP->query_extra_level() < 10) {
+    write("You are not high enough level to sandblast yet.\n");
+    return 1; }
+  if(TP->query_ghost()) {
+    write("You cannot sandblast while you are a ghost.\n");
+    return 1; }
+  if(TP->query_sp() < 100) {
+    write("You lack the energy to sandblast.\n"); return 1; }
+  if(TP->query_attrib("pie") < 20) {
+    write("You lack in faith.\n"); return 1; }
+  myob = present(GID, TP);
+  if(!myob) return;
+    if(myob->query_spell_delay()) {
+    write("You cannot cast a spell again so soon.\n"); return 1; }
+  if(!str && !TP->query_attack()) { write("Sandblast what?\n"); return 1; }
+  if(!str) ob = TP->query_attack();
+  if(!ob) ob = present(str, environment(TP));
+  if(!ob || !present(ob, environment(TP)) ) {
+    write("You can't see "+str+".\n"); return 1; }
+  if(!living(ob)) {
+    write("You cannot sandblast inanimate objects.\n"); return 1; }
+  if(ob->is_player()) {
+    write("You cannot sandblast players.\n"); return 1; }
+  write(BOLD+YELLOW+"\tYou shudder with the power of the Sand!\n"+
+        "\tStreams of glowing particles whip into "+
+        ob->query_name()+"!\n\n"+OFF+OFF);
+  say("\t"+BOLD+YELLOW+TP->query_name()+" shudders with power!\n"+
+            "\tStreams of glowing particles whip into "+
+            ob->query_name()+"!\n\n"+OFF+OFF);
+  ob->hit_player(random(40) + 30, "other|earth");
+  ob->add_spell_point(-(random(40) + 30));
+  /* myob->set_spell_delay(random(50)+20);
+  */
+  myob->set_spell_delay(15+random(250/(TP->query_extra_level())));
+  TP->add_spell_point(-100);
+  if(!TP->query_attack()) TP->attack_object(ob);
+  if(ob)
+  if(!ob->query_attack()) ob->attack_object(TP);
+  return 1; }

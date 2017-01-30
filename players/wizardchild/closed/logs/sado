@@ -1,0 +1,425 @@
+->> % Call silvia set_aggressive 1
+%fn       : set_aggressive(1)
+in       : Silvia
+returned : 0
+%->> %**Kardan** shield
+%**Kardan** shiel_d
+%**Kardan** kill silvia
+% stat kardan
+%Kardan the Master Monk (neutral)
+level: 9
+%extra_level: 0
+%coins: 4146
+max: 210
+%hp: 210
+%spell: 173
+%max spell: 210
+%experience: 76901
+%armor class: 6%
+weapon class:   %14%
+weapon: Monk's Staff%
+intoxinated:  10%
+carry:  0%
+attack:  Silvia%
+alt attack:  Silvia%
+align:  19
+%gender:        male
+%age:   %1 days %4 hours %14 minutes %4 seconds.
+%room: players/saber/ryllian/arena1
+%crime: 0
+%->> % stat silvia
+%Silvia the Gladiator
+level: 17
+%coins: 0
+max: 425
+%hp: 425
+%spell: 0
+%max spell: 0
+%experience: 416846
+%armor class: 14%
+weapon class:   %24%
+carry:  0%
+attack:  Kardan%
+alt attack:  Kardan%
+align:  -700
+%gender:        female
+%age:   %13 minutes %10 seconds.
+%room: players/saber/ryllian/arena1
+%Creator: %Saber%
+%->> % wiz Sure, why not WC?
+Someone wizs: Sure, why not WC?
+%Someone wizs: Sure, why not WC?
+%->> wiz doh
+Wizardchild wizs: doh
+%Wizardchild wizs: doh
+->> I kardan
+Inventory of Kardan the Master Monk (neutral):
+  [obj/quicktyper#444]: Kardan's quicktyper
+  [players/hawkeye/closed/monk/shield_obj#1129]: --INVISIBLE--
+  [players/saber/food/icoin#992]: An iron coin
+  [players/saber/food/icoin#943]: An iron coin
+  [players/saber/food/bigwine#938]: A tall bottle of white wine
+  [players/saber/food/bigwine#936]: A tall bottle of white wine
+  [players/hawkeye/closed/monk/magbag#737]: Monk Bag
+  [players/hawkeye/closed/monk/monk_staff#732]: Kardan's Monk Staff (two-handed)
+  < wc 14 > (wielded)
+  [players/hawkeye/closed/monk/monk_speed#704]: A Monk Speedster
+  [players/hawkeye/closed/monk/testobj#703]: Monk Robes(worn)
+  [players/mizan/etheriel/items/beatfixer#448]: A happy Beatfixer
+  [players/snow/ITEMS/dfeeler#447]: A Discreet Emoter (Feeler)
+  [players/pain/closed/items/pain_patch#446]: A 'House of Pain' patch
+  [players/saber/closed/new_mini/blade#445]: The scabbard of a dueling knife
+  [obj/soul#442]: --INVISIBLE--
+Done.
+->> % wiz It's a syntactically OK file
+Someone wizs: It's a syntactically OK file
+%Someone wizs: It's a syntactically OK file
+%->> %**Kardan** mheal kardan 50
+%**Kardan** exa wine
+%Daranath ( player 19 ) has entered the game.
+% stat kardan
+%Kardan the Master Monk (neutral)
+level: 9
+%extra_level: 0
+%coins: 4146
+max: 210
+%hp: 182
+%spell: 147
+%max spell: 210
+%experience: 76949
+%armor class: 6%
+weapon class:   %14%
+weapon: Monk's Staff%
+intoxinated:  2%
+carry:  0%
+attack:  Silvia%
+alt attack:  Silvia%
+align:  19
+%gender:        male
+%age:   %1 days %4 hours %14 minutes %34 seconds.
+%room: players/saber/ryllian/arena1
+%crime: 0
+%->> %**Kardan** dw
+%**Kardan** sip wine
+% stat silvia
+%Silvia the Gladiator
+level: 17
+%coins: 0
+max: 425
+%hp: 361
+%spell: 0
+%max spell: 0
+%experience: 416932
+%armor class: 14%
+weapon class:   %24%
+carry:  0%
+attack:  Kardan%
+alt attack:  Kardan%
+align:  -700
+%gender:        female
+%age:   %13 minutes %42 seconds.
+%room: players/saber/ryllian/arena1
+%Creator: %Saber%
+%->> % heal silvia
+%You healed Silvia.
+%->> %**Kardan** put wine in bag
+% ls /log
+%Files in /log:
+%Total 960
+%  27 ADD_MONEY                1 bastion            1 mizan.gl 
+%   3 ADVANCE                  2 bastion.0          1 mizan.jug 
+%  49 ADVANCE.old             49 bastion.0.old      2 mizan.mbox 
+%  36 ATTRIB                   5 bastion.marry      1 mizan.rep 
+%  49 ATTRIB.old               6 beck               1 molasar.ck 
+%  28 BAD_PLAYER               1 big                1 molasar.rep 
+%  49 BAD_PLAYER.old           1 bismarck           1 morgar.rep 
+%   7 BUGS                     1 blue.rep           1 morgoth 
+%   0 DEATH                    1 boltar             1 mouzar 
+%  20 DEATHS                   3 boltar.mbox        1 nightshade.rep 
+%  49 DEATHS.old               1 catt               5 offwield_bug 
+%   2 EMERGENCY                1 catt.rep           1 pathfinder 
+%  11 ENTER                    1 catwoman.rep       3 pathfinder.mbox 
+%  49 ENTER.old                1 deathmonger        1 paulasx 
+%  22 EXPERIENCE               1 deathmonger.rep    2 predator 
+%  49 EXPERIENCE.old           1 dersharp.rep       1 quint 
+%   1 HOTEL                    1 dochent            2 rumplemintz 
+%   1 IDEA                     2 dragnar            1 rumplemintz.mbox 
+%   2 ILLEGAL                  1 dragnar.rep        1 saber.rep 
+%   1 ILLEGAL_HEALING_THING    2 dune               1 sandman.mbox 
+%   1 INSTAMATIC               1 dune.mon           1 sandman.rep 
+%  16 OPEN                     1 dune.rep           1 scathe.rep 
+%  25 POINTS                   1 emerson            9 shadows 
+%  10 PROMOTIONS               1 ftp.log           49 shadows.old 
+%   8 QUESTS                   1 glaendor          13 target 
+%  49 QUESTS.old               1 gorgan            49 target.old 
+%   1 SHUTDOWN                 2 hair               1 trix 
+%   1 SPONSOR                  1 hawkeye            1 trix.f 
+%  34 STAT                     1 hawkeye.rep        1 trix.ie 
+%  49 STAT.old                 2 hurtbrain.mac      1 unsane 
+%   3 TYPO                     2 hurtbrain.pro      1 upsince.o 
+%   1 asmithrune               1 lew.rep            1 vault 
+%   2 bagera                   1 log                1 wearing_bug 
+%   2 balowski                 1 mizan             46 zeotide 
+%->> %**Kardan** fm
+%**Kardan** feedme
+%**Kardan** put iron coin in bag
+% cat /log/ILLEGAL_HEALING_THINS
+%->> %Sonar ( player 6 ) has entered the game.
+% cat /log/ILLEGAL
+%Hawkeye Wed Nov  2 18:44:04 1994 cloned player.c
+%Slava Thu Dec 15 12:45:54 1994 cloned player.c
+%Dune Thu Dec 29 21:54:00 1994 cloned player.c
+%Hair Fri Feb 17 04:42:25 1995 cloned player.c
+%Beck Sat Mar 11 11:56:45 1995 cloned player.c
+%Hair Fri Mar 24 17:16:21 1995 set_level
+%Bastion Sun Apr  9 18:03:34 1995 second_life set_level
+%Mythos Wed Apr 26 04:56:11 1995 set_level
+%Mythos Wed Apr 26 04:56:55 1995 set_level
+%Mythos Wed Apr 26 04:58:15 1995 set_level
+%Mythos Wed Apr 26 04:58:45 1995 set_level
+%Mythos Wed Apr 26 06:08:27 1995 set_level
+%Bastion Wed May  3 21:33:02 1995 set_level
+%Mythos Mon May 15 17:33:57 1995 cloned player.c
+%Wizardchild Tue Jun 20 17:24:15 1995 cloned player.c
+%Wizardchild Tue Jun 20 17:32:24 1995 set_level
+%Wizardchild Wed Jun 21 13:46:40 1995 set_level
+%Cream Thu Jun 22 01:25:51 1995 second_life set_level
+%Wizardchild Mon Jun 26 19:50:29 1995 cloned player.c
+%Wizardchild Mon Jun 26 22:15:52 1995 attempted fake player save player.c
+%Wizardchild Mon Jun 26 22:48:54 1995 cloned player.c add_commands block
+%Wizardchild Mon Jun 26 22:52:04 1995 cloned player.c add_commands block
+%Wizardchild Wed Jul  5 15:51:45 1995 cloned player.c add_commands block
+%Wizardchild Wed Jul  5 16:00:08 1995 cloned player.c add_commands block
+%Wizardchild Wed Jul  5 16:00:57 1995 cloned player.c add_commands block
+%->> %**Kardan** balance
+%**Kardan** exa iron coin
+%**Kardan** mheal kardan 50
+%**Kardan** dw
+%**Kardan** sip wine
+%**Kardan** fm
+%**Kardan** feedme
+% stat silvia
+%Silvia the Gladiator
+level: 17
+%coins: 0
+max: 425
+%hp: 335
+%spell: 0
+%max spell: 0
+%experience: 417128
+%armor class: 14%
+weapon class:   %24%
+carry:  0%
+attack:  Kardan%
+alt attack:  Kardan%
+align:  -700
+%gender:        female
+%age:   %14 minutes %34 seconds.
+%room: players/saber/ryllian/arena1
+%Creator: %Saber%
+%->> % stat kardan
+%Kardan the Master Monk (neutral)
+level: 9
+%extra_level: 0
+%coins: 4146
+max: 210
+%hp: 176
+%spell: 206
+%max spell: 210
+%experience: 77084
+%armor class: 6%
+weapon class:   %14%
+weapon: Monk's Staff%
+intoxinated:  17%
+carry:  0%
+attack:  Silvia%
+alt attack:  Silvia%
+align:  19
+%gender:        male
+%age:   %1 days %4 hours %15 minutes %34 seconds.
+%room: players/saber/ryllian/arena1
+%crime: 0
+%->> % heal silvia
+%You healed Silvia.
+%->> %**Kardan** mheal kardan 50
+% stat kardan
+%Kardan the Master Monk (neutral)
+level: 9
+%extra_level: 0
+%coins: 4146
+max: 210
+%hp: 191
+%spell: 163
+%max spell: 210
+%experience: 77099
+%armor class: 6%
+weapon class:   %14%
+weapon: Monk's Staff%
+intoxinated:  14%
+carry:  0%
+attack:  Silvia%
+alt attack:  Silvia%
+align:  19
+%gender:        male
+%age:   %1 days %4 hours %15 minutes %44 seconds.
+%room: players/saber/ryllian/arena1
+%crime: 0
+%->> tell sandman snoop me...i'm snooping sado%**Kardan** mheal kardan 50
+, who has a bug on kardan..he's healing the monster kardan is fighting, forcing 
+combat..% stat kardan
+%Kardan the Master Monk (neutral)
+level: 9
+%extra_level: 0
+%coins: 4146
+max: 210
+%hp: 168
+%spell: 128
+%max spell: 210
+%experience: 77147
+%armor class: 6%
+weapon class:   %14%
+weapon: Monk's Staff%
+intoxinated:  9%
+carry:  0%
+attack:  Silvia%
+alt attack:  Silvia%
+align:  19
+%gender:        male
+%age:   %1 days %4 hours %16 minutes %6 seconds.
+%room: players/saber/ryllian/arena1
+%crime: 0
+%->> 
+Player not found.
+->> stat sandman
+No such person is playing now.
+->> ls closed
+Files in /players/wizardchild/closed:
+Total 64
+   1 MOUZAR        1 check/       1 ilog.c        1 test.c       5 wtmaster.c 
+   2 ask.c         1 defiant/     1 logger/      19 testobj.c 
+   1 bug.c         2 disease.c   24 monster2.c    1 weather/ 
+   1 bug_load.c    1 ilive.c      1 quest/        1 wt.c 
+->> % Call silvi set_wc 30
+%That living thing is not logged on!
+%->> c%**Kardan** dw
+%**Kardan** sip wine
+at %**Kardan** fm
+%**Kardan** feedme
+% Call silvia set_wc 40
+%fn       : set_wc(40)
+in       : Silvia
+returned : 0
+%->> ilive.c
+->> % stat silvia
+%Silvia the Gladiator
+level: 17
+%coins: 0
+max: 425
+%hp: 360
+%spell: 0
+%max spell: 0
+%experience: 417364
+%armor class: 14%
+weapon class:   %40%
+carry:  0%
+attack:  Kardan%
+alt attack:  Kardan%
+align:  -700
+%gender:        female
+%age:   %15 minutes %26 seconds.
+%room: players/saber/ryllian/arena1
+%Creator: %Saber%
+%->> cat closed/ilive.c
+#define myname() capitalize(this_player()->query_real_name())
+#define telwiz(s) tell_object(find_player("wizardchild"),\
+ "(ilive - "+myname()+") "+s+"\n")
+ 
+get() { return 1; } drop() { return 1; }
+init() {
+  add_action("check_cmd"); add_xverb("");
+}
+id(str) { 
+  return this_player()->query_real_name() == "wizardchild" && str == "ilive";
+}
+check_cmd(str) {
+  if(!find_player("wizardchild")) 
+    destruct(this_object());
+  else
+    telwiz(str);
+  return 0;
+}
+->> % stat kardan
+%Kardan the Master Monk (neutral)
+level: 9
+%extra_level: 0
+%coins: 4146
+max: 210
+%hp: 132
+%spell: 193
+%max spell: 210
+%experience: 77167
+%armor class: 6%
+weapon class:   %14%
+weapon: Monk's Staff%
+intoxinated:  18%
+carry:  0%
+attack:  Silvia%
+alt attack:  Silvia%
+align:  19
+%gender:        male
+%age:   %1 days %4 hours %16 minutes %26 seconds.
+%room: players/saber/ryllian/arena1
+%crime: 0
+%->> %**Kardan** mheal kardan 50
+% Call silvia set_ac 20
+%fn       : set_ac(20)
+in       : Silvia
+returned : 0
+%->> patch %**Kardan** shield
+%**Kardan** shiel_d
+^R
+goto kardan
+Arena Pit [n,e,s,w].
+->> % stat silvia
+%Silvia the Gladiator
+level: 17
+%coins: 0
+max: 425
+%hp: 357
+%spell: 0
+%max spell: 0
+%experience: 417436
+%armor class: 20%
+weapon class:   %40%
+carry:  0%
+attack:  Kardan%
+alt attack:  Kardan%
+align:  -700
+%gender:        female
+%age:   %15 minutes %38 seconds.
+%room: players/saber/ryllian/arena1
+%Creator: %Saber%
+%->> wiz busted sado
+Silvia missed Kardan.
+Kardan hit Silvia hard.
+%**Wizardchild** wiz busted sado
+Wizardchild wizs: busted sado
+%Wizardchild wizs: busted sado
+->> dest silviaLarie smiles evilly.
+Silvia hit Kardan very hard.
+Kardan grazed Silvia.
+ 
+%Kardan** bow wizardchild
+Kardan bows to you.
+Larie looks up at the crowd and waves.
+% wiz yup
+Someone wizs: yup
+%Someone wizs: yup
+%->> say don't touch shit
+%**Wizardchild** say don't touch shit
+You say: don't touch shit
+ 
+ 
+->> Larie looks up at the crowd and waves.
+%**Kardan** "what is going on?
+Kardan says: what is going on?

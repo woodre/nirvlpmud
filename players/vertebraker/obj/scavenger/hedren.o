@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/weapon","/players/saber/stuff/power","/obj/armor","/players/arrina/armor/bedsheet","/players/mythos/awep/arrow","/players/snow/WEAPONS/greydeath","/players/ultramagnus/bdiamond","/players/khrell/weapons/skaven/fellblade","/players/sado/shop/chocolate","/obj/level_list","/players/saber/armor/slboots","/obj/weapon","/players/maledicta/cont/armor/guard_of_health","/players/wren/Area/starbug/items/jacket","/players/pain/NEW/arm/hood","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/wren/Area/starbug/items/thermos","/players/mythos/marmor/shirt","/obj/torch","/players/wren/Area/starbug/items/levis","/players/arrina/treas/horseshoe","/players/wren/Area/starbug/items/comb","/players/wren/Area/starbug/items/sequinjacket","/players/emerson/heal/pepsi","/players/wren/Area/starbug/items/cottagecheese",})
+shorts ({"Steel Longsword","A power system","Robot Head","A Linen Bedsheet","arrow","Grey[36mdeath[0m","A Blue Diamond","[41m[30mFellblade[0m","A box of delicious Belgian chocolates","A list of the top players","Stiletto heeled leather boots","spirit blade","[1;37mChestguard of [1;32mHealth[2;37;0m","Lister's leather jacket","A Black Hooded Cloak","A nobleman's shortsword","a thermos","Shirt","torch","stretched out Levi jeans.","A Silver Horseshoe","the cat's hair pick","Cat's red sequin jacket","can of Diet Pepsi","a small tub of cottage cheese.",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

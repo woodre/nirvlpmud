@@ -1,0 +1,59 @@
+# What:		LPMud Monopoly
+# Author:	David Ljung Madison <DaveSource.com>
+# See License:	http://MarginalHacks.com/License
+# Mud drivers:	2.4.5, 3.1.2, 3.2 (amylaar), 3.1.2 -DR
+
+This directory contains the necessary files to get a (hopefully) running
+version of monopoly.
+
+MANIFEST:
+
+FILES            Description
+-----            -----------
+
+README.mon       This file
+config.h         configuration file.  Edit this!
+_*.c             Board squares
+bleachers.c      The bleachers, for watching the game
+cards.c          The card functions
+considerations   a text file for reminders for me
+docs.c           the help <command> functions
+main.c           the main code for the game, also the entrance
+mbin.c           the monopoly bin command functions
+mhelp.txt        help file
+mobj.c           the monopoly object that players carry
+path.h           the path names.  You must edit this!
+rules.txt        the authentic copy of Monopoly rules
+square.c         the inherited square object
+
+Known Bugs
+----------
+
+This really depends on how well the code is ported to the mud you are on.
+Net dead players should be able to return to the game.  On some systems
+this doesn't work, it has to do with when inventory is moved from the net
+dead object to the new character.
+
+Author
+------
+
+LPMud Monopoly was written by David Ljung:
+  http://DaveSource.com
+  http://MarginalHacks.com
+  http://GetDave.com
+
+Copyright
+---------
+Monopoly is Copyright 1961, Parker Brothers
+
+This code is Copyright 1993, David Ljung
+
+See License info at:
+  http://MarginalHacks.com/License/
+
+If you like it lots, please see:
+  http://MarginalHacks.com/Pay/
+
+If you want to use the game structure that Mud Monopoly is built on to
+create new games, send me some mail.
+

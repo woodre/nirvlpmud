@@ -1,0 +1,41 @@
+
+>> TUG IN THE GUILD ROOM
+
+  While in the guild room, you will be able to safely store certain
+items between reboots. The commands for this are:
+
+push <item>  Pushes things into the ether-muck to be stored. Anything
+             which has not been pushed will disappear between reboots.
+             Push does NOT cost any SPS. The item must be in the room.
+
+tug <pos>    Recover things that may have been pushed into the ether-muck.
+             NOTE THAT TUG COSTS SPS: 2 * your player level. This means a
+             level 19 player will cost 38 SPS to tug per item.
+             To see what items are in what positions, use 'tug list'.
+
+
+   It is important to remember that things put into the ether-muck are
+communal property of all members in the guild. If you take something
+from tug, it is expected that you replace it with something of similar
+function and value. It is highly frowned upon to take things from tug
+and sell them at the shop. Constant mooching of this sort is enough to
+draw a punishment of some sort.
+
+   Remember that newer players are not expected to put anything in tug.
+They are expected however to return things that they may find there.
+Below are additional commands relevant to push-tug:
+
+
+tug activity       Displays a log of recent push-tug transactions.
+
+tug tracking       Displays a log of recent whereabouts of things that
+                   have been withdrawn with 'tug'.
+
+tug finger <plyr>  For example 'tug finger mizan' to see the history of
+                   a player's activity with tug and push. The player does
+                   not have to be logged in.
+
+tug list           Displays a listing of what is currently pushed into
+                   the ether-muck. The numbers of the positions are what
+                   you would use to 'tug' items with.
+

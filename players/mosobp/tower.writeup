@@ -1,0 +1,85 @@
+<Kame's Tower> by Mosobp
+
+The entire area is located in
+/players/mosobp/areas/TOWER
+
+there are 25 rooms located in
+/players/mosobp/areas/TOWER/rooms
+
+There are 14 mobs located in
+/players/mosobp/areas/TOWER/NPC
+
+Here is a breakdown of each mob and what they carry, etc.
+   
+Chiaotzu (/players/mosobp/areas/TOWER/NPC/chiaotzu.c)
+level 15,AC 10,WC 20,HP 500,2000 coins
+no special attacks nothing special about this mob.
+
+Garlic Jr. (/players/mosobp/areas/TOWER/NPC/garlicjr.c)
+level 25,AC 23,WC 44,HP 1000+random 400,11000+random 3000 coins
+Mob heals quickly and can cast multiple spells a round.
+Mob also carries Dark aura for evil players.
+
+Korrin  (/players/mosobp/areas/TOWER/NPC/korrin.c)
+level 10,AC 8,WC 14,HP 150, 0 coins
+Mob will eventually sell heals that also are temporary stat increases(still working out how)
+
+Mustard  (/players/mosobp/areas/TOWER/NPC/mustard.c)
+level 17,AC 12,WC 25,HP 500+random 150,3000+random 1000 coins
+mob is aggressive.
+
+Nappa  (/players/mosobp/areas/TOWER/NPC/nappa.c)
+level 20,AC 15,WC 25+random 15,HP 600+random 150,2500+random 1000 coins
+mob can cast multi spells a round.
+mob carries saiyan armor and saiyan boots.
+
+Raditz  (/players/mosobp/areas/TOWER/NPC/nappa.c)
+level 15,AC 9,WC 20,HP 600, no coins
+mob carries Saiyan boots and Saiyan armor.
+
+Salt  (/players/mosobp/areas/TOWER/NPC/salt.c)
+level 15,AC 15+random 5,WC 30+random 15,HP 500+random 200,2000+random 500 coins
+mob carries gloves to wear
+
+Tien (/players/mosobp/areas/TOWER/NPC/tien.c)
+level 20,AC 15+random 5,WC 30+random 15,HP 600+random 300,5000 coins+random 1000
+mob has a high reheal rate as well as multi cast for 2 spells 
+
+Vinegar  (/players/mosobp/areas/TOWER/NPC/vinegar.c)
+level 23,AC 15+random 5,WC 30+random 15,HP 600+random 300, 7000+random 1000 coins
+mob is aggressive, has multi spell cast  with 4 spells
+mob also is wearing gloves.
+
+Yamcha  (/players/mosobp/areas/TOWER/NPC/yamcha.c)
+level 20,AC 15,WC 30,HP 600, 2000 coins+random 2000
+mob has one spell and an accelerated heal.
+
+Piccolo  (/players/mosobp/areas/TOWER/NPC/piccolo.c)
+level 27,AC 25+random 10,WC 48,HP 1500+random 500, 15000 coins+random 3000
+mob reheals full heals 2 times also has a high heal rate and multi cast for 2 spells
+mob carries energy aura from (/players/mosobp/areas/BATTLE/OBJ) also wearing pants from tower.
+
+There are 6 items in 
+/players/mosobp/areas/TOWER/OBJ
+
+Here is a break down of the items
+
+dark ki  (/players/mosobp/areas/TOWER/OBJ/dki.c)
+ac 2, shield, value 3500
+
+dark aura (/players/mosobp/areas/TOWER/OBJ/daura.c)
+ac 2,misc ,value 5000
+aura also gives random ac bonus
+
+
+gloves  (/players/mosobp/areas/TOWER/OBJ/gloves.c)
+ac 1,gloves, value 2000
+
+pants  (/players/mosobp/areas/TOWER/OBJ/pants.)
+ac 2 , pants, value 2000
+
+Saiyan armor  (/players/mosobp/areas/TOWER/OBJ/sarmor.c)
+ac 3, main armor, value 3000
+
+Saiyan Boots  (/players/mosobp/areas/TOWER/OBJ/sboots.c)
+ac 1 boots value 1000

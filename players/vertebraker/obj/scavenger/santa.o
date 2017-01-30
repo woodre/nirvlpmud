@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/weapon","/players/wren/Area/starbug/items/levis","/players/jamila/beach/mobs/claw","/obj/weapon","/players/wren/Area/starbug/items/bazookoid","/players/pain/closed/weapons/widow","/players/wren/Area/starbug/items/comb","/players/wren/Area/starbug/items/reddress","/players/maledicta/cont/rdragon/elven_rapier","/obj/armor","/players/mosobp/areas/TEMPLE/OBJ/nsword","/players/snow/cam/stuff/shield","/players/mythos/aarmor/nodowa","/players/maledicta/cont/armor/guard_of_health","/players/hippo/armour/boots","/obj/armor","/players/pain/NEW/weap/soulcrusher","/obj/armor","/players/wren/Area/starbug/items/straw","/players/snow/shadows/stuff/nightshade","/players/ultramagnus/rdiamond","/players/wren/Area/starbug/items/hair","/players/angel/area/stargate/obj/staff","/players/arrina/heals/honeyc","/obj/weapon",})
+shorts ({"Rabbit foot","stretched out Levi jeans.","A Lobster Claw","Hand axe","Bazookoid [1;30mmkII[2;37;0m","the Widowmaker, the sword of the Berserker","the cat's hair pick","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","[32mElven [1;32mRapier[2;37;0m","Steel Shield","A nobleman's shortsword","[34m[1mBlessed Shield[0m[0m","Nodowa","[1;37mChestguard of [1;32mHealth[2;37;0m","anti-blood boots","Ring of Death","a mace named [1m[31mSoulCrusher[0m","Metal gloves","a long plastic straw","[1mNightShade[0m, the Broadsword of Death","A Red Diamond","Perfect Hair","[1;36mSTAFF WEAPON[0m","[33mgooey honeycomb[0m","A Deadly Bullwhip",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

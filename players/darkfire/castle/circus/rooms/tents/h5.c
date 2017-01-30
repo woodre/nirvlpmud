@@ -1,0 +1,30 @@
+#pragma strict_types
+
+#include <ansi.h>
+#include "/players/darkfire/castle/circus/circus.h"
+#include "_area.h"
+
+/* Inherit the area's base room. */
+inherit "/players/darkfire/castle/circus/rooms/tents/_base.c";
+
+void
+reset(int arg) {
+	::reset();
+
+	if(arg) return;
+
+	set_col(7);
+	set_row(4);
+
+	set_short(TENT_UNKNOWN2);
+
+	set_long(get_tent_description());
+
+	add_exits("s,w");
+	add_exit(PATH_TUNNELS + "a8", "tunnels");
+}
+
+void
+init() {
+	::init();
+}

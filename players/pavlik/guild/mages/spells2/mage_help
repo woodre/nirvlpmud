@@ -1,0 +1,39 @@
+mage_help(str){
+  string what;
+
+  what = query_verb();
+
+  write("\n");
+
+  if(!str) {
+    cat("/players/pavlik/guild/mages/helps2/general");
+    return 1;
+  }
+
+  if(str == "GC" && !PAV->is_gc()) {
+    return 0;
+  }
+
+  if(str == "members") {
+    DONATOR->guild_members();
+    return 1;
+  }
+
+  if(str == "members2") {
+    cat("/players/pavlik/guild/mages/players/guild_members2");
+    return 1;
+  }
+
+  cat("/players/pavlik/guild/mages/helps2/"+str);
+
+  return 1;
+}
+
+council_help(str){
+ if(!str){
+  cat("/players/pavlik/guild/mages/DOCS/menu");
+  return 1;
+ }
+ cat("/players/pavlik/guild/mages/DOCS/"+str);
+ return 1;
+}

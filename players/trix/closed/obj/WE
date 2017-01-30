@@ -1,0 +1,4 @@
+   if (!call_other(this_player(), "add_weight",
+            call_other(cosa, "query_weight"))) {
+      write("You can't carry that much.\n");
+      return 1;

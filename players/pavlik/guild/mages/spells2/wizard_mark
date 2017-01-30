@@ -1,0 +1,36 @@
+/*
+ * spell : Wizard Mark   (evocation)
+ * level : 1
+ * effect: creates a message object
+ * cost  : 40 sp
+ * spec  : 
+ * files : /mages/obj/wizard_mark.c
+ */
+
+wizard_mark(str){
+  object obj;
+
+  if(!KNOW("mark") && !KNOW("wizard_mark")) {
+    write("What?\n");
+    return 1;
+  }
+
+  if(!str) {
+    write("Mark what message?\n");
+    return 1;
+  }
+
+  write("You cast a "+HIG+"Wizard Mark"+NORM+" spell ...\n");
+  say(ME+" casts a magic spell ...\n");
+  tell_room(env,
+  "An enchanted quill of blue fire blazes in the air before you.\n"+
+  "The fire quill moves swifty and burns a message into the ground.\n");
+  write("You write: "+str+"\n");
+
+  obj = clone_object("players/pavlik/guild/mages/obj/wizard_mark");
+  move_object(obj, environment(tp));
+  obj->set_owner(tp->query_real_name());
+  obj->set_message(str);
+  tp->add_spell_point(-40);
+  return 1;
+}

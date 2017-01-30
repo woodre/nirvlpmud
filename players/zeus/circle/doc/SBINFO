@@ -1,0 +1,32 @@
+
+Shadow Blast Information -
+       [as of 6.23.00]
+
+Damage formula:
+ level / 2 + 6 + random((int + wil + pie) / 5 + 4 + gxp / 250000)
+
+Cost is based on damage:
+  < 20 damage = 10 sp,
+  < 25 damage = 15 sp,
+  < 30 damage = 20 sp,
+  < 35 damage = 25 sp, 
+    else 30 sp
+  1:8 chance of cost += random(6)
+
+max damage formula:
+ 15 + random(30)  vs players - 3,500,000 gxp, level 18, max stats
+ 15 + random(46)  vs npcs    - 7,500,000 gxp, level 18, max stats
+
+damage formula @ level 15, 2 mil gxp, stats at 8:
+ 13 + random(16)
+
+damage formula @ level 15, 4 mil gxp, stats at 20:
+ 13 + random(32)
+
+*** Max damage is 44 vs players, 56 vs npcs. ***
+
+Small, auto bonus damage / finisher:
+if gxp > 4mil & target is < 5% hp & < 50 hp & !player & !random(2):
+  sp cost  10 + random (6)
+  hp cost  1/2 target's hp
+  damage:  add_hit_point(target's hp);

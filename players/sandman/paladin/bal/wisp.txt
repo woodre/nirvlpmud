@@ -1,0 +1,30 @@
+Files:
+	players/sandman/paladin/bal/tracker.c
+	players/sandman/paladin/bal/wisp.c
+
+How it works:
+	The wisp works with command interception. The wisp follows the
+	leader (moves to the same room), intercepting his/hers commands.
+	An intercepted command starts a call_out in the wisp, which will
+	be executed immediately after all heart beats.
+	If the leader has moved, the follower will be commanded to
+	the very last command, the leader did before moving.
+	The wisp is moved to the leader in the call_out'ed function.
+	
+Advocacies:
+	Simplicity is good :-)
+	Follower imitates the leader, rather than just teleporting around.
+	Manages all nonstandard exits. Follower can even 'goportal' to
+	catch up.
+	Follower can't keep up with sprinting or fast typing players.
+	(only one move per heart beat)
+	Prevents the follower from going where he shouldn't be able to go.
+
+Drawbacks:
+	Follower can't keep up with sprinting or fast typing players.
+	Very remote chance that follower will imitate a non-move command.
+	(does it exist?)
+
+Conclusion:
+	Slow follow is probably not wanted by the players. Makes sense
+	to be slow at tracking though...

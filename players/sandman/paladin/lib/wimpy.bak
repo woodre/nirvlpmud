@@ -1,0 +1,34 @@
+
+/*
+ * WIMPY COMMANDS (4/15/94)
+ *     wimpyhp()  -  for setting wimpy hp
+ *     wimpydir() -  wimpy direction
+ */
+
+wimpyhp(str) {
+   int wimpy_at;
+   if(!str || str == "") {
+     write(filter_color("Guild wimpy has been turned off.\n",HIG));
+     previous_object()->set_wimpy_at(0);
+     return 1;
+   }
+   if(!verify_use())
+     return 1;
+   if(sscanf(str, "%d", wimpy_at) != 1) 
+     notify_fail("Usage:  wimpyhp <hit points>");
+   previous_object()->set_wimpy_at(wimpy_at);
+   write(filter_color("Guildwimpy has been set at "+wimpy_at+".\n",HIG));
+   return 1;
+}
+
+wimpydir(str) {
+   string wimpydir;
+   if(!str || sscanf(str, "%s", wimpydir) != 1) 
+     notify_fail("Usage:  wimpydir <direction>");
+   if(!verify_use())
+     return 1;
+   previous_object()->set_wimpydir(wimpydir);
+   write(filter_color("Wimpydir set to:  "+wimpydir+"\n",HIG));
+   return 1;
+}
+

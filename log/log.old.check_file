@@ -1,0 +1,1322 @@
+obj/player/prego_hb.c line 2:syntax error
+obj/player/dr/closed_guild_check.c line 2:syntax error
+obj/player/dr/read_write.c line 34:Variable myself not declared !
+obj/player/dr/read_write.c line 63:Variable inact not declared !
+obj/player/dr/read_write.c line 63:Variable inacttwo not declared !
+obj/player/dr/read_write.c line 64:Variable inact not declared !
+obj/player/dr/read_write.c line 109:Variable pwd not declared !
+obj/player/dr/read_write.c line 126:Variable ok_edit not declared !
+obj/player/dr/soul_fun.c line 11:Variable soul not declared !
+obj/player/dr/soul_fun.c line 12:Variable myself not declared !
+obj/player/dr/soul_fun.c line 23:Variable guild_file not declared !
+obj/player/dr/soul_fun.c line 23:Variable guild_file not declared !
+obj/player/dr/soul_fun.c line 23:Variable guild_file not declared !
+obj/player/dr/soul_fun.c line 25:Variable guild_file not declared !
+obj/play/suicide.h line 25:Variable password not declared !
+obj/play/suicide.h line 25:Variable password not declared !
+obj/play/weight.h line 6:Undefined function recalc_carry
+obj/play/weight.h line 13:Variable ex_lv not declared !
+obj/play/weight.h line 13:Variable ex_lv not declared !
+obj/play/testchar.h line 4:Variable TESTCHAR_D not declared !
+obj/play/weight.h line 6:Undefined function recalc_carry
+obj/play/weight.h line 13:Variable ex_lv not declared !
+obj/play/weight.h line 13:Variable ex_lv not declared !
+obj/play/testchar.h line 4:Variable TESTCHAR_D not declared !
+obj/play/testchar.h line 12:Variable testchar_var not declared !
+obj/play/testchar.h line 14:Variable testchar_var not declared !
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 4270:Unexpected end of file while skipping
+obj/player.c line 1194:Redeclaration of function communicate.
+obj/player.c line 1355:syntax error
+obj/player.c line 1358:Illegal LHS
+obj/player.c line 1369:syntax error
+obj/player.c line 1377:syntax error
+obj/player.c line 1387:Illegal LHS
+obj/player.c line 1390:Illegal LHS
+obj/player.c line 1390:syntax error
+obj/player.c line 1399:Illegal LHS
+obj/player.c line 1406:Illegal LHS
+obj/player.c line 1377:syntax error
+obj/player.c line 1387:Illegal LHS
+obj/player.c line 1390:Illegal LHS
+obj/player.c line 1390:syntax error
+obj/player.c line 1399:Illegal LHS
+obj/player.c line 1406:Illegal LHS
+obj/player.c line 1893:Newline in string
+obj/player.c line 1893:syntax error
+obj/player.c line 4291:Missing #endif
+obj/mail_reader.c line 467:syntax error
+obj/mail_reader.c line 469:Illegal LHS
+obj/mail_reader.c line 486:Variable name not declared !
+obj/player/dr/read_write.c line 16:Variable level not declared !
+obj/player/dr/read_write.c line 16:Variable CREATE not declared !
+obj/player/dr/read_write.c line 33:Variable myself not declared !
+obj/player/dr/read_write.c line 62:Variable inact not declared !
+obj/player/dr/read_write.c line 62:Variable inacttwo not declared !
+obj/player/dr/read_write.c line 63:Variable handshake not declared !
+daemons/logins.c line 34: Variable allInfo not declared !
+room/post.c line 11: Variable dset_dir not declared !
+room/post.c line 12: syntax error
+room/post.c line 13: Bad assignment: illegal lhs (target)
+room/post.c line 17: Bad assignment: illegal lhs (target)
+room/post.c line 17: syntax error
+room/post.c line 18: Bad assignment: illegal lhs (target)
+room/post.c line 93: syntax error
+room/post.c line 90: Illegal to define variable 'exit' as type 'void'
+room/post.c line 90: syntax error
+room/post.c line 93: Variable ob not declared !
+room/post.c line 90: Illegal to define variable 'exit' as type 'void'
+room/post.c line 90: syntax error
+room/post.c line 93: Variable ob not declared !
+room/post.c line 90: syntax error
+room/post.c line 93: Variable ob not declared !
+room/post.c line 88: Unexpected #endif
+room/post.c line 90: Inconsistent declaration of 'exit': Return type mismatch (void vs int)
+room/post.c line 88: Unexpected #endif
+room/post.c line 90: Inconsistent declaration of 'exit': Return type mismatch (void vs int)
+room/post.c line 90: Unexpected #endif
+obj/exp_store.c line 28:Variable exclusion not declared !
+obj/exp_store.c line 64:Variable exclusion not declared !
+obj/exp_store.c line 28:Variable exclusion not declared !
+obj/exp_store.c line 64:Variable exclusion not declared !
+obj/simul_efun/save_object_filter.c line 13: syntax error
+obj/spare_simul_efun_new.c line 45: syntax error
+obj/spare_simul_efun_new.c line 45: Bad assignment: illegal lhs (target)
+obj/spare_simul_efun_new.c line 146: syntax error
+obj/spare_simul_efun_new.c line 160: Variable arr not declared !
+bin/play/_score.c line 2:Cannot #include /obj/lib/living/settings.h
+
+bin/play/_score.c line 39:Variable INFUSE_LIMIT not declared !
+sys/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_quit.c line 5:Variable CREATE not declared !
+obj/soul.c line 1:Cannot #include /obj/play/suppressed_cmds.h
+
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+obj/soul.c line 1:Cannot #include /obj/play/suppressed_cmds.h
+
+obj/soul.c line 1:Cannot #include /obj/play/suppressed_cmds.h
+
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+closed/wiz_soul.c line 60:Variable APPRENTICE not declared !
+closed/wiz_soul.c line 99:Variable SENIOR not declared !
+closed/wiz_soul.c line 105:Variable SHUTDOWN not declared !
+closed/wiz_soul.c line 109:Variable ITEM_OVER not declared !
+closed/wiz_soul.c line 118:Variable SNOOP not declared !
+sys/security.h line 1: Cannot #include '/obj/lib/security/all.h'
+closed/wiz_soul.c line 60: Variable APPRENTICE not declared !
+obj/soul.c line 1:Cannot #include /obj/play/suppressed_cmds.h
+
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+sys/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+obj/security.h line 2:Cannot #include /obj/lib/security/all.h
+
+bin/play/_look.c line 92:Variable EXPLORE not declared !
+room/room.c line 42:Cannot #include /room/lib/func.h
+
+room/room.c line 43:Cannot #include /room/lib/sensory.h
+
+room/room.c line 42:Cannot #include /room/lib/func.h
+
+room/room.c line 43:Cannot #include /room/lib/sensory.h
+
+room/room.c line 42:Cannot #include /room/lib/func.h
+
+room/room.c line 43:Cannot #include /room/lib/sensory.h
+
+room/room.c line 42:Cannot #include /room/lib/func.h
+
+room/room.c line 43:Cannot #include /room/lib/sensory.h
+
+room/room.c line 42:Cannot #include /room/lib/func.h
+
+room/room.c line 43:Cannot #include /room/lib/sensory.h
+
+bin/play/_who4.c line 129:Undefined function andi_format
+bin/wiz/_callouts.c line 22:Undefined function printf
+bin/wiz/_callouts.c line 23:Function printf undefined
+bin/wiz/_callouts.c line 23:Wrong number of arguments to printf
+bin/wiz/_callouts.c line 24:Function printf undefined
+bin/wiz/_callouts.c line 24:Wrong number of arguments to printf
+bin/wiz/_callouts.c line 25:Function printf undefined
+bin/wiz/_callouts.c line 22:Undefined function printf
+bin/wiz/_callouts.c line 23:Function printf undefined
+bin/wiz/_callouts.c line 23:Wrong number of arguments to printf
+bin/wiz/_callouts.c line 24:Function printf undefined
+bin/wiz/_callouts.c line 24:Wrong number of arguments to printf
+bin/wiz/_callouts.c line 25:Function printf undefined
+bin/wiz/_callouts.c line 22:Undefined function printf
+bin/wiz/_callouts.c line 23:Function printf undefined
+bin/wiz/_callouts.c line 23:Wrong number of arguments to printf
+bin/wiz/_callouts.c line 24:Function printf undefined
+bin/wiz/_callouts.c line 24:Wrong number of arguments to printf
+bin/wiz/_callouts.c line 25:Function printf undefined
+obj/bull_board.c line 99:Variable line not declared !
+Mon Nov 11 14:04:52 2013: obj/simul_efun/log_file.c line 15:Too many arguments to get_dir
+Mon Nov 11 14:04:52 2013: obj/simul_efun/log_file.c line 15:Bad assignment. Rhs: "string * "
+Mon Nov 11 14:04:52 2013: obj/simul_efun/log_file.c line 15:Variable MAX_LOG_SIZE not declared !
+Mon Nov 11 14:04:52 2013: obj/simul_efun/log_file.c line 18:Undefined function set_this_object
+obj/simul_efun/save_object_filter.c line 24: syntax error
+obj/simul_efun/save_object_filter.c line 24: syntax error
+obj/simul_efun/save_object_filter.c line 23: syntax error
+obj/simul_efun/save_object_filter.c line 23: syntax error
+obj/simul_efun/save_object_filter.c line 26: Missing 'return <value>' statement
+Fri Nov 22 10:42:06 2013: open/reflex/shockwave.c line 25:syntax error
+Fri Nov 22 10:42:12 2013: open/reflex/shockwave.c line 25:syntax error
+etc/filer.c line 37: Undefined function 'check_previous_privilege'
+etc/fingerd.c line 13: Undefined function 'set_privilege'
+etc/fingerd.c line 25: Undefined function 'to_real_name'
+etc/fingerd.c line 36: Undefined function 'save_file'
+etc/fingerd.c line 36: Undefined function 'unguarded'
+etc/fingerd.c line 50: Function to_real_name undefined
+etc/fingerd.c line 50: Wrong number of arguments to to_real_name: expected 0, got 1
+Thu Dec 12 12:15:48 2013: bin/wiz/_callouts.c line 22:Undefined function printf
+Thu Dec 12 12:15:48 2013: bin/wiz/_callouts.c line 23:Function printf undefined
+Thu Dec 12 12:15:48 2013: bin/wiz/_callouts.c line 23:Wrong number of arguments to printf
+Thu Dec 12 12:15:48 2013: bin/wiz/_callouts.c line 24:Function printf undefined
+Thu Dec 12 12:15:48 2013: bin/wiz/_callouts.c line 24:Wrong number of arguments to printf
+Thu Dec 12 12:15:48 2013: bin/wiz/_callouts.c line 25:Function printf undefined
+Thu Dec 12 12:44:42 2013: bin/wiz/_callouts.c line 49:Variable HIR not declared !
+Thu Dec 12 12:44:42 2013: bin/wiz/_callouts.c line 50:Variable NORM not declared !
+Thu Dec 12 12:44:42 2013: bin/wiz/_callouts.c line 60:Variable HIR not declared !
+Thu Dec 12 12:44:42 2013: bin/wiz/_callouts.c line 61:Variable NORM not declared !
+Thu Dec 12 12:44:42 2013: bin/wiz/_callouts.c line 62:Variable HIR not declared !
+Thu Dec 12 12:44:42 2013: bin/wiz/_callouts.c line 64:Variable NORM not declared !
+Thu Dec 12 12:44:46 2013: bin/wiz/_callouts.c line 49:Variable HIR not declared !
+Thu Dec 12 12:44:46 2013: bin/wiz/_callouts.c line 50:Variable NORM not declared !
+Thu Dec 12 12:44:46 2013: bin/wiz/_callouts.c line 60:Variable HIR not declared !
+Thu Dec 12 12:44:46 2013: bin/wiz/_callouts.c line 61:Variable NORM not declared !
+Thu Dec 12 12:44:46 2013: bin/wiz/_callouts.c line 62:Variable HIR not declared !
+Thu Dec 12 12:44:46 2013: bin/wiz/_callouts.c line 64:Variable NORM not declared !
+Thu Dec 12 14:02:07 2013: obj/user/channel.c line 83:syntax error
+Thu Dec 12 14:02:07 2013: obj/user/channel.c line 83:Illegal LHS
+Thu Dec 12 14:02:07 2013: obj/user/channel.c line 86:syntax error
+Thu Dec 12 14:02:07 2013: obj/user/channel.c line 87:Illegal LHS
+Thu Dec 12 14:02:07 2013: obj/user/channel.c line 87:syntax error
+Thu Dec 12 14:02:07 2013: obj/user/channel.c line 91:Illegal LHS
+Thu Dec 12 14:02:47 2013: obj/user/channel.c line 86:syntax error
+Thu Dec 12 14:02:47 2013: obj/user/channel.c line 87:Illegal LHS
+Thu Dec 12 14:02:47 2013: obj/user/channel.c line 87:syntax error
+Thu Dec 12 14:02:47 2013: obj/user/channel.c line 91:Illegal LHS
+Thu Dec 12 14:02:47 2013: obj/user/channel.c line 91:syntax error
+Thu Dec 12 14:02:47 2013: obj/user/channel.c line 98:Illegal LHS
+Thu Dec 12 14:03:49 2013: obj/user/channel.c line 160:== always false because of different types: "unknown "
+Thu Dec 12 14:03:49 2013: obj/user/channel.c line 160:                               compared to: "string "
+Thu Dec 12 17:04:08 2013: basic/daemon.c line 22:Undefined function query_once_interactive
+Thu Dec 12 17:04:08 2013: basic/daemon.c line 23:syntax error
+Thu Dec 12 17:04:08 2013: basic/daemon.c line 34:Illegal LHS
+Thu Dec 12 17:04:08 2013: basic/daemon.c line 47:Function query_once_interactive undefined
+Thu Dec 12 17:04:08 2013: basic/daemon.c line 47:Wrong number of arguments to query_once_interactive
+Thu Dec 12 17:04:08 2013: basic/daemon.c line 48:Different types in ?: expr: "unknown "
+Thu Dec 12 17:08:32 2013: basic/name.c line 5:Cannot #include libs.h
+
+Thu Dec 12 17:08:32 2013: kernel/support/name.c line 5:Cannot #include ctype.h
+
+Thu Dec 12 17:08:32 2013: kernel/support/name.c line 9:Illegal character (hex 23) '#'
+Thu Dec 12 17:08:32 2013: kernel/support/name.c line 9:syntax error
+Thu Dec 12 17:08:32 2013: kernel/support/name.c line 9:Illegal character constant
+Thu Dec 12 17:08:32 2013: kernel/support/name.c line 10:Undefined function to_array
+Thu Dec 12 17:08:32 2013: kernel/support/name.c line 10:syntax error
+Fri Dec 13 13:15:57 2013: bin/wiz/_liblog.c line 19:Undefined function file
+Fri Dec 13 13:15:57 2013: bin/wiz/_liblog.c line 19:syntax error
+Fri Dec 20 10:42:19 2013: basic/daemon.c line 21:Undefined function copy
+Fri Dec 20 10:42:19 2013: basic/daemon.c line 27:Undefined function clonep
+Fri Dec 20 10:42:19 2013: basic/daemon.c line 38:syntax error
+Fri Dec 20 10:42:19 2013: basic/daemon.c line 39:Illegal LHS
+Fri Dec 20 10:42:19 2013: basic/daemon.c line 42:Undefined function load_name
+Fri Dec 20 10:42:19 2013: basic/daemon.c line 55:Undefined function walk_mapping
+Fri Dec 20 10:49:29 2013: complex/create.c line 30:syntax error
+Fri Dec 20 10:49:29 2013: complex/create.c line 36:syntax error
+Fri Dec 20 10:53:35 2013: complex/create.c line 29:syntax error
+Fri Dec 20 10:53:35 2013: complex/create.c line 35:syntax error
+Fri Dec 20 10:54:29 2013: basic/description.c line 9:Cannot #include message.h
+
+Fri Dec 20 10:54:29 2013: basic/description.c line 10:Cannot #include libs.h
+
+Fri Dec 20 10:54:29 2013: basic/description.c line 19:syntax error
+Fri Dec 20 10:55:45 2013: basic/description.c line 9:Cannot #include message.h
+
+Fri Dec 20 10:55:45 2013: basic/description.c line 10:Cannot #include libs.h
+
+Fri Dec 20 10:55:45 2013: basic/description.c line 19:syntax error
+Fri Dec 20 10:56:57 2013: sys/libs.h line 11:syntax error
+Fri Dec 20 10:57:45 2013: basic/description.c line 19:syntax error
+Wed Dec 25 06:45:40 2013: open/feldegast/djinn.c line 1:Cannot #include defs.h
+
+Wed Dec 25 06:45:40 2013: open/feldegast/djinn.c line 3:syntax error
+Wed Dec 25 06:45:56 2013: open/feldegast/berries.c line 1:Cannot #include defs.h
+
+Wed Dec 25 06:45:56 2013: open/feldegast/berries.c line 4:syntax error
+Thu Dec 26 19:00:31 2013: bin/wiz/_mysql.c line 8:Undefined function db_connect
+Thu Dec 26 19:00:31 2013: bin/wiz/_mysql.c line 24:Undefined function db_exec
+Thu Dec 26 19:00:31 2013: bin/wiz/_mysql.c line 25:Undefined function db_error
+Thu Dec 26 19:00:31 2013: bin/wiz/_mysql.c line 30:Undefined function db_close
+Thu Dec 26 19:00:31 2013: bin/wiz/_mysql.c line 36:Undefined function db_affected_rows
+Thu Dec 26 19:00:31 2013: bin/wiz/_mysql.c line 37:Undefined function db_coldefs
+Fri Dec 27 11:18:09 2013: kernel/io.c line 12:Undefined function extern_call
+Fri Dec 27 11:18:09 2013: kernel/io.c line 23:Undefined function query_once_interactive
+Fri Dec 27 11:18:09 2013: kernel/io.c line 24:syntax error
+Fri Dec 27 11:18:09 2013: kernel/io.c line 25:Illegal LHS
+Fri Dec 27 11:18:09 2013: kernel/io.c line 30:Illegal LHS
+Fri Dec 27 11:18:09 2013: kernel/io.c line 30:syntax error
+Fri Dec 27 11:32:29 2013: kernel/io.c line 24:Undefined function query_once_interactive
+Fri Dec 27 11:32:29 2013: kernel/io.c line 28:syntax error
+Fri Dec 27 11:32:29 2013: kernel/io.c line 30:Illegal LHS
+Fri Dec 27 11:32:29 2013: kernel/io.c line 35:Illegal LHS
+Fri Dec 27 11:32:29 2013: kernel/io.c line 35:syntax error
+Fri Dec 27 11:32:29 2013: kernel/io.c line 57:Illegal LHS
+Sun Dec 29 20:08:37 2013: open/shinshi/wiztool.c line 127:Variable OFF not declared !
+Sun Dec 29 20:08:37 2013: open/shinshi/wiztool.c line 128:Variable BLACK not declared !
+Sun Dec 29 20:08:37 2013: open/shinshi/wiztool.c line 130:Variable OFF not declared !
+Sun Dec 29 20:08:37 2013: open/shinshi/wiztool.c line 130:Variable OFF not declared !
+Sun Dec 29 20:08:37 2013: open/shinshi/wiztool.c line 132:Variable OFF not declared !
+Sun Dec 29 20:08:43 2013: open/shinshi/wiztool.c line 127:Variable OFF not declared !
+Sun Dec 29 20:08:43 2013: open/shinshi/wiztool.c line 128:Variable BLACK not declared !
+Sun Dec 29 20:08:43 2013: open/shinshi/wiztool.c line 130:Variable OFF not declared !
+Sun Dec 29 20:08:43 2013: open/shinshi/wiztool.c line 130:Variable OFF not declared !
+Sun Dec 29 20:08:43 2013: open/shinshi/wiztool.c line 132:Variable OFF not declared !
+Mon Dec 30 06:43:42 2013: open/mizan/jaraxle.c line 52:syntax error
+Mon Dec 30 06:43:42 2013: open/mizan/jaraxle.c line 61:Variable arg not declared !
+Mon Dec 30 06:43:42 2013: open/mizan/jaraxle.c line 61:Illegal LHS
+Mon Dec 30 06:43:42 2013: open/mizan/jaraxle.c line 100:Illegal LHS
+Mon Dec 30 06:43:42 2013: open/mizan/jaraxle.c line 102:Illegal LHS
+Mon Dec 30 06:43:42 2013: open/mizan/jaraxle.c line 104:Illegal LHS
+bin/wiz/secure/echo_channel.c line 25: Undefined function 'emit_channel'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+room/room.c line 86: Undefined function 'member_array'
+room/room.c line 87: Function member_array undefined
+room/room.c line 87: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Function member_array undefined
+room/room.c line 132: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Bad assignment (int vs unknown)
+room/room.c line 86: Undefined function 'member_array'
+room/room.c line 87: Function member_array undefined
+room/room.c line 87: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Function member_array undefined
+room/room.c line 132: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Bad assignment (int vs unknown)
+room/prison.c line 82: Undefined function 'member_array'
+room/prison.c line 93: Function member_array undefined
+room/prison.c line 93: Wrong number of arguments to member_array: expected 0, got 2
+room/prison.c line 93: Bad assignment (int vs unknown)
+room/prison.c line 107: Function member_array undefined
+room/prison.c line 107: Wrong number of arguments to member_array: expected 0, got 2
+bin/wiz/secure/echo_channel.c line 25: Undefined function 'emit_channel'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+room/room.c line 86: Undefined function 'member_array'
+room/room.c line 87: Function member_array undefined
+room/room.c line 87: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Function member_array undefined
+room/room.c line 132: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Bad assignment (int vs unknown)
+room/room.c line 86: Undefined function 'member_array'
+room/room.c line 87: Function member_array undefined
+room/room.c line 87: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Function member_array undefined
+room/room.c line 132: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Bad assignment (int vs unknown)
+room/prison.c line 82: Undefined function 'member_array'
+room/prison.c line 93: Function member_array undefined
+room/prison.c line 93: Wrong number of arguments to member_array: expected 0, got 2
+room/prison.c line 93: Bad assignment (int vs unknown)
+room/prison.c line 107: Function member_array undefined
+room/prison.c line 107: Wrong number of arguments to member_array: expected 0, got 2
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 92: Undefined function 'emit_channel'
+obj/objtracker.c line 93: Function basename undefined
+obj/objtracker.c line 93: Wrong number of arguments to basename: expected 0, got 1
+room/room.c line 86: Undefined function 'member_array'
+room/room.c line 87: Function member_array undefined
+room/room.c line 87: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Function member_array undefined
+room/room.c line 132: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Bad assignment (int vs unknown)
+room/room.c line 86: Undefined function 'member_array'
+room/room.c line 87: Function member_array undefined
+room/room.c line 87: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Function member_array undefined
+room/room.c line 132: Wrong number of arguments to member_array: expected 0, got 2
+room/room.c line 132: Bad assignment (int vs unknown)
+room/prison.c line 82: Undefined function 'member_array'
+room/prison.c line 93: Function member_array undefined
+room/prison.c line 93: Wrong number of arguments to member_array: expected 0, got 2
+room/prison.c line 93: Bad assignment (int vs unknown)
+room/prison.c line 107: Function member_array undefined
+room/prison.c line 107: Wrong number of arguments to member_array: expected 0, got 2
+obj/user/channel.c line 99: Undefined function 'check_file'
+obj/user/channel.c line 117: Undefined function 'format'
+obj/user/channel.c line 142: Function format undefined
+obj/user/channel.c line 142: Wrong number of arguments to format: expected 0, got 1
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+obj/weapon.c line 264: Function keys undefined
+obj/weapon.c line 264: Bad assignment (string * vs unknown)
+obj/weapon.c line 714: Function keys undefined
+obj/weapon.c line 714: Return type not matching: got unknown, expected mixed *
+obj/weapon.c line 726: Function keys undefined
+obj/weapon.c line 726: Bad assignment (string * vs unknown)
+room/exlv_tablet.c line 67: Undefined function 'pad'
+room/prison.c line 184: Undefined function 'a_delete'
+room/prison.c line 278: Undefined function 'pad'
+room/prison.c line 278: Function pad undefined
+room/prison.c line 278: Wrong number of arguments to pad: expected 0, got 3
+room/prison.c line 279: Function pad undefined
+room/prison.c line 279: Wrong number of arguments to pad: expected 0, got 2
+obj/simul_efun/format.c line 9: Variable TEXT_WIDTH not declared !
+obj/simul_efun/basename.c line 6: Undefined function 'file_name'
+obj/simul_efun.c line 356: illegal to inherit after defining functions
+obj/simul_efun.c line 601: Bad assignment (string vs unknown)
+closed/verte/qt/play_inc.h line 15 before ';': Undefined function 'deconstruct_mapping'
+closed/verte/qt/play_inc.h line 21 before ';': Function deconstruct_mapping undefined
+closed/verte/qt/play_inc.h line 21 before ';': Wrong number of arguments to deconstruct_mapping: expected 0, got 1
+closed/verte/qt/play_inc.h line 21 before end of line: Bad assignment (string * vs unknown)
+closed/verte/qt/play_inc.h line 28 before ';': Undefined function 'reconstruct_mapping'
+closed/verte/qt/play_inc.h line 34 before ';': Function reconstruct_mapping undefined
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+obj/weapon.c line 264: Function keys undefined
+obj/weapon.c line 264: Bad assignment (string * vs unknown)
+obj/weapon.c line 714: Function keys undefined
+obj/weapon.c line 714: Return type not matching: got unknown, expected mixed *
+obj/weapon.c line 726: Function keys undefined
+obj/weapon.c line 726: Bad assignment (string * vs unknown)
+room/prison.c line 184: Undefined function 'a_delete'
+room/prison.c line 351: Undefined function 'valid_wizard'
+obj/player.c line 2588 before ';': Undefined function 'caller'
+obj/player.c line 2592 before '!=myself |': Function caller undefined
+obj/player.c line 2592 before ' !c) c=cal': != always true because of different types (unknown vs object)
+obj/player.c line 2592 before ';': Function caller undefined
+obj/player.c line 2592 before end of line: Bad assignment (object vs unknown)
+obj/player.c line 2593 before ')': Undefined function 'in_editor'
+room/prison.c line 184: Undefined function 'a_delete'
+room/prison.c line 351: Undefined function 'valid_wizard'
+obj/simul_efun/emit_channel.c line 20: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 30: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 30: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 30: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 30: syntax error
+obj/simul_efun/emit_channel.c line 35: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 20: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 30: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 30: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 30: Macro 'index': Missing '(' in call
+obj/simul_efun/emit_channel.c line 30: syntax error
+obj/simul_efun/emit_channel.c line 35: Macro 'index': Missing '(' in call
+obj/armor.c line 437: Macro 'caller': Missing '(' in call
+obj/armor.c line 437: syntax error
+obj/monster.c line 1449: Macro 'caller': Missing '(' in call
+obj/monster.c line 1449: syntax error
+obj/player.c line 2593 before ')': Undefined function 'in_editor'
+obj/player.c line 2620 before ') c=this_o': Function in_editor undefined
+obj/player.c line 2620 before ') c=this_o': Wrong number of arguments to in_editor: expected 0, got 1
+obj/player.c line 2816 before ')': Function in_editor undefined
+obj/player.c line 2816 before ')': Wrong number of arguments to in_editor: expected 0, got 1
+obj/weapon.c line 355: Macro 'caller': Missing '(' in call
+obj/weapon.c line 355: syntax error
+room/prison.c line 184: Undefined function 'a_delete'
+room/prison.c line 351: Undefined function 'valid_wizard'
+obj/simul_efun/caller.c line 6: Wrong number of arguments to previous_object: expected 0, got 1
+obj/simul_efun.c line 588: Wrong number of arguments to previous_object: expected 0, got 1
+obj/simul_efun.c line 588: Wrong number of arguments to previous_object: expected 0, got 1
+obj/armor.c line 437: Macro 'caller': Missing '(' in call
+obj/armor.c line 437: syntax error
+obj/living.c line 2768: Undefined function 'add_worth'
+obj/living.c line 2768: Undefined function 'add_worth'
+obj/living.c line 2768: Undefined function 'add_worth'
+obj/weapon.c line 355: Macro 'caller': Missing '(' in call
+obj/weapon.c line 355: syntax error
+room/prison.c line 184: Undefined function 'a_delete'
+room/prison.c line 351: Undefined function 'valid_wizard'
+obj/simul_efun.c line 588: Wrong number of arguments to previous_object: expected 0, got 1
+obj/player.c line 2593 before ')': Undefined function 'in_editor'
+obj/player.c line 2620 before ') c=this_o': Function in_editor undefined
+obj/player.c line 2620 before ') c=this_o': Wrong number of arguments to in_editor: expected 0, got 1
+obj/player.c line 2816 before ')': Function in_editor undefined
+obj/player.c line 2816 before ')': Wrong number of arguments to in_editor: expected 0, got 1
+room/prison.c line 184: Undefined function 'a_delete'
+room/prison.c line 351: Undefined function 'valid_wizard'
+room/prison.c line 184: Undefined function 'a_delete'
+room/prison.c line 351: Undefined function 'valid_wizard'
+room/prison.c line 351: Undefined function 'valid_wizard'
+daemons/logins.c line 24: Undefined function 'ralign'
+bin/wiz/_tail.c line 30: Undefined function 'resolve_path'
+bin/play/_inv.c line 43: Undefined function 'delete_spaces'
+obj/user/xls.c line 80: Undefined function 'resolv_path'
+basic/parser.c line 533: Undefined function 'call_other_2ref'
+basic/parser.c line 567: Function call_other_2ref undefined
+basic/parser.c line 567: Wrong number of arguments to call_other_2ref: expected 0, got 8
+basic/parser.c line 574: Function call_other_2ref undefined
+basic/parser.c line 574: Wrong number of arguments to call_other_2ref: expected 0, got 8
+basic/parser.c line 650: syntax error
+bin/wiz/_trans.c line 30: Undefined function 'subjective'
+obj/user/text_edit.c line 40: Undefined function 'root'
+obj/user/text_edit.c line 312: Undefined function 'delete_ling'
+obj/user/text_edit.c line 312: Undefined function 'delete_ling'
+obj/simul_efun/save_object_filter.c line 26: Missing 'return <value>' statement
+Mon Jan 27 14:20:18 2014: closed/file_auth.c line 43:== always false because of different types: "int "
+Mon Jan 27 14:20:18 2014: closed/file_auth.c line 43:                               compared to: "string "
+Mon Jan 27 14:20:20 2014: closed/file_auth.c line 43:== always false because of different types: "int "
+Mon Jan 27 14:20:20 2014: closed/file_auth.c line 43:                               compared to: "string "
+Mon Jan 27 16:44:39 2014: bin/play/_score.c line 41:Undefined function is_testchar
+Tue Jan 28 17:59:22 2014: basic/id.c line 7:syntax error
+Tue Jan 28 17:59:42 2014: basic/synonym.c line 15:Undefined function m_allocate
+Tue Jan 28 17:59:42 2014: basic/synonym.c line 16:Illegal character (hex 23) '#'
+Tue Jan 28 17:59:42 2014: basic/synonym.c line 16:syntax error
+Tue Jan 28 17:59:42 2014: basic/synonym.c line 16:Illegal character constant
+Tue Jan 28 17:59:42 2014: basic/synonym.c line 20:Function m_allocate undefined
+Tue Jan 28 17:59:42 2014: basic/synonym.c line 20:Wrong number of arguments to m_allocate
+Tue Jan 28 19:00:15 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:15 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:15 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:15 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:15 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:15 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:17 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:17 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:17 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:17 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:17 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:17 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:19 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:19 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:19 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:19 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:19 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:19 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:21 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:21 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:21 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:21 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:21 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:21 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:29 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:29 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:29 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:29 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:29 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:29 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:31 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:31 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:31 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:31 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:31 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:31 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:33 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:33 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:33 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:33 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:33 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:33 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:39 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:39 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:39 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:39 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:39 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:39 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:41 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:41 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:41 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:41 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:41 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:41 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:41 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:41 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:41 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:41 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:41 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:41 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:43 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:43 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:43 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:43 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:43 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:43 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:49 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:49 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:49 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:49 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:49 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:49 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:53 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:53 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:53 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:53 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:53 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:53 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:55 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:55 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:55 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:55 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:55 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:55 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:57 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:57 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:57 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:57 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:57 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:57 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:57 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:57 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:57 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:57 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:57 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:57 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:00:59 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:00:59 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:00:59 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:00:59 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:00:59 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:00:59 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:01:01 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:01:01 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:01:01 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:01:01 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:01:01 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:01:01 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:01:09 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:01:09 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:01:09 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:01:09 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:01:09 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:01:09 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:01:21 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:01:21 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:01:21 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:01:21 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:01:21 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:01:21 2014: obj/player.c line 1831:syntax error
+Tue Jan 28 19:01:31 2014: obj/player.c line 1754:syntax error
+Tue Jan 28 19:01:31 2014: obj/player.c line 1759:Illegal LHS
+Tue Jan 28 19:01:31 2014: obj/player.c line 1761:Illegal LHS
+Tue Jan 28 19:01:31 2014: obj/player.c line 1829:Illegal LHS
+Tue Jan 28 19:01:31 2014: obj/player.c line 1831:Illegal LHS
+Tue Jan 28 19:01:31 2014: obj/player.c line 1831:syntax error
+Fri Jan 31 11:58:13 2014: obj/living.c line 691:Variable str not declared !
+Fri Jan 31 11:58:13 2014: obj/living.c line 692:syntax error
+Fri Jan 31 11:58:13 2014: obj/living.c line 699:Illegal LHS
+Fri Jan 31 11:58:13 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 11:58:13 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 11:58:13 2014: obj/living.c line 720:Variable s_flag not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 691:Variable str not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 692:syntax error
+Fri Jan 31 12:05:13 2014: obj/living.c line 699:Illegal LHS
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable s_flag not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 691:Variable str not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 692:syntax error
+Fri Jan 31 12:05:13 2014: obj/living.c line 699:Illegal LHS
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable s_flag not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 691:Variable str not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 692:syntax error
+Fri Jan 31 12:05:13 2014: obj/living.c line 699:Illegal LHS
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:13 2014: obj/living.c line 720:Variable s_flag not declared !
+Fri Jan 31 12:05:45 2014: obj/living.c line 691:Variable str not declared !
+Fri Jan 31 12:05:45 2014: obj/living.c line 692:syntax error
+Fri Jan 31 12:05:45 2014: obj/living.c line 699:Illegal LHS
+Fri Jan 31 12:05:45 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:45 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:45 2014: obj/living.c line 720:Variable s_flag not declared !
+Fri Jan 31 12:05:57 2014: obj/living.c line 691:Variable str not declared !
+Fri Jan 31 12:05:57 2014: obj/living.c line 692:syntax error
+Fri Jan 31 12:05:57 2014: obj/living.c line 699:Illegal LHS
+Fri Jan 31 12:05:57 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:57 2014: obj/living.c line 720:Variable e not declared !
+Fri Jan 31 12:05:57 2014: obj/living.c line 720:Variable s_flag not declared !
+Sat Feb  1 14:48:31 2014: bin/std_daemon.c line 9:Undefined function tell_player
+Sat Feb  1 14:49:53 2014: bin/std_daemon.c line 9:Undefined function tell_player
+Sat Feb  1 14:50:41 2014: bin/std_daemon.c line 9:Undefined function tell_player
+Sat Feb  1 14:52:37 2014: bin/std_daemon.c line 14:syntax error
+Sat Feb  1 14:52:37 2014: bin/std_daemon.c line 27:Illegal LHS
+Sat Feb  1 14:52:37 2014: bin/std_daemon.c line 28:Variable a not declared !
+Sat Feb  1 14:52:37 2014: bin/std_daemon.c line 28:Variable ob not declared !
+Sat Feb  1 14:52:37 2014: bin/std_daemon.c line 30:syntax error
+Sat Feb  1 14:57:57 2014: bin/std_daemon.c line 256:Bad argument 2 type to efun tell_object()
+obj/simul_efun/save_restore.c line 23: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 36: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 23: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 36: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 23: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 36: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 23: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 36: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 23: Missing 'return <value>' statement
+obj/simul_efun/save_restore.c line 39: Missing 'return <value>' statement
+Tue Feb  4 15:54:59 2014: obj/simul_efun/file_exists.c line 7:Cannot #include files.h
+
+Tue Feb  4 15:54:59 2014: obj/simul_efun/file_exists.c line 10:Variable FSIZE_NOFILE not declared !
+obj/player.c line 2826 before '  /* Tempo': Return type not matching: got int, expected string
+obj/player.c line 2826 before '  /* Tempo': Return type not matching: got int, expected string
+obj/player.c line 2826 before '  /* Tempo': Return type not matching: got int, expected string
+bin/wiz/_cp.c line 61: Undefined function 'cp'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+kernel/server.c line 73: Variable domainlists not declared !
+kernel/server.c line 268: Bad type of index: "string"
+kernel/server.c line 268: Bad assignment (int vs mapping)
+kernel/server.c line 294: Variable comain not declared !
+kernel/server.c line 294: Variable comain not declared !
+kernel/server.c line 334: Variable ERR_NOPRIV not declared !
+kernel/server.c line 382: Undefined function 'm_incides'
+kernel/server.c line 539: Unrecognized inheritance modifier 'nomaks'
+kernel/server.c line 540: syntax error
+kernel/server.c line 540: Unrecognized inheritance modifier 'query_access_tree'
+kernel/server.c line 540: syntax error
+kernel/server.c line 539: Unrecognized inheritance modifier 'nomaks'
+kernel/server.c line 540: syntax error
+kernel/server.c line 540: Unrecognized inheritance modifier 'query_access_tree'
+kernel/server.c line 540: syntax error
+kernel/server.c line 680: Unrecognized inheritance modifier 'nomaks'
+kernel/server.c line 681: syntax error
+kernel/server.c line 681: syntax error
+kernel/server.c line 681: Unrecognized inheritance modifier 'query_admins'
+kernel/server.c line 681: syntax error
+kernel/server.c line 698: Variable member not declared !
+kernel/server.c line 759: Undefined function 'raise_err'
+kernel/server.c line 856: Variable prot not declared !
+kernel/server.c line 865: syntax error
+kernel/server.c line 867: Bad assignment: illegal lhs (target)
+kernel/server.c line 868: syntax error
+kernel/server.c line 873: Bad assignment: illegal lhs (target)
+kernel/server.c line 873: syntax error
+kernel/server.c line 891: syntax error
+kernel/server.c line 894: syntax error
+kernel/server.c line 919: Bad assignment: illegal lhs (target)
+kernel/server.c line 919: syntax error
+basic/daemon.c line 38: syntax error
+basic/description.c line 156: Undefined function 'message2string'
+basic/description.c line 171: Function message2string undefined
+basic/description.c line 171: Wrong number of arguments to message2string: expected 0, got 1
+basic/description.c line 171: Bad arg 1 type to capitalize(): got unknown, expected string
+basic/description.c line 186: Function message2string undefined
+basic/description.c line 186: Wrong number of arguments to message2string: expected 0, got 1
+basic/extralong.c line 37: Macro 'keys': Missing '(' in call
+basic/extralong.c line 39: Illegal to redeclare local name 'res'
+basic/extralong.c line 39: Bad assignment (string * vs string)
+basic/extralong.c line 41: Macro 'keys': Missing '(' in call
+basic/extralong.c line 42: Macro 'keys': Missing '(' in call
+basic/extralong.c line 42: syntax error
+basic/extralong.c line 41: Macro 'keys': Missing '(' in call
+basic/synonym.c line 31: Macro 'keys': Missing '(' in call
+basic/synonym.c line 31: syntax error
+basic/synonym.c line 37: Macro 'keys': Missing '(' in call
+basic/synonym.c line 38: Macro 'keys': Missing '(' in call
+basic/synonym.c line 38: Too few arguments to member
+basic/synonym.c line 40: Macro 'keys': Missing '(' in call
+basic/synonym.c line 31: Macro 'keys': Missing '(' in call
+basic/synonym.c line 31: syntax error
+basic/synonym.c line 37: Macro 'keys': Missing '(' in call
+basic/synonym.c line 38: Macro 'keys': Missing '(' in call
+basic/synonym.c line 38: Too few arguments to member
+basic/synonym.c line 40: Macro 'keys': Missing '(' in call
+kernel/simul/message.c line 19: Cannot #include '/kernel/simul/list.h'
+kernel/simul/message.c line 20: Cannot #include '/kernel/simul/fold.h'
+kernel/simul/message.c line 21: Cannot #include '/kernel/simul/array.h'
+kernel/simul/message.c line 22: Cannot #include '/kernel/simul/misc.h'
+kernel/simul/message.c line 23: Cannot #include '/kernel/simul/string.h'
+kernel/simul/message.c line 24: Cannot #include '/kernel/simul/game.h'
+kernel/simul/message.c line 26: Cannot #include '/kernel/simul/lpc.h'
+kernel/simul/message.c line 268: Undefined function 'order_objects'
+kernel/simul/message.c line 947: Undefined function: capitalize_coloured
+kernel/simul/message.c line 1170: Undefined function 'apply_function'
+kernel/simul/message.c line 1183: Function apply_function undefined
+kernel/simul/message.c line 1183: Wrong number of arguments to apply_function: expected 0, got 3
+kernel/simul/message.c line 268: Undefined function 'order_objects'
+kernel/simul/message.c line 947: Undefined function: capitalize_coloured
+kernel/simul/message.c line 1374: Undefined function: capitalize_coloured
+kernel/simul/array.c line 80: Undefined function 'strinp'
+kernel/simul/array.c line 116: Undefined function 'appyl'
+kernel/simul/array.c line 179: Undefined function 'map_object'
+kernel/simul/array.c line 180: syntax error
+kernel/simul/array.c line 184: Bad assignment: illegal lhs (target)
+kernel/simul/array.c line 184: syntax error
+kernel/simul/array.c line 180: syntax error
+kernel/simul/array.c line 184: Bad assignment: illegal lhs (target)
+kernel/simul/array.c line 184: syntax error
+kernel/simul/array.c line 192: Bad assignment: illegal lhs (target)
+kernel/simul/array.c line 192: syntax error
+kernel/simul/array.c line 193: Variable arr not declared !
+kernel/simul/lpc.c line 64: Undefined function 'to_String'
+kernel/simul/lpc.c line 96: Variable fun not declared !
+kernel/simul/misc.c line 14: Cannot #include '/kernel/simul/file.h'
+kernel/simul/misc.c line 15: Cannot #include '/kernel/simul/security.h'
+kernel/simul/misc.c line 17: Cannot #include '/kerenl/simul/list.h'
+kernel/simul/misc.c line 50: Undefined function 'factorize'
+kernel/simul/misc.c line 51: Function factorize undefined
+kernel/simul/misc.c line 51: Wrong number of arguments to factorize: expected 0, got 2
+kernel/simul/misc.c line 15: Cannot #include '/kernel/simul/security.h'
+kernel/simul/misc.c line 17: Cannot #include '/kerenl/simul/list.h'
+kernel/simul/misc.c line 50: Undefined function 'factorize'
+kernel/simul/misc.c line 51: Function factorize undefined
+kernel/simul/misc.c line 51: Wrong number of arguments to factorize: expected 0, got 2
+kernel/simul/misc.c line 51: Bad assignment (mixed vs unknown)
+kernel/simul/misc.c line 17: Cannot #include '/kerenl/simul/list.h'
+kernel/simul/misc.c line 50: Undefined function 'factorize'
+kernel/simul/misc.c line 51: Function factorize undefined
+kernel/simul/misc.c line 51: Wrong number of arguments to factorize: expected 0, got 2
+kernel/simul/misc.c line 51: Bad assignment (mixed vs unknown)
+kernel/simul/misc.c line 54: Undefined function 'order_objects'
+kernel/simul/misc.c line 54: Undefined function 'order_objects'
+kernel/simul/misc.c line 58: Undefined function: sort_objects_in_env
+kernel/simul/misc.c line 143: Privilege violation: nomask simul_efun set_environment
+kernel/simul/misc.c line 143: Privilege violation: nomask simul_efun set_environment
+obj/simul_efun.c line 376: illegal to inherit after defining functions
+kernel/simul/list.c line 150: syntax error
+kernel/simul/string.c line 66: Variable special_first_ling not declared !
+kernel/simul/string.c line 128: Undefined function 'livingt'
+kernel/simul/string.c line 128: Function livingt undefined
+kernel/simul/string.c line 128: Wrong number of arguments to livingt: expected 0, got 1
+kernel/simul/string.c line 135: Function livingt undefined
+kernel/simul/string.c line 135: Wrong number of arguments to livingt: expected 0, got 1
+kernel/simul/string.c line 136: Function livingt undefined
+kernel/simul/string.c line 212: syntax error
+kernel/simul/string.c line 213: Bad assignment: illegal lhs (target)
+kernel/simul/debug.c line 12: Cannot #include '/kernel/simul/for_master.h'
+kernel/simul/debug.c line 33: Undefined function 'check_privilege'
+kernel/simul/debug.c line 52: Function check_privilege undefined
+kernel/simul/debug.c line 52: Wrong number of arguments to check_privilege: expected 0, got 1
+kernel/simul/debug.c line 77: Function check_privilege undefined
+kernel/simul/debug.c line 77: Wrong number of arguments to check_privilege: expected 0, got 1
+kernel/simul/debug.c line 109: syntax error
+kernel/simul/debug.c line 112: Bad assignment: illegal lhs (target)
+kernel/simul/debug.c line 113: Bad assignment: illegal lhs (target)
+kernel/simul/debug.c line 113: syntax error
+kernel/simul/debug.c line 120: Bad assignment: illegal lhs (target)
+kernel/simul/debug.c line 121: Bad assignment: illegal lhs (target)
+obj/simul_efun.c line 576: Inconsistent declaration of 'notify_fail': Return type mismatch (int vs void)
+obj/simul_efun.c line 601: Illegal to redefine 'nomask' function "set_environment"
+obj/simul_efun.c line 601: Incorrect number of arguments in redefinition of 'set_environment'.
+obj/simul_efun.c line 603: Illegal to redefine 'nomask' function "set_this_player"
+obj/simul_efun.c line 603: Incorrect number of arguments in redefinition of 'set_this_player'.
+obj/simul_efun.c line 576: Inconsistent declaration of 'notify_fail': Return type mismatch (int vs void)
+basic/fakeitem.c line 157: Undefined function 'update_actions'
+basic/fakeitem.c line 165: Undefined function 'add_action_error_message'
+basic/fakeitem.c line 199: Undefined function 'add_action_rule'
+basic/parser.c line 650: syntax error
+basic/parser.c line 650: Illegal character (hex 5c) '\'
+basic/parser.c line 650: Illegal character (hex 5c) '\'
+basic/parser.c line 650: Newline in string
+basic/parser.c line 652: Bad assignment: illegal lhs (target)
+basic/parser.c line 656: Bad assignment: illegal lhs (target)
+basic/parser.c line 650: syntax error
+basic/parser.c line 650: Illegal character (hex 5c) '\'
+basic/parser.c line 650: Illegal character (hex 5c) '\'
+basic/parser.c line 650: Newline in string
+basic/parser.c line 652: Bad assignment: illegal lhs (target)
+basic/parser.c line 656: Bad assignment: illegal lhs (target)
+basic/parser.c line 666: syntax error
+basic/parser.c line 666: Illegal character (hex 5c) '\'
+basic/parser.c line 666: Illegal character (hex 5c) '\'
+basic/parser.c line 666: Newline in string
+basic/parser.c line 668: Bad assignment: illegal lhs (target)
+basic/parser.c line 673: Bad assignment: illegal lhs (target)
+basic/parser.c line 666: syntax error
+basic/parser.c line 666: Illegal character (hex 5c) '\'
+basic/parser.c line 666: Illegal character (hex 5c) '\'
+basic/parser.c line 666: Newline in string
+basic/parser.c line 668: Bad assignment: illegal lhs (target)
+basic/parser.c line 673: Bad assignment: illegal lhs (target)
+basic/parser.c line 695: Too many arguments to notify_fail
+obj/simul_efun.c line 347: Unrecognized inheritance modifier 'inheirt'
+obj/simul_efun.c line 347: syntax error
+kernel/simul/game.c line 10: Cannot #include '/kernel/support/name.h'
+kernel/simul/game.c line 388: Macro 'keys': Missing '(' in call
+kernel/simul/game.c line 388: syntax error
+kernel/simul/game.c line 388: Macro 'keys': Missing '(' in call
+kernel/simul/game.c line 388: syntax error
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/living.c line 2811: Undefined function 'add_worth'
+obj/player/nrpoints.c line 56: Undefined function 'emit_channel'
+obj/player/nrpoints.c line 104: Function emit_channel undefined
+obj/player/nrpoints.c line 104: Wrong number of arguments to emit_channel: expected 0, got 2
+closed/verte/qt/soul_inc.h line 32: Undefined function 'text_contains'
+closed/verte/qt/soul_inc.h line 49: Undefined function 'member_array'
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/objtracker.c line 68: Undefined function 'member_array'
+obj/objtracker.c line 76: Undefined function 'find_player'
+obj/objtracker.c line 76: Undefined function 'basename'
+obj/objtracker.c line 76: Undefined function 'file_name'
+obj/objtracker.c line 76: Undefined function 'log_file'
+obj/objtracker.c line 90: Function log_file undefined
+obj/locklist.c line 85: Bad assignment (int vs string)
+obj/locklist.c line 90: Undefined function 'savelist'
+obj/locklist.c line 100: == always false because of different types (int vs string)
+obj/locklist.c line 101: Return type not matching: got string, expected int
+obj/locklist.c line 103: == always false because of different types (string vs int)
+obj/locklist.c line 105: == always false because of different types (string vs int)
+obj/locklist.c line 74: syntax error
+obj/locklist.c line 74: syntax error
+obj/locklist.c line 74: Unrecognized inheritance modifier 'msglist'
+obj/locklist.c line 74: syntax error
+obj/locklist.c line 74: syntax error
+obj/locklist.c line 74: Unrecognized inheritance modifier 'locklist'
+obj/locklist.c line 91: Undefined function 'savelist'
+obj/locklist.c line 102: Return type not matching: got string, expected int
+obj/locklist.c line 105: Return type not matching: got string, expected int
+obj/locklist.c line 107: Return type not matching: got string, expected int
+obj/locklist.c line 128: Bad type of index: "string"
+obj/locklist.c line 106: Return type not matching: got string, expected int
+obj/locklist.c line 109: Return type not matching: got string, expected int
+obj/locklist.c line 111: Return type not matching: got string, expected int
+obj/locklist.c line 128: Bad type of index: "string"
+obj/locklist.c line 128: Bad type of index: "string"

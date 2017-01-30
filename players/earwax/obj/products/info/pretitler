@@ -1,0 +1,10 @@
+This item uses the codes established in 'help xtitle'.  Use that as a guide
+for the color codes you can use with the pretitler.  Note: there is a
+maximum length for pretitles, and color codes aren't figured into
+it, at this moment (going to try to get that changed).
+
+Note: use "\" as an escape char (to output a "$").  
+
+Syntax: pretitle_me <new pretitle>
+
+Pretitler is a one-use item.  It is used up after one use.

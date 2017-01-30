@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/angel/area/stargate/obj/bullets","/players/hippo/armour/shield","/players/mythos/awep/wakizashi","/players/snow/heals/kw_meat","/players/scathe/armor/hood","/players/ultramagnus/darkweapon","/players/wren/Area/starbug/items/reddress","/players/arrina/weapons/longknif","/obj/weapon","/players/emerson/weap/icepick","/players/mythos/aarmor/do","/players/forbin/heals/dhuez","/players/hippo/heals/grain","/players/scathe/armor/mgarb","/players/scathe/armor/damulet","/players/ultramagnus/rsack","/players/wren/Area/starbug/items/gauntlet","/players/mosobp/areas/TEMPLE/OBJ/princerobes","/obj/weapon","/obj/weapon","/players/wren/Area/starbug/items/comb","/players/hippo/heals/nucleus","/obj/weapon","/players/snow/chaos/objects/crabmeat","/players/wren/Area/starbug/items/levis",})
+shorts ({"A clip of bullets [50]","lap of meat","Wakizashi","A hunk of whale meat","Hood","Dark Rider Broadsword","a [31mR[37me[31md[37m G[31mi[37mn[31mg[37mh[31ma[37mm [31md[37mr[31me[37ms[31ms[2;37;0m.","A longknife","A horse whip","A Sharp Ice Pick","Do-Maru","d[0m[32m'[0mHuez [0m[32mleaves[0m","[33mcrumbs of grain[0m","Black Monk Robes","A Dragon Amulet","A red sack","Time gauntlet","A Prince's Robes","Steel Longsword","An evil-looking lightsabre","the cat's hair pick","[35mnucleus of a cell[0m","Fear","A slab of giant crabmeat","stretched out Levi jeans.",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

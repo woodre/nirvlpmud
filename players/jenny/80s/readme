@@ -1,0 +1,20 @@
+This area has a 1980's theme.  It is meant to convey an image of what the 1980's were like, from my perspective at least.  Hopefully some people will find it a little nostalgic.  It is a low to mid level area.  
+
+all files in /players/jenny/80s/
+
+I will switch /players/jenny/80s/areaentrance.c with my current /players/jenny/areaentrance.c  The only difference between the files is an entrance to the new area.
+
+Chance of a few free coins in rooms 13.c, 12.c, 11.c,, 5.c,, and 20.c look at the randomchance variable in those rooms to see the chances of getting the coins, and the cash variable for how many.  You only get the coins by searching.
+
+/rooms/22.c molly.c clones every time, along with one from the group of ahall.c, ally.c, and andrew.c.   as well as one from the group of emilio.c, judd.c, and demi.c
+In /rooms/3.c the secret service agent blocks the east exit.
+
+/items/cube.c is the rubiks cube.  It sets the title of the player who solves it, if their level is less than 15.  Takes a spell point for each twist.  Query of int > random(400) It's on /mobs/al.c
+
+The heals have a small chance to heal a bonus of 5.  Heals are beans.c, coke.c, cooler,c, and juice.c
+
+/rooms/tshirt sells armor.  This is mostly for theme, the armor sucks bad.  1/7th of the time the prices are 20 percent off.
+
+/rooms/bar.c is a bar.  slightly random prices.
+
+/mobs/al.c, boyg.c, idol.c, jackson,c and lauper.c song the lyrics of their songs, for 5 coins.

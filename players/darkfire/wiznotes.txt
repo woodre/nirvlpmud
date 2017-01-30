@@ -1,0 +1,72 @@
+Testing simple FTP deploy. I am not optimistic.
+
+Use log_file to write a log. It will write to the /log directory and
+append to the file.
+Example:
+log_file("ADVANCE", ctime() + " " +cap_name+" advanced to level "+level+"
+")
+This will write to /log/ADVANCE
+
+
+Wizards do not detox, so if you drink alcohol you end up with
+a never ending buzz lol
+I use the exec command to clear my intox:
+exec this_player()->add_intoxination( this_player()->query_intoxination() * -1 )
+However you can't use exec yet so you'll have to build a command into your
+wiz tool.
+
+
+Here is the difference between lp and LD for paths
+that have the correct leading slash:
+lp:
+Valid Write: /players/pavlik/guild/mages/helps2/news ob: players/pavlik/guild/mages/gob#1862
+LD:
+Valid Write: /players/pavlik/guild/mages/helps2/news ob: obj/player#841
+.
+It looks like the calling object is different...
+
+From: dragnar
+Subj: old mail from Rump
+
+Date: Aug 30 09:30
+
+With the stock 2.4.5 mudlib that comes with LDmud, everything works as
+planned.  I reverted some master/simul stuff back to that stock, and
+have narrowed the issue down to the resolv_path simul_efun.  That's
+where the path isn't getting calculated correctly, which adds the
+current path when it's not supposed to, adds a slash, etc....
+
+We should just need to fix that simul_efun to work properly (or as
+expected) and our issues should go away.
+
+Message 3:
+From: dragnar
+Subj: old mail #2
+
+Date: Aug 30 09:31
+
+I'm guessing it's because cat() is now an sefun instead of an efun - so it's
+getting introduced into the stack.  I think we can get it to allow
+any obj/simul_efun call valid_write somewhere in master.c - if i remember
+correctly.
+
+Mage guild:
+-- colors in dragon descs
+-- savable components in pouches
+-- physical combat mode for coining (dragon form/soulmerge?)
+-- dragon should save wimpy
+-- fix 'gm' in the older rooms (inheritance)
+-- enhance the mage NPCs to cast spells, etc.
+-- Reset colors to +NORM+ after msc (and other stuff?)
+-- fix Grethon's donate code (for non-mages)
+-- make the mage mon string return empty when nothing is on (true fixed width)
+
+
+COINING:
+
+[Dragnar]: keepers are good, 2e,ne,2n from pizza hut
+
+[Wulfe]: i'll try some fruit, I like those. Where do you get the medkits?
+[Dragnar]: maledicta's, 1 sec
+[Dragnar]: Derellia
+[Dragnar]: castle maledicta, w

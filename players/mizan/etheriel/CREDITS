@@ -1,0 +1,46 @@
+I'd feel guilty if I didnt have this file at least SOMEWHERE...
+
+<>----------------<>  Credits!  <>----------------<>
+
+ORIGINAL CONCEPT:
+  Noika Chang, J. Pascale
+
+ROOM DRIVERS:
+  /players/mizan/closed/RandomRoom.c
+  /players/mizan/closed/RandomRoomDM.c
+    Dev help: Noika Chang, Renee (Rahne) Altwist
+
+  /players/mizan/closed/LiquidRoom.c
+    Idea courtesy of Kjeil Menjara (kjcil@delphi.com)
+
+#INCLUDE FILES:
+  /players/mizan/closed/NewbieGuard.c
+  /players/mizan/closed/HighLevelGuard.c
+    Idea courtesy of R. Altwist
+
+  /players/boltar/things/esc.h
+    ANSI ESC character template
+
+  /players/bastion/closed/color.h
+    ANSI ESC Color template
+
+  /players/mizan/closed/RandomMove.c
+    Dev help: Blue (old old old version)
+
+OBJECTS:
+  /players/mizan/etheriel/beasties/colin.c
+    Idea courtesy of the Skyman
+
+  /players/mizan/etheriel/beasties/arthur.c
+  /players/mizan/etheriel/beasties/prefect.c
+  /players/mizan/etheriel/beasties/normal-beast.c
+    Idea courtesy of Douglas Adams
+
+  /players/mizan/etheriel/environs/slur-device.c
+    Substance & Idea courtesy of Sado
+
+  /players/mizan/etheriel/environs/undead-sign.c
+    Graphic courtesy of Trix
+
+  /players/mizan/etheriel/heals/jug.c
+    Substance courtesy of Scooter

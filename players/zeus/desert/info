@@ -1,0 +1,30 @@
+Inculta Creperum - waste / desert darkness.
+dark desert theme, mix of mid level and high level monsters.
+all NPCs loaded through ~/OBJ/desert_daemon.c
+
+       o . o - o . o          1-4
+       .   |   |   .
+       o - o   o - o          5-8
+       |   |   |   |
+   o - o . o - o - o - o      9-14
+       |   |   |   |
+       o - o . o - o          15-18
+       .   |   |   .
+       o . o - o . o          19-22
+
+
+ name        lvl     wc     ac     hp   val     misc
+
+desert bat  13-14    18    8-9    190  670-730  can make more, special
+digger       15      16    9-20   280  800-909  varrying ac, special
+fiend        15     27-30   4     200  800-909  special, heal, wimpy
+scorpion     13      15     7     180  670-730  poison
+nomad       14-15    24     10    215   900     special, heal, heavy eq
+spirit       15      25     9     225  800-950  special
+peasant      15      20     14    225   825     special
+hunter       17      24     12    325   1200    special, wander
+
+brute        23      34     24    1000   6-10k  special
+snake        22      41     22    1000   4-9k   special
+fiend_large  22     44-48   18  800-1030 5-9k   special, heal, wimpy
+

@@ -1,0 +1,25 @@
+instead of a room loading a monster or three
+it loads and encounter daemon
+transports the party to an arena of sorts, lets say 5x5
+loads creatures based on the level of the party leader
+scatters them about the 5x5, but prolly on one side
+the daemon keeps track of where everyone is
+
+in addition to the main daemon, there would also need to be
+an ai daemon
+
+the room descs actually make a request to the main daemon
+and it returns a map of the arena, with the locations of the
+enemies and players marked
+if a player or creature has a ranged type weapon and is not
+engaged they can enter ranged mode
+which allows them to target any creature that isnt in the
+same room, every heartbeat doing minimal damage
+no exp is awarded until the end of the battle
+then it is calculated and treasure dropped
+I wanted to make it so anyone could use it with a config
+file
+
+
+AI daemon controls monster movement and casting and whatnot
+monsters labeled like tank, caster, ranged

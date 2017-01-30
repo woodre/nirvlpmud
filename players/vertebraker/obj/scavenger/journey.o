@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/obj/weapon","/players/wren/Area/starbug/items/levis","/players/scathe/weap/lbow","/players/mythos/aarmor/nodowa","/players/emerson/obj/pin","/players/jamila/beach/mobs/shell","/players/jamila/beach/mobs/claw","/players/snow/shadows/stuff/axe","/players/wren/Area/starbug/items/indianheaddress","/players/puppy/s/eq/apron","/players/snow/WEAPONS/greydeath","/players/scathe/armor/igarb","/players/scathe/armor/egarb","/obj/weapon","/players/mythos/aarmor/kabuto","/players/puppy/s/eq/ruler","/players/boltar/things/bell","/players/mythos/closed/guild/forest/misc/prop","/players/pain/closed/weapons/widow","/players/saber/armor/mini","/players/pain/NEW/arm/boots","/players/hippo/heals/blood","/players/wren/Area/starbug/items/dreds","/players/pain/NEW/weap/mace2","/players/ultramagnus/darkweapon",})
+shorts ({"Razor collar","stretched out Levi jeans.","Longbow of Force","Nodowa","A pinball machine","A Large Shell","A Lobster Claw","A dusky axe","a tiny indian headdress","An apron","Grey[36mdeath[0m","Initiate's garb","Elder's garb","A glowing lightsabre","Kabuto","A wooden ruler","A small gold colored bell","Essence of Vraith- vine sap","the Widowmaker, the sword of the Berserker","A skin tight leather mini skirt","Heavy work boots","[1;31mdrops of blood[0m","Lister's crusty deerstalker with dreds.","A huge iron mace","Dark Rider Broadsword",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

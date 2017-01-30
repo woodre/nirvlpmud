@@ -1,0 +1,27 @@
+**************
+
+
+                     Where
+
+Syntax:    where <obj>
+
+Desc:
+           Command Where returns the filename of the room that an 
+           object is in. If used on a player it gives information 
+           similar to People command. Works on monsters and objects.
+
+Warning:   If multiple objects have a similar name results may not be
+           the desired target. Also only works on mobs that are 
+           currently loaded.
+
+Example:   where beano
+                  results
+           OBJ(players/mizan/etheriel/ROOMS/croco)
+           Plane of Etheriel [oozie,howhow,pago,polar]
+
+           This is a location of a beano
+
+Related:   origin
+
+
+**************

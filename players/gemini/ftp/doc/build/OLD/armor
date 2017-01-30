@@ -1,0 +1,61 @@
+Armor Rules:
+------------
+Armor should NEVER be above AC 5 without the permission of a God.
+New 'type's (see set_type() below) of armor may only be created with the
+permission of a God.
+The standard armor types are: armor, helmet, shield, ring, amulet, boot,
+                              glove, cloak.
+Armor with type other than "armor" should rarely be above AC 1, and
+never above AC 2 without the permission of a God.
+
+A table of standard armors, their AC's, values, and weights will be
+be available soon in an effort to halt the proliferation of armor pieces
+that have similar names but completely different attributes.
+
+***Important Note***
+Armor makes life easy for the players, so it should be difficult to get.
+-------------------------------------------------------------------------
+
+To get an armor do:
+    object aobj;
+
+    aobj = clone_object("obj/armor");
+
+For customization the following routines are available :
+
+You must call these functions:
+
+set_name(n) 
+    string n. Sets the name and short description to n.
+    Sets long description to short + ".\n"
+
+These are the optional functions:
+
+set_short(s) 
+    string s. Sets the short description to s and the long to short + ".\n"
+
+set_long(l)
+    string l. Sets the long description to l.
+
+set_value(v) 
+    int v. Sets the selling value to v.
+
+set_weight(w) 
+    int w. Sets the weight to w.
+
+set_ac(a) { ac = a; }
+    int a. Sets the armor class to a. A random value up to 'a' is subtracted
+    from the hit.
+
+set_alias(a) { alias = a; }
+    string a. Sets an alias name if armor.
+
+set_type(t) { type = t };
+    string t. Sets the type of armor to t. Only one of every type can be worn.
+    These are the types you can use: helmet, amulet, armor, shield, ring, 
+    glove, cloak and boot. 
+    Default is armor. The armor class of every worn armor is added
+    together.
+
+set_arm_light(l) 
+    int l. Makes the armor shine like a lamp of strength l.

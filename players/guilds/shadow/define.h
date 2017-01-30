@@ -1,0 +1,34 @@
+#define THIS_FILE "/players/guilds/shadow/shadow.c"
+#define VERION 3.0
+#define SAVE_PATH "players/guilds/shadow/shadows/"
+#define SHADE_FILE "/players/guilds/shadow/shades.c"
+#define ENVTO environment(this_object())
+#define BORDER "<<<--->---<--->---<--->---<--->"+BOLD+"<SHADOWS>"+NOSTYLE+"<--->---<--->---<--->---<--->>>\n"
+#define GUILD_RANK ENVTO->query_guild_rank()
+#define GUILD_EXP ENVTO->query_guild_exp()
+#define NAME this_player()->query_name()
+#define PATH "/players/guilds/shadow/"
+#define TEOWN(x) tell_object(environment(this_object()), x);
+#define NEWSFILE PATH + "SHADOWNEWS"
+#define CAP(x) capitalize(x)
+#define CN capitalize(TP->query_name())
+#define RN ENVTO->query_real_name()
+#define TO this_object()
+#define TP this_player()
+#define CARRY query_carry()
+#define STRENGTH this_player()->query_attrib("str")
+#define ENVTP environment(this_player())
+#define LEVEL ENVTO->query_level()
+#define THISFACTION "Dopple-Shadow"
+#define HP ENVTO->query_hp()
+#define SP ENVTO->query_spell_point()
+#define MHP ENVTO->query_mhp()
+#define MSHP query_max_shp()
+#define MSP ENVTO->query_msp()
+#define ENVENVTO environment(ENVTO)
+#define ENV(x) environment(x)
+#define POS query_possesive()
+#define BLACK_ORB "/players/guilds/shadow/obj/black_orb"
+#define PEARL "/players/guilds/shadow/obj/pearl.c"
+#define GR ENVTO->query_guild_rank()
+#define GXP ENVTO->query_guild_exp()

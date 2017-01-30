@@ -1,0 +1,40 @@
+[Oct  9 2014 18:25] Shinshi: A: Master was letting anyone join even with the quests not done. Made a change through the trainers to check for book instead of BOOKOBJ
+[Oct  9 2014 18:41] Shinshi: A: Eweapon had a WC of 13? Changed it back to 10.
+[Oct  9 2014 19:23] Shinshi: A: Added return 1; to bsave() in /players/wicket/guild/objs/book.c
+[Oct  9 2014 19:33] Shinshi: A: Khnum (/players/wicket/guild/hall/mobs/master.c) will no longer let you become an elementalists with armor worn or a weapon wielded :)
+[Oct  9 2014 20:36] Shinshi: A: Changed the leveling up system. Wasn't checking to see if the free xp was >= the cost. Also made it take away experience (add_exp not add_experience)
+[Oct  9 2014 21:47] Shinshi: A: Edited all of the mobs in /players/wicket/guild/hall/mobs so they all say what commands they can do
+[Oct  9 2014 22:27] Shinshi: A: Edited maelstrom to have a write() and a say()
+[Oct  9 2014 22:27] Shinshi: A: Added etypo, eidea, ebug, and edrain to /players/wicket/guild/help/basics.txt
+[Oct 10 2014 14:28] Shinshi: A: Gave the 'elementals' command spacing to make everything equal (name, etc.)
+[Oct 10 2014 16:00] Shinshi: A: Added monitor values for Airbond, Earthbond, Firebond, and Waterbond (query_gmon1() in /players/wicket/guild/gob.c)
+[Oct 10 2014 20:31] Shinshi: A: Created a score based off of the game score but added a way to keep track of each Elements rank. Will edit more as I think of it and edit it with colors, etc.
+[Oct 11 2014 19:17] Shinshi: A: added if(this_player() && this_player()->is_npc()) return; due to a problem with picking up kids while using them
+[Oct 11 2014 19:30] Shinshi: A: added set_heal(5, 5); to all djinns except for the eledjinn which has set_heal(10, 5);
+[Oct 12 2014 14:27] Shinshi: A: eweapon split into 4 different weapons
+[Oct 12 2014 14:28] Shinshi: A: each eweapon returns a special. Damage that the special returns is based off of their rank in that element
+[Oct 13 2014 22:11] Shinshi: A: Fixed a bunch of miscellaneous typos
+[Oct 13 2014 22:11] Shinshi: A: Made lclap a way to prevent MONSTERS from doing damage for a length depending on their 4 element levels combined.
+[Oct 13 2014 22:12] Shinshi: A: Changed the level check for shockwave.c if(attacker->is_player() && attacker->query_level() > 20)
+[Oct 13 2014 22:17] Shinshi: A: When djinns die, they now set the elementalists has_djinn variable to 0 so they can summon another one
+[Oct 13 2014 22:22] Shinshi: A: Made weapons less spammy
+[Oct 16 2014 18:19] Shinshi: A: Made pblood - detox with 10 hp cost and 20 sp cost. cooldown is 5 minutes
+[Oct 16 2014 18:26] Shinshi: A: Added airshroud to monitor string
+[Oct 16 2014 20:56] Shinshi: A: Mobs changed so they call_out() a tell_object() when a player arrives (tells them what the mob can do)
+[Oct 22 2014 19:38] Shinshi: A: Changed cshards, lhammer, iceblast, and fdagger to allow for airshroud to work properly.
+[Oct 22 2014 19:45] Shinshi: A: Pyroblast cost reduced to 40 and damage increased. Cast time also increased. Get approval from Fred.
+[Oct 22 2014 21:06] Shinshi: A: pyroblast upped to 3min CD
+[Oct 25 2014 20:36] Shinshi: A: Nerfed lclap to last air + earth + fire + water ranks. Cooldown will be implemented as well
+[Oct 25 2014 21:13] Shinshi: A: fixed elehelp engulf, elehelp eprison, and elehelp pyroblast to display CORRECT info
+[Oct 26 2014 22:28] Shinshi: A: Wicket added which items you can form in kataprep
+[Oct 26 2014 22:28] Shinshi: A: Made it so eprison can be casted just by typing 'eprison' while in combat
+[Oct 26 2014 22:29] Shinshi: A: Nerfed lclap
+[Oct 26 2014 22:29] Shinshi: A: Nevermind. Already said that
+[Nov  3 2014 20:33] Shinshi: A: Just added an 'idle' time on 'elementals'
+[Nov  3 2014 20:40] Shinshi: A: Prevented tornado from targetting wizards
+[Nov  3 2014 21:24] Shinshi: A: Made eprison a shadow for npcs and a block for movement on players (shortened length on players)
+[Dec  7 2014 13:24] Shinshi: A: Djinn dies, you cannot summon it anymore
+[Dec 13 2014 16:37] Shinshi: A: for the day
+[Dec 13 2014 16:48] Shinshi: A: Cannot ispray and lclap at the same time
+[Dec 13 2014 17:06] Shinshi: A: Changed the help files for ispray and lclap
+[Dec 13 2014 17:06] Shinshi: A: I believe beta is done!

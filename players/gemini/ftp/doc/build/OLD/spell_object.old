@@ -1,0 +1,9 @@
+spell_object
+see code for more details. in living.c and player.c
+updates from adv_inner post 8-8-96 Bp
+
+A slight change in set up.
+if you send it any custom messages for the room
+casting player or victim
+the standard 'you cast A blah spell' will not
+appear. only the custom messages will appear.

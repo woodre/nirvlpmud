@@ -1,0 +1,54 @@
+/*
+ * spell : Strangulation   (enchantment)
+ * level : 5
+ * effect: Damage to target
+ * cost  : 30 sp + continuation
+ * spec  : Requires spell component (800 coins)
+ * files : /mages/obj/strangle_obj.c
+ *         ** see the object for details on this spell **
+ */
+
+strangulation(str){
+  object ob, obj;
+
+  if(!KNOW("strangle"))
+    notify_fail("What?\n");
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  if(guild->query_next_dmg() > time()) {
+    write("You cannot cast this spell yet.\n");
+    return 1;
+  }
+
+  /* make sure the spell component has been placed on the target */
+  if(!present("strangle_obj", obj)) {
+    write("You do not have the neccesary components for this spell.\n");
+    return 1;
+  }
+
+  write("You cast a "+HIC+"Strangulation"+NORM+" spell ...\n");
+
+  if(spell_fail2(5, "ench", "pow")) {
+    write("You "+HIR+"miscast"+NORM+" the spell!\n");
+    write("The golden circlet crumbles to dust and blows away.\n");
+    say(ME+"'s miscasts a spell!\n");
+    say("A golden circlet around "+IT+"'s neck crumbles to dust.\n");
+    destruct(present("strangle_obj", obj));
+    tp->add_spell_point(-10);
+    return 1;
+  }
+
+  tell_room(env,
+  ME+" enchants a golden circlet thhat is around "+IT+"'s neck!\n"+
+  "The golden threads melt away and reveal a hideous snake!\n");
+  tell_room(env,
+  "The hissing snake "+HIG+"flexes its coils and starts to strangle"+
+  NORM+" "+IT+"!\n");
+
+  present("strangle_obj", obj)->set_owner(tp);
+  present("strangle_obj", obj)->do_spell();
+
+  return 1;
+}

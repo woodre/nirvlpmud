@@ -1,0 +1,17 @@
+---===ROBOMECH WEPINFO===---
+
+     This is a listing of RoboMech weapons and info.
+
+ WEAPON            DAMAGE   HEAT   RANGE   BLAST   CAPACITY
+___________________________________________________________
+ autocannon          16      8      0       0       15
+ srm                 14      6      2       1       12
+ lrm                 13      5      5       2       11
+ laser               13      5      3       0       10
+ rifle               12      4      2       1       9
+ ppc                 17      9      2       3       15
+___________________________________________________________
+srm = Short Range Missile
+lrm = Long Range Missile
+ppc = Plasma Projection Cannon
+

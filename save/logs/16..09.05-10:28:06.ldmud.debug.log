@@ -1,0 +1,136 @@
+2016.08.31 09:14:12 LDMud 3.3.720 (Build 3010) (stable)
+2016.08.31 09:14:12 TLS: (OpenSSL) Keyfile 'key.pem', Certfile 'cert.pem'
+2016.08.31 09:14:12 TLS: Error setting x509 keyfile:
+2016.08.31 09:14:12 TLS: SSL error:02001002:system library:fopen:No such file or directory.
+2016.08.31 09:14:12 TLS: SSL error:20074002:BIO routines:FILE_CTRL:system lib.
+2016.08.31 09:14:12 TLS: SSL error:140B0002:SSL routines:SSL_CTX_use_PrivateKey_file:system lib.
+2016.08.31 09:14:12 mySQL 5.5.50
+2016.08.31 09:14:12 Attempting to start erq '/home/petebre/mymud/lp312/mudbin/erq'.
+2016.08.31 09:14:12 Hostname 'loafy' address '174.137.154.70'
+2016.08.31 09:14:12 UDP recv-socket requested for port: 3507
+2016.08.31 09:14:14 LDMud ready for users.
+2016.08.31 09:39:39 Bad arg 1 to call_other(): got 'number', expected 'string/array/object'.
+2016.08.31 09:39:39 program: obj/player.c, object: obj/player line 2528
+'     heart_beat' in '        obj/player.c' ('          obj/player') line 1585
+'       autosave' in '        obj/player.c' ('          obj/player') line 1260
+'        save_me' in '        obj/player.c' ('          obj/player') line 2502
+'  illegal_patch' in '        obj/player.c' ('          obj/player') line 2528
+2016.08.31 09:39:39 Heart beat in obj/player turned off.
+2016.08.31 09:39:39 Error in heartbeat.
+2016.08.31 10:00:35 Error (104) upon reading socket 8 (ip 0xa5282dc 'obj/player#386'), closing connection: Connection reset by peer
+2016.08.31 14:53:36 Missing 'return <value>' statement.
+2016.08.31 14:53:36 program: obj/go_player.c, object: obj/go_player#151 line 132
+2016.08.31 16:19:58 Caught error: Failed to load file: 'players/guilds/necro/guildobj'.
+'       cmd_hook' in '        obj/player.c' ('      obj/player#652') line 3390
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('      obj/player#652') line 33
+'      cmd_clone' in '    bin/wiz/_clone.c' ('      bin/wiz/_clone') line 55
+'          CATCH' in                        ('      bin/wiz/_clone')
+2016.08.31 16:19:58 ... execution continues.
+2016.08.31 16:20:51 Failed to load file: 'players/guilds/necro/obj/daemons/channel_d'.
+2016.08.31 16:20:51 program: bin/std_daemon.c, object: bin/std_daemon line 244
+'       cmd_hook' in 'players/guilds/necro/guildob.c' ('players/guilds/necro/guildob#662') line 548
+'            cmd' in 'players/guilds/necro/cmds/nc.c' ('players/guilds/necro/cmds/nc') line 31
+'   create_emote' in 'players/guilds/necro/daemons/channel_d.c' ('players/guilds/necro/daemons/channel_d') line 124
+'      guildcast' in '           bin/std.c' ('       bin/soul/_nod') line 64
+'      guildcast' in '    bin/std_daemon.c' ('      bin/std_daemon') line 244
+2016.08.31 16:21:34 Failed to load file: 'players/guilds/necro/obj/daemons/channel_d'.
+2016.08.31 16:21:34 program: bin/std_daemon.c, object: bin/std_daemon line 244
+'       cmd_hook' in 'players/guilds/necro/guildob.c' ('players/guilds/necro/guildob#662') line 548
+'            cmd' in 'players/guilds/necro/cmds/nc.c' ('players/guilds/necro/cmds/nc') line 31
+'   create_emote' in 'players/guilds/necro/daemons/channel_d.c' ('players/guilds/necro/daemons/channel_d') line 124
+'      guildcast' in '           bin/std.c' ('       bin/soul/_nod') line 64
+'      guildcast' in '    bin/std_daemon.c' ('      bin/std_daemon') line 244
+2016.08.31 16:31:03 Bad arg 1 to tell_room(): got 'number', expected 'string/object'.
+2016.08.31 16:31:03 program: players/mythos/closed/play/updates.c, object: players/mythos/closed/play/updates line 412
+'     heart_beat' in 'players/mythos/closed/play/updates.c' ('players/mythos/closed/play/updates') line 421
+'          sweep' in 'players/mythos/closed/play/updates.c' ('players/mythos/closed/play/updates') line 356
+'          swept' in 'players/mythos/closed/play/updates.c' ('players/mythos/closed/play/updates') line 412
+2016.08.31 16:31:03 Heart beat in players/mythos/closed/play/updates turned off.
+2016.08.31 16:31:03 Error in heartbeat.
+2016.08.31 23:06:58 Index for [] out of bounds: 50, vector size: 50
+2016.08.31 23:06:58 program: obj/wiz_bull_board.c, object: obj/wiz_bull_board#854 line 74
+'          reset' in 'players/boltar/things/cop.c' ('players/boltar/things/cop#567') line 13
+'          reset' in '       obj/monster.c' ('players/boltar/things/cop#567') line 114
+'    random_move' in '       obj/monster.c' ('players/boltar/things/cop#567') line 153
+'          south' in '    room/adv_guild.c' ('      room/adv_guild') line 344
+'    move_player' in '        obj/living.c' ('players/boltar/things/cop#567') line 251
+<lambda 0xa347429> in 'players/boltar/things/cop.c' ('players/boltar/things/cop#567') offset 9
+' _move_hook_fun' in '        obj/master.c' ('          obj/master') line 763
+'           init' in 'obj/wiz_bull_board.c' ('obj/wiz_bull_board#854') line 74
+2016.08.31 23:06:58 Error in process_objects().
+2016.08.31 23:50:26 Error (110) upon reading socket 8 (ip 0xa528280 'obj/player#652'), closing connection: Connection timed out
+2016.08.31 23:50:31 query_idle() of non-interactive object.
+2016.08.31 23:50:31 program: closed/wiz_soul.c (/closed/verte/qt/soul_inc.h), object: closed/wiz_soul#655 line 155
+'      deathcall' in 'players/guilds/necro/guildob.c' ('players/guilds/necro/guildob#664') line 189
+'         qtHook' in 'closed/wiz_soul.c (/closed/verte/qt/soul_inc.h)' (' closed/wiz_soul#655') line 155
+2016.08.31 23:50:31 Error in call out.
+2016.09.01 00:14:31 Index for [] out of bounds: 30, vector size: 30
+2016.09.01 00:14:31 program: obj/wiz_bull_board2.c, object: obj/wiz_bull_board2#975 line 71
+'          reset' in 'players/boltar/things/cop.c' ('players/boltar/things/cop#567') line 13
+'          reset' in '       obj/monster.c' ('players/boltar/things/cop#567') line 114
+'    random_move' in '       obj/monster.c' ('players/boltar/things/cop#567') line 153
+'           move' in '         room/room.c' ('      room/adv_inner') line 297
+'    move_player' in '        obj/living.c' ('players/boltar/things/cop#567') line 251
+<lambda 0xa347429> in 'players/boltar/things/cop.c' ('players/boltar/things/cop#567') offset 9
+' _move_hook_fun' in '        obj/master.c' ('          obj/master') line 763
+'           init' in 'obj/wiz_bull_board2.c' ('obj/wiz_bull_board2#975') line 71
+2016.09.01 00:14:32 Error in process_objects().
+2016.09.02 13:27:39 Index for [] out of bounds: 178, vector size: 178
+2016.09.02 13:27:39 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.09.02 13:27:40 Error in call out.
+2016.09.02 13:27:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.02 13:27:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.02 13:27:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.02 13:27:40 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.02 13:27:41 Index for [] out of bounds: 179, vector size: 179
+2016.09.02 13:27:41 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#1787') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.09.02 13:27:41 Error in call out.
+2016.09.02 13:27:41 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.02 13:27:41 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.02 13:27:41 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.03 01:41:04 Index for [] out of bounds: 200, vector size: 200
+2016.09.03 01:41:04 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.09.03 01:41:04 Error in call out.
+2016.09.03 01:41:04 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.03 01:41:04 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.03 01:41:05 Index for [] out of bounds: 200, vector size: 200
+2016.09.03 01:41:05 program: players/mizan/core/objectDM.c, object: players/mizan/core/objectDM line 603
+'limited_issue_check' in 'players/mizan/core/weapon.c' ('players/mizan/etheriel/items/cardboard-tube#2065') line 114
+'count_object_instances' in 'players/mizan/core/objectDM.c' ('players/mizan/core/objectDM') line 603
+2016.09.03 01:41:05 Error in call out.
+2016.09.03 01:41:05 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.03 01:41:05 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.03 01:41:05 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.03 01:41:05 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.03 01:41:05 call_out: user 'mizan' had an error: rescheduling call_out.
+2016.09.03 03:48:23 Index for [] out of bounds: 50, vector size: 50
+2016.09.03 03:48:23 program: obj/wiz_bull_board.c, object: obj/wiz_bull_board#2120 line 74
+'          reset' in 'players/boltar/things/cop.c' ('players/boltar/things/cop#567') line 13
+'          reset' in '       obj/monster.c' ('players/boltar/things/cop#567') line 114
+'    random_move' in '       obj/monster.c' ('players/boltar/things/cop#567') line 154
+'           move' in '         room/room.c' ('     room/adv_inner2') line 297
+'    move_player' in '        obj/living.c' ('players/boltar/things/cop#567') line 251
+<lambda 0xa347429> in 'players/boltar/things/cop.c' ('players/boltar/things/cop#567') offset 9
+' _move_hook_fun' in '        obj/master.c' ('          obj/master') line 763
+'           init' in 'obj/wiz_bull_board.c' ('obj/wiz_bull_board#2120') line 74
+2016.09.03 03:48:23 Error in process_objects().
+2016.09.05 10:18:53 Caught error: Error in loading object: 'players/oberon/closed/jewel'.
+'         qtHook' in 'closed/wiz_soul.c (/closed/verte/qt/soul_inc.h)' ('closed/wiz_soul#3231') line 211
+'   process_hook' in 'closed/wiz_soul.c (/closed/verte/qt/soul_inc.h)' ('closed/wiz_soul#3231') line 130
+'       cmd_hook' in '        obj/player.c' ('     obj/player#3228') line 3390
+'       cmd_hook' in ' obj/user/cmd_hook.c' ('     obj/player#3228') line 33
+'      cmd_clone' in '    bin/wiz/_clone.c' ('      bin/wiz/_clone') line 55
+'          CATCH' in                        ('      bin/wiz/_clone')
+2016.09.05 10:18:53 ... execution continues.
+2016.09.05 10:26:36 Error (104) upon reading socket 8 (ip 0xa53d6a4 'obj/player#3228'), closing connection: Connection reset by peer
+2016.09.05 10:28:05 Undefined function: save_wiz_file
+2016.09.05 10:28:05 program: obj/master.c, object: obj/master line 2796
+'notify_shutdown' in '        obj/master.c' ('          obj/master') line 1654
+'  save_wiz_file' in '        obj/master.c' ('          obj/master') line 2796
+2016.09.05 10:28:06 Error in master_ob->notify_shutdown()

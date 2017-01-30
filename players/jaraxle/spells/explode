@@ -1,0 +1,11 @@
+Wocket wizs: biglongdescript = read_file("/jaraxle/prettybird.txt");
+
+
+ ie prettypicture = RED+" \\'{;a.l\n"+" (oa;/ei''  'a'.>)9\n"+".. "\n"; tell_room(myroom,prettypicture);
+array_picture = explode("biglongdescript","\n");
+for(i=0,a=sizeof(array_picture);i<a;i++){
+tell_room(myroom,array_picture[i]); }
+Wocket wizs: well it should be explode(biglongdescript,"\n"); sorry
+Jaraxle wizs: ok
+Wocket wizs: and when you tell room it should be array_picture[i]+"\n";
+

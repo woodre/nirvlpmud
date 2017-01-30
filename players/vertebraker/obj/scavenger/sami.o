@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/pain/NEW/weap/soulcrusher","/players/wren/Area/starbug/items/charisma","/players/snow/ITEMS/bdiamond","/players/scathe/weap/lbow","/players/wren/Area/starbug/items/wrench","/players/ultramagnus/wiz_cloak","/players/mythos/aarmor/sode","/players/pain/NEW/arm/boots","/obj/armor","/players/maledicta/cont/armor/rboots","/obj/weapon","/players/snow/WEAPONS/greydeath","/players/wren/Area/starbug/items/lightbee","/obj/armor","/players/hawkeye/items/stone","/players/emerson/heal/lpizza","/players/mosobp/areas/TEMPLE/OBJ/robes","/players/hippo/heals/grain","/players/sado/shop/rose","/players/saber/armor/lpants","/players/softly/nhall/obj/green2","/players/mythos/awep/kama","/players/blue/weapons/obsidian_sword","/players/snow/shadows/stuff/cloak","/players/mythos/awep/ring",})
+shorts ({"a mace named [1m[31mSoulCrusher[0m","a charismatic aura","A shimmering black diamond","Longbow of Force","small pipe wrench","An Old Grey Cloak","Sode","Heavy work boots","Fawnskin Cloak","leather shoes","A glowing lightsabre","Grey[36mdeath[0m","a strange object called a 'light bee'","A [1mwhite[0m helmet","A Stone","large pizza","A Priest's Robes","[33mcrumbs of grain[0m","A beautiful red rose blossom","Black leather pants","Dark Rider Chainmaigreen)[2;37;0m [3]","kama","An Obsidian Sword","A dusky cloak","Silver Ring",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/scathe/armor/damulet","/players/scathe/armor/bowarmor","/obj/weapon","/obj/armor","/players/angel/area/stargate/obj/bullets","/players/emerson/heal/lpizza","/players/emerson/armor/ntag","/players/wren/Area/starbug/items/indianheaddress","/players/saber/armor/hardsuit1","/obj/armor","/players/jamila/beach/mobs/claw","/players/mosobp/areas/TEMPLE/OBJ/rags","/players/wren/Area/starbug/items/guitar","/players/eurale/Glade/OBJ/elven_boots","/obj/torch","/obj/armor","/players/wren/Area/starbug/items/charisma","/players/mythos/awep/kama","/players/wren/Area/starbug/items/cottagecheese","/players/mosobp/areas/TEMPLE/OBJ/tiara","/obj/armor","/players/snow/shadows/stuff/axe","/players/saber/armor/dshades","/players/pain/NEW/arm/pmail","/players/snow/chaos/objects/crabmeat",})
+shorts ({"A Dragon Amulet","Light Leather Armor","A Deadly Bullwhip","A suit of [1mwhite[0m chainmail","A clip of bullets [50]","large pizza","Name Tag","a tiny indian headdress","A light blue Hardsuit","a hat","A Lobster Claw","Peasant Rags","Lister's guitar","[1mElven boots[2;37;0m","sunflower","Metal gloves","a charismatic aura","kama","a small tub of cottage cheese.","A Princess' Tiara","A [1mwhite[0m helmet","A dusky axe","[1mDark Shades[2;37;0m","Gleeming Platemail","A slab of giant crabmeat",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

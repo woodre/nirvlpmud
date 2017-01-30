@@ -1,0 +1,23 @@
+
+
+                          [help wimpy]
+-----------------------=========+=========-----------------------   
+
+Usage: wimpy
+       wimpy <% of hitpoints> <direction>
+       wimpy off
+
+  This command will allow your character to flee when their 
+ hitpoints reach the % amount set. You will flee in the 
+ <direction> given. The command wimpy without an argument
+ will show what your wimpy is set to. Typing, 'wimpy off'
+ will turn off your wimpy and put you in brave mode. Using,
+ 'random' for the direction will send you in a random
+ direction. This direction may or may not be an exit. Attempts 
+ will be made until you exit the room. 
+
+ For player-killing players, the rules for wimpy are a little
+ skewed. There is a chance of failure, so you might
+ not be able to run away fast enough! You won't know
+ that it fails, it will just fail.
+

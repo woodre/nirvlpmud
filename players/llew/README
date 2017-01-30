@@ -1,0 +1,19 @@
+Folders should be seperated logically.  All area code (monsters,rooms,
+items,etc...) should be in folders with single capital letters.
+
+Any outside of such are in the process of cleanup.
+
+tool/     My wizardly tools, accessible by my personal wiztool.
+closed/   Stuff I'm moving out of closed to be more sharing to younger
+          wizards trying to learn.
+junk/     Old toys, some still for sale at castle. /room/eastroad4
+rooms/    Very first area I made that will never be opened.
+
+***********************************
+              AREAS
+***********************************
+Bcrystal  Opened crystal area is still in closed/crystal.  This will
+          contain my redesigned area and quest.
+Celts     Unopened area with some files from rooms.  No plans to finish.
+Other     Lazy Llew's Bar, some tools I use for testing.
+Toys      S.K. Toys 'n' Stuff opened area with toy_store quest.

@@ -1,0 +1,235 @@
+Bad argument 1 to call_other()
+Current object was players/shinshi/closed/rogue/gob2, line 762
+"rogue_save" in "players/shinshi/closed/rogue/gob2.c" ("players/shinshi/closed/rogue/gob2") line 44
+Error in call out.
+Connection reset by peer detected.
+Connection timed out detected.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Connection reset by peer detected.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Connection reset by peer detected.
+Failed to load file.
+Current object was obj/player#516, line 4
+"go_north" in "obj/player/dr/dirs.c" ("obj/player#516") line 14
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/player.c" ("obj/player#516") line 4339
+"::move_player" in "obj/living.c" ("obj/player#516") line 211
+Bad argument 1 to all_inventory()
+Current object was players/jaraxle/closed/phoenix/mons/mon#4491, line 18
+"heart_beat" in "players/jaraxle/closed/phoenix/mons/mon.c" ("players/jaraxle/closed/phoenix/mons/mon#4491") line 151
+"spec3" in "players/jaraxle/closed/phoenix/mons/mon.c" ("players/jaraxle/closed/phoenix/mons/mon#4491") line 104
+error when executing program in destroyed object players/jaraxle/closed/phoenix/mons/mon#4491
+Heart beat in players/jaraxle/closed/phoenix/mons/mon#4491 turned off.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/zeus/museum/NPC/golem#6222, line 41
+"heart_beat" in "players/zeus/museum/NPC/golem.c" ("players/zeus/museum/NPC/golem#6222") line 190
+"rage" in "players/zeus/museum/NPC/golem.c" ("players/zeus/museum/NPC/golem#6222") line 132
+Heart beat in players/zeus/museum/NPC/golem#6222 turned off.
+Connection reset by peer detected.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Connection reset by peer detected.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Connection reset by peer detected.
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/NPC/eghyron#11056, line 23
+"collect_bounty" in "players/forbin/realms/ruins/NPC/eghyron.c" ("players/forbin/realms/ruins/NPC/eghyron#11056") line 158
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/NPC/eghyron#11056, line 23
+"collect_bounty" in "players/forbin/realms/ruins/NPC/eghyron.c" ("players/forbin/realms/ruins/NPC/eghyron#11056") line 158
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/NPC/eghyron#11056, line 23
+"collect_bounty" in "players/forbin/realms/ruins/NPC/eghyron.c" ("players/forbin/realms/ruins/NPC/eghyron#11056") line 158
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/NPC/eghyron#11056, line 23
+"collect_bounty" in "players/forbin/realms/ruins/NPC/eghyron.c" ("players/forbin/realms/ruins/NPC/eghyron#11056") line 158
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/NPC/eghyron#11056, line 23
+"collect_bounty" in "players/forbin/realms/ruins/NPC/eghyron.c" ("players/forbin/realms/ruins/NPC/eghyron#11056") line 158
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/NPC/eghyron#11056, line 130
+"collect_bounty" in "players/forbin/realms/ruins/NPC/eghyron.c" ("players/forbin/realms/ruins/NPC/eghyron#11056") line 158
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/NPC/eghyron#11056, line 130
+"collect_bounty" in "players/forbin/realms/ruins/NPC/eghyron.c" ("players/forbin/realms/ruins/NPC/eghyron#11056") line 158
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/forbin/realms/ruins/NPC/eghyron#11056, line 35
+"collect_bounty" in "players/forbin/realms/ruins/NPC/eghyron.c" ("players/forbin/realms/ruins/NPC/eghyron#11056") line 158
+Error in call out.
+Connection timed out detected.
+Connection reset by peer detected.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster.c" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Bad argument 1 to call_other()
+Current object was players/guilds/Rangers/Commands/Lead, line 124
+"RangerPower" in "players/guilds/Rangers/RangerCommunicator.c" ("players/guilds/Rangers/RangerCommunicator#9769") line 322
+"RangerPower" in "players/guilds/Rangers/Commands/Lead.c" ("players/guilds/Rangers/Commands/Lead") line 37
+Connection timed out detected.
+Connection reset by peer detected.
+Too long evaluation. Execution aborted.
+Current object was obj/soul#12969, line 114
+"check_password" in "obj/player.c" ("obj/player#12966") line 1774
+"move_player_to_start" in "obj/player.c" ("obj/player#12966") line 1964
+"load_auto_obj" in "obj/player.c" ("obj/player#12966") line 2609
+"init" in "players/snow/dervish/gob.c" ("players/snow/dervish/gob#12970") line 8
+"qtHook" in "obj/soul.c" ("obj/soul#12969") line 5
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Too long evaluation. Execution aborted.
+Current object was players/khrell/monster/skaven/skavenslave#12533, line 17
+"heart_beat" in "players/wocket/turtleville/PETS/neopet.c" ("players/wocket/turtleville/PETS/neopet#3347") line 350
+"catch_tell" in "players/boltar/things/hoth.c" ("players/boltar/things/hoth#12340") line 80
+"id" in "obj/monster" ("players/khrell/monster/skaven/skavenslave#12533") line 213
+Heart beat in players/wocket/turtleville/PETS/neopet#3347 turned off.
+Host unreachable detected.
+Connection timed out detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Connection reset by peer detected.
+Too long evaluation. Execution aborted.
+Current object was players/dragnar/WalkingDead/mons/guard#5448, line 26
+"Sell" in "players/dragnar/WalkingDead/mons/lucas.c" ("players/dragnar/WalkingDead/mons/lucas#5440") line 326
+"sell" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 280
+"sell_all" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 242
+"do_sell" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 221
+"say_msg" in "obj/daemons/shop_daemon.c" ("obj/daemons/shop_daemon") line 70
+"catch_tell" in "obj/monster" ("players/dragnar/WalkingDead/mons/guard#5448") line 353
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15908, line 103
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15908") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15908 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113, line 1518
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113") line 1882
+Heart beat in players/mizan/opl/vehicles/m113 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15908, line 45
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15908") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15908 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15908, line 109
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15908") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15908 turned off.
+Indexing on illegal type.
+Current object was players/mizan/opl/vehicles/m113#15908, line 4
+"heart_beat" in "players/mizan/core/vehicle.c" ("players/mizan/opl/vehicles/m113#15908") line 1882
+Heart beat in players/mizan/opl/vehicles/m113#15908 turned off.
+Bad argument 1 to call_other()
+Current object was players/mizan/opl/environs/poop-volcano#16398, line 23
+"heart_beat" in "players/mizan/opl/environs/poop-volcano.c" ("players/mizan/opl/environs/poop-volcano#16398") line 142
+Heart beat in players/mizan/opl/environs/poop-volcano#16398 turned off.
+Connection timed out detected.
+Bad argument 1 to lower_case()
+Current object was players/nooneelse/workroom, line 115
+"reset" in "players/nooneelse/workroom.c" ("players/nooneelse/workroom") line 257
+"move_guild_gloves" in "players/nooneelse/workroom.c" ("players/nooneelse/workroom") line 67
+Error in look_for_objects_to_swap.
+Connection timed out detected.
+Failed to load file.
+Current object was players/padrone/walker/mover, line 4
+"automove" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 144
+"move_castle" in "players/padrone/walker/castle.c" ("players/padrone/walker/castle") line 234
+"init_command" in "obj/monster" ("players/padrone/walker/mover") line 510
+"move" in "room/room.c" ("room/temple/pastgate") line 297
+"move_player" in "obj/living.c" ("players/padrone/walker/mover") line 211
+Error in call out.
+Too deep recursion.
+Current object was players/mosobp/areas/BATTLE/NPC/saibaman1#8762, line 37
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#15477") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#15477") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#15477") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b1") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#15477") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6702") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6702") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6702") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b1") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6702") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#6702") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#12175") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#12175") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#12175") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b2") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#12175") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13608") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13608") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13608") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b2") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#13608") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#14638") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#14638") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#14638") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b2") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#14638") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#10169") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#10169") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#10169") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b2") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#10169") line 176
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman2.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#10166") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#10166") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#10166") line 1310
+"move" in "room/room.c" ("players/mosobp/areas/BATTLE/rooms/b2") line 297
+"move_player" in "obj/living.c" ("players/mosobp/areas/BATTLE/NPC/saibaman2#10166") line 211
+"init" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman2#10166") line 603
+"reset" in "players/mosobp/areas/BATTLE/NPC/saibaman1.c" ("players/mosobp/areas/BATTLE/NPC/saibaman1#8762") line 25
+"::reset" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#8762") line 107
+"wander" in "obj/monster" ("players/mosobp/areas/BATTLE/NPC/saibaman1#8762") line 1267
+Error in look_for_objects_to_swap.

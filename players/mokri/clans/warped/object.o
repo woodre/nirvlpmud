@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;33mDemon Light[0m (floating)[0m"
+long_desc "A heinous looking skull shaped ring.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "Demon light"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "A heinous looking skull shaped ring.[0mType 'clan_help' for commands."
+clan_short "[1;33mDemon Light[0m (floating)[0m"
+damage_type "light"
+hall_path "/room/church"
+object_name "Demon light"
+owner "dameon"
+spell_alias "dl"
+spell_mess_me "%hi yellow%Demon Light  Flashes% %hi red%BURNING %AKN%"
+spell_mess_room "Exploding with light the %hi yellow%Demon Light%normal% %hi red%BURNS%normal% %AKN%"
+spell_mess_them "%hi yellow%Demon Light  Flashes% %hi red%BURNING %AKN%"
+abilities ({})
+chan_history ({"[Tue Sep  9 14:16:56 2014] Renji: lmao","[Tue Sep  9 14:17:16 2014] Dameon: hmmm","[Tue Sep  9 14:17:22 2014] Dameon: ok i thought i had maxxed this guild","[Tue Sep  9 14:17:28 2014] Dameon: apparently i got another 1.2mill before i max.","[Tue Sep  9 14:17:38 2014] Dameon: go figure, and i spent that last night","[Tue Sep  9 14:18:01 2014] Renji: what glvl are you?","[Tue Sep  9 14:18:03 2014] Dameon: 8","[Tue Sep 30 21:43:51 2014] Smelt has joined the clan!","[Tue Sep 30 21:44:01 2014] Dameon wink","[Tue Sep 30 21:44:16 2014] Dameon: there is now 3 ppl in this clan, all of us necromancers.","[Tue Sep 30 21:44:26 2014] Dameon: no-body messes with anyone's gear","[Tue Sep  1 22:13:59 2015] Jinichi has joined the clan!","[Mon Sep  7 12:11:30 2015] Mysticfire has joined the clan!","[Mon Sep  7 12:12:22 2015] Dameon has promoted Mysticfire to a clan leader!","[Thu Oct  1 20:01:37 2015] Bilbill has joined the clan!","[Thu Oct  1 20:01:45 2015] Dameon: nog","[Sat Oct  3 14:21:36 2015] Shojiro has joined the clan!","[Sat Oct  3 14:22:08 2015] Dameon has promoted Shojiro to a clan leader!","[Sun Oct  4 00:43:46 2015] Dameon: who","[Tue Nov  3 15:01:31 2015] Dameon: target",})
+leaders ({"renji","mysticfire","shojiro",})
+join_type 2
+private_coffer 13513
+public_coffer 0
+spell_delay 5
+spell_id 1
+spell_cost 40
+last_spell_time 1448922540

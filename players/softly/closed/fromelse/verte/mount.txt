@@ -1,0 +1,139 @@
+ * * * * * * * * 
+mount.c [v] 2001
+* * * * * * * *
+
+WHAT
+	I wrote up some mounted code that I thought
+	might come in handy with some people.. basically
+	after the problems I had with the Knight Horses,
+	this automates the mounting and dismounting
+	involved, as well as the display on the player's short().
+
+HOW
+	Inherit /players/vertebraker/closed/std/mount.c -
+	or ask for your own copy to inherit.  This tutorial
+	will tell you all you need to know to use the code
+	to its fullest. [btw this file also inherits my
+      personal monster file, for more info, see monster.txt]
+ 
+********************
+
+A] Sample code;
+______________________________________________________
+
+inherit "/players/vertebraker/closed/std/mount";
+
+void
+reset(int arg)
+{
+    if(arg) return;
+    ::reset();
+    set_name("jack");
+    set_race("donkey");
+    set_short("Jack, the donkey");
+    set_long("\
+Jack the donkey is sitting here waiting for someone\n\
+to mount him.\n");
+    set_level(5);
+}
+
+status
+mountable(object Ob)
+{
+    if((mixed)Ob->query_guild_name() != "donkey_master")
+    {
+      notify_fail("\
+You are not a donkey master, and therefore cannot\n\
+ride this terrible beast.\n");
+      return 0;
+    }
+    else
+      write("\
+You leap onto the back of the donkey.\n");
+    return 1;
+}
+______________________________________________________
+
+The above code is very generic but gets the concept down.
+
+You will recognize everything as making perfect sense
+ except for, perhaps, the 'mountable(ob)' function.
+ This is a function that you can code to allow only
+ certain people to ride the beast [or prohibit kids?]; 
+ Or you could allow it to be mounted by anyone by
+ simply omitting this function from your code.
+
+There are a few optional ways of handling the prettiness
+ of the mount..  Generically it would display in the
+ above example as:
+
+[mount]
+  Vertebraker mounts Jack, the donkey.
+[dismount]
+  Vertebraker dismounts Jack, the donkey.
+[short() in who and in the room]
+  Vertebraker the Donkey Master mounted on Jack, the donkey.
+
+1] To change the mount msg..
+
+  First call a function set_silent_mount() in the reset()
+  function of the code.  Next, sort of "code over" 
+  the mount action..
+  A sample:
+
+  status cmd_mount(string str)
+  {
+      object tmpMount;
+
+      tmpMount = (mixed)this_player()->query_mounted();
+      if(tmpMount) return 0;
+
+      ::cmd_mount(str);
+
+      if(tmpMount != (mixed)this_player()->query_mounted())
+      {
+        write("\
+You hop on back of this brilliant donkey steed and\n\
+click your heels against it gently.\n");
+        return 1;
+      }
+  }
+
+2]   That is only a sample, and the dismount() could be handled
+     in a similar way...
+
+   status cmd_dismount(string str)
+   {
+       if(!this_player()->query_mounted()) return 0;
+
+       ::cmd_dismount(str);
+
+       if(!this_player()->query_mounted())
+       {
+         write("\
+You leap off the back of the donkey steed, your\n\
+sword drawn and ready for battle.\n");
+         return 1;
+       }
+   }
+
+ **** Please note that 'cmd_mount' and 'cmd_dismount'
+ **** are functions already present on the std object
+ **** which is why we are calling them in the inherited
+ **** object.. If you reuse the same function name as above,
+ **** it is unnecessary to add_action a new function
+ **** for mount, etc...
+
+3]   For the short(), the mudlib calls a function 'on_what()'
+     in the object.  Therefore all you need to do is rewrite
+     on_what() to whatever you wish.  i.e.
+
+string
+on_what()
+{
+    return "A lonesome mule, named Jack";
+}
+
+
+		that about wraps everything up.
+		any questions, don't hesitate to ask.

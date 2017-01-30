@@ -1,0 +1,11 @@
+inv_no 6
+done 1
+shield 0
+notin 0
+hit_val ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+miss_val ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+locker_arg ({"--0--","--4--",0,0,"--5--",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+filename ({"players/snow/armor/arch_robes","players/snow/armor/arch_robes","players/fakir/inn/ARM/patchcloak","players/maledicta/town/armor/wshield","players/snow/armor/arch_robes","obj/armor",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+long_dsc "As you step into the room, you realize that your shoesare damp.  You look around, and notice the room is decoratedas a giant tongue.  Dent licks you.There is a light switch on the wall near the door.There are some instructions on the inside of the door."
+owner_name "dent"
+lighton 1

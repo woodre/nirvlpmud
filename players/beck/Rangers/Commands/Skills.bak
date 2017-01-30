@@ -1,0 +1,107 @@
+#include "/players/beck/Defs.h"
+
+RangerPower(string str){
+
+   int exp;
+   int level;
+   int my_exp;
+   int level_exp;
+   int ex_lvl, lvl, spare;
+
+   if(!str){
+      previous_object()->ShowSkills();
+      return 1;
+   }
+   if(sscanf(str, "experience %d", exp) !=1){
+      write("Use 'skills experience <amount>.\n");
+      return 1;
+   }
+/*
+   level = TP->query_level();
+   if(level == 1){ level_exp = 0; }
+   if(level == 2){ level_exp = 1014; }
+   if(level == 3){ level_exp = 1771; }
+   if(level == 4){ level_exp = 2332; }
+   if(level == 5){ level_exp = 5885; }
+   if(level == 6){ level_exp = 12812; }
+   if(level == 7){ level_exp = 26662; }
+   if(level == 8){ level_exp = 39993; }
+   if(level == 9){ level_exp = 59995; }
+   if(level == 10){ level_exp = 90000; }
+   if(level == 11){ level_exp = 134998; }
+   if(level == 12){ level_exp = 195591; }
+   if(level == 13){ level_exp = 295592; }
+   if(level == 14){ level_exp = 492294; }
+   if(level == 15){ level_exp = 620026; }
+   if(level == 16){ level_exp = 820028; }
+   if(level == 17){ level_exp = 1040028; }
+   if(level == 18){ level_exp = 1367106; }
+   if(level == 19){ level_exp = 2000000; }
+*/
+
+   ex_lvl=(int)this_player()->query_extra_level();
+   lvl=(int)this_player()->query_level();
+   my_exp=(int)this_player()->query_exp();
+
+   if(ex_lvl < 1 && lvl < 21)
+     spare = (my_exp - ((int)"/room/adv_guild"->get_next_exp(lvl-1)));
+   if(ex_lvl > 0 && lvl < 21)
+     spare = (my_exp - ((int)"/room/exlv_guild"->get_next_exp(ex_lvl-1)));
+   if(spare >= exp) {
+      TP->add_exp(-exp);
+      PO->ABuildPoints(exp);
+      write("You have converted "+exp+" experience into build points.\n");
+
+
+      PO->ConvertSkillPoint();
+
+      return 1;
+   }
+   else {
+      write("You do not have enough free experience for that.\n");
+      return 1;
+   }
+   return;
+}
+
+QMax(){ return 1; }
+QRangerInfo(){
+   return 1;
+}
+
+RangerInfo(){
+   write(""+
+
+         "The skills command is used to see your current skills\n"+
+         "or to convert experience into skill points.\n"+
+
+         "\n"+
+         "skills                       - shows you all your known skills.\n"+
+         "                               You will see the following:\n"+
+         "                               Name:    Level:  Usable:  Max:  Help:   Wiz:\n"+  
+         "                               _____________________________________________\n"+
+         "                               Rt	  1       Yes      1     Yes     Beck\n\n"+
+         "                               Name:  The name of the skill\n"+
+         "                               Level:  How many skill points you have allocated\n"+
+         "                               Usable:  If the skill is a command you can type to use\n"+
+         "                               Max:  Max # of skill points you are allowed to allocate\n"+
+         "                               Help: Help is available.  Type 'ranger <name>'\n"+
+         "                               Wiz: Name of creation wizard (In case it is broke)\n\n"+
+         "\n"+
+         "skills experience <amount>   - converts <amount> experience into build points.\n"+
+         "                               Also buys skill points if you have enough build points.\n"+
+         "                               Build points = guild experience.  Skill points are\n"+
+         "                               what you actually use to purchase skills.\n"+
+         "\n\n"+
+         "WARNING: Be thoughful on how you allocate your skills.  There are more skills\n"+
+         "available than the number of skill points you will have.  If you allocate too\n"+
+         "many on 'morph' for example, you will not have any left to use to build other\n"+
+         "skills.  This is where you choose your specialties.\n"+
+         "There is no limit to the amount of skill points you can earn.  However, the\n"+
+         "experience cost becomes so high, that they become very difficult to obtain.\n"+
+         "Choose where you use the skill points wisely when you still can get them easily.\n"+
+         "If you later wish to choose to raise items like 'morph' real high, you can do that.\n"+
+          
+        "");
+        return 1;
+}

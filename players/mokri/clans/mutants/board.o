@@ -1,0 +1,15 @@
+subject "Moo"
+new_mess "Yes. Moo."
+messages ({"chip%DATA_BREAK%1182457338%DATA_BREAK%Moo%DATA_BREAK%Yes. Moo.",})
+no_clean 0
+short_desc 0
+long_desc "There is no clan_board_obj here."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_board_obj"
+alias_name 0
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})

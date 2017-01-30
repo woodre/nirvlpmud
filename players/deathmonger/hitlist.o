@@ -1,0 +1,17 @@
+cast_here 0
+dest_dir ({"room/church","south",})
+short_desc "Bounty Hunters' Guild"
+long_desc "The subdued room has small groups of bounty hunters gathered aroundtables telling tall tales about their adventures."
+items ({"frog","A green frog",})
+property 0
+no_castle_flag 0
+no_exits 0
+numbers 0
+name "victim"
+hitlist ({"victim",})
+level 1
+num_members 1
+bounties ({400,})
+logon 1
+whostr "victim"
+amt 400

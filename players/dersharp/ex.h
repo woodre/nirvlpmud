@@ -1,0 +1,9 @@
+#define TPL              this_player()
+#define CPN              capitalize(this_player()->query_name())
+#define OLYMP            "/players/dersharp/olympus/"
+#define ROOMS            "/players/dersharp/rooms/"
+#define WEAPS            "/players/dersharp/weapons/"
+#define ARMOR            "/players/dersharp/armors/"
+#define STUFF            "/players/dersharp/stuff/"
+#define MONS             "/players/dersharp/monsters/"
+#define TOB              this_object()

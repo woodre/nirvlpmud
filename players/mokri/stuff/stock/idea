@@ -1,0 +1,40 @@
+each shop has 'x' shares available (say, 100)
+the shop keeps a running tally of the money it brings in.
+at the end of the month, a player receives 1% (or 1/total number of shares)
+of that total for each share.
+the tally then resets
+
+there will be a 'stock exchange' room.
+for each shop participating, you can view the current and projected
+earnings.
+for example, if the shop has taken in 300,000 coins, and we are 10 days
+in to a 30 day month, the 'current' earnings would be 3,000 (1% of the total)
+per share, and projected would be 9,000 (it would assume the shop would continue
+to earn at the same rate till months end).
+in this room, players may purchase available shares.
+they may also put their shares up for sale.
+when buying any share, its price is the current PROJECTED price. thus, using the
+above example, the price after 10 days would be 9,000 a share. if, during the next
+ten days, the shop earned more than its projected 300,000 for that 10 day period,
+the price would then be higher. if it learned less, the price would be less.
+in this way, people can either gain or lose money by trying to guess which shops
+will under/over perform. they can also purchase stocks in less well traveled areas
+cheap, then try to promote those areas/shops to make their stock price go up.
+
+Example:
+  Based on last months sales, 'shop x' has projected earnings of 300,000 for the month.
+  This makes the price for each share 3,000 coins.
+  Player 'a' buys 10 shares for 30,000.
+  Player 'a' checks in 5 days later. The shop has taken in a total of 60,000 during those 5 days.
+  If we are in a 30 day month, and project this out, the shop should now earn 360,000 coins for the month.
+  This means each share is now worth 3,600.
+  Player 'a' decides to put five of his shares on the market.
+  5 days later, the shop has taken in a total of 90,000 for the month.
+  Since we are now 10 days in, the projected earnings are only 270,000.
+  If that player has any shares still up for sale, player 'b' can buy them for a mere
+  2,700 now!
+  If player 'b' were to purchase 3 shares, 8,100 would go into the bank account of
+  player 'a', and 3 shares would be transfered to player 'b'.
+  The shares go up and down like this all month, based on sales, until the totals
+  reset and everyone with shares is paid off.
+  Once you put shares up for sale, you cannot take them off.

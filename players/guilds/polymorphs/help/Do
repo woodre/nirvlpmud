@@ -1,0 +1,11 @@
+[DO]
+
+  A directional speedster, 'Do' changes you into a gas so you can move
+  around the mud quicker and save yourself a great deal of time.
+
+format:  Do <cmd1>,<cmd2>,<cmd3>...
+
+ You can execute up to 5 commands at once. The format is identical to the
+ quicktyper's 'do' command but note that this 'Do' is uppercase D.
+  Example: 'Do e,e,w,w,s'.
+ Commands are limited to compass direction, up and down, and in and out.

@@ -1,0 +1,55 @@
+
+inherit "obj/treasure";
+
+id(str) { return str == "shop"; }
+
+query_save_flag() { return 1; }
+reset(arg)
+{
+  name = "shop";
+}
+
+short() { return "A portable shop"; }
+
+long()
+{
+  write("This is a portable shop.\n"+
+        "listshop, sellshop and buyshop are the commands you can do.\n");
+
+}
+
+init()
+{
+/* This object allows remote buying and selling at full shop
+ * prices (allowing values > 1000) and has no weight or any sort
+ * of disadvantage. There needs to be a reason for this. -Snow */
+/*
+  add_action("list1", "listshop");
+  add_action("buy1", "buyshop");
+  add_action("sell1", "sellshop");
+*/
+}
+
+list1(str)
+{
+
+    call_other("/players/catwoman/tshop.c", "list", 0);
+    return(1);
+
+}
+
+
+buy1(str)
+{
+  call_other("/players/catwoman/tshop.c", "buy", str);
+  return(1);
+}
+sell1(str)
+{
+	call_other("/players/catwoman/tshop.c", "sell", str);
+	return(1);
+}
+query_value() {
+	return 0;
+}
+

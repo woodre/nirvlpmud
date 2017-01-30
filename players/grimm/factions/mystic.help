@@ -1,0 +1,37 @@
+Command                 Description                                  Cost  GLvl
+-------------------------------------------------------------------------------
+mystic_help or mh ..... This menu .................................. 0 sp .. 10
+mystic_tell <str> ..... Tell the people in your faction a <str> .... 0 sp .. 10
+   or  mt <str> .......                                         ....      ..
+mystic_emote <str> .... Emote a <str> to the people in your ........ 0 sp .. 10
+   or  me <str> .......   faction ..................................      ..
+mystic_who ............ See who in your faction is currently ....... 0 sp .. 10
+   or  mw .............   online ...................................      ..
+heal <x> .............. Heal yourself <x/20> hit points for ........ 0 sp .. 10
+         ..............   <x> coins ................................      ..
+shadizar <mnstr> ...... Engulf a <mnstr> in blue flames ............ 10sp .. 10
+   or zar <mnstr> .....                                 ............      ..
+mbag .................. Conjur up a mystic's magic bag ............. 20sp .. 10
+-------------------------------------------------------------------------------
+veil <mnstr> .......... Cast a veil around a monster, cripling it .. 50sp .. 11
+store <x> ............. Swap <x> spell points for <x/2> stored ..... X hp .. 11
+          .............   spell points (100 max) ...................      ..
+retrieve <x> .......... Retrieve <x> of your stored spell points ... 0 sp .. 11
+crypt ................. Send a corpse back to the crypt (the ....... 30sp .. 11
+      .................   Mystic's Party Room) .....................      ..
+-------------------------------------------------------------------------------
+weaken <mnstr> ........ Weaken a monster during combat ............. 40sp .. 12
+enchant <armor> ....... Enchant a piece of armor making it stronger  80sp .. 12
+imp summon ............ Summon a imp to your side ................. 100sp .. 12
+imp help .............. Get help on the commands your imp can do ... 0 sp .. 12
+-------------------------------------------------------------------------------
+spirits ............... Summon the spirits of old to protect you ... 40sp .. 13
+plague <mnstr> ........ Plague a <mnstr> for 5 rounds .............. 30sp .. 13
+dull <weapon> ......... Curse a weapon, making it weaker ........... 75sp .. 13
+-------------------------------------------------------------------------------
+cure <plyr> ........... Cast a cure spell on a player healing 35 pts 40sp .. 14
+curse <mnstr> ......... Put a curse on a <mnstr> for 5 minutes ..... 40sp .. 14
+-------------------------------------------------------------------------------
+death <mnstr> ......... Summon death to destroy a monster .......... 80sp .. 15
+resurect <plyr> ....... Resurect a player from the dead ............ 80sp .. 15
+scare <plyr> .......... Scare a player ............................. 15sp .. 15

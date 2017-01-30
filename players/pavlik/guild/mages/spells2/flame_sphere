@@ -1,0 +1,58 @@
+/*
+ * spell : Flame Sphere   (enchantment)
+ * level : 2
+ * effect: spell_object: 20 + random(Ench/2)   [max:50]
+ * cost  : 10 + (Ench/4) + Spell Component (Sulfur, 600 coins)
+ * spec  : 
+ * files : none
+ */
+
+flame_sphere(str) {
+
+  object obj;
+  int dmg;
+
+  if(!KNOW("flame")) {
+	write("What?\n");
+	return 1;
+  }
+
+  obj = PAV->valid_spell(str);
+  if(!obj) return 1;
+
+  if(!present("sulfur", tp)) {
+	write("You do not have the neccesary components for this spell.\n");
+	return 1;
+  }
+
+  if(guild->query_next_dmg() > time()) {
+	write("You cannot cast this spell right now.\n");
+	return 1;
+  }
+
+  tell_room(env,
+    ME+" takes a pinch of sulfur and crushes it between his fingertips.\n"+
+    "A "+HIR+"blazing"+NORM+" sphere of flames begins to appear ...\n");
+
+  if(spell_fail2(2, "ench", "int")) {
+	tell_room(env, "The flame sphere fizzles and goes out!\n");
+	write("Your spell fails.\n");
+	destruct(present("sulfur", tp));
+	tp->add_spell_point(-5);
+	return 1;
+  }
+
+  tell_room(env,
+    ME+" hurls the "+HIR+"fiery sphere of death"+NORM+" at "+IT+"!\n"+
+    "The sphere exlodes over "+IT+" and engulfs it in flame!\n");
+
+  dmg = 20 + random(guild->query_total_ench()/2);
+  tp->add_spell_point(-(10 + guild->query_enchantment()/4));
+
+  PAV->tell_damage(dmg,obj);
+  tp->set_spell_dam(dmg * 5/2);
+
+  destruct(present("sulfur", tp));
+  return 1;
+
+}

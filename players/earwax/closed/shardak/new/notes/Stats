@@ -1,0 +1,28 @@
+Working With Shard Stats - Earwax 1/16/04
+
+The following conventions are used with working with our stat system.
+All our stats are stored in an array - usually named GStats (as it is in the
+gob), but whatever you name it in a given command will work.
+
+The names are the index number in the array that corresponds to a given
+stat.  What this means is that ARCANA is array index 0.
+
+To access them:
+
+arcana = GStats[ARC] (or ARCANA)
+
+ 0  ARCANA (ARC)
+ 1  MAGIK  (MGK)
+ 2  CONFLAGRATION (CON)
+ 3  RANCOR (RAN)
+ 4  FERVOR (FER)
+ 5  DOMINATION (DOM)
+ 6  SUBJUGATION (SUB)
+ 7  WRATH (WRA)
+
+ 8  GLEVEL
+ 9  GRANK
+10  SAC_POOL
+11  GEXP
+
+Other stats, info will be added here over time if necessary.

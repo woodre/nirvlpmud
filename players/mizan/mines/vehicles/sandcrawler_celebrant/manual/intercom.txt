@@ -1,0 +1,25 @@
+>> Intercom system
+
+The passenger and driver seats have separate intercom systems that allow
+people on the outside to hear exactly what the driver or passenger says.
+
+Note that other passengers aboard the vehicle will also hear the exact same
+communications. In order to use this intercom please reference these commands.
+For those in the cargo area, refer to the 'icom' command. Cargo area intercom
+is only used for flash traffic, and is ONE-WAY in nature. You will not be able
+to hear communications from the outside.
+
+intercom on      - Turns the intercom on. You must be at the driver or
+                   passenger seat to use this function. Those in the cargo area
+                   have a separate intercom facility. Again, the driver and
+                   passenger seats have their own separate intercom systems.
+                   Once activated, anything the operator 'says' will be heard
+                   clearly by those inside AND outside the vehicle. The 'icom'
+                   command will be redundant when the intercom is in this mode.
+
+intercom off     - Turns the intercom off. Only passengers inside the vehicle
+                   will hear verbal communications.
+
+icom <msg>       - Intercoms a brief one line message without toggling the 
+                   system on or off. Useful for flash traffic.
+

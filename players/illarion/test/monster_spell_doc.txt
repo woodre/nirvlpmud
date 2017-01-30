@@ -1,0 +1,226 @@
+Enhanced Monster Spells
+
+(By Illarion, June 2004)
+
+The enhanced monster spells allow a wizard to add multiple spells with
+multiple damage types to a monster.
+
+Obviously exp is recalculated based on the extra damage from these spells.
+It's added in exactly the same way as the current spell code, but with
+a bonus of 3/2 for non-physical damage.
+
+The following functions are available for setting up and manipulating
+spells
+
+1) add_spell
+2) remove_spell
+3) set_multi_cast
+4) query_spells
+5) query_spell_info
+
+add_spell
+
+How new spells are added to the monster.  It returns 1 for
+success, and 0 for failure.
+
+It takes the following arguments:
+
+1) name (string) required
+      The name of the spell.  Players never see this name, but each spell
+      must have its own unique name.  If this argument is 0 or the name
+      of a spell the monster already has, add_spell will fail
+
+2) target message (string) optional
+      The string seen by the target of a spell.  You can add in ansi,
+      names, and pronouns using the codes listed at the end of this file.
+      You can also put in 0 here to show no message to the target.
+      A newline is NOT automatically appended.
+
+3) room message (string) optional
+      This string is seen by everyone in the room except the target of
+      the spell.  You can add in ansi, names, and pronouns using the codes
+      listed at the end of the file.  Put in a 0 to show no message to the
+      room.
+      A newline is NOT automatically appended.
+
+4) chance (integer) required 1-100 only
+      The percentage chance that this spell will be cast in any given
+      round.  IMPORTANT: This is calculated differently depending on
+      set_multi_cast.  See the notes on that below.
+
+5) damage (integer or array) optional positive only
+      The max amount of damage the spell can do (it's randomized
+      automatically)  Use a simple integer if you're only using one
+      damage type, or an array of the damage for each type if you're
+      using multiple.  You can also choose to do no damage (although that
+      would be pointless unless you also used the extra function option
+      below)
+      
+      The damage can also be a string or an array of strings in either the
+      form "min-max" (ie "10-20") or #d#+# (ie 2d6+5, like in D&D)
+      Having a max that's less than the min or leaving out arguments is
+      a bad idea.
+     
+At this point you can stop passing arguments unless you need something
+from the options below.
+      
+6) damage type (string or array) optional
+      The damage type for the damage the spell does to the target.  If you
+      leave this argument out or pass a 0 it will default to physical.
+      If you passed an array for damage, you must also pass an array for
+      damage type of the same size.
+
+7) hit all attackers (int) optional
+      If set to 1, the spell will hit everything in the room that is
+      attacking the monster.  Damage is randomized seperately for each
+      hit.  In addition, if this is set to one the whole room will see
+      the room message (including the targets) and each target will see
+      the target message.
+      
+      As suggested by Forbin you can choose more options:
+      2-hit only the alt attacker object (not the main target)
+      3-hit all attacking players, but not non-players
+      4-hit all attacking non-players, but not players
+      5-hit a single attacker at random
+      6-hit a single player attacker at random
+      7-hit a single non-player attacker at random
+      
+      Options that have only a single target will display messages as
+      appropriate.  Options with multiple possible targets will show messages
+      just as though the argument were 1, even if only one target is hit
+      If there are no non-players attacking, non-player options won't do
+      anything when used.
+      
+      
+
+8) extra function (string) optional
+      An extra function the spell calls- allowing you to do other nasty
+      things to the target.  It looks for the function in the location
+      you set in the next argument, or in this_object() by default.
+      The function is passed three arguments:
+        A) target - the target of the spell
+        B) room - the current room where the monster and target are
+        C) damage - the amount of damage (if any) just done to the target
+           by the spell calling the function
+      If hit all attackers is on, the function is called once per target
+
+9) extra function object (object) optional
+      If the extra function is somewhere other than the same object as
+      the monster, that location should go into this argument.
+
+
+remove_spell
+
+Removes a spell from the monster.  It takes one argument, a string, the
+name of the spell from add_spell.  This might be useful for a monster
+that is debilitated by a certain item.
+
+set_multi_cast
+
+Controls how the chance of the spell is used to calculate wether it is cast
+or not.  It can be set to either 1 or 0.
+
+When set to 0 (the default) only one spell (or none) will be cast per round.
+The chance of a spell being cast at all is the total of the chances of each
+spell.  Two 10% spells means a 20% chance one of them will be cast, a 20%
+and a 30% spell means a 50% chance of a spell being cast each round.  If the
+chances of your spells total 100% or greater, a spell will be cast EVERY
+round, and any spells that bring the total to above 100 won't be cast.
+
+When multi-cast is set to 1, each spell has a chance of being cast in any
+given round.  Two 10% spells means there's a 10% chance the first one will
+be cast, and a 10% chance the second one will be cast.  A 20 and a 50 means
+there's a 20% chance of the first spell every round, and a 50% chance of
+the second spell every round.  In this case it doesn't matter what the total
+chance of all the spells is.
+
+query_spells
+
+returns an array of the names of all the spells the monster currently has
+
+query_spell_info
+
+takes the name of a spell as an argument, and returns the array that contains
+all the information about the spell.  Probably not useful, but I put it in
+so that you can get out all the information you put in.
+
+The codes for adding names, colors, and pronouns is as follows, and uses
+Vertebraker's code:
+
+   #MN#: My name           #MP#: My possessive    #MS#: My subjective
+   #MO#: My objective      #TN#: Target Name      #TP#: Target possessive
+   #TS#: Target subjective #TO#: Target Objective #RET#: Carriage return [\n]
+
+ You may capitalize any of these modifiers with a C in front,
+  e.g. #CMP# for capitalized my possess., i.e. "His" instead of "his"
+
+                     Low Intensity Colours:
+ [===========================================================]
+
+  $R$ = Red     $B$ = Blue      $G$ = Green     $M$ = Magenta
+  $C$ = Cyan    $Y$ = Yellow    $W$ = White     $K$ = Black
+
+                     High Intensity Colours:
+ [===========================================================]
+
+  $HR$ = Red    $HB$ = Blue     $HG$ = Green    $HM$ = Magenta
+  $HC$ = Cyan   $HY$ = Yellow   $HW$ = White    $HK$ = Black
+
+  $N$ = reset ansi              $H$ = switch to high intensity
+Finally, here are some examples to get you started:
+
+Here's a typical spell, little different from the old-style way:
+
+add_spell("fireball","#MN# throws a large $HR$fireball$N$ at you.\n",
+                     "#MN# throws a large $HR$fireball$N$ at #TN#.\n",
+                     20,50,"other|fire");
+This will create a spell that has a 20% chance of being used that
+does from 0-50 points of fire damage to the target.
+
+In D&D, the magic missile spell actually consists of multiple missiles
+fired all at the same time:
+
+add_spell("magic missile",
+"#MN# waves #MP# hand, and several $M$magic missiles$N\n speed toward you.\n",
+"#MN# waves #MP# hand, and several $M$magic missiles$N\n speed toward $TN$.\n",
+10,({6,6,6,6,6}),({"magic","magic","magic","magic","magic"}));
+
+With set_multi_cast(0) then in each round random(100)+1 is calculated.
+A value from 1-20 would result in a fireball, a value from 21-30 would
+result in a magic missile, and 31-100 would mean no spell at all.
+
+With set_multi_cast(1) then random(100)+1 is calculated, and if it's 1-20
+a fireball is cast.  random(100)+1 is then calculated again, and if it's 
+1-10 a magic missile is cast.  Both spells can happen in a round, or only
+one, or neither.
+
+Here's one that uses multiple damage types, and hits everyone that's
+currently giving the monster grief:
+
+add_spell("hellfire",
+"The $HK$HELL$HR$FIRE$N$ burns you!\n",
+"#MN# goes down on one knee, and calls $HK$HELL$HR$FIRE$N$ up from the ground.\n",
+15,({20,20}),({"other|fire","other|evil"}),1);
+
+This causes everyone attacking the monster (players, pets, and kids) to
+recieve 0-20 fire damage and 0-20 evil damage.  The whole room sees the
+message about the monster calling the fire, and each target sees the
+message about being burned.
+
+Finally, the extra function:
+
+add_spell("eyepoke",
+"#MN# jabs you in the eye with #MP# thumb.",
+"#MN# jabs #TN# in the eye with #MP# thumb.",
+10,10,0,0,"eyepoke_extra");
+
+This spell takes advantage of the fact that a 0 for damage type defaults to
+physical damage, and that no object for the function defaults to this_object.
+Elsewhere in the monster's code you'll want this function:
+
+void eyepoke_extra(object target,object room,int damage) {
+
+}
+
+You can use the function to add an emote about the player screaming bloody
+murder, or to make the eyepoke do something extra nasty.

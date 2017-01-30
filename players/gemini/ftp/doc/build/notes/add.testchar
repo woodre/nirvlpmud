@@ -1,0 +1,37 @@
+Vertebraker [7.4.04]
+
+Okay, I'm requesting that everyone register
+their test characters with the new datafile/daemon
+system I wrote.  All you have to do is log on the test
+character and type "add_testchar <testchar>" with
+your wizard. The code takes care of the rest.
+
+And btw, all you have to do in order to query whether
+a player is a testchar is do a:
+
+  if(ob->is_testchar())  ..
+
+/obj/play/testchar.h holds some relevant
+functions.
+
+/obj/user/testchar-d.c is the daemon.
+
+Currently registering your testchar automatically
+puts a msg in short(), as well as finger, and registers
+him to a listing in the wiz cmd "testchars".
+
+Ok, I also forgot, it won't log your testchar to
+the top reboot xp list or run in xp contests...
+mm.. some other things I won't mention.
+
+Anyway, just do the friggin' thing, it takes two
+seconds.
+
+To recap:
+1] Login test character.
+2] Type 'add_testchar <testcharname>'.
+3] Ok, no real step 3, but you can type 'testchars'
+   to make sure it worked.
+
+Thanks, and mazeltov.
+

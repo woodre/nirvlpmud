@@ -1,0 +1,30 @@
+ 
+added 5) 9-18-97 Bp
+altered spell cost in 5) 12-2-97 Bp
+Teleportation Devices:
+
+A teleportation device is an item that allows a player to transfer from one
+place to another without entering the intervening rooms. This file concerns
+only items that give this power. Guild teleports will be covered later.
+
+1. All teleports will be location based. There will be NO player to player
+   teleportation. This means an item that brings the player to the church is
+   fine; however, an item that teleports johny to billy is illegal.
+
+2. All teleport items should have a limited amount of uses. When all the uses
+   are done, the item should destruct. I suggest no more than 10 uses per item.
+
+3. All teleport items MUST check for the realm() function of the destination
+   and leaving room to check for non teleport areas. Failure to do this will
+   NOT be accepted.
+
+4. The cost of the items for now will be left up to your common sense;
+   however, here are some aspects to consider. If the item costs the players
+   sp,hp,coins,ect. per each use, then its cost can be decreased. If the
+   device has the chance of not working, or working incorectly it too can have
+   a lower price. Use your imagination. A teleportation device is a type of
+   magic, and magic is by no means an exact science.
+ 
+5. Teleportation devices and settable tellports are not to be guild
+features. Guilds may have a fixed teleport command for rescue with
+a basic cost of  55+random(5)sp. 

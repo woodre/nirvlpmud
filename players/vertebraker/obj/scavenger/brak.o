@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+files ({"/players/wren/Area/starbug/items/groinal","/players/wren/Area/starbug/items/indianheaddress","/players/snow/shadows/stuff/cloak","/obj/weapon","/players/snow/shadows/stuff/sgem","/players/saber/armor/mini","/players/pain/NEW/weap/sword","/players/wren/Area/starbug/items/mirror","/players/wren/Area/starbug/items/sparehead","/players/hawkeye/weapons/weapon","/players/saber/stuff/mic","/obj/armor","/players/wren/Area/starbug/items/gauntlet","/players/mythos/awep/zantetsuken","/players/angel/area/stargate/obj/staff","/players/boltar/things/tree2","/players/wren/Area/starbug/items/laundry","/players/wren/Area/starbug/items/bazookoid","/obj/armor","/players/saber/armor/slboots","/players/angel/area/stargate/obj/P90","/players/boltar/things/bell","/players/hippo/weapons/glue","/players/mythos/awep/naginata","/players/mythos/aarmor/mempo",})
+shorts ({"Kryten's groinal attachment","a tiny indian headdress","A dusky cloak","Baby rattle","A dusky gem","A skin tight leather mini skirt","Sword","a slim pocket mirror","Kryten's sparehead 3.","Hawkeye's Scalpel","A microphone","A pair of [1mwhite[0m boots","Time gauntlet","[34mZantetsuken[0m","[1;36mSTAFF WEAPON[0m","A Christmas tree","Lister's dirty laundry","Bazookoid [1;30mmkII[2;37;0m","A suit of [1mwhite[0m platemail","Stiletto heeled leather boots","Machine gun","A small gold colored bell","a strong, 1 second glue","Naginata","Mempo",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,})
+loaded 0

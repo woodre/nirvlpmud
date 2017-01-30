@@ -1,0 +1,93 @@
+
+#include "../define.h"
+#define DAEMON "/players/maledicta/templar/gdaemon.c"
+#define CRIME "/players/boltar/templar/daemon/Criminal.c"
+inherit ROOM;
+
+reset(arg) {
+int blah; 
+if(DAEMON->query_gl(1) > 5){ 
+  if(!present("townguard_gate_mob", this_object())){
+for(blah = 0; blah < 3; blah++){
+   move_object(clone_object("/players/maledicta/ares/mobs/gate_guard.c"), this_object());
+   }
+  } 
+ }
+if(DAEMON->gate1_condition() && !present("big_ol_gate", this_object())){
+   move_object(clone_object("/players/maledicta/ares/mobs/gate1.c"), this_object());
+   }
+   if(arg) return;
+   set_short(RED+"New Ares"+NORM);
+   set_light(1);
+   set_long(
+YEL+"###"+NORM+BOLD+"|"+NORM+YEL+"####"+NORM+"  [Main Street]\n"+
+YEL+"##"+NORM+HIB+"A"+NORM+BOLD+"+---"+NORM+YEL+"#"+NORM+"\n"+
+YEL+"###"+NORM+BOLD+"|"+NORM+YEL+"#"+NORM+HIB+"W"+NORM+BOLD+"|"+NORM+YEL+"#"+NORM+"  You stand upon the large street that cuts\n"+
+BOLD+"---+"+NORM+YEL+"##"+NORM+BOLD+"+-"+NORM+"  through the center of town. Ahead is a\n"+ 
+YEL+"#"+NORM+HIB+"a"+NORM+YEL+"#"+NORM+BOLD+"|"+NORM+YEL+"#"+NORM+HIB+"B"+NORM+BOLD+"|"+NORM+YEL+"#"+NORM+"  large well and grouping of statues.\n"+
+YEL+"#"+NORM+HIB+"I"+NORM+YEL+"#"+NORM+BOLD+"|"+NORM+YEL+"####"+NORM+"  In the far distance on a hill is the\n"+
+YEL+"#"+NORM+BOLD+"--+---"+NORM+YEL+"#"+NORM+"  magnificent castle of the Templars.\n"+
+YEL+"###"+HIR+"x"+NORM+YEL+"####"+NORM+"\n");
+
+
+   add_item(
+      "street",
+      "A wide paved street that cuts through the center of New Ares");
+   add_item(
+      "well",
+      "A stone well that stands in the intersection. Several statues\n"+
+      "surround it");
+   add_item(
+      "statues",
+      "Large statues that commemorate the great generals and rulers of\n"+
+      "New Ares");
+   add_item(
+      "hill",
+      "A large hill at the north end of town. A castle can be found at\n"+
+      "its summit");
+   add_item(
+      "castle",
+      "A huge castle that rises high into the sky. It is the central\n"+
+      "command for the Templars of this region.");
+   add_exit("/players/maledicta/cont/rooms/606", "exit"); 
+   add_exit(ROOMS+"city2","enter"); 
+   }
+
+init(){
+ ::init();
+ add_action("get_key", "key");
+ add_action("nogo", "enter");
+ }
+
+nogo(){
+ if(present("townguard_gate_mob", this_object())){
+   if(CRIME->Query(this_player()->query_real_name())){
+      tell_room(this_object(),
+      "The guard blocks the criminal "+this_player()->query_real_name()+"!\n");
+      return 1;
+      }
+   if(DAEMON->query_war2() && !present("KnightInvite", this_player())){
+      tell_room(this_object(),
+      "The Templar Guards block your entrance.\n"+
+      "A guard shouts, \"No entrance! We are currently at War status!\"\n");
+      return 1;
+      }
+   }
+}
+
+query_gate(){
+if(present("big_ol_gate", this_object())) return 1;
+return 0;
+}
+
+
+get_key(){
+ write("\n\n"+HIM+"Map Key Code:"+NORM+"\n"+
+       "   A "+HIM+"-"+NORM+"  Armorer\n"+
+       "   B "+HIM+"-"+NORM+"  Bar\n"+
+       "   I "+HIM+"-"+NORM+"  Inn\n"+
+       "   W "+HIM+"-"+NORM+"  WeaponSmith\n"+
+       "   a "+HIM+"-"+NORM+"  Alchemist\n"+
+       "   x "+HIM+"-"+NORM+"  You!\n\n\n");
+  return 1;
+  }

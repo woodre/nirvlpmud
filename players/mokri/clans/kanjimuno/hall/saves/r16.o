@@ -1,0 +1,33 @@
+no_exit_display 0
+no_clean 1
+cast_here 0
+dest_dir ({"/players/mokri/clans/kanjimuno/hall/r13","east","/players/mokri/clans/kanjimuno/hall/r21","up",})
+short_desc "Isamu's Weapon Storage[0m"
+long_desc "Isamu's Weapon Storage[0m"
+items 0
+property ({"NT","NT","NT",})
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers ({"no","one","two","three","four","five","six","seven","eight","nine",})
+odors_msg 0
+feels_msg 0
+sounds_msg 0
+tastes_msg 0
+ExitMsgs 0
+smells 0
+listens 0
+tastes 0
+touchs 0
+msgs 0
+objects 0
+msg_count 0
+hb 0
+search_count 0
+no_teleport 1
+pk 0
+spar 0
+no_magic 0
+no_fight 0
+light_level 0
+Items ({"A [1mdragon-head[2;37;0m katana","/players/illarion/high/obj/dkatana_new","70",0,0,"A [1mdragon-head[2;37;0m katana","/players/illarion/high/obj/dkatana_new","130",22,3,"[31mThe Berserker Axe '[1;37mBite[0m[31m' [1;30m[[1;36m Chaos Honed [1;30m][0m [[1;32mSet of the Berzerker[0m][0m[0m","/players/jareel/weapons/stormbull/ROGAR/ChaosAx2",0,0,0,"[31mBerserker Axe '[1;37mRoar[0m[31m' [1;30m[[1;36m Chaos Honed [1;30m][0m [[1;32mSet of the Berzerker[0m][0m[0m","/players/jareel/weapons/stormbull/ROGAR/ChaosAx1",0,0,0,"Element of [34mAIR[0m","/players/mythos/awep/forest/air",0,0,0,"Element of [34mAIR[0m","/players/mythos/awep/forest/air",0,6,5,"[31mThe Berserker Axe '[1;37mBite[0m[31m' [1;30m[[1;36m Chaos Honed [1;30m][0m [[1;32mSet of the Berzerker[0m][0m[0m","/players/jareel/weapons/stormbull/ROGAR/ChaosAx2",0,0,0,"[31mBerserker Axe '[1;37mRoar[0m[31m' [1;30m[[1;36m Chaos Honed [1;30m][0m [[1;32mSet of the Berzerker[0m][0m[0m","/players/jareel/weapons/stormbull/ROGAR/ChaosAx1",0,0,0,"[33mRevive, [1;34mHealing Staff of Virtue[0m","/players/jareel/weapons/CALANAARROY/HealerStaff",0,0,0,})

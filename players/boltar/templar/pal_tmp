@@ -1,0 +1,29 @@
+/************************************/
+/*    BEGIN PALADIN ADDITIONS       */
+/************************************/
+/*
+     if(!is_npc && this_object()->query_guild_name()=="paladin") {
+*/
+   pro_object = present("pro_object", this_object());
+   if(pro_object && paladin_shield && pro_object->query_combat_method() == 2) {
+     ac_tmp += call_other(paladin_shield, "shield_bonus", pro_object);
+   }
+/************************************/
+/*     END PALADIN ADDITIONS        */
+/************************************/
+/***********************************/
+/* START TEMPLAR ADD              */
+/**********************************/
+  if(!is_npc && this_object()->query_guild_name()=="Knights Templar") {
+    templar_ob = present("KnightTemplar", this_object());
+    if(templar_ob)
+      ac_tmp += templar_ob->skill_check_def();
+     }
+/***********************************/
+/*  END TEMPLAR ADD                */
+/***********************************/
+    if(!is_npc && this_object()->query_pregnancy()){
+     i = age - this_object()->query_pregnancy();
+     i = i/5000;
+     ac_tmp = ac_tmp - i;
+    }

@@ -1,0 +1,20 @@
+no_clean 0
+cast_here 0
+dest_dir ({"/players/maledicta/castle/rooms/m3.c","out",})
+short_desc 0
+long_desc "[1m  You find yourself standing in a room made of dark matter.  The walls
+glisten in the dim light.  A small blackish pool stands in the center
+of the room.[2;37;0m
+"
+items ({"pool","You concentrate on the pool and find that you may do any of the
+following:
+   news             -  Use this command to see any news on the guild.
+   store_coins      -  Store coins in the pool of matter","walls","They are made of a rock hard glistening substance. You aren't sure
+exactly what it is",})
+property 0
+no_castle_flag 0
+no_exits 0
+custom_exits 0
+numbers 0
+allow_challenge 0
+names "0-#boltar--#boltar--#smack--#smack--#smokey--#smokey--#francesco--#diesel--#diesel-"

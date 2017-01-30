@@ -1,0 +1,35 @@
+The following are results of the dmodify() function for 10 rounds.
+The numbers shown are EXTRA damage applied for 10 rounds in each
+of the 3 available 'modes' a cyberninja may fight in.
+The cost to be able to gain these bonuses is 160k coins 1 credit == 1 coin).
+The player must also be PK.
+The bonuses are based on stats and guild rank. The numbers below
+are for a player with the following relevant stats:
+
+Player level: 19+7
+Guild Level: 10 (max)
+Belt Level: Black 10 (max)
+Honor: max
+Intelligence: 27
+Stealth: 25
+Dexterity: 26
+Luck: 26
+
+The code may be viewed at: /players/mokri/cybers/dmodify.c
+
+
+    STEALH  NORMAL  HYPER
+    ---------------------
+    4       17      22
+    8       9       27
+    7       19      15
+    7       14      11
+    1       18      17
+    2       8       12
+    8       18      24
+    5       17      16
+    7       10      6
+    4       9       22
+    ---------------------
+tot 53      139     172
+avg 5.3     13.9    17.2

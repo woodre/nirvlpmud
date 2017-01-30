@@ -1,0 +1,79 @@
+Thu Oct 15 10:54:09 1998--Action: dested gnome's star Reason: they're easy to get and he was being annoying
+Sat Oct 24 15:28:31 1998--Action: reset guest's home Reason: It seemed to be set to one of Mythos's toys
+Mon Nov  9 12:42:44 1998--Action: transed grog to a nearby room Reason: ~daranath/qualtor/cryst3 was bugged
+Sun Dec 13 16:26:24 1998--Action: created/modified caine Reason: guild testing
+Sun Dec 13 18:45:07 1998--Action: dested a beatfixer from fawn Reason: she had two and requested it
+Tue Dec 15 10:02:52 1998--Action: moved rive to church/changed home Reason: lost his guild ob and was stuck in dmage LIMBO
+Wed Jan  6 22:52:48 1999 : added a command to ~/obj/dring.c to use the new logger
+Thu Jan 28 20:02:34 1999 : changed the weapon for ~/high/mon/duncan.c with Snow's approval
+Mon Mar 15 20:15:55 1999 : changed the unique monsters in my area to use the original object instead of a clone
+Mon Mar 15 20:37:30 1999 : added tellhistory compliance to my custom teller
+Wed Mar 17 14:36:08 1999 : dested vartanian's ranger ob because something is screwy in the ranger master ob
+Tue Mar 23 22:47:02 1999 : refunded some experience Panther lost as a result of the fight_area bug, with Boltar's permission
+Sun Apr  4 22:46:18 1999 : beefed up Duncan's anti attack self code a bit
+Sun Apr 18 00:18:02 1999 : restored clone a vampire object to lilia so she could get her equipment and quit, she did both
+Sun Apr 25 02:18:07 1999 : Got rid of Dimitrix's +1 level she doesn't have the experience to have
+Thu Jun 24 01:25:28 1999 : dested some usagi copies to free up login slots
+Tue Mar  7 11:10:03 2000--Action: At Zeus's suggestion, changed my castle so that it incorporates entrances to both areas, and removed the second 'trail' object. Reason: The second object kept getting cleaned
+Sun Jul 30 03:33:56 2000 : modified the katana so storing it in the lockers wouldn't mess up the short desc
+Wed Oct 30 13:56:57 2002 : With Jaraxle's approval (and help) I made several changes to Snow's dervish guild that should prevent dervish from attacking monsters under 15% health that are already fighting someone else.  Since they auto-tank, a few were using the ability to steal kills
+Wed Oct 30 14:00:18 2002 : Most of the changes are in /players/snow/dervish/gobdir/damage.h  A "kill" verb was added to /players/snow/dervish/gobdir/init.h  The sandblast spell in /players/snow/dervish/lib/sandblast.t was also modified
+Sun Dec  1 00:59:40 2002--Action: gave shadowstone 5k exp, then took it away Reason: the stat changes prevented him from getting into newbie lockers- he had too much experience, and couldn't spend it
+Wed Jun  4 21:28:10 2003 : restored 92k of (124k exp actually spent) to hardly who was trying to raise stats beyond BCM max, but couldn't see the failure messages as they were output in black
+Fri Jul  4 01:03:35 2003 : removed feld's areas from /open/TELE_ERR#They were previously just commented out, which didn't work because the file is read in as raw text, not compiled
+Tue Aug  5 14:43:21 2003--Action: restore exp to scoobydoo Reason:  from second death to worms after he was already dead and they should have been cleared from his inventory
+[Jul 19 2004 04:16] A: Registered Test Character: Illtest
+[Jul 19 2004 04:16] A: Registered Test Character: Notharper
+[Dec  4 2004 13:13] A: Registered Test Character: Illtwo
+[0;36m[[2;37;0m05 Dec 2004 07:05:56[0;36m] [2;37;0mupdates major armors, weapons, and monsters in /players/saber to dtypes
+[0;36m[[2;37;0m05 Dec 2004 13:37[0;36m] [2;37;0mcorrected a call_out error in pesty's guild object
+[0;36m[[2;37;0m05 Dec 2004 17:03[0;36m] [2;37;0mfixed an hb-killer in /players/hogath/area/items/rring.c  note that hogath's character morgion did not report or fix this problem himself, despite 20+ monsters with dead heart_beats
+[0;36m[[2;37;0m11 Dec 2004 23:12[0;36m] [2;37;0mupdated notarmor and notweapon messages in /players/llew/closed/xetra_claws.c
+[0;36m[[2;37;0m12 Dec 2004 00:49[0;36m] [2;37;0mmodified bloodfist player shadow object to properly pass all variables when a weapon is wielded
+[0;36m[[2;37;0m12 Dec 2004 00:50[0;36m] [2;37;0mmodified /players/snow/WEAPONS/hon_sword.c so that it would modify the ac of monsters wearing armor correctly and so that it would not change monster exp values by lowering their ac
+[0;36m[[2;37;0m15 Dec 2004 11:45[0;36m] [2;37;0mcorrected a minor issue in the lockers
+[0;36m[[2;37;0m31 Dec 2004 13:28[0;36m] [2;37;0mmade a slight change in /players/vertebraker/misc/h/simon.c so that templars get their horse when they first buy it
+[0;36m[[2;37;0m10 Apr 2005 16:32[0;36m] [2;37;0mmodified mythos's library so if players quit out or use the tunnel after dying their home is reset to church
+[0;36m[[2;37;0m15 Apr 2005 20:06[0;36m] [2;37;0mgave oz 20k coins to buy a new templar horse; his current one disappeared for no reason I could find in the code
+[0;36m[[2;37;0m20 Apr 2005 21:03[0;36m] [2;37;0mgranted sami some extra experience to make up for him dying to conan multiple times due to the previous conan bug noted as fixed
+[0;36m[[2;37;0m20 Apr 2005 21:26[0;36m] [2;37;0mdid some player healing trying to diagnose the problem with lag in pk.  no conclusions so far
+[0;36m[[2;37;0m23 Apr 2005 04:37[0;36m] [2;37;0mrestored experience symbio lost in pk, since it was falsely reported that the lag issue was ficed
+[0;36m[[2;37;0m08 May 2005 19:48[0;36m] [2;37;0mrestored some exp to worm who died in what appeared to be a guild-related bug
+[May 13 2005 11:16] A: Registered Test Character: Illthree
+[0;36m[[2;37;0m18 May 2005 20:21[0;36m] [2;37;0m(yesterday) added an is_locked() check to shardak dragon item delivery
+[0;36m[[2;37;0m22 May 2005 23:58[0;36m] [2;37;0mchanged the elemental sword to be unsavable when broken - reported by vahiti
+[0;36m[[2;37;0m14 Dec 2005 18:10[0;36m] [2;37;0mfixed it so derv can't use shields and offwield simultanously
+[0;36m[[2;37;0m14 Dec 2005 18:23[0;36m] [2;37;0mnote that vahiti was abusing the above bug/exploit
+[Aug 14 2009 17:23] A: restored 400k to arrow - he lost it due to the cyberJesus special attack firing when he was no longer in the room
+[Aug 20 2009 19:23] A: /players/chip/closed/other/SATAN/room2.c no longer dests itself as soon as someone uses the exit.
+[Aug 24 2009 23:54] A: Normal death code will now log previous_object if there is no this_player
+[Aug 28 2009 18:57] A: updated air to sap the stats of a spinal's owner.  since spinals return 0 for is_pet they are completely avoiding one of the drawbacks of this very powerful weapon
+[Aug 28 2009 18:58] A: filename: /players/mythos/awep/forest/air.c
+[Aug 29 2009 12:35] A: corrected exits in  /players/saber/ryllian/arena4.c and /players/saber/ryllian/arena1.c
+[Aug 29 2009 14:52] A: one more adjustment to /players/mythos/awep/forest/air.c - chance of stat lost is now 1/250 instead of 1/200 as stats cost more now
+[Aug 29 2009 16:27] A: restored 285965 exp enigma lost to a bug
+[Dec 14 2009 00:12] A: restored 300k to theseius in partial compensation for multiple deaths from typing get all around a shardak bonfire
+[Jun  9 2010 00:21] A: restored exp mode lost due to additional deaths from forbidden forest worms that stayed on him as a ghost
+[Mar  8 2011 18:29] A: subtracted some exp from heinous, who managed to find maxint
+[Apr  1 2011 23:20] A: fixed /obj/verte/sanitizer.c   It was getting stuck in an infinite loop so any profanity was generating an error instead of posting to channels
+[Apr  1 2011 23:26] A: updated /players/snow/dervish/hall/hall.c to hopefully fully remove all references to the guild when players quit
+[Apr  1 2011 23:38] A: updated wlog so that wlog <wizname> tails that wizard's log
+[Jun 16 2011 22:05] A: Changed Oz's luck from 57 to 1
+[Aug 20 2011 18:24] A: jailed demonic for a day for bitching about what he considers wizard misconduct on gossip
+[Aug 20 2011 18:39] A: jailed ravennight for 1 day.  See note about demonic.
+[Jan 26 2014 15:36] A: jailed demonic for 3 days as a cooling off period
+[Jan 30 2014 20:41] A: added /players/guilds/healers/members/left - when someone quits the guild their file is backed up htere, and the missing dir was causing an error when someone quit
+[Feb 18 2014 21:21] A: promoted shinshi to 100 for his work on converting the dervish and helping wicket with his guild
+[Feb 20 2014 23:15] A: Registered Test Character: Raziel
+[Feb 26 2014 22:57] A: killed symbio and restored his exp, because.
+[Jul 31 2014 20:01] A: reimbursed 9 million xp timespliter lost due to a bug
+[Jul 24 2015 06:33] A: added "Someome" back into query_name in living.c
+[Jul 29 2015 21:03] A: clearned braden's guild object, guild level, and reset his home to the green
+[Aug 11 2015 05:19] A: updated the etest so it can only be done once per reset
+[Aug 14 2015 17:49] A: updated /obj/user/reports/report_tool.c to make it easier to interact with the option you just selected
+[Aug 14 2015 20:44] A: /room/post->query_mail(1) now returns 1 if there's mail and 2 if there is new mail.
+[Aug 14 2015 20:45] A: updated /bin/play/_score.c to display if the player has unread mail
+[Aug 18 2015 15:41] A: changed /players/mizan/opl/beasties/fungus/wookie.c to use heart_beat to get chatty instead of a callout
+[Aug 18 2015 15:41] A: changed /players/mizan/opl/core/monster.c to stop calling the random move timeout when there are no players in the room, since it doesn't do anything if there are no players in the room
+[Aug 19 2015 16:44] A: updated the turtles in /players/wicket/ninja_turtles/mobs/ so that the prototypes won't have random_move callouts
+[Aug 20 2015 21:30] A: fixed ~jaraxle/closed/phoenix/mons/lord.c to work with monster.c

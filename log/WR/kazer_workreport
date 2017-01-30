@@ -1,0 +1,57 @@
+Tue Dec 14 16:51:21 1999--Action: Made a testchar: Apex Reason: Needed to test out heals/armor etc.
+Fri Dec 17 18:33:07 1999--Action: Made a testchar: Ktest Reason: Apex is a jedi...i need a normal char and I don't know the ID of dragnars guild ob to idest it.
+Sat May 13 00:34:26 2000--Action: Testchar Reason: Made a testchar, my others somehow ended up in jail.  ( Player 'K' )
+Sat May 20 22:12:39 2000--Action: Bought somthing from a in-play shop Reason: Was curious as to who made the Cloak of Darkness (class armor!?), sold it back promptly.
+Wed May 31 16:45:58 2000--Action: Edited /players/kazer/realm/boh/r3.c Reason: Added a log to see when someone raids the cash register.  Also updated the room, dested the cashier and the gum afterwards, someone had already killed it.
+Wed May 31 17:02:38 2000--Action: CastleIn Reason: Eurale approved the Bridge of Harmony area and Boltar put the castle in earlier this week.
+Thu Jun  1 00:38:31 2000--Action: Edited r3.c Reason: Added a check so you can't attempt to open the register if the cashier is in the room
+Thu Jun  1 09:01:35 2000--Action: Opened The Supply Shop Reason: Eurale approved, put the entrance in.
+Sun Jun  4 13:59:49 2000--Action: Armor&Heals Reason: Went through and checked to make sure they were all no-store.  Fixed the injector and the helmet.
+Mon Jun  5 00:40:52 2000--Action: AddedCorner3 to Entrance.c Reason: Added a 'wraith' Zadath so the call_out session was literal.
+Tue Jun 13 08:16:28 2000--Action: Budah/Quest Reason: He was getting a sensitive mind notice on the asking about the quests...I asked to check on it, it gave me the info and the longsword.  No access to update the room, so I gave him the longsword.  Really sorry.
+Thu Jun 15 07:01:37 2000--Action: CashRegister Reason: Changed the message so it shows how much money you get when you raid it.
+Thu Jun 15 08:34:31 2000--Action: AuctionSystem Reason: Implimented it, Eurale approved
+Fri Jun 16 19:53:16 2000--Action: AuctionTimes Reason: Spread out the time between going once and twice and sold, players don't seem to be able to react that quickly.
+Fri Jun 16 19:58:49 2000--Action: Auction Reason: Made it so that the minimud bid on all auctions is 1k.  Don't want to see anyone else ripped off like that.
+Sat Jun 17 03:13:25 2000--Action: Auction Reason: Added a minimum bid, a ton of players requested it.  makes sense.  Minimum bid can't be more than 1k.
+Sat Jun 17 03:37:35 2000--Action: AdriannaTitle Reason: Gave her a title for helping me test out the minimum bid on my auction system.  Also refunded her 500 coins for two mislead auctions.
+Sat Jun 17 06:53:03 2000--Action: TestChar Reason: Needed to test some player to player combat with the guild.  Made the char Renegade.
+Mon Jun 19 18:23:17 2000--Action: Guild Reason: Made some major headway with the guild combat.  At present all messages are asthetic.
+Tue Jun 20 19:49:27 2000--Action: Guild Reason: Finished the asthetics to my guilds combat.  Much thanks to Mal for telling me how to doctor up my tell_room function!
+Wed Jun 21 16:12:39 2000--Action: GuildLeaving Reason: Accidentally spammed /log/DEATHS pretty extensively testing that.  Sorry.  Things are good now though, everything with the Renegades is done and i'm ready to start in on the spells.
+Fri Jun 23 04:10:11 2000--Action: Title Reason: Set Keli's title to the default level 15 one.  The tag game left it colored for some reason or other.
+Sat Jun 24 22:15:25 2000--Action: Auction Reason: Changed it so wizards can't bid.  Thanks to Wocket for pointing that out.
+Sat Jun 24 22:26:51 2000--Action: LittlesKid Reason: His kid Dakota was bugging out, she had the howling fist kung fu on her, she went into the daycare but was still 'there' cloned the kung fu to little.  Someone should investigate.
+Tue Jun 27 22:01:56 2000--Action: Guild Reason: Finished the guilds weapon shadow today, things are moving along swiftly.  Will be starting on the combat enhancement spells soon.
+Wed Jun 28 16:28:55 2000--Action: SupplyShop Reason: Changed the armor prices slightly, made the armor storable at Eurales ok.
+Thu Jun 29 01:42:34 2000--Action: Myra Reason: This is gonna be a long one...Myra has been around for ages...she's always had her bard harp and she's always added to the atmosphere of the mud.  She has never had any intent of joining another guild.  She lost her harp awhile back when some measures had to be taken to protect us from Worm.  I gave her the harp back.  She is after all a bard, and it seemed thematic.
+Fri Jun 30 13:45:43 2000--Action: Cricket Reason: Made a small black box that 'transforms' into a diamond ring, not worth anything couldn't be worn...just wanted to propose correctly, heres to hopin' she says yes :)
+Fri Jun 30 16:07:11 2000--Action: Daredevil Reason: Cloned some of sliver.c to Daredevil, he found a bug which would allow for unlim money, I dested the bad ones as well. Whoops
+Fri Jun 30 16:12:19 2000--Action: TheMist Reason: Opened TheMist area with Eurales approval
+Fri Jun 30 17:05:15 2000--Action: mfuser.c Reason: Beefed up the ac from 15 to 45.  I beat the guy way to easy.  Let see how the players do with a 110 wc and 45ac :)
+Fri Jun 30 17:21:42 2000--Action: r25.c(Bridge of Harmony) Reason: Put a teaser exit into that room when the BOH went up, the mist is open now...so I linked it to spiral.c in themist dir.
+Sat Jul  1 04:14:57 2000--Action: Mfuser.c Reason: Still too easy in my opinion, whacked him up with Blackstar tonight...upped the hp's 100 and the ac 10 more
+Sat Jul  1 14:49:36 2000--Action: /themist/OBJ/shape.c Reason: Removed an extra return that was causing the set_long to bug out.
+Sun Jul  2 17:17:51 2000--Action: Wiztool Reason: Added the commands 'idlers' and 'remake'
+Mon Jul  3 17:01:57 2000--Action: Approvals Reason: Eurale approved my two wiztool commands and my personal teller...
+Fri Jul  7 03:50:58 2000--Action: Castle Reason: Made some astethic changes, added a teaser 'tunnel' to work up interest for my guild, doesn't say anything about the guild, and I know it's premature...but it will keep em coming back!
+Sat Jul  8 19:17:11 2000--Action: Swirl Reason: Removed the change of unfusing, was causing major problems with snows dervish and the HB of players.
+Sun Jul  9 03:13:36 2000--Action: Tourney Reason: Posted a note at the green about the Tourney i'm going to be hosting next week.  Feldegast and I talked it over, he approved the prizes and such.
+Mon Jul 10 18:20:19 2000--Action: Renegades Reason: Completed the guild hall for the most part.  Cleaning up some commands, giving the guild a bit of a shine.  Will be working on logging PKs and the guild 'distinction' stat in the next week.  Things are really starting to come together!
+Tue Jul 11 19:51:26 2000--Action: Jaraxle Reason: Was fighting with him earlier today.  We both experienced some seriously odd bugs, ask me if you want the story.  Anywho I cloned him his blade mini back.
+Tue Jul 11 21:17:31 2000--Action: /plaeyrs/kazer/realm/themist/OBJ/amulet.c Reason: Fixed the ::reset(arg)...in regards to the bugs we were having a week or so ago.  Didn't fix that armor.
+Wed Jul 12 01:02:40 2000--Action: Auctioneer Reason: There is a cattle prod cheat to allow attacking in nofight areas, until that is fixed i've beefed up my auctioneer even more that previously.  Will set him back to reasonable levels when this is resolved.
+Wed Jul 12 21:56:54 2000--Action: Sybelle Reason: Dested her star, she had a constant stream of bickering going on for like 20 minutes straight.  They are easy to get, so I fgured it was no big deal.  It ceased the huge pointless arguments flying about.  Mission accomplished.
+Thu Jul 13 02:14:51 2000--Action: ExtraLevel Reason: Set Jareels extra level to +20 so she could advance to +21 again, she was trying in vain to duplicate exactly what happened. (Her hotel fubared and she lost her elemental sword, unholy fist mace and death mace)  she has mailed Feldegast on it, and I will mail him as well to vouch.  Jareel wouldn't lie about that, and she did earn the item.
+Mon Jul 17 20:54:58 2000--Action: Symbio Reason: Dested his Power Ranger comminuctor, he attacked a power ranger.  They used to do that on their own, whats up.
+Mon Jul 17 22:59:38 2000--Action: Swirl Reason: Fixed a typo.
+Tue Jul 18 12:21:31 2000--Action: Swirl Reason: Changed the short to be one line for wizards at Mythos's request.
+Sat Jul 22 08:35:50 2000--Action: HealPacks Reason: In the game for prelim testing as per approved by Eurale.
+Sun Jul 23 13:20:40 2000--Action: HealingPacks Reason: Changed the ID on the packs, were interfering with Ranger packs.
+Mon Jul 24 18:19:09 2000--Action: Green Reason: Cloned all the stuff from the green back to it, it was gone.
+Tue Jul 25 00:34:58 2000--Action: Swirl.c Reason: Made some asthetic changes to the swirl, wanted it to be more exciting to use.
+Tue Jul 25 16:07:53 2000--Action: Healpack Reason: Added a \n to a write, and changed the query weight to work in multiples of 1, not 5.  If it is to reflext the weight of the heals, it should be a multiple of 1, not 5
+Tue Jul 25 17:14:07 2000--Action: Boots.c Reason: added ::reset(); to my boots to fix that problem with do_special.
+Wed Jul 26 21:06:04 2000--Action: Auction Reason: Fixed the auction so it -really- stops wizards from bidding.  *Grrr* thanks Pain...heh I think :)
+Wed Jul 26 23:10:27 2000--Action: Boots Reason: *Blush* did the reset wrong...again.  Working now.
+Thu Jul 27 18:48:43 2000--Action: Armadillo Reason: I healed him while fixing him from a bug in Eurales levitate command, he was stuck in a room where two levitate objects had not dested properly.  Got him out and fixed up.  Instructed vampires not to use the levitate command until Eurale can have a look.

@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[31mTorch [1;37mof [31mEternal Flames[0m"
+long_desc "a generic clan object.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "eternal"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "a generic clan object.[0mType 'clan_help' for commands."
+clan_short "[31mTorch [1;37mof [31mEternal Flames[0m"
+damage_type "fire"
+hall_path "/players/dragnar/WasteLands/rooms/room2"
+object_name "eternal"
+owner "samru"
+spell_alias "rage"
+spell_mess_me "You cast %hi red%rage %white%of %hi red%fire%normal% on %AKN%"
+spell_mess_room "%TPN% casts %TP_POS% %hi red%Rage %white%of %hi red%Fire%normal% on %AKN%."
+spell_mess_them "%TPN% casts %TP_POS% %hi red%Rage %white%of %hi red%Fire%normal% on you."
+abilities ({})
+chan_history ({"[Sun Dec 12 16:25:04 2010] Thor has joined the clan!","[Sun Dec 12 16:26:16 2010] Samru: sup",})
+leaders ({})
+join_type 2
+private_coffer 2000
+public_coffer 0
+spell_delay 10
+spell_id 1
+spell_cost 50
+last_spell_time 1252826445

@@ -1,0 +1,459 @@
+[Jul 21 2006 05:34] A: ~khrell/area/skaven/skavenpestilenfoyer.c fixed typo in dest_dir that was causing wandering mobs to bug, made that exit unusable
+[Jul 21 2006 17:35] A: patched Diesel's BF file to fix the unstudy comamnd.
+[Jul 21 2006 17:37] A: ~me/closed/bloodfist/daemon/wep_daemon.c -- broke out a tell_room on the lightning gem into two seperate tell_rooms so it wouldn't truncate and bleed color.
+[Jul 22 2006 02:03] Earwax: A: Fixed wlog to show wiz name in central log, this is a test
+[Jul 24 2006 10:39] Fred: A: Jailed Cleipa for 14 days.  He died to a mob and used a different char to get his corpse back.  Informed him that if it happened again that all chars involved would be imprisoned for an extended period.
+[Jul 25 2006 13:24] Fred: A: reset Kyv's Symbiote name to "Cripple" instead of Psycho.  He felt it was more fitting.
+[Jul 25 2006 15:03] Fred: 
+  A: ~me/closed/bloodfist/power/attack.c -- attempt 
+  R: 9 to stop it from hosing quicktyper and bugging if it kills the mob.  I feel good about this one though!!
+[Jul 25 2006 15:03] Fred: A: ~me/closed/bloodfist/power/vigor.c -- tweaked vmsgs() for index out of bounds issues.
+[Jul 27 2006 08:14] Fred: A: ~me/closed/bloodfist/member/ravanne.o -- patched him back to glvl 1.  Due to a bug he was put to glvl 2.
+[Jul 27 2006 15:37] Fred: A: I upped the storage capacity of gems for BF.
+[Jul 27 2006 16:09] Fred: A: ~me/closed/bloodfist/NPC/elder.c -- added additional checks to stop the bug mentioned before with Ravanne.
+[Jul 28 2006 14:51] Fred: A: ~mizan/closed/sbox.c -- Updated to make items that are donated to be non-saveable and have no value.
+[Jul 28 2006 14:52] Fred: A: /obj/weapon.c, armor.c, treasure.c, generic_heal.c -- added donated_item to objects to make non save and have no value if they were donated.
+[Jul 29 2006 14:41] Fred: A: ~me/closed/bloodfist/obj/gem_chest.c -- additional patch for the addition of more gem storage.  Needed to fix 'withdrawl' to accept numbers greater than 15.
+[Jul 29 2006 15:00] Fred: A: ~laera/balamb/forests/obj/bone.c and bone2.c -- added a check so BF guild couldn't choose it as it can be bartered and used for a coin cheat.  Reported by Carnage.
+[Jul 31 2006 16:45] Fred: A: ~zeus/desert/r/ec4.c -- added a guild message for when non guild members enter the room with Seht.  Gives the BF a little heads up that someone might be attacking Seht.
+[Aug  1 2006 14:28] Earwax: A: fixed implants to id to dark_sight_object if they have eyes....dunno how he was doing the friggin dark vision before, but it wasn't correct
+[Aug  1 2006 15:46] Fred: A: ~recomp'd Ice 200K for killing Seht.  Somehow his Mech got credit for the kill.
+[Aug  1 2006 19:10] Earwax: A: handed flap ~forbin/realms/salam/OBJ/neruumsh.c as he lost his
+[Aug  2 2006 21:58] Earwax: A: Testing something out.
+[Aug  2 2006 22:00] Earwax: A: Test part deu
+[Aug  3 2006 17:59] Fred: A: Promo'd Pestilence down to lvl 60.  He requested it.
+[Aug  3 2006 22:59] Earwax: A: pestilence
+[Aug  4 2006 03:08] Earwax: A: wocket
+[Aug  5 2006 01:28] Ew: A: Final Test
+[Aug  6 2006 03:38] Earwax: A: unset saze pk flag cuz he had it set to spar flag
+[Aug  8 2006 16:31] Fred: A: /players/jenny/wings/mobs/players/lapointe.c -- added a check so if you're dead you can still leave the room.
+[Aug 10 2006 18:06] Earwax: A: made a change to twho to show max players this boot, and since today
+[Aug 10 2006 20:25] Pestilence: A: test
+[Aug 10 2006 22:14] Jareel: A: Gave money to flap cause he wasted money on a mob of mine that wouldn't die
+[Aug 11 2006 15:55] Earwax: A: have jareel working on documenting the /bin/wiz commands as well as relevant lfuns....veeshan and jamila should be working on the /bin/play commands, i'll add more people to those projects as it's something i want as many people working on as possible
+[Aug 11 2006 17:20] Pestilence: 
+  A: converted torment,demon.wound in the order from 
+  R: include to .c cmd
+[Aug 12 2006 20:27] Pestilence: 
+  A: converted all of orders spells,help
+  R: to /cmds .c
+[Aug 13 2006 07:45] Earwax: A: lowered bag of holding capacity from 250 to 225
+[Aug 14 2006 11:10] Jareel: A: fixed special spam on /players/jareel/weapons/chaos/woods2/hammer.c was purely superficial
+[Aug 15 2006 14:11] Fred: A: ~pestilence/club/mob/cheryl.c -- fixed a typo reported by Shakara.
+[Aug 16 2006 03:28] Earwax: A: promo'd star for past work, esp with preapprovals and walking lacar through things
+[Aug 16 2006 10:33] Fred: A: Approved Tristian's ClubFed area for gameplay.
+[Aug 16 2006 18:13] Fred: A: comp'd Wipeout some equipment he claimed he lost in a crash.  Buh.  I hate handing out equip.
+[Aug 17 2006 20:31] Earwax: A: closed off eternal bar fight, moved the gem to being revealed if they do a search in room outside of bar fight, so quest still doable
+[Aug 17 2006 20:31] Earwax: A: did this because of the completely ridiculous number of callouts and crap going on with that room, if someone wants to recode it properly they can have at it, i'm closing it otherwise, and it's too abusable, besides
+[Aug 18 2006 21:19] Pestilence: 
+  A: set blake's grank back 2
+  R: when the game crashed he lost his attribs he gained last 2 lvls, and this way he can try to gain them back
+[Aug 19 2006 00:14] Pestilence: 
+  A: changed /pavlik/guild/mages/obj/exchange_paper
+  R: library was set for /pavlik/guild/mages/rooms/library when it's actually just room minus the s
+[Aug 19 2006 00:16] Earwax: A: jareel
+[Aug 20 2006 10:03] Pestilence: 
+  A: talen said he couldn't get his stuff
+  R: i got it and dropped it outside his casino
+[Aug 20 2006 16:41] Pestilence: 
+  A: some reason stats aren't saving if there is a crash,blake lost all his stats he gained today
+  R: set him back to rank 66
+[Aug 26 2006 15:03] Pestilence: 
+  A: restored some of nyteshades eq
+  R: he spawned hino and died or quit, was running in and out grabbing his eq, and the room reset
+[Aug 31 2006 17:37] Earwax: A: added code to ~boltar/casino/front_desk.c to dest < level 5, < 1 hour old if they try to register a hotel room, also added logging, and jailed a buncha ice's chars for that shit
+[Sep  8 2006 21:36] Angel: A: gave tombsurfer 67000 coins / bug when advanced
+[Sep  8 2006 21:40] Angel: A: correction tombsurfer maxed out with 26090 coins and did not want the rest.
+[Sep 12 2006 09:22] Fred: A: Requested that Pistovblaq change his name.  Some people felt it was kinda racist.  He was already lvl 11 so just jail seemed foolish so I changed his pfile over, guild file, and lockers, to the new name of Vortex.
+[Sep 12 2006 13:21] Fred: A: recomp'd Blizzard some equipment from his computer crashing and not being able to log back in.
+[Sep 13 2006 14:49] Fred: A: ~dragnar/armor/gloves.c -- changed the set_type from misc to gloves.
+[Sep 19 2006 00:48] Sparrow: A: Fixed /players/maledicta/cont/mobs/tower.c
+[Sep 22 2006 18:58] Fred: A: ~jareel/monsters/chaos/woods2/smith.c -- fixed some typos.
+[Sep 26 2006 08:19] Fred: A: ~jareel/weapons/chaos/woods2/hammer.c -- fixed a typo.
+[Oct  2 2006 20:35] X: A: moved springdawn to her discon box when she could not find it
+[Oct  4 2006 11:51] Fred: A: updated help guilds, closed_guilds, and added helpfile for symbs since they are open now.
+[Oct  5 2006 15:01] Earwax: A: changed artos's race name to 'crybaby' because he is
+[Oct 06 2006 06:49] Earwax: A: promoted sparrow to 100, he's more than earned it, and most current 100s and above have done nothing but earned demotions.  Any problems with this decision come to me with it, but unless you're bigger, your reasons need to be strong or you will be level 1.
+[Oct 06 2006 15:15] Lacar: A: worked on Dreamspeakr's area
+[Oct  7 2006 14:57] Rumplemintz: A: Registered Test Character: Rump
+[Oct 16 2006 11:03] Lacar: A: working on dreamseakr area, found out no c107.c
+[Oct 16 2006 11:20] Lacar: A: working with test char to get back up and check area working on
+[Oct 16 2006 11:28] Lacar: A: dreamspeakr also missing c122.c to c124.c
+[Oct 19 2006 22:40] Fred: A: ~mythos/healerguild/power/heal.h -- added a line so if the target is fully healed the caster won't lose the sps and get a msg saying they healed 0.
+[Oct 20 2006 14:04] Chip: A: Registered Test Character: Chippertest
+[Oct 24 2006 17:11] Mokri: A: Registered Test Character: Jaraxle
+[Oct 24 2006 21:40] Chip: A: Registered Test Character: Chiptwo
+[Oct 30 2006 11:49] Fred: A: ~me/closed/bloodfist/eq/blood_amulet.c -- Made them saveable.
+[Oct 31 2006 09:49] Lacar: A: made a Jack-O-Lantern at green for holloween, gave it a pail.
+[Nov  5 2006 19:23] Chip: A: jailed Kadabra for botting and cursing me out when approached. 7 days.
+[Nov  5 2006 20:24] Fakir: A: p i
+[Nov  6 2006 09:55] Veeshan: A: Registered Test Character: Vet
+[Nov  9 2006 17:03] Veeshan: A: reimbursed a glove of moloch that was lost on dara
+[Nov 13 2006 14:41] Lacar: A: set up turkey at green for thanksgiveing theme
+[Nov 14 2006 12:22] Fred: A: ~me/closed/bloodfist/NPC/person.c, person1.c, person2.c, and person3.c -- needed added checks so the short and long weren't hosed if the owner left the game.
+[Nov 14 2006 13:02] Fred: A: ~me/closed/bloodfist/daemon/honor_daemon.c -- fixed a typo resulting in the "top 10" in honor listing 11 members.
+[Nov 16 2006 03:18] Earwax: A: fixed a file security bug, see liblog
+[Nov 16 2006 11:02] Lacar: A: lacar
+[Nov 16 2006 11:02] Lacar: A: turkey at green for theme of Thanksgiving
+[Nov 16 2006 19:44] Earwax: A: fixed find_player() bug that allowed multiple logons, more info in simul_efun.c and liblog
+[Nov 18 2006 17:56] Angel: A: updated file /school/room/airport.c approved by Fred
+[Nov 21 2006 23:58] Angel: A: added headers to all school files/ approved by Fred
+[Nov 22 2006 01:22] Earwax: A: promo'd mizan to 100...need him to have full read/write access to wizard dirs, AND have the level to appropriately discipline....he's going to be a wizard-affairs wizard, and player-affairs wizard.
+[Nov 22 2006 17:15] Angel: A: added header to all rooms in walmart/ approved by Fred
+[Nov 23 2006 06:17] Lacar: A: just put Turkey at green for Thanksgiving
+[Nov 28 2006 15:26] Earwax: A: fixed a bug in ~boltar/casino/front_desk.c that i had in there to address an abuse problem, fixed it
+[Nov 28 2006 22:12] Wipeout: A: Registered Test Character: Flak
+[Dec  7 2006 22:47] Fred: A: -- replaced an elemental amulet to Tyr that he lost.
+[Dec 11 2006 11:32] Fred: A: made Crip a newbie helper.
+[Dec 13 2006 21:00] Sparrow: A: /players/sparrow/areas/bwo/npc/bwo_template.c approved by Vertebraker, loads when my castle loads only, loads to a random room, /players/maledicta/cont/rooms/444,771,109,892,887 | /players/earwax/area/fields/room/tunnel3 | /players/jaraxle/cont/rdragon/rooms/pond2. During reset will move again to a random room from same array. Randomly generated statistics, hp, lev, wc, ac, multiple attack functions in /players/sparrow/areas/bwo/include.mob_funcs.c, disarm, break weapon, cha
+[Dec 14 2006 00:37] Earwax: A: promo'd rumplemintz to 60, for work he's been doing on the ld project and for getting shit in the game of his own as well
+[Dec 14 2006 03:44] Earwax: A: changed /bin/play/_bug.c to use /log/LDBUG on the ldmud port
+[Dec 14 2006 12:21] Earwax: A: changed /players/guilds/bards/johnithin.c ... level req from 6 to 7 cuz it's dicked up
+[Dec 15 2006 11:17] Vertebraker: A: Registered Test Character: Vlad
+[Dec 15 2006 11:17] Vertebraker: A: Registered Test Character: Dracula
+[Dec 16 2006 01:35] Sparrow: A: Fixed bug with /players/sparrow/areas/bwo/npc/bwo_template.c that would cause the mob to become unresponsive after switching to a target with hp < 1 and the creature dies at end of round
+[Dec 16 2006 03:09] Earwax: A: ninja ghall ... rooms and boards dir: made compat with ld, closed arena off on ld side
+[Dec 16 2006 03:27] Earwax: A: did the rest of ninja conversion while i was at it
+[Dec 16 2006 19:33] Sparrow: A: Finding that my monk is too easy for the experience that it hands out. On average it is giving 85k xps. Dropped that to around 65k and increased potential damage output by about 40%. Also changed the disarm function so that 33% of the time, the monk will steal the opponent's weapon when disarmed. That should even things out a bit.
+[Dec 16 2006 21:32] Sparrow: A: file permission issues with using write_file to write my logs, switched to log_file. Log file for black willow monk is /log/sparrow.bwm
+[Dec 17 2006 01:31] Sparrow: 
+  A: removed 
+  R: include in /players/saber/closed/new_mini/succ.c, removed call_others also
+[Dec 17 2006 01:35] Sparrow: A: Fixed ; after inherit in /players/saber/closed/new_mini/caning_muzzle.c
+[Dec 20 2006 16:22] Angel: A: made change in mason guild_lodge and mgob to fix an error/ approved by Earwax
+[Dec 21 2006 02:21] Rumplemintz: A: Removed ; from include in guilddaem.c healers
+[Dec 21 2006 09:26] Rumplemintz: A: added \n to healer channel on LD (ifdef)
+[Dec 21 2006 09:26] Rumplemintz: A: changed all paths in healer guild - in testing phase now
+[Dec 21 2006 09:32] Rumplemintz: A: updated /players/mythos/enterance - bug in items
+[Dec 21 2006 10:54] Rumplemintz: A: added dex and cha to healers guildhall
+[Dec 21 2006 11:41] Rumplemintz: A: updated /players/mythos/healerguild/guildob to clone new object in /players/guilds/healers
+[Dec 21 2006 11:42] Rumplemintz: A: updated /players/mythow/enterance.c to change exit to guilds/healers/room/hall
+[Dec 21 2006 13:13] Rumplemintz: A: updated old healerguild hall to automove to new healerguild hall
+[Dec 21 2006 21:37] Earwax: A: rangers should be fine on ld for most part now
+[Dec 21 2006 21:53] Earwax: A: forgot to log yesterday but made a few changes to the necro gob and start room to facilitate the changing of dirs to /players/guilds/necro
+[Dec 21 2006 23:29] Earwax: A: unsitebanned artos/budah, banished several more of his chars (artos, budah, bacchus, hadus, his ninja) ... he fucks up, it's permanent siteban
+[Dec 22 2006 23:25] Rumplemintz: A: changed /players/zeus/realm/city/path4.c changed south exit to go to /players/guilds/fallen instead of /players/zeus/circle
+[Dec 22 2006 23:26] Rumplemintz: A: Fallen should be gtg on LD
+[Dec 22 2006 23:28] Rumplemintz: A: update /players/zeus/circle/obj/init.h to clone new guildob on login
+[Jan  2 2007 11:12] Angel: A: fixed bug in   school  principal_office_01.c
+[Jan 02 2007 18:21] Sparrow: A: New working version of Kales area finished. Still needs testing to verify cleanup is working properly. Will make master object report what is going on.
+[Jan  2 2007 18:40] Angel: A: fixed bug  school  principal_office_02.c
+[Jan  3 2007 12:22] Fred: A: patched Mantis with the new necro guild object.
+[Jan  5 2007 22:49] Sparrow: A: moved new kale format to live directory. Files are /players/francesco/kale/rooms/entrance.c and kaleroom.c
+[Jan  7 2007 07:15] Sparrow: A: changed /players/snow/heals/ice_sphere.c to display result of heal in message to player, also added a small bit of color. Original is named ice_sphere_presparrow.c in same directory
+[Jan  8 2007 11:20] Sparrow: A: copied fran's original entrance.c back to be the active file and renamed my entrance.c to entrance_sparrow.c. It seems that there are some issues with the room cleanup that causes some sensitive mind notices.
+[Jan 13 2007 17:04] Lacar: A: worked on my area w/ Angel for headers and to add more on after first part approved.
+[Jan 14 2007 20:28] Sparrow: A: Fixed barter function on Angel's P90 machine gun
+[Jan 14 2007 23:46] Rumplemintz: A: patched Talen to set_guild_file to new Fallen guildob path
+[Jan 15 2007 00:45] Rumplemintz: A: Removed "guild_monitor" id and all 'mon' functions from fallen guildob
+[Jan 15 2007 14:17] Rumplemintz: A: helped marek get to necro 'join' room - this area needs to be reworked - can't find 'sponsor' code - and no way for non-necros to get to join area
+[Jan 31 2007 17:33] Fred: A: patched Sickness with the new Necro guild object.
+[Jan 31 2007 17:33] Fred: A: patched Muerte with the DO object didn't auto load.
+[Jan 31 2007 17:33] Fred: A: patched Pepe combat 3 in the DO guild, the guild update doesn't work rght cleared it out.
+[Feb  5 2007 11:48] Fred: A: patched Blood with the new Fallen obj.
+[Feb  5 2007 11:51] Fred: A: patched Blackstar's mag and int to 20 and 15, they didn't reset from a death in the polies.
+[Feb  6 2007 22:36] Fred: A: fixed various typos in various Necro guild spells.
+[Feb  7 2007 23:44] Rumplemintz: A: update mythos guildob.c to change set_guild_file to new healer guildob.c
+[Feb  8 2007 00:12] Sparrow: A: added 2.5 mil of xp to achilles and 2.3 mil xps to nyteshade for a death bug caused by an object that I will report next
+[Feb  8 2007 00:20] Sparrow: A: gave dara 2500000mil for same bug
+[Feb  8 2007 08:33] Fred: A: /obj/shadow_master.c -- the healer shadow was entered incorrectly and wasn't actually shadowing the plaeyrs.
+[Feb  8 2007 08:49] Fred: A: /obj/player.c -- fixed the query_free_exp() func.  It didn't work if you were lvl 19 with no plus lvl.
+[Feb  8 2007 22:09] Fred: A: Registered Test Character: Derf
+[Feb  9 2007 10:15] Chip: A: Registered Test Character: Jailbird
+[Feb 13 2007 11:13] Fred: A: um fixed a bunch of fallen crap.
+[Feb 13 2007 12:26] Fred: A: I fixed focus with commenting out a portion of circle.c and took out the commenting out of it in /obj/master.c and functions.h
+[Feb 13 2007 12:26] Fred: A: fixed powers focus.h, beckon.h, wither.h, set_percent.h, score_cmd.h, drain.h
+[Feb 13 2007 13:38] Fred: A: will be updating the rest of the powers periodically for fallen so they work as well.
+[Feb 16 2007 21:47] Angel: A:  reloaded   /players/jaraxle/3rd/alt/rooms/sea.c  / exits wern't working
+[Feb 19 2007 14:37] Fred: A: moved around some Ranger guild member save files.  The guild only holds 55 people which was full with players that were purged awhile back.  Just cleared up some spots from players that don't exist anymore.
+[Feb 20 2007 20:28] Fred: A: ~vital/dest/include/spaceport.h -- commented out a line so his area would load.  Would give error msg when you tried to enter one of his rooms.
+[Feb 22 2007 08:41] Fred: A: ~cosmo/hslist/vds_new.c -- updated the alltime score board for 2007 numbers.
+[Feb 23 2007 17:35] Fred: A: /bin/play/_sell.c -- changed it so when selling from a bag it commands unbag first instead of a move_object otherwise bag doesn't decrease it's weight and is eventually useless.
+[Feb 27 2007 15:32] Fred: A: messed with the Rnager Npc's some.  Will ahve to see if they work now.
+[Mar  9 2007 14:43] Earwax: A: mosobp
+[Mar 10 2007 19:35] Sparrow: A: approved Angel's new Stargate area
+[Mar 10 2007 23:17] Angel: A: added area/stargate approved by sparrow
+[Mar 11 2007 00:28] Sparrow: A: added a check in /players/mythos/awep/forest/flute.c near line 82 to make sure that the target of the calming spell is actually in combat. Was throwing errors. Works now. Bug reported by Mantis.
+[Mar 11 2007 00:30] Sparrow: A: Fixed syntax error in /players/mythos/closed/guild/forest/mon/dread.c that caused it not to load.
+[Mar 11 2007 15:43] Angel: A: healed Alora bug in my area
+[Mar 11 2007 19:41] Angel: A: fixed the reported bug in stargate / I had a capitol P in the alias causing the issue
+[Mar 17 2007 23:31] Chip: A: Registered Test Character: Taskmaster
+[Mar 18 2007 14:02] Vertebraker: A: Registered Test Character: Merlyn
+[Mar 20 2007 18:59] Mokri: A: edited cyber guild command 'visible' to call new vis function, as one that was in code no longer exists. assuming an LD change.
+[Mar 28 2007 09:20] Fred: A: /obj/armor.c -- updated it to pass through all the properties of Types for mutitype armors.  I.e. Full Deat Set
+[Mar 28 2007 10:24] Fred: A: updated Kmart to allow for the shout_mine.c of deathmonger's.  Updated shout_mine as well.
+[Mar 28 2007 10:24] Fred: A: updated the soot residue for the soot mine to actually go away after a time frame.
+[Mar 28 2007 11:43] Fred: A: will need to look at obj/armor.c again.  Still experience issues :(
+[Apr 11 2007 16:39] Mokri: A: edited cyber 'decorpse' command to work on corpses in inventory as well as in environment. change approved by fred.
+[Apr 15 2007 10:19] Fred: A: ~guilds/necro/mon/skeleton.c -- since their top zombie command hasn't been finished in roughly 7 years I upped the length of time their skeleton will last.
+[Apr 20 2007 14:13] Mokri: A: edited cyber guild object. added command directory so i can add commands. fred gave the 'ok'. also edited help files once command was in (a who list).
+[Apr 26 2007 12:09] Mokri: A: forgot to log it, but mucked with cyber help files yesterday and day before to include new abilities. blah.
+[Apr 30 2007 23:00] Vertebraker: A: Registered Test Character: Ludlum
+[May  1 2007 20:38] Mokri: A: edited cyber 'rat' (/players/snow/ROOM/bar) to add in 'replicator' object. approved by verte.
+[May  4 2007 12:39] Mokri: A: had to edit fullplate and look into shard 'drain' command. two were bugging each other.
+[May 10 2007 12:31] Mokri: A: edited fallen crap. was trying to make calls to 'simul_efun' that should have been in the guild object itself. '~guilds/fallen/power/shadowweave.h' specifically changed. call to 'spell_failure'
+[May 10 2007 13:28] Mokri: A: fixed 'deweave' with same as my last log (calls being made to simul_efun. blah blah blah)
+[May 11 2007 13:39] Mokri: A: removed 'repliactor' from cyberninjas (/players/snow/ROOMS/bar)
+[May 14 2007 15:37] Tallos: A: edited /players/tallos/7tigers/objects/mspellstaff.c to add magics +++ to power
+[May 14 2007 17:09] Tallos: A: recovered lost bag from claw on dc 80000 coins refund
+[May 14 2007 22:30] Tallos: A: added rodger as beta tester to mages
+[May 15 2007 00:51] Tallos: A: edited snows arch_wizard robes to add mage guild bonus
+[May 15 2007 00:58] Tallos: A: added karn as mage beta tester
+[May 15 2007 01:01] Tallos: A: /players/snow/armor/arch_robes.c edit for mage guild bonus.
+[May 15 2007 01:08] Tallos: A: edited /players/eurale/Chess/OBJ/sash.c to add mage guild bonus
+[May 15 2007 01:38] Tallos: A: edited /players/saber/armor/aura.c to add guild mage bonus and add ansi.
+[May 15 2007 01:57] Tallos: A: edited /players/zeus/museum/OBJ/cloak.c to add mage guild bonus
+[May 15 2007 02:04] Tallos: A: edited /players/fred/forest/Obj/pentacle.c to add mage guild bonus
+[May 15 2007 02:08] Tallos: A: edited /players/arrina/armor/sveil.c to add mage guild bonus
+[May 15 2007 02:19] Tallos: A: edited /players/mythos/awep/forest/air.c to add mage guild bonus
+[May 15 2007 02:30] Tallos: A: edited /players/pavlik/guild/mages/obj/wiz_hat.c changed short() color and added ac 1 since only helm wizard's can ever wear.
+[May 15 2007 16:37] Tallos: A: added mhelp newbie and mhelp newbie2 to mage help files
+[May 15 2007 23:42] Vertebraker: A: Registered Test Character: Hamster
+[May 16 2007 12:28] Tallos: A: added 300k exp to rodger for loss of exp from necros, added 300k exp rodger at exterence beta test lost exp
+[May 16 2007 12:29] Tallos: A: registered lanith as test char
+[May 16 2007 12:39] Tallos: A: Registered Test Character: Lanith
+[May 16 2007 16:11] Tallos: A: edited players/forbin/realms/flame_forest/OBJ/gmoloch to add mage guild bonus
+[May 16 2007 16:24] Tallos: A: edited /players/jaraxle/cont/bdragon/amulet.c to add mage guild bonus
+[May 16 2007 19:03] Tallos: A: edited /players/vertebraker/swamp/OBJ/denim_shorts.c to add mage guild bonus
+[May 17 2007 10:28] Fred: A: modified armor_test.h in warriors for dodge concerning weight restrictions.
+[May 17 2007 12:26] Tallos: A: edied /players/forbin/realms/keats/OBJ/nazal_swr.c to add mage guild bonus
+[May 17 2007 12:52] Tallos: A: edited /players/saber/weapons/stormstaff.c to add mage guild bonus
+[May 17 2007 13:25] Tallos: A: edited /players/forbin/realms/keats/OBJ/nazal)ewr.c to add guild guild bonus
+[May 17 2007 14:29] Tallos: A: edited /players/forbin/realms/keats/OBJ/nazal_cwr.c added mage guild bonus
+[May 17 2007 14:36] Tallos: A: edited /players/forbin/realms/keats/OBJ/nazal_owr.c to add mage guild bonus
+[May 17 2007 22:51] Fred: A: modified the warrior score cmd for the updated tox lvls.
+[May 17 2007 22:51] Fred: A: modified the warrior armor_test.h for a typo in the dodge emote.
+[May 18 2007 20:37] Tallos: A: replaced springdawns poly guild object, autocharge was not functioning
+[May 19 2007 09:31] Fred: A: fixed warrior score.  It was messed up on the exp needed once you hit prof lvl 40
+[May 19 2007 12:52] Tallos: A: problem with mason set guild title 'gtitle' and mages set guilg title 'gtitle' edited /players/angel/masons/bin/action and gtitle.c to change gmtitle.c angel will update
+[May 19 2007 12:57] Tallos: A: fixed guild error on blarrrgh
+[May 19 2007 15:01] Angel: A: changed Masons Titler command to gmtitle / conflicting with mages
+[May 20 2007 11:55] Tallos: A: fixing some types and mobs errors in 7tigers
+[May 21 2007 17:28] Fred: A: updated the warrior profession books and related help files for attrib changes.  i.e. before needed a str of 20 to train a skills now need 30 etc.etc.
+[May 21 2007 17:47] Fred: A: adjusted Lok's stats so he could join the Mages.
+[May 21 2007 23:36] Tallos: A: fixed a typo in /players/tallos/7tigers/objects/mspellstaff.c
+[May 21 2007 23:56] Tallos: A: set fix tartis stats so can join mages
+[May 22 2007 02:10] Tallos: A: replaced some of sami's gear
+[May 23 2007 12:27] Tallos: A: fixed guild error on tartis
+[May 27 2007 09:36] Fred: A: fixed the warrior guilds trainers in /OBJ.  They were still trying to log joining a prof to Mal's closed drive.
+[May 27 2007 09:37] Fred: A: fixed a typo in ~forbin/realms/keats/OBJ/nazal_acid_object.c
+[May 27 2007 14:57] Cloud: A: Registered Test Character: Cloudbreak
+[Jun  1 2007 12:33] Tallos: A: fixed death glitch on tartis
+[Jun  5 2007 08:33] Fred: A: changed the crazy high value o the holy and unholy longsword in tallos' area.  I thought I had changed those already.
+[Jun  5 2007 17:43] Fred: A: ~saber/weapons/net.c -- changed so it wouldn't start a fight, Take that ya silly Rangers!!
+[Jun  5 2007 23:21] Tallos: A: gave back some items lost in game driver sleep mode.
+[Jun  6 2007 10:59] Fred: A: ~saber/armor/aura.c -- changed so you had to be in combat to use.
+[Jun  8 2007 11:47] Lacar: A: trans Tirnok to church, room deleted the exits.
+[Jun  8 2007 12:27] Mokri: A: edited bard stuff to fix error. call to header in jaraxles area was bugging things (ansi.h)
+[Jun  8 2007 13:20] Angel: A: Replaced Gogeta Phoeniz Mask, Amulet of Lightning, and orb from jar's area/cookie issue
+[Jun  8 2007 13:34] Angel: A: replaced Hercules Mask and Amulet/ Jar's cookie issue
+[Jun  8 2007 13:38] Angel: A: replaced Joab's Phoenix Mask and 2 Lightning Amulet /cookie issue/ Fred approved.
+[Jun  8 2007 13:42] Angel: A: took back one Amulet from Joab / 1 was in locker and had returned
+[Jun  8 2007 14:45] Mizan: A: Registered Test Character: Parishilton
+[Jun  8 2007 15:27] Angel: A: added color to gate in stargate with Vertebrakers help
+[Jun 10 2007 21:54] Mizan: A: gave worm a ton of crap that i shouldnt have had to but he didnt know the mud was on a 12 hour reboot and needed some more Oxycontin to get bizadooed.
+[Jun 10 2007 21:58] Earwax: A: handed worm 2 elemental items to shut him up cuz i can't stand his whining, and he most likely did have them lost due to a bug
+[Jun 13 2007 02:26] Angel: A: healed sephiroth / sps issue didnt fix it / passing issue on
+[Jun 13 2007 02:33] Angel: A: had sephiroth beatfix and register/ it stoped the 90k sps loss/ and rehealed
+[Jun 13 2007 10:56] Brittany: A: Registered Test Character: Ten
+[Jun 14 2007 22:21] Fred: A: fixed the remaining of the Fallen's guild spells.
+[Jun 15 2007 01:37] Mizan: A: warned troy not to swap EQ with krokus
+[Jun 15 2007 01:38] Mizan: A: consider him warned :) i did not do anything i.e. imprisonment or stat correction etc
+[Jun 16 2007 15:52] Vital: A: katya
+[Jun 16 2007 16:05] Vital: A: edited /players/mythos/pass, enterance, hall, etc to rename 'enterance.c' to 'entrance.c' as this has bugged me for about 10 years
+[Jun 18 2007 11:22] Fred: A: ~boltar/casinpo/front_Desk.c -- changed it soe if you register for a room and you are less than one hour old or less than lvl 5 it tells you that you have to be lvll 5 and an hour old instead of what they are doing is illegal.  Also commented out the forced quit I see no point to it.
+[Jun 18 2007 19:18] Angel: A: trans Bloodangle out of ooze it messed up on algn once agian...
+[Jun 18 2007 20:26] Veeshan: A: I put krokus in prison for 7 days for equip sharing after mizan warned him
+[Jun 19 2007 14:39] Earwax: A: fixed a bug in ~zeus/circle/obj/init.h that was causing players with the old fallen gob to not be able to login properly
+[Jun 20 2007 17:10] Fred: A: changed up ~jaraxle/cave/crooms/randomcave.c to hopefully fix the problem with alignment while in the ooze.
+[Jun 20 2007 23:10] Chip: A: dested a duplicate clan scar off glaxgor per his request.
+[Jun 21 2007 13:26] Fred: A: /players/guilds/necro/obj/misc/bookcase.c -- fixed it so you could actually remove the books.
+[Jun 21 2007 16:21] Fred: A: /players/guilds/fallen/obj/id.h -- upped the weight limit for miscellaneous armors cause well nobody cares. heh
+[Jun 22 2007 22:43] Fred: A: updated necro spells to work in pk.  Some were modified for legality issues we'll see what happens.
+[Jun 25 2007 12:13] Fred: A: ~llew/Other/misc/deathlog.c -- updated the color for the obit.  I don't see how a 19+1 should be classified as Great on a +100 scale.  Great is now +21 to +75
+[Jun 25 2007 13:52] Mokri: A: restored missing locker slots for krokus (left empty, though)
+[Jun 30 2007 21:09] Mizan: A: for some reason recusant was set to login in Mythos' forest. Fixed to village green.
+[Jul  3 2007 17:15] Earwax: A: made a fix to ~guilds/Rangers/Commands/Rwho.c to fix bad formatting after knytemayre reported
+[Jul  4 2007 04:16] Earwax: A: added a line to ~wocket/std/wiztell.c so it wouldn't self-destruct when star popped out a kid
+[Jul  4 2007 14:11] Mizan: A: for some reason dameon is a samurai. That has been fixed
+[Jul  6 2007 22:06] Mizan: A: warned garland (zidane) not to use shops to swap equipment. Noticing a general trend of players using obscure shops to xfer objects or using very fast transfers
+[Jul  7 2007 01:15] Earwax: A: i logged garland/zidane earlier about eq passing as well
+[Jul  9 2007 15:01] Earwax: A: added 2 lines to ~mokri/clans/object.c to fix a bug where the clan object was desting when mudkids were picked up
+[Jul 11 2007 11:38] Fred: A: added a BF help file forthe various gems
+[Jul 12 2007 04:11] Earwax: A: various lib mods, see liblog for today's date
+[Jul 13 2007 04:22] Earwax: A: used gogeta and upus as playtesters for my new dispenser toy: ~/obj/products/grenade.c (which uses ~obj/products/support/smoke.c incidentally), not in game yet, will go in pending approval by someone other than me hehe
+[Jul 14 2007 21:49] Veeshan: A: tested something with flap and healed him
+[Jul 17 2007 00:49] Earwax: A: changed all the files in ~vertebraker/guilds/samurai/armor/ to nerf their physical resistances from 5 or 3, to 1.... it was exceedingly illegal defense, also set the ac on shikoro (necklace) from 2 to 0, as necklaces aren't armor. overall i changed it from 69% resistance to 21%, which is still too high imho.
+[Jul 17 2007 01:00] Earwax: A: changed the return value in armor special in samurai gob (~verte/guilds/samurai/gob.c) from 1+r(dex /3) to 1+r(dex / 5), averaging 5 ac every single hit is rediculous
+[Jul 17 2007 03:40] Earwax: A: added 'report' command, see liblog for details
+[Jul 17 2007 05:41] Earwax: A: fixed issues with report
+[Jul 18 2007 00:30] Earwax: A: put smokescreen grenade - masks room long and short, in game, approved by mizan, after i added 1/15 chance of doing 25-50 damage to all players in room over level 8
+[Jul 18 2007 03:28] Earwax: A: changed samurai obj/fireblade.c from 3+r8 to 1+r4 damage every 4 rounds
+[Jul 18 2007 03:30] Earwax: A: changed samurai /bin/_iaijitsu.c damage type from magical to physical as thematically befits the spell
+[Jul 18 2007 03:43] Earwax: A: samurai gob, changed it from having (in case of max gl, no shame), gen_wc_bonus() returning average of 15, to 7.5, this i probably will have to tweak but they get other gen_wc_bonus() additions, and it's just getting silly when you see the big picture
+[Jul 19 2007 01:39] Earwax: A: Registered Test Character: Ew
+[Jul 19 2007 15:31] Earwax: A: performed various nerfs to samurai, removed basically all generic_wc_bonus() until i implement appropriate checks this evening, and changed the core resistance to physical damage from 20% to 10% for their defensive mode.  I will evaluate this stuff a bit more and implement things the way they should be later on.
+[Jul 20 2007 01:14] Earwax: A: completed revamping of sams...they now get mild penalties to defense in offense mode, and vice versa, and do lower damage in general, with lower defense in general, will watch the numbers but they should be much more in line now
+[Jul 20 2007 03:02] Earwax: A: changed how gstick (~jenny/wings/items/gstick.c) does damage, it no longer has attack() calls, but it does more damage than it had after all the nerfings...it's now more commensurate with where it should be, without the issues and drama it had before
+[Jul 20 2007 10:53] Earwax: A: slightly beefed derv offense, they will now dictate the guild balance, as they have 0 defense, they have the maximum standard offense from here on out.  they will gain slight wc bonuses based on xlevel primarily with random chance for a smaller bonus from guild stats
+[Jul 22 2007 18:01] Fred: A: comp'd blake for a double death due to poison.
+[Jul 23 2007 03:20] Earwax: A: edited 'help bards' to just show star as gwiz, since that's how it is
+[Jul 23 2007 11:05] Angel: A: gave crip /players/jaraxle/3rd/volcano/weaps/krakin.c for bug in locker / Fred approved
+[Jul 25 2007 09:16] Earwax: A: dewizzed veeshan :( this was the decision by mizan and myself, it will be permanent pending him talking to mizan and convincing him that he'll behave, has an area, productive code all ready to go into the game, apology to volkar, and other conditions.  Dewizzing required resetting his xp, attrib, xlevel, autoloads, guild file and home
+[Jul 25 2007 11:48] Earwax: A: made it so casa de nirvana bills are paid off via bank balance before checking their current coins, idea reported via vertebraker, i say give the man 100 points and a liquidpork sammich
+[Aug  6 2007 00:42] Earwax: A: handed oz combined rings, i'm not entirely positive i should do any reimb, but i see lots o bugs in forbidden with this shit, it's only one item, and one of hardest to get so fuggit, i reimbursed....especially with the whole log full o bugs all in reference to this
+[Aug  6 2007 15:24] Mizan: A: oops, forgot to mention this from earlier- sent a mudmail to all of volkar's chars asking for his side of the story about being caught abusing a reimbursement bug. he did fess up to it, but also named a wiz that he had confided in as 'reporting' the bug
+[Aug  6 2007 15:25] Mizan: A: after asking him who the wiz was, he gave me attitude because i was invis. I went vis, imprisoned one of his chars to prove a point- that he was in no position to bargain. he named chip. So then i released the char (kosh). Well now he decided to login all his chars an inactive them.
+[Aug  6 2007 15:26] Mizan: A: As per usual situation, assignment of blame to something unrelated is the issue (he's pissed off that i was invis, not that he was caught abusing a bug).
+[Aug  6 2007 22:07] Earwax: A: changed cost of ~verte/guilds/samurai/bin/_bladestorm.c to 240 (from 80) just to get it in and stop valen's pitful whining
+[Aug  7 2007 15:32] Angel: A: joab gave me bracelet to identify due to hotel bug / Boltar fixed the bug
+[Aug  7 2007 17:28] Mizan: A: adjusted goten's attribs at his request- strength and stamina down to 30 from 34
+[Aug  7 2007 23:05] Earwax: A: created dhalek, alternate wiz level 100, in case of my ip changing, and am unable to logon this char, and also as an alternate coder and tester
+[Aug  8 2007 00:24] Earwax: A: made a change to mages to eliminate hit/run tactics, modified gob and /room/room.c
+[Aug  8 2007 23:45] Earwax: A: temporarily nerfed mage command limit to 1, from 3, until the issues in the guild get fixed, note to self: fix those issues heh
+[Aug  9 2007 01:25] Earwax: A: fixed (hopefully) bug in gordie stick and switched defective with new one on ever
+[Aug 10 2007 10:25] Earwax: A: fixed a couple bugs i caused in samurai code, minor things, in kiai and focus
+[Aug 10 2007 11:34] Earwax: A: slight nerf to sam again, made their defensive return value -10 instead of -5 (if in attack mode) and lowered their attack mode offensive return by up to 2, and defensive mode offensive return to -10 from -5
+[Aug 10 2007 11:40] Earwax: A: and added defensive mode (chudan) penalty to iaijitsu
+[Aug 12 2007 14:43] Angel: A: added /players/angel/rewards/belt.c and autoload/ approved by Earwax
+[Aug 14 2007 05:53] Earwax: A: banished pestilence abuse
+[Aug 14 2007 19:56] Angel: A: add 2 levels back to Blake / chip put mob on green and it killed him
+[Aug 15 2007 02:14] Mizan: A: reset dameon as a member of necro guild, set his guild_file appropriately
+[Aug 15 2007 13:43] Mizan: A: rmed /players/catwoman/storage/crip as he was passing equipment again
+[Aug 17 2007 14:04] Earwax: A: made a couple stabs at fixing hb issues with llew's demons ~llew/closed/crystal/demon
+[Aug 18 2007 17:21] Mizan: A: i gave soul his exp back, lost from a DC combat situation. Told him it was a freebie and that this sort of thing is generally not reimbursed
+[Aug 20 2007 09:12] Fred: A: edited id.h in the warriors guild to hopefully fix a prblem with blindfight.
+[Aug 21 2007 21:25] Mizan: A: there seem to be problems with shardak and rooms in /players/zeus/realm/city/
+[Aug 21 2007 21:25] Mizan: A: shardak assume an id of 'demon' which causes hell with those rooms, that spawn and generate demons and stuff
+[Aug 21 2007 21:26] Mizan: A: killed Tembo by accident by transing him from aforementioned area into the village church. Not smart on Mizan's part. Reimbursed EXP.
+[Aug 23 2007 12:03] Fred: A: I put Mrjones into the Bards.
+[Aug 23 2007 12:04] Fred: A: I like to see bards.  They play music and are jolly.  And they take some of the gay comments away from the rangers.
+[Aug 23 2007 15:52] Fred: A: comp'd Soul 130k exp for a guild glitch.
+[Aug 23 2007 22:53] Mizan: A: Registered Test Character: Sput
+[Aug 23 2007 22:54] Khrell: A: Registered Test Character: Pickle
+[Aug 24 2007 19:10] Mizan: A: forbin promoted to L90, restored his player character- for some reason he was not able to login beyond password authentication state
+[Aug 24 2007 19:39] Katya: A: Registered Test Character: Katest
+[Aug 26 2007 12:07] Mizan: A: made changes to mages pacify (/players/pavlik/guild/mages/pacify.c) and the guild object gob.c to break the 'pacify' command spell when stacked up in combat.
+[Aug 26 2007 12:07] Mizan: A: fakir caught teferi abusing this, we ffixed this one together, with his testing and input. Woo!
+[Aug 26 2007 14:40] Mizan: A: it probably needs to be made clear about the withdrawal policy at the nirvana bank... that once the funds are in and a reboot has passed, you can't get anything else back
+[Aug 26 2007 23:22] Earwax: A: fixed a goofy error in star.c in bard code where color codes were causing sscanf() issues ... catch_tell() might not parse them, or does something silly with them now, have to remember this for future stuffs
+[Aug 27 2007 17:11] Earwax: A: hopefully fixed a hb bug in ~forbin/realms/keats/NPC/wizard.c reported by hercules
+[Aug 28 2007 10:18] Mizan: A: added a line in /players/earwax/bank/bank.c in addition to what was already there, to clarify for n00bs to use 'help bank'
+[Aug 31 2007 01:23] Mizan: A: i probably crashed the mud. Gave out a metric asston of equipment and heals
+[Sep  3 2007 15:01] Mizan: A: updated sign in /players/mokri/clans/hall.c with warning that poor clan names will be deleted without warning
+[Sep  3 2007 15:02] Mizan: A: corrected 'capial' to capital in said room
+[Sep  4 2007 16:16] Fred: A: allowed Fartbomber to restart as char Illwind.  A more appropriate name and is a newbie.
+[Sep  4 2007 22:14] Fred: A: Changed Bale a BF guild mob to be able to use a players BankBalance when purchasing gems for the guild.
+[Sep  5 2007 00:21] Mizan: A: gave mrjones some exp back from a PK gangbang because his soul/quicktyper fragged on him
+[Sep 21 2007 07:38] Fred: A: ~/guilds/Rangers/Communicator.c && ~/guilds/Rangers/Commands/Ninja.c -- Attempt to fix the Rangers ninja morph to make them invisible and see in the dark like it's supposed to.
+[Sep 21 2007 13:36] Mokri: A: removed 'public_coffer' commands completely, and references to commands  in help files
+[Sep 25 2007 17:21] Fred: A: patched captainkirk to the same stats he had as Shitroy.  Made him change names.
+[Sep 26 2007 11:54] Fred: A: comped Fastkill for a buggt death? heh
+[Oct  2 2007 19:56] Fred: A: I removed blake from the mages guild.  Dested his object, used fix_guild blake, subtracted 1/6th of his exp, and reset his level to match his new exp.
+[Oct  4 2007 16:43] Khrell: A: Registered Test Character: Horatio
+[Oct  6 2007 23:57] Angel: A: Imprisoned Tara 5 days for cheating the system/ DC'ing and getting 200k in coins repeatedly
+[Oct  7 2007 19:50] Mizan: A: adjusted tara and becka's gold from 200k coins to 20 coins as part of the situation with the disconnect money bug. Angel was the one who has found the bug...
+[Oct  7 2007 19:50] Mizan: A: we still dont know why it has happened though.
+[Oct  8 2007 09:56] Fred: A: fixed it.
+[Oct  8 2007 09:57] Fred: A: heh ~jaraxle/cave/mobs/special.c -- it didn't have a cave_mob ID so it moved to the entrance with the corpse and killed Flick again.  Cave mobs aare supposed to destruct.
+[Oct  8 2007 13:56] Mokri: A: added portal room for clan purchase. ~mokri/clans/hall_rooms/templates. approved by fred.
+[Oct  9 2007 17:27] Mokri: A: added command 'clan_stats' to clans. ~mokri/clans/cmds/_clan_stats.c. also added appropriate help file. approved by fred.
+[Oct  9 2007 18:25] Mokri: A: various edits to clan_stats. cleaning up look, adding fields, etc
+[Oct 23 2007 01:17] Fakir: A: test
+[Oct 23 2007 01:17] Fakir: A: Cloned some stuff to soul...he lost in a dc. amulet,leggings,and misc armor.
+[Oct 23 2007 17:12] Fred: A: moved unset_invis flag in rangerCommunicator, in the quit() func.
+[Oct 23 2007 18:28] Mokri: A: added ability to 'private_coffer' command in clans to transfer bank balances to coffer balances. approved by boltar.
+[Oct 23 2007 21:50] Earwax: A: dested sam object off fury, fixed part in ~verte/samurai/bin/_leave_guild.c that had doofed that up
+[Oct 24 2007 15:52] Earwax: A: moved old adv_inner.c to adv_inner.ldbak, redid description and stuck a board in there as a communication tool for ldmud stuff
+[Oct 24 2007 15:54] Earwax: A: belay that last one til i do it up with mysql
+[Oct 24 2007 17:27] Rumplemintz: A: fixed west exit - players/molasar/CASTLE/entry.c
+[Oct 24 2007 17:27] Rumplemintz: A: fixed north exit - players/molasar/CATSLE/garden1.c
+[Oct 24 2007 17:38] Rumplemintz: A: added longsword alias in ~/tallos/7tigers/objects/holylongsowrd.c
+[Oct 24 2007 17:56] Rumplemintz: A: fixed enter() per bug report - ~/jaraxle/3rd/pyramid/rooms/room3
+[Oct 26 2007 03:30] Earwax: A: commented out autoloading of several of dark mage guild files in ~mythos/castle.c
+[Oct 26 2007 03:36] Earwax: A: should have logged this earlier, but pitched a hissy fit to verte essentially, to get actual movement on the ldmud project....this was very necessary if this crap is going to get done....
+[Oct 26 2007 03:46] Earwax: A: changed ansi include in ~fred/closed/bloodfist/daemon/channel.c from fred's ansi to the general ansi
+[Oct 26 2007 03:48] Earwax: A: attempted a fix on ~jaraxle/3rd/pyramid/items/myst_cloak.c
+[Oct 26 2007 04:15] Earwax: A: ~fred/closed/bloodfist/daemon/wep_daemon.c fixed a bug
+[Oct 26 2007 12:58] Rumplemintz: A: ~/tallos/7tigers/mobs/golddragon1.c - Fixed include statement
+[Oct 26 2007 14:22] Rumplemintz: A: /players/tallos/7tigers/rooms/dragonchambers.c - Fixed 'out' exit to remove call_out
+[Oct 26 2007 16:13] Rumplemintz: A: ~/hippo/thrombo.c - Fixed 'alias' and name
+[Oct 26 2007 16:14] Rumplemintz: A: ~/hippo/weapons/glue.c - fixed Include statement
+[Oct 26 2007 20:10] Mokri: A: fixed mage 'mmon' command.
+[Oct 28 2007 16:02] Mizan: 
+  A: removed semicolons from 
+  R: include statements in hawkeye's code
+[Oct 28 2007 16:02] Mizan: 
+  A: removed semicolons from 
+  R: include statements in snow's code
+[Oct 28 2007 16:34] Mizan: A: removed ; from include in /players/saber/stuff/popper.c
+[Oct 28 2007 16:34] Mizan: A: removed ; from includes in /players/saber/stuff/smear.c
+[Oct 28 2007 16:35] Mizan: A: removed ; from include in /players/saber/stuff/tag_gun.c
+[Oct 28 2007 16:35] Mizan: A: removed ; from includes in saber's mini guilds
+[Oct 28 2007 16:48] Mizan: A: fixed typo in /players/trix/castle/dismonst/AGG-gorilla.c "The gorilla looks..."
+[Oct 28 2007 16:55] Mizan: 
+  A: removed semicolons from 
+  R: include statements in /players/trix/*
+[Oct 28 2007 17:12] Mizan: A: made ldmud worky /players/wocket/turtleville/OBJ/heal_potion.c
+[Oct 28 2007 17:13] Mizan: A: made ldmud worky /players/feldegast/sorcs/daemons/channelD.c
+[Oct 28 2007 17:14] Mizan: A: made ldmud worky /players/feldegast/sorcs/npc/ganof.c
+[Oct 28 2007 17:15] Mizan: A: made ldmud worky /players/feldegast/sorcs/obj/telemover.c
+[Oct 28 2007 17:17] Mizan: A: made ldmud worky /players/wocket/closed/guild/obj/guilddaemon.c
+[Oct 28 2007 17:19] Mizan: A: made ldmud worky /players/wocket/f_forest/NPC/trilla.c
+[Oct 28 2007 17:19] Mizan: A: made ldmud worky /players/wocket/mages/daemons/channelD.c
+[Oct 28 2007 17:20] Mizan: A: made ldmud worky /players/wocket/mages/obj/blankpage.c
+[Oct 28 2007 17:20] Mizan: A: made ldmud worky /players/wocket/mages/objs/telemover.c
+[Oct 28 2007 17:22] Mizan: A: made ldmud worky /players/wocket/mages/spells/freezing_touch.c
+[Oct 28 2007 17:23] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg10_bk.c
+[Oct 28 2007 17:23] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg11_bk.c
+[Oct 28 2007 17:24] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg12_bk.c
+[Oct 28 2007 17:25] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg1_bk.c
+[Oct 28 2007 17:25] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg2_bk.c
+[Oct 28 2007 17:27] Mizan: A: made ldmud worky /players/feldegast/sorcs/npc/ganof.c - also changed code order of something it was doing with write_file() to work with ld
+[Oct 28 2007 17:29] Mizan: A: did the same with /players/wocket/mages/npc/ganof.c
+[Oct 28 2007 17:30] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg3_bk.c
+[Oct 28 2007 17:30] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg4_bk.c
+[Oct 28 2007 17:31] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg5_bk.c
+[Oct 28 2007 17:33] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg8_bk.c
+[Oct 28 2007 17:35] Mizan: A: made ldmud worky /players/wocket/mushrooms/mg9_bk.c
+[Oct 28 2007 17:36] Mizan: A: made ldmud worky /players/wocket/mushrooms/mgcave_bk.c
+[Oct 28 2007 17:36] Mizan: A: made ldmud worky /players/wocket/mushrooms/mghut_bk.c
+[Oct 28 2007 17:37] Mizan: A: made ldmud worky /players/wocket/necro/daemons/channel_bk.c
+[Oct 28 2007 17:38] Mizan: A: made ldmud worky /players/wocket/necro/obj/misc/salt.c
+[Oct 28 2007 17:38] Mizan: A: made ldmud worky /players/wocket/sorcs/daemons/channelD.c
+[Oct 28 2007 17:40] Mizan: A: made ldmud worky /players/wocket/sorcs/npc/ganof.c - also changed code order of something it was doing with write_file() to work with ld
+[Oct 28 2007 17:40] Mizan: A: made ldmud worky /players/wocket/sorcs/obj/telemover.c
+[Oct 28 2007 17:41] Mizan: A: made ldmud worky /players/wocket/sorcs/spells/freezing_touch.c
+[Oct 28 2007 17:42] Mizan: A: made ldmud worky /players/wocket/turtleville/questhut_bk.c
+[Oct 28 2007 17:43] Mizan: A: made ldmud worky /players/wocket/turtleville/SPEAKEASY/channelD.c
+[Oct 28 2007 20:09] Mizan: A: made ldmud worky /players/softly/algiers/obj/snakeoil.c
+[Oct 28 2007 20:10] Mizan: A: made ldmud worky /players/softly/back/tape.c
+[Oct 28 2007 20:11] Mizan: A: made ldmud worky /players/softly/back/tapem.c
+[Oct 28 2007 20:13] Mizan: A: made ldmud worky /players/softly/junk/cane.c
+[Oct 28 2007 20:15] Mizan: A: made ldmud worky /players/softly/newbie/obj/coldfire.c
+[Oct 28 2007 20:15] Mizan: A: made ldmud worky /players/softly/newbie/mobs/ffly.c
+[Oct 28 2007 20:17] Mizan: A: made ldmud worky /players/softly/newbie/obj/cheese.c
+[Oct 28 2007 20:17] Mizan: A: made ldmud worky /players/softly/newbie/obj/nut.c
+[Oct 28 2007 20:18] Mizan: A: made ldmud worky /players/softly/winter/brandy.c
+[Oct 28 2007 20:19] Mizan: A: made ldmud worky /players/softly/winter/hotchoc.c
+[Oct 28 2007 20:19] Mizan: A: made ldmud worky /players/softly/winter/marshm.c
+[Oct 28 2007 22:13] Mizan: A: made ldmud worky /players/tallos/7tigers/mobs/asimar1.c
+[Oct 28 2007 22:14] Mizan: A: made ldmud worky /players/tallos/7tigers/mobs/asimar2.c
+[Oct 28 2007 22:15] Mizan: A: made ldmud worky /players/tallos/7tigers/mobs/babau.c
+[Oct 28 2007 22:17] Mizan: A: made ldmud worky /players/tallos/7tigers/mobs/bonedevil2.c
+[Oct 28 2007 22:17] Mizan: A: made ldmud worky /players/tallos/7tigers/mobs/balor1.c
+[Oct 28 2007 22:18] Mizan: A: made ldmud worky /players/tallos/7tigers/mobs/succubus1.c
+[Oct 28 2007 22:18] Mizan: A: made ldmud worky /players/tallos/7tigers/mobs/horcb.c
+[Oct 28 2007 22:22] Mizan: A: made ldmud worky players/tallos/victoria/objects/ipexbrarainbow.c
+[Oct 28 2007 22:22] Mizan: A: made ldmud worky /players/tallos/victoria/mobs/cindycrawford.c hubba hubba
+[Oct 28 2007 22:23] Mizan: A: made ldmud worky /players/tallos/victoria/mobs/dominatrix.c
+[Oct 28 2007 22:23] Mizan: A: made ldmud worky /players/tallos/victoria/mobs/model1.c
+[Oct 28 2007 22:24] Mizan: A: made ldmud worky /players/tallos/victoria/mobs/secretsales1.c
+[Oct 28 2007 22:25] Mizan: A: made ldmud worky /players/tallos/thevast/ogremage1.c
+[Oct 28 2007 22:26] Mizan: A: made ldmud worky /players/tallos/tallosautoload/retribution.c
+[Oct 31 2007 15:42] Mizan: A: made ldmud worky /players/catacomb/Fspirit.c
+[Nov  1 2007 13:56] Mokri: A: edited jareels ansi headers to call /obj/ansi.h. was erroring out.
+[Nov 01 2007 17:27] Mokri: A: added check in ~mokri/clans/room_funcs.h to remove blank elements in array created by 'explode' due to LD-ness
+[Nov 01 2007 18:19] Mokri: A: modified 'room_funcs.h' for clans to disallow room creation from ld, as it will bug out until save_object() is valid
+[Nov  2 2007 12:05] Mokri: A: fixed softlys newbie area. was calling 'obj/ansi.h'. needed to add leading slash to path ('/obj/ansi.h'). note, i have ran into this same situation several times in the past few days
+[Nov 05 2007 19:46] Rumplemintz: A: fixed /players/mythos/prac/pet.c

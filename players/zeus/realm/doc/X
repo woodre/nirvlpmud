@@ -1,0 +1,62 @@
+the Fallen Lands forest 'arena' [for lack of a better name]
+/players/zeus/realm/x/
+
+-   11 room area, 9 of which are the 'arena' the other 2 are paths.
+-   path1.c connects to guth6.c from the west.
+-   all movement in arena is random, except
+20% chance moving east will move you to path2.c
+-   demon curse in full effect. 
+           [demons attack if low hps, can block movement]
+85% chance every arena room is NT when you enter.
+25-50% chance an npc is cloned to arena every movement.
+16% chance another npc will be cloned same movement.
+       [npcs aren't necessarily cloned to the room player is in]
+33% chance movement will fail while in combat.
+-   all npcs will auto dest after a while.
+-   all npcs will hunt the player.
+-   all npcs can summon demons to aid them in combat.
+
+npcs:                   --value--
+  *-beast            [3200-5700 coins (barter)]
+  *-shadow wraith    [no coins, just heal]
+  *-zombie           [3000 - 5500 coins]
+  *-bandit           [2000 - 4000 coins + dagger (1000)]
+  *-headless apparition  [no coins, just heal]
+  *-figure           [cloak + scythe == 2000]
+  *-demon_large      [5000 - 7000]
+  *-ghoul            [2500 - 5500]
+  *-spider           [no treasure]
+  *-vulture          [no treasure]
+  *-demon            [no treasure]
+
+objs:
+  *-cloak.c    [armor, type misc, ac 1-2]
+  *-scythe.c   [wep, wc 15-20]
+  *-claws.c    [wep, wc 19, can be bartered]
+  *-dagger.c    [wep, wc 16-19]
+  *-shadow.c  [heal- in /heals dir]
+  *-demon_heart.c  [heal- same as old, in ~/heals dir]
+
+
+Two of the NPCs in the /x rooms have 6000 coins each worth in treasure.
+The two NPCs in question are headless.c and wraith.c.
+I think 6k each is justified for 4 primary reasons.
+
+  1) It's 6k in treasure, this case heals.  They can only be sold for
+     about 2k.  A similar monster is Snow's caterpillar, which has
+     10k - 30k worth in heals on it.
+
+  2) The two NPCs each have a 1 in 10 chance of fleeing from the fight
+     at any time.  If they flee, it causes the player to have to move
+     around, making more NPCs, or take the chance that it will dest
+     after it flees.
+
+  3) These are not your average level 20 NPCs.  The wraith has a very
+     potent special, doing 10 to 60 damage, and is invisible.  The
+     headless apparition has a WC of 40 to 47, high above the standard
+     WC for an NPC of this level.
+
+  4) The environment which these NPCs are in is not your typical setting.
+     If you don't know how it works, read the X_README file located in
+     this directory.
+

@@ -1,0 +1,14 @@
+
+
+                           [help stop]
+-----------------------=========+=========-----------------------   
+
+Usage: 'stop hunting'
+
+  This command is used to stop hunting a fleeing player. When you are
+  hunting, each time you enter the room a fight will ensue, by using 
+  this command you will not attack. 
+  NOTE: You cannot stop being hunted, others will still hunt you
+        until they use this command or a certain amount of time
+        elapses.
+

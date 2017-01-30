@@ -1,0 +1,21 @@
+                               ___
+To challenge another player, simply type 'challenge <player>' and
+if they accept, you will enter the arena automatically.
+
+Once you are in the arena, you may neither quit, nor leave until
+your opponent has been defeated.  If you disconnect, you will have
+60 seconds to reconnect, or you will lose the match.
+NEW: Either player may type 'call tie' in the arena and if the other
+player agrees, you will both be moved to the recovery room.
+Note: Any losses of equipment or experience points will not be
+      recompensated for any reason.  Entering the arena is strictly
+      voluntary.
+You may also use options in your challenge to change the nature
+of the fight.  Type 'read parameters' for more information.
+
+
+ Examples:
+   challenge masakado
+   challenge batarsis -h -b
+   challenge armageddon -h
+                               ___

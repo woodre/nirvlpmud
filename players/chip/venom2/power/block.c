@@ -1,0 +1,43 @@
+/*
+Level 4 Creation and Level 4 Combat: Block - Adds an additional
+Willpower / 5 + r(combat) in AC for 1 round.  Cost: 15 sps
+This is a spell, so no other damage casting.
+*/
+
+#include "/players/chip/venom2/sdefine.h"
+
+
+main(string str, object gob, object player)
+{
+	
+	if(USER->query_ghost()) return 0;
+	if(COM < 5 || CRE < 5) return 0;
+	if(USER->query_spell_dam()) return 1;
+	if(GOB->query_spell_delay()){
+		tell_object(USER,
+		"You are already using "+GOB->query_spell_delay()+".\n");
+		return 1;
+	}
+	if(USER->query_sp() < 15){
+		tell_object(USER,
+		"You lack the energy for that.\n");
+		return 1;
+	}
+	if(GOB->query_block()){
+		tell_object(USER, "You are already blocking!\n");
+		return 1;
+	}
+	if(!USER->query_attack()){
+		tell_object(USER, COLOR+"You are not fighting!"+NORM+"\n");
+		return 1;
+	}
+	USER->add_spell_point(-15);
+	GOB->set_block((USER->query_attrib("wil") / 5) + random(COM));
+	tell_object(USER,
+		"You hold your palm outward towards your attacker...\n"+
+	HIK+"Dark Matter"+NORM+" swells forward and creates a hard shield to defend you!\n");
+	tell_room(environment(USER),
+	USER->query_name()+" forms a shield from "+HIK+"Dark Matter"+NORM+"!\n");
+	return 1;
+}
+

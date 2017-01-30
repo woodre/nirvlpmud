@@ -1,0 +1,29 @@
+no_clean 0
+wielded 0
+wielded_by 0
+name_of_weapon "A black demon blade"
+cap_name "A black demon blade"
+broke 0
+silentwield 0
+eff_wc 0
+misses 0
+hits 0
+alt_name "blade"
+alias_name "sword"
+short_desc "A black demon blade"
+long_desc "A black demon blade"
+read_msg 0
+save_flag 0
+class_of_weapon 0
+value 5000
+buy_value 0
+local_weight 0
+hit_func_fn "/players/boltar/things/antipk2"
+wield_func_fn "/players/boltar/things/antipk2"
+info 0
+type 0
+message_hit ({"massacre"," to small fragments","smashed"," with a bone crushing sound","hit"," very hard","hit"," hard","hit","","grazed","","tickled"," in the stomach",})
+multipleIds ({})
+params ({"physical",0,"hit",})
+offwielded 0
+offwield_desc 0

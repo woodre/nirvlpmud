@@ -1,0 +1,31 @@
+Because it needs it, and because I'd really like to do it, I'm 
+going to be updating this area.  any changes I make will be either
+purely cosmetic, or in bringing up the area from being one of my 
+favorites from back in 91 or 92 or whenever I was an assassin and
+roaming it, to being a competitive area in the game now.  Or at
+least an area that there's reason to hit.  I also will be recoding
+the assassins, as closely to the original as feasible, and this is
+probably a wise thing to do for that goal as well.
+
+This was approved, actually suggested, and enabled by Vertebraker
+on 9/28/05.  If you read this Deathmonger, it means you're back :)
+I'll be happy to reverse any changes or explain anything I did.
+There will also be text files covering the changes I do.
+
+-Earwax 9/29/05
+
+==================================================================
+9/29/05:
+Created the mon,room,obj,lib dirs.  I'm going to leave the old
+directories exactly the way they are, but the updated code will go
+into those 4 directories.  Once the area is fully operational, I
+will probably rm the old files, to save hard disk space, with the
+old information being backed up, by Boltar and/or Vertebraker.
+I've also started the defs.h file.  This will be a definitions file
+to simplify paths and facilitate changes.
+
+I'm starting to move the rooms into the room directory, as I change
+them.  These changes will consist of fixing typos, using defs, 
+and adding color, tweaking descs and whatnot here and there.
+Anything major that I do I will document further.
+==================================================================

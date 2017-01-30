@@ -1,0 +1,27 @@
+intelligence 100
+wisdom 100
+will_power 100
+power 100
+conjuration 100
+enchantment 100
+evocation 100
+illusion 100
+necromancy 100
+weapons 1
+monitor 1
+spells ({"crush","wizeye","werelite","userv","tlp","summon","stoneskin","sdagger","sac","reveal","query","pacify","mssle","mbag","mark","lifesteal","knowal","khirstel","fsp","food","ffire","eshield","empower","edagger","detox","cure","ctouch","blind","augury","alarm","acid","absorb","soultrap","mimage","enchant","andead","cloudkill","invuln","fball","gstr",})
+training_sessions 0
+new_spell_chances 35
+dragon_stats "dragon#1#1#1#1#1"
+dragon_descrip "the#none"
+login_cmds "gw"
+logout_cmds "gw"
+login_msg "$HY$RUN FOR COVER!$N$ ... $HC$%NAME%$N$ has $HY$arrived!$N$"
+logout_msg "You breath a deep sigh of relief ... $HC$%NAME%$N$ has $HM$left the building$N$."
+sponsor "0#0+lok"
+staff_spells "0#0#0#0#0#0"
+muffled 0
+my_exp 1144796
+divd 50
+donation 0
+balance 0

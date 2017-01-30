@@ -1,0 +1,238 @@
+./daemons/logins.c:    AllInfo = AllInfo[1..-2] + ({ temp });
+./daemons/combat.c:  return result[0..-3] + "." + result[-2..-1];
+./open/humor/hilarity.c:     set_spell_mess2(HIG+"                               ...----....\n"+
+./open/humor/hilarity.c:"                         ..-:'''         '''-..\n"+
+./domains/banking/V10/shopinterface.c:        equal_wares[h][0..-1] = ({ ware });
+./domains/banking/V10/shopinterface.c:    words[0..-1] = ({ "all" });
+./domains/banking/V10/shopinterface.c:    equal_wares[key][0..-1] = ({ o });
+./closed/bin/_mk.c:      if(arg[-2..-1]!=".c")
+./bin/play/_describe.c:    str=str[len+1..-1];
+./bin/play/_emotes.c:    output+=emotions[x][1..-3]+" ";
+./bin/wiz/secure/mk.c:      if(arg[-2..-1]!=".c")
+./bin/wiz/_update_items.c:    str=str[1..-1];
+./bin/wiz/_update_items.c:  if(str[-2..-1]==".c")
+./bin/wiz/_update_items.c:    str=str[0..-3];
+./bin/wiz/_mk.c:      if(arg[-2..-1]!="\.c")
+./bin/wiz/_combat.c:  return num[0..-3]+"."+num[-2..-1];
+./bin/wiz/_combat.c:    str_rating = str_rating[0..-5]+"."+str_rating[-4..-3];
+./obj/daemons/commands.c:    files[i] = files[i][1..-3];
+./obj/player.c:    if(sscanf(arg, "%sacces%s", temp,tmp) == 2) return arg[1..-1];
+./obj/player.c:           return str[1..-1];
+./obj/user/xls.c:        files[s]=temp[0..show_size]+ansid+temp[show_size+1..-1];
+./obj/user/xls.c:      if(files[s][-2..-1]==".c") {
+./obj/user/xls.c:          files[s]=temp[0..show_size]+ansic+temp[show_size+1..-1];
+./obj/user/xls.c:      } else if(files[s][-2..-1]==".h") {
+./obj/user/xls.c:          files[s]=temp[0..show_size]+ansih+temp[show_size+1..-1];
+./obj/user/xls.c:          files[s]=temp[0..show_size]+ansio+temp[show_size+1..-1];
+./obj/user/xls.c:      files[x]=files[x][0..show_size]+ansid+files[x][show_size+1..-1];
+./obj/user/xls.c:      files[x]=files[x][0..show_size]+ansih+files[x][show_size+1..-1];
+./obj/user/xls.c:      files[x]=files[x][0..show_size]+ansic+files[x][show_size+1..-1];
+./obj/user/xls.c:      files[x]=files[x][0..show_size]+ansio+files[x][show_size+1..-1];
+./obj/user/xls_ld.c:        files[s]=temp[0..show_size]+ansid+temp[show_size+1..-1];
+./obj/user/xls_ld.c:      if(files[s][-2..-1]==".c") {
+./obj/user/xls_ld.c:          files[s]=temp[0..show_size]+ansic+temp[show_size+1..-1];
+./obj/user/xls_ld.c:      } else if(files[s][-2..-1]==".h") {
+./obj/user/xls_ld.c:          files[s]=temp[0..show_size]+ansih+temp[show_size+1..-1];
+./obj/user/xls_ld.c:          files[s]=temp[0..show_size]+ansio+temp[show_size+1..-1];
+./obj/user/xls_ld.c:      files[x]=files[x][0..show_size]+ansid+files[x][show_size+1..-1];
+./obj/user/xls_ld.c:      files[x]=files[x][0..show_size]+ansih+files[x][show_size+1..-1];
+./obj/user/xls_ld.c:      files[x]=files[x][0..show_size]+ansic+files[x][show_size+1..-1];
+./obj/user/xls_ld.c:      files[x]=files[x][0..show_size]+ansio+files[x][show_size+1..-1];
+./obj/user/text_edit.c:      if(message[s][-1..-1]!=" ") 
+./obj/user/text_edit.c:        mess=mess[0..pos-1]+mess[pos+1..-1];
+./obj/user/text_edit.c:    else if(message[len][-1..-1]!=" ")
+./obj/user/text_edit.c:  else if(newstr[-1..-1]!=" ") newstr+=" ";
+./obj/user/text_edit.c:  else if(newstr[-1..-1]!=" ") newstr+=" ";
+./obj/user/text_edit.c:        delete_line(str[4..-1]);
+./obj/user/text_edit.c:        replace_line(str[4..-1]);
+./obj/user/text_edit.c:        insert_line(str[4..-1]);
+./obj/tools/robe.c:        return cmd_line[pos..--lc];
+./obj/tools/robe.c:      return cmd_line[pos..--lc];
+./obj/tools/robe.c:          return cmd_line[pos..--lc];
+./obj/tools/robe.c:        return cmd_line[pos..--lc];
+./obj/tools/robe.c:          return cmd_line[pos..--lc];
+./obj/tools/robe.c:      return cmd_line[pos..--lc];
+./obj/armor.c:          +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./obj/player/dr/read_write.c:    if(sscanf(arg, "%sacces%s", temp,tmp) == 2) return arg[1..-1];
+./obj/player/dr/read_write.c:           return str[1..-1];
+./obj/time_check2.c:    future=future[0..9]+" 06:05:00 "+future[-4..-1];
+./obj/weapon.c:             +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/mizan/mines/core/room.c:    if(file[-2..-1]!=".c") file=file+".c";
+./players/mizan/temp/armor.c:          +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/mizan/temp/weapon.c:             +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/languilen/gideon/rooms/101-150.c:"     !M$$$$*         'k    '     d$*##..-~`           `: \"4:x.\n"+
+./players/zeus/stuff/strlen.c:if(a[x] && sscanf(a[x], b[0..-4]+"%s", c))
+./players/rumplemintz/closed/bin/ipinfo.c:    restore_object("pfiles/"+arg+"/"+files[i][0..-3]);
+./players/rumplemintz/closed/bin/ipinfo.c:    write(pad(files[i][0..-3], 15)+name+"\n");
+./players/rumplemintz/closed/staff.c:	add_action("command_hook", t[i][0..-3]);
+./players/rumplemintz/closed/robe.c:        return cmd_line[pos..--lc];
+./players/rumplemintz/closed/robe.c:      return cmd_line[pos..--lc];
+./players/rumplemintz/closed/robe.c:          return cmd_line[pos..--lc];
+./players/rumplemintz/closed/robe.c:        return cmd_line[pos..--lc];
+./players/rumplemintz/closed/robe.c:          return cmd_line[pos..--lc];
+./players/rumplemintz/closed/robe.c:      return cmd_line[pos..--lc];
+./players/rumplemintz/closed/tplayer/tptool.c:	add_action("command_hook", t[i][0..-3]);
+./players/rumplemintz/wiz/xls.c:        files[s]=temp[0..show_size]+ansid+temp[show_size+1..-1];
+./players/rumplemintz/wiz/xls.c:      if(files[s][-2..-1]==".c") {
+./players/rumplemintz/wiz/xls.c:          files[s]=temp[0..show_size]+ansic+temp[show_size+1..-1];
+./players/rumplemintz/wiz/xls.c:      } else if(files[s][-2..-1]==".h") {
+./players/rumplemintz/wiz/xls.c:          files[s]=temp[0..show_size]+ansih+temp[show_size+1..-1];
+./players/rumplemintz/wiz/xls.c:          files[s]=temp[0..show_size]+ansio+temp[show_size+1..-1];
+./players/rumplemintz/wiz/xls.c:      files[x]=files[x][0..show_size]+ansid+files[x][show_size+1..-1];
+./players/rumplemintz/wiz/xls.c:      files[x]=files[x][0..show_size]+ansih+files[x][show_size+1..-1];
+./players/rumplemintz/wiz/xls.c:      files[x]=files[x][0..show_size]+ansic+files[x][show_size+1..-1];
+./players/rumplemintz/wiz/xls.c:      files[x]=files[x][0..show_size]+ansio+files[x][show_size+1..-1];
+./players/rumplemintz/PC/pc.c:      add_action("command_hook", t[i][0..-3]);
+./players/rumplemintz/obj/armor.c:          +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/rumplemintz/obj/room.c:    if(file[-2..-1]!=".c") file=file+".c";
+./players/rumplemintz/working_dir/blah.c:  tyme_trimmed_array = tyme_array[-6..-1];
+./players/rumplemintz/working_dir/room.c:    if(file[-2..-1]!=".c") file=file+".c";
+./players/rumplemintz/working_dir/cutstring_test.c:  cutstring = str[-6..-1];
+./players/rumplemintz/guild/necromancer/guildob.c:	add_action("command_hook", t[i][0..-3]);
+./players/rumplemintz/guild/necro/daemons/channel_d.c:	    str = str[1..-1];
+./players/rumplemintz/guild/room/droom.c:         if(file[-2..-1]!=".c") file=file+".c";
+./players/rumplemintz/room/color_room.c:         if(file[-2..-1]!=".c") file=file+".c";
+./players/angel/masons/bin/seal.c:      write(files[i][0..-5]+"\n");
+./players/angel/masons/mgob.c:    add_action("command_hook", t[i][0..-3]);
+./players/angel/masons/bak/mgob.c:    add_action("command_hook", t[i][0..-3]);
+./players/angel/tools/tool.c:    add_action("command_hook", files[i][0..-3]);
+./players/balowski/std/editor.c:	    else Text = Text[0..Line - 1] + NewText + Text[Line..-1];
+./players/eurale/closed/JUNK/showbat.c:"                        _..-'(                       )`-.._\n"+
+./players/eurale/VAMPIRES/OBJ/show_bat.c:"                        _..-'(                       )`-.._\n"+
+./players/eurale/VAMPIRES/OBJ/t_shirt.c:"                   _..-'(                       )`-.._\n"+
+./players/eurale/VAMPIRES/OBJ/E_tshirt.c:"                   _..-'(                       )`-.._\n"+
+./players/vital/temp/xls.c:        files[s]=temp[0..show_size]+ansid+temp[show_size+1..-1];
+./players/vital/temp/xls.c:      if(files[s][-2..-1]==".c") {
+./players/vital/temp/xls.c:          files[s]=temp[0..show_size]+ansic+temp[show_size+1..-1];
+./players/vital/temp/xls.c:      } else if(files[s][-2..-1]==".h") {
+./players/vital/temp/xls.c:          files[s]=temp[0..show_size]+ansih+temp[show_size+1..-1];
+./players/vital/temp/xls.c:          files[s]=temp[0..show_size]+ansio+temp[show_size+1..-1];
+./players/vital/temp/xls.c:      files[x]=files[x][0..show_size]+ansid+files[x][show_size+1..-1];
+./players/vital/temp/xls.c:      files[x]=files[x][0..show_size]+ansih+files[x][show_size+1..-1];
+./players/vital/temp/xls.c:      files[x]=files[x][0..show_size]+ansic+files[x][show_size+1..-1];
+./players/vital/temp/xls.c:      files[x]=files[x][0..show_size]+ansio+files[x][show_size+1..-1];
+./players/vital/temp/magic_room.c:        case -666..-1:
+./players/vital/temp/magic_room.c:    case -666..-1:
+./players/vital/temp/magic_room.c:    case -666..-1:
+./players/vital/temp/armor.c:          +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/vital/temp/room.c:    if(file[-2..-1]!=".c") file=file+".c";
+./players/guilds/vampires/obj/show_bat.c:"                        _..-'(                       )`-.._\n"+
+./players/guilds/vampires/obj/t_shirt.c:"                   _..-'(                       )`-.._\n"+
+./players/guilds/vampires/obj/E_tshirt.c:"                   _..-'(                       )`-.._\n"+
+./players/guilds/necro/daemons/channel_d.c:	    str = str[1..-1];
+./players/guilds/bards/martin.c:  write("Martin says, \"Your item has influence in the following areas:\n"+message[0..-3]+"\n");
+./players/illarion/test/armor.c:             +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/illarion/test/board.c:  return pad(subject,25)+pad(author,12)+time[0..5]+time[-6..-1];
+./players/illarion/test/board.c:    header=header[8..10]+header[4..6]+header[-5..-1]+header[10..15];
+./players/illarion/test/text_edit.c:      if(message[s][-1..-1]!=" ") 
+./players/illarion/test/text_edit.c:        mess=mess[0..pos-1]+mess[pos+1..-1];
+./players/illarion/test/text_edit.c:    else if(message[len][-1..-1]!=" ")
+./players/illarion/test/text_edit.c:  else if(newstr[-1..-1]!=" ") newstr+=" ";
+./players/illarion/test/text_edit.c:  else if(newstr[-1..-1]!=" ") newstr+=" ";
+./players/illarion/test/text_edit.c:        delete_line(str[4..-1]);
+./players/illarion/test/text_edit.c:        replace_line(str[4..-1]);
+./players/illarion/test/text_edit.c:        insert_line(str[4..-1]);
+./players/illarion/test/weapon.c:             +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/illarion/test/room.c:    if(file[-2..-1]!=".c") file=file+".c";
+./players/illarion/obj/xls.c:        files[s]=temp[0..show_size]+ansid+temp[show_size+1..-1];
+./players/illarion/obj/xls.c:      if(files[s][-2..-1]==".c") {
+./players/illarion/obj/xls.c:          files[s]=temp[0..show_size]+ansic+temp[show_size+1..-1];
+./players/illarion/obj/xls.c:      } else if(files[s][-2..-1]==".h") {
+./players/illarion/obj/xls.c:          files[s]=temp[0..show_size]+ansih+temp[show_size+1..-1];
+./players/illarion/obj/xls.c:          files[s]=temp[0..show_size]+ansio+temp[show_size+1..-1];
+./players/illarion/obj/xls.c:      files[x]=files[x][0..show_size]+ansid+files[x][show_size+1..-1];
+./players/illarion/obj/xls.c:      files[x]=files[x][0..show_size]+ansih+files[x][show_size+1..-1];
+./players/illarion/obj/xls.c:      files[x]=files[x][0..show_size]+ansic+files[x][show_size+1..-1];
+./players/illarion/obj/xls.c:      files[x]=files[x][0..show_size]+ansio+files[x][show_size+1..-1];
+./players/illarion/obj/xcp.c:    to_file=from[s..-1];
+./players/illarion/obj/dring.c:    what=what[1..-1];
+./players/illarion/obj/dring.c:    timestr=timestr[0..7]+"0"+timestr[9..-1];
+./players/illarion/obj/dring.c:  timestr=CYN+"["+NORM+timestr[8..10]+timestr[4..6]+timestr[-5..-1]+timestr[10..15]+CYN+"] "+NORM;
+./players/illarion/obj/dring.c:  if(str[-1..-1]!=";") str+=";";
+./players/illarion/obj/dring.c:  write("|"+pad(blah[0..siz/2],-amt/2)+pad(blah[1+siz/2..-1],amt/2)+"|\n");
+./players/illarion/obj/emotes.c:    output+=emotions[x][1..-3]+" ";
+./players/fred/closed/bloodfist/daemon/wep_daemon.c:    verb = cn[1..-3];
+./players/fred/closed/bloodfist/gob.c:    if(studied[y] && sscanf(studied[y], b[0..-4]+"%s", c))
+./players/fred/closed/bloodfist/power/bloodlust.c:    "~ - - /~- `~\n /..- "+NORM+
+./players/fred/closed/bloodfist/power/bloodomen.c:    "~ - - ~ //.\n* //..-~"+NORM+
+./players/fred/closed/bloodfist/power/bloodprayer.c:    "~ - - ~ //.\n* //..-~"+NORM+
+./players/fred/closed/bloodfist/power/bloodfury.c:    "~ - - /~-.\n /..-~"+NORM+
+./players/fred/stuff/gob.c:    if(studied[y] && sscanf(studied[y], b[0..-4]+"%s", c))
+./players/forbin/temp/gob.c:    if(studied[y] && sscanf(studied[y], b[0..-4]+"%s", c))
+./players/sado/comedy/patcher.c:      "/players/sado/toys/patchsupp.c"->pt(line[0..-2]);
+./players/snow/chaos/base.c:    TE(TP,"....----ChAoS----....\n\n");
+./players/snow/chaos/base.c:  TE(TP,"....----ChAoS----....\n");
+./players/snow/dervish/sp_checker.c:    temp = "players/snow/dervish/member/"+files[i][0..-3];
+./players/snow/dervish/sp_checker.c:    write(pad(files[i][0..-3], 12)+sand_points+"\n");
+./players/inactive_saved/pestilence.c:description "is a horseman   __  |  ""--.--.._                                             __..    ,--.  |       `.   "-.'""\_...-----..._   ,--. .--..-----.._.""|   |   /   /  |_   _    \__   ).  \           _/_ |   \|  ||  ..    >  `.  |  /   /    | | `.   ._)  /|\  \ .-"""":-"   "-.   `  ||  |.'  ,'`. |  |_/_  /    | |_.'   |   / ""`  \  ===/  ..|..  \     ||      < ""  `.  "  |/__    `.      .    \ ,--   \-..-\   /"\   /     ||  |>   )--   |    /    |     |__..-'__||__\   |___\ __.:-.._..-'_|\___||____..-/  |__|--""____/"
+./players/sparrow/closed/guild/specials/evilBonus.c:	case -500..-251:
+./players/sparrow/closed/guild/specials/evilBonus.c:	case -750..-501:
+./players/sparrow/closed/guild/specials/evilBonus.c:	case -1000..-751:
+./players/sparrow/closed/guild/specials/evilBonus.c:	case -1250..-1001:
+./players/sparrow/closed/guild/specials/evilBonus.c:	case -1500..-1251:
+./players/sparrow/closed/guild/BWO.c:      case -10..-3:
+./players/sparrow/closed/guild/BWO.c:      case -18..-11:
+./players/sparrow/closed/guild/BWO.c:    case -666666..-500: al_bonus = 3; break;
+./players/sparrow/closed/guild/BWO.c:    case -499..-250: al_bonus = 2; break;
+./players/sparrow/closed/guild/BWO.c:    case -249..-1: al_bonus = 1; break;
+./players/sparrow/closed/shardak/cmds/spy.c:            else if (name[-10..-1] == " (wielded)") name = name[0..-11];
+./players/sparrow/closed/shardak/cmds/presence.c:        case -300000000..-4800:
+./players/sparrow/closed/shardak/cmds/presence.c:        case -4799..-3600:
+./players/sparrow/closed/shardak/cmds/presence.c:        case -3599..-3000:
+./players/sparrow/closed/shardak/cmds/presence.c:        case -2999..-2000:
+./players/sparrow/closed/shardak/cmds/presence.c:        case -1999..-1000:
+./players/sparrow/closed/shardak/cmds/presence.c:        case -999..-666:
+./players/sparrow/closed/shardak/cmds/presence.c:        case -665..-333:
+./players/sparrow/closed/shardak/cmds/presence.c:        case -332..-1:
+./players/sparrow/working_dir/armor.c:          +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/sparrow/working_dir/mgob.c:    add_action("command_hook", t[i][0..-3]);
+./players/sparrow/working_dir/weapon.c:             +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/morgar/magic.c:        case -666..-1:
+./players/morgar/magic.c:    case -666..-1:
+./players/morgar/magic.c:    case -666..-1:
+./players/nooneelse/black/show_bat.c:"                        _..-'(                       )`-.._\n"+
+./players/dragnar/xls.c:        files[s]=temp[0..show_size]+ansid+temp[show_size+1..-1];
+./players/dragnar/xls.c:      if(files[s][-2..-1]==".c") {
+./players/dragnar/xls.c:          files[s]=temp[0..show_size]+ansic+temp[show_size+1..-1];
+./players/dragnar/xls.c:      } else if(files[s][-2..-1]==".h") {
+./players/dragnar/xls.c:          files[s]=temp[0..show_size]+ansih+temp[show_size+1..-1];
+./players/dragnar/xls.c:          files[s]=temp[0..show_size]+ansio+temp[show_size+1..-1];
+./players/dragnar/xls.c:      files[x]=files[x][0..show_size]+ansid+files[x][show_size+1..-1];
+./players/dragnar/xls.c:      files[x]=files[x][0..show_size]+ansih+files[x][show_size+1..-1];
+./players/dragnar/xls.c:      files[x]=files[x][0..show_size]+ansic+files[x][show_size+1..-1];
+./players/dragnar/xls.c:      files[x]=files[x][0..show_size]+ansio+files[x][show_size+1..-1];
+./players/earwax/closed/test/testd.c:      types[i] = types[i][6..-1];
+./players/earwax/closed/misc/ftell.c:  BOLD+"     ..-="+NORM+MAG+" A strange purple haze swirls around you"+NORM+BOLD+" =-.."+NORM+"\n"+ 
+./players/earwax/closed/misc/ftell.c:  BOLD+"         ..-="+NORM+HIB+" You somehow feel different"+NORM+BOLD+" =-.."+NORM+"\n");
+./players/earwax/closed/bin/ipinfo.c:    restore_object("pfiles/"+arg+"/"+files[i][0..-3]);
+./players/earwax/closed/bin/ipinfo.c:    write(pad(files[i][0..-3], 15)+name+"\n");
+./players/earwax/closed/shardak/cmds/spy.c:            else if (name[-10..-1] == " (wielded)") name = name[0..-11];
+./players/earwax/closed/shardak/cmds/presence.c:        case -300000000..-4800:
+./players/earwax/closed/shardak/cmds/presence.c:        case -4799..-3600:
+./players/earwax/closed/shardak/cmds/presence.c:        case -3599..-3000:
+./players/earwax/closed/shardak/cmds/presence.c:        case -2999..-2000:
+./players/earwax/closed/shardak/cmds/presence.c:        case -1999..-1000:
+./players/earwax/closed/shardak/cmds/presence.c:        case -999..-666:
+./players/earwax/closed/shardak/cmds/presence.c:        case -665..-333:
+./players/earwax/closed/shardak/cmds/presence.c:        case -332..-1:
+./players/earwax/weapon.c:             +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/earwax/work/armor.c:          +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./players/dune/closed/castle/rooms/moonshrine.c:  cut_tymestr = tymestr[-6..-1];
+./players/vertebraker/closed/shardak/cmds/spy.c:            else if (name[-10..-1] == " (wielded)") name = name[0..-11];
+./players/vertebraker/closed/shardak/cmds/presence.c:        case -300000000..-4800:
+./players/vertebraker/closed/shardak/cmds/presence.c:        case -4799..-3600:
+./players/vertebraker/closed/shardak/cmds/presence.c:        case -3599..-3000:
+./players/vertebraker/closed/shardak/cmds/presence.c:        case -2999..-2000:
+./players/vertebraker/closed/shardak/cmds/presence.c:        case -1999..-1000:
+./players/vertebraker/closed/shardak/cmds/presence.c:        case -999..-666:
+./players/vertebraker/closed/shardak/cmds/presence.c:        case -665..-333:
+./players/vertebraker/closed/shardak/cmds/presence.c:        case -332..-1:
+./players/jareel/weapons/legends/guardian_dagger.c:         ""+NORM+"              | |"+BOLD+CYN+"  ( ( / _..----.._  ) | ( ( _..----.._  ( (\n"+           
+./players/jareel/weapons/legends/guardian_dagger.c:         ""+NORM+",-.           | |"+BOLD+CYN+"---) V.'-------.. `-. )-/.-' ..------ `--) \._\n"+        
+./players/jareel/weapons/legends/guardian_dagger.c:         ""+NORM+"|  \===========| |"+BOLD+CYN+"                 ..-'./\.`-..                _,,-'\n"+    
+./players/braxana/horlach/!allo/pet-daem.c:be explanded and refined....- Mythos <11-22-96>
+./pfiles/dd.c:    th = "pfiles/"+char+"/"+fs[fn][0..-3];
+./room/room.c:    if(file[-2..-1]!=".c") file=file+".c";
+./std/armor.c:          +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./std/weapon.c:             +(enchantments[enchants[s]][1][-1..-1]!="\n"?"\n":""));
+./std/room.c:    if(file[-2..-1]!=".c") file=file+".c";

@@ -1,0 +1,21 @@
+>> ORDER: PILLAGE CASTLE
+
+Usage:
+order <indexnum> pillagecastle <creator> <duration>
+
+Example:
+'order 3 pillagecastle trix 10'
+
+Description:
+You basically send the creature to a castle where it will attack 
+anything matching the creator of the castle's name. It will also
+leave graffiti on the ground from where it enters (which disappears
+after 30 mins).
+
+The monsters will not be hostile to players but they will be emoting
+taunts all the time. Right now a small number of castles is supported
+but more is being added over time.
+
+If a castle is not supported you will see the monsters in rollcall
+all in /room based areas, acting a little confused.
+

@@ -1,0 +1,6 @@
+RegisterWeapon()
+RegisterWeaponBonus()
+id to:  no_weapon_attack
+that makes it call object->do_no_attack_message(attacker_ob)
+that fun returning 0 gives message of 'you are too busy to attack'
+have it return 0 instead if you're gonna do your own message

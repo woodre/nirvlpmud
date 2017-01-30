@@ -1,0 +1,19 @@
+CONCEPT
+    Encumbrance
+
+DESCRIPTION
+    Encumbrance is a means to differ the weight of certain objects
+    more exactly. An encumbrance of 2500 correlates to a weight of 1.
+    However, encumbrance is not to be understood as exactly the weight
+    of an object as in the case of query_weight() or set_weight(). An
+    object that can easier be handled than another can have a different
+    encumbrance although their weight may be the same.
+
+EXAMPLE
+    If you have for instance a dagger with a weight of 1, then a
+    leaflet or sheet of paper should not necessarily have a weight
+    of 1 as well. Better give it an encumbrance of less than 2500,
+    thus making it lighter than the dagger.
+
+SEE ALSO
+    set_encumbrance(L), query_encumbrance(L), get_encumbrance(2SIM)

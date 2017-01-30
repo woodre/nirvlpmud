@@ -1,0 +1,378 @@
+[May  1 2006 21:59] A: ~doc/helpdir/kids -- fixed a typo reported by Chou.
+[May  2 2006 08:38] A: /players/khrell/monster/skaven/stormvermin.c -- fixed a typo reported by Salina
+[May  3 2006 14:25] A: ~zeus/heals/demon_heart.c -- added an is_heal() and query_charges() for new heals and heals+ command.  Also changed short() to a set_short in the reset otherwise it wasn't showing up for some reason.
+[May  3 2006 14:40] A: /bin/play/_heals.c -- changed heals[(string)ob->query_short()] to heals[(string)ob->short()].  Items that used short(){ return "Blah"; } were showing up as 0's.
+[May  3 2006 14:41] A: ~jenny/wings/items/painkillers.c -- added some modifications so they would list properly on the heals command.
+[May  3 2006 14:41] A: ~snow/heals/ice_sphere.c -- added some modifications so they would list properly on the heals command.
+[May  3 2006 14:44] A: /bin/play/_heals_all.c -- changed heals[(string)inv[i]->query_short()] to heals[(string)inv[i]->short()] for same reason noted above for edit to _heals.c
+[May  4 2006 08:27] A: Set Earwax to lvl 21 per his request.
+[May  5 2006 08:23] A: ~angel/area/walmart/npc/ion.c -- fixed a typo reported by Amaya.
+[May  5 2006 08:23] A: ~angel/area/walmart/room/electronics.c -- fixed a typo reported by Amaya.
+[May  5 2006 08:29] A: ~angel/area/walmart/room/hardlines.c -- fixed a couple typos reported by Amaya.
+[May  5 2006 08:35] A: ~jaraxle/closed/phoenix/rooms/crack1, and floor2b.c -- fixed typos reported by Bleh.
+[May  5 2006 08:44] A: ~khrell/monster/skaven/warleng, warleng2, warleng3, verminlord.c -- fixed typos causing mobs not to load.  add_money(random(amt)amt2); need a + in there.
+[May  5 2006 08:45] A: Khrell changes above reported by Mosh.
+[May  5 2006 11:39] A: reset Chou's password, he forgot it.
+[May 11 2006 11:14] A: ~me/closed/bloodfist/NPC/faerie.c -- changed them so if the owner logs out the faerie's will disappear as well.
+[May 11 2006 11:14] A: ~me/closed/bloodfist/obj/wep_shadow.c -- fixed it, there was a bug reported by Maul where you could rewield weps and stack bonuses.
+[May 12 2006 08:19] A: ~eurale/Fiend/NPC/gremlin3.c -- fixed a typo reported by Bleh
+[May 12 2006 08:22] A: ~eurale/Fiend/mm33.c -- fixed a typo reported by Bleh.
+[May 12 2006 08:23] A: ~eurale/Fiend/mm28.c -- fixed a typo reported by Bleh.
+[May 12 2006 12:55] A: patched Artos and Hadus's luc back to 30's.  From a bug when Wax was working on player.c earlier.
+[May 14 2006 18:27] A: ~me/closed/bloodfist/obj/gem_chest.c -- forced guild save after deposit and withdraw.  Before if you deposited a gem and for some reason got dc'd or kicked out before the automatic guild save you'd lose your gems.
+[May 16 2006 14:54] A: ~maledicta/cont/rdragon/sbracers.c -- changed bf attrib bonus to 10, 30 is way too fucking high.
+[May 16 2006 14:56] A: ~feldegast/equip/tsymbol.c -- changed the BF attrib bonuses.
+[May 16 2006 14:58] A: ~feldegast/equip/guardhelm.c -- same as above.
+[May 16 2006 14:59] A: ~feldegast/equip/dwarf_plate.c -- see above.
+[May 16 2006 15:01] A: ~feldegast/equip/wandereye.c -- see above.
+[May 16 2006 15:05] A: ~zeus/realm/OBJ/onyx_platemail.c -- see above.
+[May 16 2006 15:06] A: ~zeus/realm/OBJ/ruby_amulet.c -- see above.
+[May 16 2006 15:08] A: ~trix/castle/primonst/habit.c -- see above.
+[May 16 2006 15:24] A: ~changed the cp_dir wizhelp file the example was wrong.
+[May 16 2006 15:25] A: ~trix/castle/primonst/ring.c -- see above.
+[May 16 2006 15:26] A: ~vertebraker/swamp/OBJ/j_earring.c -- see above
+[May 16 2006 15:27] A: ~arrina/armor/sveil.c -- see above
+[May 16 2006 17:16] A: ~me/closed/bloodfist/daemon/wep_daemon.c -- made some mod's to the attribs.
+[May 18 2006 08:25] A: ~me/closed/bloodfist/log/honor_log.o -- reset Vegeta's honor lvl.  He talked to me about it before he left for Iraq.  I felt it was a reasonable request.
+[May 19 2006 11:07] A: ~comp'd sahara 2mil for a death where combat didn't stop once he dc'd.
+[May 19 2006 13:18] A: ~wocket/caves/OBJ/spongejuice.c -- added is_heal();
+[May 19 2006 13:18] A: ~wocket/caves/OBJ/spongeflesh.c -- added is_heal();
+[May 19 2006 13:18] A: ~wocket/std/gendrink.c -- added query_charges(){ return charges; }
+[May 20 2006 00:28] A: ~hawkeye/monster/private.c -- fixed a typo reported by Ugh
+[May 23 2006 08:27] A: ~snow/MONSTERS/brute.c -- added a if(!environment()) return; check in the heart_beat();
+[May 23 2006 08:29] A: ~khrell/armors/skaven/warpamulet.c -- fixed a typo reported by Ugh.
+[May 23 2006 08:32] A: ~wocket/necro/guildob.c -- fixed a typo reported by Ugh.
+[May 23 2006 11:43] A: ~snow/shadows/mon/sguard.c -- and an if(!environment()) return; check in the heart_beat();
+[May 23 2006 21:13] A: released Vahiti from Prison.  Figured he was close enough.  Release date was June 4th.
+[May 24 2006 11:47] A: ~me/mages/mon/shadowdragon.c -- used a notify_fail() on the release of dragon.  the return 1; was fooking with heals.
+[May 25 2006 14:59] A: ~forbin/realms/salam/OBJ/neruumsh.c -- added a simple two_handed() check on it for BF swap command.  Before you could swap it and wield the two handed weapon while wearing a shield even though the wep redid the wield command to prevent it.  Odd.
+[May 25 2006 14:59] A: ~me/closed/bloodfist/power/swap.c -- added a check so if wep returns twwo_handed() swap command will check for worn shield.
+[May 26 2006 13:25] A: ~mythos/healerguild/guildob.c -- updated some of the commands for the new tox lvls.  Would return like 15's where 10 should be max.
+[May 26 2006 13:29] A: ~mythos/healerguild/power/need.h -- see above.
+[May 30 2006 10:07] A: ~angel/area/walmart/npc/orange.c -- fixed a typo reported by Soltan.
+[May 30 2006 10:08] A: ~angel/area/walmart/npc/blaster.c -- fixed a typo reported by Soltan
+[May 30 2006 10:10] A: ~angel/area/walmart/npc/walmart_associate_01.c -- fixed a typo reported by Soltan
+[May 31 2006 14:44] A: comp'd Phlegm 6K exp for bug testing.
+[Jun  1 2006 23:19] A: /obj/monitor.c -- add to allow BF to see their blood honor in the monitor.  Been meaning to do it for awhile just been lazy.
+[Jun  2 2006 09:56] A: ~snow/shadows/mon/sguard.c -- added an if(!environment()) return; check in the heart_beat().
+[Jun  2 2006 10:37] A: ~pestilence/club/mob/busty.c -- add same if(!environment()) check.
+[Jun  2 2006 13:30] A: ~me/mages/lib/recall.c -- fixed a typo reported by Earwax.
+[Jun  6 2006 23:16] A: ~feldegast/darkcity/Wep/sdagger.c -- made it so BF couldn't choose it.  They would be able to forge it and pawn them for a coin cheat.
+[Jun  6 2006 23:45] A: comp'd LB a minor gold gem from a crash.
+[Jun  7 2006 08:19] A: ~mythos/amisc/forest/timers.c -- made it last longer, really no point to unlimited 30-80K mobs.
+[Jun  8 2006 18:00] A: fixed Phlegm from a stupid healer bug, will fix bug tomorrow.
+[Jun  8 2006 23:17] A: patched Vegeta.  There was a guild glitch.  Moved 8,631,536 exp from his mud exp into his guild's attribute exp.
+[Jun  8 2006 23:18] A: ~me/closed/bloodfist/gob.c -- fixed a stupid error so it wasn't recording attrib exp.
+[Jun  9 2006 08:28] A: ~jaraxle/closed/templar/squires/squire.c -- fixed a typo reported by Saynt
+[Jun  9 2006 10:54] A: ~me/closed/bloodfist/obj/player_shadow.c -- fixed the alignment mask to show proper BloodMaster when above 1500 honor.
+[Jun 13 2006 08:28] A: ~saber/food/magshop.c -- fixed a typo reported by Saynt.
+[Jun 13 2006 08:37] A: ~hawkeye/monster/hawkeye.c -- changed the load_a_chat so it gives mob's name instead of just a msg.
+[Jun 14 2006 23:04] A: ~boltar/sprooms/weaponsmith.c -- made it so you had to unwield your weapon to sharpen it.
+[Jun 16 2006 17:25] A: ~me/closed/bloodfist/gob.c -- fixed the simple array.  divided it out into 3 arrays.  If a gem had a ws of 11 and there was an 11 in both the spec 1 and spec 2 categories the special would go off twice.
+[Jun 20 2006 14:34] A: ~me/closed/bloodfist/help/attributes -- fixed it for past changes that were made.
+[Jun 20 2006 22:25] A: ~guilds/bards/spells/08_digestion.c -- fixed it.  The check was set up for lvl 9 so you couldn't use it at the lvl you should be able to which is lvl 8.
+[Jun 21 2006 13:18] A: ~me/closed/bloodfist/daemon/wep_daemon.c -- fixed a couple gems that were causing errors.  The hit_player() was in front of the msg so if the hit_player killed the mob the msg would error since there was no longer an attacker_ob to query the name/short of.
+[Jun 21 2006 14:51] A: ~saber/tower/tower20+13.c -- fixed a typo causing it to not heal you when you sat on throne when you had the staff of power.
+[Jun 21 2006 21:34] A: comp'd Muerte some equip he lost from hotel snafu.
+[Jun 24 2006 10:39] A: ~comp'd Gil some stuff from a crash.
+[Jun 25 2006 14:59] A: ~eurale/Chess/NPC/w_knight.c -- fixed a typo reported by Muerte
+[Jun 25 2006 15:00] A: ~jenny/wings/rooms/sauna.c -- fixed a typo reported by Muerte.
+[Jun 25 2006 15:02] A: ~me/closed/bloodfist/eq/es.c -- fixed a typo reported by Hellspawn
+[Jun 25 2006 15:03] A: ~me/closed/templar/jacoby.c -- fixed a typo reported by Juggernaut
+[Jun 25 2006 15:06] A: ~beren/Monsters/Olgyo/zgama.c -- fixed a typo reported by Muerte
+[Jun 25 2006 15:08] A: ~open/info/guilds/ranger.nfo -- fixed a typo reported by Chaundre
+[Jun 26 2006 13:12] A: ~comp'd Dreadwolf 600K exp for a bugged death.
+[Jun 26 2006 14:43] A: ~me/closed/bloodfist/attack.c -- fixed it so would work on each kill.  It was having some issues with checking query_spell_dam() where even out of combat after awhile it still didn't work.  Added a PO->add_att_time();
+[Jun 26 2006 14:44] A: ~me/closed/bloodfist/gob.c -- see above.  Added a timer to the gob so every 3rd hb they can use attack again (if not in combat of course)
+[Jun 26 2006 15:45] A: patched Evolution's symbiote name.  He decided he wanted something else.
+[Jun 26 2006 17:11] A: ~pestilence/club/mob/various -- added some if(!environment()) checks to the heart_beat()'s on several of the stripper mobs.
+[Jun 27 2006 11:05] A: I fixed one of Khrell's rooms last night although I don't remember which one or what I fixed.  I just remember it wasn't loading, and now it is :)
+[Jun 29 2006 09:12] A: ~wocket/caves/mastercr.c -- fixed a typo in the long_desc reported by Sephiroth.
+[Jun 29 2006 09:14] A: ~trix/castle/quest/sef7.c -- fixed a typo reported by Sephiroth
+[Jun 29 2006 09:15] A: ~trix/castle/quest/sec4.c -- fixed a typo reported by Sephiroth.
+[Jun 29 2006 09:16] A: ~me/closed/bloodfist/NPC/faerie.c -- made them destruct after 5 minutes to remedy people getting too many of them.
+[Jun 30 2006 09:18] A: ~me/closed/bloodfist/obj/wep_shadow.c -- fixed a typo reported by Diesel.
+[Jul  6 2006 11:27] A: ~zeus/desert/NPC/(all of them) -- finally got off my butt and added random chance of getting gems to these mobs for BF.  Was always in the plans just never got done.
+[Jul  7 2006 17:09] A: ~me/closed/bloodfist/gob.c -- fixed the 'unstudy' command.  It worked unless you were trying to remove the last mob in the series.
+[Jul 11 2006 08:54] A: ~jaraxle/3rd/alt/mobs/necro.c -- changed it so it doesn't clone an actual necro guild object to the mob.  Some one killed it and ended up with the guild object in their inventory and it changed them to a necro as a guild.  Replaced guild object with generic ~jaraxle/3rd/alt/items/cpouch.c, that I added.
+[Jul 11 2006 15:07] A: patched Diesel back to 30 stamina, reset his guildname, and patched him back to +21 with appropriate exp.  Stupid Jaraxle mob (fixed above).
+[Jul 11 2006 17:35] A: ~earwax/obj/products/support/adrenaline.c -- added an add_action("quit","quit"); and a quit(){destruct(this_object());
+[Jul 11 2006 17:35] A: Poop.  It was storing it and reimbursing the value as if there was a crash.
+[Jul 12 2006 14:50] A: ~snow/dervish/gobdir/heartbeat.h -- added an if(testchar()) check in the check_sands() so testchars wouldn't get hurt from not having sandpoints.
+[Jul 12 2006 20:31] A: ~wocket/turtleville/PETS/neopet.c -- fixed one of the message_hit msgs.
+[Jul 19 2006 17:39] A: Jailed Ice for a week for abusing the d/c coin bug.  It's been posted on the news board, he's been talked to previously by Earwax.  It happened and instead of reporting it, just snagged heals and started killing mondar.
+[Jul 21 2006 17:35] A: patched Diesel's BF file to fix the unstudy comamnd.
+[Jul 21 2006 17:37] A: ~me/closed/bloodfist/daemon/wep_daemon.c -- broke out a tell_room on the lightning gem into two seperate tell_rooms so it wouldn't truncate and bleed color.
+[Jul 24 2006 10:39] A: Jailed Cleipa for 14 days.  He died to a mob and used a different char to get his corpse back.  Informed him that if it happened again that all chars involved would be imprisoned for an extended period.
+[Jul 25 2006 13:24] A: reset Kyv's Symbiote name to "Cripple" instead of Psycho.  He felt it was more fitting.
+[Jul 25 2006 15:03] 
+  A: ~me/closed/bloodfist/power/attack.c -- attempt 
+  R: 9 to stop it from hosing quicktyper and bugging if it kills the mob.  I feel good about this one though!!
+[Jul 25 2006 15:03] A: ~me/closed/bloodfist/power/vigor.c -- tweaked vmsgs() for index out of bounds issues.
+[Jul 27 2006 08:14] A: ~me/closed/bloodfist/member/ravanne.o -- patched him back to glvl 1.  Due to a bug he was put to glvl 2.
+[Jul 27 2006 15:37] A: I upped the storage capacity of gems for BF.
+[Jul 27 2006 16:09] A: ~me/closed/bloodfist/NPC/elder.c -- added additional checks to stop the bug mentioned before with Ravanne.
+[Jul 28 2006 14:51] A: ~mizan/closed/sbox.c -- Updated to make items that are donated to be non-saveable and have no value.
+[Jul 28 2006 14:52] A: /obj/weapon.c, armor.c, treasure.c, generic_heal.c -- added donated_item to objects to make non save and have no value if they were donated.
+[Jul 29 2006 14:41] A: ~me/closed/bloodfist/obj/gem_chest.c -- additional patch for the addition of more gem storage.  Needed to fix 'withdrawl' to accept numbers greater than 15.
+[Jul 29 2006 15:00] A: ~laera/balamb/forests/obj/bone.c and bone2.c -- added a check so BF guild couldn't choose it as it can be bartered and used for a coin cheat.  Reported by Carnage.
+[Jul 31 2006 16:45] A: ~zeus/desert/r/ec4.c -- added a guild message for when non guild members enter the room with Seht.  Gives the BF a little heads up that someone might be attacking Seht.
+[Aug  1 2006 15:46] A: ~recomp'd Ice 200K for killing Seht.  Somehow his Mech got credit for the kill.
+[Aug  3 2006 17:59] A: Promo'd Pestilence down to lvl 60.  He requested it.
+[Aug  8 2006 16:31] A: /players/jenny/wings/mobs/players/lapointe.c -- added a check so if you're dead you can still leave the room.
+[Aug 15 2006 14:11] A: ~pestilence/club/mob/cheryl.c -- fixed a typo reported by Shakara.
+[Aug 16 2006 10:33] A: Approved Tristian's ClubFed area for gameplay.
+[Aug 16 2006 18:13] A: comp'd Wipeout some equipment he claimed he lost in a crash.  Buh.  I hate handing out equip.
+[Sep 12 2006 09:22] A: Requested that Pistovblaq change his name.  Some people felt it was kinda racist.  He was already lvl 11 so just jail seemed foolish so I changed his pfile over, guild file, and lockers, to the new name of Vortex.
+[Sep 12 2006 13:21] A: recomp'd Blizzard some equipment from his computer crashing and not being able to log back in.
+[Sep 13 2006 14:49] A: ~dragnar/armor/gloves.c -- changed the set_type from misc to gloves.
+[Sep 22 2006 18:58] A: ~jareel/monsters/chaos/woods2/smith.c -- fixed some typos.
+[Sep 26 2006 08:19] A: ~jareel/weapons/chaos/woods2/hammer.c -- fixed a typo.
+[Oct  4 2006 11:51] A: updated help guilds, closed_guilds, and added helpfile for symbs since they are open now.
+[Oct 19 2006 22:40] A: ~mythos/healerguild/power/heal.h -- added a line so if the target is fully healed the caster won't lose the sps and get a msg saying they healed 0.
+[Oct 30 2006 11:49] A: ~me/closed/bloodfist/eq/blood_amulet.c -- Made them saveable.
+[Nov 14 2006 12:22] A: ~me/closed/bloodfist/NPC/person.c, person1.c, person2.c, and person3.c -- needed added checks so the short and long weren't hosed if the owner left the game.
+[Nov 14 2006 13:02] A: ~me/closed/bloodfist/daemon/honor_daemon.c -- fixed a typo resulting in the "top 10" in honor listing 11 members.
+[Dec  7 2006 22:47] A: -- replaced an elemental amulet to Tyr that he lost.
+[Dec 11 2006 11:32] A: made Crip a newbie helper.
+[Jan  3 2007 12:22] A: patched Mantis with the new necro guild object.
+[Jan 31 2007 17:33] A: patched Sickness with the new Necro guild object.
+[Jan 31 2007 17:33] A: patched Muerte with the DO object didn't auto load.
+[Jan 31 2007 17:33] A: patched Pepe combat 3 in the DO guild, the guild update doesn't work rght cleared it out.
+[Feb  5 2007 11:48] A: patched Blood with the new Fallen obj.
+[Feb  5 2007 11:51] A: patched Blackstar's mag and int to 20 and 15, they didn't reset from a death in the polies.
+[Feb  6 2007 22:36] A: fixed various typos in various Necro guild spells.
+[Feb  8 2007 08:33] A: /obj/shadow_master.c -- the healer shadow was entered incorrectly and wasn't actually shadowing the plaeyrs.
+[Feb  8 2007 08:49] A: /obj/player.c -- fixed the query_free_exp() func.  It didn't work if you were lvl 19 with no plus lvl.
+[Feb  8 2007 22:09] A: Registered Test Character: Derf
+[Feb 13 2007 11:13] A: um fixed a bunch of fallen crap.
+[Feb 13 2007 12:26] A: I fixed focus with commenting out a portion of circle.c and took out the commenting out of it in /obj/master.c and functions.h
+[Feb 13 2007 12:26] A: fixed powers focus.h, beckon.h, wither.h, set_percent.h, score_cmd.h, drain.h
+[Feb 13 2007 13:38] A: will be updating the rest of the powers periodically for fallen so they work as well.
+[Feb 19 2007 14:37] A: moved around some Ranger guild member save files.  The guild only holds 55 people which was full with players that were purged awhile back.  Just cleared up some spots from players that don't exist anymore.
+[Feb 20 2007 20:28] A: ~vital/dest/include/spaceport.h -- commented out a line so his area would load.  Would give error msg when you tried to enter one of his rooms.
+[Feb 22 2007 08:41] A: ~cosmo/hslist/vds_new.c -- updated the alltime score board for 2007 numbers.
+[Feb 23 2007 17:35] A: /bin/play/_sell.c -- changed it so when selling from a bag it commands unbag first instead of a move_object otherwise bag doesn't decrease it's weight and is eventually useless.
+[Feb 27 2007 15:32] A: messed with the Rnager Npc's some.  Will ahve to see if they work now.
+[Mar 28 2007 09:20] A: /obj/armor.c -- updated it to pass through all the properties of Types for mutitype armors.  I.e. Full Deat Set
+[Mar 28 2007 10:24] A: updated Kmart to allow for the shout_mine.c of deathmonger's.  Updated shout_mine as well.
+[Mar 28 2007 10:24] A: updated the soot residue for the soot mine to actually go away after a time frame.
+[Mar 28 2007 11:43] A: will need to look at obj/armor.c again.  Still experience issues :(
+[Apr 15 2007 10:19] A: ~guilds/necro/mon/skeleton.c -- since their top zombie command hasn't been finished in roughly 7 years I upped the length of time their skeleton will last.
+[May 17 2007 10:28] A: modified armor_test.h in warriors for dodge concerning weight restrictions.
+[May 17 2007 22:51] A: modified the warrior score cmd for the updated tox lvls.
+[May 17 2007 22:51] A: modified the warrior armor_test.h for a typo in the dodge emote.
+[May 19 2007 09:31] A: fixed warrior score.  It was messed up on the exp needed once you hit prof lvl 40
+[May 21 2007 17:28] A: updated the warrior profession books and related help files for attrib changes.  i.e. before needed a str of 20 to train a skills now need 30 etc.etc.
+[May 21 2007 17:47] A: adjusted Lok's stats so he could join the Mages.
+[May 27 2007 09:36] A: fixed the warrior guilds trainers in /OBJ.  They were still trying to log joining a prof to Mal's closed drive.
+[May 27 2007 09:37] A: fixed a typo in ~forbin/realms/keats/OBJ/nazal_acid_object.c
+[Jun  5 2007 08:33] A: changed the crazy high value o the holy and unholy longsword in tallos' area.  I thought I had changed those already.
+[Jun  5 2007 17:43] A: ~saber/weapons/net.c -- changed so it wouldn't start a fight, Take that ya silly Rangers!!
+[Jun  6 2007 10:59] A: ~saber/armor/aura.c -- changed so you had to be in combat to use.
+[Jun 14 2007 22:21] A: fixed the remaining of the Fallen's guild spells.
+[Jun 18 2007 11:22] A: ~boltar/casinpo/front_Desk.c -- changed it soe if you register for a room and you are less than one hour old or less than lvl 5 it tells you that you have to be lvll 5 and an hour old instead of what they are doing is illegal.  Also commented out the forced quit I see no point to it.
+[Jun 20 2007 17:10] A: changed up ~jaraxle/cave/crooms/randomcave.c to hopefully fix the problem with alignment while in the ooze.
+[Jun 21 2007 13:26] A: /players/guilds/necro/obj/misc/bookcase.c -- fixed it so you could actually remove the books.
+[Jun 21 2007 16:21] A: /players/guilds/fallen/obj/id.h -- upped the weight limit for miscellaneous armors cause well nobody cares. heh
+[Jun 22 2007 22:43] A: updated necro spells to work in pk.  Some were modified for legality issues we'll see what happens.
+[Jun 25 2007 12:13] A: ~llew/Other/misc/deathlog.c -- updated the color for the obit.  I don't see how a 19+1 should be classified as Great on a +100 scale.  Great is now +21 to +75
+[Jul 11 2007 11:38] A: added a BF help file forthe various gems
+[Jul 22 2007 18:01] A: comp'd blake for a double death due to poison.
+[Aug 20 2007 09:12] A: edited id.h in the warriors guild to hopefully fix a prblem with blindfight.
+[Aug 23 2007 12:03] A: I put Mrjones into the Bards.
+[Aug 23 2007 12:04] A: I like to see bards.  They play music and are jolly.  And they take some of the gay comments away from the rangers.
+[Aug 23 2007 15:52] A: comp'd Soul 130k exp for a guild glitch.
+[Sep  4 2007 16:16] A: allowed Fartbomber to restart as char Illwind.  A more appropriate name and is a newbie.
+[Sep  4 2007 22:14] A: Changed Bale a BF guild mob to be able to use a players BankBalance when purchasing gems for the guild.
+[Sep 21 2007 07:38] A: ~/guilds/Rangers/Communicator.c && ~/guilds/Rangers/Commands/Ninja.c -- Attempt to fix the Rangers ninja morph to make them invisible and see in the dark like it's supposed to.
+[Sep 25 2007 17:21] A: patched captainkirk to the same stats he had as Shitroy.  Made him change names.
+[Sep 26 2007 11:54] A: comped Fastkill for a buggt death? heh
+[Oct  2 2007 19:56] A: I removed blake from the mages guild.  Dested his object, used fix_guild blake, subtracted 1/6th of his exp, and reset his level to match his new exp.
+[Oct  8 2007 09:56] A: fixed it.
+[Oct  8 2007 09:57] A: heh ~jaraxle/cave/mobs/special.c -- it didn't have a cave_mob ID so it moved to the entrance with the corpse and killed Flick again.  Cave mobs aare supposed to destruct.
+[Oct 23 2007 17:12] A: moved unset_invis flag in rangerCommunicator, in the quit() func.
+[Dec 20 2007 22:47] A: added a new Ranger command.  /players/guilds/Rangers/Commands/Rpt.c   It allows Rangers to transfer unused skill points to fellow Rangers.
+[Dec 21 2007 09:57] A: ~maledicta/cave/rooms/randomcave.c -- fixed it so Rangers wouldn't get stuck in there.
+[Jan  7 2008 21:15] A: ~/dragnar/MKScar/cmds/scar.c -- fixed some color issues.  When the ansi was changed to include the generic <ansi.h> it didn't have the same ansi codes as the one Dragnar was using.
+[Mar  3 2008 09:13] A: Hacked Deathseeker's guild file.  I have posted on it several times told them the concequences yet it was ignored.
+[Mar  8 2008 11:30] A: edited player.c so the monitor defaulted on so newly created chars wouldn't have to type 'mon on' to see their monitor in combat.
+[Mar 25 2008 10:33] A: fixed a HB issue with ~jareel/weapons/orlanth/fiona_sword.c
+[Mar 25 2008 12:19] A: promo'd Jareel back to lvl 40 for new area and I think he was lvl 40 or above before he took a leave
+[Mar 25 2008 12:20] A: ~me/closed/bloodfist/daemons/wep_daemon.c -- made changes to code for the gem of provoked aggression.  Nerfed it so to speak.
+[Mar 26 2008 15:58] A: downgraded ~pavlik/guilds/mages/spells/mimage.c  -1 to max images, lowered, base, upped chance of busting mirror in failure cast.
+[Apr 11 2008 19:22] A: did some patchwork on Brooks.  He was in the mages and was purged awhile back, had old guild obj, gave him new guild obj, comp'd his old guild exp and made him restart in the guild since the costs have all changed.
+[Apr 12 2008 15:36] A: patched daycare2.o to change a parent.
+[Apr 12 2008 15:36] A: patched the Rangers teleport command so Rangers can't teleport to wizes that have a Ranger communicator.
+[Apr 28 2008 21:21] A: I updated attack_damn.h in the Vamps.  Sticks had an idea for it.  Seemed reasonable so went with it.
+[Apr 28 2008 22:05] A: patched Teepo's mage save file.  I still need to look into saving issues.  Until another day.
+[Jun  6 2008 22:16] A: ~jareel/weapons/chaos/woods2/chaos_axe.c -- I changed the % chance of the special going off and reduced the dmg from said special.
+[Jun  6 2008 22:39] A: rewized Mosobp.
+[Jun 19 2008 09:00] A: patched object.o in the Greycouncil clan.  It was corrupted from the channel history and wasn't loading.
+[Jul 15 2008 21:41] A: gave Mosobp final approval to add his BATTLE area.
+[Aug  6 2008 09:02] A: Promo'd Mosobp for completed area.
+[Aug  6 2008 09:03] A: Promo'd Angel to lvl 100 for new area, help with approvals, and helping new wizes with coding.
+[Aug  6 2008 09:03] A: fixed a couple of Jareel's rooms from spawning multiple mobs.
+[Mar 23 2009 15:00] A: patched Jaster with the Sam's guild object he messed his up.
+[Mar 23 2009 15:00] A: patched Jaster's guild rank.
+[Mar 23 2009 15:00] A: patched Jaster's clan object.  The Channel history was corrupted.
+[Mar 24 2009 09:32] A: fred
+[Mar 24 2009 09:34] A: ~softly/nhall/notice.o -- patched the number of msgs.  Board showed [21] but there were only 20.
+[Mar 25 2009 16:04] A: ~/players/guilds/warriors/test_obj4/leave_guild.h -- needed to reset the guild file so they can join other guilds.
+[Mar 25 2009 17:41] A: reset the password for Blizzard.
+[Apr  8 2009 09:56] A: reset the password for Chou
+[Apr  8 2009 09:56] A: incorporated a Double Experience and Improved Faster heal rate functions in game.
+[Apr 13 2009 10:17] A: I wized Shinshi.  Myself and Star will watch over him for the most part.
+[Apr 13 2009 14:32] A: at Iridel's request I remove them from the Mages guild completely and Re-joined them.
+[Apr 14 2009 15:39] A: comp'd Gogeta some equipment that didn't save in his room.
+[Apr 22 2009 11:22] A: removed Abk from the the Neo Beta Testers for cheating and lying about cheating.
+[Apr 22 2009 11:23] A: removed Sami from wiz status for adding 31 million xp to his player char.
+[Apr 23 2009 12:08] A: added Shinshi's castle to the file to load at reboots
+[Apr 26 2009 21:01] A: Promo'd Chip to lvl 40 for continued work on the Neo's guild.
+[Apr 28 2009 19:41] A: added a Heal Cost Calculator.  Just type 'healcalc' and follow the instructions :)
+[May  5 2009 10:52] A: added Chip's castle to the preload listing
+[May  5 2009 10:53] A: Restored some equip to Jaster a couple days back, Said his hotel room didn't restore.
+[May  5 2009 10:54] A: Put Shinshi in charge of the dervish guild.  All changes will go through me.  I get to zap him or demote him 1 lvl everytime he breaks something :)  Rawr!
+[May  5 2009 10:56] A: on a side note.  I had a glazed donut this morning that tasted extra delicious.  I might add it to the log in news to justify the post to this log :)
+[May  7 2009 09:16] A: Promo'd Cloud back to lvl 30 wiz status.  He used to be a wiz was autodemoted by V's system
+[May  7 2009 16:36] A: comp'd Smack exp from old Neo Symb for beta testing.
+[May  7 2009 16:37] A: /obj/partymaster.c -- added a check so players couldn't add members that were fighting.  Will stop potential cheating of adding a player that is close t okilling a mob.
+[May 12 2009 13:44] A: made some changes to the Sams to try to bring them more in line with other guilds.
+[May 12 2009 13:45] A: approved Shinshi adding of two commands to the dervish guild.
+[May 13 2009 11:14] A: added rank checks to 9 commands in Knight GOB.
+[May 13 2009 17:49] A: fixed a syntax error in /players/mythos/closed/guild/forest/rooms/cave.c it was spamming the lpmud.log shrug
+[Jun  2 2009 19:50] A: ~eurale/VAMPIRES/lib/attack_damn.h -- fixed the sp cost on it.  Wasn't subtracting.
+[Jun  3 2009 13:31] A: ~euraleVAMPIRES/OBJ/coffin_obj.c -- Fixed it so they work like lockers on retriev command.  So they can retrieve 1 instead of retrieve shield.
+[Jun  8 2009 09:00] A: Promo'd Cloud to lvl 40.  Was lvl 40 before coming back so seemed reasonable.
+[Jun  9 2009 08:31] A: ~eurale/VAMPIRES/OBJ/summons.c -- fixed a typo on it.  chek to check.
+[Jun  9 2009 21:15] A: Moved Tigers Ranger gfile from Beck's old files to the new directory.  His char was zeroed out.
+[Jun  9 2009 21:18] A: ~eurale/VAMPIRES/lib/attack_(backhand, damn, demon, grasp, scratch).h -- changed each file so if !str it would cast on whatever they were attacking.  It used to be set up to attack a str so if you were fighting a qurd it was at 3/10 and a different qurd roamed in the room your spell would attack the new qurd instead of the one you were already fighting.
+[Jun 15 2009 22:06] A: ~eurale/VAMPIRES/vampob.c -- added a lvl check so not every wiz out there is cloning an object.  I only removed the lvl check a few weeks back, re-added my own version.
+[Jun 23 2009 16:45] A: comp'd Mistaken some exp for a buggy guild trial death.  Fixed the guild trial too.
+[Jun 29 2009 08:45] A: Comp'd Worm a couple equip pieces.
+[Jun 29 2009 08:46] A: Promo'd Aingeal back to her previous lvl 40.  She was demoted to 20 as inactive from Verte.
+[Jun 29 2009 08:46] A: patched Wulfe's Cyber object he didn't have a guild file after his restore.
+[Jul  5 2009 21:32] A: patched Marlboro guild exp.  he was maxed but then they raised the total exp needed to max and it was screwing up other guild things.
+[Jul  5 2009 22:12] A: ~pavlik/guild/mages/obj/corpse_bag.c -- had some major color bleed issues.
+[Jul 11 2009 15:46] A: patched Angelus, he was patched exp but his guild converted it all into guild exp.
+[Jul 26 2009 21:50] A: ~cosmo/apt/obj/bizarro.c -- nuked it so rangers can't use it.  Darn them and their trickery.
+[Jul 27 2009 08:58] A: ~cloud/Fayawyn/mobs/doorknob.c -- added a heal_self to the HB so people would stop killing it.  As it was never meant to be killed as commented at the top.
+[Aug 19 2009 14:02] A: reinstated Data to lvl 21 instead of the inactive lvl 20
+[Sep  9 2009 22:14] A: Promo'd Khrell to lvl 100.  He's going to be doing area approvals with Star.
+[Sep 15 2009 10:27] A: mizan
+[Sep 17 2009 12:31] A: fixed a problem in Neo's with assigning tentacles.  should be a lvl 3 control skill but was coded as > 3, rather than > 2.
+[Sep 17 2009 12:31] A: why must you mock me!! :(
+[Sep 23 2009 10:11] A: patched Quagmire 410672 from a death where he says he got dc'd and reconnected to being dead.  ENTER log shows a throw reconnect, Gave him the benefit of the doubt.
+[Sep 23 2009 13:33] A: made an adjustment to /players/chip/venom2/obj/weapon.h -- nerfing move see code for specific.  It was too far off legal.
+[Oct  5 2009 14:56] A: /players/chip/venom2/OBJ/deepbag.c -- fixed it so it wouldn't bug when looking at it when the owner logs out.
+[Oct 24 2009 11:34] A: cloned /players/snow/closed/test/aura.c to Tenchu.  His got destroyed somehow and I know he's done the E-test.
+[Dec 14 2009 10:24] A: patched Amiro's mage player file.  It was buggy and he wasn't gaining exp towards the guild.
+[Jan 11 2010 14:56] A: comp'd some equipment for Amiro after he lost his from a crash.
+[May  3 2010 21:24] A: patched Avant some neo guild stuff that got messed up.
+[May  6 2010 12:27] A: com'd Cgi a prize item he lost due to inactivity.
+[May 10 2010 11:12] A: edited skill_setup.h, variables.h, hb.h, and /OBJ/sphere.c in ~chiip/venom2 to fix a bug
+[Jun  7 2010 13:50] A: fixed a bug with /bin/wiz/attrib.c and also updated /bin/play/_score2.c
+[Jun 28 2010 22:22] A: patched Mode's mage file since he had problems starting.  Just reset him to glvl 1 and cleared all his guild stats so he could restart.
+[Jun 29 2010 09:58] A: added a calcxp file to /players/pavlik/guild/mages/help directory.
+[Jun 29 2010 11:44] A: gave Shinshi access to /players/dune/closed/guild/ to oversee the Cybs guild.  Any changes will go through me.
+[Jul 12 2010 17:28] A: patched Mode's guild anfile and his exp vs guild exp for a mage bug.
+[Jul 15 2010 21:45] A: ~dune/closed/guild/snow/weapons/wepmanager.c -- added a little boost to bionics based on processor level to keep things zesty.
+[Jul 20 2010 17:01] A: ~jareel/weapons/chaos/woods2/humakt_+sword.c -- I nerfed it.  See code for details.  bah.
+[Sep 15 2010 10:11] A: ~zeus/museum/NPC/tiny_golem.c and golem.c -- tweaked slightly to make it harder to kill.  It's too easy for the experience.
+[Sep 15 2010 10:12] A: ~bastion/monster/hermit.c -- I updated this.  Used to have an WC of 3 and almost 9000 hps, players could attack it and idle for 20 minutes whilke it died.  reduced hps, upped wc, overall same experience value.
+[Sep 22 2010 08:27] A: patched ~vertebraker/prizes/krillgeta.c -- It was set up to only sharpen a specific weapon, I changed it so any weapon would work.
+[Oct 20 2010 09:31] A: I reset Gogeta's extra lvl to +72, the last lvl I could find in the advance log.
+[Oct 21 2010 08:19] A: reset gogeta's guild exp and guid rank on his pfile from when he was in BCM.  Also edited /log/user/testChars.txt so he doesn't show a test char on finger.
+[Dec  2 2010 14:31] A: changed the dervish kill function to not be static so you can alias it.
+[Dec  5 2010 16:39] A: promoted Wicket to lvl 30 for completion of first area.
+[Jan 11 2011 13:19] A: demoted Wicket back to player status per his request.  He doesn't feel that being a wiz is right for him.
+[Jan 28 2011 12:24] A: added /bin/play/_coinmerge.c -- The command just merges stacks of coins in your inventory (bags not included) into 1 larger stack of coins.
+[Feb 16 2011 09:11] A: ~fred/closed/bloodfist/NPC/elder.c - added a check in the advance portion to see if they have done the trial.  If they have it no longer tells them to do the trial again.
+[Feb 16 2011 14:25] A: ~snow/dervish/lib/offwield.h - added a line check so Dervish couldn't offwield forged and socketed bloodfist weapons.  The standard wield function was previously covered.
+[Feb 18 2011 20:59] A: ~angel/area/atlantis/obj/rgun.c -- the return on it was 2010 it's a weapon not an armor return :P
+[Feb 19 2011 14:58] A: forgot to log yesterday but reimbursed Kadaj almost 700K exp and 1 int point for an instablick death due to my fix on rgun.c that was logged.
+[Feb 19 2011 14:59] A: well his death wasn't due to my fix but it was the cause for the fix.  Whatever. I'm tired.
+[Jun  2 2011 09:57] A: ~eurale/Keep/OBJ/disir_slime.c -- Changed the if present madamrue check to return 0;.  If slimes were at the top of inventory couldn't barter things elsewhere.
+[Jun  2 2011 16:50] A: Promo'd Talen back to lvl 21 wiz status.
+[Jun 10 2011 09:46] A: ~wocket/turtleville/PETS/neopet.c -- changed them so if they die you can bring them back before a boot.
+[Jun 30 2011 14:16] A: ~/fred/closed/bloodfist/NPC/elder.c -- added a set_guild_file(0; to the leave command A guild file was sadded to clone the object at login but nothing to clear it when they left the guild
+[Jul  6 2011 08:41] A: /room/init_file -- added room/vill_green to the load list.  Since it wasn't loading before castle's it was causing an error with Llew's area.  Looks like it's working properly now.
+[Aug 22 2011 15:55] A: /players/chip/venom2/obj/weapon.h -- addjusted some of the numbers to adjust power levels.
+[Aug 24 2011 12:29] A: /players/vertebraker/guilds/samuraigob.c -- multiple changes, see comments if you care.
+[Aug 24 2011 19:53] A: /players/boltar/casino/floor/casinofloor1.c -- added an array so players could only buy chips once during a boot.
+[Aug 24 2011 19:54] A: /players/plasma/casino/slot.c -- changed it to add_money() to the player instead of upping the chip count.  This was being highly abused where players could just sit there and score millions of coins.  With the purchase of chips limited to once and payout direct they can still win but it'll limit things.
+[Jan 24 2012 13:05] A: updated ~/llew/Other/misc/deathlog.c to show 2012 deaths.
+[Feb 21 2012 11:38] A: replaced /players/daranath/qualtor/newstuff/heals/generic_heal.c with the updated generic_heal.c in /obj
+[Feb 21 2012 11:39] A: ~pavlik/guild/mages/room/blood_bank.c -0- added a if str doesn't equal choices to return 0 so you can still give items in the room.
+[Feb 21 2012 22:15] A: promoted Jack back to lvl 21.  He was a wiz roughly 8 years ago and then asked to be demoted as he didn't have the time.  He wanted to give it another go.
+[Feb 22 2012 12:37] A: restored two pieces of gear to Bilbill from a crash yesterday.
+[Feb 12 2013 09:13] A: updated /players/llew/misc/deathlog.c to update the obit notice for 2013.
+[Feb 12 2013 09:14] A: updated /players/cosmo/hslist/svds_new.c - to allow for 2013 experience records.
+[Feb 17 2013 13:56] A: compd severance exp for a pk bug death.
+[Mar 12 2013 14:02] A: Per a request I put Wicket back as a wiz.  He was demoted by request as well and decided he wanted to try it out again.
+[Mar 12 2013 15:42] A: gave Dragnar edit access to the Mage.
+[Mar 14 2013 21:41] A: stopped the random_move on /players/angel/areas/nox/npc/opher.c anteaus.c and nafrayu.c
+[Mar 19 2013 21:14] A: set Riddick's special guild title for maxing the Fallen.
+[Mar 24 2013 20:28] A: update /players/pavlik/guild/mages/help/dragon2 -- to show updated command added by Mizan of xferxp
+[Mar 31 2013 11:37] A: /update the guild_hall path in /players/mokri/clans/stoned/object.o  It was set in the K-Mart but that is no longer in game.
+[Mar 31 2013 11:38] A: patched Ranger colors to 3 or 4 rangers.  The color options were empty so they couldn't do it when they joied.
+[Mar 31 2013 11:38] A: patched several animal, weapon, dinos for Rangers too.  Couldn't do those since color was out on initial join.
+[Mar 31 2013 11:39] A: added colors so won't be an issue in the future when Rangers join.
+[Apr 16 2013 15:09] A: approved change to /players/mosobp/areas/BATTLE/OBJ/eura.c for mage guild bonus
+[Apr 16 2013 15:09] A: approved /players/zeus/museum/OBJ/light_dagger.c for mage guild bonus
+[Apr 16 2013 15:09] A: approved /players/jaraxle/3rd/pyramid/items/myst_cloak.c for mage guild bonus
+[Apr 30 2013 16:31] A: Promoted Dragnar to lvl 100.
+[Dec 15 2013 19:30] A: patched Moriarty's cyber guild file so he didn't have negative exp.
+[Dec 15 2013 19:31] A: promoted Ozzy to guild exp 671 in the Vamps.  Should make him the new guild commander.
+[Dec 18 2013 09:52] A: added code to /obj/monito.c for rogue guild combo points.  old monitor is at /obj/monitor.bak if needed.
+[Jan  6 2014 12:25] A: /players/cosmo/hslist/svds_new.c -- updated for 2014 year.
+[Jan 11 2014 21:20] A: on svds_new.c added BASE+ to line 113 and one other line using Ssave_bject();
+[Jan 14 2014 08:40] A: Fixed /players/guilds/Rangers/Commands/Recruit.c so people could banishpotential allys/guild members from joining.
+[Jan 16 2014 11:04] A: updated /players/eurale/Lab/l19.c so you could drop items in the room.
+[Jan 16 2014 11:04] A: updated /players/eurale/Lab/NPC/yugoloth.c -- so you could drop items in the room.
+[Jan 22 2014 21:05] A: Promoted Shinshi to lvl 60 for continued work and opening his Rogue guild.
+[Jan 23 2014 22:20] A: Allowed Darkfyre to get put back into the Neos.  He used to be in the guild and left and was reimbursed his exp.  Put him back but dropped him 5.5 mil as a penalty.
+[Jan 23 2014 22:21] A: put him in at glvl 6 as a start point, not with his old guild file.
+[Feb 10 2014 08:38] A: updated /bin/std_daemon.c for Elementalist
+[Mar 10 2014 12:00] A: upped ghouls hp value.
+[Mar 10 2014 12:00] A: blakc circle mage ghouls.
+[Jun 12 2014 16:41] A: made Jabroni Judge Advocate of the Knights guild.
+[Oct  9 2014 14:51] A: approved Elementalist guild for beta testing
+[Oct 15 2014 08:14] A: updated /players/pain/NEW/items/star_daemon.c -- hand an ansi of LIGHT_BLU which didn't exist once Rump changed it to the default ansi.
+[Nov  7 2014 19:43] A: upped the Ranger guild member count from a max of 55 to 65.
+[Dec 28 2014 10:40] A: approved elementalist to open from Beta.
+[Dec 29 2014 17:50] A: commented out the Elementalist portion of valid attack in player.c since the guild is open.
+[Feb 19 2015 10:16] A: Edited Gogeta's and Loke's pfiles to remove them from Rangers guild for not following the rules.  I will reinstate them in 2 weeks.
+[Feb 22 2015 14:45] A: reinstated Skan as a Ranger.
+[Apr 29 2015 10:07] A: added 100 more morph levels to Rangers.  Currently testing said changes
+[May  3 2015 19:20] A: dmoted Kyrain from lvl 21 wiz to lvl 19 player per his request.
+[May 12 2015 13:57] A: added 700,000 gold to Gogeta's bank balance.  He was trying to transfer it to Kyrain but accidently transferred it to "player" per the instructions.
+[May 19 2015 11:12] A: adjust the return numbers on Wolfpack for rangers some.
+[Jun 15 2015 16:08] A: set Hugh's stealth to 30.  He left the Feline Mini-guild and it was still set up as a max 20 stealth.
+[Jun 15 2015 19:43] A: updated /bin/play/_coinmerge -- the command will now attempt to first max out the player at 80k coins before it creates a pile of coins in their inventory.
+[Jun 17 2015 15:45] A: added another channel check to the Rangers guild in the guild_login portion of RangerCommunicator.c
+[Jul 15 2015 11:06] A: /players/guilds/dervish/objects/verte_sb.c -- changed it to use set_dose.  Before the dose wasn't working cause it was using this_player();
+[Jul 15 2015 11:06] A: /players/guilds/dervish/lib/sandblast.c -- added the int modifier and the shld->set_doxe code for the spell to work properly.
+[Jul 15 2015 20:06] A: changed Rangers rwear command to be able to wear a belt if Prestiged.
+[Jul 15 2015 20:06] A: updated Ranger's armor info for change
+[Jul 15 2015 20:07] A: patched Gogeta 1755310 for a bugged death to Duncan McLeod
+[Jul 15 2015 22:20] A: patched gogeta, anesidora, and peyer exp for bugged death.  Party size too large?
+[Jul 19 2015 16:22] A: updated /players/guilds/Rangers/Commands/Donate.c to consider exp worth of mobs for donating corpses.
+[Jul 30 2015 20:08] A: /players/guilds/healers/power/shield.h -- increased the duration the shield spell will last on players.
+[Jul 30 2015 20:09] A: /players/guilds/healers/guildob.c -- added a gen_sp_bonus for healers if they have prestiged.
+[Aug 11 2015 22:49] A: Promoted Symbio to Directive in Cyberninja guild.
+[Aug 11 2015 22:50] A: fixed a cyber mis-vote from yeah to nay. or nay to yeah whichever it was for Curse.
+[Aug 12 2015 21:41] A: promoted Puppy to lvl 60 to take over Cyber guild
+[Sep  1 2015 08:24] A: patched Charm back to lvl +3 due to error.
+[Sep  7 2015 18:30] A: Disabled Power Rangers Ninja Morph skill until I can test it more.
+[Oct  1 2015 21:38] A: added set_guild_file(0); to symbioye leave guild command.
+[Oct 17 2015 19:06] A: updated the read function on /players/sami/area/GPO/obj/dring.c -- it was set up so any 'read' action just read the earring.
+[Oct 30 2015 12:34] A: changed /players/wicket/guild/spells/lclap.c -- the effects were lasting too long and the CoolDown was never set before so could constant cast it,
+[Oct 30 2015 19:03] A: updated chsards, fdagger, iceblast, and lhammer in Elementalist guild.  Reduced SP costs.
+[Nov 12 2015 09:59] A: changed /players/guilds/warriors/test_obj5/gen_wc.h -- dexmod was pulling the stealth attribute for the bonus.  Changed to dex as it seems more accurate.  Overall shouldn't affect gameplay as most people max all the attribs.
+[Nov 13 2015 19:13] A: /players/wicket/guilds/elementalist/spells/lclap.c -- upped the sp cost and slightly increased the stun time of the spell.
+[Mar 23 2016 19:54] A: promoted Desiree to wiz level 21.
+[Apr  2 2016 18:40] A: changed the tail and tail2 commands in /players/saber/closed/new_mini/feilne.c to xtail and xtail2.
+[Apr 12 2016 14:19] A: changed fuckmeat's name to tr and updated his pfile and guild .o file.
+[Aug  1 2016 15:07] A: Demoted Cleipa back to player status at his request.
+[Aug  1 2016 15:23] A: patched Cleipa some experience he lost from a death while a wiz.

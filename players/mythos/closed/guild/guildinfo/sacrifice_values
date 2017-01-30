@@ -1,0 +1,10 @@
+
+xlevel  1500
+level   750
+spouse  30000 * (level+exlevel)/4
+object  value/1000
+stat    250  [ fae 750 ]
+weapon  wc * 20  [ if below 16 random(100) ]
+armor   ac * 75  [ if below 3  random(75) ]
+money   num/125
+kid     1000 * level

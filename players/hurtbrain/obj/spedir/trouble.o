@@ -1,0 +1,7 @@
+k 7
+backp ({"w,w,w,w,w,w,w,w,w","e,e,u,u,u,n","s,e,e,enter realm,s,s,e,e,e,n","e,s,s,s,s,s,w,w","e,s,s,s,s,s,w,n,n,n,n","w,s,s,w,s,s,w,w,w,w,n,n,n,n,n,w","s,s,lockers,tomb",0,0,0,})
+bpatt ({"e,e,e,e,e,e,e,e,e","w,w,d,d,d,s","n,w,w,enter realm,n,n,w,w,w,s","w,n,n,n,n,n,e,e","w,n,n,n,n,n,e,s,s,s,s","e,n,n,e,n,n,e,e,e,e,s,s,s,s,s,e","n,n,lockers,tomb",0,0,0,})
+patt ({"e,e,e,e,e,e,e,e,e","s,d,d,d,w,w","s,w,w,w,n,n,enter realm,w,w,n","e,e,n,n,n,n,n,w","s,s,s,s,e,n,n,n,n,n,w","e,s,s,s,s,s,e,e,e,e,n,n,e,n,n,e","tomb,lockers,n,n",0,0,0,})
+ggg "w"
+comment ({0,0,0,0,0,0,0,0,0,0,})
+obj 0

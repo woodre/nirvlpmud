@@ -1,0 +1,57 @@
+Composite for NPC
+
+/* Hit Points */
+composite += max_hp / 100;
+
+/* Armor Class */
+composite += armor_class / 4;
+
+/* Weapon Class */
+composite += weapon_class / 3;
+if(weapon_class > 50) composite ++;
+if(weapon_class > 75) composite += 2;
+
+/* Spell Damage & Spell Chance */
+composite += spell_dam * spell_chance / 100;
+if(spell_dam > 50) composite += 2;
+if(spell_dam > 100) composite += 4;
+
+/* Heal Rate */
+/* This is only in monster.c */
+heal_add = heal_rate * 3 / heal_intv;
+if(heal_add > 10) heal_add = 10;
+composite += heal_add;
+
+/* Special Attacks or Defenses, Max of 10 */
+/* Requires set_special() and query_special() in living.c */
+if(special && special < 11) composite += special;
+
+
+EXAMPLES OF SYSTEM
+
+Normal level 10 monster =
+1 + 2 + 4 + 0 + 0 + 0 = 7
+
+Normal level 20 monster =
+5 + 4 + 10 + 0 + 0 + 0 = 19
+
+Tough level 20 (Mourning Coil, Daranath)
+5 + 4 + 12 + 3 + 0 + 3 (mass attack) = 27
+
+Tough level 20 (Sylic, Wocket)
+6 + 5 + 13 + 6 + 0 + 0 = 30
+
+Tough monster (Fahkri, level 22, Arrina)
+12 + 6 + 13 + 0 + 0 + 0 = 31
+
+Tough monster (Snow Demon, level 22, Snow)
+5 + 1 + 25 + 6 + 4 + 1 (special defenses) = 42
+
+Tough monster (Guardian, level 23, Saber)
+10 + 7 + 13 + 14 + 0 + 0 = 44
+
+Tough monster (Masakado, level 19, Mythos)
+12 + 5 + 24 + 60 + 0 + 1 (no peace) = 102
+
+Tough monster (Icingdeath, level 50, Snow)
+60 + 6 + 38 + 28 + 15 + 10 (huge extra damage, defenses) = 157

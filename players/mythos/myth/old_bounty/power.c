@@ -1,0 +1,10 @@
+#include "/players/mythos/bounty/def.h"
+#include "/players/mythos/bounty/spells/enhance.h"
+#include "/players/mythos/bounty/spells/note.h"
+#include "/players/mythos/bounty/spells/recall.h"
+#include "/players/mythos/bounty/spells/tele_officer.h"
+#include "/players/mythos/bounty/spells/ration.h" 
+#include "/players/mythos/bounty/spells/grenade.h"
+#include "/players/mythos/bounty/spells/smoke.h" 
+#include "/players/mythos/bounty/spells/gline.h"
+

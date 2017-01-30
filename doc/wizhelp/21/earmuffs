@@ -1,0 +1,23 @@
+**************
+
+
+                     Earmuffs
+
+Syntax:    earmuffs <on/off>
+
+Desc:
+           Earmuffs command blocks hearing all of the public channels
+           as listed under "channels". Namely gossip, equip, shout, 
+           risque, junk, msg, babble, newbie, pk, annouce, wiz, cwiz.
+
+Warning:   You won't be able to hear players including calls for 
+           assistance. Good way to zone out and code in peace though.
+
+Example:   Bob types earmuffs on
+                  results
+           Bob will no longer hear any messages over the public channels
+
+Related:   tellblock
+
+
+**************

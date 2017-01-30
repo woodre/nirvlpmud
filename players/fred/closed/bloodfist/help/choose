@@ -1,0 +1,30 @@
+
+Bloodfist Help:  Choose a Weapon
+
+  In order to train with a weapon you must first choose it.  The only
+type of weapons that can't be trained with are those that are too
+generic.  You can have up to four chosen weapons at once, determined
+by your wisdom and faith.  A weapon can be unchoosen at any time, but
+keep in mind that all the experience put towards training with it will
+be lost.  There are some important things to consider when deciding
+what weapon to choose:
+
+  1. You want to pick a good weapon, since it is a weapon you will
+     be using often.  It is good to pick one that either defines
+     your character or has a unique special property.
+  2. The better the weapon is, the longer it will take you to train
+     with it.
+  3. If you pick a weapon that is storable, then it will be easy to
+     save in your locker until you can have it forged.  If it is not
+     storable then it will be more difficult to train with because
+     you will have to kill to get it every time you fight.
+  4. You can never be as good with non-standard weapon types such as
+     guns, magic, or telephone poles as you can with standard weapon
+     types such as swords, axes or polearms.
+
+To choose two weapons:   Wisdom >= 40,  Faith >= 10
+To choose three weapons: Wisdom >= 70,  Faith >= 40
+To choose four weapons:  Wisdom == 100, Faith >= 70
+
+Usage: choose <weapon>
+

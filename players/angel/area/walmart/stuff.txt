@@ -1,0 +1,21 @@
+doughnut.c -- should be physical dmg.  No reason for it to be poison.
+
+padano.c -- should be physical dmg.  No reason for it to be mental.
+
+pork.c -- should be physical dmg.  No reason for it to be poison.
+
+manakin.c -- need to add set_dead_ob(this_object()); to the reset()
+             if you want your monster_died() to work.
+
+When cloning multiples of the same thing to an object like your gift
+cards it's easier to use a looping function like a while or for loop
+instead of using multiple armor = clone_object() move_objects.  See
+anakin.c as an example.  You don't have to change them all unless you
+want to just so you know for future reference.
+
+Other than that you can put it in the game.
+
+I know this was kinda your 'coin' area but in the future I'd like to
+see more out of your stuff as far as here they all carry gift cards
+but like say anakin's descrip says he has all this gear but you don't 
+actually get any idea.

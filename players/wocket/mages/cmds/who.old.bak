@@ -1,0 +1,91 @@
+#include "/players/wocket/closed/ansi.h"
+
+cmd(string str){
+object *ppl;
+int i,a;
+int count;
+string msg;
+string name;
+if(str == "-old") return 0;
+ppl = users();
+ppl = sort_array(ppl,"greater_fun",this_object());
+count = 0;
+write(MAG+"\n        -----------------------------["+HIR+"*"+NORM+MAG+"]-----------------------------\n"+NORM);
+write(MAG+"       Name        Level  Guild Sex Race        Oppt       Area\n"+NORM);
+for(i=0,a=sizeof(ppl);i<a;i++){
+if(ppl[i]->query_invis() < this_player()->query_level()){
+  msg = "    ";
+  if(ppl[i]->query_dead())
+  msg += HIY+"*"+NORM;
+  else
+  msg += " ";
+  if(ppl[i]->query_invis())
+  msg += HIB+"*"+NORM;
+  else
+  msg += " ";
+  if(ppl[i]->query_fight_area())
+  msg += HIR+"*"+NORM;
+  else
+  msg += " ";
+  name = cutstring(ppl[i]->query_name(),12);
+  if(ppl[i]->query_pl_k())
+  msg += HIR+name+NORM;
+  else
+  msg += name;
+  if(ppl[i]->query_level() > 20)
+  msg += BOLD+"Wiz    "+NORM;
+  else{
+  msg += cutstring(ppl[i]->query_level(),2);
+  if(ppl[i]->query_extra_level())
+  msg += "+"+cutstring(ppl[i]->query_extra_level(),2);
+  else
+  msg += "   ";
+  msg+= "  ";
+  }
+  if(!ppl[i]->query_guild_name())
+  msg += "none";
+  else
+  msg += cutstring(ppl[i]->query_guild_name(),4);
+  msg += "   ";
+  if(ppl[i]->query_gender() == "male")
+  msg += "M";
+  else if(ppl[i]->query_gender() == "female")
+  msg += "F";
+  else
+  msg += "O";
+  msg += "  ";
+  msg += cutstring(ppl[i]->query_race(),6);
+  msg += "    ";
+  if(ppl[i]->query_attack())
+  msg += cutstring(ppl[i]->query_attack()->query_name(),10)+" "+NORM;
+  else
+  msg += "           ";
+  msg += "  ";
+  if(environment(ppl[i]))
+  if(creator(environment(ppl[i])))
+  msg += creator(environment(ppl[i]))+" "+NORM;
+  msg += " ";
+  count++;
+  write(msg+"\n");
+  
+}
+}
+write(MAG+"       There are currently "+HIR+count+NORM+MAG+" players online\n");
+write(MAG+"        -----------------------------["+HIR+"*"+NORM+MAG+"]-----------------------------\n"+NORM); 
+return 1;
+}
+
+
+
+cutstring(string str,int i){
+str = str + "                                       ";
+str = str[0..i-1];
+return str;
+}
+
+greater_fun(object one,object two){
+if(one->query_level() == two->query_level()) 
+  return one->query_extra_level() < two->query_extra_level();
+else
+  return one->query_level() < two->query_level();
+}

@@ -1,0 +1,1 @@
+getchar() { return "Á"; }

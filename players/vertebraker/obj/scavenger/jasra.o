@@ -1,0 +1,16 @@
+no_clean 0
+short_desc "A scavenger list"
+long_desc "Type "find <item>" if you find something on your list.You can "read" your scavenger list."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "scavenger list"
+alias_name "list"
+read_msg 0
+shop_dest_flag 0
+multipleIds 0
+files ({"/players/wren/Area/starbug/items/jacket","/players/hippo/heals/dna_repair","/players/wren/Area/starbug/items/lightbee","/players/mythos/awep/kama","/players/ultramagnus/breastplate","/players/paulasx/weapons/godsword","/players/pain/NEW/weap/sword","/players/pain/NEW/weap/mace","/players/snow/WEAPONS/tsunami","/players/mythos/aarmor/nodowa","/obj/weapon","/players/sado/shop/chocolate","/players/snow/shadows/stuff/crown","/players/angel/area/stargate/obj/P90","/players/wren/Area/starbug/items/bazookoid","/players/wren/Area/starbug/items/hair","/players/mythos/awep/arrow","/obj/weapon","/players/mythos/awep/claw","/obj/weapon","/obj/weapon","/players/mythos/aarmor/kabuto","/players/snow/WEAPONS/greydeath","/players/mythos/awep/katana","/players/maledicta/cont/rdragon/dragonscale",})
+shorts ({"Lister's leather jacket","[32mdna repair string[0m","a strange object called a 'light bee'","kama","A Black Breastplate with Red Decore","Godsword","Sword","A large iron mace","[34mTsunami[0m","Nodowa","Steel Longsword","A box of delicious Belgian chocolates","[1mShadowCrown[0m","Machine gun","Bazookoid [1;30mmkII[2;37;0m","Perfect Hair","arrow","a knarled staff","claws","Baby powder","A rolling pin","Kabuto","Grey[36mdeath[0m","Katana","[31ma dragonscale[2;37;0m",})
+found ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+loaded 0

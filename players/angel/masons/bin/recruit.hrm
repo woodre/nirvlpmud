@@ -1,0 +1,49 @@
+#include <ansi.h>
+#include "defs.h"
+
+status main(string str, int glevel) {
+   object target;
+   
+     if(guild_rank < 30) {
+       write("You must have a guild ranking of 30 to use this command.\n");
+       return 1;
+     }
+     if(!str || sscanf(str, "%s", who) != 1) {
+       write("Useage:  recruit <player>\n");
+       return 1;
+     }
+     if(!present(find_player(who), environment(this_player()))) {
+       write(capitalize(who)+" is not here.\n");
+       return 1;
+     }
+     if(present("seal", find_player(who))) {
+       write(capitalize(who)+" is already a member!\n");
+       return 1;
+     }
+     recruitee = find_player(who)->query_real_name();
+     if(restore_object("players/angel/masons/BANISHED/"+recruitee)) {
+       write("That person has been banished from the Guild.\n");
+       write("To re-enter the person must petition the Guildmasters.\n");
+       return 1;
+     }
+     if(find_player(who)->query_guild_exp() > 0) {
+       write(capitalize(who)+" is a member of another guild.\n");
+       return 1;
+     }
+     level = this_player()->query_level();
+     level2 = find_player(who)->query_level();
+     if(level2 < 10) {
+        write("A person must be level 10 to join this mini-guild.\n");
+        return 1;
+     }
+     move_object(clone_object("players/angel/masons/seal"), find_player(who));
+     write("You have recruited "+capitalize(who)+" into the Guild.\n");
+     tell_object(find_player(who), "You have been recruited into the Guild!\n");
+     tell_object(find_player(who), "Type 'seal' for a list of abilities.\n");
+     find_player(who)->add_guild_exp(1);
+     write_file("/open/GUILDLOGS/RECRUIT",
+          capitalize(this_player()->query_real_name())+"("+
+          this_player()->query_level()+") recruited "+
+          capitalize(who)+"("+level2+") -> "+ctime(time())+"\n");
+     return 1;
+}

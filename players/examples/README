@@ -1,0 +1,51 @@
+*******************************************************************************
+             /players/examples   -  Nirvana's LPC-example area
+*******************************************************************************
+
+PURPOSE: This area is intended to show LPC examples which are technically
+-------- up to date and which contain most of the features that are necessary
+for creating an own area in Nirvana.  Refer to ~/INDEX or ~/doc/contents for a
+list of features shown in the examples.
+
+AREA USAGE REMARKS: Wander around in the rooms, beginning in ~/room/start.
+------------------- Read the plate with the contents there (and the tablet
+with the sins, too :)).  Then go and explore.  We built an - admittedly
+very silly - quest which you may solve.  But it's not the main task to solve
+the quest, it rather is to look at the code and study it.  So use the Robe
+of Sorcery's More command ('More here', 'More beerie', ...) whereever you
+like.  The Robe of Sorcery can be found under /obj/tools/newrobe).  You also
+may copy some of the files into your directory and fit them to your needs.
+
+IMPROVE AND EXTEND THE AREA: We're still at the very beginning of such an
+---------------------------- example area.  It is rather small.  Hopefully it
+will be extended in the near future.  There are indeed further ideas which
+may be implemented here.  If YOU also have ideas on how to improve or extend
+this area, please DO contact the admin.
+
+RULES FOR EXTENSION:
+--------------------
+
+ 1) Suppose you have ideas which should be regarded here in this area.  Then
+    don't hesitate, contact the administration and talk about them!
+
+ 2) You should only add code to this area when you're absolutely sure that
+    it is technically okay, up to date and that the feature you want to show
+    is well documented in the file.  If you aren't perfectly sure about that, 
+    please contact the admin and ask.
+
+ 3) When adding code to this area don't forget to update the ~/INDEX file and,
+    that's even more important, the ~/doc/contents file by adding the feature,
+    what it does and where it can be found.
+
+ 4) When adding new rooms make sure that they are logically connected to
+    existing rooms so that it is possible to walk through the entire area.
+    Also add new rooms to the ~/doc/map file.  When adding items make sure
+    that they can be obtained by some action in one of the rooms.
+
+NOTE:
+-----
+
+A now and then updated .tgz file of this area can be obtained via Nirvana's
+ftp facility
+
+Rumplemintz, Dec-2011

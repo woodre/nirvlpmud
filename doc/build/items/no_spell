@@ -1,0 +1,11 @@
+no_spell
+6-13-96 Bp
+ 
+Two ways to prevent casting of basic spells,
+(basic spells are: fi,sh,so,mi, and invis)
+
+1)an object on the player with an id of no_spell will stop players from casting
+
+2) Calling set_spell_block(1); in the player object does the same.
+ 
+the blocking status may be found with query_spell_block();

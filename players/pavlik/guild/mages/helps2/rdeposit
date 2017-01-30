@@ -1,0 +1,12 @@
+-=[ Remote Deposit ]=-
+
+These commands allow you access to the Mages Vault from a remote location.
+The avaliable commands are:
+
+- reposit <obj> - put item into the vault.
+- redraw <obj>  - withdraw item from the vault.
+- relist <str>  - list items within the vault.  <str> is optional
+                  in case you want to specify type of items to list.
+
+You cannot deposit/withdraw money remotely.
+

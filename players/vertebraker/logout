@@ -1,0 +1,1 @@
+exec object *us, ob; int s; s = sizeof(us = users()); while(s--) if(us[s] && (ob=present("vtell", us[s]))) destruct(ob);

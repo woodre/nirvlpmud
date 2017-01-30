@@ -1,0 +1,32 @@
+no_clean 0
+short_desc "[1;33mDragon [1;30mHeadband[0m"
+long_desc "This headband has a dragon along it.[0mType 'clan_help' for commands."
+info 0
+save_flag 0
+value 0
+local_weight 1
+name "clan_object"
+alias_name "headband"
+read_msg 0
+shop_dest_flag 0
+multipleIds ({})
+clan_long "This headband has a dragon along it.[0mType 'clan_help' for commands."
+clan_short "[1;33mDragon [1;30mHeadband[0m"
+damage_type 0
+hall_path "/players/mythos/portal"
+object_name "headband"
+owner "heinous"
+spell_alias 0
+spell_mess_me 0
+spell_mess_room 0
+spell_mess_them 0
+abilities ({})
+chan_history ({"[Sat Jun 25 18:07:03 2011] Bacchus: I appreciate this man.","[Sat Jun 25 18:07:07 2011] Heinous: np","[Sat Jun 25 18:07:11 2011] Bacchus: the two deaths took the wind out of my sails.","[Sat Jun 25 19:07:20 2011] Heinous: lazy fuk they b all over in hall","[Sat Jun 25 19:07:26 2011] Bacchus: oh","[Sat Jun 25 19:07:28 2011] Bacchus: they are?","[Sat Jun 25 19:07:32 2011] Bacchus: Man, I don't look around the hall.","[Sat Jun 25 19:07:42 2011] Bacchus: I don't wanna take everything, until I start getting some.","[Sat Jun 25 19:07:48 2011] Heinous: what it is fore","[Sat Jun 25 19:08:04 2011] Heinous: gear the people i recruit","[Sat Jun 25 19:08:10 2011] Bacchus: k","[Thu Jul  7 19:51:43 2011] Heinous: rabbit","[Sun Aug 21 10:59:49 2011] Bacchus: hey man","[Sun Aug 21 10:59:53 2011] Heinous: sup","[Sun Aug 21 10:59:55 2011] Bacchus: He take your corpse?","[Sun Aug 21 11:00:15 2011] Heinous: yeah he gave most my gear back   is kool","[Sun Aug 21 11:00:39 2011] Bacchus: That pecker head. He's a cyberninja, no use for stealing gear he can't use.","[Sun Aug 21 11:00:55 2011] Heinous: no big deal","[Sun Aug 21 11:01:49 2011] Bacchus: went to a storage auction yesterday.","[Sun Aug 21 11:06:13 2011] Bacchus: not in the talkative mood today eh?",})
+leaders ({"kutharsen","wulfgar","huexzotin","xaltocan",})
+join_type 2
+private_coffer 11341023
+public_coffer 0
+spell_delay 0
+spell_id 0
+spell_cost 0
+last_spell_time 0

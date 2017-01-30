@@ -1,0 +1,45 @@
+spell_fail2(level,sch,atr) {
+
+  int school, attrib;
+  int fail_chance, total;
+
+  /* get the right school stat */
+  if(sch == "conj") school = guild->query_total_conj();
+  else if(sch == "ench") school = guild->query_total_ench();
+  else if(sch == "evoc") school = guild->query_total_evoc();
+  else if(sch == "illu") school = guild->query_total_illu();
+  else if(sch == "necr") school = guild->query_total_necr();
+  else school = 99;
+
+  /* get the right attribute stat */
+  if(atr == "int") attrib = guild->query_total_int();
+  else if(atr == "wis") attrib = guild->query_total_wis();
+  else if(atr == "wil") attrib = guild->query_total_wil();
+  else if(atr == "pow") attrib = guild->query_total_pow();
+  else attrib = 99;
+
+  /* fail chance is 50 * spell level (range: 50-350) */
+  fail_chance = level * 50;
+
+  /* total = attribute + (2 * school) (range: 2-300) */
+  total = attrib + (2 * school);
+
+  /* give us a break if we are newbies */
+  if(tp->query_guild_rank() <= 5) total += 20;
+
+  fail_chance = random(fail_chance);
+
+  if(tp->query_level() > 20) {
+	write("Fail Chance: "+fail_chance+" [vs] Total: "+total+
+	  "  ("+atr+":"+attrib+" "+sch+"*2: "+school*2+")\n");
+  }
+
+  if(fail_chance > total) {
+	return 1;  /* failed! */
+  }
+  else {
+	return 0;  /* success! */
+  }
+
+}
+

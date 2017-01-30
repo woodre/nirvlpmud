@@ -1,0 +1,143 @@
+nrpoints 651
+totalpoints 651
+np_xlevel 5
+nbday "063009"
+rlbday 0
+penalty_left 0
+np_age 206
+time_to_heal 0
+hcnum 1
+crime 0
+money 56879
+luck2 25
+lucky 369
+name "percival"
+gender "male"
+msgin "arrives"
+msgout "leaves"
+is_npc 0
+brief 0
+level 19
+armor_class 0
+hit_point 320
+max_hp 320
+experience 3627403
+mmsgout "disappears in a puff of smoke"
+mmsgin "arrives in a puff of smoke"
+attacker_ob 0
+h_check 0
+alt_attacker_ob 0
+weapon_class 3
+name_of_weapon 0
+shield_ob 0
+head_armor 0
+ghost 0
+dead 0
+whimpy_dir "south"
+local_weight 0
+hunted 0
+hunter 0
+hunting_time -2434
+cap_name "Percival"
+spell_points 325
+max_spell 325
+spell_name "elemental"
+spell_cost 0
+spell_dam 0
+spell_dtype 0
+age 542664
+is_invis 0
+frog 0
+whimpy 25
+auto_load "/players/mokri/clans/object.c:^!/players/guilds/bards/instrument.c:^!players/pain/NEW/items/star.c:^!players/boltar/casino/key:339^!/players/saber/closed/new_mini/gypsy.c:^!/players/saber/closed/new_mini/kender.c:^!/players/boltar/templar/items/bracer.c:^!"
+current_room "/players/guilds/bards/bardrooms/common"
+alignment 0
+custom_room_death_mess 0
+custom_attacker_death_mess 0
+Armors 0
+Weapons 0
+WeaponBonuses 0
+channel_names ({"gossip","msg","risque","newbie","shout",})
+BankBalance 898776
+strength 30
+intelligence 26
+stamina 30
+will_power 5
+magic_aptitude 30
+piety 5
+stealth 21
+charisma 11
+dexterity 5
+luck 25
+atrbr ({11,5,26,25,27,5,30,21,30,5,})
+stats ({0,0,0,0,0,0,0,0,0,0,})
+stat_maxes ({0,0,0,0,0,0,0,0,0,0,})
+flag_tester 0
+handshake_data 0
+handshake 0
+quest_point 0
+quests 0
+pregnancy 0
+pregtoo 0
+monitor_string "{HP: $HR$#hps#$N$/#mhp# SP: $HG$#sps#$N$/#msp# I: #intox#% F: #stu#% S: #soa#% T: #inf#%  COINS: $HY$(#coins#)$N$ $HM$#ahp#$N$ (#al#)}"
+saved_aliases ({"gc","get all from corpse","wi","withdraw","angel_eyes3","do farsong Well I'm the guy who never learned to dance,mon,farsong never even got one second glance,mon,farsong Across a crowded room was close enough,farsong I could look but I could never touch.","angel_eyes6","do farsong There's just one more thing that I need to know,mon,farsong if this is love why does it scare me so?,mon,farsong It must be somethin only you can see,mon,farsong 'cause girl I feel it when you look at me.","angel_eyes7","do farsong So tonight I'll ask the stars above,mon,farsong \"How did I ever win your love?\",mon,farsong What did I do?,mon,farsong What did I say,mon,farsong to turn your angel eyes my way?","lovestory3","do farsong This love was stronger than the powers so dark,mon,farsong A prince could have within his keeping,mon,farsong His spells to weave and steal a heart,mon,farsong Within her breast but only sleeping.","lovestory6","do farsong My love is like a storybook story,mon,farsong But it's as real as the feelings I feel,mon,farsong My love is like a storybook story,mon,farsong But it's as real as the feelings I feel .","lovestory1","do farsong Come my love I'll tell you a tale,mon,farsong Of a boy and girl and their love story,mon,farsong And how he loved her oh so much,mon,farsong And all the charms she did possess,mon,farsong Now this did happen once upon a time,mon,farsong When things were not so complex,mon,farsong How he worshipped the ground she walked,mon,farsong And when he looked in her eyes he became obsessed.","lovestory5","do farsong He said \"Don't you know I love you oh so much,mon,farsong And lay my heart at the foot of your dress?\",mon,farsong She said \"Don't you know that storybook loves,mon,farsong Always have a happy ending?\",mon,farsong Then he swooped her up just like in the books,mon,farsong And on his stallion they rode away","angel_eyes1","do farsong Girl you're looking fine tonight,mon,farsong and every guy has got you in his sights.,mon,farsong What you're doing with a clown like me,mon,farsong is surely one of life's little mysteries.","angel_eyes4","do farsong So tonight I'll ask the stars above,mon,farsong \"How did I ever win your love?\",mon,farsong What did I do?,mon,farsong What did I say,mon,farsong to turn your angel eyes my way?","angel_eyes5","do farsong Don't anyone wake me,mon,farsong if it's just a dream,mon,farsong 'Cause she's the best thing,mon,farsong ever happened to me,mon,farsong All you fellows,mon,you can look all you like,mon,but this girl you see she's leavin' here with me tonight.","joy_of_my_life1","do farsong I tiptoed in the room,mon,farsong I know you got to have your rest,mon,farsong She says \"Come lay beside me,mon,I've been waitin' since you left\",mon,farsong She's sweet to me,mon,Must be the luckiest man alive,mon,And did I tell you baby,mon,farsong You are the joy of my life.","joy_of_my_life2","do farsong First time that I saw you,mon,Ohh you took my breath away,mon,farsong I might not get to heaven,mon,But I walked with the angels that day,mon,farsong She takes me by the hand,mon,farsong I am the luckiest man alive,mon,farsong And did I tell you baby,mon,farsong You are the joy of my life.","joy_of_my_life3","do farsong Some may have their riches,mon,farsong Some may have their worldly fame,mon,farsong Long as I have you,mon,farsong I'll treasure each and every day,mon,Just take me by the hand,mon,farsong I am the luckiest man alive,mon,farsong And did I tell you baby,mon,farsong You are the joy of my life,mon,farsong And did I tell you baby,mon,farsong You are the joy of my life.","lovestory2","do farsong My love is like a storybook story,mon,farsong But it's as real as the feelings I feel,mon,farsong My love is like a storybook story,mon,farsong But it's as real as the feelings I feel,mon,farsong It's as real as the feelings I feel.","bsalute","bte raises his tankard high over his head, then turns it up and downs its contents in salute as he greets","longest_time1","do cem :starts snapping his fingers in rhythm then begins to sing a capella,mon,cem :sings:  Woa oh oh oh,mon,cem :sings:   For the longest time,mon,cem :sings:  Woa oh oh,mon,cem :sings:  For the longest","longest_time2","do cem :sings:  If you said goodbye to me tonight,mon,cem :sings:  There would still be music left to write,mon,cem :sings:  What else could I do,mon,cem :sings:  I'm so inspired by you,mon,cem :sings:  That hasn't happened for the longest time","longest_time3","do cem :sings:  Once I thought my innocence was gone,mon,cem :sings:  Now I know that happiness goes on,mon,cem :sings:  That's where you found me,mon,cem :sings:  When you put your arms around me,mon,cem :sings:  I haven't been there for the longest time","longest_time4","do cem :sings:  Woa oh oh oh,mon,cem :sings:   For the longest time,mon,cem :sings:  Woa oh oh,mon,cem :sings:  For the longest","longest_time5","do cem :sings:  I'm that voice you're hearing in the hall,mon,cem :sings:  And the greatest miracle of all,mon,cem :sings:  Is how I need you,mon,cem :sings:  And how you needed me too,mon,cem :sings:  That hasn't happened for the longest time","longest_time6","do cem :sings:  Maybe this won't last very long,mon,cem :sings:  But you feel so right,mon,cem :sings:  And I could be wrong,mon,cem :sings:  Maybe I've been hoping too hard,mon,cem :sings:  But I've gone this far,mon,cem :sings:  And it's more than I hope for","longest_time7","do cem :sings:  Who knows how much further we'll go on,mon,cem :sings:  Maybe I'll be sorry when you're gone,mon,cem :sings:  I'll take my chances,,mon,cem :sings:  I forgot how nice romance is,mon,cem :sings:  I haven't been there for the longest time","longest_time8do","cem :sings:  I had second thoughts at the start,mon,cem :sings:  I said to myself,mon,cem :sings:  Hold on to your heart,mon,cem :sings:  Now I know the woman that you are,mon,cem :sings:  You're wonderful so far,mon,cem :sings:  And it's more than I hoped for","longest_time10","do cem :sings:  Woa oh oh oh,mon,cem :sings:  For the longest time,mon,cem :sings:  Woa oh oh,mon,cem :sings:  For the longest time,mon,cem :sings:  Woa oh oh,mon,cem :sings:  For the longest time,mon,cem :sings:  Woa oh oh,mon,cem :sings:  For the longest time","longest_time9","do cem :sings:  I don't care what consequence it brings,mon,cem :sings:  I have been a fool for lesser things,mon,cem :sings:  I want you so bad,mon,cem :sings:  I think you ought to know that,mon,cem :sings:  I intend to hold you for the longest time","longest_time8","do cem :sings:  I had second thoughts at the start,mon,cem :sings:  I said to myself,mon,cem :sings:  Hold on to your heart,mon,cem :sings:  Now I know the woman that you are,mon,cem :sings:  You're wonderful so far,mon,cem :sings:  And it's more than I hoped for","angel_eyes2","do farsong So tonight I'll ask the stars above,mon,farsong \"How did I ever win your love?\",mon,farsong What did I do?,mon,farsong What did I say,mon,farsong to turn your angel eyes my way?","lovestory4","do farsong My love is like a storybook story,mon,farsong But it's as real as the feelings I feel,mon,farsong My love is like a storybook story,mon,farsong But it's as real as the feelings I feel,mon,farsong It's as real as the feelings I feel.",})
+saved_nicknames ({})
+testchar_var 0
+nirvana_points 0
+clan 0
+sig 0
+wkrm 0
+hostname "cpe-174-096-061-209.carolina.res.rr.com"
+ok_edit "none#"
+mailaddr "none"
+saved_where 0
+title "the [1;34mKeeper[2;37;0m of [1;35mLore[2;37;0m"
+pretitle 0
+password "RLhsFQej/aobw"
+spouse 0
+race "elf"
+al_title "neutral"
+PKGhostCounter 0
+intoxicated 0
+infuse 0
+stuffed 0
+soaked 0
+headache 0
+max_headache 0
+fight_area 0
+mon 1
+phys_at ({1,5,11,175,0,0,})
+no_spell 1
+called_from_ip "174.96.61.209"
+msghome "goes home"
+description "flashes you a bright smile as he notices you looking at him. His emerald green eyes sparkle with a hint of mischief as he greets you with an elaborate bow.  Long, straight, sandy-blond hair frames his thin, clean-shaven face and falls to his shoulders. A royal blue tunic with green trim is draped loosely over his slender frame and cinched around his narrow waist with a wide belt of brown leather. A pair of form-fitting black pants and knee-high brown leather boots adorn his legs. His trusty lute is strapped to his back, always at the ready for when he feels the need for song. "
+guild_name "bard"
+clan_name "harlequins"
+clan_master 0
+clan_file 0
+lastime "Jan 24 22:31 2010 to Jan 24 22:31 2010"
+player_killing 0
+invs_count 0
+invs_flag 0
+new_pl_rest 0
+muffled 0
+treasure 0
+treasure_str ({0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,})
+pwd 0
+errormsgs 0
+guild_rank 0
+guild_exp 0
+guild_file 0
+home "/players/guilds/bards/bardrooms/common.c"
+ex_lv 5
+qc 1
+no_give 0
+aprv 0
+hint "harlequin"
+AnsiPref ({"page",0,"tell",0,"gossip",0,"risque",0,"junk",0,"babble",0,"newbie","[36m","msg",0,"announce",0,"equip",0,"pk",0,"title",0,"pretitle",0,})
+old_last "Jan 16 22:32 2010 to Jan 16 23:06 2010"
+wiz_soul_light 0
+present_log 0
+present_castle 0
+friends 0
+other_copy 0

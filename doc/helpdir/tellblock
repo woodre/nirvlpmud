@@ -1,0 +1,23 @@
+
+
+                         [help tellblock]
+-----------------------=========+=========-----------------------   
+
+tellblock | tellblock off | tellblock number name
+
+tellblock -> turns tell block ON for all tells.
+
+tellblock off -> turns tell block OFF for all tells.
+
+tellblock number name -> store name in location number.
+
+tellblock reverse -> Reverses list from not allowed to only those allowed to
+                     send you tells.
+
+
+The third option can set up to 5 specific names of people who's
+tells to you will be blocked. Note: this does not save and must
+be set at each login.
+
+Note: wizard tells are not blocked.
+

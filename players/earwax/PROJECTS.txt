@@ -1,0 +1,19 @@
+switch the object tracking from mizan's objtracker to a more efficient
+  lib system in the various inherits themselves
+command system recode
+attribs
+races
+gear
+skills
+recode as much of player.c as possible, put as much into inherits
+  or preferably, daemonize, as possible
+bug/typo/idea
+nirvy points thing
+fix the cp/mv thing
+fix the read/write daemon
+pasture/tower area and miniquest
+exp contest fix it so it can cross boots
+fix this friggin d/c bug thing
+get rogaine to replace hair lost over figuring out that d/c bug thing
+adrenaline, make it force a guild save when credits are used
+**
